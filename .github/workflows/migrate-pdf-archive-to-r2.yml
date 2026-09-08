@@ -280,4 +280,5 @@ jobs:
           name: r2-pdf-migration-verification
           path: .r2-migration/
           if-no-files-found: warn
+          include-hidden-files: true
           retention-days: 30
