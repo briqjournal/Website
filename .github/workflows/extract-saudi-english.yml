@@ -18,20 +18,48 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Download and extract English article PDF
+      - name: Discover, download and extract English article PDF
         shell: bash
         env:
-          PDF_URL: "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Salman%20K.%20Al-Dhafeeire%20%26%20Sun%20Degang%20-%20Saudi%20Arabia%E2%80%99s%20Complex%20Cultural%20Hedging%20Between%20the%20U.S.%20and%20China.pdf"
+          ARTICLE_URL: "https://briqjournal.com/en/saudi-arabias-complex-cultural-hedging-between-the-us-and-china"
         run: |
           set -euo pipefail
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils
-          curl --fail --location --retry 3 --retry-delay 2 --user-agent "Mozilla/5.0" "$PDF_URL" -o /tmp/saudi-english.pdf
-          test "$(head -c 5 /tmp/saudi-english.pdf)" = "%PDF-"
+          python3 - <<'PY'
+          import html
+          import re
+          import urllib.parse
+          import urllib.request
+
+          article_url = "https://briqjournal.com/en/saudi-arabias-complex-cultural-hedging-between-the-us-and-china"
+          req = urllib.request.Request(article_url, headers={"User-Agent": "Mozilla/5.0"})
+          with urllib.request.urlopen(req, timeout=30) as response:
+              page = response.read().decode("utf-8", "replace")
+
+          hrefs = re.findall(r'href=["\']([^"\']+\.pdf(?:\?[^"\']*)?)["\']', page, flags=re.I)
+          candidates = []
+          for href in hrefs:
+              href = html.unescape(href)
+              absolute = urllib.parse.urljoin(article_url, href)
+              if "Saudi" in urllib.parse.unquote(absolute) or "Al-Dhafeeire" in urllib.parse.unquote(absolute):
+                  candidates.append(absolute)
+          if not candidates:
+              raise SystemExit("Could not discover the English article PDF link from the legacy article page")
+          pdf_url = candidates[0]
+          print("Discovered PDF URL:", pdf_url)
+          req = urllib.request.Request(pdf_url, headers={"User-Agent": "Mozilla/5.0", "Referer": article_url})
+          with urllib.request.urlopen(req, timeout=60) as response:
+              data = response.read()
+          if not data.startswith(b"%PDF-"):
+              raise SystemExit(f"Downloaded asset is not a PDF; first bytes={data[:20]!r}")
+          open("/tmp/saudi-english.pdf", "wb").write(data)
+          open("/tmp/saudi-pdf-url.txt", "w", encoding="utf-8").write(pdf_url + "\n")
+          PY
           pdftotext -layout /tmp/saudi-english.pdf /tmp/saudi-english.txt
           mkdir -p tmp
           cp /tmp/saudi-english.txt tmp/saudi-english-pdf.txt
-          printf '\nPDF source: %s\n' "$PDF_URL" >> tmp/saudi-english-pdf.txt
+          printf '\nPDF source: %s\n' "$(cat /tmp/saudi-pdf-url.txt)" >> tmp/saudi-english-pdf.txt
 
       - name: Commit extracted source text
         shell: bash
