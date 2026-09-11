@@ -1,0 +1,130 @@
+name: Repair all English article PDFs and full text
+
+on:
+  push:
+    paths:
+      - ".github/workflows/repair-all-english-articles.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: briq-repair-all-english-articles
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REGION: auto
+      AWS_EC2_METADATA_DISABLED: "true"
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF tools
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          python3 -m py_compile scripts/repair-english-article-archive.py
+          aws --version
+
+      - name: Discover, download, render-check and extract every English article
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 scripts/repair-english-article-archive.py 2>&1 | tee /tmp/english-repair.log
+          status=${PIPESTATUS[0]}
+          if [ -f tmp/english-pdf-repair-report.json ]; then
+            echo "----- repair report -----"
+            cat tmp/english-pdf-repair-report.json
+          fi
+          exit "$status"
+
+      - name: Validate generated archive data
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path('app/archive-data.json').read_text(encoding='utf-8'))
+          full = json.loads(Path('app/article-fulltext-en-archive.json').read_text(encoding='utf-8'))
+          articles = data['articles']
+          assert len(full) == len(articles), (len(full), len(articles))
+          missing = []
+          wrong = []
+          for article in articles:
+              slug = article['slug']
+              if not article.get('source_en') or not article.get('pdf_en_source') or not article.get('pdf_en_local'):
+                  missing.append(slug)
+              if article.get('pdf_en_local') != f'/assets/archive/pdfs/articles/{slug}-en.pdf':
+                  wrong.append(slug)
+              record = full.get(slug)
+              if not record or not record.get('sections'):
+                  missing.append(f'{slug}:fulltext')
+          assert not missing, missing[:20]
+          assert not wrong, wrong[:20]
+          print(f'Validated {len(articles)} English article mappings and {len(full)} full-text records.')
+          PY
+          git diff --check
+
+      - name: Build site with English full text
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run build
+
+      - name: Upload exact English article PDFs to R2
+        shell: bash
+        run: |
+          set -euo pipefail
+          aws s3 sync tmp/english-pdf-sync/ "s3://$R2_BUCKET/assets/archive/pdfs/articles/" \
+            --endpoint-url "$R2_ENDPOINT" \
+            --exclude "*" --include "*-en.pdf" \
+            --content-type application/pdf \
+            --only-show-errors
+
+          count=0
+          while IFS=$'\t' read -r local_file key expected_size expected_sha; do
+            [ -n "$key" ] || continue
+            remote_size="$(aws s3api head-object --bucket "$R2_BUCKET" --key "$key" \
+              --endpoint-url "$R2_ENDPOINT" --query ContentLength --output text)"
+            if [ "$remote_size" != "$expected_size" ]; then
+              echo "R2 size mismatch for $key: local=$expected_size remote=$remote_size" >&2
+              exit 1
+            fi
+            count=$((count + 1))
+            if (( count % 25 == 0 )); then echo "Verified $count R2 English PDFs"; fi
+          done < tmp/english-pdf-upload.tsv
+          echo "Verified all $count English PDFs in R2."
+
+      - name: Commit archive mappings and full text
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "BRIQ Archive Bot"
+          git config user.email "briq@briqjournal.com"
+          git add \
+            app/archive-data.json \
+            app/article-fulltext-en-archive.json \
+            app/components/ArticlePlatform.tsx \
+            public/assets/archive/pdfs/manifest.json \
+            scripts/repair-english-article-archive.py
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo "English article archive is already current."
+            exit 0
+          fi
+          git commit -m "Repair all English article PDFs and full text"
+          git push origin HEAD:main
