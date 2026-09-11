@@ -1,7 +1,7 @@
 {
   "generated_from": "https://briqjournal.com",
   "unique_files": 610,
-  "total_bytes": 3631248535,
+  "total_bytes": 3635792832,
   "files": [
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_82-83.pdf",
@@ -3149,10 +3149,10 @@
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Salman%20K.%20Al-Dhafeeire%20%26%20Sun%20Degang%20-%20Saudi%20Arabia%E2%80%99s%20Complex%20Cultural%20Hedging%20Between%20the%20U.S.%20and%20China.pdf",
       "local": "/assets/archive/pdfs/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi-en.pdf",
-      "bytes": 97139,
-      "sha256": "9bb3b8e84e68729076d508bec634ceb58fc682ca93dd9f6296f35bf2ee5acf38",
-      "status": "reconstructed-from-final-english-manuscript",
-      "note": "Legacy BRIQ English PDF URL is retained as provenance; the archived binary was reconstructed from BRIQ’s final audited English manuscript because the legacy asset was unavailable during migration."
+      "bytes": 4641436,
+      "sha256": "b829801cf51b932bbf53e10b646b0734a397111a4293a8c8bddaa24014fb3c85",
+      "status": "downloaded-exact-designed-article-pdf",
+      "note": "Exact designed English article PDF archived directly from the legacy BRIQ article PDF URL."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Salman%20K.%20Al-Dhafeeire%20%26%20SUN%20DEGANG_Suudi%20Arabistan%E2%80%99%C4%B1n%20ABD%20ile%20%C3%87in%20Aras%C4%B1nda%20%C3%87ok%20Boyutlu%20K%C3%BClt%C3%BCrel%20Dengeleme%20Stratejisi.pdf",
