@@ -28,11 +28,13 @@ URL_AFTER_CONNECTOR = re.compile(r"(https?://[^\s<>\"']*[-_=&#?])\s+(?=[^\s<>\"'
 DOI_STRONG_CONTINUATION = re.compile(r"(10\.\d{4,9}/[^\s<>\"']*[-/_:;])\s+(?=[A-Z0-9])", re.I)
 DOI_DOT_CONTINUATION = re.compile(r"(10\.\d{4,9}/[^\s<>\"']*\.)\s+(?=(?:\d|cnki\b|issn\b))", re.I)
 
+# Audit expressions must require actual whitespace damage. They intentionally do
+# not match valid hosts such as https://doi.org or https://www.example.org.
 SUSPICIOUS_REFERENCE_PATTERNS = [
     re.compile(r"https?\s+:\s*/\s*/|https?\s*:\s+/\s*/|https?\s*:\s*/\s+/", re.I),
     re.compile(r"https?://\s+(?=[a-z0-9-]+\.)", re.I),
-    re.compile(r"https?://(?:dx\s*\.\s*)?doi\s*\.\s*org", re.I),
-    re.compile(r"https?://(?:[a-z0-9-]+\s*\.\s*)+[a-z]{2,63}", re.I),
+    re.compile(r"https?://(?:dx\.)?doi(?:\s+\.\s*|\s*\.\s+)org", re.I),
+    re.compile(r"https?://[^\s<>\"']*(?:[a-z0-9-]\s+\.\s*[a-z0-9-]|[a-z0-9-]\s*\.\s+[a-z0-9-])", re.I),
     re.compile(r"https?://[^\s<>\"']*/\s+(?=[^\s<>\"']*[./?=&%#_-])", re.I),
     re.compile(r"https?://[^\s<>\"']*%[0-9A-F]{2}\s+(?=[^\s<>\"']*[./?=&%#_-])", re.I),
     re.compile(r"\b10\s+\.\s*\d{4,9}\s*/", re.I),
