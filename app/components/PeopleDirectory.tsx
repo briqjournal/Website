@@ -54,7 +54,7 @@ export function PeopleDirectory({
           return (
             <article className="person-card" key={`${name}-${affiliation}`}>
               <a className="person-portrait-link" href={profileHref} aria-label={isEnglish ? `View ${name}'s profile` : `${name} profilini görüntüle`}>
-                {profile?.photo ? <img className="person-portrait" src={profile.photo} alt="" /> : <span className="person-mark">{name.replace(/^(Prof\.?|Doç\.?|Dr\.?)\s+/u, "").slice(0, 1)}</span>}
+                {profile?.photo ? <img className="person-portrait" src={profile.photo} alt="" loading="lazy" decoding="async" /> : <span className="person-mark">{name.replace(/^(Prof\.?|Doç\.?|Dr\.?)\s+/u, "").slice(0, 1)}</span>}
               </a>
               <div className="person-card-copy">
                 <a className="person-name-link" href={profileHref}><h3>{name}</h3></a>

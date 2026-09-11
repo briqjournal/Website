@@ -17,7 +17,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVE_DATA = ROOT / "app" / "archive-data.json"
 PDF_ROOT = ROOT / "public" / "assets" / "archive" / "pdfs"
-MANIFEST = PDF_ROOT / "manifest.json"
+MANIFEST = ROOT / "ops" / "pdf-archive-manifest.json"
 
 REPORTS = [
     {

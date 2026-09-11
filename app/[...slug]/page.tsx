@@ -16,7 +16,9 @@ import { PeopleDirectory } from "../components/PeopleDirectory";
 import { CoverLightbox } from "../components/CoverLightbox";
 import { DergiParkLogo } from "../components/DergiParkLogo";
 import { ArticlePdfPage, ArticlePlatform } from "../components/ArticlePlatform";
-import { findAuthorProfile, bylineAffiliation } from "../authors";
+import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../authors";
+import { archiveArticleListings, archiveIssueListings } from "../archive-listing";
+import { absoluteSiteUrl } from "../site-url";
 import { issueAccent, issueSurface } from "../issue-themes";
 import {
   archiveArticles,
@@ -636,7 +638,7 @@ function AccessPolicy() {
       <EditorialLongform
         navigationTitle="Bu sayfada"
         className="for-authors-longform copyright-page"
-        before={<div className="license-lead"><img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" /><div><span>Lisans</span><h2>Creative Commons Atıf 4.0 Uluslararası</h2><p>CC BY 4.0</p></div></div>}
+        before={<div className="license-lead"><img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" loading="lazy" decoding="async" /><div><span>Lisans</span><h2>Creative Commons Atıf 4.0 Uluslararası</h2><p>CC BY 4.0</p></div></div>}
         sections={[
           {
             id: "haklarin-devri",
@@ -898,7 +900,7 @@ function Archive() {
       />
       <div className="site-shell page-section">
         <div className="archive-tools"><p><b>{archiveIssues.length} sayı</b> · 7 cilt · 2019–2026</p><a className="underlined-link" href="/guncel-sayi">Güncel sayıya git →︎</a></div>
-        <ArchiveExplorer issues={archiveIssues} />
+        <ArchiveExplorer issues={archiveIssueListings} />
       </div>
     </>
   );
@@ -913,7 +915,7 @@ function Articles() {
         intro="BRIQ arşivindeki makale, röportaj, kitap incelemesi ve diğer katkıları başlık, yazar, özet, DOI, yıl ve cilt bilgisiyle arayın."
       />
       <div className="site-shell page-section">
-        <ArticleExplorer articles={archiveArticles} />
+        <ArticleExplorer articles={archiveArticleListings} />
       </div>
     </>
   );
@@ -928,7 +930,7 @@ function AuthorProfilePage({ id }: { id: string }) {
         <div className="site-shell author-page-hero-inner">
           <div className="page-breadcrumb"><a href="/">Ana Sayfa</a><span>/</span><span>Yazar</span></div>
           <div className="author-page-identity">
-            {profile.photo ? <img className="author-page-photo" src={profile.photo} alt={`${profile.name} portresi`} /> : <span className="author-page-monogram" aria-hidden="true">{profile.name.slice(0, 1)}</span>}
+            {profile.photo ? <img className="author-page-photo" src={profile.photo} alt={`${profile.name} portresi`} loading="lazy" decoding="async" /> : <span className="author-page-monogram" aria-hidden="true">{profile.name.slice(0, 1)}</span>}
             <div><p className="section-kicker">{profile.rolesTr.length ? profile.rolesTr.join(" · ") : "Yazar"}</p><h1>{profile.name}</h1><p>{profile.affiliationTr}</p></div>
           </div>
           <div className="author-page-links" aria-label="Yazarın dış bağlantıları">
@@ -990,7 +992,7 @@ function CurrentIssue() {
         <div className="site-shell issue-masthead-grid">
           <div className="issue-cover-column">
             <div className="issue-cover-frame">
-              <img src="/assets/current-issue-tr.jpg" alt="BRIQ Cilt 7 Sayı 4 tam kapak" />
+              <img src="/assets/current-issue-tr.jpg" alt="BRIQ Cilt 7 Sayı 4 tam kapak" loading="lazy" decoding="async" />
             </div>
             <CoverLightbox src="/assets/current-issue-tr.jpg" alt="BRIQ Cilt 7 Sayı 4 kapağı" />
           </div>
@@ -1068,7 +1070,7 @@ function CallsPage() {
         <div className="calls-page-grid">
           {calls.map((call) => (
             <a href={call.url} key={call.title}>
-              {call.image ? <img src={call.image} alt="" /> : <div className="call-fallback">BRIQ</div>}
+              {call.image ? <img src={call.image} alt="" loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}
               <div>
                 <span>{call.status} · Son Tarih: {call.deadline}</span>
                 <h2>{call.title}</h2>
@@ -1129,7 +1131,7 @@ function ArchiveIssue({ volume, issue }: { volume: number; issue: number }) {
       <PageHero kicker="Arşiv" title={`Cilt ${volume} · Sayı ${issue}`} intro={theme} />
       <div className="site-shell page-section issue-detail">
         <aside className="issue-detail-cover">
-          <img src={record.cover_tr} alt={`BRIQ Cilt ${volume} Sayı ${issue} Türkçe kapağı`} />
+          <img src={record.cover_tr} alt={`BRIQ Cilt ${volume} Sayı ${issue} Türkçe kapağı`} loading="lazy" decoding="async" />
           {turkishPdf && <a className="button button-dark" href="#pdf-viewer">Tam sayıyı oku ↓︎</a>}
         </aside>
         <div className="issue-detail-content">
@@ -1221,7 +1223,7 @@ const callEditorialCopy: Record<string, { paragraphs: string[]; topics?: [string
 };
 
 function SearchPage() {
-  return <><PageHero kicker="Arama" title="BRIQ’te Ara" intro="Makaleleri, yazarları, sayıları, kapak başlıklarını, DOI kayıtlarını ve makale çağrılarını tek alanda arayın." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticles} issues={archiveIssues} calls={[...calls, ...pastCalls]} /></div></>;
+  return <><PageHero kicker="Arama" title="BRIQ’te Ara" intro="Makaleleri, yazarları, sayıları, kapak başlıklarını, DOI kayıtlarını ve makale çağrılarını tek alanda arayın." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} /></div></>;
 }
 
 function CallDetail({ slug }: { slug: string }) {
@@ -1326,6 +1328,32 @@ const pageEnglishPaths: Record<string, string> = {
   "yillik-raporlar": "/en/annual-reports",
 };
 
+export function generateStaticParams() {
+  const paths = new Set(Object.keys(pages));
+
+  for (const issue of archiveIssues) {
+    paths.add(`arsiv/cilt-${issue.volume}-sayi-${issue.issue}`);
+  }
+  for (const article of archiveArticles) {
+    paths.add(`makaleler/${article.slug}`);
+    paths.add(`makaleler/${article.slug}/pdf`);
+  }
+  for (const routeSlug of Object.keys(currentIssueArticleAliases)) {
+    paths.add(`makaleler/${routeSlug}`);
+    paths.add(`makaleler/${routeSlug}/pdf`);
+  }
+  for (const article of articles) {
+    const routeSlug = article.url.split("/").filter(Boolean).pop();
+    if (routeSlug) paths.add(`makaleler/${routeSlug}`);
+  }
+  for (const profile of authorProfiles) paths.add(`yazar/${profile.id}`);
+  for (const call of calls) paths.add(call.url.replace(/^\//, ""));
+  for (const call of pastCalls) paths.add(`makale-cagrilari/${call.slug}`);
+  for (const report of annualReports) paths.add(`yillik-raporlar/${report.number}`);
+
+  return [...paths].map((path) => ({ slug: path.split("/") }));
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -1380,7 +1408,7 @@ export async function generateMetadata({
           ...(firstPage ? { citation_firstpage: firstPage } : {}),
           ...(lastPage ? { citation_lastpage: lastPage } : {}),
           ...(article.doi ? { citation_doi: article.doi } : {}),
-          ...(articlePdfUrl(article, "tr") ? { citation_pdf_url: `https://briq-academic-journal.iakfiratt.chatgpt.site${articlePdfUrl(article, "tr")}` } : {}),
+          ...(articlePdfUrl(article, "tr") ? { citation_pdf_url: absoluteSiteUrl(articlePdfUrl(article, "tr")!) } : {}),
         },
       };
     }

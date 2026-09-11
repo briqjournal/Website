@@ -2,9 +2,6 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-const developmentPreviewMeta =
-  /<meta(?=[^>]*\bname=["']codex-preview["'])(?=[^>]*\bcontent=["']development["'])[^>]*>/i;
-
 async function renderPath(pathname) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${pathname}`);
@@ -16,7 +13,7 @@ async function renderPath(pathname) {
   );
 }
 
-test("renders development preview metadata", async () => {
+test("renders production metadata without preview markers", async () => {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
@@ -41,7 +38,9 @@ test("renders development preview metadata", async () => {
     response.headers.get("content-type") ?? "",
     /^text\/html\b/i,
   );
-  assert.match(await response.text(), developmentPreviewMeta);
+  const html = await response.text();
+  assert.doesNotMatch(html, /name=["']codex-preview["']/i);
+  assert.match(html, /<link rel="canonical" href="https:\/\/briqjournal\.com\/?"/i);
 });
 
 test("keeps registered BRIQ DOIs matched to their Crossref article records", async () => {
@@ -163,10 +162,10 @@ test("shows publication types and cover-colour issue badges in both article dire
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
 
-  assert.match(trHtml, /title="Yayın türü">Hakemli Makale/);
+  assert.match(trHtml, /title="Yayın türü">Araştırma Makalesi/);
   assert.match(trHtml, /title="Yayın türü">Röportaj/);
   assert.match(trHtml, /title="Yayın türü">Kitap İncelemesi/);
-  assert.match(enHtml, /title="Publication type">Peer-reviewed Article/);
+  assert.match(enHtml, /title="Publication type">Research Article/);
   assert.match(enHtml, /title="Publication type">Interview/);
   assert.match(enHtml, /title="Publication type">Book Review/);
   for (const html of [trHtml, enHtml]) {

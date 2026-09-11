@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { annualReports, archiveArticles, archiveIssues } from "./archive";
+import { SITE_URL } from "./site-url";
 import { authorProfiles } from "./authors";
 import { calls, pastCalls } from "./site-data";
 
-const base = "https://briq-academic-journal.iakfiratt.chatgpt.site";
+const base = SITE_URL;
 
 const trStatic = [
   "", "dergi", "dergi/briq-hakkinda", "dergi/yayin-ilkeleri",

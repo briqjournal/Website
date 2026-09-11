@@ -3727,8 +3727,7 @@ footer h3 {
   border-left: 1px solid var(--line);
 }
 
-.article-record-compact span,
-.article-metrics span {
+.article-record-compact span {
   color: var(--red);
   font-size: 10px;
   font-weight: 900;

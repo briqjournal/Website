@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 type Locale = "tr" | "en";
 
@@ -210,7 +211,16 @@ export function HomeHeroSlider({ locale = "tr" }: { locale?: Locale }) {
               <a className="issue-cover" href={slide.href} tabIndex={index === active ? 0 : -1}>
                 <span className="cover-shadow cover-shadow-one" />
                 <span className="cover-shadow cover-shadow-two" />
-                <img src={slide.image} alt={slide.imageAlt} />
+                {index === active && (
+                  <Image
+                    src={slide.image}
+                    alt={slide.imageAlt}
+                    width={720}
+                    height={960}
+                    sizes="(max-width: 760px) 62vw, (max-width: 1100px) 34vw, 390px"
+                    priority={index === 0}
+                  />
+                )}
               </a>
             </div>
           </article>

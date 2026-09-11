@@ -35,7 +35,7 @@ export function CoverLightbox({ src, alt, locale = "tr" }: { src: string; alt: s
         <div className="cover-lightbox" role="dialog" aria-modal="true" aria-label={label} onMouseDown={(event) => { if (event.target === event.currentTarget) setOpen(false); }}>
           <div className="cover-lightbox-panel">
             <button ref={closeRef} className="cover-lightbox-close" type="button" onMouseDown={(event) => { event.stopPropagation(); setOpen(false); }} onClick={() => setOpen(false)} aria-label={locale === "en" ? "Close enlarged cover" : "Büyütülmüş kapağı kapat"}>×</button>
-            <img src={src} alt={alt} />
+            <img src={src} alt={alt} decoding="async" />
             <p>{alt}</p>
           </div>
         </div>
