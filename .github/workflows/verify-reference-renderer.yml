@@ -1,5 +1,6 @@
 name: Verify reference renderer
 
+# rerun: 2
 on:
   push:
     paths:
