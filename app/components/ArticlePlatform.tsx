@@ -1,6 +1,8 @@
-import fullTextJson from "../article-fulltext-current.json";
-import saudiEnglishFullTextJson from "../article-fulltext-saudi-en.json";
-import archiveEnglishFullTextJson from "../article-fulltext-en-archive.json";
+import {
+  loadArchiveEnglishFullText,
+  loadCurrentFullText,
+  loadSaudiEnglishFullText,
+} from "../generated-fulltext/loaders";
 import { articleCitation, citationWithDoi } from "../article-citation";
 import {
   archiveArticles,
@@ -62,8 +64,6 @@ type ArticleDetails = {
   publishedOnline?: string;
 };
 
-const currentFullText = fullTextJson as Record<string, CurrentFullTextRecord>;
-const archiveEnglishFullText = archiveEnglishFullTextJson as Record<string, LocalizedFullText>;
 const SAUDI_CULTURAL_HEDGING_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";
 
 function OrcidBadge() {
@@ -219,7 +219,7 @@ function ResearchStatements({ items, locale }: { items: StatementItem[]; locale:
   );
 }
 
-export function ArticlePlatform({
+export async function ArticlePlatform({
   article,
   locale,
   routeSlug = article.slug,
@@ -230,13 +230,16 @@ export function ArticlePlatform({
   routeSlug?: string;
   details?: ArticleDetails;
 }) {
-  const fullRecord = currentFullText[article.slug];
+  const fullRecord = await loadCurrentFullText(article.slug) as CurrentFullTextRecord | undefined;
   const storedFullText = fullRecord?.[locale];
-  const archivedEnglishFullText = archiveEnglishFullText[article.slug];
+  const archivedEnglishFullText = locale === "en" && article.slug !== SAUDI_CULTURAL_HEDGING_SLUG
+    ? await loadArchiveEnglishFullText(article.slug) as LocalizedFullText | undefined
+    : undefined;
+  const saudiEnglishFullText = locale === "en" && article.slug === SAUDI_CULTURAL_HEDGING_SLUG
+    ? await loadSaudiEnglishFullText() as LocalizedFullText
+    : undefined;
   const fullText = locale === "en"
-    ? (article.slug === SAUDI_CULTURAL_HEDGING_SLUG
-        ? (saudiEnglishFullTextJson as LocalizedFullText)
-        : (archivedEnglishFullText || storedFullText))
+    ? (saudiEnglishFullText || archivedEnglishFullText || storedFullText)
     : storedFullText;
   const displayReferences = fullText ? referencesWithUnlistedCitations(fullText.sections, fullText.references, locale) : [];
   const metadata = fullRecord?.metadata;
