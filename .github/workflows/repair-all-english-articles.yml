@@ -38,6 +38,57 @@ jobs:
           python3 -m py_compile scripts/repair-english-article-archive.py
           aws --version
 
+      - name: Exclude non-text visual contributions from article repair
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('scripts/repair-english-article-archive.py')
+          text = path.read_text(encoding='utf-8')
+
+          anchor = 'SAUDI_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi"\n'
+          addition = '''SAUDI_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi"\nNON_TEXT_VISUAL_SLUGS = {\n    "yangisardaki-comlek-atolyesinin-avlusu",\n    "karikatur-1",\n    "turhan-selcuk-karikaturu",\n    "askin-ayrancioglu",\n}\n'''
+          if 'NON_TEXT_VISUAL_SLUGS = {' not in text:
+              assert anchor in text
+              text = text.replace(anchor, addition, 1)
+
+          old = '''    articles = data.get("articles", [])\n    print(f"Discovering English sources for {len(articles)} article records", flush=True)\n    discovered: list[dict[str, Any]] = []\n    discovery_failures: list[dict[str, str]] = []\n    for index, article in enumerate(articles, start=1):\n'''
+          new = '''    articles = data.get("articles", [])\n    targets = [article for article in articles if article.get("slug") not in NON_TEXT_VISUAL_SLUGS]\n    print(\n        f"Discovering English sources for {len(targets)} text article records "\n        f"({len(articles) - len(targets)} non-text visual records excluded)",\n        flush=True,\n    )\n    discovered: list[dict[str, Any]] = []\n    discovery_failures: list[dict[str, str]] = []\n    for index, article in enumerate(targets, start=1):\n'''
+          if old in text:
+              text = text.replace(old, new, 1)
+
+          text = text.replace(
+              'if index % 25 == 0 or index == len(articles):\n            print(f"Discovery {index}/{len(articles)}; ok={len(discovered)} failures={len(discovery_failures)}", flush=True)',
+              'if index % 25 == 0 or index == len(targets):\n            print(f"Discovery {index}/{len(targets)}; ok={len(discovered)} failures={len(discovery_failures)}", flush=True)',
+          )
+          text = text.replace(
+              '"total_articles": len(articles), "discovered": len(discovered)',
+              '"total_articles": len(targets), "discovered": len(discovered)',
+          )
+          text = text.replace(
+              'jobs = [by_slug[article["slug"]] for article in articles]',
+              'jobs = [by_slug[article["slug"]] for article in targets]',
+          )
+          text = text.replace(
+              '"total_articles": len(articles), "succeeded": len(results)',
+              '"total_articles": len(targets), "succeeded": len(results)',
+          )
+          text = text.replace(
+              '    for article in articles:\n        item = result_by_slug[article["slug"]]',
+              '    for article in targets:\n        item = result_by_slug[article["slug"]]',
+          )
+          text = text.replace(
+              '"total_articles": len(articles),\n        "english_pages": len(discovered),',
+              '"total_articles": len(targets),\n        "excluded_non_text_visual_records": sorted(NON_TEXT_VISUAL_SLUGS),\n        "english_pages": len(discovered),',
+          )
+
+          path.write_text(text, encoding='utf-8')
+          PY
+          python3 -m py_compile scripts/repair-english-article-archive.py
+          git diff --check
+
       - name: Discover, download, render-check and extract every English article
         shell: bash
         run: |
@@ -58,13 +109,20 @@ jobs:
           import json
           from pathlib import Path
 
+          excluded = {
+              'yangisardaki-comlek-atolyesinin-avlusu',
+              'karikatur-1',
+              'turhan-selcuk-karikaturu',
+              'askin-ayrancioglu',
+          }
           data = json.loads(Path('app/archive-data.json').read_text(encoding='utf-8'))
           full = json.loads(Path('app/article-fulltext-en-archive.json').read_text(encoding='utf-8'))
           articles = data['articles']
-          assert len(full) == len(articles), (len(full), len(articles))
+          targets = [article for article in articles if article['slug'] not in excluded]
+          assert len(full) == len(targets), (len(full), len(targets))
           missing = []
           wrong = []
-          for article in articles:
+          for article in targets:
               slug = article['slug']
               if not article.get('source_en') or not article.get('pdf_en_source') or not article.get('pdf_en_local'):
                   missing.append(slug)
@@ -75,7 +133,7 @@ jobs:
                   missing.append(f'{slug}:fulltext')
           assert not missing, missing[:20]
           assert not wrong, wrong[:20]
-          print(f'Validated {len(articles)} English article mappings and {len(full)} full-text records.')
+          print(f'Validated {len(targets)} English text-publication mappings and {len(full)} full-text records; {len(excluded)} non-text visual contributions excluded.')
           PY
           git diff --check
 
