@@ -1,0 +1,118 @@
+name: Update Volume 7 Issue 4 history
+
+on:
+  push:
+    paths:
+      - ".github/workflows/update-v7i4-history.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Update publication history
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          archive_path = Path("app/archive-data.json")
+          data = json.loads(archive_path.read_text(encoding="utf-8"))
+
+          updates = {
+              "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi": {
+                  "revised_date": "2026-04-29",
+              },
+              "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik": {
+                  "revised_date": "2026-08-03",
+              },
+              "dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi": {
+                  "revised_date": "2026-06-19",
+              },
+              "filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun": {
+                  "revised_date": "2026-07-20",
+              },
+              "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce": {
+                  "revised_date": "2026-08-02",
+                  "accepted_date": "2026-08-06",
+              },
+          }
+
+          articles = data.get("articles", [])
+          by_slug = {article.get("slug"): article for article in articles}
+          missing = [slug for slug in updates if slug not in by_slug]
+          if missing:
+              raise SystemExit(f"Missing article slug(s): {missing}")
+
+          for slug, fields in updates.items():
+              article = by_slug[slug]
+              if article.get("volume") != 7 or article.get("issue") != 4:
+                  raise SystemExit(f"Unexpected volume/issue for {slug}: {article.get('volume')}/{article.get('issue')}")
+              article.update(fields)
+
+          archive_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+          # ArticlePlatform gives current-fulltext metadata precedence over archive
+          # accepted_date. Keep Can Ulusoy's accepted date consistent if such an
+          # override exists in the current full-text record.
+          current_path = Path("app/article-fulltext-current.json")
+          current = json.loads(current_path.read_text(encoding="utf-8"))
+          can_slug = "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce"
+          record = current.get(can_slug)
+          if isinstance(record, dict):
+              metadata = record.get("metadata")
+              if isinstance(metadata, dict) and metadata.get("accepted"):
+                  print(f"Can Ulusoy current metadata accepted override: {metadata['accepted']!r} -> '2026-08-06'")
+                  metadata["accepted"] = "2026-08-06"
+                  current_path.write_text(json.dumps(current, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+              else:
+                  print("Can Ulusoy has no current-fulltext accepted override; archive accepted_date is authoritative.")
+          else:
+              print("Can Ulusoy has no current-fulltext record; archive accepted_date is authoritative.")
+
+          for slug, fields in updates.items():
+              article = by_slug[slug]
+              for field, expected in fields.items():
+                  actual = article.get(field)
+                  if actual != expected:
+                      raise SystemExit(f"Verification failed for {slug} {field}: {actual!r} != {expected!r}")
+              print(slug, {field: article.get(field) for field in fields})
+          PY
+
+      - name: Check diff
+        run: git diff --check
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Commit update
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "BRIQ Journal"
+          git config user.email "briq@briqjournal.com"
+          git add app/archive-data.json app/article-fulltext-current.json
+          if git diff --cached --quiet; then
+            echo "No publication-history changes to commit." >&2
+            exit 1
+          fi
+          git commit -m "Fill Volume 7 issue 4 revision dates"
+          git push origin HEAD:main
