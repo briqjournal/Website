@@ -38,7 +38,7 @@ jobs:
           python3 -m py_compile scripts/repair-english-article-archive.py
           aws --version
 
-      - name: Exclude non-text visual contributions from article repair
+      - name: Harden article filtering and source validation
         shell: bash
         run: |
           set -euo pipefail
@@ -48,14 +48,16 @@ jobs:
           path = Path('scripts/repair-english-article-archive.py')
           text = path.read_text(encoding='utf-8')
 
+          # Visual-only records live in archive-data's historical "articles" array,
+          # but are not textual publications and therefore have no full text to extract.
           anchor = 'SAUDI_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi"\n'
-          addition = '''SAUDI_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi"\nNON_TEXT_VISUAL_SLUGS = {\n    "yangisardaki-comlek-atolyesinin-avlusu",\n    "karikatur-1",\n    "turhan-selcuk-karikaturu",\n    "askin-ayrancioglu",\n}\n'''
-          if 'NON_TEXT_VISUAL_SLUGS = {' not in text:
+          addition = '''SAUDI_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi"\n\n\ndef is_non_text_visual(article: dict[str, Any]) -> bool:\n    text = " ".join(\n        str(article.get(key) or "")\n        for key in ("slug", "title_tr", "title_en", "citation_tr", "citation_en", "abstract_tr", "abstract_en")\n    ).lower()\n    return bool(re.search(\n        r"fotoğraf|photograph|karikatür|cartoon|(?:^|\\W)afiş(?:\\W|$)|poster|(?:^|\\W)resim(?:\\W|$)|tablosu|painting|visual contribution",\n        text,\n        flags=re.I,\n    ))\n'''
+          if 'def is_non_text_visual(' not in text:
               assert anchor in text
               text = text.replace(anchor, addition, 1)
 
           old = '''    articles = data.get("articles", [])\n    print(f"Discovering English sources for {len(articles)} article records", flush=True)\n    discovered: list[dict[str, Any]] = []\n    discovery_failures: list[dict[str, str]] = []\n    for index, article in enumerate(articles, start=1):\n'''
-          new = '''    articles = data.get("articles", [])\n    targets = [article for article in articles if article.get("slug") not in NON_TEXT_VISUAL_SLUGS]\n    print(\n        f"Discovering English sources for {len(targets)} text article records "\n        f"({len(articles) - len(targets)} non-text visual records excluded)",\n        flush=True,\n    )\n    discovered: list[dict[str, Any]] = []\n    discovery_failures: list[dict[str, str]] = []\n    for index, article in enumerate(targets, start=1):\n'''
+          new = '''    articles = data.get("articles", [])\n    targets = [article for article in articles if not is_non_text_visual(article)]\n    print(\n        f"Discovering English sources for {len(targets)} textual publication records "\n        f"({len(articles) - len(targets)} visual-only records excluded)",\n        flush=True,\n    )\n    discovered: list[dict[str, Any]] = []\n    discovery_failures: list[dict[str, str]] = []\n    for index, article in enumerate(targets, start=1):\n'''
           if old in text:
               text = text.replace(old, new, 1)
 
@@ -81,8 +83,17 @@ jobs:
           )
           text = text.replace(
               '"total_articles": len(articles),\n        "english_pages": len(discovered),',
-              '"total_articles": len(targets),\n        "excluded_non_text_visual_records": sorted(NON_TEXT_VISUAL_SLUGS),\n        "english_pages": len(discovered),',
+              '"total_articles": len(targets),\n        "excluded_visual_records": sorted(article["slug"] for article in articles if is_non_text_visual(article)),\n        "english_pages": len(discovered),',
           )
+
+          # Some older designed PDFs use fonts whose title glyphs extract badly.
+          # Confirm identity against either the English title OR the English abstract.
+          # This still rejects genuinely wrong-language links (e.g. a Turkish PDF
+          # accidentally linked from an English legacy page).
+          old_identity = '''    if not validate_title(normalized_text, job.get("title_en")):\n        raise RuntimeError(f"{slug}: English page title could not be matched to downloaded PDF text")\n'''
+          new_identity = '''    title_matches = validate_title(normalized_text, job.get("title_en"))\n    abstract_matches = bool(job.get("abstract_en")) and validate_title(normalized_text, job.get("abstract_en"))\n    if not title_matches and not abstract_matches:\n        raise RuntimeError(\n            f"{slug}: neither English page title nor English abstract could be matched to downloaded PDF text"\n        )\n'''
+          if old_identity in text:
+              text = text.replace(old_identity, new_identity, 1)
 
           path.write_text(text, encoding='utf-8')
           PY
@@ -107,18 +118,23 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           import json
+          import re
           from pathlib import Path
 
-          excluded = {
-              'yangisardaki-comlek-atolyesinin-avlusu',
-              'karikatur-1',
-              'turhan-selcuk-karikaturu',
-              'askin-ayrancioglu',
-          }
+          def is_visual(article):
+              text = ' '.join(str(article.get(key) or '') for key in (
+                  'slug', 'title_tr', 'title_en', 'citation_tr', 'citation_en', 'abstract_tr', 'abstract_en'
+              )).lower()
+              return bool(re.search(
+                  r'fotoğraf|photograph|karikatür|cartoon|(?:^|\W)afiş(?:\W|$)|poster|(?:^|\W)resim(?:\W|$)|tablosu|painting|visual contribution',
+                  text,
+                  flags=re.I,
+              ))
+
           data = json.loads(Path('app/archive-data.json').read_text(encoding='utf-8'))
           full = json.loads(Path('app/article-fulltext-en-archive.json').read_text(encoding='utf-8'))
           articles = data['articles']
-          targets = [article for article in articles if article['slug'] not in excluded]
+          targets = [article for article in articles if not is_visual(article)]
           assert len(full) == len(targets), (len(full), len(targets))
           missing = []
           wrong = []
@@ -133,7 +149,7 @@ jobs:
                   missing.append(f'{slug}:fulltext')
           assert not missing, missing[:20]
           assert not wrong, wrong[:20]
-          print(f'Validated {len(targets)} English text-publication mappings and {len(full)} full-text records; {len(excluded)} non-text visual contributions excluded.')
+          print(f'Validated {len(targets)} English textual-publication mappings/full texts; {len(articles) - len(targets)} visual-only contributions excluded.')
           PY
           git diff --check
 
