@@ -28,7 +28,9 @@ export function normalizeReferenceText(value: string) {
     .replace(/\s{2,}/g, " ")
     .trim();
 
-  text = text.replace(/\b(https?)\s*:\s*\/\s*\//gi, (_match, protocol: string) => `${protocol.toLowerCase()}://`);
+  text = text
+    .replace(/\b(https?)\s*:\s*\/\s*\//gi, (_match, protocol: string) => `${protocol.toLowerCase()}://`)
+    .replace(/(https?:\/\/)\s+(?=[a-z0-9-]+\.)/gi, "$1");
   text = compactUrlHosts(text);
   text = text
     .replace(/https?:\/\/(?:dx\.)?doi\.org\s*\/\s*/gi, "https://doi.org/")
@@ -36,11 +38,14 @@ export function normalizeReferenceText(value: string) {
     .replace(/\b10\s*\.\s*(\d{4,9})\s*\/\s*/gi, "10.$1/");
 
   // Repair spaces introduced by PDF line wrapping around URL punctuation and
-  // within DOI suffixes. The DOI rules are deliberately constrained to strong
-  // continuation signals so normal prose after a DOI is never concatenated.
-  for (let pass = 0; pass < 4; pass += 1) {
+  // within DOI suffixes. Continuations are constrained to URL-shaped tokens so
+  // ordinary prose following a link is not accidentally concatenated.
+  for (let pass = 0; pass < 5; pass += 1) {
     text = text
       .replace(/(https?:\/\/[^\s<>\[\]{}]+)\s+([/?#&=:%])\s*/gi, "$1$2")
+      .replace(/(https?:\/\/[^\s<>"']*\/)\s+(?=[^\s<>"']*[./?=&%#_-])/gi, "$1")
+      .replace(/(https?:\/\/[^\s<>"']*%[0-9A-F]{2})\s+(?=[^\s<>"']*[./?=&%#_-])/gi, "$1")
+      .replace(/(https?:\/\/[^\s<>"']*[-_=&#?])\s+(?=[^\s<>"']*[./?=&%#_-])/gi, "$1")
       .replace(/(10\.\d{4,9}\/[^\s<>"']*[-/_:;])\s+(?=[A-Z0-9])/gi, "$1")
       .replace(/(10\.\d{4,9}\/[^\s<>"']*\.)\s+(?=(?:\d|cnki\b|issn\b))/gi, "$1");
   }
