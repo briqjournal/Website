@@ -1,0 +1,143 @@
+name: Replace Saudi article with designed English PDF
+
+on:
+  push:
+    paths:
+      - ".github/workflows/replace-saudi-designed-pdf.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REGION: auto
+      AWS_EC2_METADATA_DISABLED: "true"
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      ISSUE_SOURCE: https://briqjournal.com/sites/default/files/dergi-sayilari/2026-08/BRIQ%20Volume7%20Issue4%20AUTUMN%202026.pdf
+      ARTICLE_SOURCE: https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Salman%20K.%20Al-Dhafeeire%20%26%20Sun%20Degang%20-%20Saudi%20Arabia%E2%80%99s%20Complex%20Cultural%20Hedging%20Between%20the%20U.S.%20and%20China.pdf
+      EN_LOCAL: /assets/archive/pdfs/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi-en.pdf
+    steps:
+      - name: Check out repository and LFS
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Install PDF tools
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils qpdf
+
+      - name: Download designed English issue and extract article
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --retry-delay 2 \
+            -A "Mozilla/5.0 (compatible; BRIQArchive/1.0)" \
+            "$ISSUE_SOURCE" -o /tmp/briq-en-issue.pdf
+          test "$(head -c 5 /tmp/briq-en-issue.pdf)" = "%PDF-"
+          pdfinfo /tmp/briq-en-issue.pdf | grep -E '^(Pages|Page size):'
+
+          PAGES="$(pdfinfo /tmp/briq-en-issue.pdf | awk '/^Pages:/ {print $2}')"
+          START=""
+          for i in $(seq 1 "$PAGES"); do
+            pdftotext -f "$i" -l "$i" -layout /tmp/briq-en-issue.pdf /tmp/page.txt 2>/dev/null || true
+            if grep -Fqi "Complex Cultural Hedging Between" /tmp/page.txt \
+              && grep -Fqi "Abstract" /tmp/page.txt \
+              && grep -Fqi "Keywords" /tmp/page.txt; then
+              START="$i"
+              break
+            fi
+          done
+          test -n "$START"
+          END=$((START + 29))
+          test "$END" -le "$PAGES"
+
+          pdftotext -f "$((END + 1))" -l "$((END + 1))" -layout /tmp/briq-en-issue.pdf /tmp/next-page.txt 2>/dev/null || true
+          grep -Fqi "Power Transition and Geoeconomic Connectivity" /tmp/next-page.txt
+
+          OUT="public${EN_LOCAL}"
+          mkdir -p "$(dirname "$OUT")" tmp
+          qpdf --empty --pages /tmp/briq-en-issue.pdf "$START-$END" -- "$OUT"
+
+          test "$(head -c 5 "$OUT")" = "%PDF-"
+          test "$(pdfinfo "$OUT" | awk '/^Pages:/ {print $2}')" = "30"
+          pdftotext -f 1 -l 1 -layout "$OUT" /tmp/article-first.txt
+          grep -Fqi "Complex Cultural Hedging Between" /tmp/article-first.txt
+          grep -Fqi "Abstract" /tmp/article-first.txt
+          pdftotext -f 30 -l 30 -layout "$OUT" /tmp/article-last.txt
+          grep -Fqi "References" /tmp/article-last.txt || grep -Eqi "[A-Za-z].*\([12][0-9]{3}\)" /tmp/article-last.txt
+
+          pdftoppm -f 1 -singlefile -jpeg -jpegopt quality=45 -r 48 "$OUT" /tmp/saudi-designed-preview >/dev/null 2>&1
+          base64 -w0 /tmp/saudi-designed-preview.jpg > tmp/saudi-designed-preview.jpg.b64
+          echo "EXTRACTED_RANGE=$START-$END"
+          pdfinfo "$OUT" | grep -E '^(Pages|Page size|File size):'
+
+      - name: Update manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+
+          root = Path.cwd()
+          local = os.environ['EN_LOCAL']
+          pdf = root / 'public' / local.lstrip('/')
+          manifest_path = root / 'public/assets/archive/pdfs/manifest.json'
+          manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+          row = {
+              'source': os.environ['ISSUE_SOURCE'],
+              'canonical_article_source': os.environ['ARTICLE_SOURCE'],
+              'local': local,
+              'bytes': pdf.stat().st_size,
+              'sha256': hashlib.sha256(pdf.read_bytes()).hexdigest(),
+              'status': 'extracted-from-designed-english-issue',
+              'note': 'Designed article pages extracted losslessly from BRIQ Volume 7 Issue 4 English edition (printed pp. 377-406).'
+          }
+          found = False
+          for i, existing in enumerate(manifest['files']):
+              if existing.get('local') == local:
+                  manifest['files'][i] = row
+                  found = True
+                  break
+          if not found:
+              manifest['files'].append(row)
+          manifest['files'].sort(key=lambda x: x.get('local',''))
+          manifest['unique_files'] = len(manifest['files'])
+          manifest['total_bytes'] = sum(int(x.get('bytes') or 0) for x in manifest['files'])
+          manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(row)
+          PY
+          git diff --check
+
+      - name: Upload designed PDF to R2
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="public${EN_LOCAL}"
+          KEY="${EN_LOCAL#/}"
+          aws s3 cp "$OUT" "s3://$R2_BUCKET/$KEY" --endpoint-url "$R2_ENDPOINT" --content-type application/pdf --only-show-errors
+          REMOTE_SIZE="$(aws s3api head-object --bucket "$R2_BUCKET" --key "$KEY" --endpoint-url "$R2_ENDPOINT" --query ContentLength --output text)"
+          LOCAL_SIZE="$(stat -c%s "$OUT")"
+          test "$REMOTE_SIZE" = "$LOCAL_SIZE"
+          echo "Verified R2 object: $KEY ($REMOTE_SIZE bytes)"
+
+      - name: Commit designed PDF replacement
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git lfs install --local
+          git add "public${EN_LOCAL}" public/assets/archive/pdfs/manifest.json tmp/saudi-designed-preview.jpg.b64
+          git commit -m "Replace Saudi article with designed English PDF"
+          git push origin HEAD:main
