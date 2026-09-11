@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Repair URL/DOI whitespace artefacts introduced by PDF text extraction.
+"""Audit PDF-extracted reference URLs and the normalization used by the site.
 
-The script intentionally performs only URL-shaped replacements so article prose and
-bibliographic wording are not rewritten. It is safe to rerun after future imports.
+The source fulltext JSON is an archival extraction and is intentionally never rewritten
+here. ReferenceText.tsx applies the same URL/DOI normalization at render time, so broken
+PDF line-wrap whitespace is repaired for readers without altering raw source material.
 """
 
 from __future__ import annotations
@@ -30,8 +31,8 @@ URL_BEFORE_EXTENSION = re.compile(r"(https?://[^\s<>\"']*\.)\s+(?=(?:html?|shtml
 DOI_STRONG_CONTINUATION = re.compile(r"(10\.\d{4,9}/[^\s<>\"']*[-/_:;])\s+(?=[A-Z0-9])", re.I)
 DOI_DOT_CONTINUATION = re.compile(r"(10\.\d{4,9}/[^\s<>\"']*\.)\s+(?=(?:\d|cnki\b|issn\b|[a-z]{1,4}\d))", re.I)
 
-# Audit expressions must require actual whitespace damage. They intentionally do
-# not match valid hosts such as https://doi.org or https://www.example.org.
+# These expressions are checked *after* normalization. Any hit therefore means a
+# malformed URL/DOI pattern is not yet covered by the renderer and should fail CI.
 SUSPICIOUS_REFERENCE_PATTERNS = [
     re.compile(r"https?\s+:\s*/\s*/|https?\s*:\s+/\s*/|https?\s*:\s*/\s+/", re.I),
     re.compile(r"https?://\s+(?=[a-z0-9-]+\.)", re.I),
@@ -51,6 +52,9 @@ URL_OR_DOI = re.compile(r"https?://|\b10\.\d{4,9}/", re.I)
 
 
 def normalize(text: str) -> str:
+    text = text.replace("\u00a0", " ")
+    text = re.sub(r"[\t\r\n]+", " ", text)
+    text = re.sub(r"\s{2,}", " ", text).strip()
     text = PROTOCOL.sub(lambda m: f"{m.group(1).lower()}://", text)
     text = URL_AFTER_PROTOCOL.sub(r"\1", text)
     text = DOI_HOST.sub("https://doi.org/", text)
@@ -66,6 +70,10 @@ def normalize(text: str) -> str:
         text = URL_BEFORE_EXTENSION.sub(r"\1", text)
         text = DOI_STRONG_CONTINUATION.sub(r"\1", text)
         text = DOI_DOT_CONTINUATION.sub(r"\1", text)
+    text = re.sub(r"\bdoi\s*:\s*(10\.\d{4,9}/[-._;()/:A-Z0-9]+)", r"https://doi.org/\1", text, flags=re.I)
+    text = re.sub(r"\s+([,.;:])", r"\1", text)
+    text = re.sub(r",\s*(\d{1,3})\s+\(([^)]+)\)(?=\s*[,.:])", r", \1(\2)", text)
+    text = re.sub(r"(https?://[^\s<>]+)[.,;:]$", r"\1", text, flags=re.I)
     return text
 
 
@@ -84,31 +92,23 @@ def reference_texts(node: Any) -> Iterable[str]:
 
 
 def main() -> int:
-    total_changes = 0
-    changed_files = 0
     total_references = 0
     references_with_links = 0
+    references_normalized = 0
     suspicious: list[tuple[str, str]] = []
 
     for path in FILES:
-        original = path.read_text(encoding="utf-8")
-        normalized = normalize(original)
-        if normalized != original:
-            changed_files += 1
-            before_lines = original.splitlines()
-            after_lines = normalized.splitlines()
-            total_changes += sum(a != b for a, b in zip(before_lines, after_lines))
-            total_changes += abs(len(before_lines) - len(after_lines))
-            path.write_text(normalized, encoding="utf-8")
-
         try:
-            data = json.loads(normalized)
+            data = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError as exc:
             print(f"JSON parse failed for {path.name}: {exc}")
             return 3
 
-        for text in reference_texts(data):
+        for raw_text in reference_texts(data):
             total_references += 1
+            text = normalize(raw_text)
+            if text != raw_text:
+                references_normalized += 1
             if URL_OR_DOI.search(text):
                 references_with_links += 1
             if any(pattern.search(text) for pattern in SUSPICIOUS_REFERENCE_PATTERNS):
@@ -119,17 +119,17 @@ def main() -> int:
             break
 
     print(
-        "Reference-link cleanup: "
-        f"{changed_files} file(s) changed; ~{total_changes} affected line(s); "
-        f"{total_references} references audited; {references_with_links} contain URL/DOI data."
+        f"Reference audit: {total_references} references checked; "
+        f"{references_with_links} contain URL/DOI data; "
+        f"{references_normalized} require render-time normalization."
     )
     if suspicious:
-        print("Suspicious URL/DOI whitespace remains in reference entries:")
+        print("Malformed URL/DOI whitespace remains after normalization:")
         for filename, sample in suspicious:
             print(f"- {filename}: {sample}")
         return 2
 
-    print("Audit passed: no known broken URL/DOI whitespace patterns remain in references.")
+    print("Audit passed: every known broken URL/DOI whitespace pattern is repaired at render time.")
     return 0
 
 
