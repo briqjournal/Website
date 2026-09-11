@@ -1,4 +1,4 @@
-name: Repair all English article PDFs and full text
+name: Publish verified English article PDFs and full text
 
 on:
   push:
@@ -9,11 +9,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: briq-repair-all-english-articles
+  group: briq-publish-ready-english-articles
   cancel-in-progress: false
 
 jobs:
-  repair:
+  publish:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
@@ -30,302 +30,27 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install PDF tools
+      - name: Install and verify PDF tooling
         run: |
           set -euo pipefail
           sudo apt-get update -qq
-          sudo apt-get install -y -qq poppler-utils qpdf
-          python3 -m py_compile scripts/repair-english-article-archive.py
+          sudo apt-get install -y -qq poppler-utils
+          python3 -m py_compile scripts/repair-english-article-archive.py scripts/publish-ready-english-articles.py
           aws --version
 
-      - name: Harden article filtering and source validation
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          from pathlib import Path
-
-          path = Path('scripts/repair-english-article-archive.py')
-          text = path.read_text(encoding='utf-8')
-
-          anchor = 'SAUDI_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi"\n'
-          addition = '''SAUDI_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi"\n\n\ndef is_non_text_visual(article: dict[str, Any]) -> bool:\n    text = " ".join(\n        str(article.get(key) or "")\n        for key in ("slug", "title_tr", "title_en", "citation_tr", "citation_en", "abstract_tr", "abstract_en")\n    ).lower()\n    return bool(re.search(\n        r"fotoğraf|photograph|karikatür|cartoon|(?:^|\\W)afiş(?:\\W|$)|poster|(?:^|\\W)resim(?:\\W|$)|tablosu|painting|visual contribution",\n        text,\n        flags=re.I,\n    ))\n'''
-          if 'def is_non_text_visual(' not in text:
-              assert anchor in text
-              text = text.replace(anchor, addition, 1)
-
-          old = '''    articles = data.get("articles", [])\n    print(f"Discovering English sources for {len(articles)} article records", flush=True)\n    discovered: list[dict[str, Any]] = []\n    discovery_failures: list[dict[str, str]] = []\n    for index, article in enumerate(articles, start=1):\n'''
-          new = '''    articles = data.get("articles", [])\n    targets = [article for article in articles if not is_non_text_visual(article)]\n    print(\n        f"Discovering English sources for {len(targets)} textual publication records "\n        f"({len(articles) - len(targets)} visual-only records excluded)",\n        flush=True,\n    )\n    discovered: list[dict[str, Any]] = []\n    discovery_failures: list[dict[str, str]] = []\n    for index, article in enumerate(targets, start=1):\n'''
-          if old in text:
-              text = text.replace(old, new, 1)
-
-          text = text.replace(
-              'if index % 25 == 0 or index == len(articles):\n            print(f"Discovery {index}/{len(articles)}; ok={len(discovered)} failures={len(discovery_failures)}", flush=True)',
-              'if index % 25 == 0 or index == len(targets):\n            print(f"Discovery {index}/{len(targets)}; ok={len(discovered)} failures={len(discovery_failures)}", flush=True)',
-          )
-          text = text.replace(
-              '"total_articles": len(articles), "discovered": len(discovered)',
-              '"total_articles": len(targets), "discovered": len(discovered)',
-          )
-          text = text.replace(
-              'jobs = [by_slug[article["slug"]] for article in articles]',
-              'jobs = [by_slug[article["slug"]] for article in targets]',
-          )
-          text = text.replace(
-              '"total_articles": len(articles), "succeeded": len(results)',
-              '"total_articles": len(targets), "succeeded": len(results)',
-          )
-          text = text.replace(
-              '    for article in articles:\n        item = result_by_slug[article["slug"]]',
-              '    for article in targets:\n        item = result_by_slug[article["slug"]]',
-          )
-          text = text.replace(
-              '"total_articles": len(articles),\n        "english_pages": len(discovered),',
-              '"total_articles": len(targets),\n        "excluded_visual_records": sorted(article["slug"] for article in articles if is_non_text_visual(article)),\n        "english_pages": len(discovered),',
-          )
-
-          path.write_text(text, encoding='utf-8')
-          PY
-          python3 -m py_compile scripts/repair-english-article-archive.py
-          git diff --check
-
-      - name: Add designed English issue fallback for broken legacy article links
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          from pathlib import Path
-
-          path = Path('scripts/repair-english-article-archive.py')
-          text = path.read_text(encoding='utf-8')
-
-          # Enrich each discovered article with its English issue PDF and English citation
-          # so a bad/incorrect historical article download can be recovered losslessly
-          # from the designed English issue.
-          needle = '    by_slug = {item["slug"]: item for item in discovered}\n'
-          enrichment = '''    article_by_slug = {article["slug"]: article for article in targets}\n    issue_en_sources = {\n        (issue.get("volume"), issue.get("issue")): issue.get("pdf_en_source")\n        for issue in data.get("issues", [])\n    }\n    for item in discovered:\n        article = article_by_slug[item["slug"]]\n        item["volume"] = article.get("volume")\n        item["issue"] = article.get("issue")\n        item["citation_en"] = article.get("citation_en")\n        item["pages_label"] = article.get("pages")\n        item["issue_en_source"] = issue_en_sources.get((article.get("volume"), article.get("issue")))\n    by_slug = {item["slug"]: item for item in discovered}\n'''
-          if 'issue_en_sources = {' not in text:
-              assert needle in text
-              text = text.replace(needle, enrichment, 1)
-
-          # Replace the downloader with a version that first uses the exact English
-          # article PDF, but falls back to extracting the corresponding designed pages
-          # from the English issue when the legacy article link is wrong.
-          start = text.index('def download_and_extract(job: dict[str, Any]) -> dict[str, Any]:')
-          end = text.index('\ndef discover_article(article: dict[str, Any]) -> dict[str, Any]:', start)
-          replacement = r'''ISSUE_PDF_LOCK = threading.Lock()
-
-
-def english_page_count(job: dict[str, Any]) -> int | None:
-    citation = str(job.get("citation_en") or "")
-    spans = re.findall(r"(?<!\d)(\d{1,3})\s*[-–—]\s*(\d{1,3})(?!\d)", citation)
-    if spans:
-        first, last = map(int, spans[-1])
-        if 0 < first <= last and last - first < 100:
-            return last - first + 1
-    label = str(job.get("pages_label") or "")
-    spans = re.findall(r"(?<!\d)(\d{1,3})\s*[-–—]\s*(\d{1,3})(?!\d)", label)
-    if spans:
-        first, last = map(int, spans[-1])
-        if 0 < first <= last and last - first < 100:
-            return last - first + 1
-    return None
-
-
-def text_identity_score(page_text: str, job: dict[str, Any]) -> tuple[int, int]:
-    normalized = normalize_ascii(page_text)
-    title_tokens = significant_title_tokens(job.get("title_en"))
-    abstract_tokens = significant_title_tokens(job.get("abstract_en"))
-    title_hits = sum(1 for token in title_tokens if token in normalized)
-    abstract_hits = sum(1 for token in abstract_tokens if token in normalized)
-    return title_hits, abstract_hits
-
-
-def inspect_article_pdf(path: Path, job: dict[str, Any]) -> tuple[dict[str, Any], str, str]:
-    slug = job["slug"]
-    info = pdf_info(path)
-    if info["pages"] < 1:
-        raise RuntimeError(f"{slug}: PDF has no pages")
-    with tempfile.TemporaryDirectory(prefix="briq-render-") as temp_dir:
-        preview_prefix = Path(temp_dir) / "page"
-        run(["pdftoppm", "-f", "1", "-singlefile", "-png", "-r", "72", str(path), str(preview_prefix)], timeout=180)
-        preview = preview_prefix.with_suffix(".png")
-        if not preview.is_file() or preview.stat().st_size < 1000:
-            raise RuntimeError(f"{slug}: first-page render verification failed")
-        text_path = Path(temp_dir) / "article.txt"
-        proc = subprocess.run(
-            ["pdftotext", "-layout", str(path), str(text_path)],
-            text=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            timeout=240,
-        )
-        if proc.returncode != 0:
-            raise RuntimeError(f"{slug}: pdftotext failed: {proc.stderr[-500:]}")
-        layout_text = text_path.read_text(encoding="utf-8", errors="replace")
-    normalized_text = normalize_space(layout_text)
-    if len(normalized_text) < 80:
-        raise RuntimeError(f"{slug}: PDF contains too little selectable text ({len(normalized_text)} chars)")
-    en_score, tr_score = english_score(normalized_text[:50000])
-    if len(normalized_text) > 1000 and en_score < 8 and tr_score > en_score * 1.4:
-        raise RuntimeError(f"{slug}: extracted text appears non-English (en={en_score}, tr={tr_score})")
-    title_matches = validate_title(normalized_text, job.get("title_en"))
-    abstract_matches = bool(job.get("abstract_en")) and validate_title(normalized_text, job.get("abstract_en"))
-    if not title_matches and not abstract_matches:
-        raise RuntimeError(
-            f"{slug}: neither English page title nor English abstract could be matched to downloaded PDF text"
-        )
-    return info, layout_text, normalized_text
-
-
-def issue_pdf_for(job: dict[str, Any]) -> Path:
-    source = job.get("issue_en_source")
-    if not source:
-        raise RuntimeError(f"{job['slug']}: no English issue PDF source is available for fallback")
-    issue_dir = STAGE / "_issues"
-    issue_dir.mkdir(parents=True, exist_ok=True)
-    path = issue_dir / f"volume-{job.get('volume')}-issue-{job.get('issue')}-en.pdf"
-    with ISSUE_PDF_LOCK:
-        if not path.exists() or path.stat().st_size < 10_000:
-            payload = curl_bytes(source, referer=job.get("source_en"), timeout=420)
-            if len(payload) < 10_000 or not payload.startswith(b"%PDF-"):
-                raise RuntimeError(f"{job['slug']}: English issue fallback is not a valid PDF")
-            path.write_bytes(payload)
-            pdf_info(path)
-    return path
-
-
-def extract_from_english_issue(job: dict[str, Any], destination: Path) -> None:
-    slug = job["slug"]
-    issue_path = issue_pdf_for(job)
-    expected_count = english_page_count(job)
-    if not expected_count:
-        raise RuntimeError(f"{slug}: cannot determine English article page count for issue fallback")
-
-    with tempfile.TemporaryDirectory(prefix="briq-issue-text-") as temp_dir:
-        issue_text = Path(temp_dir) / "issue.txt"
-        proc = subprocess.run(
-            ["pdftotext", "-layout", str(issue_path), str(issue_text)],
-            text=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            timeout=420,
-        )
-        if proc.returncode != 0:
-            raise RuntimeError(f"{slug}: could not extract English issue text: {proc.stderr[-500:]}")
-        pages = issue_text.read_text(encoding="utf-8", errors="replace").replace("\r", "").split("\f")
-
-    abstract_tokens = significant_title_tokens(job.get("abstract_en"))
-    minimum_abstract_hits = min(3, len(abstract_tokens)) if abstract_tokens else 0
-    ranked: list[tuple[int, int, int, int]] = []
-    for index, page_text in enumerate(pages, start=1):
-        if not page_text.strip():
-            continue
-        title_hits, abstract_hits = text_identity_score(page_text, job)
-        score = abstract_hits * 5 + title_hits
-        ranked.append((score, abstract_hits, title_hits, index))
-    if not ranked:
-        raise RuntimeError(f"{slug}: English issue PDF has no extractable pages")
-    ranked.sort(reverse=True)
-    _score, abstract_hits, title_hits, start_page = ranked[0]
-    if minimum_abstract_hits and abstract_hits < minimum_abstract_hits:
-        raise RuntimeError(
-            f"{slug}: could not locate article start in English issue "
-            f"(best title hits={title_hits}, abstract hits={abstract_hits})"
-        )
-    if not minimum_abstract_hits and title_hits < 2:
-        raise RuntimeError(f"{slug}: could not locate article title in English issue")
-
-    total_pages = pdf_info(issue_path)["pages"]
-    end_page = start_page + expected_count - 1
-    if end_page > total_pages:
-        raise RuntimeError(f"{slug}: issue fallback range {start_page}-{end_page} exceeds {total_pages} pages")
-    run([
-        "qpdf", "--empty", "--pages", str(issue_path), f"{start_page}-{end_page}", "--", str(destination)
-    ], timeout=240)
-    print(
-        f"FALLBACK {slug}: extracted designed English issue pages {start_page}-{end_page} "
-        f"from {job.get('issue_en_source')}",
-        flush=True,
-    )
-
-
-def download_and_extract(job: dict[str, Any]) -> dict[str, Any]:
-    slug = job["slug"]
-    destination = STAGE / f"{slug}-en.pdf"
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    payload = curl_bytes(job["pdf_en_source"], referer=job["source_en"], timeout=300)
-    if len(payload) < 10_000 or not payload.startswith(b"%PDF-"):
-        direct_error: Exception = RuntimeError(
-            f"{slug}: downloaded article response is not a valid PDF ({len(payload)} bytes)"
-        )
-        destination.unlink(missing_ok=True)
-    else:
-        destination.write_bytes(payload)
-        try:
-            info, layout_text, normalized_text = inspect_article_pdf(destination, job)
-            direct_error = None
-        except Exception as error:
-            direct_error = error
-
-    source_mode = "direct-legacy-article-pdf"
-    archive_source = job["pdf_en_source"]
-    if direct_error is not None:
-        print(f"DIRECT PDF REJECTED {slug}: {direct_error}; trying designed English issue fallback", flush=True)
-        extract_from_english_issue(job, destination)
-        info, layout_text, normalized_text = inspect_article_pdf(destination, job)
-        source_mode = "extracted-from-designed-english-issue"
-        archive_source = job["issue_en_source"]
-
-    payload = destination.read_bytes()
-    fulltext = build_fulltext(layout_text)
-    if not fulltext["sections"]:
-        raise RuntimeError(f"{slug}: no full-text sections could be extracted")
-    digest = hashlib.sha256(payload).hexdigest()
-    local = f"/assets/archive/pdfs/articles/{slug}-en.pdf"
-    return {
-        **job,
-        "pdf_en_source": archive_source,
-        "legacy_article_pdf_source": job.get("pdf_en_source"),
-        "source_mode": source_mode,
-        "local": local,
-        "bytes": len(payload),
-        "sha256": digest,
-        "pages": info["pages"],
-        "page_size": info["page_size"],
-        "text_chars": len(normalized_text),
-        "section_count": len(fulltext["sections"]),
-        "reference_count": len(fulltext["references"]),
-        "fulltext": fulltext,
-        "stage": str(destination),
-    }
-
-'''
-          text = text[:start] + replacement + text[end + 1:]
-
-          old_manifest = '''        by_local[item["local"]] = {\n            "source": item["pdf_en_source"],\n            "local": item["local"],\n            "bytes": item["bytes"],\n            "sha256": item["sha256"],\n            "status": "downloaded-exact-designed-english-article-pdf",\n            "note": "Exact designed English article PDF archived directly from the legacy BRIQ English article page.",\n        }\n'''
-          new_manifest = '''        source_mode = item.get("source_mode", "direct-legacy-article-pdf")\n        from_issue = source_mode == "extracted-from-designed-english-issue"\n        by_local[item["local"]] = {\n            "source": item["pdf_en_source"],\n            "canonical_article_source": item.get("legacy_article_pdf_source"),\n            "local": item["local"],\n            "bytes": item["bytes"],\n            "sha256": item["sha256"],\n            "status": (\n                "extracted-from-designed-english-issue"\n                if from_issue\n                else "downloaded-exact-designed-english-article-pdf"\n            ),\n            "note": (\n                "Designed English article pages extracted losslessly from the BRIQ English issue because the legacy article PDF link failed content validation."\n                if from_issue\n                else "Exact designed English article PDF archived directly from the legacy BRIQ English article page."\n            ),\n        }\n'''
-          if old_manifest in text:
-              text = text.replace(old_manifest, new_manifest, 1)
-
-          path.write_text(text, encoding='utf-8')
-          PY
-          python3 -m py_compile scripts/repair-english-article-archive.py
-          git diff --check
-
-      - name: Discover, download, render-check and extract every English article
+      - name: Download, render-check, extract and prepare 234 verified English articles
         shell: bash
         run: |
           set -o pipefail
-          python3 scripts/repair-english-article-archive.py 2>&1 | tee /tmp/english-repair.log
+          python3 scripts/publish-ready-english-articles.py 2>&1 | tee /tmp/english-ready.log
           status=${PIPESTATUS[0]}
-          if [ -f tmp/english-pdf-repair-report.json ]; then
-            echo "----- repair report -----"
-            cat tmp/english-pdf-repair-report.json
+          if [ -f tmp/english-ready-report.json ]; then
+            echo "----- publish report -----"
+            cat tmp/english-ready-report.json
           fi
           exit "$status"
 
-      - name: Validate generated archive data
+      - name: Validate generated mappings, full text, visual sharing and categories
         shell: bash
         run: |
           set -euo pipefail
@@ -334,49 +59,62 @@ def download_and_extract(job: dict[str, Any]) -> dict[str, Any]:
           import re
           from pathlib import Path
 
-          def is_visual(article):
-              text = ' '.join(str(article.get(key) or '') for key in (
-                  'slug', 'title_tr', 'title_en', 'citation_tr', 'citation_en', 'abstract_tr', 'abstract_en'
-              )).lower()
-              return bool(re.search(
-                  r'fotoğraf|photograph|karikatür|cartoon|(?:^|\W)afiş(?:\W|$)|poster|(?:^|\W)resim(?:\W|$)|tablosu|painting|visual contribution',
-                  text,
-                  flags=re.I,
-              ))
-
+          unresolved = {
+              "kulturel-ozguveni-percinleyelim",
+              "bes-deniz-stratejisini-canlandirmak-mumkun-mu",
+              "turkiye-ve-cinin-degisen-deniz-jeopolitiginin-neo-mahanci-bir-okumasi",
+              "mavi-vatan-doktrini-nasil-olustu",
+              "mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili",
+              "gaz-hidratlar-yakin-gelecegin-enerji-kaynagi",
+              "karabag-baslangictan-gunumuze-sorunlar-ve-cozumler",
+          }
           data = json.loads(Path('app/archive-data.json').read_text(encoding='utf-8'))
           full = json.loads(Path('app/article-fulltext-en-archive.json').read_text(encoding='utf-8'))
-          articles = data['articles']
-          targets = [article for article in articles if not is_visual(article)]
-          assert len(full) == len(targets), (len(full), len(targets))
-          missing = []
-          wrong = []
-          for article in targets:
-              slug = article['slug']
-              if not article.get('source_en') or not article.get('pdf_en_source') or not article.get('pdf_en_local'):
-                  missing.append(slug)
-              if article.get('pdf_en_local') != f'/assets/archive/pdfs/articles/{slug}-en.pdf':
-                  wrong.append(slug)
-              record = full.get(slug)
-              if not record or not record.get('sections'):
-                  missing.append(f'{slug}:fulltext')
-          assert not missing, missing[:20]
-          assert not wrong, wrong[:20]
-          print(f'Validated {len(targets)} English textual-publication mappings/full texts; {len(articles) - len(targets)} visual-only contributions excluded.')
+          report = json.loads(Path('tmp/english-ready-report.json').read_text(encoding='utf-8'))
+          assert report['phase'] == 'complete'
+          assert report['published_english_pdfs'] == 234, report['published_english_pdfs']
+          assert report['published_fulltexts'] == 234, report['published_fulltexts']
+          assert len(full) == 234, len(full)
+          assert not (unresolved & set(full)), sorted(unresolved & set(full))
+
+          by_slug = {article['slug']: article for article in data['articles']}
+          for slug in full:
+              article = by_slug[slug]
+              assert article.get('pdf_en_local') == f'/assets/archive/pdfs/articles/{slug}-en.pdf', slug
+              assert article.get('pdf_en_source'), slug
+              assert article.get('source_en'), slug
+
+          visual_pattern = re.compile(r'fotoğraf|photograph|karikatür|cartoon|(?:^|\W)afiş(?:\W|$)|poster|(?:^|\W)resim(?:\W|$)|tablosu|painting|visual contribution', re.I)
+          for article in data['articles']:
+              hay = ' '.join(str(article.get(k) or '') for k in ('slug','title_tr','title_en','citation_tr','citation_en','abstract_tr','abstract_en')).lower()
+              if visual_pattern.search(hay) and article.get('shared_bilingual_pdf'):
+                  if article.get('pdf_tr_local'):
+                      assert article.get('pdf_en_local') == article.get('pdf_tr_local'), article['slug']
+
+          archive_ts = Path('app/archive.ts').read_text(encoding='utf-8')
+          assert 'return label("Araştırma Makalesi", "Research Article");' in archive_ts
+          assert 'Hakemli Makale' not in archive_ts
+          assert 'Peer-reviewed Article' not in archive_ts
+
+          tr_route = Path('app/[...slug]/page.tsx').read_text(encoding='utf-8')
+          en_route = Path('app/en/[...slug]/page.tsx').read_text(encoding='utf-8')
+          assert 'publicationType(publication, "tr")' in tr_route
+          assert 'publicationType(publication, "en")' in en_route
+          print('Validated 234 English PDFs/full texts, shared visual PDFs, and publication category labels.')
           PY
           git diff --check
 
-      - name: Build site with English full text
+      - name: Build site
         run: |
           set -euo pipefail
           npm ci
           npm run build
 
-      - name: Upload exact English article PDFs to R2
+      - name: Upload 234 verified English PDFs to R2
         shell: bash
         run: |
           set -euo pipefail
-          aws s3 sync tmp/english-pdf-sync/ "s3://$R2_BUCKET/assets/archive/pdfs/articles/" \
+          aws s3 sync tmp/english-pdf-ready/ "s3://$R2_BUCKET/assets/archive/pdfs/articles/" \
             --endpoint-url "$R2_ENDPOINT" \
             --exclude "*" --include "*-en.pdf" \
             --content-type application/pdf \
@@ -393,10 +131,11 @@ def download_and_extract(job: dict[str, Any]) -> dict[str, Any]:
             fi
             count=$((count + 1))
             if (( count % 25 == 0 )); then echo "Verified $count R2 English PDFs"; fi
-          done < tmp/english-pdf-upload.tsv
+          done < tmp/english-ready-upload.tsv
+          test "$count" -eq 234
           echo "Verified all $count English PDFs in R2."
 
-      - name: Commit archive mappings and full text
+      - name: Commit English archive and category changes
         shell: bash
         run: |
           set -euo pipefail
@@ -406,12 +145,11 @@ def download_and_extract(job: dict[str, Any]) -> dict[str, Any]:
             app/archive-data.json \
             app/article-fulltext-en-archive.json \
             app/components/ArticlePlatform.tsx \
+            app/archive.ts \
+            'app/[...slug]/page.tsx' \
+            'app/en/[...slug]/page.tsx' \
             public/assets/archive/pdfs/manifest.json \
-            scripts/repair-english-article-archive.py
+            scripts/publish-ready-english-articles.py
           git diff --cached --check
-          if git diff --cached --quiet; then
-            echo "English article archive is already current."
-            exit 0
-          fi
-          git commit -m "Repair all English article PDFs and full text"
+          git commit -m "Publish verified English article archive"
           git push origin HEAD:main
