@@ -1,0 +1,48 @@
+name: Fix DOI presentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-doi-presentation.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply DOI metadata and citation patch
+        run: |
+          set -euo pipefail
+          python3 -m py_compile scripts/fix-doi-presentation.py
+          python3 scripts/fix-doi-presentation.py
+          grep -q 'citationWithDoi(details?.citation || articleCitation(article, locale), article.doi)' app/components/ArticlePlatform.tsx
+          grep -q 'className="publication-doi"' app/components/ArticlePlatform.tsx
+          grep -q 'https://doi.org/${article.doi}' app/components/ArticlePlatform.tsx
+          ! grep -q 'doi={article.doi}' app/components/ArticlePlatform.tsx
+          grep -q 'export function citationWithDoi' app/article-citation.ts
+          grep -q 'CitationText value={formattedCitation}' app/components/CitationTools.tsx
+          git diff --check
+
+      - name: Build site
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run build
+
+      - name: Commit changes
+        run: |
+          set -euo pipefail
+          git config user.name "BRIQ Site Bot"
+          git config user.email "briq@briqjournal.com"
+          git add app/article-citation.ts app/components/ArticlePlatform.tsx app/components/CitationTools.tsx app/components/PublicationRecord.tsx
+          git diff --cached --check
+          git commit -m "Integrate DOI into article metadata and citations"
+          git push origin HEAD:main
