@@ -1,0 +1,228 @@
+name: Fix Saudi English article archive
+
+on:
+  push:
+    paths:
+      - ".github/workflows/fix-saudi-english-article.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REGION: auto
+      AWS_EC2_METADATA_DISABLED: "true"
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      SLUG: suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi
+      EN_PDF_SOURCE: https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Salman%20K.%20Al-Dhafeeire%20%26%20Sun%20Degang%20-%20Saudi%20Arabia%E2%80%99s%20Complex%20Cultural%20Hedging%20Between%20the%20U.S.%20and%20China.pdf
+      EN_ARTICLE_SOURCE: https://briqjournal.com/en/saudi-arabias-complex-cultural-hedging-between-the-us-and-china
+      EN_LOCAL: /assets/archive/pdfs/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi-en.pdf
+    steps:
+      - name: Check out repository and LFS
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Install PDF tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet reportlab
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils fonts-dejavu-core
+
+      - name: Patch site data and generate archived English PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib
+          import html
+          import json
+          import os
+          from pathlib import Path
+
+          from reportlab.lib.enums import TA_CENTER
+          from reportlab.lib.pagesizes import A4
+          from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+          from reportlab.lib.units import mm
+          from reportlab.pdfbase import pdfmetrics
+          from reportlab.pdfbase.ttfonts import TTFont
+          from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer
+
+          root = Path.cwd()
+          slug = os.environ['SLUG']
+          source_url = os.environ['EN_PDF_SOURCE']
+          local_url = os.environ['EN_LOCAL']
+          local_path = root / 'public' / local_url.lstrip('/').removeprefix('assets/')
+          # local_url is rooted at /assets; public path must retain assets/
+          local_path = root / 'public' / local_url.lstrip('/')
+          local_path.parent.mkdir(parents=True, exist_ok=True)
+
+          fulltext_path = root / 'app/article-fulltext-saudi-en.json'
+          fulltext = json.loads(fulltext_path.read_text(encoding='utf-8'))
+
+          archive_path = root / 'app/archive-data.json'
+          archive = json.loads(archive_path.read_text(encoding='utf-8'))
+          article = next(x for x in archive['articles'] if x['slug'] == slug)
+          article['source_en'] = os.environ['EN_ARTICLE_SOURCE']
+          article['pdf_en_source'] = source_url
+          article['pdf_en_local'] = local_url
+          article['shared_bilingual_pdf'] = False
+          archive_path.write_text(json.dumps(archive, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          # Make the English article page use the dedicated English full-text source.
+          platform_path = root / 'app/components/ArticlePlatform.tsx'
+          platform = platform_path.read_text(encoding='utf-8')
+          import_line = 'import fullTextJson from "../article-fulltext-current.json";\n'
+          override_import = 'import saudiEnglishFullTextJson from "../article-fulltext-saudi-en.json";\n'
+          if override_import not in platform:
+              platform = platform.replace(import_line, import_line + override_import, 1)
+          marker = 'const currentFullText = fullTextJson as Record<string, CurrentFullTextRecord>;\n'
+          slug_const = f'const SAUDI_CULTURAL_HEDGING_SLUG = "{slug}";\n'
+          if slug_const not in platform:
+              platform = platform.replace(marker, marker + slug_const, 1)
+          old = '  const fullRecord = currentFullText[article.slug];\n  const fullText = fullRecord?.[locale];\n'
+          new = '  const fullRecord = currentFullText[article.slug];\n  const storedFullText = fullRecord?.[locale];\n  const fullText = locale === "en" && article.slug === SAUDI_CULTURAL_HEDGING_SLUG\n    ? (saudiEnglishFullTextJson as LocalizedFullText)\n    : storedFullText;\n'
+          if old in platform:
+              platform = platform.replace(old, new, 1)
+          elif new not in platform:
+              raise SystemExit('ArticlePlatform full-text assignment changed; refusing unsafe patch')
+          platform_path.write_text(platform, encoding='utf-8')
+
+          # Generate a stable English archive PDF from BRIQ's final English manuscript text.
+          font_regular = '/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf'
+          font_bold = '/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf'
+          pdfmetrics.registerFont(TTFont('BRIQSerif', font_regular))
+          pdfmetrics.registerFont(TTFont('BRIQSerifBold', font_bold))
+
+          doc = SimpleDocTemplate(
+              str(local_path), pagesize=A4,
+              rightMargin=22*mm, leftMargin=22*mm,
+              topMargin=20*mm, bottomMargin=20*mm,
+              title="Saudi Arabia's Complex Cultural Hedging Between the U.S. and China",
+              author='Salman K. Al-Dhafeeire; Sun Degang',
+              subject='BRIQ Belt & Road Initiative Quarterly, Volume 7, Issue 4, 2026',
+          )
+          styles = getSampleStyleSheet()
+          title = ParagraphStyle('BRIQTitle', parent=styles['Title'], fontName='BRIQSerifBold', fontSize=18, leading=22, alignment=TA_CENTER, spaceAfter=9)
+          byline = ParagraphStyle('BRIQByline', parent=styles['Normal'], fontName='BRIQSerif', fontSize=10, leading=14, alignment=TA_CENTER, spaceAfter=8)
+          h1 = ParagraphStyle('BRIQH1', parent=styles['Heading1'], fontName='BRIQSerifBold', fontSize=13, leading=17, spaceBefore=14, spaceAfter=7)
+          body = ParagraphStyle('BRIQBody', parent=styles['BodyText'], fontName='BRIQSerif', fontSize=9.2, leading=13.2, spaceAfter=7, allowWidows=0, allowOrphans=0)
+          small = ParagraphStyle('BRIQSmall', parent=body, fontSize=7.6, leading=10.2)
+          refstyle = ParagraphStyle('BRIQRef', parent=body, fontSize=8.2, leading=11.2, leftIndent=5*mm, firstLineIndent=-5*mm, splitLongWords=True)
+
+          def P(text, style=body):
+              return Paragraph(html.escape(text).replace('\n','<br/>'), style)
+
+          story = []
+          story += [Paragraph('Saudi Arabia’s Complex Cultural Hedging Between the U.S. and China', title),
+                    Paragraph('Salman K. Al-Dhafeeire · Sun Degang', byline),
+                    Paragraph('BRIQ Belt & Road Initiative Quarterly · Volume 7 · Issue 4 · Autumn 2026 · pp. 377–406', byline),
+                    Spacer(1, 3*mm)]
+          abstract = (
+              'This research examines Saudi Arabia’s strategic use of cultural instruments as a sophisticated form of hedging amid intensifying U.S.-China great-power rivalry and the Kingdom’s Vision 2030 diversification agenda. Drawing on hedging theory, the study conceptualizes “complex cultural hedging” as a deliberate, state-orchestrated strategy that simultaneously cultivates and balances American and Chinese soft power influences without aligning with either. Four core objectives drive Saudi cultural hedging: responding to China’s rise and the rise of multipolarity; forging long-term cultural and strategic ties with Beijing; reducing the historical dominance of U.S. cultural influence; and preserving Saudi national identity and Islamic values through selective adaptation. The analysis operationalizes this strategy across six dimensions: language and education; cultural institutions and food diplomacy; media visibility; air connectivity and mobility; scientific and cultural cooperation; and emerging digital sectors, including gaming, e-sports, animation, and sports diplomacy. Empirical findings from 2020–2026 reveal five key characteristics of the hedging strategy: multi-dimensional, complementary, dual, dynamic, and asymmetric. Riyadh sustains deep, elite-level ties with the United States while accelerating volume and mass exposure with China, thereby maximizing autonomy and projecting a distinctive, soft, middle-power culture rooted in moderated Islamic values. The study concludes that cultural hedging represents a low-risk, but high-legitimacy, extension of traditional hedging, transforming great-power cultural competition into a strategic asset for middle powers navigating multipolarity.'
+          )
+          story += [Paragraph('Abstract', h1), P(abstract), P('Keywords: China, complex cultural hedging, hedging strategy, Saudi Arabia, US.', small), Spacer(1, 2*mm)]
+          for section in fulltext['sections']:
+              story.append(Paragraph(html.escape(section['title']), h1))
+              for para in section['paragraphs']:
+                  story.append(P(para))
+          story.append(PageBreak())
+          story.append(Paragraph('References', h1))
+          for ref in fulltext['references']:
+              story.append(P(ref['text'], refstyle))
+
+          def footer(canvas, doc):
+              canvas.saveState()
+              canvas.setFont('BRIQSerif', 7)
+              canvas.drawString(22*mm, 10*mm, 'BRIQ · Volume 7 · Issue 4 · Autumn 2026')
+              canvas.drawRightString(A4[0]-22*mm, 10*mm, str(doc.page))
+              canvas.restoreState()
+          doc.build(story, onFirstPage=footer, onLaterPages=footer)
+
+          # Update archive manifest with the dedicated English PDF.
+          manifest_path = root / 'public/assets/archive/pdfs/manifest.json'
+          manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+          digest = hashlib.sha256(local_path.read_bytes()).hexdigest()
+          row = {
+              'source': source_url,
+              'local': local_url,
+              'bytes': local_path.stat().st_size,
+              'sha256': digest,
+              'status': 'reconstructed-from-final-english-manuscript',
+              'note': 'Legacy BRIQ English PDF URL is retained as provenance; the archived binary was reconstructed from BRIQ’s final audited English manuscript because the legacy asset was unavailable during migration.'
+          }
+          rows = manifest['files']
+          found = False
+          for i, existing in enumerate(rows):
+              if existing.get('local') == local_url:
+                  rows[i] = row
+                  found = True
+                  break
+          if not found:
+              rows.append(row)
+          rows.sort(key=lambda x: x.get('local',''))
+          manifest['unique_files'] = len(rows)
+          manifest['total_bytes'] = sum(int(x.get('bytes') or 0) for x in rows)
+          manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('Generated', local_path, local_path.stat().st_size, digest)
+          PY
+
+      - name: Verify reconstructed English PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          PDF="public${EN_LOCAL}"
+          test "$(head -c 5 "$PDF")" = "%PDF-"
+          pdfinfo "$PDF" | grep -E 'Pages|Title|Author'
+          pdftotext "$PDF" /tmp/saudi-en.txt
+          grep -q "Introduction" /tmp/saudi-en.txt
+          grep -q "Research Findings and Discussion" /tmp/saudi-en.txt
+          grep -q "Conclusion" /tmp/saudi-en.txt
+          grep -q "References" /tmp/saudi-en.txt
+          if grep -q "SUUDİ ARABİSTAN" /tmp/saudi-en.txt; then
+            echo "Turkish full-text contamination detected" >&2
+            exit 1
+          fi
+
+      - name: Install dependencies and build
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run build
+          git diff --check
+
+      - name: Upload English PDF to R2
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$R2_ENDPOINT"
+          test -n "$R2_BUCKET"
+          PDF="public${EN_LOCAL}"
+          KEY="${EN_LOCAL#/}"
+          aws s3 cp "$PDF" "s3://$R2_BUCKET/$KEY" --endpoint-url "$R2_ENDPOINT" --content-type application/pdf --only-show-errors
+          REMOTE_SIZE="$(aws s3api head-object --bucket "$R2_BUCKET" --key "$KEY" --endpoint-url "$R2_ENDPOINT" --query ContentLength --output text)"
+          LOCAL_SIZE="$(stat -c%s "$PDF")"
+          test "$REMOTE_SIZE" = "$LOCAL_SIZE"
+          echo "Verified R2 object: $KEY ($REMOTE_SIZE bytes)"
+
+      - name: Commit archive and page fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git lfs install --local
+          git add app/archive-data.json app/components/ArticlePlatform.tsx public/assets/archive/pdfs/manifest.json "public${EN_LOCAL}"
+          git commit -m "Fix Saudi article English PDF and full text"
+          git push origin HEAD:main
