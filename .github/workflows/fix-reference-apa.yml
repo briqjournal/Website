@@ -1,6 +1,6 @@
 name: Fix APA references
 
-# rerun: 4
+# rerun: 5
 on:
   push:
     paths:
