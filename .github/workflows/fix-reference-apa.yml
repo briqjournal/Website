@@ -1,6 +1,6 @@
 name: Fix APA references
 
-# rerun: 5
+# rerun: 6
 on:
   push:
     paths:
@@ -30,15 +30,11 @@ jobs:
       - name: Normalize extracted reference links
         run: python3 scripts/normalize-reference-links.py
 
-      - name: Verify example DOI is contiguous when present
+      - name: Verify example DOI is contiguous
         shell: bash
         run: |
           set -euo pipefail
-          if grep -R -n -E 'https://doi[[:space:]]*\.[[:space:]]*org/10\.5430/wjel\.v13n2p486' app/article-fulltext*.json; then
-            echo "Broken DOI host still present" >&2
-            exit 1
-          fi
-          grep -R -n 'https://doi.org/10.5430/wjel.v13n2p486' app/article-fulltext*.json || true
+          grep -R -n 'https://doi.org/10.5430/wjel.v13n2p486' app/article-fulltext*.json
 
       - name: Check diff
         run: git diff --check
