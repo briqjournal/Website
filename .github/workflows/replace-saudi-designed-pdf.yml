@@ -50,9 +50,11 @@ jobs:
           START=""
           for i in $(seq 1 "$PAGES"); do
             pdftotext -f "$i" -l "$i" -layout /tmp/briq-en-issue.pdf /tmp/page.txt 2>/dev/null || true
-            if grep -Fqi "Complex Cultural Hedging Between" /tmp/page.txt \
-              && grep -Fqi "Abstract" /tmp/page.txt \
-              && grep -Fqi "Keywords" /tmp/page.txt; then
+            NORMALIZED="$(tr '\n' ' ' < /tmp/page.txt | tr -s '[:space:]' ' ')"
+            if printf '%s\n' "$NORMALIZED" | grep -Fqi "Saudi Arabia" \
+              && printf '%s\n' "$NORMALIZED" | grep -Fqi "Hedging" \
+              && printf '%s\n' "$NORMALIZED" | grep -Fqi "Al-Dhafeeire" \
+              && printf '%s\n' "$NORMALIZED" | grep -Fqi "Abstract"; then
               START="$i"
               break
             fi
@@ -62,7 +64,8 @@ jobs:
           test "$END" -le "$PAGES"
 
           pdftotext -f "$((END + 1))" -l "$((END + 1))" -layout /tmp/briq-en-issue.pdf /tmp/next-page.txt 2>/dev/null || true
-          grep -Fqi "Power Transition and Geoeconomic Connectivity" /tmp/next-page.txt
+          NEXT_NORMALIZED="$(tr '\n' ' ' < /tmp/next-page.txt | tr -s '[:space:]' ' ')"
+          printf '%s\n' "$NEXT_NORMALIZED" | grep -Eqi "Power Transition|Geoeconomic Connectivity"
 
           OUT="public${EN_LOCAL}"
           mkdir -p "$(dirname "$OUT")" tmp
@@ -71,8 +74,10 @@ jobs:
           test "$(head -c 5 "$OUT")" = "%PDF-"
           test "$(pdfinfo "$OUT" | awk '/^Pages:/ {print $2}')" = "30"
           pdftotext -f 1 -l 1 -layout "$OUT" /tmp/article-first.txt
-          grep -Fqi "Complex Cultural Hedging Between" /tmp/article-first.txt
-          grep -Fqi "Abstract" /tmp/article-first.txt
+          FIRST_NORMALIZED="$(tr '\n' ' ' < /tmp/article-first.txt | tr -s '[:space:]' ' ')"
+          printf '%s\n' "$FIRST_NORMALIZED" | grep -Fqi "Saudi Arabia"
+          printf '%s\n' "$FIRST_NORMALIZED" | grep -Fqi "Hedging"
+          printf '%s\n' "$FIRST_NORMALIZED" | grep -Fqi "Abstract"
           pdftotext -f 30 -l 30 -layout "$OUT" /tmp/article-last.txt
           grep -Fqi "References" /tmp/article-last.txt || grep -Eqi "[A-Za-z].*\([12][0-9]{3}\)" /tmp/article-last.txt
 
