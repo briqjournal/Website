@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
+import { absoluteSiteUrl } from "./site-url";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://briq-academic-journal.iakfiratt.chatgpt.site/sitemap.xml",
+    sitemap: absoluteSiteUrl("/sitemap.xml"),
   };
 }

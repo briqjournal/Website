@@ -43,3 +43,5 @@ next-env.d.ts
 /tmp/
 __pycache__/
 /app/generated-fulltext/
+/app/generated-runtime/
+/public/assets/data/article-search-index.json

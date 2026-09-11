@@ -52,6 +52,26 @@ type CurrentFullTextRecord = {
   en: LocalizedFullText;
 };
 
+function mergeLocalizedFullText(
+  primary: LocalizedFullText | undefined,
+  fallback: LocalizedFullText | undefined,
+) {
+  if (!primary) return fallback;
+  if (!fallback) return primary;
+  return {
+    ...fallback,
+    ...primary,
+    sections: primary.sections?.length ? primary.sections : fallback.sections,
+    keywords: primary.keywords?.length ? primary.keywords : fallback.keywords,
+    footnotes: primary.footnotes?.length ? primary.footnotes : fallback.footnotes,
+    references: primary.references?.length ? primary.references : fallback.references,
+    acknowledgements: primary.acknowledgements?.trim() ? primary.acknowledgements : fallback.acknowledgements,
+    figures: primary.figures?.length ? primary.figures : fallback.figures,
+    declarations: { ...fallback.declarations, ...primary.declarations },
+    supplementary: primary.supplementary?.length ? primary.supplementary : fallback.supplementary,
+  } satisfies LocalizedFullText;
+}
+
 type ArticleDetails = {
   abstract?: string[];
   keywords?: string[];
@@ -239,7 +259,7 @@ export async function ArticlePlatform({
     ? await loadSaudiEnglishFullText() as LocalizedFullText
     : undefined;
   const fullText = locale === "en"
-    ? (saudiEnglishFullText || archivedEnglishFullText || storedFullText)
+    ? mergeLocalizedFullText(saudiEnglishFullText || archivedEnglishFullText, storedFullText)
     : storedFullText;
   const displayReferences = fullText ? referencesWithUnlistedCitations(fullText.sections, fullText.references, locale) : [];
   const metadata = fullRecord?.metadata;

@@ -1,27 +1,31 @@
 # GitHub repository kullanımı
 
-Bu repository BRIQ sitesinin düzenlenebilir kaynak kodunu, görsellerini ve
-yerelleştirilmiş PDF arşivini içerir. PDF arşivinde 609 benzersiz dosya bulunur.
+Bu depo BRIQ sitesinin kaynak kodunu, görsellerini ve hafif arşiv envanterini
+içerir. PDF dosyaları Git'e veya Sites derleme çıktısına eklenmez; Cloudflare
+R2 üzerinden sunulur.
 
 ## Yerel çalışma
 
-PDF arşivi yaklaşık 3,4 GiB olduğu için Git LFS gereklidir:
-
 ```bash
-git lfs install
 git clone https://github.com/briqjournal/Website.git
 cd Website
-git lfs pull
 npm ci
-npm test
+npm run build
 ```
 
-Kod değişiklikleri normal Git commit ve pull request akışıyla yönetilebilir.
-Mevcut `main` dalını zorla ezmeyin.
+Git LFS gerekmez. Değişiklikler bir özellik dalında hazırlanmalı, doğrulama
+tamamlandıktan sonra pull request ile `main` dalına alınmalıdır.
 
 ## PDF arşivi
 
-PDF envanteri `public/assets/archive/pdfs/manifest.json` dosyasındadır. Her
-kayıtta kaynak adresi, yerel yol, dosya boyutu ve SHA-256 özeti yer alır. Arşivi
-yenilemek için GitHub Actions ekranındaki `Sync PDF archive` iş akışı elle
-çalıştırılabilir.
+PDF envanteri `ops/pdf-archive-manifest.json` dosyasındadır. Her kayıt kaynak
+adresi, R2 nesne yolu, dosya boyutu ve SHA-256 özetini taşır.
+
+Arşivi yenilemek için GitHub Actions ekranındaki
+`Refresh PDF archive in Cloudflare R2` iş akışı elle çalıştırılır. İş akışı:
+
+1. kaynak PDF'leri geçici çalışma alanına indirir ve doğrular;
+2. dosyaları R2'ye yükler;
+3. R2'deki her nesnenin boyutunu envanterle karşılaştırır;
+4. Git'e hiçbir PDF eklemeden yalnızca envanter değişiklikleri için PR açar.
+

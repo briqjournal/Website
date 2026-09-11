@@ -31,8 +31,9 @@ function applyPdfHeaders(headers: Headers): void {
     headers.set("content-type", "application/pdf");
   }
   if (!headers.has("cache-control")) {
-    headers.set("cache-control", "public, max-age=3600");
+    headers.set("cache-control", "public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000");
   }
+  if (!headers.has("content-disposition")) headers.set("content-disposition", "inline");
   headers.set("accept-ranges", "bytes");
   headers.set("x-content-type-options", "nosniff");
 }

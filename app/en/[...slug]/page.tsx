@@ -27,7 +27,9 @@ import { PeopleDirectory } from "../../components/PeopleDirectory";
 import { CoverLightbox } from "../../components/CoverLightbox";
 import { DergiParkLogo } from "../../components/DergiParkLogo";
 import { ArticlePdfPage, ArticlePlatform } from "../../components/ArticlePlatform";
-import { findAuthorProfile, bylineAffiliation } from "../../authors";
+import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../authors";
+import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
+import { absoluteSiteUrl } from "../../site-url";
 import { issueAccent, issueSurface } from "../../issue-themes";
 import { advisoryBoard, editorialBoard, editors, calls, pastCalls } from "../../site-data";
 
@@ -379,7 +381,7 @@ function EnglishCopyrightTerms() {
       <EditorialLongform
         navigationTitle="On this page"
         className="for-authors-longform copyright-page"
-        before={<div className="license-lead"><img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" /><div><span>Licence</span><h2>Creative Commons Attribution 4.0 International</h2><p>CC BY 4.0</p></div></div>}
+        before={<div className="license-lead"><img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" loading="lazy" decoding="async" /><div><span>Licence</span><h2>Creative Commons Attribution 4.0 International</h2><p>CC BY 4.0</p></div></div>}
         sections={[
           {
             id: "transfer-of-rights",
@@ -494,7 +496,7 @@ function EnglishArchive() {
       <EnglishHero kicker="Archive" title="All issues" intro={`Explore ${archiveIssues.length} verified BRIQ issues by volume, issue, and publication season.`} />
       <div className="site-shell page-section">
         <div className="archive-tools"><p><b>{archiveIssues.length} issues</b> · 7 volumes · 2019-2026</p><a className="underlined-link" href="/en/current-issue">Go to current issue →︎</a></div>
-        <ArchiveExplorer issues={archiveIssues} locale="en" />
+        <ArchiveExplorer issues={archiveIssueListings} locale="en" />
       </div>
     </>
   );
@@ -505,7 +507,7 @@ function EnglishArticles() {
     <>
       <EnglishHero kicker="Publications" title="Article Search" intro="Search BRIQ articles, interviews, book reviews, and other contributions by title, author, abstract, DOI, year, and volume." />
       <div className="site-shell page-section">
-        <ArticleExplorer articles={archiveArticles} locale="en" />
+        <ArticleExplorer articles={archiveArticleListings} locale="en" />
       </div>
     </>
   );
@@ -519,7 +521,7 @@ function EnglishCurrentIssue() {
         <div className="issue-masthead-rule" />
         <div className="site-shell issue-masthead-grid">
           <div className="issue-cover-column">
-            <div className="issue-cover-frame"><img src="/assets/current-issue-en.jpg" alt="BRIQ Volume 7 Issue 4 cover" /></div>
+            <div className="issue-cover-frame"><img src="/assets/current-issue-en.jpg" alt="BRIQ Volume 7 Issue 4 cover" loading="lazy" decoding="async" /></div>
             <CoverLightbox src="/assets/current-issue-en.jpg" alt="BRIQ Volume 7 Issue 4 cover" locale="en" />
           </div>
           <div className="issue-masthead-copy">
@@ -544,10 +546,10 @@ function EnglishContact() {
   return <div className="contact-page"><EnglishHero kicker="Contact" title="Contact BRIQ" intro="Contact BRIQ for editorial questions, publication processes, and institutional matters." /><div className="site-shell page-section contact-grid contact-grid-compact"><article><span>Email</span><h2><a href="mailto:briq@briqjournal.com">briq@briqjournal.com</a></h2><p>Manuscripts should be submitted through DergiPark.</p></article><article><span>Office</span><h2>Üsküdar · Istanbul</h2><p>Ünalan Mahallesi, Libadiye Caddesi No:84, Üsküdar / Istanbul, Türkiye</p></article><article><span>Journal contact person</span><h2>İbrahim Fikret Akfırat</h2><p><a href="mailto:fikretakfirat@briqjournal.com">fikretakfirat@briqjournal.com</a></p></article><article><span>Manuscript submission</span><h2 className="dergipark-heading"><DergiParkLogo /></h2><a className="underlined-link" href="https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new">Open the submission page ↗︎</a></article></div><div className="site-shell contact-form-wrap contact-form-wrap-compact"><ContactForm locale="en" /></div></div>;
 }
 
-function EnglishSearch() { return <><EnglishHero kicker="Search" title="Search BRIQ" intro="Search articles, authors, issues, cover titles, DOI records, and calls for papers." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticles} issues={archiveIssues} calls={[...calls, ...pastCalls]} locale="en" /></div></>; }
+function EnglishSearch() { return <><EnglishHero kicker="Search" title="Search BRIQ" intro="Search articles, authors, issues, cover titles, DOI records, and calls for papers." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} locale="en" /></div></>; }
 
 function EnglishCalls() {
-  return <><EnglishHero kicker="Calls for Papers" title="Active and Past Calls" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={call.urlEn} key={call.urlEn}>{call.image ? <img src={call.image} alt="" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · Deadline: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
+  return <><EnglishHero kicker="Calls for Papers" title="Active and Past Calls" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={call.urlEn} key={call.urlEn}>{call.image ? <img src={call.image} alt="" loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · Deadline: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
 }
 
 function EnglishAuthorProfile({ id }: { id: string }) {
@@ -559,7 +561,7 @@ function EnglishAuthorProfile({ id }: { id: string }) {
         <div className="site-shell author-page-hero-inner">
           <div className="page-breadcrumb"><a href="/en">Home</a><span>/</span><span>Author</span></div>
           <div className="author-page-identity">
-            {profile.photo ? <img className="author-page-photo" src={profile.photo} alt={`${profile.name} portrait`} /> : <span className="author-page-monogram" aria-hidden="true">{profile.name.slice(0, 1)}</span>}
+            {profile.photo ? <img className="author-page-photo" src={profile.photo} alt={`${profile.name} portrait`} loading="lazy" decoding="async" /> : <span className="author-page-monogram" aria-hidden="true">{profile.name.slice(0, 1)}</span>}
             <div><p className="section-kicker">{profile.rolesEn.length ? profile.rolesEn.join(" · ") : "Author"}</p><h1>{profile.name}</h1><p>{profile.affiliationEn}</p></div>
           </div>
           <div className="author-page-links" aria-label="Author external links">
@@ -654,7 +656,7 @@ function EnglishIssue({ volume, issueNumber }: { volume: number; issueNumber: nu
     <div className="issue-page-themed" style={{ "--issue-tone": issueSurface(volume, issueNumber), "--issue-accent": issueAccent(volume, issueNumber) } as CSSProperties}>
       <EnglishHero kicker="Archive" title={`Volume ${volume} · Issue ${issueNumber}`} intro={issueLabel(record, "en")} />
       <div className="site-shell page-section issue-detail">
-        <aside className="issue-detail-cover"><img src={record.cover_en} alt={`BRIQ Volume ${volume} Issue ${issueNumber} English cover`} />{enPdf && <a className="button button-dark" href="#pdf-viewer">Read the full issue ↓︎</a>}</aside>
+        <aside className="issue-detail-cover"><img src={record.cover_en} alt={`BRIQ Volume ${volume} Issue ${issueNumber} English cover`} loading="lazy" decoding="async" />{enPdf && <a className="button button-dark" href="#pdf-viewer">Read the full issue ↓︎</a>}</aside>
         <div className="issue-detail-content">
           <div className="fact-strip"><div><span>Publication season</span><b>{record.season_en} {record.year}</b></div><div><span>Contributions</span><b>{publications.length}</b></div><div><span>Access</span><b>Open access</b></div></div>
           <h2>Contents</h2>
@@ -742,6 +744,24 @@ function EnglishCallDetail({ slug }: { slug: string }) {
   );
 }
 
+export function generateStaticParams() {
+  const paths = new Set([...Object.keys(pages), ...Object.keys(englishPageMetadata)]);
+
+  for (const issue of archiveIssues) {
+    paths.add(`archive/volume-${issue.volume}-issue-${issue.issue}`);
+  }
+  for (const article of archiveArticles) {
+    paths.add(`articles/${article.slug}`);
+    paths.add(`articles/${article.slug}/pdf`);
+  }
+  for (const profile of authorProfiles) paths.add(`authors/${profile.id}`);
+  for (const call of calls) paths.add(call.urlEn.replace(/^\/en\//, ""));
+  for (const call of pastCalls) paths.add(`calls-for-papers/${call.slug}`);
+  for (const report of annualReports) paths.add(`annual-reports/${report.number}`);
+
+  return [...paths].map((path) => ({ slug: path.split("/") }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
   const { slug } = await params;
   const key = slug.join("/");
@@ -790,7 +810,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           ...(firstPage ? { citation_firstpage: firstPage } : {}),
           ...(lastPage ? { citation_lastpage: lastPage } : {}),
           ...(article.doi ? { citation_doi: article.doi } : {}),
-          ...(articlePdfUrl(article, "en") ? { citation_pdf_url: `https://briq-academic-journal.iakfiratt.chatgpt.site${articlePdfUrl(article, "en")}` } : {}),
+          ...(articlePdfUrl(article, "en") ? { citation_pdf_url: absoluteSiteUrl(articlePdfUrl(article, "en")!) } : {}),
         },
       };
     }

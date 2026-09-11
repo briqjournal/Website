@@ -14,6 +14,8 @@ command -v timeout >/dev/null || {
 
 echo "Generating per-article full-text modules..."
 node "${script_dir}/generate-fulltext-modules.mjs"
+echo "Generating lightweight runtime data..."
+node "${script_dir}/generate-runtime-data.mjs"
 
 vinext="${SITES_PROJECT_ROOT}/node_modules/.bin/vinext"
 if [[ ! -x "${vinext}" ]]; then
@@ -27,6 +29,9 @@ timeout \
   --kill-after="${SITES_BUILD_KILL_AFTER:-10s}" \
   "${SITES_BUILD_TIMEOUT:-3m}" \
   "${vinext}" build
+
+echo "Prerendering public routes as static HTML..."
+node "${script_dir}/prerender-static.mjs"
 
 client_assets="${SITES_PROJECT_ROOT}/dist/client"
 if [[ -d "${client_assets}" ]]; then
@@ -55,3 +60,4 @@ fi
 echo "Validated client assets: no PDFs and no file larger than 25 MiB."
 
 "${script_dir}/validate-artifact.sh"
+node "${script_dir}/check-performance-budget.mjs"

@@ -34,7 +34,7 @@ export function ArticleFigures({ figures, locale }: { figures: ArticleFigure[]; 
           {figures.map((figure, index) => (
             <figure key={figure.id}>
               <button type="button" onClick={() => open(figure)} aria-label={locale === "tr" ? `${itemLabel(index)} büyüt` : `Enlarge ${itemLabel(index)}`}>
-                <img src={figure.src} alt={figure.caption} loading="lazy" />
+                <img src={figure.src} alt={figure.caption} loading="lazy" decoding="async" />
                 <span><ExpandIcon />{locale === "tr" ? "Büyüt" : "Enlarge"}</span>
               </button>
               <figcaption><b>{itemLabel(index)}</b>{figure.caption}</figcaption>
