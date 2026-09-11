@@ -26,6 +26,7 @@ import { CitationTools } from "./CitationTools";
 import { PdfViewer } from "./PdfViewer";
 import { PublicationRecord, type PublicationHistory } from "./PublicationRecord";
 import { ReferenceBackLink } from "./ReferenceBackLink";
+import { ReferenceText, referenceDoi } from "./ReferenceText";
 
 type LocalizedFullText = {
   sections: FullTextSection[];
@@ -112,39 +113,6 @@ function ArticleAuthors({ article, locale, correspondingAuthor }: { article: Arc
       })}
     </div>
   );
-}
-
-function referenceDoi(text: string) {
-  const marked = text.match(/(?:doi\s*:|https?:\/\/doi\.org\/)\s*(.+)$/i)?.[1];
-  const source = marked ? marked.replace(/\s+/g, "") : text;
-  return source.match(/10\.\d{4,9}\/[\w.()/:;-]+/i)?.[0].replace(/[.,;)]$/, "");
-}
-
-function referenceInlineContent(text: string, doi?: string, briqHref?: string) {
-  const pattern = /(https?:\/\/[^\s<>]+|10\.\d{4,9}\/[\w.()/:;-]+)/gi;
-  const parts = text.split(pattern);
-  let linkedDoi = false;
-
-  const content = parts.map((part, index) => {
-    if (!part) return null;
-    const isUrl = /^https?:\/\//i.test(part);
-    const isDoi = /^10\.\d{4,9}\//i.test(part);
-    if (isUrl || isDoi) {
-      const trailing = part.match(/[.,;]+$/)?.[0] || "";
-      const target = trailing ? part.slice(0, -trailing.length) : part;
-      const targetDoi = referenceDoi(target);
-      if (targetDoi) linkedDoi = true;
-      return <span key={`${part}-${index}`}><a className="reference-inline-link" href={isUrl ? target : `https://doi.org/${target}`} target="_blank" rel="noreferrer">{target}</a>{trailing}</span>;
-    }
-    return briqHref
-      ? <a className="reference-inline-link reference-briq-link" href={briqHref} key={`${part}-${index}`}>{part}</a>
-      : part;
-  });
-
-  if (doi && !linkedDoi) {
-    content.push(<span key="appended-doi"> · <a className="reference-inline-link" href={`https://doi.org/${doi}`} target="_blank" rel="noreferrer">{`https://doi.org/${doi}`}</a></span>);
-  }
-  return content;
 }
 
 function normalizedReference(value: string) {
@@ -365,7 +333,7 @@ export function ArticlePlatform({
               const doi = referenceDoi(reference.text);
               const briqArticle = briqReferenceArticle(reference.text, doi);
               const briqHref = briqArticle ? (locale === "tr" ? `/makaleler/${briqArticle.slug}` : `/en/articles/${briqArticle.slug}`) : undefined;
-              return <li id={reference.id} key={reference.id}><p>{referenceInlineContent(reference.text, doi, briqHref)}</p><span className="reference-actions">
+              return <li id={reference.id} key={reference.id}><p><ReferenceText text={reference.text} doi={doi} briqHref={briqHref} /></p><span className="reference-actions">
                 <ReferenceBackLink targetId={reference.id} locale={locale} kind="reference" />
               </span></li>;
             })}</ol></details> : null}

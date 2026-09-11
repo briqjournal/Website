@@ -9096,7 +9096,7 @@ footer {
   white-space: normal;
   color: var(--rust-dark);
   font-size: inherit;
-  font-weight: 700;
+  font-weight: inherit;
   text-decoration: underline;
   text-decoration-color: rgba(145, 60, 25, .34);
   text-underline-offset: 3px;
