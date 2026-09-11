@@ -1,0 +1,44 @@
+name: Extract Saudi article English PDF
+
+on:
+  push:
+    paths:
+      - ".github/workflows/extract-saudi-english.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download and extract English article PDF
+        shell: bash
+        env:
+          PDF_URL: "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Salman%20K.%20Al-Dhafeeire%20%26%20Sun%20Degang%20-%20Saudi%20Arabia%E2%80%99s%20Complex%20Cultural%20Hedging%20Between%20the%20U.S.%20and%20China.pdf"
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          curl --fail --location --retry 3 --retry-delay 2 --user-agent "Mozilla/5.0" "$PDF_URL" -o /tmp/saudi-english.pdf
+          test "$(head -c 5 /tmp/saudi-english.pdf)" = "%PDF-"
+          pdftotext -layout /tmp/saudi-english.pdf /tmp/saudi-english.txt
+          mkdir -p tmp
+          cp /tmp/saudi-english.txt tmp/saudi-english-pdf.txt
+          printf '\nPDF source: %s\n' "$PDF_URL" >> tmp/saudi-english-pdf.txt
+
+      - name: Commit extracted source text
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp/saudi-english-pdf.txt
+          git commit -m "Extract Saudi article English PDF source"
+          git push origin HEAD:main
