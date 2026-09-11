@@ -35,10 +35,14 @@ export function normalizeReferenceText(value: string) {
     .replace(/\bdoi\s*:\s*10\s*\.\s*(\d{4,9})\s*\/\s*/gi, "https://doi.org/10.$1/")
     .replace(/\b10\s*\.\s*(\d{4,9})\s*\/\s*/gi, "10.$1/");
 
-  // Repair spaces introduced by PDF line wrapping immediately before URL
-  // punctuation. Deliberately do not join arbitrary word-to-word whitespace.
+  // Repair spaces introduced by PDF line wrapping around URL punctuation and
+  // within DOI suffixes. The DOI rules are deliberately constrained to strong
+  // continuation signals so normal prose after a DOI is never concatenated.
   for (let pass = 0; pass < 4; pass += 1) {
-    text = text.replace(/(https?:\/\/[^\s<>\[\]{}]+)\s+([/?#&=:%])\s*/gi, "$1$2");
+    text = text
+      .replace(/(https?:\/\/[^\s<>\[\]{}]+)\s+([/?#&=:%])\s*/gi, "$1$2")
+      .replace(/(10\.\d{4,9}\/[^\s<>"']*[-/_:;])\s+(?=[A-Z0-9])/gi, "$1")
+      .replace(/(10\.\d{4,9}\/[^\s<>"']*\.)\s+(?=(?:\d|cnki\b|issn\b))/gi, "$1");
   }
 
   // APA 7 uses the DOI resolver form rather than a bare "doi:" label.
