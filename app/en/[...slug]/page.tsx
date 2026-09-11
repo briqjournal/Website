@@ -660,7 +660,7 @@ function EnglishIssue({ volume, issueNumber }: { volume: number; issueNumber: nu
           <h2>Contents</h2>
           <div className="compact-article-list">
             {publications.map((publication) => (
-              <a href={`/en/articles/${publication.slug}`} key={publication.slug}><small>{publication.pages ? `pp. ${publication.pages}` : "Publication record"}{publication.doi ? ` · DOI: ${publication.doi}` : ""}</small><h3>{publication.title_en || publication.title_tr}</h3><p>{publication.author}</p></a>
+              <a href={`/en/articles/${publication.slug}`} key={publication.slug}><small>{publicationType(publication, "en")} · {publication.pages ? `pp. ${publication.pages}` : "Publication record"}{publication.doi ? ` · DOI: ${publication.doi}` : ""}</small><h3>{publication.title_en || publication.title_tr}</h3><p>{publication.author}</p></a>
             ))}
           </div>
           <a className="underlined-link" href="/en/archive">Back to all issues →︎</a>

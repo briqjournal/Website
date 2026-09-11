@@ -1142,7 +1142,7 @@ function ArchiveIssue({ volume, issue }: { volume: number; issue: number }) {
           <div className="compact-article-list">
             {publications.map((publication) => (
               <a href={`/makaleler/${publication.slug}`} key={publication.slug}>
-                <small>{publication.pages ? `ss. ${publication.pages}` : "Yayın kaydı"}{publication.doi ? ` · DOI: ${publication.doi}` : ""}</small>
+                <small>{publicationType(publication, "tr")} · {publication.pages ? `ss. ${publication.pages}` : "Yayın kaydı"}{publication.doi ? ` · DOI: ${publication.doi}` : ""}</small>
                 <h3>{publication.title_tr}</h3>
                 <p>{publication.author}</p>
               </a>

@@ -173,7 +173,7 @@ export function publicationType(
   if (/\[çeviri|translation|çeviren|çeviri:/.test(text)) return label("Çeviri", "Translation");
   if (/fotoğraf|photograph|karikatür|cartoon|\bafiş\b|poster|\bresim\b|tablosu|painting|visual contribution/.test(text)) return label("Görsel Katkı", "Visual Contribution");
   if (/editörden|editorial/.test(text)) return label("Editörden", "Editorial");
-  return label("Hakemli Makale", "Peer-reviewed Article");
+  return label("Araştırma Makalesi", "Research Article");
 }
 
 export function issuePdfUrl(

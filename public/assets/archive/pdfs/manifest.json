@@ -1,21 +1,23 @@
 {
   "generated_from": "https://briqjournal.com",
-  "unique_files": 610,
-  "total_bytes": 3635792832,
+  "unique_files": 618,
+  "total_bytes": 3658795795,
   "files": [
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_82-83.pdf",
       "local": "/assets/archive/pdfs/articles/1-uluslararasi-kusak-ve-yol-inisiyatifi-turkiye-sempozyumu-turkiye-dijital-ipek-yolunun-oncusu-en.pdf",
       "bytes": 661283,
       "sha256": "c08589b0e3d576eb0fbb2fffae737d277a86aa9220a4158646f78f4ac48142ba",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Turkey%20as%20a%20Role%20Model%20in%20Chinese%20Newspapers%20of%201920-1930s.pdf",
       "local": "/assets/archive/pdfs/articles/1920-1930lardaki-cin-gazetelerinde-bir-rol-model-olarak-turkiye-en.pdf",
       "bytes": 651301,
       "sha256": "87c79aa4d7bc8766fe44f53fbe34ed2e78b330aa9ce9f73bab29ac645411f350",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/1920-1930%E2%80%99lardaki%20%C3%87in%20Gazetelerinde%20Bir%20Rol%20Model%20Olarak%20T%C3%BCrkiye.pdf",
@@ -29,7 +31,8 @@
       "local": "/assets/archive/pdfs/articles/21-yuzyilda-yeni-ipek-yolunu-kurmak-cin-turk-perspektifinden-kusak-ve-yol-girisimi-en.pdf",
       "bytes": 978191,
       "sha256": "50617c7508bb446f46a1d3ad6a255fd9efb34e4cebce29730e21c1956f6f1ab6",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/21.%20Y%C3%BCzy%C4%B1lda%20Yeni%20%C4%B0pek%20Yolu%E2%80%99nu%20Kurmak%20%C3%87in-T%C3%BCrk%20Perspektifinden%20Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi.pdf",
@@ -43,7 +46,8 @@
       "local": "/assets/archive/pdfs/articles/39-harbi-en.pdf",
       "bytes": 295395,
       "sha256": "9c060c9afc9493d7aca429e39d12db9fdbb4da26f320339cdb38e39aba041ca9",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/ENVER%20G%C3%96K%C3%87E_%C5%9E%C4%B0%C4%B0R_TR.pdf",
@@ -57,7 +61,8 @@
       "local": "/assets/archive/pdfs/articles/70-yilinda-bandung-baglantisizliktan-hegemonyaciliga-karsi-milli-devletlerin-ortak-kalkinma-ve-en.pdf",
       "bytes": 2737232,
       "sha256": "a807dd4a8e8d5d51ebdfa4763301f2f1cc0905a0343c3e899658d5212c76722f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Semih%20Koray_TR.pdf",
@@ -71,7 +76,8 @@
       "local": "/assets/archive/pdfs/articles/abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu-en.pdf",
       "bytes": 2246906,
       "sha256": "29dd658e08eae807b8c33a73805802adefba1ec3b728679a28d4306c63841404",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-66-85.pdf",
@@ -85,7 +91,8 @@
       "local": "/assets/archive/pdfs/articles/abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali-en.pdf",
       "bytes": 3602925,
       "sha256": "2e6eb358fe43f7f250a8fa070e989164dbeafa2b923c184e6fe6bb95f80095a9",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/SMAIL%20Debeche.pdf",
@@ -99,7 +106,8 @@
       "local": "/assets/archive/pdfs/articles/abdnin-cevrelemeye-calistigi-turkiye-rusya-ve-cin-isbirligi-yapmali-en.pdf",
       "bytes": 2525763,
       "sha256": "b7f28cb316899b96a6e3347ac0e9b7eaf9f49281bc64d4b9e51b2146a4b2b416",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Fahri%20Erenel_TR.pdf",
@@ -113,7 +121,8 @@
       "local": "/assets/archive/pdfs/articles/abdnin-kurdugu-ekonomik-tuzak-isiginda-abd-cin-rekabetinin-mahiyeti-en.pdf",
       "bytes": 2580462,
       "sha256": "d74ae1aef8aaec0f6a96f5acbe27dbd733d9b4364a52f4c278409d33eb20b97e",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/140-YI%20SHAOXUAN.pdf",
@@ -127,7 +136,8 @@
       "local": "/assets/archive/pdfs/articles/adalar-denizinde-yasanan-turkiye-yunanistan-geriliminin-dogu-akdeniz-bolgesel-guvenlik-kompleksine-en.pdf",
       "bytes": 4467422,
       "sha256": "f8b50c0d5e62fe8565c2bfaa7028bfa6e0255b31f9c33cb833fb18f42b2b0017",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/El%C4%B0f%20Erke%C3%A7.pdf",
@@ -141,7 +151,8 @@
       "local": "/assets/archive/pdfs/articles/afrika-asya-jeopolitik-denkleminde-afrikanin-onemi-kizildeniz-ve-yemen-denizi-en.pdf",
       "bytes": 5345546,
       "sha256": "f807f53965020acddf3d1ef9fe860a7a12c83b518e8b29126a7e2fefbde13af3",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_130-153.pdf",
@@ -155,7 +166,8 @@
       "local": "/assets/archive/pdfs/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme-en.pdf",
       "bytes": 6333253,
       "sha256": "71d5ec0114073ac4ad2c291f637536db7fbcca9a5f5fe3fa4557ec6436e33f35",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-02/Belkacem%20Iratni_TR.pdf",
@@ -169,7 +181,8 @@
       "local": "/assets/archive/pdfs/articles/afrikanin-geleceginde-turkiyenin-yeri-kazan-kazan-anlayisina-dayali-yakin-bir-isbirligine-dogru-en.pdf",
       "bytes": 1151793,
       "sha256": "d39f3ab8093176e3c166aede23f1b05285eda758129ad4f76830d06246126127",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_210-217.pdf",
@@ -183,7 +196,8 @@
       "local": "/assets/archive/pdfs/articles/afrikanin-kalbinde-sabah-en.pdf",
       "bytes": 625192,
       "sha256": "87715ca524cfb8baf1a2cb0fac4cbfc137d0b20904a6b68f3910c932788e659e",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_226-228.pdf",
@@ -197,7 +211,8 @@
       "local": "/assets/archive/pdfs/articles/afrikanin-son-somurgesi-bati-sahra-en.pdf",
       "bytes": 2032602,
       "sha256": "392049a38b41be969c8663fbbefdafe4ed56630f5d3ed1630e08acabbcaed6b3",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_172-181.pdf",
@@ -211,7 +226,8 @@
       "local": "/assets/archive/pdfs/articles/alter-kuresellesme-baglaminda-cin-fransiz-iliskileri-en.pdf",
       "bytes": 2967042,
       "sha256": "5c600a16b2282f1bdc38c83371ea9bbffd9caede7eaf54a226de7c1575b101e2",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/7Ahmet%20Gedik_T%C3%9CRK%C3%87E.pdf",
@@ -225,7 +241,8 @@
       "local": "/assets/archive/pdfs/articles/amerika-sonrasi-donemde-adil-bir-dunya-duzeni-insa-etmek-en.pdf",
       "bytes": 940709,
       "sha256": "c390fab241bc45d7de24c3947c72b1b74188eaae856e6db982104fb091adcd56",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Amerika%20Sonras%C4%B1%20D%C3%B6nemde%20Adil%20Bir%20D%C3%BCnya%20D%C3%BCzeni%20%C4%B0n%C5%9Fa%20Etmek.pdf",
@@ -239,7 +256,8 @@
       "local": "/assets/archive/pdfs/articles/anadolunun-kulturel-mirasini-koruma-ve-gelecege-aktarma-sorumlulugu-en.pdf",
       "bytes": 725790,
       "sha256": "0620bab3892350b1462ca20faddd03d622affa3378b85abe38456673e95c6339",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/MEHMET%20CELAL%20%C3%96ZDO%C4%9EAN_TR.pdf",
@@ -253,7 +271,8 @@
       "local": "/assets/archive/pdfs/articles/arap-bahari-sonrasi-uluslararasi-guvenlik-suriye-ve-libya-catismalarinin-yurtici-ve-uluslararasi-en.pdf",
       "bytes": 1374645,
       "sha256": "3690e5a2c5484cd870d54d8e2f89fcd8c490e5b972437851553ec34f5c147311",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Arap%20Bahar%C4%B1%20Sonras%C4%B1%20Uluslararas%C4%B1%20G%C3%BCvenlik%20Suriye%20ve%20Libya%20%C3%87at%C4%B1%C5%9Fmalar%C4%B1n%C4%B1n%20Yurti%C3%A7i%20ve%20Uluslararas%C4%B1%20Kaynaklar%C4%B1%20%282011-2020%29.pdf",
@@ -274,7 +293,8 @@
       "local": "/assets/archive/pdfs/articles/asya-afrika-yazarlarina-siir-en.pdf",
       "bytes": 319851,
       "sha256": "59e55c4ffe95ae42a9ce37c17e2ab329eafe9afcc77720fba6962f5616bc15c7",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-88-89.pdf",
@@ -288,7 +308,8 @@
       "local": "/assets/archive/pdfs/articles/asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani-en.pdf",
       "bytes": 2577452,
       "sha256": "39553ef53694b47feaf872ed00a4a4ad9d07ee73cadab853a128b591d30f9153",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%204.%20SAYI%20-%20ERSEL%20ZAFER%20ORAL%20-%20TR.pdf",
@@ -302,7 +323,8 @@
       "local": "/assets/archive/pdfs/articles/ataturk-modeli-gelisen-dunya-icin-bagimsizlik-ve-kalkinmada-ornek-basari-en.pdf",
       "bytes": 1232193,
       "sha256": "a63cb495f3b8cd0dda0d3073346973e9c48b3cf70d1b60042138e9be0b412fcd",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_AlexandrSotni%C3%A7enko_TR.pdf",
@@ -316,7 +338,8 @@
       "local": "/assets/archive/pdfs/articles/atli-mustafa-kemal-1988-avni-arbas-en.pdf",
       "bytes": 933628,
       "sha256": "a3935ec4dd321f0c20781d991612637100c6a25b41ee2fd14d50df1eabeeb7cc",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_Resim_TR.pdf",
@@ -330,7 +353,8 @@
       "local": "/assets/archive/pdfs/articles/avrasyada-ayrilikci-hareketlerin-jeopolitigi-en.pdf",
       "bytes": 2229128,
       "sha256": "d043f08757ddaccdb88a20b48902e885d63ba58a1d5627a60c5f496eaec10ba6",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Avrasya%E2%80%99da%20Ayr%C4%B1l%C4%B1k%C3%A7%C4%B1%20Hareketlerin%20Jeopoliti%C4%9Fi.pdf",
@@ -344,7 +368,8 @@
       "local": "/assets/archive/pdfs/articles/avrupayi-abd-liderligindeki-sanayisizlesmeden-kurtarmak-en.pdf",
       "bytes": 3291702,
       "sha256": "853e296f4d061d69c798b3638897c9e96195a426e2bd1ce01e0b94bc82a87d03",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/124-WERNER%20R%C3%9CGEMER-tr.pdf",
@@ -358,7 +383,8 @@
       "local": "/assets/archive/pdfs/articles/bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden-en.pdf",
       "bytes": 1623410,
       "sha256": "b99e1dc4834bde4c977f72c80b6ecd1581472b11b6cd2c94ca0280feaa45f86f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Fang%20Xuting_TR.pdf",
@@ -372,7 +398,8 @@
       "local": "/assets/archive/pdfs/articles/bandung-ruhu-70-yasinda-en.pdf",
       "bytes": 2645983,
       "sha256": "d15f82c11099b16a3047f2be11da517be5211a1db91c3cdf6bb7f30503d4c574",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/C%C3%9CNEYT%20AKALIN_TR2.pdf",
@@ -386,7 +413,8 @@
       "local": "/assets/archive/pdfs/articles/baris-icin-savasirken-unutma-1962-en.pdf",
       "bytes": 447206,
       "sha256": "655925113676de9b9228ca3d4e7abf4a8397eab8f3b4a4ec1600c1f6013d1551",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_231.pdf",
@@ -400,7 +428,8 @@
       "local": "/assets/archive/pdfs/articles/bati-cephesindeki-sessizlik-en.pdf",
       "bytes": 312297,
       "sha256": "30c1871639cbe02ed011cb753c8d1bfb49252a31f8c1c399c0ea578dfc54a239",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Bat%C4%B1%20Cephesindeki%20Sessizlik.pdf",
@@ -414,7 +443,8 @@
       "local": "/assets/archive/pdfs/articles/beklenen-cagri-bir-kusak-bir-yol-senfonisi-en.pdf",
       "bytes": 6741699,
       "sha256": "3bfbc60db71c778c1f85a83c266c4c820929937997401db3ef17bd05cf5cf178",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/%C5%9Eiir%20-%20BEKLENEN%20%C3%87A%C4%9ERI.pdf",
@@ -456,7 +486,8 @@
       "local": "/assets/archive/pdfs/articles/beyin-olumu-gerceklesen-nato-otanaziye-dogru-mu-gidiyor-en.pdf",
       "bytes": 2777181,
       "sha256": "5351b134dad029e26469a44e581fd205ff10d01139f1ccfaa8f0e0226da682c7",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_Fahr%C4%B0%20Erenel%20%26%20Ahmet%20Gedik_TR.pdf",
@@ -470,7 +501,8 @@
       "local": "/assets/archive/pdfs/articles/bilimin-siniri-yoktur-ama-bilim-insanlarinin-vatani-vardir-en.pdf",
       "bytes": 2393159,
       "sha256": "a831f64c75e0dbc172bd8e40fe201a12205b999da5a71a112fd62778dd7a3b9f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Bilimin%20S%C4%B1n%C4%B1r%C4%B1%20Yoktur%20Ama%20Bilim%20insanlar%C4%B1n%C4%B1n%20Vatan%C4%B1%20Vard%C4%B1r.pdf",
@@ -484,7 +516,8 @@
       "local": "/assets/archive/pdfs/articles/bin-okur-bin-hamlet-bir-cinli-akademisyenin-kusak-ve-yol-girisimi-hakkindaki-10-onemli-soruya-en.pdf",
       "bytes": 217487,
       "sha256": "0920623f36e2ce32d0dea32fe1f51fd8f4bb03a4726d4efeccfa335bc9069523",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Bin%20Okur%2C%20Bin%20Hamlet%20-%20Bir%20%C3%87inli%20Akademisyenin%20Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%20Hakk%C4%B1ndaki%2010%20%C3%96nemli%20Soruya%20Cevab%C4%B1.pdf",
@@ -498,7 +531,8 @@
       "local": "/assets/archive/pdfs/articles/bmc-yonetim-kurulu-baskani-ethem-sancak-asya-kartalinin-iki-kanadi-turkiye-ve-cin-en.pdf",
       "bytes": 771957,
       "sha256": "6bef427c9526fc8031baa15fc392987a327c39c8ad63d6959ceb525615375caf",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20ETHEM%20SANCAK.pdf",
@@ -512,7 +546,8 @@
       "local": "/assets/archive/pdfs/articles/brics-terore-karsi-mucadele-stratejisi-en.pdf",
       "bytes": 1065028,
       "sha256": "a4472fe022dcbb90ab0e53e552557a24cdb8c180457f2af87b2efbe9767ed3a4",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/BRICS%20Ter%C3%B6re%20Kar%C5%9F%C4%B1%20M%C3%BCcadele%20Stratejisi%20TR_0.pdf",
@@ -526,7 +561,8 @@
       "local": "/assets/archive/pdfs/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine-en.pdf",
       "bytes": 2301203,
       "sha256": "5f45cf83bb64acafc80c1b52525b3175f72c145967141a20736449010195cb12",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Belkacem%20Iratni_TR.pdf",
@@ -554,7 +590,8 @@
       "local": "/assets/archive/pdfs/articles/cin-abd-iliskilerinin-gelecegi-en.pdf",
       "bytes": 1741854,
       "sha256": "5be0bf6b3964691897d2b2450aca5db0121cce819338c43453fc64dcafc5ad45",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Yang%20Chen_TR.pdf",
@@ -568,7 +605,8 @@
       "local": "/assets/archive/pdfs/articles/cin-abd-rekabeti-golgesinde-kusak-ve-yol-girisimi-en.pdf",
       "bytes": 2047410,
       "sha256": "e37798ac5774d566137e7f1587318d0a1d8091245cc864ed96b0c34d734be33f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%204.%20SAYI%20-%20ASSADOLLAH%20ATHARI%20-%20EHSAN%20EJAZI%20-%20TR.pdf",
@@ -582,7 +620,8 @@
       "local": "/assets/archive/pdfs/articles/cin-baris-icinde-bir-arada-yasamanin-bes-ilkesi-temelinde-dostluk-ve-isbirligini-gelistirmeye-en.pdf",
       "bytes": 1615477,
       "sha256": "443c4cbe26752e9aa3e207805187256f2ace41cc531841f42f7572b8e78e0f52",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/Xi%20Jinping.pdf",
@@ -596,7 +635,8 @@
       "local": "/assets/archive/pdfs/articles/cin-ekonomik-mucizesinin-kodlari-gelisen-dunya-icin-dersler-en.pdf",
       "bytes": 7078519,
       "sha256": "c7d28ebad97818bda0a4d89f98cf668d479894b5805ed11db3e809f6f2201386",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/%C3%87in%20Ekonomik%20Mucizesinin%20Kodlar%C4%B1%20Geli%C5%9Fen%20D%C3%BCnya%20%C4%B0%C3%A7in%20Dersler%20-%20Efe%20Can%20G%C3%BCrcan_0.pdf",
@@ -610,7 +650,8 @@
       "local": "/assets/archive/pdfs/articles/cin-ile-afrika-ulkeleri-arasindaki-isbirliginin-degisen-dinamikleri-kuresel-kamu-mallari-yaklasimi-en.pdf",
       "bytes": 5221931,
       "sha256": "023ce7cd0e0bcbea22f1b642b73be1116f78aa5fa001e992c740899871f7863a",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_154-171.pdf",
@@ -624,7 +665,8 @@
       "local": "/assets/archive/pdfs/articles/cin-nato-iliskileri-tarih-ve-gerceklik-en.pdf",
       "bytes": 2190393,
       "sha256": "a35ae71bcefccb420a7bd7f8edea308f3fe10c839699479de03724cef96f9533",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_Yi%20Shaoxuan%20%26%20Yang%20Chen_TR.pdf",
@@ -638,7 +680,8 @@
       "local": "/assets/archive/pdfs/articles/cin-sosyalist-bir-kalkinma-modeli-mi-en.pdf",
       "bytes": 3466282,
       "sha256": "a060ecc69bcc60ad9276dc96c86748947817dd1e516a97a54e447eee443954a3",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/%C3%87in%20Sosyalist%20Bir%20Kalk%C4%B1nma%20Modeli%20Mi%20-%20Michael%20Roberts.pdf",
@@ -652,7 +695,8 @@
       "local": "/assets/archive/pdfs/articles/cin-ve-arap-ulkeleri-arasindaki-kulturel-alisverislerin-gelisimi-kusak-ve-yol-caginda-firsatlar-ve-en.pdf",
       "bytes": 1457293,
       "sha256": "8a388cd8e8c3923216f54bc577e927e1d875ee34939480d23e4c2d87c1075495",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/%C3%87in%20ve%20Arap%20%C3%9Clkeleri%20Aras%C4%B1ndaki%20K%C3%BClt%C3%BCrel%20Al%C4%B1%C5%9Fveri%C5%9Flerin%20Geli%C5%9Fimi%20Ku%C5%9Fak%20ve%20Yol%20%C3%87a%C4%9F%C4%B1%E2%80%99nda%20F%C4%B1rsatlar%20ve%20Zorluklar.pdf",
@@ -666,7 +710,8 @@
       "local": "/assets/archive/pdfs/articles/cin-ve-turkiye-imajlarinin-karsilikli-insasi-algilar-sorunlar-ve-politika-onerileri-en.pdf",
       "bytes": 1618498,
       "sha256": "769289b3448d6433a8415b52702ae152b114c84675587a4ca610cd860639356c",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/%C3%87in%20ve%20T%C3%BCrkiye%20%C4%B0majlar%C4%B1n%C4%B1n%20Kar%C5%9F%C4%B1l%C4%B1kl%C4%B1%20%C4%B0n%C5%9Fas%C4%B1%20Alg%C4%B1lar%2C%20Sorunlar%20ve%20Politika%20%C3%96nerileri.pdf",
@@ -680,7 +725,8 @@
       "local": "/assets/archive/pdfs/articles/cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni-en.pdf",
       "bytes": 77401,
       "sha256": "52c353889a9359df9145581d748e03d0f4b492d340db3546294ee9ea02ccb815",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/%C3%87%C4%B0N%20VE%20T%C3%9CRK%C4%B0YE%E2%80%99N%C4%B0N%20D%C4%B0PLOMAT%C4%B0K%20%C4%B0L%C4%B0%C5%9EK%C4%B0LER%C4%B0N%C4%B0N%20KURULU%C5%9EUNUN%2050.%20YILD%C3%96N%C3%9CM%C3%9CNDE%20KU%C5%9EAK%20VE%20YOL%20%C4%B0%C5%9EB%C4%B0RL%C4%B0%C4%9E%C4%B0%20YEN%C4%B0%20B%C4%B0R%20SAYFA%20A%C3%87IYOR.pdf",
@@ -694,7 +740,8 @@
       "local": "/assets/archive/pdfs/articles/cinde-marksizmin-yenilenmesi-en.pdf",
       "bytes": 3629761,
       "sha256": "abe20b9435bd4c679d56775c8157baf2574b34a040be76637e29792eba8a7c8a",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/344-348%20-%20Werner%20R%C3%BCgemer%20-%20Kitap%20%C4%B0nceleme.pdf",
@@ -708,7 +755,8 @@
       "local": "/assets/archive/pdfs/articles/cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege-en.pdf",
       "bytes": 7090822,
       "sha256": "28df11881ecd7d4d53c27ee81a4738ff88b515b21761efa4d8d50fd36168acbf",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/LI%20NING%20%26%20YANG%20XUYAN_TR.pdf",
@@ -722,7 +770,8 @@
       "local": "/assets/archive/pdfs/articles/cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis-en.pdf",
       "bytes": 5337516,
       "sha256": "47df334f6f1830959c93e5b721d1eb06f91721f05adfdc07d18f2451ca1c089f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-02/Xinhua%20Jian_TR.pdf",
@@ -736,7 +785,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-afrika-ile-stratejik-iliskisi-ve-yeni-uluslararasi-donusumler-eski-politikalar-yeni-zorluklar-en.pdf",
       "bytes": 8958140,
       "sha256": "a1082957ebed05fe71d733fe6613b0fd4e75905497c4d23acf4c6ccc4606d321",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/288-309%20-%20Belkacem%20Iratni%20-%20TR.pdf",
@@ -750,7 +800,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-cevre-politikalarinin-ekolojik-uygarliga-dogru-gelisimi-en.pdf",
       "bytes": 1780006,
       "sha256": "65cf3f94ab10b8c093a80f97f3ce48ca1e61e1f07de87c4ce94d86268a36f98f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/%C3%87in%E2%80%99in%20%C3%87evre%20Politikalar%C4%B1n%C4%B1n%20Ekolojik%20Uygarl%C4%B1%C4%9Fa%20Do%C4%9Fru%20Geli%C5%9Fimi.pdf",
@@ -764,7 +815,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-dis-ekonomik-siyasetinin-geleneksel-olmayan-bir-okumasi-bir-degisim-ve-donusum-sureci-en.pdf",
       "bytes": 1980288,
       "sha256": "622cdbc02aca87cc6c341c3f173b81deaa1a94c612166cda853b7861a63c9847",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_Digby%20James%20Wren_TR.pdf",
@@ -778,7 +830,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-dogu-akdenizde-cozum-onerisi-kalkinmaci-baris-yaklasimi-en.pdf",
       "bytes": 5645514,
       "sha256": "11587c5a400ea64cfd4e79a209d4bcb6003ca8d4aad481d3528dd58ba86144ba",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Sun%20Degang_TR.pdf",
@@ -792,7 +845,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-ekonomik-diyalektigi-reformun-asil-amaci-uzerine-degerlendirme-en.pdf",
       "bytes": 299826,
       "sha256": "1b8a5c2b3492689c311007466e0d1fd87e32df54f49a11ebbcc462ec8d2ba482",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/%C3%87in%E2%80%99in%20Ekonomik%20Diyalekti%C4%9Fi%20Reformun%20As%C4%B1l%20Amac%C4%B1%20%C3%9Czerine%20De%C4%9Ferlendirme%20-%20John%20Bellamy%20Foster.pdf",
@@ -806,7 +860,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-erken-modernizasyonuna-sun-yat-senin-katkisi-en.pdf",
       "bytes": 2337400,
       "sha256": "448978574323a72bc1ccd2bff963b73de4d07ce98fff2adc66b677653d44ab61",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/2Liu%20Ningning%20%26%20Cheng%20Enfu_T%C3%9CRK%C3%87E.pdf",
@@ -820,7 +875,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-hidrojen-enerjisi-endustrisinin-gelistirilmesine-yonelik-orta-ve-uzun-vadeli-planina-genel-en.pdf",
       "bytes": 845217,
       "sha256": "de59ac29735861672ce67bc45bda8d427592bb5799ca1559b83d092d8967dc84",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_TR_FINAL_SON_66-68.pdf",
@@ -828,6 +884,14 @@
       "bytes": 801018,
       "sha256": "2a234120b495fad8707852e5079f8d56af416330f87f2523d8a9d35b7d354fa7",
       "status": "downloaded"
+    },
+    {
+      "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Sanoop%20Sajan%20Koshy%20-%20BOOK%20REVIEW%20-%20China%E2%80%99s%20Global%20Infrastructure%20Strategy.pdf",
+      "local": "/assets/archive/pdfs/articles/cinin-kuresel-altyapi-stratejisi-en.pdf",
+      "bytes": 819309,
+      "sha256": "b31ec545853735dfe158985fbd15dc48eba790465e04d0be7a1e3e6b6df34d93",
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Sanoop%20Sajan%20Koshy%20-%20Kitap%20%C4%B0nceleme%20-%20%C3%87in%E2%80%99in%20K%C3%BCresel%20Altyap%C4%B1%20Stratejisi.pdf",
@@ -841,7 +905,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-sistemi-ve-dunya-gorusu-ile-islam-arasinda-celiski-yoktur-en.pdf",
       "bytes": 3447052,
       "sha256": "6c2df4a2440eac072f7d209213c5e4029ee14a9e2d91a82dce1b4a8fbb702642",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/256-265%20-%20Mushahid%20Hussain%20Sayed%20-%20R%C3%B6portaj.pdf",
@@ -855,7 +920,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi-en.pdf",
       "bytes": 2548262,
       "sha256": "ac59cfc91236261c191cce6bcc5c73f760d59d587a6520d1cee353a7b87a3b7f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/%C3%87in%E2%80%99in%20Sudan%20ve%20G%C3%BCney%20Sudan%E2%80%99daki%20%C3%87at%C4%B1%C5%9Fma%20%C3%87%C3%B6z%C3%BCm%C3%BCne%20Kat%C4%B1l%C4%B1m%C4%B1%20Bir%20%E2%80%9CYarat%C4%B1c%C4%B1%20Arabuluculuk%E2%80%9D%20%C3%96rne%C4%9Fi.pdf",
@@ -869,7 +935,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-uc-kuresel-girisimi-baglaminda-ortadogu-politikasinin-seyri-en.pdf",
       "bytes": 7518870,
       "sha256": "b81a2db71610e9847beb311fd718593a8a30241cbfe87f291c61465f0245365d",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/238-255%20-%20Yang%20Chen%20%26%20Ma%20Jinting-TR.pdf",
@@ -883,7 +950,8 @@
       "local": "/assets/archive/pdfs/articles/cinin-yeni-koronavirus-zaturresine-karsi-savasi-mucadeleler-sonuclar-ve-yansimalar-en.pdf",
       "bytes": 3469550,
       "sha256": "0751c2329dbffc48ed91b75fbe4be848a01dd8f03c87acc7ac36cf7b5d050d64",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/%C3%87in%E2%80%99in%20Yeni%20Koronavir%C3%BCs%20Zat%C3%BCrresine%20Kar%C5%9F%C4%B1%20Sava%C5%9F%C4%B1%20M%C3%BCcadeleler%2C%20Sonu%C3%A7lar%20ve%20Yans%C4%B1malar.pdf",
@@ -897,7 +965,8 @@
       "local": "/assets/archive/pdfs/articles/cinli-devrimcilerin-sun-yat-sen-ve-mustafa-kemal-arasindaki-benzerlikler-uzerine-gorusleri-en.pdf",
       "bytes": 2937583,
       "sha256": "be95cdc12f36775760cb8d1ba95dba9fc213c03bdd121d07e7312db03ab90ff6",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/3Necati%20Demircan_T%C3%9CRK%C3%87E.pdf",
@@ -925,7 +994,8 @@
       "local": "/assets/archive/pdfs/articles/cok-kutuplulasan-dunyada-geleneksel-olmayan-guvenlik-anlayisi-sio-ornegi-en.pdf",
       "bytes": 1453849,
       "sha256": "7455df6811dbc0674b671f3f39ab3f49f2d0a8863bc64d00b39e18e52211b5bb",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/%C3%87ok%20Kutuplula%C5%9Fan%20D%C3%BCnyada%20Geleneksel%20Olmayan%20G%C3%BCvenlik%20Anlay%C4%B1%C5%9F%C4%B1%20%C5%9E%C4%B0%C3%96%20%C3%96rne%C4%9Fi.pdf",
@@ -939,7 +1009,8 @@
       "local": "/assets/archive/pdfs/articles/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen-en.pdf",
       "bytes": 2804102,
       "sha256": "4a173ac5016be1ac500b163e0223f9938c255fe84445874521a708cf16c35fe9",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-40-59.pdf",
@@ -953,7 +1024,8 @@
       "local": "/assets/archive/pdfs/articles/covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor-en.pdf",
       "bytes": 637003,
       "sha256": "a378e11bff2cb7f38c0da4215da6882d19246e5c8375803db8186faae1ef3308",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20%C5%9EEREF%20ATE%C5%9E.pdf",
@@ -967,7 +1039,8 @@
       "local": "/assets/archive/pdfs/articles/covid-19-sonrasi-dunyada-saglik-ipek-yolundan-insan-sagligi-icin-ortak-gelecek-toplumuna-en.pdf",
       "bytes": 3737855,
       "sha256": "41ab64b4faacfd9e26a70918caa8d214d418440e76ebd96ee976dce7703c090c",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/COVID-19%20sonras%C4%B1%20D%C3%BCnyada%20Sa%C4%9Fl%C4%B1k%20%C4%B0pek%20Yolundan%20%C4%B0nsan%20Sa%C4%9Fl%C4%B1%C4%9F%C4%B1%20i%C3%A7in%20Ortak%20Gelecek%20Toplumuna.pdf",
@@ -981,7 +1054,8 @@
       "local": "/assets/archive/pdfs/articles/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler-en.pdf",
       "bytes": 789309,
       "sha256": "15854d294ffe862f17274d764d3858707864a1e330f56a635563589aeac46c53",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-09/BRIQ_TURKCE%20-%204.%20SAYI%20-%20SERDAR%20YURT%C3%87%C4%B0%C3%87EK%20-%20TR.pdf",
@@ -995,7 +1069,8 @@
       "local": "/assets/archive/pdfs/articles/covid-19-ve-neoliberalizmin-hiper-krizi-finansallasmanin-cokusu-en.pdf",
       "bytes": 635242,
       "sha256": "cf34286ba6efa38f58c5b799760a63df89bf106e3f8e8442db6930306030778a",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20LUIS%20KATO%20MALDONADO%20-%20GUADALUPE%20HUERTA%20MORENO.pdf",
@@ -1009,7 +1084,8 @@
       "local": "/assets/archive/pdfs/articles/cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi-en.pdf",
       "bytes": 970591,
       "sha256": "fd958ee4e3bae336a8b6cdc484e1875a11dfa87e9e89887dfc8ac6b3c0d8f266",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-30-39.pdf",
@@ -1023,7 +1099,8 @@
       "local": "/assets/archive/pdfs/articles/deniz-ve-asya-yuzyilinda-turkiye-en.pdf",
       "bytes": 2030756,
       "sha256": "30f365a19ebc982bdb0682b59320e415714705345de8ebef32b150af5c32c07a",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Deniz%20ve%20Asya%20Y%C3%BCzy%C4%B1l%C4%B1nda%20T%C3%BCrkiye.pdf",
@@ -1037,7 +1114,8 @@
       "local": "/assets/archive/pdfs/articles/devlet-farkli-politika-araclari-ile-aktif-piyasa-mudahalesini-surekli-hale-getirmeli-en.pdf",
       "bytes": 2236249,
       "sha256": "986ef83c862246767638215802f99d0183e13fdc852757e9bba9dea01ff7f345",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/%C4%B0brah%C4%B0m%20Sem%C4%B0h%20Ak%C3%A7omak_TR.pdf",
@@ -1045,6 +1123,14 @@
       "bytes": 2167442,
       "sha256": "ee263f883f92388190024f8b2cd31eb2cd9b5bcad9efe67959b957ab1f883c88",
       "status": "downloaded"
+    },
+    {
+      "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Li%20Sainan%20%26%20Li%20Xi%20-%20China-Arab%20Cooperation%20under%20the%20Digital%20Silk%20Road%20Framework%20A%20Case%20Study%20of%20Jordan.pdf",
+      "local": "/assets/archive/pdfs/articles/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi-en.pdf",
+      "bytes": 4805584,
+      "sha256": "e097367a2d9d2df34268f9659c7dabd868006d9711e645c8761e5d4e859e6ee0",
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Li%20Sainan%20%26%20Li%20Xi_Li%20Sainan%20%26%20Li%20Xi%20-%20Dijital%20%C4%B0pek%20Yolu%20%C3%87er%C3%A7evesinde%20%C3%87in-Arap%20%C4%B0%C5%9Fbirli%C4%9Fi%20%C3%9Crd%C3%BCn%20%C3%96rne%C4%9Fi.pdf",
@@ -1058,14 +1144,16 @@
       "local": "/assets/archive/pdfs/articles/dogu-akdeniz-ve-guney-kafkasyada-basari-ve-barisin-formulu-en.pdf",
       "bytes": 1786353,
       "sha256": "0754c2a00e788701b5059bb0968762373a785ff042533dcfa8105456d3339fd5",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Mohamad%20Zreik_ENG_0.pdf",
       "local": "/assets/archive/pdfs/articles/dogu-akdenizde-cin-varligi-suriye-ornegi-en.pdf",
       "bytes": 2723405,
       "sha256": "7a2719d1aabc5c6267dd792c54df218ebbf5072673cc42ecc9a17ef0a8ce2fd1",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Mohamad%20Zreik_TR.pdf",
@@ -1079,7 +1167,8 @@
       "local": "/assets/archive/pdfs/articles/dogu-akdenizdeki-son-gelismeler-isiginda-kuzey-kibris-turk-cumhuriyetinin-taninmasinin-gerekliligi-en.pdf",
       "bytes": 1544979,
       "sha256": "2dfdf26029486ad430230f8b87d13882218154d14ef88bc47500bacd448936bf",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/ErsinTatar_TR.pdf",
@@ -1093,7 +1182,8 @@
       "local": "/assets/archive/pdfs/articles/dogu-tabletleri-doksan-dokuzuncu-tablet-ata-en.pdf",
       "bytes": 841642,
       "sha256": "f17fba22b91cc86772804560763b04e830719efe16b38d7271fc1696ef2a4ef2",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_H%C3%BCseyinHaydar_TR.pdf",
@@ -1107,7 +1197,8 @@
       "local": "/assets/archive/pdfs/articles/doksan-yedinci-sonnet-siir-en.pdf",
       "bytes": 866828,
       "sha256": "16825a273a4d9e0914b59aa5e839219f3c2b8c85a1ef757f1134064ce5eed590",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/%C5%9E%C4%B0%C4%B0R%20-%20HASAN%20%C4%B0ZZETT%C4%B0N%20D%C4%B0NAMO%20-%20TR.pdf",
@@ -1135,7 +1226,8 @@
       "local": "/assets/archive/pdfs/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi-en.pdf",
       "bytes": 5175691,
       "sha256": "3dff5e8654daa66a33b5c19821b28019d9be84c0284d19160e92ffb2901b9e99",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/SONG%20SHULI%20%26%20CHENG%20ENFU%20TR_0.pdf",
@@ -1149,7 +1241,8 @@
       "local": "/assets/archive/pdfs/articles/dunya-ekonomisinin-dolardan-arindirilmasi-en.pdf",
       "bytes": 483429,
       "sha256": "6940c4f1eba905ca52321f8ba7f4fdd020f4606ef9d21f1cb73eda7e3f5f6010",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-60-65.pdf",
@@ -1163,7 +1256,8 @@
       "local": "/assets/archive/pdfs/articles/dunyanin-kusak-yola-kusak-yolun-siire-ihtiyaci-var-ve-kusak-yol-sairlerine-cagri-en.pdf",
       "bytes": 744908,
       "sha256": "53b70bd35cbf818e4967c8ce72a1ed1699efefb8ba2e42a56a2615a797619f2d",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/D%C3%BCnyan%C4%B1n%20Ku%C5%9Fak%20Yol%E2%80%99a%2C%20Ku%C5%9Fak%20Yol%E2%80%99un%20%C5%9Eiire%20%C4%B0htiyac%C4%B1%20Var%20ve%20Ku%C5%9Fak%20Yol%20%C5%9Eairlerine%20%C3%87a%C4%9Fr%C4%B1.pdf",
@@ -1177,7 +1271,8 @@
       "local": "/assets/archive/pdfs/articles/dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi-en.pdf",
       "bytes": 6324957,
       "sha256": "1908e920883245e69470c288f2dc39681fd3836b6ec20fcead84d9d262f42314",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-12/SHANGTAO%20GAO%20%26%20JESSICA%20DURDU_TR.pdf",
@@ -1191,7 +1286,8 @@
       "local": "/assets/archive/pdfs/articles/dunyayi-sarsan-turk-devrimi-en.pdf",
       "bytes": 6967312,
       "sha256": "2c246a69fa2ccecd9ef211e5cc28265e8d555c7b498c54df987694416dfd2a8f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_C%C3%BCneytAkal%C4%B1n_TR.pdf",
@@ -1205,7 +1301,8 @@
       "local": "/assets/archive/pdfs/articles/ekolojik-uygarligin-enerjisi-hidrojen-en.pdf",
       "bytes": 2865731,
       "sha256": "ac418767f8c4d6eaf6580a139a8f08cfc1778832b69ff0113a376a4a63d73858",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_TR_FINAL_SON_48-65.pdf",
@@ -1219,7 +1316,8 @@
       "local": "/assets/archive/pdfs/articles/ekolojik-uygarlik-tum-canlilar-icin-ortak-bir-gelecek-insasi-en.pdf",
       "bytes": 672270,
       "sha256": "d35253289c0c690688aee7a7af5b3c0379bde3ad309786d5cd905db2458feaf8",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Ekolojik%20Uygarl%C4%B1k%20T%C3%BCm%20Canl%C4%B1lar%20i%C3%A7in%20Ortak%20Bir%20Gelecek%20%C4%B0n%C5%9Fas%C4%B1.pdf",
@@ -1233,7 +1331,8 @@
       "local": "/assets/archive/pdfs/articles/ekolojik-uygarlikta-enerji-cevre-kesisimi-en.pdf",
       "bytes": 1521983,
       "sha256": "8a0a6ddbc3ecf2563da3b009acbbcc199fffb430193de6063e621c25ead8d0bc",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Ekolojik%20Uygarl%C4%B1kta%20Enerji-%C3%87evre%20Kesi%C5%9Fimi.pdf",
@@ -1261,7 +1360,8 @@
       "local": "/assets/archive/pdfs/articles/endonezya-dis-politikasinda-bandung-mirasina-yeniden-bakis-tarihsel-bir-inceleme-ve-guncel-en.pdf",
       "bytes": 1572634,
       "sha256": "34adbaed7b8171d1ef63b1040e1169f2062cd5db65fd11b5a1c2f8b2713a18c5",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/ZHANG%20QINGYI%20%26%20DU%20DONGHUI_TR.pdf",
@@ -1289,7 +1389,8 @@
       "local": "/assets/archive/pdfs/articles/erken-cumhuriyet-doneminde-kemalizmin-ekonomi-politikasi-1923-1938-en.pdf",
       "bytes": 1410427,
       "sha256": "d858a4ddbe85761ba309bbdffb32c708baa5479c4b04c8271d304b588dfbf18e",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Erken%20Cumhuriyet%20D%C3%B6nemi%E2%80%99nde%20Kemalizm%E2%80%99in%20Ekonomi%20Politikas%C4%B1%20-%20Tolga%20Di%C5%9F%C3%A7i.pdf",
@@ -1325,6 +1426,14 @@
       "bytes": 2780844,
       "sha256": "282a19d3db41c9575cf8ac502f9059045f1a7be4854828ee3d037a9270f1e998",
       "status": "downloaded"
+    },
+    {
+      "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Iqbal%20Akhtar_The%20Paradox%20of%20Peak%20Palestinianism%20Transatlantic%20Public.pdf",
+      "local": "/assets/archive/pdfs/articles/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun-en.pdf",
+      "bytes": 4040699,
+      "sha256": "0cc1cdf9df1aa958351ab5a0f29afcbff0b5fa375563dcefcce9cabb1828c764",
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/IQBAL%20AKHTAR_Iqbal%20Akhtar%20-%20Filistincili%C4%9Fin%20Zirve%20Paradoksu%20Transatlantik%20Kamuoyu%2C%20Stratejik%20Realizm%20ve%20%C4%B0ki%20Devletli%20%C3%87%C3%B6z%C3%BCm%C3%BCn%20Sonu.pdf",
@@ -1429,7 +1538,8 @@
       "local": "/assets/archive/pdfs/articles/genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme-en.pdf",
       "bytes": 4910690,
       "sha256": "c56a11fbda8fe89dc5421b2e5542eae0e947276ac741b434d42f15cf1b1d70e9",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/CAN%20ULUSOY%20TR_0.pdf",
@@ -1443,7 +1553,8 @@
       "local": "/assets/archive/pdfs/articles/gorevimiz-kusak-yolda-ortak-gelisme-icin-bilimsel-isbirligi-en.pdf",
       "bytes": 3254344,
       "sha256": "a1405b5bad74fb10230a86ad3c0b098859d53ce0e6fe85add98b32667a110b67",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/G%C3%B6revimiz%20Ku%C5%9Fak%20%26%20Yol%E2%80%99da%20Ortak%20Geli%C5%9Fme%20i%C3%A7in%20Bilimsel%20%C4%B0%C5%9Fbirli%C4%9Fi.pdf",
@@ -1457,7 +1568,8 @@
       "local": "/assets/archive/pdfs/articles/guc-zayifliktir-en.pdf",
       "bytes": 148922,
       "sha256": "23466d4f7f62cdb2b1736ccb7da85901df35b23baaff597b302aa22e72b8654e",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_TR-Kitap%C4%B0n.pdf",
@@ -1471,7 +1583,8 @@
       "local": "/assets/archive/pdfs/articles/guzelligin-paretmez-en.pdf",
       "bytes": 740204,
       "sha256": "859e7f208ec8f345b043213144810717218503254487fe2d69c751db75b70760",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_A%C5%9F%C4%B1kVeysel_TR.pdf",
@@ -1485,7 +1598,8 @@
       "local": "/assets/archive/pdfs/articles/hakikatin-donum-noktasi-covid-19-bati-toplumlarinin-ve-avrupa-birliginin-zayifliklarini-nasil-en.pdf",
       "bytes": 838643,
       "sha256": "9d066f1d4fbcdde84eb9cac844344c52c510dbee33e6c59351342904b54c6fd3",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20DOMINIK%20PIETZCKER.pdf",
@@ -1499,7 +1613,8 @@
       "local": "/assets/archive/pdfs/articles/hallac-siir-en.pdf",
       "bytes": 629068,
       "sha256": "e652a7199ca6a8a2889b10df21c5e2edf1fe5a863bf5ba6a744da68094e99bff",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/%C5%9E%C4%B0%C4%B0R%20-%20F%C3%9CRU%C4%9E%20FERRUHZAD-%20TR.pdf",
@@ -1513,7 +1628,8 @@
       "local": "/assets/archive/pdfs/articles/hasat-2022-en.pdf",
       "bytes": 1024146,
       "sha256": "98f6c65924f413a2a2050951e7f6c6e6e4e0eb9ac22d8392a97756248bcf85d8",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Resim_S%C3%BCleyman%20Karakul_C5S4.pdf",
@@ -1541,7 +1657,8 @@
       "local": "/assets/archive/pdfs/articles/hikaye-siir-en.pdf",
       "bytes": 352851,
       "sha256": "13dc6ebf32c15af4bb642d34cd78c7092f8a31bc6ff36d7e7304dfbd1b48c8e9",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/9Cahit%20K%C3%BClebi_%C5%9Eiir_T%C3%9CRK%C3%87E.pdf",
@@ -1555,7 +1672,8 @@
       "local": "/assets/archive/pdfs/articles/hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi-en.pdf",
       "bytes": 1280750,
       "sha256": "a5d25eabde4aab1d34c107b534e047db1fe875ad7ed33c4ee7850a77a93f1dad",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/Werner%20R%C3%BCgemer_TR.pdf",
@@ -1583,7 +1701,8 @@
       "local": "/assets/archive/pdfs/articles/iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949-en.pdf",
       "bytes": 3075359,
       "sha256": "40e9c89c6f48082a3bc8cf0fad15bf5069dc6810e3edc45ab63c87c842f00cc5",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/%C4%B0ki%20Cumhuriyet%20Aras%C4%B1nda%20Etkile%C5%9Fim%20T%C3%BCrkiye%20Cumhuriyeti%20ile%20%C3%87in%20Cumhuriyeti%20%C4%B0li%C5%9Fkileri%20%281923-1949%29_0.pdf",
@@ -1597,7 +1716,8 @@
       "local": "/assets/archive/pdfs/articles/ikinci-cin-japon-savasi-sirasinda-rol-model-olarak-ankara-chongqing-bizim-ankaramiz-en.pdf",
       "bytes": 9248726,
       "sha256": "c48f9185282eec9b8c76ccf720a926a5fa83c29a5d46039702fec2430dab786b",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/92-NECAT%C4%B0%20DEM%C4%B0RCAN-YE%20ZHANGXU-tr.pdf",
@@ -1611,7 +1731,8 @@
       "local": "/assets/archive/pdfs/articles/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim-en.pdf",
       "bytes": 1069617,
       "sha256": "c5e609420f33cf6266c0aced33eb95d119e9d301551a8f7c4f37e65679353b7f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/%C4%B0klim%20Acil%20Durumu%2C%20Pandemi%20ve%20Binalar%20Aras%C4%B1ndaki%20%C4%B0li%C5%9Fki.pdf",
@@ -1625,7 +1746,8 @@
       "local": "/assets/archive/pdfs/articles/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi-en.pdf",
       "bytes": 3817307,
       "sha256": "3eda61c8594abae986af83d41d3d74306b2a10a596411eb3015e37d1b48bb507",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Muzaffer%20Sal%C4%B0h%20Ertan_TR.pdf",
@@ -1639,7 +1761,8 @@
       "local": "/assets/archive/pdfs/articles/ingiliz-isgali-sonrasi-misirin-donusumleri-ve-turkiye-ile-iliskileri-en.pdf",
       "bytes": 531330,
       "sha256": "1187f8a668ed160b5a7cbfe9ff7f1887bc6084946869836695da26383bca2e4d",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_218-223.pdf",
@@ -1653,7 +1776,8 @@
       "local": "/assets/archive/pdfs/articles/insan-ve-doga-icin-musterek-bir-yasam-yaratmaliyiz-en.pdf",
       "bytes": 518776,
       "sha256": "b45f73185ab02140b61c799be2dceff2fcfbb2a6c4269ded9dcf082c94b5650e",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_TR_FINAL_SON_44-47.pdf",
@@ -1667,7 +1791,8 @@
       "local": "/assets/archive/pdfs/articles/insanligin-ortak-gelecegini-sporla-kurmak-2022-kis-olimpiyatlarina-dogru-en.pdf",
       "bytes": 408781,
       "sha256": "06b9ea2c30d3b9a6f77fe867eab858799968b8f9802b24f4b8561f5682fc52a1",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/I%CC%87nsanl%C4%B1g%CC%86%C4%B1n%20Ortak%20Geleceg%CC%86ini%20Sporla%20Kurmak%20-%202022%20K%C4%B1s%CC%A7%20Olimpiyatlar%C4%B1%E2%80%99na%20Dog%CC%86ru_0.pdf",
@@ -1681,7 +1806,8 @@
       "local": "/assets/archive/pdfs/articles/ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme-en.pdf",
       "bytes": 361919,
       "sha256": "3deb362ac07628df0e0a4d8b27be2166bdfbeeccd64c4b083ae2aeac696a9cac",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_TR-Wanglaixi_0.pdf",
@@ -1709,7 +1835,8 @@
       "local": "/assets/archive/pdfs/articles/ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri-en.pdf",
       "bytes": 704525,
       "sha256": "85649321f1c4a1fb4b8834e995314f536054a324e448e4d8206383f59ff9b5a7",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_TR-G%C3%BCneri.pdf",
@@ -1723,7 +1850,8 @@
       "local": "/assets/archive/pdfs/articles/ipek-yolunda-bilimsel-isbirligi-en.pdf",
       "bytes": 1696349,
       "sha256": "6dcb6fa5c253025eec7d82bdd6331027ea43c5969572bf96740bf0f1b2fb7da3",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/ipek%20Yolu%27nda%20Bilimsel%20%C4%B0%C5%9Fbirli%C4%9Fi.pdf",
@@ -1737,7 +1865,8 @@
       "local": "/assets/archive/pdfs/articles/ipek-yolunda-kulturel-bir-gezinti-ahmet-yeseviden-yunus-emreye-turk-sufi-humanizmi-en.pdf",
       "bytes": 1944013,
       "sha256": "cd9ce79c90af6cd5e238dfb243f76ca5f8903c734478fea1b8bbab351ae7db71",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/%C4%B0pek%20Yolu%E2%80%99nda%20K%C3%BClt%C3%BCrel%20Bir%20Gezinti%20Ahmet%20Yesevi%E2%80%99den%20Yunus%20Emre%E2%80%99ye%20T%C3%BCrk%20Sufi%20H%C3%BCmanizmi.pdf",
@@ -1751,7 +1880,8 @@
       "local": "/assets/archive/pdfs/articles/ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi-en.pdf",
       "bytes": 1206920,
       "sha256": "74de4aceba2e00a73f9cb1d50dddd88f026b41d69f8a3cfa2fee179ea75f87b5",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_TR-Abdullaev.pdf",
@@ -1779,7 +1909,8 @@
       "local": "/assets/archive/pdfs/articles/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap-en.pdf",
       "bytes": 1773751,
       "sha256": "9c86bfdafda2e562abca2984b9d32eca03ebc28312d093630e2d7ce381f5342f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-09/BRIQ_TURKCE%20-%204.%20SAYI%20-%20MESUD%20SADRMOHAMMAD%C4%B0%20-%20ENG.pdf",
@@ -1793,7 +1924,8 @@
       "local": "/assets/archive/pdfs/articles/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma-en.pdf",
       "bytes": 5421195,
       "sha256": "940362d77373fc42e7a4540ad0346794fa7608efb03e58b2867b51de14d83fab",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Zhang%20Yan%20Jun%20%26%20Liu%20Yu%20Jun_TR.pdf",
@@ -1821,7 +1953,8 @@
       "local": "/assets/archive/pdfs/articles/isyan-tutanaklari-en.pdf",
       "bytes": 406748,
       "sha256": "14a522e650614d999bb2d66ce207bb7c7b823ec473e8034493ca383a545da22e",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_224-225.pdf",
@@ -1835,7 +1968,8 @@
       "local": "/assets/archive/pdfs/articles/italya-ve-brics-alternatifi-en.pdf",
       "bytes": 1093964,
       "sha256": "7a35186765e30440db828abbdb02a25bbd4f8f9a754e16807da3a469d22b89fb",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/FABRIZIO%20VERDE.pdf",
@@ -1863,7 +1997,8 @@
       "local": "/assets/archive/pdfs/articles/japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak-en.pdf",
       "bytes": 1182250,
       "sha256": "72d2485339483fd793be450f535c78d68a326c2b45f33cf70148b938273b5e67",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/Hiroshi%20Onishi_TR.pdf",
@@ -1877,7 +2012,8 @@
       "local": "/assets/archive/pdfs/articles/kamu-diplomasisi-ozbekistanin-yabanci-ulkelerle-iliskilerini-guclendirmenin-bir-yolu-en.pdf",
       "bytes": 552101,
       "sha256": "3448634ba1f49264aa11f278c51d792e52140c8d8dd77c18c5c161893668aff5",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/8Zakir%20Abidov_T%C3%9CRK%C3%87E.pdf",
@@ -1891,7 +2027,8 @@
       "local": "/assets/archive/pdfs/articles/kamu-ekonomisinin-hakim-konumu-cin-sosyalizminin-can-damaridir-en.pdf",
       "bytes": 919889,
       "sha256": "3f558ceaf31bded0361781cf0003fc44414c9078392b8186d42ed264f93fad90",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Kamu%20Ekonomisinin%20H%C3%A2kim%20Konumu%20%C3%87in%20Sosyalizminin%20Can%20Damar%C4%B1d%C4%B1r%20-%20Ding%20Bing.pdf",
@@ -1919,7 +2056,8 @@
       "local": "/assets/archive/pdfs/articles/karadeniz-enerji-refah-ve-baris-denizi-en.pdf",
       "bytes": 4769151,
       "sha256": "281cf24ad0a00d73c18dfc917ddffd25ab412ff1944ec0ce12fc1abc3388c14c",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Karadeniz%20Enerji%2C%20Refah%20ve%20Bar%C4%B1%C5%9F%20Denizi.pdf",
@@ -1982,7 +2120,8 @@
       "local": "/assets/archive/pdfs/articles/karpuz-saticisi-1953-en.pdf",
       "bytes": 1029559,
       "sha256": "5e728564fd73dfcdb0d51a1ed786c14d4102aaae55be100ec81f321d1aeb582f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/357%20-%20Jewad%20Selim%20-%20Resim.pdf",
@@ -1996,14 +2135,16 @@
       "local": "/assets/archive/pdfs/articles/karsilikli-saygi-ve-dostluga-dayali-turk-cin-iliskilerinin-son-yarim-yuzyili-ve-gelecegi-en.pdf",
       "bytes": 94761,
       "sha256": "e309f7be4a05b98013a935cb93e5ab0342a72d7723026901d463568a03b14553",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/DOMINIK%20PIETZCKER_Book%20Review.pdf",
       "local": "/assets/archive/pdfs/articles/kayip-kuresel-denge-jeopolitik-degisim-uzerine-son-yayinlar-en.pdf",
       "bytes": 980402,
       "sha256": "f1cce759120306a5f1a5db5c4c22cb5655d6c4493a9da84d0d5e0cd104847913",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/DOMINIK%20PIETZCKER_kitap%20inceleme.pdf",
@@ -2017,7 +2158,8 @@
       "local": "/assets/archive/pdfs/articles/kemalist-devrim-ve-asya-en.pdf",
       "bytes": 2497345,
       "sha256": "9ae1fc4cea3040f2ea4406b042e558164cde7b773bf47aac416176ef387d0bf5",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_%C5%9EulePerin%C3%A7ek_TR.pdf",
@@ -2031,7 +2173,8 @@
       "local": "/assets/archive/pdfs/articles/kimlik-karti-siir-en.pdf",
       "bytes": 388721,
       "sha256": "7a5e5313a9d7dc61c748a0782e54b455591efc0508900bdc71a4c7a6ae084148",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-86-87.pdf",
@@ -2045,7 +2188,8 @@
       "local": "/assets/archive/pdfs/articles/korkma-siir-en.pdf",
       "bytes": 349875,
       "sha256": "58c7af13ccae9f13fd713b7089efbec765ac6f83f8183f84f79b865c88cca86b",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/350-351%20-%20Mehmet%20Akif%20Ersoy%20-%20Korkma%20-%20%C5%9Eiir.pdf",
@@ -2059,7 +2203,8 @@
       "local": "/assets/archive/pdfs/articles/koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler-en.pdf",
       "bytes": 582580,
       "sha256": "a54045277290f14ddbe57322b60299210bac8acf0d26150fc9f17f5b7e8ae003",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20SEM%C4%B0H%20KORAY.pdf",
@@ -2073,7 +2218,8 @@
       "local": "/assets/archive/pdfs/articles/koronavirus-suclama-oyunu-kuresel-salgin-uzerinden-bir-hukuk-harbinin-yurutulmesi-en.pdf",
       "bytes": 649561,
       "sha256": "e60585a9d6f8c16e093e6b473e4d90a0856dd6f925dec5cc80591824c64f1380",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20BINOY%20KAMPMARK.pdf",
@@ -2087,7 +2233,8 @@
       "local": "/assets/archive/pdfs/articles/koyun-guden-cingene-kiz-daglik-altay-ozerk-bolgesi-30-temmuz-1980-en.pdf",
       "bytes": 545912,
       "sha256": "9893b3067ca2efba9a695af123747b6b06aee4d3a96966d5f1e99337079dd777",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/356%20-%20VLADIMIR%20SOKOLAEV%20-%20Foto%C4%9Fraf.pdf",
@@ -2108,7 +2255,8 @@
       "local": "/assets/archive/pdfs/articles/kudus-2023-en.pdf",
       "bytes": 1675487,
       "sha256": "458d6f3bf0cb00d2734ec3b5ee77376f2e9430a28decc817af7f917767db67f0",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-94.pdf",
@@ -2122,7 +2270,8 @@
       "local": "/assets/archive/pdfs/articles/kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre-en.pdf",
       "bytes": 2844636,
       "sha256": "5b1e93b9b8ea7d2dddd7d25de65b1fcb227db575bbd4b6bd99b4734ea67a724d",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/NURAY%20EK%C5%9E%C4%B0_TR.pdf",
@@ -2143,7 +2292,8 @@
       "local": "/assets/archive/pdfs/articles/kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin-en.pdf",
       "bytes": 2318309,
       "sha256": "35a65f9dac402e8f86179bb0db2af4e780eda5b9a7f806013fe41d5e6d59de29",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/JASON%20MORGAN_TR.pdf",
@@ -2157,7 +2307,8 @@
       "local": "/assets/archive/pdfs/articles/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir-en.pdf",
       "bytes": 3313653,
       "sha256": "03abb92ec5397070ddc38c99224c5c6d6124f419062a46881c7a73b3d4f9f146",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-6-29.pdf",
@@ -2171,7 +2322,8 @@
       "local": "/assets/archive/pdfs/articles/kuresel-guc-sistemlerinin-politik-ekonomik-bicimlenisi-18-yuzyildan-gunumuze-en.pdf",
       "bytes": 872869,
       "sha256": "70d16dd66135b3a7a911ee94fc44410ac21d5578da8f4dbae964c49569579a3b",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Ku%CC%88resel%20Gu%CC%88%C3%A7%20Sistemlerinin%20Politik-Ekonomik%20Bi%C3%A7imleni%C5%9Fi%2018.%20Yu%CC%88zy%C4%B1ldan%20Gu%CC%88nu%CC%88mu%CC%88ze.pdf",
@@ -2185,7 +2337,8 @@
       "local": "/assets/archive/pdfs/articles/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi-en.pdf",
       "bytes": 4560804,
       "sha256": "45e9cd997263dbd587fbc9af73eaa0d2db9ecd0180ecd33ffb0127d0ea1299b4",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/U%C4%9EUR%20MURAT%20LELO%C4%9ELU_TR.pdf",
@@ -2199,7 +2352,8 @@
       "local": "/assets/archive/pdfs/articles/kuresel-kalkinma-girisimi-ve-cinin-ortadogudaki-kalkinma-isbirligi-calismalari-en.pdf",
       "bytes": 6063679,
       "sha256": "f31398bbcb4b5e41dc2303b0771b9e61a6d2eee1a578667b09aa91904acf2f30",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/104--ZOU%20ZHIQIANG-tr.pdf",
@@ -2213,7 +2367,8 @@
       "local": "/assets/archive/pdfs/articles/kurtuba-camisi-siir-en.pdf",
       "bytes": 436809,
       "sha256": "0a995c138f6a082c9aa28de5e3897cb8911ee8a91664b1d606f6dc885b19f34e",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/352-354%20-%20Muhammad%20Iqbal%20-%20%C5%9Eiir.pdf",
@@ -2227,7 +2382,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-baglaminda-cin-ve-dogu-akdeniz-ulkeleri-arasinda-isbirligi-guncel-durum-en.pdf",
       "bytes": 3023513,
       "sha256": "cc1a01c8a8db3d1b99b815f154d916a6b1792a0a85a7e93b0941a2bff3ef06ae",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/YE%20Zhangxu.pdf",
@@ -2241,7 +2397,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-bolgesellesme-ve-kuresellesme-icin-yeni-itici-guc-en.pdf",
       "bytes": 309473,
       "sha256": "c5457ad07972ebb619f3a9b00e826e3278b7be1784476d97ff08b3badc24f78d",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Kitap%20%C4%B0nceleme_TR.pdf",
@@ -2255,7 +2412,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-kapsaminda-cinin-nijeryada-yaptigi-yatirimlarin-sosyoekonomik-etkilerinin-en.pdf",
       "bytes": 5913854,
       "sha256": "3f38cb0768fdcb55620cce98576e692f61615204cc9d29d8903fa187d56aa5d7",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_192-209.pdf",
@@ -2269,7 +2427,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-kapsaminda-cinin-ortadogu-ile-kulturel-iletisimi-degerlendirme-ve-beklentiler-en.pdf",
       "bytes": 864664,
       "sha256": "de5ea608f017b2ab68f54fd02f56791be14f9b5dd08288556f3ec262d8487181",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%20Kapsam%C4%B1nda%20%C3%87in%E2%80%99in%20Ortado%C4%9Fu%20ile%20K%C3%BClt%C3%BCrel%20%C4%B0leti%C5%9Fimi%20De%C4%9Ferlendirme%20ve%20Beklentiler.pdf",
@@ -2283,7 +2442,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi-en.pdf",
       "bytes": 974974,
       "sha256": "d53e5946707931e7085ee496c86045dd05814fea8cad71940f0527cb24c655fb",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%204.%20SAYI%20-%20SERHAT%20LAT%C4%B0FO%C4%9ELU%20-%20TR_0.pdf",
@@ -2297,7 +2457,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-yeni-ufuklar-aciyor-en.pdf",
       "bytes": 698347,
       "sha256": "3fd21de3cba0f8099a970442e281474b1275393c1c32682941168eeffc306589",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%20Yeni%20Ufuklar%20A%C3%A7%C4%B1yor.pdf",
@@ -2305,6 +2466,14 @@
       "bytes": 740863,
       "sha256": "3adc2c64398b552e62a21d4430b6dbc6494b519cf7f51d69c9b2161343a816cd",
       "status": "downloaded"
+    },
+    {
+      "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%204.%20SAYI%20-%20CHENG%20ENFU%20-%20LI%20JING%20-%20TR.pdf",
+      "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisiminde-deniz-isbirliginin-gunumuzdeki-ve-gelecekteki-durumu-en.pdf",
+      "bytes": 2595184,
+      "sha256": "c90a89d084914bf684bd1151eff6e535fafa3dfe40eb75787b907cd155f47d6d",
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%204.%20SAYI%20-%20CHENG%20ENFU%20-%20LI%20JING%20-%20TR.pdf",
@@ -2318,7 +2487,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler-en.pdf",
       "bytes": 4272328,
       "sha256": "2281a204b3af96b4d3009720dd9f9925f0dfa1d7402f6ad0bfe647a03d006ab8",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%27nde%20Ortak%20ve%20S%C3%BCrd%C3%BCr%C3%BClebilir%20Bir%20Gelecek%20i%C3%A7in%20Bilime%20Dayal%C4%B1%20%C3%87%C3%B6z%C3%BCmler.pdf",
@@ -2332,7 +2502,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimine-karsi-ekonomik-soguk-savas-dusuncesinin-yarattigi-zorluklar-ve-karsi-en.pdf",
       "bytes": 7568871,
       "sha256": "cdb4ee90e16ff0133e6a7233f2ff2d29ae1405449ddfb3bb1735183e3111428c",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/310-335%20-%20Shu%20Zhan%20%26%20Hao%20Ruiqi%20-%20TR.pdf",
@@ -2346,7 +2517,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisiminin-ic-nedenleri-en.pdf",
       "bytes": 292833,
       "sha256": "90304bb26b66cd12d5d516a841755906ab79c2b7ff1b74e48fb7084a979ce033",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_TR_FINAL_SON_84-86.pdf",
@@ -2360,7 +2532,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisiminin-yuksek-nitelikli-gelisimi-icin-yeni-bir-yolculuk-en.pdf",
       "bytes": 1037974,
       "sha256": "9c00bfb99dc6cb855eeda9499cd590ed86a86629b3f2774b67165c0b599e40e9",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%E2%80%99nin%20Y%C3%BCksek%20Nitelikli%20Geli%C5%9Fimi%20i%C3%A7in%20Yeni%20Bir%20Yolculuk.pdf",
@@ -2374,7 +2547,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi-en.pdf",
       "bytes": 2578582,
       "sha256": "559e84ad1afa0d73125b763b751d69751ea509ea026ef7385da7206bb92e7d56",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/NORA%20MAHER_TR.pdf",
@@ -2388,7 +2562,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-yol-gelisen-dunyanin-onculugunde-toplumu-bicimlendirmenin-tek-yolu-en.pdf",
       "bytes": 1657467,
       "sha256": "5dde9a6c658192b971c7775a4363793ac647eee072a30418930172ece3c9713c",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/Li%20Guitao_TR.pdf",
@@ -2402,7 +2577,8 @@
       "local": "/assets/archive/pdfs/articles/kusak-yolun-kalp-atislari-en.pdf",
       "bytes": 862717,
       "sha256": "9e58708a09f3bdb19519d8c47b92a4684ef86b961eab0992b4fda0586b029db1",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/Ku%C5%9Fak%20Yol%E2%80%99un%20Kalp%20At%C4%B1%C5%9Flar%C4%B1.pdf",
@@ -2416,7 +2592,8 @@
       "local": "/assets/archive/pdfs/articles/kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi-en.pdf",
       "bytes": 1315724,
       "sha256": "bc178154295eecff7fe844527468c0c913e27c7ad2fc94c70b9bb4a0fddb8cc8",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Ersin%20Tatar_C5S4.pdf",
@@ -2444,7 +2621,8 @@
       "local": "/assets/archive/pdfs/articles/macaes-b-2019-kusak-ve-yol-cinli-bir-dunya-duzeni-londra-hurst-company-en.pdf",
       "bytes": 275006,
       "sha256": "d293f9b940cd84428551b40dd08546efec1b6228f7e64c756bf20eda8fa1122c",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/Ma%C3%A7aes%2C%20B.%20%282019%29.%20Ku%C5%9Fak%20ve%20Yol%20%C3%87inli%20Bir%20D%C3%BCnya%20D%C3%BCzeni.%20Londra%20Hurst%20ve%20Company.pdf",
@@ -2452,6 +2630,14 @@
       "bytes": 247562,
       "sha256": "f585efa69039c97ed5e73120547015896d28aa8bda916cb10200eebe7330f1e3",
       "status": "downloaded"
+    },
+    {
+      "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Can%20Ulusoy%20-%20Mao%20Zedong%E2%80%99s%20Dialectical%20Understanding%20Critique%20of%20Economic.pdf",
+      "local": "/assets/archive/pdfs/articles/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce-en.pdf",
+      "bytes": 5868772,
+      "sha256": "f9fe2777f2413f7600b565e10bd7b0fdcf2a9f894f2eff9ef423baa696cb6db5",
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Can%20Ulusoy%20-%20Mao%20Zedung%E2%80%99un%20Diyalektik%20Anlay%C4%B1%C5%9F%C4%B1%20Ekonomik%20Determinizm%20Ele%C5%9Ftirisi%2C%20Siyasal%20%C3%96zne%20ve%20%C3%87in%20D%C3%BC%C5%9F%C3%BCnce%20Gelene%C4%9Fi.pdf",
@@ -2493,7 +2679,8 @@
       "local": "/assets/archive/pdfs/articles/milli-demokratik-devlet-ve-kalkinma-en.pdf",
       "bytes": 1889183,
       "sha256": "ff427b62e24a40cd1f2dfe8942b62ae4d0e76389e873ab17b015dbc5aec0c04f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Milli%20Demokratik%20Devlet%20ve%20Kalk%C4%B1nma%20-%20Semih%20Koray.pdf",
@@ -2507,7 +2694,8 @@
       "local": "/assets/archive/pdfs/articles/milli-pullarla-ipek-yolu-tipki-ipek-yolunun-uzerinde-beliren-gokkusaklari-gibi-pullar-da-dostlugun-en.pdf",
       "bytes": 689502,
       "sha256": "73bb2e19fe9f4599f4cd34bd3f5ca3a07828d2dcc1bd2eee947bfa656ab73f16",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/ZHANG%20LILI_kitap%20inceleme.pdf",
@@ -2521,7 +2709,8 @@
       "local": "/assets/archive/pdfs/articles/misafir-en.pdf",
       "bytes": 925247,
       "sha256": "10eeeaee941fc64f52b5975c6d5271cd5b4b97848d79adcd4b06f20959ce52ec",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_MevlanaCelaleddinRumi_TR.pdf",
@@ -2535,7 +2724,8 @@
       "local": "/assets/archive/pdfs/articles/modernist-milliyetci-olarak-sun-yat-sen-ve-siyasal-mirasi-en.pdf",
       "bytes": 2281998,
       "sha256": "0f7dc3e19a6bc9cdedfd3cf34f91f2fa140c15bb5485eb9168a14c1d7dc46539",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/1Can%20Ulusoy_T%C3%9CRK%C3%87E.pdf",
@@ -2549,7 +2739,8 @@
       "local": "/assets/archive/pdfs/articles/modernlesmeye-giden-yolda-el-ele-verelim-en.pdf",
       "bytes": 2290115,
       "sha256": "efc20efe5ab324379bc4fd96c59c4fb14d8537d077c70d51b51ce4f327304302",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/266-271%20-%20Xi%20Jinping%20-%20Konferans%20Konu%C5%9Fmas%C4%B1.pdf",
@@ -2563,7 +2754,8 @@
       "local": "/assets/archive/pdfs/articles/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim-en.pdf",
       "bytes": 3895046,
       "sha256": "9fa45d96083b9098fa6ee35e949eda461e20878c6b816fde80cef12a6a23051c",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/WANG%20JIANI%20%26%20BILGUUNZAYA%20LUVSANDANDAR%20_TR.pdf",
@@ -2577,7 +2769,8 @@
       "local": "/assets/archive/pdfs/articles/moordaki-vantrilok-ve-tellal-1923-en.pdf",
       "bytes": 998304,
       "sha256": "b1e7f773b96cc6e250b9db898c8f424594a31d2b2e3ebe5478b9af7c1bf473b2",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_230.pdf",
@@ -2591,7 +2784,8 @@
       "local": "/assets/archive/pdfs/articles/mustafa-kemal-ataturkun-halkcilik-ve-devletcilik-ilkesi-sun-yat-senin-siyasi-dusuncesiyle-en.pdf",
       "bytes": 1342962,
       "sha256": "dae52cb749e7308be557e1c2090cc9b5c714381d67648aff0501684479165337",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Mustafa%20Kemal%20Atat%C3%BCrk%E2%80%99%C3%BCn%20Halk%C3%A7%C4%B1l%C4%B1k%20ve%20Devlet%C3%A7ilik%20%C4%B0lkesi%20Sun%20Yat-sen%E2%80%99in%20Siyasi%20D%C3%BC%C5%9F%C3%BCncesiyle%20Kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rma.pdf",
@@ -2605,7 +2799,8 @@
       "local": "/assets/archive/pdfs/articles/nato-hatti-kontrolden-sathi-kontrole-en.pdf",
       "bytes": 3248351,
       "sha256": "4f5d1d52c464f4e0fde7a69c39e77399ffe53ed873a0910ec7f968dd3b7d7765",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_Emin%20G%C3%BCrses_TR.pdf",
@@ -2619,7 +2814,8 @@
       "local": "/assets/archive/pdfs/articles/ogonyok-en.pdf",
       "bytes": 780496,
       "sha256": "d83940ee53457704f86abf57206fba2b976c4e00c339d0ba6010fb260a6cd527",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/11Ogonyok_Foto%C4%9Fraf_T%C3%9CRK%C3%87E.pdf",
@@ -2633,7 +2829,8 @@
       "local": "/assets/archive/pdfs/articles/ogrenmeye-ovgu-en.pdf",
       "bytes": 746118,
       "sha256": "cb27af3d69230815b972c53693c917bc4ec31b97d591792674c71d62ff8b0197",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/136-BERTOLT%20BRECHT--tr.pdf",
@@ -2647,7 +2844,8 @@
       "local": "/assets/archive/pdfs/articles/olu-su-siir-en.pdf",
       "bytes": 209671,
       "sha256": "c71a135d10063690797903cd2c4641d220387e69aeaed423c86d2f22bbb24188",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/10Wen%20Yidou_%C5%9Eiir_T%C3%9CRK%C3%87E.pdf",
@@ -2661,7 +2859,8 @@
       "local": "/assets/archive/pdfs/articles/onur-air-yonetim-kurulu-baskani-cankut-bagana-dunyada-farklilik-yaratacak-sektorleri-hedeflersek-en.pdf",
       "bytes": 489863,
       "sha256": "1d716fe64fc3cc7915fe1148e817712023fc3622368ec099ab451c43fcd14020",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20CANKUT%20BAGANA.pdf",
@@ -2675,7 +2874,8 @@
       "local": "/assets/archive/pdfs/articles/operarios-isciler-1933-en.pdf",
       "bytes": 2007514,
       "sha256": "8472530360faf7b2472a84a35df6e50eafe6fc9c0d8457f4206943c05345526a",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/150-TARSILA%20DO%20AMARAL.pdf",
@@ -2689,7 +2889,8 @@
       "local": "/assets/archive/pdfs/articles/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu-en.pdf",
       "bytes": 2697762,
       "sha256": "65afae64a99441680f49a476b90af651f4b2c788b29db23d9fd0bc27e21dab69",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/B%C3%BClent%20G%C3%9CL%C3%87UBUK%20%26%20Do%C4%9Fan%20BA%C5%9EARAN_C5S4.pdf",
@@ -2703,7 +2904,8 @@
       "local": "/assets/archive/pdfs/articles/ortadoguda-bolgesel-isbirligi-icin-yeni-bir-ekonomik-politika-yolunun-gelistirilmesi-en.pdf",
       "bytes": 2899923,
       "sha256": "f84141a3695d368990ed545797f49e93ee7c860512a339d9881f281500a0931c",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/Bassam%20Abu%20Abdullah.pdf",
@@ -2717,7 +2919,8 @@
       "local": "/assets/archive/pdfs/articles/ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi-en.pdf",
       "bytes": 2241301,
       "sha256": "1a9ddcc9ae038cdb9a4defd111eb8cc205205f032ac3574c3752aa986affeaaa",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Ortado%C4%9Fu%E2%80%99da%20G%C3%BCvenlik%20%C4%B0kileminin%20%C3%87in%E2%80%99in%20Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%E2%80%99ne%20Etkisi.pdf",
@@ -2731,7 +2934,8 @@
       "local": "/assets/archive/pdfs/articles/ortadogudaki-bolgesel-duzenin-yeniden-insasinda-cinin-rolu-itici-gucler-firsatlar-ve-zorluklar-en.pdf",
       "bytes": 1121521,
       "sha256": "d180dad6ce13c72e0db8297b982eccce139010e0425b2bc6ffdaeba7e4fb083c",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Ortado%C4%9Fu%E2%80%99daki%20B%C3%B6lgesel%20D%C3%BCzenin%20Yeniden%20%C4%B0n%C5%9Fas%C4%B1nda%20%C3%87in%E2%80%99in%20Rol%C3%BC%20%C4%B0tici%20G%C3%BC%C3%A7ler%2C%20F%C4%B1rsatlar%20ve%20Zorluklar.pdf",
@@ -2745,7 +2949,8 @@
       "local": "/assets/archive/pdfs/articles/ortak-gelecek-ve-paylasmanin-kokleri-eski-medeniyetlerimizde-en.pdf",
       "bytes": 7242107,
       "sha256": "e73cf2bcd003c1101a996cdc6085d7c8951bca6125ae70ac0134e515f391dddb",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/336-343%20-%20Khalid%20Taimur%20Akram%20-%20R%C3%B6portaj.pdf",
@@ -2759,7 +2964,8 @@
       "local": "/assets/archive/pdfs/articles/ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz-en.pdf",
       "bytes": 425737,
       "sha256": "cc4cf3c3978dfc8e074101542c1615266d7e0e9d39a1fa4287dd073955bbcc0e",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4%20T%C3%9CRK%C3%87E-6-14.pdf",
@@ -2773,7 +2979,8 @@
       "local": "/assets/archive/pdfs/articles/ortak-refahi-gerceklestirmek-icin-izleyecegimiz-program-en.pdf",
       "bytes": 1560624,
       "sha256": "7dba38cde2185d87b740c663168f6525e748d87845d71ddde61eab7a787800c4",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Ortak%20Refah%20Ger%C3%A7ekle%C5%9Ftirmek%20i%C3%A7in%20%C4%B0zleyece%C4%9Fimiz%20Program.pdf",
@@ -2781,6 +2988,14 @@
       "bytes": 3808462,
       "sha256": "d5b12e9f722d9d7cdd57ebf0d3bb692203aa9100fb6e1071bef0ba00b6d66395",
       "status": "downloaded"
+    },
+    {
+      "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/5Sun%20Yat-sen%20ile%20R%C3%B6portaj_Tarihten_T%C3%9CRK%C3%87E.pdf",
+      "local": "/assets/archive/pdfs/articles/osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke-en.pdf",
+      "bytes": 2100926,
+      "sha256": "57e0a23cbb38764d76a9dc343cf4851a42b0fafafe5aa4f56f9902e2f478f8db",
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/5Sun%20Yat-sen%20ile%20R%C3%B6portaj_Tarihten_T%C3%9CRK%C3%87E.pdf",
@@ -2794,7 +3009,8 @@
       "local": "/assets/archive/pdfs/articles/pekin-bildirgesi-en.pdf",
       "bytes": 446092,
       "sha256": "7ceb52e95e842273ebcc8795642dab9587373254d31d9652bac10706ae46e46b",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%20%C3%A7er%C3%A7evesinde%20d%C3%BCzenlenen%20Ulusal%20Bilimsel%20Kurulu%C5%9Flar%C4%B1n%20Birinci%20Uluslararas%C4%B1%20Bilim%20Forumu%27nda%20kabul%20edildi.pdf",
@@ -2808,7 +3024,8 @@
       "local": "/assets/archive/pdfs/articles/pipo-icen-zosali-kadin-1941-en.pdf",
       "bytes": 1941128,
       "sha256": "b68000fc92cfd87d596c4e2e4e5e4b8d980dcd0a36be34befb5888be02cf8ddd",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_229.pdf",
@@ -2816,6 +3033,14 @@
       "bytes": 1944962,
       "sha256": "ac98a6a9818262c27b447fdc5886452ff5c1511767694027c7601411bf89ce54",
       "status": "downloaded"
+    },
+    {
+      "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/12Qi%20Baishi_Resim_T%C3%9CRK%C3%87E.pdf",
+      "local": "/assets/archive/pdfs/articles/qi-baishi-en.pdf",
+      "bytes": 732487,
+      "sha256": "035b1ae74d211c1c0358f343f20c770f98d7094951afe0dbb3462d108f0d0091",
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/12Qi%20Baishi_Resim_T%C3%9CRK%C3%87E.pdf",
@@ -2864,7 +3089,8 @@
       "local": "/assets/archive/pdfs/articles/roportaj-yesil-ve-dijital-donusum-kapsaminda-ar-ge-ve-yenilik-ekosistemini-harekete-geciriyoruz-en.pdf",
       "bytes": 1800721,
       "sha256": "1392aa5643a3f4b4048f7b3b956fcd1274467712c70fd876adf36a73e0f43fd6",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/Orhan%20Ayd%C4%B1n_TR_SON.pdf",
@@ -2878,7 +3104,8 @@
       "local": "/assets/archive/pdfs/articles/rus-stratejist-dr-alexander-dugin-kusak-ve-yol-girisimi-avrasyanin-yolu-en.pdf",
       "bytes": 2648399,
       "sha256": "7ee0890438471459e3f5e78a42852352ff108fed931325c170eed535e044cc5a",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-09/BRIQ_TURKCE%20-%204.%20SAYI%20-%20ALEXANDER%20DUGIN%20-%20TR.pdf",
@@ -2892,7 +3119,8 @@
       "local": "/assets/archive/pdfs/articles/rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve-en.pdf",
       "bytes": 3562746,
       "sha256": "42b1897e56eb53171f6b2fbac4b0bbfe84c3eaf7baae161a4ea75e64db00bd60",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/KOLOSOVSKIY%20YAN%20TR_0.pdf",
@@ -2920,7 +3148,8 @@
       "local": "/assets/archive/pdfs/articles/sahte-siir-en.pdf",
       "bytes": 220556,
       "sha256": "ff00c9728882545e667f50bd8f2cc0244643e77893b4b790e003c216caca6870",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/AGUS%20R.%20SARJONO_%C5%9E%C4%B0%C4%B0R_TR.pdf",
@@ -2948,7 +3177,8 @@
       "local": "/assets/archive/pdfs/articles/sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan-en.pdf",
       "bytes": 587772,
       "sha256": "78ced1ff83568221dcb7b63db1d4090d09cc0df222e66851b3d65e38131bdc6b",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/%C5%9Eanghay%20%C4%B0%C5%9Fbirli%C4%9Fi%20%C3%96rg%C3%BCt%C3%BC%20Devlet%20Ba%C5%9Fkanlar%C4%B1%20Konseyi%E2%80%99nin%20Ter%C3%B6rizm%2C%20Ayr%C4%B1l%C4%B1k%C3%A7%C4%B1l%C4%B1k%20TR_0.pdf",
@@ -2962,7 +3192,8 @@
       "local": "/assets/archive/pdfs/articles/sanghayda-hidrojen-enerji-endustrisi-uygulamalari-ve-gelisimi-en.pdf",
       "bytes": 2602327,
       "sha256": "08a99c8a50a9ccb454e487f806e9a0bf0731594d8105a4eb2026a424e2943465",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_NIZAR%20SABUR_ENG.pdf",
@@ -2983,7 +3214,8 @@
       "local": "/assets/archive/pdfs/articles/senin-kokun-duydu-canim-yunus-emre-misralari-anadolu-xiii-xiv-yuzyillar-en.pdf",
       "bytes": 684169,
       "sha256": "65355deaa5dea96c27fad89043f4ee5d6af5f05cc56778ec27ef5cd56bf81e21",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/Senin%20Kokun%20Duydu%20Can%C4%B1m%20Yunus%20Emre%20M%C4%B1sralar%C4%B1%20%28Anadolu%2C%20XIII-XIV%20Y%C3%BCzy%C4%B1llar%29.pdf",
@@ -2997,7 +3229,8 @@
       "local": "/assets/archive/pdfs/articles/sevgi-duvari-en.pdf",
       "bytes": 724217,
       "sha256": "3dd0379fda5a4bb152d7ac90c2a8a0506eaed85eb944df8aa97900f7cd75a642",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/138-CAN%20Y%C3%9CCEL-tr.pdf",
@@ -3025,7 +3258,8 @@
       "local": "/assets/archive/pdfs/articles/siir-iki-kor-en.pdf",
       "bytes": 196489,
       "sha256": "5ed8fa9ee250dbb20163bdadd200657b19fc2f3bf6403fd7ee9c695d1036083d",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/BAHT%C4%B0YAR%20VAHABZADE_C5S4.pdf",
@@ -3039,7 +3273,8 @@
       "local": "/assets/archive/pdfs/articles/siir-li-bai-zor-yolculuk-en.pdf",
       "bytes": 617542,
       "sha256": "d6b61324d4142bb877680bdde9bec5a492306219bc66da59341133f0397991c6",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/LI%20BAI_TR_0.pdf",
@@ -3053,7 +3288,8 @@
       "local": "/assets/archive/pdfs/articles/siir-melih-cevdet-anday-telgrafhane-en.pdf",
       "bytes": 464421,
       "sha256": "58d6cc6e433004bb11f47bff36cfa433299efe567963da9b175f58dcb747eeee",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/MEL%C4%B0H%20CEVDET%20ANDAY_TR.pdf",
@@ -3067,7 +3303,8 @@
       "local": "/assets/archive/pdfs/articles/siir-vietnam-savasimiz-en.pdf",
       "bytes": 199989,
       "sha256": "496be43a66fc25d89b6a247698cfa3d30d0db2b007c2e5e19403b303ae92af67",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Faz%C4%B1l%20H%C3%BCsn%C3%BC%20Da%C4%9Flarca_C5S4.pdf",
@@ -3088,7 +3325,8 @@
       "local": "/assets/archive/pdfs/articles/sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici-en.pdf",
       "bytes": 1669991,
       "sha256": "7c47d247aae23e185f68aa7e76138a9c75f86727f4b8670ddcf24276dca7eca8",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Sinoloji%20ve%20%C3%87in%20Ara%C5%9Ft%C4%B1rmalar%C4%B1%20Sempozyumu%20-%20T%C3%BCrkiye%E2%80%99de%20%C3%87in%20Ara%C5%9Ft%C4%B1rmalar%C4%B1n%C4%B1n%20Yeni%20Birle%C5%9Ftirici%20Perspektifi.pdf",
@@ -3102,7 +3340,8 @@
       "local": "/assets/archive/pdfs/articles/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0-en.pdf",
       "bytes": 3179654,
       "sha256": "517f5697c27ae9fe01dd9b995b261884a376823a5c99fb95d1490e64db632e60",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/He%20Ganqiang_TR.pdf",
@@ -3130,7 +3369,8 @@
       "local": "/assets/archive/pdfs/articles/sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin-en.pdf",
       "bytes": 1382621,
       "sha256": "c0e452acd621714a233ec812c5f729f8177344d5e9bcb5fe8f4a2fb020df8e27",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/4Mao%20Zedung_Tarihten_T%C3%9CRK%C3%87E.pdf",
@@ -3151,8 +3391,8 @@
       "local": "/assets/archive/pdfs/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi-en.pdf",
       "bytes": 4641436,
       "sha256": "b829801cf51b932bbf53e10b646b0734a397111a4293a8c8bddaa24014fb3c85",
-      "status": "downloaded-exact-designed-article-pdf",
-      "note": "Exact designed English article PDF archived directly from the legacy BRIQ article PDF URL."
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Salman%20K.%20Al-Dhafeeire%20%26%20SUN%20DEGANG_Suudi%20Arabistan%E2%80%99%C4%B1n%20ABD%20ile%20%C3%87in%20Aras%C4%B1nda%20%C3%87ok%20Boyutlu%20K%C3%BClt%C3%BCrel%20Dengeleme%20Stratejisi.pdf",
@@ -3166,7 +3406,8 @@
       "local": "/assets/archive/pdfs/articles/t-miyano-renkli-tasbaski-en.pdf",
       "bytes": 685752,
       "sha256": "b1aaa687f3333ca82a262568030adbcce48c4b2dda95ad41fd62232c6592b2b7",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/13T%20Miyano_Renkli%20Ta%C5%9Fbask%C4%B1_T%C3%9CRK%C3%87E.pdf",
@@ -3180,7 +3421,8 @@
       "local": "/assets/archive/pdfs/articles/taliban-afgan-savas-agalarinin-hikayesi-en.pdf",
       "bytes": 661899,
       "sha256": "783d12c66bfe5e22583ee5901245ebaabd926ef7a7e3beae677f166682b26208",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-90-92.pdf",
@@ -3194,7 +3436,8 @@
       "local": "/assets/archive/pdfs/articles/tarihsel-perspektiften-covid-19-felaket-kapitalizmi-korku-gudumlu-bir-dunya-duzenini-nasil-uretir-en.pdf",
       "bytes": 671914,
       "sha256": "d7f08e60b4e202610932afa97755de41723f36e6f91918ec16bd3ba136148902",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20EFE%20CAN%20G%C3%9CRCAN%20-%20%C3%96MER%20ERS%C4%B0N%20KAHRAMAN%281%29.pdf",
@@ -3215,7 +3458,8 @@
       "local": "/assets/archive/pdfs/articles/turk-devletleri-teskilati-ile-rusya-ve-cinin-hedefleri-hicbir-sekilde-celismez-en.pdf",
       "bytes": 1540854,
       "sha256": "d8a519676a7ee3909ef7efde5f59302c7ce867b1997445f3856968bf92155c9b",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/Akmaral%20Batalova%20R%C3%B6portaj.pdf",
@@ -3229,7 +3473,8 @@
       "local": "/assets/archive/pdfs/articles/turk-devletleri-teskilati-rusya-cin-ve-irani-da-kapsamali-en.pdf",
       "bytes": 1932590,
       "sha256": "e290a80c70c94e45c20dea233de8240d7573b921b81fadde5cad7669ed260dab",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Aleksandr%20Sotni%C3%A7enko_C5S4.pdf",
@@ -3243,7 +3488,8 @@
       "local": "/assets/archive/pdfs/articles/turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin-en.pdf",
       "bytes": 989488,
       "sha256": "4f67c34c79fa3d825041d7104884ae3439e7561947c4f94dedcb7d1e4852161a",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/B%C4%B0rol%20K%C4%B1lk%C4%B1%C5%9F_C5S4.pdf",
@@ -3257,7 +3503,8 @@
       "local": "/assets/archive/pdfs/articles/turk-devriminin-ckp-uzerindeki-etkisi-cai-hesenin-turkiye-yazilari-uzerine-inceleme-en.pdf",
       "bytes": 5776822,
       "sha256": "1c73ed89ba13d3d5d6bdb00bfe36f27c962bc3d2b0927fac3454738ac5415398",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_NecatiDemircan_YeZhanxu_TR.pdf",
@@ -3271,7 +3518,8 @@
       "local": "/assets/archive/pdfs/articles/turk-milli-ordusunun-zaferinin-uluslarasi-kiymeti-en.pdf",
       "bytes": 780693,
       "sha256": "f0b128ad15a2e05e663814da70e6cdd8df054e0b52f2dba822b7e68572102aeb",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20GAO%20JUNYU.pdf",
@@ -3285,7 +3533,8 @@
       "local": "/assets/archive/pdfs/articles/turkiye-afrika-ticari-iliskileri-son-20-yilda-10-kat-artti-en.pdf",
       "bytes": 615455,
       "sha256": "f8c085e2443c8677d171baf44d8c110d22ddad844081d28a07f3f3fe6b9529fd",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_182-187.pdf",
@@ -3293,6 +3542,14 @@
       "bytes": 951907,
       "sha256": "c886007e3500eb1f0309ec2e2e36c4aba1a6450a0e09d9a751670148b3ff8bed",
       "status": "downloaded"
+    },
+    {
+      "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Comak%20H%20Toker%20E%20F%20Manioglu%20O%20-%20Power%20Transition%20and%20Geoeconomic%20Connectivity%20in%20Eurasia%20on%20the%2055th%20Anniversary.pdf",
+      "local": "/assets/archive/pdfs/articles/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik-en.pdf",
+      "bytes": 2040002,
+      "sha256": "09f566c551fa147c68b56d8d60b071bda101bd7cbdcb58904ae978111624dfaa",
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Hasret%20%C3%87omak%20-%20Furkan%20Toker%20-%20O%C4%9Fuzhan%20Manioglu%20-%20T%C3%BCrkiye-Cin%20Diplomatik%20%C4%B0li%C5%9Fkilerinin%2055.%20Y%C4%B1l%C4%B1nda%20Avrasya%E2%80%99da.pdf",
@@ -3306,7 +3563,8 @@
       "local": "/assets/archive/pdfs/articles/turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971-en.pdf",
       "bytes": 4255889,
       "sha256": "7b4b6622d6c3fcabe1eab17aef0c2ad253078f0f78702acb526d93768e22260a",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/T%C3%BCrkiye%20Cumhuriyeti%20ile%20%C3%87in%20Halk%20Cumhuriyeti%20Aras%C4%B1nda%20Diplomatik%20%C4%B0li%C5%9Fkilerin%20Kurulmas%C4%B1%20%281960-1971%29.pdf",
@@ -3320,7 +3578,8 @@
       "local": "/assets/archive/pdfs/articles/turkiye-misir-ve-yunanistanin-savunma-harcamalari-denklemi-uzerinden-karaman-denizi-dogu-akdeniz-en.pdf",
       "bytes": 6281704,
       "sha256": "44b8ce591c356654affe0b5c6d2f27b1656f4c94eb0f523fa98030159b9d0738",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Halil%20%C3%96zsara%C3%A7_TR.pdf",
@@ -3334,7 +3593,8 @@
       "local": "/assets/archive/pdfs/articles/turkiye-rusya-isbirligi-avrasyada-gelismelerin-seyrini-belirliyor-en.pdf",
       "bytes": 1696313,
       "sha256": "c1b0425ae12445b778c5ff8eb46832be15bd4462f3eb60efc725306a76103c55",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_Igor%20Korot%C3%A7enko_TR_0.pdf",
@@ -3362,7 +3622,8 @@
       "local": "/assets/archive/pdfs/articles/turkiye-ve-rusya-afrikanin-bati-emperyalizminden-kurtulmasi-icin-birlikte-calisabilir-en.pdf",
       "bytes": 385445,
       "sha256": "fe451b4720381d930e9d65da953ca1d312ac13fa2c979f600ff16696b8e83d25",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_188-191.pdf",
@@ -3376,7 +3637,8 @@
       "local": "/assets/archive/pdfs/articles/turkiyenin-afrika-icin-cok-boyutlu-stratejisi-ozellikler-temel-saikler-ve-gelecek-beklentileri-en.pdf",
       "bytes": 6645427,
       "sha256": "4fbb7ab43a71509516ca1ee59ed2edd075d13bb87f34de33e1bcc67ae2d4a187",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Yu%20Haijie_C5S4.pdf",
@@ -3390,7 +3652,8 @@
       "local": "/assets/archive/pdfs/articles/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti-en.pdf",
       "bytes": 7178111,
       "sha256": "c62d0b70827867f876c64cdc9baf40ee3e0a0f256a7519093f5271df9d88a123",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_TR_FINAL_SON_16-43.pdf",
@@ -3404,7 +3667,8 @@
       "local": "/assets/archive/pdfs/articles/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi-en.pdf",
       "bytes": 1463612,
       "sha256": "c9baf8f47039f9b6e1d376748cc1d7ab3676a2ba2f2865d7dfdfafc3fe95f05d",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/T%C3%BCrkiye%E2%80%99nin%20G%C3%BCncel%20%C4%B0klim%20De%C4%9Fi%C5%9Fikli%C4%9Fi%20Stratejisinin%20Ana%20Y%C3%B6nelimi.pdf",
@@ -3418,7 +3682,8 @@
       "local": "/assets/archive/pdfs/articles/turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi-en.pdf",
       "bytes": 7859874,
       "sha256": "fc3005ddd5c282dff9abc346f7729920e3d5a783ac42e41702afdd5418821e3f",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/75-OGUZ%20G%C4%B0RAY-tr.pdf",
@@ -3432,7 +3697,8 @@
       "local": "/assets/archive/pdfs/articles/turkiyenin-islamofobi-ile-mucadele-cabalari-yanitlar-motivasyonlar-ve-zorluklar-en.pdf",
       "bytes": 3287414,
       "sha256": "c89df95bf575546af8d5ec384802176a79a6209c56953df84550bdcb768c0368",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/272-287%20-%20Guo%20Xin%27gen%20-%20TR.pdf",
@@ -3446,7 +3712,8 @@
       "local": "/assets/archive/pdfs/articles/turkiyenin-kulturel-varliklari-geri-kazanma-mucadelesi-en.pdf",
       "bytes": 811699,
       "sha256": "fe9abba3ca12779c2805648dac9436f103b7738a14e321b0bf49f7b5096f940d",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/ZEYNEP%20BOZ_TR.pdf",
@@ -3460,7 +3727,8 @@
       "local": "/assets/archive/pdfs/articles/turkiyenin-turk-devletlerinin-butunlesmesindeki-etkin-rolu-baglam-uygulama-ve-etki-en.pdf",
       "bytes": 6607246,
       "sha256": "d1ef7136a230ce166bb2f647edec4e23beaaa84371390e105033ba8150101c9e",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Du%20Donghui_C5S4.pdf",
@@ -3474,7 +3742,8 @@
       "local": "/assets/archive/pdfs/articles/turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi-en.pdf",
       "bytes": 1232105,
       "sha256": "4b413f8b89125f52da1c00f0b08e3a4d336f341fffa6b0ea64ddbcc957f87246",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_OgasawaraHiroyuki_TR.pdf",
@@ -3488,7 +3757,8 @@
       "local": "/assets/archive/pdfs/articles/uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin-en.pdf",
       "bytes": 8243221,
       "sha256": "656c79522c62af6943c717b3f881a5e29534272e2d4b8ab1996ad0f2177e0fc1",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-02/Fang%20Chenyu%20%26%20Wang%20Weibin_TR.pdf",
@@ -3516,7 +3786,8 @@
       "local": "/assets/archive/pdfs/articles/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi-en.pdf",
       "bytes": 2598902,
       "sha256": "2f7619da3a6856129f171073ade0b7c84387b292bd3c325a9529732180eb51d4",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/WENBO%20ZHANG%20%26%20QUAN%20HENG_TR_0.pdf",
@@ -3530,7 +3801,8 @@
       "local": "/assets/archive/pdfs/articles/ummet-icindeki-milliyetcilik-kazi-nazrul-islamin-eserlerindeki-ataturk-uzerine-inceleme-en.pdf",
       "bytes": 2369757,
       "sha256": "95ef51876b931b6766e749e501c417436c3d32d040aee93e62a4531c490a1992",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_MohammadBas%C4%B1rUlHaqSinha_TR.pdf",
@@ -3551,7 +3823,8 @@
       "local": "/assets/archive/pdfs/articles/wape-18-yillik-forumu-en.pdf",
       "bytes": 2267790,
       "sha256": "ade059f07026d0cc64cf3b322f1fa5cb3101661bd976cdcb5a90ed57be948392",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/WAPE%2018.%20Y%C4%B1ll%C4%B1k%20Forumu%20TR_0.pdf",
@@ -3565,7 +3838,8 @@
       "local": "/assets/archive/pdfs/articles/yagmalanan-iskit-altinlarinin-mirasi-en.pdf",
       "bytes": 514016,
       "sha256": "0f9dfd0d61b695a042318b66652e7b835de335bffc337b9d1b794cce976d8ab8",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/PAVEL%20ZARIFULLIN_TR.pdf",
@@ -3593,7 +3867,8 @@
       "local": "/assets/archive/pdfs/articles/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018-en.pdf",
       "bytes": 476615,
       "sha256": "3a7a6f1db11578b126c2b7aa6714882ac595c9603e81593c41fb7411d70f0704",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20VICTOR%20MANUEL%20ISIDRO%20LUNA.pdf",
@@ -3607,7 +3882,8 @@
       "local": "/assets/archive/pdfs/articles/yeni-asya-jeopolitigi-baglaminda-turk-devletleri-teskilati-en.pdf",
       "bytes": 4070627,
       "sha256": "fb56d5bc7e7d4f33d26c25b48cb97ca98a00b0c3f96a934dbbc1ad9621ffb9de",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Osman%20Can%20%C3%9Cnver_C5S4.pdf",
@@ -3621,7 +3897,8 @@
       "local": "/assets/archive/pdfs/articles/yeni-bir-dunyanin-dogusu-tarihin-sonu-mu-en.pdf",
       "bytes": 4414810,
       "sha256": "1ed75bf5a1d3209806f858d4d5a4a37fb9c3ced7adfa1147290f7a6e267fdeb6",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Akmaral%20Batalova_C5S4.pdf",
@@ -3635,7 +3912,8 @@
       "local": "/assets/archive/pdfs/articles/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar-en.pdf",
       "bytes": 5079147,
       "sha256": "370ef88449978048282e36c437e5ceee2a0e275d77d48d60c1a63bc9a2fd5320",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/G.%20%C3%87ifci%2C%20S.%20S.%20%C3%87elebi%2C%20M.%20Parlaktuna%2C%20A.%20Ka%C3%A7ar%2C%20S.%20O.%20G%C3%BCnayd%C4%B1n_TR.pdf",
@@ -3649,7 +3927,8 @@
       "local": "/assets/archive/pdfs/articles/yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak-en.pdf",
       "bytes": 210901,
       "sha256": "dfafbd9af1f2dff2ec5ddcbef7c36da55af7b5a4df1c434cbafb98eecd776bf8",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_TR-Sancak.pdf",
@@ -3663,7 +3942,8 @@
       "local": "/assets/archive/pdfs/articles/yeni-dunyanin-safaginda-afrika-en.pdf",
       "bytes": 6099999,
       "sha256": "7ed7dd842d8ca4bf652e7f7c3f6c3dd19b7fac651c3655bbc825e6d43b07c4c2",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/BRIQ_CILT5_SAYI2_TR_102-129.pdf",
@@ -3677,7 +3957,8 @@
       "local": "/assets/archive/pdfs/articles/yeni-nesil-nazizm-2023-en.pdf",
       "bytes": 1945576,
       "sha256": "9d5b9c7d0691f1475da72f9a17dbbaa7c9992ad456ab18517f2ba9c2cc352998",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/151-MASSOUD%20SHOJAI%20TABATABAI.pdf",
@@ -3691,7 +3972,8 @@
       "local": "/assets/archive/pdfs/articles/yeni-ortadoguda-yeni-bir-donem-cin-rusya-ve-guneyin-yeniden-kesfi-en.pdf",
       "bytes": 1095137,
       "sha256": "2f6f56d13974a14a086ef18084f0b7b6760ce2d5469473e09714b490ff118197",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_Ramzy%20Baroud_TR.pdf",
@@ -3719,7 +4001,8 @@
       "local": "/assets/archive/pdfs/articles/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi-en.pdf",
       "bytes": 5467549,
       "sha256": "f07ed34a2c813e33e8dbf215290a42dd4d347bdce6fb750ae194a2907b499cf3",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_TR_FINAL_SON_1-15.pdf",
@@ -3733,7 +4016,8 @@
       "local": "/assets/archive/pdfs/articles/yukselen-kuresel-dogunun-yeni-caginda-cinin-genis-cevresel-diplomasisi-en.pdf",
       "bytes": 6439523,
       "sha256": "3357e6752af1f6ac70ab2e80ebeea77057d512a797c59c2d1589f9365c1710bd",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Degang%20Sun%20%26%20Yingqi%20Yang_C5S4.pdf",
@@ -3747,7 +4031,8 @@
       "local": "/assets/archive/pdfs/articles/yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar-en.pdf",
       "bytes": 1027273,
       "sha256": "1815b6e5db4a306c2751ae069274e6068f9c277eccb5bd92235901b86992e6e5",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/6Xiao%20Yongtao_T%C3%9CRK%C3%87E.pdf",
@@ -3761,7 +4046,8 @@
       "local": "/assets/archive/pdfs/articles/yukselen-yeni-uygarligin-bilim-ve-teknolojide-kuresel-onderlik-hedefi-en.pdf",
       "bytes": 2870983,
       "sha256": "d78e60bb6623e7ac1a737bf560a1fd58bbd710c559b2a741fbffc92ac76f2778",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/Sem%C4%B0h%20Koray_TR.pdf",
@@ -3775,7 +4061,8 @@
       "local": "/assets/archive/pdfs/articles/yunan-basbakani-venizelos-ile-tarihten-bir-soylesi-en.pdf",
       "bytes": 4343902,
       "sha256": "09f06322fcc12e6377a7cce62dc3e03969195e466adec9cd79d35c3a30b4548e",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Yunan%20Ba%C5%9Fbakan%C4%B1%20Venizelos%20ile%20Tarihten%20Bir%20S%C3%B6yle%C5%9Fi.pdf",
@@ -3789,7 +4076,8 @@
       "local": "/assets/archive/pdfs/articles/yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor-en.pdf",
       "bytes": 1684124,
       "sha256": "3399962f88d3baa40195a4485b0c1dc41feb3b46bb71be2156359fcaf7e80ed9",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Konstantin%20Sivkov_TR.pdf",
@@ -3803,7 +4091,8 @@
       "local": "/assets/archive/pdfs/articles/zaman-ve-mekani-asacak-yeni-bir-medeniyet-icin-isbirligi-en.pdf",
       "bytes": 632790,
       "sha256": "5bba14d313c16c2eab66eeb5b3b3b8089abc118998ca854ed5e2d23153211f1d",
-      "status": "downloaded"
+      "status": "downloaded-exact-designed-english-article-pdf",
+      "note": "Exact designed English article PDF archived from the legacy BRIQ English article page."
     },
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/Zaman%20ve%20Mekan%C4%B1%20A%C5%9Facak%20Yeni%20Bir%20Medeniyet%20i%C3%A7in%20%C4%B0%C5%9Fbirli%C4%9Fi.pdf",
