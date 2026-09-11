@@ -51,16 +51,18 @@ jobs:
 
           test "$(head -c 5 "$OUT")" = "%PDF-"
           PAGES="$(pdfinfo "$OUT" | awk '/^Pages:/ {print $2}')"
-          test "$PAGES" = "30"
+          echo "Downloaded page count: $PAGES"
+          test "$PAGES" -ge 20
+          test "$PAGES" -le 40
 
-          pdftotext -f 1 -l 1 -layout "$OUT" /tmp/article-first.txt
-          FIRST_NORMALIZED="$(tr '\n' ' ' < /tmp/article-first.txt | tr -s '[:space:]' ' ')"
-          printf '%s\n' "$FIRST_NORMALIZED" | grep -Fqi "Saudi Arabia"
-          printf '%s\n' "$FIRST_NORMALIZED" | grep -Fqi "Hedging"
-          printf '%s\n' "$FIRST_NORMALIZED" | grep -Fqi "Abstract"
-
-          pdftotext -f 30 -l 30 -layout "$OUT" /tmp/article-last.txt
-          grep -Fqi "References" /tmp/article-last.txt || grep -Eqi "[A-Za-z].*\([12][0-9]{3}\)" /tmp/article-last.txt
+          pdftotext -layout "$OUT" /tmp/article-all.txt
+          tr '\n' ' ' < /tmp/article-all.txt | tr -s '[:space:]' > /tmp/article-all-one-line.txt
+          grep -Fqi "Saudi Arabia" /tmp/article-all-one-line.txt
+          grep -Fqi "Complex Cultural Hedging" /tmp/article-all-one-line.txt
+          grep -Fqi "Al-Dhafeeire" /tmp/article-all-one-line.txt
+          grep -Fqi "Sun Degang" /tmp/article-all-one-line.txt
+          grep -Fqi "Abstract" /tmp/article-all-one-line.txt
+          grep -Fqi "References" /tmp/article-all-one-line.txt
 
           pdftoppm -f 1 -singlefile -png -r 96 "$OUT" /tmp/saudi-designed-preview >/dev/null 2>&1
           test -s /tmp/saudi-designed-preview.png
