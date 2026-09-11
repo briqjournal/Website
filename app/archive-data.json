@@ -787,11 +787,12 @@
       "received_date": "2026-02-10",
       "accepted_date": "2026-06-01",
       "source_tr": "https://briqjournal.com/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi",
-      "source_en": null,
+      "source_en": "https://briqjournal.com/en/saudi-arabias-complex-cultural-hedging-between-the-us-and-china",
       "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Salman%20K.%20Al-Dhafeeire%20%26%20SUN%20DEGANG_Suudi%20Arabistan%E2%80%99%C4%B1n%20ABD%20ile%20%C3%87in%20Aras%C4%B1nda%20%C3%87ok%20Boyutlu%20K%C3%BClt%C3%BCrel%20Dengeleme%20Stratejisi.pdf",
-      "shared_bilingual_pdf": true,
+      "shared_bilingual_pdf": false,
       "pdf_tr_local": "/assets/archive/pdfs/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi-tr.pdf",
-      "pdf_en_local": "/assets/archive/pdfs/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi-tr.pdf"
+      "pdf_en_local": "/assets/archive/pdfs/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi-en.pdf",
+      "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Salman%20K.%20Al-Dhafeeire%20%26%20Sun%20Degang%20-%20Saudi%20Arabia%E2%80%99s%20Complex%20Cultural%20Hedging%20Between%20the%20U.S.%20and%20China.pdf"
     },
     {
       "slug": "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik",

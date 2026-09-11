@@ -1,4 +1,5 @@
 import fullTextJson from "../article-fulltext-current.json";
+import saudiEnglishFullTextJson from "../article-fulltext-saudi-en.json";
 import { articleCitation } from "../article-citation";
 import {
   archiveArticles,
@@ -60,6 +61,7 @@ type ArticleDetails = {
 };
 
 const currentFullText = fullTextJson as Record<string, CurrentFullTextRecord>;
+const SAUDI_CULTURAL_HEDGING_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";
 
 function OrcidBadge() {
   return <span className="orcid-badge" aria-hidden="true">iD</span>;
@@ -259,7 +261,10 @@ export function ArticlePlatform({
   details?: ArticleDetails;
 }) {
   const fullRecord = currentFullText[article.slug];
-  const fullText = fullRecord?.[locale];
+  const storedFullText = fullRecord?.[locale];
+  const fullText = locale === "en" && article.slug === SAUDI_CULTURAL_HEDGING_SLUG
+    ? (saudiEnglishFullTextJson as LocalizedFullText)
+    : storedFullText;
   const displayReferences = fullText ? referencesWithUnlistedCitations(fullText.sections, fullText.references, locale) : [];
   const metadata = fullRecord?.metadata;
   const title = locale === "tr" ? article.title_tr : (article.title_en || article.title_tr);
