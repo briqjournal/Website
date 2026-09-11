@@ -19,8 +19,6 @@ URL_HOST = re.compile(r"https?://(?:[a-z0-9-]+\s*\.\s*)+[a-z]{2,63}", re.I)
 DOI_PREFIX = re.compile(r"\b10\s*\.\s*(\d{4,9})\s*/\s*", re.I)
 DOI_LABEL = re.compile(r"\bdoi\s*:\s*(10\.\d{4,9}/[-._;()/:A-Z0-9]+)", re.I)
 URL_BEFORE_PUNCT = re.compile(r"(https?://[^\s<>\[\]{}]+)\s+([/?#&=:%])\s*", re.I)
-URL_AFTER_PUNCT = re.compile(r"(https?://[^\s<>\[\]{}]*[/?#&=:%])\s+([\w~.%+_-]+(?=[/?#&=:%]|$))", re.I)
-DOI_AFTER_PUNCT = re.compile(r"(10\.\d{4,9}/[-._;()/:A-Z0-9]*[._;()/:+-])\s+([-._;()/:A-Z0-9]+)", re.I)
 
 SUSPICIOUS = [
     re.compile(r"https?://[^\s\"']*\.\s+[a-z]{2,63}(?:/|\\u002f)", re.I),
@@ -38,8 +36,6 @@ def normalize(text: str) -> str:
     text = DOI_LABEL.sub(r"https://doi.org/\1", text)
     for _ in range(4):
         text = URL_BEFORE_PUNCT.sub(r"\1\2", text)
-        text = URL_AFTER_PUNCT.sub(r"\1\2", text)
-        text = DOI_AFTER_PUNCT.sub(r"\1\2", text)
     return text
 
 
@@ -53,7 +49,6 @@ def main() -> int:
         normalized = normalize(original)
         if normalized != original:
             changed_files += 1
-            # Count affected replacement regions approximately by changed lines.
             before_lines = original.splitlines()
             after_lines = normalized.splitlines()
             total_changes += sum(a != b for a, b in zip(before_lines, after_lines))
