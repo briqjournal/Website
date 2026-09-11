@@ -1,7 +1,7 @@
 import fullTextJson from "../article-fulltext-current.json";
 import saudiEnglishFullTextJson from "../article-fulltext-saudi-en.json";
 import archiveEnglishFullTextJson from "../article-fulltext-en-archive.json";
-import { articleCitation } from "../article-citation";
+import { articleCitation, citationWithDoi } from "../article-citation";
 import {
   archiveArticles,
   articlePdfUrl,
@@ -275,7 +275,7 @@ export function ArticlePlatform({
   const title = locale === "tr" ? article.title_tr : (article.title_en || article.title_tr);
   const abstractSource = locale === "tr" ? article.abstract_tr : article.abstract_en;
   const abstract = details?.abstract || abstractSource?.split("\n").filter(Boolean) || [];
-  const citation = details?.citation || articleCitation(article, locale);
+  const citation = citationWithDoi(details?.citation || articleCitation(article, locale), article.doi);
   const keywords = details?.keywords || fullText?.keywords || [];
   const articleType = publicationType(article, locale);
   const statements = researchStatementItems(fullText, locale);
@@ -335,8 +335,9 @@ export function ArticlePlatform({
             <div><span>{locale === "tr" ? "Cilt / Sayı" : "Volume / Issue"}</span><b>{article.volume} / {article.issue}</b></div>
             <div><span>{locale === "tr" ? "Sayfa" : "Pages"}</span><b>{article.pages || "—"}</b></div>
             <div><span>{locale === "tr" ? "Yayın" : "Published"}</span><b>{locale === "tr" ? article.season_tr : article.season_en} {article.year}</b></div>
+            {article.doi && <div className="publication-doi"><span>DOI</span><b><a href={`https://doi.org/${article.doi}`} target="_blank" rel="noreferrer">{article.doi}</a></b></div>}
           </div>
-          <PublicationRecord locale={locale} history={history} doi={article.doi} />
+          <PublicationRecord locale={locale} history={history} />
         </aside>
 
         <article className="article-platform-content">

@@ -21,11 +21,9 @@ function formatDate(value: string | null | undefined, locale: Locale) {
 export function PublicationRecord({
   locale,
   history,
-  doi,
 }: {
   locale: Locale;
   history?: PublicationHistory;
-  doi?: string | null;
 }) {
   const labels: [string, string | null | undefined][] = locale === "tr"
     ? [
@@ -42,24 +40,18 @@ export function PublicationRecord({
       ];
 
   return (
-    <>
-      <div className="publication-record-group">
-        <p className="article-sidebar-heading">
-          {locale === "tr" ? "Makale geçmişi" : "Article history"}
-        </p>
-        <dl className="publication-history">
-          {labels.map(([label, value]) => (
-            <div className={value ? "" : "is-empty"} key={label}>
-              <dt>{label}</dt>
-              <dd>{formatDate(value, locale)}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-      <div className={`publication-doi${doi ? "" : " is-empty"}`}>
-        <span>DOI</span>
-        <b>{doi ? <a href={`https://doi.org/${doi}`}>{`https://doi.org/${doi}`}</a> : "—"}</b>
-      </div>
-    </>
+    <div className="publication-record-group">
+      <p className="article-sidebar-heading">
+        {locale === "tr" ? "Makale geçmişi" : "Article history"}
+      </p>
+      <dl className="publication-history">
+        {labels.map(([label, value]) => (
+          <div className={value ? "" : "is-empty"} key={label}>
+            <dt>{label}</dt>
+            <dd>{formatDate(value, locale)}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
   );
 }
