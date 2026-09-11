@@ -76,7 +76,7 @@ function pushRange(ranges: TextRange[], start: number, end: number) {
 
 function apaItalicRanges(text: string) {
   const ranges: TextRange[] = [];
-  const date = /\((?:19|20)\d{2}[a-z]?(?:,\s*[^)]*)?\)\.\s*/i.exec(text);
+  const date = /\((?:(?:19|20)\d{2}[a-z]?(?:,\s*[^)]*)?|n\.d\.(?:-[a-z])?|t\.y\.(?:-[a-z])?)\)\.\s*/i.exec(text);
   if (!date || date.index == null) return ranges;
 
   const workStart = date.index + date[0].length;
@@ -106,11 +106,11 @@ function apaItalicRanges(text: string) {
   }
 
   // Chapter in an edited book: the containing book title is italicized.
-  const chapter = /\bIn\s+.+?\((?:Ed|Eds)\.?\),\s*/i.exec(work);
+  const chapter = /(?:^|\s)(?:In|İçinde)\s+.+?\((?:Ed|Eds|Haz)\.?\),\s*/iu.exec(work);
   if (chapter?.index != null) {
     const start = workStart + chapter.index + chapter[0].length;
     const tail = text.slice(start);
-    const endMarker = /\s*(?:\((?:pp?|Vol\.?|Chapter)\b|\.\s+(?=[A-ZÇĞİÖŞÜ]))/i.exec(tail);
+    const endMarker = /\s*(?:\((?:pp?|ss?|Vol\.?|Cilt|Chapter|Bölüm)\b|\.\s+(?=[A-ZÇĞİÖŞÜ]))/iu.exec(tail);
     const end = endMarker?.index != null ? start + endMarker.index : start + tail.length;
     pushRange(ranges, start, end);
     return ranges;
