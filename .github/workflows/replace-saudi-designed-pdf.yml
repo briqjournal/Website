@@ -65,7 +65,8 @@ jobs:
 
           pdftotext -f "$((END + 1))" -l "$((END + 1))" -layout /tmp/briq-en-issue.pdf /tmp/next-page.txt 2>/dev/null || true
           NEXT_NORMALIZED="$(tr '\n' ' ' < /tmp/next-page.txt | tr -s '[:space:]' ' ')"
-          printf '%s\n' "$NEXT_NORMALIZED" | grep -Eqi "Power Transition|Geoeconomic Connectivity"
+          printf '%s\n' "$NEXT_NORMALIZED" | grep -Fqi "Karaduman"
+          printf '%s\n' "$NEXT_NORMALIZED" | grep -Fqi "China"
 
           OUT="public${EN_LOCAL}"
           mkdir -p "$(dirname "$OUT")" tmp
