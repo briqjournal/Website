@@ -34,6 +34,7 @@ export function normalizeReferenceText(value: string) {
   text = compactUrlHosts(text);
   text = text
     .replace(/https?:\/\/(?:dx\.)?doi\.org\s*\/\s*/gi, "https://doi.org/")
+    .replace(/https?:\/\/(10\.\d{4,9}\/)/gi, "https://doi.org/$1")
     .replace(/\bdoi\s*:\s*10\s*\.\s*(\d{4,9})\s*\/\s*/gi, "https://doi.org/10.$1/")
     .replace(/\b10\s*\.\s*(\d{4,9})\s*\/\s*/gi, "10.$1/");
 
@@ -46,8 +47,9 @@ export function normalizeReferenceText(value: string) {
       .replace(/(https?:\/\/[^\s<>"']*\/)\s+(?=[^\s<>"']*[./?=&%#_-])/gi, "$1")
       .replace(/(https?:\/\/[^\s<>"']*%[0-9A-F]{2})\s+(?=[^\s<>"']*[./?=&%#_-])/gi, "$1")
       .replace(/(https?:\/\/[^\s<>"']*[-_=&#?])\s+(?=[^\s<>"']*[./?=&%#_-])/gi, "$1")
+      .replace(/(https?:\/\/[^\s<>"']*\.)\s+(?=(?:html?|shtml|pdf|php|aspx?|jsp|xml|json|tr\.mfa)\b)/gi, "$1")
       .replace(/(10\.\d{4,9}\/[^\s<>"']*[-/_:;])\s+(?=[A-Z0-9])/gi, "$1")
-      .replace(/(10\.\d{4,9}\/[^\s<>"']*\.)\s+(?=(?:\d|cnki\b|issn\b))/gi, "$1");
+      .replace(/(10\.\d{4,9}\/[^\s<>"']*\.)\s+(?=(?:\d|cnki\b|issn\b|[a-z]{1,4}\d))/gi, "$1");
   }
 
   // APA 7 uses the DOI resolver form rather than a bare "doi:" label.
