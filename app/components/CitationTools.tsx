@@ -5,10 +5,20 @@ import { useState } from "react";
 function CitationText({ value }: { value: string }) {
   const match = value.match(/^(.*?)(https:\/\/doi\.org\/10\.\S+)$/i);
   if (!match) return <>{value}</>;
-  return <>
-    {match[1]}
-    <a className="reference-inline-link" href={match[2]} target="_blank" rel="noreferrer">{match[2]}</a>
-  </>;
+  return <>{match[1]}<a
+    href={match[2]}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      color: "inherit",
+      font: "inherit",
+      fontWeight: "inherit",
+      letterSpacing: "inherit",
+      textDecoration: "underline",
+      textDecorationThickness: "from-font",
+      textUnderlineOffset: "0.14em",
+    }}
+  >{match[2]}</a></>;
 }
 
 export function CitationTools({ citation, slug, locale }: { citation: string; slug: string; locale: "tr" | "en" }) {
