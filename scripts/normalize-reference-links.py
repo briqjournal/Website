@@ -16,18 +16,25 @@ ROOT = Path(__file__).resolve().parents[1]
 FILES = sorted((ROOT / "app").glob("article-fulltext*.json"))
 
 PROTOCOL = re.compile(r"\b(https?)\s*:\s*/\s*/", re.I)
+URL_AFTER_PROTOCOL = re.compile(r"(https?://)\s+(?=[a-z0-9-]+\.)", re.I)
 DOI_HOST = re.compile(r"https?://(?:dx\s*\.\s*)?doi\s*\.\s*org\s*/\s*", re.I)
 URL_HOST = re.compile(r"https?://(?:[a-z0-9-]+\s*\.\s*)+[a-z]{2,63}", re.I)
 DOI_PREFIX = re.compile(r"\b10\s*\.\s*(\d{4,9})\s*/\s*", re.I)
 DOI_LABEL = re.compile(r"\bdoi\s*:\s*(10\.\d{4,9}/[-._;()/:A-Z0-9]+)", re.I)
 URL_BEFORE_PUNCT = re.compile(r"(https?://[^\s<>\[\]{}]+)\s+([/?#&=:%])\s*", re.I)
+URL_AFTER_SLASH = re.compile(r"(https?://[^\s<>\"']*/)\s+(?=[^\s<>\"']*[./?=&%#_-])", re.I)
+URL_AFTER_ESCAPE = re.compile(r"(https?://[^\s<>\"']*%[0-9A-F]{2})\s+(?=[^\s<>\"']*[./?=&%#_-])", re.I)
+URL_AFTER_CONNECTOR = re.compile(r"(https?://[^\s<>\"']*[-_=&#?])\s+(?=[^\s<>\"']*[./?=&%#_-])", re.I)
 DOI_STRONG_CONTINUATION = re.compile(r"(10\.\d{4,9}/[^\s<>\"']*[-/_:;])\s+(?=[A-Z0-9])", re.I)
 DOI_DOT_CONTINUATION = re.compile(r"(10\.\d{4,9}/[^\s<>\"']*\.)\s+(?=(?:\d|cnki\b|issn\b))", re.I)
 
 SUSPICIOUS_REFERENCE_PATTERNS = [
-    re.compile(r"https?\s*:\s*/\s*/", re.I),
+    re.compile(r"https?\s+:\s*/\s*/|https?\s*:\s+/\s*/|https?\s*:\s*/\s+/", re.I),
+    re.compile(r"https?://\s+(?=[a-z0-9-]+\.)", re.I),
     re.compile(r"https?://(?:dx\s*\.\s*)?doi\s*\.\s*org", re.I),
     re.compile(r"https?://(?:[a-z0-9-]+\s*\.\s*)+[a-z]{2,63}", re.I),
+    re.compile(r"https?://[^\s<>\"']*/\s+(?=[^\s<>\"']*[./?=&%#_-])", re.I),
+    re.compile(r"https?://[^\s<>\"']*%[0-9A-F]{2}\s+(?=[^\s<>\"']*[./?=&%#_-])", re.I),
     re.compile(r"\b10\s+\.\s*\d{4,9}\s*/", re.I),
     re.compile(r"\b10\s*\.\s*\d{4,9}\s+/", re.I),
     re.compile(r"10\.\d{4,9}/[^\s<>\"']*[-/_:;]\s+[A-Z0-9]", re.I),
@@ -39,12 +46,16 @@ URL_OR_DOI = re.compile(r"https?://|\b10\.\d{4,9}/", re.I)
 
 def normalize(text: str) -> str:
     text = PROTOCOL.sub(lambda m: f"{m.group(1).lower()}://", text)
+    text = URL_AFTER_PROTOCOL.sub(r"\1", text)
     text = DOI_HOST.sub("https://doi.org/", text)
     text = URL_HOST.sub(lambda m: re.sub(r"\s+", "", m.group(0)), text)
     text = DOI_PREFIX.sub(r"10.\1/", text)
     text = DOI_LABEL.sub(r"https://doi.org/\1", text)
-    for _ in range(4):
+    for _ in range(5):
         text = URL_BEFORE_PUNCT.sub(r"\1\2", text)
+        text = URL_AFTER_SLASH.sub(r"\1", text)
+        text = URL_AFTER_ESCAPE.sub(r"\1", text)
+        text = URL_AFTER_CONNECTOR.sub(r"\1", text)
         text = DOI_STRONG_CONTINUATION.sub(r"\1", text)
         text = DOI_DOT_CONTINUATION.sub(r"\1", text)
     return text
