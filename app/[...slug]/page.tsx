@@ -138,7 +138,7 @@ function JournalOverview() {
             { number: "01", title: "Yayın İlkeleri", text: "Derginin temel ilkeleri, çalışma alanları ve yayın yaklaşımı.", href: "/dergi/yayin-ilkeleri" },
             { number: "02", title: "Yayın Kurulu", text: "Derginin yayın çalışmalarına yön veren kurul.", href: "/dergi/yayin-kurulu" },
             { number: "03", title: "Danışma Kurulu", text: "Bilimsel danışmanlık sağlayan uluslararası kurul.", href: "/dergi/danisma-kurulu" },
-            { number: "04", title: "Endeksler", text: "BRIQ’in mevcut sitesinde beyan edilen dizin ve keşif hizmetleri.", href: "/dergi/endeksler" },
+            { number: "04", title: "Dizinler ve Arşivler", text: "BRIQ’in akademik dizin, açık erişim deposu ve arşivleme kayıtları.", href: "/dergi/endeksler" },
             { number: "05", title: "Yıllık Raporlar", text: "Derginin faaliyetlerini, yayın performansını ve gelişimini belgeleyen raporlar.", href: "/yillik-raporlar" },
             { number: "06", title: "İletişim", text: "Yönetim yeri, yayıncı bilgisi ve kurumsal iletişim kanalları.", href: "/dergi/iletisim" },
           ]}
@@ -199,7 +199,7 @@ function AboutBriq() {
             id: "kurumsal-yapi",
             title: "Kurumsal yapı",
             subsections: [
-              { id: "yayinci", title: "Yayıncı", content: <p>BRIQ, Çin İş Geliştirme ve Dostluk Derneği bünyesindeki Çin Araştırmaları Enstitüsü tarafından yayımlanmaktadır. Derginin sahibi, Çin İş Geliştirme ve Dostluk Derneği (Türk-Çin İş Der) adına Emine Sağlam’dır.</p> },
+              { id: "yayinci", title: "Yayıncı", content: <p>BRIQ, Çin İş Geliştirme ve Dostluk Derneği tarafından yayımlanmaktadır. Derginin sahibi, Çin İş Geliştirme ve Dostluk Derneği (Türk-Çin İş Der) adına Emine Sağlam’dır.</p> },
               { id: "bagimsiz-karar", title: "Bağımsız yayın kararları", content: <><p>Yayıncı derginin kurumsal ve idari sürdürülebilirliğini sağlar; tekil yazıların değerlendirme, kabul, revizyon veya ret kararları bilimsel yayın organları tarafından verilir.</p><p>Dergi yazarlardan başvuru, değerlendirme veya yayın ücreti almaz. Sponsor, bağışçı ve dış paydaşlar hakem seçimine ya da yayın kararına müdahale edemez.</p></> },
             ],
           },
@@ -440,11 +440,11 @@ function Indexes() {
     <>
       <PageHero
         kicker="Dergi"
-        title="Endeksler"
-        intro="BRIQ’in doğrulanmış dizin ve akademik arşiv kayıtları aşağıda işlevleri birbirinden ayrılarak gösterilir."
+        title="Dizinler ve Arşivler"
+        intro="BRIQ’in doğrulanmış dizin ve akademik arşiv kayıtları, işlevleri açıkça ayrılarak gösterilir."
       />
       <div className="site-shell page-section">
-        <IndexTicker />
+        <p className="section-kicker">Dizinler · Abstracting &amp; Indexing</p>
         <div className="index-detail-grid">
           <article>
             <span>01</span>
@@ -458,10 +458,13 @@ function Indexes() {
             <p>BRIQ dergi profili ve makale kayıtlarının yer aldığı akademik dizin.</p>
             <a className="underlined-link" href="https://europub.co.uk/journals/briq-belt-road-initiative-quarterly-J-33908">BRIQ profilini aç ↗︎</a>
           </article>
+        </div>
+        <p className="section-kicker">Açık Erişim Depoları ve Arşivleme</p>
+        <div className="index-detail-grid">
           <article>
-            <span>03</span>
+            <span>01</span>
             <h2>SSOAR</h2>
-            <p>BRIQ yayınlarının tam metin kopyalarını kalıcı tanımlayıcılarla barındıran sosyal bilimler açık arşivi; dizin değildir.</p>
+            <p>BRIQ yayınlarının tam metin kopyalarını kalıcı tanımlayıcılarla barındıran sosyal bilimler açık erişim deposu ve arşivleme hizmetidir; akademik dizin olarak sınıflandırılmaz.</p>
             <a className="underlined-link" href="https://www.ssoar.info/ssoar/">SSOAR’ı aç ↗︎</a>
           </article>
         </div>
@@ -873,7 +876,7 @@ function ReviewFlow() {
             id: "hakemlik-ve-revizyon",
             title: "Hakemlik ve revizyon",
             subsections: [
-              { id: "uzman-degerlendirmesi", title: "Uzman değerlendirmesi", content: <><p>e) Makaleden sorumlu editör, BRIQ kriterleri bakımından yeterli bulunan gönderileri ilgili alanda uzman hakemlere gönderir.</p><p>f)Hakem raporları yazara yollanır ve verilen süre içinde düzeltme isteklerini uygulayıp makaleyi yollaması istenir.</p><p>g)Hakem raporunun kapsamlı değişiklikler yapılmasını önermesi durumunda, yazar tarafından gözden geçirilen gönderiler yeniden hakem onayına sunulur. Eğer hakem raporu yalnızca biçimsel değişiklikler öneriyorsa ilgili gönderi hakem önerilerine uygunluk bakımından incelenmek üzere Yazıişleri Müdürü’ne gönderilir.</p></> },
+              { id: "uzman-degerlendirmesi", title: "Uzman değerlendirmesi", content: <><p>e) Ön incelemeyi geçen her araştırma makalesi, çift kör hakemlik ilkesi doğrultusunda, ilgili alanda uzman en az iki bağımsız hakeme gönderilir. Hakemlerin mümkün olduğunca farklı kurumlardan seçilmesine özen gösterilir.</p><p>Hakem görüşlerinin esaslı biçimde ayrışması halinde editör değerlendirmesiyle karar verilebilir veya üçüncü bir hakem görüşüne başvurulabilir.</p><p>f)Hakem raporları yazara yollanır ve verilen süre içinde düzeltme isteklerini uygulayıp makaleyi yollaması istenir.</p><p>g)Hakem raporunun kapsamlı değişiklikler yapılmasını önermesi durumunda, yazar tarafından gözden geçirilen gönderiler yeniden hakem onayına sunulur. Eğer hakem raporu yalnızca biçimsel değişiklikler öneriyorsa ilgili gönderi hakem önerilerine uygunluk bakımından incelenmek üzere Yazıişleri Müdürü’ne gönderilir.</p></> },
             ],
           },
           {
@@ -1195,7 +1198,7 @@ const pageMetadata: Record<string, [string, string]> = {
   "dergi/yayin-ilkeleri": ["Yayın İlkeleri", "BRIQ’in yayın ilkeleri ve gelişen dünya perspektifi."],
   "dergi/yayin-kurulu": ["Yayın Kurulu", "BRIQ Yayın Kurulu üyeleri."],
   "dergi/danisma-kurulu": ["Danışma Kurulu", "BRIQ Danışma Kurulu üyeleri."],
-  "dergi/endeksler": ["Endeksler ve açık arşivler", "BRIQ’in doğrulanmış endeks ve açık arşiv kayıtları."],
+  "dergi/endeksler": ["Dizinler ve Arşivler", "BRIQ’in doğrulanmış akademik dizin ve açık arşiv kayıtları."],
   iletisim: ["İletişim", "BRIQ iletişim bilgileri ve mesaj formu."],
   arama: ["BRIQ’te Ara", "BRIQ makale, sayı ve çağrı araması."],
   yazarlar: ["Yazarlar için", "BRIQ’e gönderim, yazım kuralları ve değerlendirme adımları."],

@@ -7,7 +7,7 @@ export const navItems = [
       ["Yayın İlkeleri", "/dergi/yayin-ilkeleri"],
       ["Yayın Kurulu", "/dergi/yayin-kurulu"],
       ["Danışma Kurulu", "/dergi/danisma-kurulu"],
-      ["Endeksler", "/dergi/endeksler"],
+      ["Dizinler ve Arşivler", "/dergi/endeksler"],
       ["Yıllık Raporlar", "/yillik-raporlar"],
     ],
   },

@@ -41,9 +41,11 @@ type LocalizedFullText = {
   figures: ArticleFigure[];
   declarations?: {
     acknowledgements?: string;
+    authorContributions?: string;
     funding?: string;
     competingInterests?: string;
     ethicsApproval?: string;
+    informedConsent?: string;
   };
   supplementary?: { title: string; url: string }[];
 };
@@ -214,35 +216,56 @@ function researchStatementItems(fullText: LocalizedFullText | undefined, locale:
   const ack = fullText?.acknowledgements?.trim();
   const declarations = fullText?.declarations;
   const inferredFunding = ack && /(destek|support|fund|grant|program)/i.test(ack) ? ack : "";
-  const inferredAcknowledgement = ack && !inferredFunding ? ack : "";
+  const missing = locale === "tr"
+    ? {
+        authorContributions: "Bu makale için yazar katkı beyanı kaynak kaydında ayrıca belirtilmemiştir.",
+        funding: "Bu makale için finansman veya destek beyanı kaynak kaydında ayrıca belirtilmemiştir.",
+        competingInterests: "Bu makale için çıkar çatışması beyanı kaynak kaydında ayrıca belirtilmemiştir.",
+        ethicsApproval: "Bu makale için etik kurul onayı beyanı kaynak kaydında ayrıca belirtilmemiştir.",
+        informedConsent: "Bu makale için bilgilendirilmiş onam beyanı kaynak kaydında ayrıca belirtilmemiştir.",
+      }
+    : {
+        authorContributions: "A separate author-contributions statement is not available in the source record for this article.",
+        funding: "A separate funding or financial-support statement is not available in the source record for this article.",
+        competingInterests: "A separate competing-interests statement is not available in the source record for this article.",
+        ethicsApproval: "A separate ethics-approval statement is not available in the source record for this article.",
+        informedConsent: "A separate informed-consent statement is not available in the source record for this article.",
+      };
   const values = {
-    acknowledgements: declarations?.acknowledgements?.trim() || inferredAcknowledgement,
-    funding: declarations?.funding?.trim() || inferredFunding,
-    competingInterests: declarations?.competingInterests?.trim() || "",
-    ethicsApproval: declarations?.ethicsApproval?.trim() || "",
+    authorContributions: declarations?.authorContributions?.trim() || missing.authorContributions,
+    funding: declarations?.funding?.trim() || inferredFunding || missing.funding,
+    competingInterests: declarations?.competingInterests?.trim() || missing.competingInterests,
+    ethicsApproval: declarations?.ethicsApproval?.trim() || missing.ethicsApproval,
+    informedConsent: declarations?.informedConsent?.trim() || missing.informedConsent,
   };
   const definitions = locale === "tr" ? [
-    ["tesekkur", "Teşekkür", values.acknowledgements],
-    ["finansman", "Finansman beyanı", values.funding],
-    ["cikar-catismasi", "Çıkar çatışması beyanı", values.competingInterests],
-    ["etik-kurul", "Etik kurul beyanı", values.ethicsApproval],
+    ["yazar-katkilari", "Yazar Katkıları", values.authorContributions],
+    ["finansman", "Finansman / Destek", values.funding],
+    ["cikar-catismasi", "Çıkar Çatışması", values.competingInterests],
+    ["etik-kurul", "Etik Kurul Onayı", values.ethicsApproval],
+    ["bilgilendirilmis-onam", "Bilgilendirilmiş Onam", values.informedConsent],
   ] : [
-    ["acknowledgements", "Acknowledgements", values.acknowledgements],
-    ["funding", "Funding / Financial support", values.funding],
-    ["competing-interests", "Competing interests", values.competingInterests],
-    ["ethics-approval", "Ethics approval", values.ethicsApproval],
+    ["author-contributions", "Author Contributions", values.authorContributions],
+    ["funding", "Funding / Financial Support", values.funding],
+    ["competing-interests", "Competing Interests", values.competingInterests],
+    ["ethics-approval", "Ethics Approval", values.ethicsApproval],
+    ["informed-consent", "Informed Consent", values.informedConsent],
   ];
-  return definitions
-    .filter(([, , value]) => Boolean(value))
-    .map(([id, label, value]) => ({ id, label, value }));
+  return definitions.map(([id, label, value]) => ({ id, label, value }));
 }
 
 function ResearchStatements({ items, locale }: { items: StatementItem[]; locale: "tr" | "en" }) {
   if (!items.length) return null;
   return (
-    <div className="article-declaration-list">
-      {items.map(({ id, label, value }) => <section className="article-declaration" id={id} key={id}><p className="section-kicker">{locale === "tr" ? "Beyan" : "Statement"}</p><h2>{label}</h2><p>{value}</p></section>)}
-    </div>
+    <>
+      <p className="section-kicker">{locale === "tr" ? "Beyanlar" : "Declarations"}</p>
+      {items.map(({ id, label, value }) => (
+        <details className="article-accordion article-declaration-accordion" id={id} key={id}>
+          <summary><span>{label}</span><b>{locale === "tr" ? "Beyan" : "Statement"}</b></summary>
+          <div className="accordion-copy"><p>{value}</p></div>
+        </details>
+      ))}
+    </>
   );
 }
 
@@ -276,7 +299,7 @@ export async function ArticlePlatform({
   const citation = citationWithDoi(details?.citation || articleCitation(article, locale), article.doi);
   const keywords = (details?.keywords || fullText?.keywords || []).map((keyword) => keywordLabel(keyword, locale));
   const articleType = publicationType(article, locale);
-  const statements = researchStatementItems(fullText, locale);
+  const statements = articleType === (locale === "tr" ? "Araştırma Makalesi" : "Research Article") ? researchStatementItems(fullText, locale) : [];
   const supplementary = fullText?.supplementary || [];
   const trPdf = articlePdfUrl(article, "tr");
   const enPdf = articlePdfUrl(article, "en");
@@ -298,9 +321,9 @@ export async function ArticlePlatform({
     ...(keywords.length ? [{ id: locale === "tr" ? "anahtar-kelimeler" : "keywords", label: locale === "tr" ? "Anahtar kelimeler" : "Keywords", level: 1 }] : []),
     ...(fullText?.sections.length ? [{ id: locale === "tr" ? "tam-metin" : "full-text-body", label: locale === "tr" ? "Tam Metin" : "Full Text", level: 1 }] : []),
     ...(fullText?.sections || []).map((section) => ({ id: section.id, label: section.title, level: 2 })),
-    ...statements.map(({ id, label }) => ({ id, label, level: 1 })),
     ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
+    ...statements.map(({ id, label }) => ({ id, label, level: 1 })),
     { id: locale === "tr" ? "atif" : "cite", label: locale === "tr" ? "Kaynak göster" : "Cite this article", level: 1 },
     ...(fullText?.footnotes.length ? [{ id: locale === "tr" ? "dipnotlar" : "footnotes", label: locale === "tr" ? "Dipnotlar" : "Footnotes", level: 1 }] : []),
     ...(displayReferences.length ? [{ id: locale === "tr" ? "kaynakca" : "references", label: locale === "tr" ? "Kaynakça" : "References", level: 1 }] : []),
@@ -350,10 +373,11 @@ export async function ArticlePlatform({
             <section className="legacy-fulltext-note"><h2>{locale === "tr" ? "Tam Metin" : "Full Text"}</h2><p>{locale === "tr" ? "Bu arşiv kaydının tam metni dijitalleştirme sırasındadır. Doğrulanmış makale dosyasına üstteki PDF düğmesinden erişebilirsiniz." : "The full text for this archival record is being digitised. Use the PDF button above to access the verified article file."}</p></section>
           )}
 
-          <ResearchStatements items={statements} locale={locale} />
           <div className="article-disclosure-stack">
             {fullText && <ArticleFigures figures={fullText.figures} locale={locale} />}
             {supplementary.length ? <details className="article-accordion" id={locale === "tr" ? "ek-materyaller" : "supplementary"}><summary><span>{locale === "tr" ? "Ek materyaller" : "Supplementary information"}</span><b>{supplementary.length}</b></summary><div className="supplementary-links">{supplementary.map((item) => <a href={item.url} key={`${item.title}-${item.url}`} download>{item.title}<span>↓︎</span></a>)}</div></details> : null}
+
+            <ResearchStatements items={statements} locale={locale} />
 
             <details className="article-accordion article-citation-accordion" id={locale === "tr" ? "atif" : "cite"}><summary><span>{locale === "tr" ? "Bu makaleyi kaynak göster" : "Cite this article"}</span><b>APA 7</b></summary><div className="accordion-copy citation-accordion-copy"><CitationTools citation={citation} slug={article.slug} locale={locale} /></div></details>
 
