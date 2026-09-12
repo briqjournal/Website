@@ -25,6 +25,7 @@ import {
   archiveIssues,
   annualReports,
   articlePdfUrl,
+  articleRouteSlug,
   currentIssueArticleAliases,
   findArticleByRouteSlug,
   findArchiveArticle,
@@ -1372,7 +1373,7 @@ export async function generateMetadata({
       description: `${article.title_tr} doğrulanmış PDF görüntüleyicisi.`,
       alternates: {
         canonical: `/makaleler/${articlePdfMatch[1]}/pdf`,
-        languages: { "tr-TR": `/makaleler/${articlePdfMatch[1]}/pdf`, "en-US": `/en/articles/${article.slug}/pdf` },
+        languages: { "tr-TR": `/makaleler/${articlePdfMatch[1]}/pdf`, "en-US": `/en/articles/${articleRouteSlug(article, "en")}/pdf` },
       },
     };
   }
@@ -1394,7 +1395,7 @@ export async function generateMetadata({
           canonical: `/makaleler/${articleMatch[1]}`,
           languages: {
             "tr-TR": `/makaleler/${articleMatch[1]}`,
-            "en-US": `/en/articles/${article.slug}`,
+            "en-US": `/en/articles/${articleRouteSlug(article, "en")}`,
           },
         },
         other: {
@@ -1527,9 +1528,22 @@ export default async function ContentPage({
 
   if (content === null) notFound();
 
+  const alternateArticleSlug = articlePdfMatch?.[1] || articleMatch?.[1];
+  const alternateListedArticle = alternateArticleSlug
+    ? articles.find((item) => item.url.endsWith(`/${alternateArticleSlug}`))
+    : undefined;
+  const alternateArticle = alternateArticleSlug
+    ? findArticleByRouteSlug(alternateArticleSlug) || archiveArticles.find(
+      (item) => alternateListedArticle && item.volume === 7 && item.issue === 3 && item.title_tr === alternateListedArticle.title,
+    )
+    : undefined;
+  const alternateHref = alternateArticle
+    ? `/en/articles/${articleRouteSlug(alternateArticle, "en")}${articlePdfMatch ? "/pdf" : ""}`
+    : undefined;
+
   return (
     <main>
-      <SiteHeader />
+      <SiteHeader alternateHref={alternateHref} />
       {content}
       <SiteFooter />
     </main>
