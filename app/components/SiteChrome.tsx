@@ -267,7 +267,7 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
         </div>
       </div>
       <div className="site-shell footer-bottom">
-        <p>{isEnglish ? "Institute for China Studies in Türkiye (ICST)" : "Çin Araştırmaları Enstitüsü (ICST)"}</p>
+        <p>{isEnglish ? "Publisher: Turkish-Chinese Business Development and Friendship Association" : "Yayıncı: Çin İş Geliştirme ve Dostluk Derneği"}</p>
         <div>
           <img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" loading="lazy" decoding="async" />
           <span>© 2026 BRIQ</span>

@@ -560,9 +560,11 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.match(citationBlock, /<em>/);
   assert.match(citationBlock, /class="reference-inline-link"/);
   assert.doesNotMatch(citationBlock, /style=/);
-  assert.ok((doiHtml.match(/article-declaration-accordion/g) || []).length >= 5);
+  assert.ok((doiHtml.match(/article-declaration-accordion/g) || []).length >= 1);
+  assert.ok((doiHtml.match(/article-declaration-item/g) || []).length >= 4);
   assert.match(doiHtml, /Finansman \/ Destek/);
   assert.match(doiHtml, /Çıkar Çatışması/);
+  assert.doesNotMatch(doiHtml, /Bilgilendirilmiş Onam/);
 });
 
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
@@ -631,8 +633,8 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(enHome, /briq-logo\.png/);
   assert.doesNotMatch(trHome, /Sayı gündemini incele/);
   assert.doesNotMatch(enHome, /Explore the issue focus/);
-  assert.match(trHome, /Çin İş Geliştirme ve Dostluk Derneği tarafından yayımlanmaktadır/);
-  assert.match(enHome, /Published by the Turkish-Chinese Business Development and Friendship Association/);
+  assert.match(trHome, /Yayıncı: Çin İş Geliştirme ve Dostluk Derneği/);
+  assert.match(enHome, /Publisher: Turkish-Chinese Business Development and Friendship Association/);
 
   for (const html of [trHome, trCalls]) {
     assert.match(html, /1 Ekim 2026/);
