@@ -253,7 +253,7 @@ function ResearchStatements({ items, locale }: { items: StatementItem[]; locale:
   const id = locale === "tr" ? "yazar-beyanlari" : "author-declarations";
   return (
     <details className="article-accordion article-declaration-accordion" id={id}>
-      <summary><span>{locale === "tr" ? "Yazarın Beyanları" : "Author Declarations"}</span><b>{items.length}</b></summary>
+      <summary><span>{locale === "tr" ? "Yazar Beyanları" : "Author Declarations"}</span><b>{items.length}</b></summary>
       <div className="accordion-copy article-declaration-group">
         {items.map(({ id: itemId, label, value }) => (
           <section className="article-declaration-item" id={itemId} key={itemId}>
@@ -320,7 +320,7 @@ export async function ArticlePlatform({
     ...(fullText?.sections || []).map((section) => ({ id: section.id, label: section.title, level: 2 })),
     ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
-    ...(statements.length ? [{ id: locale === "tr" ? "yazar-beyanlari" : "author-declarations", label: locale === "tr" ? "Yazarın Beyanları" : "Author Declarations", level: 1 }] : []),
+    ...(statements.length ? [{ id: locale === "tr" ? "yazar-beyanlari" : "author-declarations", label: locale === "tr" ? "Yazar Beyanları" : "Author Declarations", level: 1 }] : []),
     { id: locale === "tr" ? "atif" : "cite", label: locale === "tr" ? "Kaynak göster" : "Cite this article", level: 1 },
     ...(fullText?.footnotes.length ? [{ id: locale === "tr" ? "dipnotlar" : "footnotes", label: locale === "tr" ? "Dipnotlar" : "Footnotes", level: 1 }] : []),
     ...(displayReferences.length ? [{ id: locale === "tr" ? "kaynakca" : "references", label: locale === "tr" ? "Kaynakça" : "References", level: 1 }] : []),

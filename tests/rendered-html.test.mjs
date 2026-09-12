@@ -562,7 +562,7 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.doesNotMatch(citationBlock, /style=/);
   assert.equal((doiHtml.match(/<details class="article-accordion article-declaration-accordion" id="yazar-beyanlari">/g) || []).length, 1);
   assert.equal((doiHtml.match(/class="article-declaration-item"/g) || []).length, 4);
-  assert.match(doiHtml, /Yazarın Beyanları/);
+  assert.match(doiHtml, /Yazar Beyanları/);
   assert.match(doiHtml, /Yazar Katkıları/);
   assert.match(doiHtml, /Finansman \/ Destek/);
   assert.match(doiHtml, /Çıkar Çatışması/);
