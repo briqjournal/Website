@@ -63,6 +63,43 @@ const archiveData = archiveDataJson as ArchiveData;
 export const archiveIssues = archiveData.issues;
 export const archiveArticles = archiveData.articles;
 
+function routeSlug(value: string) {
+  return value
+    .normalize("NFKD")
+    .replace(/\p{M}/gu, "")
+    .replace(/&/g, " and ")
+    .replace(/[’']/g, "")
+    .toLocaleLowerCase("en-US")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-");
+}
+
+const englishSlugBases = archiveArticles.map((article) =>
+  article.title_en?.trim() ? routeSlug(article.title_en) : article.slug,
+);
+const englishSlugCounts = new Map<string, number>();
+for (const slug of englishSlugBases) {
+  englishSlugCounts.set(slug, (englishSlugCounts.get(slug) || 0) + 1);
+}
+const englishArticleSlugs = new Map(
+  archiveArticles.map((article, index) => {
+    const base = englishSlugBases[index] || article.slug;
+    const slug = englishSlugCounts.get(base)! > 1
+      ? `${base}-volume-${article.volume}-issue-${article.issue}`
+      : base;
+    return [article.slug, slug];
+  }),
+);
+
+export function articleRouteSlug(record: ArchiveArticle, locale: "tr" | "en") {
+  return locale === "en" ? (englishArticleSlugs.get(record.slug) || record.slug) : record.slug;
+}
+
+export function articlePdfFilename(record: ArchiveArticle, locale: "tr" | "en") {
+  return `briq-${articleRouteSlug(record, locale)}-${locale}.pdf`;
+}
+
 const reportPdf = (number: number, locale: "tr" | "en") =>
   archiveData.pdf_archive?.reports?.[String(number)]?.[locale] ||
   `/assets/archive/pdfs/reports/briq-${number}-yil-raporu-${locale}.pdf`;
@@ -133,6 +170,11 @@ export function findArchiveIssue(volume: number, issue: number) {
 
 export function findArchiveArticle(slug: string) {
   return archiveArticles.find((record) => record.slug === slug);
+}
+
+export function findArticleByEnglishRouteSlug(slug: string) {
+  return archiveArticles.find((record) => articleRouteSlug(record, "en") === slug)
+    || findArchiveArticle(slug);
 }
 
 export const currentIssueArticleAliases: Record<string, string> = {
