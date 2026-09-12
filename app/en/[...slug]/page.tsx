@@ -29,6 +29,7 @@ import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../auth
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
 import { issueAccent } from "../../issue-themes";
+import { getIssueCopy } from "../../issue-copy";
 import { advisoryBoard, editorialBoard, editors, calls, pastCalls } from "../../site-data";
 
 type PageRecord = {
@@ -514,6 +515,7 @@ function EnglishArticles() {
 function EnglishCurrentIssue() {
   const record = findArchiveIssue(7, 4);
   if (!record) return null;
+  const heading = getIssueCopy(7, 4, "en");
   return (
     <IssuePlatform
       record={record}
@@ -521,8 +523,8 @@ function EnglishCurrentIssue() {
       current
       coverSrc="/assets/current-issue-en.jpg"
       periodLabel="September 2026"
-      title="A New Era in West Asia"
-      subtitle="Hegemonism Recedes, Regional Agency Grows"
+      title={heading.title}
+      subtitle={heading.subtitle}
       description="The issue examines West Asia’s changing balance of power alongside Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy."
       facts={[["Publication date", "September 2026"], ["Pages", "131"], ["Languages", "Turkish · English abstracts"], ["Access", "Open access · CC BY 4.0"]]}
     />
@@ -633,26 +635,16 @@ function EnglishReport({ number }: { number: number }) {
   );
 }
 
-const englishIssueThemes: Record<string, string> = {
-  "7-1": "Green Solutions and the Global Food–Water Crisis",
-  "6-4": "Common Security for Shared Development",
-  "6-3": "From Bandung to BRICS: The Global South’s Task",
-  "6-2": "The 1911 Chinese Revolution and Sun Yat-sen’s Legacy",
-  "6-1": "Scientific and Technological Development in the Global South",
-  "5-4": "The Belt and Road and the Organization of Turkic States",
-  "5-3": "The Belt and Road and the Islamic World",
-};
-
 function EnglishIssue({ volume, issueNumber }: { volume: number; issueNumber: number }) {
   const record = findArchiveIssue(volume, issueNumber);
   if (!record) return null;
-  const theme = englishIssueThemes[`${volume}-${issueNumber}`] || `${record.season_en} ${record.year} Issue`;
+  const heading = getIssueCopy(volume, issueNumber, "en");
   return (
     <IssuePlatform
       record={record}
       locale="en"
-      title={theme}
-      subtitle={`Volume ${volume} · Issue ${issueNumber}`}
+      title={heading.title}
+      subtitle={heading.subtitle}
       description={`Published in ${record.season_en} ${record.year}, this issue brings together ${record.articles.length} contributions in BRIQ’s open-access archive.`}
     />
   );

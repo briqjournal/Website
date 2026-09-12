@@ -102,8 +102,10 @@ export function IssuePlatform({
               <span>{issueName}</span>
               <span>{isEnglish ? "Publication Period" : "Yayın Dönemi"} · {period}</span>
             </div>
-            <h1>{title}</h1>
-            <h2>{subtitle}</h2>
+            <h1>
+              {title}
+              <em>{subtitle}</em>
+            </h1>
             <p className="issue-deck">{description}</p>
             {readingPdf && (
               <div className="issue-actions">
