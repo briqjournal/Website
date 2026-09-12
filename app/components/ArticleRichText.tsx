@@ -181,10 +181,9 @@ export function ArticleRichText({
   locale: "tr" | "en";
 }) {
   return (
-    <details className="article-accordion article-core-accordion article-fulltext" id={locale === "tr" ? "tam-metin" : "full-text-body"} open>
-      <summary><span>{locale === "tr" ? "Tam Metin" : "Full Text"}</span></summary>
-      <div className="accordion-copy article-core-copy article-fulltext-copy">
-        <div className="article-fulltext-sections">
+    <section className="article-fulltext" id={locale === "tr" ? "tam-metin" : "full-text-body"}>
+      <h2>{locale === "tr" ? "Tam Metin" : "Full Text"}</h2>
+      <div className="article-fulltext-sections">
         {sections.map((section) => (
           <section className="article-body-section" id={section.id} key={section.id}>
             <h3>{section.title}</h3>
@@ -197,8 +196,7 @@ export function ArticleRichText({
             ))}
           </section>
         ))}
-        </div>
       </div>
-    </details>
+    </section>
   );
 }
