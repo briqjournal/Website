@@ -45,7 +45,6 @@ type LocalizedFullText = {
     funding?: string;
     competingInterests?: string;
     ethicsApproval?: string;
-    informedConsent?: string;
   };
   supplementary?: { title: string; url: string }[];
 };
@@ -222,50 +221,48 @@ function researchStatementItems(fullText: LocalizedFullText | undefined, locale:
         funding: "Bu makale için finansman veya destek beyanı kaynak kaydında ayrıca belirtilmemiştir.",
         competingInterests: "Bu makale için çıkar çatışması beyanı kaynak kaydında ayrıca belirtilmemiştir.",
         ethicsApproval: "Bu makale için etik kurul onayı beyanı kaynak kaydında ayrıca belirtilmemiştir.",
-        informedConsent: "Bu makale için bilgilendirilmiş onam beyanı kaynak kaydında ayrıca belirtilmemiştir.",
       }
     : {
         authorContributions: "A separate author-contributions statement is not available in the source record for this article.",
         funding: "A separate funding or financial-support statement is not available in the source record for this article.",
         competingInterests: "A separate competing-interests statement is not available in the source record for this article.",
         ethicsApproval: "A separate ethics-approval statement is not available in the source record for this article.",
-        informedConsent: "A separate informed-consent statement is not available in the source record for this article.",
       };
   const values = {
     authorContributions: declarations?.authorContributions?.trim() || missing.authorContributions,
     funding: declarations?.funding?.trim() || inferredFunding || missing.funding,
     competingInterests: declarations?.competingInterests?.trim() || missing.competingInterests,
     ethicsApproval: declarations?.ethicsApproval?.trim() || missing.ethicsApproval,
-    informedConsent: declarations?.informedConsent?.trim() || missing.informedConsent,
   };
   const definitions = locale === "tr" ? [
     ["yazar-katkilari", "Yazar Katkıları", values.authorContributions],
     ["finansman", "Finansman / Destek", values.funding],
     ["cikar-catismasi", "Çıkar Çatışması", values.competingInterests],
     ["etik-kurul", "Etik Kurul Onayı", values.ethicsApproval],
-    ["bilgilendirilmis-onam", "Bilgilendirilmiş Onam", values.informedConsent],
   ] : [
     ["author-contributions", "Author Contributions", values.authorContributions],
     ["funding", "Funding / Financial Support", values.funding],
     ["competing-interests", "Competing Interests", values.competingInterests],
     ["ethics-approval", "Ethics Approval", values.ethicsApproval],
-    ["informed-consent", "Informed Consent", values.informedConsent],
   ];
   return definitions.map(([id, label, value]) => ({ id, label, value }));
 }
 
 function ResearchStatements({ items, locale }: { items: StatementItem[]; locale: "tr" | "en" }) {
   if (!items.length) return null;
+  const id = locale === "tr" ? "yazar-beyanlari" : "author-declarations";
   return (
-    <>
-      <p className="section-kicker">{locale === "tr" ? "Beyanlar" : "Declarations"}</p>
-      {items.map(({ id, label, value }) => (
-        <details className="article-accordion article-declaration-accordion" id={id} key={id}>
-          <summary><span>{label}</span><b>{locale === "tr" ? "Beyan" : "Statement"}</b></summary>
-          <div className="accordion-copy"><p>{value}</p></div>
-        </details>
-      ))}
-    </>
+    <details className="article-accordion article-declaration-accordion" id={id}>
+      <summary><span>{locale === "tr" ? "Yazarın Beyanları" : "Author Declarations"}</span><b>{items.length}</b></summary>
+      <div className="accordion-copy article-declaration-group">
+        {items.map(({ id: itemId, label, value }) => (
+          <section className="article-declaration-item" id={itemId} key={itemId}>
+            <h3>{label}</h3>
+            <p>{value}</p>
+          </section>
+        ))}
+      </div>
+    </details>
   );
 }
 
@@ -323,7 +320,7 @@ export async function ArticlePlatform({
     ...(fullText?.sections || []).map((section) => ({ id: section.id, label: section.title, level: 2 })),
     ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
-    ...statements.map(({ id, label }) => ({ id, label, level: 1 })),
+    ...(statements.length ? [{ id: locale === "tr" ? "yazar-beyanlari" : "author-declarations", label: locale === "tr" ? "Yazarın Beyanları" : "Author Declarations", level: 1 }] : []),
     { id: locale === "tr" ? "atif" : "cite", label: locale === "tr" ? "Kaynak göster" : "Cite this article", level: 1 },
     ...(fullText?.footnotes.length ? [{ id: locale === "tr" ? "dipnotlar" : "footnotes", label: locale === "tr" ? "Dipnotlar" : "Footnotes", level: 1 }] : []),
     ...(displayReferences.length ? [{ id: locale === "tr" ? "kaynakca" : "references", label: locale === "tr" ? "Kaynakça" : "References", level: 1 }] : []),
