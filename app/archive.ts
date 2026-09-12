@@ -187,7 +187,8 @@ export const currentIssueArticleAliases: Record<string, string> = {
 };
 
 export function findArticleByRouteSlug(slug: string) {
-  return findArchiveArticle(currentIssueArticleAliases[slug] || slug);
+  return findArchiveArticle(currentIssueArticleAliases[slug] || slug)
+    || findArticleByEnglishRouteSlug(slug);
 }
 
 export function publicationType(
