@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { annualReports, archiveArticles, archiveIssues } from "./archive";
+import { annualReports, archiveArticles, archiveIssues, articleRouteSlug } from "./archive";
 import { SITE_URL } from "./site-url";
 import { authorProfiles } from "./authors";
 import { calls, pastCalls } from "./site-data";
@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   for (const article of archiveArticles) {
     paths.add(`makaleler/${article.slug}`);
-    paths.add(`en/articles/${article.slug}`);
+    paths.add(`en/articles/${articleRouteSlug(article, "en")}`);
   }
   for (const author of authorProfiles) {
     paths.add(`yazar/${author.id}`);

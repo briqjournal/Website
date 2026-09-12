@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment, type MouseEvent, type ReactNode } from "react";
+import { ReferenceText } from "./ReferenceText";
 
 export type FullTextSection = {
   id: string;
@@ -92,13 +93,13 @@ function citationAnchor(reference: FullTextReference, label: string, key: string
     <a
       id={anchorId}
       className="inline-citation"
-      data-tooltip={reference.text}
       data-return-target={reference.id}
       href={`#${reference.id}`}
       onClick={(event) => revealTarget(event, reference.id)}
       key={key}
     >
       {label}
+      <span className="citation-tooltip" role="tooltip"><ReferenceText text={reference.text} omitLinks /></span>
     </a>
   );
 }

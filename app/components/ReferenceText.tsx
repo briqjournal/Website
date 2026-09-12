@@ -146,9 +146,20 @@ function contains(index: number, range: TextRange) {
   return index >= range.start && index < range.end;
 }
 
-function renderReference(text: string, briqHref?: string) {
+export function referenceTextWithoutLinks(value: string) {
+  return normalizeReferenceText(value)
+    .replace(
+      /\s*(?:(?:Retrieved|Available)\s+(?:from|at)\s+|(?:Erişim|Erişildi)\s*(?:adresi|tarihi)?\s*:?\s*)?(?:https?:\/\/[^\s<>\[\]{}]+|(?:doi\s*:?\s*)?10\.\d{4,9}\/[-._;()/:A-Z0-9]+)/gi,
+      "",
+    )
+    .replace(/\s+([,.;:])/g, "$1")
+    .replace(/[,;:]\s*$/, "")
+    .trim();
+}
+
+function renderReference(text: string, briqHref?: string, linkify = true) {
   const italics = apaItalicRanges(text);
-  const links = linkRanges(text);
+  const links = linkify ? linkRanges(text) : [];
   const points = new Set<number>([0, text.length]);
   italics.forEach(({ start, end }) => { points.add(start); points.add(end); });
   links.forEach(({ start, end }) => { points.add(start); points.add(end); });
@@ -174,13 +185,13 @@ function renderReference(text: string, briqHref?: string) {
   return output;
 }
 
-export function ReferenceText({ text, doi, briqHref }: { text: string; doi?: string; briqHref?: string }) {
-  const normalized = normalizeReferenceText(text);
+export function ReferenceText({ text, doi, briqHref, omitLinks = false }: { text: string; doi?: string; briqHref?: string; omitLinks?: boolean }) {
+  const normalized = omitLinks ? referenceTextWithoutLinks(text) : normalizeReferenceText(text);
   const detectedDoi = referenceDoi(normalized);
   const canonical = doi ? canonicalDoi(doi) : detectedDoi;
-  const output = renderReference(normalized, briqHref);
+  const output = renderReference(normalized, omitLinks ? undefined : briqHref, !omitLinks);
 
-  if (canonical && !detectedDoi) {
+  if (!omitLinks && canonical && !detectedDoi) {
     const href = `https://doi.org/${canonical}`;
     output.push(<Fragment key="appended-doi"> · <a className="reference-inline-link" href={href} target="_blank" rel="noreferrer">{href}</a></Fragment>);
   }

@@ -6,6 +6,8 @@ type PdfViewerProps = {
   title: string;
   turkishSrc?: string | null;
   englishSrc?: string | null;
+  turkishDownloadName?: string;
+  englishDownloadName?: string;
   startPage?: number;
   compact?: boolean;
   locale?: "tr" | "en";
@@ -15,6 +17,8 @@ export function PdfViewer({
   title,
   turkishSrc,
   englishSrc,
+  turkishDownloadName,
+  englishDownloadName,
   startPage = 1,
   compact = false,
   locale = "tr",
@@ -22,6 +26,7 @@ export function PdfViewer({
   const initialLanguage = locale === "en" && englishSrc ? "en" : turkishSrc ? "tr" : "en";
   const [language, setLanguage] = useState<"tr" | "en">(initialLanguage);
   const activeSrc = language === "tr" ? turkishSrc : englishSrc;
+  const activeDownloadName = language === "tr" ? turkishDownloadName : englishDownloadName;
   const viewerSrc = useMemo(
     () => activeSrc ? `${activeSrc}#page=${startPage}&zoom=100&toolbar=1&navpanes=0&scrollbar=1` : "",
     [activeSrc, startPage],
@@ -58,7 +63,7 @@ export function PdfViewer({
           <a href={activeSrc} target="_blank" rel="noreferrer">
             {locale === "en" ? "Open in new tab ↗︎" : "Yeni sekmede aç ↗︎"}
           </a>
-          <a href={activeSrc} download>
+          <a href={activeSrc} download={activeDownloadName || true}>
             {locale === "en" ? "Download ↓︎" : "İndir ↓︎"}
           </a>
         </div>

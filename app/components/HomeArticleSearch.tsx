@@ -42,7 +42,7 @@ export function HomeArticleSearch({
       </div>
       <div className="article-list">
         {visibleArticles.map((article, index) => (
-          <a className="article-row" href={`${locale === "tr" ? "/makaleler" : "/en/articles"}/${article.slug}`} key={article.slug}>
+          <a className="article-row" href={`${locale === "tr" ? "/makaleler" : "/en/articles"}/${locale === "en" ? article.slugEn : article.slug}`} key={article.slug}>
             <span className="article-number">{String(index + 1).padStart(2, "0")}</span>
             <span className="article-meta">
               <small>{locale === "tr" ? article.typeTr : article.typeEn}</small>
@@ -62,4 +62,3 @@ export function HomeArticleSearch({
     </>
   );
 }
-
