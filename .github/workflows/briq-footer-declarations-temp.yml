@@ -18,8 +18,9 @@ jobs:
           node-version: 24
           cache: npm
       - name: Apply requested refinements
-        shell: python
+        shell: bash
         run: |
+          python3 - <<'PY'
           from pathlib import Path
 
           def replace(path, old, new, expected=1):
@@ -48,19 +49,20 @@ jobs:
           replace(article, '    ["informed-consent", "Informed Consent", values.informedConsent],\n', '')
 
           old_component = '''function ResearchStatements({ items, locale }: { items: StatementItem[]; locale: "tr" | "en" }) {
-  if (!items.length) return null;
-  return (
-    <>
-      <p className="section-kicker">{locale === "tr" ? "Beyanlar" : "Declarations"}</p>
-      {items.map(({ id, label, value }) => (
-        <details className="article-accordion article-declaration-accordion" id={id} key={id}>
-          <summary><span>{label}</span><b>{locale === "tr" ? "Beyan" : "Statement"}</b></summary>
-          <div className="accordion-copy"><p>{value}</p></div>
-        </details>
-      ))}
-    </>
-  );
-}'''
+            if (!items.length) return null;
+            return (
+              <>
+                <p className="section-kicker">{locale === "tr" ? "Beyanlar" : "Declarations"}</p>
+                {items.map(({ id, label, value }) => (
+                  <details className="article-accordion article-declaration-accordion" id={id} key={id}>
+                    <summary><span>{label}</span><b>{locale === "tr" ? "Beyan" : "Statement"}</b></summary>
+                    <div className="accordion-copy"><p>{value}</p></div>
+                  </details>
+                ))}
+              </>
+            );
+          }'''
+          old_component = old_component.replace('\n            ', '\n').replace('{\n  if', '{\n  if')
           new_component = '''function ResearchStatements({ items, locale }: { items: StatementItem[]; locale: "tr" | "en" }) {
   if (!items.length) return null;
   const id = locale === "tr" ? "yazar-beyanlari" : "author-declarations";
@@ -85,6 +87,7 @@ jobs:
               '    ...statements.map(({ id, label }) => ({ id, label, level: 1 })),\n',
               '    ...(statements.length ? [{ id: locale === "tr" ? "yazar-beyanlari" : "author-declarations", label: locale === "tr" ? "Yazarın Beyanları" : "Author Declarations", level: 1 }] : []),\n',
           )
+          PY
       - name: Install dependencies
         run: npm ci
       - name: Build
