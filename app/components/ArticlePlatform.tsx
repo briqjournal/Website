@@ -6,7 +6,9 @@ import {
 import { articleCitation, citationWithDoi } from "../article-citation";
 import {
   archiveArticles,
+  articlePdfFilename,
   articlePdfUrl,
+  articleRouteSlug,
   publicationType,
   type ArchiveArticle,
 } from "../archive";
@@ -85,6 +87,11 @@ type ArticleDetails = {
 };
 
 const SAUDI_CULTURAL_HEDGING_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";
+
+function keywordLabel(value: string, locale: "tr" | "en") {
+  const language = locale === "tr" ? "tr-TR" : "en-US";
+  return value.trim().replace(/\p{L}/u, (letter) => letter.toLocaleUpperCase(language));
+}
 
 function OrcidBadge() {
   return <span className="orcid-badge" aria-hidden="true">iD</span>;
@@ -267,7 +274,7 @@ export async function ArticlePlatform({
   const abstractSource = locale === "tr" ? article.abstract_tr : article.abstract_en;
   const abstract = details?.abstract || abstractSource?.split("\n").filter(Boolean) || [];
   const citation = citationWithDoi(details?.citation || articleCitation(article, locale), article.doi);
-  const keywords = details?.keywords || fullText?.keywords || [];
+  const keywords = (details?.keywords || fullText?.keywords || []).map((keyword) => keywordLabel(keyword, locale));
   const articleType = publicationType(article, locale);
   const statements = researchStatementItems(fullText, locale);
   const supplementary = fullText?.supplementary || [];
@@ -315,7 +322,7 @@ export async function ArticlePlatform({
         <a className="article-fulltext-action" href="#full-text"><span>{locale === "tr" ? "Tam metin" : "Full text"}</span><ArrowIcon direction="down" /></a>
         <a className="article-issue-action" href={issueHref} style={{ backgroundColor: issueColor }}><span>{locale === "tr" ? "Sayıya git" : "View issue"}</span><ArrowIcon /></a>
         {activePdf && <a className="article-primary-action" href={`${base}/pdf`}><PdfFileIcon /><span>{locale === "tr" ? "PDF’yi görüntüle" : "View PDF"}</span><ArrowIcon direction="right" /></a>}
-        {activePdf && <a className="article-download-action" href={activePdf} download><PdfFileIcon /><span>{locale === "tr" ? "PDF’yi indir" : "Download PDF"}</span><DownloadIcon /></a>}
+        {activePdf && <a className="article-download-action" href={activePdf} download={articlePdfFilename(article, locale)}><PdfFileIcon /><span>{locale === "tr" ? "PDF’yi indir" : "Download PDF"}</span><DownloadIcon /></a>}
         <span className="article-license">CC BY 4.0</span>
       </div></div>
 
@@ -355,7 +362,7 @@ export async function ArticlePlatform({
             {displayReferences.length ? <details className="article-accordion article-references" id={locale === "tr" ? "kaynakca" : "references"}><summary><span>{locale === "tr" ? "Kaynakça" : "References"}</span><b>{displayReferences.length}</b></summary><ol>{displayReferences.map((reference) => {
               const doi = referenceDoi(reference.text);
               const briqArticle = briqReferenceArticle(reference.text, doi);
-              const briqHref = briqArticle ? (locale === "tr" ? `/makaleler/${briqArticle.slug}` : `/en/articles/${briqArticle.slug}`) : undefined;
+              const briqHref = briqArticle ? (locale === "tr" ? `/makaleler/${briqArticle.slug}` : `/en/articles/${articleRouteSlug(briqArticle, "en")}`) : undefined;
               return <li id={reference.id} key={reference.id}><p><ReferenceText text={reference.text} doi={doi} briqHref={briqHref} /></p><span className="reference-actions">
                 <ReferenceBackLink targetId={reference.id} locale={locale} kind="reference" />
               </span></li>;
@@ -378,7 +385,7 @@ export function ArticlePdfPage({ article, locale, routeSlug = article.slug }: { 
   return (
     <>
       <section className="pdf-page-heading"><div className="site-shell"><div><span>{locale === "tr" ? "PDF görüntüleyici" : "PDF viewer"}</span><h1>{title}</h1></div><a className="button button-light" href={articleHref}>←︎ {locale === "tr" ? "HTML makaleye dön" : "Back to HTML article"}</a></div></section>
-      <div className="site-shell standalone-article-pdf"><PdfViewer title={title} turkishSrc={trPdf} englishSrc={enPdf} locale={locale} compact /></div>
+      <div className="site-shell standalone-article-pdf"><PdfViewer title={title} turkishSrc={trPdf} englishSrc={enPdf} turkishDownloadName={articlePdfFilename(article, "tr")} englishDownloadName={articlePdfFilename(article, "en")} locale={locale} compact /></div>
     </>
   );
 }
