@@ -3808,9 +3808,8 @@ footer h3 {
   font-weight: 700;
 }
 
-.inline-citation::after,
+.citation-tooltip,
 .inline-footnote::after {
-  content: attr(data-tooltip);
   position: absolute;
   z-index: 30;
   left: 0;
@@ -3832,8 +3831,18 @@ footer h3 {
   transition: opacity .16s ease, transform .16s ease;
 }
 
-.inline-citation:hover::after,
-.inline-citation:focus-visible::after,
+.inline-footnote::after {
+  content: attr(data-tooltip);
+}
+
+.citation-tooltip {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+}
+
+.inline-citation:hover .citation-tooltip,
+.inline-citation:focus-visible .citation-tooltip,
 .inline-footnote:hover::after,
 .inline-footnote:focus-visible::after {
   opacity: 1;
@@ -4152,8 +4161,8 @@ footer h3 {
   margin-top: 20px;
 }
 
-.citation-toolbox button,
-.citation-toolbox a {
+.citation-toolbox-actions > button,
+.citation-toolbox .citation-export-group a {
   min-height: 36px;
   display: inline-flex;
   align-items: center;
@@ -4164,6 +4173,21 @@ footer h3 {
   font-size: 9px;
   font-weight: 800;
   cursor: pointer;
+}
+
+.citation-toolbox blockquote .reference-inline-link {
+  min-height: 0;
+  display: inline;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: .14em;
 }
 
 .article-notes ol,
