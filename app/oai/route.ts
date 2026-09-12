@@ -121,7 +121,7 @@ function headerXml(article: ArchiveArticle) {
 function metadataXml(article: ArchiveArticle, origin: string) {
   const creators = splitAuthorNames(article.author).filter(isPersonByline);
   const effectiveCreators = creators.length > 0 ? creators : [article.author.trim()].filter(Boolean);
-  const trUrl = absoluteUrl(origin, `/makaleler/${article.slug}`);
+  const trUrl = absoluteUrl(origin, `/tr/makaleler/${article.slug}`);
   const hasEnglishMetadata = Boolean(
     article.title_en
       || article.abstract_en

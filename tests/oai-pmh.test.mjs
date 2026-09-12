@@ -106,7 +106,7 @@ test("returns Dublin Core article metadata suitable for WorldCat harvesting", as
   assert.match(xml, /<dc:date>/);
   assert.match(xml, /<dc:type>Text<\/dc:type>/);
   assert.match(xml, /<dc:language>tur<\/dc:language>/);
-  assert.match(xml, /<dc:identifier>http:\/\/localhost\/makaleler\//);
+  assert.match(xml, /<dc:identifier>http:\/\/localhost\/tr\/makaleler\//);
   assert.match(xml, /<dc:rights>https:\/\/creativecommons\.org\/licenses\/by\/4\.0\/<\/dc:rights>/);
   assert.match(xml, /<setSpec>briq<\/setSpec>/);
 });
@@ -150,7 +150,7 @@ test("accepts OAI-PMH POST requests without changing ordinary site routing", asy
   assert.match(await postResponse.text(), /<Identify>/);
 
   const homeResponse = await fetchFromBuiltWorker("/", { headers: { accept: "text/html" } });
-  assert.equal(homeResponse.status, 200);
-  assert.match(homeResponse.headers.get("content-type") || "", /^text\/html\b/i);
+  assert.equal(homeResponse.status, 307);
+  assert.equal(new URL(homeResponse.headers.get("location")).pathname, "/en");
   assert.doesNotMatch(await homeResponse.text(), /<OAI-PMH\b/);
 });

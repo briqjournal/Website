@@ -40,7 +40,7 @@ export function ArchiveExplorer({ issues, locale = "tr" }: { issues: ArchiveIssu
             <div className="issue-grid">
               {group.records.map((record) => {
                 const current = record.volume === 7 && record.issue === 4;
-                const href = locale === "en" ? (current ? "/en/current-issue" : `/en/archive/volume-${record.volume}-issue-${record.issue}`) : (current ? "/guncel-sayi" : `/arsiv/cilt-${record.volume}-sayi-${record.issue}`);
+                const href = locale === "en" ? (current ? "/en/current-issue" : `/en/archive/volume-${record.volume}-issue-${record.issue}`) : (current ? "/tr/guncel-sayi" : `/tr/arsiv/cilt-${record.volume}-sayi-${record.issue}`);
                 const cover = locale === "en" ? record.coverEn : (current ? "/assets/current-issue-tr.jpg" : record.coverTr);
                 return <a className={`issue-card ${current ? "is-current" : ""}`} href={href} key={`${record.volume}-${record.issue}`}><Image src={cover} alt={locale === "en" ? `BRIQ Volume ${record.volume} Issue ${record.issue} cover` : `BRIQ Cilt ${record.volume} Sayı ${record.issue} kapağı`} width={480} height={640} sizes="(max-width: 720px) 42vw, (max-width: 1100px) 25vw, 210px" loading="lazy" /><div><span>{locale === "en" ? record.seasonEn : record.seasonTr} {record.year}</span><h2>{locale === "en" ? `Volume ${record.volume} · Issue ${record.issue}` : `Cilt ${record.volume} · Sayı ${record.issue}`}</h2><p>{locale === "en" ? record.themeEn : record.themeTr}</p>{current && <b>{locale === "en" ? "Current issue" : "Güncel sayı"}</b>}</div></a>;
               })}

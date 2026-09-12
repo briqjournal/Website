@@ -20,14 +20,14 @@ export function SearchExplorer({ articles, issues, calls, locale = "tr" }: { art
   const normalized = query.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US");
   const abstractIndex = useArticleSearchIndex(normalized.length >= 2 && (kind === "all" || kind === "article"));
   const records = useMemo(() => {
-    const articleRecords = articles.map((item) => ({ kind: "article", title: locale === "en" ? item.titleEn : item.titleTr, meta: `${item.author} · ${locale === "en" ? `Volume ${item.volume}, Issue ${item.issue}` : `Cilt ${item.volume}, Sayı ${item.issue}`}`, text: `${item.doi} ${abstractIndex?.[item.slug] || ""}`, href: `${locale === "en" ? "/en/articles" : "/makaleler"}/${locale === "en" ? item.slugEn : item.slug}` }));
-    const issueRecords = issues.map((item) => ({ kind: "issue", title: locale === "en" ? item.themeEn : item.themeTr, meta: locale === "en" ? `Volume ${item.volume} · Issue ${item.issue} · ${item.year}` : `Cilt ${item.volume} · Sayı ${item.issue} · ${item.year}`, text: `${item.seasonTr} ${item.seasonEn}`, href: locale === "en" ? `/en/archive/volume-${item.volume}-issue-${item.issue}` : `/arsiv/cilt-${item.volume}-sayi-${item.issue}` }));
+    const articleRecords = articles.map((item) => ({ kind: "article", title: locale === "en" ? item.titleEn : item.titleTr, meta: `${item.author} · ${locale === "en" ? `Volume ${item.volume}, Issue ${item.issue}` : `Cilt ${item.volume}, Sayı ${item.issue}`}`, text: `${item.doi} ${abstractIndex?.[item.slug] || ""}`, href: `${locale === "en" ? "/en/articles" : "/tr/makaleler"}/${locale === "en" ? item.slugEn : item.slug}` }));
+    const issueRecords = issues.map((item) => ({ kind: "issue", title: locale === "en" ? item.themeEn : item.themeTr, meta: locale === "en" ? `Volume ${item.volume} · Issue ${item.issue} · ${item.year}` : `Cilt ${item.volume} · Sayı ${item.issue} · ${item.year}`, text: `${item.seasonTr} ${item.seasonEn}`, href: locale === "en" ? `/en/archive/volume-${item.volume}-issue-${item.issue}` : `/tr/arsiv/cilt-${item.volume}-sayi-${item.issue}` }));
     const callRecords = calls.map((item) => ({
       kind: "call",
       title: locale === "en" ? (item.titleEn || item.title) : item.title,
       meta: `${locale === "en" ? "Deadline" : "Son tarih"}: ${locale === "en" ? (item.deadlineEn || item.deadline) : item.deadline}`,
       text: "",
-      href: locale === "en" ? (item.urlEn || `/en/calls-for-papers/${item.slug || ""}`) : (item.url || `/makale-cagrilari/${item.slug}`),
+      href: locale === "en" ? (item.urlEn || `/en/calls-for-papers/${item.slug || ""}`) : (item.url || `/tr/makale-cagrilari/${item.slug}`),
     }));
     return [...articleRecords, ...issueRecords, ...callRecords];
   }, [abstractIndex, articles, calls, issues, locale]);
