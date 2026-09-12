@@ -167,7 +167,7 @@ test("keeps the Turkish and English About BRIQ pages in structural parity", asyn
   assert.match(trHtml, /class="[^"]*scrollspy-link level-2/);
   assert.match(trHtml, /class="[^"]*scrollspy-link level-3/);
   assert.match(trHtml, /BRIQ \(Belt &amp; Road Initiative Quarterly\) Türkçe-İngilizce yayınlanan üç aylık/);
-  assert.match(trHtml, /Çin Araştırmaları Enstitüsü tarafından yayımlanmaktadır/);
+  assert.match(trHtml, /Çin İş Geliştirme ve Dostluk Derneği tarafından yayımlanmaktadır/);
   assert.match(trHtml, /2019’da yayın hayatına başladı/);
   assert.match(trHtml, /Alternatif bir akademik alan/);
   assert.match(enHtml, /<h1>About BRIQ<\/h1>/);
@@ -176,7 +176,7 @@ test("keeps the Turkish and English About BRIQ pages in structural parity", asyn
   assert.match(enHtml, /class="[^"]*scrollspy-link level-3/);
   assert.match(enHtml, /BRIQ \(Belt &amp; Road Initiative Quarterly\) is a scholarly journal/);
   assert.match(enHtml, /Independent publication decisions/);
-  assert.match(enHtml, /China Research Institute of the China Business Development and Friendship Association/);
+  assert.match(enHtml, /Turkish-Chinese Business Development and Friendship Association/);
   assert.match(enHtml, /began publication in 2019/);
   assert.match(enHtml, /An alternative scholarly space/);
 });
@@ -560,9 +560,14 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.match(citationBlock, /<em>/);
   assert.match(citationBlock, /class="reference-inline-link"/);
   assert.doesNotMatch(citationBlock, /style=/);
-  assert.equal((doiHtml.match(/class="article-declaration"/g) || []).length, 1);
-  assert.match(doiHtml, /Finansman beyanı/);
-  assert.doesNotMatch(doiHtml, /Çıkar çatışması beyanı/);
+  assert.equal((doiHtml.match(/<details class="article-accordion article-declaration-accordion" id="yazar-beyanlari">/g) || []).length, 1);
+  assert.equal((doiHtml.match(/class="article-declaration-item"/g) || []).length, 4);
+  assert.match(doiHtml, /Yazarın Beyanları/);
+  assert.match(doiHtml, /Yazar Katkıları/);
+  assert.match(doiHtml, /Finansman \/ Destek/);
+  assert.match(doiHtml, /Çıkar Çatışması/);
+  assert.match(doiHtml, /Etik Kurul Onayı/);
+  assert.doesNotMatch(doiHtml, /Bilgilendirilmiş Onam/);
 });
 
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
@@ -631,8 +636,8 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(enHome, /briq-logo\.png/);
   assert.doesNotMatch(trHome, /Sayı gündemini incele/);
   assert.doesNotMatch(enHome, /Explore the issue focus/);
-  assert.match(trHome, /Çin İş Geliştirme ve Dostluk derneği bünyesinde yer alan Çin Araştırmaları Enstitüsü \(ICST\) tarafından yayımlanmaktadır/);
-  assert.match(enHome, /Published by the Institute for China Studies in Türkiye \(ICST\), which operates within the China Business Development and Friendship Association/);
+  assert.match(trHome, /Yayıncı: Çin İş Geliştirme ve Dostluk Derneği/);
+  assert.match(enHome, /Publisher: Turkish-Chinese Business Development and Friendship Association/);
 
   for (const html of [trHome, trCalls]) {
     assert.match(html, /1 Ekim 2026/);
