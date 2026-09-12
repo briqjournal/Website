@@ -305,14 +305,35 @@ test("renders archived issues with the same platform structure as the current is
     }
   }
 
-  assert.match(archivedTr, /Ortak kalkınma için ortak güvenlik/);
-  assert.match(archivedEn, /Common Security for Shared Development/);
+  assert.match(archivedTr, /<h1>Birlikte Kalkınmak İçin<em>Ortak Güvenlik<\/em><\/h1>/);
+  assert.match(archivedEn, /<h1>Common Security for<em>Shared Development<\/em><\/h1>/);
   assert.equal((archivedTr.match(/class="issue-toc-number"/g) || []).length, 8);
   assert.equal((archivedEn.match(/class="issue-toc-number"/g) || []).length, 8);
   for (const html of [archivedTr, archivedEn]) {
     assert.doesNotMatch(html, /class="issue-detail/);
     assert.doesNotMatch(html, /class="compact-article-list/);
   }
+});
+
+test("uses verified bilingual cover headings for every issue", async () => {
+  const issuePaths = archive.issues.flatMap((issue) => [
+    `/arsiv/cilt-${issue.volume}-sayi-${issue.issue}`,
+    `/en/archive/volume-${issue.volume}-issue-${issue.issue}`,
+  ]);
+  const responses = await Promise.all(issuePaths.map(renderPath));
+  const pages = await Promise.all(responses.map((response) => response.text()));
+
+  assert.equal(pages.length, archive.issues.length * 2);
+  for (const [index, html] of pages.entries()) {
+    assert.match(html, /<h1>[^<]+<em>[^<]+<\/em><\/h1>/, issuePaths[index]);
+    assert.doesNotMatch(html, /(Bahar|Yaz|Sonbahar|Kış) \d{4} Sayısı/, issuePaths[index]);
+    assert.doesNotMatch(html, /(Spring|Summer|Autumn|Winter) \d{4} Issue/, issuePaths[index]);
+  }
+
+  const spring2026Tr = pages[issuePaths.indexOf("/arsiv/cilt-7-sayi-2")];
+  const spring2026En = pages[issuePaths.indexOf("/en/archive/volume-7-issue-2")];
+  assert.match(spring2026Tr, /<h1>Çin’e Özgü Sosyalizmin<em>Ekonomi Politiği<\/em><\/h1>/);
+  assert.match(spring2026En, /<h1>The Political Economy of<em>Socialism with Chinese Characteristics<\/em><\/h1>/);
 });
 
 test("keeps standalone board pages compact without repeating the page title", async () => {

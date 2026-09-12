@@ -5103,20 +5103,20 @@ footer h3 { font-size: 11px; }
   max-width: 760px;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(52px, 6.4vw, 88px);
-  font-weight: 600;
-  line-height: .94;
-  letter-spacing: -.055em;
+  font-size: clamp(40px, 4.7vw, 66px);
+  font-style: normal;
+  line-height: .98;
+  letter-spacing: -.045em;
 }
 
-.issue-masthead-copy > h2 {
+.issue-masthead-copy h1 em {
+  display: block;
   max-width: 760px;
-  margin: 22px 0 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(30px, 4vw, 54px);
+  margin-top: 10px;
+  font-size: .58em;
+  font-style: italic;
   font-weight: 400;
   line-height: 1.08;
-  letter-spacing: -.035em;
 }
 
 .issue-deck {
@@ -6165,11 +6165,7 @@ footer h3 { font-size: 11px; }
   }
 
   .issue-masthead-copy h1 {
-    font-size: 51px;
-  }
-
-  .issue-masthead-copy > h2 {
-    font-size: 34px;
+    font-size: clamp(34px, 10vw, 43px);
   }
 
   .issue-deck {
@@ -7272,11 +7268,14 @@ body {
   }
 
   .issue-masthead-copy h1 {
-    font-size: clamp(44px, 8vw, 60px);
+    max-width: 680px;
+    font-size: clamp(38px, 8vw, 52px);
+    overflow-wrap: anywhere;
   }
 
-  .issue-masthead-copy > h2 {
-    font-size: clamp(30px, 6vw, 42px);
+  .issue-masthead-copy h1 em {
+    font-size: .55em;
+    line-height: 1.14;
   }
 
   .issue-contents-section {
@@ -7716,12 +7715,7 @@ body {
   }
 
   .issue-masthead-copy h1 {
-    font-size: clamp(38px, 11vw, 48px);
-  }
-
-  .issue-masthead-copy > h2 {
-    margin-top: 15px;
-    font-size: clamp(27px, 8vw, 34px);
+    font-size: clamp(34px, 10vw, 43px);
   }
 
   .issue-deck {

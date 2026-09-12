@@ -20,6 +20,7 @@ import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../authors
 import { archiveArticleListings, archiveIssueListings } from "../archive-listing";
 import { absoluteSiteUrl } from "../site-url";
 import { issueAccent } from "../issue-themes";
+import { getIssueCopy } from "../issue-copy";
 import {
   archiveArticles,
   archiveIssues,
@@ -984,6 +985,7 @@ function AuthorProfilePage({ id }: { id: string }) {
 function CurrentIssue() {
   const record = findArchiveIssue(7, 4);
   if (!record) return null;
+  const heading = getIssueCopy(7, 4, "tr");
   return (
     <IssuePlatform
       record={record}
@@ -991,8 +993,8 @@ function CurrentIssue() {
       current
       coverSrc="/assets/current-issue-tr.jpg"
       periodLabel="Eylül 2026"
-      title="Batı Asya’da Yeni Dönem"
-      subtitle="Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor"
+      title={heading.title}
+      subtitle={heading.subtitle}
       description="Batı Asya’daki yeni güç dengesini; Suudi Arabistan’ın kültürel dengeleme stratejisinden Türkiye–Çin ilişkilerine, Dijital İpek Yolu’ndan Çin’in küresel altyapı yaklaşımına uzanan çalışmalarla ele alan yeni sayı."
       facts={[["Yayın tarihi", "Eylül 2026"], ["Sayfa", "131"], ["Yayın dili", "Türkçe · English"], ["Erişim", "Açık erişim · CC BY 4.0"]]}
       contentsDescription="Hakemli araştırmalar, röportajlar ve kitap incelemesi tek sayı içinde bir araya geliyor."
@@ -1050,26 +1052,16 @@ function Reports() {
   );
 }
 
-const issueThemes: Record<string, string> = {
-  "7-1": "Yeşil çözümler ve küresel gıda–su krizi",
-  "6-4": "Ortak kalkınma için ortak güvenlik",
-  "6-3": "Bandung’dan BRICS’e: Küresel Güney’in görevi",
-  "6-2": "1911 Çin Devrimi ve Sun Yat-sen’in mirası",
-  "6-1": "Küresel Güney’de bilimsel ve teknolojik gelişme",
-  "5-4": "Kuşak ve Yol ve Türk Devletleri Teşkilatı",
-  "5-3": "Kuşak ve Yol ve İslam Dünyası",
-};
-
 function ArchiveIssue({ volume, issue }: { volume: number; issue: number }) {
   const record = findArchiveIssue(volume, issue);
   if (!record) return null;
-  const theme = issueThemes[`${volume}-${issue}`] || `${record.season_tr} ${record.year} Sayısı`;
+  const heading = getIssueCopy(volume, issue, "tr");
   return (
     <IssuePlatform
       record={record}
       locale="tr"
-      title={theme}
-      subtitle={`Cilt ${volume} · Sayı ${issue}`}
+      title={heading.title}
+      subtitle={heading.subtitle}
       description={`${record.season_tr} ${record.year} döneminde yayımlanan bu sayı, ${record.articles.length} çalışmayı BRIQ arşivinde açık erişimle bir araya getiriyor.`}
     />
   );
