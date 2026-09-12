@@ -9193,63 +9193,93 @@ footer {
   }
 }
 
-/* Article disclosure accordions: unified editorial treatment */
+/* Article accordions: unified publisher-style treatment */
+.article-core-stack,
 .article-disclosure-stack {
   border-top: 0;
   display: grid;
   gap: 12px;
 }
 
+.article-core-stack {
+  margin-bottom: 12px;
+}
+
+.article-core-stack .article-accordion,
 .article-disclosure-stack .article-accordion {
   margin: 0 !important;
   overflow: hidden;
   border: 1px solid rgba(24, 20, 17, .14);
+  border-top: 2px solid var(--rust);
+  border-bottom: 1px solid var(--line);
   border-radius: 9px;
-  background: rgba(255, 253, 249, .48);
+  background: rgba(255, 253, 249, .5);
   box-shadow: 0 5px 18px rgba(24, 20, 17, .028);
   transition: border-color .18s ease, background-color .18s ease, box-shadow .18s ease;
 }
 
+.article-core-stack .article-accordion:hover,
 .article-disclosure-stack .article-accordion:hover {
-  border-color: rgba(145, 60, 25, .24);
-  background: rgba(255, 253, 249, .66);
+  border-right-color: rgba(145, 60, 25, .24);
+  border-bottom-color: rgba(145, 60, 25, .2);
+  border-left-color: rgba(145, 60, 25, .24);
+  background: rgba(255, 253, 249, .68);
 }
 
+.article-core-stack .article-accordion[open],
 .article-disclosure-stack .article-accordion[open] {
-  border-color: rgba(145, 60, 25, .24);
-  background: rgba(255, 253, 249, .76);
+  border-right-color: rgba(145, 60, 25, .24);
+  border-bottom-color: rgba(145, 60, 25, .2);
+  border-left-color: rgba(145, 60, 25, .24);
+  background: rgba(255, 253, 249, .78);
   box-shadow: 0 12px 30px rgba(24, 20, 17, .045);
 }
 
+.article-core-stack .article-accordion summary,
 .article-disclosure-stack .article-accordion summary {
   position: relative;
   min-height: 64px;
   padding: 0 58px 0 20px;
   color: var(--ink);
-  background: linear-gradient(90deg, rgba(189, 87, 34, .025), transparent 68%);
+  background: linear-gradient(90deg, rgba(189, 87, 34, .028), transparent 68%);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -.012em;
 }
 
+.article-core-stack .article-accordion summary:hover,
+.article-core-stack .article-accordion summary:focus-visible,
 .article-disclosure-stack .article-accordion summary:hover,
 .article-disclosure-stack .article-accordion summary:focus-visible {
   color: var(--ink);
-  background: linear-gradient(90deg, rgba(189, 87, 34, .06), rgba(255, 253, 249, .08) 74%);
+  background: linear-gradient(90deg, rgba(189, 87, 34, .065), rgba(255, 253, 249, .08) 74%);
 }
 
+.article-core-stack .article-accordion[open] summary,
 .article-disclosure-stack .article-accordion[open] summary {
   border-bottom: 1px solid var(--line);
-  background: linear-gradient(90deg, rgba(189, 87, 34, .045), rgba(255, 253, 249, .16) 74%);
+  background: linear-gradient(90deg, rgba(189, 87, 34, .048), rgba(255, 253, 249, .16) 74%);
 }
 
+.article-core-stack .article-accordion summary > span,
+.article-disclosure-stack .article-accordion summary > span {
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.article-core-stack .article-accordion summary::after,
 .article-disclosure-stack .article-accordion summary::after {
   right: 21px;
   width: 8px;
   height: 8px;
 }
 
+.article-core-stack .article-accordion summary b,
 .article-disclosure-stack .article-accordion summary b {
   min-width: 30px;
   height: 28px;
@@ -9270,22 +9300,60 @@ footer {
   text-transform: uppercase;
 }
 
+.article-core-stack .article-accordion[open] summary b,
 .article-disclosure-stack .article-accordion[open] summary b {
   color: var(--rust-dark);
   background: rgba(189, 87, 34, .08);
   border-color: rgba(145, 60, 25, .25);
 }
 
+.article-core-stack .article-accordion .accordion-copy,
 .article-disclosure-stack .article-accordion .accordion-copy,
 .article-disclosure-stack .article-accordion .article-figure-accordion-body {
   padding: 22px 22px 24px;
 }
 
-/* Author declarations: stacked editorial form rows */
-.article-disclosure-stack .article-declaration-accordion {
+/* Core reading sections are open by default but remain collapsible. */
+.article-core-stack .article-abstract + .article-keywords,
+.article-core-stack .article-keywords + .article-fulltext,
+.article-core-stack .article-abstract + .article-fulltext,
+.article-core-stack .article-keywords + .legacy-fulltext-note,
+.article-core-stack .article-abstract + .legacy-fulltext-note {
+  padding-top: 0;
   border-top: 2px solid var(--rust);
 }
 
+.article-core-stack .article-core-copy > :first-child {
+  margin-top: 0;
+}
+
+.article-core-stack .article-core-copy > :last-child {
+  margin-bottom: 0;
+}
+
+.article-keywords .article-keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 0;
+}
+
+.article-keywords .article-keyword-list span {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.article-fulltext-sections {
+  margin-top: 0;
+}
+
+/* Author declarations: nested form-like rows inside the parent disclosure. */
 .article-disclosure-stack .article-declaration-accordion summary > span {
   font-size: 19px;
   letter-spacing: -.015em;
@@ -9312,12 +9380,9 @@ footer {
 .article-declaration-item {
   counter-increment: declaration;
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(170px, 210px) minmax(0, 1fr);
-  column-gap: 30px;
-  align-items: start;
+  display: block;
   min-width: 0;
-  padding: 22px 24px 22px 62px;
+  padding: 0;
   border-bottom: 1px solid var(--line);
   background: rgba(255, 253, 249, .72);
 }
@@ -9329,9 +9394,10 @@ footer {
 .article-declaration-item::before {
   content: counter(declaration, decimal-leading-zero);
   position: absolute;
-  top: 24px;
-  left: 22px;
-  color: rgba(145, 60, 25, .66);
+  z-index: 1;
+  top: 17px;
+  left: 21px;
+  color: rgba(145, 60, 25, .7);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 12px;
   font-style: italic;
@@ -9339,8 +9405,11 @@ footer {
 }
 
 .article-declaration-item h3 {
-  margin: 1px 0 0;
+  margin: 0;
+  padding: 14px 22px 13px 54px;
+  border-bottom: 1px solid rgba(24, 20, 17, .09);
   color: var(--rust-dark);
+  background: rgba(233, 223, 210, .32);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   font-weight: 800;
@@ -9351,35 +9420,46 @@ footer {
 
 .article-declaration-item p {
   margin: 0 !important;
+  padding: 16px 22px 18px 54px;
   color: #3f3832 !important;
+  background: rgba(255, 253, 249, .84);
   font-family: Georgia, "Times New Roman", serif !important;
   font-size: 14.5px !important;
   line-height: 1.65 !important;
 }
 
-.article-declaration-item:hover {
-  background: rgba(255, 253, 249, .96);
+.article-declaration-item:hover h3 {
+  background: rgba(233, 223, 210, .46);
+}
+
+.article-declaration-item:hover p {
+  background: rgba(255, 253, 249, .98);
 }
 
 @media (max-width: 680px) {
+  .article-core-stack,
   .article-disclosure-stack {
     gap: 9px;
   }
 
+  .article-core-stack .article-accordion,
   .article-disclosure-stack .article-accordion {
     border-radius: 8px;
   }
 
+  .article-core-stack .article-accordion summary,
   .article-disclosure-stack .article-accordion summary {
     min-height: 58px;
     padding: 0 50px 0 16px;
     font-size: 16px;
   }
 
+  .article-core-stack .article-accordion summary::after,
   .article-disclosure-stack .article-accordion summary::after {
     right: 16px;
   }
 
+  .article-core-stack .article-accordion summary b,
   .article-disclosure-stack .article-accordion summary b {
     min-width: 27px;
     height: 26px;
@@ -9387,6 +9467,7 @@ footer {
     font-size: 8px;
   }
 
+  .article-core-stack .article-accordion .accordion-copy,
   .article-disclosure-stack .article-accordion .accordion-copy,
   .article-disclosure-stack .article-accordion .article-figure-accordion-body {
     padding: 18px 16px 20px;
@@ -9402,21 +9483,17 @@ footer {
     font-size: 11px;
   }
 
-  .article-declaration-item {
-    display: block;
-    padding: 18px 16px 19px 50px;
-  }
-
   .article-declaration-item::before {
-    top: 20px;
-    left: 17px;
+    top: 16px;
+    left: 16px;
   }
 
   .article-declaration-item h3 {
-    margin: 0 0 7px;
+    padding: 13px 16px 12px 46px;
   }
 
   .article-declaration-item p {
+    padding: 14px 16px 17px 46px;
     font-size: 14px !important;
   }
 }

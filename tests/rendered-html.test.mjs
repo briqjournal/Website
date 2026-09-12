@@ -520,7 +520,7 @@ test("capitalizes the first letter of every displayed keyword", async () => {
     renderPath(`/en/articles/${englishArticleSlug(slug)}`),
   ]);
   for (const html of [await trResponse.text(), await enResponse.text()]) {
-    const keywordSection = html.match(/<section class="article-keywords"[\s\S]*?<\/section>/)?.[0] || "";
+    const keywordSection = html.match(/<div class="article-keyword-list">[\s\S]*?<\/div>/)?.[0] || "";
     const keywords = [...keywordSection.matchAll(/<span>([^<]+)<\/span>/g)].map((match) => match[1]);
     assert.ok(keywords.length > 0);
     assert.ok(keywords.every((keyword) => !/^\p{Ll}/u.test(keyword.trim())), keywords.join(" | "));
@@ -562,7 +562,7 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.doesNotMatch(citationBlock, /style=/);
   assert.equal((doiHtml.match(/<details class="article-accordion article-declaration-accordion" id="yazar-beyanlari">/g) || []).length, 1);
   assert.equal((doiHtml.match(/class="article-declaration-item"/g) || []).length, 4);
-  assert.match(doiHtml, /Yazarın Beyanları/);
+  assert.match(doiHtml, /Yazar Beyanları/);
   assert.match(doiHtml, /Yazar Katkıları/);
   assert.match(doiHtml, /Finansman \/ Destek/);
   assert.match(doiHtml, /Çıkar Çatışması/);
@@ -608,12 +608,13 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
     enCallsResponse.text(),
   ]);
 
-  assert.match(trArticle, /<h2>Öz<\/h2>/);
+  assert.match(trArticle, /<details class="article-accordion article-core-accordion article-abstract" id="oz" open=""><summary><span>Öz<\/span><\/summary>/);
   assert.doesNotMatch(trArticle, /<h2>Özet<\/h2>/);
   assert.doesNotMatch(trArticle, /<p class="section-kicker">Öz<\/p>/);
-  assert.equal((enArticle.match(/<h2>Abstract<\/h2>/g) || []).length, 1);
-  assert.match(trArticle, /<section class="article-fulltext" id="tam-metin"><h2>Tam Metin<\/h2>/);
-  assert.match(enArticle, /<section class="article-fulltext" id="full-text-body"><h2>Full Text<\/h2>/);
+  assert.match(enArticle, /<details class="article-accordion article-core-accordion article-abstract" id="abstract" open=""><summary><span>Abstract<\/span><\/summary>/);
+  assert.match(trArticle, /<details class="article-accordion article-core-accordion article-fulltext" id="tam-metin" open=""><summary><span>Tam Metin<\/span><\/summary>/);
+  assert.match(enArticle, /<details class="article-accordion article-core-accordion article-fulltext" id="full-text-body" open=""><summary><span>Full Text<\/span><\/summary>/);
+  assert.match(trArticle, /<details class="article-accordion article-core-accordion article-keywords" id="anahtar-kelimeler" open=""><summary><span>Anahtar Kelimeler<\/span><\/summary>/);
   assert.match(trArticle, /<details class="article-accordion article-figures article-figures-accordion" id="gorseller">/);
   assert.doesNotMatch(trArticle, /HTML tam metin/);
   assert.doesNotMatch(enArticle, /HTML full text/i);

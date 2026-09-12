@@ -253,7 +253,7 @@ function ResearchStatements({ items, locale }: { items: StatementItem[]; locale:
   const id = locale === "tr" ? "yazar-beyanlari" : "author-declarations";
   return (
     <details className="article-accordion article-declaration-accordion" id={id}>
-      <summary><span>{locale === "tr" ? "Yazarın Beyanları" : "Author Declarations"}</span><b>{items.length}</b></summary>
+      <summary><span>{locale === "tr" ? "Yazar Beyanları" : "Author Declarations"}</span><b>{items.length}</b></summary>
       <div className="accordion-copy article-declaration-group">
         {items.map(({ id: itemId, label, value }) => (
           <section className="article-declaration-item" id={itemId} key={itemId}>
@@ -320,7 +320,7 @@ export async function ArticlePlatform({
     ...(fullText?.sections || []).map((section) => ({ id: section.id, label: section.title, level: 2 })),
     ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
-    ...(statements.length ? [{ id: locale === "tr" ? "yazar-beyanlari" : "author-declarations", label: locale === "tr" ? "Yazarın Beyanları" : "Author Declarations", level: 1 }] : []),
+    ...(statements.length ? [{ id: locale === "tr" ? "yazar-beyanlari" : "author-declarations", label: locale === "tr" ? "Yazar Beyanları" : "Author Declarations", level: 1 }] : []),
     { id: locale === "tr" ? "atif" : "cite", label: locale === "tr" ? "Kaynak göster" : "Cite this article", level: 1 },
     ...(fullText?.footnotes.length ? [{ id: locale === "tr" ? "dipnotlar" : "footnotes", label: locale === "tr" ? "Dipnotlar" : "Footnotes", level: 1 }] : []),
     ...(displayReferences.length ? [{ id: locale === "tr" ? "kaynakca" : "references", label: locale === "tr" ? "Kaynakça" : "References", level: 1 }] : []),
@@ -359,16 +359,20 @@ export async function ArticlePlatform({
         </aside>
 
         <article className="article-platform-content">
-          <section className="article-abstract" id={locale === "tr" ? "oz" : "abstract"}>
-            <h2>{locale === "tr" ? "Öz" : "Abstract"}</h2>
-            {abstract.length ? abstract.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{locale === "tr" ? "Kaynak arşivinde bu içerik için ayrı bir özet metni bulunmamaktadır." : "The source archive does not contain a separate abstract for this contribution."}</p>}
-          </section>
+          <div className="article-core-stack">
+            <details className="article-accordion article-core-accordion article-abstract" id={locale === "tr" ? "oz" : "abstract"} open>
+              <summary><span>{locale === "tr" ? "Öz" : "Abstract"}</span></summary>
+              <div className="accordion-copy article-core-copy">
+                {abstract.length ? abstract.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{locale === "tr" ? "Kaynak arşivinde bu içerik için ayrı bir özet metni bulunmamaktadır." : "The source archive does not contain a separate abstract for this contribution."}</p>}
+              </div>
+            </details>
 
-          {keywords.length ? <section className="article-keywords" id={locale === "tr" ? "anahtar-kelimeler" : "keywords"}><h2>{locale === "tr" ? "Anahtar kelimeler" : "Keywords"}</h2><div>{keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}</div></section> : null}
+            {keywords.length ? <details className="article-accordion article-core-accordion article-keywords" id={locale === "tr" ? "anahtar-kelimeler" : "keywords"} open><summary><span>{locale === "tr" ? "Anahtar Kelimeler" : "Keywords"}</span></summary><div className="accordion-copy article-core-copy"><div className="article-keyword-list">{keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}</div></div></details> : null}
 
-          {fullText?.sections.length ? <ArticleRichText sections={fullText.sections} references={displayReferences} notes={fullText.footnotes} locale={locale} /> : (
-            <section className="legacy-fulltext-note"><h2>{locale === "tr" ? "Tam Metin" : "Full Text"}</h2><p>{locale === "tr" ? "Bu arşiv kaydının tam metni dijitalleştirme sırasındadır. Doğrulanmış makale dosyasına üstteki PDF düğmesinden erişebilirsiniz." : "The full text for this archival record is being digitised. Use the PDF button above to access the verified article file."}</p></section>
-          )}
+            {fullText?.sections.length ? <ArticleRichText sections={fullText.sections} references={displayReferences} notes={fullText.footnotes} locale={locale} /> : (
+              <details className="article-accordion article-core-accordion legacy-fulltext-note" id={locale === "tr" ? "tam-metin" : "full-text-body"} open><summary><span>{locale === "tr" ? "Tam Metin" : "Full Text"}</span></summary><div className="accordion-copy article-core-copy"><p>{locale === "tr" ? "Bu arşiv kaydının tam metni dijitalleştirme sırasındadır. Doğrulanmış makale dosyasına üstteki PDF düğmesinden erişebilirsiniz." : "The full text for this archival record is being digitised. Use the PDF button above to access the verified article file."}</p></div></details>
+            )}
+          </div>
 
           <div className="article-disclosure-stack">
             {fullText && <ArticleFigures figures={fullText.figures} locale={locale} />}
