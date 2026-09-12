@@ -357,11 +357,15 @@ test("renders editorial information and advisory boards as scholarly mastheads",
   assert.match(trEditorial, /<h2>Yayın Kurulu<\/h2>/);
   assert.match(trEditorial, /<h2>Editörler<\/h2>/);
   assert.match(trEditorial, /<h2>Dil Editörleri<\/h2>/);
+  assert.match(trEditorial, /ODTÜ · TÜBİTAK/);
+  assert.match(trEditorial, /İTÜ TMDK/);
   assert.match(enEditorial, /<h1>Editorial Info<\/h1>/);
   assert.match(enEditorial, /<h2>Editor-in-Chief<\/h2>/);
   assert.match(enEditorial, /<h2>Editorial Board<\/h2>/);
   assert.match(enEditorial, /<h2>Editors<\/h2>/);
   assert.match(enEditorial, /<h2>Language Editors<\/h2>/);
+  assert.match(enEditorial, /Middle East Technical University · TÜBİTAK/);
+  assert.match(enEditorial, /ITU Turkish Music State Conservatory/);
 
   for (const html of [trEditorial, enEditorial]) {
     assert.match(html, /class="editorial-roster-list"/);

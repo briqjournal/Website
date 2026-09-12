@@ -4,11 +4,25 @@ import {
   type Locale,
 } from "../authors";
 
-const academicAffiliationPattern =
-  /(üniversite|university|college|akademi|academy|enstitü|institute|konservatuvar|conservatory|school of economics|tübitak)/iu;
+const academicAffiliationMarkers = [
+  "üniversite",
+  "university",
+  "college",
+  "akademi",
+  "academy",
+  "enstitü",
+  "institute",
+  "konservatuvar",
+  "conservatory",
+  "school of economics",
+  "tübitak",
+  "odtü",
+  "itü",
+];
 
 function visibleAffiliation(affiliation: string, locale: Locale) {
-  if (!academicAffiliationPattern.test(affiliation)) return "";
+  const normalizedAffiliation = affiliation.normalize("NFKC").toLocaleLowerCase("tr-TR");
+  if (!academicAffiliationMarkers.some((marker) => normalizedAffiliation.includes(marker))) return "";
   return boardAffiliation(affiliation, locale);
 }
 
