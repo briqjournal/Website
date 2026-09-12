@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import {
@@ -6,7 +6,9 @@ import {
   archiveIssues,
   annualReports,
   articlePdfUrl,
+  articleRouteSlug,
   findArchiveArticle,
+  findArticleByEnglishRouteSlug,
   findArchiveIssue,
   issueLabel,
   issuePdfUrl,
@@ -536,7 +538,7 @@ function EnglishCurrentIssue() {
           </div>
         </div>
       </section>
-      <section className="site-shell issue-contents-section" id="contents"><div className="issue-section-heading"><div><p className="section-kicker">Contents</p><h2>In this issue</h2></div></div><div className="issue-toc">{publications.map((article, index) => <a href={`/en/articles/${article.slug}`} key={article.slug}><span className="issue-toc-number">{String(index + 1).padStart(2, "0")}</span><span className="issue-toc-meta"><small>{publicationType(article, "en")}</small><b>{article.author}</b></span><span className="issue-toc-title">{article.title_en || article.title_tr}</span><span className="issue-toc-pages">{article.pages}</span><span className="issue-toc-arrow">↗︎</span></a>)}</div></section>
+      <section className="site-shell issue-contents-section" id="contents"><div className="issue-section-heading"><div><p className="section-kicker">Contents</p><h2>In this issue</h2></div></div><div className="issue-toc">{publications.map((article, index) => <a href={`/en/articles/${articleRouteSlug(article, "en")}`} key={article.slug}><span className="issue-toc-number">{String(index + 1).padStart(2, "0")}</span><span className="issue-toc-meta"><small>{publicationType(article, "en")}</small><b>{article.author}</b></span><span className="issue-toc-title">{article.title_en || article.title_tr}</span><span className="issue-toc-pages">{article.pages}</span><span className="issue-toc-arrow">↗︎</span></a>)}</div></section>
       <div className="site-shell issue-pdf-section"><PdfViewer title="BRIQ Volume 7 · Issue 4" turkishSrc="/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf" englishSrc="/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf" locale="en" /></div>
     </div>
   );
@@ -598,7 +600,7 @@ function EnglishAuthorProfile({ id }: { id: string }) {
             <div><p className="section-kicker">Archive</p><h2>Work published in BRIQ</h2></div>
             <div className="author-work-list">
               {profile.articles.map((article) => (
-                <a href={`/en/articles/${article.slug}`} key={`${article.volume}-${article.issue}-${article.slug}`}>
+                <a href={`/en/articles/${articleRouteSlug(article, "en")}`} key={`${article.volume}-${article.issue}-${article.slug}`}>
                   <span className="author-work-issue" style={{ backgroundColor: issueAccent(article.volume, article.issue) }}>Volume {article.volume} · Issue {article.issue} · {article.year}</span>
                   <h3>{article.title_en || article.title_tr}</h3>
                   <p>{article.pages ? `pp. ${article.pages}` : article.season_en}{article.doi ? ` · DOI: ${article.doi}` : ""}</p>
@@ -662,7 +664,7 @@ function EnglishIssue({ volume, issueNumber }: { volume: number; issueNumber: nu
           <h2>Contents</h2>
           <div className="compact-article-list">
             {publications.map((publication) => (
-              <a href={`/en/articles/${publication.slug}`} key={publication.slug}><small>{publicationType(publication, "en")} · {publication.pages ? `pp. ${publication.pages}` : "Publication record"}{publication.doi ? ` · DOI: ${publication.doi}` : ""}</small><h3>{publication.title_en || publication.title_tr}</h3><p>{publication.author}</p></a>
+              <a href={`/en/articles/${articleRouteSlug(publication, "en")}`} key={publication.slug}><small>{publicationType(publication, "en")} · {publication.pages ? `pp. ${publication.pages}` : "Publication record"}{publication.doi ? ` · DOI: ${publication.doi}` : ""}</small><h3>{publication.title_en || publication.title_tr}</h3><p>{publication.author}</p></a>
             ))}
           </div>
           <a className="underlined-link" href="/en/archive">Back to all issues →︎</a>
@@ -674,14 +676,19 @@ function EnglishIssue({ volume, issueNumber }: { volume: number; issueNumber: nu
 }
 
 function EnglishArticle({ slug }: { slug: string }) {
-  const article = findArchiveArticle(slug);
+  const article = findArticleByEnglishRouteSlug(slug);
   if (!article) return null;
-  return <ArticlePlatform article={article} locale="en" routeSlug={slug} />;
+  const canonicalSlug = articleRouteSlug(article, "en");
+  if (slug !== canonicalSlug) redirect(`/en/articles/${canonicalSlug}`);
+  return <ArticlePlatform article={article} locale="en" routeSlug={canonicalSlug} />;
 }
 
 function EnglishArticlePdf({ slug }: { slug: string }) {
-  const article = findArchiveArticle(slug);
-  return article ? <ArticlePdfPage article={article} locale="en" routeSlug={slug} /> : null;
+  const article = findArticleByEnglishRouteSlug(slug);
+  if (!article) return null;
+  const canonicalSlug = articleRouteSlug(article, "en");
+  if (slug !== canonicalSlug) redirect(`/en/articles/${canonicalSlug}/pdf`);
+  return <ArticlePdfPage article={article} locale="en" routeSlug={canonicalSlug} />;
 }
 
 const englishCallEditorialCopy: Record<string, { paragraphs: string[]; topics?: [string, string[]][]; note?: string }> = {
@@ -751,8 +758,9 @@ export function generateStaticParams() {
     paths.add(`archive/volume-${issue.volume}-issue-${issue.issue}`);
   }
   for (const article of archiveArticles) {
-    paths.add(`articles/${article.slug}`);
-    paths.add(`articles/${article.slug}/pdf`);
+    const slug = articleRouteSlug(article, "en");
+    paths.add(`articles/${slug}`);
+    paths.add(`articles/${slug}/pdf`);
   }
   for (const profile of authorProfiles) paths.add(`authors/${profile.id}`);
   for (const call of calls) paths.add(call.urlEn.replace(/^\/en\//, ""));
@@ -767,24 +775,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const key = slug.join("/");
   const articlePdfMatch = key.match(/^articles\/(.+)\/pdf$/);
   if (articlePdfMatch) {
-    const article = findArchiveArticle(articlePdfMatch[1]);
+    const article = findArticleByEnglishRouteSlug(articlePdfMatch[1]);
     if (article) {
       const title = article.title_en || article.title_tr;
+      const englishSlug = articleRouteSlug(article, "en");
       return {
         title: `${title} — PDF | BRIQ`,
         description: `Verified PDF viewer for ${title}.`,
         alternates: {
-          canonical: `/en/articles/${article.slug}/pdf`,
-          languages: { "tr-TR": `/makaleler/${article.slug}/pdf`, "en-US": `/en/articles/${article.slug}/pdf` },
+          canonical: `/en/articles/${englishSlug}/pdf`,
+          languages: { "tr-TR": `/makaleler/${article.slug}/pdf`, "en-US": `/en/articles/${englishSlug}/pdf` },
         },
       };
     }
   }
   const articleMatch = key.match(/^articles\/(.+)$/);
   if (articleMatch) {
-    const article = findArchiveArticle(articleMatch[1]);
+    const article = findArticleByEnglishRouteSlug(articleMatch[1]);
     if (article) {
       const title = article.title_en || article.title_tr;
+      const englishSlug = articleRouteSlug(article, "en");
       const description = article.abstract_en?.split("\n").find(Boolean)?.slice(0, 300)
         || `${article.author}, BRIQ Volume ${article.volume}, Issue ${article.issue}.`;
       const firstPage = article.pages?.split(/[-–]/)[0];
@@ -793,10 +803,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: `${title} | BRIQ`,
         description,
         alternates: {
-          canonical: `/en/articles/${article.slug}`,
+          canonical: `/en/articles/${englishSlug}`,
           languages: {
             "tr-TR": `/makaleler/${article.slug}`,
-            "en-US": `/en/articles/${article.slug}`,
+            "en-US": `/en/articles/${englishSlug}`,
           },
         },
         other: {
@@ -936,9 +946,17 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
 
   if (content === null) notFound();
 
+  const alternateArticleSlug = articlePdfMatch?.[1] || articleMatch?.[1];
+  const alternateArticle = alternateArticleSlug
+    ? findArticleByEnglishRouteSlug(alternateArticleSlug)
+    : undefined;
+  const alternateHref = alternateArticle
+    ? `/makaleler/${alternateArticle.slug}${articlePdfMatch ? "/pdf" : ""}`
+    : undefined;
+
   return (
     <main lang="en">
-      <SiteHeader locale="en" />
+      <SiteHeader locale="en" alternateHref={alternateHref} />
       {content}
       <SiteFooter locale="en" />
     </main>
