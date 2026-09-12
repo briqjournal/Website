@@ -1,4 +1,4 @@
-name: Trigger BRIQ policy updater
+name: Run BRIQ policy updater
 on:
   push:
     paths:
@@ -6,16 +6,37 @@ on:
 permissions:
   contents: write
 jobs:
-  trigger:
+  patch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Trigger one-time policy update workflow
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Apply prepared policy patch
+        shell: python
         run: |
-          printf '\n' >> .github/workflows/apply-briq-trdizin-doaj-updates.yml
-          git rm .github/workflows/briq-policy-update-temp.yml
-          git config user.name "BRIQ Site Bot"
-          git config user.email "briq@briqjournal.com"
-          git add -A
-          git commit -m "Apply one-time BRIQ policy updates"
+          from pathlib import Path
+          import textwrap
+          text = Path('.github/workflows/apply-briq-trdizin-doaj-updates.yml').read_text(encoding='utf-8')
+          marker = "          python <<'PY'\n"
+          start = text.index(marker) + len(marker)
+          end = text.index("\n          PY", start)
+          script = textwrap.dedent(text[start:end])
+          exec(compile(script, 'briq_policy_patch.py', 'exec'), {})
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Commit site updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Apply TR Dizin and DOAJ site updates"
           git push
