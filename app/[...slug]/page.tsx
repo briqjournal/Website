@@ -1,6 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
 import { IndexTicker, SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { PdfViewer } from "../components/PdfViewer";
 import { AuthorLinks } from "../components/AuthorLinks";
@@ -13,13 +13,13 @@ import { SearchExplorer } from "../components/SearchExplorer";
 import { ScrollSpyNav, type ScrollSpyItem } from "../components/ScrollSpyNav";
 import { EditorialLongform } from "../components/EditorialLongform";
 import { PeopleDirectory } from "../components/PeopleDirectory";
-import { CoverLightbox } from "../components/CoverLightbox";
 import { DergiParkLogo } from "../components/DergiParkLogo";
 import { ArticlePdfPage, ArticlePlatform } from "../components/ArticlePlatform";
+import { IssuePlatform } from "../components/IssuePlatform";
 import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../authors";
 import { archiveArticleListings, archiveIssueListings } from "../archive-listing";
 import { absoluteSiteUrl } from "../site-url";
-import { issueAccent, issueSurface } from "../issue-themes";
+import { issueAccent } from "../issue-themes";
 import {
   archiveArticles,
   archiveIssues,
@@ -28,11 +28,8 @@ import {
   articleRouteSlug,
   currentIssueArticleAliases,
   findArticleByRouteSlug,
-  findArchiveArticle,
   findArchiveIssue,
   issueLabel,
-  issuePdfUrl,
-  publicationType,
 } from "../archive";
 import {
   advisoryBoard,
@@ -985,76 +982,21 @@ function AuthorProfilePage({ id }: { id: string }) {
 }
 
 function CurrentIssue() {
-  const currentArticles = archiveArticles.filter((article) => article.volume === 7 && article.issue === 4);
+  const record = findArchiveIssue(7, 4);
+  if (!record) return null;
   return (
-    <div className="issue-page-themed" style={{ "--issue-tone": issueSurface(7, 4), "--issue-accent": issueAccent(7, 4) } as CSSProperties}>
-      <section className="issue-masthead" data-issue="07 / 04">
-        <div className="issue-masthead-rule" />
-        <div className="site-shell issue-masthead-grid">
-          <div className="issue-cover-column">
-            <div className="issue-cover-frame">
-              <img src="/assets/current-issue-tr.jpg" alt="BRIQ Cilt 7 Sayı 4 tam kapak" loading="lazy" decoding="async" />
-            </div>
-            <CoverLightbox src="/assets/current-issue-tr.jpg" alt="BRIQ Cilt 7 Sayı 4 kapağı" />
-          </div>
-          <div className="issue-masthead-copy">
-            <div className="page-breadcrumb issue-breadcrumb">
-              <a href="/">Ana Sayfa</a><span>/</span><span>Güncel Sayı</span>
-            </div>
-            <div className="issue-superline"><span>Cilt 7 · Sayı 4</span><span>Yayın Tarihi · Eylül 2026</span></div>
-            <h1>Batı Asya’da Yeni Dönem</h1>
-            <h2>Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor</h2>
-            <p className="issue-deck">
-              Batı Asya’daki yeni güç dengesini; Suudi Arabistan’ın kültürel dengeleme
-              stratejisinden Türkiye–Çin ilişkilerine, Dijital İpek Yolu’ndan Çin’in
-              küresel altyapı yaklaşımına uzanan çalışmalarla ele alan yeni sayı.
-            </p>
-            <div className="issue-actions">
-              <a className="button button-light" href="#pdf-viewer">PDF’yi sitede oku <span>↓︎</span></a>
-              <a href="/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf" download>Tam sayı PDF <span>↓︎</span></a>
-            </div>
-            <dl className="issue-identity-row">
-              <div><dt>Cilt</dt><dd>7</dd></div>
-              <div><dt>Sayı</dt><dd>4 <span>(Sonbahar)</span></dd></div>
-            </dl>
-            <dl className="issue-facts">
-              <div><dt>Yayın tarihi</dt><dd>Eylül 2026</dd></div>
-              <div><dt>Sayfa</dt><dd>131</dd></div>
-              <div><dt>Yayın dili</dt><dd>Türkçe · English</dd></div>
-              <div><dt>Erişim</dt><dd>Açık erişim · CC BY 4.0</dd></div>
-            </dl>
-          </div>
-        </div>
-      </section>
-
-      <section className="site-shell issue-contents-section" id="icerikler">
-        <div className="issue-section-heading">
-          <div><p className="section-kicker">İçindekiler</p><h2>Bu sayıdaki içerikler</h2></div>
-          <p>Hakemli araştırmalar, röportajlar ve kitap incelemesi tek sayı içinde bir araya geliyor.</p>
-        </div>
-        <div className="issue-toc">
-          {currentArticles.map((article, index) => {
-            return (
-              <a href={`/makaleler/${article.slug}`} key={article.slug}>
-                <span className="issue-toc-number">{String(index + 1).padStart(2, "0")}</span>
-                <span className="issue-toc-meta"><small>{publicationType(article, "tr")}</small><b>{article.author}</b></span>
-                <span className="issue-toc-title">{article.title_tr}</span>
-                <span className="issue-toc-pages">{article.pages || ""}</span>
-                <span className="issue-toc-arrow">↗︎</span>
-              </a>
-            );
-          })}
-        </div>
-      </section>
-
-      <div className="site-shell issue-pdf-section">
-        <PdfViewer
-          title="BRIQ Cilt 7 · Sayı 4"
-          turkishSrc="/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf"
-          englishSrc="/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf"
-        />
-      </div>
-    </div>
+    <IssuePlatform
+      record={record}
+      locale="tr"
+      current
+      coverSrc="/assets/current-issue-tr.jpg"
+      periodLabel="Eylül 2026"
+      title="Batı Asya’da Yeni Dönem"
+      subtitle="Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor"
+      description="Batı Asya’daki yeni güç dengesini; Suudi Arabistan’ın kültürel dengeleme stratejisinden Türkiye–Çin ilişkilerine, Dijital İpek Yolu’ndan Çin’in küresel altyapı yaklaşımına uzanan çalışmalarla ele alan yeni sayı."
+      facts={[["Yayın tarihi", "Eylül 2026"], ["Sayfa", "131"], ["Yayın dili", "Türkçe · English"], ["Erişim", "Açık erişim · CC BY 4.0"]]}
+      contentsDescription="Hakemli araştırmalar, röportajlar ve kitap incelemesi tek sayı içinde bir araya geliyor."
+    />
   );
 }
 
@@ -1121,49 +1063,15 @@ const issueThemes: Record<string, string> = {
 function ArchiveIssue({ volume, issue }: { volume: number; issue: number }) {
   const record = findArchiveIssue(volume, issue);
   if (!record) return null;
-  const theme = issueThemes[`${volume}-${issue}`] || issueLabel(record, "tr");
-  const publications = record.articles
-    .map((slug) => findArchiveArticle(slug))
-    .filter((publication) => publication !== undefined);
-  const turkishPdf = issuePdfUrl(record, "tr");
-  const englishPdf = issuePdfUrl(record, "en");
+  const theme = issueThemes[`${volume}-${issue}`] || `${record.season_tr} ${record.year} Sayısı`;
   return (
-    <div className="issue-page-themed" style={{ "--issue-tone": issueSurface(volume, issue), "--issue-accent": issueAccent(volume, issue) } as CSSProperties}>
-      <PageHero kicker="Arşiv" title={`Cilt ${volume} · Sayı ${issue}`} intro={theme} />
-      <div className="site-shell page-section issue-detail">
-        <aside className="issue-detail-cover">
-          <img src={record.cover_tr} alt={`BRIQ Cilt ${volume} Sayı ${issue} Türkçe kapağı`} loading="lazy" decoding="async" />
-          {turkishPdf && <a className="button button-dark" href="#pdf-viewer">Tam sayıyı oku ↓︎</a>}
-        </aside>
-        <div className="issue-detail-content">
-          <div className="fact-strip">
-            <div><span>Yayın dönemi</span><b>{record.season_tr} {record.year}</b></div>
-            <div><span>İçerik sayısı</span><b>{publications.length}</b></div>
-            <div><span>Erişim</span><b>Açık erişim</b></div>
-          </div>
-          <h2>İçindekiler</h2>
-          <div className="compact-article-list">
-            {publications.map((publication) => (
-              <a href={`/makaleler/${publication.slug}`} key={publication.slug}>
-                <small>{publicationType(publication, "tr")} · {publication.pages ? `ss. ${publication.pages}` : "Yayın kaydı"}{publication.doi ? ` · DOI: ${publication.doi}` : ""}</small>
-                <h3>{publication.title_tr}</h3>
-                <p>{publication.author}</p>
-              </a>
-            ))}
-          </div>
-          <a className="underlined-link" href="/arsiv">Tüm sayılara dön →︎</a>
-        </div>
-      </div>
-      {(turkishPdf || englishPdf) && (
-        <div className="site-shell issue-pdf-section">
-          <PdfViewer
-            title={`BRIQ Cilt ${volume} · Sayı ${issue}`}
-            turkishSrc={turkishPdf}
-            englishSrc={englishPdf}
-          />
-        </div>
-      )}
-    </div>
+    <IssuePlatform
+      record={record}
+      locale="tr"
+      title={theme}
+      subtitle={`Cilt ${volume} · Sayı ${issue}`}
+      description={`${record.season_tr} ${record.year} döneminde yayımlanan bu sayı, ${record.articles.length} çalışmayı BRIQ arşivinde açık erişimle bir araya getiriyor.`}
+    />
   );
 }
 
