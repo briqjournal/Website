@@ -2,6 +2,34 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
+const archive = JSON.parse(await readFile(new URL("../app/archive-data.json", import.meta.url), "utf8"));
+
+function slugifyEnglishTitle(value) {
+  return value
+    .normalize("NFKD")
+    .replace(/\p{M}/gu, "")
+    .replace(/&/g, " and ")
+    .replace(/[’']/g, "")
+    .toLocaleLowerCase("en-US")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-");
+}
+
+const englishSlugBases = archive.articles.map((article) =>
+  article.title_en?.trim() ? slugifyEnglishTitle(article.title_en) : article.slug,
+);
+const englishSlugCounts = new Map();
+for (const slug of englishSlugBases) englishSlugCounts.set(slug, (englishSlugCounts.get(slug) || 0) + 1);
+
+function englishArticleSlug(turkishSlug) {
+  const index = archive.articles.findIndex((article) => article.slug === turkishSlug);
+  assert.notEqual(index, -1, `article fixture ${turkishSlug}`);
+  const article = archive.articles[index];
+  const base = englishSlugBases[index] || article.slug;
+  return englishSlugCounts.get(base) > 1 ? `${base}-volume-${article.volume}-issue-${article.issue}` : base;
+}
+
 async function renderPath(pathname) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${pathname}`);
@@ -44,8 +72,6 @@ test("renders production metadata without preview markers", async () => {
 });
 
 test("keeps registered BRIQ DOIs matched to their Crossref article records", async () => {
-  const archiveUrl = new URL("../app/archive-data.json", import.meta.url);
-  const archive = JSON.parse(await readFile(archiveUrl, "utf8"));
   const registered = Object.fromEntries(
     archive.articles
       .filter((article) => article.doi)
@@ -234,7 +260,7 @@ test("keeps the new issue, board, archive, and author interactions in Turkish-En
     renderPath("/arsiv"),
     renderPath("/en/archive"),
     renderPath("/makaleler/kulturel-silinmeden-tarihsel-kurtarmaya"),
-    renderPath("/en/articles/kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin"),
+    renderPath(`/en/articles/${englishArticleSlug("kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin")}`),
   ]).then((responses) => Promise.all(responses.map((response) => response.text())));
 
   assert.match(trIssue, /Kapağı incele/);
@@ -293,11 +319,12 @@ test("keeps standalone board pages compact without repeating the page title", as
 
 test("separates bilingual HTML article reading from the dedicated PDF viewer", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
+  const englishSlug = englishArticleSlug(slug);
   const [trArticleResponse, enArticleResponse, trPdfResponse, enPdfResponse] = await Promise.all([
     renderPath(`/makaleler/${slug}`),
-    renderPath(`/en/articles/${slug}`),
+    renderPath(`/en/articles/${englishSlug}`),
     renderPath(`/makaleler/${slug}/pdf`),
-    renderPath(`/en/articles/${slug}/pdf`),
+    renderPath(`/en/articles/${englishSlug}/pdf`),
   ]);
   const [trArticle, enArticle, trPdf, enPdf] = await Promise.all([
     trArticleResponse.text(),
@@ -309,7 +336,8 @@ test("separates bilingual HTML article reading from the dedicated PDF viewer", a
   assert.match(trArticle, /Kitaplar Nasıl “Yakıldı”/);
   assert.match(enArticle, /How the Books Were “Burned”/);
   assert.match(trArticle, new RegExp(`href="/makaleler/${slug}/pdf"`));
-  assert.match(enArticle, new RegExp(`href="/en/articles/${slug}/pdf"`));
+  assert.match(enArticle, new RegExp(`href="/en/articles/${englishSlug}/pdf"`));
+  assert.match(enArticle, new RegExp(`download="briq-${englishSlug}-en\\.pdf"`));
   assert.match(trArticle, /class="inline-citation"/);
   assert.match(trArticle, /class="article-accordion article-references"/);
   assert.match(trArticle, new RegExp(`/citations/${slug}\\.ris`));
@@ -321,7 +349,26 @@ test("separates bilingual HTML article reading from the dedicated PDF viewer", a
   assert.match(trPdf, /<iframe/);
   assert.match(enPdf, /<iframe/);
   assert.match(trPdf, new RegExp(`href="/makaleler/${slug}"`));
-  assert.match(enPdf, new RegExp(`href="/en/articles/${slug}"`));
+  assert.match(enPdf, new RegExp(`href="/en/articles/${englishSlug}"`));
+  assert.match(enPdf, new RegExp(`download="briq-${englishSlug}-en\\.pdf"`));
+});
+
+test("uses English article slugs and redirects legacy Turkish-slug English URLs", async () => {
+  const slug = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";
+  const englishSlug = englishArticleSlug(slug);
+  const [directory, legacyArticle, legacyPdf] = await Promise.all([
+    renderPath("/en/articles"),
+    renderPath(`/en/articles/${slug}`),
+    renderPath(`/en/articles/${slug}/pdf`),
+  ]);
+  const directoryHtml = await directory.text();
+
+  assert.match(directoryHtml, new RegExp(`href="/en/articles/${englishSlug}"`));
+  assert.doesNotMatch(directoryHtml, new RegExp(`href="/en/articles/${slug}"`));
+  assert.ok([307, 308].includes(legacyArticle.status));
+  assert.equal(new URL(legacyArticle.headers.get("location")).pathname, `/en/articles/${englishSlug}`);
+  assert.ok([307, 308].includes(legacyPdf.status));
+  assert.equal(new URL(legacyPdf.headers.get("location")).pathname, `/en/articles/${englishSlug}/pdf`);
 });
 
 test("renders every current-issue contribution in the bilingual HTML article platform", async () => {
@@ -339,7 +386,7 @@ test("renders every current-issue contribution in the bilingual HTML article pla
   for (const slug of slugs) {
     const [trResponse, enResponse] = await Promise.all([
       renderPath(`/makaleler/${slug}`),
-      renderPath(`/en/articles/${slug}`),
+      renderPath(`/en/articles/${englishArticleSlug(slug)}`),
     ]);
     assert.equal(trResponse.status, 200, `TR ${slug}`);
     assert.equal(enResponse.status, 200, `EN ${slug}`);
@@ -361,7 +408,6 @@ test("renders every Volume 7 Issue 4 contribution from its source PDF with the c
     "cinin-kuresel-altyapi-stratejisi",
   ];
 
-  const archive = JSON.parse(await readFile(new URL("../app/archive-data.json", import.meta.url), "utf8"));
   const issueArticles = archive.articles.filter((article) => article.volume === 7 && article.issue === 4);
   assert.equal(issueArticles.length, 6);
   assert.ok(issueArticles.every((article) => article.published_online_date === "2026-09-01"));
@@ -369,7 +415,7 @@ test("renders every Volume 7 Issue 4 contribution from its source PDF with the c
   for (const slug of slugs) {
     const [trResponse, enResponse] = await Promise.all([
       renderPath(`/makaleler/${slug}`),
-      renderPath(`/en/articles/${slug}`),
+      renderPath(`/en/articles/${englishArticleSlug(slug)}`),
     ]);
     assert.equal(trResponse.status, 200, `TR ${slug}`);
     assert.equal(enResponse.status, 200, `EN ${slug}`);
@@ -387,7 +433,7 @@ test("keeps article history fixed and hides unavailable publication statements",
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trResponse, enResponse] = await Promise.all([
     renderPath(`/makaleler/${slug}`),
-    renderPath(`/en/articles/${slug}`),
+    renderPath(`/en/articles/${englishArticleSlug(slug)}`),
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
 
@@ -406,13 +452,34 @@ test("keeps article history fixed and hides unavailable publication statements",
   for (const removed of ["Katılımcı onamı", "Yayın onamı", "Veri erişilebilirliği", "Kod erişilebilirliği", "Yazar katkıları", "Yapay zekâ kullanım beyanı"]) assert.doesNotMatch(trHtml, new RegExp(removed));
 });
 
+test("capitalizes the first letter of every displayed keyword", async () => {
+  const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
+  const [trResponse, enResponse] = await Promise.all([
+    renderPath(`/makaleler/${slug}`),
+    renderPath(`/en/articles/${englishArticleSlug(slug)}`),
+  ]);
+  for (const html of [await trResponse.text(), await enResponse.text()]) {
+    const keywordSection = html.match(/<section class="article-keywords"[\s\S]*?<\/section>/)?.[0] || "";
+    const keywords = [...keywordSection.matchAll(/<span>([^<]+)<\/span>/g)].map((match) => match[1]);
+    assert.ok(keywords.length > 0);
+    assert.ok(keywords.every((keyword) => !/^\p{Ll}/u.test(keyword.trim())), keywords.join(" | "));
+  }
+});
+
 test("links each resolvable in-text citation to an expandable reference record", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const response = await renderPath(`/makaleler/${slug}`);
   const html = await response.text();
   assert.ok((html.match(/class="inline-citation"/g) || []).length >= 60);
-  assert.match(html, /class="inline-citation"[^>]*data-tooltip=/);
+  assert.doesNotMatch(html, /class="inline-citation"[^>]*data-tooltip=/);
   assert.match(html, /class="inline-citation"[^>]*href="#ref-/);
+  const tooltips = [...html.matchAll(/<span class="citation-tooltip"[^>]*>([\s\S]*?)<\/span>/g)].map((match) => match[1]);
+  assert.ok(tooltips.length >= 60);
+  assert.ok(tooltips.some((tooltip) => /<em>/.test(tooltip)), "APA 7 italics in citation tooltips");
+  for (const tooltip of tooltips) {
+    assert.doesNotMatch(tooltip, /<a\b/i);
+    assert.doesNotMatch(tooltip, /https?:\/\/|doi\.org/i);
+  }
   assert.match(html, /data-return-target="ref-/);
   assert.match(html, /Kaynak metnin kaynakça bölümünde bu atıf için ayrı bir tam künye verilmemiştir/);
   assert.doesNotMatch(html, /Google Scholar/);
@@ -426,6 +493,12 @@ test("links each resolvable in-text citation to an expandable reference record",
   const doiHtml = await doiArticle.text();
   assert.match(doiHtml, /href="https:\/\/doi\.org\/10\.[^"]+"/);
   assert.match(doiHtml, /https:\/\/doi\.org\/10\./);
+  const styledCitationArticle = await renderPath("/makaleler/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi");
+  const styledCitationHtml = await styledCitationArticle.text();
+  const citationBlock = styledCitationHtml.match(/<blockquote><p>([\s\S]*?)<\/p><\/blockquote>/)?.[1] || "";
+  assert.match(citationBlock, /<em>/);
+  assert.match(citationBlock, /class="reference-inline-link"/);
+  assert.doesNotMatch(citationBlock, /style=/);
   assert.equal((doiHtml.match(/class="article-declaration"/g) || []).length, 1);
   assert.match(doiHtml, /Finansman beyanı/);
   assert.doesNotMatch(doiHtml, /Çıkar çatışması beyanı/);
@@ -435,7 +508,7 @@ test("uses bilingual visual, footnote, and return-navigation labels", async () =
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trResponse, enResponse] = await Promise.all([
     renderPath(`/makaleler/${slug}`),
-    renderPath(`/en/articles/${slug}`),
+    renderPath(`/en/articles/${englishArticleSlug(slug)}`),
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
 
@@ -454,7 +527,7 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trArticleResponse, enArticleResponse, trHomeResponse, enHomeResponse, trCallsResponse, enCallsResponse] = await Promise.all([
     renderPath(`/makaleler/${slug}`),
-    renderPath(`/en/articles/${slug}`),
+    renderPath(`/en/articles/${englishArticleSlug(slug)}`),
     renderPath("/"),
     renderPath("/en"),
     renderPath("/makale-cagrilari"),
@@ -514,6 +587,7 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(css, /Refined scholarly controls: quiet rules, compact disclosure rows, and publisher-style citation tools/);
   assert.match(css, /\.article-disclosure-stack \.article-accordion[\s\S]*?border-bottom: 1px solid var\(--line\)/);
   assert.match(css, /\.article-platform-actions > div \{\s*min-height: 58px/);
+  assert.doesNotMatch(css, /\.citation-toolbox button,\s*\.citation-toolbox a/);
 });
 
 test("orders author guidance as rules, review, ethics, and copyright in both languages", async () => {
