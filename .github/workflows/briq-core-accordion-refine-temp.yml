@@ -1,0 +1,24 @@
+name: Refine article core accordions
+
+on:
+  push:
+    paths:
+      - '.github/workflows/briq-core-accordion-refine-temp.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply article accordion refinements
+        run: python3 scripts/patch-core-accordions.py
+      - name: Commit refinements
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/components/ArticlePlatform.tsx app/components/ArticleRichText.tsx app/globals.css tests/rendered-html.test.mjs
+          git commit -m "Refine article core accordions and declarations"
+          git push
