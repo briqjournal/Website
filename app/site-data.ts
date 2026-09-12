@@ -1,45 +1,45 @@
 export const navItems = [
   {
     label: "Dergi",
-    href: "/dergi/briq-hakkinda",
+    href: "/tr/dergi/briq-hakkinda",
     children: [
-      ["BRIQ Hakkında", "/dergi/briq-hakkinda"],
-      ["Yayın İlkeleri", "/dergi/yayin-ilkeleri"],
-      ["Yayın Kurulu", "/dergi/yayin-kurulu"],
-      ["Danışma Kurulu", "/dergi/danisma-kurulu"],
-      ["Dizinler ve Arşivler", "/dergi/endeksler"],
-      ["Yıllık Raporlar", "/yillik-raporlar"],
+      ["BRIQ Hakkında", "/tr/dergi/briq-hakkinda"],
+      ["Yayın İlkeleri", "/tr/dergi/yayin-ilkeleri"],
+      ["Yayın Kurulu", "/tr/dergi/yayin-kurulu"],
+      ["Danışma Kurulu", "/tr/dergi/danisma-kurulu"],
+      ["Dizinler ve Arşivler", "/tr/dergi/endeksler"],
+      ["Yıllık Raporlar", "/tr/yillik-raporlar"],
     ],
   },
   {
     label: "Yayınlar",
-    href: "/guncel-sayi",
+    href: "/tr/guncel-sayi",
     children: [
-      ["Güncel Sayı", "/guncel-sayi"],
-      ["Tüm Sayılar", "/arsiv"],
-      ["Makale Arama", "/makaleler"],
+      ["Güncel Sayı", "/tr/guncel-sayi"],
+      ["Tüm Sayılar", "/tr/arsiv"],
+      ["Makale Arama", "/tr/makaleler"],
     ],
   },
   {
     label: "Yazarlar İçin",
-    href: "/yazarlar",
+    href: "/tr/yazarlar",
     children: [
-      ["Yazım Kuralları", "/yazarlar/yazim-kurallari"],
-      ["Yayın Değerlendirme Süreci", "/yazarlar/yayin-degerlendirme-sureci"],
-      ["Yayın Etiği", "/yazarlar/yayin-etigi"],
-      ["Telif Hakkı Şartları ve Lisans", "/yazarlar/telif-hakki-sartlari-ve-lisans"],
+      ["Yazım Kuralları", "/tr/yazarlar/yazim-kurallari"],
+      ["Yayın Değerlendirme Süreci", "/tr/yazarlar/yayin-degerlendirme-sureci"],
+      ["Yayın Etiği", "/tr/yazarlar/yayin-etigi"],
+      ["Telif Hakkı Şartları ve Lisans", "/tr/yazarlar/telif-hakki-sartlari-ve-lisans"],
     ],
   },
   {
     label: "Makale Çağrıları",
-    href: "/makale-cagrilari",
+    href: "/tr/makale-cagrilari",
     children: [
-      ["Aktif Çağrılar", "/makale-cagrilari#aktif"],
-      ["Geçmiş Çağrılar", "/makale-cagrilari#gecmis"],
-      ["Kitap İncelemesi", "/makale-cagrilari/kitap-incelemesi"],
+      ["Aktif Çağrılar", "/tr/makale-cagrilari#aktif"],
+      ["Geçmiş Çağrılar", "/tr/makale-cagrilari#gecmis"],
+      ["Kitap İncelemesi", "/tr/makale-cagrilari/kitap-incelemesi"],
     ],
   },
-  { label: "İletişim", href: "/iletisim" },
+  { label: "İletişim", href: "/tr/iletisim" },
 ];
 
 export const articles = [
@@ -49,14 +49,14 @@ export const articles = [
       "Kültürel Silinmeden Tarihsel Kurtarmaya: Nishio Kanji ve Amerikan İşgali Altındaki Japonya’nın ‘Yakılan Kitaplar’ı",
     author: "Jason Morgan",
     issue: "Cilt 7 · Sayı 3 · 2026",
-    url: "/makaleler/kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin",
+    url: "/tr/makaleler/kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin",
   },
   {
     type: "Röportaj",
     title: "Türkiye’nin Kültürel Varlıkları Geri Kazanma Mücadelesi",
     author: "Zeynep Boz",
     issue: "Cilt 7 · Sayı 3 · 2026",
-    url: "/makaleler/turkiyenin-kulturel-varliklari-geri-kazanma-mucadelesi",
+    url: "/tr/makaleler/turkiyenin-kulturel-varliklari-geri-kazanma-mucadelesi",
   },
   {
     type: "Hakemli Makale",
@@ -64,7 +64,7 @@ export const articles = [
       "Kültür Varlıklarının Yasadışı İthalatının Önlenmesi ve İadesine İlişkin Türkiye ile İsviçre Arasındaki Anlaşmaya Eleştirel Yaklaşım",
     author: "Nuray Ekşi",
     issue: "Cilt 7 · Sayı 3 · 2026",
-    url: "/makaleler/kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre",
+    url: "/tr/makaleler/kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre",
   },
   {
     type: "Hakemli Makale",
@@ -72,21 +72,21 @@ export const articles = [
       "Çin’de Somut Olmayan Kültürel Mirasın Korunması: Yirmi Yıllık Deneyim, Süregelen Zorluklar ve Geleceğe Yönelik Yollar",
     author: "Li Ning · Yang Xuyan",
     issue: "Cilt 7 · Sayı 3 · 2026",
-    url: "/makaleler/cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege",
+    url: "/tr/makaleler/cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege",
   },
   {
     type: "Röportaj",
     title: "Anadolu’nun Kültürel Mirasını Koruma ve Geleceğe Aktarma Sorumluluğu",
     author: "Prof. Dr. Mehmet Celal Özdoğan",
     issue: "Cilt 7 · Sayı 3 · 2026",
-    url: "/makaleler/anadolunun-kulturel-mirasini-koruma-ve-gelecege-aktarma-sorumlulugu",
+    url: "/tr/makaleler/anadolunun-kulturel-mirasini-koruma-ve-gelecege-aktarma-sorumlulugu",
   },
   {
     type: "Röportaj",
     title: "Yağmalanan İskit Altınları’nın Mirası",
     author: "Pavel Zarifullin",
     issue: "Cilt 7 · Sayı 3 · 2026",
-    url: "/makaleler/yagmalanan-iskit-altinlarinin-mirasi",
+    url: "/tr/makaleler/yagmalanan-iskit-altinlarinin-mirasi",
   },
   {
     type: "Hakemli Makale",
@@ -94,14 +94,14 @@ export const articles = [
       "Moğolistan’ın Üçüncü Komşu Diplomasisi’nde Kurumsal Dengeleme: Şanghay İşbirliği Örgütü ile Etkileşim",
     author: "Wang Jiani · Bilguunzaya Luvsandandar",
     issue: "Cilt 7 · Sayı 3 · 2026",
-    url: "/makaleler/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim",
+    url: "/tr/makaleler/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim",
   },
   {
     type: "Kitap İncelemesi",
     title: "Kuşak ve Yol’un Güvenliği: Özel Güvenlik, Risk ve Çin’in Küresel Genişlemesi",
     author: "Nora Maher",
     issue: "Cilt 7 · Sayı 3 · 2026",
-    url: "/makaleler/kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi",
+    url: "/tr/makaleler/kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi",
   },
   {
     type: "Hakemli Makale",
@@ -109,14 +109,14 @@ export const articles = [
       "Sovyet ‘Reformu’nun Tarihi Trajedisinden Bizi Kurtaran Ne Oldu? Çin’in Ekonomik Çağdaşlaşmasına Yön Vermek İçin Marksist Ekonomiyi Uygulamak",
     author: "He Ganqiang",
     issue: "Cilt 7 · Sayı 1 · 2025",
-    url: "/makaleler/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu",
+    url: "/tr/makaleler/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu",
   },
   {
     type: "Hakemli Makale",
     title: "Çin’e Özgü Sosyalist Politik Ekonomi’ye Genel Bakış",
     author: "Jian Xinhua",
     issue: "Cilt 7 · Sayı 1 · 2025",
-    url: "/makaleler/cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis",
+    url: "/tr/makaleler/cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis",
   },
 ];
 
@@ -235,7 +235,7 @@ export const calls = [
     summaryEn:
       "Studies examining the geopolitical, economic, and security dimensions of transatlantic relations under conditions of multipolarity.",
     image: "/assets/cfp-transatlantic.png",
-    url: "/makale-cagrilari/transatlantik-iliskilerin-yeniden-yapilanmasi",
+    url: "/tr/makale-cagrilari/transatlantik-iliskilerin-yeniden-yapilanmasi",
     urlEn: "/en/calls-for-papers/transatlantic-relations",
   },
   {
@@ -250,7 +250,7 @@ export const calls = [
     summaryEn:
       "Studies examining the implications of artificial intelligence for productive forces, public coordination, social benefit, and the developing world.",
     image: "/assets/cfp-ai.png",
-    url: "/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah",
+    url: "/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah",
     urlEn: "/en/calls-for-papers/artificial-intelligence-productive-forces",
   },
   {
@@ -265,21 +265,21 @@ export const calls = [
     summaryEn:
       "Critical reviews of recent scholarly books on international politics, economics, culture, Asia, and the Belt and Road Initiative.",
     image: "/assets/article-figures/cinin-kuresel-altyapi-stratejisi/figure-01.jpg",
-    url: "/makale-cagrilari/kitap-incelemesi",
+    url: "/tr/makale-cagrilari/kitap-incelemesi",
     urlEn: "/en/calls-for-papers/book-reviews",
   },
 ];
 
 export const pastCalls = [
-  { title: "Gelişen Ülkelerde Kültürel Miras Yağmasına Karşı Stratejiler ve İşbirliği", titleEn: "Strategies and Cooperation against Cultural Heritage Plunder in Developing Countries", deadline: "1 Şubat 2026", deadlineEn: "1 February 2026", issue: "Cilt 7 · Sayı 3", issueEn: "Volume 7 · Issue 3", issueHref: "/arsiv/cilt-7-sayi-3", issueHrefEn: "/en/archive/volume-7-issue-3", slug: "kulturel-miras-yagmasina-karsi-stratejiler" },
-  { title: "Dünyada Giderek Büyüyen Gıda ve Su Krizi", titleEn: "The Growing Global Food and Water Crisis", deadline: "15 Eylül 2025", deadlineEn: "15 September 2025", issue: "Cilt 7 · Sayı 1", issueEn: "Volume 7 · Issue 1", issueHref: "/arsiv/cilt-7-sayi-1", issueHrefEn: "/en/archive/volume-7-issue-1", slug: "dunyada-gida-ve-su-krizi" },
+  { title: "Gelişen Ülkelerde Kültürel Miras Yağmasına Karşı Stratejiler ve İşbirliği", titleEn: "Strategies and Cooperation against Cultural Heritage Plunder in Developing Countries", deadline: "1 Şubat 2026", deadlineEn: "1 February 2026", issue: "Cilt 7 · Sayı 3", issueEn: "Volume 7 · Issue 3", issueHref: "/tr/arsiv/cilt-7-sayi-3", issueHrefEn: "/en/archive/volume-7-issue-3", slug: "kulturel-miras-yagmasina-karsi-stratejiler" },
+  { title: "Dünyada Giderek Büyüyen Gıda ve Su Krizi", titleEn: "The Growing Global Food and Water Crisis", deadline: "15 Eylül 2025", deadlineEn: "15 September 2025", issue: "Cilt 7 · Sayı 1", issueEn: "Volume 7 · Issue 1", issueHref: "/tr/arsiv/cilt-7-sayi-1", issueHrefEn: "/en/archive/volume-7-issue-1", slug: "dunyada-gida-ve-su-krizi" },
   { title: "Latin Amerika’da İlerici Dönüşümler ve Amerikan Hegemonyacılığına Direniş", titleEn: "Progressive Transformations in Latin America and Resistance to American Hegemonism", deadline: "1 Ağustos 2025", deadlineEn: "1 August 2025", issue: "Tematik sayı henüz yayımlanmadı", issueEn: "The thematic issue has not yet been published", issueHref: null, issueHrefEn: null, slug: "latin-amerikada-ilerici-donusumler" },
-  { title: "Çok Kutupluluğa Karşı Tehditler ve Ayrılıkçı-Aşırılıkçı Kışkırtmalar", titleEn: "Threats to Multipolarity and Separatist-Extremist Provocations", deadline: "1 Haziran 2025", deadlineEn: "1 June 2025", issue: "Cilt 6 · Sayı 4", issueEn: "Volume 6 · Issue 4", issueHref: "/arsiv/cilt-6-sayi-4", issueHrefEn: "/en/archive/volume-6-issue-4", slug: "cok-kutupluluga-karsi-tehditler" },
-  { title: "70. Yıl Dönümünde Bandung Konferansı’nın Mirası", titleEn: "The Legacy of the Bandung Conference on Its 70th Anniversary", deadline: "1 Aralık 2024", deadlineEn: "1 December 2024", issue: "Cilt 6 · Sayı 3", issueEn: "Volume 6 · Issue 3", issueHref: "/arsiv/cilt-6-sayi-3", issueHrefEn: "/en/archive/volume-6-issue-3", slug: "bandung-konferansinin-mirasi" },
-  { title: "1911 Çin Devrimi ve Sun Yat-Sen’in Güncel Mirası", titleEn: "The 1911 Chinese Revolution and Sun Yat-sen’s Contemporary Legacy", deadline: "1 Ekim 2024", deadlineEn: "1 October 2024", issue: "Cilt 6 · Sayı 2", issueEn: "Volume 6 · Issue 2", issueHref: "/arsiv/cilt-6-sayi-2", issueHrefEn: "/en/archive/volume-6-issue-2", slug: "1911-cin-devrimi-ve-sun-yat-sen" },
-  { title: "Küresel Güney’de Bilimsel ve Teknolojik Gelişme Politikaları", titleEn: "Policies for Scientific and Technological Development in the Global South", deadline: "1 Ağustos 2024", deadlineEn: "1 August 2024", issue: "Cilt 6 · Sayı 1", issueEn: "Volume 6 · Issue 1", issueHref: "/arsiv/cilt-6-sayi-1", issueHrefEn: "/en/archive/volume-6-issue-1", slug: "kuresel-guneyde-bilim-ve-teknoloji" },
-  { title: "Orta Asya’da Kuşak ve Yol Girişimi ve Türk Devletleri Teşkilatı", titleEn: "The Belt and Road Initiative and the Organization of Turkic States in Central Asia", deadline: "1 Haziran 2024", deadlineEn: "1 June 2024", issue: "Cilt 5 · Sayı 4", issueEn: "Volume 5 · Issue 4", issueHref: "/arsiv/cilt-5-sayi-4", issueHrefEn: "/en/archive/volume-5-issue-4", slug: "orta-asyada-kusak-ve-yol-ve-tdt" },
-  { title: "Kuşak ve Yol Girişimi ve İslam Dünyası", titleEn: "The Belt and Road Initiative and the Islamic World", deadline: "1 Mart 2024", deadlineEn: "1 March 2024", issue: "Cilt 5 · Sayı 3", issueEn: "Volume 5 · Issue 3", issueHref: "/arsiv/cilt-5-sayi-3", issueHrefEn: "/en/archive/volume-5-issue-3", slug: "kusak-ve-yol-ve-islam-dunyasi" },
+  { title: "Çok Kutupluluğa Karşı Tehditler ve Ayrılıkçı-Aşırılıkçı Kışkırtmalar", titleEn: "Threats to Multipolarity and Separatist-Extremist Provocations", deadline: "1 Haziran 2025", deadlineEn: "1 June 2025", issue: "Cilt 6 · Sayı 4", issueEn: "Volume 6 · Issue 4", issueHref: "/tr/arsiv/cilt-6-sayi-4", issueHrefEn: "/en/archive/volume-6-issue-4", slug: "cok-kutupluluga-karsi-tehditler" },
+  { title: "70. Yıl Dönümünde Bandung Konferansı’nın Mirası", titleEn: "The Legacy of the Bandung Conference on Its 70th Anniversary", deadline: "1 Aralık 2024", deadlineEn: "1 December 2024", issue: "Cilt 6 · Sayı 3", issueEn: "Volume 6 · Issue 3", issueHref: "/tr/arsiv/cilt-6-sayi-3", issueHrefEn: "/en/archive/volume-6-issue-3", slug: "bandung-konferansinin-mirasi" },
+  { title: "1911 Çin Devrimi ve Sun Yat-Sen’in Güncel Mirası", titleEn: "The 1911 Chinese Revolution and Sun Yat-sen’s Contemporary Legacy", deadline: "1 Ekim 2024", deadlineEn: "1 October 2024", issue: "Cilt 6 · Sayı 2", issueEn: "Volume 6 · Issue 2", issueHref: "/tr/arsiv/cilt-6-sayi-2", issueHrefEn: "/en/archive/volume-6-issue-2", slug: "1911-cin-devrimi-ve-sun-yat-sen" },
+  { title: "Küresel Güney’de Bilimsel ve Teknolojik Gelişme Politikaları", titleEn: "Policies for Scientific and Technological Development in the Global South", deadline: "1 Ağustos 2024", deadlineEn: "1 August 2024", issue: "Cilt 6 · Sayı 1", issueEn: "Volume 6 · Issue 1", issueHref: "/tr/arsiv/cilt-6-sayi-1", issueHrefEn: "/en/archive/volume-6-issue-1", slug: "kuresel-guneyde-bilim-ve-teknoloji" },
+  { title: "Orta Asya’da Kuşak ve Yol Girişimi ve Türk Devletleri Teşkilatı", titleEn: "The Belt and Road Initiative and the Organization of Turkic States in Central Asia", deadline: "1 Haziran 2024", deadlineEn: "1 June 2024", issue: "Cilt 5 · Sayı 4", issueEn: "Volume 5 · Issue 4", issueHref: "/tr/arsiv/cilt-5-sayi-4", issueHrefEn: "/en/archive/volume-5-issue-4", slug: "orta-asyada-kusak-ve-yol-ve-tdt" },
+  { title: "Kuşak ve Yol Girişimi ve İslam Dünyası", titleEn: "The Belt and Road Initiative and the Islamic World", deadline: "1 Mart 2024", deadlineEn: "1 March 2024", issue: "Cilt 5 · Sayı 3", issueEn: "Volume 5 · Issue 3", issueHref: "/tr/arsiv/cilt-5-sayi-3", issueHrefEn: "/en/archive/volume-5-issue-3", slug: "kusak-ve-yol-ve-islam-dunyasi" },
 ];
 
 export const editorialBoard = [

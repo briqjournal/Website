@@ -42,7 +42,7 @@ export function HomeArticleSearch({
       </div>
       <div className="article-list">
         {visibleArticles.map((article, index) => (
-          <a className="article-row" href={`${locale === "tr" ? "/makaleler" : "/en/articles"}/${locale === "en" ? article.slugEn : article.slug}`} key={article.slug}>
+          <a className="article-row" href={`${locale === "tr" ? "/tr/makaleler" : "/en/articles"}/${locale === "en" ? article.slugEn : article.slug}`} key={article.slug}>
             <span className="article-number">{String(index + 1).padStart(2, "0")}</span>
             <span className="article-meta">
               <small>{locale === "tr" ? article.typeTr : article.typeEn}</small>
@@ -56,7 +56,7 @@ export function HomeArticleSearch({
           <p className="empty-state">{locale === "tr" ? "Bu aramayla eşleşen içerik bulunamadı." : "No article matches this search."}</p>
         )}
       </div>
-      <a className="underlined-link" href={locale === "tr" ? "/makaleler" : "/en/articles"}>
+      <a className="underlined-link" href={locale === "tr" ? "/tr/makaleler" : "/en/articles"}>
         {locale === "tr" ? "Tüm makaleleri görüntüle" : "View all articles"} <span>→︎</span>
       </a>
     </>

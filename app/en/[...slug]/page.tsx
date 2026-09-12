@@ -58,24 +58,24 @@ const pages: Record<string, PageRecord> = {
 };
 
 const englishPageMetadata: Record<string, [string, string, string]> = {
-  journal: ["About BRIQ", "BRIQ’s publication profile, purpose, and institutional structure.", "/dergi"],
-  "journal/about-briq": ["About BRIQ", "BRIQ’s publication profile, purpose, and institutional structure.", "/dergi/briq-hakkinda"],
-  "journal/publication-principles": ["Principles of Publication", "BRIQ’s publication principles and developing-world perspective.", "/dergi/yayin-ilkeleri"],
-  "journal/publication-board": ["Publication Board", "Members of the BRIQ Publication Board.", "/dergi/yayin-kurulu"],
-  "journal/advisory-board": ["Advisory Board", "Members of the BRIQ Advisory Board.", "/dergi/danisma-kurulu"],
-  "journal/indexes": ["Indexing & Archiving", "BRIQ’s verified indexing and open-repository records.", "/dergi/endeksler"],
-  contact: ["Contact", "BRIQ contact information and message form.", "/iletisim"],
-  search: ["Search BRIQ", "Search BRIQ articles, issues, authors, and calls for papers.", "/arama"],
-  "for-authors": ["For Authors", "BRIQ submission guidelines and publication review process.", "/yazarlar"],
-  "for-authors/guidelines": ["Submission Guidelines", "Submission requirements for BRIQ research articles and other contributions.", "/yazarlar/yazim-kurallari"],
-  "for-authors/review-process": ["Publication Review Process", "BRIQ’s editorial and peer-review workflow from submission to publication.", "/yazarlar/yayin-degerlendirme-sureci"],
-  "for-authors/copyright-and-licence": ["Copyright Terms and Licence", "BRIQ copyright transfer and CC BY 4.0 licence terms.", "/yazarlar/telif-hakki-sartlari-ve-lisans"],
-  "for-authors/publication-ethics": ["Publication Ethics", "The ethical responsibilities of BRIQ authors, reviewers, and editors.", "/yazarlar/yayin-etigi"],
-  "current-issue": ["Current Issue — Volume 7, Issue 4", "A New Era in West Asia: contents and full-issue PDF.", "/guncel-sayi"],
-  archive: ["All Issues", "BRIQ’s verified bilingual archive of 27 issues.", "/arsiv"],
-  articles: ["Article Search", "Advanced search and filtering across BRIQ’s publication archive.", "/makaleler"],
-  "calls-for-papers": ["Calls for Papers", "Active and past BRIQ calls for papers with deadlines and publication outcomes.", "/makale-cagrilari"],
-  "annual-reports": ["Annual Reports", "Verified records of BRIQ’s publishing activity and institutional development.", "/yillik-raporlar"],
+  journal: ["About BRIQ", "BRIQ’s publication profile, purpose, and institutional structure.", "/tr/dergi"],
+  "journal/about-briq": ["About BRIQ", "BRIQ’s publication profile, purpose, and institutional structure.", "/tr/dergi/briq-hakkinda"],
+  "journal/publication-principles": ["Principles of Publication", "BRIQ’s publication principles and developing-world perspective.", "/tr/dergi/yayin-ilkeleri"],
+  "journal/publication-board": ["Publication Board", "Members of the BRIQ Publication Board.", "/tr/dergi/yayin-kurulu"],
+  "journal/advisory-board": ["Advisory Board", "Members of the BRIQ Advisory Board.", "/tr/dergi/danisma-kurulu"],
+  "journal/indexes": ["Indexing & Archiving", "BRIQ’s verified indexing and open-repository records.", "/tr/dergi/endeksler"],
+  contact: ["Contact", "BRIQ contact information and message form.", "/tr/iletisim"],
+  search: ["Search BRIQ", "Search BRIQ articles, issues, authors, and calls for papers.", "/tr/arama"],
+  "for-authors": ["For Authors", "BRIQ submission guidelines and publication review process.", "/tr/yazarlar"],
+  "for-authors/guidelines": ["Submission Guidelines", "Submission requirements for BRIQ research articles and other contributions.", "/tr/yazarlar/yazim-kurallari"],
+  "for-authors/review-process": ["Publication Review Process", "BRIQ’s editorial and peer-review workflow from submission to publication.", "/tr/yazarlar/yayin-degerlendirme-sureci"],
+  "for-authors/copyright-and-licence": ["Copyright Terms and Licence", "BRIQ copyright transfer and CC BY 4.0 licence terms.", "/tr/yazarlar/telif-hakki-sartlari-ve-lisans"],
+  "for-authors/publication-ethics": ["Publication Ethics", "The ethical responsibilities of BRIQ authors, reviewers, and editors.", "/tr/yazarlar/yayin-etigi"],
+  "current-issue": ["Current Issue — Volume 7, Issue 4", "A New Era in West Asia: contents and full-issue PDF.", "/tr/guncel-sayi"],
+  archive: ["All Issues", "BRIQ’s verified bilingual archive of 27 issues.", "/tr/arsiv"],
+  articles: ["Article Search", "Advanced search and filtering across BRIQ’s publication archive.", "/tr/makaleler"],
+  "calls-for-papers": ["Calls for Papers", "Active and past BRIQ calls for papers with deadlines and publication outcomes.", "/tr/makale-cagrilari"],
+  "annual-reports": ["Annual Reports", "Verified records of BRIQ’s publishing activity and institutional development.", "/tr/yillik-raporlar"],
 };
 
 function EnglishHero({ kicker, title, intro }: { kicker: string; title: string; intro?: string }) {
@@ -762,7 +762,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         description: `Verified PDF viewer for ${title}.`,
         alternates: {
           canonical: `/en/articles/${englishSlug}/pdf`,
-          languages: { "tr-TR": `/makaleler/${article.slug}/pdf`, "en-US": `/en/articles/${englishSlug}/pdf` },
+          languages: { "tr-TR": `/tr/makaleler/${article.slug}/pdf`, "en-US": `/en/articles/${englishSlug}/pdf` },
         },
       };
     }
@@ -783,7 +783,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         alternates: {
           canonical: `/en/articles/${englishSlug}`,
           languages: {
-            "tr-TR": `/makaleler/${article.slug}`,
+            "tr-TR": `/tr/makaleler/${article.slug}`,
             "en-US": `/en/articles/${englishSlug}`,
           },
         },
@@ -812,7 +812,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         description: `${profile.name}: ${profile.affiliationEn}. ${profile.articles.length} work(s) published in BRIQ.`,
         alternates: {
           canonical: `/en/authors/${profile.id}`,
-          languages: { "tr-TR": `/yazar/${profile.id}`, "en-US": `/en/authors/${profile.id}` },
+          languages: { "tr-TR": `/tr/yazar/${profile.id}`, "en-US": `/en/authors/${profile.id}` },
         },
       };
     }
@@ -828,7 +828,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         alternates: {
           canonical: `/en/archive/volume-${issue.volume}-issue-${issue.issue}`,
           languages: {
-            "tr-TR": `/arsiv/cilt-${issue.volume}-sayi-${issue.issue}`,
+            "tr-TR": `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}`,
             "en-US": `/en/archive/volume-${issue.volume}-issue-${issue.issue}`,
           },
         },
@@ -844,7 +844,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         description: `Verified BRIQ annual report dated ${report.dateEn}.`,
         alternates: {
           canonical: `/en/annual-reports/${report.number}`,
-          languages: { "tr-TR": `/yillik-raporlar/${report.number}`, "en-US": `/en/annual-reports/${report.number}` },
+          languages: { "tr-TR": `/tr/yillik-raporlar/${report.number}`, "en-US": `/en/annual-reports/${report.number}` },
         },
       };
     }
@@ -866,7 +866,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         description: active?.summaryEn || `Archived BRIQ call for papers. Deadline: ${past?.deadlineEn}.`,
         alternates: {
           canonical: `/en/calls-for-papers/${callSlug}`,
-          languages: { "tr-TR": `/makale-cagrilari/${turkishSlug}`, "en-US": `/en/calls-for-papers/${callSlug}` },
+          languages: { "tr-TR": `/tr/makale-cagrilari/${turkishSlug}`, "en-US": `/en/calls-for-papers/${callSlug}` },
         },
       };
     }
@@ -929,7 +929,7 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
     ? findArticleByEnglishRouteSlug(alternateArticleSlug)
     : undefined;
   const alternateHref = alternateArticle
-    ? `/makaleler/${alternateArticle.slug}${articlePdfMatch ? "/pdf" : ""}`
+    ? `/tr/makaleler/${alternateArticle.slug}${articlePdfMatch ? "/pdf" : ""}`
     : undefined;
 
   return (

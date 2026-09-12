@@ -304,10 +304,10 @@ export async function ArticlePlatform({
   const trPdf = articlePdfUrl(article, "tr");
   const enPdf = articlePdfUrl(article, "en");
   const activePdf = locale === "tr" ? trPdf : (enPdf || trPdf);
-  const base = locale === "tr" ? `/makaleler/${routeSlug}` : `/en/articles/${routeSlug}`;
+  const base = locale === "tr" ? `/tr/makaleler/${routeSlug}` : `/en/articles/${routeSlug}`;
   const issueHref = article.volume === 7 && article.issue === 4
-    ? (locale === "tr" ? "/guncel-sayi" : "/en/current-issue")
-    : (locale === "tr" ? `/arsiv/cilt-${article.volume}-sayi-${article.issue}` : `/en/archive/volume-${article.volume}-issue-${article.issue}`);
+    ? (locale === "tr" ? "/tr/guncel-sayi" : "/en/current-issue")
+    : (locale === "tr" ? `/tr/arsiv/cilt-${article.volume}-sayi-${article.issue}` : `/en/archive/volume-${article.volume}-issue-${article.issue}`);
   const issueColor = issueAccent(article.volume, article.issue);
   const history: PublicationHistory = {
     received: details?.received || metadata?.received || article.received_date,
@@ -386,7 +386,7 @@ export async function ArticlePlatform({
             {displayReferences.length ? <details className="article-accordion article-references" id={locale === "tr" ? "kaynakca" : "references"}><summary><span>{locale === "tr" ? "Kaynakça" : "References"}</span><b>{displayReferences.length}</b></summary><ol>{displayReferences.map((reference) => {
               const doi = referenceDoi(reference.text);
               const briqArticle = briqReferenceArticle(reference.text, doi);
-              const briqHref = briqArticle ? (locale === "tr" ? `/makaleler/${briqArticle.slug}` : `/en/articles/${articleRouteSlug(briqArticle, "en")}`) : undefined;
+              const briqHref = briqArticle ? (locale === "tr" ? `/tr/makaleler/${briqArticle.slug}` : `/en/articles/${articleRouteSlug(briqArticle, "en")}`) : undefined;
               return <li id={reference.id} key={reference.id}><p><ReferenceText text={reference.text} doi={doi} briqHref={briqHref} /></p><span className="reference-actions">
                 <ReferenceBackLink targetId={reference.id} locale={locale} kind="reference" />
               </span></li>;
@@ -405,7 +405,7 @@ export function ArticlePdfPage({ article, locale, routeSlug = article.slug }: { 
   const trPdf = articlePdfUrl(article, "tr");
   const enPdf = articlePdfUrl(article, "en");
   const title = locale === "tr" ? article.title_tr : (article.title_en || article.title_tr);
-  const articleHref = locale === "tr" ? `/makaleler/${routeSlug}` : `/en/articles/${routeSlug}`;
+  const articleHref = locale === "tr" ? `/tr/makaleler/${routeSlug}` : `/en/articles/${routeSlug}`;
   return (
     <>
       <section className="pdf-page-heading"><div className="site-shell"><div><span>{locale === "tr" ? "PDF görüntüleyici" : "PDF viewer"}</span><h1>{title}</h1></div><a className="button button-light" href={articleHref}>←︎ {locale === "tr" ? "HTML makaleye dön" : "Back to HTML article"}</a></div></section>

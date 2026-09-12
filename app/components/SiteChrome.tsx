@@ -15,27 +15,27 @@ const englishNavItems = [
 ];
 
 const turkishToEnglishPaths: Record<string, string> = {
-  "/": "/en",
-  "/dergi/briq-hakkinda": "/en/journal/about-briq",
-  "/dergi/yayin-ilkeleri": "/en/journal/publication-principles",
-  "/dergi/yayin-kurulu": "/en/journal/publication-board",
-  "/dergi/danisma-kurulu": "/en/journal/advisory-board",
-  "/dergi/endeksler": "/en/journal/indexes",
-  "/iletisim": "/en/contact",
-  "/guncel-sayi": "/en/current-issue",
-  "/arsiv": "/en/archive",
-  "/makaleler": "/en/articles",
-  "/yazarlar": "/en/for-authors",
-  "/yazarlar/yazim-kurallari": "/en/for-authors/guidelines",
-  "/yazarlar/yayin-degerlendirme-sureci": "/en/for-authors/review-process",
-  "/yazarlar/telif-hakki-sartlari-ve-lisans": "/en/for-authors/copyright-and-licence",
-  "/yazarlar/yayin-etigi": "/en/for-authors/publication-ethics",
-  "/arama": "/en/search",
-  "/makale-cagrilari": "/en/calls-for-papers",
-  "/makale-cagrilari/transatlantik-iliskilerin-yeniden-yapilanmasi": "/en/calls-for-papers/transatlantic-relations",
-  "/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah": "/en/calls-for-papers/artificial-intelligence-productive-forces",
-  "/makale-cagrilari/kitap-incelemesi": "/en/calls-for-papers/book-reviews",
-  "/yillik-raporlar": "/en/annual-reports",
+  "/tr": "/en",
+  "/tr/dergi/briq-hakkinda": "/en/journal/about-briq",
+  "/tr/dergi/yayin-ilkeleri": "/en/journal/publication-principles",
+  "/tr/dergi/yayin-kurulu": "/en/journal/publication-board",
+  "/tr/dergi/danisma-kurulu": "/en/journal/advisory-board",
+  "/tr/dergi/endeksler": "/en/journal/indexes",
+  "/tr/iletisim": "/en/contact",
+  "/tr/guncel-sayi": "/en/current-issue",
+  "/tr/arsiv": "/en/archive",
+  "/tr/makaleler": "/en/articles",
+  "/tr/yazarlar": "/en/for-authors",
+  "/tr/yazarlar/yazim-kurallari": "/en/for-authors/guidelines",
+  "/tr/yazarlar/yayin-degerlendirme-sureci": "/en/for-authors/review-process",
+  "/tr/yazarlar/telif-hakki-sartlari-ve-lisans": "/en/for-authors/copyright-and-licence",
+  "/tr/yazarlar/yayin-etigi": "/en/for-authors/publication-ethics",
+  "/tr/arama": "/en/search",
+  "/tr/makale-cagrilari": "/en/calls-for-papers",
+  "/tr/makale-cagrilari/transatlantik-iliskilerin-yeniden-yapilanmasi": "/en/calls-for-papers/transatlantic-relations",
+  "/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah": "/en/calls-for-papers/artificial-intelligence-productive-forces",
+  "/tr/makale-cagrilari/kitap-incelemesi": "/en/calls-for-papers/book-reviews",
+  "/tr/yillik-raporlar": "/en/annual-reports",
 };
 
 const currentIssueArticleSlugs: Record<string, string> = {
@@ -64,70 +64,70 @@ function alternateLocalePath(pathname: string, locale: Locale) {
   if (locale === "tr") {
     if (turkishToEnglishPaths[path]) return turkishToEnglishPaths[path];
 
-    const issue = path.match(/^\/arsiv\/cilt-(\d+)-sayi-(\d+)$/);
+    const issue = path.match(/^\/tr\/arsiv\/cilt-(\d+)-sayi-(\d+)$/);
     if (issue) return `/en/archive/volume-${issue[1]}-issue-${issue[2]}`;
 
-    const articlePdf = path.match(/^\/makaleler\/(.+)\/pdf$/);
+    const articlePdf = path.match(/^\/tr\/makaleler\/(.+)\/pdf$/);
     if (articlePdf) {
       const slug = currentIssueArticleSlugs[articlePdf[1]] || articlePdf[1];
       return `/en/articles/${slug}/pdf`;
     }
 
-    const article = path.match(/^\/makaleler\/(.+)$/);
+    const article = path.match(/^\/tr\/makaleler\/(.+)$/);
     if (article) {
       const slug = currentIssueArticleSlugs[article[1]] || article[1];
       return `/en/articles/${slug}`;
     }
 
-    const author = path.match(/^\/yazar\/(.+)$/);
+    const author = path.match(/^\/tr\/yazar\/(.+)$/);
     if (author) return `/en/authors/${author[1]}`;
 
-    const report = path.match(/^\/yillik-raporlar\/(\d+)$/);
+    const report = path.match(/^\/tr\/yillik-raporlar\/(\d+)$/);
     if (report) return `/en/annual-reports/${report[1]}`;
 
-    const call = path.match(/^\/makale-cagrilari\/(.+)$/);
+    const call = path.match(/^\/tr\/makale-cagrilari\/(.+)$/);
     if (call) return `/en/calls-for-papers/${call[1]}`;
 
-    return path === "/" ? "/en" : `/en${path}`;
+    return path === "/tr" ? "/en" : `/en${path.replace(/^\/tr/, "")}`;
   }
 
   if (englishToTurkishPaths[path]) return englishToTurkishPaths[path];
 
   const issue = path.match(/^\/en\/archive\/volume-(\d+)-issue-(\d+)$/);
-  if (issue) return `/arsiv/cilt-${issue[1]}-sayi-${issue[2]}`;
+  if (issue) return `/tr/arsiv/cilt-${issue[1]}-sayi-${issue[2]}`;
 
   const articlePdf = path.match(/^\/en\/articles\/(.+)\/pdf$/);
   if (articlePdf) {
     const slug = canonicalToTurkishArticleSlugs[articlePdf[1]] || articlePdf[1];
-    return `/makaleler/${slug}/pdf`;
+    return `/tr/makaleler/${slug}/pdf`;
   }
 
   const article = path.match(/^\/en\/articles\/(.+)$/);
   if (article) {
     const slug = canonicalToTurkishArticleSlugs[article[1]] || article[1];
-    return `/makaleler/${slug}`;
+    return `/tr/makaleler/${slug}`;
   }
 
   const author = path.match(/^\/en\/authors\/(.+)$/);
-  if (author) return `/yazar/${author[1]}`;
+  if (author) return `/tr/yazar/${author[1]}`;
 
   const report = path.match(/^\/en\/annual-reports\/(\d+)$/);
-  if (report) return `/yillik-raporlar/${report[1]}`;
+  if (report) return `/tr/yillik-raporlar/${report[1]}`;
 
   const call = path.match(/^\/en\/calls-for-papers\/(.+)$/);
-  if (call) return `/makale-cagrilari/${call[1]}`;
+  if (call) return `/tr/makale-cagrilari/${call[1]}`;
 
-  return path.replace(/^\/en(?=\/|$)/, "") || "/";
+  return `/tr${path.replace(/^\/en(?=\/|$)/, "")}`;
 }
 
-export function SiteHeader({ locale = "tr" }: { locale?: Locale }) {
+export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride }: { locale?: Locale; alternateHref?: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [condensed, setCondensed] = useState(false);
   const condensedRef = useRef(false);
-  const pathname = usePathname() || (locale === "en" ? "/en" : "/");
+  const pathname = usePathname() || (locale === "en" ? "/en" : "/tr");
   const isEnglish = locale === "en";
   const items = isEnglish ? englishNavItems : navItems;
-  const alternateHref = alternateLocalePath(pathname, locale);
+  const alternateHref = alternateHrefOverride || alternateLocalePath(pathname, locale);
 
   useEffect(() => {
     const onScroll = () => {
@@ -174,7 +174,7 @@ export function SiteHeader({ locale = "tr" }: { locale?: Locale }) {
       </div>
       <header className={`site-header ${condensed ? "is-condensed" : ""}`}>
         <div className="site-shell header-main">
-          <a href={isEnglish ? "/en" : "/"} className={`brand brand-${locale}`} aria-label={isEnglish ? "BRIQ home" : "BRIQ ana sayfa"}>
+          <a href={isEnglish ? "/en" : "/tr"} className={`brand brand-${locale}`} aria-label={isEnglish ? "BRIQ home" : "BRIQ ana sayfa"}>
             <span className="brand-mark" aria-hidden="true">
               <img src={isEnglish ? "/assets/briq-logo.png" : "/assets/briq-logo-tr.png"} alt="" loading="eager" decoding="async" fetchPriority="high" />
             </span>
@@ -214,7 +214,7 @@ export function SiteHeader({ locale = "tr" }: { locale?: Locale }) {
             <a className="submit-button" href={`https://dergipark.org.tr/${isEnglish ? "en" : "tr"}/journal/4696/submission/step/manuscript/new`}>
               {isEnglish ? "Submit" : "Yazı Gönder"} <span>↗︎</span>
             </a>
-            <a className="header-search" href={isEnglish ? "/en/search" : "/arama"} aria-label={isEnglish ? "Search BRIQ" : "BRIQ’te ara"}>
+            <a className="header-search" href={isEnglish ? "/en/search" : "/tr/arama"} aria-label={isEnglish ? "Search BRIQ" : "BRIQ’te ara"}>
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
             </a>
           </div>
@@ -242,17 +242,17 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
         </div>
         <div>
           <h3>{isEnglish ? "Journal" : "Dergi"}</h3>
-          <a href={isEnglish ? "/en/journal/about-briq" : "/dergi/briq-hakkinda"}>{isEnglish ? "About BRIQ" : "BRIQ Hakkında"}</a>
-          <a href={isEnglish ? "/en/journal/publication-board" : "/dergi/yayin-kurulu"}>{isEnglish ? "Publication Board" : "Yayın Kurulu"}</a>
-          <a href={isEnglish ? "/en/journal/indexes" : "/dergi/endeksler"}>{isEnglish ? "Indexes" : "Endeksler"}</a>
-          <a href={isEnglish ? "/en/annual-reports" : "/yillik-raporlar"}>{isEnglish ? "Annual reports" : "Yıllık raporlar"}</a>
+          <a href={isEnglish ? "/en/journal/about-briq" : "/tr/dergi/briq-hakkinda"}>{isEnglish ? "About BRIQ" : "BRIQ Hakkında"}</a>
+          <a href={isEnglish ? "/en/journal/publication-board" : "/tr/dergi/yayin-kurulu"}>{isEnglish ? "Publication Board" : "Yayın Kurulu"}</a>
+          <a href={isEnglish ? "/en/journal/indexes" : "/tr/dergi/endeksler"}>{isEnglish ? "Indexes" : "Endeksler"}</a>
+          <a href={isEnglish ? "/en/annual-reports" : "/tr/yillik-raporlar"}>{isEnglish ? "Annual reports" : "Yıllık raporlar"}</a>
         </div>
         <div>
           <h3>{isEnglish ? "Publishing" : "Yayınlar"}</h3>
-          <a href={isEnglish ? "/en/archive" : "/arsiv"}>{isEnglish ? "All issues" : "Tüm sayılar"}</a>
-          <a href={isEnglish ? "/en/articles" : "/makaleler"}>{isEnglish ? "Article Search" : "Makale Arama"}</a>
-          <a href={isEnglish ? "/en/for-authors/guidelines" : "/yazarlar/yazim-kurallari"}>{isEnglish ? "For authors" : "Yazarlar için"}</a>
-          <a href={isEnglish ? "/en/calls-for-papers" : "/makale-cagrilari"}>{isEnglish ? "Calls for papers" : "Makale çağrıları"}</a>
+          <a href={isEnglish ? "/en/archive" : "/tr/arsiv"}>{isEnglish ? "All issues" : "Tüm sayılar"}</a>
+          <a href={isEnglish ? "/en/articles" : "/tr/makaleler"}>{isEnglish ? "Article Search" : "Makale Arama"}</a>
+          <a href={isEnglish ? "/en/for-authors/guidelines" : "/tr/yazarlar/yazim-kurallari"}>{isEnglish ? "For authors" : "Yazarlar için"}</a>
+          <a href={isEnglish ? "/en/calls-for-papers" : "/tr/makale-cagrilari"}>{isEnglish ? "Calls for papers" : "Makale çağrıları"}</a>
         </div>
         <div>
           <h3>{isEnglish ? "Contact" : "İletişim"}</h3>
@@ -300,7 +300,7 @@ export function IndexTicker({ locale = "tr" }: { locale?: Locale }) {
           ))}
         </div>
       </div>
-      <a href={isEnglish ? "/en/journal/indexes" : "/dergi/endeksler"} className="ticker-link">
+      <a href={isEnglish ? "/en/journal/indexes" : "/tr/dergi/endeksler"} className="ticker-link">
         {isEnglish ? "Details" : "Ayrıntılar"} →︎
       </a>
     </section>

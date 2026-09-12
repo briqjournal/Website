@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "BRIQ is a quarterly, peer-reviewed scholarly journal of international politics, economics, and culture, published in Turkish and English.",
   alternates: {
     canonical: "/en",
-    languages: { "tr-TR": "/", "en-US": "/en" },
+    languages: { "tr-TR": "/tr", "en-US": "/en", "x-default": "/" },
   },
 };
 

@@ -68,10 +68,10 @@ const articleAliases = [
   "mogolistanin-ucuncu-komsu-diplomasisi",
   "kusak-ve-yolun-guvenligi-kitap-incelemesi",
 ];
-for (const slug of articleAliases) paths.add(`/makaleler/${slug}`);
+for (const slug of articleAliases) paths.add(`/tr/makaleler/${slug}`);
 
 for (const pathname of [...paths]) {
-  if (/^\/(?:makaleler|en\/articles)\/[^/]+$/.test(pathname)) {
+  if (/^\/(?:tr\/makaleler|en\/articles)\/[^/]+$/.test(pathname)) {
     paths.add(`${pathname}/pdf`);
   }
 }

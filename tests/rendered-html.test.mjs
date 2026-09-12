@@ -30,36 +30,19 @@ function englishArticleSlug(turkishSlug) {
   return englishSlugCounts.get(base) > 1 ? `${base}-volume-${article.volume}-issue-${article.issue}` : base;
 }
 
-async function renderPath(pathname) {
+async function renderPath(pathname, headers = {}) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${pathname}`);
   const { default: worker } = await import(workerUrl.href);
   return worker.fetch(
-    new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }),
+    new Request(`http://localhost${pathname}`, { headers: { accept: "text/html", ...headers } }),
     { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
     { waitUntil() {}, passThroughOnException() {} },
   );
 }
 
 test("renders production metadata without preview markers", async () => {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
-
-  const response = await worker.fetch(
-    new Request("http://localhost/", {
-      headers: { accept: "text/html" },
-    }),
-    {
-      ASSETS: {
-        fetch: async () => new Response("Not found", { status: 404 }),
-      },
-    },
-    {
-      waitUntil() {},
-      passThroughOnException() {},
-    },
-  );
+  const response = await renderPath("/tr");
 
   assert.equal(response.status, 200);
   assert.match(
@@ -68,7 +51,24 @@ test("renders production metadata without preview markers", async () => {
   );
   const html = await response.text();
   assert.doesNotMatch(html, /name=["']codex-preview["']/i);
-  assert.match(html, /<link rel="canonical" href="https:\/\/briqjournal\.com\/?"/i);
+  assert.match(html, /<link rel="canonical" href="https:\/\/briqjournal\.com\/tr"/i);
+});
+
+test("routes the locale gateway by Cloudflare country and preserves legacy Turkish URLs", async () => {
+  const [turkey, abroad, legacy] = await Promise.all([
+    renderPath("/", { "cf-ipcountry": "TR" }),
+    renderPath("/", { "cf-ipcountry": "DE" }),
+    renderPath("/arsiv?cilt=7"),
+  ]);
+
+  assert.equal(turkey.status, 307);
+  assert.equal(new URL(turkey.headers.get("location")).pathname, "/tr");
+  assert.equal(abroad.status, 307);
+  assert.equal(new URL(abroad.headers.get("location")).pathname, "/en");
+  assert.equal(legacy.status, 308);
+  const legacyLocation = new URL(legacy.headers.get("location"));
+  assert.equal(legacyLocation.pathname, "/tr/arsiv");
+  assert.equal(legacyLocation.searchParams.get("cilt"), "7");
 });
 
 test("keeps registered BRIQ DOIs matched to their Crossref article records", async () => {
@@ -89,16 +89,16 @@ test("keeps registered BRIQ DOIs matched to their Crossref article records", asy
 
 test("keeps the revised Turkish and English information architecture in parity", async () => {
   const routePairs = [
-    ["/dergi/briq-hakkinda", "BRIQ Hakkında", "/en/journal/about-briq", "About BRIQ"],
-    ["/dergi/yayin-ilkeleri", "Yayın İlkeleri", "/en/journal/publication-principles", "Principles of Publication"],
-    ["/yazarlar", "Yazarlar İçin", "/en/for-authors", "For Authors"],
-    ["/yazarlar/yazim-kurallari", "Yazım kuralları", "/en/for-authors/guidelines", "Submission Guidelines"],
-    ["/yazarlar/yayin-degerlendirme-sureci", "Yayın Değerlendirme Süreci", "/en/for-authors/review-process", "Publication Review Process"],
-    ["/yazarlar/telif-hakki-sartlari-ve-lisans", "Telif Hakkı Şartları ve Lisans", "/en/for-authors/copyright-and-licence", "Lisence Terms"],
-    ["/yazarlar/yayin-etigi", "Yayın Etiği", "/en/for-authors/publication-ethics", "Ethical Principles"],
-    ["/iletisim", "Dergi iletişim sorumlusu", "/en/contact", "Journal contact person"],
-    ["/makale-cagrilari", "Geçmiş çağrılar", "/en/calls-for-papers", "Past calls"],
-    ["/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah", "Kamusal yarar ve teknolojik egemenlik", "/en/calls-for-papers/artificial-intelligence-productive-forces", "Public benefit and technological sovereignty"],
+    ["/tr/dergi/briq-hakkinda", "BRIQ Hakkında", "/en/journal/about-briq", "About BRIQ"],
+    ["/tr/dergi/yayin-ilkeleri", "Yayın İlkeleri", "/en/journal/publication-principles", "Principles of Publication"],
+    ["/tr/yazarlar", "Yazarlar İçin", "/en/for-authors", "For Authors"],
+    ["/tr/yazarlar/yazim-kurallari", "Yazım kuralları", "/en/for-authors/guidelines", "Submission Guidelines"],
+    ["/tr/yazarlar/yayin-degerlendirme-sureci", "Yayın Değerlendirme Süreci", "/en/for-authors/review-process", "Publication Review Process"],
+    ["/tr/yazarlar/telif-hakki-sartlari-ve-lisans", "Telif Hakkı Şartları ve Lisans", "/en/for-authors/copyright-and-licence", "Lisence Terms"],
+    ["/tr/yazarlar/yayin-etigi", "Yayın Etiği", "/en/for-authors/publication-ethics", "Ethical Principles"],
+    ["/tr/iletisim", "Dergi iletişim sorumlusu", "/en/contact", "Journal contact person"],
+    ["/tr/makale-cagrilari", "Geçmiş çağrılar", "/en/calls-for-papers", "Past calls"],
+    ["/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah", "Kamusal yarar ve teknolojik egemenlik", "/en/calls-for-papers/artificial-intelligence-productive-forces", "Public benefit and technological sovereignty"],
   ];
 
   for (const [trPath, trText, enPath, enText] of routePairs) {
@@ -124,7 +124,7 @@ test("keeps calls for papers fully localised in both languages", async () => {
 
 test("publishes reciprocal canonical and language metadata for both locales", async () => {
   const [trResponse, enResponse] = await Promise.all([
-    renderPath("/makale-cagrilari"),
+    renderPath("/tr/makale-cagrilari"),
     renderPath("/en/calls-for-papers"),
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
@@ -133,12 +133,12 @@ test("publishes reciprocal canonical and language metadata for both locales", as
   assert.match(trHtml, /hrefLang="en-US"/i);
   assert.match(enHtml, /hrefLang="tr-TR"/i);
   assert.match(trHtml, /\/en\/calls-for-papers/);
-  assert.match(enHtml, /\/makale-cagrilari/);
+  assert.match(enHtml, /\/tr\/makale-cagrilari/);
 });
 
 test("renders source-faithful publication principles with a two-level section navigator", async () => {
   const [trResponse, enResponse] = await Promise.all([
-    renderPath("/dergi/yayin-ilkeleri"),
+    renderPath("/tr/dergi/yayin-ilkeleri"),
     renderPath("/en/journal/publication-principles"),
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
@@ -158,7 +158,7 @@ test("renders source-faithful publication principles with a two-level section na
 
 test("keeps the Turkish and English About BRIQ pages in structural parity", async () => {
   const [trResponse, enResponse] = await Promise.all([
-    renderPath("/dergi/briq-hakkinda"),
+    renderPath("/tr/dergi/briq-hakkinda"),
     renderPath("/en/journal/about-briq"),
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
@@ -167,7 +167,7 @@ test("keeps the Turkish and English About BRIQ pages in structural parity", asyn
   assert.match(trHtml, /class="[^"]*scrollspy-link level-2/);
   assert.match(trHtml, /class="[^"]*scrollspy-link level-3/);
   assert.match(trHtml, /BRIQ \(Belt &amp; Road Initiative Quarterly\) Türkçe-İngilizce yayınlanan üç aylık/);
-  assert.match(trHtml, /Çin Araştırmaları Enstitüsü tarafından yayımlanmaktadır/);
+  assert.match(trHtml, /Çin İş Geliştirme ve Dostluk Derneği tarafından yayımlanmaktadır/);
   assert.match(trHtml, /2019’da yayın hayatına başladı/);
   assert.match(trHtml, /Alternatif bir akademik alan/);
   assert.match(enHtml, /<h1>About BRIQ<\/h1>/);
@@ -176,14 +176,14 @@ test("keeps the Turkish and English About BRIQ pages in structural parity", asyn
   assert.match(enHtml, /class="[^"]*scrollspy-link level-3/);
   assert.match(enHtml, /BRIQ \(Belt &amp; Road Initiative Quarterly\) is a scholarly journal/);
   assert.match(enHtml, /Independent publication decisions/);
-  assert.match(enHtml, /China Research Institute of the China Business Development and Friendship Association/);
+  assert.match(enHtml, /Turkish-Chinese Business Development and Friendship Association/);
   assert.match(enHtml, /began publication in 2019/);
   assert.match(enHtml, /An alternative scholarly space/);
 });
 
 test("shows publication types and cover-colour issue badges in both article directories", async () => {
   const [trResponse, enResponse] = await Promise.all([
-    renderPath("/makaleler"),
+    renderPath("/tr/makaleler"),
     renderPath("/en/articles"),
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
@@ -203,7 +203,7 @@ test("shows publication types and cover-colour issue badges in both article dire
 test("keeps the official Turkish and English author guidance in the two-level longform system", async () => {
   const pagePairs = [
     [
-      "/yazarlar/yazim-kurallari",
+      "/tr/yazarlar/yazim-kurallari",
       "BRIQ Dergisi, akademik makalelerden kitap incelemelerine",
       "Röportaj önerileri için lütfen Yayın Kurulu ile iletişime geçiniz.",
       "/en/for-authors/guidelines",
@@ -211,7 +211,7 @@ test("keeps the official Turkish and English author guidance in the two-level lo
       "Please contact the Editorial Board for interview proposals.",
     ],
     [
-      "/yazarlar/yayin-degerlendirme-sureci",
+      "/tr/yazarlar/yayin-degerlendirme-sureci",
       "Makalelerin kabulü aşağıda belirtilen aşamalardan oluşur:",
       "son hali Yazıişleri’nin kontrolünden geçerek baskıya gönderilir.",
       "/en/for-authors/review-process",
@@ -219,7 +219,7 @@ test("keeps the official Turkish and English author guidance in the two-level lo
       "controlled by the Editorial Team and then sent to publication.",
     ],
     [
-      "/yazarlar/telif-hakki-sartlari-ve-lisans",
+      "/tr/yazarlar/telif-hakki-sartlari-ve-lisans",
       "İlgili yazar ve tüm diğer yazarlar bir bütün olarak",
       "Creative Commons Atıf 4.0 Uluslararası Lisansı",
       "/en/for-authors/copyright-and-licence",
@@ -227,7 +227,7 @@ test("keeps the official Turkish and English author guidance in the two-level lo
       "The Journal uses Creative Commons Attribution 4.0 International License",
     ],
     [
-      "/yazarlar/yayin-etigi",
+      "/tr/yazarlar/yayin-etigi",
       "ulusal ve uluslararası akademik ilke ve etik değerlere bağlı",
       "Düşmanlık, iftira ve hakaret içeren aşağılayıcı kişisel yorumlar yapılmamalıdır.",
       "/en/for-authors/publication-ethics",
@@ -253,13 +253,13 @@ test("keeps the official Turkish and English author guidance in the two-level lo
 
 test("keeps the new issue, board, archive, and author interactions in Turkish-English parity", async () => {
   const [trIssue, enIssue, trBoard, enBoard, trArchive, enArchive, trArticle, enArticle] = await Promise.all([
-    renderPath("/guncel-sayi"),
+    renderPath("/tr/guncel-sayi"),
     renderPath("/en/current-issue"),
-    renderPath("/dergi/yayin-kurulu"),
+    renderPath("/tr/dergi/yayin-kurulu"),
     renderPath("/en/journal/publication-board"),
-    renderPath("/arsiv"),
+    renderPath("/tr/arsiv"),
     renderPath("/en/archive"),
-    renderPath("/makaleler/kulturel-silinmeden-tarihsel-kurtarmaya"),
+    renderPath("/tr/makaleler/kulturel-silinmeden-tarihsel-kurtarmaya"),
     renderPath(`/en/articles/${englishArticleSlug("kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin")}`),
   ]).then((responses) => Promise.all(responses.map((response) => response.text())));
 
@@ -273,7 +273,7 @@ test("keeps the new issue, board, archive, and author interactions in Turkish-En
   assert.equal((enIssue.match(/class="issue-toc-number"/g) || []).length, 6);
 
   assert.match(trBoard, /\/assets\/people\/fikret-akfirat\.jpg/);
-  assert.match(trBoard, /href="\/yazar\/fikret-akfirat"/);
+  assert.match(trBoard, /href="\/tr\/yazar\/fikret-akfirat"/);
   assert.match(enBoard, /\/assets\/people\/fikret-akfirat\.jpg/);
   assert.match(enBoard, /href="\/en\/authors\/fikret-akfirat"/);
 
@@ -290,8 +290,8 @@ test("keeps the new issue, board, archive, and author interactions in Turkish-En
 
 test("renders archived issues with the same platform structure as the current issue", async () => {
   const responses = await Promise.all([
-    renderPath("/guncel-sayi"),
-    renderPath("/arsiv/cilt-6-sayi-4"),
+    renderPath("/tr/guncel-sayi"),
+    renderPath("/tr/arsiv/cilt-6-sayi-4"),
     renderPath("/en/current-issue"),
     renderPath("/en/archive/volume-6-issue-4"),
   ]);
@@ -317,7 +317,7 @@ test("renders archived issues with the same platform structure as the current is
 
 test("uses verified bilingual cover headings for every issue", async () => {
   const issuePaths = archive.issues.flatMap((issue) => [
-    `/arsiv/cilt-${issue.volume}-sayi-${issue.issue}`,
+    `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}`,
     `/en/archive/volume-${issue.volume}-issue-${issue.issue}`,
   ]);
   const responses = await Promise.all(issuePaths.map(renderPath));
@@ -330,7 +330,7 @@ test("uses verified bilingual cover headings for every issue", async () => {
     assert.doesNotMatch(html, /(Spring|Summer|Autumn|Winter) \d{4} Issue/, issuePaths[index]);
   }
 
-  const spring2026Tr = pages[issuePaths.indexOf("/arsiv/cilt-7-sayi-2")];
+  const spring2026Tr = pages[issuePaths.indexOf("/tr/arsiv/cilt-7-sayi-2")];
   const spring2026En = pages[issuePaths.indexOf("/en/archive/volume-7-issue-2")];
   assert.match(spring2026Tr, /<h1>Çin’e Özgü Sosyalizmin<em>Ekonomi Politiği<\/em><\/h1>/);
   assert.match(spring2026En, /<h1>The Political Economy of<em>Socialism with Chinese Characteristics<\/em><\/h1>/);
@@ -338,8 +338,8 @@ test("uses verified bilingual cover headings for every issue", async () => {
 
 test("keeps standalone board pages compact without repeating the page title", async () => {
   const boardPairs = [
-    ["/dergi/yayin-kurulu", "Yayın Kurulu", "Üyeler"],
-    ["/dergi/danisma-kurulu", "Danışma Kurulu", "Üyeler"],
+    ["/tr/dergi/yayin-kurulu", "Yayın Kurulu", "Üyeler"],
+    ["/tr/dergi/danisma-kurulu", "Danışma Kurulu", "Üyeler"],
     ["/en/journal/publication-board", "Publication Board", "Members"],
     ["/en/journal/advisory-board", "Advisory Board", "Members"],
   ];
@@ -358,7 +358,7 @@ test("keeps standalone board pages compact without repeating the page title", as
   }
 
   const [trInactive, enInactive] = await Promise.all([
-    renderPath("/dergi/editorluk-ekibi"),
+    renderPath("/tr/dergi/editorluk-ekibi"),
     renderPath("/en/journal/editorial-team"),
   ]);
   assert.equal(trInactive.status, 404);
@@ -369,9 +369,9 @@ test("separates bilingual HTML article reading from the dedicated PDF viewer", a
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const englishSlug = englishArticleSlug(slug);
   const [trArticleResponse, enArticleResponse, trPdfResponse, enPdfResponse] = await Promise.all([
-    renderPath(`/makaleler/${slug}`),
+    renderPath(`/tr/makaleler/${slug}`),
     renderPath(`/en/articles/${englishSlug}`),
-    renderPath(`/makaleler/${slug}/pdf`),
+    renderPath(`/tr/makaleler/${slug}/pdf`),
     renderPath(`/en/articles/${englishSlug}/pdf`),
   ]);
   const [trArticle, enArticle, trPdf, enPdf] = await Promise.all([
@@ -383,7 +383,7 @@ test("separates bilingual HTML article reading from the dedicated PDF viewer", a
 
   assert.match(trArticle, /Kitaplar Nasıl “Yakıldı”/);
   assert.match(enArticle, /How the Books Were “Burned”/);
-  assert.match(trArticle, new RegExp(`href="/makaleler/${slug}/pdf"`));
+  assert.match(trArticle, new RegExp(`href="/tr/makaleler/${slug}/pdf"`));
   assert.match(enArticle, new RegExp(`href="/en/articles/${englishSlug}/pdf"`));
   assert.match(enArticle, new RegExp(`download="briq-${englishSlug}-en\\.pdf"`));
   assert.match(trArticle, /class="inline-citation"/);
@@ -396,7 +396,7 @@ test("separates bilingual HTML article reading from the dedicated PDF viewer", a
   assert.match(enPdf, /PDF viewer/);
   assert.match(trPdf, /<iframe/);
   assert.match(enPdf, /<iframe/);
-  assert.match(trPdf, new RegExp(`href="/makaleler/${slug}"`));
+  assert.match(trPdf, new RegExp(`href="/tr/makaleler/${slug}"`));
   assert.match(enPdf, new RegExp(`href="/en/articles/${englishSlug}"`));
   assert.match(enPdf, new RegExp(`download="briq-${englishSlug}-en\\.pdf"`));
 });
@@ -410,8 +410,8 @@ test("uses English article slugs and redirects legacy Turkish-slug English URLs"
     renderPath(`/en/articles/${englishSlug}/pdf`),
     renderPath(`/en/articles/${slug}`),
     renderPath(`/en/articles/${slug}/pdf`),
-    renderPath(`/makaleler/${englishSlug}`),
-    renderPath(`/makaleler/${englishSlug}/pdf`),
+    renderPath(`/tr/makaleler/${englishSlug}`),
+    renderPath(`/tr/makaleler/${englishSlug}/pdf`),
   ]);
   const directoryHtml = await directory.text();
   const [englishArticleHtml, englishPdfHtml] = await Promise.all([englishArticle.text(), englishPdf.text()]);
@@ -420,16 +420,16 @@ test("uses English article slugs and redirects legacy Turkish-slug English URLs"
   assert.doesNotMatch(directoryHtml, new RegExp(`href="/en/articles/${slug}"`));
   const articleSwitchHref = englishArticleHtml.match(/href="([^"]+)"[^>]+aria-label="Bu sayfanın Türkçe sürümü"/)?.[1];
   const pdfSwitchHref = englishPdfHtml.match(/href="([^"]+)"[^>]+aria-label="Bu sayfanın Türkçe sürümü"/)?.[1];
-  assert.ok([`/makaleler/${slug}`, `/makaleler/${englishSlug}`].includes(articleSwitchHref));
-  assert.ok([`/makaleler/${slug}/pdf`, `/makaleler/${englishSlug}/pdf`].includes(pdfSwitchHref));
+  assert.ok([`/tr/makaleler/${slug}`, `/tr/makaleler/${englishSlug}`].includes(articleSwitchHref));
+  assert.ok([`/tr/makaleler/${slug}/pdf`, `/tr/makaleler/${englishSlug}/pdf`].includes(pdfSwitchHref));
   assert.ok([307, 308].includes(legacyArticle.status));
   assert.equal(new URL(legacyArticle.headers.get("location")).pathname, `/en/articles/${englishSlug}`);
   assert.ok([307, 308].includes(legacyPdf.status));
   assert.equal(new URL(legacyPdf.headers.get("location")).pathname, `/en/articles/${englishSlug}/pdf`);
   assert.ok([307, 308].includes(misplacedTurkishArticle.status));
-  assert.equal(new URL(misplacedTurkishArticle.headers.get("location")).pathname, `/makaleler/${slug}`);
+  assert.equal(new URL(misplacedTurkishArticle.headers.get("location")).pathname, `/tr/makaleler/${slug}`);
   assert.ok([307, 308].includes(misplacedTurkishPdf.status));
-  assert.equal(new URL(misplacedTurkishPdf.headers.get("location")).pathname, `/makaleler/${slug}/pdf`);
+  assert.equal(new URL(misplacedTurkishPdf.headers.get("location")).pathname, `/tr/makaleler/${slug}/pdf`);
 });
 
 test("renders every current-issue contribution in the bilingual HTML article platform", async () => {
@@ -446,7 +446,7 @@ test("renders every current-issue contribution in the bilingual HTML article pla
 
   for (const slug of slugs) {
     const [trResponse, enResponse] = await Promise.all([
-      renderPath(`/makaleler/${slug}`),
+      renderPath(`/tr/makaleler/${slug}`),
       renderPath(`/en/articles/${englishArticleSlug(slug)}`),
     ]);
     assert.equal(trResponse.status, 200, `TR ${slug}`);
@@ -475,7 +475,7 @@ test("renders every Volume 7 Issue 4 contribution from its source PDF with the c
 
   for (const slug of slugs) {
     const [trResponse, enResponse] = await Promise.all([
-      renderPath(`/makaleler/${slug}`),
+      renderPath(`/tr/makaleler/${slug}`),
       renderPath(`/en/articles/${englishArticleSlug(slug)}`),
     ]);
     assert.equal(trResponse.status, 200, `TR ${slug}`);
@@ -493,7 +493,7 @@ test("renders every Volume 7 Issue 4 contribution from its source PDF with the c
 test("keeps article history fixed and hides unavailable publication statements", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trResponse, enResponse] = await Promise.all([
-    renderPath(`/makaleler/${slug}`),
+    renderPath(`/tr/makaleler/${slug}`),
     renderPath(`/en/articles/${englishArticleSlug(slug)}`),
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
@@ -516,7 +516,7 @@ test("keeps article history fixed and hides unavailable publication statements",
 test("capitalizes the first letter of every displayed keyword", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trResponse, enResponse] = await Promise.all([
-    renderPath(`/makaleler/${slug}`),
+    renderPath(`/tr/makaleler/${slug}`),
     renderPath(`/en/articles/${englishArticleSlug(slug)}`),
   ]);
   for (const html of [await trResponse.text(), await enResponse.text()]) {
@@ -529,7 +529,7 @@ test("capitalizes the first letter of every displayed keyword", async () => {
 
 test("links each resolvable in-text citation to an expandable reference record", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
-  const response = await renderPath(`/makaleler/${slug}`);
+  const response = await renderPath(`/tr/makaleler/${slug}`);
   const html = await response.text();
   assert.ok((html.match(/class="inline-citation"/g) || []).length >= 60);
   assert.doesNotMatch(html, /class="inline-citation"[^>]*data-tooltip=/);
@@ -550,25 +550,25 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.doesNotMatch(html, /Görüntülenme ve atıflar/);
   assert.doesNotMatch(html, /class="article-metrics"/);
 
-  const doiArticle = await renderPath("/makaleler/cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege");
+  const doiArticle = await renderPath("/tr/makaleler/cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege");
   const doiHtml = await doiArticle.text();
   assert.match(doiHtml, /href="https:\/\/doi\.org\/10\.[^"]+"/);
   assert.match(doiHtml, /https:\/\/doi\.org\/10\./);
-  const styledCitationArticle = await renderPath("/makaleler/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi");
+  const styledCitationArticle = await renderPath("/tr/makaleler/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi");
   const styledCitationHtml = await styledCitationArticle.text();
   const citationBlock = styledCitationHtml.match(/<blockquote><p>([\s\S]*?)<\/p><\/blockquote>/)?.[1] || "";
   assert.match(citationBlock, /<em>/);
   assert.match(citationBlock, /class="reference-inline-link"/);
   assert.doesNotMatch(citationBlock, /style=/);
-  assert.equal((doiHtml.match(/class="article-declaration"/g) || []).length, 1);
-  assert.match(doiHtml, /Finansman beyanı/);
-  assert.doesNotMatch(doiHtml, /Çıkar çatışması beyanı/);
+  assert.ok((doiHtml.match(/article-declaration-accordion/g) || []).length >= 5);
+  assert.match(doiHtml, /Finansman \/ Destek/);
+  assert.match(doiHtml, /Çıkar Çatışması/);
 });
 
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trResponse, enResponse] = await Promise.all([
-    renderPath(`/makaleler/${slug}`),
+    renderPath(`/tr/makaleler/${slug}`),
     renderPath(`/en/articles/${englishArticleSlug(slug)}`),
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
@@ -587,11 +587,11 @@ test("uses bilingual visual, footnote, and return-navigation labels", async () =
 test("keeps the refined article hierarchy, action order, and call deadline in parity", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trArticleResponse, enArticleResponse, trHomeResponse, enHomeResponse, trCallsResponse, enCallsResponse] = await Promise.all([
-    renderPath(`/makaleler/${slug}`),
+    renderPath(`/tr/makaleler/${slug}`),
     renderPath(`/en/articles/${englishArticleSlug(slug)}`),
-    renderPath("/"),
+    renderPath("/tr"),
     renderPath("/en"),
-    renderPath("/makale-cagrilari"),
+    renderPath("/tr/makale-cagrilari"),
     renderPath("/en/calls-for-papers"),
   ]);
   const [trArticle, enArticle, trHome, enHome, trCalls, enCalls] = await Promise.all([
@@ -631,8 +631,8 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(enHome, /briq-logo\.png/);
   assert.doesNotMatch(trHome, /Sayı gündemini incele/);
   assert.doesNotMatch(enHome, /Explore the issue focus/);
-  assert.match(trHome, /Çin İş Geliştirme ve Dostluk derneği bünyesinde yer alan Çin Araştırmaları Enstitüsü \(ICST\) tarafından yayımlanmaktadır/);
-  assert.match(enHome, /Published by the Institute for China Studies in Türkiye \(ICST\), which operates within the China Business Development and Friendship Association/);
+  assert.match(trHome, /Çin İş Geliştirme ve Dostluk Derneği tarafından yayımlanmaktadır/);
+  assert.match(enHome, /Published by the Turkish-Chinese Business Development and Friendship Association/);
 
   for (const html of [trHome, trCalls]) {
     assert.match(html, /1 Ekim 2026/);
@@ -653,9 +653,9 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
 
 test("orders author guidance as rules, review, ethics, and copyright in both languages", async () => {
   const [trHubResponse, trReviewResponse, trEthicsResponse, enHubResponse, enReviewResponse, enEthicsResponse] = await Promise.all([
-    renderPath("/yazarlar"),
-    renderPath("/yazarlar/yayin-degerlendirme-sureci"),
-    renderPath("/yazarlar/yayin-etigi"),
+    renderPath("/tr/yazarlar"),
+    renderPath("/tr/yazarlar/yayin-degerlendirme-sureci"),
+    renderPath("/tr/yazarlar/yayin-etigi"),
     renderPath("/en/for-authors"),
     renderPath("/en/for-authors/review-process"),
     renderPath("/en/for-authors/publication-ethics"),
@@ -671,15 +671,15 @@ test("orders author guidance as rules, review, ethics, and copyright in both lan
 
   assert.ok(trHub.indexOf("Yayın Etiği") < trHub.indexOf("Telif Hakkı Şartları ve Lisans"));
   assert.ok(enHub.indexOf("Publication Ethics") < enHub.indexOf("Copyright Terms and Licence"));
-  assert.match(trReview, /class="editorial-next-link" href="\/yazarlar\/yayin-etigi">Yayın Etiği/);
+  assert.match(trReview, /class="editorial-next-link" href="\/tr\/yazarlar\/yayin-etigi">Yayın Etiği/);
   assert.match(enReview, /class="editorial-next-link" href="\/en\/for-authors\/publication-ethics">Publication Ethics/);
-  assert.match(trEthics, /class="editorial-next-link" href="\/yazarlar\/telif-hakki-sartlari-ve-lisans">Telif Hakkı Şartları ve Lisans/);
+  assert.match(trEthics, /class="editorial-next-link" href="\/tr\/yazarlar\/telif-hakki-sartlari-ve-lisans">Telif Hakkı Şartları ve Lisans/);
   assert.match(enEthics, /class="editorial-next-link" href="\/en\/for-authors\/copyright-and-licence">Copyright Terms and Licence/);
 });
 
 test("shows biographies and dated BRIQ appointments on staff profiles", async () => {
   const [trResponse, enResponse] = await Promise.all([
-    renderPath("/yazar/fikret-akfirat"),
+    renderPath("/tr/yazar/fikret-akfirat"),
     renderPath("/en/authors/fikret-akfirat"),
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
@@ -695,7 +695,7 @@ test("shows biographies and dated BRIQ appointments on staff profiles", async ()
 });
 
 test("groups all issues of each volume under one archive year without rewriting issue dates", async () => {
-  const [trResponse, enResponse] = await Promise.all([renderPath("/arsiv"), renderPath("/en/archive")]);
+  const [trResponse, enResponse] = await Promise.all([renderPath("/tr/arsiv"), renderPath("/en/archive")]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
 
   for (const html of [trHtml, enHtml]) {
@@ -714,7 +714,7 @@ test("keeps current-issue identity values at the same type size as the other fac
 });
 
 test("shows the DOI prefix and official DergiPark wordmark in both home pages", async () => {
-  const [trResponse, enResponse] = await Promise.all([renderPath("/"), renderPath("/en")]);
+  const [trResponse, enResponse] = await Promise.all([renderPath("/tr"), renderPath("/en")]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
   for (const html of [trHtml, enHtml]) {
     assert.match(html, /DOI 10\.67696/);
@@ -727,9 +727,11 @@ test("shows the DOI prefix and official DergiPark wordmark in both home pages", 
 test("ships a complete bilingual mobile layout without emoji-presented arrows", async () => {
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   const sourceFiles = [
-    "../app/[...slug]/page.tsx",
+    "../app/[...slug]/route.ts",
     "../app/en/[...slug]/page.tsx",
     "../app/page.tsx",
+    "../app/tr/[...slug]/page.tsx",
+    "../app/tr/page.tsx",
     "../app/en/page.tsx",
     "../app/components/ArticleExplorer.tsx",
     "../app/components/CallsExplorer.tsx",
@@ -754,7 +756,7 @@ test("ships a complete bilingual mobile layout without emoji-presented arrows", 
   assert.match(css, /@media \(max-width: 380px\)/);
   assert.doesNotMatch(sources.join("\n"), /[←→↓↑↗](?!︎)/u);
 
-  const [trResponse, enResponse] = await Promise.all([renderPath("/"), renderPath("/en")]);
+  const [trResponse, enResponse] = await Promise.all([renderPath("/tr"), renderPath("/en")]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
   for (const html of [trHtml, enHtml]) {
     assert.match(html, /aria-controls="primary-navigation"/);

@@ -63,7 +63,7 @@ export function IssuePlatform({
         ["Erişim", "Açık erişim"],
       ]);
   const homeHref = isEnglish ? "/en" : "/";
-  const archiveHref = isEnglish ? "/en/archive" : "/arsiv";
+  const archiveHref = isEnglish ? "/en/archive" : "/tr/arsiv";
   const issueName = isEnglish
     ? `Volume ${record.volume} · Issue ${record.issue}`
     : `Cilt ${record.volume} · Sayı ${record.issue}`;
@@ -141,7 +141,7 @@ export function IssuePlatform({
         <div className="issue-toc">
           {publications.map((publication, index) => (
             <a
-              href={isEnglish ? `/en/articles/${articleRouteSlug(publication, "en")}` : `/makaleler/${publication.slug}`}
+              href={isEnglish ? `/en/articles/${articleRouteSlug(publication, "en")}` : `/tr/makaleler/${publication.slug}`}
               key={publication.slug}
             >
               <span className="issue-toc-number">{padIssueNumber(index + 1)}</span>

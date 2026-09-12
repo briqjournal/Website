@@ -315,7 +315,7 @@ export function authorId(name: string) {
 }
 
 export function authorProfileHref(name: string, locale: Locale) {
-  return `${locale === "tr" ? "/yazar" : "/en/authors"}/${authorId(name)}`;
+  return `${locale === "tr" ? "/tr/yazar" : "/en/authors"}/${authorId(name)}`;
 }
 
 export function authorAffiliation(name: string, locale: Locale) {
