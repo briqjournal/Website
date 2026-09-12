@@ -1,4 +1,4 @@
-name: BRIQ policy update temporary
+name: Trigger BRIQ policy updater
 on:
   push:
     paths:
@@ -6,183 +6,16 @@ on:
 permissions:
   contents: write
 jobs:
-  patch:
+  trigger:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Apply requested updates
-        shell: python
+      - name: Trigger one-time policy update workflow
         run: |
-          from pathlib import Path
-
-          def replace(path, old, new, count=None):
-              p = Path(path)
-              s = p.read_text()
-              if old not in s:
-                  raise SystemExit(f'pattern not found in {path}: {old[:100]!r}')
-              s = s.replace(old, new, count if count is not None else -1)
-              p.write_text(s)
-
-          tr = 'app/[...slug]/page.tsx'
-          en = 'app/en/[...slug]/page.tsx'
-          article = 'app/components/ArticlePlatform.tsx'
-
-          # 2) Peer review: explicit minimum two independent reviewers + divergent-review rule.
-          replace(tr,
-              '<p>e) Makaleden sorumlu editör, BRIQ kriterleri bakımından yeterli bulunan gönderileri ilgili alanda uzman hakemlere gönderir.</p><p>f)Hakem raporları yazara yollanır',
-              '<p>e) Makaleden sorumlu editör, BRIQ kriterleri bakımından yeterli bulunan gönderileri ilgili alanda uzman hakemlere gönderir.</p><p>Ön incelemeyi geçen her araştırma makalesi, çift kör hakemlik ilkesi doğrultusunda, ilgili alanda uzman en az iki bağımsız hakeme gönderilir. Hakemlerin mümkün olduğunca farklı kurumlardan seçilmesine özen gösterilir.</p><p>Hakem görüşlerinin esaslı biçimde ayrışması halinde editör değerlendirmesiyle karar verilebilir veya üçüncü bir hakem görüşüne başvurulabilir.</p><p>f)Hakem raporları yazara yollanır')
-          replace(en,
-              '<p>e) If the relevant BRIQ editors find the submission eligible for external and blind peer review based on the above criteria, the Editorial Team will contact potential peer-reviewers who have expertise in the relevant areas.</p><p>f) Upon receipt of peer-review reports',
-              '<p>e) If the relevant BRIQ editors find the submission eligible for external and blind peer review based on the above criteria, the Editorial Team will contact potential peer-reviewers who have expertise in the relevant areas.</p><p>Every research article that passes initial screening is sent, under the double-blind peer-review principle, to at least two independent reviewers with expertise in the relevant field. Reviewers are selected from different institutions whenever possible.</p><p>If the reviewers’ opinions diverge substantially, the editor may make a reasoned assessment or seek an additional opinion from a third reviewer.</p><p>f) Upon receipt of peer-review reports')
-
-          # 9) Publisher: make the association itself the publisher in both languages.
-          replace(tr,
-              'BRIQ, Çin İş Geliştirme ve Dostluk Derneği bünyesindeki Çin Araştırmaları Enstitüsü tarafından yayımlanmaktadır. Derginin sahibi, Çin İş Geliştirme ve Dostluk Derneği (Türk-Çin İş Der) adına Emine Sağlam’dır.',
-              'BRIQ’in yayıncısı Çin İş Geliştirme ve Dostluk Derneği’dir (Türk-Çin İş Der). Derginin sahibi, Çin İş Geliştirme ve Dostluk Derneği adına Emine Sağlam’dır.')
-          replace(en,
-              'BRIQ is published by the China Research Institute of the China Business Development and Friendship Association. Scientific decisions on individual submissions are made by the journal’s authorised academic bodies.',
-              'BRIQ is published by the Turkish-Chinese Business Development and Friendship Association. Scientific decisions on individual submissions are made by the journal’s authorised academic bodies.')
-          replace(en,
-              'BRIQ is published by the China Research Institute of the China Business Development and Friendship Association.',
-              'BRIQ is published by the Turkish-Chinese Business Development and Friendship Association.')
-
-          # 19) Indexing & archiving: distinguish indexes from repository/preservation services.
-          old_tr = '''function Indexes() {
-  return (
-    <>
-      <PageHero
-        kicker="Dergi"
-        title="Endeksler"
-        intro="BRIQ’in doğrulanmış dizin ve akademik arşiv kayıtları aşağıda işlevleri birbirinden ayrılarak gösterilir."
-      />
-      <div className="site-shell page-section">
-        <IndexTicker />
-        <div className="index-detail-grid">
-          <article>
-            <span>01</span>
-            <h2>ERIH PLUS</h2>
-            <p>Beşerî ve sosyal bilimler için Avrupa referans dizini.</p>
-            <a className="underlined-link" href="https://erihplus.hkdir.no/">Resmî kayıtta ara ↗︎</a>
-          </article>
-          <article>
-            <span>02</span>
-            <h2>EuroPub</h2>
-            <p>BRIQ dergi profili ve makale kayıtlarının yer aldığı akademik dizin.</p>
-            <a className="underlined-link" href="https://europub.co.uk/journals/briq-belt-road-initiative-quarterly-J-33908">BRIQ profilini aç ↗︎</a>
-          </article>
-          <article>
-            <span>03</span>
-            <h2>SSOAR</h2>
-            <p>BRIQ yayınlarının tam metin kopyalarını kalıcı tanımlayıcılarla barındıran sosyal bilimler açık arşivi; dizin değildir.</p>
-            <a className="underlined-link" href="https://www.ssoar.info/ssoar/">SSOAR’ı aç ↗︎</a>
-          </article>
-        </div>
-      </div>
-    </>
-  );
-}'''
-          new_tr = '''function Indexes() {
-  return (
-    <>
-      <PageHero
-        kicker="Dergi"
-        title="Dizinler ve Arşivler"
-        intro="BRIQ’in doğrulanmış dizin, açık erişim deposu ve arşiv kayıtları işlevlerine göre ayrı başlıklar altında gösterilir."
-      />
-      <div className="site-shell page-section">
-        <IndexTicker />
-        <h2 className="page-section-title">Dizinler</h2>
-        <div className="index-detail-grid">
-          <article>
-            <span>01</span>
-            <h2>ERIH PLUS</h2>
-            <p>Beşerî ve sosyal bilimler için Avrupa referans dizini.</p>
-            <a className="underlined-link" href="https://erihplus.hkdir.no/">Resmî kayıtta ara ↗︎</a>
-          </article>
-          <article>
-            <span>02</span>
-            <h2>EuroPub</h2>
-            <p>BRIQ dergi profili ve makale kayıtlarının yer aldığı akademik dizin.</p>
-            <a className="underlined-link" href="https://europub.co.uk/journals/briq-belt-road-initiative-quarterly-J-33908">BRIQ profilini aç ↗︎</a>
-          </article>
-        </div>
-        <h2 className="page-section-title">Açık erişim deposu ve arşivleme</h2>
-        <div className="index-detail-grid">
-          <article>
-            <span>01</span>
-            <h2>SSOAR</h2>
-            <p>BRIQ yayınlarının tam metin kopyalarını kalıcı tanımlayıcılarla barındıran sosyal bilimler açık erişim deposu ve arşividir; akademik dizin olarak sınıflandırılmaz.</p>
-            <a className="underlined-link" href="https://www.ssoar.info/ssoar/">SSOAR’ı aç ↗︎</a>
-          </article>
-        </div>
-      </div>
-    </>
-  );
-}'''
-          replace(tr, old_tr, new_tr)
-
-          old_en = '''function EnglishIndexes() {
-  return (
-    <>
-      <EnglishHero kicker="Journal" title="Indexes" intro="Verified indexing and repository records, identified by their actual function." />
-      <div className="site-shell page-section">
-        <IndexTicker locale="en" />
-        <div className="index-detail-grid">
-          <article><span>01</span><h2>ERIH PLUS</h2><p>European Reference Index for the Humanities and Social Sciences.</p><a className="underlined-link" href="https://erihplus.hkdir.no/">Search the official register ↗︎</a></article>
-          <article><span>02</span><h2>EuroPub</h2><p>Academic index containing BRIQ’s journal and article records.</p><a className="underlined-link" href="https://europub.co.uk/journals/briq-belt-road-initiative-quarterly-J-33908">Open the BRIQ profile ↗︎</a></article>
-          <article><span>03</span><h2>SSOAR</h2><p>Open social-science repository preserving full-text BRIQ publications; it is not presented as an index.</p><a className="underlined-link" href="https://www.ssoar.info/ssoar/">Open SSOAR ↗︎</a></article>
-        </div>
-      </div>
-    </>
-  );
-}'''
-          new_en = '''function EnglishIndexes() {
-  return (
-    <>
-      <EnglishHero kicker="Journal" title="Indexing & Archiving" intro="BRIQ’s verified indexing, open-repository, and archiving records are presented separately according to their function." />
-      <div className="site-shell page-section">
-        <IndexTicker locale="en" />
-        <h2 className="page-section-title">Abstracting & Indexing</h2>
-        <div className="index-detail-grid">
-          <article><span>01</span><h2>ERIH PLUS</h2><p>European Reference Index for the Humanities and Social Sciences.</p><a className="underlined-link" href="https://erihplus.hkdir.no/">Search the official register ↗︎</a></article>
-          <article><span>02</span><h2>EuroPub</h2><p>Academic index containing BRIQ’s journal and article records.</p><a className="underlined-link" href="https://europub.co.uk/journals/briq-belt-road-initiative-quarterly-J-33908">Open the BRIQ profile ↗︎</a></article>
-        </div>
-        <h2 className="page-section-title">Open Repository & Archiving</h2>
-        <div className="index-detail-grid">
-          <article><span>01</span><h2>SSOAR</h2><p>Open social-science repository and archive preserving full-text BRIQ publications with persistent identifiers; it is not classified as an academic index.</p><a className="underlined-link" href="https://www.ssoar.info/ssoar/">Open SSOAR ↗︎</a></article>
-        </div>
-      </div>
-    </>
-  );
-}'''
-          replace(en, old_en, new_en)
-          replace(tr, 'title: "Endeksler ve açık arşivler"', 'title: "Dizinler ve Arşivler"') if False else None
-          replace(tr, '"dergi/endeksler": ["Endeksler ve açık arşivler", "BRIQ’in doğrulanmış endeks ve açık arşiv kayıtları."]', '"dergi/endeksler": ["Dizinler ve Arşivler", "BRIQ’in doğrulanmış dizin, açık erişim deposu ve arşiv kayıtları."]')
-          replace(en, '"journal/indexes": ["Indexes and Repositories", "BRIQ’s verified index and open-repository records.", "/dergi/endeksler"]', '"journal/indexes": ["Indexing & Archiving", "BRIQ’s verified indexing, open-repository, and archiving records.", "/dergi/endeksler"]')
-
-          # 8) Article declarations: add author contributions + informed consent, use existing accordion design, and stop after informed consent.
-          replace(article,
-              '    ethicsApproval?: string;\n  };',
-              '    authorContributions?: string;\n    ethicsApproval?: string;\n    informedConsent?: string;\n  };')
-          replace(article,
-              '  const values = {\n    acknowledgements: declarations?.acknowledgements?.trim() || inferredAcknowledgement,\n    funding: declarations?.funding?.trim() || inferredFunding,\n    competingInterests: declarations?.competingInterests?.trim() || "",\n    ethicsApproval: declarations?.ethicsApproval?.trim() || "",\n  };',
-              '  const values = {\n    authorContributions: declarations?.authorContributions?.trim() || "",\n    funding: declarations?.funding?.trim() || inferredFunding,\n    competingInterests: declarations?.competingInterests?.trim() || "",\n    ethicsApproval: declarations?.ethicsApproval?.trim() || "",\n    informedConsent: declarations?.informedConsent?.trim() || "",\n  };')
-          replace(article,
-              '  const inferredAcknowledgement = ack && !inferredFunding ? ack : "";\n',
-              '')
-          replace(article,
-              '  const definitions = locale === "tr" ? [\n    ["tesekkur", "Teşekkür", values.acknowledgements],\n    ["finansman", "Finansman beyanı", values.funding],\n    ["cikar-catismasi", "Çıkar çatışması beyanı", values.competingInterests],\n    ["etik-kurul", "Etik kurul beyanı", values.ethicsApproval],\n  ] : [\n    ["acknowledgements", "Acknowledgements", values.acknowledgements],\n    ["funding", "Funding / Financial support", values.funding],\n    ["competing-interests", "Competing interests", values.competingInterests],\n    ["ethics-approval", "Ethics approval", values.ethicsApproval],\n  ];',
-              '  const definitions = locale === "tr" ? [\n    ["yazar-katkilari", "Yazar katkıları", values.authorContributions],\n    ["finansman", "Finansman", values.funding],\n    ["cikar-catismasi", "Çıkar çatışması", values.competingInterests],\n    ["etik-kurul", "Etik kurul onayı", values.ethicsApproval],\n    ["bilgilendirilmis-onam", "Bilgilendirilmiş onam", values.informedConsent],\n  ] : [\n    ["author-contributions", "Author contributions", values.authorContributions],\n    ["funding", "Funding", values.funding],\n    ["competing-interests", "Competing interests", values.competingInterests],\n    ["ethics-approval", "Ethics approval", values.ethicsApproval],\n    ["informed-consent", "Informed consent", values.informedConsent],\n  ];')
-          replace(article,
-              '  return (\n    <div className="article-declaration-list">\n      {items.map(({ id, label, value }) => <section className="article-declaration" id={id} key={id}><p className="section-kicker">{locale === "tr" ? "Beyan" : "Statement"}</p><h2>{label}</h2><p>{value}</p></section>)}\n    </div>\n  );',
-              '  return (\n    <div className="article-declaration-list">\n      {items.map(({ id, label, value }) => <details className="article-accordion article-declaration" id={id} key={id}><summary><span>{label}</span><b>{locale === "tr" ? "Beyan" : "Statement"}</b></summary><div className="accordion-copy"><p>{value}</p></div></details>)}\n    </div>\n  );')
-
-          # Remove the temporary workflow from the final tree.
-          Path('.github/workflows/briq-policy-update-temp.yml').unlink()
-      - name: Commit changes
-        run: |
+          printf '\n' >> .github/workflows/apply-briq-trdizin-doaj-updates.yml
+          git rm .github/workflows/briq-policy-update-temp.yml
           git config user.name "BRIQ Site Bot"
           git config user.email "briq@briqjournal.com"
           git add -A
-          git commit -m "Update peer review, declarations, publisher and archiving pages"
+          git commit -m "Apply one-time BRIQ policy updates"
           git push
