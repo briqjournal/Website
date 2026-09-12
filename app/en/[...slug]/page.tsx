@@ -1,18 +1,14 @@
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import {
   archiveArticles,
   archiveIssues,
   annualReports,
   articlePdfUrl,
   articleRouteSlug,
-  findArchiveArticle,
   findArticleByEnglishRouteSlug,
   findArchiveIssue,
   issueLabel,
-  issuePdfUrl,
-  publicationType,
 } from "../../archive";
 import { IndexTicker, SiteFooter, SiteHeader } from "../../components/SiteChrome";
 import { PdfViewer } from "../../components/PdfViewer";
@@ -26,13 +22,13 @@ import { CallsExplorer } from "../../components/CallsExplorer";
 import { ScrollSpyNav, type ScrollSpyItem } from "../../components/ScrollSpyNav";
 import { EditorialLongform } from "../../components/EditorialLongform";
 import { PeopleDirectory } from "../../components/PeopleDirectory";
-import { CoverLightbox } from "../../components/CoverLightbox";
 import { DergiParkLogo } from "../../components/DergiParkLogo";
 import { ArticlePdfPage, ArticlePlatform } from "../../components/ArticlePlatform";
+import { IssuePlatform } from "../../components/IssuePlatform";
 import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../authors";
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
-import { issueAccent, issueSurface } from "../../issue-themes";
+import { issueAccent } from "../../issue-themes";
 import { advisoryBoard, editorialBoard, editors, calls, pastCalls } from "../../site-data";
 
 type PageRecord = {
@@ -516,31 +512,20 @@ function EnglishArticles() {
 }
 
 function EnglishCurrentIssue() {
-  const publications = archiveArticles.filter((article) => article.volume === 7 && article.issue === 4);
+  const record = findArchiveIssue(7, 4);
+  if (!record) return null;
   return (
-    <div className="issue-page-themed" style={{ "--issue-tone": issueSurface(7, 4), "--issue-accent": issueAccent(7, 4) } as CSSProperties}>
-      <section className="issue-masthead" data-issue="07 / 04">
-        <div className="issue-masthead-rule" />
-        <div className="site-shell issue-masthead-grid">
-          <div className="issue-cover-column">
-            <div className="issue-cover-frame"><img src="/assets/current-issue-en.jpg" alt="BRIQ Volume 7 Issue 4 cover" loading="lazy" decoding="async" /></div>
-            <CoverLightbox src="/assets/current-issue-en.jpg" alt="BRIQ Volume 7 Issue 4 cover" locale="en" />
-          </div>
-          <div className="issue-masthead-copy">
-            <div className="page-breadcrumb issue-breadcrumb"><a href="/en">Home</a><span>/</span><span>Current Issue</span></div>
-            <div className="issue-superline"><span>Volume 7 · Issue 4</span><span>Publication Date · September 2026</span></div>
-            <h1>A New Era in West Asia</h1>
-            <h2>Hegemonism Recedes, Regional Agency Grows</h2>
-            <p className="issue-deck">The issue examines West Asia’s changing balance of power alongside Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy.</p>
-            <div className="issue-actions"><a className="button button-light" href="#pdf-viewer">Read on site <span>↓︎</span></a><a href="/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf" download>Full issue PDF <span>↓︎</span></a></div>
-            <dl className="issue-identity-row"><div><dt>Volume</dt><dd>7</dd></div><div><dt>Issue</dt><dd>4 <span>(Autumn)</span></dd></div></dl>
-            <dl className="issue-facts"><div><dt>Publication date</dt><dd>September 2026</dd></div><div><dt>Pages</dt><dd>131</dd></div><div><dt>Languages</dt><dd>Turkish · English abstracts</dd></div><div><dt>Access</dt><dd>Open access · CC BY 4.0</dd></div></dl>
-          </div>
-        </div>
-      </section>
-      <section className="site-shell issue-contents-section" id="contents"><div className="issue-section-heading"><div><p className="section-kicker">Contents</p><h2>In this issue</h2></div></div><div className="issue-toc">{publications.map((article, index) => <a href={`/en/articles/${articleRouteSlug(article, "en")}`} key={article.slug}><span className="issue-toc-number">{String(index + 1).padStart(2, "0")}</span><span className="issue-toc-meta"><small>{publicationType(article, "en")}</small><b>{article.author}</b></span><span className="issue-toc-title">{article.title_en || article.title_tr}</span><span className="issue-toc-pages">{article.pages}</span><span className="issue-toc-arrow">↗︎</span></a>)}</div></section>
-      <div className="site-shell issue-pdf-section"><PdfViewer title="BRIQ Volume 7 · Issue 4" turkishSrc="/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf" englishSrc="/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf" locale="en" /></div>
-    </div>
+    <IssuePlatform
+      record={record}
+      locale="en"
+      current
+      coverSrc="/assets/current-issue-en.jpg"
+      periodLabel="September 2026"
+      title="A New Era in West Asia"
+      subtitle="Hegemonism Recedes, Regional Agency Grows"
+      description="The issue examines West Asia’s changing balance of power alongside Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy."
+      facts={[["Publication date", "September 2026"], ["Pages", "131"], ["Languages", "Turkish · English abstracts"], ["Access", "Open access · CC BY 4.0"]]}
+    />
   );
 }
 
@@ -648,30 +633,28 @@ function EnglishReport({ number }: { number: number }) {
   );
 }
 
+const englishIssueThemes: Record<string, string> = {
+  "7-1": "Green Solutions and the Global Food–Water Crisis",
+  "6-4": "Common Security for Shared Development",
+  "6-3": "From Bandung to BRICS: The Global South’s Task",
+  "6-2": "The 1911 Chinese Revolution and Sun Yat-sen’s Legacy",
+  "6-1": "Scientific and Technological Development in the Global South",
+  "5-4": "The Belt and Road and the Organization of Turkic States",
+  "5-3": "The Belt and Road and the Islamic World",
+};
+
 function EnglishIssue({ volume, issueNumber }: { volume: number; issueNumber: number }) {
   const record = findArchiveIssue(volume, issueNumber);
   if (!record) return null;
-  const publications = record.articles.map(findArchiveArticle).filter((item) => item !== undefined);
-  const trPdf = issuePdfUrl(record, "tr");
-  const enPdf = issuePdfUrl(record, "en");
+  const theme = englishIssueThemes[`${volume}-${issueNumber}`] || `${record.season_en} ${record.year} Issue`;
   return (
-    <div className="issue-page-themed" style={{ "--issue-tone": issueSurface(volume, issueNumber), "--issue-accent": issueAccent(volume, issueNumber) } as CSSProperties}>
-      <EnglishHero kicker="Archive" title={`Volume ${volume} · Issue ${issueNumber}`} intro={issueLabel(record, "en")} />
-      <div className="site-shell page-section issue-detail">
-        <aside className="issue-detail-cover"><img src={record.cover_en} alt={`BRIQ Volume ${volume} Issue ${issueNumber} English cover`} loading="lazy" decoding="async" />{enPdf && <a className="button button-dark" href="#pdf-viewer">Read the full issue ↓︎</a>}</aside>
-        <div className="issue-detail-content">
-          <div className="fact-strip"><div><span>Publication season</span><b>{record.season_en} {record.year}</b></div><div><span>Contributions</span><b>{publications.length}</b></div><div><span>Access</span><b>Open access</b></div></div>
-          <h2>Contents</h2>
-          <div className="compact-article-list">
-            {publications.map((publication) => (
-              <a href={`/en/articles/${articleRouteSlug(publication, "en")}`} key={publication.slug}><small>{publicationType(publication, "en")} · {publication.pages ? `pp. ${publication.pages}` : "Publication record"}{publication.doi ? ` · DOI: ${publication.doi}` : ""}</small><h3>{publication.title_en || publication.title_tr}</h3><p>{publication.author}</p></a>
-            ))}
-          </div>
-          <a className="underlined-link" href="/en/archive">Back to all issues →︎</a>
-        </div>
-      </div>
-      {(trPdf || enPdf) && <div className="site-shell issue-pdf-section"><PdfViewer title={`BRIQ Volume ${volume} · Issue ${issueNumber}`} turkishSrc={trPdf} englishSrc={enPdf} locale="en" /></div>}
-    </div>
+    <IssuePlatform
+      record={record}
+      locale="en"
+      title={theme}
+      subtitle={`Volume ${volume} · Issue ${issueNumber}`}
+      description={`Published in ${record.season_en} ${record.year}, this issue brings together ${record.articles.length} contributions in BRIQ’s open-access archive.`}
+    />
   );
 }
 
