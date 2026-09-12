@@ -272,9 +272,13 @@ test("keeps the new issue, board, archive, and author interactions in Turkish-En
   assert.match(enIssue, /A New Era in West Asia/);
   assert.equal((enIssue.match(/class="issue-toc-number"/g) || []).length, 6);
 
-  assert.match(trBoard, /\/assets\/people\/fikret-akfirat\.jpg/);
+  assert.match(trBoard, /<h1>Editoryal Bilgiler<\/h1>/);
+  assert.match(trBoard, /class="editorial-roster-list"/);
+  assert.doesNotMatch(trBoard, /\/assets\/people\//);
   assert.match(trBoard, /href="\/tr\/yazar\/fikret-akfirat"/);
-  assert.match(enBoard, /\/assets\/people\/fikret-akfirat\.jpg/);
+  assert.match(enBoard, /<h1>Editorial Info<\/h1>/);
+  assert.match(enBoard, /<h2>Editorial Board<\/h2>/);
+  assert.doesNotMatch(enBoard, /\/assets\/people\//);
   assert.match(enBoard, /href="\/en\/authors\/fikret-akfirat"/);
 
   for (const html of [trArchive, enArchive]) {
@@ -336,22 +340,50 @@ test("uses verified bilingual cover headings for every issue", async () => {
   assert.match(spring2026En, /<h1>The Political Economy of<em>Socialism with Chinese Characteristics<\/em><\/h1>/);
 });
 
-test("keeps standalone board pages compact without repeating the page title", async () => {
-  const boardPairs = [
-    ["/tr/dergi/yayin-kurulu", "Yayın Kurulu", "Üyeler"],
+test("renders editorial information and advisory boards as scholarly mastheads", async () => {
+  const [trEditorialResponse, enEditorialResponse] = await Promise.all([
+    renderPath("/tr/dergi/yayin-kurulu"),
+    renderPath("/en/journal/publication-board"),
+  ]);
+  const [trEditorial, enEditorial] = await Promise.all([
+    trEditorialResponse.text(),
+    enEditorialResponse.text(),
+  ]);
+
+  assert.equal(trEditorialResponse.status, 200);
+  assert.equal(enEditorialResponse.status, 200);
+  assert.match(trEditorial, /<h1>Editoryal Bilgiler<\/h1>/);
+  assert.match(trEditorial, /<h2>Genel Yayın Yönetmeni<\/h2>/);
+  assert.match(trEditorial, /<h2>Yayın Kurulu<\/h2>/);
+  assert.match(trEditorial, /<h2>Editörler<\/h2>/);
+  assert.match(trEditorial, /<h2>Dil Editörleri<\/h2>/);
+  assert.match(enEditorial, /<h1>Editorial Info<\/h1>/);
+  assert.match(enEditorial, /<h2>Editor-in-Chief<\/h2>/);
+  assert.match(enEditorial, /<h2>Editorial Board<\/h2>/);
+  assert.match(enEditorial, /<h2>Editors<\/h2>/);
+  assert.match(enEditorial, /<h2>Language Editors<\/h2>/);
+
+  for (const html of [trEditorial, enEditorial]) {
+    assert.match(html, /class="editorial-roster-list"/);
+    assert.doesNotMatch(html, /class="person-card"/);
+    assert.doesNotMatch(html, /\/assets\/people\//);
+  }
+  assert.doesNotMatch(trEditorial, /Gazeteci-Yazar/);
+  assert.doesNotMatch(enEditorial, /Journalist and author/);
+
+  const advisoryPairs = [
     ["/tr/dergi/danisma-kurulu", "Danışma Kurulu", "Üyeler"],
-    ["/en/journal/publication-board", "Publication Board", "Members"],
     ["/en/journal/advisory-board", "Advisory Board", "Members"],
   ];
 
-  for (const [pathname, title, memberLabel] of boardPairs) {
+  for (const [pathname, title, memberLabel] of advisoryPairs) {
     const response = await renderPath(pathname);
     assert.equal(response.status, 200, pathname);
     const html = await response.text();
     const escapedTitle = title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
     assert.match(html, /class="[^"]*board-page-section/);
-    assert.match(html, /class="[^"]*board-directory is-compact/);
+    assert.match(html, /class="[^"]*editorial-roster is-compact/);
     assert.match(html, new RegExp(`<h1>${escapedTitle}<\\/h1>`));
     assert.doesNotMatch(html, new RegExp(`<h2>${escapedTitle}<\\/h2>`));
     assert.match(html, new RegExp(`<span>${memberLabel}<\\/span>`));
@@ -363,6 +395,35 @@ test("keeps standalone board pages compact without repeating the page title", as
   ]);
   assert.equal(trInactive.status, 404);
   assert.equal(enInactive.status, 404);
+});
+
+test("lists active calls with left-hand images and prominent deadlines", async () => {
+  const [trResponse, enResponse] = await Promise.all([renderPath("/tr"), renderPath("/en")]);
+  const [trHome, enHome] = await Promise.all([trResponse.text(), enResponse.text()]);
+
+  for (const html of [trHome, enHome]) {
+    assert.equal((html.match(/class="home-call-row"/g) || []).length, 3);
+    assert.equal((html.match(/class="home-call-image"/g) || []).length, 3);
+    assert.equal((html.match(/class="home-call-deadline"/g) || []).length, 3);
+    assert.doesNotMatch(html, /class="call-card/);
+  }
+  assert.match(trHome, /<small>Son Tarih<\/small><strong>1 Ekim 2026<\/strong>/);
+  assert.match(enHome, /<small>Deadline<\/small><strong>1 October 2026<\/strong>/);
+});
+
+test("uses four consistent monochrome issue palettes across all volumes", async () => {
+  const responses = await Promise.all([
+    renderPath("/tr/arsiv/cilt-7-sayi-1"),
+    renderPath("/tr/arsiv/cilt-7-sayi-2"),
+    renderPath("/tr/arsiv/cilt-7-sayi-3"),
+    renderPath("/tr/guncel-sayi"),
+  ]);
+  const pages = await Promise.all(responses.map((response) => response.text()));
+
+  assert.match(pages[0], /--issue-tone:#0b3438;--issue-accent:#1f6668/);
+  assert.match(pages[1], /--issue-tone:#0c315f;--issue-accent:#1e5a91/);
+  assert.match(pages[2], /--issue-tone:#4b281d;--issue-accent:#b95524/);
+  assert.match(pages[3], /--issue-tone:#35131f;--issue-accent:#713349/);
 });
 
 test("separates bilingual HTML article reading from the dedicated PDF viewer", async () => {

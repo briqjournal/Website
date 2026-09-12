@@ -7,7 +7,7 @@ import { navItems } from "../site-data";
 type Locale = "tr" | "en";
 
 const englishNavItems = [
-  { label: "Journal", href: "/en/journal/about-briq", children: [["About BRIQ", "/en/journal/about-briq"], ["Publication Principles", "/en/journal/publication-principles"], ["Publication Board", "/en/journal/publication-board"], ["Advisory Board", "/en/journal/advisory-board"], ["Indexing & Archiving", "/en/journal/indexes"], ["Annual Reports", "/en/annual-reports"]] },
+  { label: "Journal", href: "/en/journal/about-briq", children: [["About BRIQ", "/en/journal/about-briq"], ["Publication Principles", "/en/journal/publication-principles"], ["Editorial Info", "/en/journal/publication-board"], ["Advisory Board", "/en/journal/advisory-board"], ["Indexing & Archiving", "/en/journal/indexes"], ["Annual Reports", "/en/annual-reports"]] },
   { label: "Publications", href: "/en/current-issue", children: [["Current Issue", "/en/current-issue"], ["All Issues", "/en/archive"], ["Article Search", "/en/articles"]] },
   { label: "For Authors", href: "/en/for-authors", children: [["Submission Guidelines", "/en/for-authors/guidelines"], ["Publication Review Process", "/en/for-authors/review-process"], ["Publication Ethics", "/en/for-authors/publication-ethics"], ["Copyright Terms and Licence", "/en/for-authors/copyright-and-licence"]] },
   { label: "Calls for Papers", href: "/en/calls-for-papers", children: [["Active Calls", "/en/calls-for-papers#active"], ["Past Calls", "/en/calls-for-papers#past"], ["Book Reviews", "/en/calls-for-papers/book-reviews"]] },
@@ -243,7 +243,7 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
         <div>
           <h3>{isEnglish ? "Journal" : "Dergi"}</h3>
           <a href={isEnglish ? "/en/journal/about-briq" : "/tr/dergi/briq-hakkinda"}>{isEnglish ? "About BRIQ" : "BRIQ Hakkında"}</a>
-          <a href={isEnglish ? "/en/journal/publication-board" : "/tr/dergi/yayin-kurulu"}>{isEnglish ? "Publication Board" : "Yayın Kurulu"}</a>
+          <a href={isEnglish ? "/en/journal/publication-board" : "/tr/dergi/yayin-kurulu"}>{isEnglish ? "Editorial Info" : "Editoryal Bilgiler"}</a>
           <a href={isEnglish ? "/en/journal/indexes" : "/tr/dergi/endeksler"}>{isEnglish ? "Indexes" : "Endeksler"}</a>
           <a href={isEnglish ? "/en/annual-reports" : "/tr/yillik-raporlar"}>{isEnglish ? "Annual reports" : "Yıllık raporlar"}</a>
         </div>

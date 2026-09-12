@@ -19,13 +19,18 @@ export default function EnglishHome() {
       <section className="section manifesto"><div className="site-shell manifesto-grid">
         <div className="manifesto-index">BRIQ / 07</div>
         <div className="manifesto-title"><p className="section-kicker light">Journal</p><h2>Reading the world through the eyes of developing countries.</h2></div>
-        <div className="manifesto-copy"><p>BRIQ is a quarterly scholarly journal published in Turkish and English, covering international politics, economics, and culture. It discusses the opportunities opened by the Belt and Road Initiative from the perspective of the developing world and common development.</p><div className="manifesto-links"><a href="/en/journal/about-briq">About BRIQ <span>→︎</span></a><a href="/en/journal/publication-principles">Publication Principles <span>→︎</span></a><a href="/en/journal/publication-board">Publication Board <span>→︎</span></a></div></div>
+        <div className="manifesto-copy"><p>BRIQ is a quarterly scholarly journal published in Turkish and English, covering international politics, economics, and culture. It discusses the opportunities opened by the Belt and Road Initiative from the perspective of the developing world and common development.</p><div className="manifesto-links"><a href="/en/journal/about-briq">About BRIQ <span>→︎</span></a><a href="/en/journal/publication-principles">Publication Principles <span>→︎</span></a><a href="/en/journal/publication-board">Editorial Info <span>→︎</span></a></div></div>
       </div></section>
 
       <section className="section calls"><div className="site-shell">
         <div className="section-heading split-heading"><div><p className="section-kicker">Call for contributions</p><h2>Open calls for papers</h2></div><a className="underlined-link" href="/en/calls-for-papers">All calls <span>→︎</span></a></div>
-        <div className="call-grid">
-          {calls.map((call, index) => <a className={`call-card call-card-${index + 1} ${index === 2 ? "call-card-book" : ""}`} href={call.urlEn} key={call.titleEn}>{call.image && <img src={call.image} alt="" aria-hidden="true" loading="lazy" decoding="async" />}{call.image && <div className="call-overlay" />}<div className="call-content"><span className="deadline">{call.statusEn === "Open call" ? call.statusEn : `Deadline: ${call.deadlineEn}`}</span><h3>{call.titleEn}</h3>{index === 2 && <p>{call.summaryEn}</p>}<span className="call-link">View call ↗︎</span></div></a>)}
+        <div className="home-call-list">
+          {calls.map((call) => <a className="home-call-row" href={call.urlEn} key={call.titleEn}>
+            <span className="home-call-image">{call.image && <img src={call.image} alt="" aria-hidden="true" loading="lazy" decoding="async" />}</span>
+            <span className="home-call-deadline"><small>Deadline</small><strong>{call.deadlineEn}</strong></span>
+            <div className="home-call-copy"><span>{call.statusEn}</span><h3>{call.titleEn}</h3><p>{call.summaryEn}</p></div>
+            <span className="home-call-link">View call <b>↗︎</b></span>
+          </a>)}
         </div>
       </div></section>
 

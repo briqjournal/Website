@@ -5,7 +5,7 @@ export const navItems = [
     children: [
       ["BRIQ Hakkında", "/tr/dergi/briq-hakkinda"],
       ["Yayın İlkeleri", "/tr/dergi/yayin-ilkeleri"],
-      ["Yayın Kurulu", "/tr/dergi/yayin-kurulu"],
+      ["Editoryal Bilgiler", "/tr/dergi/yayin-kurulu"],
       ["Danışma Kurulu", "/tr/dergi/danisma-kurulu"],
       ["Dizinler ve Arşivler", "/tr/dergi/endeksler"],
       ["Yıllık Raporlar", "/tr/yillik-raporlar"],

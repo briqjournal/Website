@@ -62,7 +62,7 @@ export function IssuePlatform({
         ["Yayın dili", "Türkçe · English"],
         ["Erişim", "Açık erişim"],
       ]);
-  const homeHref = isEnglish ? "/en" : "/";
+  const homeHref = isEnglish ? "/en" : "/tr";
   const archiveHref = isEnglish ? "/en/archive" : "/tr/arsiv";
   const issueName = isEnglish
     ? `Volume ${record.volume} · Issue ${record.issue}`

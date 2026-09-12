@@ -33,26 +33,26 @@ export function issueTheme(volume: number, issue: number, locale: "tr" | "en") {
   return themes[`${volume}-${issue}`]?.[locale] || "";
 }
 
-const coverAccents = ["#a53e2f", "#23465f", "#8b6734", "#476756", "#70495d", "#b65a27", "#3f4b73"];
+const issuePalettes = {
+  1: { accent: "#1f6668", badge: "#2f6665", surface: "#0b3438" },
+  2: { accent: "#1e5a91", badge: "#315c79", surface: "#0c315f" },
+  3: { accent: "#b95524", badge: "#8f431f", surface: "#4b281d" },
+  4: { accent: "#713349", badge: "#713349", surface: "#35131f" },
+} as const;
 
-export function issueAccent(volume: number, issue: number) {
-  if (volume === 7 && issue === 4) return "#4d1b2a";
-  if (volume === 7 && issue === 3) return "#b95524";
-  return coverAccents[(volume * 3 + issue - 1) % coverAccents.length];
+function issuePalette(issue: number) {
+  const family = (((issue - 1) % 4) + 1) as keyof typeof issuePalettes;
+  return issuePalettes[family];
 }
 
-const badgeAccents = ["#7f3025", "#315c79", "#74552c", "#385746", "#84596d", "#8f431f", "#59658f"];
-
-export function issueBadgeAccent(volume: number, issue: number) {
-  if (volume === 7 && issue === 4) return "#713349";
-  if (volume === 7 && issue === 3) return "#8f431f";
-  return badgeAccents[(volume * 3 + issue - 1) % badgeAccents.length];
+export function issueAccent(_volume: number, issue: number) {
+  return issuePalette(issue).accent;
 }
 
-const issueSurfaces = ["#63271f", "#19384d", "#594321", "#29483c", "#533747", "#6b351f", "#343e62"];
+export function issueBadgeAccent(_volume: number, issue: number) {
+  return issuePalette(issue).badge;
+}
 
-export function issueSurface(volume: number, issue: number) {
-  if (volume === 7 && issue === 4) return "#35131f";
-  if (volume === 7 && issue === 3) return "#4b281d";
-  return issueSurfaces[(volume * 3 + issue - 1) % issueSurfaces.length];
+export function issueSurface(_volume: number, issue: number) {
+  return issuePalette(issue).surface;
 }

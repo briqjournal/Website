@@ -40,7 +40,7 @@ export default function Home() {
                 Yayın İlkeleri <span>→︎</span>
               </a>
               <a href="/tr/dergi/yayin-kurulu">
-                Yayın Kurulu <span>→︎</span>
+                Editoryal Bilgiler <span>→︎</span>
               </a>
             </div>
           </div>
@@ -58,21 +58,26 @@ export default function Home() {
               Tüm çağrılar <span>→︎</span>
             </a>
           </div>
-          <div className="call-grid">
-            {calls.map((call, index) => (
+          <div className="home-call-list">
+            {calls.map((call) => (
               <a
-                className={`call-card call-card-${index + 1} ${index === 2 ? "call-card-book" : ""}`}
+                className="home-call-row"
                 href={call.url}
                 key={call.title}
               >
-                {call.image && <img src={call.image} alt="" aria-hidden="true" loading="lazy" decoding="async" />}
-                {call.image && <div className="call-overlay" />}
-                <div className="call-content">
-                  <span className="deadline">Son Tarih: {call.deadline}</span>
+                <span className="home-call-image">
+                  {call.image && <img src={call.image} alt="" aria-hidden="true" loading="lazy" decoding="async" />}
+                </span>
+                <span className="home-call-deadline">
+                  <small>Son Tarih</small>
+                  <strong>{call.deadline}</strong>
+                </span>
+                <div className="home-call-copy">
+                  <span>{call.status}</span>
                   <h3>{call.title}</h3>
-                  {index === 2 && <p>{call.summary}</p>}
-                  <span className="call-link">Çağrıyı incele ↗︎</span>
+                  <p>{call.summary}</p>
                 </div>
+                <span className="home-call-link">Çağrıyı incele <b>↗︎</b></span>
               </a>
             ))}
           </div>

@@ -377,7 +377,7 @@ export const authorProfiles: AuthorProfile[] = (() => {
   }
 
   const boardGroups = [
-    { people: editorialBoard, tr: "Yayın Kurulu", en: "Publication Board", roleTr: "Yayın Kurulu Üyesi", roleEn: "Publication Board Member" },
+    { people: editorialBoard, tr: "Yayın Kurulu", en: "Editorial Board", roleTr: "Yayın Kurulu Üyesi", roleEn: "Editorial Board Member" },
     { people: advisoryBoard, tr: "Danışma Kurulu", en: "Advisory Board", roleTr: "Danışma Kurulu Üyesi", roleEn: "Advisory Board Member" },
     { people: editors, tr: "Editörlük Ekibi", en: "Editorial Team", roleTr: "Editörlük Ekibi Üyesi", roleEn: "Editorial Team Member" },
   ];
@@ -389,7 +389,7 @@ export const authorProfiles: AuthorProfile[] = (() => {
       const metadata = authorMetadata[canonicalName] || {};
       const appointment: BriqAppointment = {
         roleTr: canonicalName === "Fikret Akfırat" && group.tr === "Yayın Kurulu" ? "Genel Yayın Yönetmeni" : group.roleTr,
-        roleEn: canonicalName === "Fikret Akfırat" && group.en === "Publication Board" ? "Editor-in-Chief" : group.roleEn,
+        roleEn: canonicalName === "Fikret Akfırat" && group.en === "Editorial Board" ? "Editor-in-Chief" : group.roleEn,
         termTr: "2026–Günümüz",
         termEn: "2026–Present",
       };

@@ -54,14 +54,14 @@ const pages: Record<string, PageRecord> = {
   "for-authors/review-process": { kicker: "For Authors", title: "Publication Review Process", intro: "The route from initial screening through review, revision, translation, author approval, and publication.", sections: [["Initial review", "Editors assess publication principles, originality, relevance, thematic fit, writing rules, and ethical criteria including plagiarism."], ["Editorial preparation", "Citations and references are matched, similarity findings are addressed, headings and source needs are checked, and the manuscript is prepared for specialist review."], ["Peer review and revision", "Every research article that passes initial screening is sent under double-blind peer review to at least two independent subject experts, selected as far as possible from different institutions. If reviewer opinions diverge substantially, an editorial assessment may be made or a third reviewer may be consulted. Reports are shared with the author; substantial revisions may be returned to the reviewers."], ["Translation and publication", "The revised manuscript is translated, checked by an assigned editor, sent to the author for limited final changes and acceptance of copyright terms, and then prepared for publication."]]},
   "for-authors/copyright-and-licence": { kicker: "For Authors", title: "Copyright Terms and Licence", intro: "Author undertakings, supplementary material, editing, publication ethics, termination, and licensing.", sections: [["Author undertakings", "Authors confirm that they have authority to submit the work, that it is original, accurate, lawful, and does not infringe third-party rights."], ["Supplementary material", "Datasets, audiovisual interviews, podcasts, appendices, additional text, charts, illustrations, photographs, graphics, and film may be supplied as supplementary material."], ["Editing and corrections", "The editor and publisher may edit for clarity, accuracy, language, style, and presentation; the corresponding author reviews proofs and responds within the stated period."], ["Licence", "Published content is made available under the Creative Commons Attribution 4.0 International licence (CC BY 4.0)."]]},
   "for-authors/publication-ethics": { kicker: "For Authors", title: "Publication Ethics", intro: "Ethical duties of editors, authors, and reviewers.", sections: [["Journal ethics", "BRIQ follows national and international academic principles and standards associated with COPE, DOAJ, and OASPA."], ["Editors", "Editors and assistant editors act objectively and impartially, protect confidentiality, and cooperate through a fair division of responsibilities."], ["Authors", "Authors must comply with applicable copyright law, national research and publication ethics rules, COPE standards, and BRIQ’s adopted requirements."], ["Reviewers", "Reviewers assess manuscripts carefully, fairly, and within their expertise; report ethical concerns promptly; and use constructive, respectful language."]]},
-  "calls-for-papers/book-reviews": { kicker: "Calls for Papers", title: "Call for Book Reviews", intro: "A continuously open call for critical reviews of recent scholarly books.", sections: [["Purpose", "Accepted proposals lead to a concise introduction to a book’s main questions and viewpoint together with a critical assessment of its strengths, weaknesses, scholarly quality, and contribution."], ["Format", "Reviews are no longer than 1,000 words and include the book’s APA citation and a short author biography of up to 150 words."], ["Contact", "Send proposals and questions to the BRIQ Publication Board at briq@briqjournal.com."]]},
+  "calls-for-papers/book-reviews": { kicker: "Calls for Papers", title: "Call for Book Reviews", intro: "A continuously open call for critical reviews of recent scholarly books.", sections: [["Purpose", "Accepted proposals lead to a concise introduction to a book’s main questions and viewpoint together with a critical assessment of its strengths, weaknesses, scholarly quality, and contribution."], ["Format", "Reviews are no longer than 1,000 words and include the book’s APA citation and a short author biography of up to 150 words."], ["Contact", "Send proposals and questions to the BRIQ Editorial Board at briq@briqjournal.com."]]},
 };
 
 const englishPageMetadata: Record<string, [string, string, string]> = {
   journal: ["About BRIQ", "BRIQ’s publication profile, purpose, and institutional structure.", "/tr/dergi"],
   "journal/about-briq": ["About BRIQ", "BRIQ’s publication profile, purpose, and institutional structure.", "/tr/dergi/briq-hakkinda"],
   "journal/publication-principles": ["Principles of Publication", "BRIQ’s publication principles and developing-world perspective.", "/tr/dergi/yayin-ilkeleri"],
-  "journal/publication-board": ["Publication Board", "Members of the BRIQ Publication Board.", "/tr/dergi/yayin-kurulu"],
+  "journal/publication-board": ["Editorial Info", "BRIQ’s editorial structure, Editorial Board, and editors.", "/tr/dergi/yayin-kurulu"],
   "journal/advisory-board": ["Advisory Board", "Members of the BRIQ Advisory Board.", "/tr/dergi/danisma-kurulu"],
   "journal/indexes": ["Indexing & Archiving", "BRIQ’s verified indexing and open-repository records.", "/tr/dergi/endeksler"],
   contact: ["Contact", "BRIQ contact information and message form.", "/tr/iletisim"],
@@ -449,7 +449,7 @@ function EnglishEthicsPolicy() {
 
 function EnglishBoards() {
   const groups = [
-    ["Publication Board", editorialBoard],
+    ["Editorial Board", editorialBoard],
     ["Advisory Board", advisoryBoard],
     ["Editorial production team", editors],
   ] as const;
@@ -469,7 +469,27 @@ function EnglishPeoplePage({ title, people, intro }: { title: string; people: st
   return <><EnglishHero kicker="Journal" title={title} intro={intro} /><div className="site-shell page-section board-page-section"><PeopleDirectory title={title} people={people} locale="en" compact /></div></>;
 }
 
-function EnglishPublicationBoard() { return <EnglishPeoplePage title="Publication Board" people={editorialBoard} intro="The members guiding BRIQ’s publication work and their current affiliations." />; }
+function EnglishPublicationBoard() {
+  const editorInChief = editorialBoard.filter(([name]) => name === "Fikret Akfırat");
+  const boardMembers = editorialBoard.filter(([name]) => name !== "Fikret Akfırat");
+  const languageEditors = editors.filter(([, affiliation]) => affiliation === "İngilizce Dil Editörü");
+  const editorialStaff = editors.filter(([, affiliation]) => affiliation !== "İngilizce Dil Editörü");
+  return (
+    <>
+      <EnglishHero
+        kicker="Journal"
+        title="Editorial Info"
+        intro="BRIQ’s editorial responsibilities, Editorial Board, and editors are presented in a scholarly journal masthead format."
+      />
+      <div className="site-shell page-section board-page-section editorial-info-page">
+        <PeopleDirectory title="Editor-in-Chief" people={editorInChief} locale="en" />
+        <PeopleDirectory title="Editorial Board" people={boardMembers} locale="en" />
+        <PeopleDirectory title="Editors" people={editorialStaff} locale="en" />
+        <PeopleDirectory title="Language Editors" people={languageEditors} locale="en" />
+      </div>
+    </>
+  );
+}
 function EnglishAdvisoryBoard() { return <EnglishPeoplePage title="Advisory Board" people={advisoryBoard} intro="Scholars and experts from multiple countries and disciplines who advise BRIQ." />; }
 function EnglishEditorialTeam() { return <EnglishPeoplePage title="Editorial Team" people={editors} intro="The team coordinating manuscripts, language work, translation, editing, and production." />; }
 
@@ -700,7 +720,7 @@ const englishCallEditorialCopy: Record<string, { paragraphs: string[]; topics?: 
       "Once a proposal is accepted, the review should concisely introduce the book’s main questions and perspective and assess its strengths, weaknesses, scholarly quality, and contribution to the field.",
     ],
     topics: [["Review file", ["No more than 1,000 words", "The book’s bibliographic record in APA style", "A short biography of the reviewer of no more than 150 words", "A critical, reasoned, and properly sourced assessment"]]],
-    note: "Book proposals and submission questions may be sent to the BRIQ Publication Board at briq@briqjournal.com.",
+    note: "Book proposals and submission questions may be sent to the BRIQ Editorial Board at briq@briqjournal.com.",
   },
 };
 

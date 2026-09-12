@@ -136,7 +136,7 @@ function JournalOverview() {
         <LinkCards
           items={[
             { number: "01", title: "Yayın İlkeleri", text: "Derginin temel ilkeleri, çalışma alanları ve yayın yaklaşımı.", href: "/tr/dergi/yayin-ilkeleri" },
-            { number: "02", title: "Yayın Kurulu", text: "Derginin yayın çalışmalarına yön veren kurul.", href: "/tr/dergi/yayin-kurulu" },
+            { number: "02", title: "Editoryal Bilgiler", text: "Derginin editoryal yapısı, yayın kurulu ve editörleri.", href: "/tr/dergi/yayin-kurulu" },
             { number: "03", title: "Danışma Kurulu", text: "Bilimsel danışmanlık sağlayan uluslararası kurul.", href: "/tr/dergi/danisma-kurulu" },
             { number: "04", title: "Dizinler ve Arşivler", text: "BRIQ’in akademik dizin, açık erişim deposu ve arşivleme kayıtları.", href: "/tr/dergi/endeksler" },
             { number: "05", title: "Yıllık Raporlar", text: "Derginin faaliyetlerini, yayın performansını ve gelişimini belgeleyen raporlar.", href: "/tr/yillik-raporlar" },
@@ -268,7 +268,27 @@ function BoardPage({ title, people, intro }: { title: string; people: string[][]
   return <><PageHero kicker="Dergi" title={title} intro={intro} /><div className="site-shell page-section board-page-section"><PeopleDirectory title={title} people={people} compact /></div></>;
 }
 
-function PublicationBoardPage() { return <BoardPage title="Yayın Kurulu" people={editorialBoard} intro="BRIQ’in yayın çalışmalarına yön veren kurul üyeleri ve güncel kurumsal bilgileri." />; }
+function PublicationBoardPage() {
+  const editorInChief = editorialBoard.filter(([name]) => name === "Fikret Akfırat");
+  const boardMembers = editorialBoard.filter(([name]) => name !== "Fikret Akfırat");
+  const languageEditors = editors.filter(([, affiliation]) => affiliation === "İngilizce Dil Editörü");
+  const editorialStaff = editors.filter(([, affiliation]) => affiliation !== "İngilizce Dil Editörü");
+  return (
+    <>
+      <PageHero
+        kicker="Dergi"
+        title="Editoryal Bilgiler"
+        intro="BRIQ’in editoryal sorumlulukları, yayın kurulu ve editör kadrosu akademik dergi künyesi düzeninde sunulur."
+      />
+      <div className="site-shell page-section board-page-section editorial-info-page">
+        <PeopleDirectory title="Genel Yayın Yönetmeni" people={editorInChief} />
+        <PeopleDirectory title="Yayın Kurulu" people={boardMembers} />
+        <PeopleDirectory title="Editörler" people={editorialStaff} />
+        <PeopleDirectory title="Dil Editörleri" people={languageEditors} />
+      </div>
+    </>
+  );
+}
 function AdvisoryBoardPage() { return <BoardPage title="Danışma Kurulu" people={advisoryBoard} intro="Farklı ülkelerden ve disiplinlerden uzmanlarla BRIQ’e bilimsel danışmanlık sağlayan kurul." />; }
 function EditorialTeamPage() { return <BoardPage title="Editörlük Ekibi" people={editors} intro="Dosya takibi, dil, çeviri, redaksiyon ve yayına hazırlık çalışmalarını yürüten ekip." />; }
 
@@ -380,7 +400,7 @@ function Organization() {
         </section>
         <PeopleDirectory title="Yayın Kurulu" people={editorialBoard} />
         <PeopleDirectory title="Danışma Kurulu" people={advisoryBoard} />
-        <PeopleDirectory title="Editoryal üretim ekibi" people={editors} />
+        <PeopleDirectory title="Editörler" people={editors} />
       </div>
     </>
   );
@@ -1196,7 +1216,7 @@ const pageMetadata: Record<string, [string, string]> = {
   dergi: ["BRIQ Hakkında", "BRIQ’in yayın profili, amacı, tarihçesi ve kurumsal yapısı."],
   "dergi/briq-hakkinda": ["BRIQ Hakkında", "BRIQ’in yayın profili, amacı, tarihçesi ve kurumsal yapısı."],
   "dergi/yayin-ilkeleri": ["Yayın İlkeleri", "BRIQ’in yayın ilkeleri ve gelişen dünya perspektifi."],
-  "dergi/yayin-kurulu": ["Yayın Kurulu", "BRIQ Yayın Kurulu üyeleri."],
+  "dergi/yayin-kurulu": ["Editoryal Bilgiler", "BRIQ’in editoryal yapısı, Yayın Kurulu ve editör kadrosu."],
   "dergi/danisma-kurulu": ["Danışma Kurulu", "BRIQ Danışma Kurulu üyeleri."],
   "dergi/endeksler": ["Dizinler ve Arşivler", "BRIQ’in doğrulanmış akademik dizin ve açık arşiv kayıtları."],
   iletisim: ["İletişim", "BRIQ iletişim bilgileri ve mesaj formu."],
