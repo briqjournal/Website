@@ -264,11 +264,11 @@ test("keeps the new issue, board, archive, and author interactions in Turkish-En
   ]).then((responses) => Promise.all(responses.map((response) => response.text())));
 
   assert.match(trIssue, /Kapağı incele/);
-  assert.match(trIssue, /4 <span>\(Sonbahar\)<\/span>/);
+  assert.match(trIssue, /Sonbahar/);
   assert.match(trIssue, /Batı Asya’da Yeni Dönem/);
   assert.equal((trIssue.match(/class="issue-toc-number"/g) || []).length, 6);
   assert.match(enIssue, /Inspect cover/);
-  assert.match(enIssue, /4 <span>\(Autumn\)<\/span>/);
+  assert.match(enIssue, /Autumn/);
   assert.match(enIssue, /A New Era in West Asia/);
   assert.equal((enIssue.match(/class="issue-toc-number"/g) || []).length, 6);
 
@@ -285,6 +285,33 @@ test("keeps the new issue, board, archive, and author interactions in Turkish-En
   for (const html of [trArticle, enArticle]) {
     assert.match(html, /class="author-profile-link"/);
     assert.doesNotMatch(html, /class="author-popover"/);
+  }
+});
+
+test("renders archived issues with the same platform structure as the current issue", async () => {
+  const responses = await Promise.all([
+    renderPath("/guncel-sayi"),
+    renderPath("/arsiv/cilt-6-sayi-4"),
+    renderPath("/en/current-issue"),
+    renderPath("/en/archive/volume-6-issue-4"),
+  ]);
+  const [currentTr, archivedTr, currentEn, archivedEn] = await Promise.all(
+    responses.map((response) => response.text()),
+  );
+
+  for (const html of [currentTr, archivedTr, currentEn, archivedEn]) {
+    for (const className of ["issue-masthead", "issue-cover-frame", "issue-actions", "issue-identity-row", "issue-facts", "issue-toc", "issue-pdf-section"]) {
+      assert.match(html, new RegExp(`class="[^"]*${className}`), className);
+    }
+  }
+
+  assert.match(archivedTr, /Ortak kalkınma için ortak güvenlik/);
+  assert.match(archivedEn, /Common Security for Shared Development/);
+  assert.equal((archivedTr.match(/class="issue-toc-number"/g) || []).length, 8);
+  assert.equal((archivedEn.match(/class="issue-toc-number"/g) || []).length, 8);
+  for (const html of [archivedTr, archivedEn]) {
+    assert.doesNotMatch(html, /class="issue-detail/);
+    assert.doesNotMatch(html, /class="compact-article-list/);
   }
 });
 
