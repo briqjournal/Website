@@ -1,12 +1,14 @@
 import {
   archiveArticles,
   archiveIssues,
+  articleRouteSlug,
   publicationType,
 } from "./archive";
 import { issueTheme } from "./issue-themes";
 
 export type ArchiveArticleListing = {
   slug: string;
+  slugEn: string;
   volume: number;
   issue: number;
   year: string;
@@ -32,6 +34,7 @@ export type ArchiveIssueListing = {
 
 export const archiveArticleListings: ArchiveArticleListing[] = archiveArticles.map((article) => ({
   slug: article.slug,
+  slugEn: articleRouteSlug(article, "en"),
   volume: article.volume,
   issue: article.issue,
   year: article.year,
@@ -54,4 +57,3 @@ export const archiveIssueListings: ArchiveIssueListing[] = archiveIssues.map((is
   themeTr: issueTheme(issue.volume, issue.issue, "tr"),
   themeEn: issueTheme(issue.volume, issue.issue, "en"),
 }));
-
