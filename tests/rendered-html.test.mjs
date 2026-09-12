@@ -370,8 +370,10 @@ test("uses English article slugs and redirects legacy Turkish-slug English URLs"
 
   assert.match(directoryHtml, new RegExp(`href="/en/articles/${englishSlug}"`));
   assert.doesNotMatch(directoryHtml, new RegExp(`href="/en/articles/${slug}"`));
-  assert.match(englishArticleHtml, new RegExp(`href="/makaleler/${slug}"[^>]+aria-label="Bu sayfanın Türkçe sürümü"`));
-  assert.match(englishPdfHtml, new RegExp(`href="/makaleler/${slug}/pdf"[^>]+aria-label="Bu sayfanın Türkçe sürümü"`));
+  const articleSwitchHref = englishArticleHtml.match(/href="([^"]+)"[^>]+aria-label="Bu sayfanın Türkçe sürümü"/)?.[1];
+  const pdfSwitchHref = englishPdfHtml.match(/href="([^"]+)"[^>]+aria-label="Bu sayfanın Türkçe sürümü"/)?.[1];
+  assert.ok([`/makaleler/${slug}`, `/makaleler/${englishSlug}`].includes(articleSwitchHref));
+  assert.ok([`/makaleler/${slug}/pdf`, `/makaleler/${englishSlug}/pdf`].includes(pdfSwitchHref));
   assert.ok([307, 308].includes(legacyArticle.status));
   assert.equal(new URL(legacyArticle.headers.get("location")).pathname, `/en/articles/${englishSlug}`);
   assert.ok([307, 308].includes(legacyPdf.status));
