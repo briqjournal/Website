@@ -356,19 +356,32 @@ test("separates bilingual HTML article reading from the dedicated PDF viewer", a
 test("uses English article slugs and redirects legacy Turkish-slug English URLs", async () => {
   const slug = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";
   const englishSlug = englishArticleSlug(slug);
-  const [directory, legacyArticle, legacyPdf] = await Promise.all([
+  const [directory, englishArticle, englishPdf, legacyArticle, legacyPdf, misplacedTurkishArticle, misplacedTurkishPdf] = await Promise.all([
     renderPath("/en/articles"),
+    renderPath(`/en/articles/${englishSlug}`),
+    renderPath(`/en/articles/${englishSlug}/pdf`),
     renderPath(`/en/articles/${slug}`),
     renderPath(`/en/articles/${slug}/pdf`),
+    renderPath(`/makaleler/${englishSlug}`),
+    renderPath(`/makaleler/${englishSlug}/pdf`),
   ]);
   const directoryHtml = await directory.text();
+  const [englishArticleHtml, englishPdfHtml] = await Promise.all([englishArticle.text(), englishPdf.text()]);
 
   assert.match(directoryHtml, new RegExp(`href="/en/articles/${englishSlug}"`));
   assert.doesNotMatch(directoryHtml, new RegExp(`href="/en/articles/${slug}"`));
+  const articleSwitchHref = englishArticleHtml.match(/href="([^"]+)"[^>]+aria-label="Bu sayfanın Türkçe sürümü"/)?.[1];
+  const pdfSwitchHref = englishPdfHtml.match(/href="([^"]+)"[^>]+aria-label="Bu sayfanın Türkçe sürümü"/)?.[1];
+  assert.ok([`/makaleler/${slug}`, `/makaleler/${englishSlug}`].includes(articleSwitchHref));
+  assert.ok([`/makaleler/${slug}/pdf`, `/makaleler/${englishSlug}/pdf`].includes(pdfSwitchHref));
   assert.ok([307, 308].includes(legacyArticle.status));
   assert.equal(new URL(legacyArticle.headers.get("location")).pathname, `/en/articles/${englishSlug}`);
   assert.ok([307, 308].includes(legacyPdf.status));
   assert.equal(new URL(legacyPdf.headers.get("location")).pathname, `/en/articles/${englishSlug}/pdf`);
+  assert.ok([307, 308].includes(misplacedTurkishArticle.status));
+  assert.equal(new URL(misplacedTurkishArticle.headers.get("location")).pathname, `/makaleler/${slug}`);
+  assert.ok([307, 308].includes(misplacedTurkishPdf.status));
+  assert.equal(new URL(misplacedTurkishPdf.headers.get("location")).pathname, `/makaleler/${slug}/pdf`);
 });
 
 test("renders every current-issue contribution in the bilingual HTML article platform", async () => {

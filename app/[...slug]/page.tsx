@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import type { CSSProperties, ReactNode } from "react";
 import { IndexTicker, SiteFooter, SiteHeader } from "../components/SiteChrome";
@@ -1177,6 +1177,7 @@ function ArticleDetail({ slug }: { slug: string }) {
   const listed = articles.find((item) => item.url.endsWith(`/${slug}`));
   const article = findArticleByRouteSlug(slug) || archiveArticles.find((item) => listed && item.volume === 7 && item.issue === 3 && item.title_tr === listed.title);
   if (!article) return null;
+  if (slug !== article.slug && slug === articleRouteSlug(article, "en")) redirect(`/makaleler/${article.slug}`);
   const legacySlug = Object.entries(currentIssueArticleAliases).find(([, canonical]) => canonical === slug)?.[0];
   return <ArticlePlatform article={article} locale="tr" routeSlug={slug} details={articleDetails[slug] || (legacySlug ? articleDetails[legacySlug] : undefined)} />;
 }
@@ -1185,6 +1186,7 @@ function ArticlePdfDetail({ slug }: { slug: string }) {
   const direct = findArticleByRouteSlug(slug);
   const listed = articles.find((item) => item.url.endsWith(`/${slug}`));
   const article = direct || archiveArticles.find((item) => listed && item.volume === 7 && item.issue === 3 && item.title_tr === listed.title);
+  if (article && slug !== article.slug && slug === articleRouteSlug(article, "en")) redirect(`/makaleler/${article.slug}/pdf`);
   return article ? <ArticlePdfPage article={article} locale="tr" routeSlug={slug} /> : null;
 }
 
@@ -1372,8 +1374,8 @@ export async function generateMetadata({
       title: `${article.title_tr} — PDF | BRIQ`,
       description: `${article.title_tr} doğrulanmış PDF görüntüleyicisi.`,
       alternates: {
-        canonical: `/makaleler/${articlePdfMatch[1]}/pdf`,
-        languages: { "tr-TR": `/makaleler/${articlePdfMatch[1]}/pdf`, "en-US": `/en/articles/${articleRouteSlug(article, "en")}/pdf` },
+        canonical: `/makaleler/${article.slug}/pdf`,
+        languages: { "tr-TR": `/makaleler/${article.slug}/pdf`, "en-US": `/en/articles/${articleRouteSlug(article, "en")}/pdf` },
       },
     };
   }
@@ -1392,9 +1394,9 @@ export async function generateMetadata({
         title: `${article.title_tr} | BRIQ`,
         description,
         alternates: {
-          canonical: `/makaleler/${articleMatch[1]}`,
+          canonical: `/makaleler/${article.slug}`,
           languages: {
-            "tr-TR": `/makaleler/${articleMatch[1]}`,
+            "tr-TR": `/makaleler/${article.slug}`,
             "en-US": `/en/articles/${articleRouteSlug(article, "en")}`,
           },
         },
