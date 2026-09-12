@@ -1,0 +1,24 @@
+name: Refine declaration accordion only
+
+on:
+  push:
+    paths:
+      - '.github/workflows/briq-declaration-nested-style-temp.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply focused declaration accordion changes
+        run: python3 scripts/patch-declaration-nested-style.py
+      - name: Commit focused changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/components/ArticlePlatform.tsx app/globals.css tests/rendered-html.test.mjs
+          git commit -m "Refine declaration accordion without changing core article sections"
+          git push
