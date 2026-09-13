@@ -1144,9 +1144,8 @@ function CallDetail({ slug }: { slug: string }) {
   const copy = completeCallCopyTr[slug] || callEditorialCopy[slug];
   return (
     <>
-      <CallHero locale="tr" slug={slug} title={title} deadline={deadline} active={Boolean(active)} />
-      <div className="site-shell reading-layout call-detail-page">
-        <aside className="reading-nav"><b>Çağrı bilgisi</b><span>Son Tarih: {deadline}</span><span>{active ? "Aktif çağrı" : "Geçmiş çağrı"}</span></aside>
+      <CallHero locale="tr" slug={slug} title={title} deadline={deadline} active={Boolean(active)} image={active?.image} />
+      <div className="site-shell call-detail-page">
         <div className="reading-content">
           <section><h2>Çağrının kapsamı</h2>{copy ? copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{active?.summary || "Bu tematik çağrı, BRIQ’in ilgili sayısı için uluslararası akademik katkıları bir araya getirmek üzere yayımlanmıştır."}</p>}</section>
           {copy?.topics?.length ? (

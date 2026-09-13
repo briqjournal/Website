@@ -731,9 +731,8 @@ function EnglishCallDetail({ slug }: { slug: string }) {
   const copy = completeCallCopyEn[slug] || englishCallEditorialCopy[slug];
   return (
     <>
-      <CallHero locale="en" slug={slug} title={title} deadline={deadline} active={Boolean(active)} />
-      <div className="site-shell reading-layout call-detail-page">
-        <aside className="reading-nav"><b>Call information</b><span>Deadline: {deadline}</span><span>{active ? "Active call" : "Past call"}</span></aside>
+      <CallHero locale="en" slug={slug} title={title} deadline={deadline} active={Boolean(active)} image={active?.image} />
+      <div className="site-shell call-detail-page">
         <div className="reading-content">
           <section><h2>Scope of the call</h2>{copy ? copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>This thematic call was published to bring together international scholarly contributions for the relevant BRIQ issue.</p>}</section>
           {copy?.topics?.length ? (

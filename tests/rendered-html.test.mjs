@@ -439,6 +439,8 @@ test("renders the two active thematic calls with complete structured source copy
     assert.equal(response.status, 200);
   }
   for (const html of [trTransatlantic, trAi, enTransatlantic, enAi]) {
+    assert.match(html, /class="call-detail-hero-media"/);
+    assert.doesNotMatch(html, /class="reading-nav"/);
     assert.match(html, /class="call-topics-section"/);
     assert.match(html, /class="call-guidelines-section"/);
     assert.match(html, /class="call-important-date"/);
@@ -468,6 +470,9 @@ test("renders the two active thematic calls with complete structured source copy
   assert.match(css, /\.home-call-row:nth-child\(4n \+ 2\) \{[^}]*background: var\(--call-field\)/);
   assert.match(css, /\.home-call-row:nth-child\(4n \+ 3\) \{[^}]*background: var\(--call-field\)/);
   assert.match(css, /\.home-call-row:nth-child\(4n\) \{[^}]*background: var\(--call-field\)/);
+  assert.match(css, /Compact publisher-style call pages: one reading column and image-tinted mastheads/);
+  assert.match(css, /\.call-topic-group,[\s\S]*?display: block/);
+  assert.match(css, /\.call-detail-hero h1 \{[\s\S]*?font-size: clamp\(32px, 3\.7vw, 50px\)/);
 });
 
 test("uses four consistent monochrome issue palettes across all volumes", async () => {

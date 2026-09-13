@@ -10489,3 +10489,224 @@ footer {
   .cover-lightbox-panel img { max-width: calc(100vw - 32px); }
   .cover-lightbox.is-zoomed .cover-lightbox-panel img { width: 170vw; }
 }
+
+/* Compact publisher-style call pages: one reading column and image-tinted mastheads. */
+.call-detail-hero {
+  --call-hero-start: #111b28;
+  --call-hero-end: #24364b;
+  --call-hero-accent: #e1a47d;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(112deg, var(--call-hero-start), var(--call-hero-end));
+  color: var(--white);
+}
+
+.call-tone-ai {
+  --call-hero-start: #173e5c;
+  --call-hero-end: #246487;
+  --call-hero-accent: #b8dfef;
+}
+
+.call-tone-book {
+  --call-hero-start: #4b281d;
+  --call-hero-end: #70402e;
+  --call-hero-accent: #efb38e;
+}
+
+.call-detail-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(8, 13, 19, .7) 0%, rgba(8, 13, 19, .48) 48%, rgba(8, 13, 19, .14) 100%);
+  pointer-events: none;
+}
+
+.call-detail-hero-media {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: .48;
+  filter: saturate(.72) contrast(1.06);
+  mix-blend-mode: soft-light;
+}
+
+.call-detail-hero-inner {
+  position: relative;
+  z-index: 2;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+.call-detail-hero .page-breadcrumb {
+  margin-bottom: 32px;
+  color: rgba(255, 255, 255, .7);
+}
+
+.call-detail-hero-grid {
+  grid-template-columns: minmax(0, 1fr) 224px;
+  gap: 54px;
+  align-items: end;
+}
+
+.call-detail-hero .section-kicker {
+  color: var(--call-hero-accent);
+}
+
+.call-detail-hero h1 {
+  max-width: 820px;
+  margin-top: 9px;
+  color: var(--white);
+  font-size: clamp(32px, 3.7vw, 50px);
+  line-height: 1.06;
+  letter-spacing: -.035em;
+}
+
+.call-deadline-frame {
+  padding: 17px 18px 19px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  background: rgba(8, 13, 19, .22);
+  backdrop-filter: blur(5px);
+}
+
+.call-deadline-frame span {
+  margin-bottom: 8px;
+  color: var(--call-hero-accent);
+}
+
+.call-deadline-frame strong {
+  color: var(--white);
+  font-size: 25px;
+  line-height: 1.12;
+}
+
+.call-detail-page {
+  max-width: 1000px;
+  padding-top: 46px;
+  padding-bottom: 72px;
+}
+
+.call-detail-page .reading-content {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.call-detail-page .reading-content section + section {
+  margin-top: 32px;
+  padding-top: 32px;
+}
+
+.call-detail-page .reading-content h2 {
+  margin: 0;
+  font-size: clamp(25px, 2.5vw, 32px);
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+
+.call-detail-page .reading-content p,
+.call-detail-page .reading-content li {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.call-detail-page .reading-content p {
+  margin: 14px 0 0;
+}
+
+.call-section-intro {
+  margin-bottom: 20px !important;
+}
+
+.call-topic-groups {
+  margin-top: 18px;
+}
+
+.call-topic-group,
+.call-topic-groups.is-single .call-topic-group {
+  display: block;
+  padding: 19px 0 20px;
+}
+
+.call-topic-group h3 {
+  margin: 0 0 8px;
+  font-size: clamp(20px, 2vw, 24px);
+  line-height: 1.2;
+}
+
+.call-topic-group ul,
+.call-topic-groups.is-single ul,
+.call-guidelines-section ul {
+  display: block;
+  margin: 0;
+}
+
+.call-topic-group li,
+.call-guidelines-section li {
+  padding: 5px 0 5px 21px !important;
+}
+
+.call-important-date {
+  display: grid;
+  grid-template-columns: minmax(150px, .65fr) minmax(0, 1.35fr);
+  gap: 28px;
+  align-items: center;
+  padding: 24px 27px 26px !important;
+}
+
+.call-important-date p {
+  margin: 0;
+  font-size: clamp(21px, 2.2vw, 27px) !important;
+}
+
+.call-contact-section .dergipark-button {
+  margin-top: 15px;
+}
+
+.call-detail-page .reading-content > .underlined-link {
+  display: inline-block;
+  margin-top: 36px;
+}
+
+@media (max-width: 760px) {
+  .call-detail-hero-inner {
+    padding-top: 20px;
+    padding-bottom: 34px;
+  }
+
+  .call-detail-hero .page-breadcrumb {
+    margin-bottom: 24px;
+  }
+
+  .call-detail-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .call-detail-hero h1 {
+    max-width: 620px;
+    font-size: clamp(30px, 8.8vw, 38px);
+  }
+
+  .call-deadline-frame {
+    width: min(100%, 270px);
+  }
+
+  .call-detail-page {
+    padding-top: 34px;
+    padding-bottom: 54px;
+  }
+
+  .call-detail-page .reading-content section + section {
+    margin-top: 26px;
+    padding-top: 26px;
+  }
+
+  .call-important-date {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    padding: 22px 21px 24px !important;
+  }
+}
