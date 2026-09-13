@@ -361,6 +361,7 @@ test("renders editorial information and advisory boards as scholarly mastheads",
   assert.match(trEditorial, /<h2>Editörler<\/h2>/);
   assert.match(trEditorial, /<h2>Dil Editörleri<\/h2>/);
   assert.match(trEditorial, /ODTÜ · TÜBİTAK/);
+  assert.match(trEditorial, /<em>ODTÜ · TÜBİTAK<\/em>/);
   assert.match(trEditorial, /İTÜ TMDK/);
   assert.match(enEditorial, /<h1>Editorial Info<\/h1>/);
   assert.match(enEditorial, /<h2>Editor-in-Chief<\/h2>/);
@@ -368,6 +369,7 @@ test("renders editorial information and advisory boards as scholarly mastheads",
   assert.match(enEditorial, /<h2>Editors<\/h2>/);
   assert.match(enEditorial, /<h2>Language Editors<\/h2>/);
   assert.match(enEditorial, /Middle East Technical University · TÜBİTAK/);
+  assert.match(enEditorial, /<em>Middle East Technical University · TÜBİTAK<\/em>/);
   assert.match(enEditorial, /ITU Turkish Music State Conservatory/);
 
   for (const html of [trEditorial, enEditorial]) {
@@ -410,13 +412,13 @@ test("lists active calls with left-hand images and prominent deadlines", async (
   const [trHome, enHome] = await Promise.all([trResponse.text(), enResponse.text()]);
 
   for (const html of [trHome, enHome]) {
-    assert.equal((html.match(/class="home-call-row"/g) || []).length, 2);
-    assert.equal((html.match(/class="home-call-image"/g) || []).length, 2);
-    assert.equal((html.match(/class="home-call-deadline"/g) || []).length, 2);
+    assert.equal((html.match(/class="home-call-row"/g) || []).length, 3);
+    assert.equal((html.match(/class="home-call-image"/g) || []).length, 3);
+    assert.equal((html.match(/class="home-call-deadline"/g) || []).length, 3);
     assert.doesNotMatch(html, /class="call-card/);
   }
-  assert.match(trHome, /<small>Son Tarih<\/small><strong>1 Aralık 2026<\/strong>/);
-  assert.match(enHome, /<small>Deadline<\/small><strong>1 December 2026<\/strong>/);
+  assert.match(trHome, /<small>Son Tarih<\/small><strong><span>1 Ekim<\/span><span>2026<\/span><\/strong>/);
+  assert.match(enHome, /<small>Deadline<\/small><strong><span>1 October<\/span><span>2026<\/span><\/strong>/);
 });
 
 test("uses four consistent monochrome issue palettes across all volumes", async () => {
@@ -705,12 +707,16 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(trHome, /Yayıncı: Çin İş Geliştirme ve Dostluk Derneği/);
   assert.match(enHome, /Publisher: Turkish-Chinese Business Development and Friendship Association/);
 
-  assert.match(trHome, /1 Aralık 2026/);
+  assert.match(trHome, /1 Ekim/);
+  assert.match(trHome, /1 Aralık/);
   assert.doesNotMatch(trHome, /15 Ağustos 2026/);
-  assert.match(trCalls, /15 Ağustos 2026/);
-  assert.match(enHome, /1 December 2026/);
+  assert.match(trCalls, /1 Ekim 2026/);
+  assert.doesNotMatch(trCalls, /15 Ağustos 2026/);
+  assert.match(enHome, /1 October/);
+  assert.match(enHome, /1 December/);
   assert.doesNotMatch(enHome, /15 August 2026/);
-  assert.match(enCalls, /15 August 2026/);
+  assert.match(enCalls, /1 October 2026/);
+  assert.doesNotMatch(enCalls, /15 August 2026/);
 
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   assert.match(css, /Article hierarchy, compact disclosures, and sitewide density refinement/);
@@ -761,6 +767,8 @@ test("shows biographies and dated BRIQ appointments on staff profiles", async ()
   assert.match(enHtml, /Roles and terms/);
   assert.match(enHtml, /Editor-in-Chief/);
   assert.match(enHtml, /2026–Present/);
+  assert.match(trHtml, />Google Scholar<\/span>/);
+  assert.match(trHtml, /class="author-action-icon/);
 });
 
 test("groups all issues of each volume under one archive year without rewriting issue dates", async () => {

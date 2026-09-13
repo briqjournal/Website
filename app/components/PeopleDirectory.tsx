@@ -59,9 +59,9 @@ export function PeopleDirectory({
           const displayedAffiliation = visibleAffiliation(affiliation, locale);
           return (
             <li key={name}>
-              <div>
+              <div className="editorial-roster-entry">
                 <a className="editorial-roster-name" href={profileHref}>{name}</a>
-                {displayedAffiliation && <p>{displayedAffiliation}</p>}
+                {displayedAffiliation && <><span aria-hidden="true">, </span><em>{displayedAffiliation}</em></>}
               </div>
               <a className="editorial-roster-profile" href={profileHref} aria-label={isEnglish ? `View ${name}'s BRIQ profile` : `${name} BRIQ profilini görüntüle`}>↗︎</a>
             </li>

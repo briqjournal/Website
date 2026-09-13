@@ -26,7 +26,7 @@ import { DergiParkLogo } from "../../components/DergiParkLogo";
 import { ArticlePdfPage, ArticlePlatform } from "../../components/ArticlePlatform";
 import { IssuePlatform } from "../../components/IssuePlatform";
 import { CurrentIssueEditorial } from "../../components/CurrentIssueEditorial";
-import { AuthorUpdateForm } from "../../components/AuthorUpdateForm";
+import { AuthorProfileActions } from "../../components/AuthorProfileActions";
 import { IndexDirectory } from "../../components/IndexDirectory";
 import { CallHero } from "../../components/CallHero";
 import { completeCallCopyEn } from "../../call-content";
@@ -581,13 +581,7 @@ function EnglishAuthorProfile({ id }: { id: string }) {
             {profile.photo ? <img className="author-page-photo" src={profile.photo} alt={`${profile.name} portrait`} loading="lazy" decoding="async" /> : <span className="author-page-monogram" aria-hidden="true">{profile.name.slice(0, 1)}</span>}
             <div><p className="section-kicker">{profile.rolesEn.length ? profile.rolesEn.join(" · ") : "Author"}</p><h1>{profile.name}</h1><p>{profile.affiliationEn}</p></div>
           </div>
-          <div className="author-page-links" aria-label="Author external links">
-            {profile.email && <a href={`mailto:${profile.email}`}>Email <span>↗︎</span></a>}
-            <a href={profile.scholarUrl} target="_blank" rel="noreferrer">Search Google Scholar <span>↗︎</span></a>
-            {profile.orcids.map((orcid) => <a href={`https://orcid.org/${orcid}`} target="_blank" rel="noreferrer" key={orcid}>ORCID <span>↗︎</span></a>)}
-            {profile.institutionUrl && <a href={profile.institutionUrl} target="_blank" rel="noreferrer">Institutional page <span>↗︎</span></a>}
-            <AuthorUpdateForm authorName={profile.name} locale="en" />
-          </div>
+          <AuthorProfileActions authorName={profile.name} email={profile.email} scholarUrl={profile.scholarUrl} orcids={profile.orcids} institutionUrl={profile.institutionUrl} locale="en" />
         </div>
       </section>
       <div className="site-shell author-page-layout">

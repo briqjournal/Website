@@ -92,7 +92,7 @@ export const completeCallCopyTr: Record<string, CallEditorialCopy> = {
       ["İran Savaşı ve Küresel Etkileri", ["ABD–İran çatışmasının Avrupa açısından stratejik sonuçları", "Enerji güvenliği, ekonomik kırılganlıklar ve jeopolitik riskler", "Bölgesel yayılma dinamikleri ve NATO’nun olası rolü"]],
       ["Çok Kutupluluk ve Batı İttifakının Krizi", ["Alternatif jeopolitik platform ve kurumların yükselişi", "BRICS, ŞİÖ ve Küresel Güney’in rolü", "Küresel yönetişim yapılarının dönüşümü"]],
     ],
-    note: "Makaleler özgün olmalı ve başka bir yerde değerlendirme sürecinde bulunmamalıdır. Uzunluk 5.000–9.000 kelimedir. BRIQ, güncel yazım kuralları doğrultusunda APA 7’yi kullanır. Tüm akademik çalışmalar çift kör hakemlik sürecine tabi tutulur. Son metin gönderimi 15 Ağustos 2026’da sona ermiştir.",
+    note: "Makaleler özgün olmalı ve başka bir yerde değerlendirme sürecinde bulunmamalıdır. Uzunluk 5.000–9.000 kelimedir. BRIQ, güncel yazım kuralları doğrultusunda APA 7’yi kullanır. Tüm akademik çalışmalar çift kör hakemlik sürecine tabi tutulur. Son metin gönderimi 1 Ekim 2026’dır.",
   },
   "yapay-zeka-uretici-gucler-ortak-refah": {
     paragraphs: [
@@ -137,7 +137,7 @@ export const completeCallCopyEn: Record<string, CallEditorialCopy> = {
       ["The Iran War and Its Global Effects", ["Strategic consequences of the US-Iran conflict for Europe", "Energy security, economic vulnerabilities, and geopolitical risks", "Regional escalation dynamics and NATO’s possible role"]],
       ["Multipolarity and the Crisis of the Western Alliance", ["The rise of alternative geopolitical platforms and institutions", "The role of BRICS, the SCO, and the Global South", "The transformation of global governance structures"]],
     ],
-    note: "Manuscripts must be original and not under consideration elsewhere. The required length is 5,000–9,000 words. BRIQ follows APA 7 under its current submission guidelines. All scholarly articles undergo double-blind peer review. The final submission deadline was 15 August 2026.",
+    note: "Manuscripts must be original and not under consideration elsewhere. The required length is 5,000–9,000 words. BRIQ follows APA 7 under its current submission guidelines. All scholarly articles undergo double-blind peer review. The final submission deadline is 1 October 2026.",
   },
   "artificial-intelligence-productive-forces": {
     paragraphs: [

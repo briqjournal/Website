@@ -224,6 +224,21 @@ export const calls = [
   {
     status: "Aktif çağrı",
     statusEn: "Active call",
+    deadline: "1 Ekim 2026",
+    deadlineEn: "1 October 2026",
+    title: "Savaşlar ve Stratejik Parçalanma Çağında Transatlantik İlişkilerin Yeniden Yapılanması",
+    titleEn: "Reconfiguring Transatlantic Relations in an Era of War and Strategic Fragmentation",
+    summary:
+      "Ukrayna savaşı, ABD–Avrupa ilişkileri, NATO’nun dönüşümü ve çok kutuplulaşma bağlamında transatlantik ittifakın yeniden yapılanmasını inceleyen çalışmalar.",
+    summaryEn:
+      "Studies examining the reconfiguration of the transatlantic alliance through the war in Ukraine, US–European relations, NATO’s transformation, and multipolarity.",
+    image: "/assets/cfp-transatlantic.png",
+    url: "/tr/makale-cagrilari/transatlantik-iliskilerin-yeniden-yapilanmasi",
+    urlEn: "/en/calls-for-papers/transatlantic-relations",
+  },
+  {
+    status: "Aktif çağrı",
+    statusEn: "Active call",
     deadline: "1 Aralık 2026",
     deadlineEn: "1 December 2026",
     title: "Yapay Zekâ, Üretici Güçler ve İnsanlığın Ortak Refahı",
@@ -254,7 +269,6 @@ export const calls = [
 ];
 
 export const pastCalls = [
-  { title: "Savaşlar ve Stratejik Parçalanma Çağında Transatlantik İlişkilerin Yeniden Yapılanması", titleEn: "Reconfiguring Transatlantic Relations in an Era of War and Strategic Fragmentation", deadline: "15 Ağustos 2026", deadlineEn: "15 August 2026", issue: "Tematik sayı henüz yayımlanmadı", issueEn: "The thematic issue has not yet been published", issueHref: null, issueHrefEn: null, slug: "transatlantik-iliskilerin-yeniden-yapilanmasi", slugEn: "transatlantic-relations" },
   { title: "Gelişen Ülkelerde Kültürel Miras Yağmasına Karşı Stratejiler ve İşbirliği", titleEn: "Strategies and Cooperation against Cultural Heritage Plunder in Developing Countries", deadline: "1 Şubat 2026", deadlineEn: "1 February 2026", issue: "Cilt 7 · Sayı 3", issueEn: "Volume 7 · Issue 3", issueHref: "/tr/arsiv/cilt-7-sayi-3", issueHrefEn: "/en/archive/volume-7-issue-3", slug: "kulturel-miras-yagmasina-karsi-stratejiler" },
   { title: "Dünyada Giderek Büyüyen Gıda ve Su Krizi", titleEn: "The Growing Global Food and Water Crisis", deadline: "15 Eylül 2025", deadlineEn: "15 September 2025", issue: "Cilt 7 · Sayı 1", issueEn: "Volume 7 · Issue 1", issueHref: "/tr/arsiv/cilt-7-sayi-1", issueHrefEn: "/en/archive/volume-7-issue-1", slug: "dunyada-gida-ve-su-krizi" },
   { title: "Latin Amerika’da İlerici Dönüşümler ve Amerikan Hegemonyacılığına Direniş", titleEn: "Progressive Transformations in Latin America and Resistance to American Hegemonism", deadline: "1 Ağustos 2025", deadlineEn: "1 August 2025", issue: "Tematik sayı henüz yayımlanmadı", issueEn: "The thematic issue has not yet been published", issueHref: null, issueHrefEn: null, slug: "latin-amerikada-ilerici-donusumler" },

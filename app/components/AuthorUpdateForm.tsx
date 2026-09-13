@@ -31,7 +31,8 @@ export function AuthorUpdateForm({ authorName, locale = "tr" }: { authorName: st
   return (
     <>
       <button className="author-update-trigger" type="button" onClick={() => dialogRef.current?.showModal()}>
-        {isEnglish ? "Update profile" : "Güncelle"} <span>↗︎</span>
+        <svg className="author-action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4l10.8-10.8a2.8 2.8 0 0 0-4-4L4 16zM13.5 6.5l4 4"/></svg>
+        <span>{isEnglish ? "Update profile" : "Güncelle"}</span>
       </button>
       <dialog className="author-update-dialog" ref={dialogRef} onClick={(event) => {
         if (event.target === dialogRef.current) close();
