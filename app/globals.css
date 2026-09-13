@@ -10196,10 +10196,10 @@ footer {
   border-bottom-color: rgba(255, 255, 255, .18);
 }
 
-.home-call-row:nth-child(4n + 1) { --call-field: linear-gradient(112deg, #111b28 0%, #24364b 100%); --call-field-hover: linear-gradient(112deg, #172437 0%, #2b435e 100%); --call-accent: #e1a47d; }
-.home-call-row:nth-child(4n + 2) { --call-field: linear-gradient(112deg, #173e5c 0%, #246487 100%); --call-field-hover: linear-gradient(112deg, #1b4b70 0%, #2a7398 100%); --call-accent: #b8dfef; }
-.home-call-row:nth-child(4n + 3) { --call-field: linear-gradient(112deg, #4b281d 0%, #70402e 100%); --call-field-hover: linear-gradient(112deg, #592f22 0%, #80503a 100%); --call-accent: #efb38e; }
-.home-call-row:nth-child(4n) { --call-field: linear-gradient(112deg, #35131f 0%, #5a293d 100%); --call-field-hover: linear-gradient(112deg, #431827 0%, #69334a 100%); --call-accent: #e0afbf; }
+.home-call-row:nth-child(4n + 1) { --call-field: linear-gradient(112deg, #111b28 0%, #24364b 100%); --call-field-hover: linear-gradient(112deg, #172437 0%, #2b435e 100%); --call-accent: #e1a47d; background: var(--call-field); }
+.home-call-row:nth-child(4n + 2) { --call-field: linear-gradient(112deg, #173e5c 0%, #246487 100%); --call-field-hover: linear-gradient(112deg, #1b4b70 0%, #2a7398 100%); --call-accent: #b8dfef; background: var(--call-field); }
+.home-call-row:nth-child(4n + 3) { --call-field: linear-gradient(112deg, #4b281d 0%, #70402e 100%); --call-field-hover: linear-gradient(112deg, #592f22 0%, #80503a 100%); --call-accent: #efb38e; background: var(--call-field); }
+.home-call-row:nth-child(4n) { --call-field: linear-gradient(112deg, #35131f 0%, #5a293d 100%); --call-field-hover: linear-gradient(112deg, #431827 0%, #69334a 100%); --call-accent: #e0afbf; background: var(--call-field); }
 
 .home-call-row:hover {
   background: var(--call-field-hover);

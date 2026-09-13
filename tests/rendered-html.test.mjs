@@ -464,6 +464,10 @@ test("renders the two active thematic calls with complete structured source copy
   assert.match(css, /\.editorial-roster\.is-compact \.editorial-roster-meta > span:first-child/);
   assert.match(css, /#111b28/);
   assert.match(css, /#173e5c/);
+  assert.match(css, /\.home-call-row:nth-child\(4n \+ 1\) \{[^}]*background: var\(--call-field\)/);
+  assert.match(css, /\.home-call-row:nth-child\(4n \+ 2\) \{[^}]*background: var\(--call-field\)/);
+  assert.match(css, /\.home-call-row:nth-child\(4n \+ 3\) \{[^}]*background: var\(--call-field\)/);
+  assert.match(css, /\.home-call-row:nth-child\(4n\) \{[^}]*background: var\(--call-field\)/);
 });
 
 test("uses four consistent monochrome issue palettes across all volumes", async () => {
