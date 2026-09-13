@@ -6,6 +6,59 @@ import { extname, join, resolve } from "node:path";
 const root = resolve(import.meta.dirname, "..");
 const issueKey = process.argv[2] || "7-3";
 
+const issueTwoRecords = [
+  {
+    slug: "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0",
+    pages: [7, 20],
+    body: { tr: 9, en: 9 },
+    metadata: { received: "2025-12-30", accepted: "2026-01-19" },
+    sectionTitleReplacements: { "Giri ş": "Giriş" },
+  },
+  {
+    slug: "cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis",
+    pages: [21, 44],
+    body: { tr: 23, en: 23 },
+    metadata: { received: "2026-01-13", accepted: "2026-02-08" },
+  },
+  {
+    slug: "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme",
+    pages: [45, 70],
+    body: { tr: 47, en: 47 },
+    metadata: { received: "2025-11-16", accepted: "2026-01-24" },
+  },
+  {
+    slug: "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin",
+    pages: [71, 98],
+    body: { tr: 73, en: 73 },
+    metadata: { received: "2025-11-25", accepted: "2026-01-27" },
+    sectionTitleReplacements: {
+      "Teorik Çerçeve Hedef Ülkelerde Uluslararası Kalkınma İşbirliğinin Siyasallaşması: Kavramsal Tanım": "Teorik Çerçeve: Hedef Ülkelerde Uluslararası Kalkınma İşbirliğinin Siyasallaşması",
+      "Siyasal Sorunların Devamlılığı (Issue Conti-": "Siyasal Sorunların Devamlılığı (Issue Continuation)",
+      "Araçsal Siyasallaşma (Instrumental Politici-": "Araçsal Siyasallaşma (Instrumental Politicization)",
+      "İdeolojik Siyasallaşma (Ideological Politi-": "İdeolojik Siyasallaşma (Ideological Politicization)",
+      "“İşbirliği–Çatışma” Modeli ve Uluslararası": "“İşbirliği–Çatışma” Modeli ve Uluslararası Kalkınma İşbirliğinin İmkânsız Üçlemesi",
+      "Düzenli Demokrasi ve Araçsal Siyasallaş-": "Düzenli Demokrasi ve Araçsal Siyasallaştırma",
+      "Competitive Behaviour of External Major": "Competitive Behaviour of External Major Powers",
+      "“Cooperation-Confrontation” Model and the Impossible Trinity of International Devel-": "“Cooperation-Confrontation” Model and the Impossible Trinity of International Development Cooperation",
+      "Orderly Democracy and Instrumental Polit-": "Orderly Democracy and Instrumental Politicization",
+    },
+    dropSectionTitles: [",", "/"],
+  },
+  {
+    slug: "hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi",
+    pages: [99, 116],
+    body: { tr: 101, en: 101 },
+    metadata: { received: "2025-11-07", accepted: "2026-01-31" },
+  },
+  {
+    slug: "japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak",
+    pages: [117, 124],
+    body: { tr: 119, en: 119 },
+    metadata: { received: "2025-09-22", accepted: "2026-01-15" },
+    dropSectionTitles: ["Figure: JCP’s Strategic Shift from the A-B bloc to the A-C bloc"],
+  },
+];
+
 const issueThreeRecords = [
   {
     slug: "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin",
@@ -174,6 +227,15 @@ const issueFourRecords = [
 ];
 
 const issueConfigs = {
+  "7-2": {
+    pdfs: {
+      tr: join(root, "tmp/pdfs/v7i2-tr.pdf"),
+      en: join(root, "tmp/pdfs/v7i2-en.pdf"),
+    },
+    records: issueTwoRecords,
+    sourceLocale: { tr: "tr", en: "en" },
+    extractImages: false,
+  },
   "7-3": {
     pdfs: {
       tr: join(root, "public/assets/issues/briq-cilt-7-sayi-3-yaz-2026-tr.pdf"),
@@ -193,7 +255,7 @@ const issueConfigs = {
 };
 
 const issueConfig = issueConfigs[issueKey];
-if (!issueConfig) throw new Error(`Unknown issue ${issueKey}. Use 7-3 or 7-4.`);
+if (!issueConfig) throw new Error(`Unknown issue ${issueKey}. Use 7-2, 7-3, or 7-4.`);
 const { pdfs, records } = issueConfig;
 
 const exactHeadings = new Set([
@@ -273,7 +335,11 @@ function looksLikeHeading(node) {
   if (node.bold && /\?$/.test(node.text)) return true;
   if (/[.!:;]$/.test(node.text)) return false;
   if (node.font.size < 15 || node.font.size > 19) return false;
-  if (node.font.color && !/^#(?:211f1f|404041|000000)$/i.test(node.font.color)) return true;
+  const color = node.font.color.match(/^#([\da-f]{2})([\da-f]{2})([\da-f]{2})$/i);
+  if (color) {
+    const channels = color.slice(1).map((value) => Number.parseInt(value, 16));
+    if (Math.max(...channels) > 80 && Math.max(...channels) - Math.min(...channels) > 35) return true;
+  }
   if (node.bold && node.text.split(/\s+/).length <= 12) return true;
   return false;
 }
@@ -393,10 +459,19 @@ function blocksToSections(blocks, locale) {
 
 function normalizeSectionTitles(sections, record) {
   const replacements = record.sectionTitleReplacements || {};
-  return sections.map((section) => ({
+  const normalized = sections.map((section) => ({
     ...section,
     title: replacements[section.title] || section.title,
   }));
+  const dropped = new Set(record.dropSectionTitles || []);
+  return normalized.reduce((result, section) => {
+    if (dropped.has(section.title) && result.length) {
+      result[result.length - 1].paragraphs.push(...section.paragraphs);
+    } else {
+      result.push(section);
+    }
+    return result;
+  }, []);
 }
 
 function parseNumberedNotes(blocks) {
@@ -466,7 +541,7 @@ for (const locale of ["tr", "en"]) {
 
 const result = {};
 for (const record of records) {
-  const imagePaths = extractImages(record);
+  const imagePaths = issueConfig.extractImages === false ? [] : extractImages(record);
   result[record.slug] = { metadata: record.metadata || {}, tr: null, en: null };
   for (const locale of ["tr", "en"]) {
     const sourceLocale = issueConfig.sourceLocale[locale];

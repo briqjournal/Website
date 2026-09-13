@@ -26,6 +26,7 @@ import { archiveArticleListings, archiveIssueListings } from "../../archive-list
 import { absoluteSiteUrl } from "../../site-url";
 import { issueAccent } from "../../issue-themes";
 import { getIssueCopy } from "../../issue-copy";
+import { archiveEditorialHref, issueSupplementaryContents } from "../../issue-supplementary";
 import {
   archiveArticles,
   archiveIssues,
@@ -58,7 +59,7 @@ function PageHero({
   title,
   intro,
 }: {
-  kicker: string;
+  kicker?: string;
   title: string;
   intro?: string;
 }) {
@@ -69,9 +70,9 @@ function PageHero({
         <div className="page-breadcrumb">
           <a href="/tr">Ana Sayfa</a>
           <span>/</span>
-          <span>{kicker}</span>
+          <span>{kicker || title}</span>
         </div>
-        <p className="section-kicker light">{kicker}</p>
+        {kicker && <p className="section-kicker light">{kicker}</p>}
         <h1>{title}</h1>
         {intro && <p>{intro}</p>}
       </div>
@@ -1012,8 +1013,7 @@ function CallsPage() {
   return (
     <>
       <PageHero
-        kicker="Makale Çağrıları"
-        title="Açık ve geçmiş çağrılar"
+        title="Makale Çağrıları"
         intro="BRIQ’in tematik sayıları, özel dosyaları ve sürekli açık kitap incelemesi çağrısı."
       />
       <div className="site-shell page-section">
@@ -1062,13 +1062,17 @@ function ArchiveIssue({ volume, issue }: { volume: number; issue: number }) {
   const record = findArchiveIssue(volume, issue);
   if (!record) return null;
   const heading = getIssueCopy(volume, issue, "tr");
+  const supplementary = issueSupplementaryContents(volume, issue);
+  const contributionCount = record.articles.length + (supplementary?.length || 0);
   return (
     <IssuePlatform
       record={record}
       locale="tr"
       title={heading.title}
       subtitle={heading.subtitle}
-      description={`${record.season_tr} ${record.year} döneminde yayımlanan bu sayı, ${record.articles.length} çalışmayı BRIQ arşivinde açık erişimle bir araya getiriyor.`}
+      description={`${record.season_tr} ${record.year} döneminde yayımlanan bu sayı, ${contributionCount} çalışmayı BRIQ arşivinde açık erişimle bir araya getiriyor.`}
+      editorialHref={archiveEditorialHref(volume, issue, "tr")}
+      additionalContents={supplementary}
     />
   );
 }
@@ -1271,6 +1275,7 @@ export function generateStaticParams() {
 
   for (const issue of archiveIssues) {
     paths.add(`arsiv/cilt-${issue.volume}-sayi-${issue.issue}`);
+    if (issue.volume === 7 && issue.issue <= 3) paths.add(`arsiv/cilt-${issue.volume}-sayi-${issue.issue}/sunus`);
   }
   for (const article of archiveArticles) {
     paths.add(`makaleler/${article.slug}`);
@@ -1299,6 +1304,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const key = slug.join("/");
+  const editorialMatch = key.match(/^arsiv\/cilt-(\d+)-sayi-(\d+)\/sunus$/);
   const articlePdfMatch = key.match(/^makaleler\/(.+)\/pdf$/);
   if (articlePdfMatch) {
     const listed = articles.find((item) => item.url.endsWith(`/${articlePdfMatch[1]}`));
@@ -1368,6 +1374,22 @@ export async function generateMetadata({
   }
 
   const issueMatch = key.match(/^arsiv\/cilt-(\d+)-sayi-(\d+)$/);
+  if (editorialMatch) {
+    const issue = findArchiveIssue(Number(editorialMatch[1]), Number(editorialMatch[2]));
+    if (issue) {
+      return {
+        title: `${issueLabel(issue, "tr")} — Sunuş | BRIQ`,
+        description: `Fikret Akfırat’ın ${issueLabel(issue, "tr")} için sunuş yazısı.`,
+        alternates: {
+          canonical: `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}/sunus`,
+          languages: {
+            "tr-TR": `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}/sunus`,
+            "en-US": `/en/archive/volume-${issue.volume}-issue-${issue.issue}/editorial`,
+          },
+        },
+      };
+    }
+  }
   if (issueMatch) {
     const issue = findArchiveIssue(Number(issueMatch[1]), Number(issueMatch[2]));
     if (issue) {
@@ -1446,16 +1468,18 @@ export default async function ContentPage({
   const { slug } = await params;
   const key = slug.join("/");
   const Page = pages[key];
+  const editorialMatch = key.match(/^arsiv\/cilt-(\d+)-sayi-(\d+)\/sunus$/);
   const issueMatch = key.match(/^arsiv\/cilt-(\d+)-sayi-(\d+)$/);
   const articlePdfMatch = key.match(/^makaleler\/(.+)\/pdf$/);
   const articleMatch = key.match(/^makaleler\/(.+)$/);
   const authorMatch = key.match(/^yazar\/(.+)$/);
   const callMatch = key.match(/^makale-cagrilari\/(.+)$/);
   const reportMatch = key.match(/^yillik-raporlar\/(\d+)$/);
-  if (!Page && !issueMatch && !articlePdfMatch && !articleMatch && !authorMatch && !callMatch && !reportMatch) notFound();
+  if (!Page && !editorialMatch && !issueMatch && !articlePdfMatch && !articleMatch && !authorMatch && !callMatch && !reportMatch) notFound();
 
   let content: ReactNode;
   if (Page) content = <Page />;
+  else if (editorialMatch) content = <CurrentIssueEditorial volume={Number(editorialMatch[1])} issueNumber={Number(editorialMatch[2])} />;
   else if (issueMatch) content = <ArchiveIssue volume={Number(issueMatch[1])} issue={Number(issueMatch[2])} />;
   else if (articlePdfMatch) content = <ArticlePdfDetail slug={articlePdfMatch[1]} />;
   else if (articleMatch) content = <ArticleDetail slug={articleMatch[1]} />;
@@ -1476,7 +1500,9 @@ export default async function ContentPage({
     : undefined;
   const alternateHref = alternateArticle
     ? `/en/articles/${articleRouteSlug(alternateArticle, "en")}${articlePdfMatch ? "/pdf" : ""}`
-    : undefined;
+    : editorialMatch
+      ? `/en/archive/volume-${editorialMatch[1]}-issue-${editorialMatch[2]}/editorial`
+      : undefined;
 
   return (
     <main>

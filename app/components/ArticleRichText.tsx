@@ -180,13 +180,14 @@ export function ArticleRichText({
   notes: FullTextNote[];
   locale: "tr" | "en";
 }) {
+  const genericSectionTitles = new Set(["tam metin", "full text"]);
   return (
     <section className="article-fulltext" id={locale === "tr" ? "tam-metin" : "full-text-body"}>
       <h2>{locale === "tr" ? "Tam Metin" : "Full Text"}</h2>
       <div className="article-fulltext-sections">
         {sections.map((section) => (
           <section className="article-body-section" id={section.id} key={section.id}>
-            <h3>{section.title}</h3>
+            {!genericSectionTitles.has(section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US")) && <h3>{section.title}</h3>}
             {section.paragraphs.map((paragraph, index) => (
               <p key={`${section.id}-${index}`}>
                 {renderText(paragraph, references, notes, `${section.id}-${index}`).map((part, partIndex) => (

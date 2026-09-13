@@ -35,6 +35,7 @@ import { archiveArticleListings, archiveIssueListings } from "../../archive-list
 import { absoluteSiteUrl } from "../../site-url";
 import { issueAccent } from "../../issue-themes";
 import { getIssueCopy } from "../../issue-copy";
+import { archiveEditorialHref, issueSupplementaryContents } from "../../issue-supplementary";
 import { advisoryBoard, editorialBoard, editors, calls, pastCalls } from "../../site-data";
 
 type PageRecord = {
@@ -84,13 +85,13 @@ const englishPageMetadata: Record<string, [string, string, string]> = {
   "annual-reports": ["Annual Reports", "Verified records of BRIQ’s publishing activity and institutional development.", "/tr/yillik-raporlar"],
 };
 
-function EnglishHero({ kicker, title, intro }: { kicker: string; title: string; intro?: string }) {
+function EnglishHero({ kicker, title, intro }: { kicker?: string; title: string; intro?: string }) {
   return (
     <section className="page-hero">
       <div className="page-hero-rule" />
       <div className="site-shell page-hero-inner">
-        <div className="page-breadcrumb"><a href="/en">Home</a><span>/</span><span>{kicker}</span></div>
-        <p className="section-kicker light">{kicker}</p>
+        <div className="page-breadcrumb"><a href="/en">Home</a><span>/</span><span>{kicker || title}</span></div>
+        {kicker && <p className="section-kicker light">{kicker}</p>}
         <h1>{title}</h1>
         {intro && <p>{intro}</p>}
       </div>
@@ -566,7 +567,7 @@ function EnglishContact() {
 function EnglishSearch() { return <><EnglishHero kicker="Search" title="Search BRIQ" intro="Search articles, authors, issues, cover titles, DOI records, and calls for papers." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} locale="en" /></div></>; }
 
 function EnglishCalls() {
-  return <><EnglishHero kicker="Calls for Papers" title="Active and Past Calls" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={call.urlEn} key={call.urlEn}>{call.image ? <img src={call.image} alt="" loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · Deadline: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
+  return <><EnglishHero title="Calls for Papers" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={call.urlEn} key={call.urlEn}>{call.image ? <img src={call.image} alt="" loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · Deadline: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
 }
 
 function EnglishAuthorProfile({ id }: { id: string }) {
@@ -660,13 +661,17 @@ function EnglishIssue({ volume, issueNumber }: { volume: number; issueNumber: nu
   const record = findArchiveIssue(volume, issueNumber);
   if (!record) return null;
   const heading = getIssueCopy(volume, issueNumber, "en");
+  const supplementary = issueSupplementaryContents(volume, issueNumber);
+  const contributionCount = record.articles.length + (supplementary?.length || 0);
   return (
     <IssuePlatform
       record={record}
       locale="en"
       title={heading.title}
       subtitle={heading.subtitle}
-      description={`Published in ${record.season_en} ${record.year}, this issue brings together ${record.articles.length} contributions in BRIQ’s open-access archive.`}
+      description={`Published in ${record.season_en} ${record.year}, this issue brings together ${contributionCount} contributions in BRIQ’s open-access archive.`}
+      editorialHref={archiveEditorialHref(volume, issueNumber, "en")}
+      additionalContents={supplementary}
     />
   );
 }
@@ -779,6 +784,7 @@ export function generateStaticParams() {
 
   for (const issue of archiveIssues) {
     paths.add(`archive/volume-${issue.volume}-issue-${issue.issue}`);
+    if (issue.volume === 7 && issue.issue <= 3) paths.add(`archive/volume-${issue.volume}-issue-${issue.issue}/editorial`);
   }
   for (const article of archiveArticles) {
     const slug = articleRouteSlug(article, "en");
@@ -796,6 +802,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
   const { slug } = await params;
   const key = slug.join("/");
+  const editorialMatch = key.match(/^archive\/volume-(\d+)-issue-(\d+)\/editorial$/);
   const articlePdfMatch = key.match(/^articles\/(.+)\/pdf$/);
   if (articlePdfMatch) {
     const article = findArticleByEnglishRouteSlug(articlePdfMatch[1]);
@@ -864,6 +871,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   const issueMatch = key.match(/^archive\/volume-(\d+)-issue-(\d+)$/);
+  if (editorialMatch) {
+    const issue = findArchiveIssue(Number(editorialMatch[1]), Number(editorialMatch[2]));
+    if (issue) {
+      return {
+        title: `${issueLabel(issue, "en")} — Editorial | BRIQ`,
+        description: `Fikret Akfırat’s editorial for ${issueLabel(issue, "en")}.`,
+        alternates: {
+          canonical: `/en/archive/volume-${issue.volume}-issue-${issue.issue}/editorial`,
+          languages: {
+            "tr-TR": `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}/sunus`,
+            "en-US": `/en/archive/volume-${issue.volume}-issue-${issue.issue}/editorial`,
+          },
+        },
+      };
+    }
+  }
   if (issueMatch) {
     const issue = findArchiveIssue(Number(issueMatch[1]), Number(issueMatch[2]));
     if (issue) {
@@ -933,6 +956,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function EnglishContentPage({ params }: { params: Promise<{ slug: string[] }> }) {
   const { slug } = await params;
   const key = slug.join("/");
+  const editorialMatch = key.match(/^archive\/volume-(\d+)-issue-(\d+)\/editorial$/);
   const issueMatch = key.match(/^archive\/volume-(\d+)-issue-(\d+)$/);
   const articlePdfMatch = key.match(/^articles\/(.+)\/pdf$/);
   const articleMatch = key.match(/^articles\/(.+)$/);
@@ -959,6 +983,7 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
   else if (key === "contact") content = <EnglishContact />;
   else if (key === "search") content = <EnglishSearch />;
   else if (key === "annual-reports") content = <EnglishReports />;
+  else if (editorialMatch) content = <CurrentIssueEditorial locale="en" volume={Number(editorialMatch[1])} issueNumber={Number(editorialMatch[2])} />;
   else if (issueMatch) content = <EnglishIssue volume={Number(issueMatch[1])} issueNumber={Number(issueMatch[2])} />;
   else if (articlePdfMatch) content = <EnglishArticlePdf slug={articlePdfMatch[1]} />;
   else if (articleMatch) content = <EnglishArticle slug={articleMatch[1]} />;
@@ -976,7 +1001,9 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
     : undefined;
   const alternateHref = alternateArticle
     ? `/tr/makaleler/${alternateArticle.slug}${articlePdfMatch ? "/pdf" : ""}`
-    : undefined;
+    : editorialMatch
+      ? `/tr/arsiv/cilt-${editorialMatch[1]}-sayi-${editorialMatch[2]}/sunus`
+      : undefined;
 
   return (
     <main lang="en">

@@ -16,6 +16,7 @@ export type IssueSupplementaryContent = {
   typeTr: string;
   typeEn: string;
   author: string;
+  authorEn?: string;
   titleTr: string;
   titleEn: string;
   pages: string;
@@ -62,16 +63,17 @@ export function IssuePlatform({
   const readingPdf = (isEnglish ? englishPdf : turkishPdf) || turkishPdf || englishPdf;
   const cover = coverSrc || (isEnglish ? record.cover_en : record.cover_tr);
   const period = periodLabel || `${isEnglish ? record.season_en : record.season_tr} ${record.year}`;
+  const contributionCount = publications.length + additionalContents.length;
   const issueFacts: readonly IssueFact[] = facts || (isEnglish
     ? [
         ["Publication period", period],
-        ["Contributions", String(publications.length)],
+        ["Contributions", String(contributionCount)],
         ["Languages", "Turkish · English"],
         ["Access", "Open access"],
       ]
     : [
         ["Yayın dönemi", period],
-        ["İçerik", String(publications.length)],
+        ["İçerik", String(contributionCount)],
         ["Yayın dili", "Türkçe · English"],
         ["Erişim", "Açık erişim"],
       ]);
@@ -175,7 +177,7 @@ export function IssuePlatform({
               <span className="issue-toc-number">{padIssueNumber(publications.length + index + 1)}</span>
               <span className="issue-toc-meta">
                 <small>{isEnglish ? content.typeEn : content.typeTr}</small>
-                <b>{content.author}</b>
+                <b>{isEnglish ? (content.authorEn || content.author) : content.author}</b>
               </span>
               <span className="issue-toc-title">{isEnglish ? content.titleEn : content.titleTr}</span>
               <span className="issue-toc-pages">{content.pages}</span>

@@ -1,4 +1,5 @@
 import { findArchiveIssue, issuePdfUrl } from "../archive";
+import { archivedEditorials } from "../editorials";
 
 const editorialTr = [
   "ABD ve İsrail’in İran’a yönelik saldırısıyla ortaya çıkan uluslararası tablo, yalnızca Batı Asya’da değil, dünya genelinde güç dengelerindeki köklü dönüşümün en önemli göstergelerinden biri oldu. Saldırının hedefi, İran’ı bölgesel güç olmaktan çıkarmak, ABD-İsrail üstünlüğünü yeniden tesis etmek ve Batı Asya’yı yeniden Washington’un çizdiği güvenlik çerçevesine sokmaktı. Ancak sonuç bunun tersi oldu. ABD’nin doğrudan müdahalesi, sahip olduğu askeri üstünlüğün bölgesel sonuçları belirlemeye yetmediğini ortaya koydu. İsrail’in saldırganlığı ise bölge ülkelerini ABD-İsrail çizgisinde birleştirmek yerine, kendi güvenliklerini ve geleceklerini kendilerinin belirleme eğilimini güçlendirdi.",
@@ -20,27 +21,44 @@ const editorialEn = [
   "No completed new order yet exists in West Asia. US military and economic power remains significant, and differences of interest among regional countries continue. But the old order no longer functions as it once did. The changing global balance of power is creating the objective conditions for nation-states to strengthen their independence against imperialist hegemonism. West Asian countries are displaying a stronger will to determine their own security and future. The Mecca Agreement signed on 7 August 2026 is a concrete expression of this development.",
 ];
 
-export function CurrentIssueEditorial({ locale = "tr" }: { locale?: "tr" | "en" }) {
+export function CurrentIssueEditorial({
+  locale = "tr",
+  volume = 7,
+  issueNumber = 4,
+}: {
+  locale?: "tr" | "en";
+  volume?: number;
+  issueNumber?: number;
+}) {
   const isEnglish = locale === "en";
-  const issue = findArchiveIssue(7, 4);
+  const issue = findArchiveIssue(volume, issueNumber);
   const pdf = issue ? issuePdfUrl(issue, locale) || issuePdfUrl(issue, "tr") : undefined;
+  const archivedCopy = archivedEditorials[`${volume}-${issueNumber}`]?.[locale];
+  const copy = archivedCopy || {
+    title: isEnglish ? "A New Era in West Asia" : "Batı Asya’da Yeni Dönem",
+    subtitle: isEnglish ? "Hegemonism Recedes, Regional Will Grows Stronger" : "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor",
+    paragraphs: isEnglish ? editorialEn : editorialTr,
+  };
+  const current = volume === 7 && issueNumber === 4;
   const home = isEnglish ? "/en" : "/tr";
-  const issueHref = isEnglish ? "/en/current-issue" : "/tr/guncel-sayi";
+  const issueHref = current
+    ? (isEnglish ? "/en/current-issue" : "/tr/guncel-sayi")
+    : (isEnglish ? `/en/archive/volume-${volume}-issue-${issueNumber}` : `/tr/arsiv/cilt-${volume}-sayi-${issueNumber}`);
   return (
     <article className="current-editorial-page">
       <header className="current-editorial-hero">
         <div className="site-shell">
-          <div className="page-breadcrumb"><a href={home}>{isEnglish ? "Home" : "Ana Sayfa"}</a><span>/</span><a href={issueHref}>{isEnglish ? "Current Issue" : "Güncel Sayı"}</a><span>/</span><span>{isEnglish ? "Editorial" : "Sunuş"}</span></div>
+          <div className="page-breadcrumb"><a href={home}>{isEnglish ? "Home" : "Ana Sayfa"}</a><span>/</span><a href={issueHref}>{current ? (isEnglish ? "Current Issue" : "Güncel Sayı") : (isEnglish ? `Volume ${volume} · Issue ${issueNumber}` : `Cilt ${volume} · Sayı ${issueNumber}`)}</a><span>/</span><span>{isEnglish ? "Editorial" : "Sunuş"}</span></div>
           <p className="section-kicker light">{isEnglish ? "Editorial" : "Editörden"}</p>
-          <h1>{isEnglish ? "A New Era in West Asia" : "Batı Asya’da Yeni Dönem"}<em>{isEnglish ? "Hegemonism Recedes, Regional Will Grows Stronger" : "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor"}</em></h1>
+          <h1>{copy.title}{copy.subtitle && <em>{copy.subtitle}</em>}</h1>
           <div className="current-editorial-byline"><b>Fikret Akfırat</b><span>{isEnglish ? "Editor-in-Chief" : "Genel Yayın Yönetmeni"}</span></div>
         </div>
       </header>
       <div className="site-shell current-editorial-layout">
-        <aside><span>{isEnglish ? "BRIQ" : "BRIQ"}</span><b>7.4</b><a href={issueHref}>{isEnglish ? "Back to the issue" : "Sayıya dön"} →︎</a></aside>
+        <aside><span>BRIQ</span><b>{volume}.{issueNumber}</b><a href={issueHref}>{isEnglish ? "Back to the issue" : "Sayıya dön"} →︎</a></aside>
         <div className="current-editorial-body">
-          {(isEnglish ? editorialEn : editorialTr).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          {pdf && <div className="current-editorial-actions"><a className="button button-dark" href={`${pdf}#page=4`}>{isEnglish ? "View in Full Issue PDF" : "Tam Sayı PDF’de Gör"} <span>↗︎</span></a><a className="underlined-link" href={issueHref}>{isEnglish ? "Current issue" : "Güncel sayı"} →︎</a></div>}
+          {copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {pdf && <div className="current-editorial-actions"><a className="button button-dark" href={`${pdf}#page=4`}>{isEnglish ? "View in Full Issue PDF" : "Tam Sayı PDF’de Gör"} <span>↗︎</span></a><a className="underlined-link" href={issueHref}>{isEnglish ? "Issue contents" : "Sayı içeriği"} →︎</a></div>}
         </div>
       </div>
     </article>

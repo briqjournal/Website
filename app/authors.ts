@@ -135,6 +135,62 @@ export function boardAffiliation(affiliation: string, locale: Locale) {
 }
 
 const authorMetadata: Record<string, AuthorMetadata> = {
+  "He Ganqiang": {
+    tr: "Nanjing Finans ve Ekonomi Üniversitesi, Ekonomi Fakültesi, Çin",
+    en: "Faculty of Economics, Nanjing University of Finance and Economics, China",
+    email: "heganqiang6229@sina.com",
+    orcids: ["0009-0006-2002-874X"],
+    biographyTr: "He Ganqiang, Nanjing Finans ve Ekonomi Üniversitesi Ekonomi Fakültesi’nde profesör ve Çin Politik Ekonomi Derneği danışmanıdır. Çalışmaları sermaye ve çağdaş Çin ekonomisi üzerine yoğunlaşmaktadır.",
+    biographyEn: "He Ganqiang is a professor in the Faculty of Economics at Nanjing University of Finance and Economics and an advisor to the Chinese Political Economy Association. His research focuses on capital and the contemporary Chinese economy.",
+  },
+  "Xinhua Jian": {
+    tr: "Wuhan Üniversitesi, Ekonomi ve İşletme Fakültesi, Çin",
+    en: "School of Economics and Management, Wuhan University, China",
+    email: "xhjian@whu.edu.cn",
+    orcids: ["0009-0000-3432-9363"],
+    biographyTr: "Xinhua Jian, Nanchang Üniversitesi ile Wuhan Üniversitesi’nin Ekonomi ve İşletme Fakültelerinde öğretim üyesidir. Çalışmaları Marksist politik ekonominin incelenmesi ve uygulanması ile Çin ekonomisindeki sorunlara odaklanmaktadır.",
+    biographyEn: "Xinhua Jian teaches at the schools of Economics and Management of Nanchang University and Wuhan University. His work focuses on the study and application of Marxist political economy and on issues in China’s economy.",
+  },
+  "Belkacem Iratni": {
+    tr: "Cezayir Üniversitesi, Siyaset ve Uluslararası İlişkiler Fakültesi, Cezayir",
+    en: "Faculty of Politics and International Relations, University of Algiers, Algeria",
+    email: "kiratni54@gmail.com",
+    orcids: ["0009-0007-4747-8836"],
+    biographyTr: "Belkacem Iratni, Cezayir Üniversitesi Siyaset ve Uluslararası İlişkiler Fakültesi’nde sözleşmeli profesördür. Çalışmaları Cezayir’in iç ve dış politikası ile Sahel-Sahra bölgesindeki güvenlik sorunlarına odaklanmaktadır.",
+    biographyEn: "Belkacem Iratni is a contractual professor in the Faculty of Politics and International Relations at the University of Algiers. His research addresses Algeria’s domestic and foreign policy and security issues in the Sahel-Saharan region.",
+  },
+  "Fang Chenyu": {
+    tr: "Fudan Üniversitesi, Uluslararası İlişkiler ve Kamu Yönetimi Fakültesi, Çin",
+    en: "School of International Relations and Public Affairs, Fudan University, China",
+    email: "cyfang22@m.fudan.edu.cn",
+    orcids: ["0009-0004-8432-712X"],
+    biographyTr: "Fang Chenyu, Fudan Üniversitesi Uluslararası İlişkiler ve Kamu Yönetimi Fakültesi’nde doktora öğrencisidir. Araştırmaları Kuşak ve Yol Girişimi ve güç rekabeti üzerine yoğunlaşmaktadır.",
+    biographyEn: "Fang Chenyu is a PhD candidate at the School of International Relations and Public Affairs, Fudan University. His research focuses on the Belt and Road Initiative and power competition.",
+  },
+  "Wang Weibin": {
+    tr: "Pekin Yabancı Diller Üniversitesi, Uluslararası İlişkiler Okulu, Çin",
+    en: "School of International Relations, Beijing Foreign Studies University, China",
+    email: "wangweibin@bfsu.edu.cn",
+    orcids: ["0009-0005-9719-4378"],
+    biographyTr: "Wang Weibin, Pekin Yabancı Diller Üniversitesi Uluslararası İlişkiler Okulu’nda doktora öğrencisidir. Araştırmaları Avrupa siyaseti ve diplomasisi üzerine odaklanmaktadır.",
+    biographyEn: "Wang Weibin is a PhD candidate at the School of International Relations, Beijing Foreign Studies University. His research focuses on European politics and diplomacy.",
+  },
+  "Werner Rügemer": {
+    tr: "Yazar, Köln, Almanya",
+    en: "Author, Cologne, Germany",
+    email: "werner.ruegemer@posteo.de",
+    orcids: ["0000-0001-2848-0017"],
+    biographyTr: "Werner Rügemer, Köln’de yaşayan yazar ve düşünürdür. Dilbilim, ekonomi ve felsefe eğitimi almış; Köln Üniversitesi’nde öğretim üyeliği yapmıştır. Dünya Politik Ekonomi Derneği Konsey üyesidir.",
+    biographyEn: "Werner Rügemer is an author and philosopher based in Cologne. He studied linguistics, economics, and philosophy, taught at the University of Cologne, and serves on the Council of the World Association for Political Economy.",
+  },
+  "Hiroshi Onishi": {
+    tr: "Keio Üniversitesi ve Kyoto Üniversitesi, Emeritus Profesör, Japonya",
+    en: "Professor Emeritus, Keio University and Kyoto University, Japan",
+    email: "ohnishi@f6.dion.ne.jp",
+    orcids: ["0009-0009-0475-3193"],
+    biographyTr: "Hiroshi Onishi, Keio Üniversitesi ve Kyoto Üniversitesi emeritus profesörüdür. Dünya Politik Ekonomi Derneği başkan yardımcısıdır; temel araştırma alanı Marksist formal ekonomidir.",
+    biographyEn: "Hiroshi Onishi is Professor Emeritus at Keio University and Kyoto University and Vice Chair of the World Association for Political Economy. His principal research field is Marxian formal economics.",
+  },
   "Jason Morgan": {
     tr: "Reitaku Üniversitesi, Küresel Çalışmalar Fakültesi, Japonya",
     en: "Faculty of Global Studies, Reitaku University, Japan",

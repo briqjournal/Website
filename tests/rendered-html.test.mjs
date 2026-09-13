@@ -136,6 +136,23 @@ test("publishes reciprocal canonical and language metadata for both locales", as
   assert.match(enHtml, /\/tr\/makale-cagrilari/);
 });
 
+test("uses a single calls-for-papers heading and keeps the publisher credit only once", async () => {
+  const [trResponse, enResponse] = await Promise.all([
+    renderPath("/tr/makale-cagrilari"),
+    renderPath("/en/calls-for-papers"),
+  ]);
+  const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
+
+  assert.match(trHtml, /<h1>Makale Çağrıları<\/h1>/);
+  assert.doesNotMatch(trHtml, /Açık ve geçmiş çağrılar/i);
+  assert.doesNotMatch(trHtml, /<p class="section-kicker light">Makale Çağrıları<\/p>/);
+  assert.match(enHtml, /<h1>Calls for Papers<\/h1>/);
+  assert.doesNotMatch(enHtml, /Active and Past Calls/i);
+  assert.doesNotMatch(enHtml, /<p class="section-kicker light">Calls for Papers<\/p>/);
+  assert.equal((trHtml.match(/Çin İş Geliştirme ve Dostluk Derneği tarafından yayımlanmaktadır\./g) || []).length, 0);
+  assert.equal((trHtml.match(/Yayıncı: Çin İş Geliştirme ve Dostluk Derneği/g) || []).length, 1);
+});
+
 test("renders source-faithful publication principles with a two-level section navigator", async () => {
   const [trResponse, enResponse] = await Promise.all([
     renderPath("/tr/dergi/yayin-ilkeleri"),
@@ -581,6 +598,67 @@ test("renders every current-issue contribution in the bilingual HTML article pla
     assert.match(enHtml, /class="article-body-section"/, `EN full text ${slug}`);
     assert.doesNotMatch(trHtml, /legacy-fulltext-note/, `TR legacy fallback ${slug}`);
     assert.doesNotMatch(enHtml, /legacy-fulltext-note/, `EN legacy fallback ${slug}`);
+  }
+});
+
+test("publishes Volume 7 Issues 1–3 editorials and Issue 3 supplementary contents", async () => {
+  for (const issue of [1, 2, 3]) {
+    const [trIssueResponse, enIssueResponse, trEditorialResponse, enEditorialResponse] = await Promise.all([
+      renderPath(`/tr/arsiv/cilt-7-sayi-${issue}`),
+      renderPath(`/en/archive/volume-7-issue-${issue}`),
+      renderPath(`/tr/arsiv/cilt-7-sayi-${issue}/sunus`),
+      renderPath(`/en/archive/volume-7-issue-${issue}/editorial`),
+    ]);
+    assert.equal(trEditorialResponse.status, 200, `TR editorial 7.${issue}`);
+    assert.equal(enEditorialResponse.status, 200, `EN editorial 7.${issue}`);
+    const [trIssue, enIssue, trEditorial, enEditorial] = await Promise.all([
+      trIssueResponse.text(),
+      enIssueResponse.text(),
+      trEditorialResponse.text(),
+      enEditorialResponse.text(),
+    ]);
+    assert.match(trIssue, new RegExp(`/tr/arsiv/cilt-7-sayi-${issue}/sunus`));
+    assert.match(enIssue, new RegExp(`/en/archive/volume-7-issue-${issue}/editorial`));
+    assert.match(trEditorial, /Fikret Akfırat/);
+    assert.match(enEditorial, /Editor-in-Chief/);
+    assert.match(trEditorial, new RegExp(`href="/en/archive/volume-7-issue-${issue}/editorial"`));
+    assert.match(enEditorial, new RegExp(`href="/tr/arsiv/cilt-7-sayi-${issue}/sunus"`));
+  }
+
+  const issueThree = await (await renderPath("/tr/arsiv/cilt-7-sayi-3")).text();
+  assert.equal((issueThree.match(/class="issue-toc-number"/g) || []).length, 13);
+  assert.match(issueThree, /Hafız Şirazi/);
+  assert.match(issueThree, /Hasan Hüseyin Korkmazgil/);
+  assert.match(issueThree, /Louis Daguerre/);
+  assert.match(issueThree, /Rawan Anani/);
+  assert.match(issueThree, /Olivio Martinez/);
+  for (const page of [123, 125, 127, 128, 129]) assert.match(issueThree, new RegExp(`#page=${page}`));
+});
+
+test("renders Volume 7 Issue 2 articles as bilingual HTML with issue-verified affiliations", async () => {
+  const expected = [
+    ["sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0", "Nanjing Finans ve Ekonomi Üniversitesi", "Nanjing University of Finance and Economics"],
+    ["cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis", "Wuhan Üniversitesi", "Wuhan University"],
+    ["afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme", "Cezayir Üniversitesi", "University of Algiers"],
+    ["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin", "Fudan Üniversitesi", "Fudan University"],
+    ["hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi", "Yazar, Köln, Almanya", "Author, Cologne, Germany"],
+    ["japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak", "Keio Üniversitesi ve Kyoto Üniversitesi", "Keio University and Kyoto University"],
+  ];
+
+  for (const [slug, affiliationTr, affiliationEn] of expected) {
+    const [trResponse, enResponse] = await Promise.all([
+      renderPath(`/tr/makaleler/${slug}`),
+      renderPath(`/en/articles/${englishArticleSlug(slug)}`),
+    ]);
+    assert.equal(trResponse.status, 200, `TR 7.2 ${slug}`);
+    assert.equal(enResponse.status, 200, `EN 7.2 ${slug}`);
+    const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
+    assert.match(trHtml, /class="article-body-section"/, `TR full text ${slug}`);
+    assert.match(enHtml, /class="article-body-section"/, `EN full text ${slug}`);
+    assert.match(trHtml, new RegExp(affiliationTr));
+    assert.match(enHtml, new RegExp(affiliationEn));
+    assert.doesNotMatch(trHtml, /Bağımsız Araştırmacı/);
+    assert.doesNotMatch(enHtml, /Independent Researcher/);
   }
 });
 

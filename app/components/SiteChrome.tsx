@@ -68,6 +68,9 @@ function alternateLocalePath(pathname: string, locale: Locale) {
     const issue = path.match(/^\/tr\/arsiv\/cilt-(\d+)-sayi-(\d+)$/);
     if (issue) return `/en/archive/volume-${issue[1]}-issue-${issue[2]}`;
 
+    const editorial = path.match(/^\/tr\/arsiv\/cilt-(\d+)-sayi-(\d+)\/sunus$/);
+    if (editorial) return `/en/archive/volume-${editorial[1]}-issue-${editorial[2]}/editorial`;
+
     const articlePdf = path.match(/^\/tr\/makaleler\/(.+)\/pdf$/);
     if (articlePdf) {
       const slug = currentIssueArticleSlugs[articlePdf[1]] || articlePdf[1];
@@ -96,6 +99,9 @@ function alternateLocalePath(pathname: string, locale: Locale) {
 
   const issue = path.match(/^\/en\/archive\/volume-(\d+)-issue-(\d+)$/);
   if (issue) return `/tr/arsiv/cilt-${issue[1]}-sayi-${issue[2]}`;
+
+  const editorial = path.match(/^\/en\/archive\/volume-(\d+)-issue-(\d+)\/editorial$/);
+  if (editorial) return `/tr/arsiv/cilt-${editorial[1]}-sayi-${editorial[2]}/sunus`;
 
   const articlePdf = path.match(/^\/en\/articles\/(.+)\/pdf$/);
   if (articlePdf) {
@@ -234,11 +240,6 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
           <img src={isEnglish ? "/assets/briq-logo.png" : "/assets/briq-logo-tr.png"} alt="BRIQ" loading="lazy" decoding="async" />
           <p>
             {isEnglish ? "BRIQ is a quarterly journal of international politics, economics, and culture published in Turkish and English." : "BRIQ (Belt & Road Initiative Quarterly) Türkçe-İngilizce, üç aylık uluslararası siyaset, ekonomi ve kültür dergisidir."}
-          </p>
-          <p>
-            {isEnglish
-              ? "Published by the Turkish-Chinese Business Development and Friendship Association."
-              : "Çin İş Geliştirme ve Dostluk Derneği tarafından yayımlanmaktadır."}
           </p>
         </div>
         <div>
