@@ -736,10 +736,37 @@ function EnglishCallDetail({ slug }: { slug: string }) {
         <aside className="reading-nav"><b>Call information</b><span>Deadline: {deadline}</span><span>{active ? "Active call" : "Past call"}</span></aside>
         <div className="reading-content">
           <section><h2>Scope of the call</h2>{copy ? copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>This thematic call was published to bring together international scholarly contributions for the relevant BRIQ issue.</p>}</section>
-          {copy?.topics?.map(([heading, topics]) => <section key={heading}><h2>{heading}</h2><ul>{topics.map((topic) => <li key={topic}>{topic}</li>)}</ul></section>)}
-          {copy?.note && <section><h2>Guidelines and submission</h2><p>{copy.note}</p></section>}
+          {copy?.topics?.length ? (
+            <section className="call-topics-section">
+              <h2>{copy.topics.length === 1 ? copy.topics[0][0] : "Suggested Topics"}</h2>
+              {copy.topicIntro && <p className="call-section-intro">{copy.topicIntro}</p>}
+              <div className={`call-topic-groups ${copy.topics.length === 1 ? "is-single" : ""}`}>
+                {copy.topics.map(([heading, topics]) => (
+                  <div className="call-topic-group" key={heading}>
+                    {copy.topics!.length > 1 && <h3>{heading}</h3>}
+                    <ul>{topics.map((topic) => <li key={topic}>{topic}</li>)}</ul>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : null}
+          {copy?.guidelines?.length ? (
+            <section className="call-guidelines-section">
+              <h2>Submission Guidelines</h2>
+              <ul>{copy.guidelines.map((item) => <li key={item}>{item}</li>)}</ul>
+              {copy.guidelineHref && <a className="underlined-link" href={copy.guidelineHref}>View the complete submission guidelines →︎</a>}
+            </section>
+          ) : copy?.note ? <section><h2>Guidelines and submission</h2><p>{copy.note}</p></section> : null}
+          {copy?.deadline && <section className="call-important-date"><h2>Important Dates</h2><p>{copy.deadline}</p></section>}
+          {copy?.contact && (
+            <section className="call-contact-section">
+              <h2>Submission and Contact</h2>
+              <p><a className="inline-link" href={`mailto:${copy.contact}`}>{copy.contact}</a></p>
+              {active && <a className="button button-dark dergipark-button" href="https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new"><DergiParkLogo prefix="Submit via" /><span>↗︎</span></a>}
+            </section>
+          )}
           {past && <section><h2>Outcome of the call</h2><p>{past.issueHrefEn ? <>The issue published following this call: <a className="inline-link" href={past.issueHrefEn}>{past.issueEn}</a>.</> : past.issueEn}</p></section>}
-          {active && <section><h2>Submission</h2><p>Manuscripts may be prepared in Turkish or English. Authors should review the submission guidelines before submitting.</p><a className="button button-dark dergipark-button" href="https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new"><DergiParkLogo prefix="Submit via" /><span>↗︎</span></a></section>}
+          {active && !copy?.contact && <section><h2>Submission</h2><p>Manuscripts may be prepared in Turkish or English. Authors should review the submission guidelines before submitting.</p><a className="button button-dark dergipark-button" href="https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new"><DergiParkLogo prefix="Submit via" /><span>↗︎</span></a></section>}
           <a className="underlined-link" href="/en/calls-for-papers">Back to all calls →︎</a>
         </div>
       </div>

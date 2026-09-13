@@ -1149,10 +1149,37 @@ function CallDetail({ slug }: { slug: string }) {
         <aside className="reading-nav"><b>Çağrı bilgisi</b><span>Son Tarih: {deadline}</span><span>{active ? "Aktif çağrı" : "Geçmiş çağrı"}</span></aside>
         <div className="reading-content">
           <section><h2>Çağrının kapsamı</h2>{copy ? copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{active?.summary || "Bu tematik çağrı, BRIQ’in ilgili sayısı için uluslararası akademik katkıları bir araya getirmek üzere yayımlanmıştır."}</p>}</section>
-          {copy?.topics?.map(([heading, topics]) => <section key={heading}><h2>{heading}</h2><ul>{topics.map((topic) => <li key={topic}>{topic}</li>)}</ul></section>)}
-          {copy?.note && <section><h2>Yazım ve başvuru</h2><p>{copy.note}</p></section>}
+          {copy?.topics?.length ? (
+            <section className="call-topics-section">
+              <h2>{copy.topics.length === 1 ? copy.topics[0][0] : "Önerilen Konu Başlıkları"}</h2>
+              {copy.topicIntro && <p className="call-section-intro">{copy.topicIntro}</p>}
+              <div className={`call-topic-groups ${copy.topics.length === 1 ? "is-single" : ""}`}>
+                {copy.topics.map(([heading, topics]) => (
+                  <div className="call-topic-group" key={heading}>
+                    {copy.topics!.length > 1 && <h3>{heading}</h3>}
+                    <ul>{topics.map((topic) => <li key={topic}>{topic}</li>)}</ul>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : null}
+          {copy?.guidelines?.length ? (
+            <section className="call-guidelines-section">
+              <h2>Yazım Kuralları</h2>
+              <ul>{copy.guidelines.map((item) => <li key={item}>{item}</li>)}</ul>
+              {copy.guidelineHref && <a className="underlined-link" href={copy.guidelineHref}>Ayrıntılı yazım kurallarını incele →︎</a>}
+            </section>
+          ) : copy?.note ? <section><h2>Yazım ve başvuru</h2><p>{copy.note}</p></section> : null}
+          {copy?.deadline && <section className="call-important-date"><h2>Önemli Tarihler</h2><p>{copy.deadline}</p></section>}
+          {copy?.contact && (
+            <section className="call-contact-section">
+              <h2>Başvuru ve İletişim</h2>
+              <p><a className="inline-link" href={`mailto:${copy.contact}`}>{copy.contact}</a></p>
+              {active && <a className="button button-dark dergipark-button" href="https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new"><DergiParkLogo suffix="’tan gönder" /><span>↗︎</span></a>}
+            </section>
+          )}
           {past && <section><h2>Çağrı sonucu</h2><p>{past.issueHref ? <>Bu çağrı sonucunda yayımlanan sayı: <a className="inline-link" href={past.issueHref}>{past.issue}</a>.</> : past.issue}</p></section>}
-          {active && <section><h2>Gönderim</h2><p>Çalışmalar Türkçe veya İngilizce hazırlanabilir. Başvuru öncesinde yazım kuralları ve gönderim kontrol listesi incelenmelidir.</p><a className="button button-dark dergipark-button" href="https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new"><DergiParkLogo suffix="’tan gönder" /><span>↗︎</span></a></section>}
+          {active && !copy?.contact && <section><h2>Gönderim</h2><p>Çalışmalar Türkçe veya İngilizce hazırlanabilir. Başvuru öncesinde yazım kuralları ve gönderim kontrol listesi incelenmelidir.</p><a className="button button-dark dergipark-button" href="https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new"><DergiParkLogo suffix="’tan gönder" /><span>↗︎</span></a></section>}
           <a className="underlined-link" href="/tr/makale-cagrilari">Tüm çağrılara dön →︎</a>
         </div>
       </div>

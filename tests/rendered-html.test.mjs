@@ -421,6 +421,51 @@ test("lists active calls with left-hand images and prominent deadlines", async (
   assert.match(enHome, /<small>Deadline<\/small><strong><span>1 October<\/span><span>2026<\/span><\/strong>/);
 });
 
+test("renders the two active thematic calls with complete structured source copy", async () => {
+  const [trTransatlanticResponse, trAiResponse, enTransatlanticResponse, enAiResponse] = await Promise.all([
+    renderPath("/tr/makale-cagrilari/transatlantik-iliskilerin-yeniden-yapilanmasi"),
+    renderPath("/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah"),
+    renderPath("/en/calls-for-papers/transatlantic-relations"),
+    renderPath("/en/calls-for-papers/artificial-intelligence-productive-forces"),
+  ]);
+  const [trTransatlantic, trAi, enTransatlantic, enAi] = await Promise.all([
+    trTransatlanticResponse.text(),
+    trAiResponse.text(),
+    enTransatlanticResponse.text(),
+    enAiResponse.text(),
+  ]);
+
+  for (const response of [trTransatlanticResponse, trAiResponse, enTransatlanticResponse, enAiResponse]) {
+    assert.equal(response.status, 200);
+  }
+  for (const html of [trTransatlantic, trAi, enTransatlantic, enAi]) {
+    assert.match(html, /class="call-topics-section"/);
+    assert.match(html, /class="call-guidelines-section"/);
+    assert.match(html, /class="call-important-date"/);
+    assert.match(html, /class="call-contact-section"/);
+    assert.match(html, /mailto:briq@briqjournal\.com/);
+  }
+
+  assert.match(trTransatlantic, /<h3>Transatlantik İlişkilerde Dönüşüm<\/h3>/);
+  assert.match(trTransatlantic, /<h3>Çok Kutupluluk ve Batı İttifakının Krizi<\/h3>/);
+  assert.match(trTransatlantic, /Atıf sistemi: APA 7\./);
+  assert.match(trTransatlantic, /Son metin gönderimi: 1 Ekim 2026/);
+  assert.doesNotMatch(trTransatlantic, /15 Ağustos 2026|APA 6/);
+
+  assert.match(trAi, /BRIQ, yukarıdaki genel çerçeve içinde/);
+  assert.match(trAi, /Yapay zekânın askerileşmesi ile sivil\/kamucu kullanım/);
+  assert.match(trAi, /Son metin gönderimi: 1 Aralık 2026/);
+  assert.match(enTransatlantic, /<h3>Transformation in Transatlantic Relations<\/h3>/);
+  assert.match(enAi, /Within this general framework, BRIQ welcomes submissions/);
+
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(css, /\.board-page-section > \.editorial-roster \{\s*margin-top: 0/);
+  assert.match(css, /\.editorial-info-page \{\s*max-width: none/);
+  assert.match(css, /\.editorial-roster\.is-compact \.editorial-roster-meta > span:first-child/);
+  assert.match(css, /#111b28/);
+  assert.match(css, /#173e5c/);
+});
+
 test("uses four consistent monochrome issue palettes across all volumes", async () => {
   const responses = await Promise.all([
     renderPath("/tr/arsiv/cilt-7-sayi-1"),

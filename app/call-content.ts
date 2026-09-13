@@ -1,6 +1,11 @@
 export type CallEditorialCopy = {
   paragraphs: string[];
   topics?: [string, string[]][];
+  topicIntro?: string;
+  guidelines?: string[];
+  guidelineHref?: string;
+  deadline?: string;
+  contact?: string;
   note?: string;
 };
 
@@ -81,8 +86,8 @@ const aiTopicsEn = [
 export const completeCallCopyTr: Record<string, CallEditorialCopy> = {
   "transatlantik-iliskilerin-yeniden-yapilanmasi": {
     paragraphs: [
-      "Günümüz uluslararası sistemi, iç içe geçmiş krizler, değişen güç dengeleri ve yerleşik kurumsal yapıların aşınmasıyla birlikte derin bir dönüşüm sürecinden geçmektedir. Ukrayna savaşı, Donald Trump’ın ABD’de yeniden iktidara gelişi ve İran ile yaşanan doğrudan çatışma süreci, transatlantik ilişkilerin yapısal olarak yeniden şekillenmesini hızlandırmıştır. Bu gelişmeler, Batı ittifakı içerisindeki derin çelişkileri görünür kılmıştır.",
-      "ABD ile Avrupa arasındaki farklılaşmalar artık yalnızca politika tercihleriyle sınırlı kalmayıp güvenlik, ekonomik yönetişim ve küresel düzen konularında rekabet eden stratejik perspektifleri yansıtmaktadır. Aynı zamanda çatışma alanlarının çoğalması ve jeopolitik rekabetin yoğunlaşması, NATO’nun sürdürülebilirliği ve gelecekteki yönelimi hakkında temel soruları gündeme getirmektedir.",
+      "Günümüz uluslararası sistemi, iç içe geçmiş krizler, değişen güç dengeleri ve yerleşik kurumsal yapıların aşınmasıyla birlikte derin bir dönüşüm sürecinden geçmektedir. Ukrayna savaşı, Donald Trump’ın ABD’de yeniden iktidara gelişi ve son olarak İran ile yaşanan doğrudan çatışma süreci, transatlantik ilişkilerin yapısal olarak yeniden şekillenmesini hızlandırmıştır. Bu gelişmeler, Batı ittifakı içerisindeki derin çelişkileri görünür kılmıştır.",
+      "ABD ile Avrupa arasındaki farklılaşmalar artık yalnızca politika tercihleriyle sınırlı kalmayıp, güvenlik, ekonomik yönetişim ve küresel düzen konularında rekabet eden stratejik perspektifleri yansıtmaktadır. Aynı zamanda çatışma alanlarının çoğalması ve jeopolitik rekabetin yoğunlaşması, NATO’nun sürdürülebilirliği ve gelecekteki yönelimi hakkında temel soruları gündeme getirmektedir.",
       "Bu bağlamda BRIQ, ABD–Avrupa ilişkileri ve NATO’nun dönüşen rolünü küresel sistemdeki yapısal değişimlerle birlikte ele alan makaleleri davet etmektedir. Bu özel sayı, transatlantik ilişkilerdeki yeniden yapılanmayı küresel sistem dönüşümü bağlamında ele alan eleştirel bir tartışma zemini oluşturmayı amaçlamaktadır. Disiplinler arası ve teorik derinliği olan çalışmalar özellikle teşvik edilmektedir.",
     ],
     topics: [
@@ -92,7 +97,16 @@ export const completeCallCopyTr: Record<string, CallEditorialCopy> = {
       ["İran Savaşı ve Küresel Etkileri", ["ABD–İran çatışmasının Avrupa açısından stratejik sonuçları", "Enerji güvenliği, ekonomik kırılganlıklar ve jeopolitik riskler", "Bölgesel yayılma dinamikleri ve NATO’nun olası rolü"]],
       ["Çok Kutupluluk ve Batı İttifakının Krizi", ["Alternatif jeopolitik platform ve kurumların yükselişi", "BRICS, ŞİÖ ve Küresel Güney’in rolü", "Küresel yönetişim yapılarının dönüşümü"]],
     ],
-    note: "Makaleler özgün olmalı ve başka bir yerde değerlendirme sürecinde bulunmamalıdır. Uzunluk 5.000–9.000 kelimedir. BRIQ, güncel yazım kuralları doğrultusunda APA 7’yi kullanır. Tüm akademik çalışmalar çift kör hakemlik sürecine tabi tutulur. Son metin gönderimi 1 Ekim 2026’dır.",
+    topicIntro: "Aşağıdaki başlıklar başta olmak üzere çalışmalar değerlendirilecektir:",
+    guidelines: [
+      "Makaleler özgün olmalı ve başka bir yerde değerlendirme sürecinde bulunmamalıdır.",
+      "Uzunluk: 5.000–9.000 kelime.",
+      "Atıf sistemi: APA 7.",
+      "Tüm çalışmalar çift kör hakemlik sürecine tabi tutulacaktır.",
+    ],
+    guidelineHref: "/tr/yazarlar/yazim-kurallari",
+    deadline: "Son metin gönderimi: 1 Ekim 2026",
+    contact: "briq@briqjournal.com",
   },
   "yapay-zeka-uretici-gucler-ortak-refah": {
     paragraphs: [
@@ -106,10 +120,21 @@ export const completeCallCopyTr: Record<string, CallEditorialCopy> = {
       "Veri, çip, hesaplama altyapısı, araştırmacı yetiştirme kapasitesi ve sanayi entegrasyonu gibi alanlardaki farklılıkların ülkelerin göreli konumları, uzmanlaşma biçimleri ve teknolojik bağımlılık ilişkileri üzerindeki etkisi bu dosyanın tartışma başlıkları arasındadır. Bu nedenle yapay zekâ, piyasa uygulamaları yanında kamu yararı, toplumsal gelişme ve ortak refah boyutlarıyla da ele alınabilir.",
       "Yapay zekâ, bilim alanında da önemli bir dönüşüm potansiyeli taşımaktadır. Büyük veri analizi, modelleme, simülasyon, malzeme bilimi, biyoteknoloji, ilaç geliştirme, iklim araştırmaları ve temel bilimlerde yeni araştırma imkânları ortaya çıkarken; akademik üretimde yöntem, doğrulama, yazarlık, emek, özgünlük ve araştırma etiği gibi meseleler de tartışmaya açılmaktadır.",
       "Bu nedenle yapay zekânın hangi toplumsal amaçlarla, kimin denetiminde, hangi etik ve hukuki sınırlar içinde ve hangi gelişme perspektifiyle kullanılacağı önem taşımaktadır.",
-      "Bu çerçevede BRIQ; yapay zekânın üretici güçlerin gelişimi, işgücü, toplumsal refah, bilimsel üretim, kamusal planlama, uluslararası eşitsizlikler ve etik yönetişim üzerindeki etkilerini ele alan eleştirel, karşılaştırmalı, kuramsal ve ampirik çalışmaları beklemektedir. Teknoloji alanındaki tekelleşme, kamucu alternatifler, gelişmekte olan ülkelerin deneyimleri, işgücünün robotlaşma ve yapay zekâ karşısındaki dönüşümü, eşitsiz gelişme dinamikleri, bilimsel ilerleme ve toplumsal yarar arasındaki ilişki bu dosyanın öncelikli ilgi alanları arasındadır.",
+      "Bu çerçevede BRIQ; yapay zekânın üretici güçlerin gelişimi, işgücü, toplumsal refah, bilimsel üretim, kamusal planlama, uluslararası eşitsizlikler ve etik yönetişim üzerindeki etkilerini ele alan eleştirel, karşılaştırmalı, kuramsal ve ampirik çalışmaları beklemektedir.",
+      "Teknoloji alanındaki tekelleşme, kamucu alternatifler, gelişmekte olan ülkelerin deneyimleri, işgücünün robotlaşma ve yapay zekâ karşısındaki dönüşümü, eşitsiz gelişme dinamikleri, bilimsel ilerleme ve toplumsal yarar arasındaki ilişki bu dosyanın öncelikli ilgi alanları arasındadır.",
     ],
     topics: [["Önerilen Konu Başlıkları", aiTopicsTr]],
-    note: "Makale gönderimleri Türkçe ve İngilizce kabul edilir. Makaleler özgün olmalı ve başka bir yerde değerlendirme sürecinde bulunmamalıdır. Uzunluk 5.000–9.000 kelimedir. Atıf sistemi APA 7’dir. Tüm akademik çalışmalar çift kör hakemlik sürecine tabi tutulur. Son metin gönderimi 1 Aralık 2026’dır. Başvuru ve iletişim: briq@briqjournal.com.",
+    topicIntro: "BRIQ, yukarıdaki genel çerçeve içinde aşağıda yer alan alanlarla ilgili, bunlarla sınırlı olmamak kaydıyla, makale başvurularına açıktır:",
+    guidelines: [
+      "Makale gönderimleri Türkçe ve İngilizce dillerinde kabul edilir.",
+      "Makaleler özgün olmalı ve başka bir yerde değerlendirme sürecinde bulunmamalıdır.",
+      "Uzunluk: 5.000–9.000 kelime.",
+      "Atıf sistemi: APA 7.",
+      "Tüm çalışmalar çift kör hakemlik sürecine tabi tutulacaktır.",
+    ],
+    guidelineHref: "/tr/yazarlar/yazim-kurallari",
+    deadline: "Son metin gönderimi: 1 Aralık 2026",
+    contact: "briq@briqjournal.com",
   },
   "kitap-incelemesi": {
     paragraphs: [
@@ -137,7 +162,16 @@ export const completeCallCopyEn: Record<string, CallEditorialCopy> = {
       ["The Iran War and Its Global Effects", ["Strategic consequences of the US-Iran conflict for Europe", "Energy security, economic vulnerabilities, and geopolitical risks", "Regional escalation dynamics and NATO’s possible role"]],
       ["Multipolarity and the Crisis of the Western Alliance", ["The rise of alternative geopolitical platforms and institutions", "The role of BRICS, the SCO, and the Global South", "The transformation of global governance structures"]],
     ],
-    note: "Manuscripts must be original and not under consideration elsewhere. The required length is 5,000–9,000 words. BRIQ follows APA 7 under its current submission guidelines. All scholarly articles undergo double-blind peer review. The final submission deadline is 1 October 2026.",
+    topicIntro: "Submissions addressing the following topics, among others, will be considered:",
+    guidelines: [
+      "Manuscripts must be original and not under consideration elsewhere.",
+      "Length: 5,000–9,000 words.",
+      "Citation style: APA 7.",
+      "All scholarly articles undergo double-blind peer review.",
+    ],
+    guidelineHref: "/en/for-authors/submission-guidelines",
+    deadline: "Final manuscript submission: 1 October 2026",
+    contact: "briq@briqjournal.com",
   },
   "artificial-intelligence-productive-forces": {
     paragraphs: [
@@ -151,10 +185,21 @@ export const completeCallCopyEn: Record<string, CallEditorialCopy> = {
       "Differences in data, chips, computing infrastructure, researcher-training capacity, and industrial integration affect countries’ relative positions, forms of specialisation, and relations of technological dependency. AI should therefore be considered not only through market applications but also through public benefit, social development, and common prosperity.",
       "AI also carries substantial transformative potential for science. Big-data analysis, modelling, simulation, materials science, biotechnology, drug development, climate research, and the basic sciences are gaining new possibilities, while method, verification, authorship, labour, originality, and research ethics are being reopened for debate.",
       "The social purposes, forms of control, ethical and legal boundaries, and development perspectives governing AI are therefore crucial.",
-      "BRIQ welcomes critical, comparative, theoretical, and empirical studies on AI’s effects on productive forces, labour, social welfare, scientific production, public planning, international inequalities, and ethical governance. Technological monopolisation, public alternatives, developing-country experiences, the transformation of labour, uneven development, and the relationship between scientific progress and social benefit are among the issue’s priority areas.",
+      "BRIQ welcomes critical, comparative, theoretical, and empirical studies on AI’s effects on productive forces, labour, social welfare, scientific production, public planning, international inequalities, and ethical governance.",
+      "Technological monopolisation, public alternatives, developing-country experiences, the transformation of labour, uneven development, and the relationship between scientific progress and social benefit are among the issue’s priority areas.",
     ],
     topics: [["Suggested Topics", aiTopicsEn]],
-    note: "Submissions are accepted in Turkish or English. Manuscripts must be original and not under consideration elsewhere. The required length is 5,000–9,000 words. BRIQ follows APA 7. All scholarly articles undergo double-blind peer review. The final submission deadline is 1 December 2026. Contact: briq@briqjournal.com.",
+    topicIntro: "Within this general framework, BRIQ welcomes submissions in the following areas, without being limited to them:",
+    guidelines: [
+      "Submissions are accepted in Turkish or English.",
+      "Manuscripts must be original and not under consideration elsewhere.",
+      "Length: 5,000–9,000 words.",
+      "Citation style: APA 7.",
+      "All scholarly articles undergo double-blind peer review.",
+    ],
+    guidelineHref: "/en/for-authors/submission-guidelines",
+    deadline: "Final manuscript submission: 1 December 2026",
+    contact: "briq@briqjournal.com",
   },
   "book-reviews": {
     paragraphs: [
