@@ -16,6 +16,11 @@ import { PeopleDirectory } from "../../components/PeopleDirectory";
 import { DergiParkLogo } from "../../components/DergiParkLogo";
 import { ArticlePdfPage, ArticlePlatform } from "../../components/ArticlePlatform";
 import { IssuePlatform } from "../../components/IssuePlatform";
+import { CurrentIssueEditorial } from "../../components/CurrentIssueEditorial";
+import { AuthorUpdateForm } from "../../components/AuthorUpdateForm";
+import { IndexDirectory } from "../../components/IndexDirectory";
+import { CallHero } from "../../components/CallHero";
+import { completeCallCopyTr } from "../../call-content";
 import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../authors";
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
@@ -136,7 +141,7 @@ function JournalOverview() {
         <LinkCards
           items={[
             { number: "01", title: "Yayın İlkeleri", text: "Derginin temel ilkeleri, çalışma alanları ve yayın yaklaşımı.", href: "/tr/dergi/yayin-ilkeleri" },
-            { number: "02", title: "Editoryal Bilgiler", text: "Derginin editoryal yapısı, yayın kurulu ve editörleri.", href: "/tr/dergi/yayin-kurulu" },
+            { number: "02", title: "Yayın Kurulu", text: "Derginin editoryal yapısı, yayın kurulu ve editörleri.", href: "/tr/dergi/yayin-kurulu" },
             { number: "03", title: "Danışma Kurulu", text: "Bilimsel danışmanlık sağlayan uluslararası kurul.", href: "/tr/dergi/danisma-kurulu" },
             { number: "04", title: "Dizinler ve Arşivler", text: "BRIQ’in akademik dizin, açık erişim deposu ve arşivleme kayıtları.", href: "/tr/dergi/endeksler" },
             { number: "05", title: "Yıllık Raporlar", text: "Derginin faaliyetlerini, yayın performansını ve gelişimini belgeleyen raporlar.", href: "/tr/yillik-raporlar" },
@@ -277,7 +282,7 @@ function PublicationBoardPage() {
     <>
       <PageHero
         kicker="Dergi"
-        title="Editoryal Bilgiler"
+        title="Yayın Kurulu"
         intro="BRIQ’in editoryal sorumlulukları, yayın kurulu ve editör kadrosu akademik dergi künyesi düzeninde sunulur."
       />
       <div className="site-shell page-section board-page-section editorial-info-page">
@@ -464,30 +469,7 @@ function Indexes() {
         intro="BRIQ’in doğrulanmış dizin ve akademik arşiv kayıtları, işlevleri açıkça ayrılarak gösterilir."
       />
       <div className="site-shell page-section">
-        <p className="section-kicker">Dizinler · Abstracting &amp; Indexing</p>
-        <div className="index-detail-grid">
-          <article>
-            <span>01</span>
-            <h2>ERIH PLUS</h2>
-            <p>Beşerî ve sosyal bilimler için Avrupa referans dizini.</p>
-            <a className="underlined-link" href="https://erihplus.hkdir.no/">Resmî kayıtta ara ↗︎</a>
-          </article>
-          <article>
-            <span>02</span>
-            <h2>EuroPub</h2>
-            <p>BRIQ dergi profili ve makale kayıtlarının yer aldığı akademik dizin.</p>
-            <a className="underlined-link" href="https://europub.co.uk/journals/briq-belt-road-initiative-quarterly-J-33908">BRIQ profilini aç ↗︎</a>
-          </article>
-        </div>
-        <p className="section-kicker">Açık Erişim Depoları ve Arşivleme</p>
-        <div className="index-detail-grid">
-          <article>
-            <span>01</span>
-            <h2>SSOAR</h2>
-            <p>BRIQ yayınlarının tam metin kopyalarını kalıcı tanımlayıcılarla barındıran sosyal bilimler açık erişim deposu ve arşivleme hizmetidir; akademik dizin olarak sınıflandırılmaz.</p>
-            <a className="underlined-link" href="https://www.ssoar.info/ssoar/">SSOAR’ı aç ↗︎</a>
-          </article>
-        </div>
+        <IndexDirectory />
       </div>
     </>
   );
@@ -960,20 +942,20 @@ function AuthorProfilePage({ id }: { id: string }) {
             <a href={profile.scholarUrl} target="_blank" rel="noreferrer">Google Scholar’da ara <span>↗︎</span></a>
             {profile.orcids.map((orcid) => <a href={`https://orcid.org/${orcid}`} target="_blank" rel="noreferrer" key={orcid}>ORCID <span>↗︎</span></a>)}
             {profile.institutionUrl && <a href={profile.institutionUrl} target="_blank" rel="noreferrer">Kurum sayfası <span>↗︎</span></a>}
+            <AuthorUpdateForm authorName={profile.name} />
           </div>
         </div>
       </section>
       <div className="site-shell author-page-layout">
         <aside><span>BRIQ yayınları</span><b>{profile.articles.length}</b><p>Bu sayfa, yazarın BRIQ arşivindeki bütün çalışmalarını bir araya getirir.</p></aside>
         <div className="author-page-main">
-          {profile.briqAppointments.length > 0 && (
-            <section className="author-transparency" aria-label="Kısa biyografi ve BRIQ görevleri">
+          <section className={`author-transparency ${profile.briqAppointments.length ? "" : "biography-only"}`} aria-label="Kısa biyografi ve BRIQ görevleri">
               <article className="author-profile-panel">
                 <p className="section-kicker">Profil</p>
                 <h2>Kısa biyografi</h2>
                 <p>{profile.biographyTr}</p>
               </article>
-              <article className="author-profile-panel author-role-panel">
+              {profile.briqAppointments.length > 0 && <article className="author-profile-panel author-role-panel">
                 <p className="section-kicker">BRIQ</p>
                 <h2>Görevler ve dönemler</h2>
                 <dl className="author-role-list">
@@ -982,9 +964,8 @@ function AuthorProfilePage({ id }: { id: string }) {
                   ))}
                 </dl>
                 <small>Görev dönemleri yayımlanmış güncel 2026 kurul kaydını esas alır.</small>
-              </article>
+              </article>}
             </section>
-          )}
           <section className="author-page-publications">
             <div><p className="section-kicker">Arşiv</p><h2>BRIQ’te yayımlanan çalışmalar</h2></div>
             <div className="author-work-list">
@@ -1020,7 +1001,15 @@ function CurrentIssue() {
       subtitle={heading.subtitle}
       description="Batı Asya’daki yeni güç dengesini; Suudi Arabistan’ın kültürel dengeleme stratejisinden Türkiye–Çin ilişkilerine, Dijital İpek Yolu’ndan Çin’in küresel altyapı yaklaşımına uzanan çalışmalarla ele alan yeni sayı."
       facts={[["Yayın tarihi", "Eylül 2026"], ["Sayfa", "131"], ["Yayın dili", "Türkçe · English"], ["Erişim", "Açık erişim · CC BY 4.0"]]}
-      contentsDescription="Hakemli araştırmalar, röportajlar ve kitap incelemesi tek sayı içinde bir araya geliyor."
+      contentsDescription=""
+      editorialHref="/tr/guncel-sayi/sunus"
+      additionalContents={[
+        { typeTr: "Şiir", typeEn: "Poem", author: "Attilâ İlhan", titleTr: "Yalnızlığı Denemek", titleEn: "Trying Loneliness", pages: "501–502", pdfPage: 131 },
+        { typeTr: "Şiir", typeEn: "Poem", author: "Salah Abdel Sabour · Çeviren: Latif Bolat", titleTr: "Hüzün", titleEn: "Sorrow", pages: "503–504", pdfPage: 133 },
+        { typeTr: "Fotoğraf", typeEn: "Photograph", author: "Philippe Halsman", titleTr: "Dalí Atomicus (1948)", titleEn: "Dalí Atomicus (1948)", pages: "505", pdfPage: 135 },
+        { typeTr: "Resim", typeEn: "Painting", author: "Pablo Picasso", titleTr: "Saltimbanques Ailesi (1905)", titleEn: "Family of Saltimbanques (1905)", pages: "506", pdfPage: 136 },
+        { typeTr: "Karikatür", typeEn: "Cartoon", author: "Y. Çerepanov", titleTr: "Kendi Uçak Gemisini Denize Sürüyor (1979)", titleEn: "Launching His Own Aircraft Carrier (1979)", pages: "507", pdfPage: 137 },
+      ]}
     />
   );
 }
@@ -1158,10 +1147,10 @@ function CallDetail({ slug }: { slug: string }) {
   const title = active?.title || past?.title;
   if (!title) return null;
   const deadline = active?.deadline || past?.deadline || "";
-  const copy = callEditorialCopy[slug];
+  const copy = completeCallCopyTr[slug] || callEditorialCopy[slug];
   return (
     <>
-      <PageHero kicker="Makale Çağrısı" title={title} intro={`Son Tarih: ${deadline}`} />
+      <CallHero locale="tr" slug={slug} title={title} deadline={deadline} active={Boolean(active)} />
       <div className="site-shell reading-layout call-detail-page">
         <aside className="reading-nav"><b>Çağrı bilgisi</b><span>Son Tarih: {deadline}</span><span>{active ? "Aktif çağrı" : "Geçmiş çağrı"}</span></aside>
         <div className="reading-content">
@@ -1208,6 +1197,7 @@ const pages: Record<string, () => ReactNode> = {
   arsiv: Archive,
   makaleler: Articles,
   "guncel-sayi": CurrentIssue,
+  "guncel-sayi/sunus": () => <CurrentIssueEditorial />,
   "makale-cagrilari": CallsPage,
   "yillik-raporlar": Reports,
 };
@@ -1216,7 +1206,7 @@ const pageMetadata: Record<string, [string, string]> = {
   dergi: ["BRIQ Hakkında", "BRIQ’in yayın profili, amacı, tarihçesi ve kurumsal yapısı."],
   "dergi/briq-hakkinda": ["BRIQ Hakkında", "BRIQ’in yayın profili, amacı, tarihçesi ve kurumsal yapısı."],
   "dergi/yayin-ilkeleri": ["Yayın İlkeleri", "BRIQ’in yayın ilkeleri ve gelişen dünya perspektifi."],
-  "dergi/yayin-kurulu": ["Editoryal Bilgiler", "BRIQ’in editoryal yapısı, Yayın Kurulu ve editör kadrosu."],
+  "dergi/yayin-kurulu": ["Yayın Kurulu", "BRIQ’in editoryal yapısı, Yayın Kurulu ve editör kadrosu."],
   "dergi/danisma-kurulu": ["Danışma Kurulu", "BRIQ Danışma Kurulu üyeleri."],
   "dergi/endeksler": ["Dizinler ve Arşivler", "BRIQ’in doğrulanmış akademik dizin ve açık arşiv kayıtları."],
   iletisim: ["İletişim", "BRIQ iletişim bilgileri ve mesaj formu."],
@@ -1227,6 +1217,7 @@ const pageMetadata: Record<string, [string, string]> = {
   "yazarlar/telif-hakki-sartlari-ve-lisans": ["Telif Hakkı Şartları ve Lisans", "BRIQ telif devri ve CC BY 4.0 lisans koşulları."],
   "yazarlar/yayin-etigi": ["Yayın Etiği", "Yazar, hakem ve editörlerin etik görevleri."],
   "guncel-sayi": ["Güncel sayı — Cilt 7, Sayı 4", "Batı Asya’da Yeni Dönem: tam sayı, içindekiler ve PDF."],
+  "guncel-sayi/sunus": ["Batı Asya’da Yeni Dönem — Sunuş", "Fikret Akfırat’ın BRIQ Cilt 7, Sayı 4 için sunuş yazısı."],
   arsiv: ["Tüm sayılar", "BRIQ’in 27 sayılık doğrulanmış Türkçe ve İngilizce arşivi."],
   makaleler: ["Makale Arama", "BRIQ arşivindeki 279 tekil yayın kaydında gelişmiş arama ve filtreleme."],
   "makale-cagrilari": ["Makale çağrıları", "Aktif ve geçmiş BRIQ makale çağrıları ile son tarihler."],
@@ -1248,6 +1239,7 @@ const pageEnglishPaths: Record<string, string> = {
   "yazarlar/telif-hakki-sartlari-ve-lisans": "/en/for-authors/copyright-and-licence",
   "yazarlar/yayin-etigi": "/en/for-authors/publication-ethics",
   "guncel-sayi": "/en/current-issue",
+  "guncel-sayi/sunus": "/en/current-issue/editorial",
   arsiv: "/en/archive",
   makaleler: "/en/articles",
   "makale-cagrilari": "/en/calls-for-papers",

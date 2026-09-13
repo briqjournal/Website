@@ -12,6 +12,7 @@ type Call = {
   issueHref: string | null;
   issueHrefEn?: string | null;
   slug: string;
+  slugEn?: string;
 };
 
 export function CallsExplorer({ calls, locale = "tr" }: { calls: Call[]; locale?: "tr" | "en" }) {
@@ -22,7 +23,7 @@ export function CallsExplorer({ calls, locale = "tr" }: { calls: Call[]; locale?
     deadline: locale === "en" ? (call.deadlineEn || call.deadline) : call.deadline,
     issue: locale === "en" ? (call.issueEn || call.issue) : call.issue,
     issueHref: locale === "en" ? (call.issueHrefEn ?? call.issueHref) : call.issueHref,
-    slug: call.slug,
+    slug: locale === "en" ? (call.slugEn || call.slug) : call.slug,
   });
   const localizedCalls = calls.map(localize);
   const years = [...new Set(localizedCalls.map((call) => call.deadline.match(/\d{4}/)?.[0]).filter(Boolean) as string[])].sort().reverse();

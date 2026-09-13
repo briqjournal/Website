@@ -12,6 +12,15 @@ import { PdfViewer } from "./PdfViewer";
 
 type Locale = "tr" | "en";
 type IssueFact = readonly [label: string, value: string];
+export type IssueSupplementaryContent = {
+  typeTr: string;
+  typeEn: string;
+  author: string;
+  titleTr: string;
+  titleEn: string;
+  pages: string;
+  pdfPage: number;
+};
 
 type IssuePlatformProps = {
   record: ArchiveIssue;
@@ -24,6 +33,8 @@ type IssuePlatformProps = {
   periodLabel?: string;
   facts?: readonly IssueFact[];
   contentsDescription?: string;
+  editorialHref?: string;
+  additionalContents?: readonly IssueSupplementaryContent[];
 };
 
 const padIssueNumber = (value: number) => String(value).padStart(2, "0");
@@ -39,6 +50,8 @@ export function IssuePlatform({
   periodLabel,
   facts,
   contentsDescription,
+  editorialHref,
+  additionalContents = [],
 }: IssuePlatformProps) {
   const isEnglish = locale === "en";
   const publications = record.articles
@@ -107,14 +120,17 @@ export function IssuePlatform({
               <em>{subtitle}</em>
             </h1>
             <p className="issue-deck">{description}</p>
-            {readingPdf && (
+            {(readingPdf || editorialHref) && (
               <div className="issue-actions">
-                <a className="button button-light" href="#pdf-viewer">
+                {readingPdf && <a className="button button-light" href="#pdf-viewer">
                   {isEnglish ? "Read PDF on site" : "PDF’yi sitede oku"} <span>↓︎</span>
-                </a>
-                <a href={readingPdf} download>
-                  {isEnglish ? "Download full issue" : "Tam sayı PDF"} <span>↓︎</span>
-                </a>
+                </a>}
+                {readingPdf && <a href={readingPdf} download>
+                  {isEnglish ? "Download Full Issue PDF" : "Tam Sayı PDF İndir"} <span>↓︎</span>
+                </a>}
+                {editorialHref && <a href={editorialHref}>
+                  {isEnglish ? "Read the editorial" : "Sunuş yazısını oku"} <span>→︎</span>
+                </a>}
               </div>
             )}
             <dl className="issue-identity-row">
@@ -134,9 +150,9 @@ export function IssuePlatform({
             <p className="section-kicker">{isEnglish ? "Contents" : "İçindekiler"}</p>
             <h2>{isEnglish ? "In this issue" : "Bu sayıdaki içerikler"}</h2>
           </div>
-          <p>{contentsDescription || (isEnglish
+          {contentsDescription !== "" && <p>{contentsDescription ?? (isEnglish
             ? "All contributions published in this issue are presented with their article type, author, and page range."
-            : "Bu sayıda yayımlanan tüm çalışmalar; yayın türü, yazar ve sayfa aralığıyla birlikte sunulmaktadır.")}</p>
+            : "Bu sayıda yayımlanan tüm çalışmalar; yayın türü, yazar ve sayfa aralığıyla birlikte sunulmaktadır.")}</p>}
         </div>
         <div className="issue-toc">
           {publications.map((publication, index) => (
@@ -151,6 +167,18 @@ export function IssuePlatform({
               </span>
               <span className="issue-toc-title">{isEnglish ? (publication.title_en || publication.title_tr) : publication.title_tr}</span>
               <span className="issue-toc-pages">{publication.pages || ""}</span>
+              <span className="issue-toc-arrow">↗︎</span>
+            </a>
+          ))}
+          {additionalContents.map((content, index) => (
+            <a href={`${readingPdf}#page=${content.pdfPage}`} key={`${content.author}-${content.titleTr}`}>
+              <span className="issue-toc-number">{padIssueNumber(publications.length + index + 1)}</span>
+              <span className="issue-toc-meta">
+                <small>{isEnglish ? content.typeEn : content.typeTr}</small>
+                <b>{content.author}</b>
+              </span>
+              <span className="issue-toc-title">{isEnglish ? content.titleEn : content.titleTr}</span>
+              <span className="issue-toc-pages">{content.pages}</span>
               <span className="issue-toc-arrow">↗︎</span>
             </a>
           ))}

@@ -25,6 +25,11 @@ import { PeopleDirectory } from "../../components/PeopleDirectory";
 import { DergiParkLogo } from "../../components/DergiParkLogo";
 import { ArticlePdfPage, ArticlePlatform } from "../../components/ArticlePlatform";
 import { IssuePlatform } from "../../components/IssuePlatform";
+import { CurrentIssueEditorial } from "../../components/CurrentIssueEditorial";
+import { AuthorUpdateForm } from "../../components/AuthorUpdateForm";
+import { IndexDirectory } from "../../components/IndexDirectory";
+import { CallHero } from "../../components/CallHero";
+import { completeCallCopyEn } from "../../call-content";
 import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../authors";
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
@@ -72,6 +77,7 @@ const englishPageMetadata: Record<string, [string, string, string]> = {
   "for-authors/copyright-and-licence": ["Copyright Terms and Licence", "BRIQ copyright transfer and CC BY 4.0 licence terms.", "/tr/yazarlar/telif-hakki-sartlari-ve-lisans"],
   "for-authors/publication-ethics": ["Publication Ethics", "The ethical responsibilities of BRIQ authors, reviewers, and editors.", "/tr/yazarlar/yayin-etigi"],
   "current-issue": ["Current Issue — Volume 7, Issue 4", "A New Era in West Asia: contents and full-issue PDF.", "/tr/guncel-sayi"],
+  "current-issue/editorial": ["A New Era in West Asia — Editorial", "Fikret Akfırat’s editorial for BRIQ Volume 7, Issue 4.", "/tr/guncel-sayi/sunus"],
   archive: ["All Issues", "BRIQ’s verified bilingual archive of 27 issues.", "/tr/arsiv"],
   articles: ["Article Search", "Advanced search and filtering across BRIQ’s publication archive.", "/tr/makaleler"],
   "calls-for-papers": ["Calls for Papers", "Active and past BRIQ calls for papers with deadlines and publication outcomes.", "/tr/makale-cagrilari"],
@@ -497,17 +503,7 @@ function EnglishIndexes() {
   return (
     <>
       <EnglishHero kicker="Journal" title="Indexing & Archiving" intro="BRIQ’s verified indexing and academic repository records, clearly separated by function." />
-      <div className="site-shell page-section">
-        <p className="section-kicker">Abstracting &amp; Indexing</p>
-        <div className="index-detail-grid">
-          <article><span>01</span><h2>ERIH PLUS</h2><p>European Reference Index for the Humanities and Social Sciences.</p><a className="underlined-link" href="https://erihplus.hkdir.no/">Search the official register ↗︎</a></article>
-          <article><span>02</span><h2>EuroPub</h2><p>Academic index containing BRIQ’s journal and article records.</p><a className="underlined-link" href="https://europub.co.uk/journals/briq-belt-road-initiative-quarterly-J-33908">Open the BRIQ profile ↗︎</a></article>
-        </div>
-        <p className="section-kicker">Open Repositories &amp; Archiving</p>
-        <div className="index-detail-grid">
-          <article><span>01</span><h2>SSOAR</h2><p>Open social-science repository and archiving service preserving full-text BRIQ publications with persistent identifiers; it is not classified as an academic index.</p><a className="underlined-link" href="https://www.ssoar.info/ssoar/">Open SSOAR ↗︎</a></article>
-        </div>
-      </div>
+      <div className="site-shell page-section"><IndexDirectory locale="en" /></div>
     </>
   );
 }
@@ -550,6 +546,15 @@ function EnglishCurrentIssue() {
       subtitle={heading.subtitle}
       description="The issue examines West Asia’s changing balance of power alongside Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy."
       facts={[["Publication date", "September 2026"], ["Pages", "131"], ["Languages", "Turkish · English abstracts"], ["Access", "Open access · CC BY 4.0"]]}
+      contentsDescription=""
+      editorialHref="/en/current-issue/editorial"
+      additionalContents={[
+        { typeTr: "Şiir", typeEn: "Poem", author: "Attilâ İlhan", titleTr: "Yalnızlığı Denemek", titleEn: "Trying Loneliness", pages: "501–502", pdfPage: 131 },
+        { typeTr: "Şiir", typeEn: "Poem", author: "Salah Abdel Sabour · Translated by Latif Bolat", titleTr: "Hüzün", titleEn: "Sorrow", pages: "503–504", pdfPage: 133 },
+        { typeTr: "Fotoğraf", typeEn: "Photograph", author: "Philippe Halsman", titleTr: "Dalí Atomicus (1948)", titleEn: "Dalí Atomicus (1948)", pages: "505", pdfPage: 135 },
+        { typeTr: "Resim", typeEn: "Painting", author: "Pablo Picasso", titleTr: "Saltimbanques Ailesi (1905)", titleEn: "Family of Saltimbanques (1905)", pages: "506", pdfPage: 136 },
+        { typeTr: "Karikatür", typeEn: "Cartoon", author: "Y. Çerepanov", titleTr: "Kendi Uçak Gemisini Denize Sürüyor (1979)", titleEn: "Launching His Own Aircraft Carrier (1979)", pages: "507", pdfPage: 137 },
+      ]}
     />
   );
 }
@@ -581,20 +586,20 @@ function EnglishAuthorProfile({ id }: { id: string }) {
             <a href={profile.scholarUrl} target="_blank" rel="noreferrer">Search Google Scholar <span>↗︎</span></a>
             {profile.orcids.map((orcid) => <a href={`https://orcid.org/${orcid}`} target="_blank" rel="noreferrer" key={orcid}>ORCID <span>↗︎</span></a>)}
             {profile.institutionUrl && <a href={profile.institutionUrl} target="_blank" rel="noreferrer">Institutional page <span>↗︎</span></a>}
+            <AuthorUpdateForm authorName={profile.name} locale="en" />
           </div>
         </div>
       </section>
       <div className="site-shell author-page-layout">
         <aside><span>BRIQ publications</span><b>{profile.articles.length}</b><p>This page brings together all of the author’s work in the BRIQ archive.</p></aside>
         <div className="author-page-main">
-          {profile.briqAppointments.length > 0 && (
-            <section className="author-transparency" aria-label="Short biography and BRIQ appointments">
+          <section className={`author-transparency ${profile.briqAppointments.length ? "" : "biography-only"}`} aria-label="Short biography and BRIQ appointments">
               <article className="author-profile-panel">
                 <p className="section-kicker">Profile</p>
                 <h2>Short biography</h2>
                 <p>{profile.biographyEn}</p>
               </article>
-              <article className="author-profile-panel author-role-panel">
+              {profile.briqAppointments.length > 0 && <article className="author-profile-panel author-role-panel">
                 <p className="section-kicker">BRIQ</p>
                 <h2>Roles and terms</h2>
                 <dl className="author-role-list">
@@ -603,9 +608,8 @@ function EnglishAuthorProfile({ id }: { id: string }) {
                   ))}
                 </dl>
                 <small>Terms reflect BRIQ’s published current board record for 2026.</small>
-              </article>
+              </article>}
             </section>
-          )}
           <section className="author-page-publications">
             <div><p className="section-kicker">Archive</p><h2>Work published in BRIQ</h2></div>
             <div className="author-work-list">
@@ -726,14 +730,14 @@ const englishCallEditorialCopy: Record<string, { paragraphs: string[]; topics?: 
 
 function EnglishCallDetail({ slug }: { slug: string }) {
   const active = calls.find((item) => item.urlEn.endsWith(`/${slug}`));
-  const past = pastCalls.find((item) => item.slug === slug);
+  const past = pastCalls.find((item) => (item.slugEn || item.slug) === slug);
   const title = active?.titleEn || past?.titleEn;
   if (!title) return null;
   const deadline = active?.deadlineEn || past?.deadlineEn || "";
-  const copy = englishCallEditorialCopy[slug];
+  const copy = completeCallCopyEn[slug] || englishCallEditorialCopy[slug];
   return (
     <>
-      <EnglishHero kicker="Call for Papers" title={title} intro={`Deadline: ${deadline}`} />
+      <CallHero locale="en" slug={slug} title={title} deadline={deadline} active={Boolean(active)} />
       <div className="site-shell reading-layout call-detail-page">
         <aside className="reading-nav"><b>Call information</b><span>Deadline: {deadline}</span><span>{active ? "Active call" : "Past call"}</span></aside>
         <div className="reading-content">
@@ -751,6 +755,7 @@ function EnglishCallDetail({ slug }: { slug: string }) {
 
 export function generateStaticParams() {
   const paths = new Set([...Object.keys(pages), ...Object.keys(englishPageMetadata)]);
+  paths.add("current-issue/editorial");
 
   for (const issue of archiveIssues) {
     paths.add(`archive/volume-${issue.volume}-issue-${issue.issue}`);
@@ -762,7 +767,7 @@ export function generateStaticParams() {
   }
   for (const profile of authorProfiles) paths.add(`authors/${profile.id}`);
   for (const call of calls) paths.add(call.urlEn.replace(/^\/en\//, ""));
-  for (const call of pastCalls) paths.add(`calls-for-papers/${call.slug}`);
+  for (const call of pastCalls) paths.add(`calls-for-papers/${call.slugEn || call.slug}`);
   for (const report of annualReports) paths.add(`annual-reports/${report.number}`);
 
   return [...paths].map((path) => ({ slug: path.split("/") }));
@@ -873,7 +878,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (callMatch) {
     const callSlug = callMatch[1];
     const active = calls.find((item) => item.urlEn.endsWith(`/${callSlug}`));
-    const past = pastCalls.find((item) => item.slug === callSlug);
+    const past = pastCalls.find((item) => (item.slugEn || item.slug) === callSlug);
     const title = active?.titleEn || past?.titleEn;
     if (title) {
       const turkishSlug = callSlug === "transatlantic-relations"
@@ -927,6 +932,7 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
   else if (key === "for-authors/copyright-and-licence") content = <EnglishCopyrightTerms />;
   else if (key === "for-authors/publication-ethics") content = <EnglishEthicsPolicy />;
   else if (key === "current-issue") content = <EnglishCurrentIssue />;
+  else if (key === "current-issue/editorial") content = <CurrentIssueEditorial locale="en" />;
   else if (key === "archive") content = <EnglishArchive />;
   else if (key === "articles") content = <EnglishArticles />;
   else if (key === "calls-for-papers") content = <EnglishCalls />;

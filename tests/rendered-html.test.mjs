@@ -98,7 +98,7 @@ test("keeps the revised Turkish and English information architecture in parity",
     ["/tr/yazarlar/yayin-etigi", "Yayın Etiği", "/en/for-authors/publication-ethics", "Ethical Principles"],
     ["/tr/iletisim", "Dergi iletişim sorumlusu", "/en/contact", "Journal contact person"],
     ["/tr/makale-cagrilari", "Geçmiş çağrılar", "/en/calls-for-papers", "Past calls"],
-    ["/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah", "Kamusal yarar ve teknolojik egemenlik", "/en/calls-for-papers/artificial-intelligence-productive-forces", "Public benefit and technological sovereignty"],
+    ["/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah", "Önerilen Konu Başlıkları", "/en/calls-for-papers/artificial-intelligence-productive-forces", "Suggested Topics"],
   ];
 
   for (const [trPath, trText, enPath, enText] of routePairs) {
@@ -266,13 +266,16 @@ test("keeps the new issue, board, archive, and author interactions in Turkish-En
   assert.match(trIssue, /Kapağı incele/);
   assert.match(trIssue, /Sonbahar/);
   assert.match(trIssue, /Batı Asya’da Yeni Dönem/);
-  assert.equal((trIssue.match(/class="issue-toc-number"/g) || []).length, 6);
+  assert.equal((trIssue.match(/class="issue-toc-number"/g) || []).length, 11);
+  assert.match(trIssue, /Sunuş yazısını oku/);
+  assert.match(trIssue, /Yalnızlığı Denemek/);
   assert.match(enIssue, /Inspect cover/);
   assert.match(enIssue, /Autumn/);
   assert.match(enIssue, /A New Era in West Asia/);
-  assert.equal((enIssue.match(/class="issue-toc-number"/g) || []).length, 6);
+  assert.equal((enIssue.match(/class="issue-toc-number"/g) || []).length, 11);
+  assert.match(enIssue, /Read the editorial/);
 
-  assert.match(trBoard, /<h1>Editoryal Bilgiler<\/h1>/);
+  assert.match(trBoard, /<h1>Yayın Kurulu<\/h1>/);
   assert.match(trBoard, /class="editorial-roster-list"/);
   assert.doesNotMatch(trBoard, /\/assets\/people\//);
   assert.match(trBoard, /href="\/tr\/yazar\/fikret-akfirat"/);
@@ -352,7 +355,7 @@ test("renders editorial information and advisory boards as scholarly mastheads",
 
   assert.equal(trEditorialResponse.status, 200);
   assert.equal(enEditorialResponse.status, 200);
-  assert.match(trEditorial, /<h1>Editoryal Bilgiler<\/h1>/);
+  assert.match(trEditorial, /<h1>Yayın Kurulu<\/h1>/);
   assert.match(trEditorial, /<h2>Genel Yayın Yönetmeni<\/h2>/);
   assert.match(trEditorial, /<h2>Yayın Kurulu<\/h2>/);
   assert.match(trEditorial, /<h2>Editörler<\/h2>/);
@@ -371,6 +374,7 @@ test("renders editorial information and advisory boards as scholarly mastheads",
     assert.match(html, /class="editorial-roster-list"/);
     assert.doesNotMatch(html, /class="person-card"/);
     assert.doesNotMatch(html, /\/assets\/people\//);
+    assert.doesNotMatch(html, /editorial-roster-number/);
   }
   assert.doesNotMatch(trEditorial, /Gazeteci-Yazar/);
   assert.doesNotMatch(enEditorial, /Journalist and author/);
@@ -406,13 +410,13 @@ test("lists active calls with left-hand images and prominent deadlines", async (
   const [trHome, enHome] = await Promise.all([trResponse.text(), enResponse.text()]);
 
   for (const html of [trHome, enHome]) {
-    assert.equal((html.match(/class="home-call-row"/g) || []).length, 3);
-    assert.equal((html.match(/class="home-call-image"/g) || []).length, 3);
-    assert.equal((html.match(/class="home-call-deadline"/g) || []).length, 3);
+    assert.equal((html.match(/class="home-call-row"/g) || []).length, 2);
+    assert.equal((html.match(/class="home-call-image"/g) || []).length, 2);
+    assert.equal((html.match(/class="home-call-deadline"/g) || []).length, 2);
     assert.doesNotMatch(html, /class="call-card/);
   }
-  assert.match(trHome, /<small>Son Tarih<\/small><strong>1 Ekim 2026<\/strong>/);
-  assert.match(enHome, /<small>Deadline<\/small><strong>1 October 2026<\/strong>/);
+  assert.match(trHome, /<small>Son Tarih<\/small><strong>1 Aralık 2026<\/strong>/);
+  assert.match(enHome, /<small>Deadline<\/small><strong>1 December 2026<\/strong>/);
 });
 
 test("uses four consistent monochrome issue palettes across all volumes", async () => {
@@ -701,14 +705,12 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(trHome, /Yayıncı: Çin İş Geliştirme ve Dostluk Derneği/);
   assert.match(enHome, /Publisher: Turkish-Chinese Business Development and Friendship Association/);
 
-  for (const html of [trHome, trCalls]) {
-    assert.match(html, /1 Ekim 2026/);
-    assert.doesNotMatch(html, /15 Ağustos 2026/);
-  }
-  for (const html of [enHome, enCalls]) {
-    assert.match(html, /1 October 2026/);
-    assert.doesNotMatch(html, /15 August 2026/);
-  }
+  assert.match(trHome, /1 Aralık 2026/);
+  assert.doesNotMatch(trHome, /15 Ağustos 2026/);
+  assert.match(trCalls, /15 Ağustos 2026/);
+  assert.match(enHome, /1 December 2026/);
+  assert.doesNotMatch(enHome, /15 August 2026/);
+  assert.match(enCalls, /15 August 2026/);
 
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   assert.match(css, /Article hierarchy, compact disclosures, and sitewide density refinement/);

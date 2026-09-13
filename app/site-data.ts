@@ -5,7 +5,7 @@ export const navItems = [
     children: [
       ["BRIQ Hakkında", "/tr/dergi/briq-hakkinda"],
       ["Yayın İlkeleri", "/tr/dergi/yayin-ilkeleri"],
-      ["Editoryal Bilgiler", "/tr/dergi/yayin-kurulu"],
+      ["Yayın Kurulu", "/tr/dergi/yayin-kurulu"],
       ["Danışma Kurulu", "/tr/dergi/danisma-kurulu"],
       ["Dizinler ve Arşivler", "/tr/dergi/endeksler"],
       ["Yıllık Raporlar", "/tr/yillik-raporlar"],
@@ -224,23 +224,6 @@ export const calls = [
   {
     status: "Aktif çağrı",
     statusEn: "Active call",
-    deadline: "1 Ekim 2026",
-    deadlineEn: "1 October 2026",
-    title:
-      "Savaşlar ve Stratejik Parçalanma Çağında Transatlantik İlişkilerin Yeniden Yapılanması",
-    titleEn:
-      "Reconfiguring Transatlantic Relations in an Era of War and Strategic Fragmentation",
-    summary:
-      "Transatlantik ilişkilerin jeopolitik, ekonomik ve güvenlik boyutlarını çok kutuplulaşma koşullarında tartışan çalışmalar.",
-    summaryEn:
-      "Studies examining the geopolitical, economic, and security dimensions of transatlantic relations under conditions of multipolarity.",
-    image: "/assets/cfp-transatlantic.png",
-    url: "/tr/makale-cagrilari/transatlantik-iliskilerin-yeniden-yapilanmasi",
-    urlEn: "/en/calls-for-papers/transatlantic-relations",
-  },
-  {
-    status: "Aktif çağrı",
-    statusEn: "Active call",
     deadline: "1 Aralık 2026",
     deadlineEn: "1 December 2026",
     title: "Yapay Zekâ, Üretici Güçler ve İnsanlığın Ortak Refahı",
@@ -256,8 +239,8 @@ export const calls = [
   {
     status: "Sürekli açık",
     statusEn: "Open call",
-    deadline: "Sınırsız",
-    deadlineEn: "No deadline",
+    deadline: "Süresiz",
+    deadlineEn: "Ongoing",
     title: "Kitap İncelemesi",
     titleEn: "Call for Book Reviews",
     summary:
@@ -271,6 +254,7 @@ export const calls = [
 ];
 
 export const pastCalls = [
+  { title: "Savaşlar ve Stratejik Parçalanma Çağında Transatlantik İlişkilerin Yeniden Yapılanması", titleEn: "Reconfiguring Transatlantic Relations in an Era of War and Strategic Fragmentation", deadline: "15 Ağustos 2026", deadlineEn: "15 August 2026", issue: "Tematik sayı henüz yayımlanmadı", issueEn: "The thematic issue has not yet been published", issueHref: null, issueHrefEn: null, slug: "transatlantik-iliskilerin-yeniden-yapilanmasi", slugEn: "transatlantic-relations" },
   { title: "Gelişen Ülkelerde Kültürel Miras Yağmasına Karşı Stratejiler ve İşbirliği", titleEn: "Strategies and Cooperation against Cultural Heritage Plunder in Developing Countries", deadline: "1 Şubat 2026", deadlineEn: "1 February 2026", issue: "Cilt 7 · Sayı 3", issueEn: "Volume 7 · Issue 3", issueHref: "/tr/arsiv/cilt-7-sayi-3", issueHrefEn: "/en/archive/volume-7-issue-3", slug: "kulturel-miras-yagmasina-karsi-stratejiler" },
   { title: "Dünyada Giderek Büyüyen Gıda ve Su Krizi", titleEn: "The Growing Global Food and Water Crisis", deadline: "15 Eylül 2025", deadlineEn: "15 September 2025", issue: "Cilt 7 · Sayı 1", issueEn: "Volume 7 · Issue 1", issueHref: "/tr/arsiv/cilt-7-sayi-1", issueHrefEn: "/en/archive/volume-7-issue-1", slug: "dunyada-gida-ve-su-krizi" },
   { title: "Latin Amerika’da İlerici Dönüşümler ve Amerikan Hegemonyacılığına Direniş", titleEn: "Progressive Transformations in Latin America and Resistance to American Hegemonism", deadline: "1 Ağustos 2025", deadlineEn: "1 August 2025", issue: "Tematik sayı henüz yayımlanmadı", issueEn: "The thematic issue has not yet been published", issueHref: null, issueHrefEn: null, slug: "latin-amerikada-ilerici-donusumler" },
@@ -338,6 +322,7 @@ export const editors = [
 
 export const indexNames = [
   { name: "ERIH PLUS", position: "18%" },
-  { name: "EuroPub", position: "50%" },
+  { name: "EuroPub", position: "39%" },
+  { name: "Root Indexing", position: "62%" },
   { name: "SSOAR", position: "82%" },
 ];

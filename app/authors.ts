@@ -428,11 +428,11 @@ export const authorProfiles: AuthorProfile[] = (() => {
     .map((profile) => ({
       ...profile,
       biographyTr: profile.biographyTr || (profile.briqAppointments.length
-        ? `${profile.name} için kayıtlı güncel mesleki veya kurumsal bilgi: ${profile.affiliationTr}. BRIQ bünyesindeki güncel görevi: ${profile.briqAppointments.map((item) => item.roleTr).join(" · ")}.`
-        : ""),
+        ? `${profile.name}, BRIQ bünyesinde ${profile.briqAppointments.map((item) => item.roleTr).join(" · ")} olarak görev yapmaktadır. Kayıtlı güncel mesleki veya kurumsal bilgi: ${profile.affiliationTr}.`
+        : `${profile.name}, BRIQ arşivinde ${profile.articles.length} ${profile.articles.length === 1 ? "çalışması" : "çalışması"} bulunan bir yazardır.${profile.affiliationTr !== "Bağımsız Araştırmacı" ? ` Kayıtlı güncel kurum bilgisi: ${profile.affiliationTr}.` : ""}`),
       biographyEn: profile.biographyEn || (profile.briqAppointments.length
-        ? `${profile.name}’s current professional or institutional information is recorded as ${profile.affiliationEn}. Current role at BRIQ: ${profile.briqAppointments.map((item) => item.roleEn).join(" · ")}.`
-        : ""),
+        ? `${profile.name} serves BRIQ as ${profile.briqAppointments.map((item) => item.roleEn).join(" · ")}. Current professional or institutional information: ${profile.affiliationEn}.`
+        : `${profile.name} is an author with ${profile.articles.length} ${profile.articles.length === 1 ? "work" : "works"} in the BRIQ archive.${profile.affiliationEn !== "Independent Researcher" ? ` Current institutional information: ${profile.affiliationEn}.` : ""}`),
       articles: profile.articles.sort(
         (a, b) => b.volume - a.volume || b.issue - a.issue || a.title_tr.localeCompare(b.title_tr, "tr"),
       ),

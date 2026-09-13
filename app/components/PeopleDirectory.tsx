@@ -44,24 +44,21 @@ export function PeopleDirectory({
       {compact ? (
         <div className="editorial-roster-meta">
           <span>{isEnglish ? "Members" : "Üyeler"}</span>
-          <span className="record-count">{people.length} {isEnglish ? "members" : "kişi"}</span>
         </div>
       ) : (
         <div className="editorial-roster-heading">
           <div>
-            <p>{isEnglish ? "Editorial directory" : "Editoryal künye"}</p>
+            <p>{isEnglish ? "Journal masthead" : "Dergi künyesi"}</p>
             <h2>{title}</h2>
           </div>
-          <span className="record-count">{people.length} {isEnglish ? "members" : "kişi"}</span>
         </div>
       )}
-      <ol className="editorial-roster-list">
-        {people.map(([name, affiliation], index) => {
+      <ul className="editorial-roster-list">
+        {people.map(([name, affiliation]) => {
           const profileHref = authorProfileHref(name, locale);
           const displayedAffiliation = visibleAffiliation(affiliation, locale);
           return (
             <li key={name}>
-              <span className="editorial-roster-number">{String(index + 1).padStart(2, "0")}</span>
               <div>
                 <a className="editorial-roster-name" href={profileHref}>{name}</a>
                 {displayedAffiliation && <p>{displayedAffiliation}</p>}
@@ -70,7 +67,7 @@ export function PeopleDirectory({
             </li>
           );
         })}
-      </ol>
+      </ul>
     </section>
   );
 }

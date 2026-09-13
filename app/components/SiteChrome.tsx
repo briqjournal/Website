@@ -23,6 +23,7 @@ const turkishToEnglishPaths: Record<string, string> = {
   "/tr/dergi/endeksler": "/en/journal/indexes",
   "/tr/iletisim": "/en/contact",
   "/tr/guncel-sayi": "/en/current-issue",
+  "/tr/guncel-sayi/sunus": "/en/current-issue/editorial",
   "/tr/arsiv": "/en/archive",
   "/tr/makaleler": "/en/articles",
   "/tr/yazarlar": "/en/for-authors",
@@ -243,7 +244,7 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
         <div>
           <h3>{isEnglish ? "Journal" : "Dergi"}</h3>
           <a href={isEnglish ? "/en/journal/about-briq" : "/tr/dergi/briq-hakkinda"}>{isEnglish ? "About BRIQ" : "BRIQ Hakkında"}</a>
-          <a href={isEnglish ? "/en/journal/publication-board" : "/tr/dergi/yayin-kurulu"}>{isEnglish ? "Editorial Info" : "Editoryal Bilgiler"}</a>
+          <a href={isEnglish ? "/en/journal/publication-board" : "/tr/dergi/yayin-kurulu"}>{isEnglish ? "Editorial Info" : "Yayın Kurulu"}</a>
           <a href={isEnglish ? "/en/journal/indexes" : "/tr/dergi/endeksler"}>{isEnglish ? "Indexes" : "Endeksler"}</a>
           <a href={isEnglish ? "/en/annual-reports" : "/tr/yillik-raporlar"}>{isEnglish ? "Annual reports" : "Yıllık raporlar"}</a>
         </div>
@@ -280,9 +281,10 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
 export function IndexTicker({ locale = "tr" }: { locale?: Locale }) {
   const isEnglish = locale === "en";
   const items = [
-    ["ERIH PLUS", "/assets/indexes/erih-plus.png", "https://erihplus.hkdir.no/"],
-    ["EuroPub", "/assets/indexes/europub.png", "https://europub.co.uk/journals/briq-belt-road-initiative-quarterly-J-33908"],
-    ["SSOAR", "/assets/indexes/ssoar.png", "https://www.ssoar.info/ssoar/"],
+    ["ERIH PLUS", "/assets/indexes/erih-plus.svg", "https://erihplus.hkdir.no/en/journal?id=509127"],
+    ["EuroPub", "/assets/indexes/europub.svg", "https://europub.co.uk/journals/briq-belt-road-initiative-quarterly-J-33908"],
+    ["Root Indexing", "/assets/indexes/root-indexing.svg", "https://rootindexing.com/journal/belt-road-initiative-quarterly-BRIQ/"],
+    ["SSOAR", "/assets/indexes/ssoar.svg", "https://www.ssoar.info/ssoar/discover?query=2687-5896"],
   ];
   const repeated = [...items, ...items];
 

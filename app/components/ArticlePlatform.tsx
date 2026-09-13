@@ -94,6 +94,13 @@ function keywordLabel(value: string, locale: "tr" | "en") {
   return value.trim().replace(/\p{L}/u, (letter) => letter.toLocaleUpperCase(language));
 }
 
+function cleanAbstractParagraphs(values: string[], locale: "tr" | "en") {
+  const heading = locale === "tr" ? /^(?:öz|özet)\s*[:.\-–—]?\s*/iu : /^abstract\s*[:.\-–—]?\s*/iu;
+  return values
+    .map((value, index) => index === 0 ? value.replace(heading, "").trim() : value.trim())
+    .filter(Boolean);
+}
+
 function OrcidBadge() {
   return <span className="orcid-badge" aria-hidden="true">iD</span>;
 }
@@ -292,7 +299,7 @@ export async function ArticlePlatform({
   const metadata = fullRecord?.metadata;
   const title = locale === "tr" ? article.title_tr : (article.title_en || article.title_tr);
   const abstractSource = locale === "tr" ? article.abstract_tr : article.abstract_en;
-  const abstract = details?.abstract || abstractSource?.split("\n").filter(Boolean) || [];
+  const abstract = cleanAbstractParagraphs(details?.abstract || abstractSource?.split("\n").filter(Boolean) || [], locale);
   const citation = citationWithDoi(details?.citation || articleCitation(article, locale), article.doi);
   const keywords = (details?.keywords || fullText?.keywords || []).map((keyword) => keywordLabel(keyword, locale));
   const articleType = publicationType(article, locale);

@@ -40,7 +40,7 @@ export default function Home() {
                 Yayın İlkeleri <span>→︎</span>
               </a>
               <a href="/tr/dergi/yayin-kurulu">
-                Editoryal Bilgiler <span>→︎</span>
+                Yayın Kurulu <span>→︎</span>
               </a>
             </div>
           </div>
