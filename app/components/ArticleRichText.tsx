@@ -169,6 +169,17 @@ function renderText(text: string, references: FullTextReference[], notes: FullTe
   return output;
 }
 
+function renderFormattedText(text: string, references: FullTextReference[], notes: FullTextNote[], anchorScope: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).filter(Boolean).map((part, index) => {
+    const strong = part.startsWith("**") && part.endsWith("**");
+    const content = strong ? part.slice(2, -2) : part;
+    const rendered = renderText(content, references, notes, `${anchorScope}-${index}`);
+    return strong
+      ? <strong key={`${anchorScope}-strong-${index}`}>{rendered.map((item, itemIndex) => <Fragment key={itemIndex}>{item}</Fragment>)}</strong>
+      : <Fragment key={`${anchorScope}-text-${index}`}>{rendered.map((item, itemIndex) => <Fragment key={itemIndex}>{item}</Fragment>)}</Fragment>;
+  });
+}
+
 export function ArticleRichText({
   sections,
   references,
@@ -190,9 +201,7 @@ export function ArticleRichText({
             {!genericSectionTitles.has(section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US")) && <h3>{section.title}</h3>}
             {section.paragraphs.map((paragraph, index) => (
               <p key={`${section.id}-${index}`}>
-                {renderText(paragraph, references, notes, `${section.id}-${index}`).map((part, partIndex) => (
-                  <Fragment key={partIndex}>{part}</Fragment>
-                ))}
+                {renderFormattedText(paragraph, references, notes, `${section.id}-${index}`)}
               </p>
             ))}
           </section>

@@ -1,5 +1,7 @@
+import type { CSSProperties } from "react";
 import { findArchiveIssue, issuePdfUrl } from "../archive";
 import { archivedEditorials } from "../editorials";
+import { issueAccent, issueSurface } from "../issue-themes";
 
 const editorialTr = [
   "ABD ve İsrail’in İran’a yönelik saldırısıyla ortaya çıkan uluslararası tablo, yalnızca Batı Asya’da değil, dünya genelinde güç dengelerindeki köklü dönüşümün en önemli göstergelerinden biri oldu. Saldırının hedefi, İran’ı bölgesel güç olmaktan çıkarmak, ABD-İsrail üstünlüğünü yeniden tesis etmek ve Batı Asya’yı yeniden Washington’un çizdiği güvenlik çerçevesine sokmaktı. Ancak sonuç bunun tersi oldu. ABD’nin doğrudan müdahalesi, sahip olduğu askeri üstünlüğün bölgesel sonuçları belirlemeye yetmediğini ortaya koydu. İsrail’in saldırganlığı ise bölge ülkelerini ABD-İsrail çizgisinde birleştirmek yerine, kendi güvenliklerini ve geleceklerini kendilerinin belirleme eğilimini güçlendirdi.",
@@ -40,12 +42,20 @@ export function CurrentIssueEditorial({
     paragraphs: isEnglish ? editorialEn : editorialTr,
   };
   const current = volume === 7 && issueNumber === 4;
+  const accent = issueAccent(volume, issueNumber);
+  const surface = issueSurface(volume, issueNumber);
+  const period = issue
+    ? `${isEnglish ? issue.season_en : issue.season_tr} ${issue.year}`
+    : "—";
   const home = isEnglish ? "/en" : "/tr";
   const issueHref = current
     ? (isEnglish ? "/en/current-issue" : "/tr/guncel-sayi")
     : (isEnglish ? `/en/archive/volume-${volume}-issue-${issueNumber}` : `/tr/arsiv/cilt-${volume}-sayi-${issueNumber}`);
   return (
-    <article className="current-editorial-page">
+    <article
+      className="current-editorial-page"
+      style={{ "--issue-accent": accent, "--issue-tone": surface } as CSSProperties}
+    >
       <header className="current-editorial-hero">
         <div className="site-shell">
           <div className="page-breadcrumb"><a href={home}>{isEnglish ? "Home" : "Ana Sayfa"}</a><span>/</span><a href={issueHref}>{current ? (isEnglish ? "Current Issue" : "Güncel Sayı") : (isEnglish ? `Volume ${volume} · Issue ${issueNumber}` : `Cilt ${volume} · Sayı ${issueNumber}`)}</a><span>/</span><span>{isEnglish ? "Editorial" : "Sunuş"}</span></div>
@@ -55,7 +65,17 @@ export function CurrentIssueEditorial({
         </div>
       </header>
       <div className="site-shell current-editorial-layout">
-        <aside><span>BRIQ</span><b>{volume}.{issueNumber}</b><a href={issueHref}>{isEnglish ? "Back to the issue" : "Sayıya dön"} →︎</a></aside>
+        <aside className="current-editorial-imprint">
+          <span className="current-editorial-mark">BRIQ</span>
+          <b>{isEnglish ? `Volume ${volume} · Issue ${issueNumber}` : `Cilt ${volume} · Sayı ${issueNumber}`}</b>
+          <dl>
+            <div><dt>{isEnglish ? "Publication period" : "Yayın dönemi"}</dt><dd>{period}</dd></div>
+            <div><dt>ISSN</dt><dd>2687-5896</dd></div>
+            <div><dt>E-ISSN</dt><dd>2718-0581</dd></div>
+            <div><dt>{isEnglish ? "Access" : "Erişim"}</dt><dd>{isEnglish ? "Open access" : "Açık erişim"}</dd></div>
+          </dl>
+          <a href={issueHref}>{isEnglish ? "Back to the issue" : "Sayıya dön"} <span>→︎</span></a>
+        </aside>
         <div className="current-editorial-body">
           {copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           {pdf && <div className="current-editorial-actions"><a className="button button-dark" href={`${pdf}#page=4`}>{isEnglish ? "View in Full Issue PDF" : "Tam Sayı PDF’de Gör"} <span>↗︎</span></a><a className="underlined-link" href={issueHref}>{isEnglish ? "Issue contents" : "Sayı içeriği"} →︎</a></div>}

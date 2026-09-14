@@ -17,8 +17,8 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "Cultural Heritage Plunder", subtitle: "Imperialist Hegemony and the Struggle for Restitution" },
   },
   "7-2": {
-    tr: { title: "Çin’e Özgü Sosyalizmin", subtitle: "Ekonomi Politiği" },
-    en: { title: "The Political Economy of", subtitle: "Socialism with Chinese Characteristics" },
+    tr: { title: "Çin’e Özgü Sosyalizmin Ekonomi Politiği", subtitle: "" },
+    en: { title: "The Political Economy of Socialism with Chinese Characteristics", subtitle: "" },
   },
   "7-1": {
     tr: { title: "İklim-Su-Gıda Krizi", subtitle: "Çözüm Yükselen Güney’de" },

@@ -13,6 +13,7 @@ import { PdfViewer } from "./PdfViewer";
 type Locale = "tr" | "en";
 type IssueFact = readonly [label: string, value: string];
 export type IssueSupplementaryContent = {
+  sourceSlug?: string;
   typeTr: string;
   typeEn: string;
   author: string;
@@ -22,6 +23,14 @@ export type IssueSupplementaryContent = {
   pages: string;
   pdfPage: number;
 };
+
+export function issueContributionCount(
+  record: ArchiveIssue,
+  additionalContents: readonly IssueSupplementaryContent[] = [],
+) {
+  const supplementalSlugs = new Set(additionalContents.map((content) => content.sourceSlug).filter(Boolean));
+  return record.articles.filter((slug) => !supplementalSlugs.has(slug)).length + additionalContents.length;
+}
 
 type IssuePlatformProps = {
   record: ArchiveIssue;
@@ -55,7 +64,9 @@ export function IssuePlatform({
   additionalContents = [],
 }: IssuePlatformProps) {
   const isEnglish = locale === "en";
+  const supplementalSlugs = new Set(additionalContents.map((content) => content.sourceSlug).filter(Boolean));
   const publications = record.articles
+    .filter((slug) => !supplementalSlugs.has(slug))
     .map(findArchiveArticle)
     .filter((publication) => publication !== undefined);
   const turkishPdf = issuePdfUrl(record, "tr");
@@ -63,7 +74,7 @@ export function IssuePlatform({
   const readingPdf = (isEnglish ? englishPdf : turkishPdf) || turkishPdf || englishPdf;
   const cover = coverSrc || (isEnglish ? record.cover_en : record.cover_tr);
   const period = periodLabel || `${isEnglish ? record.season_en : record.season_tr} ${record.year}`;
-  const contributionCount = publications.length + additionalContents.length;
+  const contributionCount = issueContributionCount(record, additionalContents);
   const issueFacts: readonly IssueFact[] = facts || (isEnglish
     ? [
         ["Publication period", period],
@@ -119,7 +130,7 @@ export function IssuePlatform({
             </div>
             <h1>
               {title}
-              <em>{subtitle}</em>
+              {subtitle && <em>{subtitle}</em>}
             </h1>
             <p className="issue-deck">{description}</p>
             {(readingPdf || editorialHref) && (

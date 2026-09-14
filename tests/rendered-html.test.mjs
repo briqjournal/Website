@@ -349,15 +349,17 @@ test("uses verified bilingual cover headings for every issue", async () => {
 
   assert.equal(pages.length, archive.issues.length * 2);
   for (const [index, html] of pages.entries()) {
-    assert.match(html, /<h1>[^<]+<em>[^<]+<\/em><\/h1>/, issuePaths[index]);
+    assert.match(html, /<h1>[^<]+(?:<em>[^<]+<\/em>)?<\/h1>/, issuePaths[index]);
     assert.doesNotMatch(html, /(Bahar|Yaz|Sonbahar|Kış) \d{4} Sayısı/, issuePaths[index]);
     assert.doesNotMatch(html, /(Spring|Summer|Autumn|Winter) \d{4} Issue/, issuePaths[index]);
   }
 
   const spring2026Tr = pages[issuePaths.indexOf("/tr/arsiv/cilt-7-sayi-2")];
   const spring2026En = pages[issuePaths.indexOf("/en/archive/volume-7-issue-2")];
-  assert.match(spring2026Tr, /<h1>Çin’e Özgü Sosyalizmin<em>Ekonomi Politiği<\/em><\/h1>/);
-  assert.match(spring2026En, /<h1>The Political Economy of<em>Socialism with Chinese Characteristics<\/em><\/h1>/);
+  assert.match(spring2026Tr, /<h1>Çin’e Özgü Sosyalizmin Ekonomi Politiği<\/h1>/);
+  assert.match(spring2026En, /<h1>The Political Economy of Socialism with Chinese Characteristics<\/h1>/);
+  assert.doesNotMatch(spring2026Tr, /<h1>Çin’e Özgü Sosyalizmin<em>/);
+  assert.doesNotMatch(spring2026En, /<h1>The Political Economy of<em>/);
 });
 
 test("renders editorial information and advisory boards as scholarly mastheads", async () => {
@@ -621,6 +623,11 @@ test("publishes Volume 7 Issues 1–3 editorials and Issue 3 supplementary conte
     assert.match(enIssue, new RegExp(`/en/archive/volume-7-issue-${issue}/editorial`));
     assert.match(trEditorial, /Fikret Akfırat/);
     assert.match(enEditorial, /Editor-in-Chief/);
+    assert.match(trEditorial, /class="current-editorial-imprint"/);
+    assert.match(trEditorial, /ISSN/);
+    assert.match(trEditorial, /2687-5896/);
+    assert.match(trEditorial, /2718-0581/);
+    assert.match(trEditorial, /--issue-accent:#[0-9a-f]{6}/i);
     assert.match(trEditorial, new RegExp(`href="/en/archive/volume-7-issue-${issue}/editorial"`));
     assert.match(enEditorial, new RegExp(`href="/tr/arsiv/cilt-7-sayi-${issue}/sunus"`));
   }
@@ -633,6 +640,23 @@ test("publishes Volume 7 Issues 1–3 editorials and Issue 3 supplementary conte
   assert.match(issueThree, /Rawan Anani/);
   assert.match(issueThree, /Olivio Martinez/);
   for (const page of [123, 125, 127, 128, 129]) assert.match(issueThree, new RegExp(`#page=${page}`));
+
+  const [issueOne, issueTwo] = await Promise.all([
+    renderPath("/tr/arsiv/cilt-7-sayi-1").then((response) => response.text()),
+    renderPath("/tr/arsiv/cilt-7-sayi-2").then((response) => response.text()),
+  ]);
+  assert.equal((issueOne.match(/class="issue-toc-number"/g) || []).length, 10);
+  assert.match(issueOne, /Hiroshi Sugimoto/);
+  assert.match(issueOne, /Nazmi Ziya Güran/);
+  assert.match(issueOne, /Semih Balcıoğlu/);
+  assert.match(issueOne, /Cahit Sıtkı Tarancı/);
+  assert.match(issueOne, /Pablo Neruda/);
+  for (const page of [128, 129, 130, 131, 133]) assert.match(issueOne, new RegExp(`#page=${page}`));
+  assert.equal((issueTwo.match(/class="issue-toc-number"/g) || []).length, 11);
+  assert.match(issueTwo, /Devrimci Operalar/);
+  assert.match(issueTwo, /Anyuan’a Giderken Başkan Mao/);
+  assert.match(issueTwo, /On Bin Hane, Bir Aile, Bahar Şehri Doldurur/);
+  for (const page of [125, 127, 129, 130, 131]) assert.match(issueTwo, new RegExp(`#page=${page}`));
 });
 
 test("renders Volume 7 Issue 2 articles as bilingual HTML with issue-verified affiliations", async () => {
@@ -657,6 +681,56 @@ test("renders Volume 7 Issue 2 articles as bilingual HTML with issue-verified af
     assert.match(enHtml, /class="article-body-section"/, `EN full text ${slug}`);
     assert.match(trHtml, new RegExp(affiliationTr));
     assert.match(enHtml, new RegExp(affiliationEn));
+    assert.doesNotMatch(trHtml, /Bağımsız Araştırmacı/);
+    assert.doesNotMatch(enHtml, /Independent Researcher/);
+    assert.match(trHtml, /1 Nisan 2026/);
+    assert.match(enHtml, /1 April 2026/);
+    assert.match(trHtml, /Atıfta bulun/);
+  }
+
+  const issueArticles = archive.articles.filter((article) => article.volume === 7 && article.issue === 2);
+  assert.equal(issueArticles.length, 11);
+  assert.ok(issueArticles.every((article) => article.published_online_date === "2026-04-01"));
+  assert.equal(issueArticles[0].publication_type_tr, "Çeviri");
+  assert.equal(issueArticles[1].publication_type_tr, "Çeviri");
+  assert.equal(issueArticles[4].publication_type_tr, "Görüş Makalesi");
+  assert.equal(issueArticles[5].publication_type_tr, "Görüş Makalesi");
+
+  const [firstTranslation, secondTranslation] = await Promise.all([
+    renderPath(`/tr/makaleler/${expected[0][0]}`).then((response) => response.text()),
+    renderPath(`/tr/makaleler/${expected[1][0]}`).then((response) => response.text()),
+  ]);
+  assert.match(firstTranslation, /<span>Yayın notu<\/span>/);
+  assert.match(firstTranslation, /Politik Ekonomi Araştırmaları/);
+  assert.match(secondTranslation, /<span>Yayın notu<\/span>/);
+  assert.match(secondTranslation, /1–24\. sayfalarında yer alan Giriş bölümünün çevirisidir/);
+  assert.doesNotMatch(firstTranslation, /Yazar Beyanları/);
+  assert.doesNotMatch(secondTranslation, /Yazar Beyanları/);
+});
+
+test("renders every Volume 7 Issue 1 article and book review as bilingual HTML with verified author affiliations", async () => {
+  const expected = [
+    ["uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi", "Şanghay Sosyal Bilimler Akademisi", "Shanghai Academy of Social Sciences"],
+    ["iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi", "Elektrik Mühendisi ve Yenilenebilir Enerji Uzmanı", "Electrical Engineer and Renewable Energy Expert"],
+    ["dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi", "Çin Dışişleri Üniversitesi", "China Foreign Affairs University"],
+    ["islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma", "Xi’an Uluslararası Çalışmalar Üniversitesi", "Xi’an International Studies University"],
+    ["cin-abd-iliskilerinin-gelecegi", "Şanghay Üniversitesi", "Shanghai University"],
+  ];
+
+  for (const [slug, affiliationTr, affiliationEn] of expected) {
+    const [trResponse, enResponse] = await Promise.all([
+      renderPath(`/tr/makaleler/${slug}`),
+      renderPath(`/en/articles/${englishArticleSlug(slug)}`),
+    ]);
+    assert.equal(trResponse.status, 200, `TR 7.1 ${slug}`);
+    assert.equal(enResponse.status, 200, `EN 7.1 ${slug}`);
+    const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
+    assert.match(trHtml, /class="article-body-section"/);
+    assert.match(enHtml, /class="article-body-section"/);
+    assert.match(trHtml, new RegExp(affiliationTr));
+    assert.match(enHtml, new RegExp(affiliationEn));
+    assert.doesNotMatch(trHtml, /legacy-fulltext-note/);
+    assert.doesNotMatch(enHtml, /legacy-fulltext-note/);
     assert.doesNotMatch(trHtml, /Bağımsız Araştırmacı/);
     assert.doesNotMatch(enHtml, /Independent Researcher/);
   }

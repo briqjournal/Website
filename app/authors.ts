@@ -135,6 +135,68 @@ export function boardAffiliation(affiliation: string, locale: Locale) {
 }
 
 const authorMetadata: Record<string, AuthorMetadata> = {
+  "Wenbo Zhang": {
+    tr: "Şanghay Sosyal Bilimler Akademisi, Ekoloji ve Sürdürülebilir Kalkınma Enstitüsü, Çin",
+    en: "Institute of Ecology and Sustainable Development, Shanghai Academy of Social Sciences, China",
+    email: "wenboz00@sass.org.cn",
+    orcids: ["0009-0002-0162-2234"],
+    biographyTr: "Wenbo Zhang, Şanghay Sosyal Bilimler Akademisi Ekoloji ve Sürdürülebilir Kalkınma Enstitüsü’nde Sürdürülebilir Kalkınma İçin Uluslararası Karşılaştırmalı Çalışmalar Araştırma Ofisi Direktörüdür. Çalışmaları uluslararası çevre politikası araçları, düşük karbon politikaları ve ekolojik uygarlığa odaklanmaktadır.",
+    biographyEn: "Wenbo Zhang directs the Research Office for International Comparative Studies of Sustainable Development at the Institute of Ecology and Sustainable Development, Shanghai Academy of Social Sciences. His research focuses on international environmental policy instruments, low-carbon policy, and ecological civilisation.",
+  },
+  "Quan Heng": {
+    tr: "Şanghay Sosyal Bilimler Akademisi, Çin",
+    en: "Shanghai Academy of Social Sciences, China",
+    biographyTr: "Quan Heng, Şanghay Sosyal Bilimler Akademisi Parti Komitesi Sekreteridir. Çalışmaları Çin’e özgü politik ekonomi, dünya ekonomisi, kalkınma ekonomisi, Çin’in ekonomik kalkınması ve gelir dağılımı üzerine yoğunlaşmaktadır.",
+    biographyEn: "Quan Heng is Secretary of the Party Committee of the Shanghai Academy of Social Sciences. His research focuses on political economy with Chinese characteristics, the world economy, development economics, China’s economic development, and income distribution.",
+  },
+  "Muzaffer Salih Ertan": {
+    tr: "Elektrik Mühendisi ve Yenilenebilir Enerji Uzmanı, Türkiye",
+    en: "Electrical Engineer and Renewable Energy Expert, Türkiye",
+    email: "salih.ertan@gmail.com",
+    orcids: ["0009-0008-8659-7165"],
+    biographyTr: "Muzaffer Salih Ertan, biyokütleden enerji ve biyoyakıt alanlarında çalışan elektrik mühendisi ve yenilenebilir enerji uzmanıdır. Enerji, çevre, su ve gıda güvenliği konularında araştırma ve sivil toplum çalışmaları yürütmektedir.",
+    biographyEn: "Muzaffer Salih Ertan is an electrical engineer and renewable-energy expert working on energy from biomass and biofuels. His research and civil-society work address energy, the environment, water, and food security.",
+  },
+  "Shangtao Gao": {
+    tr: "Çin Dışişleri Üniversitesi, Uluslararası İlişkiler Enstitüsü, Çin",
+    en: "Institute of International Relations, China Foreign Affairs University, China",
+    email: "gaostao613@163.com",
+    orcids: ["0009-0000-2031-9869"],
+    biographyTr: "Shangtao Gao, Çin Dışişleri Üniversitesi Uluslararası İlişkiler Enstitüsü’nde profesör ve yüksek lisans danışmanı, aynı üniversitenin Ortadoğu Çalışmaları Merkezi Direktörüdür. Uluslararası ilişkiler teorisi, Çin dış politikası ve Ortadoğu üzerine çalışmaktadır.",
+    biographyEn: "Shangtao Gao is a professor and master’s supervisor at the Institute of International Relations, China Foreign Affairs University, and directs its Center for Middle East Studies. He works on international-relations theory, China’s foreign policy, and the Middle East.",
+  },
+  "Jessica Durdu": {
+    tr: "Çin Dışişleri Üniversitesi, Uluslararası İlişkiler, Çin",
+    en: "International Relations, China Foreign Affairs University, China",
+    email: "jessicadurdu@gmail.com",
+    orcids: ["0009-0000-2315-9661"],
+    biographyTr: "Jessica Durdu, Çin Dışişleri Üniversitesi’nde uluslararası ilişkiler doktora adayı ve Türkiye-Çin ilişkileri ile uluslararası diplomasi alanlarında çalışan dış ilişkiler uzmanıdır. Araştırmaları diplomatik strateji ve küresel siyasi işbirliğine odaklanmaktadır.",
+    biographyEn: "Jessica Durdu is a PhD candidate in International Relations at China Foreign Affairs University and a foreign-affairs specialist in Türkiye-China relations and international diplomacy. Her research focuses on diplomatic strategy and global political cooperation.",
+  },
+  "Zhang Yan Jun": {
+    tr: "Xi’an Uluslararası Çalışmalar Üniversitesi, Uluslararası İlişkiler Okulu, Çin",
+    en: "School of International Relations, Xi’an International Studies University, China",
+    email: "zilizhangyanjun@qq.com",
+    orcids: ["0000-0002-7444-3432"],
+    biographyTr: "Zhang Yan Jun, Xi’an Uluslararası Çalışmalar Üniversitesi Uluslararası İlişkiler Okulu’nda doçenttir. Araştırmaları Ortadoğu’daki silahlanma yarışı, silah kontrolü ve askerî-endüstriyel kompleks üzerine odaklanmaktadır.",
+    biographyEn: "Zhang Yan Jun is an associate professor at the School of International Relations, Xi’an International Studies University. His research focuses on the arms race, arms control, and the military-industrial complex in the Middle East.",
+  },
+  "Liu Yu Jun": {
+    tr: "Xi’an Uluslararası Çalışmalar Üniversitesi, Uluslararası İlişkiler Okulu, Çin",
+    en: "School of International Relations, Xi’an International Studies University, China",
+    email: "15955469652@163.com",
+    orcids: ["0009-0007-6549-432X"],
+    biographyTr: "Liu Yu Jun, Xi’an Uluslararası Çalışmalar Üniversitesi Uluslararası İlişkiler Okulu’nda yüksek lisans adayıdır. Araştırmaları Asya’daki güvenlik meselelerine odaklanmaktadır.",
+    biographyEn: "Liu Yu Jun is a master’s candidate at the School of International Relations, Xi’an International Studies University. His research focuses on security issues in Asia.",
+  },
+  "Yang Chen": {
+    tr: "Şanghay Üniversitesi, Tarih Bölümü ve Türkiye Çalışmaları Merkezi, Çin",
+    en: "Department of History and Center for Turkish Studies, Shanghai University, China",
+    email: "ycwf2008@163.com",
+    orcids: ["0000-0002-4840-6427"],
+    biographyTr: "Yang Chen, Şanghay Üniversitesi Sosyal Bilimler Fakültesi Tarih Bölümü’nde doçent ve Şanghay Üniversitesi Türkiye Çalışmaları Merkezi Direktörüdür. Türkiye’de siyasal İslamcı hareketler, parti siyaseti, dış politika ve Çin-Türkiye ilişkileri üzerine çalışmaktadır.",
+    biographyEn: "Yang Chen is an associate professor in the Department of History, College of Liberal Arts, Shanghai University, and Executive Director of the university’s Center for Turkish Studies. His research focuses on political Islamic movements, party politics, foreign policy, and China-Türkiye relations.",
+  },
   "He Ganqiang": {
     tr: "Nanjing Finans ve Ekonomi Üniversitesi, Ekonomi Fakültesi, Çin",
     en: "Faculty of Economics, Nanjing University of Finance and Economics, China",

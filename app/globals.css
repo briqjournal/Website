@@ -3492,7 +3492,7 @@ footer h3 {
 
 /* Current-issue editorial. */
 .current-editorial-hero {
-  background: linear-gradient(126deg, #5d241a 0%, #7d2c1d 54%, #ab5b35 100%);
+  background: linear-gradient(126deg, var(--issue-tone) 0%, color-mix(in srgb, var(--issue-tone) 68%, var(--issue-accent)) 54%, var(--issue-accent) 100%);
   color: #fff;
 }
 
@@ -3512,7 +3512,7 @@ footer h3 {
   display: block;
   max-width: 780px;
   margin-top: 16px;
-  color: #f2c9aa;
+  color: color-mix(in srgb, #fff 72%, var(--issue-accent));
   font-size: .5em;
   font-weight: 400;
   line-height: 1.18;
@@ -3522,12 +3522,17 @@ footer h3 {
 .current-editorial-byline b { font-family: Georgia, "Times New Roman", serif; font-size: 20px; }
 .current-editorial-byline span { color: rgba(255,255,255,.68); font-size: 10px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
 .current-editorial-layout { display: grid; grid-template-columns: 170px minmax(0, 780px); gap: 68px; padding-top: 72px; padding-bottom: 96px; }
-.current-editorial-layout aside { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; padding-top: 8px; border-top: 1px solid var(--ink); }
-.current-editorial-layout aside span { padding-top: 14px; color: var(--rust-dark); font-size: 9px; font-weight: 900; letter-spacing: .13em; }
-.current-editorial-layout aside b { font-family: Georgia, "Times New Roman", serif; font-size: 40px; font-weight: 500; }
-.current-editorial-layout aside a { margin-top: 10px; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+.current-editorial-layout aside { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding-top: 0; border-top: 3px solid var(--issue-accent); }
+.current-editorial-layout .current-editorial-mark { padding-top: 15px; color: var(--issue-accent); font-size: 9px; font-weight: 900; letter-spacing: .13em; }
+.current-editorial-layout aside > b { margin-top: 10px; font-family: Georgia, "Times New Roman", serif; font-size: 27px; font-weight: 500; line-height: 1.12; }
+.current-editorial-imprint dl { margin: 26px 0 0; border-top: 1px solid var(--line); }
+.current-editorial-imprint dl div { padding: 11px 0; border-bottom: 1px solid var(--line); }
+.current-editorial-imprint dt { margin-bottom: 3px; color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.current-editorial-imprint dd { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 14px; line-height: 1.35; }
+.current-editorial-layout aside > a { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 18px; padding: 13px 14px; background: var(--issue-accent); color: #fff; font-size: 9px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.current-editorial-layout aside > a span { font-size: 15px; line-height: 1; }
 .current-editorial-body p { margin: 0 0 1.25em; font-family: Georgia, "Times New Roman", serif; font-size: 19px; line-height: 1.82; }
-.current-editorial-body p:first-child::first-letter { float: left; margin: .08em .09em 0 0; color: var(--rust-dark); font-size: 4.1em; line-height: .75; }
+.current-editorial-body p:first-child::first-letter { float: left; margin: .08em .09em 0 0; color: var(--issue-accent); font-size: 4.1em; line-height: .75; }
 .current-editorial-actions { display: flex; align-items: center; gap: 24px; margin-top: 42px; padding-top: 28px; border-top: 1px solid var(--line); }
 
 /* Call details: the same editorial scale as article pages, with a visible deadline. */
@@ -3608,7 +3613,7 @@ footer h3 {
   .index-detail-grid { grid-template-columns: minmax(0, 1fr); }
   .index-service-card { min-height: 286px; }
   .current-editorial-layout { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-top: 46px; }
-  .current-editorial-layout aside { display: none; }
+  .current-editorial-layout aside { display: flex; max-width: 280px; }
   .current-editorial-body p { font-size: 17px; line-height: 1.72; }
   .current-editorial-actions { align-items: flex-start; flex-direction: column; }
   .author-update-form { padding: 30px 20px 24px; }

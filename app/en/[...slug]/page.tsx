@@ -24,7 +24,7 @@ import { EditorialLongform } from "../../components/EditorialLongform";
 import { PeopleDirectory } from "../../components/PeopleDirectory";
 import { DergiParkLogo } from "../../components/DergiParkLogo";
 import { ArticlePdfPage, ArticlePlatform } from "../../components/ArticlePlatform";
-import { IssuePlatform } from "../../components/IssuePlatform";
+import { IssuePlatform, issueContributionCount } from "../../components/IssuePlatform";
 import { CurrentIssueEditorial } from "../../components/CurrentIssueEditorial";
 import { AuthorProfileActions } from "../../components/AuthorProfileActions";
 import { IndexDirectory } from "../../components/IndexDirectory";
@@ -662,7 +662,7 @@ function EnglishIssue({ volume, issueNumber }: { volume: number; issueNumber: nu
   if (!record) return null;
   const heading = getIssueCopy(volume, issueNumber, "en");
   const supplementary = issueSupplementaryContents(volume, issueNumber);
-  const contributionCount = record.articles.length + (supplementary?.length || 0);
+  const contributionCount = issueContributionCount(record, supplementary);
   return (
     <IssuePlatform
       record={record}

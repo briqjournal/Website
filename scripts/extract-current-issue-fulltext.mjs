@@ -6,30 +6,86 @@ import { extname, join, resolve } from "node:path";
 const root = resolve(import.meta.dirname, "..");
 const issueKey = process.argv[2] || "7-3";
 
+const issueOneRecords = [
+  {
+    slug: "uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi",
+    pages: [7, 28],
+    body: { tr: 9, en: 8 },
+    start: { tr: "Giriş", en: "Introduction" },
+    metadata: { received: "2025-07-15", accepted: "2025-10-11" },
+  },
+  {
+    slug: "iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi",
+    pages: [29, 52],
+    body: { tr: 31, en: 30 },
+    start: { tr: "Giriş", en: "Introduction" },
+    metadata: { received: "2025-09-17", accepted: "2025-11-01" },
+  },
+  {
+    slug: "dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi",
+    pages: [53, 90],
+    body: { tr: 55, en: 54 },
+    start: { tr: "Giriş", en: "Introduction" },
+    metadata: { received: "2025-07-28", accepted: "2025-09-30" },
+  },
+  {
+    slug: "islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma",
+    pages: [91, 120],
+    body: { tr: 93, en: 92 },
+    start: { tr: "Giriş", en: "Introduction" },
+    metadata: { received: "2025-04-26", accepted: "2025-10-30" },
+  },
+  {
+    slug: "cin-abd-iliskilerinin-gelecegi",
+    pages: [121, 127],
+    body: { tr: 121, en: 121 },
+  },
+];
+
 const issueTwoRecords = [
   {
     slug: "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0",
     pages: [7, 20],
-    body: { tr: 9, en: 9 },
+    body: { tr: 9, en: 8 },
+    start: { tr: "Giri", en: "Introduction" },
     metadata: { received: "2025-12-30", accepted: "2026-01-19" },
     sectionTitleReplacements: { "Giri ş": "Giriş" },
+    publicationNote: {
+      tr: "Bu makalenin Çincesi 《政治经济学研究》 (Politik Ekonomi Araştırmaları), Sayı 3 (2024)’te yayımlanmıştır. Öz ve anahtar kelimeler BRIQ tarafından hazırlanmıştır.",
+      en: "The Chinese original of this article was published in 《政治经济学研究》 (Political Economy Research), Issue 3 (2024). The abstract and keywords were prepared by BRIQ.",
+    },
+    dropParagraphStarts: {
+      tr: ["Bu makalenin Çincesi", "Öz ve anahtar kelimeler"],
+      en: ["The abstract and keywords were provided by BRIQ"],
+    },
   },
   {
     slug: "cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis",
     pages: [21, 44],
-    body: { tr: 23, en: 23 },
+    body: { tr: 23, en: 22 },
+    start: { tr: "Giriş", en: "Introduction" },
     metadata: { received: "2026-01-13", accepted: "2026-02-08" },
+    publicationNote: {
+      tr: "Bu makale, Xinhua Jian’ın 2018’de yayımlanan 《中国特色社会主义政治经济学重大疑难问题研究》 (Çin’e Özgü Sosyalist Politik Ekonomide Başlıca ve Zor Sorunlar Üzerine İnceleme) adlı Çince kitabının 1–24. sayfalarında yer alan Giriş bölümünün çevirisidir. Öz ve anahtar kelimeler BRIQ tarafından hazırlanmıştır.",
+      en: "This article is a translation of the Introduction on pages 1–24 of Xinhua Jian’s 2018 Chinese-language book 《中国特色社会主义政治经济学重大疑难问题研究》 (A Study of Major and Difficult Problems in Socialist Political Economy with Chinese Characteristics). The abstract and keywords were prepared by BRIQ.",
+    },
+    dropParagraphStarts: {
+      tr: ["Bu makale, “Xinhua Jian’ın 2018’de yayımlanan"],
+      en: ["This article is a translation of the Introduction section on pages 1-24"],
+    },
   },
   {
     slug: "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme",
     pages: [45, 70],
-    body: { tr: 47, en: 47 },
+    body: { tr: 47, en: 46 },
+    start: { tr: "Giriş", en: "Introduction" },
     metadata: { received: "2025-11-16", accepted: "2026-01-24" },
   },
   {
     slug: "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin",
     pages: [71, 98],
-    body: { tr: 73, en: 73 },
+    body: { tr: 73, en: 72 },
+    start: { tr: "Giriş", en: "Introduction" },
     metadata: { received: "2025-11-25", accepted: "2026-01-27" },
     sectionTitleReplacements: {
       "Teorik Çerçeve Hedef Ülkelerde Uluslararası Kalkınma İşbirliğinin Siyasallaşması: Kavramsal Tanım": "Teorik Çerçeve: Hedef Ülkelerde Uluslararası Kalkınma İşbirliğinin Siyasallaşması",
@@ -37,23 +93,47 @@ const issueTwoRecords = [
       "Araçsal Siyasallaşma (Instrumental Politici-": "Araçsal Siyasallaşma (Instrumental Politicization)",
       "İdeolojik Siyasallaşma (Ideological Politi-": "İdeolojik Siyasallaşma (Ideological Politicization)",
       "“İşbirliği–Çatışma” Modeli ve Uluslararası": "“İşbirliği–Çatışma” Modeli ve Uluslararası Kalkınma İşbirliğinin İmkânsız Üçlemesi",
-      "Düzenli Demokrasi ve Araçsal Siyasallaş-": "Düzenli Demokrasi ve Araçsal Siyasallaştırma",
+      "Düzenli Demokrasi ve Araçsal Siyasallaş-": "Düzenli Demokrasi ve Araçsal Siyasallaştırma: Kurumsal Siyasal Oyunlar",
       "Competitive Behaviour of External Major": "Competitive Behaviour of External Major Powers",
       "“Cooperation-Confrontation” Model and the Impossible Trinity of International Devel-": "“Cooperation-Confrontation” Model and the Impossible Trinity of International Development Cooperation",
-      "Orderly Democracy and Instrumental Polit-": "Orderly Democracy and Instrumental Politicization",
+      "Orderly Democracy and Instrumental Polit-": "Orderly Democracy and Instrumental Politicization: Institutional Political Games",
+    },
+    inlineSectionTitles: {
+      tr: [
+        "Siyasal Sorunların Devamlılığı (Issue Continuation)",
+        "Araçsal Siyasallaşma (Instrumental Politicization)",
+        "İdeolojik Siyasallaşma (Ideological Politicization)",
+      ],
+      en: ["Competitive Behaviour of External Major Powers"],
+    },
+    inlineParagraphLabels: {
+      tr: ["Kamusal Siyaset Sürecinin Açıklığı", "İç Siyasal Bölünme", "Büyük Dış Güçlerin Rekabetçi Davranışı"],
+      en: ["Instrumental Politicization", "Ideological Politicization", "Openness of Public Policy Process", "Domestic Political Division"],
+    },
+    leadingParagraphFragments: {
+      tr: ["nuation): ", "zation): ", "cization): ", "Kalkınma İşbirliğinin İmkânsız Üçlemesi: ", "tırma: Kurumsal Siyasal Oyunlar: "],
+      en: ["Powers: ", "opment Cooperation: ", "icization: Institutional Political Games: "],
+    },
+    paragraphTextReplacements: {
+      en: {
+        "First is Issue continuation. ": "**Issue Continuation:** ",
+        "Specifically: Issue Continuation: ": "Specifically: **Issue Continuation:** ",
+      },
     },
     dropSectionTitles: [",", "/"],
   },
   {
     slug: "hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi",
     pages: [99, 116],
-    body: { tr: 101, en: 101 },
+    body: { tr: 101, en: 100 },
+    start: { tr: "Giriş", en: "Introduction" },
     metadata: { received: "2025-11-07", accepted: "2026-01-31" },
   },
   {
     slug: "japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak",
     pages: [117, 124],
-    body: { tr: 119, en: 119 },
+    body: { tr: 119, en: 118 },
+    start: { tr: "Giriş", en: "Introduction" },
     metadata: { received: "2025-09-22", accepted: "2026-01-15" },
     dropSectionTitles: ["Figure: JCP’s Strategic Shift from the A-B bloc to the A-C bloc"],
   },
@@ -227,6 +307,15 @@ const issueFourRecords = [
 ];
 
 const issueConfigs = {
+  "7-1": {
+    pdfs: {
+      tr: join(root, "tmp/pdfs/v7i1-tr.pdf"),
+      en: join(root, "tmp/pdfs/v7i1-en.pdf"),
+    },
+    records: issueOneRecords,
+    sourceLocale: { tr: "tr", en: "en" },
+    extractImages: false,
+  },
   "7-2": {
     pdfs: {
       tr: join(root, "tmp/pdfs/v7i2-tr.pdf"),
@@ -255,11 +344,11 @@ const issueConfigs = {
 };
 
 const issueConfig = issueConfigs[issueKey];
-if (!issueConfig) throw new Error(`Unknown issue ${issueKey}. Use 7-2, 7-3, or 7-4.`);
+if (!issueConfig) throw new Error(`Unknown issue ${issueKey}. Use 7-1, 7-2, 7-3, or 7-4.`);
 const { pdfs, records } = issueConfig;
 
 const exactHeadings = new Set([
-  "Giriş", "Introduction", "Sonuç", "Conclusion", "Conclusions", "Kaynakça", "References",
+  "Giriş", "Giri ş", "Introduction", "Sonuç", "Conclusion", "Conclusions", "Kaynakça", "References",
   "Notlar", "Notes", "Teşekkür", "Acknowledgements", "Acknowledgments",
 ]);
 
@@ -367,7 +456,7 @@ function extractBlocks(pages, config, locale) {
 
   for (const page of selected) {
     for (const node of page.nodes) {
-      if (isNoise(node)) continue;
+      if (isNoise(node) && !exactHeadings.has(node.text)) continue;
       if (captionTail && node.page === captionTail.page && node.top > captionTail.top && node.top - captionTail.top <= 42 && node.font.size <= 18) {
         captions[captions.length - 1] = dehyphenatedJoin(captions[captions.length - 1], node.text);
         captionTail = { page: node.page, top: node.top };
@@ -379,7 +468,9 @@ function extractBlocks(pages, config, locale) {
         captionTail = { page: node.page, top: node.top };
         continue;
       }
-      if (node.font.size < 14 || node.font.size > 19) continue;
+      const explicitHeading = exactHeadings.has(node.text);
+      const minimumFontSize = mode === "body" ? 14 : 10;
+      if (!explicitHeading && (node.font.size < minimumFontSize || node.font.size > 19)) continue;
       if (/^(Jason Morgan|Nuray Ekşi|Li Ning|Wang Jiani).+ - /i.test(node.text)) continue;
 
       if (!started) {
@@ -457,15 +548,36 @@ function blocksToSections(blocks, locale) {
   }));
 }
 
-function normalizeSectionTitles(sections, record) {
+function normalizeParagraph(value, record, locale) {
+  let normalized = value;
+  for (const fragment of record.leadingParagraphFragments?.[locale] || []) {
+    if (normalized.startsWith(fragment)) normalized = normalized.slice(fragment.length);
+  }
+  for (const [from, to] of Object.entries(record.paragraphTextReplacements?.[locale] || {})) {
+    normalized = normalized.replaceAll(from, to);
+  }
+  for (const label of record.inlineParagraphLabels?.[locale] || []) {
+    normalized = normalized.replaceAll(`${label}:`, `**${label}:**`);
+  }
+  return normalized.trim();
+}
+
+function normalizeSectionTitles(sections, record, locale) {
   const replacements = record.sectionTitleReplacements || {};
   const normalized = sections.map((section) => ({
     ...section,
     title: replacements[section.title] || section.title,
+    paragraphs: section.paragraphs
+      .map((paragraph) => normalizeParagraph(paragraph, record, locale))
+      .filter((paragraph) => !(record.dropParagraphStarts?.[locale] || []).some((prefix) => paragraph.startsWith(prefix))),
   }));
   const dropped = new Set(record.dropSectionTitles || []);
+  const inline = new Set(record.inlineSectionTitles?.[locale] || []);
   return normalized.reduce((result, section) => {
-    if (dropped.has(section.title) && result.length) {
+    if (inline.has(section.title) && result.length) {
+      const [first = "", ...rest] = section.paragraphs;
+      result[result.length - 1].paragraphs.push(`**${section.title}:** ${first}`.trim(), ...rest);
+    } else if (dropped.has(section.title) && result.length) {
       result[result.length - 1].paragraphs.push(...section.paragraphs);
     } else {
       result.push(section);
@@ -548,8 +660,9 @@ for (const record of records) {
     const extracted = extractBlocks(parsed[sourceLocale], record, sourceLocale);
     const special = splitSpecialSections(extracted.blocks, sourceLocale);
     result[record.slug][locale] = {
-      sections: normalizeSectionTitles(blocksToSections(special.body, locale), record),
+      sections: normalizeSectionTitles(blocksToSections(special.body, locale), record, locale),
       keywords: extractKeywords(record, locale),
+      publicationNote: record.publicationNote?.[locale],
       footnotes: parseNumberedNotes(special.notes),
       references: parseReferences(special.references),
       acknowledgements: special.acknowledgements.map((block) => block.text).join(" ").trim(),

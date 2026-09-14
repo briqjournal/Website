@@ -38,6 +38,8 @@ export type ArchiveArticle = {
   revised_date?: string | null;
   accepted_date?: string | null;
   published_online_date?: string | null;
+  publication_type_tr?: string | null;
+  publication_type_en?: string | null;
   source_tr: string;
   source_en?: string | null;
   pdf_tr_source?: string | null;
@@ -195,6 +197,8 @@ export function publicationType(
   record: ArchiveArticle,
   locale: "tr" | "en",
 ) {
+  const explicit = locale === "tr" ? record.publication_type_tr : record.publication_type_en;
+  if (explicit?.trim()) return explicit;
   const text = [
     record.slug,
     record.title_tr,

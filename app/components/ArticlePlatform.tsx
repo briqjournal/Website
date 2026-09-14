@@ -35,6 +35,7 @@ import { ReferenceText, referenceDoi } from "./ReferenceText";
 type LocalizedFullText = {
   sections: FullTextSection[];
   keywords?: string[];
+  publicationNote?: string;
   footnotes: FullTextNote[];
   references: FullTextReference[];
   acknowledgements: string;
@@ -260,7 +261,7 @@ function ResearchStatements({ items, locale }: { items: StatementItem[]; locale:
   const id = locale === "tr" ? "yazar-beyanlari" : "author-declarations";
   return (
     <details className="article-accordion article-declaration-accordion" id={id}>
-      <summary><span>{locale === "tr" ? "Yazar Beyanları" : "Author Declarations"}</span><b>{items.length}</b></summary>
+      <summary><span>{locale === "tr" ? "Yazar beyanları" : "Author declarations"}</span><b>{items.length}</b></summary>
       <div className="accordion-copy article-declaration-group">
         {items.map(({ id: itemId, label, value }) => (
           <section className="article-declaration-item" id={itemId} key={itemId}>
@@ -303,7 +304,10 @@ export async function ArticlePlatform({
   const citation = citationWithDoi(details?.citation || articleCitation(article, locale), article.doi);
   const keywords = (details?.keywords || fullText?.keywords || []).map((keyword) => keywordLabel(keyword, locale));
   const articleType = publicationType(article, locale);
-  const statements = articleType === (locale === "tr" ? "Araştırma Makalesi" : "Research Article") ? researchStatementItems(fullText, locale) : [];
+  const researchTypes = locale === "tr"
+    ? ["Araştırma Makalesi", "Hakemli Araştırma Makalesi"]
+    : ["Research Article", "Peer-reviewed Research Article"];
+  const statements = researchTypes.includes(articleType) ? researchStatementItems(fullText, locale) : [];
   const supplementary = fullText?.supplementary || [];
   const trPdf = articlePdfUrl(article, "tr");
   const enPdf = articlePdfUrl(article, "en");
@@ -327,8 +331,9 @@ export async function ArticlePlatform({
     ...(fullText?.sections || []).map((section) => ({ id: section.id, label: section.title, level: 2 })),
     ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
-    ...(statements.length ? [{ id: locale === "tr" ? "yazar-beyanlari" : "author-declarations", label: locale === "tr" ? "Yazar Beyanları" : "Author Declarations", level: 1 }] : []),
-    { id: locale === "tr" ? "atif" : "cite", label: locale === "tr" ? "Kaynak göster" : "Cite this article", level: 1 },
+    ...(fullText?.publicationNote ? [{ id: locale === "tr" ? "yayin-notu" : "publication-note", label: locale === "tr" ? "Yayın notu" : "Publication note", level: 1 }] : []),
+    ...(statements.length ? [{ id: locale === "tr" ? "yazar-beyanlari" : "author-declarations", label: locale === "tr" ? "Yazar beyanları" : "Author declarations", level: 1 }] : []),
+    { id: locale === "tr" ? "atif" : "cite", label: locale === "tr" ? "Atıfta bulun" : "Cite this article", level: 1 },
     ...(fullText?.footnotes.length ? [{ id: locale === "tr" ? "dipnotlar" : "footnotes", label: locale === "tr" ? "Dipnotlar" : "Footnotes", level: 1 }] : []),
     ...(displayReferences.length ? [{ id: locale === "tr" ? "kaynakca" : "references", label: locale === "tr" ? "Kaynakça" : "References", level: 1 }] : []),
   ];
@@ -381,9 +386,11 @@ export async function ArticlePlatform({
             {fullText && <ArticleFigures figures={fullText.figures} locale={locale} />}
             {supplementary.length ? <details className="article-accordion" id={locale === "tr" ? "ek-materyaller" : "supplementary"}><summary><span>{locale === "tr" ? "Ek materyaller" : "Supplementary information"}</span><b>{supplementary.length}</b></summary><div className="supplementary-links">{supplementary.map((item) => <a href={item.url} key={`${item.title}-${item.url}`} download>{item.title}<span>↓︎</span></a>)}</div></details> : null}
 
+            {fullText?.publicationNote && <details className="article-accordion article-publication-note" id={locale === "tr" ? "yayin-notu" : "publication-note"}><summary><span>{locale === "tr" ? "Yayın notu" : "Publication note"}</span><b>i</b></summary><div className="accordion-copy"><p>{fullText.publicationNote}</p></div></details>}
+
             <ResearchStatements items={statements} locale={locale} />
 
-            <details className="article-accordion article-citation-accordion" id={locale === "tr" ? "atif" : "cite"}><summary><span>{locale === "tr" ? "Bu makaleyi kaynak göster" : "Cite this article"}</span><b>APA 7</b></summary><div className="accordion-copy citation-accordion-copy"><CitationTools citation={citation} slug={article.slug} locale={locale} /></div></details>
+            <details className="article-accordion article-citation-accordion" id={locale === "tr" ? "atif" : "cite"}><summary><span>{locale === "tr" ? "Atıfta bulun" : "Cite this article"}</span><b>APA 7</b></summary><div className="accordion-copy citation-accordion-copy"><CitationTools citation={citation} slug={article.slug} locale={locale} /></div></details>
 
             {fullText?.footnotes.length ? <details className="article-accordion article-notes" id={locale === "tr" ? "dipnotlar" : "footnotes"}><summary><span>{locale === "tr" ? "Dipnotlar" : "Footnotes"}</span><b>{fullText.footnotes.length}</b></summary><ol>{fullText.footnotes.map((note) => <li id={`footnote-${note.id}`} key={note.id}><span>{note.id}</span><p>{note.text}</p><ReferenceBackLink targetId={`footnote-${note.id}`} locale={locale} kind="footnote" /></li>)}</ol></details> : null}
 
