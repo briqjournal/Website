@@ -82,7 +82,9 @@
         "title": "Fırsatlar ve Zorluklar",
         "paragraphs": [
           "Ürdün’de Çin-Arap Dijital İpek Yolu işbirliğinin uygulaması hem fırsatlar hem de zorluklar barındırmaktadır. Bu zorluklar yalnızca teknik veya ekonomik nitelikte değildir; büyük güç rekabeti bağlamında teknolojik tercihleri ve düzenleyici çerçeveleri etkileyen daha geniş jeopolitik dinamikler tarafından da şekillendirilmektedir (Dahdal & Abdel Ghafar, 2025). Bu nedenle, potansiyel riskleri etkili biçimde yönetirken DİY’in faydalarını en üst düzeye çıkarmak için hem zorlukların hem de fırsatların sistematik biçimde anlaşılması zorunludur."
-        ]
+        ],
+        "level": "subsection",
+        "toc": false
       },
       {
         "id": "tr-section-10",
