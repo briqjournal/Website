@@ -31,10 +31,10 @@ This repository powers the bilingual BRIQ journal site on Cloudflare Workers. Op
 
 | Change | Start here |
 |---|---|
-| Article/issue metadata, dates, DOI, type, PDF paths | `app/archive-data.json` |
-| Current-issue and Turkish full text | `app/article-fulltext-current.json` |
-| Archived English full text | `app/article-fulltext-en-archive.json` |
-| Saudi English supplement | `app/article-fulltext-saudi-en.json` |
+| Article/issue metadata, dates, DOI, type, PDF paths | `content/articles/<slug>/metadata.json`, `content/issues/vNN-iNN.json` |
+| Current-period bilingual full text | `content/articles/<slug>/fulltext/current.json` |
+| Archived English full text | `content/articles/<slug>/fulltext/en-archive.json` |
+| Saudi English supplement | `content/articles/<slug>/fulltext/saudi-en.json` |
 | Article layout, declarations, citations, PDF page | `app/components/ArticlePlatform.tsx`, `ArticleRichText.tsx`, `PdfViewer.tsx` |
 | Issue layout and issue editorial | `app/components/IssuePlatform.tsx`, `CurrentIssueEditorial.tsx`, `app/editorials.ts` |
 | Calls for papers | `app/site-data.ts`, `app/call-content.ts`, call components |
@@ -51,7 +51,7 @@ This repository powers the bilingual BRIQ journal site on Cloudflare Workers. Op
 - PDFs belong in Cloudflare R2, not Git. Preserve the `BRIQ_PDF -> briq-pdf` binding.
 - Do not add D1 unless a documented feature and schema genuinely require it.
 - Preserve canonical `/tr` and `/en` trees, locale routing, metadata, sitemap, and OAI-PMH alignment.
-- Treat `app/generated-fulltext/`, `app/generated-runtime/`, and `public/assets/data/article-search-index.json` as generated outputs.
+- Treat `app/archive-data.json`, `app/article-fulltext-*.json`, `app/generated-fulltext/`, `app/generated-runtime/`, and `public/assets/data/article-search-index.json` as generated outputs.
 - Do not manually deploy a source state that differs from the Git commit intended for production.
 - Do not use uploaded editorial/organizational documents unless the requested site change actually depends on them.
 
@@ -64,7 +64,7 @@ This repository powers the bilingual BRIQ journal site on Cloudflare Workers. Op
 
 ## Planned maintenance refactor
 
-The runtime already generates per-article modules, but the canonical sources remain large monoliths. The next architecture task is to make per-article/per-issue files canonical and generate aggregate indexes from them. After that, split the Turkish and English catch-all pages by page family and move page-family styles out of `app/globals.css`. Do these as explicit migrations with compatibility tests, not during routine content fixes.
+Per-article and per-issue JSON files under `content/` are canonical; aggregate JSON and runtime modules are generated. A later, separate architecture task may split the Turkish and English catch-all pages by page family and move page-family styles out of `app/globals.css`. Do not combine that work with routine content fixes.
 
 ## User-facing handoff
 

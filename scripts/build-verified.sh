@@ -12,6 +12,8 @@ command -v timeout >/dev/null || {
   exit 69
 }
 
+echo "Generating archive data from modular sources..."
+node "${script_dir}/generate-archive-data.mjs"
 echo "Generating per-article full-text modules..."
 node "${script_dir}/generate-fulltext-modules.mjs"
 echo "Generating lightweight runtime data..."

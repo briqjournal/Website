@@ -13,8 +13,10 @@
     "test": "npm run build && node --test tests/*.test.mjs",
     "validate:artifact": "bash scripts/validate-artifact.sh",
     "lint": "npm run generate:data && bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern app/generated-fulltext --ignore-pattern app/generated-runtime",
-    "generate:data": "node scripts/generate-fulltext-modules.mjs && node scripts/generate-runtime-data.mjs",
-    "generate:fulltext": "node scripts/generate-fulltext-modules.mjs"
+    "generate:data": "node scripts/generate-archive-data.mjs && node scripts/generate-fulltext-modules.mjs && node scripts/generate-runtime-data.mjs",
+    "generate:fulltext": "node scripts/generate-fulltext-modules.mjs",
+    "generate:archive": "node scripts/generate-archive-data.mjs",
+    "import:content": "node scripts/import-content-monoliths.mjs"
   },
   "dependencies": {
     "next": "16.2.6",

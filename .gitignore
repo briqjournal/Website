@@ -45,3 +45,9 @@ __pycache__/
 /app/generated-fulltext/
 /app/generated-runtime/
 /public/assets/data/article-search-index.json
+
+# generated compatibility aggregates; canonical sources live under /content
+/app/archive-data.json
+/app/article-fulltext-current.json
+/app/article-fulltext-en-archive.json
+/app/article-fulltext-saudi-en.json

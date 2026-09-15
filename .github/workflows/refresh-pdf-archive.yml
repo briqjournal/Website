@@ -42,8 +42,14 @@ jobs:
           done
           aws --version
 
+      - name: Materialize the generated archive
+        run: node scripts/generate-archive-data.mjs
+
       - name: Download and verify the source archive
         run: python3 scripts/localize-pdf-archive.py
+
+      - name: Persist refreshed metadata in modular sources
+        run: node scripts/import-content-monoliths.mjs --archive
 
       - name: Upload PDFs to R2
         shell: bash
@@ -97,7 +103,7 @@ jobs:
         run: |
           set -euo pipefail
           find public -type f -iname '*.pdf' -delete
-          git add app/archive-data.json ops/pdf-archive-manifest.json
+          git add content ops/pdf-archive-manifest.json
           if git diff --cached --quiet; then
             echo "R2 and the repository inventory are already current."
             exit 0
