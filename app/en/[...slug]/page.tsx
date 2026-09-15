@@ -85,12 +85,12 @@ const englishPageMetadata: Record<string, [string, string, string]> = {
   "annual-reports": ["Annual Reports", "Verified records of BRIQ’s publishing activity and institutional development.", "/tr/yillik-raporlar"],
 };
 
-function EnglishHero({ kicker, title, intro }: { kicker?: string; title: string; intro?: string }) {
+function EnglishHero({ kicker, title, intro, breadcrumbLabel }: { kicker?: string; title: string; intro?: string; breadcrumbLabel?: string }) {
   return (
     <section className="page-hero">
       <div className="page-hero-rule" />
       <div className="site-shell page-hero-inner">
-        <div className="page-breadcrumb"><a href="/en">Home</a><span>/</span><span>{kicker || title}</span></div>
+        <div className="page-breadcrumb"><a href="/en">Home</a><span>/</span><span>{breadcrumbLabel || kicker || title}</span></div>
         {kicker && <p className="section-kicker light">{kicker}</p>}
         <h1>{title}</h1>
         {intro && <p>{intro}</p>}
@@ -511,13 +511,13 @@ function EnglishIndexes() {
 
 function EnglishArchive() {
   return (
-    <>
-      <EnglishHero kicker="Archive" title="All issues" intro={`Explore ${archiveIssues.length} verified BRIQ issues by volume, issue, and publication season.`} />
+    <div className="archive-page">
+      <EnglishHero title="All issues" breadcrumbLabel="Archive" />
       <div className="site-shell page-section">
         <div className="archive-tools"><p><b>{archiveIssues.length} issues</b> · 7 volumes · 2019-2026</p><a className="underlined-link" href="/en/current-issue">Go to current issue →︎</a></div>
         <ArchiveExplorer issues={archiveIssueListings} locale="en" />
       </div>
-    </>
+    </div>
   );
 }
 

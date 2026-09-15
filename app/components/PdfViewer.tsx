@@ -11,6 +11,7 @@ type PdfViewerProps = {
   startPage?: number;
   compact?: boolean;
   locale?: "tr" | "en";
+  showTitle?: boolean;
 };
 
 export function PdfViewer({
@@ -22,6 +23,7 @@ export function PdfViewer({
   startPage = 1,
   compact = false,
   locale = "tr",
+  showTitle = true,
 }: PdfViewerProps) {
   const initialLanguage = locale === "en" && englishSrc ? "en" : turkishSrc ? "tr" : "en";
   const [language, setLanguage] = useState<"tr" | "en">(initialLanguage);
@@ -39,7 +41,7 @@ export function PdfViewer({
       <div className="pdf-reader-toolbar">
         <div>
           <span className="pdf-reader-kicker">{locale === "en" ? "On-site PDF viewer" : "Site içi PDF görüntüleyici"}</span>
-          <h2>{title}</h2>
+          {showTitle && <h2>{title}</h2>}
         </div>
         <div className="pdf-reader-controls" aria-label="PDF dili">
           {turkishSrc && (

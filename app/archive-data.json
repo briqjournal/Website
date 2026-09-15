@@ -1203,13 +1203,14 @@
       "citation_en": "Citation \n Iratni, B. (2026). Foreign Powers’ Interventions in Africa: A Critical Assessment. BRIQ Belt & Road Initiative Quarterly, 7(2), 167-192.",
       "pages": "167-192",
       "published_online_date": "2026-04-01",
-      "publication_type_tr": "Hakemli Araştırma Makalesi",
-      "publication_type_en": "Peer-reviewed Research Article",
+      "publication_type_tr": "Araştırma Makalesi",
+      "publication_type_en": "Research Article",
       "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-02/Belkacem%20Iratni_TR.pdf",
       "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-04/Belkacem%20Iratni_EN.pdf",
       "pdf_tr_local": "/assets/archive/pdfs/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme-tr.pdf",
       "pdf_en_local": "/assets/archive/pdfs/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme-en.pdf",
-      "shared_bilingual_pdf": false
+      "shared_bilingual_pdf": false,
+      "revised_date": "2025-12-30"
     },
     {
       "slug": "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin",
@@ -1229,13 +1230,14 @@
       "citation_en": "Citation \n Fang, C. & Wang, W. (2026). The Domestic Political Logic of International Development Cooperation: The Politicization of the BRI in Southeast Asia. BRIQ Belt & Road Initiative Quarterly, 7(2), 193-220.",
       "pages": "193-220",
       "published_online_date": "2026-04-01",
-      "publication_type_tr": "Hakemli Araştırma Makalesi",
-      "publication_type_en": "Peer-reviewed Research Article",
+      "publication_type_tr": "Araştırma Makalesi",
+      "publication_type_en": "Research Article",
       "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-02/Fang%20Chenyu%20%26%20Wang%20Weibin_TR.pdf",
       "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-04/Fang%20Chenyu%20%26%20Wang%20Weibin_EN.pdf",
       "pdf_tr_local": "/assets/archive/pdfs/articles/uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin-tr.pdf",
       "pdf_en_local": "/assets/archive/pdfs/articles/uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin-en.pdf",
-      "shared_bilingual_pdf": false
+      "shared_bilingual_pdf": false,
+      "revised_date": "2026-01-23"
     },
     {
       "slug": "hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi",
@@ -7387,25 +7389,25 @@
     "localized": true,
     "unique_files": 609,
     "reports": {
-      "5": {
-        "tr": "/assets/archive/pdfs/reports/briq-5-yil-raporu-tr.pdf",
-        "en": "/assets/archive/pdfs/reports/briq-5-yil-raporu-en.pdf"
-      },
-      "4": {
-        "tr": "/assets/archive/pdfs/reports/briq-4-yil-raporu-tr.pdf",
-        "en": "/assets/archive/pdfs/reports/briq-4-yil-raporu-en.pdf"
-      },
-      "3": {
-        "tr": "/assets/archive/pdfs/reports/briq-3-yil-raporu-tr.pdf",
-        "en": "/assets/archive/pdfs/reports/briq-3-yil-raporu-en.pdf"
+      "1": {
+        "tr": "/assets/archive/pdfs/reports/briq-1-yil-raporu-tr.pdf",
+        "en": "/assets/archive/pdfs/reports/briq-1-yil-raporu-en.pdf"
       },
       "2": {
         "tr": "/assets/archive/pdfs/reports/briq-2-yil-raporu-tr.pdf",
         "en": "/assets/archive/pdfs/reports/briq-2-yil-raporu-en.pdf"
       },
-      "1": {
-        "tr": "/assets/archive/pdfs/reports/briq-1-yil-raporu-tr.pdf",
-        "en": "/assets/archive/pdfs/reports/briq-1-yil-raporu-en.pdf"
+      "3": {
+        "tr": "/assets/archive/pdfs/reports/briq-3-yil-raporu-tr.pdf",
+        "en": "/assets/archive/pdfs/reports/briq-3-yil-raporu-en.pdf"
+      },
+      "4": {
+        "tr": "/assets/archive/pdfs/reports/briq-4-yil-raporu-tr.pdf",
+        "en": "/assets/archive/pdfs/reports/briq-4-yil-raporu-en.pdf"
+      },
+      "5": {
+        "tr": "/assets/archive/pdfs/reports/briq-5-yil-raporu-tr.pdf",
+        "en": "/assets/archive/pdfs/reports/briq-5-yil-raporu-en.pdf"
       }
     }
   }

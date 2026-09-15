@@ -4640,6 +4640,30 @@ footer h3 {
   line-height: 1.08;
 }
 
+.pdf-page-copy p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 15px 0 0;
+  color: rgba(255,255,255,.78);
+  font-size: 12px;
+}
+
+.pdf-page-copy p b { color: white; }
+.pdf-page-copy p small { font-size: inherit; }
+
+.pdf-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+.pdf-issue-button {
+  border-color: transparent;
+  color: white;
+}
+
 .standalone-article-pdf {
   padding-top: 28px;
   padding-bottom: 72px;
@@ -4648,6 +4672,12 @@ footer h3 {
 .standalone-article-pdf .pdf-reader-frame,
 .standalone-article-pdf .pdf-reader-frame iframe {
   min-height: calc(100vh - 210px);
+}
+
+.standalone-article-pdf .pdf-reader-toolbar {
+  min-height: 68px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 @media (max-width: 900px) {
@@ -8497,6 +8527,20 @@ body {
   margin-top: 0 !important;
 }
 
+.article-body-section h4 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.article-body-section h4 + p {
+  margin-top: 0 !important;
+}
+
 .article-declaration-list {
   margin-top: 38px;
 }
@@ -10589,14 +10633,14 @@ footer {
 }
 
 .call-detail-page {
-  max-width: 1000px;
+  max-width: 1240px;
   padding-top: 46px;
   padding-bottom: 72px;
 }
 
 .call-detail-page .reading-content {
   max-width: 840px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .call-detail-page .reading-content section + section {
@@ -10714,4 +10758,23 @@ footer {
     gap: 10px;
     padding: 22px 21px 24px !important;
   }
+}
+
+/* Compact archive masthead and search rhythm. */
+.archive-page .page-hero-inner {
+  min-height: 190px;
+  padding-top: 28px;
+  padding-bottom: 32px;
+}
+
+.archive-page .page-breadcrumb { margin-bottom: 20px; }
+.archive-page .page-hero h1 { font-size: clamp(42px, 5vw, 64px); }
+.archive-page .page-section { padding-top: 30px; }
+.archive-page .archive-tools { margin-bottom: 20px; }
+.archive-page .directory-toolbar { margin-top: 0; margin-bottom: 30px; padding: 17px; }
+
+@media (max-width: 720px) {
+  .archive-page .page-hero-inner { min-height: 160px; }
+  .archive-page .page-section { padding-top: 24px; }
+  .archive-page .archive-tools { margin-bottom: 16px; }
 }

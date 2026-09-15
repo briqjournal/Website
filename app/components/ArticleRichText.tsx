@@ -7,10 +7,46 @@ export type FullTextSection = {
   id: string;
   title: string;
   paragraphs: string[];
+  level?: "section" | "subsection";
+  toc?: boolean;
 };
 
 export type FullTextNote = { id: string; text: string };
 export type FullTextReference = { id: string; text: string };
+
+const openingAcronyms = new Set(["ABD", "AB", "BM", "BRI", "KYG", "YKYG", "ÇKP", "CPC", "ASEAN", "NATO", "DTÖ", "WTO", "IMF", "AIIB", "AAYB", "BRICS", "ŞİÖ", "SCO", "G7", "G20", "GDO", "GMO", "CBAM", "SKDM", "EU", "UN", "U.S.", "US"]);
+
+function sentenceCasePdfOpening(value: string, locale: "tr" | "en") {
+  const language = locale === "tr" ? "tr-TR" : "en-US";
+  const parts = value.split(/(\s+)/);
+  let firstWord = true;
+  for (let index = 0; index < parts.length; index += 1) {
+    if (/^\s+$/.test(parts[index])) continue;
+    const token = parts[index].replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}.’']+$/gu, "");
+    if (!token || !/\p{L}/u.test(token)) continue;
+    if (/\p{Ll}/u.test(token)) break;
+    const possessive = token.match(/^([\p{L}.]+)([’'][\p{L}]+)$/u);
+    const base = possessive ? possessive[1] : token;
+    let normalized = openingAcronyms.has(base) || /^[IVXLCDM]+$/u.test(base)
+      ? base
+      : base.toLocaleLowerCase(language);
+    if (firstWord && !openingAcronyms.has(base) && !/^[IVXLCDM]+$/u.test(base)) {
+      normalized = normalized.replace(/\p{L}/u, (letter) => letter.toLocaleUpperCase(language));
+    }
+    if (possessive) normalized += possessive[2].toLocaleLowerCase(language);
+    parts[index] = parts[index].replace(token, normalized);
+    firstWord = false;
+  }
+  return parts.join("")
+    .replace(/^Kuşak ve yol girişimi/u, "Kuşak ve Yol Girişimi")
+    .replace(/^The belt and road initiative/u, "The Belt and Road Initiative")
+    .replace(/^Çin komünist partisi/u, "Çin Komünist Partisi")
+    .replace(/^The rapid rise of china/u, "The rapid rise of China")
+    .replace(/^Mao zedong/u, "Mao Zedong")
+    .replace(/^Suudi arabistan/u, "Suudi Arabistan")
+    .replace(/^On december/u, "On December")
+    .replace(/^The shanghai five, comprising china/u, "The Shanghai Five, comprising China");
+}
 
 const dateTokenPattern = /(?:19|20)\d{2}[a-z]?|t\.\s*y\.|n\.\s*d\./giu;
 const citationStopWords = new Set([
@@ -170,12 +206,18 @@ function renderText(text: string, references: FullTextReference[], notes: FullTe
 }
 
 function renderFormattedText(text: string, references: FullTextReference[], notes: FullTextNote[], anchorScope: string) {
-  return text.split(/(\*\*[^*]+\*\*)/g).filter(Boolean).map((part, index) => {
-    const strong = part.startsWith("**") && part.endsWith("**");
-    const content = strong ? part.slice(2, -2) : part;
+  return text.split(/(\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*|\*[^*]+\*)/g).filter(Boolean).map((part, index) => {
+    const strongEmphasis = part.startsWith("***") && part.endsWith("***");
+    const strong = !strongEmphasis && part.startsWith("**") && part.endsWith("**");
+    const emphasis = !strongEmphasis && !strong && part.startsWith("*") && part.endsWith("*");
+    const content = strongEmphasis ? part.slice(3, -3) : (strong ? part.slice(2, -2) : (emphasis ? part.slice(1, -1) : part));
     const rendered = renderText(content, references, notes, `${anchorScope}-${index}`);
-    return strong
+    return strongEmphasis
+      ? <strong key={`${anchorScope}-strong-em-${index}`}><em>{rendered.map((item, itemIndex) => <Fragment key={itemIndex}>{item}</Fragment>)}</em></strong>
+      : strong
       ? <strong key={`${anchorScope}-strong-${index}`}>{rendered.map((item, itemIndex) => <Fragment key={itemIndex}>{item}</Fragment>)}</strong>
+      : emphasis
+      ? <em key={`${anchorScope}-em-${index}`}>{rendered.map((item, itemIndex) => <Fragment key={itemIndex}>{item}</Fragment>)}</em>
       : <Fragment key={`${anchorScope}-text-${index}`}>{rendered.map((item, itemIndex) => <Fragment key={itemIndex}>{item}</Fragment>)}</Fragment>;
   });
 }
@@ -196,12 +238,14 @@ export function ArticleRichText({
     <section className="article-fulltext" id={locale === "tr" ? "tam-metin" : "full-text-body"}>
       <h2>{locale === "tr" ? "Tam Metin" : "Full Text"}</h2>
       <div className="article-fulltext-sections">
-        {sections.map((section) => (
+        {sections.map((section, sectionIndex) => (
           <section className="article-body-section" id={section.id} key={section.id}>
-            {!genericSectionTitles.has(section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US")) && <h3>{section.title}</h3>}
+            {!genericSectionTitles.has(section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US")) && (
+              section.level === "subsection" ? <h4>{section.title}</h4> : <h3>{section.title}</h3>
+            )}
             {section.paragraphs.map((paragraph, index) => (
               <p key={`${section.id}-${index}`}>
-                {renderFormattedText(paragraph, references, notes, `${section.id}-${index}`)}
+                {renderFormattedText(sectionIndex === 0 && index === 0 ? sentenceCasePdfOpening(paragraph, locale) : paragraph, references, notes, `${section.id}-${index}`)}
               </p>
             ))}
           </section>

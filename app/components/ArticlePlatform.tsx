@@ -328,7 +328,9 @@ export async function ArticlePlatform({
     { id: abstractId, label: locale === "tr" ? "Öz" : "Abstract", level: 1 },
     ...(keywords.length ? [{ id: locale === "tr" ? "anahtar-kelimeler" : "keywords", label: locale === "tr" ? "Anahtar kelimeler" : "Keywords", level: 1 }] : []),
     ...(fullText?.sections.length ? [{ id: locale === "tr" ? "tam-metin" : "full-text-body", label: locale === "tr" ? "Tam Metin" : "Full Text", level: 1 }] : []),
-    ...(fullText?.sections || []).map((section) => ({ id: section.id, label: section.title, level: 2 })),
+    ...(fullText?.sections || [])
+      .filter((section) => section.toc !== false && section.level !== "subsection")
+      .map((section) => ({ id: section.id, label: section.title, level: 2 })),
     ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
     ...(fullText?.publicationNote ? [{ id: locale === "tr" ? "yayin-notu" : "publication-note", label: locale === "tr" ? "Yayın notu" : "Publication note", level: 1 }] : []),
@@ -417,10 +419,17 @@ export function ArticlePdfPage({ article, locale, routeSlug = article.slug }: { 
   const enPdf = articlePdfUrl(article, "en");
   const title = locale === "tr" ? article.title_tr : (article.title_en || article.title_tr);
   const articleHref = locale === "tr" ? `/tr/makaleler/${routeSlug}` : `/en/articles/${routeSlug}`;
+  const issueHref = article.volume === 7 && article.issue === 4
+    ? (locale === "tr" ? "/tr/guncel-sayi" : "/en/current-issue")
+    : (locale === "tr" ? `/tr/arsiv/cilt-${article.volume}-sayi-${article.issue}` : `/en/archive/volume-${article.volume}-issue-${article.issue}`);
+  const issueLabel = locale === "tr"
+    ? `Cilt ${article.volume} · Sayı ${article.issue} · ${article.season_tr} ${article.year}`
+    : `Volume ${article.volume} · Issue ${article.issue} · ${article.season_en} ${article.year}`;
+  const issueColor = issueAccent(article.volume, article.issue);
   return (
     <>
-      <section className="pdf-page-heading"><div className="site-shell"><div><span>{locale === "tr" ? "PDF görüntüleyici" : "PDF viewer"}</span><h1>{title}</h1></div><a className="button button-light" href={articleHref}>←︎ {locale === "tr" ? "HTML makaleye dön" : "Back to HTML article"}</a></div></section>
-      <div className="site-shell standalone-article-pdf"><PdfViewer title={title} turkishSrc={trPdf} englishSrc={enPdf} turkishDownloadName={articlePdfFilename(article, "tr")} englishDownloadName={articlePdfFilename(article, "en")} locale={locale} compact /></div>
+      <section className="pdf-page-heading"><div className="site-shell"><div className="pdf-page-copy"><span>{locale === "tr" ? "PDF görüntüleyici" : "PDF viewer"}</span><h1>{title}</h1><p><b>{article.author}</b><small>{issueLabel}</small></p></div><div className="pdf-page-actions"><a className="button button-light" href={articleHref}>←︎ {locale === "tr" ? "Tam Metne Geri Dön" : "Back to Full Text"}</a><a className="button pdf-issue-button" href={issueHref} style={{ backgroundColor: issueColor }}>{locale === "tr" ? "Sayıya Dön" : "Back to Issue"} →︎</a></div></div></section>
+      <div className="site-shell standalone-article-pdf"><PdfViewer title={title} turkishSrc={trPdf} englishSrc={enPdf} turkishDownloadName={articlePdfFilename(article, "tr")} englishDownloadName={articlePdfFilename(article, "en")} locale={locale} compact showTitle={false} /></div>
     </>
   );
 }

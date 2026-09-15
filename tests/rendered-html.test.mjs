@@ -1045,3 +1045,38 @@ test("ships a complete bilingual mobile layout without emoji-presented arrows", 
     assert.match(html, /aria-controls="primary-navigation"/);
   }
 });
+
+test("preserves Volume 7 PDF hierarchy, metadata, and compact archive/PDF navigation", async () => {
+  const fullText = JSON.parse(await readFile(new URL("../app/article-fulltext-current.json", import.meta.url), "utf8"));
+  const volumeSeven = archive.articles.filter((article) => article.volume === 7);
+  assert.equal(volumeSeven.some((article) => /Hakemli Araştırma|Peer-reviewed Research/.test(`${article.publication_type_tr} ${article.publication_type_en}`)), false);
+
+  const africa = volumeSeven.find((article) => article.slug === "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme");
+  const domestic = volumeSeven.find((article) => article.slug === "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin");
+  assert.equal(africa.revised_date, "2025-12-30");
+  assert.equal(domestic.revised_date, "2026-01-23");
+  assert.ok(fullText[africa.slug].tr.references.filter((reference) => reference.text.includes("(Erişim tarihi:")).length > 30);
+
+  const lowCarbonSlug = "uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi";
+  const lowCarbon = fullText[lowCarbonSlug].tr;
+  const policy = lowCarbon.sections.find((section) => section.title === "Politika Önerileri");
+  assert.equal(policy.toc, false);
+  assert.match(policy.paragraphs.join(" "), /\*\*Bir KYG karbon muhasebesi sistemi oluşturulmalıdır\.\*\*/);
+  assert.equal(lowCarbon.sections.some((section) => section.title.includes("oluştu-")), false);
+
+  const [archiveResponse, pdfResponse] = await Promise.all([
+    renderPath("/tr/arsiv"),
+    renderPath(`/tr/makaleler/${lowCarbonSlug}/pdf`),
+  ]);
+  const [archiveHtml, pdfHtml] = await Promise.all([archiveResponse.text(), pdfResponse.text()]);
+  assert.match(archiveHtml, /class="archive-page"/);
+  assert.doesNotMatch(archiveHtml, /BRIQ’in ilk sayısından güncel sayıya/);
+  assert.match(pdfHtml, /Tam Metne Geri Dön/);
+  assert.match(pdfHtml, /Sayıya Dön/);
+  assert.match(pdfHtml, /Cilt 7(?:<!-- -->)? · (?:<!-- -->)?Sayı 1/);
+
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(css, /\.call-detail-page \{[^}]*max-width:\s*1240px/s);
+  assert.match(css, /\.call-detail-page \.reading-content \{[^}]*margin:\s*0;/s);
+  assert.match(css, /\.article-body-section h4 \{[^}]*font-style:\s*italic;/s);
+});

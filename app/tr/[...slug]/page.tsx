@@ -58,10 +58,12 @@ function PageHero({
   kicker,
   title,
   intro,
+  breadcrumbLabel,
 }: {
   kicker?: string;
   title: string;
   intro?: string;
+  breadcrumbLabel?: string;
 }) {
   return (
     <section className="page-hero">
@@ -70,7 +72,7 @@ function PageHero({
         <div className="page-breadcrumb">
           <a href="/tr">Ana Sayfa</a>
           <span>/</span>
-          <span>{kicker || title}</span>
+          <span>{breadcrumbLabel || kicker || title}</span>
         </div>
         {kicker && <p className="section-kicker light">{kicker}</p>}
         <h1>{title}</h1>
@@ -897,17 +899,16 @@ function ReviewFlow() {
 
 function Archive() {
   return (
-    <>
+    <div className="archive-page">
       <PageHero
-        kicker="Arşiv"
         title="Tüm sayılar"
-        intro="BRIQ’in ilk sayısından güncel sayıya kadar yayımlanan 27 sayılık arşivi cilt ve sayı düzeninde keşfedin."
+        breadcrumbLabel="Arşiv"
       />
       <div className="site-shell page-section">
         <div className="archive-tools"><p><b>{archiveIssues.length} sayı</b> · 7 cilt · 2019–2026</p><a className="underlined-link" href="/tr/guncel-sayi">Güncel sayıya git →︎</a></div>
         <ArchiveExplorer issues={archiveIssueListings} />
       </div>
-    </>
+    </div>
   );
 }
 
