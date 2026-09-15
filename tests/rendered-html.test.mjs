@@ -1079,4 +1079,10 @@ test("preserves Volume 7 PDF hierarchy, metadata, and compact archive/PDF naviga
   assert.match(css, /\.call-detail-page \{[^}]*max-width:\s*1240px/s);
   assert.match(css, /\.call-detail-page \.reading-content \{[^}]*margin:\s*0;/s);
   assert.match(css, /\.article-body-section h4 \{[^}]*font-style:\s*italic;/s);
+
+  const waterSlug = "iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi";
+  const waterResponse = await renderPath(`/en/articles/${waterSlug}`);
+  const waterHtml = await waterResponse.text();
+  assert.match(waterHtml, /Concrete Solutions and Recommendations for the Climate-Water-Food Triple Crisis/);
+  assert.doesNotMatch(waterHtml, /Concrete Solutions and Recommendations for the Triple Crisis of Climate, Water, and Food/);
 });

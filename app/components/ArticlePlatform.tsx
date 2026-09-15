@@ -293,8 +293,12 @@ export async function ArticlePlatform({
   const saudiEnglishFullText = locale === "en" && article.slug === SAUDI_CULTURAL_HEDGING_SLUG
     ? await loadSaudiEnglishFullText() as LocalizedFullText
     : undefined;
+  const archivedEnglishSource = saudiEnglishFullText || archivedEnglishFullText;
+  const preferCurrentEnglish = article.volume === 7 && article.issue <= 3;
   const fullText = locale === "en"
-    ? mergeLocalizedFullText(saudiEnglishFullText || archivedEnglishFullText, storedFullText)
+    ? preferCurrentEnglish
+      ? mergeLocalizedFullText(storedFullText, archivedEnglishSource)
+      : mergeLocalizedFullText(archivedEnglishSource, storedFullText)
     : storedFullText;
   const displayReferences = fullText ? referencesWithUnlistedCitations(fullText.sections, fullText.references, locale) : [];
   const metadata = fullRecord?.metadata;
