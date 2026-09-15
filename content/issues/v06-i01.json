@@ -1,0 +1,32 @@
+{
+  "volume": 6,
+  "issue": 1,
+  "season_tr": "Kış",
+  "season_en": "Winter",
+  "year": "2024-2025",
+  "source_tr": "https://briqjournal.com/briq-6cilt-1sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol6-issue1",
+  "cover_tr": "/assets/archive/covers/cilt-6-sayi-1-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-6-sayi-1-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2024-12/BRIQ%20Cilt6Sayi1.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2024-12/BRIQ%20Volume6Issue1.pdf",
+  "articles": [
+    "roportaj-yesil-ve-dijital-donusum-kapsaminda-ar-ge-ve-yenilik-ekosistemini-harekete-geciriyoruz",
+    "kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi",
+    "kusak-yol-gelisen-dunyanin-onculugunde-toplumu-bicimlendirmenin-tek-yolu",
+    "yukselen-yeni-uygarligin-bilim-ve-teknolojide-kuresel-onderlik-hedefi",
+    "devlet-farkli-politika-araclari-ile-aktif-piyasa-mudahalesini-surekli-hale-getirmeli",
+    "turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi",
+    "ikinci-cin-japon-savasi-sirasinda-rol-model-olarak-ankara-chongqing-bizim-ankaramiz",
+    "kuresel-kalkinma-girisimi-ve-cinin-ortadogudaki-kalkinma-isbirligi-calismalari",
+    "avrupayi-abd-liderligindeki-sanayisizlesmeden-kurtarmak",
+    "ogrenmeye-ovgu",
+    "sevgi-duvari",
+    "abdnin-kurdugu-ekonomik-tuzak-isiginda-abd-cin-rekabetinin-mahiyeti",
+    "izmir-kizilcullu-koy-enstitusu",
+    "operarios-isciler-1933",
+    "yeni-nesil-nazizm-2023"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-6-sayi-1-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-6-sayi-1-en.pdf"
+}

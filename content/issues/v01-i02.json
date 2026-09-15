@@ -1,0 +1,24 @@
+{
+  "volume": 1,
+  "issue": 2,
+  "season_tr": "Bahar",
+  "season_en": "Spring",
+  "year": "2020",
+  "source_tr": "https://briqjournal.com/briq-1cilt-2-sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol1-issue2",
+  "cover_tr": "/assets/archive/covers/cilt-1-sayi-2-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-1-sayi-2-en.jpg",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%201.%20Cilt%202.%20Say%C4%B1_KAPAK_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.1%20Issue2_COVER_Site.pdf",
+  "articles": [
+    "cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi",
+    "cok-kutuplulasan-dunyada-geleneksel-olmayan-guvenlik-anlayisi-sio-ornegi",
+    "ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi",
+    "avrasyada-ayrilikci-hareketlerin-jeopolitigi",
+    "arap-bahari-sonrasi-uluslararasi-guvenlik-suriye-ve-libya-catismalarinin-yurtici-ve-uluslararasi",
+    "deniz-ve-asya-yuzyilinda-turkiye",
+    "cinin-yeni-koronavirus-zaturresine-karsi-savasi-mucadeleler-sonuclar-ve-yansimalar"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-1-sayi-2-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-1-sayi-2-en.pdf"
+}

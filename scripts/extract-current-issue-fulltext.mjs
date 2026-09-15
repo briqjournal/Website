@@ -675,8 +675,14 @@ for (const record of records) {
   }
 }
 
-const outputPath = join(root, "app/article-fulltext-current.json");
-const existing = JSON.parse(readFileSync(outputPath, "utf8"));
-writeFileSync(outputPath, `${JSON.stringify({ ...existing, ...result }, null, 2)}\n`);
+const catalogPath = join(root, "content/catalog.json");
+const catalog = JSON.parse(readFileSync(catalogPath, "utf8"));
+for (const [slug, value] of Object.entries(result)) {
+  const outputPath = join(root, "content/articles", slug, "fulltext/current.json");
+  mkdirSync(resolve(outputPath, ".."), { recursive: true });
+  writeFileSync(outputPath, `${JSON.stringify(value, null, 2)}\n`);
+  if (!catalog.fulltext.current.includes(slug)) catalog.fulltext.current.push(slug);
+}
+writeFileSync(catalogPath, `${JSON.stringify(catalog, null, 2)}\n`);
 rmSync(temp, { recursive: true });
-console.log(`Generated HTML full text for ${records.length} articles from issue ${issueKey}.`);
+console.log(`Generated modular HTML full text for ${records.length} articles from issue ${issueKey}.`);

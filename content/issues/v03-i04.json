@@ -1,0 +1,28 @@
+{
+  "volume": 3,
+  "issue": 4,
+  "season_tr": "Güz",
+  "season_en": "Autumn",
+  "year": "2022",
+  "source_tr": "https://briqjournal.com/briq-3-cilt-4-sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol3-issue4",
+  "cover_tr": "/assets/archive/covers/cilt-3-sayi-4-tr.jpeg",
+  "cover_en": "/assets/archive/covers/cilt-3-sayi-4-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%203.%20Cilt%204.%20Say%C4%B1_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.3%20Issue4_Site.pdf",
+  "articles": [
+    "ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz",
+    "yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak",
+    "kulturel-ozguveni-percinleyelim",
+    "ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin",
+    "ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme",
+    "ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri",
+    "ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi",
+    "guc-zayifliktir",
+    "yangin-merdiveni",
+    "simitci",
+    "uygarligin-ipek-yolu"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-3-sayi-4-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-3-sayi-4-en.pdf"
+}

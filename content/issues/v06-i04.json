@@ -1,0 +1,25 @@
+{
+  "volume": 6,
+  "issue": 4,
+  "season_tr": "Güz",
+  "season_en": "Autumn",
+  "year": "2025",
+  "source_tr": "https://briqjournal.com/briq-6cilt-4sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol6-issue4-0",
+  "cover_tr": "/assets/archive/covers/cilt-6-sayi-4-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-6-sayi-4-en.jpg",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-09/BRIQ_Cilt6_Say%C4%B14_2025_Sonbahar_0.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-09/BRIQ%20Vol.6%20Issue4%202026%20Autumn_0.pdf",
+  "articles": [
+    "rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve",
+    "brics-terore-karsi-mucadele-stratejisi",
+    "sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan",
+    "dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi",
+    "genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme",
+    "wape-18-yillik-forumu",
+    "hallac-siir",
+    "doksan-yedinci-sonnet-siir"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-6-sayi-4-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf"
+}

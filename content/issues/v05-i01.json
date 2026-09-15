@@ -1,0 +1,28 @@
+{
+  "volume": 5,
+  "issue": 1,
+  "season_tr": "Kış",
+  "season_en": "Winter",
+  "year": "2023-2024",
+  "source_tr": "https://briqjournal.com/briq-5cilt-1sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol5-issue1",
+  "cover_tr": "/assets/archive/covers/cilt-5-sayi-1-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-5-sayi-1-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Cilt5%20Say%C4%B11%20KI%C5%9E%202023-2024_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Volume5%20Issue1%20Winter%202023-2024_Site.pdf",
+  "articles": [
+    "kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir",
+    "cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi",
+    "cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen",
+    "dunya-ekonomisinin-dolardan-arindirilmasi",
+    "abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu",
+    "kimlik-karti-siir",
+    "asya-afrika-yazarlarina-siir",
+    "taliban-afgan-savas-agalarinin-hikayesi",
+    "filistin-1947",
+    "kudus-2023",
+    "filistinli-bir-multecinin-gozunden"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-5-sayi-1-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-5-sayi-1-en.pdf"
+}

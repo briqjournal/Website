@@ -1,0 +1,30 @@
+{
+  "volume": 6,
+  "issue": 2,
+  "season_tr": "Bahar",
+  "season_en": "Spring",
+  "year": "2025",
+  "source_tr": "https://briqjournal.com/briq-6cilt-2sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol6-issue2",
+  "cover_tr": "/assets/archive/covers/cilt-6-sayi-2-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-6-sayi-2-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-03/BRIQ_Cilt6Say%C4%B12_2025BAHAR.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-03/BRIQ_Volume6SIssue2_2025Spring.pdf",
+  "articles": [
+    "modernist-milliyetci-olarak-sun-yat-sen-ve-siyasal-mirasi",
+    "cinin-erken-modernizasyonuna-sun-yat-senin-katkisi",
+    "cinli-devrimcilerin-sun-yat-sen-ve-mustafa-kemal-arasindaki-benzerlikler-uzerine-gorusleri",
+    "sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin",
+    "osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke",
+    "yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar",
+    "alter-kuresellesme-baglaminda-cin-fransiz-iliskileri",
+    "kamu-diplomasisi-ozbekistanin-yabanci-ulkelerle-iliskilerini-guclendirmenin-bir-yolu",
+    "hikaye-siir",
+    "olu-su-siir",
+    "ogonyok",
+    "qi-baishi",
+    "t-miyano-renkli-tasbaski"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-6-sayi-2-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-6-sayi-2-en.pdf"
+}

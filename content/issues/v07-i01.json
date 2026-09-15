@@ -1,0 +1,22 @@
+{
+  "volume": 7,
+  "issue": 1,
+  "season_tr": "Kış",
+  "season_en": "Winter",
+  "year": "2025-2026",
+  "source_tr": "https://briqjournal.com/briq-7cilt-1sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol7-issue1",
+  "cover_tr": "/assets/archive/covers/cilt-7-sayi-1-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-7-sayi-1-en.jpg",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Cilt7%20Say%C4%B11%20KI%C5%9E%202025-2026_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-11/BRIQ%20Volume7%20Issue1%20Winter%202025-2026_0.pdf",
+  "articles": [
+    "uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi",
+    "iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi",
+    "dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi",
+    "islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma",
+    "cin-abd-iliskilerinin-gelecegi"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-7-sayi-1-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-7-sayi-1-en.pdf"
+}

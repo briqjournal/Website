@@ -1,0 +1,28 @@
+{
+  "volume": 2,
+  "issue": 2,
+  "season_tr": "Bahar",
+  "season_en": "Spring",
+  "year": "2021",
+  "source_tr": "https://briqjournal.com/briq-2-cilt-2-sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol2-issue2",
+  "cover_tr": "/assets/archive/covers/cilt-2-sayi-2-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-2-sayi-2-en.jpg",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%202.%20Cilt%202.%20Say%C4%B1_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.2%20Issue2_Site.pdf",
+  "articles": [
+    "gorevimiz-kusak-yolda-ortak-gelisme-icin-bilimsel-isbirligi",
+    "pekin-bildirgesi",
+    "kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler",
+    "bilimin-siniri-yoktur-ama-bilim-insanlarinin-vatani-vardir",
+    "ipek-yolunda-bilimsel-isbirligi",
+    "karadeniz-enerji-refah-ve-baris-denizi",
+    "covid-19-sonrasi-dunyada-saglik-ipek-yolundan-insan-sagligi-icin-ortak-gelecek-toplumuna",
+    "yunan-basbakani-venizelos-ile-tarihten-bir-soylesi",
+    "fotograf-0",
+    "sevgililer-tuvale-yagli-boya-ugur-durak",
+    "karikatur"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-2-sayi-2-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-2-sayi-2-en.pdf"
+}

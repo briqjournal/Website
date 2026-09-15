@@ -1,0 +1,31 @@
+{
+  "volume": 5,
+  "issue": 2,
+  "season_tr": "Bahar",
+  "season_en": "Spring",
+  "year": "2024",
+  "source_tr": "https://briqjournal.com/briq-5cilt-2sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol5-issue2",
+  "cover_tr": "/assets/archive/covers/cilt-5-sayi-2-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-5-sayi-2-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2024-03/briq-52-tr.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2024-03/briq-52-en_0.pdf",
+  "articles": [
+    "yeni-dunyanin-safaginda-afrika",
+    "afrika-asya-jeopolitik-denkleminde-afrikanin-onemi-kizildeniz-ve-yemen-denizi",
+    "cin-ile-afrika-ulkeleri-arasindaki-isbirliginin-degisen-dinamikleri-kuresel-kamu-mallari-yaklasimi",
+    "afrikanin-son-somurgesi-bati-sahra",
+    "turkiye-afrika-ticari-iliskileri-son-20-yilda-10-kat-artti",
+    "turkiye-ve-rusya-afrikanin-bati-emperyalizminden-kurtulmasi-icin-birlikte-calisabilir",
+    "kusak-ve-yol-girisimi-kapsaminda-cinin-nijeryada-yaptigi-yatirimlarin-sosyoekonomik-etkilerinin",
+    "afrikanin-geleceginde-turkiyenin-yeri-kazan-kazan-anlayisina-dayali-yakin-bir-isbirligine-dogru",
+    "ingiliz-isgali-sonrasi-misirin-donusumleri-ve-turkiye-ile-iliskileri",
+    "isyan-tutanaklari",
+    "afrikanin-kalbinde-sabah",
+    "pipo-icen-zosali-kadin-1941",
+    "moordaki-vantrilok-ve-tellal-1923",
+    "baris-icin-savasirken-unutma-1962"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-5-sayi-2-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-5-sayi-2-en.pdf"
+}

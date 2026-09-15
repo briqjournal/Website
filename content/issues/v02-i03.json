@@ -1,0 +1,27 @@
+{
+  "volume": 2,
+  "issue": 3,
+  "season_tr": "Yaz",
+  "season_en": "Summer",
+  "year": "2021",
+  "source_tr": "https://briqjournal.com/briq-2cilt-3-sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol2-issue3",
+  "cover_tr": "/assets/archive/covers/cilt-2-sayi-3-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-2-sayi-3-en.jpg",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%202.Cilt%203.%20Say%C4%B1_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.2%20Issue.3_Site.pdf",
+  "articles": [
+    "cinin-cevre-politikalarinin-ekolojik-uygarliga-dogru-gelisimi",
+    "ekolojik-uygarlik-tum-canlilar-icin-ortak-bir-gelecek-insasi",
+    "turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi",
+    "ekolojik-uygarlikta-enerji-cevre-kesisimi",
+    "iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim",
+    "bati-cephesindeki-sessizlik",
+    "1920-1930lardaki-cin-gazetelerinde-bir-rol-model-olarak-turkiye",
+    "sadik-ucok",
+    "ekrem-kahraman",
+    "askin-ayrancioglu"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-2-sayi-3-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-2-sayi-3-en.pdf"
+}

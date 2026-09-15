@@ -1,0 +1,24 @@
+{
+  "volume": 4,
+  "issue": 1,
+  "season_tr": "Kış",
+  "season_en": "Winter",
+  "year": "2022-2023",
+  "source_tr": "https://briqjournal.com/briq-4cilt-1sayi-turkce",
+  "source_en": "https://briqjournal.com/en/briq-vol4-issue1",
+  "cover_tr": "/assets/archive/covers/cilt-4-sayi-1-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-4-sayi-1-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2022-12/CILT4_SAYI1_TR_kapakl%C4%B1.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2022-12/VOLUME4_ISSUE1_0.pdf",
+  "articles": [
+    "dogu-akdenizdeki-son-gelismeler-isiginda-kuzey-kibris-turk-cumhuriyetinin-taninmasinin-gerekliligi",
+    "abdnin-cevrelemeye-calistigi-turkiye-rusya-ve-cin-isbirligi-yapmali",
+    "yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor",
+    "cinin-dogu-akdenizde-cozum-onerisi-kalkinmaci-baris-yaklasimi",
+    "turkiye-misir-ve-yunanistanin-savunma-harcamalari-denklemi-uzerinden-karaman-denizi-dogu-akdeniz",
+    "dogu-akdenizde-cin-varligi-suriye-ornegi",
+    "kusak-ve-yol-girisimi-bolgesellesme-ve-kuresellesme-icin-yeni-itici-guc"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-4-sayi-1-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-4-sayi-1-en.pdf"
+}

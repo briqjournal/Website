@@ -1,0 +1,24 @@
+{
+  "volume": 2,
+  "issue": 1,
+  "season_tr": "Kış",
+  "season_en": "Winter",
+  "year": "2020-2021",
+  "source_tr": "https://briqjournal.com/briq-2cilt-1-sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol2-issue1",
+  "cover_tr": "/assets/archive/covers/cilt-2-sayi-1-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-2-sayi-1-en.jpg",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%202.%20Cilt%201.%20Say%C4%B1_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.2%20Issue1_Site.pdf",
+  "articles": [
+    "bes-deniz-stratejisini-canlandirmak-mumkun-mu",
+    "turkiye-ve-cinin-degisen-deniz-jeopolitiginin-neo-mahanci-bir-okumasi",
+    "mavi-vatan-doktrini-nasil-olustu",
+    "mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili",
+    "gaz-hidratlar-yakin-gelecegin-enerji-kaynagi",
+    "karabag-baslangictan-gunumuze-sorunlar-ve-cozumler",
+    "fotograf-omer-burhanoglu"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-2-sayi-1-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-2-sayi-1-en.pdf"
+}
