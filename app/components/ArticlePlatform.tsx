@@ -427,12 +427,14 @@ export function ArticlePdfPage({ article, locale, routeSlug = article.slug }: { 
     ? (locale === "tr" ? "/tr/guncel-sayi" : "/en/current-issue")
     : (locale === "tr" ? `/tr/arsiv/cilt-${article.volume}-sayi-${article.issue}` : `/en/archive/volume-${article.volume}-issue-${article.issue}`);
   const issueLabel = locale === "tr"
-    ? `Cilt ${article.volume} · Sayı ${article.issue} · ${article.season_tr} ${article.year}`
-    : `Volume ${article.volume} · Issue ${article.issue} · ${article.season_en} ${article.year}`;
+    ? `Cilt ${article.volume} · Sayı ${article.issue}`
+    : `Volume ${article.volume} · Issue ${article.issue}`;
+  const issueDate = `${locale === "tr" ? article.season_tr : article.season_en} ${article.year}`;
   const issueColor = issueAccent(article.volume, article.issue);
+  const authorNames = splitAuthorNames(article.author);
   return (
     <>
-      <section className="pdf-page-heading"><div className="site-shell"><div className="pdf-page-copy"><span>{locale === "tr" ? "PDF görüntüleyici" : "PDF viewer"}</span><h1>{title}</h1><p><b>{article.author}</b><small>{issueLabel}</small></p></div><div className="pdf-page-actions"><a className="button button-light" href={articleHref}>←︎ {locale === "tr" ? "Tam Metne Geri Dön" : "Back to Full Text"}</a><a className="button pdf-issue-button" href={issueHref} style={{ backgroundColor: issueColor }}>{locale === "tr" ? "Sayıya Dön" : "Back to Issue"} →︎</a></div></div></section>
+      <section className="pdf-page-heading"><div className="site-shell"><div className="pdf-page-copy"><span>{locale === "tr" ? "PDF görüntüleyici" : "PDF viewer"}</span><h1>{title}</h1><p><b>{authorNames.map((name, index) => <span key={`${name}-${index}`}>{index > 0 ? ", " : ""}{isPersonByline(name) ? <a href={authorProfileHref(name, locale)} style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>{name}</a> : name}</span>)}</b><a href={issueHref} style={{ width: "fit-content", display: "inline-flex", padding: "7px 9px", borderRadius: "2px", color: "#fff", backgroundColor: issueColor, fontSize: "10px", fontWeight: 800, lineHeight: 1 }}>{issueLabel}</a><small>{issueDate}</small></p></div><div className="pdf-page-actions"><a className="button button-light" href={articleHref}>←︎ {locale === "tr" ? "Tam Metne Geri Dön" : "Back to Full Text"}</a><a className="button pdf-issue-button" href={issueHref} style={{ backgroundColor: issueColor }}>{locale === "tr" ? "Sayıya Dön" : "Back to Issue"} →︎</a></div></div></section>
       <div className="site-shell standalone-article-pdf"><PdfViewer title={title} turkishSrc={trPdf} englishSrc={enPdf} turkishDownloadName={articlePdfFilename(article, "tr")} englishDownloadName={articlePdfFilename(article, "en")} locale={locale} compact showTitle={false} /></div>
     </>
   );
