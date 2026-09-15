@@ -1,0 +1,28 @@
+{
+  "volume": 3,
+  "issue": 3,
+  "season_tr": "Yaz",
+  "season_en": "Summer",
+  "year": "2022",
+  "source_tr": "https://briqjournal.com/briq-3-cilt-3-sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol3-issue3",
+  "cover_tr": "/assets/archive/covers/cilt-3-sayi-3-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-3-sayi-3-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%203.%20Cilt%203.%20Say%C4%B1_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.3%20Issue3_Site.pdf",
+  "articles": [
+    "yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi",
+    "turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti",
+    "insan-ve-doga-icin-musterek-bir-yasam-yaratmaliyiz",
+    "ekolojik-uygarligin-enerjisi-hidrojen",
+    "cinin-hidrojen-enerjisi-endustrisinin-gelistirilmesine-yonelik-orta-ve-uzun-vadeli-planina-genel",
+    "sanghayda-hidrojen-enerji-endustrisi-uygulamalari-ve-gelisimi",
+    "1-uluslararasi-kusak-ve-yol-inisiyatifi-turkiye-sempozyumu-turkiye-dijital-ipek-yolunun-oncusu",
+    "kusak-ve-yol-girisiminin-ic-nedenleri",
+    "yangisardaki-comlek-atolyesinin-avlusu",
+    "supernova-moskova",
+    "karikatur-1"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-3-sayi-3-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-3-sayi-3-en.pdf"
+}

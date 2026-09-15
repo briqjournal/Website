@@ -1,0 +1,28 @@
+{
+  "volume": 4,
+  "issue": 2,
+  "season_tr": "Bahar",
+  "season_en": "Spring",
+  "year": "2023",
+  "source_tr": "https://briqjournal.com/briq-4-cilt-2-sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol4-issue2",
+  "cover_tr": "/assets/archive/covers/cilt-4-sayi-2-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-4-sayi-2-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Cilt4%20Say%C4%B12_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2023-03/CILT4_SAYI2_ENG_merged.pdf",
+  "articles": [
+    "ortadoguda-bolgesel-isbirligi-icin-yeni-bir-ekonomik-politika-yolunun-gelistirilmesi",
+    "adalar-denizinde-yasanan-turkiye-yunanistan-geriliminin-dogu-akdeniz-bolgesel-guvenlik-kompleksine",
+    "abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali",
+    "cin-baris-icinde-bir-arada-yasamanin-bes-ilkesi-temelinde-dostluk-ve-isbirligini-gelistirmeye",
+    "kusak-ve-yol-girisimi-baglaminda-cin-ve-dogu-akdeniz-ulkeleri-arasinda-isbirligi-guncel-durum",
+    "italya-ve-brics-alternatifi",
+    "kayip-kuresel-denge-jeopolitik-degisim-uzerine-son-yayinlar",
+    "milli-pullarla-ipek-yolu-tipki-ipek-yolunun-uzerinde-beliren-gokkusaklari-gibi-pullar-da-dostlugun",
+    "futbol-taraftarlari-baku-1959",
+    "donbass-tuz-madeni-1926",
+    "yeniden-ayaga-kalkacagiz"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-4-sayi-2-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-4-sayi-2-en.pdf"
+}

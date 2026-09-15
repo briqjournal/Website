@@ -1,0 +1,25 @@
+{
+  "volume": 7,
+  "issue": 3,
+  "season_tr": "Yaz",
+  "season_en": "Summer",
+  "year": "2026",
+  "source_tr": "https://briqjournal.com/briq-7cilt-3sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol7-issue3",
+  "cover_tr": "/assets/archive/covers/cilt-7-sayi-3-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-7-sayi-3-en.jpg",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2026-05/BRIQ%20Cilt7%20Say%C4%B13%20YAZ%202026_3.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2026-05/BRIQ%20Volume7%20Issue3%20SUMMER%202026_2.pdf",
+  "articles": [
+    "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin",
+    "turkiyenin-kulturel-varliklari-geri-kazanma-mucadelesi",
+    "kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre",
+    "cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege",
+    "anadolunun-kulturel-mirasini-koruma-ve-gelecege-aktarma-sorumlulugu",
+    "yagmalanan-iskit-altinlarinin-mirasi",
+    "mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim",
+    "kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi"
+  ],
+  "pdf_tr_local": "/assets/issues/briq-cilt-7-sayi-3-yaz-2026-tr.pdf",
+  "pdf_en_local": "/assets/issues/briq-cilt-7-sayi-3-yaz-2026.pdf"
+}

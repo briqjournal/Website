@@ -1,0 +1,29 @@
+{
+  "volume": 4,
+  "issue": 4,
+  "season_tr": "Güz",
+  "season_en": "Autumn",
+  "year": "2023",
+  "source_tr": "https://briqjournal.com/briq-4cilt-4sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol4-issue4",
+  "cover_tr": "/assets/archive/covers/cilt-4-sayi-4-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-4-sayi-4-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Cilt4%20Say%C4%B14_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Volume4%20Issue4_Site.pdf",
+  "articles": [
+    "dunyayi-sarsan-turk-devrimi",
+    "kemalist-devrim-ve-asya",
+    "ataturk-modeli-gelisen-dunya-icin-bagimsizlik-ve-kalkinmada-ornek-basari",
+    "turk-devriminin-ckp-uzerindeki-etkisi-cai-hesenin-turkiye-yazilari-uzerine-inceleme",
+    "ummet-icindeki-milliyetcilik-kazi-nazrul-islamin-eserlerindeki-ataturk-uzerine-inceleme",
+    "turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi",
+    "misafir",
+    "guzelligin-paretmez",
+    "dogu-tabletleri-doksan-dokuzuncu-tablet-ata",
+    "rgali-29-ekim-1933",
+    "atli-mustafa-kemal-1988-avni-arbas",
+    "krokodil-3-aralik-1922"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-4-sayi-4-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-4-sayi-4-en.pdf"
+}

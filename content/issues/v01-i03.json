@@ -1,0 +1,28 @@
+{
+  "volume": 1,
+  "issue": 3,
+  "season_tr": "Yaz",
+  "season_en": "Summer",
+  "year": "2020",
+  "source_tr": "https://briqjournal.com/briq-1cilt-3-sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol1-issue3",
+  "cover_tr": "/assets/archive/covers/cilt-1-sayi-3-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-1-sayi-3-en.jpg",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%201.%20Cilt%203.%20Say%C4%B1_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.1%20Issue3_Site.pdf",
+  "articles": [
+    "bmc-yonetim-kurulu-baskani-ethem-sancak-asya-kartalinin-iki-kanadi-turkiye-ve-cin",
+    "onur-air-yonetim-kurulu-baskani-cankut-bagana-dunyada-farklilik-yaratacak-sektorleri-hedeflersek",
+    "hakikatin-donum-noktasi-covid-19-bati-toplumlarinin-ve-avrupa-birliginin-zayifliklarini-nasil",
+    "koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler",
+    "tarihsel-perspektiften-covid-19-felaket-kapitalizmi-korku-gudumlu-bir-dunya-duzenini-nasil-uretir",
+    "koronavirus-suclama-oyunu-kuresel-salgin-uzerinden-bir-hukuk-harbinin-yurutulmesi",
+    "covid-19-ve-neoliberalizmin-hiper-krizi-finansallasmanin-cokusu",
+    "ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018",
+    "turk-milli-ordusunun-zaferinin-uluslarasi-kiymeti",
+    "covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor",
+    "cobanin-sagim-sonrasi-suruyu-tekrar-otlaklara-goturme-cabasi-ve-tozlu-yolculuk"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-1-sayi-3-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-1-sayi-3-en.pdf"
+}

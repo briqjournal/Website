@@ -1,0 +1,27 @@
+{
+  "volume": 2,
+  "issue": 4,
+  "season_tr": "Güz",
+  "season_en": "Autumn",
+  "year": "2021",
+  "source_tr": "https://briqjournal.com/briq-2cilt-4-sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol2-issue4",
+  "cover_tr": "/assets/archive/covers/cilt-2-sayi-4-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-2-sayi-4-en.jpg",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%202.Cilt%204.Say%C4%B1.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.2%20Issue.4.pdf",
+  "articles": [
+    "ipek-yolunda-kulturel-bir-gezinti-ahmet-yeseviden-yunus-emreye-turk-sufi-humanizmi",
+    "zaman-ve-mekani-asacak-yeni-bir-medeniyet-icin-isbirligi",
+    "cin-ve-arap-ulkeleri-arasindaki-kulturel-alisverislerin-gelisimi-kusak-ve-yol-caginda-firsatlar-ve",
+    "kusak-yolun-kalp-atislari",
+    "senin-kokun-duydu-canim-yunus-emre-misralari-anadolu-xiii-xiv-yuzyillar",
+    "kusak-ve-yol-girisimi-kapsaminda-cinin-ortadogu-ile-kulturel-iletisimi-degerlendirme-ve-beklentiler",
+    "macaes-b-2019-kusak-ve-yol-cinli-bir-dunya-duzeni-londra-hurst-company",
+    "ibrahim-balaban",
+    "ipek-yolunun-geri-donusu",
+    "karikatur-0"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-2-sayi-4-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-2-sayi-4-en.pdf"
+}

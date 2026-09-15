@@ -1,0 +1,31 @@
+{
+  "volume": 5,
+  "issue": 4,
+  "season_tr": "Güz",
+  "season_en": "Autumn",
+  "year": "2024",
+  "source_tr": "https://briqjournal.com/briq-5cilt-4sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol5-issue4",
+  "cover_tr": "/assets/archive/covers/cilt-5-sayi-4-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-5-sayi-4-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2024-09/BRIQ%20C5S4%20TUMSAYI_compressed.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2024-09/BRIQ_C5S4_ENG.pdf",
+  "articles": [
+    "yukselen-kuresel-dogunun-yeni-caginda-cinin-genis-cevresel-diplomasisi",
+    "yeni-asya-jeopolitigi-baglaminda-turk-devletleri-teskilati",
+    "turk-devletleri-teskilati-rusya-cin-ve-irani-da-kapsamali",
+    "kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi",
+    "turkiyenin-turk-devletlerinin-butunlesmesindeki-etkin-rolu-baglam-uygulama-ve-etki",
+    "orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu",
+    "turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin",
+    "turkiyenin-afrika-icin-cok-boyutlu-stratejisi-ozellikler-temel-saikler-ve-gelecek-beklentileri",
+    "yeni-bir-dunyanin-dogusu-tarihin-sonu-mu",
+    "siir-vietnam-savasimiz",
+    "siir-iki-kor",
+    "erzurum-sokaklari-1916",
+    "hasat-2022",
+    "karikatur-molla-nasraddin-dergisinin-7-nisan-1906-tarihli-ilk-kapagi"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-5-sayi-4-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-5-sayi-4-en.pdf"
+}

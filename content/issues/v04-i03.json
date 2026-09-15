@@ -1,0 +1,27 @@
+{
+  "volume": 4,
+  "issue": 3,
+  "season_tr": "Yaz",
+  "season_en": "Summer",
+  "year": "2023",
+  "source_tr": "https://briqjournal.com/briq-4cilt-3sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol4-issue3",
+  "cover_tr": "/assets/archive/covers/cilt-4-sayi-3-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-4-sayi-3-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Cilt4%20Say%C4%B13_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Volume4%20Issue3_Site.pdf",
+  "articles": [
+    "beyin-olumu-gerceklesen-nato-otanaziye-dogru-mu-gidiyor",
+    "turkiye-rusya-isbirligi-avrasyada-gelismelerin-seyrini-belirliyor",
+    "cin-nato-iliskileri-tarih-ve-gerceklik",
+    "nato-hatti-kontrolden-sathi-kontrole",
+    "turk-devletleri-teskilati-ile-rusya-ve-cinin-hedefleri-hicbir-sekilde-celismez",
+    "cinin-dis-ekonomik-siyasetinin-geleneksel-olmayan-bir-okumasi-bir-degisim-ve-donusum-sureci",
+    "yeni-ortadoguda-yeni-bir-donem-cin-rusya-ve-guneyin-yeniden-kesfi",
+    "bell-the-cat",
+    "savas-kan-lekesi",
+    "uluslararasi-kole-plantasyonu-uzerine"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-4-sayi-3-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-4-sayi-3-en.pdf"
+}

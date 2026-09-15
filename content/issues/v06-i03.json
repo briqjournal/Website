@@ -1,0 +1,28 @@
+{
+  "volume": 6,
+  "issue": 3,
+  "season_tr": "Yaz",
+  "season_en": "Summer",
+  "year": "2025",
+  "source_tr": "https://briqjournal.com/briq-6cilt-3sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol6-issue3",
+  "cover_tr": "/assets/archive/covers/cilt-6-sayi-3-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-6-sayi-3-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-10/BRIQ_Cilt6Say%C4%B13_2025Yaz.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-06/BRIQ_Volume6SIssue3_2025Summer.pdf",
+  "articles": [
+    "cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine",
+    "70-yilinda-bandung-baglantisizliktan-hegemonyaciliga-karsi-milli-devletlerin-ortak-kalkinma-ve",
+    "endonezya-dis-politikasinda-bandung-mirasina-yeniden-bakis-tarihsel-bir-inceleme-ve-guncel",
+    "bandung-ruhu-70-yasinda",
+    "bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden",
+    "yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar",
+    "sahte-siir",
+    "39-harbi",
+    "china-reconstructs",
+    "hendra-gunawan",
+    "endonezya-posta-pulu"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-6-sayi-3-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-6-sayi-3-en.pdf"
+}

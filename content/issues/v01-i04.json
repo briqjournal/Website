@@ -1,0 +1,26 @@
+{
+  "volume": 1,
+  "issue": 4,
+  "season_tr": "Güz",
+  "season_en": "Autumn",
+  "year": "2020",
+  "source_tr": "https://briqjournal.com/briq-1cilt-4-sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol1-issue4",
+  "cover_tr": "/assets/archive/covers/cilt-1-sayi-4-tr.jpg",
+  "cover_en": "/assets/archive/covers/cilt-1-sayi-4-en.jpg",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%201.%20Cilt%204.%20Say%C4%B1_Site.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.1%20Issue4_Site.pdf",
+  "articles": [
+    "rus-stratejist-dr-alexander-dugin-kusak-ve-yol-girisimi-avrasyanin-yolu",
+    "kusak-ve-yol-girisiminde-deniz-isbirliginin-gunumuzdeki-ve-gelecekteki-durumu",
+    "asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani",
+    "cin-abd-rekabeti-golgesinde-kusak-ve-yol-girisimi",
+    "dogu-akdeniz-ve-guney-kafkasyada-basari-ve-barisin-formulu",
+    "kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi",
+    "iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap",
+    "covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler",
+    "fotograf-ni-min-fujian-huian-kadini-ag-onariyor"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-1-sayi-4-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-1-sayi-4-en.pdf"
+}

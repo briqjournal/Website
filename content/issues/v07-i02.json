@@ -1,0 +1,28 @@
+{
+  "volume": 7,
+  "issue": 2,
+  "season_tr": "Bahar",
+  "season_en": "Spring",
+  "year": "2026",
+  "source_tr": "https://briqjournal.com/briq-7cilt-2sayi",
+  "source_en": "https://briqjournal.com/en/briq-vol7-issue2",
+  "cover_tr": "/assets/archive/covers/cilt-7-sayi-2-tr.png",
+  "cover_en": "/assets/archive/covers/cilt-7-sayi-2-en.png",
+  "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2026-05/BRIQ%20Cilt7%20Say%C4%B12%20BAHAR%202026.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2026-04/BRIQ%20Volume7%20Issue2%20SPRING%202026.pdf",
+  "articles": [
+    "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0",
+    "cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis",
+    "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme",
+    "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin",
+    "hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi",
+    "japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak",
+    "siir-li-bai-zor-yolculuk",
+    "siir-melih-cevdet-anday-telgrafhane",
+    "zhang-yaxin",
+    "liu-chunhua",
+    "sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu"
+  ],
+  "pdf_tr_local": "/assets/archive/pdfs/issues/cilt-7-sayi-2-tr.pdf",
+  "pdf_en_local": "/assets/archive/pdfs/issues/cilt-7-sayi-2-en.pdf"
+}
