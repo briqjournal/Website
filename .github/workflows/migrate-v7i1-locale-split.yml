@@ -1,0 +1,189 @@
+name: Migrate V7I1 locale split
+on:
+  push:
+    branches: [automation/v7i1-locale-split]
+permissions:
+  contents: write
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install PDF tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+      - name: Migrate, source-check, validate, and safely push
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+
+          cat >/tmp/migrate-v7i1.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i01.json','utf8'));
+          const slugs=issue.articles;
+          if(slugs.length!==5) throw new Error(`Expected 5 V7I1 contributions, got ${slugs.length}`);
+          for(const slug of slugs){
+            const dir=path.join('content/articles',slug,'fulltext');
+            const currentFile=path.join(dir,'current.json');
+            if(!fs.existsSync(currentFile)) throw new Error(`${slug}: current.json missing`);
+            const current=JSON.parse(fs.readFileSync(currentFile,'utf8'));
+            for(const locale of ['en','tr']){
+              const data=current[locale];
+              if(!data || !Array.isArray(data.sections)) throw new Error(`${slug}: current.${locale}.sections missing`);
+              for(let i=0;i<data.sections.length;i++){
+                const sec=data.sections[i];
+                if(!sec.id || !new RegExp(`^${locale}-section-\\d+$`).test(sec.id)) sec.id=`${locale}-section-${i+1}`;
+              }
+              fs.writeFileSync(path.join(dir,`${locale}.json`),JSON.stringify(data,null,2)+'\n');
+            }
+            fs.unlinkSync(currentFile);
+          }
+          const catalogPath='content/catalog.json';
+          const catalog=JSON.parse(fs.readFileSync(catalogPath,'utf8'));
+          catalog.fulltext ||= {};
+          const localized=new Set(catalog.fulltext.localized||[]);
+          for(const slug of slugs) localized.add(slug);
+          catalog.fulltext.localized=[...localized];
+          for(const key of ['current','en_archive']) catalog.fulltext[key]=(catalog.fulltext[key]||[]).filter(slug=>!slugs.includes(slug));
+          fs.writeFileSync(catalogPath,JSON.stringify(catalog,null,2)+'\n');
+          JS
+
+          cat >/tmp/test-v7i1.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          import test from 'node:test';
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i01.json','utf8'));
+          const catalog=JSON.parse(fs.readFileSync('content/catalog.json','utf8'));
+          test('V7I1 uses only canonical locale-split full-text files',()=>{
+            for(const slug of issue.articles){
+              const dir=path.join('content/articles',slug,'fulltext');
+              assert.deepEqual(fs.readdirSync(dir).filter(x=>x.endsWith('.json')).sort(),['en.json','tr.json']);
+              assert.ok(catalog.fulltext.localized.includes(slug));
+              assert.ok(!catalog.fulltext.current.includes(slug));
+              assert.ok(!catalog.fulltext.en_archive.includes(slug));
+              for(const locale of ['en','tr']){
+                const f=JSON.parse(fs.readFileSync(path.join(dir,`${locale}.json`),'utf8'));
+                const ids=(f.sections||[]).map(s=>s.id);
+                assert.equal(ids.length,new Set(ids).size,`${slug}/${locale}: duplicate IDs`);
+                for(const id of ids) assert.match(id,new RegExp(`^${locale}-section-\\d+$`),`${slug}/${locale}: ${id}`);
+              }
+            }
+          });
+          test('V7I1 keeps locale bodies distinct and issue publication date canonical',()=>{
+            for(const slug of issue.articles){
+              const m=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'metadata.json'),'utf8'));
+              assert.equal(m.dates.published,'2025-12-01',slug);
+              const en=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'fulltext/en.json'),'utf8'));
+              const tr=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'fulltext/tr.json'),'utf8'));
+              const body=x=>(x.sections||[]).flatMap(s=>s.paragraphs||[]).join(' ').replace(/\s+/g,' ').trim();
+              if(body(en).length>300 && body(tr).length>300) assert.notEqual(body(en),body(tr),`${slug}: duplicated locale body`);
+            }
+          });
+          JS
+
+          cat >/tmp/audit-v7i1.py <<'PY'
+          import json,re,subprocess,tempfile,urllib.request,sys
+          from pathlib import Path
+          from difflib import SequenceMatcher
+          issue=json.loads(Path('content/issues/v07-i01.json').read_text())
+          tmp=Path(tempfile.mkdtemp(prefix='v7i1-pdf-'))
+          warnings=[]; severe=[]
+          def norm(s):
+            s=(s or '').replace('\u00ad','').replace('’',"'").replace('“','"').replace('”','"')
+            return re.sub(r'\s+',' ',s).strip().lower()
+          def tokens(s): return re.findall(r"[\wÀ-žğüşöçıİĞÜŞÖÇ'-]+",norm(s),flags=re.UNICODE)
+          def pscore(p,txt):
+            p=norm(p); t=norm(txt)
+            if len(p)<70: return 1.0 if p in t else 0.0
+            # compare canonical paragraph against sliding token windows from source PDF
+            pw=tokens(p); tw=tokens(t)
+            if not pw or not tw: return 0.0
+            needle=' '.join(pw); n=len(pw); best=0.0
+            # exact 100-char fragments are strong source-faithfulness signal
+            frags=[p[i:i+140] for i in range(0,len(p),140) if len(p[i:i+140])>=80]
+            if frags and all(f in t for f in frags): return 1.0
+            step=max(15,n//6)
+            for i in range(0,max(1,len(tw)-n+1),step):
+              cand=' '.join(tw[i:i+n+20])
+              best=max(best,SequenceMatcher(None,needle,cand).ratio())
+              if best>=0.97: break
+            return best
+          for slug in issue['articles']:
+            meta=json.loads(Path(f'content/articles/{slug}/metadata.json').read_text())
+            print('\n###',slug)
+            for locale in ['en','tr']:
+              full=json.loads(Path(f'content/articles/{slug}/fulltext/{locale}.json').read_text())
+              url=meta.get('urls',{}).get('pdfEn' if locale=='en' else 'pdfTr')
+              if not url:
+                severe.append((slug,locale,'missing article PDF source')); continue
+              pdf=tmp/f'{slug}-{locale}.pdf'; txtp=tmp/f'{slug}-{locale}.txt'
+              req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+              try:
+                with urllib.request.urlopen(req,timeout=45) as r: pdf.write_bytes(r.read())
+                subprocess.run(['pdftotext','-layout',str(pdf),str(txtp)],check=True,stdout=subprocess.DEVNULL)
+              except Exception as e:
+                severe.append((slug,locale,'PDF download/extract failed',str(e))); continue
+              txt=txtp.read_text(errors='replace')
+              paras=[p for s in full.get('sections',[]) for p in s.get('paragraphs',[]) if len(norm(p))>=80]
+              scores=[pscore(p,txt) for p in paras]
+              low=[(i,round(sc,3),paras[i][:100]) for i,sc in enumerate(scores) if sc<0.72]
+              avg=sum(scores)/len(scores) if scores else 1
+              print(locale,'paragraphs',len(paras),'avg',round(avg,4),'min',round(min(scores),4) if scores else None,'low<.72',len(low))
+              for x in low[:10]: print(' LOW',x)
+              if low: severe.append((slug,locale,'low PDF paragraph matches',low[:10]))
+              ab=meta.get('abstract',{}).get(locale)
+              if ab:
+                asc=pscore(ab,txt); print(locale,'abstract',round(asc,4))
+                if asc<0.72: severe.append((slug,locale,'abstract mismatch',round(asc,3)))
+              title=meta.get('title',{}).get(locale,'')
+              if title and norm(title)[:60] not in norm(txt): warnings.append((slug,locale,'title not exact in PDF'))
+              flat='\n'.join((r.get('text','') if isinstance(r,dict) else str(r)) for r in full.get('references',[]))
+              # narrow indicators only: whitespace inside DOI/URL tokens
+              for pat,name in [(r'https?://[^\s]+\s+[A-Za-z0-9][^\s]*\.(?:com|org|gov|edu|net|int)\b','URL'),(r'10\.\d{4,9}/\S+\s+\S+','DOI')]:
+                if re.search(pat,flat): warnings.append((slug,locale,f'possible broken {name}'))
+              if meta.get('keywords',{}).get(locale,[]) != full.get('keywords',[]): warnings.append((slug,locale,'metadata/fulltext keyword mismatch'))
+              for label in ['Funding','Finansman','Conflict of Interest','Çıkar Çatışması','Data Availability','Veri Kullanılabilirliği','Received','Geliş','Accepted','Kabul','Revised','Revizyon']:
+                if label.lower() in txt.lower(): print(locale,'LABEL',label)
+          print('\nWARNINGS')
+          for w in warnings: print(w)
+          print('SEVERE')
+          for e in severe: print(e)
+          if severe: sys.exit(2)
+          PY
+
+          apply_migration() {
+            node /tmp/migrate-v7i1.mjs
+            cp /tmp/test-v7i1.mjs tests/v7i1-locale-fulltext.test.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i1-locale-fulltext.test.mjs
+            python3 /tmp/audit-v7i1.py
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_migration
+            npm test
+            npm run lint
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then echo "main advanced during validation attempt $ATTEMPT; retrying"; continue; fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content app tests
+            git commit -m 'Split Volume 7 Issue 1 bilingual full texts'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then git push origin HEAD:main; exit 0; fi
+            echo "main advanced after commit attempt $ATTEMPT; retrying"
+          done
+          echo 'main kept advancing; refusing unsafe push'; exit 1
