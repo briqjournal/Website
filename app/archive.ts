@@ -17,6 +17,39 @@ export type ArchiveIssue = {
   articles: string[];
 };
 
+export type LocalizedStatementMetadata = {
+  statement_tr?: string | null;
+  statement_en?: string | null;
+};
+
+export type ArticleFundingMetadata = LocalizedStatementMetadata & {
+  funders?: {
+    name_tr?: string | null;
+    name_en?: string | null;
+    grant_or_project_number?: string | null;
+  }[];
+};
+
+export type ArticleAuthorContributionsMetadata = LocalizedStatementMetadata & {
+  credit_roles?: {
+    role: string;
+    authors: string[];
+  }[];
+};
+
+export type ArticleEthicsMetadata = LocalizedStatementMetadata & {
+  committee_name_tr?: string | null;
+  committee_name_en?: string | null;
+  approval_date?: string | null;
+  decision_number?: string | null;
+};
+
+export type ArticleDataAvailabilityMetadata = LocalizedStatementMetadata & {
+  repository_name?: string | null;
+  data_doi?: string | null;
+  url?: string | null;
+};
+
 export type ArchiveArticle = {
   slug: string;
   volume: number;
@@ -47,6 +80,13 @@ export type ArchiveArticle = {
   pdf_tr_local?: string;
   pdf_en_local?: string;
   shared_bilingual_pdf?: boolean;
+  funding?: ArticleFundingMetadata;
+  conflict_of_interest?: LocalizedStatementMetadata;
+  author_contributions?: ArticleAuthorContributionsMetadata;
+  ethics_approval_and_informed_consent?: ArticleEthicsMetadata;
+  data_availability?: ArticleDataAvailabilityMetadata;
+  ai_use_statement?: LocalizedStatementMetadata;
+  acknowledgements?: LocalizedStatementMetadata;
 };
 
 type ArchiveData = {

@@ -46,6 +46,8 @@ type LocalizedFullText = {
     funding?: string;
     competingInterests?: string;
     ethicsApproval?: string;
+    dataAvailability?: string;
+    aiUse?: string;
   };
   supplementary?: { title: string; url: string }[];
 };
@@ -219,41 +221,100 @@ function referencesWithUnlistedCitations(
 
 type StatementItem = { id: string; label: string; value: string };
 
-function researchStatementItems(fullText: LocalizedFullText | undefined, locale: "tr" | "en"): StatementItem[] {
-  const ack = fullText?.acknowledgements?.trim();
+function localizedMetadataStatement(
+  value: { statement_tr?: string | null; statement_en?: string | null } | undefined,
+  locale: "tr" | "en",
+) {
+  return (locale === "tr" ? value?.statement_tr : value?.statement_en)?.trim() || "";
+}
+
+function articleAcknowledgements(
+  article: ArchiveArticle,
+  fullText: LocalizedFullText | undefined,
+  locale: "tr" | "en",
+) {
+  return localizedMetadataStatement(article.acknowledgements, locale)
+    || fullText?.acknowledgements?.trim()
+    || fullText?.declarations?.acknowledgements?.trim()
+    || "";
+}
+
+function researchStatementItems(
+  article: ArchiveArticle,
+  fullText: LocalizedFullText | undefined,
+  locale: "tr" | "en",
+): StatementItem[] {
   const declarations = fullText?.declarations;
-  const inferredFunding = ack && /(destek|support|fund|grant|program)/i.test(ack) ? ack : "";
   const missing = locale === "tr"
     ? {
-        authorContributions: "Bu makale için yazar katkı beyanı kaynak kaydında ayrıca belirtilmemiştir.",
-        funding: "Bu makale için finansman veya destek beyanı kaynak kaydında ayrıca belirtilmemiştir.",
-        competingInterests: "Bu makale için çıkar çatışması beyanı kaynak kaydında ayrıca belirtilmemiştir.",
-        ethicsApproval: "Bu makale için etik kurul onayı beyanı kaynak kaydında ayrıca belirtilmemiştir.",
+        funding: "Bu makale için finansman beyanı kaynak kaydında ayrıca belirtilmemiştir.",
+        conflictOfInterest: "Bu makale için çıkar çatışması beyanı kaynak kaydında ayrıca belirtilmemiştir.",
+        authorContributions: "Bu makale için yazar katkıları beyanı kaynak kaydında ayrıca belirtilmemiştir.",
+        dataAvailability: "Bu makale için veri kullanılabilirliği beyanı kaynak kaydında ayrıca belirtilmemiştir.",
       }
     : {
+        funding: "A separate funding statement is not available in the source record for this article.",
+        conflictOfInterest: "A separate conflict-of-interest statement is not available in the source record for this article.",
         authorContributions: "A separate author-contributions statement is not available in the source record for this article.",
-        funding: "A separate funding or financial-support statement is not available in the source record for this article.",
-        competingInterests: "A separate competing-interests statement is not available in the source record for this article.",
-        ethicsApproval: "A separate ethics-approval statement is not available in the source record for this article.",
+        dataAvailability: "A separate data-availability statement is not available in the source record for this article.",
       };
   const values = {
-    authorContributions: declarations?.authorContributions?.trim() || missing.authorContributions,
-    funding: declarations?.funding?.trim() || inferredFunding || missing.funding,
-    competingInterests: declarations?.competingInterests?.trim() || missing.competingInterests,
-    ethicsApproval: declarations?.ethicsApproval?.trim() || missing.ethicsApproval,
+    funding: localizedMetadataStatement(article.funding, locale)
+      || declarations?.funding?.trim()
+      || missing.funding,
+    conflictOfInterest: localizedMetadataStatement(article.conflict_of_interest, locale)
+      || declarations?.competingInterests?.trim()
+      || missing.conflictOfInterest,
+    authorContributions: localizedMetadataStatement(article.author_contributions, locale)
+      || declarations?.authorContributions?.trim()
+      || missing.authorContributions,
+    ethicsApproval: localizedMetadataStatement(article.ethics_approval_and_informed_consent, locale)
+      || declarations?.ethicsApproval?.trim()
+      || "",
+    dataAvailability: localizedMetadataStatement(article.data_availability, locale)
+      || declarations?.dataAvailability?.trim()
+      || missing.dataAvailability,
+    aiUse: localizedMetadataStatement(article.ai_use_statement, locale)
+      || declarations?.aiUse?.trim()
+      || "",
   };
-  const definitions = locale === "tr" ? [
-    ["yazar-katkilari", "Yazar Katkıları", values.authorContributions],
-    ["finansman", "Finansman / Destek", values.funding],
-    ["cikar-catismasi", "Çıkar Çatışması", values.competingInterests],
-    ["etik-kurul", "Etik Kurul Onayı", values.ethicsApproval],
+  const items: StatementItem[] = locale === "tr" ? [
+    { id: "finansman", label: "Finansman", value: values.funding },
+    { id: "cikar-catismasi", label: "Çıkar Çatışması", value: values.conflictOfInterest },
+    { id: "yazar-katkilari", label: "Yazar Katkıları", value: values.authorContributions },
+    { id: "veri-kullanilabilirligi", label: "Veri Kullanılabilirliği", value: values.dataAvailability },
   ] : [
-    ["author-contributions", "Author Contributions", values.authorContributions],
-    ["funding", "Funding / Financial Support", values.funding],
-    ["competing-interests", "Competing Interests", values.competingInterests],
-    ["ethics-approval", "Ethics Approval", values.ethicsApproval],
+    { id: "funding", label: "Funding", value: values.funding },
+    { id: "conflict-of-interest", label: "Conflict of Interest", value: values.conflictOfInterest },
+    { id: "author-contributions", label: "Author Contributions", value: values.authorContributions },
+    { id: "data-availability", label: "Data Availability", value: values.dataAvailability },
   ];
-  return definitions.map(([id, label, value]) => ({ id, label, value }));
+  if (values.ethicsApproval) {
+    items.splice(3, 0, {
+      id: locale === "tr" ? "etik-onay-ve-katilimci-onami" : "ethics-approval-and-informed-consent",
+      label: locale === "tr" ? "Etik Onay ve Katılımcı Onamı" : "Ethics Approval and Informed Consent",
+      value: values.ethicsApproval,
+    });
+  }
+  if (values.aiUse) {
+    items.push({
+      id: locale === "tr" ? "yapay-zeka-kullanimi" : "ai-use",
+      label: locale === "tr" ? "Yapay Zekâ Kullanımı" : "AI Use",
+      value: values.aiUse,
+    });
+  }
+  return items;
+}
+
+function Acknowledgements({ value, locale }: { value: string; locale: "tr" | "en" }) {
+  if (!value) return null;
+  const id = locale === "tr" ? "tesekkur" : "acknowledgements";
+  return (
+    <details className="article-accordion article-acknowledgements-accordion" id={id}>
+      <summary><span>{locale === "tr" ? "Teşekkür" : "Acknowledgements"}</span><b>i</b></summary>
+      <div className="accordion-copy"><p>{value}</p></div>
+    </details>
+  );
 }
 
 function ResearchStatements({ items, locale }: { items: StatementItem[]; locale: "tr" | "en" }) {
@@ -311,7 +372,9 @@ export async function ArticlePlatform({
   const researchTypes = locale === "tr"
     ? ["Araştırma Makalesi", "Hakemli Araştırma Makalesi"]
     : ["Research Article", "Peer-reviewed Research Article"];
-  const statements = researchTypes.includes(articleType) ? researchStatementItems(fullText, locale) : [];
+  const isResearchArticle = researchTypes.includes(articleType);
+  const acknowledgements = articleAcknowledgements(article, fullText, locale);
+  const statements = isResearchArticle ? researchStatementItems(article, fullText, locale) : [];
   const supplementary = fullText?.supplementary || [];
   const trPdf = articlePdfUrl(article, "tr");
   const enPdf = articlePdfUrl(article, "en");
@@ -338,6 +401,7 @@ export async function ArticlePlatform({
     ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
     ...(fullText?.publicationNote ? [{ id: locale === "tr" ? "yayin-notu" : "publication-note", label: locale === "tr" ? "Yayın notu" : "Publication note", level: 1 }] : []),
+    ...(acknowledgements ? [{ id: locale === "tr" ? "tesekkur" : "acknowledgements", label: locale === "tr" ? "Teşekkür" : "Acknowledgements", level: 1 }] : []),
     ...(statements.length ? [{ id: locale === "tr" ? "yazar-beyanlari" : "author-declarations", label: locale === "tr" ? "Yazar beyanları" : "Author declarations", level: 1 }] : []),
     { id: locale === "tr" ? "atif" : "cite", label: locale === "tr" ? "Atıfta bulun" : "Cite this article", level: 1 },
     ...(fullText?.footnotes.length ? [{ id: locale === "tr" ? "dipnotlar" : "footnotes", label: locale === "tr" ? "Dipnotlar" : "Footnotes", level: 1 }] : []),
@@ -394,6 +458,7 @@ export async function ArticlePlatform({
 
             {fullText?.publicationNote && <details className="article-accordion article-publication-note" id={locale === "tr" ? "yayin-notu" : "publication-note"}><summary><span>{locale === "tr" ? "Yayın notu" : "Publication note"}</span><b>i</b></summary><div className="accordion-copy"><p>{fullText.publicationNote}</p></div></details>}
 
+            <Acknowledgements value={acknowledgements} locale={locale} />
             <ResearchStatements items={statements} locale={locale} />
 
             <details className="article-accordion article-citation-accordion" id={locale === "tr" ? "atif" : "cite"}><summary><span>{locale === "tr" ? "Atıfta bulun" : "Cite this article"}</span><b>APA 7</b></summary><div className="accordion-copy citation-accordion-copy"><CitationTools citation={citation} slug={article.slug} locale={locale} /></div></details>

@@ -839,9 +839,12 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.doesNotMatch(citationBlock, /style=/);
   assert.ok((doiHtml.match(/article-declaration-accordion/g) || []).length >= 1);
   assert.ok((doiHtml.match(/article-declaration-item/g) || []).length >= 4);
-  assert.match(doiHtml, /Finansman \/ Destek/);
-  assert.match(doiHtml, /Çıkar Çatışması/);
-  assert.doesNotMatch(doiHtml, /Bilgilendirilmiş Onam/);
+  const declarationOrder = ["Finansman", "Çıkar Çatışması", "Yazar Katkıları", "Veri Kullanılabilirliği"]
+    .map((label) => doiHtml.indexOf(label));
+  assert.ok(declarationOrder.every((position) => position >= 0));
+  assert.deepEqual(declarationOrder, [...declarationOrder].sort((left, right) => left - right));
+  assert.doesNotMatch(doiHtml, /Etik Onay ve Katılımcı Onamı/);
+  assert.doesNotMatch(doiHtml, /Yapay Zekâ Kullanımı/);
 });
 
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
