@@ -30,8 +30,27 @@ jobs:
           new = "def canon_heading(s):\n    s = unicodedata.normalize('NFKD', s).replace('“', '').replace('”', '').replace('’', \"'\")\n    return re.sub(r'[^a-z0-9]+', '', s.lower())\nheading_lookup = {canon_heading(h): h for h in headings}"
           assert old in body
           body = body.replace(old, new, 1)
+          body = body.replace('ref_blocks = []', 'ref_blocks = []\nmanual_started = set()', 1)
           body = body.replace('if nt in heading_lookup:', 'hkey = canon_heading(nt)\n        if hkey in heading_lookup:', 1)
           body = body.replace('current = start_section(heading_lookup[nt])', 'current = start_section(heading_lookup[hkey])', 1)
+          needle = "for b in blocks:\n        t = b['text']"
+          replacement = """for b in blocks:
+        manual = {
+            11: ('The Arduous Quest for a Militant Non-Aligned Movement', 'R', 108.1),
+            18: ('Adapting the Non-Aligned Movement to an Evolving Global Landscape', 'L', 108.7),
+        }
+        if pno in manual:
+            title, col, y = manual[pno]
+            in_col = (b['x0'] >= 285) if col == 'R' else (b['x0'] < 285)
+            if in_col and b['y0'] >= y - 3 and pno not in manual_started:
+                started = True
+                current = start_section(title)
+                manual_started.add(pno)
+            if in_col and y - 3 <= b['y0'] <= y + 30 and any('MinionPro-Bold' in f for f in b['fonts']):
+                continue
+        t = b['text']"""
+          assert needle in body
+          body = body.replace(needle, replacement, 1)
           exec(compile(body, '<iratni-repair>', 'exec'), {})
           PY
           node -e "JSON.parse(require('fs').readFileSync('content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/en-archive.json','utf8')); JSON.parse(require('fs').readFileSync('content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/metadata.json','utf8'));"
