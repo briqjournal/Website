@@ -1,0 +1,41 @@
+name: Patch Iratni heading matcher
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/patch-iratni-heading-match.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Patch failed heading matcher
+        run: |
+          git pull --rebase origin main
+          python <<'PY'
+          from pathlib import Path
+          p = Path('.github/workflows/fix-iratni-fulltext.yml')
+          s = p.read_text(encoding='utf-8')
+          old = "heading_lookup = {re.sub(r'\\s+', ' ', h).strip(): h for h in headings}"
+          new = "def canon_heading(s):\n              s = unicodedata.normalize('NFKD', s).replace('“', '').replace('”', '').replace('’', \"'\")\n              return re.sub(r'[^a-z0-9]+', '', s.lower())\n          heading_lookup = {canon_heading(h): h for h in headings}"
+          assert old in s
+          s = s.replace(old, new, 1)
+          assert 'if nt in heading_lookup:' in s
+          s = s.replace('if nt in heading_lookup:', 'hkey = canon_heading(nt)\n                  if hkey in heading_lookup:', 1)
+          assert 'current = start_section(heading_lookup[nt])' in s
+          s = s.replace('current = start_section(heading_lookup[nt])', 'current = start_section(heading_lookup[hkey])', 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+          rm .github/workflows/patch-iratni-heading-match.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .github/workflows/fix-iratni-fulltext.yml .github/workflows/patch-iratni-heading-match.yml
+          git commit -m 'Harden Iratni PDF heading matching'
+          git push origin HEAD:main
