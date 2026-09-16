@@ -91,7 +91,6 @@ jobs:
 
             p.write_text(json.dumps(m, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          # Correct WEF footnote structure and reference extraction artifacts.
           wef = ROOT/'content/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/fulltext/current.json'
           f = json.loads(wef.read_text(encoding='utf-8'))
           supmap = {'⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9'}
@@ -104,10 +103,7 @@ jobs:
           for loc in ('tr','en'):
             notes = {str(n.get('id')): n.get('text','').strip() for n in f[loc].get('footnotes',[])}
             rebuilt = []
-            if loc == 'tr':
-              first = ' '.join(x for x in [notes.get('1',''), notes.get('21','')] if x).strip()
-            else:
-              first = notes.get('1','')
+            first = ' '.join(x for x in [notes.get('1',''), notes.get('21','')] if x).strip() if loc == 'tr' else notes.get('1','')
             if first: rebuilt.append({'id':'1','text':clean_space(first)})
             if notes.get('2'): rebuilt.append({'id':'2','text':clean_space(notes['2'])})
             if notes.get('3'):
@@ -116,10 +112,8 @@ jobs:
               if notes.get(nid): rebuilt.append({'id':nid,'text':clean_space(notes[nid])})
             f[loc]['footnotes'] = rebuilt
 
-          # Split the merged Trump/Wilber item in the English WEF bibliography.
-          enrefs = f['en'].get('references',[])
           fixed = []
-          for r in enrefs:
+          for r in f['en'].get('references',[]):
             text = clean_space(r.get('text',''))
             marker = ' Wilber, K. (1979).'
             if marker in text:
@@ -130,7 +124,6 @@ jobs:
               fixed.append({'id':'', 'text':text})
           f['en']['references'] = fixed
 
-          # Conservative cleanup of clear PDF line-break artifacts in WEF references.
           replacements = {
             'Monthly r eview':'Monthly Review', 'Monthly eview':'Monthly Review',
             'MISCON- DUCT':'MISCONDUCT', '1 May ıs':'1 Mayıs',
@@ -150,7 +143,6 @@ jobs:
               r['text'] = text
           wef.write_text(json.dumps(f, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          # Correct two clear SCO extraction artifacts without editorially rewriting the source text.
           sco = ROOT/'content/articles/sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan/fulltext/current.json'
           s = json.loads(sco.read_text(encoding='utf-8'))
           bad = 'Belarus Cumhuriyeti KGB’si, Afganistan Dışişleri Bakanlığı ve Afganistan Teröre Karşı Mücadele Koordinasyon Konseyi ile işbirliğine ilişkin mutabakat zaptları ve anlaşmalar imzalandı. Moğolistan.'
@@ -162,7 +154,6 @@ jobs:
               r['text'] = r.get('text','').replace('sectsco. org','sectsco.org').replace('https:// ecrats.org','https://ecrats.org')
           sco.write_text(json.dumps(s, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-          # Add missing person metadata so the site does not label real authors as independent researchers.
           ap = ROOT/'app/authors.ts'
           authors = ap.read_text(encoding='utf-8')
           marker = 'const authorMetadata: Record<string, AuthorMetadata> = {\n'
@@ -199,12 +190,8 @@ jobs:
             en: "Poet",
           },
           '''
-          needed = []
-          for name in ['Kolosovskiy Yan','Song Shuli','Cheng Enfu','Füruğ Ferruhzad','Hasan İzzettin Dinamo']:
-            if not re.search(r'^\s*"'+re.escape(name)+r'"\s*:\s*\{', authors, re.M):
-              needed.append(name)
+          needed = [name for name in ['Kolosovskiy Yan','Song Shuli','Cheng Enfu','Füruğ Ferruhzad','Hasan İzzettin Dinamo'] if not re.search(r'^\s*"'+re.escape(name)+r'"\s*:\s*\{', authors, re.M)]
           if needed:
-            # Insert the whole block only when none of these metadata entries exists; otherwise add missing entries individually below.
             blocks = []
             for block in re.split(r'(?=^  "[^"]+": \{)', entries, flags=re.M):
               if not block.strip(): continue
@@ -260,7 +247,7 @@ jobs:
           git diff --stat
           git config user.name 'BRIQ Journal'
           git config user.email 'briq@briqjournal.com'
-          git add content app/authors.ts app/archive-data.json app/generated-fulltext app/generated-runtime
+          git add content app/authors.ts
           if git diff --cached --quiet; then
             echo 'No changes required.'
             exit 0
