@@ -15,8 +15,15 @@ jobs:
           set -euo pipefail
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils
+          LOCAL='public/assets/archive/pdfs/articles/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi-en.pdf'
           URL='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Li%20Sainan%20%26%20Li%20Xi%20-%20China-Arab%20Cooperation%20under%20the%20Digital%20Silk%20Road%20Framework%20A%20Case%20Study%20of%20Jordan.pdf'
-          curl -L --fail --retry 3 "$URL" -o /tmp/jordan-en.pdf
+          if [ -f "$LOCAL" ]; then
+            cp "$LOCAL" /tmp/jordan-en.pdf
+            echo "Using repository-local English PDF: $LOCAL"
+          else
+            curl -L --fail --retry 2 --connect-timeout 15 --max-time 60 "$URL" -o /tmp/jordan-en.pdf
+            echo 'Using downloaded official English PDF.'
+          fi
           pdfinfo /tmp/jordan-en.pdf | sed -n '1,25p'
           pdftotext -layout -nopgbrk /tmp/jordan-en.pdf jordan-en-layout.txt
           pdftotext -nopgbrk /tmp/jordan-en.pdf jordan-en-flow.txt
