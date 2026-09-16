@@ -1,0 +1,31 @@
+name: V7I4 full suite check
+
+on:
+  push:
+    branches:
+      - automation/v7i4-full-suite-check
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Full test and lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CI: "true"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.0
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Full build and test suite
+        run: npm test
+      - name: Lint
+        run: npm run lint
