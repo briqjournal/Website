@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { buildArchiveData } from "./content-store.mjs";
+import { buildArchiveData } from "./archive-store.mjs";
 
 const root = process.cwd();
 const archive = await buildArchiveData(root);
