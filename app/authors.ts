@@ -135,6 +135,38 @@ export function boardAffiliation(affiliation: string, locale: Locale) {
 }
 
 const authorMetadata: Record<string, AuthorMetadata> = {
+  "Kolosovskiy Yan": {
+  tr: "Shandong Üniversitesi, Uluslararası Politika Yüksek Lisans Programı, Çin",
+  en: "MA in International Politics, Shandong University, China",
+  email: "kolosovskiy98@gmail.com",
+  orcids: ["0009-0002-4054-1103"],
+  biographyTr: "Kolosovskiy Yan, Taşkent'te 1998'de doğdu. Zhejiang Finans ve Ekonomi Üniversitesi Uluslararası Ekonomi ve Ticaret Bölümü'nden lisans derecesiyle mezun oldu. 2024'te Tayland'daki Thammasat Üniversitesi'nde Asya-Pasifik Çalışmaları yüksek lisansını tamamladı; Shandong Üniversitesi'nde Çin-Rusya-Orta Asya ilişkilerine odaklanan Uluslararası Politika yüksek lisans eğitimini sürdürmektedir.",
+  biographyEn: "Kolosovskiy Yan was born in Tashkent in 1998. He graduated from Zhejiang University of Finance and Economics with a BA in International Economics and Trade. After completing an MA in Asia-Pacific Studies at Thammasat University in 2024, he is completing an MA in International Politics at Shandong University, focusing on Sino-Russian-Central Asian relations.",
+},
+"Song Shuli": {
+  tr: "Zhejiang Uluslararası Çalışmalar Üniversitesi, Uluslararası İşletme Okulu, Çin",
+  en: "International Business School, Zhejiang International Studies University, China",
+  email: "songshuli2012@126.com",
+  orcids: ["0009-0003-2248-2645"],
+  biographyTr: "Song Shuli, Zhejiang Uluslararası Çalışmalar Üniversitesi Uluslararası İşletme Okulu'nda profesördür; ekonomi doktorasına sahiptir ve yüksek lisans danışmanıdır.",
+  biographyEn: "Song Shuli is a professor at the International Business School of Zhejiang International Studies University, holds a Doctor of Economics degree, and is a master's supervisor.",
+},
+"Cheng Enfu": {
+  tr: "Dünya Politik Ekonomi Derneği (WAPE) Başkanı",
+  en: "President, World Association for Political Economy (WAPE)",
+  email: "ict@cass.org.cn",
+  orcids: ["0000-0002-9236-1916"],
+  biographyTr: "Cheng Enfu, Çin'in dördüncü kuşak iktisatçıları arasında önde gelen isimlerden biri olarak kabul edilen bir politik iktisatçıdır. Dünya Politik Ekonomi Derneği'nin (WAPE) başkanıdır.",
+  biographyEn: "Cheng Enfu is regarded as a leading figure among China's fourth generation of economists. He is President of the World Association for Political Economy (WAPE).",
+},
+"Füruğ Ferruhzad": {
+  tr: "Şair",
+  en: "Poet",
+},
+"Hasan İzzettin Dinamo": {
+  tr: "Şair",
+  en: "Poet",
+},
   "Wenbo Zhang": {
     tr: "Şanghay Sosyal Bilimler Akademisi, Ekoloji ve Sürdürülebilir Kalkınma Enstitüsü, Çin",
     en: "Institute of Ecology and Sustainable Development, Shanghai Academy of Social Sciences, China",
