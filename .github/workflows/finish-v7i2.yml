@@ -1,0 +1,134 @@
+name: Finish and verify V7I2 migration
+on:
+  push:
+    branches: [automation/v7i2-locale-split]
+permissions:
+  contents: write
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Finish migration on latest main and verify
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Reuse the already-reviewed migration payload from the previous workflow,
+          # but keep these temporary scripts outside the repository before resetting to main.
+          python3 <<'PY'
+          import re
+          from pathlib import Path
+          src = Path('.github/workflows/migrate-v7i2.yml').read_text()
+          for name in ('migrate-v7i2.mjs', 'write-v7i2-tests.mjs'):
+              pattern = rf"cat > /tmp/{re.escape(name)} <<'JS'\n(.*?)\n          JS"
+              match = re.search(pattern, src, re.S)
+              if not match:
+                  raise SystemExit(f'Could not extract {name}')
+              body = re.sub(r'^          ', '', match.group(1), flags=re.M)
+              Path('/tmp', name).write_text(body)
+          PY
+
+          cat > /tmp/materialize-v7i2-keywords.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import { pathToFileURL } from 'node:url';
+          const store = await import(pathToFileURL(path.join(process.cwd(), 'scripts/content-store.mjs')).href);
+          const issue = JSON.parse(fs.readFileSync('content/issues/v07-i02.json', 'utf8'));
+          for (const slug of issue.articles.slice(0, 6)) {
+            const override = store.bilingualKeywordParityOverrides.get(slug);
+            if (!override) throw new Error(`${slug}: reviewed keyword override missing`);
+            for (const locale of ['tr', 'en']) {
+              const file = path.join('content/articles', slug, 'fulltext', `${locale}.json`);
+              const record = JSON.parse(fs.readFileSync(file, 'utf8'));
+              record.keywords = [...override[locale]];
+              fs.writeFileSync(file, JSON.stringify(record, null, 2) + '\n');
+            }
+          }
+          JS
+
+          cat > /tmp/patch-tests-for-localized.mjs <<'JS'
+          import fs from 'node:fs';
+          function replace(file, from, to) {
+            let text = fs.readFileSync(file, 'utf8');
+            if (!text.includes(from)) {
+              if (text.includes(to)) return;
+              throw new Error(`${file}: expected test pattern not found: ${from}`);
+            }
+            text = text.replace(from, to);
+            fs.writeFileSync(file, text);
+          }
+
+          const keyword = 'tests/keyword-case.test.mjs';
+          replace(keyword,
+            'const development = current["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin"];',
+            'const development = localized["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin"] || current["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin"];');
+          replace(keyword,
+            'const onishi = current["japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak"];',
+            'const onishi = localized["japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak"] || current["japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak"];');
+          replace(keyword,
+            'const ertan = current["iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi"];',
+            'const ertan = localized["iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi"] || current["iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi"];');
+          replace(keyword,
+            'const kolosovskiy = current["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"];',
+            'const kolosovskiy = localized["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"] || current["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"];');
+
+          const rendered = 'tests/rendered-html.test.mjs';
+          replace(rendered,
+            'const fullText = JSON.parse(await readFile(new URL("../app/article-fulltext-current.json", import.meta.url), "utf8"));',
+            'const currentFullText = JSON.parse(await readFile(new URL("../app/article-fulltext-current.json", import.meta.url), "utf8"));\n  const localizedFullText = JSON.parse(await readFile(new URL("../app/article-fulltext-localized.json", import.meta.url), "utf8"));\n  const fullTextFor = (slug) => localizedFullText[slug] || currentFullText[slug];');
+          replace(rendered,
+            'assert.ok(fullText[africa.slug].tr.references.filter((reference) => reference.text.includes("(Erişim tarihi:")).length > 30);',
+            'assert.ok(fullTextFor(africa.slug).tr.references.filter((reference) => reference.text.includes("(Erişim tarihi:")).length > 30);');
+          replace(rendered,
+            'const lowCarbon = fullText[lowCarbonSlug].tr;',
+            'const lowCarbon = fullTextFor(lowCarbonSlug).tr;');
+          JS
+
+          npm ci --no-audit --no-fund
+
+          apply_all() {
+            node /tmp/migrate-v7i2.mjs
+            node /tmp/materialize-v7i2-keywords.mjs
+            node /tmp/write-v7i2-tests.mjs
+            node /tmp/patch-tests-for-localized.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i2-locale-fulltext.test.mjs tests/keyword-case.test.mjs
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_all
+            npm test
+            npm run lint
+
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+              echo "main advanced during validation attempt $ATTEMPT; retrying"
+              continue
+            fi
+            if git diff --quiet; then
+              echo 'V7I2 migration already present on main.'
+              exit 0
+            fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content app tests
+            git commit -m 'Migrate Volume 7 Issue 2 to locale-split full text'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced after commit attempt $ATTEMPT; retrying"
+          done
+          echo 'main kept advancing; refusing unsafe push'
+          exit 1
