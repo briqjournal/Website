@@ -18,14 +18,14 @@ export type ArchiveIssue = {
 };
 
 export type LocalizedStatementMetadata = {
-  statement_tr?: string | null;
   statement_en?: string | null;
+  statement_tr?: string | null;
 };
 
 export type ArticleFundingMetadata = LocalizedStatementMetadata & {
   funders?: {
-    name_tr?: string | null;
     name_en?: string | null;
+    name_tr?: string | null;
     grant_or_project_number?: string | null;
   }[];
 };
@@ -71,8 +71,10 @@ export type ArchiveArticle = {
   revised_date?: string | null;
   accepted_date?: string | null;
   published_online_date?: string | null;
-  publication_type_tr?: string | null;
   publication_type_en?: string | null;
+  publication_type_tr?: string | null;
+  peer_reviewed?: boolean;
+  scholarly?: boolean;
   source_tr: string;
   source_en?: string | null;
   pdf_tr_source?: string | null;
