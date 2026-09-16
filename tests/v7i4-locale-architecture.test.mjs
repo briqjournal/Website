@@ -82,8 +82,8 @@ test("restores the Saudi English figures and complete source bibliography", asyn
   assert(!english.references.some((reference) => reference.text.startsWith("Saudi Space Agency. (2025).")));
 });
 
-test("uses the real English cover and localized issue PDF", () => {
+test("uses the real English cover and source issue PDF without a Turkish fallback", () => {
   assert.equal(issue.cover_en, "/assets/archive/covers/cilt-7-sayi-4-en-v3.jpg");
-  assert.equal(issue.pdf_en_local, "/assets/issues/briq-volume-7-issue-4-autumn-2026.pdf");
-  assert.match(issue.pdf_en_source, /BRIQ%20Volume7%20Issue4%20AUTUMN%202026\.pdf$/u);
+  assert.match(issue.pdf_en_source, /BRIQ%20Volume7%20Issue4%20AUTUMN%202026\\.pdf$/u);
+  assert.doesNotMatch(issue.pdf_en_source, /Cilt7|Issue3|SUMMER/u);
 });
