@@ -322,7 +322,7 @@ function ResearchStatements({ items, locale }: { items: StatementItem[]; locale:
   const id = locale === "tr" ? "yazar-beyanlari" : "author-declarations";
   return (
     <details className="article-accordion article-declaration-accordion" id={id}>
-      <summary><span>{locale === "tr" ? "Yazar beyanları" : "Author declarations"}</span><b>{items.length}</b></summary>
+      <summary><span>{locale === "tr" ? "Yazar beyanları" : "Author declarations"}</span><b style={{ fontFamily: "Arial, Helvetica, sans-serif", fontSize: "clamp(8px, 1.2vw, 9px)", fontWeight: 800, letterSpacing: ".07em", lineHeight: 1, textTransform: "uppercase" }}>{items.length}</b></summary>
       <div className="accordion-copy article-declaration-group">
         {items.map(({ id: itemId, label, value }) => (
           <section className="article-declaration-item" id={itemId} key={itemId}>
