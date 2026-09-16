@@ -1,0 +1,26 @@
+name: Compare V7I2 keyword layers
+on:
+  push:
+    branches: [automation/v7i2-post-v2-audit]
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node <<'JS'
+          const fs=require('fs'),p=require('path');
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i02.json','utf8'));
+          for(const slug of issue.articles){
+            const m=JSON.parse(fs.readFileSync(p.join('content/articles',slug,'metadata.json'),'utf8'));
+            for(const locale of ['en','tr']){
+              const f=JSON.parse(fs.readFileSync(p.join('content/articles',slug,'fulltext',locale+'.json'),'utf8'));
+              const a=m.keywords?.[locale]||[], b=f.keywords||[];
+              if(JSON.stringify(a)!==JSON.stringify(b)){
+                console.log('\n'+slug+'/'+locale); console.log('META',JSON.stringify(a)); console.log('FULL',JSON.stringify(b));
+              }
+            }
+          }
+          JS
