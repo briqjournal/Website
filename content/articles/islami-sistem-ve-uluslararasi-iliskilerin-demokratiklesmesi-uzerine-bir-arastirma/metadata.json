@@ -1,22 +1,46 @@
 {
   "schemaVersion": 2,
   "id": "islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
-  "title": {"en": "Research on the Islamic System and the Democratization of International Relations", "tr": "İslami Sistem ve Uluslararası İlişkilerin Demokratikleşmesi Üzerine Bir Araştırma"},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Research on the Islamic System and the Democratization of International Relations",
+    "tr": "İslami Sistem ve Uluslararası İlişkilerin Demokratikleşmesi Üzerine Bir Araştırma"
+  },
   "authors": [
     {
       "displayName": "Zhang Yan Jun",
       "givenName": "Yan Jun",
       "familyName": "Zhang",
       "orcid": "https://orcid.org/0000-0002-7444-3432",
-      "affiliations": [{"name": "Xi’an International Studies University", "nameTr": "Xi’an Uluslararası Çalışmalar Üniversitesi", "nameEn": "Xi’an International Studies University", "country": "China", "ror": null}]
+      "affiliations": [
+        {
+          "name": "Xi’an International Studies University",
+          "nameTr": "Xi’an Uluslararası Çalışmalar Üniversitesi",
+          "nameEn": "Xi’an International Studies University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     },
     {
       "displayName": "Liu Yu Jun",
       "givenName": "Yu Jun",
       "familyName": "Liu",
       "orcid": "https://orcid.org/0009-0007-6549-432X",
-      "affiliations": [{"name": "Xi’an International Studies University", "nameTr": "Xi’an Uluslararası Çalışmalar Üniversitesi", "nameEn": "Xi’an International Studies University", "country": "China", "ror": null}]
+      "affiliations": [
+        {
+          "name": "Xi’an International Studies University",
+          "nameTr": "Xi’an Uluslararası Çalışmalar Üniversitesi",
+          "nameEn": "Xi’an International Studies University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
@@ -24,23 +48,77 @@
     "tr": "Bu makalenin amacı, İslami Sistem’in uluslararası ilişkilerin demokratikleşmesi açısından taşıdığı önemi araştırmaktır. Mevcut çok kutuplu çağda, İslam dünyası, Çin, ABD, Rusya ve Avrupa’nın yanında potansiyel bir önemli denge unsurunu temsil etmektedir. Haraç Sistemi ve Antlaşma Sistemi ile karşılaştırmalı bir çalışma yoluyla makale, bir uluslararası ilişkiler modeli olarak İslami Sistem’in varlığını teyit etmektedir. Çin akademik çevrelerinde, bu makalenin yazarları, İslami Sistem’in fiili varlığını öne süren ilk akademisyenler arasındadır. Bu makalede, İslami Sistem’in, tarihsel olarak imparatorlukların ve çağdaş dönemde önde gelen devletlerin temsil ettiği İslam güçlerinin hakim olduğu ve İslam’ın sistem içinde ortak ideoloji olarak hizmet ettiği bir uluslararası ilişkiler modeli olduğunu savunmaktadır. Tarihsel olarak, İslami Sisitem’in dış ilişkileri, erken dönemde toprak genişlemesi, daha sonraki dönemde ise öncelikle ticaret ve dini yayma faaliyetleri ile şekillenmiştir. İslami Sistem dikkate değer şekilde, uzun bir ömre sahip olmuştur. 19. yüzyılın sonlarından itibaren, İslami Sistem’i canlandırma çabaları devam etmiş olup, onun yeniden tesis edilmesi, uluslararası ilişkilerin demokratikleşmesi açısından büyük önem taşımaktadır."
   },
   "keywords": {
-    "en": ["democratization", "international relations", "islamic system", "treaty System", "tributary system"],
-    "tr": ["demokratikleşme", "uluslararası ilişkiler", "İslami sistem", "anlaşma sistemi", "haraç sistemi"]
+    "en": [
+      "democratization",
+      "international relations",
+      "islamic system",
+      "treaty System",
+      "tributary system"
+    ],
+    "tr": [
+      "anlaşma sistemi",
+      "demokratikleşme",
+      "haraç sistemi",
+      "islami sistem",
+      "uluslararası ilişkiler"
+    ]
   },
-  "dates": {"received": "2025-04-28", "revised": "2025-10-18", "accepted": "2025-11-16", "published": "2025-12-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 1, "year": "2025-2026", "season": {"en": "Winter", "tr": "Kış"}},
-  "pages": {"first": "85", "last": "114"},
+  "dates": {
+    "received": "2025-04-28",
+    "revised": "2025-10-18",
+    "accepted": "2025-11-16",
+    "published": "2025-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 1,
+    "year": "2025-2026",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "85",
+    "last": "114"
+  },
   "doi": "10.67696/6r8h4k4a",
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": {
     "statement": {
       "en": "This treatise was supported by the 2023 Annual Project of the “Fourteenth Five-Year Plan” of Education Science in Shaanxi Province, “Pushing talents to international organizations and the innovation path of talent training mode for political science majors in Shaanxi universities” (SGH23Y2327) and the China Higher Education Society’s 2025 Higher Education Scientific Research Planning Project “Research on the Training Mode and Optimization Countermeasures of Top-notch Foreign-related Talents Majoring in International Politics in Foreign Language Colleges” (25GZ0201).",
       "tr": "Bu inceleme, Shaanxi Eyaleti Eğitim Bilimi “On Dördüncü Beş Yıllık Plan”ın 2023 Yıllık Projesi, “Yetenekleri uluslararası kuruluşlara yönlendirmek ve Shaanxi üniversitelerinde siyaset bilimi bölümleri için yetenek yetiştirme modelinin inovasyon yolu” (SGH23Y2327) ve Çin Yükseköğretim Derneği’nin 2025 Yükseköğretim Bilimsel Araştırma Planlama Projesi “Yabancı Diller Kolejlerinde Uluslararası Siyaset Bölümü Öğrencileri için En Üst Düzey Yabancı Dillerle İlgili Yeteneklerin Yetiştirilme Modeli ve Optimizasyon Önlemleri Üzerine Araştırma” (25GZ0201) tarafından desteklenmiştir."
     },
     "funders": [
-      {"name": "Shaanxi Province Education Science “Fourteenth Five-Year Plan”", "nameTr": "Shaanxi Eyaleti Eğitim Bilimi “On Dördüncü Beş Yıllık Plan”", "nameEn": "Shaanxi Province Education Science “Fourteenth Five-Year Plan”", "ror": null, "awardNumbers": ["SGH23Y2327"]},
-      {"name": "China Association of Higher Education", "nameTr": "Çin Yükseköğretim Derneği", "nameEn": "China Association of Higher Education", "ror": null, "awardNumbers": ["25GZ0201"]}
+      {
+        "name": "Shaanxi Province Education Science “Fourteenth Five-Year Plan”",
+        "nameTr": "Shaanxi Eyaleti Eğitim Bilimi “On Dördüncü Beş Yıllık Plan”",
+        "nameEn": "Shaanxi Province Education Science “Fourteenth Five-Year Plan”",
+        "ror": null,
+        "awardNumbers": [
+          "SGH23Y2327"
+        ]
+      },
+      {
+        "name": "China Association of Higher Education",
+        "nameTr": "Çin Yükseköğretim Derneği",
+        "nameEn": "China Association of Higher Education",
+        "ror": null,
+        "awardNumbers": [
+          "25GZ0201"
+        ]
+      }
     ]
   },
   "conflictOfInterest": null,

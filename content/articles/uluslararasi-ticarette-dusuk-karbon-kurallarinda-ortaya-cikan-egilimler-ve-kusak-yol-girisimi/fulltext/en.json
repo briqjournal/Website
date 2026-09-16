@@ -1,0 +1,266 @@
+{
+  "sections": [
+    {
+      "id": "en-section-1",
+      "title": "Introduction",
+      "paragraphs": [
+        "Promoting carbon neutrality has become a global consensus. However, in the context of the deep division of global industrial chains, disparities in carbon reduction policies between countries have led to the transfer of high-carbon industries or carbon-intensive segments of industrial chains to developing countries, resulting in “carbon leakage”. Consequently, developed countries and regions, including the EU, the U.S., and Japan, have implemented trade restrictions such as CBAM, carbon tariffs, and carbon labeling. These measures ostensibly address carbon leakage while representing these countries’ intention to gain control over international trade rules governing carbon emission accounting, offsetting, and taxation. The EU’s issuance of CBAM transitional reporting rules on August 17, 2023, marked the mechanism’s evolution from a proposal and trade negotiation stage to a substantive trade barrier.",
+        "Existing studies refer to trade restrictions implemented by different countries to address climate change and promote carbon neutrality as low-carbon rules for international trade (Hu et al., 2015). The original intention of low-carbon rules for international trade was to prevent carbon leakage resulting from differences in the stringency of climate policies among countries (Tu et al., 2023). However, most current low-carbon international trade rules are unilateral rather than multilateral agreements signed by multiple countries. This means that developed economies, such as the EU, the U.S., and Japan, can leverage their market dominance and position in the global industrial division of labor to formulate trade rules favorable to themselves under the guise of addressing climate change, while compelling other countries to accept them. Therefore, many scholars have questioned their legitimacy and justification, arguing that mechanisms such as carbon border adjustment taxes violate the WTO’s principle of non-discrimination (Wang, 2023) and constitute trade protectionism under the banner of environmental protection (Zhang et al., 2025). Regarding rule design and actual effects, low-carbon rules for international trade have relatively minor impacts on Least Developed Countries (LDC) and Small Island Developing States (SIDS). Still, they will significantly impact manufacturing powerhouses such as China and energy and raw material exporters like Russia and Venezuela. Furthermore, provisions in these rules regarding product carbon footprint verification and carbon pricing requirements may also disrupt industrial relocation and foreign investment flows.",
+        "China proposes that the BRI promote regional cooperation and is a vital platform for international and regional economic collaboration. China has conducted extensive economic cooperation with BRI partner countries in multiple areas, including energy infrastructure development and industrial collaboration. However, BRI participants, represented by Russia, ASEAN nations, and Venezuela, which primarily export carbon-intensive products, including industrial products, energy resources, and raw materials, face the most severe impacts from low-carbon rules for international trade. Furthermore, the evident shortcomings of BRI countries in low-carbon transition technologies, capital, and institutional frameworks have amplified the multifaceted effects of these low-carbon rules. With the formation of coalitions for low-carbon trade barriers, the diversification of trade restrictions, and the full extension to the upstream and downstream of industrial chains, low-carbon rules for international trade will have increasingly more profound impacts on the economic and trade cooperation among the BRI countries, even to the extent of delaying or interrupting industrial investments and new energy development under the BRI. Hence, to advance the BRI’s green development, it is essential to understand the evolving trends of low-carbon rules for international trade and their implications for BRI implementation.",
+        "This study draws on policy documents— namely the European Union’s Carbon Border Adjustment Mechanism (CBAM), the European Green Deal, the U.S. Clean Competition Act, and the objectives and mandates of the G7 “Climate Club”—as well as on multinational corporate ESG disclosures (Apple, BMW, Boeing, etc.) and authoritative trade databases (the Environmental Provisions in Regional Trade Agreements Database, UN COMTRADE, and the WTO Integrated Database). The paper conducts quantitative and qualitative assessments of emerging low-carbon rules in international trade by employing content analysis, comparative policy analysis, and quantitative text analysis. It evaluates their implications for greening the Belt and Road Initiative (BRI)."
+      ]
+    },
+    {
+      "id": "en-section-2",
+      "title": "Evolving Trends in Low-Carbon Rules for International Trade",
+      "paragraphs": [
+        "As developed countries transition from ambivalence to advocacy in their attitude toward carbon neutrality, the EU and the U.S. attempt to gain control over international low-carbon trade rules by accelerating the implementation of carbon tariffs and forming multinational low-carbon trade coalitions."
+      ]
+    },
+    {
+      "id": "en-section-3",
+      "title": "Cutthroat Competition for First-Mover Advantage",
+      "paragraphs": [
+        "Current key strategies adopted by the EU and the U.S. to compete for control over low-carbon trade rules involve accelerating the substantive implementation of such regulations, such as CBAM, while leveraging their first-mover advantages and market positions to export these standards. Take the EU CBAM as an example. Compared to earlier proposals, the CBAM has narrowed the product coverage to six major categories, including steel and aluminum, while temporarily excluding organic chemicals and polymers to reduce opposition from raw materials exporters. Regarding the targets of carbon accounting, the current focus is on direct product emissions; for indirect emissions, only specific precursors and downstream products will be counted, thereby reducing accounting complexity and resistance from related companies. Regarding implementation scope, countries covered by the EU Emissions Trading System (EU ETS) are excluded, mitigating opposition within the EU.",
+        "The concept of “implicit carbon pricing” regarding carbon cost deduction rules has been recognized. The International Trade Committee (INTA) of the European Parliament has published the Amended Draft Opinion on the CBAM proposal, which not only extends the transition period but also emphasizes that the EU should establish an open, multilateral, global system for sustainable trade with its partners. This amendment leaves room for recognizing implicit carbon pricing (Hu et al., 2015). Additionally, the EU has added “equally effective carbon reduction measures beyond carbon pricing mechanisms” among the compliance costs deductible in carbon tariffs (Wu, 2022), reducing resistance from countries such as the U.S. and China, where carbon pricing mechanisms are not yet fully developed. Similarly, the U.S. has introduced the Clean Competition Act (CCA) despite lacking a unified carbon pricing mechanism and mature evaluation standards for carbon emission data. Currently, the EU and the U.S. are developing shared strategies, including relaxing rules and expanding the scope of exemptions, to reduce resistance to the substantive implementation of carbon tariffs, thereby gaining a first-mover advantage in low-carbon trade."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-4",
+      "title": "Formation of Coalitions for Low-Carbon Trade Barriers",
+      "paragraphs": [
+        "Countries and regions represented by the EU and the U.S. have attempted to establish a “climate club” and low-carbon trade coalitions on the pretext of strengthening their motivation to participate in climate governance and reducing the transaction costs of global negotiations.",
+        "First, they have built a multinational “carbon club.” In October 2021, the U.S. and the EU settled on steel and aluminum tariffs. They jointly established a “carbon club” targeting steel and aluminum products, setting carbon content and market economy status as dual entry barriers for steel and aluminum imports from non-member countries. On December 12, 2022, as proposed by Germany, the G7 released the objectives and mandate for the “climate club,” planning to create a climate coalition centered on an “international target carbon price” and imposing a unified carbon tariff on imports from non-participating countries (Wu, 2022).",
+        "Second, they are increasing the weight of carbon-related clauses in free trade agreements. In the Plan for a Clean Energy Revolution and Environmental Justice, the U.S. proposed negotiating future bilateral trade agreements based on climate commitments made by partners, including the EU, Japan, and Canada. It also proposed imposing carbon taxes or quota controls on certain high-emission export products (United Nations Office for Disaster Risk Reduction, 2020; U.S. State Department, 2021), gradually integrating carbon-related issues into the sustainable development provisions of free trade agreements. The framework of a developed-world low-carbon trade coalition is taking shape faster.",
+        "The “climate club” and low-carbon trade coalitions utilize carbon pricing-based tariffs as punitive measures against non-member countries while conferring exclusive advantages to members, including financial support, technological transfer, international collaboration, market entry privileges, and security assurances. While these coalitions demonstrate specific multilateral attributes when compared with the CBAM (Guan & Li, 2023), their highly restricted membership, designed to ensure the effectiveness of exclusive rewards for members and punitive mechanisms against non-members, ultimately renders them incapable of addressing the global short supply of public goods for climate governance. In essence, they constitute an alternative manifestation of tariff barriers."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-5",
+      "title": "Diversification of Trade Restrictions",
+      "paragraphs": [
+        "The EU and the U.S. have also proactively established trade rules based on product life-cycle carbon footprints, such as carbon labeling and low-carbon product certification. Since 2020, the EU has successively updated or introduced a series of regulations, including the Circular Economy Action Plan, the Packaging and Packaging Waste Directive (PPWD), the new EU Battery Regulation, and the EU Strategy for Sustainable and Circular Textiles. These regulations specify the targets and methods of calculations for product life-cycle carbon footprints, laying the groundwork for adopting low-carbon trade measures such as carbon labeling and low-carbon product certification. Furthermore, the European Parliament on June 21 adopted the Corporate Sustainability Reporting Directive (CSRD). This regulation expands and defines the scope of ESG reporting and adds requirements for the audit and due diligence of disclosures. It is anticipated that implementing the CBAM in China will either follow the CSRD framework or work in tandem with it. In the future, these measures will coordinate with the CBAM to create diverse forms of low-carbon trade barriers."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-6",
+      "title": "Expansion of Corporate Low-Carbon Procurement",
+      "paragraphs": [
+        "Certain dominant firms in supply chains have extended net-zero emission mandates to their upstream and downstream partners in an attempt to shape low-carbon supply chain rules at the corporate level. First, they set up “green procurement clubs.” At COP27 in 2022, 65 corporations, including Apple, Microsoft, Boeing, and Airbus, established the First Movers Coalition (FMC), committing to $12 billion in green procurement by 2030. Second, supply chain leaders impose low-carbon transformation requirements on suppliers. Lead firms in the supply chain, including Apple and BMW, have instituted carbon-neutral supply chain commitments with stricter emissions requirements for vendors, securing technological and informational dominance in green and low-carbon areas."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-7",
+      "title": "Fragmentation of Carbon-related Trade Rules",
+      "paragraphs": [
+        "The EU CBAM, climate clubs, and corporate low-carbon procurement coalitions represent trade rules dominated by a minority of countries or corporations. These initiatives challenge and undermine the effectiveness of global frameworks such as the United Nations Framework Convention on Climate Change (UNFCCC), the Paris Agreement, and WTO regulations. The series of measures taken by the EU and the U.S. will trigger a new round of competition for global climate governance leadership and accelerate the fragmentation and realignment of governance authority in the international community (Guan & Li, 2023). Prominent climate governance actors, including China, the U.S., the EU, India, and Russia, may respond by establishing multiple climate clubs and low-carbon trade coalitions, further splitting the global climate governance system."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-8",
+      "title": "Progress and Achievements of the Green Belt and Road Initiative",
+      "paragraphs": [
+        "When proposing the BRI in 2013, China established green development as its core philosophy and fundamental principle. Adhering to the concept of addressing environmental issues through development, China has promoted green and low-carbon development in BRI partner countries by taking several measures, including cultivating green industries, developing clean energy, transferring green technologies, and jointly developing environmental protection standards.",
+        "Through international trade cooperation, China, through the BRI, has enabled partner countries to achieve deeper integration into global supply, industrial, and value chains. It also generates employment opportunities through international trade to support sustainable development objectives. Between 2013 and 2022, goods trade between China and BRI partner countries grew from $1.04 trillion to $2.07 trillion, achieving a 7.9% compound annual growth rate (CAGR), substantially higher than the 4.7% CAGR of China’s overall foreign trade during the same period. Cumulative two-way investment surpassed $380 billion, including over $240 billion in China’s outward direct investment. Overseas economic and trade cooperation zones built by Chinese companies in partner countries have generated 421,000 local jobs (United Nations Office for Disaster Risk Reduction, 2020). According to World Bank projections in Belt and Road Economics: Opportunities and Risks of Transport Corridors, by 2030, BRI implementation could potentially lift 7.6 million people from extreme poverty and 32 million from moderate poverty and increase global trade by 6.2% and Intra-BRI trade by 9.7%, thereby raising global income by 2.9%.",
+        "In advancing green industry development, China actively supports BRI partner countries in cultivating sustainable industries. For collaborative industrial projects, China rigorously complies with domestic and international green investment standards, establishes BRI principles, implements standardized environmental impact assessment mechanisms, and guides enterprises to fulfill environmental responsibilities to prevent cross-border pollution transfer actively. China has instituted green access criteria for the Green Smart Park of the China-SCO Local Economic and Trade Cooperation Demonstration Area (SCODA) and the China-Egypt TEDA Suez Economic and Trade Cooperation Zone (SETC-Zone). These efforts have yielded multiple flagship green and low-carbon demonstration projects that catalyze local green industrial transformation, including the Indonesia Tsingshan Industrial Park, the Vientiane Saysettha Low-carbon Demonstration Zone, and Sino-African agricultural technology demonstration centers.",
+        "In developing clean energy, China capitalizes on its technological and industrial strengths in new energy to drive the clean energy transition across BRI partner countries. As part of its commitment to facilitating low-carbon energy system transformation in these nations, China has completely ceased the development of new overseas coal-fired power projects. Building on this foundation, China has utilized the local resources of the BRI countries to construct the Zhanatas Wind Power Project in Kazakhstan, the Ivovik Wind Farm Project in Bosnia and Herzegovina, and the Trung Son Solar Power Plant in Vietnam.",
+        "According to International Energy Agency projections, the annual average new installed capacity along the BRI region will exceed 80 GW by 2040, positioning it as one of the world’s fastest-growing electricity markets.",
+        "China upholds an open-source and equitable model for technology and information collaboration in green technology cooperation, vigorously advancing the dissemination and implementation of digital and information technologies across BRI countries. These efforts have led to the establishment of platforms and institutions such as the BRI Environmental Big Data Platform, the Belt and Road Environmental Technology Exchange and Transfer Center, and the BRI Green Development Institute, providing specialized support for sharing environmental data, fostering green industrial partnerships, and facilitating sustainable finance initiatives. Furthermore, China actively cultivates human resources for green technology. China has trained 3,000 environmental specialists from more than 120 BRI countries through the Green Silk Road Envoys Program. In co-building ecological protection standards, China regulates development activities through institutional mechanisms, actively promotes the alignment of international environmental policies and multilateral cooperation on green development, and jointly establishes environmental governance systems with BRI partner countries. China aligns with the green development strategies and ecological needs of BRI partner countries by formulating development plans, including the China-ASEAN Environmental Cooperation Action Plan and the Green Lancang-Mekong Initiative, while playing an active role in shaping global environmental standards and integrating cutting-edge green technologies with sustainable management approaches into flagship projects. Establishing platforms for international cooperation, including the BRI International Green Development Coalition and the Initiative for Belt and Road Partnership on Green Development, has created channels for BRI countries to coordinate policies, exchange green technology, build consensus on green development, and share experience in green development."
+      ]
+    },
+    {
+      "id": "en-section-9",
+      "title": "Impact on the Green Development of the Belt and Road Initiative",
+      "paragraphs": [
+        "The increasing prevalence and stringency of international low-carbon trade rules present a double-edged sword for the Green Development of the Belt and Road Initiative."
+      ]
+    },
+    {
+      "id": "en-section-10",
+      "title": "Possible Opportunities and Positive Impacts",
+      "paragraphs": [
+        "International low-carbon trade policies strengthen the constraints on climate governance for BRI countries. Under the Paris Agreement, climate governance largely relies on voluntary national commitments and lacks mandatory enforcement (Gürcan, 2021). Although the EU Green Deal and the establishment of climate clubs have unilateral characteristics, they have clarified the direction of climate policies in developed countries and transmitted pressure for low-carbon transformation to BRI countries through trade, thereby enhancing the binding force of climate governance.",
+        "Multinational corporations’ green and low-carbon procurement strategies drive BRI countries’ demand for green facilities and equipment. In the global division of labor, most BRI countries undertake high-carbon segments such as raw material supply, primary product processing, and assembly. To adapt to multinational corporations’ green procurement and supply chain transformation requirements, the demand for new energy equipment, energy-saving and environmental protection devices, and green power facilities in these countries will increase significantly (Türe, 2022; Dai, 2025). This will accelerate green energy cooperation between China and BRI countries.",
+        "The CBAM accelerates the construction of carbon pricing mechanisms in BRI countries. The EU CBAM requires the accounting of product carbon emissions, forcing other countries to accept or recognize the carbon prices of the EU Emissions Trading System (EU ETS). To meet the EU CBAM’s compliance requirements and enhance their exports’ competitiveness, BRI countries will accelerate the construction of their domestic carbon markets and improve their carbon emission cost accounting systems.",
+        "The green and low-carbon policies of Europe and the United States force BRI countries to strengthen cooperation on low-carbon rules. Policies such as the EU Green Deal and the U.S. Clean Competition Act (CCA) are essential for these regions to gain a say in green and low-carbon rules. This will compel BRI countries to strengthen institutional cooperation in carbon accounting and pricing to avoid being disadvantaged in future international trade (Kılkıs, 2022)."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-11",
+      "title": "Possible Challenges and Negative Impacts",
+      "paragraphs": []
+    },
+    {
+      "id": "en-section-12",
+      "title": "Compliance Pressure Restricts Trade Cooperation",
+      "paragraphs": [
+        "The EU and U.S. have seized the initiative in creating carbon-related restrictions by establishing “carbon barriers” and forming an exclusive “carbon tariff coalition”. This has significantly impacted trade for BRI countries, with the consequences specifically evident in the following dimensions: Higher compliance costs and weakened competitiveness of enterprises: The low-carbon rules for international trade will bring additional carbon compliance costs to BRI countries, undermining the competitiveness of export products from enterprises in those countries. These rules will directly increase export costs for products from BRI economies in the short term. According to Zhang et al. (2025), the EU CBAM will substantially raise export costs for China’s carbon-intensive industries, such as steel and aluminum, with projected export reductions of 18%-25% for steel and 15%-20% for aluminum by 2026. Long-term analysis reveals that developed economies such as the EU and the U.S. will leverage these low-carbon rules to maintain industrial competitive advantages, as their significantly lower carbon intensity compared to developing nations enables them to gain additional trade advantages through carbon-related trade barriers. Moreover, key components of the low-carbon rules, including Monitoring, Reporting, and Verification (MRV) systems for carbon data, green electricity, and green certificate trading, are controlled by third-party institutions from the EU, the U.S., and Japan. Due to the late development of the low-carbon service sector in BRI countries, their relatively immature systems lack international recognition compared to Western counterparts. Consequently, enterprises are compelled to choose those international institutions for exports, escalating compliance cost burdens.",
+        "Extended compliance cycles and diminished trade efficiency: The low-carbon trade system requires enterprises to provide carbon emissions reports and supporting information. From the perspective of exporting companies, they must present massive amounts of information and data and submit them for review, which lengthens the compliance cycle of foreign trade. During the EU CBAM transition phase, for instance, traders must submit reports that cover the following information: categorized total import volume for the quarter (with manufacturer identification), direct and indirect emissions per product category, and carbon emission costs already paid in the country of origin. To validate the reports, companies must present manufacturer details, equipment status, production capacity, domestic usage information, and geographic coordinates precise to six decimal places (Hu et al., 2015; Yang et al., 2022), significantly increasing compliance cycles and burdens. As calculated by Liu et al. (2022), the requirement for disclosing the cobalt and lithium carbon footprint under the new EU battery regulation extends the compliance cycle for the export of electric vehicle components from China to Europe to 14 months, reducing trade efficiency by 19%."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-13",
+      "title": "Carbon Verification Across Entire Industrial Chains Impacts Industrial Cooperation",
+      "paragraphs": [
+        "The Green BRI has significantly enhanced industrial collaboration between China and participating nations, particularly in Hungary and Vietnam’s successful absorption of transferred industries, including new energy vehicles and electronic information technologies. However, the evolving landscape of low-carbon rules for international trade has introduced uncertainties to these established BRI industrial partnerships.",
+        "Industrial investments from BRI countries may be diverted to regions with lower carbon pricing, such as the EU and the U.S. Current low-carbon rules for international trade, such as the EU CBAM, only specify products subject to carbon taxation without defining carbon accounting boundaries. If based on “direct emissions” that cover only production processes directly controlled by manufacturers, companies could reduce direct emissions by purchasing semi-finished products or separating upstream and downstream operations. However, if adopting “embedded emissions” that include emissions from intermediate production, manufacturers would face identical carbon costs whether for assembling purchased semi-finished components or for carrying out production independently (Yang et al., 2022). In this case, companies would be incentivized to relocate all industrial chains to countries with carbon pricing advantages. China’s carbon intensity exceeds that of the U.S. by over threefold, with its steel industry’s emission factor about 1.5 times higher (Liu et al., 2022). Countries primarily exporting raw materials and carbon-intensive goods, such as Russia and Saudi Arabia, demonstrate even higher carbon intensities. Introducing the low-carbon rules for international trade will cause such countries to lose upstream customers or force them to transfer some industrial chains to countries with lower carbon prices, such as the EU and the U.S.",
+        "Carbon verification may cause industrial carbon lock-ins in BRI countries. A diversity of international trade carbon barriers, including the new EU Battery Regulation and France’s carbon labeling scheme, implemented through carbon footprint verification and labeling requirements, effectively function as trade barriers in product imports and project bidding, while protecting domestic low-carbon and zero-carbon technologies and products (European Commission, 2020). Currently, BRI countries lag behind Western counterparts in the standards and policies on carbon footprint verification and labeling, resulting in limited international recognition of their carbon footprint calculations and weakened positions in trade negotiations. If Western economies establish a system of trade restriction rules comprising carbon trade barriers, they will likely propagate unilateral trade barriers under the guise of “net-zero” objectives. As a result, the competitive advantages of BRI countries in terms of labor costs, raw materials, and energy resources could be negated by high carbon compliance costs. This would deter multinational corporations from industrial relocation and investment in BRI countries. Without access to carbon-efficient technologies and financing, BRI countries face the prospect of being locked into energy-intensive, high-emission industrial structures. Compounding these challenges, the lack of alignment and mutual recognition between China and the EU in carbon footprint verification standards means that Chinese companies transferring such industries as solar photovoltaics and wind power to BRI countries also face high compliance costs. This further constrains these countries’ access to green and low-carbon technologies and financing, ultimately hindering their green and low-carbon industrial transformation."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-14",
+      "title": "Carbon Pricing Rules Impact Regional Carbon Market Cooperation",
+      "paragraphs": [
+        "While complying with WTO regulations and existing free trade agreements, the EU CBAM retains provisions for companies to claim rebates or make additional payments according to verified product carbon intensity. The mechanism incorporates “price-based deduction” and “volume-based deduction” methods, though the final one to be applied has yet to be determined. Given the gap between BRI countries and the EU in carbon market development, adopting the CBAM, irrespective of which method is selected, will consolidate the EU’s position in the carbon market and affect cooperation among BRI participants in the regional carbon market.",
+        "The “price-based deduction” mechanism will consolidate the EU’s dominant role in establishing carbon market price benchmarks, as it requires companies to compensate based on price differences with the EU carbon market. Currently, the development of the carbon market in BRI countries is at a nascent stage. The International Carbon Action Partnership (ICAP)’s Emissions Trading Worldwide Status Report 2025 indicates that among developing BRI nations, only Indonesia, Kazakhstan, Türkiye, New Zealand, and Mexico have operational carbon trading markets; Brazil, Vietnam, and four others are in the process of establishing theirs; and Argentina, Thailand, Malaysia, and two additional countries are considering implementation (ICAP, 2025). Without functional carbon markets or effective carbon pricing mechanisms, BRI countries face no alternative but to adopt EU carbon prices as a reference. Trading volumes and price levels remain substantially below EU standards, even in those BRI nations with operational carbon markets (Kılkış, 2024). For instance, when China’s national carbon market launched in 2021, its trading price hovered around RMB 50/ton, contrasting sharply with the contemporaneous EU price exceeding €50/ton (approximately 7.7 times higher) (Long et al., 2022). Given these significant price disparities, carbon tariffs calculated using the EU’s pricing mechanism would constitute a substantial component of companies’ primary emission costs, cementing the EU carbon market’s “de facto” benchmark status in global carbon pricing.",
+        "The “volume-based deduction” method will tether other countries to the EU carbon market. Under this system, companies receive exemptions from carbon tariffs for emissions volumes already priced in their domestic markets, subject to EU recognition of carbon accounting data from their governments or third-party institutions. The condition for such recognition, as stipulated in Article 2 (5) of the European Commission’s Proposal for a Regulation of the European Parliament and of the Council Establishing a Carbon Border Adjustment Mechanism, requires “full linkage between the country of origin’s emissions trading system and the EU ETS” (European Commission, 2020). This provision effectively mandates alignment with EU carbon pricing benchmarks, compelling participating nations to surrender their carbon pricing autonomy and submit to integration with the EU’s carbon market regime. Through either the “price-based” or “volume-based” deduction methods, the EU can capitalize on its market influence and first-mover advantage to elevate its standards to global carbon trade norms. This process could occur without seeking cooperation with international institutions or countries outside the EU, exemplifying the “Brussels Effect” that cements the EU’s dominance in the global carbon market. Among BRI countries, the carbon markets of China, Kazakhstan, and Mexico exhibit significant gaps compared to the EU ETS regarding industry coverage, trading liquidity, and market maturity. If compelled to adopt the EU CBAM’s carbon price linkage model, these countries’ carbon pricing mechanisms would struggle to fulfill their intended functions and face the risk of being marginalized."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-15",
+      "title": "Certification and Consumption Barriers Constrain New Energy Cooperation",
+      "paragraphs": [
+        "The formation of the green procurement coalition by multinational corporations such as Apple, BMW, and Airbus to promote green and low-carbon procurement in the supply chain has driven growing demand among BRI enterprises to purchase and certify green electricity. BRI countries are blessed with abundant new energy resources. For example, South Asia enjoys approximately 2,500 hours of sunshine yearly (Halder et al., 2015), and underdeveloped BRI countries and regions, including Africa, hold 60% of the world’s solar and vast renewable resources, including wind, geothermal, and hydroenergy (International Energy Agency, 2022). China has collaborated extensively with BRI partners on new energy projects. Examples include the 900 MW photovoltaic power plant developed by Zonergy in Pakistan and Chinese-aided initiatives in Nepal, including a solar-powered community bathroom and a rooftop photovoltaic power generation facility. However, through a series of low-carbon rules for international trade, the EU and the U.S. have assumed the authority to determine whether foreign green electricity, green certificates, and carbon sinks can be used to offset carbon tariffs. This undermines BRI countries’ efforts to achieve carbon neutrality through new energy development. Specifically: The EU and U.S. maintain a stranglehold on verifying green electricity and certificates, undermining the carbon asset valuation of clean energy projects. This Western dominance over global green certification creates barriers, as evidenced by RE100’s “conditional acceptance” policy toward Chinese green electricity or certificates (Wang et al., 2023). Collaborative new energy projects between China and BRI partner countries equally face challenges in certification. Foreign trade companies are often compelled to accept Western certification standards to satisfy customers’ requirements for green certification and reduce the complexity of certification and emission deduction. The financial burden is substantial, with many companies forced to allocate heavy budgets to purchase internationally recognized green certificates demanded by global customers such as BMW. Moreover, it is difficult to translate the emission reductions generated from new energy projects into tradable carbon assets and carbon emission deductions, creating a disincentive for BRI nations to pursue collaborative new energy developments.",
+        "Disclosure requirements increase the risk of sensitive data exposure and implementation barriers for new energy initiatives. In mechanisms like the EU CBAM, companies must submit project details to international third-party bodies, including geographic coordinates, photos, project scale, and implementation, to qualify self-developed and distributed new energy projects for emission cost reductions. This data sharing increases the risk of leaking scientific, technological, and geographical information with national security implications. BRI countries extend regulatory review periods to prevent the leakage of sensitive information and enhance security vetting for new energy developments. These measures create obstacles to the implementation of collaborative new energy projects.",
+        "The certification and consumption restrictions will divert financial resources from new energy development to other areas. The low-carbon rules’ certification and consumption restrictions will create additional financial pressures on capital-scarce BRI countries, forcing them to channel significant funds allocated to new energy infrastructure toward purchasing foreign green electricity and carbon sink projects."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-16",
+      "title": "Conclusion",
+      "paragraphs": []
+    },
+    {
+      "id": "en-section-17",
+      "title": "Policy Recommendations",
+      "paragraphs": [
+        "International low-carbon trade rules impact the development of a Green BRI through multiple channels, including trade compliance pressures, industrial carbon lock-in, carbon pricing constraints, and new energy absorption controls. To mitigate the risks posed by evolving low-carbon rules for international trade, coordinated responses are needed in regulatory frameworks, market mechanisms, and infrastructure development, ultimately advancing a global governance system with “leadership-driven governance” for a Green BRI. Specifically:",
+        "**A carbon accounting system for the BRI should be built.** It is recommended that BRI countries jointly establish a carbon emissions accounting system to create a carbon accounting public good that aligns with their development levels and carbon neutrality processes. Specifically,",
+        "**First,** research should be conducted to develop recommended emission factor standards. This involves analyzing the intensity values, types, industrial chain relationships, and relevant raw material data of major export product categories from BRI countries to formulate recommended carbon emission factor standards, while actively participating in the development of international standards for carbon emission monitoring technologies and accounting rules, and promoting the alignment and mutual recognition of carbon accounting and verification standards with international norms.",
+        "**Second,** efforts should be made to enhance the carbon accounting capabilities of supply chain enterprises by promoting green supply chain management and leveraging the BRI International Green Development Coalition to establish carbon accounting standards for dominant industries such as wind power and photovoltaics. BRI countries should collaborate to develop carbon accounting guidelines for carbon-intensive industries, including steel, metallurgy, and petrochemicals; incorporate embodied carbon intensity accounting; and establish a carbon footprint labeling system that achieves mutual recognition with ISO standards.",
+        "**The low-carbon rules for trade among BRI countries should be built and refined.** It is recommended that low-carbon rules be built for trade among BRI countries. This involves establishing a carbon tariff compensation mechanism. Specifically, BRI countries should take the initiative to add a “joint but differentiated carbon accountability” in the upgraded agreement on the China-ASEAN Free Trade Area (FTA), develop a carbon tariff compensation mechanism for Central Asian countries, and explore the possibility of achieving mutual recognition with countries such as Singapore and the UAE for green subsidy rules. It is recommended that BRI countries release a list of low-carbon products incorporating PV modules, new energy vehicles, and sewage treatment products; streamline related processes, such as the carbon emissions accounting and compliance review of low-carbon products; and implement the exemption or compensation of carbon tariffs.",
+        "**A BRI carbon pricing system should be built.** BRI countries should accelerate the formulation of an intergovernmental emission reduction cooperation framework agreement, establish a collaborative emission reduction management institution, and jointly advance the development of emission reduction project methodologies and the verification, registration, and transfer of emission reductions. Regional carbon markets should be developed in areas with mature conditions, such as between China and ASEAN nations and between China and Central Asian countries. Utilizing blockchain technology, BRI countries should create cross-border carbon accounting ledgers under the Asian Infrastructure Investment Bank’s framework to enable interoperability and sharing of carbon accounting methods and data, while establishing BRI carbon settlement centers in Hong Kong, Singapore, and other key cities to facilitate carbon market trading of carbon sink and new energy projects from BRI nations. Furthermore, BRI countries should promote the evaluation and mutual recognition of implicit carbon pricing by guiding industry associations and professional institutions to calculate compliance costs and assess operational impacts stemming from mandatory upgrades and retirement of high-energy, high-emission equipment, production activity restrictions, and other non-pricing policy instruments, ultimately fostering consensus on implicit carbon pricing among major economies and global organizations.",
+        "**The mutual recognition of BRI carbon offset mechanisms should be promoted.** It is recommended that BRI countries facilitate the inclusion of their collaborative new energy projects into the green electricity mutual recognition system while supporting companies and international organizations in establishing green electricity certification service platforms. They should encourage broader enterprise participation in RE100, the global initiative promoting green electricity consumption, and assist green certification service providers in collaborating with domestic and foreign institutions to develop the international I-REC green certification service platform. Additionally, they should create specialized information and data service platforms to handle BRI international green certificate registration, data storage, and authentication processes.",
+        "**The BRI carbon information disclosure framework should be established.** It is recommended that BRI countries jointly develop implementation and national guidelines for carbon information disclosure to standardize disclosure content, methods, and platforms, as well as establish management mechanisms against violations of mandatory disclosure requirements, thereby forming unified and standardized technical disclosure standards. BRI countries should create a Task Force on Climate-related Financial Disclosures (TCFD) framework compatible with carbon market accounting systems and aligned with international standards, while promoting international harmonization and mutual recognition of assessment frameworks, standards, and implementation tools. Furthermore, they should develop a unified carbon information disclosure platform through regional carbon emission trading markets.",
+        "**Carbon compliance accounting service providers should be fostered.** BRI countries should support and develop globally competitive carbon accounting and consulting service industries. This involves establishing access regulations and standardization systems for carbon accounting services, third-party carbon asset management, low-carbon certification, and legal compliance services, while cultivating a comprehensive low-carbon service industry chain encompassing carbon data collection, verification, third-party testing institutions, and monitoring services. Additionally, qualified institutions and enterprises should be encouraged and guided to participate in international low-carbon certification systems and contribute to developing global standards and regulations for carbon accounting and trading."
+      ],
+      "level": "subsection",
+      "toc": false
+    }
+  ],
+  "keywords": [
+    "BRI",
+    "carbon rules for international trade",
+    "CBAM",
+    "carbon labeling"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Dai, W. (2025). Belt and road initiative: driving innovation in tech enterprises through global value chains. Finance Research Letters, 74 (000)."
+    },
+    {
+      "id": "ref-2",
+      "text": "European Commission (2020). Powering a Climate-neutral Economy: An EU Strategy for Energy System Integration. Brussels: European Commission."
+    },
+    {
+      "id": "ref-3",
+      "text": "Guan, K. W., & Li, Q. H. (2023). The Reshaping of Global Climate Governance by EU and U.S.: From “Climate Clubs” to “Carbon Border Adjustments”. Global Review, 15 (5),"
+    },
+    {
+      "id": "ref-4",
+      "text": "Gürcan, E. C. (2021). On the development of China’s environmental policies towards an ecological civilization. Belt & Road Initiative Quarterly, 2 (3).7-25."
+    },
+    {
+      "id": "ref-5",
+      "text": "Halder, P. K. et al. (2015). Energy Scarcity and Potential of Renewable Energy in Bangladesh, Renewable and Sustainable Energy Reviews, 51, 1636-1649."
+    },
+    {
+      "id": "ref-6",
+      "text": "Hu, J. B., Ren, Y. Y., & Ding, Z. G. (2015). Carbon Barriers in International Trade under Climate Change and Response Strategies. Inquiry into Economic Issues, (10), 137-141."
+    },
+    {
+      "id": "ref-7",
+      "text": "ICAP. (2025) Emissions Trading Worldwide: ICAP Status Report 2025. Retrieved July 1, 2025, from https://icapcarbonaction.com/ en/publications/emissions-trading-worldwide-icap-status-report-2025."
+    },
+    {
+      "id": "ref-8",
+      "text": "International Energy Agency. (2022). Africa Energy Outlook 2022. Retrieved July 1, 2025, from https://iea.blob.core.windows. net/assets/220b2862-33a6-47bd-81e9- 00e586f4d384/AfricaEnergyOutlook2022.pdf."
+    },
+    {
+      "id": "ref-9",
+      "text": "Kılkıs, B. (2022). Green hydrogen: The common thread of the Belt and Road Initiative. Belt & Road Initiative Quarterly (BRIQ), 3 (3), 6-20."
+    },
+    {
+      "id": "ref-10",
+      "text": "Kılkış, B. (2024). Perspective Piece: The Urgency of A New Carbon Market for Turkic States and the Belt & Road. Quarterly, 5 (4), 448-454."
+    },
+    {
+      "id": "ref-11",
+      "text": "Liu, F., Khan, Y., & Marie, M. (2022). Carbon Neutrality Challenges in Belt and Road Countries: What Factors Can Contribute to CO2 Emissions Mitigation?. Environmental Science and Pollution Research, 30 (6), 14884–14901."
+    },
+    {
+      "id": "ref-12",
+      "text": "Long, F., Dong, Z. F., Bi, F. F., Zhou, J., & Lian, C. (2022). Analysis of Impacts of and Responses to the EU Carbon Border Adjustment Mechanism. Chinese Journal of Environmental Management, 14 (2), 43–48."
+    },
+    {
+      "id": "ref-13",
+      "text": "Tu, X. Q., Jin, X. X., & Qin, R. B. (2023). Analysis of the EU Carbon Border Adjustment Mechanism and Its Trade Impacts. Southeast Academic Research, (05), 67-76."
+    },
+    {
+      "id": "ref-14",
+      "text": "Türe, İ. E. (2022). The ultimate solution for Turkey’s energy, water shortage, and climate change problems: Hydrogen fuel. Belt & Road Initiative Quarterly (BRIQ), 3 (3), 22-49."
+    },
+    {
+      "id": "ref-15",
+      "text": "United Nations Office for Disaster Risk Reduction (2020). The Human Cost of Disasters: An Overview of the Last 20 Years (2000-2019) [R]. Geneva: United Nations Office for Disaster Risk."
+    },
+    {
+      "id": "ref-16",
+      "text": "United States Department of State (2021). The Long-term Strategy of the United States-Pathways to Net-zero Greenhouse Gas Emissions by 2050.Washington, DC."
+    },
+    {
+      "id": "ref-17",
+      "text": "Wang, C., Liu, X., Li, H., & Yang, C. (2023). Analyzing the Impact of Low-Carbon City Pilot Policy on Enterprises’ Labor Demand: Evidence from China. Energy Economics, 124,106676."
+    },
+    {
+      "id": "ref-18",
+      "text": "Wang, Y. P. (2023). The Relativity of Legality Determination for Carbon Trade Barriers under WTO Law. Business and Economic Law Review, (05), 34-55."
+    },
+    {
+      "id": "ref-19",
+      "text": "Wu, B. X. (2022). The U.S. and EU Resolve Steel and Aluminum Trade Disputes, Advancing the “Carbon Club” as a Trade Weapon. The Economic Observer. Retrieved July 1, 2025, from https://www.eeo.com.cn/2021/1104/510016. shtml."
+    },
+    {
+      "id": "ref-20",
+      "text": "Yang, C., Wang, S.Y., & Cheng, B. D. (2022). Implementation Essentials and Impacts of the EU Carbon Border Adjustment Mechanism and China’s Countermeasures. Intertrade, (6), 28–33."
+    },
+    {
+      "id": "ref-21",
+      "text": "Zhang, G. P., Lin, L. K., & Cai, L. F. (2025). The Impact of EU and U.S. Carbon Tariff Policies on China and Response Strategies. Social Sciences in Shenzhen, (03), 85-96."
+    }
+  ],
+  "acknowledgements": "",
+  "figures": []
+}

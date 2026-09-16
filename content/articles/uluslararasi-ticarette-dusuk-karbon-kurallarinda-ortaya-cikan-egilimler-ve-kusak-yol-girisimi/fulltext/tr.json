@@ -1,0 +1,263 @@
+{
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Giriş",
+      "paragraphs": [
+        "Karbon-nötr uygulamaları teşvik etmek küresel bir mutabakata dönüşmüş bulunuyor. Ancak, küresel endüstriyel zincirlerin derin bölünmüşlüğü bağlamında, ülkeler arasındaki karbon azaltma politikalarındaki farklılıklar, yüksek karbonlu endüstrilerin veya endüstriyel zincirlerin karbon yoğun bölümlerinin gelişmekte olan ülkelere transferine yol açmış ve atmosfere “karbon kaçağı “ile sonuçlanmıştır. Sonuç olarak, AB, ABD ve Japonya gibi gelişmiş ülkeler ve bölgeler, SKDM, karbon vergileri ve karbon etiketleme gibi bir dizi ticaret kısıtlaması uygulamaya koymuştur. Bu önlemler, görünüşte karbon kaçağını ele alırken, aslında bu ülkelerin karbon emisyonu muhasebesi, dengeleme ve vergilendirmeyi yöneten uluslararası ticaret kuralları üzerinde kontrol elde etme niyetini ortaya koymaktadır. AB’nin 17 Ağustos 2023’te SKDM geçiş raporlama kurallarını yayınlaması, mekanizmanın bir öneri ve ticaret müzakere konusundan ziyade, somut bir ticaret engeline evrimleştiğini işaret etmiştir.",
+        "Mevcut çalışmalar, iklim değişikliğini ele almak ve karbon nötr uygulamaları teşvik etmek amacıyla farklı ülkeler tarafından uygulanan ticaret kısıtlamalarını uluslararası ticaret için düşük karbon kuralları olarak adlandırmaktadır (Hu et al., 2015). Uluslararası ticaret için düşük karbon kurallarının orijinal niyeti, ülkeler arasındaki iklim politikalarının sıkılığındaki farklılıklardan kaynaklanan karbon sızıntısını önlemekti (Tu et al., 2023). Ancak, mevcut uluslararası ticaret için düşük karbon kurallarının çoğu, çok taraflı anlaşmalar yerine tek taraflı önlemlerdir. Bu, AB, ABD ve Japonya gibi gelişmiş ekonomilerin, iklim değişikliğini ele alma kisvesi altında kendileri için elverişli ticaret kuralları formüle ederken, pazar hakimiyetlerini ve küresel endüstriyel işbölümündeki konumlarını kullanabildikleri ve diğer ülkeleri bu kuralları kabul etmeye zorlayabildikleri anlamına gelir. Bu nedenle, birçok akademisyen meşruiyetlerini ve haklılıklarını sorgulamakta, karbon sınırı ayarlama vergileri gibi mekanizmaların DTÖ’nün ayrımcı olmama ilkesini ihlal ettiğini (Wang, 2023) ve çevre koruma bayrağı altında ticaret korumacılığı oluşturduğunu savunmaktadır (Zhang et al., 2025). Kural tasarımı ve fiili etkiler açısından, uluslararası ticaret için düşük karbon kurallarının En Az Gelişmiş Ülkeler (LDC) ve Küçük Ada Gelişmekte Olan Devletler (SIDS) üzerindeki etkileri nispeten daha azdır, ancak Çin gibi imalat güçlerinin yanı sıra Rusya ve Venezuela gibi enerji ve hammadde ihracatçılarını önemli ölçüde etkileyecektir. Ayrıca, bu kurallardaki ürün karbon ayak izi doğrulaması ve karbon fiyatlandırma gerekliliği ile ilgili hükümler, endüstriyel yeniden konumlanma ve yabancı yatırım akışlarını da bozabilir.",
+        "Çin tarafından bölgesel işbirliğini teşvik etmek amacıyla önerilen KYG, uluslararası ve bölgesel ekonomik işbirliği için hayati bir platform görevi görmektedir. Çin, KYG ortak ülkeleriyle enerji altyapısı geliştirme ve endüstriyel işbirliği de dahil olmak üzere çoklu alanlarda kapsamlı ekonomik işbirliği yapmıştır. Ancak, başta Rusya, ASEAN ülkeleri ve Venezuela tarafından temsil edilen, endüstriyel ürünler, enerji kaynakları ve hammaddeler dahil olmak üzere ağırlıklı olarak karbon yoğun ürünler ihraç eden KYG katılımcıları, uluslararası ticaret için düşük karbon kurallarından en şiddetli etkilere maruz kalmaktadır. Ayrıca, KYG ülkelerinin düşük karbonlu geçiş teknolojileri, sermaye ve kurumsal çerçevelerdeki belirgin eksiklikleri, bu düşük karbon kurallarının çok yönlü etkilerini artırmıştır. Düşük karbonlu ticaret engelleri için koalisyonların oluşumu, ticaret kısıtlamalarının çeşitlenmesi ve endüstriyel zincirlerin yukarı ve aşağı akışlarına tam olarak uzanmasıyla birlikte, uluslararası ticaret için düşük karbon kurallarının KYG ülkeleri arasındaki ekonomik ve ticari işbirliği üzerindeki etkileri giderek derinleşecek, hatta KYG kapsamındaki endüstriyel yatırımları ve yeni enerji gelişimini geciktirecek veya kesintiye uğratacak boyuta ulaşacaktır. Bu nedenle, KYG’nin yeşil kalkınmasını ilerletmek için, uluslararası ticaret için düşük karbon kurallarının evrimleşen eğilimlerini ve KYG uygulaması üzerindeki etkilerini anlamak büyük önem taşımaktadır.",
+        "Bu çalışma, politika belgelerinden—yani Avrupa Birliğinin Sınırda Karbon Düzenleme Mekanizması (SKDM), Avrupa Yeşil Mutabakatı, ABD Temiz Rekabet Yasası ve G7 “İklim Kulübü”nün hedef ve yetkileri—yanı sıra çok uluslu şirket ESG açıklamalarından (Apple, BMW, Boeing, vb.) ve yetkili ticaret veri tabanlarından (Bölgesel Ticaret Anlaşmaları Veri tabanında Çevresel Hükümler, UN COMTRADE ve DTÖ Entegre Veri tabanı) yararlanmaktadır. İçerik analizi, karşılaştırmalı politika analizi ve nicel metin analizi kullanan bu makale, uluslararası ticarette ortaya çıkan düşük karbon kurallarının hem nicel hem de nitel değerlendirmesini yapmakta ve Kuşak ve Yol Girişiminin (KYG) aynı zamanda bir yeşil kuşağa dönüşmesi üzerindeki etkilerini değerlendirmektedir."
+      ]
+    },
+    {
+      "id": "tr-section-2",
+      "title": "Uluslararası Ticarette Düşük Karbon Kurallarındaki Gelişen Eğilimler",
+      "paragraphs": [
+        "Gelişmiş ülkeler “karbon nötr” hedefine yönelik tutumlarında kararsızlıktan savunuculuğa geçerken, AB ve ABD, karbon tarifelerinin uygulanmasını hızlandırarak ve çok uluslu düşük karbon ticaret koalisyonları oluşturarak düşük karbon ticaret kuralları üzerinde kontrol sağlamaya çalışmaktadır."
+      ]
+    },
+    {
+      "id": "tr-section-3",
+      "title": "Öncü Avantaj İçin Amansız Rekabet",
+      "paragraphs": [
+        "AB ve ABD’nin düşük karbon ticaret kurallarının kontrolü için rekabet etmek amacıyla benimsediği mevcut kilit stratejiler, SKDM gibi kuralların somut uygulamasını hızlandırmanın yanı sıra, öncü avantajlarını ve pazar konumlarını kullanarak bu standartları ihraç etmeyi içermektedir. Örnek olarak AB SKDM’yi ele alalım. Önceki önerilere kıyasla, SKDM ürün kapsamını çelik ve alüminyum gibi altı ana kategoriye daraltmış, hammadde ihracatçılarının itirazlarını azaltmak için organik kimyasallar ve polimerler gibi ürünleri geçici olarak hariç tutmuştur. Karbon muhasebesi hedefleri söz konusu olduğunda, odak noktası şimdilik doğrudan ürün emisyonlarıdır ve dolaylı emisyonlar için yalnızca belirli öncüller ve aşağı akış ürünler dikkate alınacak, böylece muhasebe karmaşıklığı ve ilgili şirketlerin direnci azaltılacaktır. Uygulama kapsamı açısından, AB Emisyon Ticaret Sistemi (EU ETS) kapsamındaki ülkeler hariç tutularak AB içindeki muhalefet yumuşatılmıştır. Karbon maliyeti düşme kurallarına gelince, “örtülü karbon fiyatlandırması” kavramı tanınmıştır. Avrupa Parlamentosu Uluslararası Ticaret Komitesi (INTA), SKDM teklifi üzerine Değişiklik Taslak Görüşünü yayımlamış olup, bu yalnızca geçiş dönemini öne çekmekle kalmamış, aynı zamanda AB’nin ortaklarla sürdürülebilir ticaret için açık, çok taraflı bir küresel sistem kurması gerektiğini de vurgulamıştır. Bu değişiklik, örtülü karbon fiyatlandırmasını tanımak için alan bırakmaktadır (Hu et al., 2015). Ayrıca AB, karbon tarifelerinde kesinti yapılabilen uyum maliyetleri arasına “karbon fiyatlandırma mekanizmalarının ötesinde, eşit derecede etkili karbon azaltma önlemlerini” eklemiş (Wu, 2022), böylece karbon fiyatlandırma mekanizmalarının henüz tam olarak gelişmediği ABD ve Çin gibi ülkelerden gelen direnci azaltmıştır. Benzer şekilde, ABD, birleşik bir karbon fiyatlandırma mekanizması ve olgun karbon emisyon verisi değerlendirme standartlarından yoksun olmasına rağmen Temiz Rekabet Yasasını (CCA) sunmuştur. Şu anda AB ve ABD, karbon tarifelerinin somut uygulanmasına yönelik direnci azaltmak ve böylece düşük karbon ticaret alanında öncü avantajlar elde etmek için kuralları esnetmek ve muafiyet kapsamını genişletmek gibi ortak stratejiler geliştirmektedir."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "tr-section-4",
+      "title": "Düşük Karbonlu Ticaret Engelleri İçin Koalisyonların Oluşumu",
+      "paragraphs": [
+        "AB ve ABD tarafından temsil edilen ülkeler ve bölgeler, iklim yönetişimine katılma motivasyonlarını güçlendirme ve küresel müzakerelerin işlem maliyetlerini azaltma gerekçesiyle bir “iklim kulübü” ve düşük karbonlu ticaret koalisyonları oluşturmaya teşebbüs etmişlerdir.",
+        "İlk olarak, çok uluslu bir “karbon kulübü” inşa ettiler. Ekim 2021’de, ABD ve AB, çelik ve alüminyum tarifeleri üzerine bir anlaşmaya vardı ve üye olmayan ülkelerden yapılan çelik ve alüminyum ithalatı için karbon içeriği ve piyasa ekonomisi statüsünü çift giriş engeli olarak belirleyerek, çelik ve alüminyum ürünlerini hedef alan bir “karbon kulübü”nü ortaklaşa kurdu. 12 Aralık 2022’de, Almanya’nın önerisi üzerine, G7 “iklim kulübü”nün amaçlarını ve yetki belgesini yayınladı ve “uluslararası hedef karbon fiyatı” merkezli bir iklim koalisyonu oluşturmayı ve katılmayan ülkelerden yapılan ithalata birleşik bir karbon tarifesi uygulamayı planladı (Wu, 2022).",
+        "İkinci olarak, serbest ticaret anlaşmalarındaki karbonla ilgili hükümlerin ağırlığını artırıyorlar. Temiz Enerji Devrimi ve Çevresel Adalet Planında, ABD, AB, Japonya ve Kanada dahil olmak üzere ortakların yaptığı iklim taahhütlerine dayanarak gelecekteki ikili ticaret anlaşmalarını müzakere etmeyi önerdi. Ayrıca, belirli yüksek emisyonlu ihracat ürünlerine karbon vergileri veya kota kontrolleri uygulamayı önerdi (United Nations Office for Disaster Risk Reduction, 2020; U.S. State Department, 2021), böylece karbonla ilgili konuları kademeli olarak serbest ticaret anlaşmalarının sürdürülebilir kalkınma hükümlerine entegre etti. Gelişmiş dünyadan oluşan bir düşük karbonlu ticaret koalisyonunun çerçevesi daha hızlı bir şekilde şekilleniyor.",
+        "Hem “iklim kulübü” hem de düşük karbonlu ticaret koalisyonları, üye olmayan ülkelere karşı cezai tedbirler olarak karbon fiyatlandırmasına dayalı tarifeler kullanırken, üyelere finansal destek, teknoloji transferi, uluslararası işbirliği, piyasaya giriş ayrıcalıkları ve güvence gibi münhasır avantajlar sağlamaktadır. Bu koalisyonlar SKDM (Guan & Li, 2023) ile karşılaştırıldığında belirli çok taraflı özellikler sergileseler de, üyeler için münhasır ödüllerin ve üye olmayanlara karşı cezai mekanizmaların etkinliğini sağlamak üzere tasarlanmış yüksek derecede kısıtlı üyelikleri, nihayetinde onları iklim yönetişimi için küresel kamu malları kıtlığını ele almaktan aciz bırakmaktadır. Özünde, bunlar basitçe tarife engellerinin alternatif bir tezahürünü oluşturmaktadır."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "tr-section-5",
+      "title": "Ticaret Kısıtlamalarının Çeşitlenmesi",
+      "paragraphs": [
+        "AB ve ABD ayrıca, karbon etiketleme ve düşük karbonlu ürün sertifikası gibi, ürün yaşam döngüsü karbon ayak izine dayalı ticaret kurallarını, ileriye etkili (önetkin) bir şekilde oluşturmaktadır. 2020’den bu yana AB, Döngüsel Ekonomi Eylem Planı, Ambalaj ve Ambalaj Atıkları Direktifi (PPWD), yeni AB Pil Yönetmeliği ve AB Sürdürülebilir ve Döngüsel Tekstiller Stratejisi dahil olmak üzere bir dizi düzenlemeyi art arda güncelledi veya tanıttı. Bu düzenlemeler, ürün yaşam döngüsü karbon ayak izi hedeflerini ve hesaplama yöntemlerini belirterek, karbon etiketleme ve düşük karbonlu ürün sertifikası gibi düşük karbonlu ticaret önlemlerinin benimsenmesi için zemin hazırlamaktadır. Ayrıca, Avrupa Parlamentosu 21 Haziran’da Kurumsal Sürdürülebilirlik Raporlama Direktifi’ni (CSRD) kabul etti. Bu düzenleme, ESG raporlamasının kapsamını genişletmekte ve tanımlamakta ve açıklamaların denetimi ve “due diligence” (özenli durum tespiti) için gereklilikler eklemektedir. Çin’de SKDM uygulamasının ya CSRD çerçevesini takip etmesi ya da onunla birlikte çalışması beklenmektedir. İlerleyen dönemde, bu önlemler SKDM ile koordineli bir şekilde çeşitli biçimlerde düşük karbonlu ticaret engelleri yaratacaktır."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "tr-section-6",
+      "title": "Şirket Düzeyinde Düşük Karbonlu Mal Tedarikinin Genişlemesi",
+      "paragraphs": [
+        "Tedarik zincirlerindeki bazı baskın firmalar, şirket düzeyinde düşük karbonlu tedarik zinciri kurallarını şekillendirmek amacıyla, net sıfır emisyon mandalarını yukarı ve aşağı yönlü iş ortaklarına genişletmiştir. İlk olarak, “yeşil tedarik kulüpleri” kurdular. 2022’deki COP27’de Apple, Microsoft, Boeing ve Airbus gibi 65 şirket, “İlk Hareket Edenler Koalisyonunu” (FMC) kurarak 2030’a kadar 12 milyar dolarlık yeşil tedarik taahhüdünde bulundu. İkinci olarak, tedarik zinciri liderleri tedarikçilerine düşük karbonlu dönüşüm gereklilikleri dayatmaktadır. Apple ve BMW gibi tedarik zincirindeki öncü firmalar, tedarikçiler için daha katı emisyon gereksinimleri içeren karbon nötr tedarik zinciri taahhütleri getirerek, yeşil ve düşük karbonlu alanlarda hem teknolojik hem de bilgisel hakimiyet sağlamıştır."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "tr-section-7",
+      "title": "Karbonla İlgili Ticaret Kurallarının Parçalanması",
+      "paragraphs": [
+        "AB SKDM’yi, iklim kulüpleri ve şirket temelli düşük karbonlu mal tedarik koalisyonlarının tümü, bir avuç ülke veya şirket tarafından dayatılan ticaret kurallarını temsil etmektedir. Bu girişimler, Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi (UNFCCC), Paris Anlaşması ve DTÖ düzenlemeleri gibi küresel çerçevelerin etkinliğine meydan okumakta ve onları baltalamaktadır. AB ve ABD’nin aldığı bir dizi önlem, küresel iklim yönetişimi liderliği için yeni bir rekabet turunu tetikleyecek ve uluslararası toplumdaki yönetişim otoritesinin parçalanmasını ve yeniden hizalanmasını hızlandıracaktır (Guan & Li, 2023). Çin, ABD, AB’nin yanı sıra Hindistan ve Rusya gibi büyük iklim yönetişimi aktörleri, çok sayıda iklim kulübü ve düşük karbon ticaret koalisyonu kurarak karşılık verebilir ve böylece küresel iklim yönetişim sistemini daha da bölebilir."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "tr-section-8",
+      "title": "Yeşil Kuşak ve Yol Girişimi’nin İlerlemesi ve Başarıları",
+      "paragraphs": [
+        "Çin, Yeşil Kuşak ve Yol Girişimi’ni (YKYG) 2013’te önerirken yeşil kalkınmayı temel felsefesi ve temel ilkesi olarak belirlemiştir. Çevre sorunlarını kalkınma yoluyla çözme fikrine bağlı kalan Çin, “yeşil endüstriler” ile “temiz enerjiyi” geliştirmek, “yeşil teknolojiler” transfer etmek ve çevre koruma standartlarını ortaklaşa geliştirmek de dahil olmak üzere bir dizi önlem alarak KYG ortak ülkelerinde yeşil ve düşük karbonlu kalkınmayı teşvik etmiştir.",
+        "Uluslararası ticaret işbirliğinde Çin, YKYG aracılığıyla ortak ülkelerin küresel tedarik zincirlerine, sanayi zincirlerine ve değer zincirlerine daha derinlemesine entegrasyon sağlamasını mümkün kılarken, sürdürülebilir kalkınma hedeflerini desteklemek için uluslararası ticaret yoluyla istihdam fırsatları da yaratmıştır. 2013 ve 2022 yılları arasında Çin ile YKYG ortak ülkeleri arasındaki mal ticareti 1,04 trilyon dolardan 2,07 trilyon dolara yükselerek %7,9 “bileşik yıllık büyüme oranı” (BYBO) yakalamış ve bu, aynı dönemde Çin’in genel dış ticaretinin %4,7’lik BYBO’dan önemli ölçüde yüksektir. Kümülatif çift yönlü yatırım 380 milyar doları aşmış olup, bunun 240 milyar doları aşkın kısmı Çin’in dışa doğru doğrudan yatırımlarıdır. Çinli şirketler tarafından ortak ülkelerde inşa edilen denizaşırı ekonomik ve ticari işbirliği bölgeleri 421.000 yerel iş imkanı yaratmıştır (United Nations Office for Disaster Risk Reduction, 2020). Dünya Bankasının Kuşak ve Yol Ekonomisi: Ulaşım Koridorlarının F ırsatları ve Riskleri raporundaki projeksiyonlarına göre, 2030 yılına kadar YKYG uygulaması, 7,6 milyon insanı aşırı yoksulluktan ve 32 milyon insanı orta düzey yoksulluktan kurtarabilir, küresel ticareti %6,2 ve KYG içi ticareti %9,7 artırabilir ve böylece küresel geliri %2,9 artırabilir.",
+        "Yeşil Sanayi gelişimini ilerletmede Çin, YKYG ortak ülkelerini sürdürülebilir endüstriler geliştirmeleri için aktif olarak desteklemektedir. İşbirlikçi endüstriyel projeler için Çin, hem yerel hem de uluslararası yeşil yatırım standartlarına sıkı bir şekilde uymakta, YKYG için yeşil yatırım ilkeleri oluşturmakta, standartlaştırılmış çevresel etki değerlendirme mekanizmaları uygulamakta ve sınır ötesi kirlilik transferini önlemek için işletmelerin çevresel sorumluluklarını aktif olarak yerine getirmelerine rehberlik etmektedir. Çin, Çin-SCO Yerel Ekonomik ve Ticari İşbirliği Demonstrasyon Alanı’nın (SCODA) Yeşil Akıllı Parkı ve Çin-Mısır TEDA Süveyş Ekonomik ve Ticari İşbirliği Bölgesi (SETC-Zone) için yeşil erişim kriterleri oluşturmuştur. Bu çabalar, Endonezya Tsingshan Endüstri Parkı, Vientiane Saysettha Düşük Karbonlu Demonstrasyon Bölgesi ve Çin-Afrika tarım teknolojisi demonstrasyon merkezleri de dahil olmak üzere yerel yeşil endüstriyel dönüşümü harekete geçiren çok sayıda amiral gemisi niteliğinde yeşil ve düşük karbonlu demonstrasyon projesi üretmiştir.",
+        "Temiz enerji geliştirmede Çin, KYG ortak ülkelerindeki temiz enerji geçişini yönlendirmek için yeni enerjideki teknolojik ve endüstriyel güçlerinden yararlanmaktadır. Çin, bu ülkelerde düşük karbonlu enerji sistemi dönüşümünü kolaylaştırma taahhüdünün bir parçası olarak, yeni denizaşırı kömür yakıtlı enerji projesi geliştirmeyi tamamen durdurmuştur. Bu temelin üzerine inşa eden Çin, KYG ülkelerinin yerel kaynaklarını kullanarak Kazakistan’daki Zhanatas Rüzgar Enerjisi Projesi, Bosna-Hersek'teki Ivovik Rüzgar Çiftliği Projesi ve Vietnam’daki Trung Son Güneş Enerjisi Santralini inşa etmiştir. Uluslararası Enerji Ajansı projeksiyonlarına göre, KYG bölgesindeki yıllık ortalama yeni kurulu kapasite 2040 yılına kadar 80 GW seviyesini aşacak ve bu da onu dünyanın en hızlı büyüyen elektrik pazarlarından biri konumuna getirecektir.",
+        "Yeşil teknoloji işbirliği alanında Çin, KYG ülkeleri arasında dijital ve bilgi teknolojilerinin yayılımını ve uygulanmasını şiddetle ilerleterek, teknoloji ve bilgi işbirliği için açık kaynaklı ve adil bir modeli benimsemektedir. Bu çabalar, YKYG Çevre Büyük Veri Platformu, Kuşak ve Yol Çevre Teknolojisi Değişim ve Transfer Merkezi ve KYG Yeşil Kalkınma Enstitüsü gibi platform ve kurumların kurulmasına yol açmış, çevresel veri paylaşımı, yeşil endüstriyel ortaklıkların teşviki ve sürdürülebilir finans girişimlerinin kolaylaştırılması için uzmanlaşmış destek sağlamıştır. Ayrıca Çin, yeşil teknoloji için insan kaynaklarını aktif olarak yetiştirmektedir. Yeşil İpek Yolu Elçileri Programı aracılığıyla Çin, 120’den fazla KYG ülkesinden 3.000 çevre uzmanını eğitmiştir. Çevre koruma standartlarını ortaklaşa inşa etmede Çin, kalkınma faaliyetlerini kurumsal mekanizmalar yoluyla düzenlemeye bağlı kalmakta, uluslararası çevre politikalarının uyumlaştırılmasını ve yeşil kalkınma üzerine çok taraflı işbirliğini aktif olarak teşvik etmekte ve KYG ortak ülkeleriyle ortaklaşa çevre yönetişim sistemleri kurmaktadır. Çin, Çin-ASEAN Çevre İşbirliği Eylem Planı ve Yeşil Lancang-Mekong Girişimi de dahil olmak üzere kalkınma planları hazırlayarak KYG ortak ülkelerinin yeşil kalkınma stratejileri ve çevresel ihtiyaçlarıyla uyum sağlarken, küresel çevre standartlarının şekillendirilmesinde aktif rol oynamakta ve en ileri yeşil teknolojileri sürdürülebilir yönetim yaklaşımlarıyla amiral gemisi projelere entegre etmektedir. KYG Uluslararası Yeşil Kalkınma Koalisyonu ve Kuşak ve Yol Ortaklığı Yeşil Kalkınma Girişimi de dahil olmak üzere uluslararası işbirliği platformlarının kurulması, KYG ülkeleri için politikaları koordine etme, yeşil teknoloji alışverişinde bulunma, yeşil kalkınma konusunda fikir birliği oluşturma ve yeşil kalkınma deneyimlerini paylaşma kanalları yaratmıştır."
+      ]
+    },
+    {
+      "id": "tr-section-9",
+      "title": "Kuşak ve Yol Girişiminin Yeşil Kalkınma Üzerindeki Etkisi",
+      "paragraphs": [
+        "Uluslararası düşük karbon ticaret kurallarının giderek yaygınlaşması ve sıkılaşması, Kuşak ve Yol Girişimi Yeşil Kalkınma bağlamında iki ağzı keskin bir bıçak sunmaktadır."
+      ]
+    },
+    {
+      "id": "tr-section-10",
+      "title": "Olası Fırsatlar ve Olumlu Etkiler",
+      "paragraphs": [
+        "Uluslararası düşük karbon ticaret politikaları, KYG ülkeleri için iklim yönetişimi kısıtlamalarını güçlendirir. Paris İklim Anlaşması çerçevesinde iklim yönetişimi büyük ölçüde gönüllü ulusal taahhütlere dayanmakta ve zorunlu yaptırımlardan yoksundur (Gürcan, 2021). AB Yeşil Mutabakatı ve iklim kulüplerinin kurulması tek taraflı özelliklere sahip olsa da, gelişmiş ülkelerin iklim politikalarının yönünü netleştirmiş ve ticaret yoluyla KYG ülkelerine düşük karbonlu dönüşüm için baskı iletmiş, böylece iklim yönetişiminin bağlayıcılığını artırmıştır.",
+        "Çok uluslu şirketlerin yeşil ve düşük karbonlu tedarik stratejileri, KYG ülkelerinde yeşil tesis ve ekipman talebini artırır. Küresel işbölümünde, çoğu KYG ülkesi hammadde tedariği, birincil ürün işleme ve montaj gibi yüksek karbonlu segmentleri üstlenmektedir. Çok uluslu şirketlerin yeşil tedarik ve tedarik zinciri dönüşüm gerekliliklerine uyum sağlamak için bu ülkelerde yeni enerji ekipmanları, enerji tasarruflu ve çevre koruma cihazları ile yeşil güç tesislerine olan talep önemli ölçüde artacaktır (Türe, 2022; Dai, 2025). Bu durum, Çin ve KYG ülkeleri arasındaki yeşil enerji işbirliğini hızlandıracaktır.",
+        "Sınırda Karbon Düzenleme Mekanizması (SKDM), KYG ülkelerinde karbon fiyatlandırma mekanizmalarının inşasını hızlandırır. AB SKDM ürün karbon emisyonlarının muhasebesini gerektirir, bu da diğer ülkeleri AB Emisyon Ticaret Sistemi (EU ETS) karbon fiyatlarını kabul etmeye veya tanımaya zorlayacaktır. AB SKDM’nin uyum gerekliliklerini karşılamak ve ihracat rekabet güçlerini artırmak için KYG ülkeleri, yerel karbon piyasalarının inşasını hızlandıracak ve karbon emisyon maliyeti muhasebe sistemlerini iyileştirecektir.",
+        "Avrupa ve Amerika Birleşik Devletlerinin yeşil ve düşük karbonlu politikaları, KYG ülkelerini düşük karbon kuralları üzerinde işbirliğini güçlendirmeye zorlar. AB Yeşil Mutabakatı ve ABD Temiz Rekabet Yasası (CCA - TRY) gibi politikalar, bu bölgelerin yeşil ve düşük karbon kurallarında söz sahibi olmak için kullandığı önemli araçlardır. Bu durum, KYG ülkelerini gelecekteki uluslararası ticarette dezavantajlı duruma düşmemek için karbon muhasebesi ve fiyatlandırması gibi alanlarda kurumsal işbirliğini güçlendirmeye zorlayacaktır (Kılkıs, 2022)."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "tr-section-11",
+      "title": "Olası Zorluklar ve Olumsuz Etkiler",
+      "paragraphs": []
+    },
+    {
+      "id": "tr-section-12",
+      "title": "Uyum Baskısı Ticaret İşbirliğini Kısıtlıyor",
+      "paragraphs": [
+        "AB ve ABD, “karbon bariyerleri” oluşturarak ve münhasır bir “karbon tarifesi koalisyonu” oluşturarak karbonla ilgili kısıtlamalar oluşturma inisiyatifini ele geçirmiştir. Bu durum KYG ülkelerinin ticaretini önemli ölçüde etkilemiş olup, sonuçlar özellikle aşağıdaki boyutlarda belirgindir: Yüksek uyum maliyetleri ve zayıflayan işletme rekabet gücü: Uluslararası ticaret için düşük karbon kuralları, KYG ülkelerine ek karbon uyum maliyetleri getirecek ve böylece bu ülkelerdeki işletmelerin ihracat ürünlerinin rekabet gücünü baltalayacaktır. Bu kurallar kısa vadede KYG ekonomilerinden gelen ürünlerin ihracat maliyetlerini doğrudan artıracaktır. Zhang ve diğerlerine (2025) göre, AB SKDM, çelik ve alüminyum gibi Çin’in karbon yoğun sektörleri için ihracat maliyetlerini önemli ölçüde artıracak ve 2026 yılına kadar çelik için %18-25 ve alüminyum için %15-20 ihracat azalması öngörülmektedir. Uzun vadeli analizler, AB ve ABD gibi gelişmiş ekonomilerin, gelişmekte olan ülkelere kıyasla önemli ölçüde daha düşük olan karbon yoğunlukları sayesinde, karbonla ilgili ticaret engelleri aracılığıyla ek ticari avantajlar elde edebilmeleri nedeniyle, bu düşük karbon kurallarını endüstriyel rekabet avantajlarını korumak için kullanacağını ortaya koymaktadır. Ayrıca, karbon verileri için İzleme, Raporlama ve Doğrulama (İRD - MRV) sistemleri, yeşil elektrik ve yeşil sertifika ticareti de dahil olmak üzere düşük karbon kurallarının kilit bileşenleri, AB, ABD ve Japonya menşeli üçüncü taraf kurumlar tarafından kontrol edilmektedir. KYG ülkelerinde düşük karbon hizmet sektörünün geç gelişmesi nedeniyle, nispeten olgunlaşmamış sistemleri Batılı muadillerine kıyasla uluslararası tanınır olmaktan yoksundur. Sonuç olarak, işletmeler ihracatta bu uluslararası kurumları seçmek zorunda kalmakta ve bu da uyum maliyeti yüklerini daha da artırmaktadır.",
+        "Uzatılan uyum döngüleri ve azalan ticaret verimliliği: Düşük karbon ticaret sistemi, işletmelerin karbon emisyon raporları ve destekleyici bilgileri sağlamasını gerektirir. İhracat yapan şirketler açısından, büyük miktarda bilgi ve veri sunmaları ve bunları incelemeye tabi tutmaları gerekmekte, bu da dış ticaretin uyum döngüsünü uzatmaktadır. Örneğin, AB SKDM geçiş aşamasında, tüccarların aşağıdaki bilgileri kapsayan raporlar sunması gerekmektedir: çeyreklik kategorize toplam ithalat hacmi (üretici kimliği ile birlikte), ürün kategorisi başına doğrudan ve dolaylı emisyonlar ve menşe ülkede halihazırda ödenmiş karbon emisyon maliyetleri. Raporları doğrulamak için şirketler, altı ondalık basamağa kadar kesin coğrafi koordinatlar da dahil olmak üzere üretici detaylarını, ekipman durumunu, üretim kapasitesini, yerel kullanım bilgilerini sunmak zorundadır (Hu et al., 2015; Yang et al., 2022), bu da uyum döngülerini ve onlar üzerindeki yükleri önemli ölçüde artırmaktadır. Liu ve diğerleri (2022) tarafından hesaplandığı üzere, yeni AB pil düzenlemesi kapsamında kobalt ve lityum karbon ayak izinin ifşası gerekliliği, Çin’den Avrupa’ya elektrikli araç bileşenleri ihracatı için uyum döngüsünü 14 aya uzatmakta ve ticaret verimliliğini %19 azaltmaktadır."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "tr-section-13",
+      "title": "Tüm Sanayi Zincirlerinde Karbon Doğrulaması Sanayi İşbirliğini Etkiliyor",
+      "paragraphs": [
+        "Yeşil KYG, Çin ve katılımcı ülkeler arasındaki sanayi işbirliğini önemli ölçüde geliştirmiş olup, bu durum, Macaristan ve Vietnam’ın yeni enerji araçları ve elektronik bilgi teknolojileri de dahil olmak üzere transfer edilen sanayileri başarıyla bünyelerine katmalarında belirgindir. Bununla birlikte, uluslararası ticaret için düşük karbon kurallarının evrilen manzarası, bu yerleşik KYG sanayi ortaklıklarına belirsizlikler getirmiştir.",
+        "KYG ülkelerinden gelen endüstriyel yatırımlar, AB ve ABD gibi daha düşük karbon fiyatlandırmasına sahip bölgelere yönlendirilebilir. AB SKDM gibi mevcut uluslararası ticaret düşük karbon kuralları, yalnızca karbon vergilendirmesine tabi ürünleri belirtmekte ancak karbon muhasebesi sınırlarını tanımlamamaktadır. Yalnızca üreticilerin doğrudan kontrol ettiği üretim süreçlerini kapsayan “doğrudan emisyonlar” temel alınırsa, şirketler yarı mamul satın alarak veya yukarı ve aşağı akış operasyonlarını ayırarak doğrudan emisyonları azaltabilir. Ancak, ara üretimden kaynaklanan emisyonları içeren “gömülü emisyonlar” benimsendiğinde, üreticiler satın alınan yarı mamul bileşenleri monte etmek için veya bağımsız olarak üretim yapmak için aynı karbon maliyetleriyle karşı karşıya kalacaktır (Yang et al., 2022). Bu durumda, şirketler tüm sanayi zincirlerini karbon fiyatlandırma avantajlarına sahip ülkelere taşımaya teşvik edilecektir. Çin’in karbon yoğunluğu, ABD’den üç katından fazla olup, çelik endüstrisinin emisyon faktörü yaklaşık 1,5 kat daha yüksektir (Liu et al., 2022). Başlıca hammadde ve karbon yoğun mallar ihraç eden Rusya ve Suudi Arabistan gibi ülkeler ise daha da yüksek karbon yoğunlukları sergilemektedir. Uluslararası ticaret için düşük karbon kurallarının getirilmesi, bu tür ülkelerin yukarı akış müşterilerini kaybetmesine veya bazı sanayi zincirlerini AB ve ABD gibi daha düşük karbon fiyatlarına sahip ülkelere transfer etmeye zorlanmasına neden olacaktır.",
+        "Karbon doğrulaması, KYG ülkelerinde endüstriyel “karbon kilidine” neden olabilir. Yeni AB Pil Yönetmeliği ve Fransa’nın karbon etiketleme şeması da dahil olmak üzere çeşitli uluslararası ticaret karbon bariyerleri, karbon ayak izi doğrulama ve etiketleme gereklilikleri yoluyla uygulanarak, ürün ithalatında ve proje ihalelerinde etkin bir şekilde ticaret engeli işlevi görürken, aynı zamanda yerli düşük karbonlu ve sıfır karbonlu teknolojileri ve ürünleri korumaktadır (European Commission, 2020). Halihazırda, KYG ülkeleri karbon ayak izi doğrulama ve etiketleme standartları ve politikalarında Batılı muadillerinin gerisinde kalmakta, bu da karbon ayak izi hesaplamalarının uluslararası tanınırlığını sınırlamakta ve ticaret müzakerelerindeki konumlarını zayıflatmaktadır. Batı ekonomileri, karbon ticaret bariyerlerinden oluşan bir ticaret kısıtlama kuralları sistemi kurarsa, “net-sıfır” hedefleri kisvesi altında tek taraflı ticaret engellerini yaymaları muhtemeldir. Sonuç olarak, KYG ülkelerinin iş gücü maliyetleri, hammaddeler ve enerji kaynaklarındaki rekabet avantajları, yüksek karbon uyum maliyetleri tarafından etkisiz hale getirilebilir. Bu, çok uluslu şirketleri KYG ülkelerinde endüstriyel yer değiştirme ve yatırım yapmaktan alıkoyacaktır. Karbon verimli teknolojilere ve finansmana erişim olmadan, KYG ülkeleri enerji yoğun, yüksek emisyonlu endüstriyel yapılarda kilitlenme beklentisiyle karşı karşıyadır. Bu zorlukları daha da artıran, Çin ve AB arasında karbon ayak izi doğrulama standartlarında uyum ve karşılıklı tanıma eksikliği, güneş fotovoltaik ve rüzgar gücü gibi endüstrileri KYG ülkelerine transfer eden Çinli şirketlerin de yüksek uyum maliyetleriyle karşı karşıya olduğu anlamına gelmektedir. Bu durum, bu ülkelerin yeşil ve düşük karbonlu teknolojilere ve finansmana erişimini daha da kısıtlamakta ve nihayetinde yeşil ve düşük karbonlu endüstriyel dönüşümlerini engellemektedir."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "tr-section-14",
+      "title": "Karbon Fiyatlandırma Kuralları Bölgesel Karbon Piyasası İşbirliğini Etkiliyor",
+      "paragraphs": [
+        "AB SKDM, DTÖ düzenlemelerine ve mevcut serbest ticaret anlaşmalarına uyum sağlarken, şirketlerin doğrulanmış ürün karbon yoğunluğuna göre geri ödeme talep etmeleri veya ek ödeme yapmaları için hükümler içermektedir. Mekanizma “fiyat bazlı kesinti” ve “hacim bazlı kesinti” yöntemlerini içermekte olup, hangisinin uygulanacağı henüz belirlenmemiştir. KYG ülkeleri ile AB arasında karbon piyasası gelişimindeki boşluk göz önüne alındığında, SKDM’nin kabulü, hangi yöntem seçilirse seçilsin, AB’nin karbon piyasasındaki konumunu pekiştirecek ve KYG katılımcıları arasındaki bölgesel karbon piyasası işbirliğini etkileyecektir.",
+        "“Fiyat bazlı kesinti” mekanizması, AB’nin karbon piyasası fiyat kriterleri oluşturmadaki baskın rolünü pekiştirecektir, çünkü şirketlerin AB karbon piyasası ile olan fark fiyatlarına göre tazminat ödemelerini gerektirir. Halihazırda, KYG ülkelerinde karbon piyasası gelişimi emekleme aşamasında kalmaya devam etmektedir. Uluslararası Karbon Eylem Ortaklığının (ICAP) 2025 Dünya Çapında Emisyon Ticareti Durum Raporu, gelişmekte olan KYG ülkeleri arasında yalnızca Endonezya, Kazakistan, Türkiye, Yeni Zelanda ve Meksika’nın operasyonel karbon ticaret piyasalarına sahip olduğunu; Brezilya, Vietnam ve dört diğer ülkenin kendi piyasalarını kurma sürecinde olduğunu; ve Arjantin, Tayland, Malezya ve iki ek ülkenin ise uygulamayı düşündüğünü göstermektedir (ICAP, 2025). İşlevsel karbon piyasaları veya etkili karbon fiyatlandırma mekanizmaları olmadan, KYG ülkelerinin referans olarak AB karbon fiyatlarını benimsemekten başka seçeneği yoktur. Operasyonel karbon piyasalarına sahip olan KYG ülkelerinde bile, hem işlem hacimleri hem de fiyat seviyeleri önemli ölçüde AB standartlarının altında kalmaktadır (Kılkış, 2024). Örneğin, Çin’in ulusal karbon piyasası 2021’de başladığında, işlem fiyatı yaklaşık 50 RMB/ton civarında seyretmiş, bu da aynı dönemde 50 Euro/ton’u (yaklaşık 7,7 kat daha yüksek) aşan AB fiyatıyla keskin bir tezat oluşturmuştur (Long et al., 2022). Bu önemli fiyat farklılıkları göz önüne alındığında, AB’nin fiyatlandırma mekanizması kullanılarak hesaplanan karbon tarifeleri, şirketlerin birincil emisyon maliyetlerinin önemli bir bileşenini oluşturacak ve böylece AB karbon piyasasının küresel karbon fiyatlandırmasındaki fiili kriter (de facto) statüsünü pekiştirecektir.",
+        "“Hacim bazlı kesinti” yöntemi, diğer ülkeleri AB karbon piyasasına bağlayacaktır. Bu sistem altında, şirketler, yerel piyasalarda halihazırda fiyatlandırılmış emisyon hacimleri için karbon tarifelerinden muaf tutulur, ancak bu muafiyet AB hükumetlerinden veya üçüncü taraf kurumlardan gelen karbon muhasebe verilerini tanımasına tabidir. Avrupa Komisyonunun, bir Sınırda Karbon Düzenlemesi Mekanizması Kuran Avrupa Parlamentosu ve Konsey Tüzüğü Teklifinin 2. Maddesinde belirtildiği üzere, bu tür bir tanımanın koşulu, “menşe ülkenin emisyon ticaret sistemi ile AB ETS’si arasında tam bağlantı” gerektirir (European Commission, 2020). Bu hüküm, fiilen AB karbon fiyatlandırma kriterleriyle uyumu zorunlu kılarak, katılan ülkeleri karbon fiyatlandırma özerkliklerinden feragat etmeye ve AB’nin karbon piyasası rejimiyle bütünleşmeye zorlamaktadır. AB, “fiyat bazlı” veya “hacim bazlı” kesinti yöntemlerinden herhangi biri aracılığıyla, piyasa etkisini ve öncü avantajını, standartlarını küresel karbon ticaret normlarına yükseltmek için kullanabilir. Bu süreç, AB dışındaki uluslararası kurumlarla veya ülkelerle işbirliği aramak zorunda kalmadan gerçekleşebilir ve AB’nin küresel karbon piyasasındaki hakimiyetini pekiştiren “Brüksel Etkisi”ne örnek teşkil eder. Halihazırda, KYG ülkeleri arasında Çin, Kazakistan ve Meksika’nın karbon piyasaları, sektör kapsamı, işlem likiditesi ve piyasa olgunluğu açısından AB ETS ile karşılaştırıldığında önemli boşluklar sergilemektedir. AB SKDM karbon fiyatı bağlantı modelini benimsemeye zorlanırlarsa, bu ülkelerin karbon fiyatlandırma mekanizmaları amaçlanan işlevlerini yerine getirmekte zorlanacak ve marjinalleşme riskiyle karşı karşıya kalacaktır."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "tr-section-15",
+      "title": "Sertifikasyon ve Tüketim Engelleri Yeni Enerji İşbirliğini Kısıtlıyor",
+      "paragraphs": [
+        "Apple, BMW ve Airbus gibi çok uluslu şirketlerin tedarik zincirinde yeşil ve düşük karbonlu tedariki teşvik etmek için yeşil tedarik koalisyonu oluşturması, KYG işletmeleri arasında yeşil elektrik satın alma ve sertifikalandırma talebini artırmıştır. KYG ülkeleri bol miktarda yeni enerji kaynağına sahiptir. Örneğin, Güney Asya yılda yaklaşık 2.500 saat güneş ışığı almaktadır (Halder et al., 2015) ve Afrika dahil olmak üzere gelişmemiş KYG ülkeleri ve bölgeleri, dünyanın güneş enerjisi kaynaklarının %60’ına ve rüzgar enerjisi, jeotermal enerji ve hidroelektrik (International Energy Agency, 2022) dahil olmak üzere geniş yenilenebilir kaynaklara sahiptir. Çin, KYG ortaklarıyla yeni enerji projeleri üzerinde kapsamlı işbirliği yapmıştır. Örnekler arasında Zonergy tarafından Pakistan’da geliştirilen 900 MW’lık fotovoltaik güç santrali ve Nepal’de güneş enerjili toplum banyosu ve çatı üstü fotovoltaik güç üretim tesisi dahil olmak üzere Çin destekli girişimler yer almaktadır. Bununla birlikte, AB ve ABD, bir dizi uluslararası ticaret düşük karbon kuralı aracılığıyla, yabancı yeşil elektriğin, yeşil sertifikaların ve karbon yutaklarının karbon tarifelerini dengelemek için kullanılıp kullanılamayacağını belirleme yetkisini üstlenmiştir. Bu durum, KYG ülkelerinin yeni enerji geliştirme yoluyla karbon nötr hedefine ulaşma çabalarını baltalamaktadır. Spesifik olarak: AB ve ABD, yeşil elektrik ve sertifikaların doğrulaması üzerinde bir tekel bulundurmakta ve temiz enerji projelerinin karbon varlık değerlemesini baltalamaktadır. Küresel yeşil sertifikasyon üzerindeki bu Batı hakimiyeti, RE100’ün Çin menşeli yeşil elektrik veya sertifikalara yönelik “şartlı kabul” politikasında da kanıtlandığı üzere engeller yaratmaktadır (Wang et al., 2023). Çin ve KYG ortak ülkeleri arasındaki işbirlikçi yeni enerji projeleri de sertifikalandırmada benzer zorluklarla karşı karşıyadır. Dış ticaret şirketleri, müşterilerinin yeşil sertifikasyon gerekliliklerini karşılamak ve sertifikasyon ile emisyon kesintisi karmaşıklığını azaltmak amacıyla sıklıkla Batı sertifikasyon standartlarını kabul etmek zorunda kalmaktadır. Finansal yük önemlidir; birçok şirket, BMW gibi küresel müşterilerin talep ettiği uluslararası alanda tanınan yeşil sertifikaları satın almak için ağır bütçeler ayırmak zorunda kalmaktadır. Dahası, yeni enerji projelerinden üretilen emisyon azaltımlarını, ticarete konu karbon varlıklarına ve karbon emisyonu kesintilerine dönüştürmek zordur. Bu da KYG ülkelerinin işbirlikçi yeni enerji geliştirmelerini peşinden gitme konusunda caydırıcı bir etki yaratmaktadır.",
+        "Açıklama gereksinimleri, hassas verilerin ifşası riskini ve yeni enerji girişimleri için uygulama engellerini artırmaktadır. AB SKDM gibi mekanizmalarda, şirketlerin öz geliştirilmiş ve dağıtılmış yeni enerji projelerini emisyon maliyeti indirimleri için nitelendirebilmek amacıyla, coğrafi koordinatlar, fotoğraflar, proje ölçeği ve uygulama durumu dahil olmak üzere proje detaylarını uluslararası üçüncü taraf kuruluşlara sunmaları gerekmektedir. Bu veri paylaşımı, ulusal güvenlik etkileri olan bilimsel, teknolojik ve coğrafi bilgilerin sızma riskini artırmaktadır. Hassas bilgilerin sızmasını önlemek için, KYG ülkeleri düzenleyici inceleme sürelerini uzatmakta ve yeni enerji geliştirmeleri için güvenlik incelemelerini güçlendirmektedir. Bu önlemler, işbirlikçi yeni enerji projelerinin uygulanmasına engeller oluşturmaktadır.",
+        "Sertifikasyon ve tüketim kısıtlamaları, finansal kaynakları yeni enerji geliştirmeden diğer alanlara yönlendirecektir. Düşük karbon kurallarının dayattığı sertifikasyon ve tüketim kısıtlamaları, sermayesi kıt olan KYG ülkeleri üzerinde ek finansal baskılar yaratacak ve onları yeni enerji altyapısına ayrılacak önemli fonları, yabancı yeşil elektrik ve karbon yutak projeleri satın almaya kanalize etmeye zorlayacaktır."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "tr-section-16",
+      "title": "Sonuç",
+      "paragraphs": []
+    },
+    {
+      "id": "tr-section-17",
+      "title": "Politika Önerileri",
+      "paragraphs": [
+        "Uluslararası düşük karbon ticaret kuralları, Yeşil KYG gelişimini ticaret uyum baskıları, endüstriyel karbon kilidi, karbon fiyatlandırma kısıtlamaları ve yeni enerji emilim kontrolleri de dahil olmak üzere çoklu kanallar aracılığıyla etkilemektedir. Uluslararası ticaret için gelişen düşük karbon kurallarının oluşturduğu riskleri hafifletmek için düzenleyici çerçevelerde, piyasa mekanizmalarında ve altyapı geliştirmede koordineli yanıtlar gereklidir ve nihayetinde bir Yeşil KYG için “liderlik odaklı yönetişim”e sahip bir uluslararası yönetişim sisteminin ilerletilmesi gerekmektedir. Spesifik olarak:",
+        "**Bir KYG karbon muhasebesi sistemi oluşturulmalıdır.** KYG ülkelerinin, kendi kalkınma seviyeleri ve karbon nötrlük süreçleriyle uyumlu bir karbon muhasebesi kamu malı yaratmak için ortaklaşa bir karbon emisyonu muhasebe sistemi kurmaları önerilir.",
+        "Spesifik olarak, ilk olarak, önerilen emisyon faktörü standartlarını geliştirmek için araştırmalar yapılmalıdır. Bu, önerilen karbon emisyon faktörü standartlarını formüle etmek için KYG ülkelerinden başlıca ihracat ürün kategorilerinin yoğunluk değerlerini, türlerini, sanayi zinciri ilişkilerini ve ilgili hammadde verilerini analiz etmeyi, aynı zamanda karbon emisyonu izleme teknolojileri ve muhasebe kuralları için uluslararası standartların geliştirilmesine aktif olarak katılmayı ve karbon muhasebesi ve doğrulama standartlarının uluslararası normlarla uyumunu ve karşılıklı tanınmasını teşvik etmeyi içerir. İkinci olarak, yeşil tedarik zinciri yönetimini teşvik ederek ve KYG Uluslararası Yeşil Kalkınma Koalisyonundan yararlanarak rüzgar gücü ve fotovoltaikler gibi baskın endüstriler için karbon muhasebesi standartları oluşturmak suretiyle tedarik zinciri işletmelerinin karbon muhasebesi kapasitelerini geliştirmek için çaba gösterilmelidir. KYG ülkeleri, çelik, metalürji ve petrokimyasallar dahil olmak üzere karbon yoğun endüstriler için karbon muhasebesi kılavuzları geliştirmek üzere işbirliği yapmalı; gömülü karbon yoğunluğu muhasebesini dahil etmeli; ve ISO standartları ile karşılıklı tanınma sağlayan bir karbon ayak izi etiketleme sistemi kurmalıdır.",
+        "**KYG ülkeleri arasındaki ticaret için düşük karbon kuralları inşa edilmeli ve iyileştirilmelidir.** KYG ülkeleri arasında düşük karbon ticaret kurallarının inşa edilmesi önerilir. Bu, bir karbon tarifesi telafi mekanizması kurulmasını içerir. Spesifik olarak, KYG ülkeleri, Çin-ASEAN Serbest Ticaret Bölgesi (STB) yükseltilmiş anlaşmasına “ortak fakat farklılaştırılmış karbon hesap verebilirliği” eklemek için inisiyatif almalı, Orta Asya ülkeleri için bir karbon tarifesi telafi mekanizması geliştirmeli ve Singapur ve BAE gibi ülkelerle yeşil sübvansiyon kuralları için karşılıklı tanınma olasılığını araştırmalıdır. KYG ülkelerinin, PV modüllerini, yeni enerji araçlarını ve atık su arıtma ürünlerini içeren bir düşük karbonlu ürün listesi yayınlaması; düşük karbonlu ürünlerin karbon emisyonları muhasebesi ve uyum incelemesi gibi ilgili süreçleri basitleştirmesi; ve karbon tarifelerinden muafiyet veya tazminat uygulaması önerilir.",
+        "**Bir KYG karbon fiyatlandırma sistemi oluşturulmalıdır.** KYG ülkeleri, hükumetler arası bir emisyon azaltımı işbirliği çerçeve anlaşmasının formülasyonunu hızlandırmalı, işbirlikçi bir emisyon azaltımı yönetim kurumu kurmalı ve emisyon azaltımı proje metodolojilerinin ve emisyon azaltımlarının doğrulama, kayıt ve transferinin geliştirilmesini ortaklaşa ilerletmelidir. Bölgesel karbon piyasaları, Çin ve ASEAN ülkeleri arasında ve Çin ile Orta Asya ülkeleri arasında olduğu gibi koşulların olgun olduğu bölgelerde geliştirilmelidir. Blok-zincir teknolojisinden yararlanarak, KYG ülkeleri, Asya Altyapı Yatırım Bankası çerçevesi altında karbon muhasebesi yöntemlerinin ve verilerinin birlikte çalışabilirliğini ve paylaşımını etkinleştirmek için sınır ötesi karbon muhasebesi defterleri oluşturmalı, aynı zamanda KYG ülkelerinden karbon yutak ve yeni enerji projelerinin karbon piyasası ticaretini kolaylaştırmak için Hong Kong, Singapur ve diğer kilit şehirlerde KYG karbon takas merkezleri kurmalıdır. Ayrıca, KYG ülkeleri, sektör birliklerini ve profesyonel kurumları, yüksek enerjili, yüksek emisyonlu ekipmanların zorunlu yükseltme ve emekliliğinden, üretim faaliyeti kısıtlamalarından ve diğer fiyatlandırma dışı politika araçlarından kaynaklanan uyum maliyetlerini hesaplamak ve operasyonel etkileri değerlendirmek için yönlendirerek örtülü karbon fiyatlandırmasının değerlendirilmesini ve karşılıklı tanınmasını teşvik etmeli ve nihayetinde büyük ekonomiler ve küresel kuruluşlar arasında örtülü karbon fiyatlandırması üzerinde fikir birliğini teşvik etmelidir.",
+        "**KYG karbon denkleştirme mekanizmalarının karşılıklı tanınması teşvik edilmelidir.** KYG ülkelerinin, işbirlikçi yeni enerji projelerinin yeşil elektrik karşılıklı tanıma sistemine dahil edilmesini kolaylaştırmaları, aynı zamanda şirketleri ve uluslararası örgütleri yeşil elektrik sertifikasyon hizmet platformları kurmada desteklemeleri önerilir. Yeşil elektrik tüketimini teşvik eden küresel girişim RE100’e daha geniş işletme katılımını teşvik etmeli ve yeşil sertifikasyon hizmet sağlayıcılarına yurt içi ve yurt dışı kurumlarla işbirliği yaparak uluslararası I-REC yeşil sertifikasyon hizmet platformunu ortaklaşa geliştirmede yardımcı olmalıdırlar. Ek olarak, KYG uluslararası yeşil sertifika kaydı, veri depolama ve kimlik doğrulama süreçlerini ele almak için özel bilgi ve veri hizmet platformları oluşturmalıdırlar.",
+        "**KYG karbon bilgi açıklama çerçevesi oluşturulmalıdır.** KYG ülkelerinin, açıklama içeriğini, yöntemlerini ve platformlarını standart hale getirmek ve zorunlu açıklama gerekliliklerinin ihlaline karşı yönetim mekanizmaları kurmak için karbon bilgi açıklaması için uygulama ve ulusal kılavuzları ortaklaşa geliştirmeleri, böylece birleşik ve standartlaştırılmış teknik açıklama standartları oluşturmaları önerilir. KYG ülkeleri, karbon piyasası muhasebe sistemleriyle uyumlu ve uluslararası standartlarla uyumlu bir İklimle İlgili “Finansal Açıklamalar Görev Gücü” çerçevesi oluşturmalı, aynı zamanda değerlendirme çerçevelerinin, standartların ve uygulama araçlarının uluslararası uyumlaştırılmasını ve karşılıklı tanınmasını teşvik etmelidir. Ayrıca, bölgesel karbon emisyonu ticaret piyasaları aracılığıyla birleşik bir karbon bilgi açıklama platformu geliştirmelidirler.",
+        "**Karbon uyum muhasebesi hizmet sağlayıcıları teşvik edilmelidir.** KYG ülkeleri, küresel olarak rekabetçi karbon muhasebesi ve danışmanlık hizmeti endüstrilerini desteklemeli ve geliştirmelidir. Bu, karbon muhasebesi hizmetleri, üçüncü taraf karbon varlık yönetimi, düşük karbon sertifikasyonu ve yasal uyum hizmetleri için erişim düzenlemeleri ve standardizasyon sistemleri kurmayı, aynı zamanda karbon veri toplama, doğrulama, üçüncü taraf test kuruluşları ve izleme hizmetlerini kapsayan kapsamlı bir düşük karbon hizmeti endüstriyel zinciri yetiştirmeyi içerir. Ek olarak, nitelikli kurum ve işletmelerin uluslararası düşük karbon sertifikasyon sistemlerine katılımı teşvik edilmeli ve yönlendirilmeli ve karbon muhasebesi ve ticareti için küresel standartların ve düzenlemelerin geliştirilmesine katkıda bulunmalıdır."
+      ],
+      "level": "subsection",
+      "toc": false
+    }
+  ],
+  "keywords": [
+    "karbon etiketleme",
+    "KYG",
+    "SKDM",
+    "uluslararası ticaret için karbon kuralları"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Dai, W. (2025). Belt and road initiative: driving innovation in tech enterprises through global value chains. Finance Research Letters, 74 (000)."
+    },
+    {
+      "id": "ref-2",
+      "text": "European Commission (2020). Powering a Climate-neutral Economy: An EU Strategy for Energy System Integration. Brussels: European Commission."
+    },
+    {
+      "id": "ref-3",
+      "text": "Guan, K. W., & Li, Q. H. (2023). The Reshaping of Global Climate Governance by EU and U.S.: From “Climate Clubs” to “Carbon Border Adjustments”. Global Review, 15 (5),"
+    },
+    {
+      "id": "ref-4",
+      "text": "Gürcan, E. C. (2021). On the development of China’s environmental policies towards an ecological civilization. Belt & Road Initiative Quarterly (BRIQ), (3).7-25."
+    },
+    {
+      "id": "ref-5",
+      "text": "Halder, P. K. et al. (2015). Energy Scarcity and Potential of Renewable Energy in Bangladesh, Renewable and Sustainable Energy Reviews, 51, 1636-1649."
+    },
+    {
+      "id": "ref-6",
+      "text": "Hu, J. B., Ren, Y. Y., & Ding, Z. G. (2015). Carbon Barriers in International Trade under Climate Change and Response Strategies. Inquiry into Economic Issues, (10), 137-141."
+    },
+    {
+      "id": "ref-7",
+      "text": "ICAP. (2025) Emissions Trading Worldwide: ICAP Status Report 2025. 1 Temmuz 2025 tarihinde https://icapcarbonaction.com/en/publications/ emissions-trading-worldwide-icap-status-report-2025 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-8",
+      "text": "International Energy Agency. (2022). Africa Energy Outlook 2022. 1 Temmuz 2025 tarihinde https:// iea.blob.core.windows.net/assets/220b2862- 33a6-47bd-81e9-00e586f4d384/AfricaEnergyOutlook2022.pdf adresinden alınmıştır."
+    },
+    {
+      "id": "ref-9",
+      "text": "Kılkıs, B. (2022). Green hydrogen: The common thread of the Belt and Road Initiative. Belt & Road Initiative Quarterly (BRIQ), 3 (3), 6-20."
+    },
+    {
+      "id": "ref-10",
+      "text": "Kılkış, B. (2024). Perspective Piece: The Urgency of A New Carbon Market for Turkic States and the Belt & Road. terly, 5 (4), 448-454."
+    },
+    {
+      "id": "ref-11",
+      "text": "Liu, F., Khan, Y., & Marie, M. (2022). Carbon Neutrality Challenges in Belt and Road Countries: What Factors Can Contribute to CO2 Emissions Mitigation?. Environmental Science and Pollution Research, 30 (6), 14884–14901."
+    },
+    {
+      "id": "ref-12",
+      "text": "Long, F., Dong, Z. F., Bi, F. F., Zhou, J., & Lian, C. (2022). Analysis of Impacts of and Responses to the EU Carbon Border Adjustment Mechanism. Chinese Journal of Environmental Management, (2), 43–48."
+    },
+    {
+      "id": "ref-13",
+      "text": "Tu, X. Q., Jin, X. X., & Qin, R. B. (2023). Analysis of the EU Carbon Border Adjustment Mechanism and Its Trade Impacts. Southeast Academic Research, (05), 67-76."
+    },
+    {
+      "id": "ref-14",
+      "text": "Türe, İ. E. (2022). The ultimate solution for Turkey’s energy, water shortage, and climate change problems: Hydrogen fuel. Belt & Road Initiative Quarterly (BRIQ), 3 (3), 22-49."
+    },
+    {
+      "id": "ref-15",
+      "text": "United Nations Office for Disaster Risk Reduction (2020). The Human Cost of Disasters: An Overview of the Last 20 Years (2000-2019) [R]. Geneva: United Nations Office for Disaster Risk."
+    },
+    {
+      "id": "ref-16",
+      "text": "United States Department of State (2021). The Longterm Strategy of the United States-Pathways to Net-zero Greenhouse Gas Emissions by 2050. Washington, DC."
+    },
+    {
+      "id": "ref-17",
+      "text": "Wang, C., Liu, X., Li, H., & Yang, C. (2023). Analyzing the Impact of Low-Carbon City Pilot Policy on Enterprises’ Labor Demand: Evidence from China. Energy Economics, 124,106676."
+    },
+    {
+      "id": "ref-18",
+      "text": "Wang, Y. P. (2023). The Relativity of Legality Determination for Carbon Trade Barriers under WTO Law. Business and Economic Law Review, (05), 34-55."
+    },
+    {
+      "id": "ref-19",
+      "text": "Wu, B. X. (2022). The U.S. and EU Resolve Steel and Aluminum Trade Disputes, Advancing the “Carbon Club” as a Trade Weapon. The Economic Observer. 1 Temmuz 2025 tarihinde https://www.eeo.com.cn/2021/1104/510016.shtml adresinden alınmıştır."
+    },
+    {
+      "id": "ref-20",
+      "text": "Yang, C., Wang, S.Y., & Cheng, B. D. (2022). Implementation Essentials and Impacts of the EU Carbon Border Adjustment Mechanism and China’s Countermeasures. Intertrade, (6), 28–33."
+    },
+    {
+      "id": "ref-21",
+      "text": "Zhang, G. P., Lin, L. K., & Cai, L. F. (2025). The Impact of EU and U.S. Carbon Tariff Policies on China and Response Strategies. Social Sciences in Shenzhen, (03), 85-96."
+    }
+  ],
+  "acknowledgements": "",
+  "figures": []
+}
