@@ -44,8 +44,8 @@ test("normalizes every Turkish and English keyword to title case", async () => {
 test("preserves acronyms while fixing known keyword spacing and casing", async () => {
   const { current } = await loadFullTextCollections();
   const relations = current["turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik"];
-  assert(relations.tr.keywords.includes("Türkiye Çin İlişkileri"));
-  assert(relations.en.keywords.includes("Türkiye China Relations"));
+  assert(relations.tr.keywords.includes("Türkiye-Çin İlişkileri"));
+  assert(relations.en.keywords.includes("Türkiye-China Relations"));
 
   const development = current["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin"];
   assert(development.en.keywords.includes("Belt And Road Initiative"));
