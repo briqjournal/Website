@@ -10,7 +10,7 @@ type IssueCopy = Record<IssueLocale, IssueHeading>;
 export const issueCopy: Record<string, IssueCopy> = {
   "7-4": {
     tr: { title: "Batı Asya’da Yeni Dönem", subtitle: "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor" },
-    en: { title: "A New Era in West Asia", subtitle: "Hegemonism Recedes, Regional Agency Grows" },
+    en: { title: "A New Era in West Asia", subtitle: "The Erosion of Hegemony and the Rise of Regional Agency" },
   },
   "7-3": {
     tr: { title: "Kültürel Miras Yağması", subtitle: "Emperyalist Hegemonya Ve İade Mücadelesi" },
