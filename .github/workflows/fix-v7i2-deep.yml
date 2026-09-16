@@ -1,0 +1,149 @@
+name: Fix V7I2 deep-audit findings
+on:
+  push:
+    branches: [automation/v7i2-deep-fixes]
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install extraction tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils imagemagick
+      - name: Apply fixes on latest main, verify, and safely push
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+
+          cat >/tmp/fix-v7i2.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+
+          const rw = (file, fn) => {
+            const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+            fn(data);
+            fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+          };
+
+          // Normalize all Fang-Wang section IDs to the locale-split canonical convention.
+          const fw = 'uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin';
+          for (const locale of ['en','tr']) {
+            const file = path.join('content/articles', fw, 'fulltext', `${locale}.json`);
+            rw(file, data => {
+              for (let i = 0; i < (data.sections || []).length; i++) data.sections[i].id = `${locale}-section-${i + 1}`;
+            });
+          }
+
+          const visuals = [
+            {
+              slug: 'zhang-yaxin',
+              tr: 'Devrimci operalar',
+              en: 'Revolutionary operas',
+              asset: '/assets/article-figures/zhang-yaxin/figure-01.jpg',
+            },
+            {
+              slug: 'liu-chunhua',
+              tr: 'Anyuan’a Giderken Başkan Mao, 1967, tuval üzerine yağlıboya',
+              en: 'Chairman Mao en Route to Anyuan, 1967, oil on canvas',
+              asset: '/assets/article-figures/liu-chunhua/figure-01.jpg',
+            },
+            {
+              slug: 'sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu',
+              tr: 'On bin hane, bir aile, bahar şehri doldurur (万户一家春满城), Mayıs 1960',
+              en: 'Ten thousand households, one family, spring fills the city (万户一家春满城), May 1960',
+              asset: '/assets/article-figures/sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu/figure-01.jpg',
+            },
+          ];
+          for (const item of visuals) {
+            for (const locale of ['en','tr']) {
+              const file = path.join('content/articles', item.slug, 'fulltext', `${locale}.json`);
+              rw(file, data => {
+                data.figures = [{ id: 'figure-1', src: item.asset, caption: item[locale] }];
+              });
+            }
+          }
+          JS
+
+          cat >/tmp/test-v7i2-deep.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          import test from 'node:test';
+          const issue = JSON.parse(fs.readFileSync('content/issues/v07-i02.json','utf8'));
+          const read = (slug, locale) => JSON.parse(fs.readFileSync(path.join('content/articles',slug,'fulltext',`${locale}.json`),'utf8'));
+          test('V7I2 locale-split section ids are canonical', () => {
+            for (const slug of issue.articles) for (const locale of ['en','tr']) {
+              const x=read(slug,locale);
+              for (const [i,section] of (x.sections||[]).entries()) assert.equal(section.id, `${locale}-section-${i+1}`, `${slug}/${locale}`);
+            }
+          });
+          test('V7I2 visual contributions render their source artwork', () => {
+            for (const slug of ['zhang-yaxin','liu-chunhua','sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu']) {
+              for (const locale of ['en','tr']) {
+                const x=read(slug,locale);
+                assert.equal(x.figures?.length,1,`${slug}/${locale}`);
+                const src=x.figures[0].src;
+                assert(src.startsWith('/assets/article-figures/'));
+                const file=path.join('public',src.replace(/^\//,''));
+                assert(fs.existsSync(file),file);
+                assert(fs.statSync(file).size > 100_000, `${file} too small`);
+              }
+            }
+          });
+          JS
+
+          extract_visual() {
+            slug="$1"; url="$2"
+            tmp="$(mktemp -d)"
+            curl -fsSL --retry 3 -A 'Mozilla/5.0' "$url" -o "$tmp/source.pdf"
+            pdfimages -f 1 -l 1 -j "$tmp/source.pdf" "$tmp/image" >/dev/null
+            candidate="$(find "$tmp" -maxdepth 1 -type f \( -name 'image-*.jpg' -o -name 'image-*.jpeg' \) -printf '%s %p\n' | sort -nr | head -1 | cut -d' ' -f2-)"
+            test -n "$candidate"
+            mkdir -p "public/assets/article-figures/$slug"
+            convert "$candidate" -colorspace sRGB -strip -quality 91 "public/assets/article-figures/$slug/figure-01.jpg"
+            test "$(stat -c%s "public/assets/article-figures/$slug/figure-01.jpg")" -gt 100000
+          }
+
+          apply_fix() {
+            node /tmp/fix-v7i2.mjs
+            extract_visual 'zhang-yaxin' 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/FOTO_ZHANG%20YAXIN_TR_0.pdf'
+            extract_visual 'liu-chunhua' 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/RES%C4%B0M_LIU%20CHUNHUA_TR.pdf'
+            extract_visual 'sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu' 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/AF%C4%B0%C5%9E_%C5%9Eanghay%20Halk%20G%C3%BCzel%20Sanatlar%20_TR.pdf'
+            cp /tmp/test-v7i2-deep.mjs tests/v7i2-deep-integrity.test.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i2-locale-fulltext.test.mjs tests/v7i2-deep-integrity.test.mjs
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_fix
+            npm test
+            npm run lint
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+              echo "main advanced during validation attempt $ATTEMPT; retrying"
+              continue
+            fi
+            if git diff --quiet; then echo 'V7I2 deep fixes already present.'; exit 0; fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content public/assets/article-figures app tests
+            git commit -m 'Complete Volume 7 Issue 2 visual full text'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced after commit attempt $ATTEMPT; retrying"
+          done
+          echo 'main kept advancing; refusing unsafe push'; exit 1
