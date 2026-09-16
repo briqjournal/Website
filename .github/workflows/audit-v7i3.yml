@@ -1,0 +1,169 @@
+name: Audit V7I3 full-text integrity
+on:
+  push:
+    branches: [automation/v7i3-audit]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Structural and content audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/audit-v7i3.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+
+          const issue = JSON.parse(fs.readFileSync('content/issues/v07-i03.json', 'utf8'));
+          const catalog = JSON.parse(fs.readFileSync('content/catalog.json', 'utf8'));
+          const errors = [];
+          const warnings = [];
+          const report = [];
+          const expectedPublished = '2026-06-01';
+          const norm = (v) => String(v ?? '').replace(/\s+/g, ' ').trim();
+          const collectStrings = (data) => [
+            ...(data.sections ?? []).flatMap((s) => [s.title, ...(s.paragraphs ?? [])]),
+            ...(data.footnotes ?? []).map((x) => x.text),
+            ...(data.references ?? []).map((x) => x.text),
+            ...(data.figures ?? []).flatMap((x) => [x.caption, x.source, x.alt]),
+          ].map(norm).filter(Boolean);
+          const narrativeStrings = (data) => [
+            ...(data.sections ?? []).flatMap((s) => [s.title, ...(s.paragraphs ?? [])]),
+            ...(data.footnotes ?? []).map((x) => x.text),
+            ...(data.figures ?? []).flatMap((x) => [x.caption, x.source, x.alt]),
+          ].map(norm).filter(Boolean);
+
+          if (issue.volume !== 7 || issue.issue !== 3) errors.push('Issue descriptor is not V7I3');
+          if (issue.articles?.length !== 8) errors.push(`Expected 8 contributions, found ${issue.articles?.length}`);
+          for (const p of [issue.pdf_tr_local, issue.pdf_en_local, issue.cover_tr, issue.cover_en]) {
+            const disk = p?.startsWith('/') ? `public${p}` : p;
+            if (!disk || !fs.existsSync(disk)) errors.push(`Missing issue asset: ${p}`);
+          }
+
+          for (const slug of issue.articles ?? []) {
+            const base = path.join('content/articles', slug);
+            const metaPath = path.join(base, 'metadata.json');
+            const ftDir = path.join(base, 'fulltext');
+            if (!fs.existsSync(metaPath)) { errors.push(`${slug}: missing metadata.json`); continue; }
+            if (!fs.existsSync(ftDir)) { errors.push(`${slug}: missing fulltext dir`); continue; }
+            const files = fs.readdirSync(ftDir).sort();
+            if (JSON.stringify(files) !== JSON.stringify(['en.json','tr.json'])) errors.push(`${slug}: fulltext files = ${files.join(', ')}`);
+            if (!files.includes('en.json') || !files.includes('tr.json')) continue;
+
+            const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+            const en = JSON.parse(fs.readFileSync(path.join(ftDir, 'en.json'), 'utf8'));
+            const tr = JSON.parse(fs.readFileSync(path.join(ftDir, 'tr.json'), 'utf8'));
+            if (meta.slug !== slug) errors.push(`${slug}: metadata slug mismatch`);
+            if (meta.volume !== 7 || meta.issue !== 3) errors.push(`${slug}: wrong volume/issue ${meta.volume}/${meta.issue}`);
+            if (meta.published_online_date !== expectedPublished) errors.push(`${slug}: published_online_date ${meta.published_online_date} != ${expectedPublished}`);
+            for (const k of ['title_tr','title_en','author','pages','source_tr','source_en','pdf_tr_local','pdf_en_local']) if (!norm(meta[k])) errors.push(`${slug}: missing metadata ${k}`);
+            for (const k of ['received_date','accepted_date']) if (meta[k] && !/^\d{4}-\d{2}-\d{2}$/.test(meta[k])) errors.push(`${slug}: malformed ${k}=${meta[k]}`);
+            if (meta.revised_date && !/^\d{4}-\d{2}-\d{2}$/.test(meta.revised_date)) errors.push(`${slug}: malformed revised_date=${meta.revised_date}`);
+            if (meta.citation_tr && !meta.citation_tr.includes('7(3)')) errors.push(`${slug}: citation_tr missing 7(3)`);
+            if (meta.citation_en && !meta.citation_en.includes('7(3)')) errors.push(`${slug}: citation_en missing 7(3)`);
+            if (meta.pages && meta.citation_tr && !meta.citation_tr.includes(meta.pages)) errors.push(`${slug}: citation_tr pages mismatch`);
+            if (meta.pages && meta.citation_en && !meta.citation_en.includes(meta.pages)) errors.push(`${slug}: citation_en pages mismatch`);
+            for (const p of [meta.pdf_tr_local, meta.pdf_en_local]) {
+              const disk = p?.startsWith('/') ? `public${p}` : p;
+              if (!disk || !fs.existsSync(disk)) errors.push(`${slug}: missing local PDF ${p}`);
+            }
+            if (!catalog.fulltext?.localized?.includes(slug)) errors.push(`${slug}: not in catalog.fulltext.localized`);
+            if (catalog.fulltext?.current?.includes(slug)) errors.push(`${slug}: still in catalog.fulltext.current`);
+            if (catalog.fulltext?.en_archive?.includes(slug)) errors.push(`${slug}: still in catalog.fulltext.en_archive`);
+
+            for (const [locale, data] of [['en', en], ['tr', tr]]) {
+              if (!Array.isArray(data.sections) || data.sections.length === 0) errors.push(`${slug}/${locale}: no sections`);
+              const ids = new Set();
+              for (const [i,s] of (data.sections ?? []).entries()) {
+                if (!norm(s.title)) warnings.push(`${slug}/${locale}: section ${i+1} has empty title`);
+                if (!Array.isArray(s.paragraphs)) errors.push(`${slug}/${locale}: section ${i+1} paragraphs not array`);
+                if (!s.id) errors.push(`${slug}/${locale}: section ${i+1} missing id`);
+                else if (ids.has(s.id)) errors.push(`${slug}/${locale}: duplicate section id ${s.id}`);
+                else ids.add(s.id);
+                for (const [j,p] of (s.paragraphs ?? []).entries()) if (!norm(p)) warnings.push(`${slug}/${locale}: empty paragraph ${i+1}.${j+1}`);
+              }
+              const refIds = new Set();
+              for (const ref of data.references ?? []) {
+                if (!norm(ref.text)) errors.push(`${slug}/${locale}: empty reference ${ref.id}`);
+                if (!ref.id) warnings.push(`${slug}/${locale}: reference missing id`);
+                else if (refIds.has(ref.id)) errors.push(`${slug}/${locale}: duplicate reference id ${ref.id}`);
+                else refIds.add(ref.id);
+              }
+              for (const s of collectStrings(data)) {
+                if (/\uFFFD/.test(s)) errors.push(`${slug}/${locale}: replacement character found: ${s.slice(0,120)}`);
+                if (/\u00AD/.test(s)) warnings.push(`${slug}/${locale}: soft hyphen found: ${s.slice(0,120)}`);
+                if (/\s{2,}/.test(s)) warnings.push(`${slug}/${locale}: repeated spaces after normalization impossible`);
+              }
+              for (const s of narrativeStrings(data)) {
+                const m = s.match(/(?<=[A-Za-zÀ-ž])\d{3}\s+(?=[A-Za-zÀ-ž])/u);
+                if (m) errors.push(`${slug}/${locale}: possible embedded page number '${m[0]}' in ${s.slice(Math.max(0,m.index-60), Math.min(s.length,m.index+80))}`);
+                if (/\b[A-Za-z]{3,}-\s+[a-z]{3,}\b/.test(s)) warnings.push(`${slug}/${locale}: possible line-wrap hyphenation: ${s.match(/\b[A-Za-z]{3,}-\s+[a-z]{3,}\b/)?.[0]}`);
+              }
+              for (const ref of data.references ?? []) {
+                const s = norm(ref.text);
+                const idx = s.search(/https?:\/\//i);
+                if (idx >= 0 && /\s/.test(s.slice(idx))) errors.push(`${slug}/${locale}: whitespace inside terminal URL in ${ref.id}: ${s}`);
+                if (/https:\/\/10\./i.test(s)) errors.push(`${slug}/${locale}: malformed DOI URL in ${ref.id}: ${s}`);
+                if (/\bdoi:\s*10\.[^\s]*\s+\S/i.test(s)) warnings.push(`${slug}/${locale}: possible DOI split in ${ref.id}: ${s}`);
+                if (/[-–—]\s*$/.test(s)) warnings.push(`${slug}/${locale}: reference ends with dash ${ref.id}: ${s}`);
+              }
+            }
+
+            const enText = collectStrings(en).join(' ');
+            const trText = collectStrings(tr).join(' ');
+            if (enText === trText) errors.push(`${slug}: EN/TR are identical`);
+            const enScore = (enText.match(/\b(the|and|of|to|in|is|that|for|with|as)\b/gi) ?? []).length;
+            const trInEn = (enText.match(/\b(ve|bir|bu|için|ile|olarak|olan|gibi)\b/gi) ?? []).length;
+            if (enText.length > 1200 && enScore < Math.max(20, trInEn * 1.25)) errors.push(`${slug}: English language sanity failed (${enScore}/${trInEn})`);
+            const trScore = (trText.match(/\b(ve|bir|bu|için|ile|olarak|olan|gibi)\b/gi) ?? []).length;
+            const enInTr = (trText.match(/\b(the|and|of|to|in|is|that|for|with|as)\b/gi) ?? []).length;
+            if (trText.length > 1200 && trScore < Math.max(20, enInTr * .65)) warnings.push(`${slug}: Turkish language sanity borderline (${trScore}/${enInTr})`);
+            if ((en.keywords?.length ?? 0) !== (tr.keywords?.length ?? 0)) errors.push(`${slug}: keyword count mismatch EN ${en.keywords?.length ?? 0} / TR ${tr.keywords?.length ?? 0}`);
+
+            report.push({
+              slug,
+              type: meta.article_type ?? meta.type ?? '',
+              pages: meta.pages,
+              enSections: en.sections?.length ?? 0,
+              trSections: tr.sections?.length ?? 0,
+              enParagraphs: (en.sections ?? []).reduce((n,s)=>n+(s.paragraphs?.length ?? 0),0),
+              trParagraphs: (tr.sections ?? []).reduce((n,s)=>n+(s.paragraphs?.length ?? 0),0),
+              enRefs: en.references?.length ?? 0,
+              trRefs: tr.references?.length ?? 0,
+              enKeywords: en.keywords?.length ?? 0,
+              trKeywords: tr.keywords?.length ?? 0,
+              dates: [meta.received_date, meta.revised_date, meta.accepted_date, meta.published_online_date].filter(Boolean).join(' / '),
+            });
+          }
+
+          console.log('\n=== V7I3 AUDIT TABLE ===');
+          console.table(report);
+          console.log('\n=== WARNINGS ===');
+          if (!warnings.length) console.log('none'); else warnings.forEach((x)=>console.log('- '+x));
+          console.log('\n=== ERRORS ===');
+          if (!errors.length) console.log('none'); else errors.forEach((x)=>console.log('- '+x));
+          console.log(`\nSUMMARY: ${errors.length} errors, ${warnings.length} warnings`);
+          if (errors.length) process.exit(2);
+          JS
+          node /tmp/audit-v7i3.mjs
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Generators in canonical order
+        run: |
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+          git diff --check
+      - name: Targeted tests
+        run: node --test tests/v7i3-locale-fulltext.test.mjs tests/keyword-case.test.mjs tests/oai-pmh.test.mjs
+      - name: Production build
+        run: npm run build
+      - name: Render tests after build
+        run: node --test tests/rendered-html.test.mjs
+      - name: Full test suite
+        run: npm test
