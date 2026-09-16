@@ -1,0 +1,51 @@
+name: One-time Gurcan full-text finalization
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/finalize-gurcan-fulltext.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Assemble, validate, and install repaired full text
+        run: |
+          set -euo pipefail
+          target='content/articles/amerika-sonrasi-donemde-adil-bir-dunya-duzeni-insa-etmek/fulltext/en-archive.json'
+          cat tmp/gurcan-fulltext-1.b64 tmp/gurcan-fulltext-2.b64 tmp/gurcan-fulltext-3.b64 tmp/gurcan-fulltext-4.b64 | base64 --decode > "$target"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          target = Path('content/articles/amerika-sonrasi-donemde-adil-bir-dunya-duzeni-insa-etmek/fulltext/en-archive.json')
+          data = json.loads(target.read_text(encoding='utf-8'))
+
+          assert isinstance(data.get('sections'), list) and len(data['sections']) >= 4, 'Expected structured article sections'
+          assert data['sections'][0].get('id') == 'full-text', 'Expected full-text opening section'
+          first = data['sections'][0].get('paragraphs', [''])[0]
+          assert first.startswith('Much has changed over the last three decades'), 'Unexpected opening paragraph'
+          titles = [section.get('title', '') for section in data['sections']]
+          assert any('Eroding American Leadership' in title for title in titles), 'Missing first main heading'
+          assert any('Emerging Alternatives' in title or 'Post-American' in title for title in titles), 'Missing later main heading'
+          assert isinstance(data.get('references'), list) and len(data['references']) == 49, f"Expected 49 references, found {len(data.get('references', []))}"
+          assert not any(title.startswith('19 NAFTA disputes') for title in titles), 'Column-order extraction artifact remains'
+          for section in data['sections']:
+              for paragraph in section.get('paragraphs', []):
+                  assert 'MUCH HAS CHANGED OVER THE LAST imperialism' not in paragraph, 'Old two-column extraction artifact remains'
+          PY
+          rm -f tmp/gurcan-fulltext-1.b64 tmp/gurcan-fulltext-2.b64 tmp/gurcan-fulltext-3.b64 tmp/gurcan-fulltext-4.b64
+          rm .github/workflows/finalize-gurcan-fulltext.yml
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add "$target" tmp .github/workflows/finalize-gurcan-fulltext.yml
+          git commit -m 'Repair Gürcan English full text and clean staging files'
+          git push origin HEAD:main
