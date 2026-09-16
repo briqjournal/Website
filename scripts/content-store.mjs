@@ -2,10 +2,12 @@ import { readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 const safeSlug = /^[a-z0-9-]+$/;
-const englishKeywordSpacingFixes = new Map([
+const keywordSpacingFixes = new Map([
   ["BeltandRoadInitiative", "Belt and Road Initiative"],
   ["GlobalSouth", "Global South"],
   ["internationaldevelopmentcooperation", "international development cooperation"],
+  ["TürkiyeÇin ilişkileri", "Türkiye Çin ilişkileri"],
+  ["TürkiyeChina relations", "Türkiye China relations"],
 ]);
 
 async function readJson(path) {
@@ -20,9 +22,16 @@ function assertSlug(slug, context) {
   assert(safeSlug.test(slug), `Unsafe article slug in ${context}: ${slug}`);
 }
 
+function normalizeKeywordList(keywords) {
+  if (!Array.isArray(keywords)) return keywords;
+  return keywords.map((keyword) => keywordSpacingFixes.get(keyword) || keyword);
+}
+
 function normalizeFullTextKeywords(record) {
-  if (!record?.en || !Array.isArray(record.en.keywords)) return record;
-  record.en.keywords = record.en.keywords.map((keyword) => englishKeywordSpacingFixes.get(keyword) || keyword);
+  if (!record) return record;
+  if (Array.isArray(record.keywords)) record.keywords = normalizeKeywordList(record.keywords);
+  if (record.tr) record.tr.keywords = normalizeKeywordList(record.tr.keywords);
+  if (record.en) record.en.keywords = normalizeKeywordList(record.en.keywords);
   return record;
 }
 
