@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/344-348%20-%20Werner%20R%C3%BCgemer%20-%20Book%20Review.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/cinde-marksizmin-yenilenmesi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/cinde-marksizmin-yenilenmesi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Kitap İncelemesi",
+  "publication_type_en": "Book Review",
+  "received_date": "2024-03-17",
+  "accepted_date": "2024-04-26",
+  "published_online_date": "2024-06-01"
 }
