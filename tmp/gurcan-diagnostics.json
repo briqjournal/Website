@@ -1,0 +1,8 @@
+{
+  "bytes": 27000,
+  "characters": 26806,
+  "starts_with": "{\n  \"sections\": [\n    {\n      \"id\": \"full-text\",\n      \"title\": \"Full Text\",\n      \"paragraphs\": [\n        \"Much has changed over the last three decades since P",
+  "ends_with": "ss of faith in the fair distribution of rights and duties within its own institutions. Meanwhile, there is a growing consensus among developing countries on the need for creating alternative cooperative arrangements independent of America’s overwhelming influence. The rights and duties of international cooperation are being renegotiated along the lines of such values and principles as mutual trust, mutual benefit, equality, inclusiveness, openness, consultation, respect for cultural diversity and national sovereignty, and peaceful development.\",\n        \"Second, the US-centered world system is cracking and disintegrating, largely due to America’s arbitrary approach, which feeds off exploitative and coercive practices that arrest international development. The crisis of neoliberalism – not ",
+  "valid_json": false,
+  "json_error": "Unterminated string starting at: line 43 column 9 (char 26566)"
+}
