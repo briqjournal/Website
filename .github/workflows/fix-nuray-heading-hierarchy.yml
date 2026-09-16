@@ -1,0 +1,198 @@
+name: Fix Nuray Eksi heading hierarchy
+on:
+  push:
+    branches: [automation/fix-nuray-heading-hierarchy]
+    paths: [.github/workflows/fix-nuray-heading-hierarchy.yml]
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore PDF heading hierarchy in TR and EN
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B fix-nuray-headings "$BASE"
+          python3 - <<'PY'
+          from pathlib import Path
+          import copy, json
+
+          path = Path('content/articles/kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre/fulltext/current.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          before = copy.deepcopy(data)
+
+          def split_heading(sections, combined, parent, child, suffix):
+              matches = [i for i, s in enumerate(sections) if s.get('title') == combined]
+              assert len(matches) == 1, (combined, matches)
+              i = matches[0]
+              old = sections[i]
+              parent_section = copy.deepcopy(old)
+              parent_section['title'] = parent
+              parent_section['paragraphs'] = []
+              parent_section.pop('level', None)
+              parent_section.pop('toc', None)
+              child_section = {
+                  'id': f"{old['id']}-{suffix}",
+                  'title': child,
+                  'paragraphs': old.get('paragraphs', []),
+                  'level': 'subsection',
+                  'toc': False,
+              }
+              sections[i:i+1] = [parent_section, child_section]
+
+          split_heading(
+              data['tr']['sections'],
+              'Kültür Varlıklarının Yasadışı Ticaretinin Artış Nedenleri ve Bu Ticaretle Mücadelede Aktörler Kültür Varlıklarının Yasadışı Ticaretini Artıran Faktörler',
+              'Kültür Varlıklarının Yasadışı Ticaretinin Artış Nedenleri ve Bu Ticaretle Mücadelede Aktörler',
+              'Kültür Varlıklarının Yasadışı Ticaretini Artıran Faktörler',
+              'sub-1',
+          )
+          split_heading(
+              data['tr']['sections'],
+              'Anlaşma Uyarınca Yasadışı İthalata Konu Kültür Varlıklarının İadesi Gönüllü İade',
+              'Anlaşma Uyarınca Yasadışı İthalata Konu Kültür Varlıklarının İadesi',
+              'Gönüllü İade',
+              'sub-1',
+          )
+          split_heading(
+              data['tr']['sections'],
+              'Dava Yoluyla İade Yetkili Mahkeme ve Uygulanacak Hukuk',
+              'Dava Yoluyla İade',
+              'Yetkili Mahkeme ve Uygulanacak Hukuk',
+              'sub-1',
+          )
+
+          split_heading(
+              data['en']['sections'],
+              'Reasons for the Increase in Illegal Trade of Cultural Property and Actors in the Fight Against This Trade Factors Increasing the Illicit Trade of Cultural Property',
+              'Reasons for the Increase in Illegal Trade of Cultural Property and Actors in the Fight Against This Trade',
+              'Factors Increasing the Illicit Trade of Cultural Property',
+              'sub-1',
+          )
+          split_heading(
+              data['en']['sections'],
+              'Repatriation of Cultural Property Subject to Illicit Importation under the Agreement Voluntary Repatriation',
+              'Repatriation of Cultural Property Subject to Illicit Importation under the Agreement',
+              'Voluntary Repatriation',
+              'sub-1',
+          )
+          split_heading(
+              data['en']['sections'],
+              'Judicial Repatriation of Cultural Property Jurisdiction and Applicable Law',
+              'Judicial Repatriation of Cultural Property',
+              'Jurisdiction and Applicable Law',
+              'sub-1',
+          )
+
+          tr_subtitles = {
+              'Kültür Varlıklarının Yasadışı Ticaretini Artıran Faktörler',
+              'Kültür Varlıklarının Yasadışı Ticaretiyle Mücadelede Ulusal ve Uluslararası Aktörler',
+              'Anlaşma’nın Konusu ve Kapsamı',
+              'Anlaşma’nın Süresi',
+              'Anlaşma’nın Uygulanmasında İsviçre ve Türkiye’nin Yetkili İdari Birimleri ve Görevleri',
+              'Anlaşma’nın Uygulanmasında Doğrudan veya Dolaylı Rolü Bulunan İsviçre ve Türkiye’deki Kurumların Bilgilendirilmesi',
+              'Yasadışı İthalatın Yasaklanması',
+              'Gönüllü İade',
+              'Yetkili Mahkeme ve Uygulanacak Hukuk',
+              'İade Davasında Zamanaşımının Tabi Olduğu Hukuk',
+              'Aleyhine İade Davası Açılan Devletin Görevleri',
+              'Dava Açan Devletin İspatla Yükümlü Olduğu Hususlar',
+              'İade Talebinin Askıya Alınacağı Haller',
+              'İade Talep Eden Devletin Karşılamakla Yükümlü Olduğu Masraflar ve Tazminat',
+              'Kültür Varlığının İadesi Sonrası Yükümlülükler',
+              'Türkiye-İsviçre Kültürel İşbirliği ve Eğitimin Teşvik Edilmesi',
+              'Anlaşma’nın Kültür Varlıklarının Yasadışı Ticaretinin Önlenmesine İlişkin Diğer Çok Taraflı ve İki Taraflı Anlaşmalarla İlişkisi',
+              'Anlaşma’nın Uygulanması ve Yorumu Konusunda Türkiye ve İsviçre Arasında Ortaya Çıkabilecek Uyuşmazlıkların Çözümü',
+          }
+          en_subtitles = {
+              'Factors Increasing the Illicit Trade of Cultural Property',
+              'National and International Actors in the Fight Against Illicit Trade in Cultural Property',
+              'Subject and Scope of the Agreement',
+              'Duration of the Agreement',
+              'The Competent Administrative Bodies of Switzerland and Türkiye and Their Duties in the Implementation of the Agreement',
+              'Notification to the Swiss and Turkish Authorities Directly or Indirectly Involved in the Implementation of the Agreement',
+              'Prohibition of Illicit Importation',
+              'Voluntary Repatriation',
+              'Jurisdiction and Applicable Law',
+              'Law Governing the Statute of Limitations in Repatriation Cases',
+              'Support of the State Against Which a Return Lawsuit Is Filed',
+              'Issues the Plaintiff State Is Required to Prove',
+              'Circumstances in Which a Return Request Will Be Suspended',
+              'Costs and Compensation to Be Borne by the Requesting State',
+              'Post-Return Obligations Concerning Cultural Property',
+              'Türkiye–Switzerland Cultural Cooperation and Promotion of Education',
+              'Relationship of the Agreement with Other Multilateral and Bilateral Agreements on the Prevention of the Illicit Trade in Cultural Property',
+              'Settlement of Differences between Türkiye and Switzerland Arising from the Implementation and Interpretation of the Agreement',
+          }
+
+          for locale, subtitles in [('tr', tr_subtitles), ('en', en_subtitles)]:
+              sections = data[locale]['sections']
+              titles = {s['title'] for s in sections}
+              missing = subtitles - titles
+              assert not missing, (locale, 'missing subtitles', missing)
+              for section in sections:
+                  if section['title'] in subtitles:
+                      section['level'] = 'subsection'
+                      section['toc'] = False
+                  else:
+                      section.pop('level', None)
+                      section.pop('toc', None)
+
+          # Content integrity: only heading structure may change.
+          for locale in ('tr', 'en'):
+              before_paragraphs = [p for s in before[locale]['sections'] for p in s.get('paragraphs', [])]
+              after_paragraphs = [p for s in data[locale]['sections'] for p in s.get('paragraphs', [])]
+              assert before_paragraphs == after_paragraphs, f'{locale} body paragraphs changed'
+              for key in ('references', 'footnotes', 'figures', 'keywords', 'acknowledgements', 'declarations', 'supplementary', 'publicationNote'):
+                  if key in before[locale] or key in data[locale]:
+                      assert before[locale].get(key) == data[locale].get(key), (locale, key)
+
+          expected_main_tr = [
+              'Giriş',
+              'Kültür Varlıklarının Yasadışı Ticaretinin Artış Nedenleri ve Bu Ticaretle Mücadelede Aktörler',
+              'Kültür Varlığı Kaçakçılığıyla Mücadelede Milletlerarası Antlaşmaların Rolü',
+              'Türkiye Cumhuriyeti Hükümeti ve İsviçre Federal Konseyi Arasında Arkeolojik Kültür Varlıklarının Yasadışı İthali ve Transit Geçişinin Önlenmesi ile İadesine İlişkin Anlaşma',
+              'Anlaşma Uyarınca Yasadışı İthalata Konu Kültür Varlıklarının İadesi',
+              'Dava Yoluyla İade',
+              'Sonuç',
+          ]
+          expected_main_en = [
+              'Introduction',
+              'Reasons for the Increase in Illegal Trade of Cultural Property and Actors in the Fight Against This Trade',
+              'The Role of International Treaties in Combating the Smuggling of Cultural Property',
+              'The Agreement between the Government of the Republic of Türkiye and the Swiss Federal Council on the Prevention of the Illicit Import and Transit and the Repatriation of Archaeological Cultural Property',
+              'Repatriation of Cultural Property Subject to Illicit Importation under the Agreement',
+              'Judicial Repatriation of Cultural Property',
+              'Conclusion',
+          ]
+          for locale, expected in [('tr', expected_main_tr), ('en', expected_main_en)]:
+              actual = [s['title'] for s in data[locale]['sections'] if s.get('level') != 'subsection' and s.get('toc') is not False]
+              assert actual == expected, (locale, actual)
+              ids = [s['id'] for s in data[locale]['sections']]
+              assert len(ids) == len(set(ids)), (locale, 'duplicate ids')
+
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('TR sections:', len(data['tr']['sections']), 'EN sections:', len(data['en']['sections']))
+          print('Heading hierarchy validation passed')
+          PY
+
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+          git diff --check
+          npm ci --no-audit --no-fund
+          npm run build
+
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content/articles/kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre/fulltext/current.json
+          git diff --cached --quiet && { echo 'No changes required'; exit 0; }
+          git commit -m 'Fix Nuray Eksi heading hierarchy'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced during validation; refusing push'; exit 1; }
+          git push origin HEAD:main
