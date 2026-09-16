@@ -1,0 +1,49 @@
+name: Audit V7I2 legacy content
+on:
+  push:
+    branches: [automation/v7i2-locale-split]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit V7I2 sources
+        shell: bash
+        run: |
+          node <<'JS'
+          const fs=require('fs'); const path=require('path');
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i02.json','utf8'));
+          function paras(x){return (x?.sections??[]).reduce((n,s)=>n+(s.paragraphs??[]).length,0)}
+          function words(x){return (x?.sections??[]).flatMap(s=>s.paragraphs??[]).join(' ').split(/\s+/).filter(Boolean).length}
+          function suspicious(x){
+            const text=JSON.stringify(x??{});
+            return {
+              pageTokens:(text.match(/(?<=[A-Za-zÀ-ž])\d{3}\s+(?=[A-Za-zÀ-ž])/gu)||[]).length,
+              splitUrls:(text.match(/https?:\\?\/\\?\/[^"\n]{0,160}\s+[^"\n]{0,80}/gu)||[]).length,
+              brokenDoi:(text.match(/doi:\s*10\.[^"\n]*\s+[^"\n]*/giu)||[]).length,
+              mojibake:(text.match(/�|Ã.|Â.|â€|â€™/g)||[]).length,
+            };
+          }
+          for(const slug of issue.articles){
+            const dir=path.join('content/articles',slug,'fulltext');
+            const files=fs.readdirSync(dir).sort();
+            const meta=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'metadata.json'),'utf8'));
+            let src={};
+            if(files.includes('current.json')) src=JSON.parse(fs.readFileSync(path.join(dir,'current.json'),'utf8'));
+            const tr=src.tr; const en=src.en;
+            const trText=JSON.stringify(tr??{}), enText=JSON.stringify(en??{});
+            const refs=(x)=>x?.references?.length??0;
+            console.log('\n===',slug,'===');
+            console.log('files=',files.join(','));
+            console.log('schemaVersion=',meta.schemaVersion??'legacy','published=',meta.published_online_date??meta.dates?.published??null,'type=',meta.publication_type_tr??meta.articleType?.tr??null);
+            console.log('current keys=',Object.keys(src));
+            console.log('TR sections/paras/words/refs=',tr?.sections?.length??0,paras(tr),words(tr),refs(tr),'susp=',JSON.stringify(suspicious(tr)));
+            console.log('EN sections/paras/words/refs=',en?.sections?.length??0,paras(en),words(en),refs(en),'susp=',JSON.stringify(suspicious(en)));
+            console.log('locale identical=',trText===enText,'en/tr word ratio=',words(tr)?(words(en)/words(tr)).toFixed(2):'n/a');
+            console.log('history=',JSON.stringify({received:meta.received_date??src.metadata?.received,revised:meta.revised_date??src.metadata?.revised,accepted:meta.accepted_date??src.metadata?.accepted}));
+            const absTr=meta.abstract_tr??meta.abstract?.tr??null, absEn=meta.abstract_en??meta.abstract?.en??null;
+            console.log('abstract labels=',/^(?:öz|özet)\b/iu.test(absTr??''),/^abstract\b/iu.test(absEn??''));
+          }
+          JS
