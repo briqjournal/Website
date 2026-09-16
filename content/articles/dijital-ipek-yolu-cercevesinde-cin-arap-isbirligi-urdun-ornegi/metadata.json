@@ -14,8 +14,6 @@
     "0009-0006-3256-1197"
   ],
   "shared_bilingual_pdf": false,
-  "publication_type_en": "Research Article",
-  "publication_type_tr": "Araştırma Makalesi",
   "peer_reviewed": true,
   "scholarly": true,
   "funding": {
@@ -30,6 +28,7 @@
     ]
   },
   "season_en": "Autumn",
+  "publication_type_en": "Research Article",
   "title_en": "China-Arab Cooperation under the Digital Silk Road Framework: A Case Study of Jordan",
   "abstract_en": "Abstract \n The Digital Silk Road (DSR), a key component of China's Belt and Road Initiative, offers partner countries strategic opportunities in telecommunications, artificial intelligence, cloud computing, e-commerce, and smart cities. This paper examines China-Arab cooperation under the DSR framework through a case study of Jordan, located at the crossroads of the Levant, the Gulf, and North Africa. Drawing on literature analysis, official reports, the study finds that Chinese companies, particularly Huawei and ZTE, have played a significant role in upgrading Jordan's digital infrastructure, expanding network coverage, and cultivating local talent through ICT training programs. The cooperation also faces challenges, including data security concerns, regulatory misalignment, skills shortages, and geopolitical pressures. The paper argues that, with improved digital governance, stronger legal frameworks, and strategic investment, the DSR can accelerate Jordan's digital transformation, enhance its economic resilience, and reinforce its position as a regional digital hub, thus fostering sustainable and mutually beneficial China-Arab cooperation.",
   "citation_en": "Li, S., & Li, X. (2026). China-Arab Cooperation under the Digital Silk Road Framework: A Case Study of Jordan. BRIQ Belt & Road Initiative Quarterly, 7(4), 427-446.",
@@ -37,6 +36,7 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Li%20Sainan%20%26%20Li%20Xi%20-%20China-Arab%20Cooperation%20under%20the%20Digital%20Silk%20Road%20Framework%20A%20Case%20Study%20of%20Jordan.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi-en.pdf",
   "season_tr": "Sonbahar",
+  "publication_type_tr": "Araştırma Makalesi",
   "title_tr": "Dijital İpek Yolu Çerçevesinde Çin-Arap İşbirliği: Ürdün Örneği",
   "abstract_tr": "Çin’in öncülüğünü yaptığı Kuşak ve Yol Girişimi’nin temel bileşenlerinden biri olan Dijital İpek Yolu (DİY), ortak ülkelere telekomünikasyon, yapay zekâ, bulut bilişim, e-ticaret ve akıllı şehirler alanlarında stratejik fırsatlar sunmaktadır. Bu makale, Levant, Körfez ve Kuzey Afrika’nın kesişim noktasında yer alan Ürdün örneği üzerinden DİY çerçevesindeki Çin-Arap işbirliğini incelemektedir. Literatür analizine ve resmî raporlara dayanan çalışma, başta Huawei ve ZTE olmak üzere Çinli şirketlerin Ürdün’ün dijital altyapısının geliştirilmesinde, ağ kapsamının genişletilmesinde ve BİT eğitim programları aracılığıyla yerel insan kaynağının yetiştirilmesinde önemli bir rol oynadığını ortaya koymaktadır. İşbirliği aynı zamanda veri güvenliği kaygıları, düzenleyici çerçeveler arasındaki uyumsuzluk, beceri eksikliği ve jeopolitik baskılar gibi zorluklarla karşı karşıyadır. Makale, dijital yönetişimin iyileştirilmesi, hukuki çerçevelerin güçlendirilmesi ve stratejik yatırımlarla DİY’in Ürdün’ün dijital dönüşümünü hızlandırabileceğini, ekonomik dayanıklılığını artırabileceğini ve bölgesel bir dijital merkez olarak konumunu güçlendirebileceğini; böylece sürdürülebilir ve karşılıklı yarara dayalı Çin-Arap işbirliğini teşvik edebileceğini savunmaktadır.",
   "citation_tr": "Li, S., & Li, X. (2026). Dijital İpek Yolu Çerçevesinde Çin-Arap İşbirliği: Ürdün Örneği. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(4), 427-446.",
