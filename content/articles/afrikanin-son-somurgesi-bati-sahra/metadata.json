@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/CILT5_SAYI2_ENG5_172-181.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/afrikanin-son-somurgesi-bati-sahra-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/afrikanin-son-somurgesi-bati-sahra-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Görüş Makalesi",
+  "publication_type_en": "Opinion Article",
+  "received_date": "2024-01-15",
+  "accepted_date": "2024-01-28",
+  "published_online_date": "2024-03-01"
 }
