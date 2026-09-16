@@ -384,6 +384,7 @@ export async function ArticlePlatform({
     ? ["Araştırma Makalesi", "Hakemli Araştırma Makalesi"]
     : ["Research Article", "Peer-reviewed Research Article"];
   const isResearchArticle = researchTypes.includes(articleType);
+  const isBookReview = articleType === (locale === "tr" ? "Kitap İncelemesi" : "Book Review");
   const acknowledgements = articleAcknowledgements(article, fullText, locale);
   const statements = isResearchArticle ? researchStatementItems(article, fullText, locale) : [];
   const supplementary = fullText?.supplementary || [];
@@ -402,12 +403,17 @@ export async function ArticlePlatform({
     publishedOnline: details?.publishedOnline || article.published_online_date,
   };
   const abstractId = locale === "tr" ? "oz" : "abstract";
+  const genericFullTextSectionTitle = locale === "tr" ? "tam metin" : "full text";
   const nav = [
-    { id: abstractId, label: locale === "tr" ? "Öz" : "Abstract", level: 1 },
+    ...(!isBookReview ? [{ id: abstractId, label: locale === "tr" ? "Öz" : "Abstract", level: 1 }] : []),
     ...(keywords.length ? [{ id: locale === "tr" ? "anahtar-kelimeler" : "keywords", label: locale === "tr" ? "Anahtar kelimeler" : "Keywords", level: 1 }] : []),
     ...(fullText?.sections.length ? [{ id: locale === "tr" ? "tam-metin" : "full-text-body", label: locale === "tr" ? "Tam Metin" : "Full Text", level: 1 }] : []),
     ...(fullText?.sections || [])
-      .filter((section) => section.toc !== false && section.level !== "subsection")
+      .filter((section) =>
+        section.toc !== false
+        && section.level !== "subsection"
+        && section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US") !== genericFullTextSectionTitle
+      )
       .map((section) => ({ id: section.id, label: section.title, level: 2 })),
     ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
@@ -452,10 +458,10 @@ export async function ArticlePlatform({
         </aside>
 
         <article className="article-platform-content">
-          <section className="article-abstract" id={locale === "tr" ? "oz" : "abstract"}>
+          {!isBookReview && <section className="article-abstract" id={locale === "tr" ? "oz" : "abstract"}>
             <h2>{locale === "tr" ? "Öz" : "Abstract"}</h2>
             {abstract.length ? abstract.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{locale === "tr" ? "Kaynak arşivinde bu içerik için ayrı bir özet metni bulunmamaktadır." : "The source archive does not contain a separate abstract for this contribution."}</p>}
-          </section>
+          </section>}
 
           {keywords.length ? <section className="article-keywords" id={locale === "tr" ? "anahtar-kelimeler" : "keywords"}><h2>{locale === "tr" ? "Anahtar kelimeler" : "Keywords"}</h2><div>{keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}</div></section> : null}
 
