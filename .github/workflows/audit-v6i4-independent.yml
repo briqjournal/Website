@@ -1,0 +1,151 @@
+name: Independent Volume 6 Issue 4 PDF Audit
+on:
+  push:
+    branches: [audit/v6i4-independent]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure PDF text tools
+        run: |
+          if ! command -v pdftotext >/dev/null || ! command -v pdfinfo >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y poppler-utils
+          fi
+      - name: Compare canonical JSON against official PDFs
+        run: |
+          python3 <<'PY'
+          import json, os, re, subprocess, unicodedata, pathlib, collections, sys
+          ROOT=pathlib.Path('.')
+          issue=json.load(open('content/issues/v06-i04.json',encoding='utf-8'))
+          out=[]
+          os.makedirs('/tmp/v6i4',exist_ok=True)
+
+          def norm(s):
+              s=unicodedata.normalize('NFKC',str(s or '')).replace('\u00ad','')
+              s=s.replace('’',"'").replace('“','"').replace('”','"')
+              s=s.lower()
+              s=re.sub(r'[^\w]+',' ',s,flags=re.UNICODE)
+              return re.sub(r'\s+',' ',s).strip()
+
+          def tokens(s): return norm(s).split()
+          def shingle_hits(text_norm, value, n=7):
+              ts=tokens(value)
+              if len(ts)<n:
+                  q=' '.join(ts)
+                  return (1 if q and q in text_norm else 0, 1)
+              starts=sorted(set([0,max(0,(len(ts)-n)//2),max(0,len(ts)-n)]))
+              qs=[' '.join(ts[i:i+n]) for i in starts]
+              return sum(q in text_norm for q in qs),len(qs)
+
+          def get_pdf(url, dest):
+              r=subprocess.run(['curl','-A','Mozilla/5.0','-L','--fail','--retry','2','--connect-timeout','20','-o',dest,url],text=True,capture_output=True)
+              return r.returncode, r.stderr[-400:]
+
+          # Issue-level year/filename audit.
+          issue_year={}
+          for loc,key in [('tr','pdf_tr_source'),('en','pdf_en_source')]:
+              url=issue.get(key)
+              dest=f'/tmp/v6i4/issue-{loc}.pdf'
+              rc,err=get_pdf(url,dest)
+              if rc==0:
+                  txt=f'/tmp/v6i4/issue-{loc}.txt'
+                  subprocess.run(['pdftotext','-f','1','-l','8','-raw',dest,txt],check=True)
+                  raw=open(txt,encoding='utf-8',errors='replace').read()
+                  info=subprocess.run(['pdfinfo',dest],text=True,capture_output=True).stdout
+                  issue_year[loc]={
+                      'url':url,
+                      'filename_has_2026':'2026' in url,
+                      'text_has_2025':bool(re.search(r'\b2025\b',raw)),
+                      'text_has_2026':bool(re.search(r'\b2026\b',raw)),
+                      'pages':re.search(r'^Pages:\s+(\d+)',info,re.M).group(1) if re.search(r'^Pages:\s+(\d+)',info,re.M) else None,
+                      'first_year_contexts':re.findall(r'.{0,35}(?:2025|2026).{0,35}',raw)[:8]
+                  }
+              else: issue_year[loc]={'url':url,'download_error':err}
+          print('ISSUE_YEAR_AUDIT='+json.dumps(issue_year,ensure_ascii=False))
+
+          for slug in issue['articles']:
+              base=ROOT/'content'/'articles'/slug
+              meta=json.load(open(base/'metadata.json',encoding='utf-8'))
+              rec={'slug':slug,'type':meta.get('articleType',{}).get('id'),'dates':meta.get('dates'),'pages':meta.get('pages'),'locales':{}}
+              for loc in ['tr','en']:
+                  ft=json.load(open(base/'fulltext'/f'{loc}.json',encoding='utf-8'))
+                  url=(meta.get('urls') or {}).get('pdfTr' if loc=='tr' else 'pdfEn')
+                  lr={'pdf':url,'sections':len(ft.get('sections') or []),'references':len(ft.get('references') or []),'keywords':ft.get('keywords') or []}
+                  if not url:
+                      lr['skip']='no pdf url'; rec['locales'][loc]=lr; continue
+                  pdf=f'/tmp/v6i4/{slug}-{loc}.pdf'; txt=f'/tmp/v6i4/{slug}-{loc}.txt'
+                  rc,err=get_pdf(url,pdf)
+                  if rc!=0:
+                      lr['download_error']=err; rec['locales'][loc]=lr; continue
+                  subprocess.run(['pdftotext','-raw',pdf,txt],check=True)
+                  raw=open(txt,encoding='utf-8',errors='replace').read()
+                  # Join only obvious PDF word-break hyphenations before normalization.
+                  raw_join=re.sub(r'(?<=\w)-\s*\n\s*(?=\w)','',raw)
+                  pdfn=norm(raw_join)
+                  info=subprocess.run(['pdfinfo',pdf],text=True,capture_output=True).stdout
+                  m=re.search(r'^Pages:\s+(\d+)',info,re.M); lr['pdf_pages']=int(m.group(1)) if m else None
+                  lr['replacement_chars']=raw.count('\ufffd')
+                  lr['control_2']=raw.count('\x02')
+                  # Metadata coverage.
+                  title=(meta.get('title') or {}).get(loc)
+                  lr['title_in_pdf']=norm(title) in pdfn if title else None
+                  abstract=(meta.get('abstract') or {}).get(loc)
+                  lr['abstract_shingles']=shingle_hits(pdfn,abstract,8) if abstract else None
+                  lr['keyword_in_pdf']={k:(norm(k) in pdfn) for k in (meta.get('keywords') or {}).get(loc,[])}
+                  # Dates explicitly printed in article PDF.
+                  dcheck={}
+                  for dk,dv in (meta.get('dates') or {}).items():
+                      if not dv: dcheck[dk]=None; continue
+                      y,mn,d=dv.split('-'); forms=[dv,f'{d}.{mn}.{y}',f'{d}/{mn}/{y}',f'{d}-{mn}-{y}']
+                      dcheck[dk]=any(norm(x) in pdfn for x in forms)
+                  lr['date_in_pdf']=dcheck
+                  # Section heading presence (ignore synthetic generic full-text wrapper).
+                  missing=[]
+                  for s in ft.get('sections') or []:
+                      t=(s.get('title') or '').strip()
+                      if not t or norm(t) in {'full text','tam metin'}: continue
+                      if norm(t) not in pdfn: missing.append(t)
+                  lr['headings_missing_exact']=missing
+                  # Paragraph-level coverage using first/middle/end word shingles.
+                  paras=[]
+                  for si,s in enumerate(ft.get('sections') or []):
+                      for pi,p in enumerate(s.get('paragraphs') or []):
+                          if isinstance(p,str) and len(tokens(p))>=12:
+                              h,total=shingle_hits(pdfn,p,7)
+                              paras.append((si+1,pi+1,h,total,p[:150]))
+                  lr['paragraphs_tested']=len(paras)
+                  lr['paragraphs_zero_hit']=[{'section':a,'paragraph':b,'sample':e} for a,b,h,t,e in paras if h==0][:30]
+                  lr['paragraphs_partial_hit_count']=sum(1 for a,b,h,t,e in paras if 0<h<t)
+                  # Reference-level basic coverage, using first seven normalized words.
+                  refmiss=[]
+                  for ri,r in enumerate(ft.get('references') or []):
+                      text=r if isinstance(r,str) else (r.get('text') or '')
+                      ts=tokens(text)
+                      if len(ts)>=5:
+                          q=' '.join(ts[:min(7,len(ts))])
+                          if q not in pdfn: refmiss.append({'ref':ri+1,'sample':text[:160]})
+                  lr['references_first_shingle_missing']=refmiss[:30]
+                  # Detect suspicious extraction artifacts remaining in canonical JSON.
+                  serialized=json.dumps(ft,ensure_ascii=False)
+                  lr['suspicious_hyphen_space']=re.findall(r'\b[\wÇĞİÖŞÜçğıöşü]{2,}-\s+[\wÇĞİÖŞÜçğıöşü]{2,}\b',serialized)[:30]
+                  lr['contains_page_header_tokens']=bool(re.search(r'BRI[qQ]\s*[•·]|Cilt\s*6\s*Sayı\s*4|Vol\.?\s*6\s*Issue',serialized,re.I))
+                  lr['section_titles_ending_hyphen']=[s.get('title') for s in ft.get('sections') or [] if str(s.get('title') or '').rstrip().endswith('-')]
+                  # Declarations: flag likely source statements omitted from metadata, and metadata statements absent from PDF.
+                  tail=norm(raw_join[-12000:])
+                  lr['pdf_mentions_funding']=any(x in tail for x in ['funding','finansman','supported by','desteklenmektedir','desteklenmiştir'])
+                  lr['metadata_has_funding']=bool(meta.get('funding'))
+                  lr['pdf_mentions_conflict']=any(x in tail for x in ['conflict of interest','çıkar çatışması'])
+                  lr['metadata_has_conflict']=bool(meta.get('conflictOfInterest'))
+                  if meta.get('funding') and isinstance(meta['funding'],dict):
+                      st=(meta['funding'].get('statement') or {}).get(loc)
+                      lr['funding_statement_shingles']=shingle_hits(pdfn,st,7) if st else None
+                  rec['locales'][loc]=lr
+              out.append(rec)
+          print('AUDIT_REPORT_BEGIN')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          print('AUDIT_REPORT_END')
+          PY
