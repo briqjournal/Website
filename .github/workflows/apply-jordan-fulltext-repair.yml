@@ -1,0 +1,58 @@
+name: Apply Jordan full-text repair
+on:
+  push:
+    branches: [automation/v7i4-jordan-fulltext]
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rebuild, validate, and fast-forward main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main automation/v7i4-jordan-fulltext
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v7i4-jordan-repair "$BASE"
+
+          git show origin/automation/v7i4-jordan-fulltext:scripts/repair-jordan-fulltext.py > /tmp/repair-jordan-fulltext.py
+          git show origin/automation/v7i4-jordan-fulltext:tests/jordan-english-fulltext.test.mjs > tests/jordan-english-fulltext.test.mjs
+
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          URL='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Li%20Sainan%20%26%20Li%20Xi%20-%20China-Arab%20Cooperation%20under%20the%20Digital%20Silk%20Road%20Framework%20A%20Case%20Study%20of%20Jordan.pdf'
+          curl -L --fail --retry 3 --connect-timeout 15 --max-time 90 "$URL" -o /tmp/jordan-en.pdf
+          pdftotext -nopgbrk /tmp/jordan-en.pdf /tmp/jordan-en-flow.txt
+          python /tmp/repair-jordan-fulltext.py
+
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+          node --test tests/keyword-case.test.mjs tests/comak-english-fulltext.test.mjs tests/jordan-english-fulltext.test.mjs
+          git diff --check
+          npm ci --no-audit --no-fund
+          npm run build
+
+          PAGE='dist/client/en/articles/china-arab-cooperation-under-the-digital-silk-road-framework-a-case-study-of-jordan/index.html'
+          test -f "$PAGE"
+          grep -q 'The Digital Silk Road Initiative and China-Jordan Cooperation' "$PAGE"
+          grep -q 'The Iterative Upgrading of Jordan’s Digital Transformation Strategy' "$PAGE"
+          grep -q 'Debt sustainability and financial transparency' "$PAGE"
+          grep -q 'D5000260296' "$PAGE"
+          ! grep -q '>Giriş<' "$PAGE"
+          ! grep -q '>Yöntem<' "$PAGE"
+          ! grep -q 'THE RAPID ADVANCEMENT OF DIGITAL Forum for International Cooperation' "$PAGE"
+
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content tests app
+          git diff --cached --quiet && { echo 'No changes'; exit 0; }
+          git commit -m 'Repair and split Jordan bilingual full text'
+
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced; refusing push'; exit 1; }
+          git push origin HEAD:main
