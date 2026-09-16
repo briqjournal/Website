@@ -1,0 +1,164 @@
+name: Finalize Volume 6 Issue 4 Canonical
+on:
+  push:
+    branches: [migration/v6i4-canonical]
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Migrate, validate, and safely update main
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+
+          cat >/tmp/finalize-v6i4.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+
+          const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+          const write=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n');
+          const issue=read('content/issues/v06-i04.json');
+          const slugs=issue.articles;
+          if(slugs.length!==8||new Set(slugs).size!==8) throw new Error(`Expected 8 unique V6I4 contributions, got ${slugs.length}/${new Set(slugs).size}`);
+
+          const decisions=new Map([
+            ['rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve',{
+              en:['Central Asian security','counterterrorism strategies','CSTO','Islamic radicalism','Russia’s foreign policy','transnational jihadist networks'],
+              tr:['Orta Asya güvenliği','teröre karşı mücadele stratejileri','KGAÖ','İslami radikalizm','Rusya’nın dış politikası','ulusötesi cihatçı ağlar'],
+            }],
+            ['dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi',{
+              en:['capitalist rent-seeking','crisis of economic globalization','global accumulation of capital','neoliberalism','spatio-temporal fix'],
+              tr:['ekonomik küreselleşme krizi','kapitalist rant arayışı','küresel sermaye birikimi','mekansal-zamansal düzeltme','neoliberalizm'],
+            }],
+            ['genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme',{
+              en:['China','4 May','New Culture Movement','New Youth','Communist Party of China'],
+              tr:['Çin','Çin Komünist Partisi','4 Mayıs','Yeni Gençlik','Yeni Kültür Hareketi'],
+            }],
+          ]);
+
+          const refText=r=>typeof r==='string'?r:r?.text||'';
+          const withText=(r,t)=>typeof r==='string'?t:{...r,text:t};
+          function repairReferenceUrl(value){
+            const text=String(value??'');
+            const start=text.search(/https?:\/\//iu);
+            if(start<0) return text;
+            const before=text.slice(0,start);
+            const tail=text.slice(start);
+            const markers=[
+              /\s+\(?(?:adresinden|adresine)\b/iu,
+              /\s+\(?(?:erişim tarihi|erişildi|erişim)\b/iu,
+              /\s+\(?(?:accessed|retrieved)\b/iu,
+            ];
+            let boundary=tail.length;
+            for(const marker of markers){const found=tail.search(marker);if(found>=0) boundary=Math.min(boundary,found);}
+            const url=tail.slice(0,boundary);
+            if(!/\s/u.test(url)) return text;
+            return before+url.replace(/\s+/gu,'')+tail.slice(boundary);
+          }
+
+          for(const slug of slugs){
+            const base=path.join('content/articles',slug);
+            const metaPath=path.join(base,'metadata.json');
+            const currentPath=path.join(base,'fulltext/current.json');
+            const meta=read(metaPath);
+            if(meta.schemaVersion!==2) throw new Error(`${slug}: metadata is not schema v2`);
+            if(meta.journal?.volume!==6||meta.journal?.issue!==4) throw new Error(`${slug}: wrong journal volume/issue`);
+            const current=read(currentPath);
+            if(!current.en||!current.tr) throw new Error(`${slug}: current.json lacks both locales`);
+            const decision=decisions.get(slug);
+            for(const locale of ['en','tr']){
+              const ft=structuredClone(current[locale]);
+              if(decision) ft.keywords=[...decision[locale]];
+              else ft.keywords=Array.isArray(ft.keywords)?ft.keywords:[];
+              ft.references=(ft.references||[]).map(r=>withText(r,repairReferenceUrl(refText(r))));
+              const ids=(ft.sections||[]).map(s=>s.id);
+              if(ids.some(x=>!x)||new Set(ids).size!==ids.length) throw new Error(`${slug}/${locale}: invalid section ids`);
+              write(path.join(base,`fulltext/${locale}.json`),ft);
+            }
+            if(decision){
+              meta.keywords??={en:[],tr:[]};
+              meta.keywords.en=[...decision.en];
+              meta.keywords.tr=[...decision.tr];
+            }
+            write(metaPath,meta);
+            fs.rmSync(currentPath);
+            const legacyEn=path.join(base,'fulltext/en-archive.json');
+            if(fs.existsSync(legacyEn)) fs.rmSync(legacyEn);
+          }
+
+          // Move V6I4 from legacy current/en_archive collections into the canonical localized collection.
+          {
+            const file='content/catalog.json';
+            const catalog=read(file);
+            const moving=new Set(slugs);
+            catalog.fulltext.current=(catalog.fulltext.current||[]).filter(x=>!moving.has(x));
+            catalog.fulltext.en_archive=(catalog.fulltext.en_archive||[]).filter(x=>!moving.has(x));
+            const localized=new Set([...(catalog.fulltext.localized||[]),...slugs]);
+            catalog.fulltext.localized=(catalog.article_order||[]).filter(x=>localized.has(x));
+            write(file,catalog);
+          }
+
+          // The reviewed Kolosovskiy keyword decision now lives in canonical JSON, not a loader exception.
+          {
+            const file='scripts/content-store.mjs';
+            let s=fs.readFileSync(file,'utf8');
+            const slug='rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve';
+            const start=s.indexOf(`  ["${slug}", {`);
+            if(start<0) throw new Error('Kolosovskiy keyword override not found');
+            const end=s.indexOf('  }],',start);
+            if(end<0) throw new Error('Kolosovskiy keyword override end not found');
+            s=s.slice(0,start)+s.slice(end+'  }],'.length);
+            fs.writeFileSync(file,s);
+          }
+
+          // Old keyword test should validate canonical output, not require the retired loader override.
+          {
+            const file='tests/keyword-case.test.mjs';
+            let s=fs.readFileSync(file,'utf8');
+            s=s.replace(/\n\s*assert\.equal\(bilingualKeywordParityOverrides\.get\("rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"\)\?\.source, "en"\);/u,'');
+            fs.writeFileSync(file,s);
+          }
+
+          fs.writeFileSync('tests/v6i4-content-integrity.test.mjs',`import fs from "node:fs";\nimport assert from "node:assert/strict";\nimport test from "node:test";\nimport { bilingualKeywordParityOverrides } from "../scripts/content-store.mjs";\nconst read=p=>JSON.parse(fs.readFileSync(p,"utf8"));\nconst issue=read("content/issues/v06-i04.json");\nconst slugs=issue.articles;\nconst refText=r=>typeof r==="string"?r:r?.text||"";\nfunction urlPart(value){const start=value.search(/https?:\\/\\//iu);if(start<0)return null;const tail=value.slice(start);const markers=[/\\s+\\(?(?:adresinden|adresine)\\b/iu,/\\s+\\(?(?:erişim tarihi|erişildi|erişim)\\b/iu,/\\s+\\(?(?:accessed|retrieved)\\b/iu];let end=tail.length;for(const marker of markers){const i=tail.search(marker);if(i>=0)end=Math.min(end,i);}return tail.slice(0,end);}\ntest("V6I4 is canonical locale-split metadata-v2 content",()=>{assert.equal(slugs.length,8);assert.equal(new Set(slugs).size,8);for(const slug of slugs){const base=\`content/articles/\${slug}\`;const meta=read(\`\${base}/metadata.json\`);assert.equal(meta.schemaVersion,2,slug);assert.equal(meta.journal.volume,6,slug);assert.equal(meta.journal.issue,4,slug);assert.equal(meta.dates.published,"2025-09-01",slug);assert.deepEqual(fs.readdirSync(\`\${base}/fulltext\`).filter(x=>x.endsWith(".json")).sort(),["en.json","tr.json"],slug);for(const locale of ["en","tr"]){const ft=read(\`\${base}/fulltext/\${locale}.json\`);assert.deepEqual(meta.keywords?.[locale]||[],ft.keywords||[],\`\${slug}/\${locale} keyword mismatch\`);const ids=(ft.sections||[]).map(s=>s.id);assert.equal(ids.length,new Set(ids).size,\`\${slug}/\${locale} duplicate section id\`);for(const [i,r] of (ft.references||[]).entries()){const url=urlPart(refText(r));if(url)assert.doesNotMatch(url,/\\s/u,\`\${slug}/\${locale} ref \${i+1}: \${url}\`);}}assert(!bilingualKeywordParityOverrides.has(slug),\`\${slug}: V6I4 must not depend on loader override\`);}});\ntest("V6I4 source-verified keyword and structure decisions remain intact",()=>{const kolos="rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve";const km=read(\`content/articles/\${kolos}/metadata.json\`);assert.deepEqual(km.keywords.en,["Central Asian security","counterterrorism strategies","CSTO","Islamic radicalism","Russia’s foreign policy","transnational jihadist networks"]);assert.deepEqual(km.keywords.tr,["Orta Asya güvenliği","teröre karşı mücadele stratejileri","KGAÖ","İslami radikalizm","Rusya’nın dış politikası","ulusötesi cihatçı ağlar"]);const ken=read(\`content/articles/\${kolos}/fulltext/en.json\`);const ktr=read(\`content/articles/\${kolos}/fulltext/tr.json\`);assert.equal(ken.references.length,70);assert.equal(ktr.references.length,70);const wef="dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi";const wm=read(\`content/articles/\${wef}/metadata.json\`);assert.deepEqual(wm.keywords.tr,["ekonomik küreselleşme krizi","kapitalist rant arayışı","küresel sermaye birikimi","mekansal-zamansal düzeltme","neoliberalizm"]);assert.equal(read(\`content/articles/\${wef}/fulltext/en.json\`).references.length,35);assert.equal(read(\`content/articles/\${wef}/fulltext/tr.json\`).references.length,35);const young="genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme";const ym=read(\`content/articles/\${young}/metadata.json\`);assert.deepEqual(ym.keywords.en,["China","4 May","New Culture Movement","New Youth","Communist Party of China"]);assert.deepEqual(ym.keywords.tr,["Çin","Çin Komünist Partisi","4 Mayıs","Yeni Gençlik","Yeni Kültür Hareketi"]);const yen=read(\`content/articles/\${young}/fulltext/en.json\`);const ytr=read(\`content/articles/\${young}/fulltext/tr.json\`);assert.equal(yen.sections.length,7);assert.equal(ytr.sections.length,8);assert.equal(yen.references.length,28);assert.equal(ytr.references.length,29);});\ntest("V6I4 catalog is localized and no longer legacy-current",()=>{const c=read("content/catalog.json");for(const slug of slugs){assert(c.fulltext.localized.includes(slug),slug);assert(!c.fulltext.current.includes(slug),slug);assert(!c.fulltext.en_archive.includes(slug),slug);}});\n`);
+          JS
+
+          apply_changes(){
+            node /tmp/finalize-v6i4.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v6i4-content-integrity.test.mjs tests/keyword-case.test.mjs tests/article-metadata-v2.test.mjs
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_changes
+            npm test
+            npm run lint
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+              echo "main advanced during validation attempt $ATTEMPT; retrying"
+              continue
+            fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content scripts tests app
+            git commit -m 'Finalize Volume 6 Issue 4 canonical full text'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced after validation attempt $ATTEMPT; retrying"
+          done
+          echo 'main kept advancing; refusing unsafe push'; exit 1
