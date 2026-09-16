@@ -6,11 +6,12 @@ import { join } from "node:path";
 const root = process.cwd();
 const readJson = async (path) => JSON.parse(await readFile(path, "utf8"));
 
-function inspectKeywords(keywords, locale, source, candidates) {
+function inspectKeywords(keywords, locale, source, candidates, inventory) {
   if (!Array.isArray(keywords)) return;
   for (const raw of keywords) {
     if (typeof raw !== "string") continue;
     const value = raw.trim();
+    inventory[locale].add(value);
     const compactLetters = /^[\p{L}\p{M}]+$/u.test(value);
     const camelJoin = /[\p{Ll}][\p{Lu}]/u.test(value) || /[\p{Lu}]{2,}[\p{Lu}][\p{Ll}]/u.test(value);
     const longSingleToken = compactLetters && [...value].length >= 16;
@@ -30,6 +31,7 @@ function inspectKeywords(keywords, locale, source, candidates) {
 test("audit all canonical article keywords", async () => {
   const catalog = await readJson(join(root, "content/catalog.json"));
   const candidates = [];
+  const inventory = { tr: new Set(), en: new Set() };
   let keywordCount = 0;
   let arrayCount = 0;
 
@@ -42,7 +44,7 @@ test("audit all canonical article keywords", async () => {
         arrayCount += 1;
         keywordCount += keywords.length;
       }
-      inspectKeywords(keywords, locale, source, candidates);
+      inspectKeywords(keywords, locale, source, candidates, inventory);
     }
   }
 
@@ -54,7 +56,7 @@ test("audit all canonical article keywords", async () => {
       arrayCount += 1;
       keywordCount += keywords.length;
     }
-    inspectKeywords(keywords, "en", source, candidates);
+    inspectKeywords(keywords, "en", source, candidates, inventory);
   }
 
   if (catalog.fulltext.saudi_en) {
@@ -66,10 +68,12 @@ test("audit all canonical article keywords", async () => {
       arrayCount += 1;
       keywordCount += keywords.length;
     }
-    inspectKeywords(keywords, "en", source, candidates);
+    inspectKeywords(keywords, "en", source, candidates, inventory);
   }
 
   console.log(`KEYWORD_AUDIT arrays=${arrayCount} keywords=${keywordCount}`);
   console.log(`KEYWORD_AUDIT_CANDIDATES ${JSON.stringify(candidates)}`);
+  console.log(`KEYWORD_INVENTORY_TR ${JSON.stringify([...inventory.tr].sort((a, b) => a.localeCompare(b, "tr")))}`);
+  console.log(`KEYWORD_INVENTORY_EN ${JSON.stringify([...inventory.en].sort((a, b) => a.localeCompare(b, "en")))}`);
   assert.fail(`Keyword audit emitted ${candidates.length} candidates for manual review.`);
 });
