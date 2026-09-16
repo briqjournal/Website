@@ -1,0 +1,22 @@
+name: Probe Volume 6 Issue 3 PDF Order
+on:
+  push:
+    branches: [audit/v6i3-independent]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare raw and layout extraction
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update >/dev/null && sudo apt-get install -y poppler-utils >/dev/null
+          URL='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Belkacem%20Iratni_ENG.pdf'
+          curl -L --fail --retry 3 "$URL" -o /tmp/a.pdf
+          pdftotext -f 2 -l 3 -raw /tmp/a.pdf /tmp/raw.txt
+          pdftotext -f 2 -l 3 -layout /tmp/a.pdf /tmp/layout.txt
+          echo '=== RAW ==='; sed -n '1,220p' /tmp/raw.txt
+          echo '=== LAYOUT ==='; sed -n '1,120p' /tmp/layout.txt
