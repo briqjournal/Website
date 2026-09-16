@@ -1,0 +1,206 @@
+name: Finalize V7I1
+on:
+  push:
+    branches: [automation/v7i1-finalize]
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Finalize on latest main, validate, and safely push
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+
+          cat >/tmp/finalize-v7i1.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+
+          const issue = JSON.parse(fs.readFileSync('content/issues/v07-i01.json','utf8'));
+          if (issue.articles.length !== 5) throw new Error(`Expected 5 V7I1 items, got ${issue.articles.length}`);
+          const [wenbo, ertan, gao, zhang, yang] = issue.articles;
+
+          const read = f => JSON.parse(fs.readFileSync(f,'utf8'));
+          const write = (f,x) => fs.writeFileSync(f, JSON.stringify(x,null,2)+'\n');
+          const ft = (slug,locale) => path.join('content/articles',slug,'fulltext',`${locale}.json`);
+          const metaFile = slug => path.join('content/articles',slug,'metadata.json');
+          const textOf = r => typeof r === 'string' ? r : r.text;
+          const setText = (r,t) => typeof r === 'string' ? t : {...r,text:t};
+          const editRefs = (data,fn) => { data.references = (data.references||[]).map((r,i)=>setText(r,fn(textOf(r),i))).filter(r=>textOf(r).trim()); };
+
+          // 1) Locale split. Preserve content verbatim, normalize only structural section anchors.
+          for (const slug of issue.articles) {
+            const dir = path.join('content/articles',slug,'fulltext');
+            const current = path.join(dir,'current.json');
+            if (fs.existsSync(current)) {
+              const legacy = read(current);
+              for (const locale of ['en','tr']) {
+                if (!legacy[locale]?.sections) throw new Error(`${slug}/${locale}: missing legacy locale`);
+                legacy[locale].sections.forEach((s,i)=>s.id=`${locale}-section-${i+1}`);
+                write(ft(slug,locale),legacy[locale]);
+              }
+              fs.unlinkSync(current);
+            } else {
+              for (const locale of ['en','tr']) {
+                const file=ft(slug,locale); if(!fs.existsSync(file)) throw new Error(`${slug}/${locale}: no canonical or legacy text`);
+                const x=read(file); x.sections.forEach((s,i)=>s.id=`${locale}-section-${i+1}`); write(file,x);
+              }
+            }
+          }
+
+          // 2) Source-verified keyword repairs.
+          // Ertan: the Turkish PDF has the same five keywords already held in metadata; legacy fulltext omitted them.
+          {
+            const m=read(metaFile(ertan)), tr=read(ft(ertan,'tr'));
+            tr.keywords=[...(m.keywords?.tr||[])]; write(ft(ertan,'tr'),tr);
+          }
+          // Gao-Durdu and Zhang-Liu: canonical fulltext/PDF wording and ordering is authoritative for TR keywords.
+          for (const slug of [gao,zhang]) {
+            const m=read(metaFile(slug)), tr=read(ft(slug,'tr'));
+            m.keywords ||= {en:[],tr:[]}; m.keywords.tr=[...(tr.keywords||[])]; write(metaFile(slug),m);
+          }
+          // Yang Chen: official article pages publish these metadata keywords though the book-review PDF has no keyword block.
+          {
+            const m=read(metaFile(yang));
+            for(const locale of ['en','tr']) { const x=read(ft(yang,locale)); x.keywords=[...(m.keywords?.[locale]||[])]; write(ft(yang,locale),x); }
+          }
+
+          // 3) Narrow bibliography repairs: references only, never body prose.
+          {
+            const tr=read(ft(wenbo,'tr'));
+            editRefs(tr,t=>t.replace('https://www. eeo.com.cn/','https://www.eeo.com.cn/'));
+            write(ft(wenbo,'tr'),tr);
+          }
+          for(const locale of ['en','tr']) {
+            const x=read(ft(ertan,locale));
+            editRefs(x,t=>t
+              .replace('https://doi.org/10.1146/annurev. ecolsys.30.1.539','https://doi.org/10.1146/annurev.ecolsys.30.1.539')
+              .replace('https://doi.org/10.1186/s12302-014- 0034-1','https://doi.org/10.1186/s12302-014-0034-1')
+              .replace('https://doi.org/10.1007/s11258-008- 9485-0','https://doi.org/10.1007/s11258-008-9485-0')
+              .replace('https://www. fao.org/','https://www.fao.org/'));
+            write(ft(ertan,locale),x);
+          }
+          {
+            const canonicalHumphrey = 'Humphrey, C. and Chen, Y. (2021) China in the multilateral development banks: evolving strategies of a new power. Report. London: ODI (www.odi.org/en/publications/china-multilateral-development-banks).';
+            for(const locale of ['en','tr']) {
+              const x=read(ft(gao,locale));
+              // EN extraction glued Humphrey tail to European Council; TR extraction made it a stray record.
+              x.references=(x.references||[]).filter(r=>!/^evolving strategies of a new power\./i.test(textOf(r).trim()));
+              editRefs(x,t=>{
+                if(/^Humphrey, C\. and Chen, Y\. \(2021\)/i.test(t)) return canonicalHumphrey;
+                t=t.replace(/(pandemic-treaty-op-ed\/)evolving strategies of a new power\..*$/i,'$1');
+                // Source-verified truncated DOI.
+                if(/^Gaens, B\., Sinkkonen, V\., & Vogt, H\. \(2023\)/.test(t)) {
+                  t=t.replace(/https:\/\/\s*doi\.org\/10\.1007\/s12140-023-09401-\s*$/i,'https://doi.org/10.1007/s12140-023-09401-z');
+                }
+                // PDF line wrapping inserted whitespace inside Gao-Durdu URLs. URLs are terminal in these refs.
+                const h=t.search(/https?:\/\//i);
+                if(h>=0) {
+                  const pre=t.slice(0,h), tail=t.slice(h);
+                  const boundary=tail.search(/\s+(?:adresinden\s+alınmıştır|accessed\b|retrieved\b)/i);
+                  let url=boundary>0?tail.slice(0,boundary):tail;
+                  const post=boundary>0?tail.slice(boundary):'';
+                  url=url.replace(/\s+/g,'').replace(/#:~:text=.*$/i,'');
+                  t=pre+url+post;
+                }
+                // Known line-break losses where a hyphen was swallowed or spuriously retained.
+                t=t.replace('sco-nations-conduct-1stjoint-counter-terrorism-drill-in-china','sco-nations-conduct-1st-joint-counter-terrorism-drill-in-china')
+                   .replace('rise-of-the-globalsouth-and-descent-of-descent-of-the-north','rise-of-the-global-south-and-descent-of-the-north')
+                   .replace('rise-of-the-globalsouth-and-descent-of-the-north','rise-of-the-global-south-and-descent-of-the-north')
+                   .replace('/en/MediaCenter/News/Pages/news2025-6-2-3.aspx-','/en/MediaCenter/News/Pages/news2025-6-2-3.aspx');
+                return t;
+              });
+              write(ft(gao,locale),x);
+            }
+          }
+          {
+            const tr=read(ft(zhang,'tr'));
+            editRefs(tr,t=>t.replace('https://zhuanlan. zhihu.com/','https://zhuanlan.zhihu.com/'));
+            write(ft(zhang,'tr'),tr);
+          }
+
+          // 4) Synchronize keyword metadata/fulltext after source-specific decisions.
+          for(const slug of issue.articles) {
+            const m=read(metaFile(slug)); m.keywords ||= {en:[],tr:[]};
+            for(const locale of ['en','tr']) {
+              const x=read(ft(slug,locale));
+              if(JSON.stringify(m.keywords[locale]||[])!==JSON.stringify(x.keywords||[])) {
+                // Wenbo is already aligned; all intended asymmetries were handled explicitly above.
+                throw new Error(`${slug}/${locale}: unresolved keyword mismatch: ${JSON.stringify(m.keywords[locale])} vs ${JSON.stringify(x.keywords)}`);
+              }
+            }
+          }
+
+          // 5) Catalog migration.
+          const catalogPath='content/catalog.json', c=read(catalogPath); c.fulltext ||= {};
+          c.fulltext.localized=[...new Set([...(c.fulltext.localized||[]),...issue.articles])];
+          for(const key of ['current','en_archive']) c.fulltext[key]=(c.fulltext[key]||[]).filter(s=>!issue.articles.includes(s));
+          write(catalogPath,c);
+          JS
+
+          cat >/tmp/v7i1-test.mjs <<'JS'
+          import fs from 'node:fs'; import path from 'node:path'; import assert from 'node:assert/strict'; import test from 'node:test';
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i01.json','utf8')); const catalog=JSON.parse(fs.readFileSync('content/catalog.json','utf8'));
+          const read=(slug,l)=>JSON.parse(fs.readFileSync(path.join('content/articles',slug,'fulltext',`${l}.json`),'utf8'));
+          const meta=slug=>JSON.parse(fs.readFileSync(path.join('content/articles',slug,'metadata.json'),'utf8'));
+          const txt=r=>typeof r==='string'?r:r.text;
+          test('V7I1 is canonical locale-split metadata-v2 content',()=>{
+            assert.equal(issue.articles.length,5);
+            for(const slug of issue.articles){
+              const dir=path.join('content/articles',slug,'fulltext'); assert.deepEqual(fs.readdirSync(dir).filter(x=>x.endsWith('.json')).sort(),['en.json','tr.json']);
+              assert.equal(meta(slug).schemaVersion,2); assert.equal(meta(slug).dates.published,'2025-12-01');
+              assert(catalog.fulltext.localized.includes(slug)); assert(!catalog.fulltext.current.includes(slug)); assert(!catalog.fulltext.en_archive.includes(slug));
+              for(const l of ['en','tr']){ const x=read(slug,l); x.sections.forEach((s,i)=>assert.equal(s.id,`${l}-section-${i+1}`,`${slug}/${l}`)); assert.deepEqual(meta(slug).keywords?.[l]||[],x.keywords||[],`${slug}/${l} keywords`); }
+            }
+          });
+          test('V7I1 bilingual bodies remain distinct',()=>{
+            const body=x=>x.sections.flatMap(s=>s.paragraphs||[]).join(' ').replace(/\s+/g,' ').trim();
+            for(const slug of issue.articles){ const e=body(read(slug,'en')),t=body(read(slug,'tr')); if(e.length>300&&t.length>300) assert.notEqual(e,t,slug); }
+          });
+          test('V7I1 source-verified reference repairs stay intact',()=>{
+            const all=[]; for(const slug of issue.articles) for(const l of ['en','tr']) all.push(...(read(slug,l).references||[]).map(txt)); const joined=all.join('\n');
+            for(const bad of ['https://www. eeo.com.cn','annurev. ecolsys','s12302-014- 0034-1','s11258-008- 9485-0','https://www. fao.org','https://zhuanlan. zhihu.com','https://www. aa.com.tr','https://www. bu.edu','https://www. inss.org.il','https://www. iisd.org','https://www. weforum.org','https://www. brettonwoodsproject.org','https:// doi.org','evolving strategies of a new power. Report. London: ODI (www. odi.org']) assert(!joined.includes(bad),bad);
+            const g=issue.articles[2]; for(const l of ['en','tr']) { const refs=(read(g,l).references||[]).map(txt); assert.equal(refs.length,62,`Gao ${l} refs`); assert.equal(refs.filter(x=>/^Humphrey, C\. and Chen, Y\. \(2021\)/.test(x)).length,1); assert(refs.some(x=>x.includes('10.1007/s12140-023-09401-z'))); }
+            const zrefs=(read(issue.articles[3],'tr').references||[]).map(txt); assert.equal(zrefs.length,74); assert(zrefs.some(x=>/^Zhou, L\.Y\. \(2009\)/.test(x)),'source-only Zhou ref must remain');
+          });
+          test('V7I1 declarations are not invented and Zhang-Liu funding is preserved',()=>{
+            for(const slug of issue.articles.slice(0,3)) assert.equal(meta(slug).funding,null,slug);
+            const f=meta(issue.articles[3]).funding; assert(f); const s=JSON.stringify(f); assert(s.includes('SGH23Y2327')); assert(s.includes('25GZ0201'));
+            assert.equal(meta(issue.articles[4]).abstract.en,null); assert.equal(meta(issue.articles[4]).abstract.tr,null);
+          });
+          JS
+
+          apply_all() {
+            node /tmp/finalize-v7i1.mjs
+            cp /tmp/v7i1-test.mjs tests/v7i1-content-integrity.test.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i1-content-integrity.test.mjs
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_all
+            npm test
+            npm run lint
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then echo "main advanced during validation attempt $ATTEMPT; retrying"; continue; fi
+            if git diff --quiet; then echo 'V7I1 final state already present.'; exit 0; fi
+            git config user.name 'BRIQ Journal'; git config user.email 'briq@briqjournal.com'
+            git add content app tests
+            git commit -m 'Finalize Volume 7 Issue 1 canonical full text'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then git push origin HEAD:main; exit 0; fi
+            echo "main advanced after commit attempt $ATTEMPT; retrying"
+          done
+          echo 'main kept advancing; refusing unsafe push'; exit 1
