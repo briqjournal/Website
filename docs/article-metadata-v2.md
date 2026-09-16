@@ -47,6 +47,8 @@ Authors are stored individually. `displayName` preserves the published form and 
 
 Shared bilingual fields use explicit `en` and `tr` keys. This applies to title, abstract, keywords, season labels, citations, and author declarations where translations exist.
 
+Store semantic content only, not presentation labels. For example, `abstract.en` must contain the abstract itself rather than a string beginning with `Abstract`, and `abstract.tr` must not begin with a UI heading such as `Öz` or `Özet`. The same rule applies to citation labels such as `Citation` and `Atıf`.
+
 Do not invent a translation merely to satisfy parity. Missing legacy information should be represented as `null` until it is verified from the published article, editorial records, or another authoritative source.
 
 ## Dates
