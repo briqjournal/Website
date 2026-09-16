@@ -68,6 +68,24 @@
         }
       }
     },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["displayName", "role"],
+        "properties": {
+          "displayName": { "type": "string", "minLength": 1 },
+          "givenName": { "type": ["string", "null"] },
+          "familyName": { "type": ["string", "null"] },
+          "role": { "type": "string", "minLength": 1 },
+          "orcid": {
+            "type": ["string", "null"],
+            "pattern": "^(https://orcid\\.org/)?[0-9X]{4}-[0-9X]{4}-[0-9X]{4}-[0-9X]{4}$"
+          }
+        }
+      }
+    },
     "abstract": { "$ref": "#/$defs/localizedNullable" },
     "keywords": {
       "type": "object",
