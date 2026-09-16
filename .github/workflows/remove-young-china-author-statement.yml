@@ -1,0 +1,49 @@
+name: Remove Young China author statement
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/remove-young-china-author-statement.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sync latest main
+        run: git pull --rebase origin main
+      - name: Remove author statement section
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = 'content/articles/genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme/fulltext/tr.json';
+          const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+          const targetTitle = 'YAZAR BEYANI';
+          const targetText = 'Bu çalışma bilimsel araştırma ve yayın etiği kurallarına uygun olarak hazırlanmıştır. Araştırmacı herhangi bir çıkar çatışması bildirmemiştir.';
+          const index = data.sections.findIndex(section =>
+            section.id === 'tr-section-8' &&
+            section.title === targetTitle &&
+            Array.isArray(section.paragraphs) &&
+            section.paragraphs.length === 1 &&
+            section.paragraphs[0] === targetText
+          );
+          if (index === -1) throw new Error('Expected YAZAR BEYANI section not found exactly');
+          data.sections.splice(index, 1);
+          fs.writeFileSync(path, JSON.stringify(data, null, 2) + '\n');
+          NODE
+      - name: Commit removal and clean up workflow
+        run: |
+          rm .github/workflows/remove-young-china-author-statement.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add content/articles/genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme/fulltext/tr.json \
+                  .github/workflows/remove-young-china-author-statement.yml
+          git commit -m 'Remove author statement from Young China article body'
+          git pull --rebase origin main
+          git push origin HEAD:main
