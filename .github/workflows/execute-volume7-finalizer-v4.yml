@@ -1,0 +1,45 @@
+name: Execute Volume 7 Finalizer V4
+on:
+  push:
+    branches: [fix/volume7-canonical-finalization]
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Execute corrected canonical finalizer
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          src=Path('.github/workflows/finalize-volume7-canonical.yml').read_text()
+          marker='        run: |\n'
+          body=src.split(marker,1)[1]
+          lines=[]
+          for line in body.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          body='\n'.join(lines)+'\n'
+
+          body=body.replace(r'/\s+(?:adresinden|adresine)\b/iu', r'/\s+\(?(?:adresinden|adresine)\b/iu')
+          body=body.replace(r'/\s+(?:erişim tarihi|erişildi|erişim)\b/iu', r'/\s+\(?(?:erişim tarihi|erişildi|erişim)\b/iu')
+
+          old='const override=bilingualKeywordParityOverrides.get(slug);'
+          new="const override=bilingualKeywordParityOverrides.get(slug) || (slug==='yagmalanan-iskit-altinlarinin-mirasi' ? { tr:['Röportaj','İskitler','Dünya Kültür Mirası'], en:['Interview','Scythian','Cultural Heritage'] } : undefined);"
+          if old not in body:
+              raise SystemExit('override insertion point not found')
+          body=body.replace(old,new)
+
+          anchor='          // Remove obsolete tests that expected V7 keyword override entries to remain in the loader.\n'
+          mao_patch='''          // Keep the Mao regression test aligned with the reviewed source-language keyword ordering.\n          {\n            const file='tests/mao-english-fulltext.test.mjs';\n            let s=fs.readFileSync(file,'utf8');\n            const old='assert.deepEqual(record.en.keywords, ["Dialectics", "Mao Zedong", "Mao Zedong Thought", "Mass Line", "Political Subject", "Traditional Chinese Thought"]);';\n            const replacement='assert.deepEqual(record.en.keywords, ["Dialectics", "Traditional Chinese Thought", "Mass Line", "Mao Zedong", "Mao Zedong Thought", "Political Subject"]);';\n            if(!s.includes(old)) throw new Error('Mao expected keyword order not found');\n            fs.writeFileSync(file,s.replace(old,replacement));\n          }\n\n'''
+          if anchor not in body:
+              raise SystemExit('Mao patch anchor not found')
+          body=body.replace(anchor,mao_patch+anchor,1)
+
+          Path('/tmp/run-volume7-finalizer-v4.sh').write_text(body)
+          PY
+          bash /tmp/run-volume7-finalizer-v4.sh
