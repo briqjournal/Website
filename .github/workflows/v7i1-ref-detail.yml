@@ -1,0 +1,19 @@
+name: V7I1 ref detail
+on:
+  push:
+    branches: [automation/v7i1-structure-inventory]
+permissions:
+  contents: read
+jobs:
+  detail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node <<'JS'
+          const fs=require('fs');
+          const g=JSON.parse(fs.readFileSync('content/articles/dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi/fulltext/current.json'));
+          for(const l of ['en','tr']) { console.log('\nGAO',l); (g[l].references||[]).forEach((r,i)=>{if(i>=19&&i<=25) console.log(i,typeof r==='string'?r:r.text)}); }
+          const z=JSON.parse(fs.readFileSync('content/articles/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/fulltext/current.json'));
+          for(const l of ['en','tr']) { console.log('\nZHANG',l); (z[l].references||[]).forEach((r,i)=>{if(i>=70) console.log(i,typeof r==='string'?r:r.text)}); }
+          JS
