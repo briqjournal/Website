@@ -33,7 +33,7 @@ jobs:
               'bytes': len(raw.encode('utf-8')),
               'characters': len(raw),
               'starts_with': raw[:160],
-              'ends_with': raw[-500:],
+              'ends_with': raw[-800:],
           }
           try:
               data = json.loads(raw)
@@ -48,6 +48,7 @@ jobs:
           rm .github/workflows/finalize-gurcan-fulltext.yml
           git config user.name 'BRIQ Journal'
           git config user.email 'briq@briqjournal.com'
-          git add tmp/gurcan-decoded-partial.json tmp/gurcan-diagnostics.json .github/workflows/finalize-gurcan-fulltext.yml
-          git commit -m 'Inspect decoded Gürcan staged payload'
+          git add -f tmp/gurcan-decoded-partial.json tmp/gurcan-diagnostics.json
+          git add .github/workflows/finalize-gurcan-fulltext.yml
+          git commit -m 'Persist decoded Gürcan payload diagnostics'
           git push origin HEAD:main
