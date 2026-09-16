@@ -7,7 +7,7 @@ const issue = JSON.parse(fs.readFileSync("content/issues/v07-i02.json", "utf8"))
 const catalog = JSON.parse(fs.readFileSync("content/catalog.json", "utf8"));
 const prose = [
   ["sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0", 5, 5, 13, 13],
-  ["cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis", 12, 12, 7, 7],
+  ["cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis", 13, 13, 7, 7],
   ["afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme", 14, 14, 55, 55],
   ["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin", 12, 12, 30, 30],
   ["hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi", 39, 39, 30, 30],
