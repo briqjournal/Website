@@ -1,0 +1,34 @@
+name: Probe Volume 6 Issue 3 PDF Typography
+on:
+  push:
+    branches: [audit/v6i3-independent]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect PDF blocks and typography
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet pymupdf
+          python3 <<'PY'
+          import fitz, urllib.request
+          u='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Belkacem%20Iratni_ENG.pdf'
+          urllib.request.urlretrieve(u,'/tmp/a.pdf')
+          d=fitz.open('/tmp/a.pdf')
+          for pi in [1,2,3]:
+            p=d[pi]
+            print('\n=== PAGE',pi+1,'===',p.rect)
+            dic=p.get_text('dict', sort=False)
+            for b in dic['blocks']:
+              if b.get('type')!=0: continue
+              txt=' '.join(''.join(s['text'] for s in l['spans']).strip() for l in b['lines']).strip()
+              if not txt: continue
+              spans=[s for l in b['lines'] for s in l['spans'] if s['text'].strip()]
+              sizes=sorted(set(round(s['size'],1) for s in spans))
+              fonts=sorted(set(s['font'] for s in spans))[:4]
+              print('BLOCK',tuple(round(x,1) for x in b['bbox']),'sizes',sizes,'fonts',fonts,'::',txt[:240].replace('\n',' '))
+          PY
