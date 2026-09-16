@@ -1,0 +1,96 @@
+name: Migrate V7I1 locale split v2
+on:
+  push:
+    branches: [automation/v7i1-locale-split]
+permissions:
+  contents: write
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Split and validate latest main safely
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+          cat >/tmp/run.mjs <<'JS'
+          import fs from 'node:fs'; import path from 'node:path';
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i01.json','utf8'));
+          for(const slug of issue.articles){
+            const dir=path.join('content/articles',slug,'fulltext');
+            const cur=JSON.parse(fs.readFileSync(path.join(dir,'current.json'),'utf8'));
+            for(const locale of ['en','tr']){
+              const x=cur[locale]; if(!x?.sections) throw new Error(`${slug}/${locale} missing`);
+              x.sections.forEach((s,i)=>s.id=`${locale}-section-${i+1}`);
+              fs.writeFileSync(path.join(dir,`${locale}.json`),JSON.stringify(x,null,2)+'\n');
+            }
+            fs.unlinkSync(path.join(dir,'current.json'));
+          }
+          const cp='content/catalog.json'; const c=JSON.parse(fs.readFileSync(cp,'utf8'));
+          c.fulltext.localized=[...new Set([...(c.fulltext.localized||[]),...issue.articles])];
+          for(const k of ['current','en_archive']) c.fulltext[k]=(c.fulltext[k]||[]).filter(s=>!issue.articles.includes(s));
+          fs.writeFileSync(cp,JSON.stringify(c,null,2)+'\n');
+          JS
+          cat >/tmp/test.mjs <<'JS'
+          import fs from 'node:fs'; import path from 'node:path'; import assert from 'node:assert/strict'; import test from 'node:test';
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i01.json','utf8')); const c=JSON.parse(fs.readFileSync('content/catalog.json','utf8'));
+          test('V7I1 canonical locale split',()=>{for(const slug of issue.articles){const d=path.join('content/articles',slug,'fulltext'); assert.deepEqual(fs.readdirSync(d).filter(x=>x.endsWith('.json')).sort(),['en.json','tr.json']); assert(c.fulltext.localized.includes(slug)); assert(!c.fulltext.current.includes(slug)); assert(!c.fulltext.en_archive.includes(slug)); for(const l of ['en','tr']){const x=JSON.parse(fs.readFileSync(path.join(d,`${l}.json`),'utf8')); x.sections.forEach((s,i)=>assert.equal(s.id,`${l}-section-${i+1}`));}}});
+          test('V7I1 publication date is 1 Dec 2025',()=>{for(const slug of issue.articles){const m=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'metadata.json'),'utf8')); assert.equal(m.dates.published,'2025-12-01');}});
+          JS
+          cat >/tmp/audit.py <<'PY'
+          import json,re,subprocess,tempfile,urllib.request,sys
+          from pathlib import Path
+          from difflib import SequenceMatcher
+          issue=json.loads(Path('content/issues/v07-i01.json').read_text()); tmp=Path(tempfile.mkdtemp()); severe=[]; warnings=[]
+          def norm(s): return re.sub(r'\s+',' ',(s or '').replace('\u00ad','').replace('’',"'").replace('“','"').replace('”','"')).strip().lower()
+          def toks(s): return re.findall(r"[\wÀ-žğüşöçıİĞÜŞÖÇ'-]+",norm(s),re.UNICODE)
+          def score(p,t):
+            p=norm(p); t=norm(t); pw=toks(p); tw=toks(t)
+            if not pw:return 1
+            if len(p)>=90 and all(p[i:i+120] in t for i in range(0,len(p),120) if len(p[i:i+120])>=75): return 1
+            n=len(pw); needle=' '.join(pw); best=0; step=max(12,n//8)
+            for i in range(0,max(1,len(tw)-n+1),step):
+              best=max(best,SequenceMatcher(None,needle,' '.join(tw[i:i+n+18])).ratio())
+              if best>.97:break
+            return best
+          for slug in issue['articles']:
+            m=json.loads(Path(f'content/articles/{slug}/metadata.json').read_text()); print('\n###',slug)
+            for l,key in [('en','pdfEn'),('tr','pdfTr')]:
+              f=json.loads(Path(f'content/articles/{slug}/fulltext/{l}.json').read_text()); url=m['urls'].get(key)
+              if not url: severe.append((slug,l,'no pdf')); continue
+              pdf=tmp/f'{slug}-{l}.pdf'; txt=tmp/f'{slug}-{l}.txt'
+              try:
+                req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}); pdf.write_bytes(urllib.request.urlopen(req,timeout=45).read()); subprocess.run(['pdftotext','-layout',str(pdf),str(txt)],check=True)
+              except Exception as e: severe.append((slug,l,'pdf',str(e))); continue
+              src=txt.read_text(errors='replace'); ps=[p for s in f.get('sections',[]) for p in s.get('paragraphs',[]) if len(norm(p))>=80]; ss=[score(p,src) for p in ps]; lows=[(i,round(v,3),ps[i][:110]) for i,v in enumerate(ss) if v<.70]
+              print(l,'paras',len(ps),'avg',round(sum(ss)/len(ss),4) if ss else None,'min',round(min(ss),4) if ss else None,'low',len(lows)); [print(' LOW',x) for x in lows[:8]]
+              if lows: severe.append((slug,l,'paragraphs',lows[:8]))
+              ab=m.get('abstract',{}).get(l)
+              if ab:
+                a=score(ab,src); print(l,'abstract',round(a,4));
+                if a<.70: severe.append((slug,l,'abstract',a))
+              if m.get('keywords',{}).get(l,[])!=f.get('keywords',[]): warnings.append((slug,l,'keyword mismatch'))
+              refs='\n'.join(r.get('text','') if isinstance(r,dict) else str(r) for r in f.get('references',[]))
+              if re.search(r'https?://\S+\s+\S*\.(?:com|org|gov|edu|net|int)\b',refs): warnings.append((slug,l,'possible URL break'))
+              if re.search(r'10\.\d{4,9}/\S+\s+\S+',refs): warnings.append((slug,l,'possible DOI break'))
+              for lab in ['Funding','Finansman','Conflict of Interest','Çıkar Çatışması','Data Availability','Veri Kullanılabilirliği','Received','Geliş','Accepted','Kabul','Revised','Revizyon']:
+                if lab.lower() in src.lower(): print(l,'LABEL',lab)
+          print('WARNINGS',*warnings,sep='\n'); print('SEVERE',*severe,sep='\n');
+          if severe: sys.exit(2)
+          PY
+          for A in 1 2 3 4 5 6; do
+            git fetch origin main; BASE=$(git rev-parse origin/main); git reset --hard "$BASE"; git clean -fd
+            node /tmp/run.mjs; cp /tmp/test.mjs tests/v7i1-locale-fulltext.test.mjs
+            node scripts/generate-archive-data.mjs; node scripts/generate-fulltext-modules.mjs; node scripts/generate-runtime-data.mjs
+            node --test tests/v7i1-locale-fulltext.test.mjs
+            python3 /tmp/audit.py
+            git diff --check; npm test; npm run lint
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then echo "main advanced; retry $A"; continue; fi
+            git config user.name 'BRIQ Journal'; git config user.email 'briq@briqjournal.com'; git add content app tests; git commit -m 'Split Volume 7 Issue 1 bilingual full texts'; git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then git push origin HEAD:main; exit 0; fi
+          done
+          exit 1
