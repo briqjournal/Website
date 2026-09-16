@@ -1,0 +1,97 @@
+name: Finalize V7I1 Corrected
+on:
+  push:
+    branches: [automation/v7i1-finalize]
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply audited V7I1 migration on latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+
+          # Reuse the already-audited migration and regression test embedded in the
+          # primary finalizer, then apply the source-reviewed Ertan keyword order.
+          python - <<'PY'
+          from pathlib import Path
+          import re, textwrap
+          s=Path('.github/workflows/finalize-v7i1.yml').read_text()
+          def extract(target):
+              m=re.search(rf"cat >{re.escape(target)} <<'JS'\n(.*?)\n          JS",s,re.S)
+              if not m: raise SystemExit(f'cannot extract {target}')
+              Path(target).write_text(textwrap.dedent(m.group(1))+"\n")
+          extract('/tmp/finalize-v7i1.mjs')
+          extract('/tmp/v7i1-test.mjs')
+          PY
+
+          cat >/tmp/fix-v7i1-keywords.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const slug='iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi';
+          const keywords={
+            tr:['Gıda Güvencesi','İklim Akıllı Tarım','İklim Değişikliği','Su Güvenliği','Sürdürülebilir Kalkınma'],
+            en:['Food Security','Climate-Smart Agriculture','Climate Change','Water Security','Sustainable Development'],
+          };
+          const base=path.join('content/articles',slug);
+          const metaPath=path.join(base,'metadata.json');
+          const meta=JSON.parse(fs.readFileSync(metaPath,'utf8'));
+          meta.keywords ||= {en:[],tr:[]};
+          for(const locale of ['en','tr']) {
+            const file=path.join(base,'fulltext',`${locale}.json`);
+            const data=JSON.parse(fs.readFileSync(file,'utf8'));
+            data.keywords=[...keywords[locale]];
+            meta.keywords[locale]=[...keywords[locale]];
+            fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');
+          }
+          fs.writeFileSync(metaPath,JSON.stringify(meta,null,2)+'\n');
+          JS
+
+          apply_all() {
+            node /tmp/finalize-v7i1.mjs
+            node /tmp/fix-v7i1-keywords.mjs
+            cp /tmp/v7i1-test.mjs tests/v7i1-content-integrity.test.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i1-content-integrity.test.mjs
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_all
+            npm run build
+            npm test
+            npm run lint
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+              echo "main advanced during validation attempt $ATTEMPT; retrying"
+              continue
+            fi
+            if git diff --quiet; then
+              echo 'V7I1 final state already present.'
+              exit 0
+            fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content app tests
+            git commit -m 'Finalize Volume 7 Issue 1 canonical full text'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced after commit attempt $ATTEMPT; retrying"
+          done
+          echo 'main kept advancing; refusing unsafe push'
+          exit 1
