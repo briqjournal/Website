@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { loadFullTextCollections } from "../scripts/content-store.mjs";
 
 const slug = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
@@ -44,4 +45,11 @@ test("keeps the Çomak-Toker-Manioğlu article bilingual instead of duplicating 
 
   assert(record.en.figures.every((figure) => /[A-Za-z]/u.test(figure.caption)));
   assert.equal(record.en.figures[2].caption, "Table 1: Indicators used to distinguish a transit country from a joint production hub");
+});
+
+
+test("keeps the canonical English record ahead of the broken archive extraction at render time", async () => {
+  const platform = await readFile(new URL("../app/components/ArticlePlatform.tsx", import.meta.url), "utf8");
+  assert.match(platform, /const COMAK_ENGLISH_FULLTEXT_SLUG =/u);
+  assert.match(platform, /article\.slug === COMAK_ENGLISH_FULLTEXT_SLUG/u);
 });

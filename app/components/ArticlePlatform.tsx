@@ -92,6 +92,7 @@ type ArticleDetails = {
 
 const SAUDI_CULTURAL_HEDGING_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";
 const HE_GANQIANG_TRANSLATION_SLUG = "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0";
+const COMAK_ENGLISH_FULLTEXT_SLUG = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
 
 function keywordLabel(value: string, locale: "tr" | "en") {
   const language = locale === "tr" ? "tr-TR" : "en-US";
@@ -367,7 +368,8 @@ export async function ArticlePlatform({
     ? await loadSaudiEnglishFullText() as LocalizedFullText
     : undefined;
   const archivedEnglishSource = saudiEnglishFullText || archivedEnglishFullText;
-  const preferCurrentEnglish = article.volume === 7 && article.issue <= 3;
+  const preferCurrentEnglish = (article.volume === 7 && article.issue <= 3)
+    || article.slug === COMAK_ENGLISH_FULLTEXT_SLUG;
   const fullText = locale === "en"
     ? preferCurrentEnglish
       ? mergeLocalizedFullText(storedFullText, archivedEnglishSource)
