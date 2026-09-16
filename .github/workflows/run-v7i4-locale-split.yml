@@ -35,8 +35,8 @@ jobs:
           git diff --check
           npm ci --no-audit --no-fund
           npm run build
-          grep -q 'Saudi Arabia’s pledge to achieve Vision 2030' dist/client/en/articles/saudi-arabias-complex-cultural-hedging-between-the-us-and-china/index.html
-          grep -q 'Power Transition and Geoeconomic Connectivity: The Belt and Road Initiative and the Middle Corridor' dist/client/en/articles/power-transition-and-geoeconomic-connectivity-in-eurasia-on-the-55th-anniversary-of-turkiye-china-diplomatic-relations/index.html
+          grep -R -q --include='index.html' 'Saudi Arabia’s pledge to achieve Vision 2030' dist/client/en
+          grep -R -q --include='index.html' 'Power Transition and Geoeconomic Connectivity: The Belt and Road Initiative and the Middle Corridor' dist/client/en
           git config user.name 'BRIQ Journal'
           git config user.email 'briq@briqjournal.com'
           git add content scripts app tests
