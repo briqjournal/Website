@@ -28,8 +28,34 @@ jobs:
             throw new Error(`Expected 8 V7I3 contributions, found ${issue.articles?.length}`);
           }
 
+          const MORGAN = 'kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin';
           const suspicious = [];
           const normalize = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
+
+          function repairEnglishReference(slug, ref) {
+            let text = normalize(ref.text);
+
+            // PDF extraction frequently inserts whitespace inside a URL. In these
+            // references the URL is terminal, so compact only the terminal URL tail.
+            const httpIndex = text.search(/https?:\/\//i);
+            if (httpIndex >= 0) {
+              text = text.slice(0, httpIndex) + text.slice(httpIndex).replace(/\s+/g, '');
+            } else {
+              const doiIndex = text.search(/\bdoi:\s*10\./i);
+              if (doiIndex >= 0) {
+                text = text.slice(0, doiIndex) + text.slice(doiIndex).replace(/\s+/g, '');
+              }
+            }
+
+            // The official EN PDF breaks this bibliographic entry across a page footer.
+            // Restore the complete publisher name rather than preserving the extraction cut.
+            if (slug === MORGAN && ref.id === 'ref-52' && /Osaka:\s*Sōgen-$/u.test(text)) {
+              text = 'Yoshida, T. (2016). Nichibei gōdō iinkai no kenkyū: Nazo no kenryoku kōzō no shōtai ni semaru. Osaka: Sōgensha.';
+            }
+
+            return { ...ref, text };
+          }
+
           const bodyText = (data) => [
             ...(data.sections ?? []).flatMap((s) => [s.title, ...(s.paragraphs ?? [])]),
             ...(data.footnotes ?? []).map((x) => x.text),
@@ -62,6 +88,9 @@ jobs:
 
             const en = JSON.parse(fs.readFileSync(enPath, 'utf8'));
             const tr = JSON.parse(fs.readFileSync(trPath, 'utf8'));
+            en.references = (en.references ?? []).map((ref) => repairEnglishReference(slug, ref));
+            fs.writeFileSync(enPath, JSON.stringify(en, null, 2) + '\n');
+
             const enBody = bodyText(en);
             const trBody = bodyText(tr);
             if (!en.sections?.length || !tr.sections?.length) throw new Error(`Empty locale sections: ${slug}`);
@@ -75,17 +104,23 @@ jobs:
             for (const ref of en.references ?? []) {
               const text = normalize(ref.text);
               if (/[-–—]\s*$/.test(text)) suspicious.push(`${slug} ${ref.id}: reference ends abruptly: ${text}`);
-              const url = text.match(/https?:\/\/\S+/)?.[0];
-              if (url && /\/$/.test(url)) {
-                const tail = text.slice(text.indexOf(url) + url.length).trim();
-                if (/^[A-Za-z0-9_-]+\/[A-Za-z0-9_./-]+/.test(tail)) {
-                  suspicious.push(`${slug} ${ref.id}: probable split URL: ${text}`);
-                }
+              const httpIndex = text.search(/https?:\/\//i);
+              if (httpIndex >= 0 && /\s/.test(text.slice(httpIndex))) {
+                suspicious.push(`${slug} ${ref.id}: whitespace remains inside terminal URL: ${text}`);
+              }
+              const doiIndex = text.search(/\bdoi:\s*10\./i);
+              if (doiIndex >= 0 && /\s/.test(text.slice(doiIndex))) {
+                suspicious.push(`${slug} ${ref.id}: whitespace remains inside DOI: ${text}`);
               }
             }
 
-            const embedded = [...enBody.matchAll(/(?<=[A-Za-z])\d{3}\s+(?=[A-Za-z])/g)].map((m) => m[0]);
-            if (embedded.length) console.log(`NOTICE ${slug}: ${embedded.length} possible embedded page-number token(s); manual review required`);
+            const embeddedRegex = /(?<=[A-Za-z])\d{3}\s+(?=[A-Za-z])/g;
+            const matches = [...enBody.matchAll(embeddedRegex)];
+            for (const match of matches) {
+              const start = Math.max(0, match.index - 55);
+              const end = Math.min(enBody.length, match.index + match[0].length + 55);
+              suspicious.push(`${slug}: possible embedded PDF page token "${match[0]}" in …${enBody.slice(start, end).replace(/\n/g, ' ')}…`);
+            }
             console.log(`OK ${slug}: EN ${en.sections.length} sections / TR ${tr.sections.length} sections`);
           }
 
