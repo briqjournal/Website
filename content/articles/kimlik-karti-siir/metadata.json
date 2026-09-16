@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_ENG-86-87.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/kimlik-karti-siir-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/kimlik-karti-siir-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Şiir",
+  "publication_type_en": "Poem",
+  "published_online_date": "2023-12-01"
 }
