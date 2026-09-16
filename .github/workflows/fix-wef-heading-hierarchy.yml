@@ -1,0 +1,76 @@
+name: Fix WEF article heading hierarchy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-wef-heading-hierarchy.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sync latest main
+        run: git pull --rebase origin main
+      - name: Correct EN/TR heading hierarchy
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const root = 'content/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/fulltext';
+          const mainSections = new Set([1, 2, 7, 11]);
+          const expectedMainTitles = {
+            en: {
+              1: 'Introduction',
+              2: 'The Major Issues of the World Economic Forum Influencing Globalization',
+              7: 'The Formation Logic of the Paradox of the Globalization Impact of the World Economic Forum',
+              11: 'Conclusions and Insights'
+            },
+            tr: {
+              1: 'Giriş',
+              2: 'Dünya Ekonomik Forumu’nun Küreselleşmeyi Etkilemesinde Başlıca Konular',
+              7: 'Dünya Ekonomik Forumu’nun Küreselleşmeye Etkisi Paradoksunun Oluşum Mantığı',
+              11: 'Sonuçlar ve Öngörüler'
+            }
+          };
+          const canonicalTrSection8 = 'WEF’in kapitalist küresel ekonomik sistemdeki içsel dengesizliklerin tarihsel köklerini etkili bir şekilde hafifletme konusundaki zorlukları';
+
+          for (const lang of ['en', 'tr']) {
+            const path = `${root}/${lang}.json`;
+            const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+            if (!Array.isArray(data.sections) || data.sections.length !== 11) {
+              throw new Error(`${lang}: expected 11 sections, found ${data.sections?.length}`);
+            }
+            data.sections.forEach((section, idx) => {
+              const n = idx + 1;
+              const expectedId = `${lang}-section-${n}`;
+              if (section.id !== expectedId) {
+                throw new Error(`${lang}: expected ${expectedId}, found ${section.id}`);
+              }
+              const expectedTitle = expectedMainTitles[lang][n];
+              if (expectedTitle && section.title !== expectedTitle) {
+                throw new Error(`${lang}: unexpected main title at section ${n}: ${section.title}`);
+              }
+              section.level = mainSections.has(n) ? 'section' : 'subsection';
+            });
+            if (lang === 'tr') {
+              data.sections[7].title = canonicalTrSection8;
+            }
+            fs.writeFileSync(path, JSON.stringify(data, null, 2) + '\n');
+          }
+          NODE
+      - name: Commit hierarchy fix and remove one-time workflow
+        run: |
+          rm .github/workflows/fix-wef-heading-hierarchy.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add content/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/fulltext/en.json \
+                  content/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/fulltext/tr.json \
+                  .github/workflows/fix-wef-heading-hierarchy.yml
+          git commit -m 'Fix WEF article heading hierarchy'
+          git push origin HEAD:main
