@@ -1,31 +1,51 @@
 {
-  "slug": "iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi",
-  "volume": 7,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2025-2026",
-  "author": "Muzaffer Salih Ertan",
-  "title_tr": "İklim Değişikliği Bağlamında Su Kıtlığı ve Küresel Gıda Krizi",
-  "abstract_tr": "İklim değişikliği, günümüzde en acil ve yaşamsal öneme sahip bulunan küresel ölçekte bir tehdit olarak ortaya çıkmış olup, çevresel sistemler, ekonomik yapılar ve sosyal istikrar üzerinde derin etkiler yaratmaktadır. En ağır sonuçları arasında, toplulukları istikrarsızlaştırma ve dünya çapında eşitsizlikleri büsbütün arttırma tehdidi taşıyan, birbiriyle yakın bağlantılı olan, su kıtlığı ve gıda güvensizliği krizleri yer almaktadır. Bu çalışmada, iklim değişikliği, su kaynakları ve gıda güvencesi arasındaki çok boyutlu ilişkiyi ve karmaşık bağı incelenmekte; iklim değişikliğinin hidrolojik döngüleri, tarımsal verimliliği ve küresel tedarik zincirlerini nasıl bozduğuna dair mekanizmalar ele alınmaktadır. Güncel ampirik çalışmalardan, politika çerçevelerinden ve disiplinler arası bir perspektiften yararlanarak makale, kurak ve yarı kurak bölgelerin, gelişmekte olan ülkelerin ve küçük ölçekli çiftçilerin artan kırılganlığını ele almaktadır. Biyolojik ve fiziksel etkilerin ötesinde, kaynaklar için artan rekabet, nüfus yer değiştirmesi, politik istikrarsızlık ve gibi boyutlar da detaylandırılmaktadır. Makale, bütünleşmiş su kaynakları yönetimi, iklim değişikliği etkilerine dirençli akıllı tarımın (CSA) benimsenmesi, sürdürülebilir beslenme değişiklikleri ve eşitliği, iklim adaletini önceliklendiren sağlam politika çerçevelerine acil ihtiyacı vurguladıktan sonra, iklim değişikliği etkilerini giderici önlem ve araçlara değinilerek  sonuçlanmaktadır.",
-  "source_tr": "https://briqjournal.com/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi",
-  "source_en": "https://briqjournal.com/en/water-scarcity-and-the-global-food-crisis-the-context-climate-change",
-  "title_en": "Water Scarcity and the Global Food Crisis in the Context of Climate Change",
-  "abstract_en": "Abstract \n Climate change has emerged as the most urgent and vitally important global challenge of the twenty-first century, profoundly impacting environmental systems, economic structures, and social stability. Among its most severe consequences are the closely interconnected water scarcity and food insecurity crises, which threaten to destabilize communities and profoundly exacerbate inequalities worldwide. This study examines the multidimensional relationship and complex nexus between climate change, water resources, and food security; it addresses the mechanisms through which climate change disrupts hydrological cycles, agricultural productivity, and global supply chains. Drawing on current empirical studies, policy frameworks, and an interdisciplinary perspective, the article discusses the increasing vulnerability of arid and semi-arid regions, developing countries, and small-scale farmers. Beyond biological and physical impacts, dimensions such as increased resource competition, population displacement, and political instability are also detailed. The article emphasizes the urgent need for integrated water resources management, the adoption of climate-smart agriculture (CSA), sustainable dietary changes, and robust policy frameworks that prioritize equity and climate justice. It concludes by proposing measures and tools to mitigate the effects of climate change.",
-  "citation_tr": "Atıf \n Ertan, S. (2025). İklim Değişikliği Bağlamında Su Kıtlığı ve Küresel Gıda Krizi. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(1), 23-46.",
-  "citation_en": "Citation \n Ertan, S. (2025). Water Scarcity and the Global Food Crisis in the Context of Climate Change. BRIQ Belt & Road Initiative Quarterly, 7(1), 23-46.",
-  "pages": "23-46",
-  "received_date": "2025-09-17",
-  "revised_date": "2025-10-21",
-  "accepted_date": "2025-11-02",
-  "published_online_date": "2025-12-01",
-  "doi": "10.67696/6d5e3a4d",
-  "orcids": [
-    "0009-0008-8659-7165"
+  "schemaVersion": 2,
+  "id": "iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi",
+  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "title": {"en": "Water Scarcity and the Global Food Crisis in the Context of Climate Change", "tr": "İklim Değişikliği Bağlamında Su Kıtlığı ve Küresel Gıda Krizi"},
+  "authors": [
+    {
+      "displayName": "Muzaffer Salih Ertan",
+      "givenName": "Muzaffer Salih",
+      "familyName": "Ertan",
+      "orcid": "https://orcid.org/0009-0008-8659-7165",
+      "affiliations": [
+        {"name": "Electrical Engineer and Renewable Energy Expert", "nameTr": "Elektrik Mühendisi ve Yenilenebilir Enerji Uzmanı", "nameEn": "Electrical Engineer and Renewable Energy Expert", "country": null, "ror": null}
+      ]
+    }
   ],
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Muzaffer%20Sal%C4%B0h%20Ertan_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Muzaffer%20Sal%C4%B0h%20Ertan_EN_0.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi-en.pdf",
-  "shared_bilingual_pdf": false
+  "abstract": {
+    "en": "Climate change has emerged as the most urgent and vitally important global challenge of the twenty-first century, profoundly impacting environmental systems, economic structures, and social stability. Among its most severe consequences are the closely interconnected water scarcity and food insecurity crises, which threaten to destabilize communities and profoundly exacerbate inequalities worldwide. This study examines the multidimensional relationship and complex nexus between climate change, water resources, and food security; it addresses the mechanisms through which climate change disrupts hydrological cycles, agricultural productivity, and global supply chains. Drawing on current empirical studies, policy frameworks, and an interdisciplinary perspective, the article discusses the increasing vulnerability of arid and semi-arid regions, developing countries, and small-scale farmers. Beyond biological and physical impacts, dimensions such as increased resource competition, population displacement, and political instability are also detailed. The article emphasizes the urgent need for integrated water resources management, the adoption of climate-smart agriculture (CSA), sustainable dietary changes, and robust policy frameworks that prioritize equity and climate justice. It concludes by proposing measures and tools to mitigate the effects of climate change.",
+    "tr": "İklim değişikliği, günümüzde en acil ve yaşamsal öneme sahip bulunan küresel ölçekte bir tehdit olarak ortaya çıkmış olup, çevresel sistemler, ekonomik yapılar ve sosyal istikrar üzerinde derin etkiler yaratmaktadır. En ağır sonuçları arasında, toplulukları istikrarsızlaştırma ve dünya çapında eşitsizlikleri büsbütün arttırma tehdidi taşıyan, birbiriyle yakın bağlantılı olan, su kıtlığı ve gıda güvensizliği krizleri yer almaktadır. Bu çalışmada, iklim değişikliği, su kaynakları ve gıda güvencesi arasındaki çok boyutlu ilişkiyi ve karmaşık bağı incelenmekte; iklim değişikliğinin hidrolojik döngüleri, tarımsal verimliliği ve küresel tedarik zincirlerini nasıl bozduğuna dair mekanizmalar ele alınmaktadır. Güncel ampirik çalışmalardan, politika çerçevelerinden ve disiplinler arası bir perspektiften yararlanarak makale, kurak ve yarı kurak bölgelerin, gelişmekte olan ülkelerin ve küçük ölçekli çiftçilerin artan kırılganlığını ele almaktadır. Biyolojik ve fiziksel etkilerin ötesinde, kaynaklar için artan rekabet, nüfus yer değiştirmesi, politik istikrarsızlık ve gibi boyutlar da detaylandırılmaktadır. Makale, bütünleşmiş su kaynakları yönetimi, iklim değişikliği etkilerine dirençli akıllı tarımın (CSA) benimsenmesi, sürdürülebilir beslenme değişiklikleri ve eşitliği, iklim adaletini önceliklendiren sağlam politika çerçevelerine acil ihtiyacı vurguladıktan sonra, iklim değişikliği etkilerini giderici önlem ve araçlara değinilerek  sonuçlanmaktadır."
+  },
+  "keywords": {
+    "en": ["climate change", "climate-smart agriculture", "food security", "sustainable development", "water security"],
+    "tr": ["iklim değişikliği", "iklim akıllı tarım", "gıda güvencesi", "sürdürülebilir kalkınma", "su güvenliği"]
+  },
+  "dates": {"received": "2025-09-17", "revised": "2025-10-21", "accepted": "2025-11-02", "published": "2025-12-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 1, "year": "2025-2026", "season": {"en": "Winter", "tr": "Kış"}},
+  "pages": {"first": "23", "last": "46"},
+  "doi": "10.67696/6d5e3a4d",
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Ertan, S. (2025). Water Scarcity and the Global Food Crisis in the Context of Climate Change. BRIQ Belt & Road Initiative Quarterly, 7(1), 23-46.",
+    "tr": "Ertan, S. (2025). İklim Değişikliği Bağlamında Su Kıtlığı ve Küresel Gıda Krizi. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(1), 23-46."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/water-scarcity-and-the-global-food-crisis-the-context-climate-change",
+    "tr": "https://briqjournal.com/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Muzaffer%20Sal%C4%B0h%20Ertan_EN_0.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Muzaffer%20Sal%C4%B0h%20Ertan_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
