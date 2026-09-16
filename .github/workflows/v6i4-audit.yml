@@ -1,48 +1,271 @@
-name: Audit Volume 6 Issue 4 canonical records
+name: Apply Volume 6 Issue 4 audit corrections
 on:
   push:
     branches: [automation/v6i4-fulltext]
     paths: [.github/workflows/v6i4-audit.yml]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  audit:
+  fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Deep audit latest main canonical data
+      - name: Patch latest main and publish one corrective commit
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
-          git checkout --detach origin/main
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v6i4-audit-fix "$BASE"
           python3 - <<'PY'
           from pathlib import Path
-          import json,re
+          import json, re
+
+          ROOT = Path('.')
+          issue = json.loads((ROOT/'content/issues/v06-i04.json').read_text(encoding='utf-8'))
+
+          types = {
+            'rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve': ('Araştırma Makalesi','Research Article'),
+            'brics-terore-karsi-mucadele-stratejisi': ('Zirve Bildirisi','Summit Declaration'),
+            'sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan': ('Zirve Bildirisi','Summit Declaration'),
+            'dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi': ('Araştırma Makalesi','Research Article'),
+            'genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme': ('Araştırma Makalesi','Research Article'),
+            'wape-18-yillik-forumu': ('Konferans Raporu','Conference Report'),
+            'hallac-siir': ('Şiir','Poem'),
+            'doksan-yedinci-sonnet-siir': ('Şiir','Poem'),
+          }
+
+          def clean_space(value):
+            if not isinstance(value, str):
+              return value
+            return re.sub(r'\s+', ' ', value.replace('\u00a0',' ')).strip()
+
+          for slug in issue['articles']:
+            p = ROOT/'content/articles'/slug/'metadata.json'
+            m = json.loads(p.read_text(encoding='utf-8'))
+            m['publication_type_tr'], m['publication_type_en'] = types[slug]
+            for field in ('title_tr','title_en','abstract_tr','abstract_en','citation_tr','citation_en'):
+              if m.get(field) is not None:
+                m[field] = clean_space(m[field])
+            if m.get('abstract_en'):
+              m['abstract_en'] = re.sub(r'^Abstract\s*', '', m['abstract_en'], flags=re.I)
+            if m.get('citation_tr'):
+              m['citation_tr'] = re.sub(r'^Atıf\s*:?[ ]*', '', m['citation_tr'], flags=re.I)
+            if m.get('citation_en'):
+              m['citation_en'] = re.sub(r'^Citation\s*:?[ ]*', '', m['citation_en'], flags=re.I)
+
+            if slug == 'rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve':
+              m['orcids'] = ['0009-0002-4054-1103']
+              m['received_date'] = '2025-03-26'
+              m['accepted_date'] = '2025-05-10'
+            elif slug == 'brics-terore-karsi-mucadele-stratejisi':
+              m['author'] = ''
+              m['pages'] = '409-412'
+            elif slug == 'sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan':
+              m['author'] = ''
+              if m.get('abstract_tr'):
+                m['abstract_tr'] = m['abstract_tr'].replace('“üç kötülüğe”  karşı', '“üç kötülüğe” karşı')
+            elif slug == 'dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi':
+              m['orcids'] = ['0009-0003-2248-2645','0000-0002-9236-1916']
+              m['received_date'] = '2025-04-03'
+              m['accepted_date'] = '2025-07-27'
+            elif slug == 'genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme':
+              m['orcids'] = ['0000-0002-4465-3201']
+              if m.get('abstract_en'):
+                m['abstract_en'] = (m['abstract_en']
+                  .replace('May 4, 1919.This', 'May 4, 1919. This')
+                  .replace('Young Chi-nese', 'Young Chinese')
+                  .replace('de-mocracy', 'democracy'))
+            elif slug == 'wape-18-yillik-forumu':
+              m['author'] = ''
+              if m.get('citation_en'):
+                m['citation_en'] = m['citation_en'].replace('Belt &Road', 'Belt & Road')
+            elif slug == 'hallac-siir':
+              m['title_tr'] = 'Hallaç - Şiir'
+              m['title_en'] = 'Hallaj - Poem'
+            elif slug == 'doksan-yedinci-sonnet-siir':
+              m['title_tr'] = 'Doksan Yedinci Sonnet - Şiir'
+              m['title_en'] = 'Ninety-Seventh Sonnet - Poem'
+
+            p.write_text(json.dumps(m, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          # Correct WEF footnote structure and reference extraction artifacts.
+          wef = ROOT/'content/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/fulltext/current.json'
+          f = json.loads(wef.read_text(encoding='utf-8'))
+          supmap = {'⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9'}
+          def split_note3(text):
+            parts = re.split(r'\s*([⁴⁵⁶⁷⁸⁹])\s*', text)
+            out = [{'id':'3','text':parts[0].strip()}]
+            for i in range(1, len(parts), 2):
+              out.append({'id':supmap[parts[i]], 'text':parts[i+1].strip()})
+            return out
+          for loc in ('tr','en'):
+            notes = {str(n.get('id')): n.get('text','').strip() for n in f[loc].get('footnotes',[])}
+            rebuilt = []
+            if loc == 'tr':
+              first = ' '.join(x for x in [notes.get('1',''), notes.get('21','')] if x).strip()
+            else:
+              first = notes.get('1','')
+            if first: rebuilt.append({'id':'1','text':clean_space(first)})
+            if notes.get('2'): rebuilt.append({'id':'2','text':clean_space(notes['2'])})
+            if notes.get('3'):
+              rebuilt.extend({'id':n['id'],'text':clean_space(n['text'])} for n in split_note3(notes['3']))
+            for nid in ('10','11'):
+              if notes.get(nid): rebuilt.append({'id':nid,'text':clean_space(notes[nid])})
+            f[loc]['footnotes'] = rebuilt
+
+          # Split the merged Trump/Wilber item in the English WEF bibliography.
+          enrefs = f['en'].get('references',[])
+          fixed = []
+          for r in enrefs:
+            text = clean_space(r.get('text',''))
+            marker = ' Wilber, K. (1979).'
+            if marker in text:
+              left, right = text.split(marker, 1)
+              fixed.append({'id':'', 'text':left.strip()})
+              fixed.append({'id':'', 'text':'Wilber, K. (1979).'+right})
+            else:
+              fixed.append({'id':'', 'text':text})
+          f['en']['references'] = fixed
+
+          # Conservative cleanup of clear PDF line-break artifacts in WEF references.
+          replacements = {
+            'Monthly r eview':'Monthly Review', 'Monthly eview':'Monthly Review',
+            'MISCON- DUCT':'MISCONDUCT', '1 May ıs':'1 Mayıs',
+            '2025- 04-25':'2025-04-25', '2025-04- 24':'2025-04-24',
+            'baidu. com':'baidu.com', '997. shtml':'997.shtml',
+            '79bb- 4134':'79bb-4134', 'https:// globalism.news':'https://globalism.news',
+            'globalism.news/2025- 04-25':'globalism.news/2025-04-25',
+          }
+          for loc in ('tr','en'):
+            for i, r in enumerate(f[loc].get('references',[]), 1):
+              text = clean_space(r.get('text',''))
+              for a,b in replacements.items(): text = text.replace(a,b)
+              if loc == 'tr':
+                text = text.replace('14 Mart 14, 2025’te', '14 Mart 2025’te')
+                text = text.replace('April 15 Nisan 2025’te', '15 Nisan 2025’te')
+              r['id'] = f'ref-{i}'
+              r['text'] = text
+          wef.write_text(json.dumps(f, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          # Correct two clear SCO extraction artifacts without editorially rewriting the source text.
+          sco = ROOT/'content/articles/sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan/fulltext/current.json'
+          s = json.loads(sco.read_text(encoding='utf-8'))
+          bad = 'Belarus Cumhuriyeti KGB’si, Afganistan Dışişleri Bakanlığı ve Afganistan Teröre Karşı Mücadele Koordinasyon Konseyi ile işbirliğine ilişkin mutabakat zaptları ve anlaşmalar imzalandı. Moğolistan.'
+          good = 'Belarus Cumhuriyeti KGB’si, Afganistan Dışişleri Bakanlığı ve Moğolistan Teröre Karşı Mücadele Koordinasyon Konseyi ile işbirliğine ilişkin mutabakat zaptları ve anlaşmalar imzalandı.'
+          for sec in s['tr'].get('sections',[]):
+            sec['paragraphs'] = [p.replace(bad, good) for p in sec.get('paragraphs',[])]
+          for loc in ('tr','en'):
+            for r in s[loc].get('references',[]):
+              r['text'] = r.get('text','').replace('sectsco. org','sectsco.org').replace('https:// ecrats.org','https://ecrats.org')
+          sco.write_text(json.dumps(s, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          # Add missing person metadata so the site does not label real authors as independent researchers.
+          ap = ROOT/'app/authors.ts'
+          authors = ap.read_text(encoding='utf-8')
+          marker = 'const authorMetadata: Record<string, AuthorMetadata> = {\n'
+          entries = '''  "Kolosovskiy Yan": {
+            tr: "Shandong Üniversitesi, Uluslararası Politika Yüksek Lisans Programı, Çin",
+            en: "MA in International Politics, Shandong University, China",
+            email: "kolosovskiy98@gmail.com",
+            orcids: ["0009-0002-4054-1103"],
+            biographyTr: "Kolosovskiy Yan, Taşkent'te 1998'de doğdu. Zhejiang Finans ve Ekonomi Üniversitesi Uluslararası Ekonomi ve Ticaret Bölümü'nden lisans derecesiyle mezun oldu. 2024'te Tayland'daki Thammasat Üniversitesi'nde Asya-Pasifik Çalışmaları yüksek lisansını tamamladı; Shandong Üniversitesi'nde Çin-Rusya-Orta Asya ilişkilerine odaklanan Uluslararası Politika yüksek lisans eğitimini sürdürmektedir.",
+            biographyEn: "Kolosovskiy Yan was born in Tashkent in 1998. He graduated from Zhejiang University of Finance and Economics with a BA in International Economics and Trade. After completing an MA in Asia-Pacific Studies at Thammasat University in 2024, he is completing an MA in International Politics at Shandong University, focusing on Sino-Russian-Central Asian relations.",
+          },
+          "Song Shuli": {
+            tr: "Zhejiang Uluslararası Çalışmalar Üniversitesi, Uluslararası İşletme Okulu, Çin",
+            en: "International Business School, Zhejiang International Studies University, China",
+            email: "songshuli2012@126.com",
+            orcids: ["0009-0003-2248-2645"],
+            biographyTr: "Song Shuli, Zhejiang Uluslararası Çalışmalar Üniversitesi Uluslararası İşletme Okulu'nda profesördür; ekonomi doktorasına sahiptir ve yüksek lisans danışmanıdır.",
+            biographyEn: "Song Shuli is a professor at the International Business School of Zhejiang International Studies University, holds a Doctor of Economics degree, and is a master's supervisor.",
+          },
+          "Cheng Enfu": {
+            tr: "Dünya Politik Ekonomi Derneği (WAPE) Başkanı",
+            en: "President, World Association for Political Economy (WAPE)",
+            email: "ict@cass.org.cn",
+            orcids: ["0000-0002-9236-1916"],
+            biographyTr: "Cheng Enfu, Çin'in dördüncü kuşak iktisatçıları arasında önde gelen isimlerden biri olarak kabul edilen bir politik iktisatçıdır. Dünya Politik Ekonomi Derneği'nin (WAPE) başkanıdır.",
+            biographyEn: "Cheng Enfu is regarded as a leading figure among China's fourth generation of economists. He is President of the World Association for Political Economy (WAPE).",
+          },
+          "Füruğ Ferruhzad": {
+            tr: "Şair",
+            en: "Poet",
+          },
+          "Hasan İzzettin Dinamo": {
+            tr: "Şair",
+            en: "Poet",
+          },
+          '''
+          needed = []
+          for name in ['Kolosovskiy Yan','Song Shuli','Cheng Enfu','Füruğ Ferruhzad','Hasan İzzettin Dinamo']:
+            if not re.search(r'^\s*"'+re.escape(name)+r'"\s*:\s*\{', authors, re.M):
+              needed.append(name)
+          if needed:
+            # Insert the whole block only when none of these metadata entries exists; otherwise add missing entries individually below.
+            blocks = []
+            for block in re.split(r'(?=^  "[^"]+": \{)', entries, flags=re.M):
+              if not block.strip(): continue
+              nm = re.match(r'\s*"([^"]+)"', block)
+              if nm and nm.group(1) in needed: blocks.append(block)
+            authors = authors.replace(marker, marker + ''.join(blocks), 1)
+            ap.write_text(authors, encoding='utf-8')
+          PY
+
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re
           issue=json.loads(Path('content/issues/v06-i04.json').read_text(encoding='utf-8'))
-          print('MAIN',__import__('subprocess').check_output(['git','rev-parse','HEAD'],text=True).strip())
-          # Author profile availability
-          authors=Path('app/authors.ts').read_text(encoding='utf-8')
-          for name in ['Kolosovskiy Yan','Song Shuli','Cheng Enfu','Can Ulusoy','Füruğ Ferruhzad','Hasan İzzettin Dinamo']:
-            print('AUTHOR_PROFILE',name, bool(re.search(r'^[ \t]*'+re.escape(json.dumps(name,ensure_ascii=False))+r'\s*:\s*\{',authors,re.M)))
-          # Exact metadata/category audit
+          expected={
+            'rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve':('Araştırma Makalesi','Research Article'),
+            'brics-terore-karsi-mucadele-stratejisi':('Zirve Bildirisi','Summit Declaration'),
+            'sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan':('Zirve Bildirisi','Summit Declaration'),
+            'dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi':('Araştırma Makalesi','Research Article'),
+            'genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme':('Araştırma Makalesi','Research Article'),
+            'wape-18-yillik-forumu':('Konferans Raporu','Conference Report'),
+            'hallac-siir':('Şiir','Poem'), 'doksan-yedinci-sonnet-siir':('Şiir','Poem')}
           for slug in issue['articles']:
             m=json.loads((Path('content/articles')/slug/'metadata.json').read_text(encoding='utf-8'))
-            print('META',slug,'author=',repr(m.get('author')),'pages=',repr(m.get('pages')),'types=',repr(m.get('publication_type_tr')),repr(m.get('publication_type_en')))
-          # WEF reference lists and footnotes, where TR/EN counts differ.
-          slug='dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi'
-          f=json.loads((Path('content/articles')/slug/'fulltext/current.json').read_text(encoding='utf-8'))
-          for loc in ('tr','en'):
-            print('\nWEF',loc.upper(),'REFERENCES',len(f[loc]['references']))
-            for i,r in enumerate(f[loc]['references'],1): print(f'{loc.upper()}REF{i:02d}',r.get('text',''))
-            print('WEF',loc.upper(),'FOOTNOTES',len(f[loc]['footnotes']))
-            for n in f[loc]['footnotes']: print(loc.upper(),'NOTE',n)
-          # Young China exact reference tails for verified split-vs-joined source entry.
-          slug='genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme'
-          f=json.loads((Path('content/articles')/slug/'fulltext/current.json').read_text(encoding='utf-8'))
-          for loc in ('tr','en'):
-            print('\nYOUNG',loc.upper(),'REFERENCES',len(f[loc]['references']))
-            for i,r in list(enumerate(f[loc]['references'],1))[-4:]: print(f'{loc.upper()}REF{i:02d}',r.get('text',''))
+            assert (m['publication_type_tr'],m['publication_type_en']) == expected[slug]
+            for k in ('abstract_en','citation_tr','citation_en'):
+              v=m.get(k) or ''
+              assert not re.match(r'^(Abstract|Atıf|Citation)\s*:?',v,re.I), (slug,k,v[:40])
+          assert json.loads(Path('content/articles/brics-terore-karsi-mucadele-stratejisi/metadata.json').read_text())['pages']=='409-412'
+          for slug in ('brics-terore-karsi-mucadele-stratejisi','sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan','wape-18-yillik-forumu'):
+            assert json.loads((Path('content/articles')/slug/'metadata.json').read_text())['author']==''
+          f=json.loads(Path('content/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/fulltext/current.json').read_text())
+          assert [n['id'] for n in f['tr']['footnotes']] == [str(i) for i in range(1,12)]
+          assert [n['id'] for n in f['en']['footnotes']] == [str(i) for i in range(1,12)]
+          assert len(f['tr']['references'])==35 and len(f['en']['references'])==35
+          assert any(r['text'].startswith('Wilber, K. (1979).') for r in f['en']['references'])
+          alltext=' '.join(r['text'] for loc in ('tr','en') for r in f[loc]['references'])
+          for bad in ('MISCON- DUCT','Monthly eview','Monthly r eview','2025- 04-25','baidu. com','997. shtml'):
+            assert bad not in alltext, bad
+          authors=Path('app/authors.ts').read_text(encoding='utf-8')
+          for name in ('Kolosovskiy Yan','Song Shuli','Cheng Enfu','Füruğ Ferruhzad','Hasan İzzettin Dinamo'):
+            assert re.search(r'^\s*"'+re.escape(name)+r'"\s*:\s*\{',authors,re.M), name
+          print('V6I4 validation passed')
           PY
+
+          git diff --check
+          echo '--- changed files ---'
+          git status --short
+          echo '--- diff stat ---'
+          git diff --stat
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content app/authors.ts app/archive-data.json app/generated-fulltext app/generated-runtime
+          if git diff --cached --quiet; then
+            echo 'No changes required.'
+            exit 0
+          fi
+          git commit -m 'Audit and correct Volume 6 Issue 4 records'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced during audit; refusing non-fast-forward push'; exit 1; }
+          git push origin HEAD:main
