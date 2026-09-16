@@ -1,0 +1,91 @@
+name: Fix Africa article heading hierarchy
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-africa-heading-hierarchy.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Correct article hierarchy and global subsection typography
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          slug = "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme"
+          base = Path("content/articles") / slug / "fulltext"
+
+          main_numbers = {1, 2, 6, 10, 14}
+          subsection_numbers = {3, 4, 5, 7, 8, 9, 11, 12, 13}
+
+          for lang in ("en", "tr"):
+              path = base / f"{lang}.json"
+              data = json.loads(path.read_text(encoding="utf-8"))
+              seen = set()
+              for section in data["sections"]:
+                  prefix = f"{lang}-section-"
+                  if not section["id"].startswith(prefix):
+                      continue
+                  try:
+                      number = int(section["id"].removeprefix(prefix))
+                  except ValueError:
+                      continue
+                  if number in main_numbers:
+                      section["level"] = "section"
+                      seen.add(number)
+                  elif number in subsection_numbers:
+                      section["level"] = "subsection"
+                      seen.add(number)
+              expected = main_numbers | subsection_numbers
+              if seen != expected:
+                  raise RuntimeError(f"Unexpected {lang} section set: missing={sorted(expected-seen)} extra={sorted(seen-expected)}")
+              path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+          rich_path = Path("app/components/ArticleRichText.tsx")
+          rich = rich_path.read_text(encoding="utf-8")
+          old = '<section className="article-body-section" id={section.id} key={section.id}>'
+          new = '<section className={`article-body-section${section.level === "subsection" ? " article-body-subsection" : ""}`} id={section.id} key={section.id}>'
+          if new not in rich:
+              if old not in rich:
+                  raise RuntimeError("ArticleRichText section wrapper not found")
+              rich = rich.replace(old, new, 1)
+              rich_path.write_text(rich, encoding="utf-8")
+
+          css_path = Path("app/globals.css")
+          css = css_path.read_text(encoding="utf-8")
+          marker = "/* Article full-text heading hierarchy */"
+          if marker not in css:
+              css += '''\n\n/* Article full-text heading hierarchy */\n.article-platform-content .article-body-section > h3 {\n  margin: 0 0 18px;\n  color: var(--ink);\n  font-family: Georgia, "Times New Roman", serif;\n  font-size: clamp(24px, 2.25vw, 29px);\n  font-weight: 500;\n  line-height: 1.18;\n  letter-spacing: -.02em;\n}\n\n.article-platform-content .article-body-section > h4 {\n  margin: 0 0 12px;\n  color: #403a35;\n  font-family: Georgia, "Times New Roman", serif;\n  font-size: clamp(18px, 1.55vw, 20px);\n  font-weight: 600;\n  line-height: 1.3;\n  letter-spacing: -.008em;\n}\n\n.article-platform-content .article-body-section.article-body-subsection {\n  margin-top: 30px;\n  padding-top: 0;\n  border-top: 0;\n}\n\n@media (max-width: 640px) {\n  .article-platform-content .article-body-section > h3 {\n    font-size: 23px;\n  }\n\n  .article-platform-content .article-body-section > h4 {\n    font-size: 18px;\n  }\n\n  .article-platform-content .article-body-section.article-body-subsection {\n    margin-top: 26px;\n    padding-top: 0;\n  }\n}\n'''
+              css_path.write_text(css, encoding="utf-8")
+          PY
+
+      - name: Commit correction
+        run: |
+          if git diff --quiet -- \
+            content/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/fulltext/en.json \
+            content/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/fulltext/tr.json \
+            app/components/ArticleRichText.tsx \
+            app/globals.css; then
+            echo "No changes needed."
+            exit 0
+          fi
+          git config user.name "BRIQ Journal"
+          git config user.email "briq@briqjournal.com"
+          git add \
+            content/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/fulltext/en.json \
+            content/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/fulltext/tr.json \
+            app/components/ArticleRichText.tsx \
+            app/globals.css
+          git commit -m "Fix Africa article heading hierarchy and subsection styling"
+          git pull --rebase origin main
+          git push origin HEAD:main
