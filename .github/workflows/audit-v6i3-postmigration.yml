@@ -1,0 +1,35 @@
+name: Audit V6I3 postmigration
+on:
+  push:
+    branches: [audit/v6i3-postmigration]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect canonical structure
+        run: |
+          python3 <<'PY'
+          import json,re,pathlib
+          issue=json.load(open('content/issues/v06-i03.json'))
+          for slug in issue['articles']:
+            print('\n###',slug)
+            for loc in ('en','tr'):
+              p=pathlib.Path('content/articles')/slug/'fulltext'/f'{loc}.json'
+              d=json.load(open(p))
+              print(loc,'sections=',len(d.get('sections',[])),'refs=',len(d.get('references',[])),'figs=',len(d.get('figures',[])))
+              for s in d.get('sections',[]): print('  H',repr(s['title']),'paras',len(s.get('paragraphs',[])))
+              paras=[x for s in d.get('sections',[]) for x in s.get('paragraphs',[])]
+              broken=[]
+              for i,x in enumerate(paras[:-1]):
+                y=paras[i+1]
+                if re.search(r'[A-Za-zÇĞİÖŞÜçğıöşü]-$',x) and re.match(r'^[a-zçğıöşü]',y): broken.append((x[-80:],y[:80]))
+              print('  broken_hyphen_boundaries=',len(broken))
+              for a,b in broken[:30]: print('   BROKEN',repr(a),'|',repr(b))
+              dup=sum(1 for a,b in zip(paras,paras[1:]) if a.strip()==b.strip())
+              print('  adjacent_duplicates=',dup)
+              badheaders=sum(1 for x in paras if re.search(r'B\s+R\s+I\s*[Qq].{0,50}(?:Volume|Cilt)',x,re.I))
+              print('  embedded_headers=',badheaders)
+          PY
