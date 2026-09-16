@@ -33,7 +33,6 @@ jobs:
           const v7 = new Set(issueSlugs);
           if (v7.size !== 30) throw new Error(`Expected 30 unique Volume 7 contributions, got ${v7.size}`);
 
-          // Read the already-reviewed source-language decisions before removing the temporary override layer.
           const storeUrl=pathToFileURL(path.resolve('scripts/content-store.mjs')).href+`?audit=${Date.now()}`;
           const { bilingualKeywordParityOverrides } = await import(storeUrl);
 
@@ -104,7 +103,6 @@ jobs:
             write(metaPath,meta);
           }
 
-          // Repair the one clear interview-heading PDF extraction truncation using the complete Turkish source line.
           {
             const slug='anadolunun-kulturel-mirasini-koruma-ve-gelecege-aktarma-sorumlulugu';
             const file=`content/articles/${slug}/fulltext/en.json`;
@@ -117,7 +115,6 @@ jobs:
             write(file,data);
           }
 
-          // Volume 7 is localized canonical content now. Remove its old slug-specific keyword decisions and the obsolete Çomak repair path.
           {
             const file='scripts/content-store.mjs';
             let s=fs.readFileSync(file,'utf8');
@@ -135,7 +132,6 @@ jobs:
             fs.writeFileSync(file,s);
           }
 
-          // Remove obsolete tests that expected V7 keyword override entries to remain in the loader.
           {
             const file='tests/keyword-case.test.mjs';
             let s=fs.readFileSync(file,'utf8');
@@ -152,10 +148,9 @@ jobs:
 
           cat >/tmp/volume7-canonical-test.mjs <<'JS'
           import fs from 'node:fs';
-          import path from 'node:path';
           import assert from 'node:assert/strict';
           import test from 'node:test';
-          import { bilingualKeywordParityOverrides } from './scripts/content-store.mjs';
+          import { bilingualKeywordParityOverrides } from '../scripts/content-store.mjs';
           const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
           const expectedDates={1:'2025-12-01',2:'2026-03-01',3:'2026-06-01',4:'2026-09-01'};
           const slugs=[]; const issueBySlug=new Map();
