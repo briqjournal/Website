@@ -1,20 +1,57 @@
 {
   "schemaVersion": 2,
   "id": "wape-18-yillik-forumu",
-  "articleType": {"id": "conference-report", "tr": "Konferans Raporu", "en": "Conference Report", "peerReviewed": false},
-  "title": {"en": "WAPE 18th Annual Forum", "tr": "WAPE 18. Yıllık Forumu"},
+  "articleType": {
+    "id": "conference-report",
+    "tr": "Konferans Raporu",
+    "en": "Conference Report",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "WAPE 18th Annual Forum",
+    "tr": "WAPE 18. Yıllık Forumu"
+  },
   "authors": [],
   "abstract": {
     "en": "The World Association for Political Economy (WAPE) Annual Forum, organized by the China Business Development and Friendship Association (Turk-China Business Association) at Yeditepe University on August 6-8, 2025, was attended by 85 political economists from 16 countries, and 68 papers were presented. The theme of this year's Forum was the challenges and opportunities that multipolarity brings to political economy. Topics such as artificial intelligence, ecology, the digital Silk Road, global economic transformation, socialist modernization in China, and regional alliances were discussed from a political economy perspective based on current data. Please find attached Prof. Cheng Enfu's and Adnan Akfırat's speeches at the opening session and the final declaration of the WAPE 18th Forum.",
     "tr": "Çin İş Geliştirme ve Dostluk Derneği (Türk-Çin İş Der) tarafından, 6–8 Ağustos 2025’te Yeditepe Üniversitesi’nde düzenlenen Dünya Politik Ekonomi Derneği (WAPE) Yıllık Forumu’na 16 ülkeden 85 siyasal iktisatçı katıldı, 68 bildiri sunuldu. Bu yılın Forumu’nun teması, çok kutupluluğun ekonomi politiğe getirdiği meydan okumalar ve açtığı fırsatlardı. Yapay zekâ, ekoloji, dijital İpek Yolu, küresel ekonomik dönüşüm, Çin’de sosyalist modernleşme ve bölgesel ittifaklar başlıkları, güncel verilere dayalı siyasal ekonomi perspektifiyle tartışıldı. Prof. Cheng Enfu’nun ve Adnan Akfırat’ın açış oturumundaki konuşmalarını ve WAPE 18. Forumu’nun sonuç bildirisini ekte incelemenize sunuyoruz."
   },
-  "keywords": {"en": [], "tr": []},
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2025-09-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 4, "year": 2025, "season": {"en": "Autumn", "tr": "Güz"}},
-  "pages": {"first": "471", "last": "481"},
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2025-09-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 4,
+    "year": 2025,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "471",
+    "last": "481"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

@@ -1,0 +1,432 @@
+{
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Giriş",
+      "paragraphs": [
+        "Sovyetler Birliği’nin dağılmasıyla ortaya çıkan güç boşluğundan, bölgenin kötü yönetiminden ve sosyoekonomik istikrarsızlığından faydalanan radikal hareketler ortaya çıkmıştır. Bunlar arasında dini uyanışçılığı etnopolitik hedeflerle birleştiren İslamcı örgütler ciddi bir güvenlik tehdidiydi. Bunlardan bazıları aşırı uçlara dönüşerek hem bölgesel istikrarı hem de uluslararası güvenliği tehlikeye atarken, diğerleri bölgenin farklı uluslarını İslami çerçeveler altında bir araya getirmeyi amaçladı.",
+        "Orta Asya’da, özellikle de Kolektif Güvenlik Antlaşması Örgütü (KGAÖ) aracılığıyla yürütülen teröre karşı mücadele girişimlerini analiz etmek için bölgenin kendine özgü güvenlik dinamiklerini dikkate alan bir çerçeve gereklidir. Barry Buzan ve Ole Wæver’in Bölgesel Güvenlik Kompleksi Teorisi (RSCT), güvenlik sonuçlarını sadece iç veya uluslararası güçlerin değil, bölgesel etkileşimlerin nasıl şekillendirdiğini vurgulayan ikna edici bir mercek sunmaktadır. Yazarlar, Orta Asya’nın Sovyet sonrası alanda “zayıf bir alt kompleks” olarak faaliyet gösterdiğini, dış tehditlerin (ulus ötesi terörizm, Afganistan’daki kalıcı istikrarsızlık) ve iç kırılganlıkların (etnik gerilimler, yönetişim eksiklikleri) etkileşime girdiğini ve bölgesel güvenliği bağımsız olarak sağlama yeteneğini sınırladığını iddia etmektedir. Ana aktör olan Rusya, bölgesel güvenliği çoğunlukla bu sorunlara koordineli yanıtlar planlayan KGAÖ gibi örgütler aracılığıyla organize etmektedir (Buzan & Waever, 2003).",
+        "KGAÖ’nün teröre karşı mücadele stratejisi, RSCT’nin birbiriyle bağlantılı tehditlere odaklanarak, organize suç, uyuşturucu kaçakçılığı ve terörizmin birleşmesine karşı mücadelede çok taraflı işbirliğini kullanma vurgusuyla uyumludur. Rusya’nın bölgesel güvenlik alanındaki baskın konumu, ortak tatbikatlar veya 2022 Kazakistan müdahalesi gibi KGAÖ faaliyetlerine yoğun katılımı ile güçlenmektedir. Sovyet sonrası Orta Asya’da “yeni büyük oyun” tahminleri yapılıyordu, bun karşın bu senaryo hiçbir zaman tam olarak gerçekleşmedi. Bunun yerine Rusya, çok sayıda ikili anlaşmanın yanı sıra Bağımsız Devletler Topluluğu (BDT), Avrasya Ekonomik Birliği (AEB) ve KGAÖ gibi çok taraflı örgütler aracılığıyla nüfuzunu güçlendirdi. Tek taraflı hegemonyaya alternatif olarak kolektif güvenlik yönetimini savunan Şanghay İşbirliği Örgütü’nde (ŞİÖ) resmileşen Çin-Rus işbirliğinde görüldüğü üzere, bölgesel güçler aynı anda istikrara rekabetten daha yüksek bir öncelik vermiştir.",
+        "Sınırlı yabancı katılımı nedeniyle Orta Asya hala Rusya liderliğinde bir alt komplekstir ve bir “büyük güç kompleksi” veya “süper kompleks” haline gelmemiştir. Rusya’nın kurumsallaşmış etkisi, Orta Asya cumhuriyetleri arasında bölgeler arası temasların gerçekleştiği güvenlik paradigmasını büyük ölçüde şekillendirmektedir. Çin ve Amerika Birleşik Devletleri (ABD), Orta Asya ülkeleriyle güvenlik konularında birlikte çalışmaya devam etmekle birlikte, katılımları hala pratik ve yasal kısıtlamalarla sınırlıdır. KGAÖ’nün 2022’de Kazakistan’da başlattığı barışı koruma operasyonunun da gösterdiği gibi, bu tür faaliyetler Rusya’nın daimi askeri üsleri ve yerleşik müdahale mekanizmalarıyla kurumsallaşmış bölgesel katılımıyla tam bir tezat oluşturmaktadır.",
+        "Dostluk-düşmanlık örüntüleri kavramsallaştırması, bu çalışmanın Rusya ile Orta Asya ülkeleri arasındaki güvenlik bağlarına ilişkin değerlendirmesinin temelini oluşturmaktadır. Bölgede işlerin nasıl yürüdüğünü, sadece kimin daha büyük güce sahip olduğunun değil, ülkelerin birbirlerini nasıl gördükleri ve birbirlerine nasıl bağlandıklarının belirlediğini belirten Buzan & Waever’a (2003) göre, bölgedeki güvenlik etkileşimlerinin nasıl geliştiği, ülkelerin birbirlerini müttefik mi yoksa düşman olarak mı gördüklerine bağlıdır. Rusya’nın Orta Asya’da uzun süredir devam eden güvenlik sağlayıcılığı rolü, özellikle KGAÖ, BDT ve diğer ŞİÖ ülkeleri ile işbirliği yoluyla kurumsal hâkimiyetini destekleyen kalıcı iyi niyet kalıpları üretmiştir.",
+        "Bu çalışma, RSCT’yi kullanan dört analitik seviye aracılığıyla, nitel vaka analizi ve süreç izleme kullanarak KGAÖ teröre karşı mücadele operasyonlarını incelemektedir. Çalışma, devletlerin ortak güvenlikte birbirine bağımlı oyuncular olarak algılanmasına ve üye devletlerde ülke içi düzeyde radikalleşme süreçlerine odaklanmaktadır. Bölgesel düzeydeki inceleme, kurumsal temeller, istihbarat paylaşımı prosedürleri ve ortak askeri tatbikatlar gibi operasyonel çerçeveleri değerlendirirken, süregelen eksikliklere de işaret etmektedir. Analiz, KGAÖ ile ŞİÖ gibi diğer bölgesel çerçeveler arasında bölgeler arası düzeyde güvenlik işbirliğinin geliştirilmesi için olası yolları incelemektedir. Son olarak, çalışma uluslararası teröre karşı mücadele rejimleri ile KGAÖ’nün dünya çapındaki eylemleri arasındaki normatif uyumluluğu değerlendirmektedir.",
+        "Çalışma, ikincil kaynaklara ek olarak, KGAÖ arşivlerinden ve üye ülkelerden birincil kayıtları da kullanmaktadır. Değişen tehdit algıları ve tepki kalıplarına özel bir dikkat gösterilerek, tematik kodlama temel RSCT özelliklerine dayalı materyalleri gruplandırır. Hükümet yorumlarının bölgesel ve küresel güvenlik uzmanlarının bağımsız uzman analizleriyle çapraz referanslandırılmasıyla metodolojik üçgenleme geçerliliği artırmaktadır. Bu çok kaynaklı strateji, operasyonel gerçekler ile kurumsal anlatılar arasında bir denge kurmaktadır.",
+        "Analitik çerçeve, özellikle iki önemli gelişmeye bakarak KGAÖ’nün eylemlerini değişen jeopolitik koşulların içine yerleştirmektedir. Taliban’ın Afganistan’daki yönetimi hem güvenlik tartışmaları için fırsatlar hem de IŞİD ve El Kaide’nin ülkede artan varlığıyla ilgili devam eden zorluklar sunmaktadır. Suriye’nin çatışma sonrası istikrara kavuşması ve ulus ötesi cihatçı ağların stratejik gelişimi gibi bölge dışı unsurların KGAÖ’nün operasyonel planlama ve tehdit değerlendirme prosedürlerini nasıl etkilediğinin değerlendirilmesi de bu bağlamsal araştırmanın bir başka yönünü oluşturmaktadır.",
+        "Analiz üzerinde bazı kısıtlamalar olabilir. İlk olarak, KGAÖ ve Rusya tarafından yayınlanan materyallere çok fazla güvenmek Kremlin yanlısı bir önyargıya yol açabilir; ancak bu önyargı çeşitli kaynaklardan gelen bilgilerin birleştirilmesiyle azaltılabilir. Bazı ana materyaller Arapça, Orta Asya ve diğer dillerde mevcut olduğundan, dil engelleri bir sorun teşkil etmektedir. Sonuç olarak, bazı bulgular iyi rapor edilmemiş olabilir. Üçüncüsü, KGAÖ’nün hızlı kurumsal evrimi ve ilgili olayların yoğun dinamikleri nedeniyle bazı son değişiklikler akademik ve analitik çevrelerde henüz tam olarak temsil edilmemiş olabilir.",
+        "Araştırma Hedefleri: Bu çalışmanın gerçekleştirmeye çalıştığı üç ana hedef vardır. İlk olarak, bölgede terörizme katkıda bulunan tarihi, siyasi, sosyoekonomik ve dış etkilere bakılmaktadır. İkinci olarak, KGAÖ tarafından yürütülen Orta Asya teröre karşı mücadele çabalarının ne kadar iyi işlediğini değerlendirmeyi amaçlamaktadır. Üçüncü olarak, Rusya’nın Orta Asya’daki güvenlik gündemini etkilemek için KGAÖ’yü ne derece kullandığını değerlendirmektedir."
+      ]
+    },
+    {
+      "id": "tr-section-2",
+      "title": "Günümüzde Orta Asya’da İslami Radikalizm",
+      "paragraphs": [
+        "Çağdaş ideolojik mücadeleler ile tarihsel İslami gelenekler arasındaki bağlantıları incelemek, Orta Asya’daki İslami radikalizm çalışmaları için elzemdir. Çoğu akademisyen bölgenin 7. ve 8. yüzyıllarda daha İslami hale geldiği konusunda hemfikir olsa da (Егоров, 2014; Казанцeв, 2016), Sovyet sekülerleşmesinin ve bağımsızlık sonrası canlanmanın bugünkü aşırılık yanlısı hareketleri nasıl etkilediği konusunda hala pek çok anlaşmazlık bulunmaktadır. Sufi uygulamaları ve Hanefi Sünni doktrinine dayanan geleneksel Orta Asya İslamı, yerel geleneklere uyum sağlama konusunda bir geçmişe sahiptir (Khalid, 2007; Safranchuk & Makhmudov, 2024). Bununla birlikte, hem seküler hükümete hem de Sufi senkretizmine karşı çıkan Vahhabilik ve Selefilik gibi pürist hareketler bu esnekliğe karşı çıkmıştır (Meijer, 2009; Ro’i, 2000). Bölgedeki radikalleşmeye ilişkin mevcut tartışmaların çoğu, İslam’ın çoğulcu ve dışlayıcı görüşleri arasındaki bu çatışmayla çerçevelenmektedir."
+      ]
+    },
+    {
+      "id": "tr-section-3",
+      "title": "Orta Asya’da İslami Radikalizm: İç ve Dış Faktörler",
+      "paragraphs": [
+        "Çağdaş dönemdeki radikalizmin, “Orta Asya’nın İslami geçmişinin doğal bir yan ürünü mü” yoksa “bağımsızlık sonrası Sovyet zulmü ve istikrarsızlığın getirdiği bir kırılma mı” olduğu sorusu literatürde tartışmalı bir konudur. Bazı akademisyenler, Sovyet tedbirlerinin İslami bilinci ortadan kaldırmak yerine sadece bastırdığını ve aşırılık yanlılarının daha sonra faydalanacağı manevi bir boşluk yarattığını iddia etmektedir (Haghayeghi, 1996; Егоров, 2014). Bazıları ise 1990’lara kadar geleneksel İslam’ı köktendinci dış baskılardan koruyan Sovyet sekülerleşmesinin istemeden de olsa İslam’ı koruduğunu savunmaktadır (Khalid, 2007; Safranchuk & Makhmudov, 2024). Böylece, Sovyet sonrası İslam’ın yeniden canlanması üç grup arasında bir çatışmaya dönüşmüştür: Seküler ve geleneksel yapıları şiddetle reddetmeyi savunan radikaller, ılımlı yeniden yorumlamaları savunan reformistler ve Sovyet öncesi Hanefi uygulamalarını geri getirmeye çalışan gelenekçiler (Collins, 2007; Omelicheva, 2013).",
+        "Bu ideolojik mücadele en iyi şekilde Fergana Vadisi’nde görülmektedir. Bir zamanlar İslami eğitimin merkezi olan Fergana Vadisi, yoğun dindarlığı ve ekonomik marjinalleşmesi nedeniyle aşırılık için bir üreme alanı haline gelmiştir (Olcott, 2007). İç memnuniyetsizliğin dış ideolojik etkilerle nasıl harmanlandığının bir örneği olarak, Özbekistan İslami Hareketi (IMU) gibi hareketler yerel kaygılardan doğmuş ancak küresel cihatçı söylemi benimsemiştir (Бабаджанов, 2010). Bu sentez, Orta Asya radikalizminin bileşik doğasını vurgulamakta ve bunun sadece ithal bir olgu olduğu yönündeki önceki görüşlere meydan okumaktadır.",
+        "Orta Asya radikalleşmesinde dış güçlerin önemi kapsamlı bir şekilde incelenmiş olsa da, akademisyenler arasında bunların göreceli önemi hakkındaki görüşler farklılık göstermektedir. Bazıları başarılarının devlet baskısı ve ekonomik çaresizlik gibi önceden var olan yerel koşullara bağlı olduğunu iddia ederken (Safranchuk & Makhmudov, 2024), diğerleri Hizb-ut Tahrir (HT) ve Selefi misyonerler gibi uluslararası örgütlerin doğrudan etkisini vurgulamaktadır (Orofino, 2021; Zelin, 2023). Örneğin, Özbekistan’da hükümetin ılımlı İslam’a yönelik sert baskıları, halkın belirli kesimlerini yabancılaştırarak ve pan-İslami hilafet söylemini cazip hale getirerek, HT’nin gelişmesine yardımcı oldu (Егоров, 2014). Benzer şekilde, deneyimlerini radikal bir bakış açısıyla yeniden yorumlayan geri dönen işçi göçmenler, uluslararası yayılmanın yanı sıra Selefiliğin popülerlik kazanmasına da yardımcı olmuştur (Sharipova & Beissembayev, 2023).",
+        "Taliban’ın 2021’den sonra askeri çatışmadan devlet yönetimine geçmesi, ulusötesi cihatçı çevrelerle ideolojik bir ayrışmaya yol açmıştır. Hareketin küresel cihattan çekilmesi, devrimci eylemleri Afganistan sınırlarıyla kısıtlaması ve dışarıdaki müttefik İslamcı güçleri desteklememesi, HT’nin kamuoyu önünde eleştirdiği ilk konular arasında yer almıştır (Knyazev, 2024). Taliban siyasi muhalefeti yasaklasa ve HT üyelerini sık sık gözaltına alsa da, örgüt Afganistan’da gizlice faaliyet göstermeye, bağlı camiler ve çevrimiçi kanallar aracılığıyla propaganda yaymaya devam etmektedir. Taliban, HT’nin pan-İslamist hilafet hırsını kendi emirlikleri için bir tehlike olarak gördüğünden, HT’yi rakip bir İslamcı grup olarak aktif bir şekilde bastırırken, HT Taliban ile açıkça karşı karşıya gelmekten kaçınmaktadır. Bunun yerine, Taliban’ı destekler görünürken dini cemaatler içinde gizlice üye topluyor. Bu iki yönlü dinamik HT’nin düşmanca ortamlardaki tarihsel pragmatizmini yansıtmaktadır.",
+        "Mevcut araştırmalar, iç ve dış radikalleşme faktörlerini ayrı ayrı ele alarak bunların sinerjik etkilerini sıklıkla göz ardı etmektedir. Bu çalışma, ulusötesi cihatçı çerçevelerin yerel kaygılarla (işsizlik, yoksulluk ve cehalet gibi) etkileşime girerek benzersiz radikal gruplar yaratma yollarını inceleyerek bu boşluğu doldurmaktadır. Ayrıca, daha önceki yayınlarda HT ve IMU gibi gruplar ayrıntılı bir şekilde ele alınmış olmasına rağmen, Orta Asya’da Selefiliğin doktrinsel gelişimini, özellikle de Sovyet sonrası suç alt kültürlerine adaptasyonunu inceleyen daha az sayıda çalışma bulunmaktadır (Прохватилов, 2023)."
+      ]
+    },
+    {
+      "id": "tr-section-4",
+      "title": "Bölgeyle ilişkili cihatçı örgütler",
+      "paragraphs": [
+        "Orta Asya bağlantılı cihatçı örgütlerin varlığını sürdürmesi, yerel militan ekosistemler ile küresel ideolojik hareketler arasındaki bağlantıyı vurgulamaktadır. IŞİD-Horasan (IŞİD-K), El Kaide, Katibat al-Imam al-Bukhari (KIB), Katibat Tawhid wal-Jihad (KTJ) ve Jamaat Ansarullah (JA) gibi grupların varlığı önceki araştırmalar tarafından geniş çapta kabul edilmiş olsa da, bu örgütlerin üye kazanma taktikleri, operasyonel dinamikleri ve teröre karşı mücadele baskıları karşısındaki esneklikleri hakkındaki bilgilerimizde hala önemli boşluklar bulunmaktadır. Bu bölüm, konuyu mevcut akademik tartışmalar bağlamına oturtarak ve popüler inanışları ampirik verilerle çürüterek bu boşlukları ele almaktadır.",
+        "Doğu Afganistan ve Pakistan sınır bölgelerindeki operasyonel üssü ile IŞİD-K, şu anda Afganistan ve çevresindeki bölgelerdeki en aktif terör örgütüdür. Operasyonel kapasitesini Orta Asyalı radikallerden, Afgan etnik azınlıklardan, Pakistan Talibanı militanlarından (TTP) ve diğer bölgesel cihatçı hareketlerden ayrılanlardan almaktadır. Taliban’ın Ağustos 2021’de yönetimi ele geçirmesinden önce ve sonra ısrarla sürdürdüğü teröre karşı mücadele çabaları IŞİD-K’nin yıkıcı kabiliyetlerini büyük ölçüde sınırlamış olsa da örgüt hâlâ karmaşık saldırılar gerçekleştirme kapasitesine ve ulus ötesi hedeflere sahip ve bu da onu önemli bir bölgesel güvenlik tehdidi haline getiriyor. Her ne kadar yetersiz kaynakları onu gizlice faaliyet göstermeye zorlasa da, IŞİD-K Taliban yönetimine karşı olduğunu göstermek için sık sık sivillere ve yabancılara yönelik terör eylemleriyle misilleme yapıyor. Taliban, IŞİD-K ile mücadele etmek için çoğunlukla istihbarata dayalı operasyonları kullanmış ve taktiksel anlamda mütevazı başarılar elde etmiştir. Ancak kaynak yetersizliği nedeniyle örgütü tamamen yok edemiyor ve bu da IŞİD-K’yı sürekli bir güvenlik tehlikesi olarak tutuyor.",
+        "Teröre karşı mücadele baskılarına rağmen IŞİD-K kayda değer bir direnç göstermiştir. Grubun 2015’te birkaç yüz olan savaş gücü 2021’de 5 ila 7 bine yükseldi ve 2024’ün başlarında 15 bin ila 17 bin savaşçıya sahip olacağı tahmin ediliyordu. Taciklerin, Özbeklerin ve diğer yabancı uyrukluların örgüte katılımına giderek daha fazla odaklanılıyor. Örgüt, yapısal zayıflıkların aşırıcılığı kolaylaştırdığı Orta Asya’dan, özellikle de Tacikistan’dan adam devşirerek etkisini daha da arttırmaktadır. Tacikistan Devlet Başkanı Emomali Rahmon, 24 Tacik vatandaşının son üç yıl içinde 10 farklı ülkede ya terör saldırısı gerçekleştirdiğini ya da saldırı planlamakla suçlandığını kabul etmiştir (Umarov, 2024). Bu genişlemeye rağmen, IŞİD’in bölgesel hedefleri Taliban ve Afgan hükümetinin muhalefeti nedeniyle ciddi şekilde kısıtlanmış, bu da örgütün odağını Orta Asyalıları askere alarak Ortadoğu’daki çatışmalarda savaşa kaydırmasına neden olmuştur (Safranchuk & Makhmudov, 2024; Strachota, 2024; Эргашев, 2024). Büyük kayıplara neden olan Mart 2024 Moskova grevi ve Tacikistan’ın Khatlon Eyaletinde Çinli işçilere yönelik Kasım 2024 saldırısı gibi yüksek profilli saldırılar bu genişlemeyle aynı zamana denk gelmiştir (Caballero, 2024; áеренко, 2024).",
+        "Orta Asyalı cihatçı grupların operasyonel becerileri Suriye krizi sayesinde önemli ölçüde gelişmiştir. Hayati bir eğitim alanı olarak savaş, KIB ve KTJ gibi ağların güçlü militan gruplara dönüşmesini sağladı. El Kaide’nin Suriye’deki kolu olan Hey’et Tahrir el-Şam ile güçlerini birleştiren bu gruplar savaş deneyimi, doktrin desteği ve uluslararası bağlantılar kazanarak uluslararası cihatçılıkla bağlantılarını derinleştirdi. Bu süre zarfında coğrafi etkileri ve örgütsel karmaşıklıkları büyük ölçüde arttı (Soliev, 2019; 2020). Ağustos 2016’da Bişkek’teki Çin Büyükelçiliği’ne düzenlenen saldırı ve Nisan 2017’de St. Petersburg’da 16 kişinin hayatını kaybettiği metro patlamasıyla KTJ çok sofistike bir ağ olarak adını duyurmuştur (Тюкеев, 2024). Örgüt Rusya’da Orta Asyalı göçmen işçi toplamaya devam ediyor ve 700 militanı olduğu düşünülüyor. Rus polisi daha fazla militan toplama mesajı yakaladığını iddia etmiştir (Safranchuk & Makhmudov, 2024). 2021-2022 yıllarında 39 KTJ üyesi hapse atılmış, Şubat 2024’te ise 49 kişi daha tutuklanmıştır (Ведомости, 2024). Orta Asyalı militanların ulusötesi cihatçı ağlarda artan gücü, Tacik komutan Saifiddin Tadjiboev’in Hay’at Tahrir al- Sham’ın liderlik yapısındaki varlığı ile daha fazla kanıtlanmaktadır (Orda, 2025; SCO RATS, 2025).",
+        "Tahrike Taliban Tacikistan (TTT) ve JA, Afganistan’daki bölgesel istikrar için yinelenen bir tehlike haline gelmiştir. Tacik-Afgan sınırı boyunca, TTT’den 200 militan ve JA’dan 300 savaşçı faaliyet göstermekte, son teknoloji silahlar elde etmek için Taliban desteğini kullanmakta ve “Horasan’ın Sesi” gibi propaganda siteleri aracılığıyla irredantist hedeflerini ilerletmektedir (Makhmudov vd., 2023). Taliban’ın arabuluculuk konusundaki ısrarı ve JA üyelerini iade etmeyi reddetmesi, bir tampon gücü korumayı Duşanbe’nin güvenlik sorunlarıyla ilgilenmenin önüne koyan stratejik kararların örnekleridir (Pannier, 2024).",
+        "Taliban içindeki önemli etnik ve hizipsel bölünmeler, yakın zamanda Afganistan’ın kuzeyindeki Tacik komutanlara yönelik saldırıları ve özellikle de Hakkani’ye bağlı lider Hüseyin Cundi’nin Takhar bölgesinde tutuklanmasıyla ortaya çıkmıştır. Bu tasfiyede Kandahar yönetiminin Peştun gücünü destekleme ve Hakkani Ağı’nın tarihsel özerkliğini zayıflatma çabası görülmektedir (Bifolchi, 2025). Azınlık grubunun marjinalleştirilmesi, Taliban karşıtı duyguların hala mevcut olduğu kuzey bölgelerini istikrarsızlaştırma riski taşırken, Tacik militan varlığının azalması Tacik İslamcı aşırılık yanlılarının sınır ötesi tehditlerini azaltarak Afganistan-Tacikistan bağlarını güçlendirebilir. Daha da endişe verici olanı, bu hamlelerin IŞİD-K’ya, yabancılaşmış Tacik topluluklarından militan devşirme ve etnik gerilimlerden yararlanma fırsatı vermesidir ki bu da bölgesel isyanları yeniden alevlendirebilir ve Taliban’ın zayıf iktidarını tehdit edebilir."
+      ]
+    },
+    {
+      "id": "tr-section-5",
+      "title": "KGAÖ’nün Orta Asya'da Teröre Karşı Mücadele Girişimleri",
+      "paragraphs": [
+        "1992’de imzalanan Kolektif Güvenlik Antlaşması ile kurulan önemli bir bölgesel örgüt olan KGAÖ’nün misyonu, operasyonel ve stratejik çerçeveler uygulayarak üye ülkeleri dış tehditlerden korumak ve terörizmle mücadele etmektir. KGAÖ, Rusya’nın 2016 ve 2023 Dış Politika Konseptlerinde bölgesel güvenliğin bir ayağı olarak konumlandırılmış ve özellikle Orta Asya’da olmak üzere Rus dış politikasındaki önemi vurgulanmıştır (MFA Russia, 2016, 2023). KGAÖ üyesi olmak, özellikle Afganistan’ın yarattığı tehlikeler göz önüne alındığında, Tacikistan’ın ulusal ve bölgesel güvenlik stratejisi için elzemdir. Hem 2015 Duşanbe isyanı sırasında KGAÖ yardımına duyulan güven hem de Tacikistan’ın 2015 Dış Politika Konsepti bunu göstermektedir (MFA Tajikistan, 2015). Bununla birlikte, KGAÖ’nün 2010 etnik karışıklıkları sırasında algılanan eylemsizliği, Kırgızistan’ın daha ölçülü bir yaklaşım benimseyen ve örgütü çok sayıda çok taraflı platformdan biri olarak gören 2019 Dış Politika Konseptini etkilemiştir (KR, 2019). Buna karşılık Kazakistan dış politikada çok vektörlü bir yaklaşım kullanmakta ve 2020 Dış Politika Konseptinde KGAÖ’yü NATO ile karşılaştırmaktadır. Ancak Kazakistan’ın söyleminde örgütün artan önemi, KGA- Ö’nün 2022’deki iç karışıklık sırasında barışı koruma desteği sağlamasının ardından giderek daha fazla yer bulmuştur (Akorda, 2020; Белоглазов, 2024)."
+      ]
+    },
+    {
+      "id": "tr-section-6",
+      "title": "KGAÖ’nün terörizmle mücadele için kavramsal temelleri",
+      "paragraphs": [
+        "KGAÖ’nün terörizmle mücadele stratejisi, 7 Ekim 2002 Moskova Zirvesi’nde onaylanan Tüzüğünde, özellikle de 3. Maddesinde özetlenen temel değerlerine dayanmaktadır. Üye devletlerin bağımsızlığı, toprak bütünlüğü ve egemenliğinin kolektif savunmasına odaklanan örgütün tüzüğü, barışı teşvik etmek, bölgesel ve küresel güvenliği geliştirmek ve istikrarı korumak olan ana hedeflerini ortaya koymaktadır. KGAÖ’nün çatışmaların barışçıl yollarla çözümüne olan bağlılığı, güvenlik sorunlarının çözümünde siyasi ve diplomatik önlemlere öncelik vermesinden de anlaşılmaktadır (CSTO, 2002).",
+        "Rusya, örgütün hayatta kalmasının birincil garantörü ve en büyük askeri ve mali katkı sağlayıcısı olarak örgütün kavramsal çerçevesi ve operasyonel amaçları üzerinde büyük bir etkiye sahip olmuştur. KGAÖ terörizmi tam olarak tanımlamasa da, BM kararları, uluslararası anlaşmalar ve 2009 tarihli “Terörizmle Mücadele” model yasası da dahil olmak üzere BDT çerçeveleriyle tutarlıdır (BDT Asamblesi, 2009). Uluslararası teröre karşı mücadele normlarına uygun olarak KGAÖ, BM’nin terörizmin kapsamlı bir yasal tanımını yapması ve terörist grupların listesini güncel tutması için sürekli baskı yapmıştır. Moskova, KGAÖ’nün gündemini küresel düzeyde ileriye taşımak için diplomatik gücünü kullanarak bu girişimlerin büyük bir destekçisi olmuştur.",
+        "KGAÖ’nün strateji çerçevesi, terör örgütlerinin faaliyetlerini finanse etmek için kaçakçılık ağlarını kullandığı uyuşturucu kaçakçılığı ve terörizm gibi birbiriyle bağlantılı sorunları ele almaktadır. Birbiriyle bağlantılı bu sorunlarla mücadele etmek için üye devletler işbirliklerini ve ortak kaynaklarını arttırmışlardır. Kırgızistan’da 2003 yılında bir Rus hava üssünün kurulması, 2001 yılında Kolektif Hızlı Konuşlandırma Güçlerinin yeniden yapılandırılması ve Avrasya Ekonomik Topluluğu içinde dış sınırların korunmasına yönelik anlaşmalar önemli girişimlerdir (CSTO, 2001; Белоглазов, 2024). Rusya’nın hayati önem taşıyan askeri ve lojistik desteği ile bu eylemler KGAÖ’nün operasyonel kabiliyetini büyük ölçüde arttırmıştır.",
+        "Terörizm, aşırıcılık ve insan kaçakçılığıyla mücadele etmek için KGAÖ Şartı’nın 8. Maddesi, Kolektif Hızlı Konuşlanma Kuvvetleri (2001), Kolektif Hızlı Reaksiyon Kuvvetleri (KSOR, 2009) ve Kolektif Barışı Koruma Kuvvetleri gibi özel birimlerin kullanımı yoluyla işbirliğini vurgulamaktadır. KSOR, 18,000 personeli ile çeşitli görevleri yerine getirmek üzere üye ülkelerin özel kuvvetlerini ve askeri birliklerini bir araya getirmektedir. KGAÖ’nün operasyonel kabiliyeti Kolektif Hava Kuvvetleri ve Hızlı Konuşlanan Kolektif Kuvvetler gibi diğer gruplar tarafından daha da artırılmaktadır. Üye ülkeler, terör olaylarını taklit eden düzenli ortak tatbikatlar yoluyla işbirliğine dayalı tepkilerini test edebilir ve geliştirebilirler (CSTO, 2002; 2009).",
+        "Kolektif Güvenlik Konseyi, Dışişleri Bakanları Konseyi, Güvenlik Konseyi Sekreterleri Komitesi ve Savunma Bakanları Konseyi gibi önemli kuruluşlar KGAÖ’nün kurumsal çerçevesinin bir parçasıdır. Teröre Karşı Mücadele Çalışma Grubu 2005 yılından bu yana tehdit değerlendirmesi ve plan geliştirilmesinde kilit bir rol oynamıştır. Dışişleri Bakanları Konseyi’ne bağlı bir diğer önemli kuruluş olan Afganistan Çalışma Grubu, Afganistan’daki durumu takip etmek ve özellikle Tacikistan’daki militan saldırılarını durdurmak için hükümetle birlikte çalışmakla görevlidir. Afganistan çalışma grubuna Afganların katılımı Kasım 2006’da Kabil’deki Rus delegelerin KGAÖ işbirliği konusunda güncellenmiş Afgan fikirlerini ele almasıyla başlamıştır (Гонтарь, 2015).",
+        "Rusya, KGAÖ’nün kurumsal ve yasal çerçevesinin geliştirilmesinde etkili olmuştur. Kolektif güvenliğe yönelik uyumlu bir yaklaşımı teşvik etmek amacıyla 2005 yılında imzalanan bir anlaşma üye ülkelerin eğitim kurumları arasında askeri eğitimi kolaylaştırırken, 2004 yılında bir Genelkurmay Başkanlığı’nın kurulması üye ülkeler arasında koordinasyonu artırmıştır. Her ne kadar 2012 yılında üyeliğini durdurmuş olsa da Özbekistan’ın 2006 yılındaki katılımı KGAÖ’nün gücünü arttırmıştır (CSTO, 2004, 2005). Örgüt, ŞİÖ gibi diğer örgütlerle birlikte bölgesel işbirliği arayışına girmiştir. ŞİÖ ve KGAÖ arasında 2007 yılında imzalanan bir Mutabakat Zaptı, organize suç, uyuşturucu kaçakçılığı, terörizm ve silahların yayılmasına karşı ortak operasyonları kolaylaştırarak uluslararası katılımı güçlendirmiştir (SCO & CSTO, 2007).",
+        "Farklı ülkelerin terörist grupları tanımlamak için farklı standartlara sahip olması nedeniyle zorluklar yaşanmasına rağmen, 2003 yılında tek bir terörist listesi oluşturma girişimleri başlamış ve 2004 yılında geçici bir listeye izin verilmiştir. Birleştirilmiş bir liste 2016’da kabul edilmiş ve 2015’te yeniden başlayan müzakerelerin ardından 2017’de tamamlanmıştır (Ведомости, 2016; Дорохина, 2018). Ancak 2022 yılında Tacikistan Devlet Başkanı Emomali Rahmon, listenin tamamlanmamış uygulamasına ilişkin çekincelerini dile getirmiştir (Sputnik, 2022).",
+        "Taliban’ın yirmi yıllık yasağı Nisan 2025’te Rusya Yüksek Mahkemesi tarafından iptal edilmiş ve Taliban derhal terör örgütleri listesinden çıkarılmıştır. Bu karar, Dışişleri ve Adalet Bakanlıklarının 2023’te sunduğu ve Başsavcının da onayladığı önerilerin ardından geldi. Taliban’ın Crocus Belediye Binası saldırısıyla bağlantılı militanlarla savaşmaya hazır olduğu FSB tarafından not edildi. Grubun terör faaliyetlerindeki azalmayı ve rakip aşırılık yanlılarına yönelik baskıları yansıtan bu karar, Rusya ile Afganistan arasındaki siyasi, ekonomik ve kültürel bağlantıların artmasına olanak sağlıyor. Her ne kadar hiçbir devlet Taliban’ı tam olarak tanımasa da Kırgızistan ve Kazakistan Taliban’ı halihazırda listeden çıkarmış durumda, dolayısıyla bu eylem Orta Asya’daki eğilimlerle uyumlu. Bölgenin en sert duruşu, azınlık hakları ve Taciklerin Afganistan yönetimine dahil edilmesi çağrısında bulunurken güç ihraç etmeye devam eden Tacikistan tarafından sürdürülmektedir (Суринская & Лакстыгал, 2025).",
+        "Askeri, diplomatik ve kurumsal alanlarda ortak çabalara odaklanan KGAÖ’nün 2016-2025 Kolektif Güvenlik Stratejisi, teröre karşı mücadele konusundaki kararlılığının altını çizmektedir (CSTO, 2016). Daha genel küresel güvenlik eğilimleriyle uyumlu olan bu strateji, KGAÖ’nün güvenlik kabiliyetlerini artırma, çok taraflı işbirliğini teşvik etme ve terörizmin altında yatan nedenlerle mücadele etme vurgusunu öne çıkarmaktadır. Rusya, KGAÖ’nün başlıca askeri ve mali destekçisi olarak bu çabaların desteklenmesinde kilit bir rol oynamaktadır. Bu girişimlerin bir sonucu olarak KGAÖ, Orta Asya ve ötesinde bölgesel güvenliğin dinamiklerinin belirlenmesinde önemli bir role sahip olmaya devam etmektedir."
+      ]
+    },
+    {
+      "id": "tr-section-7",
+      "title": "Teröre karşı mücadele ile ilgili KGAÖ misyonları ve tatbikatları",
+      "paragraphs": [
+        "İşbirliğine dayalı askeri tatbikatlar ve operasyonlar yoluyla KGAÖ, üye devletlerinin teröre karşı mücadele kabiliyetlerini güçlendirmeye sürekli olarak yüksek öncelik vermiştir. Birlikte çalışabilirliği, operasyonel hazırlığı ve çağdaş güvenlik sorunlarına karşı kolektif kapasitemizi arttırmak bu programların hedefleridir. KGAÖ, rehine krizleri, bombalamalar ve önemli altyapılara saldırılar gibi gerçekçi terör senaryolarını modelleyerek koordinasyonu geliştirmekte, süreçleri hızlandırmakta ve karmaşık ve dinamik zorluklarla başa çıkma kabiliyetini güçlendirmektedir.",
+        "KGAÖ’nün teröre karşı mücadele tatbikatları Afganistan’daki güvenlik ortamından büyük ölçüde etkilenmektedir. Uyuşturucu kaçakçılığı, sınır ötesi terörizm ve aşırılık yanlısı inançların Orta Asya’ya yayılmasına ilişkin endişeler Taliban’ın yeniden iktidara gelmesiyle birlikte artmıştır. Tacikistan, Afganistan ile olan 1.400 kilometrelik sınırı nedeniyle özellikle hassas bir konumdadır. 2010 yılında başlatılan “Cobalt” tatbikat serisi, bu tehditlere karşı koymak amacıyla terörist faaliyetleri bozmak ve yasadışı ağları dağıtmak için özel kuvvetler, keşif birimleri ve en son askeri teknolojileri kullanmaktadır. Rusya’daki 2024 versiyonu iç güvenlik güçleri, ulusal muhafız birlikleri ve teröre karşı mücadele timleri arasındaki işbirliğine odaklanarak KGAÖ’nün gerçekçi savaş koşullarında işlev görme kapasitesini ortaya koymuştur. Örneğin Tacikistan’daki “Cobalt-2021” tatbikatı, simüle edilmiş terörist saldırılarını etkisiz hale getirmek için hızlı müdahale güçlerinin, keşif taburlarının ve askeri helikopterlerin kullanımını sergilemiştir (Muraviev, 2022).",
+        "“Cobalt ”ı tamamlayan “Thunder” tatbikatları, güvenlik ve uyuşturucu karşıtı kurumlardan özel personele odaklanmaktadır. Bu tatbikatlar 2012’den bu yana, özellikle Tacikistan gibi isyanların ve yasadışı ticaretin önemli sorunlar olduğu bölgelerde, sınır aşan suç gruplarıyla mücadele etmek için iki yılda bir gerçekleştirilmektedir. “Thunder”, organize suç ve terörizm arasındaki ilişkiyi ele alarak KGAÖ’nün güncel güvenlik sorunlarıyla mücadele kapasitesini güçlendirmektedir.",
+        "2017 yılında başlatılan “Yıkılmaz Kardeşlik” tatbikatları barışı koruma, hızlı konuşlanma, lojistik destek ve keşif konularını içermektedir. İstihbarat elde etme ve çatışmaları çözme gibi görevlerin simüle edildiği 2017 yinelemesine 12.000 asker ve 1.500 askeri birlik katılmıştır (CSTO, 2017). Kazakistan’daki 2024 yinelemesi, kontrol noktası yönetimi, insani yardım ve çatışma bölgesi devriyesi gibi barışı koruma görevlerini vurgulayarak KGAÖ’nün askeri ve sivil kurumları koordine etme kapasitesini göstermiştir (CSTO, 2024c).",
+        "Buna benzer şekilde, 2009’dan bu yana her yıl düzenlenen “Etkileşim” tatbikatları, özel operasyonlar ve yasadışı silahlı örgütlerin ortadan kaldırılması gibi bölgesel güvenliğe yönelik zorlukları ele almaktadır. KGAÖ’nün çağdaş terörizmin karmaşıklığına ilişkin anlayışına uygun olarak, bu tatbikatlar psikolojik ve bilgi savaşı tatbikatlarını da içermektedir. “Poisk” ve “Echelon” ile birlikte gerçekleştirilen 2021 yılındaki tatbikatta 500 askeri donanım birimi ve 4.000 asker yer almış ve KGAÖ’nün entegre teröre karşı mücadele stratejisini göstermiştir (CSTO, 2021). 2016 yılında başlatılan “Poisk” tatbikatları istihbarat ve keşif yeteneklerini geliştirmeyi amaçlamaktadır. İşbirliğine dayalı keşif operasyonlarını geliştirmek ve KGAÖ kuvvetlerinin hızlı ve etkili teröre karşı mücadele görevlerine hazır olduğundan emin olmak için Kırgızistan’daki 2024 yinelemesinde İHA’lar ve termal görüntüleme gibi en son teknolojilerden yararlanılmıştır (CSTO, 2024a).",
+        "“Rubezh” ve “Echelon” tatbikatlarının işlevleri birbirlerini tamamlayıcı niteliktedir. “Echelon” lojistik ve malzeme desteğine öncelik verirken, “Rubezh” Orta Asya’yı dış tehditlerden korumak için hızlı konuşlanmaya odaklanmaktadır. Uzak yerlerdeki terör tehditlerine karşılık verebilmek için KGAÖ’nün uzak mesafelere kuvvet konuşlandırabilmesi gerekiyor ki bu da ilk kez 2018’de gerçekleştirilen “Hava Köprüsü” tatbikatlarıyla test edildi.",
+        "2018 yılında başlatılan “Paralı Asker” Operasyonu, özellikle Ortadoğu’da olmak üzere başka yerlerde terör eylemlerine katılmak üzere KGAÖ üyesi devletlerden gelen insan akışına ve eleman kazanma ağlarına müdahale ediyor. Rusya Devlet Başkanı Vladimir Putin, 2023 yılında terörist grupların vatandaşlarını silah altına almasını engelleme konusunda ülkesinin sorumluluklarını vurguladı. Operasyon sonucunda “İslam Devleti” ve “Hizb ut-Tahrir” gibi yasaklı örgütlerin üyeleri tutuklanarak operasyonun etkinliği kanıtlanmıştır (RBC, 2023).",
+        "2009 yılında başlatılan “Proxy” Operasyonu, çevrimiçi üye toplama, siber terörizm ve aşırılık yanlısı inançların yayılmasıyla mücadele etmektedir. “Proxy”, KGAÖ’nün dijital çağa adaptasyonunu yansıtacak şekilde, aşırılık yanlılarını devşirmenin ana aracı olarak internete odaklanmaktadır. Ayrıca, ŞİÖ ve KGAÖ siber güvenlik projelerinde birlikte çalışarak siber tehditlere karşı mücadelede çok taraflı işbirliğinin değerini vurgulamıştır (Rauf, 2020).",
+        "Ocak 2022’de Kazakistan’da yaşanan kargaşa sırasında KGAÖ’nün teröre karşı mücadele kabiliyetleri test edilmiştir. Terör tehlikesi nedeniyle Cumhurbaşkanı Kassym-Jomart Tokayev, protestolar şiddete dönüştüğünde KGAÖ’den yardım istemiştir. Kolektif Güvenlik Antlaşması’nın dış tehditlere karşı kolektif savunmaya izin veren 4. Maddesi ilk kez Rusya’nın Kolektif Barışı Koruma Güçleri’ni hızlı bir şekilde konuşlandırarak hayati önem taşıyan altyapıyı istikrara kavuşturmasıyla işletildi (Kucera, 2022). Bu müdahale Rusya’nın bölgenin lideri olarak konumunu güçlendirirken, KGAÖ’nün hızlı bir şekilde konuşlanma ve aşırı dinci protestolar gibi geleneksel olmayan güvenlik tehditlerine uyum sağlama yeteneğini de ortaya koymuştur.",
+        "Teröre karşı mücadele, KGAÖ’nün kriz yönetimi ve bölgesel güvenliği de vurgulayan 2025 gündeminin en önemli önceliğidir. 2024 tarihli “KGAÖ ve BDT Teröre Karşı Mücadele Merkezi Arasında İşbirliği Memorandumu” kapsamındaki ilk tatbikat olan Tacikistan’daki ortak teröre karşı mücadele tatbikatı, “Yıkılmaz Kardeşlik-2025” barışı koruma tatbikatıyla entegre edilecek ve BDT ülkeleriyle koordine edilecek. Tacikistan’ın Hotlon bölgesinde de simüle edilmiş bir barışı koruma görevi gerçekleştirilecek. Albay General Serdyukov bu tatbikatların bölgedeki aşırıcılık, terörizm ve istikrarsızlığa karşı hazırlığı arttırdığını vurguladı. Bu arada Kırgızistan krize müdahale ve hızlı konuşlanma üzerine “Rubezh-2025” komuta-personel tatbikatı ve operasyonel bir toplantı düzenliyor (CSTO, 2025b).",
+        "“Yıkılmaz Kardeşlik” gibi büyük tatbikatlardan “Paralı Asker” ve “Vekil” gibi odaklanmış operasyonlara kadar, KGAÖ’nün teröre karşı mücadele çabaları hem yerleşik hem de yeni tehditlerle başa çıkmak için kapsamlı ve esnek bir strateji ortaya koymaktadır. KGAÖ, en son teknolojileri kullanarak, gerçekçi senaryoları modelleyerek ve bölgesel işbirliğini teşvik ederek üye devletlerin operasyonel hazırlığını geliştirmektedir. Yine de ulusal planların koordine edilmesi ve siber terörizm ve ideolojik aşırıcılık gibi yeni tehlikelerle başa çıkılması gibi sorunlar devam etmektedir. KGAÖ’nün bölgesel güvenliği korumadaki uzun vadeli etkinliği, adaptasyon kapasitesine bağlı olacaktır."
+      ]
+    },
+    {
+      "id": "tr-section-8",
+      "title": "KGAÖ’nün Terörizmle Mücadele Zorlukları Terörizmin dijitalleşmesi",
+      "paragraphs": [
+        "Bölgenin sosyoekonomik kırılganlıkları ve Orta Asya’nın hızla dijitalleşmesi nedeniyle daha fazla kötüleşen günümüz terörizminin ulus ötesi boyutuyla mücadele, Rusya’nın KGAÖ kapsamındaki en büyük endişelerinden biridir. Rusya’nın teröre karşı mücadele çabalarını koordine etmek için KGAÖ’yü kullanmadaki kayda değer başarılarına rağmen, kurum yine de etkinliğini tehlikeye atan kalıcı ve yeni zorluklarla karşı karşıyadır. Radikal örgütler Rus ve Orta Asya güvenlik servisleri tarafından fark edilmemek için şifreli iletişim kanalları kullanmakta ve gençleri örgüte katmak ve radikalleştirmek için sosyal medya platformlarını aktif olarak kullanmaktadır. KGAÖ üyesi devletler arasında iç koordinasyonun geliştirilmesi ve Ortadoğu ülkeleri, Çin, ABD ve uluslararası örgütler gibi diğer aktörlerle işbirliği yapılması gerekliliği, terörizmin dijital boyutunun altını çizmektedir. Ancak etkili işbirliği jeopolitik çatışmalar ve farklı teröre karşı mücadele gündemleri nedeniyle sıklıkla engellenmekte ve sınır ötesi tehditlerle başa çıkma çabalarını zorlaştırmaktadır.",
+        "Institute for Advanced International Studies (Özbekistan) tarafından Rusça, Özbekçe, Tacikçe, Kırgızca ve Kazakça dahil olmak üzere çeşitli dillerde sosyal medya platformlarını takip eden bir çalışma, aşırılık yanlısı örgütlerin dijital araçlara artan bağımlılığına daha fazla ışık tutuyor. Radikal ideolojilerin yayılmasını analiz etmek ve bu ağlar içindeki etkilerini değerlendirmek çalışmanın hedefleriydi. Önemli miktarda propaganda içeriğinin tespit edildiği Özbekçe ve Tacikçe platformlarda aşırılık yanlısı gruplar ve propagandacılar arasında çok yüksek bir faaliyetin keşfedilmesi, çalışmanın ana sonuçlarından biriydi. Çalışma, Moskova’daki Crocus Belediye Binası’na düzenlenen terör saldırısına yol açan provokasyonların Rus göçmenlere yönelik propagandadan etkilendiğini ortaya koymuştur. Ayrıca, işe alım yapanlar tarafından oluşturulan bilgilerin incelenmesinin, belirli parti veya örgütlerle olan ilişkilerin belirlenmesine nasıl yardımcı olabileceğini göstererek, hedef kitleyi ve propagandanın amaçlarını anlamanın stratejik önemini vurgulamıştır (IAIS, 2024).",
+        "Benzer bir gelişmede, Özbekistan Yüksek Mahkemesi, aşırılıkçı ve terörist ideolojileri nedeniyle ülkede ithal edilmesi, üretilmesi, dağıtılması veya sergilenmesi yasak olan yayınların kapsamlı bir listesini yayınlamıştır. Listede YouTube (135), Telegram (713), Instagram profilleri (226), Facebook sayfaları (203), TikTok hesapları (44) ve diğer sosyal medya platformları (68) engellenen kanallar arasında yer alıyor (Ўзбекистон Геспубликаси Олий суди, 2025). Bu düzenleyici eylem, IAIS’nin bulgularını desteklemekte ve sosyal medyanın aşırılık yanlısı bilgilerin yayılması için hayati bir kanal olarak artan farkındalığını vurgulamaktadır.",
+        "Bu eğilimin en iyi örneği, üye toplamak, propaganda yaymak ve operasyonları yönetmek için uluslararası terörizmin ana aracı olarak ortaya çıkan Telegram’ı aktif olarak kullanan İslam Devleti-Horasan gibi örgütlerdir. Mart 2024’te Moskova’da meydana gelen ve Rusya’nın güvenlik çerçevesindeki zayıflıkları ortaya çıkaran terör olayı bunun açık bir örneğini teşkil etmiştir. Olay, terör örgütlerinin dijital araçlara ne kadar bağımlı olduğunu açıkça ortaya koymuş ve KGAÖ üyesi ülkelerdeki teröre karşı mücadele personelinin güncel teknik kaynaklara erişiminin, sürekli eğitiminin ve becerilerini geliştirmesinin gerekliliğinin altını çizmiştir. Ancak üye ülkeler arasındaki koordinasyon ve bilgi alışverişi eksikliği bu çabaları sıklıkla baltalamaktadır. Örneğin, katillerden birinin kardeşi Moskova olayından önce Suriye’deki terörist faaliyetlere karıştığı için Tacikistan’ın arananlar listesindeydi. Ancak saldırganın kendisi de dahil olmak üzere diğer aile üyeleri, Tacik ve Rus istihbarat servisleri arasındaki bilgi paylaşım sistemlerindeki eksiklikler nedeniyle Rusya’ya sorunsuz bir şekilde girebildi. Rusya’nın KGAÖ’ye etkin bir şekilde liderlik edebilmesi için istihbarat paylaşımını geliştirmesi, iç koordinasyonu güçlendirmesi ve değişen ulus ötesi tehditlere karşı ortak eğitim programları yürütmesi gerekmektedir. (áоловова, Bu başarısızlık sadece ortak operasyonel çabalardaki önemli boşlukları ortaya koymakla kalmıyor, aynı zamanda KGA- Ö’nün kolektif teröre karşı mücadele stratejisindeki sistemik zayıflıkları da gözler önüne seriyor."
+      ]
+    },
+    {
+      "id": "tr-section-9",
+      "title": "Sosyoekonomik nedenler ve bölgesel anlaşmazlıklar",
+      "paragraphs": [
+        "Kırgızistan ile Tacikistan arasında Sovyet döneminden kalan 972 kilometrelik sınır, etnik ve ekonomik gerçekleri göz ardı ederek ve kaynaklara erişim konusunda onlarca yıldır çatışmalara yol açan tartışmalı bölgelerden geçerek bir gerilim kaynağı olmuştur. SSCB’nin dağılmasından sonra, yerel topluluklar arasında sık sık çatışmalara dönüşen gerginlikler, 2021-2022 yıllarında iki CSTO üyesi arasında düzinelerce ölüm ve toplu tahliyelerle sonuçlanan silahlı çatışmalarla doruğa ulaştı. Bu olaylar bölgesel istikrarın kırılganlığını ve diplomatik çözümlere duyulan ihtiyacı vurgulamaktadır.",
+        "Bişkek ve Duşanbe başlangıçta dışarıdan arabuluculuğu kabul etmekte isteksiz olsalar da Rusya müzakerelerin kolaylaştırılmasında çok önemli bir rol oynadı. Moskova’nın Ekim 2022’de üçlü bir toplantı düzenlemesi bir dönüm noktası oldu. Kırgızistan ve Tacikistan, KGAÖ ve Rusya’nın yardımıyla önümüzdeki iki yıl boyunca sınırı belirlemek için Rusya’nın sağladığı arşiv belgelerini kullandı ve Şubat 2024’te bir sınırlandırma anlaşması imzaladılar (CSTO PA, 2022; Xinhua, 2025). Ancak ihtilaflı tarafların Rusya’nın müdahilliğini resmen kabul etmemiş olması, gerginliklerin hala devam ettiğini ve dışarıdan bir yargıya dayandıklarını kabul etmekte isteksiz olduklarını göstermektedir. Anlaşma büyük bir adım olsa da, tarafların güven tesis etme kapasitesi anlaşmanın uzun vadedeki kalıcılığını belirleyecektir. Bölgesel güvenliğin karşılıklı bağımlılığı, KGAÖ’nün Tacik-Afgan sınırını 2025-2030 yılları arasında güçlendirmeye yönelik odaklanmış bir programı onaylamasıyla ortaya çıkmıştır. Bu tür adımların başarılı olabilmesi için Kırgız-Tacik sınırının istikrarlı kalması gerekmektedir zira herhangi bir tırmanma Orta Asya güvenliğini koruma çabalarını tehlikeye atabilir (CSTO, 2024b).",
+        "Başarılı bir teröre karşı mücadelenin önemli ancak sıklıkla göz ardı edilen bir bileşeni de operasyonel ve teknolojik zorlukların yanı sıra kamuoyu algısı ve güvenidir. KGAÖ, başarılarını ve girişimlerini etkili bir şekilde iletememesinin bir sonucu olarak meşruiyet ve kamuoyu desteğinden yoksundur. Örgütün toplumu radikal ideolojiye karşı bir araya getirme kapasitesi bu eşitsizlik nedeniyle zayıflamaktadır. Açıklığın ve sivil toplumla etkileşimin artırılması kamu güvenini artırabilir ve KGAÖ’nün itibarını güçlendirebilir. Bu Rusya için hem bir zorluk hem de bir fırsattır: bir yandan dış işbirliği ve iç koordinasyon sorunlarıyla uğraşmak zorundadır; diğer yandan KGAÖ’nün daha birleşik ve esnek bir teröre karşı mücadele stratejisi geliştirmesine yardımcı olmak için liderlik konumunu kullanabilir. Rusya bu sorunları ele alarak Orta Asya üzerindeki hakimiyetini artırabilir ve KGAÖ’nün güncel güvenlik kaygıları karşısında geçerliliğini sürdürmesini garanti altına alabilir.",
+        "Ayrıca, Orta Asya’da radikalleşmeyi etkileyen sosyoekonomik unsurları göz ardı etmek mümkün değildir. Yüksek işsizlik, yoksulluk ve kısıtlı eğitim olanakları radikalleşmeyi kolaylaştırmaktadır. KGAÖ çoğunlukla askeri ve güvenlik önlemlerine odaklansa da sosyoekonomik kalkınma projelerini içeren daha kapsamlı bir strateji terörizmin altında yatan nedenleri ele alabilir. Örgütün baskın gücü olarak Rusya bu girişimleri destekleme kabiliyetine sahiptir, ancak bunu yapmak stratejik hedefleri yeniden değerlendirmeyi ve bölgesel kalkınma girişimleri için finansmanı artırmayı gerektirecektir. Sosyoekonomik projeleri güvenlik tedbirleriyle birleştiren iki yönlü bir strateji, KGAÖ’nün uzun vadeli etkinliğini artırabilir ve bölgesel istikrarı destekleyebilir."
+      ]
+    },
+    {
+      "id": "tr-section-10",
+      "title": "Suriye’deki istikrarsızlık Orta Asya’nın güvenliği için tehdit oluşturuyor",
+      "paragraphs": [
+        "Muhalif güçler önemli bölgeleri ele geçirdikten sonra Suriye’de iktidarın el değiştirmesinin ŞİÖ üyeleri ve KGAÖ operasyonları için ciddi güvenlik sonuçları olacaktır. Suriye şu anda çatışan güç alanlarına bölünmüş durumda ve bu da ulus ötesi terörist ağların bir güvenlik tehdidi olarak yeniden ortaya çıkmasını kolaylaştırdı. Eski Çinli, Rus ve Orta Asyalı IŞİD üyelerinin Suriye’deki hapishanelerden ülkelerine geri dönme olasılığı, bölgedeki terör örgütlerini yeniden canlandırabileceği için özellikle endişe vericidir. Taliban’ın siyasi ve ekonomik zorluklar karşısında IŞİD-K ve El-Kaide gibi köklü terör örgütleriyle mücadele etme kabiliyetinin sınırlı olması Afganistan’ı özellikle kırılgan hale getirmektedir. Radikalleşme yine de yerel sosyoekonomik hayal kırıklıkları ve ulus ötesi terör örgütlerinin süregelen çekiciliği tarafından beslenmektedir.",
+        "Eski SSCB vatandaşları 2011 yılında Suriye iç savaşının başlamasından bu yana IŞİD ve Nusra Cephesi gibi Selefi-cihatçı örgütlere aktif olarak katılmaktadır. Ancak IŞİD’in 2016 yılında Suriye-Türkiye sınırının kontrolünü kaybetmesiyle birlikte BDT’den cihatçı akını büyük ölçüde yavaşladı. Savaş kayıpları, takviye eksikliği ve Nusra Cephesi lideri Ebu Muhammed El Culani’nin stratejisindeki değişiklikler nedeniyle, tarihsel olarak azınlık oldukları İdlib’deki yabancı militanların sayısı da azaldı (Семенов, 2025).",
+        "Nusra Cephesi 2016’dan bu yana yaklaşımını değiştirerek dünya çapında bir cihattan uzaklaşıp Suriye topraklarıyla sınırlı yerel bir cihada yöneldi. Sonuç olarak, Suriyeliler tarafından temsil edilen daha ılımlı bir kanat ile çoğunlukla yabancılardan oluşan radikal bir kanat arasında bir iç bölünme yaşandı. “Suriyelileşme” süreci, grubun 2017’de adını HTŞ olarak değiştirmesinin ardından hızlandı ve yabancı savaşçıların rolü büyük ölçüde azaldı. Suriye’ye taşındıktan sonra birçoğu toplum içinde asimile olmaya başladı, aileler kurdu ve aşırılıkçı inançlarından vazgeçti. Ancak yabancı savaşçıların hepsi Suriye hükümetinin mevcut politikasına katılmıyor. HTŞ’nin Suriye’deki daha ılımlı duruşunun aksine, örneğin Suriye’de El Kaide’yi temsil eden Tanzim Hurras al-Din veya Ensar al-Tawhid üyeleri cihadı “ihraç etme” fikrine bağlılıklarında kararlıdır (Антон Мардасов & Семенов, 2024).",
+        "Yeni Suriye hükümetinin radikalizmden arındırma ve entegrasyon stratejisi terörizm tehdidini azaltmaya yardımcı olmaktadır. Ancak bu strateji, özellikle kadınların toplumdaki rolünün artması ve had cezaları gibi Şeriat ilkelerinin reddedilmesi başta olmak üzere sosyal politikaların liberalleştirilmesini kınayan eski Sovyet dünyasından gelenler gibi katı Selefiler arasında memnuniyetsizliğe yol açmaktadır. Suriye yönetiminin mevcut politikasının genel hedefi, daha ılımlı ve kapsayıcı bir toplumu teşvik ederek 2021’de Afganistan’daki durumun tekrarlanması ihtimalini azaltmaktır. Bununla birlikte, özellikle yabancı savaşçılar arasında radikal unsurlarla devam eden çatışmalar, istikrarı desteklemek ve radikalleşmenin olası tekrarlarını önlemek için daha fazla çalışmanın gerekli olduğunu göstermektedir (Семенов, 2025).",
+        "Kırgız Cumhuriyeti’nin Güvenlik Konseyi Sekreteri Marat Imankulov, Suriye’nin geleceğinin hala belirsiz ve istikrardan uzak olduğunu belirtti. Yeni Suriye hükümeti kaçınılmaz olarak en güçlü ideolojik düşmanı olan ve hala önemli bir savaş kabiliyetine sahip IŞİD ile uğraşmak zorunda kalacaktır. Ulus ötesi terörist güçlerin Suriye sınırlarının ötesine yayılma ihtimali, uluslararası toplumun ve komşu devletlerin paylaştığı büyük bir endişe kaynağıdır. Mevcut tahminlere göre, Doğu Türkistan İslami Hareketi üyeleri, Suriye güvenlik oluşumlarına asimile olmuş 20,000 kadar yabancı militan arasında yer almaktadır. Uzmanlara göre bu savaşçıların yaklaşık 6,000’i öncelikli olarak Çin’i yıkmaya odaklanmışken, diğerleri Orta Asya ve Kuzey Kafkasya’dan geliyor. Dikkat çekici bir şekilde, yaklaşık 5,000 terörist (aile üyeleri hariç) Orta Asya kökenlidir (Imankulov, 2025).",
+        "Kendi ülkelerinde terörizm ve aşırıcılıkla ilgili suçlardan arananların Suriye’de önemli hükümet görevlerine atanması özellikle endişe verici bir olgudur. Propaganda değerine ek olarak, bu görevler bu kişilere Suriye’den ayrılma, resmi işler için yurtdışına seyahat etme ve istikrarı bozucu operasyonlara katılma özgürlüğü vererek bölge için ciddi güvenlik tehditleri oluşturmaktadır. M. İmankulov yeni Suriye hükümetinin hala büyük ölçüde iç yönetimle ilgilendiğine ve Doğu Türkistan İslami Hareketi gibi eski militan örgütlerin güvenlik sistemlerine dahil edildiğine işaret etse de savaşçıların geniş çaplı dağılma ihtimali hala mevcut. Herhangi bir büyük siyasi karışıklık, yakın bir kitlesel göç olası olmasa da, yerleştirilen yabancı savaşçıların kaçmasına yol açabilir (Imankulov, 2025).",
+        "HTŞ, Aralık 2024’ten bu yana Afganistan’daki ayak izini, özellikle de yabancı teröristler için bölgesel bir sıcak nokta haline gelen Baghlan Vilayetinin Andarab Vadisi’nde büyük ölçüde artırmıştır. Uygur, Tacik, Özbek, Çeçen ve diğer HTŞ savaşçıları Suriye’deki başarılarının ardından Afganistan ve Pakistan’a taşındı. İslam Devleti, El Kaide ve HTŞ’de daha önce deneyimi olan tecrübeli Tacik militan Mevlevi Abdul Fetih ilk hücrelerin başındaydı. Aralık 2024 sonu itibariyle 500 ila 700 savaşçı ve aileleri Bağlan’daki Banu, Dih-Salah ve Pul-i Hisar bölgelerini kendilerine ev edinmişti. Hizb-ut Tahrir’in Afganistan şubesinin lojistik desteğiyle grup 2025’in başlarında hem yerel katılımlar hem de yabancı katılımlar sonucunda hızla genişledi (áеренко, 2025).",
+        "Baghlan’daki camiler ve 2025 baharından itibaren İran sınırına yakın Herat Vilayeti, Afganistan’da HTŞ’ye katılımın ana merkezleridir. Gençler yerel mollalar tarafından örgüte katılmaya teşvik edilmekte, camilerde sözleşmeler imzalanmakta ve işe alınanlara peşin ödeme yapılmakta, mollalar da yüzde almaktadır. HTŞ’nin Afganistan kolu bu kampanyadan büyük fayda sağladı; tahminlere göre savaşçı sayısı 10,000’e yakın ve bunların arasında ödenmeyen maaşlarına kızan hoşnutsuz Taliban üyeleri de var. Afganistan’daki HTŞ savaşçılarının çoğu “Suriye cihadında” uzmanlaşmış Uygurlar olduğundan, bu eğilim Orta Asya, Rusya ve İran’ın yanı sıra Çin için de bir tehdit oluşturabilir (áеренко, 2025)."
+      ]
+    },
+    {
+      "id": "tr-section-11",
+      "title": "Sonuç",
+      "paragraphs": [
+        "Orta Asya’nın mevcut güvenlik sorunları, radikalleşme olgusu da dahil olmak üzere tarihi, ekonomik ve jeopolitik güçlerin karmaşık bir etkileşimi ile şekillenmektedir. Bu kırılganlığın temel nedeni, Sovyet döneminde geleneksel İslami örgütlerin metodik olarak yapısöküme uğratılmasıdır; bu durum sadece asırlık dini yapıları altüst etmekle kalmamış, aynı zamanda ideolojik bir boşluk da bırakmıştır. Bu boşluk, Sovyet sonrası dönemde, kurumsal zayıflık ve gevşek hükümet kontrolü karşısında güç kazanan aşırı fikirler de dahil olmak üzere, İslam’ın çatışan yorumları için bir üreme ortamı haline gelmiştir. Bu tarihsel gidişat, ulusötesi terör ağlarının sosyoekonomik şikayetleri stratejik olarak istismar etmesiyle, yani göçmen grupları ve yönetişim eksikliklerinin en belirgin olduğu marjinalleşmiş kent çeperlerini hedef almasıyla daha da kötüleşti.",
+        "Rusya’nın Orta Asya’da teröre karşı mücadele işbirliği ve kolektif savunma için ana aracı olan KGAÖ, bölgesel güvenlik mimarisinin temel taşı haline gelmiştir. Grup, 2022’de Kazakistan’daki ayaklanma gibi kriz zamanlarında operasyonel olarak etkili olduğunu kanıtladı, ancak 2024’teki Moskova saldırısından önce istihbarat paylaşımındaki başarısızlıklar temel kusurlarını vurguladı. Bu kusurlar, sınır aşan tehditlerin değişen doğası ile CSTO’nun konvansiyonel güvenlik çerçevesi arasındaki genişleyen uçurumu vurgulamaktadır. Orta Asya dışındaki jeopolitik gelişmeler, özellikle de Taliban’ın 2021’de Afganistan’da iktidara geri dönmesi ve 2024’te Suriye’de Beşar Esad hükümetinin devrilmesi, bölgesel güvenlik denklemini daha da karmaşık hale getirmiştir. Geleneksel olarak üstün olan güçlere karşı uzun süreli asimetrik savaşın uygulanabilir bir taktik olduğu görüşü bu gelişmelerle güçlendi. Küresel cihatçı hareketler, entelektüel ve taktiksel felsefelerini değiştiren bu paradigma değişiminden güç almıştır.",
+        "Bölgesel güvenliği etkileyen en önemli faktörlerden biri hala Afganistan’daki durumdur. 1990’larda uluslararası alanda tanınan bir terör örgütü olarak ortaya çıkışından bu yana Taliban yönetimi önemli bir metamorfoz geçirmiştir. İktidara geldiği 2021 yılından bu yana devlet inşası ve iç güvenlik konsolidasyonuna odaklanan grup, Hizb-ut Tahrir ve IŞİD-K gibi yabancı terör örgütleriyle aktif bir şekilde mücadele ediyor. Taliban, sınır ötesi istikrarsızlık tehlikesini azaltan bu pratik yeniden hizalanma sayesinde artık başlıca bölgesel aktörlerin güvenlik hedefleriyle uyumlu hale geldi. Bu eğilim, Taliban’ın Çin-Kazakistan-Özbekistan-Afganistan demiryolu hattı ve Trans-Afgan Demiryolu gibi bölgesel altyapı girişimlerine katılımının da gösterdiği gibi ekonomik pragmatizmle daha da güçlendi. Bu arada, kırılgan ekonomik koşullar, cansız bir merkezi hükümet ve Taliban’ın teröre karşı etkin bir şekilde mücadele etme kabiliyetini sınırlayan aşırı unsurlar gibi sistemik sorunlar hala mevcuttur. Çatışma olasılığını azaltarak, ŞİÖ ve Moskova İstişareleri gibi çok taraflı çerçeveler aracılığıyla angajman, Taliban’ı bariz bir tehditten ziyade olası bir güvenlik ortağı olarak yeniden çerçevelendirdi.",
+        "Afganistan’ın Pakistan ve Orta Asya ile olan sınırları, Taliban’ın otoritesini güçlendirme çabalarına rağmen, devam eden ulus ötesi isyancı faaliyetler nedeniyle istikrarsız olmaya devam etmektedir. Bazı gruplar teoride Kabil’e sadık olduklarını iddia etseler de ideoloji farklılıkları, dış finansman ve Afganistan’ın yetki alanı dışındaki komuta sistemleri nedeniyle gerçek bağlılıkları belirsizdir. Taliban’ın kontrolünü potansiyel olarak zayıflatmanın yanı sıra bu ikilik, sınır ötesi tehditleri canlı tutan ve Kabil’in terörist ağları başarılı bir şekilde dağıtma ve bölgesel güvenlik işbirliğini teşvik etme kabiliyetini sınırlayan bir güvenlik paradoksu yaratıyor. Suriye’den dönen Orta Asyalı militanlar durumu daha da kötüleştirerek IŞİD-K veya El Kaide ile işbirliği yapma ihtimallerini arttırıyor. Taliban’ın teröre karşı mücadele kabiliyeti, uluslararası yaptırımlar ve dondurulmuş rezervler nedeniyle daha da zayıflamakta, bu da yönetişim ve ekonomik kalkınmayı engellemektedir. Çin ve Rusya yaptırımların kaldırılmasını desteklese de, sürdürülebilir barış için Afganistan’ın bölgesel ekonomik çerçevelere daha geniş bir şekilde entegre edilmesi gerekmektedir. Bu süreç çoktan başladı, ancak istikrarsızlığın yapısal nedenlerinin ele alınması ve Çin-Rus işbirliğinin geliştirilmesi için daha fazla zamana ihtiyaç var.",
+        "Çok yönlü bir reform programı, KGAÖ’nün teröre karşı mücadeledeki etkinliğini arttırmak için siber güvenliği stratejik bir öncelik haline getirmelidir. Örgütün aşırılık yanlısı propagandayı titizlikle izlemesine, çevrimiçi radikalleşme girişimlerini engellemesine ve ulus ötesi karşı söylem kampanyaları düzenlemesine olanak tanıyacak önemli bir kurumsal araç, özel bir KGAÖ Siber Komutanlığının oluşturulması olacaktır. Operasyonel müdahale protokollerini standartlaştırarak ve üye devletler arasında teknik birlikte çalışabilirliği geliştirerek, ŞİÖ ile resmi işbirliğine dayalı siber savunma tatbikatları bu çerçeveyi daha da güçlendirebilir ve kolektif siber güvenlik hazırlığındaki mevcut boşlukları kapatabilir. Önerilen bu eylemler, Cyberus Vakfı ile KGAÖ Sekretaryası arasında Nisan 2025’te imzalanan işbirliği mutabakatı da dâhil olmak üzere, son dönemdeki kurumsal gelişmelerle tutarlıdır. Kritik altyapılara yönelik siber tehditlerin birlikte araştırılması, özel eğitim yöntemlerinin standartlaştırılması ve üye ülkeler arasında siber güvenlik yasalarının uyumlaştırılması olmak üzere üç ana alana vurgu yapan bu anlaşma, modernleşme yolunda atılmış önemli bir adımdır. (CSTO, 2025a)",
+        "Güvenlik servisleri arasındaki yetersiz birlikte çalışabilirlik, üye devletler arasındaki teknik kabiliyet farklılıkları ve ciddi personel eksiklikleri -ki bunlar özellikle yetersiz finanse edilen bölgesel ofislerin uzman teröre karşı mücadele uzmanlığından ve çağdaş gözetleme altyapısından yoksun olduğu Orta Asya’da ciddi boyutlardadır ve bu da kalıcı operasyonel kör noktalara neden olmaktadır- KGAÖ’nün teröre karşı etkin bir şekilde mücadele etme kabiliyetini sınırlamaktadır. Birleştirilmiş bir terörist izleme listesinin olmaması, sınır aşan militanların izlenmesinde güvenlik açıklarına ve boşluklara yol açan iki taraflı bilgi transferlerine güvenmeye zorlarken, uyumlu siber güvenlik çerçevelerinin ve standartlaştırılmış eğitim prosedürlerinin olmaması hibrit tehditlere karşı hassasiyeti artırmaktadır. Bu kalıcı sorunları ele almak için grup, militanları sınır ötesinde takip etmek için kilit ortaklarla yakın çalışan ve paylaşılan veri yönetimi yoluyla ulusal bağımsızlık gerekliliği ile tehdit analizini dengeleyen bir Ortak Analitik Merkez kurmalıdır. Kısa vadeli operasyonel boşlukları eş zamanlı olarak kapatacak ve değişen asimetrik tehditlere karşı uzun vadeli kurumsal dayanıklılığı güçlendirecek kapsamlı bir strateji, bağlama özgü kapasite geliştirme için bölgesel eğitim merkezleri kurmayı, radikalleşmeye karşı önleyici tedbirleri uygulamaya koymayı ve ulusal yetki alanlarını dikkate alan kademeli yasal uyumlaştırma için çalışmayı içerir.",
+        "Asimetrik savaş ve drone savaşı gibi çağdaş silahların kullanıldığı operasyonlar konusunda uzmanlaşmış teröre karşı mücadele birimleri ile KGAÖ, hibrit tehditlere karşı koymak için KSOR’un modernizasyonunu hızlandırmalıdır. Böylece bu silahların hem terör örgütleri hem de tam teşekküllü ordular tarafından giderek daha fazla kullanılmasının önüne geçilmiş olacaktır. Birlikte çalışabilirliği ve barışı koruma kabiliyetlerini korurken, bu modernizasyon üye ülkelerin denenmiş ve doğru sistemlerini, özellikle de Rusya’nın son operasyonel deneyimini içermelidir. KGAÖ güvenlik ortamında hızlı konuşlanmaya hazır olmayı sağlamak için standartlaştırılmış eğitim, arazi izleme, insansız hava aracı saldırılarına karşı tesislerin savunulması ve düşmana karşı hassas saldırılar gibi çağdaş hibrit savaş durumlarını dikkate almalıdır.",
+        "Orta Asya’yı bir Çin-Rusya rekabet alanı olarak gösteren popüler Batı anlatılarının aksine, gerçekler iki ülkenin bölgesel istikrarı güçlendirmek için birlikte çalıştığını göstermektedir. Çin’in özellikle Kuşak ve Yol Girişimi ve Dijital İpek Yolu aracılığıyla ekonomik katılımı, aşırıcılığın altında yatan köklerle mücadele için gelişimsel bir çerçeve sunarken, Rusya da CSTO aracılığıyla askeri ve stratejik liderlik sağlamaktadır. Bölgesel güvenlik koordinasyonunun güçlendirilmesi, ŞİÖ ve KGAÖ’nün güçlü yönlerini birleştirerek, iki örgüt arasında daha derin kurumsal entegrasyonu teşvik ederek ve özellikle Çin’in kayda değer adımlar attığı güvenlik teknolojisi alanında aralarındaki işbirliğini genişleterek sağlanabilir. Ayrıca, Çin ve Rusya’nın Afganistan’ın ekonomik toparlanmasına yardımcı olmak ve Taliban’ın teröre karşı mücadele becerilerini desteklemek için birlikte çalışması bölgesel istikrarı güçlendirebilir. Suriye’deki terör ağlarının yükselişi ve Afganistan’a giren yabancı savaşçıların sayısındaki artışla birlikte Çin, Rusya ve Orta Asya’nın güvenliği için tehdit oluşturan bu girişimler özellikle önemlidir.",
+        "Son olarak, yoksulluk, genç işsizliği, zorunlu göç ve yetersiz eğitim fırsatları Orta Asya’da KGAÖ üyesi devletler için radikalleşmenin başlıca nedenleri olmaya devam etmektedir. Aşırılıkçı fikirler, özellikle kırsal kesimlerdeki gençler arasında bu sosyoekonomik faktörler tarafından beslenmektedir. Altta yatan bu sorunlar ele alınmadığı takdirde teröre karşı mücadele yöntemleri tepkisel olma riskini taşır. Ayrıca, KGAÖ’nün aşırıcılıkla mücadele etme ve cihatçı ağlara karşı toplumsal direnci güçlendirme çabaları, şeffaflık eksikliği, kopuk iletişim ve zayıf sivil toplum katılımından kaynaklanan düşük kamu meşruiyeti nedeniyle zayıflamıştır.",
+        "Rusya’nın uzun vadeli kalkınma yardımlarını güvenlik liderliği ile birleştirmek gibi stratejik bir yükümlülüğü vardır. Rusya, özellikle reel sektöre yapacağı yatırımlarla üye ülkelerde ekonomik fırsatlar yaratarak risk altındaki insanların aşırılık yanlısı gruplara katılmaya daha az yatkın hale gelmelerine yardımcı olabilir. KGAÖ’nün operasyonel güvenilirliğini artırmanın yanı sıra, askeri caydırıcılığı sosyoekonomik istikrarla birleştiren daha kapsamlı bir güvenlik modeline yönelmek, bölgenin uluslararası terörist gruplardan gelen maddi ve ideolojik tehditlere karşı direncini artıracaktır. Bu anlamda, Rusya’nın kalkınma odaklı güvenlik çerçevelerini desteklemeye devam etmesi halinde, KGAÖ reaktif bir askeri bloktan ziyade bölgesel istikrarın proaktif bir garantörü haline gelebilir."
+      ]
+    }
+  ],
+  "keywords": [
+    "Orta Asya güvenliği",
+    "teröre karşı mücadele stratejileri",
+    "KGAÖ",
+    "İslami radikalizm",
+    "Rusya’nın dış politikası",
+    "ulusötesi cihatçı ağlar"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Akorda. (2020). On the Concept of the Foreign Policy of the Republic of Kazakhstan for 2020-2030. «Akorda» Presidential Palace. Retrieved January 14 from https://www.akorda.kz/en/legal_acts/decrees/on-the-concept-of-the-foreign-policy-of-the-republic-ofkazakhstan-for-2020-2030"
+    },
+    {
+      "id": "ref-2",
+      "text": "Bifolchi, G. (2025). Tajik Taliban Commanders Arrested in Afghanistan Underline the Movement’s Internal Frictions. Special Eurasia. Retrieved April 29 from https://www.specialeurasia.com/2025/04/15/tajik-taliban-afghanistan/"
+    },
+    {
+      "id": "ref-3",
+      "text": "Buzan, B., & Waever, O. (2003). Regions and powers: The structure of international security (Vol. 91). Cambridge University Press."
+    },
+    {
+      "id": "ref-4",
+      "text": "Caballero, L. (2024). https://theconversation.com/how-moscow-terror-attack-fits-isis-k-strategy-to-widen-agenda-take-fight-to-itsperceived-enemies-226469"
+    },
+    {
+      "id": "ref-5",
+      "text": "CIS Assembly. (2009). МОДЕЛЬНЫЙ ЗАКОН “О ПРОТИВОДЕЙСТВИИ ТЕРРОРИЗМУ.” CIS Anti-Terrorism Center. Retrieved January 14 from https://www.cisatc.org/1289/9115/135/9126/9129/249"
+    },
+    {
+      "id": "ref-6",
+      "text": "Collins, K. (2007). Ideas, networks, and Islamist movements: Evidence from Central Asia and the Caucasus. World Politics, (1), 64-96."
+    },
+    {
+      "id": "ref-7",
+      "text": "CSTO. (2001). The collective forces of the rapid deployment of the Central Asian collective security region. CSTO. Retrieved January 14 from https://jscsto.odkb-csto.org/en/voennaya-sostavlyauschaya-odkb/ksbrtsar.php"
+    },
+    {
+      "id": "ref-8",
+      "text": "CSTO. (2002). Charter of the Collective Security Treaty Organization, dated October 07, 2002. CSTO. Retrieved January 14 from https://en.odkb-csto.org/documents/documents/ustav_organizatsii_dogovora_o_kollektivnoy_bezopasnosti_/#loaded"
+    },
+    {
+      "id": "ref-9",
+      "text": "CSTO. (2004). Historical Background CSTO. Retrieved January 14 from https://jscsto.odkb-csto.org/en/istoricheskaya-spravka/"
+    },
+    {
+      "id": "ref-10",
+      "text": "CSTO. (2005). MATERIAL FOR PRESENTATION OF THE STATUSES OF THE CSTO PARTNER AND OBSERVER UNDER THE CSTO. CSTO. Retrieved January 14 from https://en.odkb-csto.org/institute/"
+    },
+    {
+      "id": "ref-11",
+      "text": "CSTO. (2009). The CSTO Collective Rapid Reaction Forces. CSTO. Retrieved January 14 from https://jscsto.odkb-csto.org/en/voennaya-sostavlyauschaya-odkb/ksorodkb.php"
+    },
+    {
+      "id": "ref-12",
+      "text": "CSTO. (2016). Collective Security Strategy until 2025. CSTO. Retrieved January 14 from https://en.odkb-csto.org/session/2016/session2016/"
+    },
+    {
+      "id": "ref-13",
+      "text": "CSTO. (2017). The CSTO “Combat Brotherhood 2017” joint operational and strategic exercise will be held in Russia, Armenia, Kazakhstan, and Tajikistan from October 3 to November 20, 2017. CSTO. Retrieved January 17 from https://en.odkb-csto.org/training/CSTO_collective_forces/sovmestnoe_operativno_strategicheskoe_uchenie_odkb_boevoe_bratstvo_2017_proydet_na_territorii_rossii-10345/#loaded"
+    },
+    {
+      "id": "ref-14",
+      "text": "CSTO. (2021). The CSTO trainings “Echelon-2021,” “Search-2021,” and “Interaction-2021” started in the Republic of Tajikistan. CSTO. Retrieved January 17 from https://en.odkb-csto.org/training/trainings_interaction/v-respublike-tadzhikistan-nachalis-ucheniya-odkb-eshelon-2021-poisk-2021-i-vzaimodeystvie-2021/#loaded"
+    },
+    {
+      "id": "ref-15",
+      "text": "CSTO. (2024a). The active phase of the CSTO trainings “Interaction-2024,” “Search-2024,” and “Echelon-2024” was completed in the Kyrgyz Republic. CSTO. Retrieved January 17 from https://en.odkb-csto.org/news/news_odkb/v-kyrgyzstane-zavershilas-aktivnaya-faza-ucheniy-odkb-vzaimodeystvie-2024-poisk-2024-eshelon-2024/#loaded"
+    },
+    {
+      "id": "ref-16",
+      "text": "CSTO. (2024b). The CSTO CSC session was held in Astana. CSTO. Retrieved March 3 from https://en.odkb-csto.org/news/news_odkb/v-astane-sostoyalas-sessiya-skb-odkb/#loaded"
+    },
+    {
+      "id": "ref-17",
+      "text": "CSTO. (2024c). “Indestructible Brotherhood-2024”: The CSTO Collective Peacekeeping Forces began the active phase of the training in the Republic of Kazakhstan. CSTO. Retrieved January 17 from https://en.odkb-csto.org/news/news_odkb/nerushimoe-bratstvo-2024-kollektivnye-mirotvorcheskie-sily-odkb-pristupili-k-aktivnoy-faze-ucheniya-/#loaded"
+    },
+    {
+      "id": "ref-18",
+      "text": "CSTO. (2025a). The CSTO and the “Cyberus” Foundation will work to improve the security of the organization’s member states in cyberspace. CSTO. Retrieved May 1 from https://en.odkb-csto.org/news/news_odkb/odkb-i-fond-sayberus-zaymutsya-povysheniem-zashchishchennosti-gosudarstv-chlenov-organizatsii-v-kibe/#loaded"
+    },
+    {
+      "id": "ref-19",
+      "text": "CSTO. (2025b). The CSTO is holding a strategic command-staff training. CSTO. Retrieved March 25 from https://en.odkb-csto.org/news/news_odkb/v-odkb-provoditsya-strategicheskaya-komandno-shtabnaya-trenirovka/#loaded"
+    },
+    {
+      "id": "ref-20",
+      "text": "CSTO PA. (2022). Vladimir Putin: Kyrgyzstan and Tajikistan are our close allies. CSTO Parliamentary Assembly. Retrieved March 3 from https://pacsto.org/events/vladimir-putin-kyrgyzstan-i-tadzhikistan-nashi"
+    },
+    {
+      "id": "ref-21",
+      "text": "Haghayeghi, M. (1996). Islam and Politics in Central Asia. St. Martin’s Press. https://books.google.nl/books?id=NmP04VU0N2cC"
+    },
+    {
+      "id": "ref-22",
+      "text": "IAIS. (2024). Central Asia Media Monitoring on Radicalism and Terrorism Issues. Center for Afghanistan and South Asian Studies. https://iais.uz/en/outputnew/central-asia-media-monitoring-on-radicalism-and-terrorism-issues"
+    },
+    {
+      "id": "ref-23",
+      "text": "Imankulov, M. (2025). Up to 20,000 militants join Syria’s police and security forces—Kyrgyz Security Council. TASS. Retrieved March 8 from https://tass.com/defense/1918961"
+    },
+    {
+      "id": "ref-24",
+      "text": "Khalid, A. (2007). Islam after communism: religion and politics in Central Asia. Univ. of California Press."
+    },
+    {
+      "id": "ref-25",
+      "text": "Knyazev, A. (2024). Afghanistan and Regional Security: Scenarios for the Future. RIAC Retrieved January 8 from https://russiancouncil.ru/en/analytics-and-comments/analytics/afghanistan-and-regional-security-scenarios-for-the-future/"
+    },
+    {
+      "id": "ref-26",
+      "text": "KR, M. (2019). Concept of Foreign Policy of the Kyrgyz Republic. Ministry of Justice of the Kyrgyz Republic. Retrieved January 14 from https://cbd.minjust.gov.kg/430045/edition/949067/ru"
+    },
+    {
+      "id": "ref-27",
+      "text": "Kucera, J. (2022). CSTO agrees to intervene in Kazakhstan unrest. Eurasianet. Retrieved January 17 from https://eurasianet.org/csto-agrees-to-intervene-in-kazakhstan-unrest"
+    },
+    {
+      "id": "ref-28",
+      "text": "Makhmudov, R., Rakhimov, A., & Umarov, A. (2023). The current state of participation of Central Asian nationals in the activities of terrorist organizations in Afghanistan. The Institute for Advanced International Studies. Retrieved January 12 from https://www.iais.uz/en/outputnew/sovremennoe-sostoyanie-uchastiya-grazhdan-stran-tsentralnoy-azii-v-deyatelnosti-terroristicheskih-organizatsiy-v-afganistane"
+    },
+    {
+      "id": "ref-29",
+      "text": "Meijer, R. (2009). Global Salafism. London: Hurst and Company."
+    },
+    {
+      "id": "ref-30",
+      "text": "MFA Russia. (2016). The Foreign Policy Concept of the Russian Federation 2016. Voltaire Network. Retrieved January 14 from https://www.voltairenet.org/article202038.html"
+    },
+    {
+      "id": "ref-31",
+      "text": "MFA Russia. (2023). The Concept of the Foreign Policy of the Russian Federation. MFA Russia. Retrieved January 14 from https://mid.ru/en/foreign_policy/fundamental_documents/1860586/"
+    },
+    {
+      "id": "ref-32",
+      "text": "MFA Tajikistan. (2015). Concept of the Foreign Policy of the Republic of Tajikistan. MFA Tajikistan. Retrieved January 14 from https://mfa.tj/en/main/view/988/concept-of-the-foreign-policy-of-the-republic-of-tajikistan#:~:text=Based%20on%20expansion%20of%20important,independence%20of%20any%20state%2C%20creation"
+    },
+    {
+      "id": "ref-33",
+      "text": "Muraviev, A. D. (2022). Russia’s Views on and Initial Responses to the 2021 Strategic Retake of Afghanistan by the Taliban. Journal of Asian Security and International Affairs, (3), 424-445."
+    },
+    {
+      "id": "ref-34",
+      "text": "Olcott, M. B. (2007). Roots of Radical Islam in Central Asia."
+    },
+    {
+      "id": "ref-35",
+      "text": "Omelicheva, M. (2013). Terrorism in Central Asia. Education About Asia, (3)."
+    },
+    {
+      "id": "ref-36",
+      "text": "Orda. (2025). Syria Reportedly Appoints Tajik National to Military Leadership. Orda. Retrieved March 1 from https://en.orda.kz/syria-reportedly-appoints-tajik-national-to-military-leadership-4419/"
+    },
+    {
+      "id": "ref-37",
+      "text": "Orofino, E. (2021). Hizb ut-Tahrir: Revisiting Its Origin, Ideology, and Method. In Handbook of Contemporary Islam and Muslim Lives (pp. 1271-1291). Springer."
+    },
+    {
+      "id": "ref-38",
+      "text": "Pannier, B. (2024). Tajikistan’s Afghan Conundrum. Foreign Policy Research Institute. Retrieved January 12 from https://www.fpri.org/article/2024/11/tajikistans-afghan-conundrum/"
+    },
+    {
+      "id": "ref-39",
+      "text": "Rauf, S. (2020). Prospects of CSTO and SCO in regional politics of Central Asia. International Journal of Politics and Security, (4 (Çin Özel Sayısı)), 30-50."
+    },
+    {
+      "id": "ref-40",
+      "text": "RBC. (2023). Путин рассказал об операции «Наемник». RBC. Retrieved January 17 from https://www.rbc.ru/politics/23/11/2023/655f474e9a79475aaf57ad9a"
+    },
+    {
+      "id": "ref-41",
+      "text": "Ro’i, Y. (2000). Islam in the Soviet Union: From the Second World War to Gorbachev. Columbia University Press."
+    },
+    {
+      "id": "ref-42",
+      "text": "Safranchuk, I., & Makhmudov, R. (2024). Contemporary Islamic Radicalism in Central Asia: Genesis and History of Development. Politics and Religion Journal, (2), 243-267."
+    },
+    {
+      "id": "ref-43",
+      "text": "SCO & CSTO. (2007). The memorandum of understanding between the Secretariat of the Collective Security Treaty Organization and the Secretariat of the Shanghai Cooperation Organization. CIS Legislation Retrieved January 14 from https://cis-legislation.com/document.fwx?rgn=46847"
+    },
+    {
+      "id": "ref-44",
+      "text": "SCO RATS. (2025). Могут ли граждане из стран Центральной Азии, находящиеся в Сирии, представлять новую региональную угрозу? SCO RATS. Retrieved March 1 from https://ecrats.org/ru/security_situation/analysis/14675/"
+    },
+    {
+      "id": "ref-45",
+      "text": "Sharipova, D., & Beissembayev, S. (2023). Causes of violent extremism in Central Asia: The case of Kazakhstan. Studies in Conflict & Terrorism, (9), 1702-1724."
+    },
+    {
+      "id": "ref-46",
+      "text": "Soliev, N. (2019). Central Asia: Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, and Uzbekistan. Counter Terrorist Trends and Analyses, (1), 65-70."
+    },
+    {
+      "id": "ref-47",
+      "text": "Soliev, N. (2020). CENTRAL ASIA. Counter Terrorist Trends and Analyses, (1), 70-76."
+    },
+    {
+      "id": "ref-48",
+      "text": "Sputnik. (2022). В ОДКБ до сих пор не составлен единый перечень террористических организаций – Рахмон. Sputnik. Retrieved January 14 from https://am.sputniknews.ru/20220110/v-odkb-dosikh-por-ne-sostavlen-edinyy-perechen-terroristicheskikh-organizatsiy--rakhmon-37345115.html"
+    },
+    {
+      "id": "ref-49",
+      "text": "Strachota, K. (2024). Islamic State-Khorasan: global jihad’s new front."
+    },
+    {
+      "id": "ref-50",
+      "text": "Umarov, T. (2024). Moscow Terror Attack Spotlights Russia-Tajikistan Ties. Carnegie Russia Eurasia Center. Retrieved January 10 from https://carnegieendowment.org/russia-eurasia/politika/2024/03/moscow-terror-attack-spotlights-russia-tajikistan-ties?lang=en"
+    },
+    {
+      "id": "ref-51",
+      "text": "Xinhua. (2025). Kyrgyzstan, Tajikistan sign final protocol on delimitation of state border. Xinhua. Retrieved March 3 from https://english.news.cn/asiapacific/20250222/25e1361ec7a94367b04a0dd526b6f-0d2/c.html"
+    },
+    {
+      "id": "ref-52",
+      "text": "Zelin, A. Y. (2023). The Age of Political Jihadism: A Study of Hayat Tahrir Al-Sham. Rowman & Littlefield."
+    },
+    {
+      "id": "ref-53",
+      "text": "Антон Мардасов, & Семенов, К. (2024). Новая власть Сирии: сильные и слабые стороны. Российский совет по международным делам. Retrieved March 3 from https://russiancouncil.ru/analytics-and-comments/analytics/novaya-vlast-siriisilnye-i-slabye-storony/"
+    },
+    {
+      "id": "ref-54",
+      "text": "Бабаджанов, Б. (2010). Исламское движение Узбекистана»: джихад как идеология «Изгоев. Россия и мусульманский мир(3), 105-124."
+    },
+    {
+      "id": "ref-55",
+      "text": "Белоглазов, А. В.. (2024). Деятельность Организации Договора о коллективной безопасности в Центральной Азии (2002– 2022). Россия и мир: научный диалог(4), 190-203."
+    },
+    {
+      "id": "ref-56",
+      "text": "Ведомости. (2016). ОДКБ утвердила единый список террористических организаций. Ведомости. Retrieved January 14 from https://www.vedomosti.ru/politics/news/2016/10/14/661016-odkb-utverdila-spisok-terroristicheskih-organizatsii"
+    },
+    {
+      "id": "ref-57",
+      "text": "Ведомости. (2024). ФСБ задержала 49 участников террористической сети «Катиба Таухид валь -Джихад». Ведомости. Retrieved January 12 from https://www.vedomosti.ru/society/news/2024/02/26/1022137-zaderzhani-49-uchastnikov-terroristicheskoi-seti"
+    },
+    {
+      "id": "ref-58",
+      "text": "Гонтарь, С. М. (2015). Роль руководства Российской Федерации в развитии внешнеполитического сотрудничества Организации Договора о коллективной безопасности. Историческая и социально - образовательная мысль, (5-2), 36-42."
+    },
+    {
+      "id": "ref-59",
+      "text": "Дорохина, К. М. (2018). Анализ стратегии организации Договора о коллективной безопасности в сфере противодействия терроризму. Вестник Московского университета. Серия 12. Политические науки(5), 62-77."
+    },
+    {
+      "id": "ref-60",
+      "text": "Егоров, Е. (2014). Исламский радикализм в Центральной Азии: Хизб ут-Тахрир и исламское движение Узбекистана. Среднерусский вестник общественных наук(3 (33)), 188-193."
+    },
+    {
+      "id": "ref-61",
+      "text": "Казанцев, А. А. (2016). Проблема роста исламского радикализма в странах Центральной Азии. Международная аналитика(3), 97-111."
+    },
+    {
+      "id": "ref-62",
+      "text": "Прохватилов, В. (2023). Почему в Казахстане поднимают голову салафиты? Eurasiatoday. Retrieved January 8 from https://eurasiatoday.ru/pochemu-v-kazahstane-podnimayut-golovu-salafity/"
+    },
+    {
+      "id": "ref-63",
+      "text": "Семенов, К. (2025). Боевики из постсоветского пространства в Сирии: угрозы и проблемы дерадикализации. Российский совет по международным делам. Retrieved March 3 from https://russiancouncil.ru/analytics-and-comments/analytics/boeviki-iz-postsovetskogo-prostranstva-v-sirii-ugrozy-i-problemy-deradikalizatsii/"
+    },
+    {
+      "id": "ref-64",
+      "text": "Серенко, А. (2024). В Центральной Азии исламисты начинают “антикитайский джихад”. Независимая газета. Retrieved January 10 from https://www.ng.ru/kartblansh/2024-11-24/3_9141_kb.html"
+    },
+    {
+      "id": "ref-65",
+      "text": "Серенко, А. (2025). Ветераны «сирийского джихада» перебираются в Афганистан. Независимая газета. Retrieved April 30 from https://www.ng.ru/kartblansh/2025-04-14/3_9234_kb.html"
+    },
+    {
+      "id": "ref-66",
+      "text": "Соловова, Т. (2024). Брат террориста Мирзоева **, расстрелявшего людей в «Крокусе», был связан с ИГИЛ *. 2025. https://www.nsk.kp.ru/daily/27585/4912096/"
+    },
+    {
+      "id": "ref-67",
+      "text": "Суринская, Я., & Лакстыгал, И. (2025). Что означает приостановка запрета деятельности «Талибана» в России. Ведомости. Retrieved April 28 from https://www.vedomosti.ru/politics/articles/2025/04/18/1105151-chto-oznachaet-priostanovka-zapreta-deyatelnosti-talibana-v-rossii"
+    },
+    {
+      "id": "ref-68",
+      "text": "Тюкеев, К. (2024). Ребрендинг террористических групп в Сирии — история и современные тенденции. Institute for Political Studies at the T. Usubaliev Foundation. Retrieved March 1 from https://usubaliev-institute.org/2024/07/05/%D1%80%D0%B5%D0%B1%D1%80%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3-%D1%82%D0%B5%D1%80%D1%80%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0-"
+    },
+    {
+      "id": "ref-69",
+      "text": "Ўзбекистон Республикаси Олий суди. (2025). Ўзбекистон Республикаси Олий суди томонидан интернет жаҳон тармоҳидаги диний экстремистик, террористик ва ақидапарастлик қоялари билан йўқрилган деб топилган қамда Ўзбекистон Республикасининг қудудига олиб кириш, тайёрлаш, сақлаш, тарҳатиш ва намойиш этилиши таҳиҳланган манба ва контентлар ( материаллар ). Ўзбекистон Республикаси Олий суд. Retrieved March 3 from https://sud.uz/open-info/supremecourt-open-info/"
+    },
+    {
+      "id": "ref-70",
+      "text": "Эргашев, Б. (2024). Эксперт о ситуации с ростом числа боевиков в Афганистане. SCT RATS. Retrieved January 12 from https://ecrats.org/ru/security_situation/analysis/8466/"
+    }
+  ],
+  "acknowledgements": "",
+  "figures": []
+}

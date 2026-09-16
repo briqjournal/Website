@@ -11,11 +11,7 @@ const keywordSpacingFixes = new Map([
 ]);
 
 export const bilingualKeywordParityOverrides = new Map([
-  ["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve", {
-    source: "en",
-    tr: ["Orta Asya güvenliği", "teröre karşı mücadele stratejileri", "KGAÖ", "İslami radikalizm", "Rusya’nın dış politikası", "ulusötesi cihatçı ağlar"],
-    en: ["Central Asian security", "counterterrorism strategies", "CSTO", "Islamic radicalism", "Russia’s foreign policy", "transnational jihadist networks"],
-  }],
+
 ]);
 
 async function readJson(path) {

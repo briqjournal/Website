@@ -1,33 +1,99 @@
 {
   "schemaVersion": 2,
   "id": "dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
   "title": {
     "en": "A Political Economy Critique of the Globalizing Impact of the World Economic Forum",
     "tr": "Dünya Ekonomik Forumu’nun Küreselleşme Sürecindeki Etkisinin Ekonomi Politik Eleştirisi"
   },
   "authors": [
-    {"displayName": "Prof. Dr. Song Shuli", "givenName": "Shuli", "familyName": "Song", "orcid": "https://orcid.org/0009-0003-2248-2645", "affiliations": []},
-    {"displayName": "Prof. Dr. Cheng Enfu", "givenName": "Enfu", "familyName": "Cheng", "orcid": "https://orcid.org/0000-0002-9236-1916", "affiliations": []}
+    {
+      "displayName": "Prof. Dr. Song Shuli",
+      "givenName": "Shuli",
+      "familyName": "Song",
+      "orcid": "https://orcid.org/0009-0003-2248-2645",
+      "affiliations": []
+    },
+    {
+      "displayName": "Prof. Dr. Cheng Enfu",
+      "givenName": "Enfu",
+      "familyName": "Cheng",
+      "orcid": "https://orcid.org/0000-0002-9236-1916",
+      "affiliations": []
+    }
   ],
   "abstract": {
     "en": "The World Economic Forum has been questioned and criticized for its influence on globalization for many years, but it has not received sufficient attention from the academic community. In Marx’s capital accumulation theory, this study constructs a theoretical framework for systemically critiquing the “spatio-temporal fix” logic of international monopoly capital. Historical materialist analysis unveils the WEF’s structural incapacity to mediate the endogenous dual paradox engendered by globalized capital accumulation. It indicates that the so-called “international economic cooperation and exchange” it promotes is, in essence, the reconstitution of an accumulation system through which monopoly capital groups transfer surplus value through geographical expansion.",
     "tr": "Dünya Ekonomik Forumu (WEF) uzun yıllardır küreselleşme üzerindeki etkisi bakımından sorgulanmakta ve eleştirilmekte, ancak akademik çevrelerden yeterli ilgiyi görmemektedir. Marx’ın sermaye birikimi teorisini temel alan bu çalışma, uluslararası tekelci sermayenin “mekân-zaman düzeltmesi” mantığını sistematik olarak eleştirmek için teorik bir çerçeve inşa etmektedir. Çalışmada, tarihsel materyalist analiz yoluyla, WEF’in, küreselleşmiş sermaye birikiminin yarattığı içsel ikili paradoksa aracılık etme konusundaki yapısal yetersizliği temelden ortaya konmaktadır. Çalışma, teşvik ettiği sözde “uluslararası ekonomik işbirliği ve mübadelenin” özünde, tekelci sermaye gruplarının coğrafi genişleme yoluyla artı değer aktardığı bir birikim sisteminin yeniden oluşturulması olduğunu göstermektedir."
   },
   "keywords": {
-    "en": ["capitalist rent-seeking", "crisis of economic globalization", "global accumulation of capital", "neoliberalism", "spatio-temporal fix"],
-    "tr": ["ekonomik küreselleşme krizi", "kapitalist rant arayışı", "küresel sermaye birikimi", "mekansal-zamansal düzeltme", "neoliberalizm"]
+    "en": [
+      "capitalist rent-seeking",
+      "crisis of economic globalization",
+      "global accumulation of capital",
+      "neoliberalism",
+      "spatio-temporal fix"
+    ],
+    "tr": [
+      "ekonomik küreselleşme krizi",
+      "kapitalist rant arayışı",
+      "küresel sermaye birikimi",
+      "mekansal-zamansal düzeltme",
+      "neoliberalizm"
+    ]
   },
-  "dates": {"received": "2025-04-03", "revised": null, "accepted": "2025-07-27", "published": "2025-09-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 4, "year": 2025, "season": {"en": "Autumn", "tr": "Güz"}},
-  "pages": {"first": "417", "last": "448"},
+  "dates": {
+    "received": "2025-04-03",
+    "revised": null,
+    "accepted": "2025-07-27",
+    "published": "2025-09-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 4,
+    "year": 2025,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "417",
+    "last": "448"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": {
-    "statement": {"en": "This article is a phased achievement of the General Project of the National Social Science Foundation of China, “Research on Marx’s Law of International Value and Its Contemporary Value from the Perspective of Unbalanced Development of the International Digital Economy” (20BKS017).", "tr": null},
+    "statement": {
+      "en": "This article is a phased achievement of the General Project of the National Social Science Foundation of China, “Research on Marx’s Law of International Value and Its Contemporary Value from the Perspective of Unbalanced Development of the International Digital Economy” (20BKS017).",
+      "tr": null
+    },
     "funders": [
-      {"name": "National Social Science Foundation of China", "nameTr": null, "nameEn": "National Social Science Foundation of China", "ror": null, "awardNumbers": ["20BKS017"]}
+      {
+        "name": "National Social Science Foundation of China",
+        "nameTr": null,
+        "nameEn": "National Social Science Foundation of China",
+        "ror": null,
+        "awardNumbers": [
+          "20BKS017"
+        ]
+      }
     ]
   },
   "conflictOfInterest": null,

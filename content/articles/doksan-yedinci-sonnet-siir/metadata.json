@@ -1,19 +1,65 @@
 {
   "schemaVersion": 2,
   "id": "doksan-yedinci-sonnet-siir",
-  "articleType": {"id": "poem", "tr": "Şiir", "en": "Poem", "peerReviewed": false},
-  "title": {"en": "Ninety-Seventh Sonnet - Poem", "tr": "Doksan Yedinci Sonnet - Şiir"},
+  "articleType": {
+    "id": "poem",
+    "tr": "Şiir",
+    "en": "Poem",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Ninety-Seventh Sonnet - Poem",
+    "tr": "Doksan Yedinci Sonnet - Şiir"
+  },
   "authors": [
-    {"displayName": "Hasan İzzettin Dinamo", "givenName": "Hasan İzzettin", "familyName": "Dinamo", "orcid": null, "affiliations": []}
+    {
+      "displayName": "Hasan İzzettin Dinamo",
+      "givenName": "Hasan İzzettin",
+      "familyName": "Dinamo",
+      "orcid": null,
+      "affiliations": []
+    }
   ],
-  "abstract": {"en": null, "tr": null},
-  "keywords": {"en": [], "tr": []},
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2025-09-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 4, "year": 2025, "season": {"en": "Autumn", "tr": "Güz"}},
-  "pages": {"first": "487", "last": "488"},
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2025-09-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 4,
+    "year": 2025,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "487",
+    "last": "488"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

@@ -1,7 +1,12 @@
 {
   "schemaVersion": 2,
   "id": "sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan",
-  "articleType": {"id": "summit-declaration", "tr": "Zirve Bildirisi", "en": "Summit Declaration", "peerReviewed": false},
+  "articleType": {
+    "id": "summit-declaration",
+    "tr": "Zirve Bildirisi",
+    "en": "Summit Declaration",
+    "peerReviewed": false
+  },
   "title": {
     "en": "Statement of the Council of Shanghai Cooperation Organization Heads of State on Countering Radicalization Leading to Terrorism, Separatism, and Extremism",
     "tr": "Şanghay İşbirliği Örgütü Devlet Başkanları Konseyi’nin Terörizm, Ayrılıkçılık ve Aşırıcılığa Yol Açan Radikalleşmeyle Mücadeleye İlişkin Bildirisi"
@@ -11,13 +16,42 @@
     "en": "The fight of the Shanghai Cooperation Organization against the “three evils” is an important chapter in the story of the organization. The “three evils”, also called “three evil forces,” refer to terrorism, separatism, and extremism. The concept was first defined in June 2001 during the first SCO summit. Taking regional security and stability as a priority, the SCO has been making unremitting efforts to crack down on the “three evils.” The Shanghai Cooperation Organization (SCO), an exemplary organization in cooperation in the fight against terrorism, has achieved significant regional and international successes since the early 2000s. The following is the statement on countering terrorism, separatism, and extremism that was declared by the SCO Heads of State at the 2023 summit.",
     "tr": "Şanghay İşbirliği Örgütü'nün (ŞİÖ) “üç kötülüğe” karşı mücadelesi, örgütün tarihinde önemli bir bölümdür. “Üç kötülük”, aynı zamanda “üç kötü güç” olarak da adlandırılır ve terörizm, ayrılıkçılık ve aşırıcılığı ifade eder. Kavram ilk olarak Haziran 2001'de ilk ŞİÖ zirvesinde tanımlanmıştır. Bölgesel güvenlik ve istikrarı öncelik olarak ele alan ŞİÖ, “üç kötülüğe” karşı mücadele etmek için aralıksız çaba göstermektedir. Terörizme karşı mücadelede işbirliği konusunda örnek bir örgüt olan ŞİÖ 2000’li yılların başından itibaren bölgesel ve uluslararası önemli başarılara imza atmıştır. ŞİÖ Devlet ve Hükümet Başkanlarının 2023 yılındaki Zirvede terörizm, ayrılıkçılık ve aşırılıkçılığa karşı ilan ettikleri bildiriyi sunuyoruz."
   },
-  "keywords": {"en": [], "tr": []},
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2025-09-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 4, "year": 2025, "season": {"en": "Autumn", "tr": "Güz"}},
-  "pages": {"first": "413", "last": "416"},
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2025-09-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 4,
+    "year": 2025,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "413",
+    "last": "416"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,
