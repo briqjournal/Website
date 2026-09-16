@@ -407,8 +407,8 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     institutionUrl: "https://sipa.fiu.edu/",
   },
   "Can Ulusoy": {
-    tr: "Kapadokya Üniversitesi, Siyaset Bilimi ve Uluslararası İlişkiler Bölümü, Türkiye",
-    en: "Department of Political Science and International Relations, Cappadocia University, Türkiye",
+    tr: "Kapadokya Üniversitesi, İktisadi, İdari ve Sosyal Bilimler Fakültesi, Siyaset Bilimi ve Uluslararası İlişkiler Bölümü, Türkiye",
+    en: "Faculty of Economics, Administrative and Social Sciences, Department of Political Science and International Relations, Cappadocia University, Türkiye",
     email: "can.ulusoy@kapadokya.edu.tr",
     orcids: ["0000-0002-4465-3201"],
     institutionUrl: "https://kapadokya.edu.tr/",
