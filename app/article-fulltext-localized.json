@@ -6982,7 +6982,7 @@
           "text": "Xinhua News. (2025). Mongolia’s foreign trade surges 12.3 pct in 2024. Retrieved December 2, 2025, from https://english.news.cn/20250110/d5b146d6436a4f5e9b8b-8b4ee0ab9373/c.html"
         }
       ],
-      "acknowledgements": "This article is supported by funding from the “National Social Science Foundation Youth Program” (21CGJ037).",
+      "acknowledgements": "",
       "figures": [
         {
           "id": "figure-1",
@@ -7019,7 +7019,10 @@
           "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-07.jpg",
           "caption": "called for elevating Mongolia’s ties with the SCO (Photo: CGTN, 2018)."
         }
-      ]
+      ],
+      "declarations": {
+        "funding": "This article is supported by funding from the “National Social Science Foundation Youth Program” (21CGJ037)."
+      }
     },
     "tr": {
       "sections": [
@@ -7471,7 +7474,7 @@
           "text": "Khaliun, A. (2025b). Монгол Улс уран олборлох дэлхийн тав дахь том үйлдвэртэй болно [Mongolia to become the world’s fifth largest uranium producer]. The Mongolian Mining Journal. 19 Aralık 2025 tarihinde https://www.mongolianminingjournal.com/a/74203 adresinden alınmıştır."
         }
       ],
-      "acknowledgements": "Bu makale, “Ulusal Sosyal Bilimler Vakfı Gençlik Programı” (21CGJ037) tarafından desteklenmektedir.",
+      "acknowledgements": "",
       "figures": [
         {
           "id": "figure-1",
@@ -7508,7 +7511,10 @@
           "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-07.jpg",
           "caption": "(Fotoğraf: CGTN, 2018)."
         }
-      ]
+      ],
+      "declarations": {
+        "funding": "Bu makale, “Ulusal Sosyal Bilimler Vakfı Gençlik Programı” (21CGJ037) tarafından desteklenmektedir."
+      }
     }
   },
   "kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi": {
@@ -9035,12 +9041,12 @@
           ]
         },
         {
-          "id": "theoretical-framework",
+          "id": "en-section-2",
           "title": "Theoretical Framework",
           "paragraphs": []
         },
         {
-          "id": "politicization-of-international-development-cooperation-in-target-countries-conceptual-def",
+          "id": "en-section-3",
           "title": "Politicization of International Development Cooperation in Target Countries: Conceptual Definition",
           "paragraphs": [
             "Politicization refers to the process of imbuing a non-political issue with political significance. Based on this, the domestic politicization of transnational development and diplomatic matters refers to the process of assigning domestic political meaning to an issue that originally belongs to the transnational sphere. This study argues that the realization of domestic politicization requires specific background conditions. First, the problem must have a direct connection to domestic politics, making it potentially political. For example, the inconsistent use of political conditionalities by some donors, who require high political conditionalities for the provision of aid to specific recipients but do not require political conditionalities for some recipients who provide a lot of aid, may, to a certain extent, lead to a crisis of confidence in the political conditionalities of assistance provided by other countries to the donor countries (Mold & Zimmermann, 2008); second, it often manifests as a goal-driven or event-driven characteristic, caused by the actions of domestic political actors based on political goals or political demands, which is the result of the actor’s behavior. More concretely, this is manifested explicitly in how the political conditions attached to foreign aid inevitably undermine the accountability structures of recipient countries’ local governments. It is also evident that, even without such political conditions, recipient countries cannot use external aid entirely at their own discretion. Donor nations retain the right to demand transparency regarding the use of aid funds and to require the adoption of credible utilization methods to prevent misuse of such resources. Taken together, international development cooperation led by major powers is highly susceptible to politicization in target countries. This is because its goals and practices inevitably embed external technologies, ideas, and influence into recipients’ domestic affairs, thereby creating political implications beyond mere material interest linkages. Moreover, such cooperation often intersects with sensitive areas of domestic governance—such as national development strategies, planning priorities, and foreign policy design—making it particularly easy for domestic political actors to frame it as politically consequential. In practice, politicization may be driven either by incumbents seeking to claim credit and gain political prestige or by challengers who mobilize controversy to contest authority and pursue the redistribution of power and interests. Therefore, the core driving force of this mechanism lies in the absolute need to mobilize the domestic public for political purposes.",
@@ -9052,7 +9058,7 @@
           "toc": false
         },
         {
-          "id": "mechanisms-and-causal-explanatory-factors-of-the-politicization-of-international-developme",
+          "id": "en-section-4",
           "title": "Mechanisms and Causal Explanatory Factors of the Politicization of International Development Cooperation in Target Countries",
           "paragraphs": [
             "A mechanism is a process that can cause or prevent (change or control) specific changes in the entire system or its subsystems (Bunge, 1999). The existence and function of the mechanism are objective and real, and concern for the mechanism has ontological significance, serving as a necessary step in causal explanation. Accordingly, this study intends to propose an intermediate mechanism for the politicization of international development cooperation in target countries to understand the process by which international development cooperation led by major powers is implanted into the domestic politics of target countries, thereby explaining the differences in the degree of domestic political interference in different countries and different projects.",
@@ -9066,7 +9072,7 @@
           ]
         },
         {
-          "id": "politicization-of-international-development-cooperation-in-target-countries",
+          "id": "en-section-5",
           "title": "Politicization of International Development Cooperation in Target Countries",
           "paragraphs": [
             "In the Global South, international development cooperation not only involves economic assistance and technical support but also inevitably engages recipient countries’ internal political processes, shaping a “cooperation-confrontation” dynamic. From a comparative political perspective, Southeast Asian countries provide rich empirical support for understanding and verifying this structural tension. Development issues continue to plague the region, with unbalanced outcomes and differentiated characteristics across countries. In the countries most severely affected by development issues, the superposition of structural conditions and situational stimuli has stimulated the political mechanism of ideologizing development cooperation, further exacerbating the complexity of collaboration. Some other countries have created more favourable conditions for absorbing external modernization factors by effectively controlling the politicization tendency of development cooperation.",
@@ -9077,12 +9083,12 @@
           "toc": false
         },
         {
-          "id": "the-ideologicalization-of-the-belt-and-road-initiative-in-southeast-asia",
+          "id": "en-section-6",
           "title": "The Ideologicalization of the Belt and Road Initiative in Southeast Asia",
           "paragraphs": []
         },
         {
-          "id": "the-stalled-subic-clark-railway-project-in-the-philippines",
+          "id": "en-section-7",
           "title": "The Stalled Subic-Clark Railway Project in the Philippines",
           "paragraphs": [
             "The Subic-Clark Railway project, a key component of the BRI and part of the Duterte administration’s “Build, Build, Build” strategy, was intended to enhance logistics efficiency in Luzon by connecting Subic Bay and Clark International Airport (Chao, 2020). The Subic-Clark Railway is a freight railway under construction in central Luzon, Philippines, with a total length of 71 kilometers. Upon completion, it will enable port-rail-air multimodal transport, reduce logistics costs in Luzon’s core economic zone, and connect with the Northern Line Railway in the Philippines. On January 16, 2021, the Philippine Department of Transportation signed a $940 million commercial contract with Chinese enterprises, marking the largest intergovernmental cooperation project between China and the Philippines at that time.",
@@ -9096,7 +9102,7 @@
           "toc": false
         },
         {
-          "id": "en-section-9",
+          "id": "en-section-8",
           "title": "The Termination of the Myitsone Hydropower Project in Myanmar",
           "paragraphs": [
             "The suspension of the Myitsone Hydropower Project underscores the intricate dynamics of Myanmar’s democratic transition, particularly the interplay between external influences and domestic development, mirroring the “impossible trinity” concept. Initiated in 2006, the Sino-Myanmar project, a $3 billion undertaking led by China Power Investment Corporation, was suspended in 2011 by President Thein Sein amid democratic reforms, central-local tensions, and great-power dynamics. As the world’s 15th largest hydropower station, construction officially commenced in December 2009. This project was jointly invested in and constructed by a consortium comprising Myanmar’s Ministry of Electric Power, China Power Investment Corporation, and Myanmar’s Asia World Company. With a total installed capacity of 6 million kilowatts, it can provide Myanmar with an average of 30.8 billion kilowatt-hours of electricity annually. After meeting domestic demand, surplus power will be exported to neighbouring countries.",
@@ -9108,7 +9114,7 @@
           "toc": false
         },
         {
-          "id": "en-section-10",
+          "id": "en-section-9",
           "title": "Limited Politicization and the Advancement of the BRI in Southeast Asia",
           "paragraphs": [
             "Not all instances of development cooperation politicization manifest as institutional tensions akin to an “impossible trinity.” In certain democracies characterized by robust institutional resilience, such as Malaysia and Indonesia, external cooperative projects, while enmeshed in domestic politics, primarily exhibit instrumental politicization. This entails strategically integrating external cooperation into public policy, partisan competition, and state-building endeavors, thereby bolstering governing legitimacy, resource allocation, and policy agenda management. Despite political divergences within these nations’ democratic frameworks, the presence of “parliamentarization” and “technocratization” mechanisms provides a buffer, enabling the adjustment and re-narration of development projects to ensure their continued progress.",
@@ -9117,7 +9123,7 @@
           ]
         },
         {
-          "id": "en-section-11",
+          "id": "en-section-10",
           "title": "Instrumental Politicization of the East Coast Rail Link (ECRL) Project in the Context of Malaysian Elections",
           "paragraphs": [
             "Since the 21st-Century Maritime Silk Road Initiative was introduced in Malaysia in 2013, China has consistently remained the country’s largest foreign investor in the infrastructure and construction sectors, while also deepening cooperation across manufacturing, services, technological applications, and people-to-people exchanges. China has long been Malaysia’s largest trading partner, and this highly structured economic interdependence has provided a stable material foundation for sustained China–Malaysia development cooperation.",
@@ -9131,7 +9137,7 @@
           "toc": false
         },
         {
-          "id": "en-section-12",
+          "id": "en-section-11",
           "title": "The Delay and Subsequent Operationalization of the Jakarta-Bandung High-Speed Railway (HSR) Project",
           "paragraphs": [
             "The Jakarta-Bandung High-Speed Railway (HSR) project exemplifies China’s BRI within ASEAN. This infrastructure project, linking West Java’s urban centers, aimed to enhance infrastructure and stimulate regional economic development. Initially conceived in 2015, the HSR was inaugurated in October 2023. Despite societal contestation, the project exhibited “instrumental politicization”. The Jakarta-Bandung High- Speed Railway (JSR) is the most typical project in Indonesia’s Belt and Road cooperation that has achieved ‘limited politicization/instrumental politicization’. Although the project faced numerous controversies over the environment, land acquisition, debt, and cost overruns between its inception in 2015 and its opening in 2023, it did not slide into the stagnation or cancellation of the Subic-Clark Railway in the Philippines, thanks to the dual ‘cooling mechanisms’ of parliamentarization and Technocratization that make Indonesia’s system more resilient.",
@@ -9144,7 +9150,7 @@
           "toc": false
         },
         {
-          "id": "en-section-13",
+          "id": "en-section-12",
           "title": "Conclusion",
           "paragraphs": [
             "This study demonstrates that the politicization of international development cooperation in Southeast Asia is structurally embedded in the interaction between domestic political processes and international development cooperation led by major powers (e.g., the Belt and Road Initiative ).",
@@ -9301,12 +9307,12 @@
           ]
         },
         {
-          "id": "teorik-cerceve",
+          "id": "tr-section-2",
           "title": "Teorik Çerçeve",
           "paragraphs": []
         },
         {
-          "id": "hedef-ulkelerde-uluslararası-kalkınma-ısbirliginin-siyasallasması-kavramsal-tanım",
+          "id": "tr-section-3",
           "title": "Hedef Ülkelerde Uluslararası Kalkınma İşbirliğinin Siyasallaşması: Kavramsal Tanım",
           "paragraphs": [
             "Siyasallaşma, siyasi olmayan bir konuya siyasal anlam yüklenmesi sürecini ifade eder. Buna dayanarak, ulusötesi kalkınma ve diplomatik meselelerin ülke içinde siyasallaşması, başlangıçta ulusötesi alana ait olan bir konuya iç siyasal anlam atfedilmesi sürecini ifade eder. Bu çalışma, ülke içinde siyasallaşmanın gerçekleşmesinin belirli arka plan koşullarını gerektirdiğini savunmaktadır. İlk olarak, sorun iç siyasetle doğrudan bağlantılı olmalı ve bu yönüyle potansiyel olarak siyasal bir nitelik taşımalıdır. Örneğin, bazı bağışçıların siyasi koşullulukları tutarsız biçimde uygulaması—belirli alıcılara yardım sağlanması için yüksek siyasi koşulluluklar talep ederken, çok fazla yardım sağlayan bazı alıcılardan siyasi koşulluluk talep etmemeleri—bir ölçüde, bağışçı ülkelere diğer ülkeler tarafından sağlanan yardımların siyasi koşulluluklarına yönelik bir güven krizine yol açabilir (Mold & Zimmermann, 2008).",
@@ -9333,7 +9339,7 @@
           "toc": false
         },
         {
-          "id": "hedef-ulkelerde-uluslararası-kalkınma-ısbirliginin-siyasallasmasının-mekanizmaları-ve-nede",
+          "id": "tr-section-4",
           "title": "Hedef Ülkelerde Uluslararası Kalkınma İşbirliğinin Siyasallaşmasının Mekanizmaları ve Nedensel Açıklayıcı Faktörler",
           "paragraphs": [
             "Bir mekanizma, bütün sistemde ya da alt sistemlerinde belirli değişimleri meydana getirebilen veya engelleyebilen (değiştiren ya da kontrol eden) bir süreci ifade eder (Bunge, 1999). Mekanizmanın varlığı ve işlevi nesnel ve gerçektir; mekanizmaya yönelik ilgi ontolojik bir anlam taşımakta ve nedensel açıklamanın zorunlu bir aşaması olarak kabul edilmektedir. Bu doğrultuda, bu çalışma büyük güçler tarafından yönlendirilen uluslararası kalkınma işbirliğinin hedef ülkelerin iç siyasetine nasıl yerleştirildiğini anlamak amacıyla, hedef ülkelerde uluslararası kalkınma işbirliğinin siyasallaşmasına ilişkin bir ara mekanizma önermektedir. Böylece farklı ülkelerde ve farklı projelerde iç siyasi müdahalenin derecesindeki farklılıklar açıklanmaya çalışılmaktadır.",
@@ -9357,7 +9363,7 @@
           ]
         },
         {
-          "id": "hedef-ulkelerde-uluslararası-kalkınma-ısbirliginin-siyasallasması",
+          "id": "tr-section-5",
           "title": "Hedef Ülkelerde Uluslararası Kalkınma İşbirliğinin Siyasallaşması",
           "paragraphs": [
             "Küresel Güney bağlamında uluslararası kalkınma işbirliği, yalnızca ekonomik yardım ve teknik destekle sınırlı kalmamakta; aynı zamanda alıcı ülkelerin iç siyasi süreçlerine kaçınılmaz biçimde dâhil olmakta ve bir tür “işbirliği–karşıtlık” dinamiği üretmektedir. Karşılaştırmalı siyaset perspektifinden bakıldığında, Güneydoğu Asya ülkeleri bu yapısal gerilimi anlamak ve doğrulamak açısından zengin ampirik bulgular sunmaktadır.",
@@ -9369,12 +9375,12 @@
           "toc": false
         },
         {
-          "id": "guneydogu-asya-da-kusak-ve-yol-girisiminin-ıdeolojiklestirilmesi",
+          "id": "tr-section-6",
           "title": "Güneydoğu Asya’da Kuşak ve Yol Girişiminin İdeolojikleştirilmesi",
           "paragraphs": []
         },
         {
-          "id": "filipinler-de-durdurulan-subic-clark-demiryolu-projesi",
+          "id": "tr-section-7",
           "title": "Filipinler’de Durdurulan Subic-Clark Demiryolu Projesi",
           "paragraphs": [
             "KYG’nin önemli bir bileşeni ve Duterte yönetiminin “İnşa Et, İnşa Et, İnşa Et” stratejisinin bir parçası olan Subic-Clark Demiryolu projesi, Subic Körfezi ile Clark Uluslararası Havalimanı’nı birbirine bağlayarak Luzon’daki lojistik verimliliğini artırmayı amaçlıyordu (Chao, 2020). Subic-Clark Demiryolu, Filipinler’in Luzon bölgesinde inşaatı devam eden, toplam uzunluğu 71 kilometre olan bir yük demiryoludur. Tamamlandığında, liman-demiryolu-hava çok modlu taşımacılığı mümkün kılacak, Luzon’un temel ekonomik bölgesindeki lojistik maliyetlerini azaltacak ve Filipinler’deki Kuzey Hattı Demiryolu ile bağlantı sağlayacaktır. 16 Ocak 2021’de Filipinler Ulaştırma Bakanlığı, Çinli şirketlerle 940 milyon dolarlık bir ticari sözleşme imzaladı ve bu, o tarihte Çin ile Filipinler arasındaki en büyük hükümetler arası işbirliği projesi oldu.",
@@ -9388,7 +9394,7 @@
           "toc": false
         },
         {
-          "id": "tr-section-13",
+          "id": "tr-section-8",
           "title": "Myanmar’daki Myitsone Hidroelektrik Projesi’nin Sonlandırılması",
           "paragraphs": [
             "Myitsone Hidroelektrik Projesi’nin askıya alınması, Myanmar’ın demokratik geçiş sürecinin karmaşık dinamiklerini, özellikle de dış etkiler ile iç gelişmeler arasındaki etkileşimi vurgulayarak “imkansız üçlü” kavramını yansıtmaktadır. 2006 yılında başlatılan ve China Power Investment Corporation tarafından yürütülen 3 milyar dolarlık Çin-Myanmar projesi, demokratik reformlar, merkezi ve yerel gerilimler ve büyük güç dinamikleri nedeniyle 2011 yılında Cumhurbaşkanı Thein Sein tarafından askıya alınmıştır. Dünyanın en büyük 15. hidroelektrik santrali olan projenin inşaatı resmi olarak Aralık 2009’da başlamıştır. Bu proje, Myanmar Elektrik Enerjisi Bakanlığı, China Power Investment Corporation ve Myanmar’ın Asia World Company şirketinden oluşan bir konsorsiyum tarafından ortaklaşa yatırımı yapılmış ve inşa edilmiştir. Toplam 6 milyon kilovatlık kurulu gücüyle, Myanmar’a yıllık ortalama 30,8 milyar kilovat-saat elektrik sağlayabilir. Yurt içi talebi karşıladıktan sonra, fazla elektrik komşu ülkelere ihraç edilecektir.",
@@ -9400,7 +9406,7 @@
           "toc": false
         },
         {
-          "id": "tr-section-14",
+          "id": "tr-section-9",
           "title": "Sınırlı Siyasallaşma ve Güneydoğu Asya’da KYG’nin İlerlemesi",
           "paragraphs": [
             "Kalkınma işbirliğinin siyasallaşmasının tüm örnekleri, “imkansız üçlü”ye benzer kurumsal gerilimler şeklinde ortaya çıkmaz. Malezya ve Endonezya gibi sağlam kurumsal dirençle karakterize edilen bazı demokrasilerde, dış işbirliği projeleri iç siyasete karışmış olsa da, esas olarak araçsal siyasallaşma sergiler. Bu, dış işbirliğini kamu siyaseti, partizan rekabet ve devlet kurma çabalarına stratejik olarak entegre etmeyi gerektirir ve böylece yönetimin meşruiyetini, kaynak tahsisini ve siyaset gündemi yönetimini güçlendirir. Bu ülkelerin demokratik çerçeveleri içindeki siyasi farklılıklara rağmen, “parlamentarleşme” ve “teknokratlaşma” mekanizmalarının varlığı bir tampon görevi görerek, kalkınma projelerinin devamlılığını sağlamak için bu projelerin düzenlenmesini ve yeniden şekillendirilmesini mümkün kılar.",
@@ -9410,7 +9416,7 @@
           ]
         },
         {
-          "id": "tr-section-15",
+          "id": "tr-section-10",
           "title": "Malezya Seçimleri Bağlamında Doğu Kıyısı Demiryolu Bağlantısı (ECRL) Projesinin Araçsal Siyasallaştırılması",
           "paragraphs": [
             "21. Yüzyıl Deniz İpek Yolu Girişimi 2013 yılında Malezya’da başlatıldığından bu yana, Çin altyapı ve inşaat sektörlerinde ülkenin en büyük yabancı yatırımcısı olmaya devam ederken, imalat, hizmetler, teknolojik uygulamalar ve halklar arası ilişkiler alanlarında da işbirliğini derinleştirmiştir. Çin uzun süredir Malezya’nın en büyük ticaret ortağıdır ve bu son derece yapılandırılmış ekonomik karşılıklı bağımlılık, Çin-Malezya arasında sürdürülebilir kalkınma işbirliği için istikrarlı bir maddi temel sağlamıştır.",
@@ -9424,7 +9430,7 @@
           "toc": false
         },
         {
-          "id": "tr-section-16",
+          "id": "tr-section-11",
           "title": "Cakarta-Bandung Yüksek Hızlı Demiryolu Projesi’nin (HSR) Gecikmesi ve Sonrasında Faaliyete Geçirilmesi",
           "paragraphs": [
             "Cakarta-Bandung Yüksek Hızlı Demiryolu (HSR) projesi, ASEAN içinde KYG projelerinden birini örneklemektedir. Batı Cava’nın kentsel merkezlerini birbirine bağlayan bu altyapı projesi, altyapıyı geliştirmek ve bölgesel ekonomik kalkınmayı teşvik etmeyi amaçlamaktaydı. İlk olarak 2015 yılında tasarlanan HSR, Ekim 2023’te hizmete açıldı. Toplumsal itirazlara rağmen, proje “araçsal siyasallaşma” sergilemiştir. Jakarta-Bandung Yüksek Hızlı Demiryolu (JSR), Endonezya’nın Kuşak ve Yol işbirliğinde “sınırlı siyasallaşma/araçsal siyasallaşma”ya ulaşan en tipik projedir. Proje, 2015’teki başlangıcından 2023’teki açılışına kadar çevre, arazi edinimi, borç ve maliyet aşımları konusunda sayısız tartışmaya maruz kalsa da, Endonezya’nın sistemini daha dirençli hale getiren parlamenterleşme ve teknokratlaşma gibi ikili “soğutma mekanizmaları” sayesinde Filipinler’deki Subic-Clark Demiryolu’nun durgunluğuna veya iptal edilmesi gibi olmadı.",
@@ -9437,7 +9443,7 @@
           "toc": false
         },
         {
-          "id": "tr-section-17",
+          "id": "tr-section-12",
           "title": "Sonuç",
           "paragraphs": [
             "Bu çalışma, Güneydoğu Asya’da uluslararası kalkınma işbirliğinin siyasallaşmasının, iç siyasi süreçler ile büyük güçlerin öncülüğündeki uluslararası kalkınma işbirliği (örneğin Kuşak ve Yol Girişimi) arasındaki etkileşime yapısal olarak gömülü olduğunu göstermektedir.",
@@ -10936,7 +10942,13 @@
         }
       ],
       "acknowledgements": "",
-      "figures": []
+      "figures": [
+        {
+          "id": "figure-1",
+          "src": "/assets/article-figures/zhang-yaxin/figure-01.jpg",
+          "caption": "Revolutionary operas"
+        }
+      ]
     },
     "tr": {
       "sections": [
@@ -10957,7 +10969,13 @@
         }
       ],
       "acknowledgements": "",
-      "figures": []
+      "figures": [
+        {
+          "id": "figure-1",
+          "src": "/assets/article-figures/zhang-yaxin/figure-01.jpg",
+          "caption": "Devrimci operalar"
+        }
+      ]
     }
   },
   "liu-chunhua": {
@@ -10975,7 +10993,13 @@
       "footnotes": [],
       "references": [],
       "acknowledgements": "",
-      "figures": []
+      "figures": [
+        {
+          "id": "figure-1",
+          "src": "/assets/article-figures/liu-chunhua/figure-01.jpg",
+          "caption": "Chairman Mao en Route to Anyuan, 1967, oil on canvas"
+        }
+      ]
     },
     "tr": {
       "sections": [
@@ -10991,7 +11015,13 @@
       "footnotes": [],
       "references": [],
       "acknowledgements": "",
-      "figures": []
+      "figures": [
+        {
+          "id": "figure-1",
+          "src": "/assets/article-figures/liu-chunhua/figure-01.jpg",
+          "caption": "Anyuan’a Giderken Başkan Mao, 1967, tuval üzerine yağlıboya"
+        }
+      ]
     }
   },
   "sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu": {
@@ -11015,7 +11045,13 @@
         }
       ],
       "acknowledgements": "",
-      "figures": []
+      "figures": [
+        {
+          "id": "figure-1",
+          "src": "/assets/article-figures/sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu/figure-01.jpg",
+          "caption": "Ten thousand households, one family, spring fills the city (万户一家春满城), May 1960"
+        }
+      ]
     },
     "tr": {
       "sections": [
@@ -11037,7 +11073,13 @@
         }
       ],
       "acknowledgements": "",
-      "figures": []
+      "figures": [
+        {
+          "id": "figure-1",
+          "src": "/assets/article-figures/sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu/figure-01.jpg",
+          "caption": "On bin hane, bir aile, bahar şehri doldurur (万户一家春满城), Mayıs 1960"
+        }
+      ]
     }
   }
 }

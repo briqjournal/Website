@@ -17,5 +17,11 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/zhang-yaxin/figure-01.jpg",
+      "caption": "Revolutionary operas"
+    }
+  ]
 }

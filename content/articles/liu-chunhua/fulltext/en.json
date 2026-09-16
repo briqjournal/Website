@@ -12,5 +12,11 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/liu-chunhua/figure-01.jpg",
+      "caption": "Chairman Mao en Route to Anyuan, 1967, oil on canvas"
+    }
+  ]
 }
