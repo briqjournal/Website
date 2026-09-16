@@ -1,0 +1,145 @@
+name: Migrate V7I3 locale-split full texts
+on:
+  push:
+    branches: [automation/v7i3-locale-split]
+permissions:
+  contents: write
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Migrate, audit, validate, and safely fast-forward main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main automation/v7i3-locale-split
+
+          cat > /tmp/migrate-v7i3.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+
+          const issuePath = 'content/issues/v07-i03.json';
+          const issue = JSON.parse(fs.readFileSync(issuePath, 'utf8'));
+          if (issue.volume !== 7 || issue.issue !== 3) throw new Error('Unexpected issue descriptor');
+          if (!Array.isArray(issue.articles) || issue.articles.length !== 8) {
+            throw new Error(`Expected 8 V7I3 contributions, found ${issue.articles?.length}`);
+          }
+
+          const suspicious = [];
+          const normalize = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
+          const bodyText = (data) => [
+            ...(data.sections ?? []).flatMap((s) => [s.title, ...(s.paragraphs ?? [])]),
+            ...(data.footnotes ?? []).map((x) => x.text),
+            ...(data.references ?? []).map((x) => x.text),
+            ...(data.figures ?? []).map((x) => x.caption),
+          ].map(normalize).filter(Boolean).join('\n');
+
+          for (const slug of issue.articles) {
+            const dir = path.join('content', 'articles', slug, 'fulltext');
+            const currentPath = path.join(dir, 'current.json');
+            const enPath = path.join(dir, 'en.json');
+            const trPath = path.join(dir, 'tr.json');
+
+            if (fs.existsSync(currentPath)) {
+              const current = JSON.parse(fs.readFileSync(currentPath, 'utf8'));
+              if (!current.en?.sections?.length) throw new Error(`Missing real EN full text in ${slug}`);
+              if (!current.tr?.sections?.length) throw new Error(`Missing TR full text in ${slug}`);
+              fs.writeFileSync(enPath, JSON.stringify(current.en, null, 2) + '\n');
+              fs.writeFileSync(trPath, JSON.stringify(current.tr, null, 2) + '\n');
+              fs.rmSync(currentPath);
+            }
+
+            if (!fs.existsSync(enPath) || !fs.existsSync(trPath)) {
+              throw new Error(`Canonical locale pair missing after migration: ${slug}`);
+            }
+            for (const legacy of ['current.json', 'en-archive.json', 'saudi-en.json']) {
+              const p = path.join(dir, legacy);
+              if (fs.existsSync(p)) fs.rmSync(p);
+            }
+
+            const en = JSON.parse(fs.readFileSync(enPath, 'utf8'));
+            const tr = JSON.parse(fs.readFileSync(trPath, 'utf8'));
+            const enBody = bodyText(en);
+            const trBody = bodyText(tr);
+            if (!en.sections?.length || !tr.sections?.length) throw new Error(`Empty locale sections: ${slug}`);
+            if (enBody === trBody) throw new Error(`EN/TR are identical: ${slug}`);
+            const enScore = (enBody.match(/\b(the|and|of|to|in|is|that|for|with|as)\b/gi) ?? []).length;
+            const trScore = (enBody.match(/\b(ve|bir|bu|için|ile|olarak|olan|da|de|gibi)\b/gi) ?? []).length;
+            if (enBody.length > 1200 && enScore < Math.max(20, trScore * 1.25)) {
+              throw new Error(`English language sanity check failed: ${slug} (en=${enScore}, tr=${trScore})`);
+            }
+
+            for (const ref of en.references ?? []) {
+              const text = normalize(ref.text);
+              if (/[-–—]\s*$/.test(text)) suspicious.push(`${slug} ${ref.id}: reference ends abruptly: ${text}`);
+              const url = text.match(/https?:\/\/\S+/)?.[0];
+              if (url && /\/$/.test(url)) {
+                const tail = text.slice(text.indexOf(url) + url.length).trim();
+                if (/^[A-Za-z0-9_-]+\/[A-Za-z0-9_./-]+/.test(tail)) {
+                  suspicious.push(`${slug} ${ref.id}: probable split URL: ${text}`);
+                }
+              }
+            }
+
+            const embedded = [...enBody.matchAll(/(?<=[A-Za-z])\d{3}\s+(?=[A-Za-z])/g)].map((m) => m[0]);
+            if (embedded.length) console.log(`NOTICE ${slug}: ${embedded.length} possible embedded page-number token(s); manual review required`);
+            console.log(`OK ${slug}: EN ${en.sections.length} sections / TR ${tr.sections.length} sections`);
+          }
+
+          if (suspicious.length) {
+            console.error('\nSuspicious English extraction artifacts:');
+            for (const item of suspicious) console.error(`- ${item}`);
+            process.exit(2);
+          }
+          JS
+
+          cat > /tmp/write-v7i3-test.mjs <<'JS'
+          import fs from 'node:fs';
+          const issue = JSON.parse(fs.readFileSync('content/issues/v07-i03.json', 'utf8'));
+          const slugs = JSON.stringify(issue.articles, null, 2);
+          fs.writeFileSync('tests/v7i3-locale-fulltext.test.mjs', `import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport fs from 'node:fs';\nimport path from 'node:path';\n\nconst slugs = ${slugs};\n\ntest('V7I3 uses only canonical locale-split full-text files', () => {\n  assert.equal(slugs.length, 8);\n  for (const slug of slugs) {\n    const dir = path.join('content', 'articles', slug, 'fulltext');\n    const names = fs.readdirSync(dir).sort();\n    assert.deepEqual(names, ['en.json', 'tr.json'], slug);\n    const en = JSON.parse(fs.readFileSync(path.join(dir, 'en.json'), 'utf8'));\n    const tr = JSON.parse(fs.readFileSync(path.join(dir, 'tr.json'), 'utf8'));\n    assert.ok(en.sections?.length, \`missing EN sections: \${slug}\`);\n    assert.ok(tr.sections?.length, \`missing TR sections: \${slug}\`);\n    const enText = en.sections.flatMap((s) => [s.title, ...(s.paragraphs ?? [])]).join(' ');\n    const trText = tr.sections.flatMap((s) => [s.title, ...(s.paragraphs ?? [])]).join(' ');\n    assert.notEqual(enText, trText, \`EN must not fall back to TR: \${slug}\`);\n  }\n});\n`);
+          JS
+
+          apply_and_validate() {
+            node /tmp/migrate-v7i3.mjs
+            node /tmp/write-v7i3-test.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i3-locale-fulltext.test.mjs tests/keyword-case.test.mjs
+            git diff --check
+          }
+
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v7i3-validate "$BASE"
+          apply_and_validate
+          npm ci --no-audit --no-fund
+          npm run build
+          node --test tests/v7i3-locale-fulltext.test.mjs tests/oai-pmh.test.mjs
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            FINAL_BASE="$(git rev-parse origin/main)"
+            git checkout -B v7i3-push "$FINAL_BASE"
+            apply_and_validate
+            if git diff --quiet; then
+              echo 'V7I3 is already canonical on main; no commit required.'
+              exit 0
+            fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content tests app
+            git commit -m 'Split Volume 7 Issue 3 bilingual full texts'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$FINAL_BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced during attempt $ATTEMPT; retrying"
+          done
+
+          echo 'main kept advancing; refusing unsafe push'
+          exit 1
