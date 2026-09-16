@@ -1,0 +1,41 @@
+name: Patch V7I1 finalizer
+on:
+  push:
+    branches: [automation/v7i1-finalize]
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: automation/v7i1-finalize
+      - name: Add remaining reference-only DOI normalization
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('.github/workflows/finalize-v7i1.yml')
+          s=p.read_text()
+          old="""              .replace('https://doi.org/10.1007/s11258-008- 9485-0','https://doi.org/10.1007/s11258-008-9485-0')
+              .replace('https://www. fao.org/','https://www.fao.org/'));"""
+          new="""              .replace('https://doi.org/10.1007/s11258-008- 9485-0','https://doi.org/10.1007/s11258-008-9485-0')
+              .replace(/https:\/\/\\s+doi\\.org\//gi,'https://doi.org/')
+              .replace('https://www. fao.org/','https://www.fao.org/'));"""
+          if old in s:
+              p.write_text(s.replace(old,new,1))
+              print('patched')
+          elif ".replace(/https:\\/\\/\\\\s+doi\\\\.org\\//gi,'https://doi.org/')" in s or "replace(/https:\/\/\\s+doi\\.org\//gi" in s:
+              print('already patched')
+          else:
+              raise SystemExit('expected finalizer anchor not found')
+          PY
+          if git diff --quiet; then exit 0; fi
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add .github/workflows/finalize-v7i1.yml
+          git commit -m 'Normalize remaining V7I1 reference DOI spacing'
+          git push origin HEAD:automation/v7i1-finalize
