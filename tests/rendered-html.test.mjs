@@ -1050,7 +1050,9 @@ test("ships a complete bilingual mobile layout without emoji-presented arrows", 
 });
 
 test("preserves Volume 7 PDF hierarchy, metadata, and compact archive/PDF navigation", async () => {
-  const fullText = JSON.parse(await readFile(new URL("../app/article-fulltext-current.json", import.meta.url), "utf8"));
+  const currentFullText = JSON.parse(await readFile(new URL("../app/article-fulltext-current.json", import.meta.url), "utf8"));
+  const localizedFullText = JSON.parse(await readFile(new URL("../app/article-fulltext-localized.json", import.meta.url), "utf8"));
+  const fullTextFor = (slug) => localizedFullText[slug] || currentFullText[slug];
   const volumeSeven = archive.articles.filter((article) => article.volume === 7);
   assert.equal(volumeSeven.some((article) => /Hakemli Araştırma|Peer-reviewed Research/.test(`${article.publication_type_tr} ${article.publication_type_en}`)), false);
 
@@ -1058,10 +1060,10 @@ test("preserves Volume 7 PDF hierarchy, metadata, and compact archive/PDF naviga
   const domestic = volumeSeven.find((article) => article.slug === "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin");
   assert.equal(africa.revised_date, "2025-12-30");
   assert.equal(domestic.revised_date, "2026-01-23");
-  assert.ok(fullText[africa.slug].tr.references.filter((reference) => reference.text.includes("(Erişim tarihi:")).length > 30);
+  assert.ok(fullTextFor(africa.slug).tr.references.filter((reference) => reference.text.includes("(Erişim tarihi:")).length > 30);
 
   const lowCarbonSlug = "uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi";
-  const lowCarbon = fullText[lowCarbonSlug].tr;
+  const lowCarbon = fullTextFor(lowCarbonSlug).tr;
   const policy = lowCarbon.sections.find((section) => section.title === "Politika Önerileri");
   assert.equal(policy.toc, false);
   assert.match(policy.paragraphs.join(" "), /\*\*Bir KYG karbon muhasebesi sistemi oluşturulmalıdır\.\*\*/);

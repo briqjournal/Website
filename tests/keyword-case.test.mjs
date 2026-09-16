@@ -43,7 +43,7 @@ test("preserves acronyms while fixing known keyword spacing and casing", async (
   assert(relations.tr.keywords.includes("Türkiye-Çin İlişkileri"));
   assert(relations.en.keywords.includes("Türkiye-China Relations"));
 
-  const development = current["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin"];
+  const development = localized["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin"] || current["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin"];
   assert(development.en.keywords.includes("Belt And Road Initiative"));
   assert(development.en.keywords.includes("Global South"));
   assert(development.en.keywords.includes("International Development Cooperation"));
@@ -66,15 +66,15 @@ test("keeps bilingual keyword counts and reviewed ordering in parity", async () 
     assert(["tr", "en"].includes(override.source), `Missing source-language decision for ${slug}`);
   }
 
-  const onishi = current["japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak"];
+  const onishi = localized["japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak"] || current["japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak"];
   assert.deepEqual(onishi.en.keywords, ["Exclusionism", "Japanese Communist Party", "Right Wing And Left Wing In Japan", "Sanseito Party", "USA"]);
   assert.deepEqual(onishi.tr.keywords, ["Dışlayıcılık", "Japonya Komünist Partisi", "Japonya'da Sağ Ve Sol", "Sanseito Partisi", "ABD"]);
 
-  const ertan = current["iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi"];
+  const ertan = localized["iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi"] || current["iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi"];
   assert.deepEqual(ertan.tr.keywords, ["Gıda Güvencesi", "İklim Akıllı Tarım", "İklim Değişikliği", "Su Güvenliği", "Sürdürülebilir Kalkınma"]);
   assert.deepEqual(ertan.en.keywords, ["Food Security", "Climate-Smart Agriculture", "Climate Change", "Water Security", "Sustainable Development"]);
 
-  const kolosovskiy = current["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"];
+  const kolosovskiy = localized["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"] || current["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"];
   assert.deepEqual(kolosovskiy.en.keywords, ["Central Asian Security", "Counterterrorism Strategies", "CSTO", "Islamic Radicalism", "Russia’s Foreign Policy", "Transnational Jihadist Networks"]);
   assert.deepEqual(kolosovskiy.tr.keywords, ["Orta Asya Güvenliği", "Teröre Karşı Mücadele Stratejileri", "KGAÖ", "İslami Radikalizm", "Rusya’nın Dış Politikası", "Ulusötesi Cihatçı Ağlar"]);
 
