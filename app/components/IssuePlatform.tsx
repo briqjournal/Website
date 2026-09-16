@@ -86,25 +86,27 @@ export function IssuePlatform({
   const period = exactPublicationDate || periodLabel || `${isEnglish ? record.season_en : record.season_tr} ${record.year}`;
   const publicationDateLabel = isEnglish ? "Publication Date" : "Yayın Tarihi";
   const contributionCount = issueContributionCount(record, additionalContents);
+  const issueLanguageValue = isEnglish ? "English · Turkish" : "Türkçe · İngilizce";
   const defaultIssueFacts: readonly IssueFact[] = isEnglish
     ? [
         [publicationDateLabel, period],
         ["Contributions", String(contributionCount)],
-        ["Languages", "Turkish · English"],
+        ["Languages", issueLanguageValue],
         ["Access", "Open access"],
       ]
     : [
         [publicationDateLabel, period],
         ["İçerik", String(contributionCount)],
-        ["Yayın dili", "Türkçe · English"],
+        ["Yayın dili", issueLanguageValue],
         ["Erişim", "Açık erişim"],
       ];
   const issueFacts: readonly IssueFact[] = facts
     ? facts.map(([label, value]) => {
         const isPublicationDateFact = /^(Yayın tarihi|Yayın dönemi|Publication date|Publication period)$/i.test(label);
-        return isPublicationDateFact
-          ? [publicationDateLabel, exactPublicationDate || value] as const
-          : [label, value] as const;
+        const isLanguageFact = /^(Yayın dili|Yayın dilleri|Language|Languages)$/i.test(label);
+        if (isPublicationDateFact) return [publicationDateLabel, exactPublicationDate || value] as const;
+        if (isLanguageFact) return [label, issueLanguageValue] as const;
+        return [label, value] as const;
       })
     : defaultIssueFacts;
   const homeHref = isEnglish ? "/en" : "/tr";
