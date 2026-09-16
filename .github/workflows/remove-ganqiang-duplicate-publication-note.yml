@@ -1,0 +1,47 @@
+name: Remove duplicate Ganqiang publication note
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/remove-ganqiang-duplicate-publication-note.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Remove duplicate publication sentence from English body
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('content/articles/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0/fulltext/en.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          target = 'This article was published in Chinese in 《政治 经济学研究》 (Political Economy Research, Issue 3, 2024).'
+          removed = 0
+          for section in data.get('sections', []):
+              before = len(section.get('paragraphs', []))
+              section['paragraphs'] = [p for p in section.get('paragraphs', []) if p.strip() != target]
+              removed += before - len(section['paragraphs'])
+          if removed != 1:
+              raise SystemExit(f'Expected to remove exactly 1 duplicate publication sentence, removed {removed}')
+          note = (data.get('publicationNote') or '').strip()
+          if 'Political Economy Research' not in note or 'Issue 3 (2024)' not in note:
+              raise SystemExit('Expected publicationNote is missing or changed')
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
+          git rm .github/workflows/remove-ganqiang-duplicate-publication-note.yml
+          git config user.name "BRIQ Journal"
+          git config user.email "briq@briqjournal.com"
+          git add content/articles/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0/fulltext/en.json
+          git commit -m "Remove duplicate Ganqiang publication note from body"
+          git pull --rebase origin main
+          git push origin HEAD:main
