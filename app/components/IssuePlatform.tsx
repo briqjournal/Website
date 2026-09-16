@@ -24,6 +24,13 @@ export type IssueSupplementaryContent = {
   pdfPage: number;
 };
 
+const volume7PublicationDates: Record<number, Record<Locale, string>> = {
+  1: { tr: "1 Aralık 2025", en: "1 December 2025" },
+  2: { tr: "1 Mart 2026", en: "1 March 2026" },
+  3: { tr: "1 Haziran 2026", en: "1 June 2026" },
+  4: { tr: "1 Eylül 2026", en: "1 September 2026" },
+};
+
 export function issueContributionCount(
   record: ArchiveIssue,
   additionalContents: readonly IssueSupplementaryContent[] = [],
@@ -73,21 +80,33 @@ export function IssuePlatform({
   const englishPdf = issuePdfUrl(record, "en");
   const readingPdf = (isEnglish ? englishPdf : turkishPdf) || turkishPdf || englishPdf;
   const cover = coverSrc || (isEnglish ? record.cover_en : record.cover_tr);
-  const period = periodLabel || `${isEnglish ? record.season_en : record.season_tr} ${record.year}`;
+  const exactPublicationDate = record.volume === 7
+    ? volume7PublicationDates[record.issue]?.[locale]
+    : undefined;
+  const period = exactPublicationDate || periodLabel || `${isEnglish ? record.season_en : record.season_tr} ${record.year}`;
+  const publicationDateLabel = isEnglish ? "Publication Date" : "Yayın Tarihi";
   const contributionCount = issueContributionCount(record, additionalContents);
-  const issueFacts: readonly IssueFact[] = facts || (isEnglish
+  const defaultIssueFacts: readonly IssueFact[] = isEnglish
     ? [
-        ["Publication period", period],
+        [publicationDateLabel, period],
         ["Contributions", String(contributionCount)],
         ["Languages", "Turkish · English"],
         ["Access", "Open access"],
       ]
     : [
-        ["Yayın dönemi", period],
+        [publicationDateLabel, period],
         ["İçerik", String(contributionCount)],
         ["Yayın dili", "Türkçe · English"],
         ["Erişim", "Açık erişim"],
-      ]);
+      ];
+  const issueFacts: readonly IssueFact[] = facts
+    ? facts.map(([label, value]) => {
+        const isPublicationDateFact = /^(Yayın tarihi|Yayın dönemi|Publication date|Publication period)$/i.test(label);
+        return isPublicationDateFact
+          ? [publicationDateLabel, exactPublicationDate || value] as const
+          : [label, value] as const;
+      })
+    : defaultIssueFacts;
   const homeHref = isEnglish ? "/en" : "/tr";
   const archiveHref = isEnglish ? "/en/archive" : "/tr/arsiv";
   const issueName = isEnglish
@@ -126,7 +145,7 @@ export function IssuePlatform({
             </div>
             <div className="issue-superline">
               <span>{issueName}</span>
-              <span>{isEnglish ? "Publication Period" : "Yayın Dönemi"} · {period}</span>
+              <span>{publicationDateLabel} · {period}</span>
             </div>
             <h1>
               {title}
