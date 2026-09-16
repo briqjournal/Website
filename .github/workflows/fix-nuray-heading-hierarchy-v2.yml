@@ -1,0 +1,42 @@
+name: Retry Nuray Eksi heading hierarchy fix
+on:
+  push:
+    branches: [automation/fix-nuray-heading-hierarchy]
+    paths: [.github/workflows/fix-nuray-heading-hierarchy-v2.yml]
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply validated heading hierarchy and build
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp .github/workflows/fix-nuray-heading-hierarchy.yml /tmp/source-workflow.yml
+          awk '/python3 - <<'\''PY'\''/{capture=1; next} capture && /^          PY$/{exit} capture {sub(/^          /, ""); print}' /tmp/source-workflow.yml > /tmp/fix_nuray.py
+          test -s /tmp/fix_nuray.py
+
+          git fetch origin main
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B fix-nuray-headings "$BASE"
+          python3 /tmp/fix_nuray.py
+
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+          git diff --check
+          npm ci --no-audit --no-fund
+          npm run build
+
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content/articles/kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre/fulltext/current.json
+          git diff --cached --quiet && { echo 'No changes required'; exit 0; }
+          git commit -m 'Fix Nuray Eksi heading hierarchy'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced during validation; refusing push'; exit 1; }
+          git push origin HEAD:main
