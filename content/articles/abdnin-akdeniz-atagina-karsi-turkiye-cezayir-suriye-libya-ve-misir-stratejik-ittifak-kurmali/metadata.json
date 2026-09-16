@@ -1,26 +1,32 @@
 {
-  "slug": "abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali",
-  "volume": 4,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2023",
-  "author": "Smail Debeche",
-  "title_tr": "ABD’nin Akdeniz atağına karşı Türkiye, Cezayir, Suriye, Libya ve Mısır stratejik ittifak kurmalı",
-  "abstract_tr": "\"Batılı Büyük Güçler, Akdeniz Bölgesi’ndeki Batılı olmayan ülkelerin aleyhine Akdeniz’i sömürgeci kampanyalarında ve stratejik boyutlarda yoğun bir şekilde kullanmışlardır. Amerika dışında hiç kimse, herhangi bir saldırgan askeri eylemden kazançlı çıkmayacaktır. Amerika Irak işgalinde kazandı, Suriye’ye karşı tutumuyla kazandı, Libya’da kazandı. Bu yüzden her ülke bunu ciddiye almalı, özellikle de daha fazla işbirliği yapması gereken Akdeniz bölgesindeki ülkeler. Türkiye, Cezayir, Suriye, Libya ve Mısır, tüm bu ülkeler stratejik müttefik olmalı ve birbirleriyle çatışmak yerine daha fazla uzlaşı içinde olmalılar. Akdeniz ülkelerinin en .nemli sorunu olan petrol ve doğalgazın çıkarılması konusu ciddi bir şekilde ele alınmalıdır. Bu sorunlar, bu ülkeler arasında savaş ya da çatışma konusu haline getirilmemeli siyasi olarak çözülmelidir; aksi takdirde sonunda kazanan Amerika ve Avrupa ülkeleri olacaktır.”",
-  "source_tr": "https://briqjournal.com/abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali",
-  "source_en": "https://briqjournal.com/en/turkiye-algeria-syria-libya-and-egypt-should-form-strategic-alliance-against-the-us-mediterranean",
-  "title_en": "Türkiye, Algeria, Syria, Libya and Egypt should form a strategic alliance against the US Mediterranean aggression",
-  "abstract_en": "Abstract \n \"Western Great Powers have heavily used the Mediterranean Sea in their colonial campaigns and strategic dimensions at the expense of non-Western countries in the Mediterranean Zone. No one but America gains from any aggressive military action. America profited from the invasion of Iraq, profited from its attitude towards Syria, profited from  Libya, etc. That's why every country should take this seriously, especially those in the Mediterranean region that need to cooperate more. Türkiye, Algeria, Syria, Libya, and Egypt— all these countries should be strategic allies, and they should be in greater consensus with each other instead of getting into conflicts. The exploitation of petroleum and gas, which are some of the main issues that Mediterranean countries face, should be studied seriously. They should be solved politically instead of engaging in wars and conflicts with each other; if not, in the end, the winner will be America and European countries.\"",
-  "citation_tr": "Atıf \n Debeche, S. (2023). ABD’nin Akdeniz atağına karşı Türkiye, Cezayir, Suriye, Libya ve Mısır stratejik\nittifak kurmalı. (Röportajı yapan Işıkgün Akfırat). BRIQ Kuşak ve Yol Girişimi Dergisi, 4(2), 50-57.",
-  "citation_en": "Citation \n Debeche, S. (2023). Türkiye, Algeria, Syria, Libya and Egypt should form a strategic alliance against the US Mediterranean aggression. (Işıkgün Akfırat, Interviewer). BRIQ Belt &  Road Initiative Quarterly, 4(2), 50-57.",
-  "pages": "50-57",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/SMAIL%20Debeche.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/SMAIL%20Debeche_0.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Röportaj",
-  "publication_type_en": "Interview",
-  "published_online_date": "2023-03-01"
+  "schemaVersion": 2,
+  "id": "abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali",
+  "articleType": {"id": "interview", "tr": "Röportaj", "en": "Interview", "peerReviewed": false},
+  "title": {"en": "Türkiye, Algeria, Syria, Libya and Egypt should form a strategic alliance against the US Mediterranean aggression", "tr": "ABD’nin Akdeniz atağına karşı Türkiye, Cezayir, Suriye, Libya ve Mısır stratejik ittifak kurmalı"},
+  "authors": [
+    {"displayName": "Smail Debeche", "givenName": "Smail", "familyName": "Debeche", "orcid": null, "affiliations": [{"name": "University of Algiers III", "nameTr": "Cezayir III Üniversitesi", "nameEn": "University of Algiers III", "country": "Algeria", "ror": null}]}
+  ],
+  "contributors": [
+    {"displayName": "Işıkgün Akfırat", "givenName": "Işıkgün", "familyName": "Akfırat", "role": "interviewer", "orcid": null}
+  ],
+  "abstract": {
+    "en": "“Western Great Powers have heavily used the Mediterranean Sea in their colonial campaigns and strategic dimensions at the expense of non-Western countries in the Mediterranean Zone. No one but America gains from any aggressive military action. America profited from the invasion of Iraq, profited from its attitude towards Syria, profited from Libya, etc. That's why every country should take this seriously, especially those in the Mediterranean region that need to cooperate more. Türkiye, Algeria, Syria, Libya, and Egypt— all these countries should be strategic allies, and they should be in greater consensus with each other instead of getting into conflicts. The exploitation of petroleum and gas, which are some of the main issues that Mediterranean countries face, should be studied seriously. They should be solved politically instead of engaging in wars and conflicts with each other; if not, in the end, the winner will be America and European countries.”",
+    "tr": "“Batılı Büyük Güçler, Akdeniz Bölgesi’ndeki Batılı olmayan ülkelerin aleyhine Akdeniz’i sömürgeci kampanyalarında ve stratejik boyutlarda yoğun bir şekilde kullanmışlardır. Amerika dışında hiç kimse, herhangi bir saldırgan askeri eylemden kazançlı çıkmayacaktır. Amerika Irak işgalinde kazandı, Suriye’ye karşı tutumuyla kazandı, Libya’da kazandı. Bu yüzden her ülke bunu ciddiye almalı, özellikle de daha fazla işbirliği yapması gereken Akdeniz bölgesindeki ülkeler. Türkiye, Cezayir, Suriye, Libya ve Mısır, tüm bu ülkeler stratejik müttefik olmalı ve birbirleriyle çatışmak yerine daha fazla uzlaşı içinde olmalılar. Akdeniz ülkelerinin en önemli sorunu olan petrol ve doğalgazın çıkarılması konusu ciddi bir şekilde ele alınmalıdır. Bu sorunlar, bu ülkeler arasında savaş ya da çatışma konusu haline getirilmemeli siyasi olarak çözülmelidir; aksi takdirde sonunda kazanan Amerika ve Avrupa ülkeleri olacaktır.”"
+  },
+  "keywords": {"en": [], "tr": []},
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2023-03-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 4, "issue": 2, "year": 2023, "season": {"en": "Spring", "tr": "Bahar"}},
+  "pages": {"first": "50", "last": "57"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {"en": "Debeche, S. (2023). Türkiye, Algeria, Syria, Libya and Egypt should form a strategic alliance against the US Mediterranean aggression. (Işıkgün Akfırat, Interviewer). BRIQ Belt & Road Initiative Quarterly, 4(2), 50-57.", "tr": "Debeche, S. (2023). ABD’nin Akdeniz atağına karşı Türkiye, Cezayir, Suriye, Libya ve Mısır stratejik ittifak kurmalı. (Röportajı yapan Işıkgün Akfırat). BRIQ Kuşak ve Yol Girişimi Dergisi, 4(2), 50-57."},
+  "urls": {"en": "https://briqjournal.com/en/turkiye-algeria-syria-libya-and-egypt-should-form-strategic-alliance-against-the-us-mediterranean", "tr": "https://briqjournal.com/abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali", "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/SMAIL%20Debeche_0.pdf", "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/SMAIL%20Debeche.pdf", "pdfEnLocal": "/assets/archive/pdfs/articles/abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali-en.pdf", "pdfTrLocal": "/assets/archive/pdfs/articles/abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali-tr.pdf", "sharedBilingualPdf": false}
 }
