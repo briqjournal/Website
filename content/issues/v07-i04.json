@@ -5,11 +5,11 @@
   "season_en": "Autumn",
   "year": "2026",
   "source_tr": "https://briqjournal.com/briq-7cilt-4sayi",
-  "source_en": null,
+  "source_en": "https://briqjournal.com/en/briq-vol7-issue4",
   "cover_tr": "/assets/archive/covers/cilt-7-sayi-4-tr.jpg",
-  "cover_en": "/assets/archive/covers/cilt-7-sayi-4-en-v2.jpg",
+  "cover_en": "/assets/current-issue.jpg",
   "pdf_tr_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2026-08/BRIQ%20Cilt7%20Say%C4%B14%20SONBAHAR%202026.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2026-08/BRIQ%20Cilt7%20Say%C4%B14%20SONBAHAR%202026.pdf",
+  "pdf_en_source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2026-08/BRIQ%20Volume7%20Issue4%20AUTUMN%202026.pdf",
   "articles": [
     "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi",
     "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik",
@@ -18,6 +18,5 @@
     "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce",
     "cinin-kuresel-altyapi-stratejisi"
   ],
-  "pdf_tr_local": "/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf",
-  "pdf_en_local": "/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf"
+  "pdf_tr_local": "/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf"
 }
