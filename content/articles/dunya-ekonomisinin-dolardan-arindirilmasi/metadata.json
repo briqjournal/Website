@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_ENG-60-65.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/dunya-ekonomisinin-dolardan-arindirilmasi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/dunya-ekonomisinin-dolardan-arindirilmasi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Konferans Konuşması",
+  "publication_type_en": "Conference Speech",
+  "published_online_date": "2023-12-01"
 }
