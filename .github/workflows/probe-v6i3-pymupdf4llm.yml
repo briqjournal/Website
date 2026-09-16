@@ -1,0 +1,28 @@
+name: Probe V6I3 Layout Aware Extraction
+on:
+  push:
+    branches: [audit/v6i3-independent]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe PyMuPDF4LLM extraction
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet pymupdf pymupdf4llm
+          python3 <<'PY'
+          import urllib.request, pymupdf4llm
+          tests={
+            'iratni':'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Belkacem%20Iratni_ENG.pdf',
+            'gas':'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/G.%20%C3%87ifci%2C%20S.%20S.%20%C3%87elebi%2C%20M.%20Parlaktuna%2C%20A.%20Ka%C3%A7ar%2C%20S.%20O.%20G%C3%BCnayd%C4%B1n_ENG.pdf'
+          }
+          for name,url in tests.items():
+            p=f'/tmp/{name}.pdf'; urllib.request.urlretrieve(url,p)
+            md=pymupdf4llm.to_markdown(p, pages=list(range(min(6, __import__('pymupdf').open(p).page_count))), write_images=False, ignore_images=False)
+            print('\n===== ',name,' =====\n')
+            print(md[:18000])
+          PY
