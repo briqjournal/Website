@@ -1,0 +1,94 @@
+name: Audit Volume 7 Overview
+on:
+  push:
+    branches: [audit/volume7-overview-2]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install
+        run: npm ci --no-audit --no-fund
+      - name: Audit Volume 7 canonical content
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'JS'
+          const fs=require('fs'); const path=require('path');
+          const expectedDates={1:'2025-12-01',2:'2026-03-01',3:'2026-06-01',4:'2026-09-01'};
+          const catalog=JSON.parse(fs.readFileSync('content/catalog.json','utf8'));
+          const failures=[]; const warnings=[]; const stats=[];
+          const fail=(msg)=>failures.push(msg); const warn=(msg)=>warnings.push(msg);
+          const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+          const refText=r=>typeof r==='string'?r:(r?.text||'');
+          let total=0;
+          for(let issueNo=1;issueNo<=4;issueNo++){
+            const issuePath=`content/issues/v07-i0${issueNo}.json`;
+            const issue=read(issuePath); let issueRefs=0; let issueParas=0;
+            if(issue.volume!==7||issue.issue!==issueNo) fail(`${issuePath}: volume/issue mismatch`);
+            if(!Array.isArray(issue.articles)||!issue.articles.length) fail(`${issuePath}: no articles`);
+            for(const slug of issue.articles){
+              total++;
+              const base=path.join('content/articles',slug);
+              const metaPath=path.join(base,'metadata.json');
+              if(!fs.existsSync(metaPath)){ fail(`${slug}: metadata missing`); continue; }
+              const meta=read(metaPath);
+              if(meta.schemaVersion!==2) fail(`${slug}: schemaVersion ${meta.schemaVersion}`);
+              if(meta.journal?.volume!==7||meta.journal?.issue!==issueNo) fail(`${slug}: journal volume/issue mismatch`);
+              if(meta.dates?.published!==expectedDates[issueNo]) fail(`${slug}: published ${meta.dates?.published} != ${expectedDates[issueNo]}`);
+              const typeLabels=[meta.articleType?.tr,meta.articleType?.en].filter(Boolean).join(' | ');
+              if(/Hakemli Araştırma Makalesi/iu.test(typeLabels)) fail(`${slug}: deprecated article type label`);
+              const ftDir=path.join(base,'fulltext');
+              if(!fs.existsSync(ftDir)){ fail(`${slug}: fulltext dir missing`); continue; }
+              const jsons=fs.readdirSync(ftDir).filter(x=>x.endsWith('.json')).sort();
+              if(JSON.stringify(jsons)!==JSON.stringify(['en.json','tr.json'])) fail(`${slug}: fulltext files ${jsons.join(',')}`);
+              if(!catalog.fulltext?.localized?.includes(slug)) fail(`${slug}: missing from catalog localized`);
+              if(catalog.fulltext?.current?.includes(slug)||catalog.fulltext?.en_archive?.includes(slug)) fail(`${slug}: still present in legacy catalog bucket`);
+              const bodies={};
+              for(const locale of ['en','tr']){
+                const f=path.join(ftDir,`${locale}.json`); if(!fs.existsSync(f)){fail(`${slug}/${locale}: missing`);continue;}
+                const data=read(f); const sections=data.sections||[];
+                const ids=new Set();
+                sections.forEach((s,i)=>{
+                  if(s.id!==`${locale}-section-${i+1}`) fail(`${slug}/${locale}: section id ${s.id} at ${i+1}`);
+                  if(ids.has(s.id)) fail(`${slug}/${locale}: duplicate section id ${s.id}`); ids.add(s.id);
+                  if(typeof s.title!=='string'||!s.title.trim()) fail(`${slug}/${locale}: empty section title ${i+1}`);
+                  if(/-\s*$/u.test(s.title)&&!/[A-Z]{2,}-$/u.test(s.title)) warn(`${slug}/${locale}: heading ends hyphen: ${s.title}`);
+                  for(const p of s.paragraphs||[]){
+                    issueParas++;
+                    if(/\b(?:B üyük|lowcost|Çin- ABD)\b/u.test(p)) fail(`${slug}/${locale}: known extraction artifact in body`);
+                  }
+                });
+                const metaKw=meta.keywords?.[locale]||[]; const ftKw=data.keywords||[];
+                if(JSON.stringify(metaKw)!==JSON.stringify(ftKw)) fail(`${slug}/${locale}: keyword mismatch metadata/fulltext`);
+                const refs=data.references||[]; issueRefs+=refs.length;
+                refs.forEach((r,idx)=>{
+                  const t=refText(r);
+                  if(/https?:\/\/\s+/iu.test(t)||/https?:\/\/www\.\s+/iu.test(t)||/doi\.org\/\s+/iu.test(t)) fail(`${slug}/${locale} ref ${idx+1}: obvious URL whitespace`);
+                  if(/\b(?:www\.|doi\.org\/)[^\n]{0,100}\s+-[A-Za-z0-9]/u.test(t)) warn(`${slug}/${locale} ref ${idx+1}: possible URL line-break artifact`);
+                });
+                bodies[locale]=sections.flatMap(s=>s.paragraphs||[]).join(' ').replace(/\s+/g,' ').trim();
+              }
+              if((bodies.en?.length||0)>300&&(bodies.tr?.length||0)>300&&bodies.en===bodies.tr) fail(`${slug}: English and Turkish bodies identical`);
+              if(!meta.pages?.first||!meta.pages?.last) warn(`${slug}: page range incomplete`);
+              if(!meta.doi) warn(`${slug}: DOI missing`);
+            }
+            stats.push({issue:issueNo,articles:issue.articles.length,refs:issueRefs,paragraphs:issueParas});
+          }
+          if(total!==30) fail(`Volume 7 total article count expected 30, got ${total}`);
+          console.log('VOLUME7_STATS '+JSON.stringify(stats));
+          console.log('VOLUME7_TOTAL '+total);
+          if(warnings.length){ console.log('VOLUME7_WARNINGS'); warnings.forEach(x=>console.log('WARN '+x)); }
+          if(failures.length){ console.error('VOLUME7_FAILURES'); failures.forEach(x=>console.error('FAIL '+x)); process.exit(1); }
+          console.log('VOLUME7_CANONICAL_AUDIT_OK');
+          JS
+      - name: Run Volume 7 regression tests
+        run: node --test tests/v7i*.test.mjs tests/volume7*.test.mjs 2>/dev/null || node --test tests/v7i*.test.mjs
+      - name: Full repository test and build
+        run: npm test
+      - name: Lint
+        run: npm run lint
