@@ -151,6 +151,7 @@ export function toArchiveArticle(record, issueRecord = null) {
     pdf_tr_local: record.urls?.pdfTrLocal,
     pdf_en_local: record.urls?.pdfEnLocal,
     shared_bilingual_pdf: Boolean(record.urls?.sharedBilingualPdf),
+    reviewed_book: record.reviewedBook ?? undefined,
     funding: legacyFunding(record.funding),
     conflict_of_interest: legacyStatement(record.conflictOfInterest),
     author_contributions: legacyAuthorContributions(record.authorContributions),
