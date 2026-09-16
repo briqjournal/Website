@@ -21,6 +21,13 @@ jobs:
           git show origin/automation/fix-comak-live-english:scripts/migrate-v7i4-locale-split.mjs > /tmp/migrate-v7i4-locale-split.mjs
           cp /tmp/migrate-v7i4-locale-split.mjs scripts/migrate-v7i4-locale-split.mjs
           node scripts/migrate-v7i4-locale-split.mjs
+          node --input-type=module <<'NODE'
+          import { readFile, writeFile } from 'node:fs/promises';
+          const path='content/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi/fulltext/en.json';
+          const record=JSON.parse(await readFile(path,'utf8'));
+          record.keywords=['China','complex cultural hedging','hedging strategy','Saudi Arabia','US'];
+          await writeFile(path,JSON.stringify(record,null,2)+'\n','utf8');
+          NODE
           node scripts/generate-archive-data.mjs
           node scripts/generate-fulltext-modules.mjs
           node scripts/generate-runtime-data.mjs
