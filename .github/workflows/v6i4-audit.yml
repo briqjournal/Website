@@ -1,122 +1,24 @@
-name: Finalize Volume 6 Issue 4 source cleanup
+name: Verify final Volume 6 Issue 4 build
 on:
   push:
     branches: [automation/v6i4-fulltext]
     paths: [.github/workflows/v6i4-audit.yml]
 permissions:
-  contents: write
+  contents: read
 jobs:
-  fix:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Apply final source and formatting corrections to latest main
+      - name: Build latest main
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
-          BASE="$(git rev-parse origin/main)"
-          git checkout -B v6i4-final-fix "$BASE"
-          python3 - <<'PY'
-          from pathlib import Path
-          import json,re
-          R=Path('.')
-          issue=json.loads((R/'content/issues/v06-i04.json').read_text(encoding='utf-8'))
-
-          for slug in issue['articles']:
-            p=R/'content/articles'/slug/'metadata.json'; m=json.loads(p.read_text(encoding='utf-8'))
-            for f in ('title_tr','title_en','abstract_tr','abstract_en','citation_tr','citation_en'):
-              if isinstance(m.get(f),str):
-                v=re.sub(r'\s+',' ',m[f].replace('\u00a0',' ')).strip()
-                m[f]=re.sub(r'\s+([,.;:?!])',r'\1',v)
-            if slug=='genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme':
-              m['received_date']='2025-02-05'; m['accepted_date']='2025-05-01'
-            p.write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-
-          kp=R/'content/articles/rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve/fulltext/current.json'
-          k=json.loads(kp.read_text(encoding='utf-8')); tr=k['tr']['references']; en=k['en']['references']
-          def ident(t): return re.sub(r'\W+',' ',re.sub(r'https?://\S+','',t.lower())).strip()
-          have={ident(r.get('text','')) for r in tr}
-          for r in en:
-            t=r.get('text',''); rid=ident(t)
-            if rid not in have and (t.startswith('Ўзбекистон Республикаси Олий суди.') or t.startswith('Эргашев, Б. (2024).')):
-              tr.append({'id':'','text':t}); have.add(rid)
-          def clean_k_ref(t):
-            t=re.sub(r'\s+',' ',t.replace('\u00a0',' ')).strip(); t=re.sub(r'\s+([,.;:?!])',r'\1',t)
-            m=re.search(r'https?://',t)
-            if m: t=t[:m.start()].rstrip()+' '+re.sub(r'\s+','',t[m.start():])
-            return t.strip()
-          for loc in ('tr','en'):
-            for i,r in enumerate(k[loc]['references'],1): r.update(id=f'ref-{i}',text=clean_k_ref(r.get('text','')))
-          kp.write_text(json.dumps(k,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-
-          wp=R/'content/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/fulltext/current.json'
-          w=json.loads(wp.read_text(encoding='utf-8'))
-          for loc in ('tr','en'):
-            for r in w[loc]['references']: r['text']=r['text'].replace('https:// www.','https://www.').replace('http:// www.','http://www.')
-          wp.write_text(json.dumps(w,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-
-          yp=R/'content/articles/genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme/fulltext/current.json'
-          y=json.loads(yp.read_text(encoding='utf-8'))
-          for loc in ('tr','en'):
-            for r in y[loc]['references']:
-              t=r['text']
-              t=t.replace('/download/ pdf/','/download/pdf/').replace('A NewLiterary History','A New Literary History')
-              t=t.replace('Ç in Kom ünist','Çin Komünist').replace('Y ö netiliyor','Yönetiliyor').replace('‘ Datong’','‘Datong’')
-              t=re.sub(r'\s+([,.;:?!])',r'\1',t)
-              r['text']=t
-          yp.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-
-          ap=R/'app/authors.ts'; a=ap.read_text(encoding='utf-8')
-          a=a.replace('tr: "Kapadokya Üniversitesi, Siyaset Bilimi ve Uluslararası İlişkiler Bölümü, Türkiye",\n    en: "Department of Political Science and International Relations, Cappadocia University, Türkiye",',
-                      'tr: "Kapadokya Üniversitesi, İktisadi, İdari ve Sosyal Bilimler Fakültesi, Siyaset Bilimi ve Uluslararası İlişkiler Bölümü, Türkiye",\n    en: "Faculty of Economics, Administrative and Social Sciences, Department of Political Science and International Relations, Cappadocia University, Türkiye",')
-          ap.write_text(a,encoding='utf-8')
-          PY
-
-          node scripts/generate-archive-data.mjs
-          node scripts/generate-fulltext-modules.mjs
-          node scripts/generate-runtime-data.mjs
-
-          python3 - <<'PY'
-          from pathlib import Path
-          import json,re
-          R=Path('.')
-          k=json.loads((R/'content/articles/rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve/fulltext/current.json').read_text())
-          assert (len(k['tr']['references']),len(k['en']['references']))==(70,70)
-          for loc in ('tr','en'):
-            assert [r['id'] for r in k[loc]['references']]==[f'ref-{i}' for i in range(1,71)]
-            assert any(r['text'].startswith('Ўзбекистон Республикаси Олий суди.') for r in k[loc]['references'])
-            assert any(r['text'].startswith('Эргашев, Б. (2024).') for r in k[loc]['references'])
-            for r in k[loc]['references']:
-              m=re.search(r'https?://',r['text'])
-              if m: assert not re.search(r'\s',r['text'][m.start():]), r['text']
-          w=json.loads((R/'content/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/fulltext/current.json').read_text())
-          assert (len(w['tr']['references']),len(w['en']['references']))==(35,35)
-          assert 'https:// www.' not in ' '.join(r['text'] for r in w['tr']['references'])
-          y=json.loads((R/'content/articles/genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme/fulltext/current.json').read_text())
-          assert (len(y['tr']['references']),len(y['en']['references']))==(29,28)
-          yy=' '.join(r['text'] for loc in ('tr','en') for r in y[loc]['references'])
-          for bad in ('/download/ pdf/','A NewLiterary History','Ç in Kom ünist','Y ö netiliyor','‘ Datong’'):
-            assert bad not in yy, bad
-          cm=json.loads((R/'content/articles/genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme/metadata.json').read_text())
-          assert cm.get('received_date')=='2025-02-05' and cm.get('accepted_date')=='2025-05-01'
-          assert 'İktisadi, İdari ve Sosyal Bilimler Fakültesi, Siyaset Bilimi ve Uluslararası İlişkiler Bölümü' in (R/'app/authors.ts').read_text(encoding='utf-8')
-          issue=json.loads((R/'content/issues/v06-i04.json').read_text())
-          expected=[('Araştırma Makalesi','Research Article'),('Zirve Bildirisi','Summit Declaration'),('Zirve Bildirisi','Summit Declaration'),('Araştırma Makalesi','Research Article'),('Araştırma Makalesi','Research Article'),('Konferans Raporu','Conference Report'),('Şiir','Poem'),('Şiir','Poem')]
-          for slug,typ in zip(issue['articles'],expected):
-            m=json.loads((R/'content/articles'/slug/'metadata.json').read_text()); assert (m['publication_type_tr'],m['publication_type_en'])==typ
-          for slug in (issue['articles'][1],issue['articles'][2],issue['articles'][5]):
-            assert json.loads((R/'content/articles'/slug/'metadata.json').read_text())['author']==''
-          print('Final V6I4 source audit passed')
-          PY
-
-          git diff --check
-          git config user.name 'BRIQ Journal'; git config user.email 'briq@briqjournal.com'
-          git add content app/authors.ts
-          git diff --cached --quiet && { echo 'No changes required'; exit 0; }
-          git commit -m 'Complete Volume 6 Issue 4 source audit'
-          git fetch origin main
-          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced during audit; refusing push'; exit 1; }
-          git push origin HEAD:main
+          git checkout --detach origin/main
+          echo "VERIFYING $(git rev-parse HEAD)"
+          npm ci --no-audit --no-fund
+          npm run generate:data
+          npm run build
