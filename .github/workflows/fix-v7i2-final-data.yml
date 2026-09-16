@@ -1,0 +1,118 @@
+name: Fix final V7I2 data integrity
+on:
+  push:
+    branches: [automation/v7i2-final-data-integrity]
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply verified metadata fixes on latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+
+          cat >/tmp/fix-v7i2-final.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const issue = JSON.parse(fs.readFileSync('content/issues/v07-i02.json','utf8'));
+          let keywordChanges = 0;
+          for (const slug of issue.articles) {
+            const metaFile = path.join('content/articles',slug,'metadata.json');
+            const meta = JSON.parse(fs.readFileSync(metaFile,'utf8'));
+            if (meta.schemaVersion !== 2) throw new Error(`${slug}: metadata v2 required`);
+            meta.keywords ||= { en: [], tr: [] };
+            for (const locale of ['en','tr']) {
+              const full = JSON.parse(fs.readFileSync(path.join('content/articles',slug,'fulltext',`${locale}.json`),'utf8'));
+              const canonical = full.keywords || [];
+              if (JSON.stringify(meta.keywords[locale] || []) !== JSON.stringify(canonical)) {
+                meta.keywords[locale] = [...canonical];
+                keywordChanges += 1;
+              }
+            }
+            fs.writeFileSync(metaFile,JSON.stringify(meta,null,2)+'\n');
+          }
+          if (keywordChanges !== 6) throw new Error(`Expected 6 audited keyword-layer fixes, got ${keywordChanges}`);
+
+          const zfile='content/articles/zhang-yaxin/metadata.json';
+          const z=JSON.parse(fs.readFileSync(zfile,'utf8'));
+          if (!z.urls?.pdfTr) throw new Error('Zhang Turkish PDF must remain available');
+          z.urls.pdfEn = null;
+          z.urls.pdfEnLocal = null;
+          z.urls.sharedBilingualPdf = false;
+          fs.writeFileSync(zfile,JSON.stringify(z,null,2)+'\n');
+          JS
+
+          cat >/tmp/test-v7i2-final.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          import test from 'node:test';
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i02.json','utf8'));
+          test('V7I2 metadata keywords exactly match canonical locale full text',()=>{
+            for(const slug of issue.articles){
+              const m=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'metadata.json'),'utf8'));
+              for(const locale of ['en','tr']){
+                const f=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'fulltext',`${locale}.json`),'utf8'));
+                assert.deepEqual(m.keywords?.[locale]||[],f.keywords||[],`${slug}/${locale}`);
+              }
+            }
+          });
+          test('Zhang Yaxin does not expose the Turkish-only PDF as an English PDF',()=>{
+            const m=JSON.parse(fs.readFileSync('content/articles/zhang-yaxin/metadata.json','utf8'));
+            assert.ok(m.urls.pdfTr);
+            assert.equal(m.urls.pdfEn,null);
+            assert.equal(m.urls.pdfEnLocal,null);
+            assert.equal(m.urls.sharedBilingualPdf,false);
+          });
+          JS
+
+          apply_fix() {
+            node /tmp/fix-v7i2-final.mjs
+            cp /tmp/test-v7i2-final.mjs tests/v7i2-metadata-integrity.test.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i2-locale-fulltext.test.mjs tests/v7i2-deep-integrity.test.mjs tests/v7i2-metadata-integrity.test.mjs
+            node <<'JS'
+          const fs=require('fs');
+          const a=JSON.parse(fs.readFileSync('app/archive-data.json','utf8'));
+          const z=a.articles.find(x=>x.slug==='zhang-yaxin');
+          if(!z) throw new Error('generated Zhang record missing');
+          if(z.pdf_en_source || z.pdf_en_local || z.shared_bilingual_pdf) throw new Error('generated Zhang record still exposes English/shared PDF');
+          if(!z.pdf_tr_source && !z.pdf_tr_local) throw new Error('generated Zhang Turkish PDF missing');
+          JS
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_fix
+            npm test
+            npm run lint
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+              echo "main advanced during validation attempt $ATTEMPT; retrying"
+              continue
+            fi
+            if git diff --quiet; then echo 'V7I2 final integrity fixes already present.'; exit 0; fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content app tests
+            git commit -m 'Align Volume 7 Issue 2 metadata with canonical content'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced after commit attempt $ATTEMPT; retrying"
+          done
+          echo 'main kept advancing; refusing unsafe push'; exit 1
