@@ -112,7 +112,7 @@ function PublicationNoteCopy({ value, locale, articleSlug }: { value: string; lo
   const text = articleSlug === HE_GANQIANG_TRANSLATION_SLUG ? `${value} ${credit}` : value;
   const linkedNames = new Set(["Necati Demircan", "Jessica Durdu"]);
   return <>{text.split(/(Necati Demircan|Jessica Durdu)/g).map((part, index) => linkedNames.has(part)
-    ? <a href={authorProfileHref(part, locale)} key={`${part}-${index}`}>{part}</a>
+    ? <a className="reference-inline-link" href={authorProfileHref(part, locale)} key={`${part}-${index}`} style={{ whiteSpace: "normal", color: "var(--rust-dark)", fontSize: "inherit", fontWeight: "inherit", textDecoration: "underline" }}>{part}</a>
     : part)}</>;
 }
 
