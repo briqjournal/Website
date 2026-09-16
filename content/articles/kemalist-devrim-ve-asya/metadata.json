@@ -1,28 +1,32 @@
 {
-  "slug": "kemalist-devrim-ve-asya",
-  "volume": 4,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2023",
-  "author": "Şule Perinçek",
-  "title_tr": "Kemalist Devrim ve Asya",
-  "abstract_tr": "Türk Devrimi, emperyalizme karşı duran, tanrının İngiliz olmadığını ispatlayan, bu dünyadaki mücadeleyi ateşleyen, bağımsız, halktan yana, kapitalizm temelinde bir sistem geliştirmeye çalışan model. Çin modeli de, Sun Yat Sen önderliğinde emperyalizme ve sömürgeciliğe karşı Kemalist Devrim benzeri bir mücadele verdikten sonra Komünist Partisi önderliğinde Milli Demokratik devrimi sürdürdü. Bugün bu iki mücadeleci ülkenin, bir yolun iki ucunu tutmaları ve benzer kaderi paylaşmaları, ama birinin ekonomideki gelişmişliğinden Kovid’le mücadelesine kadar farklılık yaşamaları da bir rastlantı değildir. Atatürk, 1922’de o dönemde dünyadaki cepheleşmeyi de açık görüyor ve çözümü öneriyordu: “Zararlı ve zehirli beyinlerden gelerek bize musallat olan zümreye karşı (…) Doğu’yu Batı’dan ayıran ve ta kuzeyden güneye kadar uzanan müşterek bir cephe vardır. Bu cephede müdafaalarda bulunabilmek, yekdiğeriyle hemdert olmuş milletlerin hakiki, samimi dayanışması ile mümkün olacaktır. (…) Fakat bu dayanışmaya dahil devletlerin başlı başına ayrı ayrı kuvvetli olması, ayrı ayrı bağımsızlık fikriyle mütehassis ve donanmış bulunması lazımdır.” Bu anlayış da emperyalizmin dayattığı düşmanlık ve ayrışma anlayışına karşı bir duruştur. Başarının yolu buradan geçmiştir ve geçecektir. Bugün de hedef alınan bu siyasi duruş, kültür ve anlayıştır. Önümüzdeki yüzyıl Asya’dan Afrika’ya Latin Amerika’ya kadar yeni bir tarih yazma zamanıdır. Başarının anahtarı elimizdedir.",
-  "source_tr": "https://briqjournal.com/kemalist-devrim-ve-asya",
-  "source_en": "https://briqjournal.com/en/the-kemalist-revolution-and-asia",
-  "title_en": "The Kemalist Revolution and Asia",
-  "abstract_en": "Abstract \n The Turkish revolution is a model that emerged from a struggle against imperialism, proving that God is not British, and aiming to establish a system based on capitalist principles favoring the interest of the people. The Chinese model, under the leadership of Sun Yat Sen, similarly fought against imperialism and colonialism, following the Kemalist Revolution's path. Under the guidance of the Communist Party, they continued with a National Democratic revolution. Today, these two countries, both fighters in their own right, holding the two ends of a path and sharing a similar fate, yet differing in aspects ranging from economic development to their response to the COVID-19 pandemic, is not a mere coincidence. The leader of the defense of their respective homelands at that time saw the global polarization clearly and proposed a solution: \"Against the harmful group that has afflicted us... There is a common front that separates the East from the West, stretching all the way from the North to the South. To be able to defend on this front, it will require the genuine and sincere solidarity of nations that have become each other's allies... However, the states participating in this solidarity must be individually strong, fortified with the idea of independence.\" This understanding is a stance against the enmity and division imposed by imperialism. Success has always and will continue to come through this path. The political stance, culture, and understanding targeted today also stem from this standpoint. The coming century is a time to rewrite history from Asia to Africa and Latin America. The key to success lies in our hands.",
-  "citation_tr": "Atıf \n Perinçek, Ş. (2023). 100. Yılında Kemalist Devrim ve Asya. BRIQ Kuşak ve Yol Girişimi Dergisi, 4(4), 28-38.",
-  "citation_en": "Citation \n Perinçek, Ş. (2023). The Kemalist Revolution and Asia. BRIQ Belt & Road Initiative Quarterly, 4(4), 28-38.",
-  "pages": "28-38",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_%C5%9EulePerin%C3%A7ek_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_%C5%9EulePerin%C3%A7ek_ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/kemalist-devrim-ve-asya-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/kemalist-devrim-ve-asya-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Görüş Makalesi",
-  "publication_type_en": "Perspective Article",
-  "received_date": "2023-07-31",
-  "accepted_date": "2023-08-09",
-  "published_online_date": "2023-09-01"
+  "schemaVersion": 2,
+  "id": "kemalist-devrim-ve-asya",
+  "articleType": {"id": "perspective-piece", "tr": "Görüş Makalesi", "en": "Perspective Piece", "peerReviewed": false},
+  "title": {"en": "The Kemalist Revolution and Asia", "tr": "Kemalist Devrim ve Asya"},
+  "authors": [
+    {"displayName": "H. Şule Perinçek", "givenName": "H. Şule", "familyName": "Perinçek", "orcid": null, "affiliations": [
+      {"name": "Atatürk’ün Bütün Eserleri", "nameTr": "Atatürk’ün Bütün Eserleri", "nameEn": "Collected Works of Atatürk", "country": "Türkiye", "ror": null},
+      {"name": "Ulusal Strateji Merkezi (USMER)", "nameTr": "Ulusal Strateji Merkezi (USMER)", "nameEn": "National Strategy Center (USMER)", "country": "Türkiye", "ror": null}
+    ]}
+  ],
+  "abstract": {
+    "en": "The Turkish revolution is a model that emerged from a struggle against imperialism, proving that God is not British, and aiming to establish a system based on capitalist principles favoring the interest of the people. The Chinese model, under the leadership of Sun Yat Sen, similarly fought against imperialism and colonialism, following the Kemalist Revolution's path. Under the guidance of the Communist Party, they continued with a National Democratic revolution. Today, these two countries, both fighters in their own right, holding the two ends of a path and sharing a similar fate, yet differing in aspects ranging from economic development to their response to the COVID-19 pandemic, is not a mere coincidence. The leader of the defense of their respective homelands at that time saw the global polarization clearly and proposed a solution: “Against the harmful group that has afflicted us... There is a common front that separates the East from the West, stretching all the way from the North to the South. To be able to defend on this front, it will require the genuine and sincere solidarity of nations that have become each other's allies... However, the states participating in this solidarity must be individually strong, fortified with the idea of independence.” This understanding is a stance against the enmity and division imposed by imperialism. Success has always and will continue to come through this path. The political stance, culture, and understanding targeted today also stem from this standpoint. The coming century is a time to rewrite history from Asia to Africa and Latin America. The key to success lies in our hands.",
+    "tr": "Türk Devrimi, emperyalizme karşı duran, tanrının İngiliz olmadığını ispatlayan, bu dünyadaki mücadeleyi ateşleyen, bağımsız, halktan yana, kapitalizm temelinde bir sistem geliştirmeye çalışan model. Çin modeli de, Sun Yat Sen önderliğinde emperyalizme ve sömürgeciliğe karşı Kemalist Devrim benzeri bir mücadele verdikten sonra Komünist Partisi önderliğinde Milli Demokratik devrimi sürdürdü. Bugün bu iki mücadeleci ülkenin, bir yolun iki ucunu tutmaları ve benzer kaderi paylaşmaları, ama birinin ekonomideki gelişmişliğinden Kovid’le mücadelesine kadar farklılık yaşamaları da bir rastlantı değildir. Atatürk, 1922’de o dönemde dünyadaki cepheleşmeyi de açık görüyor ve çözümü öneriyordu: “Zararlı ve zehirli beyinlerden gelerek bize musallat olan zümreye karşı (…) Doğu’yu Batı’dan ayıran ve ta kuzeyden güneye kadar uzanan müşterek bir cephe vardır. Bu cephede müdafaalarda bulunabilmek, yekdiğeriyle hemdert olmuş milletlerin hakiki, samimi dayanışması ile mümkün olacaktır. (…) Fakat bu dayanışmaya dahil devletlerin başlı başına ayrı ayrı kuvvetli olması, ayrı ayrı bağımsızlık fikriyle mütehassis ve donanmış bulunması lazımdır.” Bu anlayış da emperyalizmin dayattığı düşmanlık ve ayrışma anlayışına karşı bir duruştur. Başarının yolu buradan geçmiştir ve geçecektir. Bugün de hedef alınan bu siyasi duruş, kültür ve anlayıştır. Önümüzdeki yüzyıl Asya’dan Afrika’ya Latin Amerika’ya kadar yeni bir tarih yazma zamanıdır. Başarının anahtarı elimizdedir."
+  },
+  "keywords": {"en": [], "tr": []},
+  "dates": {"received": "2023-07-31", "revised": null, "accepted": "2023-08-09", "published": "2023-09-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 4, "issue": 4, "year": 2023, "season": {"en": "Autumn", "tr": "Güz"}},
+  "pages": {"first": "28", "last": "38"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {"en": "Perinçek, Ş. (2023). The Kemalist Revolution and Asia. BRIQ Belt & Road Initiative Quarterly, 4(4), 28-38.", "tr": "Perinçek, Ş. (2023). 100. Yılında Kemalist Devrim ve Asya. BRIQ Kuşak ve Yol Girişimi Dergisi, 4(4), 28-38."},
+  "urls": {"en": "https://briqjournal.com/en/the-kemalist-revolution-and-asia", "tr": "https://briqjournal.com/kemalist-devrim-ve-asya", "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_%C5%9EulePerin%C3%A7ek_ENG.pdf", "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_%C5%9EulePerin%C3%A7ek_TR.pdf", "pdfEnLocal": "/assets/archive/pdfs/articles/kemalist-devrim-ve-asya-en.pdf", "pdfTrLocal": "/assets/archive/pdfs/articles/kemalist-devrim-ve-asya-tr.pdf", "sharedBilingualPdf": false}
 }

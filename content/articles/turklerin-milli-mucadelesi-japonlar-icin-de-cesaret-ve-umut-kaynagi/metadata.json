@@ -1,26 +1,34 @@
 {
-  "slug": "turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi",
-  "volume": 4,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2023",
-  "author": "Doç. Dr. Ogasawara Hiroyuki",
-  "title_tr": "\"Türkler'in millî mücadelesi, Japonlar için de cesaret ve umut kaynağı\"",
-  "abstract_tr": "“Doktora tezimi bitirdikten sonra, Osmanlı İmparatorluğu’nun modern döneminden Türkiye Cumhuriyeti’nin başlangıç dönemine kadarki tarih yazımına ilişkin araştırmalar yapmaya başladım. Ahmet Mithat ve Namık Kemal’in tarih düşünceleri, Tanzimat dönemi sonrası Modern Osmanlı İmparatorluğu’ndaki tarih eğitimini araştırdıktan sonra, Türkiye Cumhuriyeti’nin ilk döneminde yazılmış tarih ders kitaplarına ilgi duydum. Türkiye Cumhuriyeti adıyla yeni bir devlet kurulurken, ulusa yeni bir kimlik vermek için yeni bir tarih anlatısı oluşturma denemesi yapıldı. Yazdığım Atatürk biyografisinin, 2023 yılının Ekim ayında, Türkiye Cumhuriyeti’nin kuruluşunun 100. yıl dönümünde yayınlanması planlanıyor. Türkiye, ABD ve Avrupalı büyük devletlerin müdahalelerine daha fazla maruz olan coğrafi koşullardaydı. Atatürk ve yoldaşları bütün bu zorlukları aşarak Türkiye Cumhuriyeti’ni kurdular. Millî mücadele süreci Japonlara da büyük bir cesaret ve umut vermektedir.”",
-  "source_tr": "https://briqjournal.com/turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi",
-  "source_en": "https://briqjournal.com/en/the-turkish-national-struggle-inspires-the-japanese-well",
-  "title_en": "\"The Turkish national struggle inspires the Japanese as well\"",
-  "abstract_en": "Abstract \n “After completing my doctoral thesis, I began research on historical writing starting from the Ottoman Empire’s modern period up to the beginning period of the Republic of Türkiye. After researching Ahmet Mithat and Namik Kemal’s thoughts on history and the education of history in the Modern Ottoman Empire after the Tanzimat period, I became interested in the history textbooks written in the first period of the Republic of Türkiye. While a new state named the Republic of Türkiye was being established, an attempt was made to create a new historical narrative to give the nation a new identity. The biography of Atatürk I have written is planned to be published in October 2023, on the 100th anniversary of the establishment of the Republic of Türkiye. Türkiye was in such geographical conditions that it had greater exposure to the intervention of the US and major European states. Ataturk and his comrades overcame all these difficulties and established the Republic of Türkiye. The national struggle process gives the Japanese great courage and hope, too.”",
-  "citation_tr": "Atıf \n Hiroyuki, O. (2023). Türklerin millî mücadelesi, Japonlar için de cesaret ve umut kaynağı. (Röportajı yapan İnan Öner). BRIQ Kuşak ve Yol Girişimi Dergisi, 4(4), 80-85.",
-  "citation_en": "Citation \n Hiroyuki, O. (2023). The Turkish national struggle inspires the Japanese as well. (İnan Öner, Interviewer). BRIQ Belt & Road Initiative Quarterly, 4(4), 80-85.",
-  "pages": "80-85",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_OgasawaraHiroyuki_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_OgasawaraHiroyuki_ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Röportaj",
-  "publication_type_en": "Interview",
-  "published_online_date": "2023-09-01"
+  "schemaVersion": 2,
+  "id": "turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi",
+  "articleType": {"id": "interview", "tr": "Röportaj", "en": "Interview", "peerReviewed": false},
+  "title": {"en": "“The Turkish national struggle inspires the Japanese as well”", "tr": "“Türkler'in millî mücadelesi, Japonlar için de cesaret ve umut kaynağı”"},
+  "authors": [
+    {"displayName": "Ogasawara Hiroyuki", "givenName": null, "familyName": null, "orcid": null, "affiliations": [
+      {"name": "Kyushu University", "nameTr": "Kyushu Üniversitesi", "nameEn": "Kyushu University", "country": "Japan", "ror": null}
+    ]}
+  ],
+  "contributors": [
+    {"displayName": "İnan Öner", "givenName": "İnan", "familyName": "Öner", "role": "interviewer", "orcid": null}
+  ],
+  "abstract": {
+    "en": "“After completing my doctoral thesis, I began research on historical writing starting from the Ottoman Empire’s modern period up to the beginning period of the Republic of Türkiye. After researching Ahmet Mithat and Namik Kemal’s thoughts on history and the education of history in the Modern Ottoman Empire after the Tanzimat period, I became interested in the history textbooks written in the first period of the Republic of Türkiye. While a new state named the Republic of Türkiye was being established, an attempt was made to create a new historical narrative to give the nation a new identity. The biography of Atatürk I have written is planned to be published in October 2023, on the 100th anniversary of the establishment of the Republic of Türkiye. Türkiye was in such geographical conditions that it had greater exposure to the intervention of the US and major European states. Ataturk and his comrades overcame all these difficulties and established the Republic of Türkiye. The national struggle process gives the Japanese great courage and hope, too.”",
+    "tr": "“Doktora tezimi bitirdikten sonra, Osmanlı İmparatorluğu’nun modern döneminden Türkiye Cumhuriyeti’nin başlangıç dönemine kadarki tarih yazımına ilişkin araştırmalar yapmaya başladım. Ahmet Mithat ve Namık Kemal’in tarih düşünceleri, Tanzimat dönemi sonrası Modern Osmanlı İmparatorluğu’ndaki tarih eğitimini araştırdıktan sonra, Türkiye Cumhuriyeti’nin ilk döneminde yazılmış tarih ders kitaplarına ilgi duydum. Türkiye Cumhuriyeti adıyla yeni bir devlet kurulurken, ulusa yeni bir kimlik vermek için yeni bir tarih anlatısı oluşturma denemesi yapıldı. Yazdığım Atatürk biyografisinin, 2023 yılının Ekim ayında, Türkiye Cumhuriyeti’nin kuruluşunun 100. yıl dönümünde yayınlanması planlanıyor. Türkiye, ABD ve Avrupalı büyük devletlerin müdahalelerine daha fazla maruz olan coğrafi koşullardaydı. Atatürk ve yoldaşları bütün bu zorlukları aşarak Türkiye Cumhuriyeti’ni kurdular. Millî mücadele süreci Japonlara da büyük bir cesaret ve umut vermektedir.”"
+  },
+  "keywords": {"en": [], "tr": []},
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2023-09-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 4, "issue": 4, "year": 2023, "season": {"en": "Autumn", "tr": "Güz"}},
+  "pages": {"first": "80", "last": "85"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {"en": "Hiroyuki, O. (2023). The Turkish national struggle inspires the Japanese as well. (İnan Öner, Interviewer). BRIQ Belt & Road Initiative Quarterly, 4(4), 80-85.", "tr": "Hiroyuki, O. (2023). Türklerin millî mücadelesi, Japonlar için de cesaret ve umut kaynağı. (Röportajı yapan İnan Öner). BRIQ Kuşak ve Yol Girişimi Dergisi, 4(4), 80-85."},
+  "urls": {"en": "https://briqjournal.com/en/the-turkish-national-struggle-inspires-the-japanese-well", "tr": "https://briqjournal.com/turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi", "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_OgasawaraHiroyuki_ENG.pdf", "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_OgasawaraHiroyuki_TR.pdf", "pdfEnLocal": "/assets/archive/pdfs/articles/turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi-en.pdf", "pdfTrLocal": "/assets/archive/pdfs/articles/turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi-tr.pdf", "sharedBilingualPdf": false}
 }

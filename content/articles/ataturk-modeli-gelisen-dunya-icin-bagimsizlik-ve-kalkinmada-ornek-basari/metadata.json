@@ -1,26 +1,34 @@
 {
-  "slug": "ataturk-modeli-gelisen-dunya-icin-bagimsizlik-ve-kalkinmada-ornek-basari",
-  "volume": 4,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2023",
-  "author": "Assoc. Prof. Dr. Aleksandr Sotniçenko",
-  "title_tr": "\"Atatürk modeli: Gelişen dünya için bağımsızlık ve kalkınmada örnek başarı\"",
-  "abstract_tr": "\"Atatürk’ün yaşamı boyunca yaptığı açıklamalara ve verdiği demeçlere baktığımız takdirde, bazı tezlerinin Rus-Türk ilişkilerinin gelişimi bakımından müspet ve menfi etkilere neden olduğunu söyleyebiliriz. Ama asla unutulmaması gereken çok mühim bir detay var: Taksim Meydanı’ndaki Cumhuriyet Anıtı’nda, Atatürk’ün hemen yanında, Sovyet Rusya’nın Türkiye’deki ilk büyükelçisi Semyon Aralov’un yer aldığını görüyoruz. Bakınız bu anıt, bizzat Gazi Mustafa Kemal Paşa’nın emri ile dikilmiştir. Bu nedenle, Atatürk’ün Rusya ile tesis edilen yakın dostluğu ve kardeşliği unutmaması için Türk halkına bir vasiyet bıraktığını ifade edebiliriz. Gelişmekte olan ülkeler bakımından da Atatürk, 20. yüzyılın ilk yarısı itibarıyla bir tarım ülkesi olan Türkiye’yi ekonomik bakımdan kalkındıran endüstriyel dönüşümün temellerini atmış örnek bir liderdir. Kendisinin bu icraatlarının etkileri 21. yüzyılın küresel siyasi süreçlerinde de güçlü bir biçimde hissedilmektedir.”",
-  "source_tr": "https://briqjournal.com/ataturk-modeli-gelisen-dunya-icin-bagimsizlik-ve-kalkinmada-ornek-basari",
-  "source_en": "https://briqjournal.com/en/the-ataturk-model-inspirational-achievement-independence-and-development",
-  "title_en": "\"The Atatürk model: An inspirational achievement in independence and development\"",
-  "abstract_en": "Abstract \n “Let’s look at the explanations and statements made by Mustafa Kemal throughout his life. We can say that some of his theses positively and negatively affected the developing Russian-Turkish relations. But a very important detail should never be forgotten: In the Republic Monument in Taksim Square, right next to Atatürk, we see that Semyon Aralov, the first ambassador of Soviet Russia to Türkiye, is located. The order of Gazi Mustafa Kemal Pasha himself erected this monument. For this reason, we can state that Atatürk left a legacy to the Turkish people not to forget the close friendship and brotherhood established with Russia. Regarding developing countries, Atatürk is an exemplary leader who laid the foundations of the industrial transformation that economically developed Türkiye, an agricultural country as of the first half of the 20th century. The effects of his actions are also strongly felt in the global political processes of the 21st century.”",
-  "citation_tr": "Atıf \n Sotniçenko A. (2023). Atatürk modeli: Gelişen dünya için bağımsızlık ve kalkınmada örnek başarı.\n(Röportajı yapan Işıkgün Akfırat). BRIQ Kuşak ve Yol Girişimi Dergisi, 4(4), 40-44.",
-  "citation_en": "Citation \n Sotnichenko, A. (2023). The Atatürk model: An inspirational achievement in independence and development. (Işıkgün Akfırat, Interviewer). BRIQ Belt & Road Initiative Quarterly, 4(4), 40-44.",
-  "pages": "40-44",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_AlexandrSotni%C3%A7enko_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_AlexandrSotni%C3%A7enko_ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/ataturk-modeli-gelisen-dunya-icin-bagimsizlik-ve-kalkinmada-ornek-basari-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/ataturk-modeli-gelisen-dunya-icin-bagimsizlik-ve-kalkinmada-ornek-basari-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Röportaj",
-  "publication_type_en": "Interview",
-  "published_online_date": "2023-09-01"
+  "schemaVersion": 2,
+  "id": "ataturk-modeli-gelisen-dunya-icin-bagimsizlik-ve-kalkinmada-ornek-basari",
+  "articleType": {"id": "interview", "tr": "Röportaj", "en": "Interview", "peerReviewed": false},
+  "title": {"en": "“The Atatürk model: An inspirational achievement in independence and development”", "tr": "“Atatürk modeli: Gelişen dünya için bağımsızlık ve kalkınmada örnek başarı”"},
+  "authors": [
+    {"displayName": "Aleksandr Sotniçenko", "givenName": "Aleksandr", "familyName": "Sotniçenko", "orcid": null, "affiliations": [
+      {"name": "Russian Cultural and Scientific Center (Rus Evi Ankara)", "nameTr": "Rus Kültür ve Bilim Merkezi (Rus Evi Ankara)", "nameEn": "Russian Cultural and Scientific Center (Rus Evi Ankara)", "country": "Türkiye", "ror": null}
+    ]}
+  ],
+  "contributors": [
+    {"displayName": "Işıkgün Akfırat", "givenName": "Işıkgün", "familyName": "Akfırat", "role": "interviewer", "orcid": null}
+  ],
+  "abstract": {
+    "en": "“Let’s look at the explanations and statements made by Mustafa Kemal throughout his life. We can say that some of his theses positively and negatively affected the developing Russian-Turkish relations. But a very important detail should never be forgotten: In the Republic Monument in Taksim Square, right next to Atatürk, we see that Semyon Aralov, the first ambassador of Soviet Russia to Türkiye, is located. The order of Gazi Mustafa Kemal Pasha himself erected this monument. For this reason, we can state that Atatürk left a legacy to the Turkish people not to forget the close friendship and brotherhood established with Russia. Regarding developing countries, Atatürk is an exemplary leader who laid the foundations of the industrial transformation that economically developed Türkiye, an agricultural country as of the first half of the 20th century. The effects of his actions are also strongly felt in the global political processes of the 21st century.”",
+    "tr": "“Atatürk’ün yaşamı boyunca yaptığı açıklamalara ve verdiği demeçlere baktığımız takdirde, bazı tezlerinin Rus-Türk ilişkilerinin gelişimi bakımından müspet ve menfi etkilere neden olduğunu söyleyebiliriz. Ama asla unutulmaması gereken çok mühim bir detay var: Taksim Meydanı’ndaki Cumhuriyet Anıtı’nda, Atatürk’ün hemen yanında, Sovyet Rusya’nın Türkiye’deki ilk büyükelçisi Semyon Aralov’un yer aldığını görüyoruz. Bakınız bu anıt, bizzat Gazi Mustafa Kemal Paşa’nın emri ile dikilmiştir. Bu nedenle, Atatürk’ün Rusya ile tesis edilen yakın dostluğu ve kardeşliği unutmaması için Türk halkına bir vasiyet bıraktığını ifade edebiliriz. Gelişmekte olan ülkeler bakımından da Atatürk, 20. yüzyılın ilk yarısı itibarıyla bir tarım ülkesi olan Türkiye’yi ekonomik bakımdan kalkındıran endüstriyel dönüşümün temellerini atmış örnek bir liderdir. Kendisinin bu icraatlarının etkileri 21. yüzyılın küresel siyasi süreçlerinde de güçlü bir biçimde hissedilmektedir.”"
+  },
+  "keywords": {"en": [], "tr": []},
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2023-09-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 4, "issue": 4, "year": 2023, "season": {"en": "Autumn", "tr": "Güz"}},
+  "pages": {"first": "40", "last": "44"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {"en": "Sotnichenko, A. (2023). The Atatürk model: An inspirational achievement in independence and development. (Işıkgün Akfırat, Interviewer). BRIQ Belt & Road Initiative Quarterly, 4(4), 40-44.", "tr": "Sotniçenko A. (2023). Atatürk modeli: Gelişen dünya için bağımsızlık ve kalkınmada örnek başarı. (Röportajı yapan Işıkgün Akfırat). BRIQ Kuşak ve Yol Girişimi Dergisi, 4(4), 40-44."},
+  "urls": {"en": "https://briqjournal.com/en/the-ataturk-model-inspirational-achievement-independence-and-development", "tr": "https://briqjournal.com/ataturk-modeli-gelisen-dunya-icin-bagimsizlik-ve-kalkinmada-ornek-basari", "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_AlexandrSotni%C3%A7enko_ENG.pdf", "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_AlexandrSotni%C3%A7enko_TR.pdf", "pdfEnLocal": "/assets/archive/pdfs/articles/ataturk-modeli-gelisen-dunya-icin-bagimsizlik-ve-kalkinmada-ornek-basari-en.pdf", "pdfTrLocal": "/assets/archive/pdfs/articles/ataturk-modeli-gelisen-dunya-icin-bagimsizlik-ve-kalkinmada-ornek-basari-tr.pdf", "sharedBilingualPdf": false}
 }
