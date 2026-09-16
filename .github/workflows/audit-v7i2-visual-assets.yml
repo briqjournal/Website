@@ -1,0 +1,36 @@
+name: Inspect V7I2 visual assets
+on:
+  push:
+    branches: [automation/v7i2-deep-audit]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Inspect embedded images
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json,urllib.request,tempfile,subprocess
+          from pathlib import Path
+          slugs=['zhang-yaxin','liu-chunhua','sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu']
+          tmp=Path(tempfile.mkdtemp())
+          for slug in slugs:
+              m=json.loads(Path('content/articles',slug,'metadata.json').read_text())
+              print('\n###',slug)
+              seen=set()
+              for locale in ['tr','en']:
+                  url=(m.get('urls') or {}).get('pdfTr' if locale=='tr' else 'pdfEn') or m.get('pdf_tr_source' if locale=='tr' else 'pdf_en_source')
+                  if not url or url in seen: continue
+                  seen.add(url)
+                  pdf=tmp/f'{slug}-{locale}.pdf'
+                  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+                  with urllib.request.urlopen(req,timeout=40) as r: pdf.write_bytes(r.read())
+                  print(locale,url,'bytes',pdf.stat().st_size)
+                  out=subprocess.run(['pdfimages','-list',str(pdf)],capture_output=True,text=True,check=True).stdout
+                  print(out)
+          PY
