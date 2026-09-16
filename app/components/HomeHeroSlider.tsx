@@ -89,7 +89,7 @@ const slides = {
       action: "Explore the issue",
       secondaryHref: "/en/current-issue#pdf-viewer",
       secondary: "Full issue PDF",
-      image: "/assets/current-issue-en.jpg",
+      image: "/assets/archive/covers/cilt-7-sayi-4-en-v2.jpg",
       imageAlt: "BRIQ Volume 7 Issue 4 cover",
       tone: "plum",
     },
