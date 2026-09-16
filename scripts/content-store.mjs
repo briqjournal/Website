@@ -126,6 +126,103 @@ function assertSlug(slug, context) {
   assert(safeSlug.test(slug), `Unsafe article slug in ${context}: ${slug}`);
 }
 
+function assertUniqueIds(items, context) {
+  const ids = items.map((item) => item?.id);
+  assert(ids.every((id) => typeof id === "string" && id.trim()), `${context} items must define non-empty ids.`);
+  assert(new Set(ids).size === ids.length, `Duplicate id in ${context}.`);
+}
+
+function validateFullTextCatalog(fulltext) {
+  const collections = ["localized", "current", "en_archive"];
+  const membership = new Map();
+
+  for (const collection of collections) {
+    const slugs = fulltext[collection] || [];
+    assert(Array.isArray(slugs), `content/catalog.json fulltext.${collection} must be an array.`);
+    assert(new Set(slugs).size === slugs.length, `Duplicate slug in fulltext.${collection}.`);
+    for (const slug of slugs) {
+      assertSlug(slug, `fulltext.${collection}`);
+      assert(!membership.has(slug), `Full-text slug appears in both ${membership.get(slug)} and ${collection}: ${slug}`);
+      membership.set(slug, collection);
+    }
+  }
+}
+
+function validateLocalizedStatementMetadata(value, context) {
+  assert(value && typeof value === "object" && !Array.isArray(value), `${context} must be an object.`);
+  for (const field of ["statement_en", "statement_tr"]) {
+    if (value[field] !== undefined && value[field] !== null) {
+      assert(typeof value[field] === "string" && value[field].trim(), `${context}.${field} must be a non-empty string.`);
+    }
+  }
+}
+
+function validateLocalizedArticleMetadata(article, slug) {
+  assert(typeof article.publication_type_en === "string" && article.publication_type_en.trim(), `Localized metadata must define publication_type_en: ${slug}`);
+  assert(typeof article.publication_type_tr === "string" && article.publication_type_tr.trim(), `Localized metadata must define publication_type_tr: ${slug}`);
+  assert(typeof article.peer_reviewed === "boolean", `Localized metadata must define peer_reviewed: ${slug}`);
+  assert(typeof article.scholarly === "boolean", `Localized metadata must define scholarly: ${slug}`);
+
+  for (const field of ["conflict_of_interest", "author_contributions", "ethics_approval_and_informed_consent", "data_availability", "ai_use_statement", "acknowledgements"]) {
+    if (article[field] !== undefined) validateLocalizedStatementMetadata(article[field], `${slug} metadata.${field}`);
+  }
+
+  if (article.funding !== undefined) {
+    validateLocalizedStatementMetadata(article.funding, `${slug} metadata.funding`);
+    if (article.funding.funders !== undefined) {
+      assert(Array.isArray(article.funding.funders), `${slug} metadata.funding.funders must be an array.`);
+      for (const [index, funder] of article.funding.funders.entries()) {
+        assert(funder && typeof funder === "object" && !Array.isArray(funder), `${slug} metadata.funding.funders[${index}] must be an object.`);
+        assert(
+          (typeof funder.name_en === "string" && funder.name_en.trim()) ||
+          (typeof funder.name_tr === "string" && funder.name_tr.trim()),
+          `${slug} metadata.funding.funders[${index}] must define a localized name.`,
+        );
+        if (funder.grant_or_project_number !== undefined && funder.grant_or_project_number !== null) {
+          assert(typeof funder.grant_or_project_number === "string" && funder.grant_or_project_number.trim(), `${slug} metadata.funding.funders[${index}].grant_or_project_number must be a non-empty string.`);
+        }
+      }
+    }
+  }
+}
+
+function validateLocalizedFullTextRecord(record, slug, locale) {
+  const context = `${slug}/fulltext/${locale}.json`;
+  assert(record && typeof record === "object" && !Array.isArray(record), `${context} must contain an object.`);
+
+  for (const field of ["sections", "keywords", "footnotes", "references", "figures"]) {
+    assert(Array.isArray(record[field]), `${context} must define a ${field} array.`);
+  }
+  assert(record.sections.length > 0, `${context} must contain at least one section.`);
+  assert(record.keywords.every((keyword) => typeof keyword === "string" && keyword.trim()), `${context} keywords must be non-empty strings.`);
+
+  assertUniqueIds(record.sections, `${context} sections`);
+  for (const section of record.sections) {
+    assert(typeof section.title === "string" && section.title.trim(), `${context} section ${section.id} must define a title.`);
+    assert(Array.isArray(section.paragraphs), `${context} section ${section.id} must define paragraphs.`);
+    assert(section.paragraphs.every((paragraph) => typeof paragraph === "string" && paragraph.trim()), `${context} section ${section.id} paragraphs must be non-empty strings.`);
+  }
+
+  assertUniqueIds(record.footnotes, `${context} footnotes`);
+  assert(record.footnotes.every((item) => typeof item.text === "string" && item.text.trim()), `${context} footnotes must define text.`);
+  assertUniqueIds(record.references, `${context} references`);
+  assert(record.references.every((item) => typeof item.text === "string" && item.text.trim()), `${context} references must define text.`);
+  assertUniqueIds(record.figures, `${context} figures`);
+  assert(record.figures.every((item) =>
+    typeof item.src === "string" && item.src.trim() &&
+    typeof item.caption === "string" && item.caption.trim()
+  ), `${context} figures must define src and caption.`);
+}
+
+function validateLocalizedPair(pair, slug) {
+  for (const field of ["sections", "keywords", "footnotes", "references", "figures"]) {
+    assert(
+      pair.en[field].length === pair.tr[field].length,
+      `Localized ${field} count mismatch for ${slug}: en=${pair.en[field].length}, tr=${pair.tr[field].length}`,
+    );
+  }
+}
+
 function titleCaseKeyword(value, locale) {
   const language = locale === "tr" ? "tr-TR" : "en-US";
   return value.trim().replace(/\p{L}[\p{L}\p{M}]*(?:['’]\p{L}[\p{L}\p{M}]*)?/gu, (word) => {
@@ -189,6 +286,7 @@ export async function loadCatalog(root = process.cwd()) {
   assert(Array.isArray(catalog.issue_order), "content/catalog.json must define issue_order.");
   assert(Array.isArray(catalog.article_order), "content/catalog.json must define article_order.");
   assert(catalog.fulltext && typeof catalog.fulltext === "object", "content/catalog.json must define fulltext.");
+  validateFullTextCatalog(catalog.fulltext);
   return catalog;
 }
 
@@ -197,6 +295,7 @@ export async function buildArchiveData(root = process.cwd()) {
   const issues = [];
   const issueKeys = new Set();
   const referencedArticles = [];
+  const localizedSlugs = new Set(catalog.fulltext.localized || []);
 
   for (const file of catalog.issue_order) {
     assert(/^v\d{2}-i\d{2}\.json$/.test(file), `Unsafe issue filename: ${file}`);
@@ -225,6 +324,7 @@ export async function buildArchiveData(root = process.cwd()) {
     const article = await readJson(join(root, "content/articles", slug, "metadata.json"));
     assert(article.slug === slug, `Metadata slug mismatch for ${slug}.`);
     assert(issueKeys.has(`${article.volume}:${article.issue}`), `Missing issue for ${slug}.`);
+    if (localizedSlugs.has(slug)) validateLocalizedArticleMetadata(article, slug);
     if (article.doi) {
       assert(!dois.has(article.doi), `Duplicate DOI: ${article.doi}`);
       dois.add(article.doi);
@@ -257,6 +357,7 @@ async function readLocalizedFullText(root, slug, locale) {
   assertSlug(slug, `${locale}.json`);
   const record = await readJson(join(root, "content/articles", slug, "fulltext", `${locale}.json`));
   if (Array.isArray(record.keywords)) record.keywords = normalizeKeywordList(record.keywords, locale);
+  validateLocalizedFullTextRecord(record, slug, locale);
   return record;
 }
 
@@ -269,10 +370,14 @@ export async function loadFullTextCollections(root = process.cwd()) {
   assert(new Set(currentSlugs).size === currentSlugs.length, "Duplicate current full-text slug.");
   assert(new Set(archiveSlugs).size === archiveSlugs.length, "Duplicate English archive full-text slug.");
   const localized = {};
-  for (const slug of localizedSlugs) localized[slug] = {
-    en: await readLocalizedFullText(root, slug, "en"),
-    tr: await readLocalizedFullText(root, slug, "tr"),
-  };
+  for (const slug of localizedSlugs) {
+    const pair = {
+      en: await readLocalizedFullText(root, slug, "en"),
+      tr: await readLocalizedFullText(root, slug, "tr"),
+    };
+    validateLocalizedPair(pair, slug);
+    localized[slug] = pair;
+  }
   const current = {};
   for (const slug of currentSlugs) current[slug] = await readFullTextRecord(root, slug, "current.json");
   const enArchive = {};

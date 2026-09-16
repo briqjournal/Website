@@ -32,9 +32,9 @@ This repository powers the bilingual BRIQ journal site on Cloudflare Workers. Op
 | Change | Start here |
 |---|---|
 | Article/issue metadata, dates, DOI, type, PDF paths | `content/articles/<slug>/metadata.json`, `content/issues/vNN-iNN.json` |
-| Current-period bilingual full text | `content/articles/<slug>/fulltext/current.json` |
-| Archived English full text | `content/articles/<slug>/fulltext/en-archive.json` |
-| Saudi English supplement | `content/articles/<slug>/fulltext/saudi-en.json` |
+| Locale-split current full text | `content/articles/<slug>/fulltext/en.json`, `content/articles/<slug>/fulltext/tr.json`; register the slug in `content/catalog.json#fulltext.localized` |
+| Transitional bilingual full text (legacy only) | `content/articles/<slug>/fulltext/current.json`; do not use for new or migrated issues |
+| Transitional archived English full text (legacy only) | `content/articles/<slug>/fulltext/en-archive.json`; do not add locale supplements |
 | Article layout, declarations, citations, PDF page | `app/components/ArticlePlatform.tsx`, `ArticleRichText.tsx`, `PdfViewer.tsx` |
 | Issue layout and issue editorial | `app/components/IssuePlatform.tsx`, `CurrentIssueEditorial.tsx`, `app/editorials.ts` |
 | Calls for papers | `app/site-data.ts`, `app/call-content.ts`, call components |
@@ -51,6 +51,8 @@ This repository powers the bilingual BRIQ journal site on Cloudflare Workers. Op
 - PDFs belong in Cloudflare R2, not Git. Preserve the `BRIQ_PDF -> briq-pdf` binding.
 - Do not add D1 unless a documented feature and schema genuinely require it.
 - Preserve canonical `/tr` and `/en` trees, locale routing, metadata, sitemap, and OAI-PMH alignment.
+- For locale-split articles, keep shared bibliographic and declaration data in `metadata.json`; keep prose, keywords, notes, references, and figures in `fulltext/en.json` and `fulltext/tr.json`.
+- Store explicit `publication_type_en`, `publication_type_tr`, `peer_reviewed`, and `scholarly` values for locale-split records. Order bilingual metadata with English before Turkish and never infer book reviews from citation text.
 - Treat `app/archive-data.json`, `app/article-fulltext-*.json`, `app/generated-fulltext/`, `app/generated-runtime/`, and `public/assets/data/article-search-index.json` as generated outputs.
 - Do not manually deploy a source state that differs from the Git commit intended for production.
 - Do not use uploaded editorial/organizational documents unless the requested site change actually depends on them.

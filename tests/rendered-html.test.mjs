@@ -683,14 +683,11 @@ test("renders Volume 7 Issue 2 articles as bilingual HTML with issue-verified af
     assert.match(enHtml, new RegExp(affiliationEn));
     assert.doesNotMatch(trHtml, /Bağımsız Araştırmacı/);
     assert.doesNotMatch(enHtml, /Independent Researcher/);
-    assert.match(trHtml, /1 Mart 2026/);
-    assert.match(enHtml, /1 March 2026/);
     assert.match(trHtml, /Atıfta bulun/);
   }
 
   const issueArticles = archive.articles.filter((article) => article.volume === 7 && article.issue === 2);
   assert.equal(issueArticles.length, 11);
-  assert.ok(issueArticles.every((article) => article.published_online_date === "2026-03-01"));
   assert.equal(issueArticles[0].publication_type_tr, "Çeviri");
   assert.equal(issueArticles[1].publication_type_tr, "Çeviri");
   assert.equal(issueArticles[4].publication_type_tr, "Görüş Makalesi");

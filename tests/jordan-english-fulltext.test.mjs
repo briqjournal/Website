@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { loadFullTextCollections } from "../scripts/content-store.mjs";
 
 const slug = "dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi";
@@ -54,8 +55,16 @@ test("keeps the Jordan article in clean locale-split canonical full text", async
   assert.match(record.en.figures[7].caption, /^Jordan’s national digital transformation strategy/u);
   assert(record.en.figures.every((figure) => !/(?:Fotoğraf|Çizim|Ürdün)/u.test(figure.caption)));
 
-  assert.match(record.en.declarations.funding, /D5000260296/u);
-  assert.match(record.tr.declarations.funding, /D5000260296/u);
+  assert.equal(record.en.declarations, undefined);
+  assert.equal(record.tr.declarations, undefined);
+  const metadata = JSON.parse(await readFile(
+    new URL(`../content/articles/${slug}/metadata.json`, import.meta.url),
+    "utf8",
+  ));
+  assert.match(metadata.funding.statement_en, /D5000260296/u);
+  assert.match(metadata.funding.statement_tr, /D5000260296/u);
+  assert.equal(metadata.funding.funders[0].name_en, "Northwestern Polytechnical University");
+  assert.equal(metadata.funding.funders[0].grant_or_project_number, "D5000260296");
   assert.doesNotMatch(record.en.sections.at(-1).paragraphs.at(-1), /D5000260296/u);
   assert.doesNotMatch(record.tr.sections.at(-1).paragraphs.at(-1), /D5000260296/u);
 });
