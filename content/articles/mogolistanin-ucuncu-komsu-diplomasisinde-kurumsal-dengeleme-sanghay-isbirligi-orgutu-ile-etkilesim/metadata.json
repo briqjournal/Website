@@ -1,27 +1,63 @@
 {
-  "slug": "mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim",
-  "volume": 7,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2026",
-  "author": "Wang Jiani - Bilguunzaya Luvsandandar",
-  "title_tr": "Moğolistan’ın Üçüncü Komşu Diplomasisi’nde Kurumsal Dengeleme: Şanghay İşbirliği Örgütü ile Etkileşim",
-  "abstract_tr": "Denize kıyısı olmayan ve kalıcı tarafsızlığa bağlı bir devlet olarak Moğolistan, Üçüncü Komşu Diplomasisi politikasını Şanghay İşbirliği Örgütü (ŞİÖ) içinde kurumsal dengeleme mekanizmasına stratejik biçimde dönüştürmüştür. Bu makale, Moğolistan’ın angajmanının ikili bir mantık tarafından yönlendirildiğini savunmaktadır: Risk dengeleme (hedging) ve kaldıraç kullanımı (leveraging). Moğolistan, bir yandan Çin ve Rusya’ya yönelik stratejik ve ekonomik bağımlılığını azaltmayı, diğer yandan ŞİÖ platformunu kullanarak coğrafi konumunun ve kaynak zenginliğinin değerini artırmayı amaçlamaktadır. Seçici katılım, gündemin yeniden çerçevelenmesi ve kurumsal iç içe geçirme yoluyla Moğolistan, gözlemci statüsünü özerklik ve etkiyi azamiye çıkaracak şekilde aktif olarak biçimlendirmektedir. Çalışma, Moğolistan’ın hesaplı ve yenilikçi yaklaşımının, ikincil devletlerin çok taraflı kurumları stratejik varlıklara dönüştürerek hem kurumsal dengeleme teorisini hem de çekişmeli bölgelerde küçük devlet diplomasisi pratiğini nasıl ilerletebileceğine dair güçlü bir model sunduğu sonucuna varmaktadır.",
-  "source_tr": "https://briqjournal.com/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim",
-  "source_en": "https://briqjournal.com/en/institutional-balancing-mongolias-third-neighbor-diplomacy-engagement-the-shanghai-cooperation",
-  "title_en": "Institutional Balancing in Mongolia’s Third Neighbor Diplomacy: Engagement with the Shanghai Cooperation Organization",
-  "abstract_en": "Abstract \n Mongolia, as a landlocked state committed to permanent neutrality, has strategically transformed its Third Neighbor Diplomacy policy into a mechanism for institutional balancing within the Shanghai Cooperation Organization (SCO). This article contends that Mongolia’s engagement is motivated by a dual logic of hedging and leveraging: it aims to reduce strategic and economic dependence on China and Russia while utilizing the SCO platform to enhance the value of its geographic location and resource endowments. Through selective participation, agenda reframing, and institutional nesting, Mongolia actively shapes its observer status to maximize autonomy and influence. The study concludes that Mongolia’s calculated and innovative approach provides a compelling model for how secondary states can convert multilateral institutions into strategic assets, thereby advancing both the theory of institutional balancing and the practice of small-state diplomacy in contested regions.",
-  "citation_tr": "Atıf \n Wang, J., & Luvsandandar, B. (2026). Moğolistan’ın Üçüncü Komşu Diplomasisi’nde kurumsal dengeleme: Şanghay İşbirliği Örgütü ile etkileşim. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(3), 338-365.",
-  "citation_en": "Citation \n Wang, J., & Luvsandandar, B. (2026). Institutional balancing in Mongolia’s Third Neighbor Diplomacy: Engagement with the Shanghai Cooperation Organization. BRIQ Belt & Road Initiative Quarterly, 7(3), 338-365.",
-  "pages": "338-365",
-  "received_date": "2026-02-06",
-  "revised_date": "2026-03-21",
-  "accepted_date": "2026-04-25",
-  "published_online_date": "2026-06-01",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/WANG%20JIANI%20%26%20BILGUUNZAYA%20LUVSANDANDAR%20_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/WANG%20JIANI%20%26%20BILGUUNZAYA%20LUVSANDANDAR_ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim",
+  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "title": {
+    "en": "Institutional Balancing in Mongolia’s Third Neighbor Diplomacy: Engagement with the Shanghai Cooperation Organization",
+    "tr": "Moğolistan’ın Üçüncü Komşu Diplomasisi’nde Kurumsal Dengeleme: Şanghay İşbirliği Örgütü ile Etkileşim"
+  },
+  "authors": [
+    {
+      "displayName": "Wang Jiani",
+      "givenName": "Jiani",
+      "familyName": "Wang",
+      "orcid": "https://orcid.org/0009-0000-0543-3719",
+      "affiliations": [
+        {"name": "Department of History, Shanghai University", "nameTr": "Şanghay Üniversitesi, Tarih Bölümü", "nameEn": "Department of History, Shanghai University", "country": "China", "ror": null}
+      ]
+    },
+    {
+      "displayName": "Bilguunzaya Luvsandandar",
+      "givenName": "Bilguunzaya",
+      "familyName": "Luvsandandar",
+      "orcid": "https://orcid.org/0009-0005-8843-6013",
+      "affiliations": [
+        {"name": "College of Liberal Arts, Shanghai University", "nameTr": "Şanghay Üniversitesi, Liberal Sanatlar Fakültesi", "nameEn": "College of Liberal Arts, Shanghai University", "country": "China", "ror": null}
+      ]
+    }
+  ],
+  "abstract": {
+    "en": "Mongolia, as a landlocked state committed to permanent neutrality, has strategically transformed its Third Neighbor Diplomacy policy into a mechanism for institutional balancing within the Shanghai Cooperation Organization (SCO). This article contends that Mongolia’s engagement is motivated by a dual logic of hedging and leveraging: it aims to reduce strategic and economic dependence on China and Russia while utilizing the SCO platform to enhance the value of its geographic location and resource endowments. Through selective participation, agenda reframing, and institutional nesting, Mongolia actively shapes its observer status to maximize autonomy and influence. The study concludes that Mongolia’s calculated and innovative approach provides a compelling model for how secondary states can convert multilateral institutions into strategic assets, thereby advancing both the theory of institutional balancing and the practice of small-state diplomacy in contested regions.",
+    "tr": "Denize kıyısı olmayan ve kalıcı tarafsızlığa bağlı bir devlet olarak Moğolistan, Üçüncü Komşu Diplomasisi politikasını Şanghay İşbirliği Örgütü (ŞİÖ) içinde kurumsal dengeleme mekanizmasına stratejik biçimde dönüştürmüştür. Bu makale, Moğolistan’ın angajmanının ikili bir mantık tarafından yönlendirildiğini savunmaktadır: Risk dengeleme (hedging) ve kaldıraç kullanımı (leveraging). Moğolistan, bir yandan Çin ve Rusya’ya yönelik stratejik ve ekonomik bağımlılığını azaltmayı, diğer yandan ŞİÖ platformunu kullanarak coğrafi konumunun ve kaynak zenginliğinin değerini artırmayı amaçlamaktadır. Seçici katılım, gündemin yeniden çerçevelenmesi ve kurumsal iç içe geçirme yoluyla Moğolistan, gözlemci statüsünü özerklik ve etkiyi azamiye çıkaracak şekilde aktif olarak biçimlendirmektedir. Çalışma, Moğolistan’ın hesaplı ve yenilikçi yaklaşımının, ikincil devletlerin çok taraflı kurumları stratejik varlıklara dönüştürerek hem kurumsal dengeleme teorisini hem de çekişmeli bölgelerde küçük devlet diplomasisi pratiğini nasıl ilerletebileceğine dair güçlü bir model sunduğu sonucuna varmaktadır."
+  },
+  "keywords": {
+    "en": ["hedging", "leveraging", "Mongolia", "Shanghai Cooperation Organization", "Third Neighbor Diplomacy"],
+    "tr": []
+  },
+  "dates": {"received": "2026-02-06", "revised": "2026-03-21", "accepted": "2026-04-25", "published": "2026-06-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 3, "year": 2026, "season": {"en": "Summer", "tr": "Yaz"}},
+  "pages": {"first": "338", "last": "365"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Wang, J., & Luvsandandar, B. (2026). Institutional balancing in Mongolia’s Third Neighbor Diplomacy: Engagement with the Shanghai Cooperation Organization. BRIQ Belt & Road Initiative Quarterly, 7(3), 338-365.",
+    "tr": "Wang, J., & Luvsandandar, B. (2026). Moğolistan’ın Üçüncü Komşu Diplomasisi’nde kurumsal dengeleme: Şanghay İşbirliği Örgütü ile etkileşim. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(3), 338-365."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/institutional-balancing-mongolias-third-neighbor-diplomacy-engagement-the-shanghai-cooperation",
+    "tr": "https://briqjournal.com/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/WANG%20JIANI%20%26%20BILGUUNZAYA%20LUVSANDANDAR_ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/WANG%20JIANI%20%26%20BILGUUNZAYA%20LUVSANDANDAR%20_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

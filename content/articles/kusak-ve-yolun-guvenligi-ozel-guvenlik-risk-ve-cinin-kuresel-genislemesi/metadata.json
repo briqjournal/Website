@@ -1,24 +1,45 @@
 {
-  "slug": "kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi",
-  "volume": 7,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2026",
-  "author": "Nora Maher",
-  "title_tr": "Kuşak ve Yol’un Güvenliği: Özel Güvenlik, Risk ve Çin’in Küresel Genişlemesi",
-  "abstract_tr": "",
-  "source_tr": "https://briqjournal.com/kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi",
-  "source_en": "https://briqjournal.com/en/securing-the-belt-and-road-private-security-risk-and-chinas-global-expansion",
-  "title_en": "Securing the Belt and Road: Private Security, Risk, and China’s Global Expansion",
-  "abstract_en": "",
-  "citation_tr": "Atıf \n Maher, N. (2026). Securing the Belt and Road: Private security, risk, and China’s global expansion [A. Arduino’nun China’s Private Army: Protecting the New Silk Road adlı kitabının incelemesi, 2018, Palgrave Macmillan]. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(3), 366–369.",
-  "citation_en": "Citation \n Maher, N. (2026). Securing the Belt and Road: Private security, risk, and China’s global expansion [Review of the book China’s Private Army: Protecting the New Silk Road, by A. Arduino, 2018, Palgrave Macmillan]. BRIQ Belt & Road Initiative Quarterly, 7(3), 366–369.",
-  "pages": "366–369",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/NORA%20MAHER_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/NORA%20MAHER_ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi-en.pdf",
-  "shared_bilingual_pdf": false,
-  "published_online_date": "2026-06-01"
+  "schemaVersion": 2,
+  "id": "kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi",
+  "articleType": {"id": "book-review", "tr": "Kitap İncelemesi", "en": "Book Review", "peerReviewed": false},
+  "title": {"en": "Securing the Belt and Road: Private Security, Risk, and China’s Global Expansion", "tr": "Kuşak ve Yol’un Güvenliği: Özel Güvenlik, Risk ve Çin’in Küresel Genişlemesi"},
+  "authors": [
+    {
+      "displayName": "Nora Maher",
+      "givenName": "Nora",
+      "familyName": "Maher",
+      "orcid": "https://orcid.org/0000-0002-9858-8548",
+      "affiliations": [
+        {"name": "Department of Political Science, May University in Cairo", "nameTr": "May Üniversitesi (MUC), Siyaset Bilimi Bölümü", "nameEn": "Department of Political Science, May University in Cairo", "country": "Egypt", "ror": null}
+      ]
+    }
+  ],
+  "abstract": {"en": null, "tr": null},
+  "keywords": {"en": ["Securing the Belt and Road", "Private Security"], "tr": []},
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2026-06-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 3, "year": 2026, "season": {"en": "Summer", "tr": "Yaz"}},
+  "pages": {"first": "366", "last": "369"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Maher, N. (2026). Securing the Belt and Road: Private security, risk, and China’s global expansion [Review of the book China’s Private Army: Protecting the New Silk Road, by A. Arduino, 2018, Palgrave Macmillan]. BRIQ Belt & Road Initiative Quarterly, 7(3), 366–369.",
+    "tr": "Maher, N. (2026). Securing the Belt and Road: Private security, risk, and China’s global expansion [A. Arduino’nun China’s Private Army: Protecting the New Silk Road adlı kitabının incelemesi, 2018, Palgrave Macmillan]. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(3), 366–369."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/securing-the-belt-and-road-private-security-risk-and-chinas-global-expansion",
+    "tr": "https://briqjournal.com/kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/NORA%20MAHER_ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/NORA%20MAHER_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
