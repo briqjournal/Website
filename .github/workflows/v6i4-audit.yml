@@ -1,4 +1,4 @@
-name: Verify Volume 6 Issue 4 build
+name: Deep audit Volume 6 Issue 4 references
 on:
   push:
     branches: [automation/v6i4-fulltext]
@@ -6,19 +6,61 @@ on:
 permissions:
   contents: read
 jobs:
-  verify:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Build latest main
+      - name: Audit latest main references and formatting
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
           git checkout --detach origin/main
-          echo "VERIFYING $(git rev-parse HEAD)"
-          npm ci --no-audit --no-fund
-          npm run generate:data
-          npm run build
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,re,difflib
+          issue=json.loads(Path('content/issues/v06-i04.json').read_text(encoding='utf-8'))
+          print('MAIN',__import__('subprocess').check_output(['git','rev-parse','HEAD'],text=True).strip())
+          def key(text):
+            text=text.lower()
+            text=re.sub(r'https?://\S+','',text)
+            text=re.sub(r'[^a-z0-9а-яçğıöşü]+',' ',text)
+            return ' '.join(text.split())[:100]
+          url_bad=re.compile(r'https?://\s|https?://\S*\s+\.(?:com|org|net|edu)|\.(?:com|org|net|edu)\s+[/a-z0-9]|https?://[^ ]*\s+[a-z0-9_-]+\.(?:com|org|net)',re.I)
+          split_bad=re.compile(r'\b(?:[A-Za-z]{2,})-\s+[A-Za-z]{2,}\b')
+          for slug in issue['articles']:
+            fp=Path('content/articles')/slug/'fulltext/current.json'
+            f=json.loads(fp.read_text(encoding='utf-8'))
+            tr=f['tr'].get('references',[]); en=f['en'].get('references',[])
+            print('\n###',slug,'TR',len(tr),'EN',len(en))
+            for loc,refs in [('TR',tr),('EN',en)]:
+              for i,r in enumerate(refs,1):
+                t=r.get('text','')
+                flags=[]
+                if 'https:// ' in t or 'http:// ' in t: flags.append('URL_AFTER_SCHEME_SPACE')
+                if re.search(r'\.(?:com|org|net|edu)\s+/',t,re.I): flags.append('URL_DOMAIN_SPACE')
+                if re.search(r'https?://\S+\.\s+(?:com|org|net|edu)',t,re.I): flags.append('URL_DOT_SPACE_TLD')
+                if re.search(r'https?://[^ ]+\s+[A-Za-z0-9_-]+/',t): flags.append('URL_INTERNAL_SPACE')
+                if re.search(r'\b[A-Za-z]{2,}-\s+[A-Za-z]{2,}\b',t): flags.append('WORD_HYPHEN_SPACE')
+                if flags: print(loc,'REF_FLAG',i,','.join(flags),repr(t))
+            if tr and en and len(tr)!=len(en):
+              a=[key(x.get('text','')) for x in tr]; b=[key(x.get('text','')) for x in en]
+              sm=difflib.SequenceMatcher(a=a,b=b,autojunk=False)
+              for tag,i1,i2,j1,j2 in sm.get_opcodes():
+                if tag!='equal':
+                  print('DIFF',tag,'TR',i1+1,i2,'EN',j1+1,j2)
+                  for i in range(i1,i2): print('  TR',i+1,tr[i].get('text',''))
+                  for j in range(j1,j2): print('  EN',j+1,en[j].get('text',''))
+            for loc in ('tr','en'):
+              d=f[loc]
+              ids=[str(n.get('id')) for n in d.get('footnotes',[])]
+              if len(ids)!=len(set(ids)): print(loc.upper(),'DUP_FOOTNOTE_IDS',ids)
+              # scan body for PDF soft-hyphen-style artifacts that should not appear on web
+              for si,s in enumerate(d.get('sections',[]),1):
+                for pi,p in enumerate(s.get('paragraphs',[]),1):
+                  hits=re.findall(r'\b[A-Za-z]{3,}-(?:[A-Za-z]{2,})\b',p)
+                  suspects=[h for h in hits if h.lower() in {'chi-nese','de-mocracy','presen-tations','interpre-tation','roman-ticism','en-throning','pur-ist','re-formist','re-juvenation','uncomplicat-edly','suffi-ciently','char-acters','pe-riod','de-bates','orga-nizations','se-cret','chi-na','cen-tury','mo-ve-ments'}]
+                  if suspects: print(loc.upper(),'BODY_FLAG',si,pi,suspects,repr(p[:220]))
+          PY
