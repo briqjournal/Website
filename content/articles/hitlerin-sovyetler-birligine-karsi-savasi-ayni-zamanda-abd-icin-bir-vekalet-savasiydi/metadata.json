@@ -1,7 +1,12 @@
 {
   "schemaVersion": 2,
   "id": "hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi",
-  "articleType": {"id": "opinion-article", "tr": "Görüş Makalesi", "en": "Opinion Article", "peerReviewed": false},
+  "articleType": {
+    "id": "opinion-article",
+    "tr": "Görüş Makalesi",
+    "en": "Opinion Article",
+    "peerReviewed": false
+  },
   "title": {
     "en": "Hitler’s War Against The Soviet Union: Also, a Proxy War For The US",
     "tr": "Hitler’in Sovyetler Birliği’ne Karşı Savaşı, Aynı Zamanda ABD İçin Bir Vekalet Savaşıydı"
@@ -20,15 +25,53 @@
     "tr": "Bu makale, Adolf Hitler’in Sovyetler Birliği’ne karşı savaşını, ABD’nin sosyalizme karşı mücadelede bir vekalet savaşı olarak kullandığını savunmaktadır. ABD’li kapitalistler, kamuoyu nezdinde tarafsızlıklarını korumalarına ve sonradan müttefik olmalarına rağmen, 1920’lerden itibaren Avrupa’daki faşist rejimleri—özellikle Nazi Almanyasını—siyasi, ekonomik ve teknolojik olarak sistematik bir şekilde desteklemişlerdir. Ford, General Motors, IBM ve Standard Oil gibi büyük Amerikan şirketleri, Wehrmacht’a hayati askeri malzeme, teknoloji ve finansal hizmetler sağlayarak Hitler’in yıldırım savaşlarını ve Sovyetler Birliği’ne karşı imha savaşını mümkün kılmıştır. Wall Street tarafından yönlendirilen ve Hitler’in savaş bankası olarak görev yapan Uluslararası Ödemeler Bankası (BIS), yağmalanmış altın ve kaynakların transferini kolaylaştırarak II. Dünya Savaşı boyunca bölge dışı alanlarda faaliyetlerini sürdürmüştür. ABD, Stalingrad’dan sonra Sovyetler Birliği’ne sınırlı Lend-Lease yardımı sağlamış ve ikinci cephenin açılmasını 1944’e kadar ertelemiştir. Savaş sonrasında ABD, Nazi işbirlikçilerini korumuş ve Marshall Planı aracılığıyla anti-komünist ekonomik yeniden yapılanma için BIS’i kullanmaya devam etmiştir. Bu durum, ABD’nin asıl amacının faşizmi yenmek değil, kapitalizmin baş düşmanı olarak Sovyetler Birliği’ni yok etmek olduğunu göstermektedir."
   },
   "keywords": {
-    "en": ["anti-communism", "Bank for International Settlements", "Proxy war", "Nazi Germany", "US corporations"],
-    "tr": ["ABD şirketleri", "anti-komünizm", "Nazi Almanyası", "Uluslararası Ödemeler Bankası", "vekalet savaşı"]
+    "en": [
+      "anti-communism",
+      "Bank for International Settlements (BIS)",
+      "Proxy war",
+      "Nazi Germany",
+      "US corporations"
+    ],
+    "tr": [
+      "anti-komünizm",
+      "Uluslararası Ödemeler Bankası (BIS)",
+      "vekalet savaşı",
+      "Nazi Almanyası",
+      "ABD şirketleri"
+    ]
   },
-  "dates": {"received": "2025-11-07", "revised": null, "accepted": "2026-01-31", "published": "2026-03-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 2, "year": 2026, "season": {"en": "Spring", "tr": "Bahar"}},
-  "pages": {"first": "221", "last": "238"},
+  "dates": {
+    "received": "2025-11-07",
+    "revised": null,
+    "accepted": "2026-01-31",
+    "published": "2026-03-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 2,
+    "year": 2026,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "221",
+    "last": "238"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

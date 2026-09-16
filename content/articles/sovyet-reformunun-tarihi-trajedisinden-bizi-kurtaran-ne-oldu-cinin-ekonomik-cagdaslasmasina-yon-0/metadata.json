@@ -1,7 +1,12 @@
 {
   "schemaVersion": 2,
   "id": "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0",
-  "articleType": {"id": "translation", "tr": "Çeviri", "en": "Translation", "peerReviewed": false},
+  "articleType": {
+    "id": "translation",
+    "tr": "Çeviri",
+    "en": "Translation",
+    "peerReviewed": false
+  },
   "title": {
     "en": "What Saved us From the Historical Tragedy of Soviet “Reform”? Applying Marxist Economics to Guide Chinese Economic Modernization",
     "tr": "Sovyet “Reformu”nun Tarihi Trajedisinden Bizi Kurtaran Ne Oldu? Çin’in Ekonomik Çağdaşlaşmasına Yön Vermek İçin Marksist Ekonomiyi Uygulamak"
@@ -13,7 +18,13 @@
       "familyName": "He",
       "orcid": "https://orcid.org/0009-0006-2002-874X",
       "affiliations": [
-        {"name": "Nanjing University of Finance and Economics (NUFE)", "nameTr": "Nanjing Finans ve Ekonomi Üniversitesi", "nameEn": "Nanjing University of Finance and Economics (NUFE)", "country": "China", "ror": null}
+        {
+          "name": "Nanjing University of Finance and Economics (NUFE)",
+          "nameTr": "Nanjing Finans ve Ekonomi Üniversitesi",
+          "nameEn": "Nanjing University of Finance and Economics (NUFE)",
+          "country": "China",
+          "ror": null
+        }
       ]
     }
   ],
@@ -22,15 +33,53 @@
     "tr": "Bu makale, Çin tarzı çağdaşlaşmanın ancak Marxist ekonomi politiğin bilimsel rehberliği altında sürdürülebilir bir doğrultuda ilerleyebileceğini savunmaktadır. Çalışma, Batı kökenli neoliberal ve Keynesçi yaklaşımların, sosyalist piyasa ekonomisinin teorik temelleriyle yapısal olarak bağdaşmadığını ve Sovyetler Birliği’nin reform sürecinde yaşanan tarihsel çöküşün ardındaki temel nedenlerden biri olduğunu ileri sürmektedir. Tarihsel materyalizm temelinde, üretim ilişkilerinin ve mülkiyet yapısının toplumsal yeniden üretim sürecindeki belirleyici rolü vurgulanmakta; kamu mülkiyetinin ekonomideki öncü konumunun zayıflatılmasının gelir eşitsizliği, yapısal dengesizlikler ve makroekonomik kırılganlıklar yarattığı gösterilmektedir. Makale ayrıca, sosyalist piyasa ekonomisinin, kamu mülkiyetine dayalı üretim ilişkileri ile piyasa dolaşım mekanizmalarının diyalektik bütünlüğü olarak kavranması gerektiğini ileri sürmektedir. Bu çerçevede, Marx’ın yeniden üretim, sermaye birikimi ve değer teorilerinin, Çin’in ekonomik çağdaşlaşma sürecine yönelik makroekonomik yönetişim, mülkiyet yapısı ve dışa açılma politikalarının bilimsel temelini oluşturduğu savunulmaktadır."
   },
   "keywords": {
-    "en": ["Chinese modernization", "common prosperity", "market economy", "Marxist economics", "socialism with Chinese characteristics"],
-    "tr": ["Çin’e özgü sosyalizm", "Çin’in çağdaşlaşması", "Marksist ekonomi", "ortak refah", "piyasa ekonomisi"]
+    "en": [
+      "Chinese modernization",
+      "common prosperity",
+      "market economy",
+      "Marxist economics",
+      "socialism with Chinese characteristics"
+    ],
+    "tr": [
+      "Çin’in çağdaşlaşması",
+      "ortak refah",
+      "piyasa ekonomisi",
+      "Marksist ekonomi",
+      "Çin’e özgü sosyalizm"
+    ]
   },
-  "dates": {"received": "2025-12-30", "revised": null, "accepted": "2026-01-19", "published": "2026-03-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 2, "year": 2026, "season": {"en": "Spring", "tr": "Bahar"}},
-  "pages": {"first": "129", "last": "142"},
+  "dates": {
+    "received": "2025-12-30",
+    "revised": null,
+    "accepted": "2026-01-19",
+    "published": "2026-03-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 2,
+    "year": 2026,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "129",
+    "last": "142"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

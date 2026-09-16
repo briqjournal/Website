@@ -1,7 +1,12 @@
 {
   "schemaVersion": 2,
   "id": "japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak",
-  "articleType": {"id": "opinion-article", "tr": "Görüş Makalesi", "en": "Opinion Article", "peerReviewed": false},
+  "articleType": {
+    "id": "opinion-article",
+    "tr": "Görüş Makalesi",
+    "en": "Opinion Article",
+    "peerReviewed": false
+  },
   "title": {
     "en": "Possible Alliance Between “Right Wing” and “Left Wing” Against the US Occupation in Japan",
     "tr": "Japonya’daki ABD İşgaline Karşı “Sağ” ve “Sol” Arasında Olası İttifak"
@@ -13,7 +18,13 @@
       "familyName": "Onishi",
       "orcid": "https://orcid.org/0009-0009-0475-3193",
       "affiliations": [
-        {"name": "Keio University and Kyoto University", "nameTr": "Keio Üniversitesi ve Kyoto Üniversitesi", "nameEn": "Keio University and Kyoto University", "country": "Japan", "ror": null}
+        {
+          "name": "Keio University and Kyoto University",
+          "nameTr": "Keio Üniversitesi ve Kyoto Üniversitesi",
+          "nameEn": "Keio University and Kyoto University",
+          "country": "Japan",
+          "ror": null
+        }
       ]
     }
   ],
@@ -22,15 +33,53 @@
     "tr": "Japonya’da 20 Temmuz 2025’te yapılan üst meclis seçimlerinde Sanseito Partisi büyük bir başarı elde etti. Sanseito Partisi’nin popülist amaçları Komünist Parti ile ittifak kurmak için hiçbir neden sunmadığı için, bir zorluk daha bulunmaktadır. Almanya, Fransa, İngiltere ve Hollanda gibi diğer ülkelerde de durum aynıdır. Yeni ortaya çıkan “aşırı sağ partilerin” dışlayıcı tutumu, komünistler tarafından paylaşılamaz. Komünist partiler bu partilerle ittifak kurmak isterlerse, birçok destekçilerini kaybedeceklerdir. Ancak, Trump’ın “Önce Amerika” stratejisi ışığında, JKP’nin anti-ABD özelliklerini güçlendirmek gibi objektif bir rolü vardır. Sanseito Partisi’nin yükseliş dalgasına yansıyan Japon sosyal çelişkilerinin nasıl çözülmesi gerektiği ve anti-ABD sloganlarının nasıl ele alınması gerektiği konusunda bir anlayışa varmak son derece önemlidir. Batı ülkelerinde görülen siyasi durumla benzerlikleri ve farklılıkları belirleyerek, izlememiz gereken yönü araştırmalıyız."
   },
   "keywords": {
-    "en": ["exclusionism", "Japanese Communist Party", "right wing and left wing in Japan", "Sanseito Party", "USA"],
-    "tr": ["ABD", "dışlayıcılık", "Japonya Komünist Partisi", "Japonya'da sağ ve sol", "Sanseito Partisi"]
+    "en": [
+      "exclusionism",
+      "Japanese Communist Party",
+      "right wing and left wing in Japan",
+      "Sanseito Party",
+      "USA"
+    ],
+    "tr": [
+      "dışlayıcılık",
+      "Japonya Komünist Partisi",
+      "Japonya'da sağ ve sol",
+      "Sanseito Partisi",
+      "ABD"
+    ]
   },
-  "dates": {"received": "2025-09-22", "revised": "2025-12-30", "accepted": "2026-01-31", "published": "2026-03-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 2, "year": 2026, "season": {"en": "Spring", "tr": "Bahar"}},
-  "pages": {"first": "239", "last": "246"},
+  "dates": {
+    "received": "2025-09-22",
+    "revised": "2025-12-30",
+    "accepted": "2026-01-31",
+    "published": "2026-03-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 2,
+    "year": 2026,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "239",
+    "last": "246"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

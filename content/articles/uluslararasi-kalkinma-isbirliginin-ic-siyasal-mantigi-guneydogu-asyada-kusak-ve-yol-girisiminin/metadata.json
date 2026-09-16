@@ -1,7 +1,12 @@
 {
   "schemaVersion": 2,
   "id": "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
   "title": {
     "en": "The Domestic Political Logic of International Development Cooperation: The Politicization of the BRI in Southeast Asia",
     "tr": "Uluslararası Kalkınma İşbirliğinin İç Siyasal Mantığı: Güneydoğu Asya’da Kuşak ve Yol Girişimi’nin Siyasallaşması"
@@ -13,7 +18,13 @@
       "familyName": "Fang",
       "orcid": "https://orcid.org/0009-0004-8432-712X",
       "affiliations": [
-        {"name": "Fudan University", "nameTr": "Fudan Üniversitesi", "nameEn": "Fudan University", "country": "China", "ror": null}
+        {
+          "name": "Fudan University",
+          "nameTr": "Fudan Üniversitesi",
+          "nameEn": "Fudan University",
+          "country": "China",
+          "ror": null
+        }
       ]
     },
     {
@@ -22,7 +33,13 @@
       "familyName": "Wang",
       "orcid": "https://orcid.org/0009-0005-9719-4378",
       "affiliations": [
-        {"name": "Beijing Foreign Studies University", "nameTr": "Pekin Yabancı Diller Üniversitesi", "nameEn": "Beijing Foreign Studies University", "country": "China", "ror": null}
+        {
+          "name": "Beijing Foreign Studies University",
+          "nameTr": "Pekin Yabancı Diller Üniversitesi",
+          "nameEn": "Beijing Foreign Studies University",
+          "country": "China",
+          "ror": null
+        }
       ]
     }
   ],
@@ -31,15 +48,53 @@
     "tr": "Bu çalışma, Güneydoğu Asya Uluslar Birliği (ASEAN) bağlamında Kuşak ve Yol Girişimi’nin (KYG) iç siyasal temellerini incelemekte ve uluslararası kalkınma işbirliğinin uygulanması ile sonuçlarının, özellikle KYG’nin siyasallaşması sürecinde, büyük ölçüde iç siyasal dinamikler tarafından belirlendiğini ileri sürmektedir. Çalışma, ASEAN ülkelerinde KYG ile ilgili artan riskleri ele almakta; kamu siyaseti yapım sürecinin açıklığı, iç siyasal bölünmeler ve dış güç dinamiklerini siyasallaşmanın başlıca belirleyicileri olarak tanımlamaktadır. Mevcut literatür, çoğunlukla devletler arası projelerin sonuçlarına odaklanmakta; projelerin uygulandığı ülkelerin iç siyasal dinamiklerini ise kısmen ihmal etmektedir. Oysa bağışçı aktörler, genellikle yardım projelerine alıcı ülkelerden daha duyarlı yaklaşmakta ve siyaset öncelikleri müzakere edilirken projelerin içinde yer aldığı siyasal ve toplumsal bağlamları gözardı edebilmektedir. Bu çalışma, siyasallaşma kavramını tanımlamak üzere bir kuramsal çerçeve geliştirmekte; siyasal sorunların devamlılığı, araçsal siyasallaşma ve ideolojik siyasallaşma olmak üzere üç farklı siyasallaşma türü arasında ayrım yapmaktadır. Ayrıca, uluslararası kalkınma işbirliğinin iç siyasal bağlamlara nasıl eklemlendiğini açıklamak amacıyla temas, ayrışma, seferberlik ve pekişme aşamalarından oluşan bir mekanizma önerilmektedir. Son olarak, Küresel Güney’de uluslararası kalkınma işbirliğinin karşı karşıya olduğu yapısal güçlükleri açıklamak üzere “kalkınma işbirliğinin imkânsız üçlemesi” kavramı ortaya konulmaktadır."
   },
   "keywords": {
-    "en": ["ASEAN", "Belt and Road Initiative", "Global South", "international development cooperation", "politicization"],
-    "tr": ["ASEAN", "Kuşak ve Yol Girişimi", "Küresel Güney", "uluslararası kalkınma işbirliği", "siyasallaşma"]
+    "en": [
+      "ASEAN",
+      "Belt and Road Initiative",
+      "Global South",
+      "international development cooperation",
+      "politicization"
+    ],
+    "tr": [
+      "ASEAN",
+      "Kuşak ve Yol Girişimi",
+      "Küresel Güney",
+      "uluslararası kalkınma işbirliği",
+      "siyasallaşma"
+    ]
   },
-  "dates": {"received": "2025-11-26", "revised": "2026-01-23", "accepted": "2026-02-07", "published": "2026-03-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 2, "year": 2026, "season": {"en": "Spring", "tr": "Bahar"}},
-  "pages": {"first": "193", "last": "220"},
+  "dates": {
+    "received": "2025-11-26",
+    "revised": "2026-01-23",
+    "accepted": "2026-02-07",
+    "published": "2026-03-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 2,
+    "year": 2026,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "193",
+    "last": "220"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

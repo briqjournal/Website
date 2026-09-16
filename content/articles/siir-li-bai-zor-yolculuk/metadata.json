@@ -1,17 +1,65 @@
 {
   "schemaVersion": 2,
   "id": "siir-li-bai-zor-yolculuk",
-  "articleType": {"id": "poem", "tr": "Şiir", "en": "Poem", "peerReviewed": false},
-  "title": {"en": "POEM- Li Bai - The Hard Road", "tr": "ŞİİR- Li Bai - Zor Yolculuk"},
-  "authors": [{"displayName": "Li Bai", "givenName": "Bai", "familyName": "Li", "orcid": null, "affiliations": []}],
-  "abstract": {"en": null, "tr": null},
-  "keywords": {"en": [], "tr": []},
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2026-03-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 2, "year": 2026, "season": {"en": "Spring", "tr": "Bahar"}},
-  "pages": {"first": "247", "last": "248"},
+  "articleType": {
+    "id": "poem",
+    "tr": "Şiir",
+    "en": "Poem",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "POEM- Li Bai - The Hard Road",
+    "tr": "ŞİİR- Li Bai - Zor Yolculuk"
+  },
+  "authors": [
+    {
+      "displayName": "Li Bai",
+      "givenName": "Bai",
+      "familyName": "Li",
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2026-03-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 2,
+    "year": 2026,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "247",
+    "last": "248"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,
@@ -19,7 +67,10 @@
   "dataAvailability": null,
   "aiUse": null,
   "acknowledgements": null,
-  "citation": {"en": "[Poem by Li Bai]. (2026). The Hard Road. BRIQ Belt & Road Initiative Quarterly, 7(2), 247-248.", "tr": "[Li Bai şiiri]. (2026). Zor Yolculuk. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(2), 247-248."},
+  "citation": {
+    "en": "[Poem by Li Bai]. (2026). The Hard Road. BRIQ Belt & Road Initiative Quarterly, 7(2), 247-248.",
+    "tr": "[Li Bai şiiri]. (2026). Zor Yolculuk. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(2), 247-248."
+  },
   "urls": {
     "en": "https://briqjournal.com/en/poem-li-bai-the-hard-road",
     "tr": "https://briqjournal.com/siir-li-bai-zor-yolculuk",

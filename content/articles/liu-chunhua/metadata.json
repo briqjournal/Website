@@ -1,17 +1,65 @@
 {
   "schemaVersion": 2,
   "id": "liu-chunhua",
-  "articleType": {"id": "painting", "tr": "Resim", "en": "Painting", "peerReviewed": false},
-  "title": {"en": "Chairman Mao en Route to Anyuan", "tr": "Anyuan’a Giderken Başkan Mao"},
-  "authors": [{"displayName": "Liu Chunhua", "givenName": "Chunhua", "familyName": "Liu", "orcid": null, "affiliations": []}],
-  "abstract": {"en": null, "tr": null},
-  "keywords": {"en": [], "tr": []},
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2026-03-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 2, "year": 2026, "season": {"en": "Spring", "tr": "Bahar"}},
-  "pages": {"first": "252", "last": "252"},
+  "articleType": {
+    "id": "painting",
+    "tr": "Resim",
+    "en": "Painting",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Chairman Mao en Route to Anyuan",
+    "tr": "Anyuan’a Giderken Başkan Mao"
+  },
+  "authors": [
+    {
+      "displayName": "Liu Chunhua",
+      "givenName": "Chunhua",
+      "familyName": "Liu",
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2026-03-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 2,
+    "year": 2026,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "252",
+    "last": "252"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,
@@ -19,7 +67,10 @@
   "dataAvailability": null,
   "aiUse": null,
   "acknowledgements": null,
-  "citation": {"en": "[Painting by Liu Chunhua]. (2026). Chairman Mao en Route to Anyuan. BRIQ Belt & Road Initiative Quarterly, 7(2), 252.", "tr": "[Liu Chunhua resmi]. (2026). Anyuan’a Giderken Başkan Mao, 1967. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(2), 252."},
+  "citation": {
+    "en": "[Painting by Liu Chunhua]. (2026). Chairman Mao en Route to Anyuan. BRIQ Belt & Road Initiative Quarterly, 7(2), 252.",
+    "tr": "[Liu Chunhua resmi]. (2026). Anyuan’a Giderken Başkan Mao, 1967. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(2), 252."
+  },
   "urls": {
     "en": "https://briqjournal.com/en/liu-chunhua",
     "tr": "https://briqjournal.com/liu-chunhua",

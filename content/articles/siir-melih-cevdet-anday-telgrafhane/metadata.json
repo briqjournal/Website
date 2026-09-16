@@ -1,17 +1,65 @@
 {
   "schemaVersion": 2,
   "id": "siir-melih-cevdet-anday-telgrafhane",
-  "articleType": {"id": "poem", "tr": "Şiir", "en": "Poem", "peerReviewed": false},
-  "title": {"en": "POEM - Melih Cevdet Anday - The Telegraph Office", "tr": "ŞİİR - Melih Cevdet Anday - Telgrafhane"},
-  "authors": [{"displayName": "Melih Cevdet Anday", "givenName": "Melih Cevdet", "familyName": "Anday", "orcid": null, "affiliations": []}],
-  "abstract": {"en": null, "tr": null},
-  "keywords": {"en": [], "tr": []},
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2026-03-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 2, "year": 2026, "season": {"en": "Spring", "tr": "Bahar"}},
-  "pages": {"first": "249", "last": "250"},
+  "articleType": {
+    "id": "poem",
+    "tr": "Şiir",
+    "en": "Poem",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "POEM - Melih Cevdet Anday - The Telegraph Office",
+    "tr": "ŞİİR - Melih Cevdet Anday - Telgrafhane"
+  },
+  "authors": [
+    {
+      "displayName": "Melih Cevdet Anday",
+      "givenName": "Melih Cevdet",
+      "familyName": "Anday",
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2026-03-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 2,
+    "year": 2026,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "249",
+    "last": "250"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,
@@ -19,7 +67,10 @@
   "dataAvailability": null,
   "aiUse": null,
   "acknowledgements": null,
-  "citation": {"en": "[Poem by Melih Cevdet Anday]. (2026). The Telegraph Office. BRIQ Belt & Road Initiative Quarterly, 7(2), 249-250.", "tr": "[Melih Cevdet Anday şiiri]. (2026). Telgrafhane. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(2), 249-250."},
+  "citation": {
+    "en": "[Poem by Melih Cevdet Anday]. (2026). The Telegraph Office. BRIQ Belt & Road Initiative Quarterly, 7(2), 249-250.",
+    "tr": "[Melih Cevdet Anday şiiri]. (2026). Telgrafhane. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(2), 249-250."
+  },
   "urls": {
     "en": "https://briqjournal.com/en/poem-melih-cevdet-anday-the-telegraph-office",
     "tr": "https://briqjournal.com/siir-melih-cevdet-anday-telgrafhane",

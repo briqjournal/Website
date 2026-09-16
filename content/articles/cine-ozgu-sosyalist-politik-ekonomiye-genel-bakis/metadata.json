@@ -1,8 +1,16 @@
 {
   "schemaVersion": 2,
   "id": "cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis",
-  "articleType": {"id": "translation", "tr": "Çeviri", "en": "Translation", "peerReviewed": false},
-  "title": {"en": "An Overview of Socialist Political Economy with Chinese Characteristics", "tr": "Çin’e Özgü Sosyalist Politik Ekonomi’ye Genel Bakış"},
+  "articleType": {
+    "id": "translation",
+    "tr": "Çeviri",
+    "en": "Translation",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "An Overview of Socialist Political Economy with Chinese Characteristics",
+    "tr": "Çin’e Özgü Sosyalist Politik Ekonomi’ye Genel Bakış"
+  },
   "authors": [
     {
       "displayName": "Xinhua Jian",
@@ -10,7 +18,13 @@
       "familyName": "Jian",
       "orcid": "https://orcid.org/0009-0000-3432-9363",
       "affiliations": [
-        {"name": "School of Economics and Management, Wuhan University", "nameTr": "Wuhan Üniversitesi, Ekonomi ve İşletme Fakültesi", "nameEn": "School of Economics and Management, Wuhan University", "country": "China", "ror": null}
+        {
+          "name": "School of Economics and Management, Wuhan University",
+          "nameTr": "Wuhan Üniversitesi, Ekonomi ve İşletme Fakültesi",
+          "nameEn": "School of Economics and Management, Wuhan University",
+          "country": "China",
+          "ror": null
+        }
       ]
     }
   ],
@@ -19,15 +33,53 @@
     "tr": "Bu makale, Çin’e özgü sosyalist politik ekonomiyi, Marksist politik ekonomiye dayanan ve Çin’in tarihsel pratiği boyunca sürekli olarak yeniden şekillenen tutarlı bir teorik sistem olarak incelemektedir. Çalışma, Çin’in ekonomik modelini belirli ulusal ve küresel koşullar altında Marksist teorinin diyalektik bir gelişimi olarak kavramsallaştırmaktadır. Bu çerçevenin temel kategorilerini, metodolojik ilkelerini ve değer yönelimlerini analiz ederken, piyasa mekanizmaları ile sosyalist üretim ilişkilerinin yenilikçi bir sentezi olarak sosyalist piyasa ekonomisinin teorik önemine özellikle dikkat çekmektedir. Makale ayrıca, insan merkezli kalkınma, ortak refah ve yüksek kaliteli büyüme gibi kavramların, geleneksel politik ekonomiyi endüstriyel çağın varsayımlarının ötesine nasıl genişlettiğini tartışmaktadır. Teori-uygulama etkileşimini ve tarihsel materyalizmi vurgulayarak, çalışma Çin özellikli sosyalist politik ekonominin, çağdaş politik ekonomiyi zenginleştiren ve Marksist ekonomi teorisinin açıklayıcı kapsamını genişleten ayrı bir paradigma oluşturduğunu savunmaktadır."
   },
   "keywords": {
-    "en": ["economic reform in China", "Marxist political economy", "socialist political economy with Chinese characteristics", "socialist construction", "socialist market economy"],
-    "tr": ["Çin’e özgü sosyalist politik ekonomi", "Çin’de ekonomik reform", "Marksist politik ekonomi", "sosyalizmin inşası", "sosyalist piyasa ekonomisi"]
+    "en": [
+      "economic reform in China",
+      "Marxist political economy",
+      "socialist political economy with Chinese characteristics",
+      "socialist construction",
+      "socialist market economy"
+    ],
+    "tr": [
+      "Çin’de ekonomik reform",
+      "Marksist politik ekonomi",
+      "Çin’e özgü sosyalist politik ekonomi",
+      "sosyalizmin inşası",
+      "sosyalist piyasa ekonomisi"
+    ]
   },
-  "dates": {"received": "2026-01-27", "revised": null, "accepted": "2026-02-08", "published": "2026-03-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 2, "year": 2026, "season": {"en": "Spring", "tr": "Bahar"}},
-  "pages": {"first": "143", "last": "166"},
+  "dates": {
+    "received": "2026-01-27",
+    "revised": null,
+    "accepted": "2026-02-08",
+    "published": "2026-03-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 2,
+    "year": 2026,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "143",
+    "last": "166"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,
