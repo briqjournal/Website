@@ -1,0 +1,30 @@
+name: Execute Volume 7 Finalizer V2
+on:
+  push:
+    branches: [fix/volume7-canonical-finalization]
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Execute corrected finalizer
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          src=Path('.github/workflows/finalize-volume7-canonical.yml').read_text()
+          marker='        run: |\n'
+          body=src.split(marker,1)[1]
+          lines=[]
+          for line in body.splitlines():
+              lines.append(line[10:] if line.startswith('          ') else line)
+          body='\n'.join(lines)+'\n'
+          body=body.replace("from './scripts/content-store.mjs'", "from '../scripts/content-store.mjs'")
+          Path('/tmp/run-volume7-finalizer.sh').write_text(body)
+          PY
+          bash /tmp/run-volume7-finalizer.sh
