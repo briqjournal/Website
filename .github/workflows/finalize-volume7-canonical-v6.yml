@@ -1,0 +1,30 @@
+name: Finalize Volume 7 Canonical V6
+on:
+  push:
+    branches: [fix/volume7-canonical-finalization]
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Execute V5 with official Nora Maher keyword pair
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          src=Path('.github/workflows/finalize-volume7-canonical-v5.yml').read_text()
+          marker='        run: |\n'
+          body=src.split(marker,1)[1]
+          body='\n'.join(line[10:] if line.startswith('          ') else line for line in body.splitlines())+'\n'
+          old="""const extraPairs=new Map([\n  ['yagmalanan-iskit-altinlarinin-mirasi',{\n    source:'tr',\n    tr:['Röportaj','İskitler','Dünya Kültür Mirası'],\n    en:['Interview','Scythian','Cultural Heritage'],\n  }],\n]);"""
+          new="""const extraPairs=new Map([\n  ['yagmalanan-iskit-altinlarinin-mirasi',{\n    source:'tr',\n    tr:['Röportaj','İskitler','Dünya Kültür Mirası'],\n    en:['Interview','Scythian','Cultural Heritage'],\n  }],\n  ['kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi',{\n    source:'tr',\n    tr:['Kuşak ve Yol’un Güvenliği','Özel Güvenlik'],\n    en:['Securing the Belt and Road','Private Security'],\n  }],\n]);"""
+          if old not in body:
+              raise SystemExit('extraPairs block not found')
+          Path('/tmp/run-v7-v6.sh').write_text(body.replace(old,new,1))
+          PY
+          bash /tmp/run-v7-v6.sh
