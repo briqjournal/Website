@@ -84,6 +84,6 @@ test("restores the Saudi English figures and complete source bibliography", asyn
 
 test("uses the real English cover and source issue PDF without a Turkish fallback", () => {
   assert.equal(issue.cover_en, "/assets/archive/covers/cilt-7-sayi-4-en-v3.jpg");
-  assert.match(issue.pdf_en_source, /BRIQ%20Volume7%20Issue4%20AUTUMN%202026\\.pdf$/u);
+  assert(issue.pdf_en_source.endsWith("/BRIQ%20Volume7%20Issue4%20AUTUMN%202026.pdf"));
   assert.doesNotMatch(issue.pdf_en_source, /Cilt7|Issue3|SUMMER/u);
 });
