@@ -26,7 +26,8 @@ test("V7I3 keeps canonical locale files and the June 2026 publication date", () 
     assert.ok(!catalog.fulltext.current.includes(slug), slug);
     assert.ok(!catalog.fulltext.en_archive.includes(slug), slug);
     const metadata = JSON.parse(fs.readFileSync(path.join("content/articles", slug, "metadata.json"), "utf8"));
-    assert.equal(metadata.published_online_date, "2026-06-01", slug);
+    const published = metadata.schemaVersion === 2 ? metadata.dates?.published : metadata.published_online_date;
+    assert.equal(published, "2026-06-01", slug);
   }
 });
 
@@ -63,6 +64,11 @@ test("V7I3 has distinct bilingual text without embedded PDF page-number tokens",
 
 test("V7I3 book review does not publish the reviewed-book citation as an abstract", () => {
   const metadata = JSON.parse(fs.readFileSync(path.join("content/articles", reviewSlug, "metadata.json"), "utf8"));
-  assert.equal(metadata.abstract_tr, "");
-  assert.equal(metadata.abstract_en, "");
+  if (metadata.schemaVersion === 2) {
+    assert.equal(metadata.abstract?.tr, null);
+    assert.equal(metadata.abstract?.en, null);
+  } else {
+    assert.equal(metadata.abstract_tr, "");
+    assert.equal(metadata.abstract_en, "");
+  }
 });
