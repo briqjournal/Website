@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Aleksandr%20SOTNICHENKO%20ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/turk-devletleri-teskilati-rusya-cin-ve-irani-da-kapsamali-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/turk-devletleri-teskilati-rusya-cin-ve-irani-da-kapsamali-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Röportaj",
+  "publication_type_en": "Interview",
+  "published_online_date": "2024-09-01"
 }
