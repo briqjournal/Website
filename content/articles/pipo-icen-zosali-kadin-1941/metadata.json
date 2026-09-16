@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/CILT5_SAYI2_ENG5_229.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/pipo-icen-zosali-kadin-1941-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/pipo-icen-zosali-kadin-1941-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Fotoğraf",
+  "publication_type_en": "Photograph",
+  "published_online_date": "2024-03-01"
 }
