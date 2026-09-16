@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22.13.0
@@ -37,4 +37,6 @@ jobs:
             exit 0
           fi
           git commit -m "Update Cilt 3 metadata from verified spreadsheet"
-          git push
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
