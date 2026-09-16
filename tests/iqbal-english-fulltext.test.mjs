@@ -44,7 +44,7 @@ test("keeps the Iqbal Akhtar article in clean locale-split English full text", a
   assert.doesNotMatch(body, /(?:Giriş|Araştırma Tasarımı|Transatlantik Kamuoyundaki Dönüşüm|Sonuç)/u);
   assert.doesNotMatch(body, /(?:B R I q •|Iqbal Akhtar - The Paradox of Peak Palestinianism:|Amer463|po469)/u);
 
-  assert.deepEqual(record.en.keywords, ["Abraham Accords", "Iran", "Palestinianism", "transatlantic relations", "two-state solution"]);
+  assert.deepEqual(record.en.keywords, ["Abraham Accords", "Iran", "Palestinianism", "Transatlantic Relations", "Two-State Solution"]);
   assert.equal(record.en.references.length, 70);
   assert.equal(record.en.figures.length, 9);
   assert.match(record.en.figures[0].caption, /^As of September 22, 2025/u);
