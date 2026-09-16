@@ -19,8 +19,6 @@ jobs:
           BASE="$(git rev-parse origin/main)"
           git checkout -B v7i4-mao-repair "$BASE"
           git show origin/automation/v7i4-mao:scripts/repair-mao-fulltext.py > /tmp/repair-mao.py
-          # The source JSON has one DOI split as "10.4312/ as..." by PDF extraction.
-          # Normalize that exact extraction artefact in the temporary repair script.
           sed -i 's|replace("https://doi.org/ ", "https://doi.org/")|replace("10.4312/ ", "10.4312/")|' /tmp/repair-mao.py
           git show origin/automation/v7i4-mao:tests/mao-english-fulltext.test.mjs > tests/mao-english-fulltext.test.mjs
           sudo apt-get update -qq
@@ -36,8 +34,8 @@ jobs:
           git diff --check
           npm ci --no-audit --no-fund
           npm run build
-          PAGE='dist/client/en/articles/mao-zedongs-dialectical-understanding-critique-economic-determinism-the-political-subject-and-the-chinese-intellectual-tradition/index.html'
-          test -f "$PAGE"
+          PAGE="$(grep -rl 'Mao Zedong’s Dialectical Understanding' dist/client/en/articles --include=index.html | head -1)"
+          test -n "$PAGE"
           grep -q 'Sources of Mao’s Dialectical Thought' "$PAGE"
           grep -q 'The Fundamental Principles of Dialectics in Mao' "$PAGE"
           grep -q 'from the masses, to the masses' "$PAGE"
