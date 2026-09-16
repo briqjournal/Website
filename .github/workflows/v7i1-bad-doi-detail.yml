@@ -1,0 +1,16 @@
+name: V7I1 bad DOI detail
+on:
+  push:
+    branches: [automation/v7i1-structure-inventory]
+permissions:
+  contents: read
+jobs:
+  detail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node <<'JS'
+          const fs=require('fs'),p=require('path'); const issue=JSON.parse(fs.readFileSync('content/issues/v07-i01.json'));
+          for(const slug of issue.articles){const c=JSON.parse(fs.readFileSync(p.join('content/articles',slug,'fulltext/current.json'))); for(const l of ['en','tr']) (c[l].references||[]).forEach((r,i)=>{const t=typeof r==='string'?r:r.text; if(t.includes('https:// doi.org')) console.log(slug,l,i,t);});}
+          JS
