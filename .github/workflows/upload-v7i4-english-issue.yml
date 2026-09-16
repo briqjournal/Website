@@ -1,4 +1,4 @@
-name: Upload Volume 7 Issue 4 English PDF
+name: Verify Volume 7 Issue 4 English PDF
 
 on:
   push:
@@ -55,17 +55,6 @@ jobs:
           echo "bytes=$bytes" >> "$GITHUB_OUTPUT"
           echo "sha256=$sha256" >> "$GITHUB_OUTPUT"
           echo "Validated PDF: bytes=$bytes sha256=$sha256"
-
-      - name: Upload exact object to R2
-        shell: bash
-        run: |
-          set -euo pipefail
-          aws s3api put-object \
-            --bucket "$R2_BUCKET" \
-            --key "$OBJECT_KEY" \
-            --body "${{ steps.pdf.outputs.target }}" \
-            --content-type application/pdf \
-            --endpoint-url "$R2_ENDPOINT" >/dev/null
 
       - name: Verify uploaded object
         shell: bash
