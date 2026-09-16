@@ -1,0 +1,121 @@
+name: Fix and verify V7I2 reference URLs
+on:
+  push:
+    branches: [automation/v7i2-reference-cleanup]
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fix exact audited references and verify latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+
+          cat > /tmp/fix-v7i2-urls.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const targets = [
+            ['sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0','tr','ref-2'],
+            ['sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0','tr','ref-13'],
+            ['sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0','en','ref-2'],
+            ['sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0','en','ref-11'],
+            ['sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0','en','ref-13'],
+            ['uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin','tr','ref-27'],
+            ['uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin','en','ref-27'],
+          ];
+          function repair(text) {
+            const s=String(text??''); const i=s.search(/https?:\/\//i); if(i<0) throw new Error('target has no URL');
+            const tail=s.slice(i);
+            const markers=[/\s+\(?(?:Erişim|Retrieved|Accessed)\b/iu,/\s+(?:adresinden|adresine)\b/iu];
+            let end=tail.length; for(const re of markers){const m=tail.search(re); if(m>=0) end=Math.min(end,m)}
+            const url=tail.slice(0,end).replace(/\s+/g,'');
+            return s.slice(0,i)+url+tail.slice(end);
+          }
+          for(const [slug,locale,id] of targets){
+            const file=path.join('content/articles',slug,'fulltext',`${locale}.json`);
+            const data=JSON.parse(fs.readFileSync(file,'utf8'));
+            const ref=(data.references??[]).find(x=>x.id===id);
+            if(!ref) throw new Error(`${slug}/${locale}/${id}: reference missing`);
+            ref.text=repair(ref.text);
+            fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');
+          }
+          JS
+
+          cat > /tmp/append-v7i2-url-test.mjs <<'JS'
+          import fs from 'node:fs';
+          const file='tests/v7i2-locale-fulltext.test.mjs';
+          let text=fs.readFileSync(file,'utf8');
+          const marker='V7I2 reference URLs and DOI strings remain free of PDF line-break corruption';
+          if(!text.includes(marker)) text += `
+          test("${marker}", () => {
+            const normalize = (value) => String(value ?? "").replace(/\\s+/g, " ").trim();
+            const terminalUrl = (value) => {
+              const text = normalize(value);
+              const index = text.search(/https?:\\/\\//i);
+              if (index < 0) return null;
+              const tail = text.slice(index);
+              const markers = [/\\s+\\(?(?:Erişim|Retrieved|Accessed)\\b/iu, /\\s+(?:adresinden|adresine)\\b/iu];
+              let end = tail.length;
+              for (const pattern of markers) {
+                const found = tail.search(pattern);
+                if (found >= 0) end = Math.min(end, found);
+              }
+              return tail.slice(0, end).replace(/[.,;:]$/, "");
+            };
+            for (const slug of issue.articles) {
+              for (const locale of ["tr", "en"]) {
+                const fulltext = read(slug, locale);
+                for (const record of [...(fulltext.references ?? []), ...(fulltext.footnotes ?? [])]) {
+                  const url = terminalUrl(record.text);
+                  if (url) assert.doesNotMatch(url, /\\s/u, \`${'${'}slug}/${'${'}locale}/${'${'}record.id}: ${'${'}url}\`);
+                  const doi = normalize(record.text).match(/\\bdoi:\\s*(10\\..*)$/iu)?.[1];
+                  if (doi) assert.doesNotMatch(doi, /\\s/u, \`${'${'}slug}/${'${'}locale}/${'${'}record.id}: ${'${'}doi}\`);
+                }
+              }
+            }
+          });
+          `.replace(/^          /gm,'');
+          fs.writeFileSync(file,text);
+          JS
+
+          apply_fix() {
+            node /tmp/fix-v7i2-urls.mjs
+            node /tmp/append-v7i2-url-test.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i2-locale-fulltext.test.mjs
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_fix
+            npm test
+            npm run lint
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+              echo "main advanced during validation attempt $ATTEMPT; retrying"
+              continue
+            fi
+            if git diff --quiet; then echo 'Reference cleanup already present.'; exit 0; fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content app tests
+            git commit -m 'Clean Volume 7 Issue 2 reference URLs'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+          done
+          echo 'main kept advancing; refusing unsafe push'; exit 1
