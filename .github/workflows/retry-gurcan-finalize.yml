@@ -1,0 +1,44 @@
+name: One-time Gurcan full-text retry
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/retry-gurcan-finalize.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run existing completion script and commit clean result
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          workflow = Path('.github/workflows/finalize-gurcan-clean-fulltext.yml').read_text(encoding='utf-8')
+          start_marker = "          python - <<'PY'\n"
+          start = workflow.index(start_marker) + len(start_marker)
+          end = workflow.index("\n          PY\n", start)
+          block = workflow[start:end]
+          lines = block.splitlines()
+          indent = min(len(line) - len(line.lstrip()) for line in lines if line.strip())
+          script = '\n'.join(line[indent:] for line in lines) + '\n'
+          Path('/tmp/finalize_gurcan.py').write_text(script, encoding='utf-8')
+          PY
+          python /tmp/finalize_gurcan.py
+          rm -f tmp/gurcan-fulltext-1.b64 tmp/gurcan-fulltext-2.b64 tmp/gurcan-fulltext-3.b64 tmp/gurcan-fulltext-4.b64 tmp/gurcan-decoded-partial.json tmp/gurcan-diagnostics.json
+          rm .github/workflows/finalize-gurcan-clean-fulltext.yml .github/workflows/retry-gurcan-finalize.yml
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content/articles/amerika-sonrasi-donemde-adil-bir-dunya-duzeni-insa-etmek/fulltext/en-archive.json
+          git add -u tmp
+          git add -u .github/workflows
+          git commit -m 'Repair Gürcan English full text and references'
+          git push origin HEAD:main
