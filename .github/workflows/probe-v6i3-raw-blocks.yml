@@ -1,0 +1,26 @@
+name: Probe Volume 6 Issue 3 Raw Blocks
+on:
+  push:
+    branches: [audit/v6i3-independent]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect raw paragraph block behavior
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update >/dev/null && sudo apt-get install -y poppler-utils >/dev/null
+          python3 <<'PY'
+          import urllib.request, subprocess, re
+          u='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Belkacem%20Iratni_ENG.pdf'
+          urllib.request.urlretrieve(u,'/tmp/a.pdf')
+          subprocess.run(['pdftotext','-raw','/tmp/a.pdf','/tmp/a.txt'],check=True)
+          s=open('/tmp/a.txt',errors='ignore').read()
+          blocks=[re.sub(r'\s+',' ',b).strip() for b in re.split(r'\n\s*\n',s) if b.strip()]
+          print('blocks',len(blocks))
+          for i,b in enumerate(blocks[:80]): print(i,repr(b[:450]))
+          PY
