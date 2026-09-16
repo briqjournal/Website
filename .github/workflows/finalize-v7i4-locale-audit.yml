@@ -67,7 +67,13 @@ jobs:
             node scripts/generate-archive-data.mjs
             node scripts/generate-fulltext-modules.mjs
             node scripts/generate-runtime-data.mjs
-            node --test tests/*.test.mjs
+            node --test \
+              tests/comak-english-fulltext.test.mjs \
+              tests/iqbal-english-fulltext.test.mjs \
+              tests/jordan-english-fulltext.test.mjs \
+              tests/keyword-case.test.mjs \
+              tests/koshy-english-fulltext.test.mjs \
+              tests/mao-english-fulltext.test.mjs
             git diff --check
           }
 
@@ -76,6 +82,7 @@ jobs:
           apply_and_audit
           npm ci --no-audit --no-fund
           npm run build
+          node --test tests/*.test.mjs
 
           for ATTEMPT in 1 2 3 4 5 6; do
             git fetch origin main
