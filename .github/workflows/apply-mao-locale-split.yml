@@ -1,0 +1,49 @@
+name: Apply Mao locale split
+on:
+  push:
+    branches: [automation/v7i4-mao]
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rebuild, validate, and fast-forward main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main automation/v7i4-mao
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v7i4-mao-repair "$BASE"
+          git show origin/automation/v7i4-mao:scripts/repair-mao-fulltext.py > /tmp/repair-mao.py
+          git show origin/automation/v7i4-mao:tests/mao-english-fulltext.test.mjs > tests/mao-english-fulltext.test.mjs
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          URL='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Can%20Ulusoy%20-%20Mao%20Zedong%E2%80%99s%20Dialectical%20Understanding%20Critique%20of%20Economic.pdf'
+          curl -L --fail --retry 3 --connect-timeout 15 --max-time 120 "$URL" -o /tmp/mao.pdf
+          pdftotext -nopgbrk /tmp/mao.pdf /tmp/mao-flow.txt
+          python /tmp/repair-mao.py
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+          node --test tests/keyword-case.test.mjs tests/comak-english-fulltext.test.mjs tests/jordan-english-fulltext.test.mjs tests/koshy-english-fulltext.test.mjs tests/mao-english-fulltext.test.mjs
+          git diff --check
+          npm ci --no-audit --no-fund
+          npm run build
+          PAGE='dist/client/en/articles/mao-zedongs-dialectical-understanding-critique-economic-determinism-the-political-subject-and-the-chinese-intellectual-tradition/index.html'
+          test -f "$PAGE"
+          grep -q 'Sources of Mao’s Dialectical Thought' "$PAGE"
+          grep -q 'The Fundamental Principles of Dialectics in Mao' "$PAGE"
+          grep -q 'from the masses, to the masses' "$PAGE"
+          ! grep -q '>Giriş<' "$PAGE"
+          ! grep -q '>Yöntem<' "$PAGE"
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content tests app
+          git commit -m 'Repair and split Mao bilingual full text'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced; refusing push'; exit 1; }
+          git push origin HEAD:main
