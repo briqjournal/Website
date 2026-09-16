@@ -14,10 +14,7 @@
       ]
     }
   ],
-  "abstract": {
-    "en": "Arduino, A. (2018). China’s Private Army: Protecting the New Silk Road. Singapore: Palgrave Pivot.",
-    "tr": "Arduino, A. (2018). China’s Private Army: Protecting the New Silk Road. Singapore: Palgrave Pivot."
-  },
+  "abstract": {"en": null, "tr": null},
   "keywords": {"en": ["Securing the Belt and Road", "Private Security"], "tr": []},
   "dates": {"received": null, "revised": null, "accepted": null, "published": "2026-06-01"},
   "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 3, "year": 2026, "season": {"en": "Summer", "tr": "Yaz"}},
