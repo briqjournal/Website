@@ -60,10 +60,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          aws s3 cp "${{ steps.pdf.outputs.target }}" "s3://$R2_BUCKET/$OBJECT_KEY" \
-            --endpoint-url "$R2_ENDPOINT" \
+          aws s3api put-object \
+            --bucket "$R2_BUCKET" \
+            --key "$OBJECT_KEY" \
+            --body "${{ steps.pdf.outputs.target }}" \
             --content-type application/pdf \
-            --only-show-errors
+            --endpoint-url "$R2_ENDPOINT" >/dev/null
 
       - name: Verify uploaded object
         shell: bash
