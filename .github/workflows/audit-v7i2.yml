@@ -12,38 +12,47 @@ jobs:
       - name: Audit V7I2 sources
         shell: bash
         run: |
+          set -euo pipefail
           node <<'JS'
           const fs=require('fs'); const path=require('path');
           const issue=JSON.parse(fs.readFileSync('content/issues/v07-i02.json','utf8'));
           function paras(x){return (x?.sections??[]).reduce((n,s)=>n+(s.paragraphs??[]).length,0)}
           function words(x){return (x?.sections??[]).flatMap(s=>s.paragraphs??[]).join(' ').split(/\s+/).filter(Boolean).length}
-          function suspicious(x){
-            const text=JSON.stringify(x??{});
-            return {
-              pageTokens:(text.match(/(?<=[A-Za-zÀ-ž])\d{3}\s+(?=[A-Za-zÀ-ž])/gu)||[]).length,
-              splitUrls:(text.match(/https?:\\?\/\\?\/[^"\n]{0,160}\s+[^"\n]{0,80}/gu)||[]).length,
-              brokenDoi:(text.match(/doi:\s*10\.[^"\n]*\s+[^"\n]*/giu)||[]).length,
-              mojibake:(text.match(/�|Ã.|Â.|â€|â€™/g)||[]).length,
-            };
-          }
+          function suspicious(x){const t=JSON.stringify(x??{});return {pageTokens:(t.match(/(?<=[A-Za-zÀ-ž])\d{3}\s+(?=[A-Za-zÀ-ž])/gu)||[]).length,mojibake:(t.match(/�|Ã.|Â.|â€|â€™/g)||[]).length}}
           for(const slug of issue.articles){
             const dir=path.join('content/articles',slug,'fulltext');
-            const files=fs.readdirSync(dir).sort();
+            const files=fs.existsSync(dir)?fs.readdirSync(dir).sort():[];
             const meta=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'metadata.json'),'utf8'));
-            let src={};
-            if(files.includes('current.json')) src=JSON.parse(fs.readFileSync(path.join(dir,'current.json'),'utf8'));
-            const tr=src.tr; const en=src.en;
-            const trText=JSON.stringify(tr??{}), enText=JSON.stringify(en??{});
-            const refs=(x)=>x?.references?.length??0;
-            console.log('\n===',slug,'===');
-            console.log('files=',files.join(','));
+            let src={}; if(files.includes('current.json'))src=JSON.parse(fs.readFileSync(path.join(dir,'current.json'),'utf8'));
+            let archived=null;if(files.includes('en-archive.json'))archived=JSON.parse(fs.readFileSync(path.join(dir,'en-archive.json'),'utf8'));
+            const tr=src.tr, en=src.en;
+            console.log('\n===',slug,'===');console.log('files=',files.join(',')||'(none)');
             console.log('schemaVersion=',meta.schemaVersion??'legacy','published=',meta.published_online_date??meta.dates?.published??null,'type=',meta.publication_type_tr??meta.articleType?.tr??null);
-            console.log('current keys=',Object.keys(src));
-            console.log('TR sections/paras/words/refs=',tr?.sections?.length??0,paras(tr),words(tr),refs(tr),'susp=',JSON.stringify(suspicious(tr)));
-            console.log('EN sections/paras/words/refs=',en?.sections?.length??0,paras(en),words(en),refs(en),'susp=',JSON.stringify(suspicious(en)));
-            console.log('locale identical=',trText===enText,'en/tr word ratio=',words(tr)?(words(en)/words(tr)).toFixed(2):'n/a');
-            console.log('history=',JSON.stringify({received:meta.received_date??src.metadata?.received,revised:meta.revised_date??src.metadata?.revised,accepted:meta.accepted_date??src.metadata?.accepted}));
-            const absTr=meta.abstract_tr??meta.abstract?.tr??null, absEn=meta.abstract_en??meta.abstract?.en??null;
-            console.log('abstract labels=',/^(?:öz|özet)\b/iu.test(absTr??''),/^abstract\b/iu.test(absEn??''));
+            console.log('TR sections/paras/words/refs=',tr?.sections?.length??0,paras(tr),words(tr),tr?.references?.length??0,'susp=',JSON.stringify(suspicious(tr)));
+            console.log('EN sections/paras/words/refs=',en?.sections?.length??0,paras(en),words(en),en?.references?.length??0,'susp=',JSON.stringify(suspicious(en)));
+            console.log('ARCHIVE EN sections/paras/words=',archived?.sections?.length??0,paras(archived),words(archived));
+            console.log('locale identical=',JSON.stringify(tr??{})===JSON.stringify(en??{}));
+            console.log('history=',JSON.stringify({received:meta.received_date??src.metadata?.received??null,revised:meta.revised_date??src.metadata?.revised??null,accepted:meta.accepted_date??src.metadata?.accepted??null}));
+            console.log('pdf=',JSON.stringify({tr:meta.pdf_tr_source??meta.urls?.pdfTr??null,en:meta.pdf_en_source??meta.urls?.pdfEn??null}));
           }
           JS
+
+          command -v pdftotext >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y poppler-utils >/dev/null)
+          node <<'JS' > /tmp/v7i2-pdfs.tsv
+          const fs=require('fs');
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i02.json','utf8'));
+          for(const slug of issue.articles){
+            const dir=`content/articles/${slug}/fulltext`;
+            if(fs.existsSync(`${dir}/current.json`)) continue;
+            const m=JSON.parse(fs.readFileSync(`content/articles/${slug}/metadata.json`,'utf8'));
+            console.log([slug,m.pdf_tr_source??m.urls?.pdfTr??'',m.pdf_en_source??m.urls?.pdfEn??''].join('\t'));
+          }
+          JS
+          while IFS=$'\t' read -r slug tr en; do
+            echo; echo "##### PDF EXTRACT: $slug / TR #####"
+            curl -L --fail --silent --show-error "$tr" -o /tmp/a.pdf
+            pdftotext -layout -enc UTF-8 /tmp/a.pdf - | sed -n '1,220p'
+            echo; echo "##### PDF EXTRACT: $slug / EN #####"
+            curl -L --fail --silent --show-error "$en" -o /tmp/a.pdf
+            pdftotext -layout -enc UTF-8 /tmp/a.pdf - | sed -n '1,220p'
+          done < /tmp/v7i2-pdfs.tsv
