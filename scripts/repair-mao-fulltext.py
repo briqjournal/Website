@@ -15,8 +15,14 @@ def para(*ranges):
     for start, end in ranges:
         for n in range(start, end + 1):
             value = LINES[n - 1].strip()
-            if value:
-                parts.append(value)
+            if not value:
+                continue
+            # Running page headers can fall inside otherwise valid paragraph ranges.
+            # Drop only the exact article header; substantive occurrences of the
+            # author's or Mao's name remain untouched.
+            if value.startswith("Can Ulusoy- Mao Zedong"):
+                continue
+            parts.append(value)
     text = ""
     for value in parts:
         if not text:
