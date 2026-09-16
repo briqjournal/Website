@@ -1,0 +1,95 @@
+name: Full-text single-source phase 1
+on:
+  push:
+    branches: [automation/fix-comak-live-english]
+    paths: [.github/workflows/fulltext-single-source-phase1.yml]
+permissions:
+  contents: write
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Remove redundant English archives where canonical current.en is already clean
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B fulltext-single-source-phase1 "$BASE"
+
+          node --input-type=module <<'NODE'
+          import { readFile, writeFile, rm } from 'node:fs/promises';
+          import { join } from 'node:path';
+          const root=process.cwd();
+          const cp=join(root,'content/catalog.json');
+          const catalog=JSON.parse(await readFile(cp,'utf8'));
+          const current=catalog.fulltext.current || [];
+          const archive=catalog.fulltext.en_archive || [];
+          const as=new Set(archive);
+          const overlap=current.filter(s=>as.has(s));
+          const unresolved=new Set([
+            'suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi',
+            'dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi',
+            'filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun',
+            'mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce',
+            'cinin-kuresel-altyapi-stratejisi',
+          ]);
+          const removable=overlap.filter(s=>!unresolved.has(s));
+          if(removable.length!==28) throw new Error(`Expected 28 safe redundant archives, got ${removable.length}`);
+
+          const trWords=new Set('ve bir bu için ile olarak olan daha çok ise ancak gibi tarafından üzerine arasında de da veya hem her kadar sonra önce karşı içinde'.split(' '));
+          const enWords=new Set('the and of to in is for with on that as by from this are was were an a or between into through under among has have its their which'.split(' '));
+          function flatten(x){const out=[]; for(const s of x?.sections||[]) out.push(s.title||'',...(s.paragraphs||[])); return out.join(' ')}
+          function language(text){const toks=text.toLocaleLowerCase('tr-TR').match(/[\p{L}]+/gu)||[];let tr=0,en=0;for(const t of toks){if(trWords.has(t))tr++;if(enWords.has(t))en++;}return {tr,en};}
+
+          for(const slug of removable){
+            const curPath=join(root,'content/articles',slug,'fulltext/current.json');
+            const cur=JSON.parse(await readFile(curPath,'utf8'));
+            if(!cur.en?.sections?.length) throw new Error(`Missing canonical current.en sections: ${slug}`);
+            const l=language(flatten(cur.en));
+            if(!(l.en>l.tr*1.6 && l.en>=8)) throw new Error(`current.en not safely English for ${slug}: ${JSON.stringify(l)}`);
+            await rm(join(root,'content/articles',slug,'fulltext/en-archive.json'));
+          }
+          catalog.fulltext.en_archive=archive.filter(s=>!removable.includes(s));
+          await writeFile(cp,JSON.stringify(catalog,null,2)+'\n','utf8');
+          console.log(`Removed ${removable.length} redundant en-archive files.`);
+          console.log('Remaining archive entries:',catalog.fulltext.en_archive.length);
+          console.log('Remaining unresolved overlap:',[...unresolved]);
+          NODE
+
+          node --input-type=module <<'NODE'
+          import { readFile, access } from 'node:fs/promises';
+          import { join } from 'node:path';
+          const catalog=JSON.parse(await readFile('content/catalog.json','utf8'));
+          const c=new Set(catalog.fulltext.current||[]), a=new Set(catalog.fulltext.en_archive||[]);
+          const overlap=[...c].filter(x=>a.has(x));
+          const currentOnly=[...c].filter(x=>!a.has(x));
+          if(c.size!==33) throw new Error(`current count changed: ${c.size}`);
+          if(a.size!==206) throw new Error(`expected 206 archives after phase1, got ${a.size}`);
+          if(overlap.length!==5) throw new Error(`expected 5 unresolved overlaps, got ${overlap.length}`);
+          if(currentOnly.length!==28) throw new Error(`expected 28 current-only canonical records, got ${currentOnly.length}`);
+          for(const slug of currentOnly){
+            try{await access(join('content/articles',slug,'fulltext/en-archive.json')); throw new Error(`archive still exists: ${slug}`)}catch(e){if(e.code!=='ENOENT')throw e;}
+          }
+          console.log('Phase 1 structural assertions passed.');
+          NODE
+
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+          node --test tests/keyword-case.test.mjs tests/comak-english-fulltext.test.mjs
+          git diff --check
+          npm ci --no-audit --no-fund
+          npm run build
+
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content/catalog.json content/articles
+          git diff --cached --quiet && { echo 'No changes'; exit 0; }
+          git commit -m 'Remove redundant English full-text archives'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced; refusing push'; exit 1; }
+          git push origin HEAD:main
