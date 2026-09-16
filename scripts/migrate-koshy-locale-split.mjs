@@ -1,0 +1,51 @@
+import { readFile, writeFile, rm } from "node:fs/promises";
+import { join } from "node:path";
+
+const root = process.cwd();
+const slug = "cinin-kuresel-altyapi-stratejisi";
+const dir = join(root, "content/articles", slug, "fulltext");
+const current = JSON.parse(await readFile(join(dir, "current.json"), "utf8"));
+
+const paragraphs = [
+  "A persistent weakness in Belt and Road Initiative scholarship has been its tendency to treat China’s overseas infrastructure ambitions as a purely 21st-century phenomenon. Much of the existing literature starts the clock at the BRI’s formal launch in 2013 and, as a result, misreads the initiative as something new rather than an expression of foreign policy habits with much longer roots. Austin Strange’s Chinese Global Infrastructure addresses this gap directly. By situating the BRI in a historical context stretching back to the Mao era, Strange argues that understanding what China is doing abroad today requires engaging seriously with what it was doing there six decades ago. The book is among the more empirically grounded studies of Chinese statecraft to have appeared in recent years, and it offers analysts and scholars a way out of the polarised debate between “debt trap” narratives on one side and enthusiasm for Chinese-led development on the other.",
+  "Strange bases his analysis on two datasets: AidData’s records covering China’s 21st-century activities, and an original dataset he compiled, cataloging approximately 4,000 projects from 1949 to 1999. During the Mao era, China functioned as a net donor, extending aid on ideological rather than commercial grounds and cultivating solidarity with newly independent states across Africa and Asia. But during the 1980s and 1990s, China shifted to the role of a net recipient, drawing on Japanese loans and World Bank financing to support its own modernization. By the mid-2000s, policy banks such as China EXIM Bank and the China Development Bank had begun channeling capital outward again, blending political direction with market logic in ways that laid the institutional groundwork for the BRI. The book’s longitudinal design gives it its authority, as Strange is not speculating about historical continuity but measuring it.",
+  "The book moves beyond the common binary that frames Chinese overseas investment as either development aid or debt-trap diplomacy, introducing instead a typology based on project visibility and national salience. On the one hand, it is large-scale economic projects in transport, energy, and industry, commercially motivated and financially substantial, averaging around US$371 million in the current century. On the other side, what he calls prestige infrastructure, smaller projects averaging around US$29 million that carry national symbolism rather than economic weight, such as stadiums, government buildings, and conference centers. These are allocated primarily to smaller states and serve as visible tokens of political alignment, offering host governments a kind of modernity on display while providing Beijing with what Strange describes as “national symbolic capital.” The distinction is more than descriptive.",
+  "Strange goes on to examine how infrastructure acquisition has historically translated into diplomatic behavior, asking whether states that received Chinese projects were more likely to support Beijing on contested international questions. The evidence he presents around UN Resolution 2758 in 1971 is instructive. States that had received infrastructure were measurably more inclined to back China’s position, and individual projects served as material anchors for that alignment. The Vau i Dejës Hydroelectric Power Station in Albania, agreed upon in 1967, is one such example, a relatively modest investment that carried massive political weight during a formative period of Chinese foreign policy. Strange does not overstate the causal logic here. He acknowledges that turning a built project into a durable political influence is rarely straightforward and depends on conditions that Beijing cannot always control, including leadership changes, shifts in domestic opinion, and the performance of the projects themselves.",
+  "This leads to one of the book’s most candid arguments, its sustained attention to the limits of infrastructure as a political tool. Strange identifies a structural gap between the goals of China’s central government and the behavior of its State-Owned Enterprises (SOEs) in the field. These firms operate according to commercial incentives that do not always align with Beijing’s strategic objectives. When projects run into trouble, whether through cost overruns, delays, or allegations of corruption, host governments tend to hold the Chinese state responsible rather than the individual contractor. Strange calls this misattribution, an underappreciated vulnerability in China’s infrastructure diplomacy that no amount of careful project selection at the planning stage can fully prevent.",
+  "The book is straightforward about the questions it cannot yet answer. Digital infrastructure, including 5G networks, AI-enabled platforms, and e-governance systems, is included in the analysis but not given the same treatment as physical projects. This is a reasonable limitation given the available data, though digital connectivity may generate different forms of influence than physical infrastructure. Environmental questions present a similar problem.",
+  "Strange notes that Chinese infrastructure projects have, in many cases, accelerated deforestation and other forms of ecological degradation. Still, the datasets do not yet support a full assessment of whether the green commitments announced in recent years, including Xi Jinping’s 2021 pledge to stop financing overseas coal plants, reflect a genuine shift in practice or merely a change in rhetoric.",
+  "Strange concludes that the BRI is not in decline, but is being recalibrated in response to shifting economic and political pressures. Debt distress in a growing number of partner countries, combined with domestic economic pressures in China, is pushing Beijing toward smaller, more selective investments. The appetite for flagship megaprojects appears to be declining, replaced by what Strange characterizes as a preference for higher quality and lower risk. Whether this shift is durable or tactical remains to be seen, but the historical framing the book provides offers something useful, a reminder that the underlying instinct to use visible, nationally significant infrastructure as an instrument of foreign policy has persisted across very different phases of Chinese political economy, from revolutionary solidarity projects in the 1960s to the commercial connectivity logic of the BRI today. The book offers a strong empirical foundation and clearer analytical language than much of the existing literature, making it essential reading for understanding the origins, purpose, and future trajectory of the BRI."
+];
+
+const english = {
+  sections: [{ id: "en-section-1", title: "Full text", paragraphs }],
+  keywords: [],
+  footnotes: [],
+  references: [],
+  acknowledgements: "",
+  figures: [
+    { ...current.en.figures[0], caption: "Austin Strange, Chinese Global Infrastructure (Cambridge University Press, 2024)." },
+    { ...current.en.figures[1], caption: "China will continue promoting BRI infrastructure development with established advantages (Illustration: Tang Tengfei/Global Times, 2023)." }
+  ]
+};
+
+const englishBody = paragraphs.join("\n");
+if (paragraphs.length !== 8) throw new Error("Expected 8 English paragraphs");
+if (!/^A persistent weakness in Belt and Road Initiative scholarship/u.test(paragraphs[0])) throw new Error("English opening mismatch");
+for (const artifact of ["KUŞAK VE YOL", "Çin’in", "yönelik", "A PERSISTENT WEAKNESS IN BELT AND ROAD ical context"] ) {
+  if (englishBody.includes(artifact)) throw new Error(`English artifact remains: ${artifact}`);
+}
+
+await writeFile(join(dir, "en.json"), `${JSON.stringify(english, null, 2)}\n`, "utf8");
+await writeFile(join(dir, "tr.json"), `${JSON.stringify(current.tr, null, 2)}\n`, "utf8");
+await rm(join(dir, "current.json"));
+await rm(join(dir, "en-archive.json"));
+
+const catalogPath = join(root, "content/catalog.json");
+const catalog = JSON.parse(await readFile(catalogPath, "utf8"));
+catalog.fulltext.current = (catalog.fulltext.current || []).filter((value) => value !== slug);
+catalog.fulltext.en_archive = (catalog.fulltext.en_archive || []).filter((value) => value !== slug);
+catalog.fulltext.localized ||= [];
+if (!catalog.fulltext.localized.includes(slug)) catalog.fulltext.localized.push(slug);
+await writeFile(catalogPath, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
+console.log("Prepared Koshy locale-split full text.");
