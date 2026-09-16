@@ -1,0 +1,41 @@
+name: Probe V6I3 heading fonts
+on:
+  push:
+    branches: [audit/v6i3-postmigration]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install --quiet pymupdf
+      - name: Print heading candidates from PDF typography
+        run: |
+          python3 <<'PY'
+          import json,pathlib,urllib.request,fitz,re
+          issue=json.load(open('content/issues/v06-i03.json'))
+          for slug in issue['articles'][:6]:
+            meta=json.load(open(pathlib.Path('content/articles')/slug/'metadata.json'))
+            print('\n########',slug,'########')
+            for loc,key in [('en','pdfEn'),('tr','pdfTr')]:
+              url=meta['urls'][key]; p=f'/tmp/{slug}-{loc}.pdf'; urllib.request.urlretrieve(url,p)
+              doc=fitz.open(p); print('\n--',loc,'--')
+              seen=[]
+              for pno,page in enumerate(doc):
+                data=page.get_text('dict')
+                for block in data.get('blocks',[]):
+                  if 'lines' not in block: continue
+                  spans=[s for line in block['lines'] for s in line.get('spans',[])]
+                  if not spans: continue
+                  txt=' '.join(s['text'].strip() for s in spans if s['text'].strip())
+                  txt=re.sub(r'\s+',' ',txt).strip()
+                  if not txt or len(txt)>240: continue
+                  maxsize=max(s['size'] for s in spans)
+                  bold=any('bold' in s['font'].lower() for s in spans)
+                  if pno==0: continue
+                  if maxsize>=11.2 or (bold and maxsize>=10.5):
+                    key2=(txt,round(maxsize,1),bold)
+                    if key2 not in seen:
+                      seen.append(key2); print(f'p{pno+1:02d} size={maxsize:.1f} bold={bold}: {txt}')
+          PY
