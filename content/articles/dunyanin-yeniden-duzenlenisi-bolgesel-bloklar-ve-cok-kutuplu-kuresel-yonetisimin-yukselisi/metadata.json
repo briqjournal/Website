@@ -1,32 +1,56 @@
 {
-  "slug": "dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi",
-  "volume": 7,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2025-2026",
-  "author": "Shangtao Gao - Jessica Durdu",
-  "title_tr": "Dünyanın Yeniden Düzenlenişi: Bölgesel Bloklar ve Çok Kutuplu Küresel Yönetişimin Yükselişi",
-  "abstract_tr": "Uluslararası yönetişim sistemi yapısal bir dönüşüm geçiriyor ve bu dönüşüm, Batı liderliğindeki kurumların geleneksel hakimiyetine giderek daha fazla meydan okuyan bölgesel blokların ve kurumların yükselişiyle hızlanıyor. Bu makale, özellikle İkinci Dünya Savaşı’ndan sonra Batı liderliğindeki kurumların hakim olduğu tek kutuplu liberal hegemonik düzenden, bölgesel blokların ve kurumların ortaya çıkmasıyla karakterize edilen çok kutuplu bir küresel yönetişim sistemine doğru küresel geçişi analiz ediyor. Makale, iklim değişikliği, ekonomik eşitsizlik ve siyasi çok kutupluluk gibi ortak bir anlayış ve işbirliği gerektiren 21. yüzyılın zorluklarını ele almak için geleneksel devletlerarası kurumların giderek artan yetersizliğinin, bölgeselcilik ve Güney-Güney işbirliğine dayanan alternatif yönetişim yapılarının yaygınlaşmasına yol açtığını savunmaktadır. Makale, dünya sahnesinde ortak zorluklar veya coğrafi yakınlık etrafında oluşan grupların gayri resmi işbirliği eğilimi olan “bölgesel bloklar” ile yapılandırılmış kurallara ve uzun vadeli yönetişim çerçevelerine sahip resmi yapılar olan “kurumlar” arasında ayrım yapmaktadır. Bu makale, kurumları kategorize ederek, bölgesel blokların ve kurumların küresel olarak daha kapsayıcı ve çoğulcu bir yönetişim mimarisini nasıl şekillendirdiğini değerlendirmektedir. Çin ve Küresel Güney’in yükselişiyle ilişkili mekanizmalara ve bunların küresel yönetişimin gelecekteki yapısı üzerindeki etkilerine özel önem verilmektedir. Çalışma, uluslararası sistemin devletlerarası çatışma çözümü çerçevesinden, çok kutuplu yönetişimi merkezine alan küresel bir zorluk yönetimi paradigmasına doğru kaymakta olduğu sonucuna varmaktadır.",
-  "source_tr": "https://briqjournal.com/dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi",
-  "source_en": "https://briqjournal.com/en/reordering-the-world-regional-blocs-and-the-rise-multipolar-global-governance",
-  "title_en": "Reordering the World: Regional Blocs and the Rise of Multipolar Global Governance",
-  "abstract_en": "Abstract \n The international governance system is undergoing a structural transformation, and this transformation is catalyzed by the rise of regional blocs and institutions that increasingly challenge the traditional dominance of Western-led institutions. This article analyzes the global transition from a unipolar liberal hegemonic order, dominated by Western-led institutions, especially after World War II, toward a multipolar global governance system characterized by the emergence of regional blocs and institutions. It argues that the growing inability of traditional inter-state institutions to address 21st-century challenges, such as climate change, economic inequality, and political multipolarity, which require a common understanding and cooperation, has led to the proliferation of alternative governance structures rooted in regionalism and South-South cooperation. It distinguishes between “regional blocs” as informal cooperative tendency of groupings formed around shared challenges or geographic proximity on the world stage, and “institutions” as formalized organizations with structured rules and long-term governance frameworks. By categorizing institutions, this paper evaluates how regional blocs and institutions are shaping a more inclusive and pluralistic governance architecture globally. Special attention is given to mechanisms associated with the rise of China and the Global South, as well as their implications for the future configuration of global governance. The study concludes that the international system is shifting from an inter-state conflict resolution framework to a global challenge-management paradigm, with multipolar governance at its core.",
-  "citation_tr": "Atıf \n Gao, S. & Durdu, J. (2025). Dünyanın Yeniden Düzenlenişi: Bölgesel Bloklar ve Çok Kutuplu Küresel Yönetişimin Yükselişi. BRIQ Kuşak ve Yol Girişimi Dergisi, 7 (1), 47-84.",
-  "citation_en": "Citation \n Gao, S. & Durdu, J. (2025). Reordering the World: Regional Blocs and the Rise of Multipolar Global Governance. BRIQ Belt & Road Initiative Quarterly, 7(1), 47-84.",
-  "pages": "47-84",
-  "received_date": "2025-07-28",
-  "revised_date": "2025-09-23",
-  "accepted_date": "2025-10-21",
-  "published_online_date": "2025-12-01",
-  "doi": "10.67696/7q2m9x4k",
-  "orcids": [
-    "0009-0000-2031-9869",
-    "0009-0000-2315-9661"
+  "schemaVersion": 2,
+  "id": "dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi",
+  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "title": {"en": "Reordering the World: Regional Blocs and the Rise of Multipolar Global Governance", "tr": "Dünyanın Yeniden Düzenlenişi: Bölgesel Bloklar ve Çok Kutuplu Küresel Yönetişimin Yükselişi"},
+  "authors": [
+    {
+      "displayName": "Shangtao Gao",
+      "givenName": "Shangtao",
+      "familyName": "Gao",
+      "orcid": "https://orcid.org/0009-0000-2031-9869",
+      "affiliations": [{"name": "China Foreign Affairs University", "nameTr": "Çin Dışişleri Üniversitesi", "nameEn": "China Foreign Affairs University", "country": "China", "ror": null}]
+    },
+    {
+      "displayName": "Jessica Durdu",
+      "givenName": "Jessica",
+      "familyName": "Durdu",
+      "orcid": "https://orcid.org/0009-0000-2315-9661",
+      "affiliations": [{"name": "China Foreign Affairs University", "nameTr": "Çin Dışişleri Üniversitesi", "nameEn": "China Foreign Affairs University", "country": "China", "ror": null}]
+    }
   ],
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-12/SHANGTAO%20GAO%20%26%20JESSICA%20DURDU_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-12/SHANGTAO%20GAO%20%26%20JESSICA%20DURDU_EN.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi-en.pdf",
-  "shared_bilingual_pdf": false
+  "abstract": {
+    "en": "The international governance system is undergoing a structural transformation, and this transformation is catalyzed by the rise of regional blocs and institutions that increasingly challenge the traditional dominance of Western-led institutions. This article analyzes the global transition from a unipolar liberal hegemonic order, dominated by Western-led institutions, especially after World War II, toward a multipolar global governance system characterized by the emergence of regional blocs and institutions. It argues that the growing inability of traditional inter-state institutions to address 21st-century challenges, such as climate change, economic inequality, and political multipolarity, which require a common understanding and cooperation, has led to the proliferation of alternative governance structures rooted in regionalism and South-South cooperation. It distinguishes between “regional blocs” as informal cooperative tendency of groupings formed around shared challenges or geographic proximity on the world stage, and “institutions” as formalized organizations with structured rules and long-term governance frameworks. By categorizing institutions, this paper evaluates how regional blocs and institutions are shaping a more inclusive and pluralistic governance architecture globally. Special attention is given to mechanisms associated with the rise of China and the Global South, as well as their implications for the future configuration of global governance. The study concludes that the international system is shifting from an inter-state conflict resolution framework to a global challenge-management paradigm, with multipolar governance at its core.",
+    "tr": "Uluslararası yönetişim sistemi yapısal bir dönüşüm geçiriyor ve bu dönüşüm, Batı liderliğindeki kurumların geleneksel hakimiyetine giderek daha fazla meydan okuyan bölgesel blokların ve kurumların yükselişiyle hızlanıyor. Bu makale, özellikle İkinci Dünya Savaşı’ndan sonra Batı liderliğindeki kurumların hakim olduğu tek kutuplu liberal hegemonik düzenden, bölgesel blokların ve kurumların ortaya çıkmasıyla karakterize edilen çok kutuplu bir küresel yönetişim sistemine doğru küresel geçişi analiz ediyor. Makale, iklim değişikliği, ekonomik eşitsizlik ve siyasi çok kutupluluk gibi ortak bir anlayış ve işbirliği gerektiren 21. yüzyılın zorluklarını ele almak için geleneksel devletlerarası kurumların giderek artan yetersizliğinin, bölgeselcilik ve Güney-Güney işbirliğine dayanan alternatif yönetişim yapılarının yaygınlaşmasına yol açtığını savunmaktadır. Makale, dünya sahnesinde ortak zorluklar veya coğrafi yakınlık etrafında oluşan grupların gayri resmi işbirliği eğilimi olan “bölgesel bloklar” ile yapılandırılmış kurallara ve uzun vadeli yönetişim çerçevelerine sahip resmi yapılar olan “kurumlar” arasında ayrım yapmaktadır. Bu makale, kurumları kategorize ederek, bölgesel blokların ve kurumların küresel olarak daha kapsayıcı ve çoğulcu bir yönetişim mimarisini nasıl şekillendirdiğini değerlendirmektedir. Çin ve Küresel Güney’in yükselişiyle ilişkili mekanizmalara ve bunların küresel yönetişimin gelecekteki yapısı üzerindeki etkilerine özel önem verilmektedir. Çalışma, uluslararası sistemin devletlerarası çatışma çözümü çerçevesinden, çok kutuplu yönetişimi merkezine alan küresel bir zorluk yönetimi paradigmasına doğru kaymakta olduğu sonucuna varmaktadır."
+  },
+  "keywords": {
+    "en": ["China’s rise", "global institutions", "Global South", "multipolar governance", "regional blocs", "post-hegemonic order"],
+    "tr": ["Çin’in yükselişi", "küresel kurumlar", "Küresel Güney", "çok kutuplu yönetişim", "bölgesel bloklar", "hegemonya sonrası düzen"]
+  },
+  "dates": {"received": "2025-07-28", "revised": "2025-09-23", "accepted": "2025-10-21", "published": "2025-12-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 1, "year": "2025-2026", "season": {"en": "Winter", "tr": "Kış"}},
+  "pages": {"first": "47", "last": "84"},
+  "doi": "10.67696/7q2m9x4k",
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Gao, S. & Durdu, J. (2025). Reordering the World: Regional Blocs and the Rise of Multipolar Global Governance. BRIQ Belt & Road Initiative Quarterly, 7(1), 47-84.",
+    "tr": "Gao, S. & Durdu, J. (2025). Dünyanın Yeniden Düzenlenişi: Bölgesel Bloklar ve Çok Kutuplu Küresel Yönetişimin Yükselişi. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(1), 47-84."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/reordering-the-world-regional-blocs-and-the-rise-multipolar-global-governance",
+    "tr": "https://briqjournal.com/dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-12/SHANGTAO%20GAO%20%26%20JESSICA%20DURDU_EN.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-12/SHANGTAO%20GAO%20%26%20JESSICA%20DURDU_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
