@@ -1,0 +1,102 @@
+name: Finalize V7I4 locale audit
+on:
+  push:
+    branches: [automation/v7i4-final-audit]
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Clean, audit, validate, and fast-forward main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main automation/v7i4-final-audit
+
+          cat > /tmp/audit-v7i4.py <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          root = Path.cwd()
+          slugs = [
+              "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi",
+              "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik",
+              "dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi",
+              "filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun",
+              "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce",
+              "cinin-kuresel-altyapi-stratejisi",
+          ]
+          embedded_page = re.compile(r"(?<=[A-Za-z])\d{3}\s+(?=[A-Za-z])")
+
+          for slug in slugs:
+              fulltext = root / "content" / "articles" / slug / "fulltext"
+              tr_path = fulltext / "tr.json"
+              en_path = fulltext / "en.json"
+              assert tr_path.exists(), f"missing tr.json: {slug}"
+              assert en_path.exists(), f"missing en.json: {slug}"
+              assert not (fulltext / "current.json").exists(), f"legacy current.json remains: {slug}"
+              assert not (fulltext / "en-archive.json").exists(), f"legacy en-archive.json remains: {slug}"
+
+              data = json.loads(en_path.read_text(encoding="utf-8"))
+              for section in data.get("sections", []):
+                  section["title"] = embedded_page.sub("", section.get("title", ""))
+                  section["paragraphs"] = [embedded_page.sub("", p) for p in section.get("paragraphs", [])]
+              for figure in data.get("figures", []):
+                  caption = figure.get("caption")
+                  if isinstance(caption, str):
+                      figure["caption"] = embedded_page.sub("", caption)
+
+              body = "\n".join(
+                  [section.get("title", "") for section in data.get("sections", [])]
+                  + [p for section in data.get("sections", []) for p in section.get("paragraphs", [])]
+                  + [figure.get("caption", "") for figure in data.get("figures", [])]
+              )
+              assert not embedded_page.search(body), f"embedded PDF page number remains: {slug}"
+              assert data.get("sections"), f"no English sections: {slug}"
+              en_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+              print(f"OK {slug}: {len(data.get('sections', []))} EN sections")
+          PY
+
+          apply_and_audit() {
+            python /tmp/audit-v7i4.py
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/*.test.mjs
+            git diff --check
+          }
+
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v7i4-final-validate "$BASE"
+          apply_and_audit
+          npm ci --no-audit --no-fund
+          npm run build
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            FINAL_BASE="$(git rev-parse origin/main)"
+            git checkout -B v7i4-final-push "$FINAL_BASE"
+            apply_and_audit
+            if git diff --quiet; then
+              echo 'V7I4 is already clean on main; no commit required.'
+              exit 0
+            fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content app
+            git commit -m 'Finalize Volume 7 Issue 4 locale-split full texts'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$FINAL_BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced during final attempt $ATTEMPT; retrying"
+          done
+
+          echo 'main kept advancing; refusing unsafe push'
+          exit 1
