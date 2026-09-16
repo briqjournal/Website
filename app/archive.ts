@@ -270,9 +270,7 @@ export function issuePdfUrl(
   const local = locale === "tr" ? record.pdf_tr_local : record.pdf_en_local;
   if (local) return local;
   const source = locale === "tr" ? record.pdf_tr_source : record.pdf_en_source;
-  return source
-    ? `/dosyalar/sayi/cilt-${record.volume}-sayi-${record.issue}/${locale}.pdf`
-    : null;
+  return source || null;
 }
 
 export function articlePdfUrl(

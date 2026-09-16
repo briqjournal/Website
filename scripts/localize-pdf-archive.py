@@ -51,7 +51,7 @@ KNOWN_LOCAL_ISSUES = {
     (7, 3, "tr"): "/assets/issues/briq-cilt-7-sayi-3-yaz-2026-tr.pdf",
     (7, 3, "en"): "/assets/issues/briq-cilt-7-sayi-3-yaz-2026.pdf",
     (7, 4, "tr"): "/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf",
-    (7, 4, "en"): "/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf",
+    (7, 4, "en"): "/assets/issues/briq-volume-7-issue-4-autumn-2026.pdf",
 }
 
 

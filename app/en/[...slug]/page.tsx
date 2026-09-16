@@ -541,7 +541,6 @@ function EnglishCurrentIssue() {
       record={record}
       locale="en"
       current
-      coverSrc="/assets/current-issue-en.jpg"
       periodLabel="September 2026"
       title={heading.title}
       subtitle={heading.subtitle}
