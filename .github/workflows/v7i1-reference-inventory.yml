@@ -1,0 +1,44 @@
+name: V7I1 reference inventory
+on:
+  push:
+    branches: [automation/v7i1-structure-inventory]
+permissions:
+  contents: read
+jobs:
+  refs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 <<'PY'
+          import json,re
+          from pathlib import Path
+          from difflib import SequenceMatcher
+          issue=json.loads(Path('content/issues/v07-i01.json').read_text())
+          def text(r): return r.get('text','') if isinstance(r,dict) else str(r)
+          def norm(s):
+            s=s.lower().replace('’',"'").replace('–','-')
+            s=re.sub(r'https?://\S+','',s); s=re.sub(r'doi\s*:?\s*10\.\S+','',s)
+            s=re.sub(r'\s+',' ',s); return re.sub(r'[^\w\s]','',s)
+          def key(s):
+            y=re.search(r'\b(19|20)\d{2}[a-z]?\b',s.lower()); first=re.findall(r'[A-Za-zÀ-žÇĞİÖŞÜçğıöşü]{3,}',s)
+            return ((first[0].lower() if first else ''),(y.group(0) if y else ''))
+          for slug in issue['articles']:
+            cur=json.loads(Path(f'content/articles/{slug}/fulltext/current.json').read_text()); en=[text(x) for x in cur['en'].get('references',[])]; tr=[text(x) for x in cur['tr'].get('references',[])]
+            print('\n###',slug,'EN/TR',len(en),len(tr))
+            # suspicious URL/DOI whitespace
+            for l,refs in [('en',en),('tr',tr)]:
+              for i,r in enumerate(refs):
+                if re.search(r'https?://\S+\s+\S*\.(?:com|org|gov|edu|net|int)\b',r): print('BROKEN_URL?',l,i,r)
+                if re.search(r'10\.\d{4,9}/\S+\s+\S+',r): print('BROKEN_DOI?',l,i,r)
+            used=set(); unmatched=[]
+            for i,a in enumerate(en):
+              candidates=[(SequenceMatcher(None,norm(a),norm(b)).ratio(),j,b) for j,b in enumerate(tr) if j not in used]
+              if not candidates: unmatched.append(('EN',i,a)); continue
+              sc,j,b=max(candidates)
+              if sc>.47 or (key(a)==key(b) and key(a)!=('','')): used.add(j)
+              else: unmatched.append(('EN',i,a,round(sc,2),j,b))
+            for j,b in enumerate(tr):
+              if j not in used: unmatched.append(('TR',j,b))
+            for u in unmatched: print('UNMATCHED',u)
+          PY
