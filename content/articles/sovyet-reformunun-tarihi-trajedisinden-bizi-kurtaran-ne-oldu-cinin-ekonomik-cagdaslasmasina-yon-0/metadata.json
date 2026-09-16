@@ -1,28 +1,54 @@
 {
-  "slug": "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0",
-  "volume": 7,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2026",
-  "author": "He Ganqiang",
-  "title_tr": "Sovyet “Reformu”nun Tarihi Trajedisinden Bizi Kurtaran Ne Oldu? Çin’in Ekonomik Çağdaşlaşmasına Yön Vermek İçin Marksist Ekonomiyi Uygulamak",
-  "abstract_tr": "Bu makale, Çin tarzı çağdaşlaşmanın ancak Marxist ekonomi politiğin bilimsel rehberliği altında sürdürülebilir bir doğrultuda ilerleyebileceğini savunmaktadır. Çalışma, Batı kökenli neoliberal ve Keynesçi yaklaşımların, sosyalist piyasa ekonomisinin teorik temelleriyle yapısal olarak bağdaşmadığını ve Sovyetler Birliği’nin reform sürecinde yaşanan tarihsel çöküşün ardındaki temel nedenlerden biri olduğunu ileri sürmektedir. Tarihsel materyalizm temelinde, üretim ilişkilerinin ve mülkiyet yapısının toplumsal yeniden üretim sürecindeki belirleyici rolü vurgulanmakta; kamu mülkiyetinin ekonomideki öncü konumunun zayıflatılmasının gelir eşitsizliği, yapısal dengesizlikler ve makroekonomik kırılganlıklar yarattığı gösterilmektedir. Makale ayrıca, sosyalist piyasa ekonomisinin, kamu mülkiyetine dayalı üretim ilişkileri ile piyasa dolaşım mekanizmalarının diyalektik bütünlüğü olarak kavranması gerektiğini ileri sürmektedir. Bu çerçevede, Marx’ın yeniden üretim, sermaye birikimi ve değer teorilerinin, Çin’in ekonomik çağdaşlaşma sürecine yönelik makroekonomik yönetişim, mülkiyet yapısı ve dışa açılma politikalarının bilimsel temelini oluşturduğu savunulmaktadır.",
-  "source_tr": "https://briqjournal.com/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0",
-  "source_en": "https://briqjournal.com/en/what-saved-us-the-historical-tragedy-soviet-reform-applying-marxist-economics-guide-chinese-0",
-  "title_en": "What Saved us From the Historical Tragedy of Soviet “Reform”? Applying Marxist Economics to Guide Chinese Economic Modernization",
-  "abstract_en": "Abstract \n This article argues that Chinese-style modernization can only advance in a sustainable and socialist direction under the scientific guidance of Marxist political economy. It contends that Western neoliberal and Keynesian paradigms are structurally incompatible with the theoretical foundations of the socialist market economy and constituted a central cause of the historical failure of Soviet “reform.” Grounded in historical materialism, the study emphasizes the determining role of production relations and ownership structures in the process of social reproduction. It demonstrates that the weakening of public ownership as the leading economic force generates income polarization, structural imbalances, and macroeconomic instability. The article further conceptualizes the socialist market economy as a dialectical unity between public ownership–based production relations and market circulation mechanisms. Within this framework, Marx’s theories of reproduction, capital accumulation, and value are presented as the scientific basis for macroeconomic governance, property relations, and China’s strategy of economic opening in the process of modernization.",
-  "citation_tr": "Atıf \n He, G. (2026). Sovyet “Reformu”nun Tarihi Trajedisinden Bizi Kurtaran Ne Oldu? Çin’in Ekonomik Çağdaşlaşmasına Yön Vermek İçin Marksist Ekonomiyi Uygulamak. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(2), 129-142.",
-  "citation_en": "Citation \n He, G. (2026). Applying Marxist Economics to Guide Chinese Economic Modernization. BRIQ Belt & Road Initiative Quarterly, 7(2), 129-142.",
-  "pages": "129-142",
-  "received_date": "2025-12-30",
-  "published_online_date": "2026-03-01",
-  "publication_type_tr": "Çeviri",
-  "publication_type_en": "Translation",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/He%20Ganqiang_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/He%20Ganqiang_EN.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0-en.pdf",
-  "shared_bilingual_pdf": false,
-  "accepted_date": "2026-01-19"
+  "schemaVersion": 2,
+  "id": "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0",
+  "articleType": {"id": "translation", "tr": "Çeviri", "en": "Translation", "peerReviewed": false},
+  "title": {
+    "en": "What Saved us From the Historical Tragedy of Soviet “Reform”? Applying Marxist Economics to Guide Chinese Economic Modernization",
+    "tr": "Sovyet “Reformu”nun Tarihi Trajedisinden Bizi Kurtaran Ne Oldu? Çin’in Ekonomik Çağdaşlaşmasına Yön Vermek İçin Marksist Ekonomiyi Uygulamak"
+  },
+  "authors": [
+    {
+      "displayName": "He Ganqiang",
+      "givenName": "Ganqiang",
+      "familyName": "He",
+      "orcid": "https://orcid.org/0009-0006-2002-874X",
+      "affiliations": [
+        {"name": "Nanjing University of Finance and Economics (NUFE)", "nameTr": "Nanjing Finans ve Ekonomi Üniversitesi", "nameEn": "Nanjing University of Finance and Economics (NUFE)", "country": "China", "ror": null}
+      ]
+    }
+  ],
+  "abstract": {
+    "en": "This article argues that Chinese-style modernization can only advance in a sustainable and socialist direction under the scientific guidance of Marxist political economy. It contends that Western neoliberal and Keynesian paradigms are structurally incompatible with the theoretical foundations of the socialist market economy and constituted a central cause of the historical failure of Soviet “reform.” Grounded in historical materialism, the study emphasizes the determining role of production relations and ownership structures in the process of social reproduction. It demonstrates that the weakening of public ownership as the leading economic force generates income polarization, structural imbalances, and macroeconomic instability. The article further conceptualizes the socialist market economy as a dialectical unity between public ownership–based production relations and market circulation mechanisms. Within this framework, Marx’s theories of reproduction, capital accumulation, and value are presented as the scientific basis for macroeconomic governance, property relations, and China’s strategy of economic opening in the process of modernization.",
+    "tr": "Bu makale, Çin tarzı çağdaşlaşmanın ancak Marxist ekonomi politiğin bilimsel rehberliği altında sürdürülebilir bir doğrultuda ilerleyebileceğini savunmaktadır. Çalışma, Batı kökenli neoliberal ve Keynesçi yaklaşımların, sosyalist piyasa ekonomisinin teorik temelleriyle yapısal olarak bağdaşmadığını ve Sovyetler Birliği’nin reform sürecinde yaşanan tarihsel çöküşün ardındaki temel nedenlerden biri olduğunu ileri sürmektedir. Tarihsel materyalizm temelinde, üretim ilişkilerinin ve mülkiyet yapısının toplumsal yeniden üretim sürecindeki belirleyici rolü vurgulanmakta; kamu mülkiyetinin ekonomideki öncü konumunun zayıflatılmasının gelir eşitsizliği, yapısal dengesizlikler ve makroekonomik kırılganlıklar yarattığı gösterilmektedir. Makale ayrıca, sosyalist piyasa ekonomisinin, kamu mülkiyetine dayalı üretim ilişkileri ile piyasa dolaşım mekanizmalarının diyalektik bütünlüğü olarak kavranması gerektiğini ileri sürmektedir. Bu çerçevede, Marx’ın yeniden üretim, sermaye birikimi ve değer teorilerinin, Çin’in ekonomik çağdaşlaşma sürecine yönelik makroekonomik yönetişim, mülkiyet yapısı ve dışa açılma politikalarının bilimsel temelini oluşturduğu savunulmaktadır."
+  },
+  "keywords": {
+    "en": ["Chinese modernization", "common prosperity", "market economy", "Marxist economics", "socialism with Chinese characteristics"],
+    "tr": ["Çin’e özgü sosyalizm", "Çin’in çağdaşlaşması", "Marksist ekonomi", "ortak refah", "piyasa ekonomisi"]
+  },
+  "dates": {"received": "2025-12-30", "revised": null, "accepted": "2026-01-19", "published": "2026-03-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 2, "year": 2026, "season": {"en": "Spring", "tr": "Bahar"}},
+  "pages": {"first": "129", "last": "142"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "He, G. (2026). Applying Marxist Economics to Guide Chinese Economic Modernization. BRIQ Belt & Road Initiative Quarterly, 7(2), 129-142.",
+    "tr": "He, G. (2026). Sovyet “Reformu”nun Tarihi Trajedisinden Bizi Kurtaran Ne Oldu? Çin’in Ekonomik Çağdaşlaşmasına Yön Vermek İçin Marksist Ekonomiyi Uygulamak. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(2), 129-142."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/what-saved-us-the-historical-tragedy-soviet-reform-applying-marxist-economics-guide-chinese-0",
+    "tr": "https://briqjournal.com/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/He%20Ganqiang_EN.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-03/He%20Ganqiang_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
