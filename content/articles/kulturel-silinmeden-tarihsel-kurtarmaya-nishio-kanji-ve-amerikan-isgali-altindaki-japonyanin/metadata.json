@@ -1,27 +1,54 @@
 {
-  "slug": "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin",
-  "volume": 7,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2026",
-  "author": "Jason Morgan",
-  "title_tr": "Kültürel Silinmeden Tarihsel Kurtarmaya: Nishio Kanji ve Amerikan İşgali Altındaki Japonya’nın ‘Yakılan Kitaplar’ı",
-  "abstract_tr": "“Gelişmekte olan ülkelerde kültürel mirasın yağmalanması” yalnızca maddi kültürle sınırlı olmak zorunda değildir. Bugün “gelişmekte olan” kategorisinde yer almayan uluslar da kültürel yağmanın mağduru olmuş olabilir. Bu makalede, Amerikan işgal otoritelerinin İkinci Dünya Savaşı’ndan sonra işgal altındaki Japonya’da fiziksel koleksiyonlardan ve tarihsel-kültürel hafızadan çıkarılmasını emrettiği funsho’yu (yakılmış kitaplar) ele alıyorum. Makale, bu silme pratiğinin tarihsel ve kültürel sonuçlarının, yöntemi Amerikan egemenliğinin başka bölgelerdeki diğer örnekleriyle nasıl ilişkilendirdiğini incelemekte; ayrıca tarihçi Nishio Kanji ve başka kamusal entelektüeller de dahil olmak üzere Japon araştırmacıların Amerikan işgalinin tarihsel karartma girişimlerine karşı koymak amacıyla funsho’yu geri kazanma çabalarını ele almaktadır. Böylece yalnızca Amerika’nın Asya’daki varlığının değil, aynı zamanda Amerika’nın kendi sınırları içindeki eylemlerinin de Batı-merkezci olmayan ve doğru bir tarihini yeniden sahiplenme imkânı doğmaktadır.",
-  "source_tr": "https://briqjournal.com/kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin",
-  "source_en": "https://briqjournal.com/en/cultural-erasure-historical-recovery-nishio-kanji-and-the-burned-books-american-occupied-japan",
-  "title_en": "From Cultural Erasure to Historical Recovery: Nishio Kanji and the ‘Burned Books’ of American-Occupied Japan",
-  "abstract_en": "Abstract \n The “plundering of cultural heritage in developing nations” need not be strictly limited to physical culture. Moreover, nations not now categorized as “developing” can also have been victims of cultural plunder. In this paper, I introduce the funsho (burned books) that American occupation authorities ordered removed from physical collections and from historical and cultural memory in occupied Japan after the Second World War. This paper explores how the historical and cultural consequences of this erasure connect the tactic to other episodes of American domination in different regions. It describes the efforts of Japanese scholars, including historian Nishio Kanji and other public intellectuals, to recover the funsho to counter the American Occupation’s attempts at historical blackout, thereby reclaiming a non-Western-centric, accurate history of not only America in Asia but also of American actions within the United States.",
-  "citation_tr": "Atıf \n Morgan, J. (2026). Kültürel silinmeden tarihsel kurtarmaya: Nishio Kanji ve Amerikan işgali altındaki Japonya’nın ‘Yakılan Kitaplar’ı. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(3), 254-269.",
-  "citation_en": "Citation \n Morgan, J. (2026). From cultural erasure to historical recovery: Nishio Kanji and the ‘Burned Books’ of American-occupied Japan. BRIQ Belt & Road Initiative Quarterly, 7(3), 254-269.",
-  "pages": "254-269",
-  "received_date": "2026-01-14",
-  "revised_date": "2026-02-10",
-  "accepted_date": "2026-04-06",
-  "published_online_date": "2026-06-01",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/JASON%20MORGAN_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/JASON%20MORGAN_ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin",
+  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "title": {
+    "en": "From Cultural Erasure to Historical Recovery: Nishio Kanji and the ‘Burned Books’ of American-Occupied Japan",
+    "tr": "Kültürel Silinmeden Tarihsel Kurtarmaya: Nishio Kanji ve Amerikan İşgali Altındaki Japonya’nın ‘Yakılan Kitaplar’ı"
+  },
+  "authors": [
+    {
+      "displayName": "Jason Morgan",
+      "givenName": "Jason",
+      "familyName": "Morgan",
+      "orcid": null,
+      "affiliations": [
+        {"name": "Faculty of Global Studies, Reitaku University", "nameTr": "Reitaku Üniversitesi, Küresel Çalışmalar Fakültesi", "nameEn": "Faculty of Global Studies, Reitaku University", "country": "Japan", "ror": null}
+      ]
+    }
+  ],
+  "abstract": {
+    "en": "The “plundering of cultural heritage in developing nations” need not be strictly limited to physical culture. Moreover, nations not now categorized as “developing” can also have been victims of cultural plunder. In this paper, I introduce the funsho (burned books) that American occupation authorities ordered removed from physical collections and from historical and cultural memory in occupied Japan after the Second World War. This paper explores how the historical and cultural consequences of this erasure connect the tactic to other episodes of American domination in different regions. It describes the efforts of Japanese scholars, including historian Nishio Kanji and other public intellectuals, to recover the funsho to counter the American Occupation’s attempts at historical blackout, thereby reclaiming a non-Western-centric, accurate history of not only America in Asia but also of American actions within the United States.",
+    "tr": "“Gelişmekte olan ülkelerde kültürel mirasın yağmalanması” yalnızca maddi kültürle sınırlı olmak zorunda değildir. Bugün “gelişmekte olan” kategorisinde yer almayan uluslar da kültürel yağmanın mağduru olmuş olabilir. Bu makalede, Amerikan işgal otoritelerinin İkinci Dünya Savaşı’ndan sonra işgal altındaki Japonya’da fiziksel koleksiyonlardan ve tarihsel-kültürel hafızadan çıkarılmasını emrettiği funsho’yu (yakılmış kitaplar) ele alıyorum. Makale, bu silme pratiğinin tarihsel ve kültürel sonuçlarının, yöntemi Amerikan egemenliğinin başka bölgelerdeki diğer örnekleriyle nasıl ilişkilendirdiğini incelemekte; ayrıca tarihçi Nishio Kanji ve başka kamusal entelektüeller de dahil olmak üzere Japon araştırmacıların Amerikan işgalinin tarihsel karartma girişimlerine karşı koymak amacıyla funsho’yu geri kazanma çabalarını ele almaktadır. Böylece yalnızca Amerika’nın Asya’daki varlığının değil, aynı zamanda Amerika’nın kendi sınırları içindeki eylemlerinin de Batı-merkezci olmayan ve doğru bir tarihini yeniden sahiplenme imkânı doğmaktadır."
+  },
+  "keywords": {
+    "en": ["American Occupation of Japan", "funsho", "General Headquarters", "GHQ", "Nishio Kanji", "Supreme Commander for the Allied Powers", "SCAP"],
+    "tr": ["funsho", "Genel Karargâh", "Japonya’da Amerikan işgali", "Müttefik Kuvvetler Yüksek Komutanlığı", "SCAP", "Nishio Kanji"]
+  },
+  "dates": {"received": "2026-01-14", "revised": "2026-02-10", "accepted": "2026-04-06", "published": "2026-06-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 3, "year": 2026, "season": {"en": "Summer", "tr": "Yaz"}},
+  "pages": {"first": "254", "last": "269"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Morgan, J. (2026). From cultural erasure to historical recovery: Nishio Kanji and the ‘Burned Books’ of American-occupied Japan. BRIQ Belt & Road Initiative Quarterly, 7(3), 254-269.",
+    "tr": "Morgan, J. (2026). Kültürel silinmeden tarihsel kurtarmaya: Nishio Kanji ve Amerikan işgali altındaki Japonya’nın ‘Yakılan Kitaplar’ı. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(3), 254-269."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/cultural-erasure-historical-recovery-nishio-kanji-and-the-burned-books-american-occupied-japan",
+    "tr": "https://briqjournal.com/kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/JASON%20MORGAN_ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-05/JASON%20MORGAN_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
