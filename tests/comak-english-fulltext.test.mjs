@@ -22,7 +22,26 @@ test("keeps the Çomak-Toker-Manioğlu article bilingual instead of duplicating 
   assert.match(englishBody, /Middle Corridor/u);
   assert.match(englishBody, /weaponized interdependence/u);
 
+  assert.equal(
+    record.tr.sections[4].title,
+    "Güç Geçişi ve Jeoekonomik Bağlantısallık: Kuşak ve Yol Girişimi ile Orta Koridor",
+  );
+  assert.equal(
+    record.en.sections[4].title,
+    "Power Transition and Geoeconomic Connectivity: The Belt and Road Initiative and the Middle Corridor",
+  );
+  assert(!record.tr.sections[3].paragraphs.includes("Güç Geçişi ve Jeoekonomik Bağlantısallık:"));
+  assert(!record.en.sections[3].paragraphs.includes("Power Transition and Geoeconomic Connectivity:"));
+
   assert.equal(record.tr.keywords.length, record.en.keywords.length);
+  assert(record.tr.keywords.includes("Türkiye-Çin İlişkileri"));
+  assert(record.en.keywords.includes("Türkiye-China Relations"));
+
+  assert.equal(record.tr.references.length, 32);
+  assert.equal(record.en.references.length, 32);
+  assert(record.tr.references.some((reference) => reference.text.includes("10.25064/mulkiye.1300476")));
+  assert(record.en.references.some((reference) => reference.text.includes("10.25064/mulkiye.1300476")));
+
   assert(record.en.figures.every((figure) => /[A-Za-z]/u.test(figure.caption)));
   assert.equal(record.en.figures[2].caption, "Table 1: Indicators used to distinguish a transit country from a joint production hub");
 });
