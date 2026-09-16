@@ -24,9 +24,7 @@ jobs:
           const issuePath = 'content/issues/v07-i03.json';
           const issue = JSON.parse(fs.readFileSync(issuePath, 'utf8'));
           if (issue.volume !== 7 || issue.issue !== 3) throw new Error('Unexpected issue descriptor');
-          if (!Array.isArray(issue.articles) || issue.articles.length !== 8) {
-            throw new Error(`Expected 8 V7I3 contributions, found ${issue.articles?.length}`);
-          }
+          if (!Array.isArray(issue.articles) || issue.articles.length !== 8) throw new Error(`Expected 8 V7I3 contributions, found ${issue.articles?.length}`);
 
           const MORGAN = 'kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin';
           const MONGOLIA = 'mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim';
@@ -36,15 +34,13 @@ jobs:
           function repairEnglishReference(slug, ref) {
             let text = normalize(ref.text);
             const httpIndex = text.search(/https?:\/\//i);
-            if (httpIndex >= 0) {
-              text = text.slice(0, httpIndex) + text.slice(httpIndex).replace(/\s+/g, '');
-            } else {
+            if (httpIndex >= 0) text = text.slice(0, httpIndex) + text.slice(httpIndex).replace(/\s+/g, '');
+            else {
               const doiIndex = text.search(/\bdoi:\s*10\./i);
               if (doiIndex >= 0) text = text.slice(0, doiIndex) + text.slice(doiIndex).replace(/\s+/g, '');
             }
             text = text.replace(/(\d)\s+\((\d+)\)/g, '$1($2)');
             text = text.replace(/(\d)[–-]\s+(\d)/g, '$1–$2');
-
             if (slug === MORGAN && ref.id === 'ref-52' && /Osaka:\s*Sōgen-$/u.test(text)) {
               text = 'Yoshida, T. (2016). Nichibei gōdō iinkai no kenkyū: Nazo no kenryoku kōzō no shōtai ni semaru. Osaka: Sōgensha.';
             }
@@ -64,7 +60,6 @@ jobs:
             ...(data.references ?? []).map((x) => x.text),
             ...(data.figures ?? []).map((x) => x.caption),
           ].map(normalize).filter(Boolean).join('\n');
-
           const narrativeText = (data) => [
             ...(data.sections ?? []).flatMap((s) => [s.title, ...(s.paragraphs ?? [])]),
             ...(data.footnotes ?? []).map((x) => x.text),
@@ -76,7 +71,6 @@ jobs:
             const currentPath = path.join(dir, 'current.json');
             const enPath = path.join(dir, 'en.json');
             const trPath = path.join(dir, 'tr.json');
-
             if (fs.existsSync(currentPath)) {
               const current = JSON.parse(fs.readFileSync(currentPath, 'utf8'));
               if (!current.en?.sections?.length) throw new Error(`Missing real EN full text in ${slug}`);
@@ -85,7 +79,6 @@ jobs:
               fs.writeFileSync(trPath, JSON.stringify(current.tr, null, 2) + '\n');
               fs.rmSync(currentPath);
             }
-
             if (!fs.existsSync(enPath) || !fs.existsSync(trPath)) throw new Error(`Canonical locale pair missing after migration: ${slug}`);
             for (const legacy of ['current.json', 'en-archive.json', 'saudi-en.json']) {
               const p = path.join(dir, legacy);
@@ -95,7 +88,12 @@ jobs:
             const en = JSON.parse(fs.readFileSync(enPath, 'utf8'));
             const tr = JSON.parse(fs.readFileSync(trPath, 'utf8'));
             en.references = (en.references ?? []).map((ref) => repairEnglishReference(slug, ref));
+            if (slug === MORGAN && Array.isArray(tr.keywords)) {
+              const merged = 'Genel Karargâh (GHQ); Japonya’da Amerikan işgali';
+              tr.keywords = tr.keywords.flatMap((keyword) => keyword === merged ? ['Genel Karargâh (GHQ)', 'Japonya’da Amerikan işgali'] : [keyword]);
+            }
             fs.writeFileSync(enPath, JSON.stringify(en, null, 2) + '\n');
+            fs.writeFileSync(trPath, JSON.stringify(tr, null, 2) + '\n');
 
             const enBody = bodyText(en);
             const trBody = bodyText(tr);
@@ -103,9 +101,8 @@ jobs:
             if (enBody === trBody) throw new Error(`EN/TR are identical: ${slug}`);
             const enScore = (enBody.match(/\b(the|and|of|to|in|is|that|for|with|as)\b/gi) ?? []).length;
             const trScore = (enBody.match(/\b(ve|bir|bu|için|ile|olarak|olan|da|de|gibi)\b/gi) ?? []).length;
-            if (enBody.length > 1200 && enScore < Math.max(20, trScore * 1.25)) {
-              throw new Error(`English language sanity check failed: ${slug} (en=${enScore}, tr=${trScore})`);
-            }
+            if (enBody.length > 1200 && enScore < Math.max(20, trScore * 1.25)) throw new Error(`English language sanity check failed: ${slug} (en=${enScore}, tr=${trScore})`);
+            console.log(`OK ${slug}: EN ${en.sections.length} sections / TR ${tr.sections.length} sections; keywords EN ${en.keywords?.length ?? 0} / TR ${tr.keywords?.length ?? 0}`);
 
             for (const ref of en.references ?? []) {
               const text = normalize(ref.text);
@@ -115,19 +112,14 @@ jobs:
               const doiIndex = text.search(/\bdoi:\s*10\./i);
               if (doiIndex >= 0 && /\s/.test(text.slice(doiIndex))) suspicious.push(`${slug} ${ref.id}: whitespace remains inside DOI: ${text}`);
             }
-
             const narrative = narrativeText(en);
-            const embeddedRegex = /(?<=[A-Za-z])\d{3}\s+(?=[A-Za-z])/g;
-            for (const match of narrative.matchAll(embeddedRegex)) {
+            for (const match of narrative.matchAll(/(?<=[A-Za-z])\d{3}\s+(?=[A-Za-z])/g)) {
               const start = Math.max(0, match.index - 55);
               const end = Math.min(narrative.length, match.index + match[0].length + 55);
               suspicious.push(`${slug}: possible embedded PDF page token "${match[0]}" in …${narrative.slice(start, end).replace(/\n/g, ' ')}…`);
             }
-            console.log(`OK ${slug}: EN ${en.sections.length} sections / TR ${tr.sections.length} sections`);
           }
 
-          // Catalog membership is data, not a runtime slug exception. Register the
-          // canonical pairs and remove the same slugs from all legacy collections.
           const catalogPath = 'content/catalog.json';
           const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
           const issueSlugs = new Set(issue.articles);
