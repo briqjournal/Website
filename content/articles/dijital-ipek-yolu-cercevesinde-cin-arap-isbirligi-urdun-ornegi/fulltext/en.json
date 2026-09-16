@@ -1,0 +1,313 @@
+{
+  "sections": [
+    {
+      "id": "en-section-1",
+      "title": "Introduction",
+      "paragraphs": [
+        "The rapid advancement of digital technologies is driving countries toward greater connectivity and economic transformation. Against this background, China advanced the idea of digital connectivity under the Belt and Road Initiative (BRI). The policy foundations of the Digital Silk Road (hereinafter referred to as the DSR) can be traced to the 2015 Vision and Actions on Jointly Building Silk Road Economic Belt and 21st-Century Maritime Silk Road, jointly issued by the National Development and Reform Commission, the Ministry of Foreign Affairs, and the Ministry of Commerce, which called for the development of cross-border communication networks and the advancement of an “Information Silk Road” (National Development and Reform Commission et al., 2015). The concept of the DSR was formally introduced by President Xi Jinping at the first Belt and Road Forum for International Cooperation in May 2017, marking its official establishment as a key component of the BRI (Xi, 2017). The DSR aims to promote digital connectivity, technological cooperation, and innovation-driven development among partner countries. It covers a broad spectrum of sectors, including telecommunications infrastructure, 5G, data centers, cloud computing, AI, e-commerce, smart cities, satellite navigation, and digital governance. Geographically, it spans Asia, Africa, Europe, and the Middle East, with notable partners including the UAE, Saudi Arabia, Qatar, Egypt, and Oman. The initiative is particularly significant for Middle Eastern nations, which have made digital transformation a strategic pillar of their national development.",
+        "Jordan is strategically located at the crossroads of Asia, Africa, and Europe. Recognizing the importance of digital transformation for economic diversification and competitiveness, the country has identified it as a national development priority through the Jordan Digital Economy Strategy 2021–2025. The strategy seeks to accelerate digital infrastructure development, expand digital government services, strengthen digital skills, foster innovation and entrepreneurship, and increase the digital economy’s contribution to national growth (Ministry of Digital Economy and Entrepreneurship, 2021). With its advanced digital technologies and extensive experience in digital infrastructure development, China has become an important partner for Jordan in advancing this agenda (Senate of Jordan, 2026).",
+        "Existing research has extensively analyzed the Belt and Road Initiative and its geopolitical, economic, and social implications. As digital technologies play an increasingly important role in the global economy, the DSR has gradually become a new focus of academic attention (Brown & Burjanadze, 2020; Oreglia & Zheng, 2024). Early literature mainly focused on the conceptual definition of the DSR, its national-level objectives, and the types of digital infrastructure projects involved (Shen, 2018), emphasizing its role in promoting digital infrastructure construction, increasing internet penetration, and facilitating digital trade (Heeks et al., 2024). The DSR is seen as a mechanism for bridging the digital divide in developing countries by leveraging advanced digital technologies and expertise from China (Arsentyeva, 2024; He & Zhou, 2024). Within the framework of China-Arab cooperation, relevant studies often highlight the mutual benefits of this partnership. Arab countries, including Jordan, are embracing digital transformation to diversify their economies and improve public services.",
+        "China’s involvement in developing digital infrastructure and emerging digital solutions across the Middle East and North Africa (MENA) has also attracted increasing scholarly attention (Dahdal & Abdel Ghafar, 2025). Research indicates that Chinese companies, particularly Huawei and ZTE, have played a significant role in telecommunications networks, data centers, and smart city solutions in North Africa (El Kadi, 2024). Taking Egypt and Algeria as illustrative cases, both governments are investing considerably in upgrading their network infrastructure. Egypt’s internet penetration rate rose from 29% in 2009 to 72% in 2020, while Algeria reached 63% in the same year. Mobile penetration stands at 110% and 105.8%, respectively. This rising demand has driven Huawei and ZTE to expand their local presence: Huawei employs roughly 1,000 staff in Egypt and about 500 in Algeria, with a localization rate of 70% in both countries; ZTE Algeria has approximately 200 in‑house employees and 500 outsourced workers, with a similar proportion of local hires. As a signature project, the Huawei‑AFGO‑Tech joint venture mobile phone factory in Algiers, launched in 2019, has a monthly production capacity of 15,000 units, representing a concrete manifestation of the Digital Silk Road in North Africa (El Kadi, 2024).",
+        "In addition, Huawei has established ICT academies in cooperation with several Jordanian universities to cultivate digital talent and support the country’s digital transformation (Al-Ahliyya Amman University, 2025; The Jordan Times, 2019; Yarmouk University, 2024).",
+        "The existing literature on Jordan has addressed its strategic importance in the Middle East (Chaziza & Lutmar, 2026) and its digital transformation efforts (Almajali, Thuneibat, & Qatawneh, 2025). However, few studies have systematically examined the China–Arab Digital Silk Road cooperation framework through a detailed case study of Jordan. Jordan represents a particularly valuable case for analysis because it is among the Arab countries that have actively pursued digital transformation through initiatives such as the Jordan Digital Economy Strategy 2021–2025 and the Economic Modernization Vision. At the same time, Jordan has developed extensive digital cooperation with China, particularly in telecommunications infrastructure, digital skills development, and technology transfer. Moreover, unlike resource-rich Gulf states, Jordan is a resource-constrained developing country whose digital transformation relies more heavily on international cooperation and external technological support, making it a useful case for assessing the developmental impact of the Digital Silk Road on Arab developing countries. Therefore, a more in-depth investigation is needed regarding specific projects, overall trends, and the economic, social, and geopolitical impacts of the DSR on Jordan’s digital landscape."
+      ]
+    },
+    {
+      "id": "en-section-2",
+      "title": "Methodology",
+      "paragraphs": [
+        "This paper adopts a qualitative research method, with case study analysis as its core, to examine the practice of the China-Arab Digital Silk Road cooperation framework in Jordan. The case study approach is suitable for investigating contemporary phenomena in their real-life contexts, especially when the boundaries between phenomenon and context are not clearly defined (Yin, 2018). It helps to holistically understand the interaction between DSR initiatives and Jordan’s digital transformation efforts.",
+        "Data for this study are drawn from four types of secondary sources: (a) academic literature on the Belt and Road Initiative, the Digital Silk Road, China-Arab relations, and Jordan’s digital economy; (b) official reports and policy documents from government agencies (e.g., China’s Ministry of Commerce, Jordan’s Ministry of Digital Economy and Entrepreneurship) and international organizations (e.g., World Bank); (c) news articles and media reports from reputable outlets; and (d) corporate reports and press releases from Chinese ICT companies operating in Jordan, including Huawei and ZTE. These sources were triangulated to ensure the reliability and validity of the findings."
+      ]
+    },
+    {
+      "id": "en-section-3",
+      "title": "The Digital Silk Road Initiative and China-Jordan Cooperation",
+      "paragraphs": [
+        "Since its official proposal in 2017, the Digital Silk Road has evolved from a concept of digital infrastructure connectivity into a comprehensive framework encompassing technology standards, platform ecosystems, and data governance. For Jordan, the DSR offers not only access to advanced digital technologies but also a strategic pathway to accelerate its national transformation agenda. The alignment between China’s digital cooperation vision and Jordan’s domestic strategy has laid the foundation for deepening bilateral engagement. Understanding this evolving relationship requires a closer look at the DSR’s global expansion, Jordan’s own digital strategy upgrades, the country’s specific needs as a partner, the institutionalization of China-Jordan cooperation, and recent project-level developments."
+      ]
+    },
+    {
+      "id": "en-section-4",
+      "title": "The Evolving Concept of the Digital Silk Road and Its Global Context",
+      "paragraphs": [
+        "The DSR is a key component of China’s Belt and Road Initiative, reflecting China’s commitment to promoting global digital connectivity and cooperation. It has been in development for over a decade. Its scope extends far beyond early infrastructure construction, encompassing land and submarine cables, 4G/5G networks, artificial intelligence, data centers, cloud infrastructure, smart cities, fintech, cross-border e-commerce, cybersecurity systems, and even nanotechnology and quantum computing (Cai et al., 2025).",
+        "In terms of global reach, by the tenth anniversary of the Belt and Road Initiative in 2023, China had signed over 200 cooperation documents on the joint construction of the Belt and Road with 152 countries and 32 international organizations, covering nearly 80 percent of United Nations member states (Wang & Wang, 2023). Within the DSR framework, China’s BeiDou Navigation Satellite System has achieved extensive global coverage, and Chinese telecommunications firms, led by Huawei, have played a foundational role in expanding mobile network infrastructure across Africa (Dahdal & Abdel Ghafar, 2025; Gordon & Nouwens, 2022). In contrast to the early phase of China’s overseas engagement, which was dominated by state-owned enterprises undertaking large-scale infrastructure projects, the current wave of digital initiatives is increasingly driven by private Chinese companies, including Huawei, Alibaba, ZTE, Tencent, and Hikvision (Dahdal & Abdel Ghafar, 2025; Gordon & Nouwens, 2022; Hussain et al., 2024). Chinese firms have also been actively involved in digital infrastructure projects globally, including data centers and cloud nodes (Gordon & Nouwens, 2022).",
+        "The Digital Silk Road is not limited to hardware exports. In recent years, China’s cooperation model has gradually expanded from building digital infrastructure and providing hardware and technical services to exporting digital models and platforms, and even participating in shaping global internet governance architectures (Stanford HAI, 2025). Chinese open-source AI models have gained significant global traction, with Alibaba’s “Tongyi Qianwen” series emerging as one of the world’s largest providers of open-source AI systems. This indicates that the Digital Silk Road is moving toward more advanced technical standards and governance concepts (Chosun Ilbo, 2026).",
+        "As the DSR continues to deepen, American academia has also begun to view the initiative through a strategic competition lens, regarding it as both an instrument for China to advance its geostrategic objectives and a significant challenge to U.S. geopolitical advantages and digital dominance. Against this backdrop, the U.S. government issued the Artificial Intelligence Action Plan in 2025, which directly responds to the DSR by pledging to “counter Chinese influence in international governance bodies,” strengthen enforcement of AI compute export controls, and export the “American AI stack”, including hardware, software, and standards to allied nations as an alternative to Chinese technology (The White House, 2025). The U.S. AI strategy is widely seen as a direct response to China’s digital expansion, largely for two reasons: first, the DSR is reshaping the global geopolitical landscape and challenging existing U.S. dominance; second, competition between China and the United States in the technology sector, particularly in digital technologies, continues to intensify (Feng, 2025). This strategic deployment in the AI field also indirectly underscores the growing influence of the DSR in the global digital governance landscape."
+      ]
+    },
+    {
+      "id": "en-section-5",
+      "title": "The Iterative Upgrading of Jordan’s Digital Transformation Strategy",
+      "paragraphs": [
+        "Jordan’s digital transformation has evolved through successive policy phases, each building upon prior frameworks (Al‑Jaghoub & Westrup, 2003). After completing the “Jordan 2025 Vision” and the “National Digital Transformation and Implementation Plan 2021– 2025,” the government approved a new strategy for 2026–2028 at the end of 2025 (Ministry of Digital Economy and Entrepreneurship, 2025). According to the official document, the strategy aims to build a secure, digitally capable state that leverages next‑generation technologies to drive economic growth and social development. Its core pillars include citizen-centered services, seamless digital journeys, proactive government delivery, data‑driven decision‑making, and digital inclusion. The strategy lists 57 projects covering areas such as full digitization of government services, digital identity, the Sanad application, data governance, digital health and education, cybersecurity, 5G, open data, a green digital economy, and emerging technologies, to be implemented in phases over three years (Khaberni, 2025).",
+        "Compared with earlier policies that focused on discrete ICT infrastructure projects, the most notable change in the new strategy is the integration of digitalization into a broader governance Li Sainan & Li Xi - China-Arab Cooperation under the Digital Silk Road Framework: A Case Study of Jordan and economic modernization agenda. This shift reflects a new policy logic: successful digital transformation depends not only on technological inputs but also on the coordinated alignment of institutional factors, including administrative reform, legal frameworks, human resources, and budgetary systems. Concretely, the strategy introduces a “digital‑by‑design” principle, requiring that digital logic be embedded in public service processes from the initial design stage, rather than retrofitting digitization onto existing paper‑based procedures. At the implementation level, the strategy establishes systematic monitoring mechanisms, including a set of sector‑level main indicators and numerous sub‑indicators, with designated agencies regularly assessing progress. The strategy also lists seven national enablers: advanced data technologies, secure digital payment systems, cybersecurity frameworks, 5G and fiber-optic networks, digital identity solutions, government platforms, and skilled digital human capital. These enablers are highly interdependent; for example, the effectiveness of digital identity systems depends on robust cybersecurity and data governance. The core innovation of this institutional design is that it advances these enablers as an integrated whole rather than in isolation (MoDEE, 2025). This shift from a “project‑driven” to a “system‑driven” approach provides a more stable institutional foundation for Jordan to attract external technology cooperation and investment than earlier frameworks did.",
+        "At the regional level, Jordan’s digital transformation interacts in complex ways with China’s Digital Silk Road (DSR). In contrast to Western countries that have imposed bans on Chinese telecommunications equipment providers, most Middle Eastern and North African governments have not followed suit and continue to cooperate with Chinese suppliers, largely due to their demand for cost-effective digital infrastructure, technology-transfer opportunities, and pragmatic development priorities. DSR‑related digital infrastructure projects are rapidly connecting the region’s economies with China’s 5G networks, data centers, and cloud platforms—these places Jordan and other regional countries in a distinctive geopolitical position. On the one hand, they seek to maintain long-standing strategic and economic relations with the United States and Europe; on the other hand, they aim to diversify their technological partnerships through engagement with China under the Digital Silk Road (DSR), thereby gaining access to additional sources of digital technology, investment, and market opportunities. Rather than choosing between competing powers, these countries seek to maximize the benefits derived from both sides while preserving their strategic autonomy. Consequently, how to strike a dynamic balance among these objectives has become a key policy challenge for Jordan’s decision-makers (Dahdal & Abdel Ghafar, 2025). The institutional maturity of Jordan’s current strategy, namely its capacity to integrate governance mechanisms, human capital development, and policy coordination, provides a better basis for managing this balance than the fragmented policy systems of the past. However, it should be noted that advantages in institutional design do not automatically guarantee implementation outcomes. Drawing on the literature on digital governance, digital sovereignty, and geopolitical competition, this study argues that whether this institutional potential translates into actual cooperative results depends on three interrelated factors: the consistency of implementation and the efficiency of cross‑ministerial coordination, Jordan’s ability to safeguard its digital sovereignty and maintain vendor diversification in negotiations, and the trajectory of great‑power geopolitical competition. The coming years will be a critical period for observing whether Jordan can truly benefit from the DSR while mitigating related risks."
+      ]
+    },
+    {
+      "id": "en-section-6",
+      "title": "Jordan’s National Characteristics and Demand for Digital Partners",
+      "paragraphs": [
+        "Jordan is located in the heart of the Middle East, bordered by Syria to the north, Iraq to the east, Saudi Arabia to the south, and Palestine to the west. It sits at the intersection of the Levant, the Gulf, and North Africa, serving as a strategic corridor linking major regional economies. This unique geographical position not only makes it a natural node for regional flows of goods and capital but also positions it to become a regional data hub in the digital domain.",
+        "In terms of its national structure, Jordan has several distinctive features. First, it is relatively poor in natural resources but rich in human capital. The information and communications technology sector accounts for about 12 percent of Jordan’s GDP (The Jordan Times, 2021), a relatively high level in the Arab region, and the country is widely regarded as one of the important centers for software development, outsourcing, and IT services in the Middle East. Second, its population is young and digitally literate, with an internet penetration rate exceeding 90 percent and very high smartphone usage (Digital Watch Observatory, 2025). This provides a broad user base and market space for the development of the digital economy. Third, a remittance-based economy coexists with brain drain. Approximately 50 percent of Jordan’s potential workforce works abroad, and the country has long faced a serious talent loss problem (Commercial Office of the Embassy of China in Jordan, 2019). At the same time, Jordan has cultivated a large pool of overseas technical talent, creating favorable conditions for talent return and knowledge transfer.",
+        "Under pressure to diversify the economy in the post-oil era, the Jordanian government has, in recent years, made ICT and the digital economy core pillars of its national development strategy (MoDEE, 2025). However, constrained by a limited domestic market, insufficient investment in research and development, and a structural mismatch between supply and demand for high-tech talent, Jordan still faces many obstacles to advancing its comprehensive digital transformation. These characteristics constitute the internal driving force behind Jordan’s active pursuit of external digital partners."
+      ]
+    },
+    {
+      "id": "en-section-7",
+      "title": "Consolidation and Institutionalization of the China-Jordan Digital Cooperation Framework",
+      "paragraphs": [
+        "China has become an important partner for Jordan in advancing its digital development, leveraging its technological strengths and extensive experience in key areas of digital transformation, including 5G networks, cloud computing, e‑commerce platforms, and smart city solutions. From Jordan’s perspective, the solutions offered by Chinese companies are not only competitively priced but also capable of rapid deployment. This aligns well with the practical requirements of a developing economy like Jordan, which has limited fiscal space and seeks to upgrade its infrastructure at a relatively low cost.",
+        "Against this backdrop, strategic understanding and institutionalized cooperation between the two countries have continued to deepen. At the high‑level policy coordination level, China and Jordan established a strategic partnership in 2015 and, in 2019, signed a memorandum of understanding to jointly build the Belt and Road Initiative, explicitly listing the digital economy as a priority area for cooperation. At the global multilateral level, both China and Arab countries have expressed their commitment to strengthening digital partnerships. During the China‑Arab Cultural Dialogue held in Dubai in 2025, the China Internet Development Foundation formally proposed four cooperative initiatives to create a “more dynamic, more sustainable, and more inclusive new ecosystem for China‑Arab digital cooperation”. The initiatives cover areas such as digital content creation platforms, regular dialogue on AI ethics and governance, cooperation in digital public welfare, and mechanisms for youth innovation exchange (CRI Online, 2025). Progress on these multilateral frameworks has provided more stable and predictable institutional guarantees for bilateral China‑Jordan digital cooperation.",
+        "The “2026 World Mayors Dialogue · Xi’an” event held in Xi’an in April 2026, with cities from the League of Arab States as main guests (Shaanxi Provincial People’s Government, 2026), focused on core topics such as “roots of civilization and smart governance” and “green transition and digital intelligence renewal,” exploring ways to effectively translate national‑level strategic consensus into practical cooperation at the local and city levels. The event brought dialogue to the frontiers of smart city operations, smart manufacturing production lines, and world cultural heritage sites, showcasing the practical experience of Chinese cities in digital governance and providing actionable reference models for China‑Jordan cooperation at the sub‑national level.",
+        "China‑Jordan digital cooperation is shifting from project‑driven to institution‑driven, forming a three‑tier institutional system encompassing multilateral frameworks, bilateral agreements, and local cooperation. This continuously consolidated institutional foundation provides solid policy guarantees and mechanisms to deepen bilateral cooperation in the digital domain further."
+      ]
+    },
+    {
+      "id": "en-section-8",
+      "title": "Recent Developments in Chinese Enterprises’ Participation in Jordan’s Digital Construction",
+      "paragraphs": [
+        "Cooperation between China and Jordan in digital infrastructure is no longer limited to traditional telecom equipment trade. It has gradually expanded into areas such as smart government, smart education, smart healthcare, smart energy, and smart finance. Some Chinese companies are also changing their business models: in the past, they mainly sold hardware to Jordan; now, they are beginning to provide integrated digital solutions. This suggests that their role in the Jordanian market is shifting from external technology suppliers to long‑term digital transformation partners.",
+        "In cloud computing and data centers, Chinese involvement is deepening as well. By building cloud infrastructure, deploying AI applications, and investing in data centers, these companies are gradually establishing a foothold in the Middle East’s digital ecosystem. Amman aims to become a regional data hub, and Chinese firms’ capabilities in cloud computing and data centers fit well with that ambition. This alignment not only facilitates cooperation in data storage and processing but could also help Jordan better participate in regional data flows and the data‑value chain. For Jordan, improving data center and cloud capacity is an important foundation for realizing its vision of becoming a digital services hub, and Chinese technology exports are playing a catalytic role in this process.",
+        "In the area of talent development and university cooperation, some tangible progress has been made in recent years. Chinese companies have established long‑term partnerships with several Jordanian universities to run ICT training programs jointly. These collaborations usually include curriculum development, teacher training, and industry certification – moving away from one‑off technology transfer toward systematic capacity building. Starting from one or two pilot projects, they have expanded to cover more higher‑education institutions, forming a complete talent development chain from classroom teaching to industry certification. This model helps alleviate the shortage of high‑skilled digital talent that Jordan faces in its digital economic development, while also providing Chinese firms with the human capital needed for their long‑term local presence. In addition, Chinese companies’ performance in Jordan’s fintech sector has been recognized by the local market, and their technical capabilities have received positive feedback in industry awards. Breakthroughs in fintech have extended China‑Jordan digital cooperation from traditional infrastructure into areas more directly related to people’s lives, such as inclusive finance and digital payments.",
+        "The activities of Chinese enterprises in Jordan follow a fairly clear evolutionary path: starting with communications network infrastructure, then expanding to digital platforms and vertical applications, and further extending to talent development and standard alignment. This suggests that China‑Jordan digital cooperation is moving beyond conventional hardware trade toward a broader framework encompassing the digital economy, talent development, technical standards, and digital governance. At the institutional level, the basis of bilateral cooperation is gradually shifting from individual projects to more systematic coordination and alignment. With the ongoing development of multilateral frameworks such as the China‑Arab Summit and regional digital governance forums, this cooperation is likely to enter a phase that emphasizes institutional coordination, mutual recognition of technologies, and sustainable development. How deep and how far this process goes, of course, will also depend on the two sides’ ability to sustain dialogue and coordination on data governance, technical standards, industrial policies, and related issues."
+      ]
+    },
+    {
+      "id": "en-section-9",
+      "title": "Opportunities and Challenges",
+      "paragraphs": [
+        "The practice of China-Arab Digital Silk Road cooperation in Jordan presents both opportunities and challenges. These challenges are not solely technical or economic. Still, they are shaped by broader geopolitical dynamics that influence technological choices and regulatory frameworks in the context of major power competition (Dahdal & Abdel Ghafar, 2025). A systematic understanding of both challenges and opportunities is therefore essential for maximizing the benefits of the DSR while effectively managing potential risks."
+      ]
+    },
+    {
+      "id": "en-section-10",
+      "title": "Opportunities",
+      "paragraphs": [
+        "The Digital Silk Road (DSR) offers Jordan a significant opportunity to accelerate its digital transformation. Chinese firms bring advanced technology, substantial investment capacity, and experience in rapid deployment, which can help Jordan upgrade its digital infrastructure in key areas such as high‑speed networks, cloud computing, and data centers within a relatively short timeframe. This acceleration effect is important for Jordan to remain competitive in the global digital economy and to achieve the targets set out in its national digital strategy.",
+        "Digitalization is also a core driver of economic growth. By improving digital connectivity and fostering local digital industries, the DSR can stimulate new economic activities, create employment, and help Jordan reduce its reliance on traditional sectors. Enhanced cross‑border digital trade, for instance, opens up wider international markets for Jordanian small and medium‑sized enterprises, thereby strengthening overall economic resilience. Jordan’s own economic modernization program, announced in early 2026, has listed the digital economy as one of its eight key driving sectors, further confirming the central role of digitalization in the national economic strategy.",
+        "Another important dimension is knowledge transfer and talent development. China’s involvement in Jordan’s ICT sector extends beyond hardware construction to include systematic investment in human resources. Training programs run in cooperation with Chinese firms equip Jordanian youth with valuable skills in emerging technologies, helping address the country’s need for a skilled digital workforce. Such knowledge transfer not only helps build local technical capacity but also lays a talent foundation for the long‑term sustainability of digital initiatives. By early 2026, cooperation between Chinese companies and several Jordanian universities had entered substantive operational stages, with courses covering routing and switching, cybersecurity, cloud computing, and artificial intelligence.",
+        "As a key node country in the DSR, Jordan is well positioned further to consolidate its role as a regional digital hub. By improving digital connections with China and other Belt and Road partner countries, Jordan can facilitate broader regional integration, cross‑border trade, and cultural exchange, becoming an important node in a wider digital network. This status can, in turn, attract more foreign direct investment and promote the development of regional digital cooperation mechanisms. The Central Asia Internet Governance Forum, launched in April 2026, with its theme “Digital Silk Road: From Isolation to Connectivity and Digital Integration”, indicates that regional multilateral frameworks are incorporating hub countries such as Jordan into a broader digital cooperation agenda.",
+        "Finally, deep cooperation with Chinese technology companies gives Jordan access to cutting‑edge technologies and innovative digital solutions. Such external technological input can stimulate local innovation ecosystems, encourage investment in research and development, and contribute to a more dynamic, technology‑intensive industrial system. In frontier areas such as artificial intelligence, blockchain, and fintech, the demonstration effects of China‑Jordan cooperation projects can help attract more entrepreneurs and capital to the Jordanian market. The virtual assets law and blockchain technology policy approved by Jordan at the end of 2025 provide clearer institutional guidance for business innovation."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-11",
+      "title": "Challenges",
+      "paragraphs": [
+        "Despite the significant opportunities, China-Jordan Digital Silk Road cooperation faces several challenges that require close attention. Data security and privacy protection. Under the DSR framework, data flows have increased substantially, making issues of data security, privacy protection, and data sovereignty more prominent. Jordan has enacted relevant data protection laws, but the details of enforcement and rules for cross-border data flows still need improvement. Some international concerns have been raised about the security of Chinese equipment; such trust deficits need to be addressed through transparent technical audits and joint security mechanisms. In recent years, Jordan has issued a data governance framework policy and has gradually built an institutional system covering data classification, cross-border transfer auditing, and privacy impact assessment. Nevertheless, balancing digital economic development with personal data protection remains an issue that requires continuous coordination between the two.",
+        "Consistency of regulatory frameworks and governance standards. China and Jordan differ in technical standards, cybersecurity regulations, and market access for digital services. For instance, their respective cybersecurity classification protection standards differ in certain control measures from internationally accepted standards; the legal validity of electronic signatures and contracts also requires cross-border coordination. These differences may lead to increased compliance costs or technical integration barriers in actual cooperation. In accordance with the principle of respecting each other’s legal systems, both sides should gradually narrow standard gaps through bilateral consultations and technical committees, and explore mutual recognition arrangements.",
+        "Debt sustainability and financial transparency. Large-scale digital infrastructure projects related to the DSR often involve substantial investment. Although China’s loan terms are often more flexible than those of Western financial institutions, Jordan still needs to carefully assess the long-term financial burden of each project. Ensuring transparency in financing arrangements and properly designing repayment schedules are crucial to preventing the accumulation of sovereign debt risks. Jordan’s current public debt as a share of GDP remains relatively high. While expanding digital infrastructure investment, it should adhere to the principles of living within its means and phased implementation.",
+        "Domestic digital divide and inclusive development. Although the DSR aims to promote digital connectivity, significant disparities in digital access persist across regions, income groups, and between urban and rural areas in Jordan. Without targeted policy interventions, improvements in digital infrastructure may first benefit urban and developed areas, thereby widening existing inequalities. Some large cities have already taken the lead in deploying next-generation mobile communication trial networks, while broadband coverage in remote rural areas remains low. Jordan’s national digital transformation strategy has listed “digital inclusion” as one of its core pillars and has set universal service targets. Achieving truly inclusive development will require comprehensive measures, including educational outreach, terminal subsidies, and the decentralization of public services.",
+        "Addressing the above challenges requires proactive, forward-looking policies, transparent and efficient governance mechanisms, and a balanced approach to international partnerships on Jordan’s part. By carefully managing opportunities and risks, Jordan can fully realize its digital transformation goals under the DSR framework while effectively safeguarding its national interests and digital sovereignty."
+      ],
+      "level": "subsection",
+      "toc": false
+    },
+    {
+      "id": "en-section-12",
+      "title": "Conclusion",
+      "paragraphs": [
+        "The China-Arab Digital Silk Road cooperation, as exemplified by Jordan, constitutes an important and evolving dimension of bilateral relations. This study shows that the DSR offers substantial opportunities for Jordan to accelerate its digital transformation, promote economic growth, and enhance human capital. Chinese enterprises, particularly leading telecommunications companies such as Huawei and ZTE, have played a key role in upgrading Jordan’s digital infrastructure and advancing talent development. These cooperative efforts are well aligned with Jordan’s national digital strategy and have made tangible contributions to its vision of becoming a regional digital hub.",
+        "At the same time, the analysis reveals several challenges that need to be actively addressed to ensure the long‑term success and sustainability of China-Jordan DSR cooperation. Issues such as data security, regulatory coordination, geopolitical sensitivities, and debt sustainability must be carefully managed through sound governance frameworks. The potential risk of widening domestic digital divides also deserves close attention.",
+        "In summary, the China-Arab Digital Silk Road cooperation, with Jordan as a case study, holds considerable potential for mutual benefit. By strategically seizing opportunities and proactively responding to challenges, China and Jordan can build a more resilient, sustainable, and mutually beneficial digital partnership. Such a partnership will not only promote economic and social progress on both sides but also contribute to regional stability and the diversification of global digital governance. Future research could further examine the micro-level impacts of DSR cooperation in Jordan, including its actual effects on empowering small and medium-sized enterprises in their digital transformation, and conduct cross-period comparative analyses to provide more refined empirical evidence for deepening China-Arab digital cooperation."
+      ]
+    }
+  ],
+  "keywords": [
+    "China-Arab cooperation",
+    "digital infrastructure",
+    "Digital Silk Road",
+    "digital transformation",
+    "Jordan"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Al-Ahliyya Amman University. (2025, July 7). Memorandum of cooperation between AAU and Huawei Technologies-Jordan. https://www.ammanu.edu.jo/news/memorandum-of-cooperation-between-aau-and-huawei-technologies-jordan/"
+    },
+    {
+      "id": "ref-2",
+      "text": "Al-Jaghoub, S., & Westrup, C. (2003). Jordan and ICT-led development: Towards a competitive state? Information Technology & People, 16(1), 93–110. https://doi.org/10.1108/09593840310463032"
+    },
+    {
+      "id": "ref-3",
+      "text": "Almajali, H., Thuneibat, N., & Qatawneh, N. (2025). Investigation of the antecedents of digital transformation and their effects on operational performance in the Jordanian manufacturing sector. Journal of Risk and Financial Management, 18(8), Article 446. https://doi.org/10.3390/jrfm18080446"
+    },
+    {
+      "id": "ref-4",
+      "text": "Arsentyeva, I. I. (2024). China’s Digital Silk Road: Challenges and opportunities for Latin America and the Caribbean. Vestnik RUDN. International Relations, 24(1), 51–64. https://doi.org/10.22363/2313-0660-2024-24-1-51-64"
+    },
+    {
+      "id": "ref-5",
+      "text": "Brown, K., & Burjanadze, A. (2020). The Digital Silk Road: Upgrading the “16+1” cooperation? In H. Pechlaner, G. Erschbamer, H. Thees, & M. Gruber (Eds.), China and the new Silk Road (pp. 137–145). Springer."
+    },
+    {
+      "id": "ref-6",
+      "text": "Cai, F., Nolan, P., & Wang, L. (Eds.). (2025). The Routledge handbook of the Belt and Road (3rd ed.). Routledge. https://doi.org/10.4324/9781003660750"
+    },
+    {
+      "id": "ref-7",
+      "text": "Chaziza, M., & Lutmar, C. (2026). Jordan’s niche diplomacy: Reframing middle-power agency in the 21st-century Middle East. World, 7(2), Article 25. https://doi.org/10.3390/world7020025"
+    },
+    {
+      "id": "ref-8",
+      "text": "Chosun Ilbo. (2026, April 13). Alibaba’s Qwen dominates the global open-source AI market. https://www.chosun.com/english/industry-en/2026/04/13/LVNIQOTWGFEUTH4DHZ3PFHGSZ4/"
+    },
+    {
+      "id": "ref-9",
+      "text": "CRI Online. (2025, November 22). From ‘cultural bonds’ to ‘Digital Silk Road’: China and Arab states jointly depict a new vision of cooperation in digital era. https://city.cri.cn/20251121/78247831-0525-4161-b48d-7d09a791e563.html"
+    },
+    {
+      "id": "ref-10",
+      "text": "Dahdal, A. M., & Abdel Ghafar, A. (2025). The Digital Silk Road: “Tech-diplomacy” as a paradigm for understanding technological adoption and emerging digital regulations in MENA. Asian Journal of Law and Society, 12(Special Issue 2), 163–188. https://doi.org/10.1017/als.2024.30"
+    },
+    {
+      "id": "ref-11",
+      "text": "Digital Watch Observatory. (2025). Jordan. https://dig.watch/countries/jordan"
+    },
+    {
+      "id": "ref-12",
+      "text": "El Kadi, T. (2024). Learning along the Digital Silk Road? Technology transfer, power, and Chinese ICT corporations in North Africa. The Information Society, 40(2), 136–153. https://doi.org/10.1080/01972243.2024.2317060"
+    },
+    {
+      "id": "ref-13",
+      "text": "Feng, Z. (2025). 美欧学界对”数字丝绸之路”的认知评析 [An analysis of American and European academic perceptions of the Digital Silk Road]. 云南社会科学 [Yunnan Social Sciences], (4), 42–52."
+    },
+    {
+      "id": "ref-14",
+      "text": "Gordon, D., & Nouwens, M. (Eds.). (2022). The Digital Silk Road: China’s technological rise and the geopolitics of cyberspace. Routledge."
+    },
+    {
+      "id": "ref-15",
+      "text": "He, Z. P., & Zhou, M. (2024). 共建”数字丝绸之路”的中国角色、挑战及应对 [China’s role, challenges, and responses in building the Digital Silk Road]. 东北亚论坛 [Northeast Asia Forum], (6), 110–124."
+    },
+    {
+      "id": "ref-16",
+      "text": "Heeks, R., Ospina, A. V., Foster, C., Gao, P., Han, X., Jepson, N., Schindler, S., & Zhou, Q. (2024). China’s digital expansion in the Global South: Systematic literature review and future research agenda. The Information Society, 40(2), 69–95. https://doi.org/10.1080/01972243.2024.2315875"
+    },
+    {
+      "id": "ref-17",
+      "text": "Hussain, F., Hussain, Z., Khan, M. I., & Imran, A. (2024). The digital rise and its economic implications for China through the Digital Silk Road under the Belt and Road Initiative. Asian Journal of Comparative Politics, 9(2), 238–253. https://doi.org/10.1177/20578911231174731"
+    },
+    {
+      "id": "ref-18",
+      "text": "Khaberni. (2025, November 23). Ratification of the Jordanian strategy for digital transformation for the years 2026–2028. https://www.khaberni.com/news/754388-ratification-of-the-jordanian-strategy-for-digital-transformation-for-the-years-2026-–-2028"
+    },
+    {
+      "id": "ref-19",
+      "text": "Ministry of Digital Economy and Entrepreneurship. (2025). Jordanian digital transformation strategy and the implementation plan 2026–2028. https://www.modee.gov.jo/ebv4.0/root_storage/en/eb_list_page/jordanian_digital_transformation_strategy_and_the_implementation_plan_2026-2028.pdf"
+    },
+    {
+      "id": "ref-20",
+      "text": "National Development and Reform Commission, Ministry of Foreign Affairs, & Ministry of Commerce of the People’s Republic of China. (2015). Vision and actions on jointly building Silk Road Economic Belt and 21st-Century Maritime Silk Road. https://policy.asiapacificenergy.org/sites/default/files/Vision%20and%20Actions%20on%20Jointly%20Building%20Silk%20Road%20Economic%20Belt%20and%2021st-Century%20Maritime%20Silk%20Road%20%28EN%29.pdf"
+    },
+    {
+      "id": "ref-21",
+      "text": "Oreglia, E., & Zheng, W. (2024). The Digital Silk Road between national rhetoric and provincial ambitions. The China Quarterly, 261, 183–195. https://doi.org/10.1017/S0305741024000936"
+    },
+    {
+      "id": "ref-22",
+      "text": "Senate of Jordan. (2026, January 11). Jordan, China explore deeper strategic partnership. https://senate.jo/En/NewsDetails/Pr11012026En"
+    },
+    {
+      "id": "ref-23",
+      "text": "Shaanxi Provincial People’s Government. (2026, April 26). 2026 World Mayor Dialogue·Xi’an event to open on the 27th: “Roots of civilization and smart governance” as one of the core themes, aiming to transform national-level strategic consensus into practical city-level cooperation. https://www.shaanxi.gov.cn/xw/ldx/ds/202604/t20260426_3633251.html"
+    },
+    {
+      "id": "ref-24",
+      "text": "Shen, H. (2018). Building a digital silk road? Situating the internet in China’s Belt and Road Initiative. International Journal of Communication, 12, 2683–2701."
+    },
+    {
+      "id": "ref-25",
+      "text": "Stanford HAI. (2025, December 16). Beyond DeepSeek: China’s diverse open-weight AI ecosystem and its policy implications."
+    },
+    {
+      "id": "ref-26",
+      "text": "The Jordan Times. (2019, June 27). Huawei to launch first ICT academy in Jordan. https://www.jordantimes.com/news/local/huawei-launch-first-ict-academy-jordan"
+    },
+    {
+      "id": "ref-27",
+      "text": "The Jordan Times. (2021, December 1). ICT talent will accelerate Jordan’s future digital economy. https://jordantimes.com/opinion/ethan-wang/ict-talent-will-accelerate-jordans-future-digital-economy"
+    },
+    {
+      "id": "ref-28",
+      "text": "The Jordan Times. (2026, January 12). Gov’t launches new executive program to advance economic, administrative, and social reforms. https://jordantimes.com/news/local/govt-launches-new-executive-programme-to-advance-economic-administrative-social-reforms"
+    },
+    {
+      "id": "ref-29",
+      "text": "The White House. (2025, July 23). Winning the AI race: America’s AI action plan. https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf"
+    },
+    {
+      "id": "ref-30",
+      "text": "Wang, E., & Wang, M. (2023, July 18). China signs over 200 BRI cooperation documents with 152 countries, 32 int’l organizations. China News Service. https://www.chinanews.com.cn/gn/2023/07-18/10045260.shtml"
+    },
+    {
+      "id": "ref-31",
+      "text": "Xi, J. (2017, May 14). 携手推进“一带一路”建设 [Work together to build the Belt and Road] [Keynote address]. Belt and Road Forum for International Cooperation. http://2017.beltandroadforum.org/n100/2017/0514/c24-407.html"
+    },
+    {
+      "id": "ref-32",
+      "text": "Yarmouk University. (2024, September 19). Yarmouk signs MoU with Huawei to promote ICT education. https://www.yu.edu.jo/index.php/en/newsen/5950-yarmouk-signs-mou-with-huawei-to-promote-ict-education"
+    },
+    {
+      "id": "ref-33",
+      "text": "Yin, R. K. (2018). Case study research and applications: Design and methods (6th ed.). SAGE."
+    },
+    {
+      "id": "ref-34",
+      "text": "驻约旦使馆经商处. (2019). 约旦劳动力市场与人才流失情况 [Labor migration and talent loss in Jordan]. http://211.88.33.68/article/zwjg/zwdy/zwdyxyf/201904/20190402858373.shtml"
+    }
+  ],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-01.jpg",
+      "caption": "The DSR aims to promote digital connectivity, technological cooperation, and innovation-driven development among partner countries (Photo: CGTN, 2021)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-02.jpg",
+      "caption": "Within the DSR framework, China’s Bei-Dou Navigation Satellite System has achieved extensive global coverage (Photo: Xinhua, 2024)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-03.jpg",
+      "caption": "Jordan’s digital transformation has evolved through successive policy phases, each building upon prior frameworks (Illustration: mozon-tech, n.d.)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-04.jpg",
+      "caption": "The information and communications technology sector accounts for about 12 percent of Jordan’s GDP (Illustration: Jordan News Agency, 2026)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-05.jpg",
+      "caption": "In the memorandum of understanding signed by China and Jordan in 2019 to jointly build the Belt and Road Initiative, the digital economy was identified as a priority area of cooperation. Chinese Foreign Minister Wang Yi meets with King Abdullah II of Jordan in Amman, Jordan, Dec 15, 2025 (Photo: China Daily, 2025)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-06.jpg",
+      "caption": "Jordan Investment Minister Tareq Abughazaleh participated in the opening of the China International Supply Chain Expo (CISCE) in Beijing on June 23, 2026, highlighting Jordan's investment opportunities (Photo: Jordan News Agency, 2026)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-07.jpg",
+      "caption": "The Jordan Industrial Operating Systems Security Forum 2026 brought together policymakers, regulators, and industry experts to strengthen cybersecurity across the Kingdom’s critical infrastructure (Photo: Jordan News Agency, 2026)."
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-08.jpg",
+      "caption": "Jordan’s national digital transformation strategy has listed “digital inclusion” as one of its core pillars and has set universal service targets (Photo: TechAfricanews, 2026)."
+    }
+  ],
+  "declarations": {
+    "funding": "This thesis is the result of the stage research of 2026 Special Project for High-Quality Development of Humanities and Social Sciences Research at Northwestern Polytechnical University: Power, Technology, and Norms: Cyberspace Governance in GCC Countries and the Reshaping of the Middle East International Order under the Global Governance Initiative (Project No. D5000260296)"
+  }
+}
