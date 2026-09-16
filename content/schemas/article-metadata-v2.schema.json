@@ -87,6 +87,18 @@
       }
     },
     "abstract": { "$ref": "#/$defs/localizedNullable" },
+    "reviewedBook": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["authorsApa", "year", "title", "publisher"],
+      "properties": {
+        "authorsApa": { "type": "string", "minLength": 1 },
+        "year": { "type": ["integer", "string"] },
+        "title": { "type": "string", "minLength": 1 },
+        "publisher": { "type": "string", "minLength": 1 },
+        "isbn": { "type": ["string", "null"] }
+      }
+    },
     "keywords": {
       "type": "object",
       "additionalProperties": false,
