@@ -1,0 +1,76 @@
+name: Audit V7I2 metadata v2
+on:
+  push:
+    branches: [automation/v7i2-post-v2-audit]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Audit metadata and source declaration text
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json,re,urllib.request,tempfile,subprocess
+          from pathlib import Path
+          issue=json.loads(Path('content/issues/v07-i02.json').read_text())
+          errors=[]; warnings=[]; tmp=Path(tempfile.mkdtemp())
+          research={'research-article'}
+          decl=re.compile(r'(?i)\b(funding|financial support|conflict(?:s)? of interest|competing interests?|author contributions?|data availability|ethics approval|informed consent|acknowledg(?:e)?ments?|finansman|mali destek|çıkar çatışması|yazar katkıları|veri kullanılabilirliği|etik onay|katılımcı onamı|teşekkür)\b')
+          for i,slug in enumerate(issue['articles'],1):
+            m=json.loads(Path('content/articles',slug,'metadata.json').read_text())
+            assert m.get('schemaVersion')==2, f'{slug}: not v2'
+            assert m.get('id')==slug
+            assert m.get('journal',{}).get('volume')==7 and m.get('journal',{}).get('issue')==2
+            assert m.get('dates',{}).get('published')=='2026-03-01'
+            assert m.get('language')==['en','tr']
+            for locale in ['en','tr']:
+              assert m.get('title',{}).get(locale), f'{slug}: missing {locale} title'
+              c=m.get('citation',{}).get(locale)
+              assert c, f'{slug}: missing {locale} citation'
+              if re.match(r'^\s*(citation|atıf)\b',c,re.I): errors.append(f'{slug}: citation label embedded {locale}')
+              a=m.get('abstract',{}).get(locale)
+              if a and re.match(r'^\s*(abstract|özet)\b',a,re.I): errors.append(f'{slug}: abstract label embedded {locale}')
+              ft=json.loads(Path('content/articles',slug,'fulltext',locale+'.json').read_text())
+              if (m.get('keywords',{}).get(locale) or []) != (ft.get('keywords') or []): errors.append(f'{slug}/{locale}: metadata/fulltext keyword mismatch')
+            t=m.get('articleType',{})
+            expected_peer=t.get('id') in research
+            if bool(t.get('peerReviewed')) != expected_peer: warnings.append(f'{slug}: peerReviewed={t.get("peerReviewed")} type={t.get("id")}')
+            for author in m.get('authors',[]):
+              o=author.get('orcid')
+              if o and not re.fullmatch(r'https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[\dX]',o): errors.append(f'{slug}: malformed ORCID {o}')
+            p=m.get('pages',{}); page_range=p.get('first') if p.get('first')==p.get('last') else f"{p.get('first')}-{p.get('last')}"
+            for locale in ['en','tr']:
+              if page_range and page_range not in m['citation'][locale]: warnings.append(f'{slug}/{locale}: citation pages do not literally match {page_range}')
+            # Download source PDFs for the first six contribution types and scan declaration-like text.
+            if i<=6:
+              for locale,key in [('en','pdfEn'),('tr','pdfTr')]:
+                url=m.get('urls',{}).get(key)
+                if not url: continue
+                pdf=tmp/f'{i}-{locale}.pdf'; txt=tmp/f'{i}-{locale}.txt'
+                req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+                with urllib.request.urlopen(req,timeout=40) as r: pdf.write_bytes(r.read())
+                subprocess.run(['pdftotext','-raw',str(pdf),str(txt)],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+                text=txt.read_text(errors='ignore')
+                hits=[]
+                for match in decl.finditer(text):
+                  start=max(0,match.start()-100); end=min(len(text),match.end()+260)
+                  snippet=re.sub(r'\s+',' ',text[start:end]).strip()
+                  if snippet not in hits: hits.append(snippet)
+                if hits:
+                  print(f'DECL {slug}/{locale}:')
+                  for h in hits[:8]: print(' ',h)
+            print(f'META {i:02d} {slug}: type={t.get("id")} peer={t.get("peerReviewed")} pages={page_range} authors={len(m.get("authors",[]))} doi={m.get("doi")}')
+          # Known PDF truthfulness invariant for Zhang is checked explicitly.
+          z=json.loads(Path('content/articles/zhang-yaxin/metadata.json').read_text())
+          u=z.get('urls',{})
+          if u.get('sharedBilingualPdf') and u.get('pdfEn')==u.get('pdfTr'):
+            warnings.append('zhang-yaxin: English PDF is declared shared with Turkish PDF; deep audit showed that file contains Turkish page only')
+          print('\nERRORS',len(errors)); [print('E:',x) for x in errors]
+          print('\nWARNINGS',len(warnings)); [print('W:',x) for x in warnings]
+          if errors: raise SystemExit(2)
+          PY
