@@ -1,0 +1,31 @@
+name: One-time Cilt 4 metadata migration
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cilt4-metadata-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Update Cilt 4 metadata
+        run: node scripts/tmp-update-cilt4-metadata.mjs
+      - name: Commit metadata changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/articles content/issues/v04-i01.json
+          if git diff --cached --quiet; then
+            echo "No metadata changes to commit."
+            exit 0
+          fi
+          git commit -m "Update Cilt 4 metadata from verified spreadsheet"
+          git push origin HEAD:main
