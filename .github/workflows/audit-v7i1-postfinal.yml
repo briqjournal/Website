@@ -1,0 +1,67 @@
+name: Audit V7I1 Postfinal
+on:
+  push:
+    branches: [audit/v7i1-postfinal]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect canonical V7I1 content
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'JS'
+          const fs=require('fs'); const path=require('path');
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i01.json','utf8'));
+          const catalog=JSON.parse(fs.readFileSync('content/catalog.json','utf8'));
+          const suspicious=[];
+          const report=[];
+          const text=r=>typeof r==='string'?r:(r?.text||'');
+          const norm=s=>String(s||'').replace(/\s+/g,' ').trim();
+          const body=x=>(x.sections||[]).flatMap(s=>s.paragraphs||[]).join('\n');
+          function scanUrls(slug,loc,x){
+            for (const [i,r] of (x.references||[]).entries()) {
+              const t=text(r);
+              if (/https?:\/\/[^\s]*\s+[^\s]*(?:\.|\/|doi|com|org|gov|edu|net)/iu.test(t) || /doi\.org\/[^\s]*\s+[^\s]*/iu.test(t)) suspicious.push(`${slug}/${loc} ref ${i+1}: possible split URL/DOI :: ${t}`);
+              if (/https:\/\/\s|www\.\s|doi\.\s|10\.\d{4,9}\/\S*\s+-?\s*\S+/iu.test(t)) suspicious.push(`${slug}/${loc} ref ${i+1}: whitespace corruption :: ${t}`);
+              if (/�|Ã.|Â.|â€|â€™|\u0000/u.test(t)) suspicious.push(`${slug}/${loc} ref ${i+1}: mojibake :: ${t}`);
+            }
+          }
+          for(const slug of issue.articles){
+            const base=path.join('content/articles',slug); const m=JSON.parse(fs.readFileSync(path.join(base,'metadata.json'),'utf8'));
+            const en=JSON.parse(fs.readFileSync(path.join(base,'fulltext/en.json'),'utf8')); const tr=JSON.parse(fs.readFileSync(path.join(base,'fulltext/tr.json'),'utf8'));
+            const files=fs.readdirSync(path.join(base,'fulltext')).sort();
+            const ids={};
+            for(const [loc,x] of [['en',en],['tr',tr]]){
+              const arr=(x.sections||[]).map(s=>s.id); if(new Set(arr).size!==arr.length) suspicious.push(`${slug}/${loc}: duplicate section ids`);
+              if(arr.some(id=>!new RegExp(`^${loc}-section-\\d+[a-z]?$`).test(id))) suspicious.push(`${slug}/${loc}: noncanonical section id(s) ${arr.join(',')}`);
+              for(const [i,s] of (x.sections||[]).entries()){
+                if(!['section','subsection'].includes(s.level)) suspicious.push(`${slug}/${loc} section ${i+1}: unexpected level ${s.level}`);
+                if(!norm(s.title)) suspicious.push(`${slug}/${loc} section ${i+1}: empty title`);
+              }
+              const refs=(x.references||[]).map(text).map(norm); const dups=refs.filter((r,i)=>r&&refs.indexOf(r)!==i); if(dups.length) suspicious.push(`${slug}/${loc}: duplicate refs: ${[...new Set(dups)].join(' || ')}`);
+              scanUrls(slug,loc,x);
+              const raw=JSON.stringify(x); if(/�|Ã.|Â.|â€|â€™/u.test(raw)) suspicious.push(`${slug}/${loc}: mojibake in canonical fulltext`);
+              if(/\b(?:BRIq|Cilt 7 Sayı 1|Volume 7 Issue 1)\b/u.test(body(x))) suspicious.push(`${slug}/${loc}: possible PDF header/footer token in body`);
+            }
+            if(files.join(',')!=='en.json,tr.json') suspicious.push(`${slug}: fulltext files ${files.join(',')}`);
+            if(m.schemaVersion!==2) suspicious.push(`${slug}: metadata schemaVersion ${m.schemaVersion}`);
+            if(m.journal?.volume!==7||m.journal?.issue!==1||m.dates?.published!=='2025-12-01') suspicious.push(`${slug}: issue/date metadata mismatch`);
+            if(!/^10\.67696\/[a-z0-9]+$/i.test(m.doi||'')) suspicious.push(`${slug}: DOI shape ${m.doi}`);
+            if(JSON.stringify(m.keywords?.en||[])!==JSON.stringify(en.keywords||[])) suspicious.push(`${slug}/en: metadata/fulltext keyword mismatch`);
+            if(JSON.stringify(m.keywords?.tr||[])!==JSON.stringify(tr.keywords||[])) suspicious.push(`${slug}/tr: metadata/fulltext keyword mismatch`);
+            if((m.abstract?.en??null)!==(en.abstract??null) && norm(m.abstract?.en)!==norm(en.abstract)) suspicious.push(`${slug}/en: metadata/fulltext abstract mismatch`);
+            if((m.abstract?.tr??null)!==(tr.abstract??null) && norm(m.abstract?.tr)!==norm(tr.abstract)) suspicious.push(`${slug}/tr: metadata/fulltext abstract mismatch`);
+            if(body(en).length>300&&body(tr).length>300&&norm(body(en))===norm(body(tr))) suspicious.push(`${slug}: EN/TR body identical`);
+            const dates=[m.dates?.received,m.dates?.revised,m.dates?.accepted,m.dates?.published].filter(Boolean); if(dates.some((d,i)=>i&&d<dates[i-1])) suspicious.push(`${slug}: nonmonotonic dates ${dates.join(' -> ')}`);
+            for(const k of ['pdfEnLocal','pdfTrLocal']) { const p=m.urls?.[k]; if(p){const f=path.join('public',p.replace(/^\//,'')); if(!fs.existsSync(f)) suspicious.push(`${slug}: missing ${k} ${p}`); else if(fs.statSync(f).size<10000) suspicious.push(`${slug}: tiny ${k} ${fs.statSync(f).size}`); } }
+            if(!catalog.fulltext?.localized?.includes(slug)||catalog.fulltext?.current?.includes(slug)||catalog.fulltext?.en_archive?.includes(slug)) suspicious.push(`${slug}: catalog fulltext classification wrong`);
+            const grants=JSON.stringify(m.funding||{}).match(/[A-Z0-9]{6,}/g)||[]; for(const grant of grants){if(!JSON.stringify({en,tr}).includes(grant)) suspicious.push(`${slug}: funding grant ${grant} absent from canonical fulltext`);}
+            report.push({slug,type:m.articleType?.id,pages:`${m.pages?.first}-${m.pages?.last}`,doi:m.doi,dates:m.dates,keywords:{en:m.keywords?.en,tr:m.keywords?.tr},funding:!!m.funding,sections:{en:(en.sections||[]).map(s=>({id:s.id,level:s.level,title:s.title,paras:(s.paragraphs||[]).length})),tr:(tr.sections||[]).map(s=>({id:s.id,level:s.level,title:s.title,paras:(s.paragraphs||[]).length}))},refs:{en:(en.references||[]).length,tr:(tr.references||[]).length},bodyChars:{en:body(en).length,tr:body(tr).length},abstract:{en:m.abstract?.en??null,tr:m.abstract?.tr??null}});
+          }
+          console.log('=== V7I1 STRUCTURED REPORT ==='); console.log(JSON.stringify(report,null,2));
+          console.log('=== SUSPICIOUS ==='); if(suspicious.length) suspicious.forEach(x=>console.log('WARN',x)); else console.log('NONE');
+          JS
