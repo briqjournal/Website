@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { loadFullTextCollections } from "../scripts/content-store.mjs";
+import { bilingualKeywordParityOverrides, loadFullTextCollections } from "../scripts/content-store.mjs";
 
 function assertTitleCase(keyword, locale) {
   const language = locale === "tr" ? "tr-TR" : "en-US";
@@ -38,7 +38,7 @@ test("normalizes every Turkish and English keyword to title case", async () => {
     count += 1;
   }
 
-  assert.equal(count, 721);
+  assert.equal(count, 726);
 });
 
 test("preserves acronyms while fixing known keyword spacing and casing", async () => {
@@ -54,4 +54,32 @@ test("preserves acronyms while fixing known keyword spacing and casing", async (
 
   const acronyms = relations.tr.keywords.filter((keyword) => /\b(?:ABD|KYG|BIS)\b/u.test(keyword));
   for (const keyword of acronyms) assert.match(keyword, /\b(?:ABD|KYG|BIS)\b/u);
+});
+
+test("keeps bilingual keyword counts and reviewed ordering in parity", async () => {
+  const { current } = await loadFullTextCollections();
+
+  for (const [slug, record] of Object.entries(current)) {
+    const tr = record?.tr?.keywords || [];
+    const en = record?.en?.keywords || [];
+    assert.equal(tr.length, en.length, `Turkish/English keyword count mismatch for ${slug}`);
+  }
+
+  for (const [slug, override] of bilingualKeywordParityOverrides) {
+    assert.equal(override.tr.length, override.en.length, `Reviewed keyword pair count mismatch for ${slug}`);
+    assert(["tr", "en"].includes(override.source), `Missing source-language decision for ${slug}`);
+  }
+
+  const onishi = current["japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak"];
+  assert.deepEqual(onishi.en.keywords, ["Exclusionism", "Japanese Communist Party", "Right Wing And Left Wing In Japan", "Sanseito Party", "USA"]);
+  assert.deepEqual(onishi.tr.keywords, ["Dışlayıcılık", "Japonya Komünist Partisi", "Japonya'da Sağ Ve Sol", "Sanseito Partisi", "ABD"]);
+
+  const ertan = current["iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi"];
+  assert.deepEqual(ertan.tr.keywords, ["Gıda Güvencesi", "İklim Akıllı Tarım", "İklim Değişikliği", "Su Güvenliği", "Sürdürülebilir Kalkınma"]);
+  assert.deepEqual(ertan.en.keywords, ["Food Security", "Climate-Smart Agriculture", "Climate Change", "Water Security", "Sustainable Development"]);
+
+  assert.equal(bilingualKeywordParityOverrides.get("kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre")?.source, "tr");
+  assert.equal(bilingualKeywordParityOverrides.get("turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik")?.source, "tr");
+  assert.equal(bilingualKeywordParityOverrides.get("mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce")?.source, "tr");
+  assert.equal(bilingualKeywordParityOverrides.get("iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi")?.source, "tr");
 });
