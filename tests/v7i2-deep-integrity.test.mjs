@@ -8,7 +8,21 @@ test('V7I2 locale-split section ids are locale-prefixed and unique', () => {
   for (const slug of issue.articles) for (const locale of ['en','tr']) {
     const ids=(read(slug,locale).sections||[]).map(section=>section.id);
     assert.equal(new Set(ids).size,ids.length,`${slug}/${locale}: duplicate section id`);
-    for (const id of ids) assert.match(id,new RegExp(`^${locale}-section-\\d+$`),`${slug}/${locale}: ${id}`);
+    for (const id of ids) assert.match(id,new RegExp(`^${locale}-section-\\d+[a-z]?$`),`${slug}/${locale}: ${id}`);
+  }
+});
+test('Jian article preserves the corrected parent/subsection heading hierarchy', () => {
+  const slug='cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis';
+  for (const locale of ['en','tr']) {
+    const sections=read(slug,locale).sections||[];
+    const parent=sections.find(section=>section.id===`${locale}-section-2`);
+    const child=sections.find(section=>section.id===`${locale}-section-2a`);
+    assert.ok(parent,`${slug}/${locale}: missing parent section`);
+    assert.ok(child,`${slug}/${locale}: missing child subsection`);
+    assert.equal(parent.level,'section',`${slug}/${locale}: parent level`);
+    assert.equal(child.level,'subsection',`${slug}/${locale}: child level`);
+    assert.equal(parent.paragraphs?.length ?? 0,0,`${slug}/${locale}: parent should be structural only`);
+    assert.ok((child.paragraphs?.length ?? 0)>0,`${slug}/${locale}: child should contain the section text`);
   }
 });
 test('V7I2 visual contributions render their source artwork', () => {
