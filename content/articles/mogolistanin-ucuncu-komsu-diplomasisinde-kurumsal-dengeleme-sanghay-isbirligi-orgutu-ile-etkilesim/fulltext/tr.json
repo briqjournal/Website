@@ -1,0 +1,480 @@
+{
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Giriş",
+      "paragraphs": [
+        "Çin, Rusya, Kırgızistan, Kazakistan ve Tacikistan’dan oluşan Şanghay Beşlisi, üyeleri arasındaki sınır güvenliğini güçlendirmek amacıyla 1996’da kuruldu. 1990’larda Sovyetler Birliği’nin dağılması, Çin’i halef devletlerle ortak zemin aramaya yöneltti. 2001’de Özbekistan’ın katılımının ardından örgütün adı resmen Şanghay İşbirliği Örgütü (ŞİÖ) oldu ve amaçları yalnızca sınır meselelerinin ötesine genişledi. ŞİÖ, yalnızca ekonomik işbirliği ya da bütünleşmeye odaklanmak yerine, küresel jeopolitik olayların ve karmaşık süreçlerin yaşandığı alanın tamamını kapsar. ŞİÖ, dünya nüfusunun yüzde 40’ından fazlasını barındırmakta ve küresel GSYH’nin yüzde 24,2’sini oluşturmaktadır (Nadin, Nijhar, & Mami, 2022). 2025’e Kadar Kalkınma Stratejisi, ŞİÖ’nün salt askerî ya da ekonomik bir yapı olarak işlemeyeceğini; ulusüstü yönetim organlarına sahip askerî-siyasal bir blok ya da ekonomik bütünleşme birliği olmayı amaçlamadan, çok boyutlu bir bölgesel örgüt olarak rolünü güçlendirmeyi hedeflediğini belirtir (SCO, 2015).",
+        "Moğolistan’ın büyük jeopolitik güçler arasında sıkışmış, denize kıyısı olmayan bir ülke olması, üçüncü taraf ülkelerden gelen yatırımı sınırlamıştır. Bu coğrafi gerçeklik, Moğolistan’ı sürekli jeopolitik baskılar ve hassas bir nüfuz dengesiyle karşı karşıya bırakmaktadır. Çin, Rusya ve Moğolistan arasındaki ilişkilerin analizi, Çin’in Moğolistan üzerinde kayda değer bir ekonomik etkiye sahip olduğunu göstermektedir. 2024’te Moğolistan’ın ihracatının yüzde 91,3’ü Çin’e yönelmiş; bunlar da esas olarak Moğolistan ekonomisi açısından hayati önemdeki kömür ve bakır gibi temel hammaddelerden oluşmuştur (Xinhua News, 2025). Ayrıca Moğolistan’ın diğer ülkelerle yaptığı ticaretin büyük kısmı Çin topraklarından geçmekte, bu da Çin’e sınırlar, gümrükler ve demiryolu limanları üzerinde stratejik kaldıraç sağlamaktadır. Rusya ise altyapı ve enerji arzı üzerinde önemli bir denetime sahiptir; benzin ve dizel dahil tüketim amaçlı yakıtların yüzde 90’ından fazlası Rusya’dan ithal edilmektedir. Dolayısıyla Rusya’daki aksaklıklar ya da fiyat artışları, Moğolistan açısından sosyoekonomik sorunlar yaratabilir. Sovyet dönemi standartlarına göre inşa edilmiş demiryolu altyapısı da bu stratejik bağımlılığı güçlendirmektedir. Çin ve Rusya ŞİÖ’nün önde gelen üyeleri iken, Moğolistan örgütte gözlemci devlet statüsündedir. Denize kıyısı olmayan ve kalıcı tarafsızlığa bağlı bir ülke olarak Moğolistan, Üçüncü Komşu Diplomasisi stratejisini sürdürürken iki komşusundan da güvenlik güvenceleri aramaktadır. Bu bağlamda merkezi araştırma sorusu şudur: Çin ve Rusya’nın hâkim olduğu bir örgüt olan ŞİÖ’ye Moğolistan neden angaje olmaktadır?"
+      ]
+    },
+    {
+      "id": "tr-section-2",
+      "title": "Literatür Taraması",
+      "paragraphs": [
+        "Üçüncü Komşu Diplomasisi çerçevesinin sınırlılıkları dikkate alındığında, Moğolistan’ın dış ilişkilerinde tam olarak saf tutmaksızın işbirliği ile ihtiyat arasında denge kuran kasıtlı muğlaklığı için güçlü bir teorik temel vardır. Cheng-Chwee Kuik, risk dengeleme stratejisinin küçük devletlerin işbirliği ve dengeleme gibi farklı dış politika biçimlerini aynı anda izleyerek artan uluslararası belirsizlik karşısında geniş bir politika seçenekleri yelpazesini korumasına imkân verdiğini savunur (Kuik, 2021). Benzer biçimde, Evelyn Goh da risk dengelemeyi, ne dengelemenin, ne “peşine takılma”nın (bandwagoning) ne de tarafsızlığın en iyi sonucu verdiği durumlarla başa çıkmak için tasarlanan stratejilerin birleşimi olarak tanımlar (Telci & Rakipoğlu, 2021). Rusya ve Çin’le güçlü siyasal ve ekonomik ilişkileri öncelerken gelişmiş üçüncü komşularla da daha derin ortaklıklar kurmak isteyen Moğolistan açısından risk dengeleme teorisi, Üçüncü Komşu Diplomasisi politikasını salt betimleyici okumaların ötesine taşıyarak, onun uyarlanabilir ve risk hesaplayan dış politikasını anlamak için değerli bir analitik çerçeve sunmaktadır.",
+        "Risk dengeleme, küçük ve orta ölçekli güçlerin büyük güç rekabeti karşısında özerkliklerini koruma yolu olarak tanımlanmıştır. Risk dengeleme hem angajmanı hem de karşı dengelemeyi içerir. Kuik bu teoriyi, devletlerin ekonomik ya da siyasal faydalar elde etmek için bir süper güçle işbirliği yaparken, ileride ortaya çıkabilecek riskleri hafifletmek üzere aynı anda güvenlik ve diplomatik önlemler hazırladığı bir “sigorta arayışı” stratejisi olarak betimler (Kuik, 2025). Anarşik bir uluslararası sistemde bu politika, özellikle büyük güçlerin niyetleri belirsiz kaldığında, küçük devletler açısından tek bir tarafa aşırı bağlanma ihtimalini azaltır.",
+        "Risk dengeleme stratejisi tek ve düz bir politikaya indirgenemez. Walt ittifak oluşumuna ilişkin vaka incelemeleri yürütmüş ve sonunda uluslararası ittifakların ya “dengeleme” ya da “peşine takılma” olduğunu ileri sürmüştür (Walt, 1987). Dengeleme, daha zayıf devletlerin baskın bir güç ya da koalisyonu dengelemek üzere birleşmesini ifade ederken, peşine takılma, tehditkâr bir gücün yanında tam olarak saf tutmayı ifade eder. Figiaconi, bu katı realist perspektifin yalnızca güçlü ülkelerin üstünlüğüne uygulandığını; buna karşılık küçük ve orta ölçekli devletlerin, kendi özgül stratejileri ve sistemsel baskılar içinde, hayatta kalmak için sahip oldukları imkânları nasıl kullandıklarını ihmal ettiğini savunur (Figiaconi, 2025).",
+        "Geleneksel teorilerin aksine, risk dengeleme angajmanı ile direnci birlikte içerir. Goh, Çin’le ekonomik büyüme amacıyla normal ilişkileri sürdürürken güvenlik için ABD ile işbirliği bağlarını güçlendirmek zorunda olan Güneydoğu Asya ülkelerinde risk dengelemenin uygun bir yönetişim mekanizması olduğunu ileri sürer (Goh, 2005). Güneydoğu Asya ve Çin bağlamında Kuik, küçük ve orta ölçekli devletlerin faydalarını azamiye çıkarmaya yönelik üç kritik politika tespit etmiştir (Kuik & Rozman, 2015). Bunlardan ilki ve en önemlisi, yükselen bir güçle ekonomik araçlar yoluyla ilişkiden pay alma amacı taşıyan “ekonomik pragmatizm”dir. İkincisi, çoklu ikili ve çok taraflı temaslara katılarak yükselen güçle diplomatik yakınlık sürdürmektir; yani çeşitli diplomatik kanallar açarak konumunu daha avantajlı bir aşamaya yükseltmek ve Kuik’in adlandırmasıyla “bağlayıcı angajman”dır. Son olarak sınırlı peşine takılma politikası, seçici eylemler yoluyla büyük bir güçle ortaklık kurup, ancak bunu sınırlı ölçüde yaparak siyasal faydalar üretmeyi amaçlar. Daha sonraki çalışmalar da Çin’in yükselişi ve ABD’nin Asya’daki geleneksel hâkimiyeti temelinde bu mantığı ilerletmiş; Lim ve Cooper, belirsizlik karşısında manevra alanını korumak için farklı jeopolitik amaçlara sahip birden fazla tarafa aynı anda verilen çelişkili tepkiler de dâhil olmak üzere, risk dengelemeyi kasıtlı ve hesaplı eylemler bütünü olarak tanımlamıştır (Lim & Cooper, 2015).",
+        "Risk dengelemenin bağlamı tartışmaya açıktır. Risk dengelemenin ayırt edici özellikleri, hizalanma biçimleri ve bunların tutarlılığı, bu konudaki çalışmaların bir parçasıdır. Korolev, bu iki alan arasındaki benzerlikleri kabul etmiş ve risk dengeleme ile devlet davranışına ilişkin diğer yakın kavramlar arasında örtüşen unsurları açıklığa kavuşturmanın hayli güç olduğuna işaret etmiştir. Risk dengeleme çoğu zaman “dolaylı” ya da “yumuşak dengeleme”, “sınırlı peşine takılma”, “realist tarzı dengeleme”, “düşük yoğunluklu dengeleme” ya da basitçe “dengeleme” gibi terimlerle geniş biçimde ölçülmektedir (Figiaconi, 2025). Korolev, Kuik’in politika ve eylemlerine değil, ilkeler ve mantığa dayalı kavramsal bir yaklaşımla risk dengelemenin özelliklerini göreli eşit uzaklık, eşzamanlılık, karşıt ve dengeleyici önlemler ile politika seçeneklerinin çeşitlendirilmesi olarak tanımlamıştır (Korolev, 2024). Ona göre risk dengeleme, özellikle yapısal öngörülemezliğin zirve yaptığı koşullarda en değerli stratejidir; devletler bu durumda dış politikalarını daha basit ve doğrudan bir çizgiye kaydırma hakkına sahip olabilirler. Koga ise risk dengelemeyi, özellikle güç kaymalarının yaşandığı dönemlerde ikincil düzeydeki devletler için dengeleme ile peşine takılma arasında yer alan orta düzey bir strateji olarak kavramsallaştırır (Koga, 2018). Diğer bazı yazarlar ise risk dengeleme ile dengeleme ve benzeri teoriler arasında örtüşmeden ziyade açık bir ayrım olması gerektiği konusunda ısrar eder. Haacke ve Ciorciari’ye göre bir devlet düşmanca koşullar altında olup belirli bir güce karşı askerî direnç içine girse bile, siyasal ve ekonomik alanlarda yine de risk dengeleme uygulayabilir (Haacke & Ciorciari, 2022). Bu, söz konusu devletlerin ilişkilerinden yine de önemli ölçüde fayda sağladıkları anlamına gelir. Haacke ve diğerleri risk dengelemenin, yaşamsal varoluşsal risklerin uygun biçimde yerleştirilmesi ve yönetilmesiyle ilgili olduğunu, bu yönüyle de dengeleme ve peşine takılmadan ayrıldığını savunmuştur. Risk dengelemenin içeriğine dair olarak González-Pujol ekonomik, siyasal ve askerî risk dengeleme ayrımına gider ve bunları alanlar arası ve alan içi çelişkilerle ilişkilendirir (González-Pujol, 2024). İlki, bir devletin dış politikanın belirli bir alanında büyük bir güçle işbirliği yaparken başka bir alanda rekabetçi kalması durumunu ifade eder. İkincisi ise bir devletin aynı alanda başka bir ülkeye yönelik hem işbirlikçi hem de dirençli unsurlar içeren bir politika izlemesidir. Bu karşıt davranışlar, devletlerin risk dengeleme esnekliğini yönetmek için kasıtlı olarak başvurduğu eylemlerdir.",
+        "İkincil devletlerin risk dengeleme kapasitesini güçlendiren ekonomik faaliyet, teorinin talep ettiği önemli bir unsurdur. Lim ve Mukherjee, Güney Asya bağlamında (Maldivler ve Sri Lanka örneklerinde) uluslararası ilişkilerin belirsizlik doğasıyla ilgili alışıldık tartışmaların yanı sıra, açık bir tehdit olmasa bile bir devletin ekonomik kazanç nedeniyle dış politikasını neden risk dengeleme yaklaşımına göre şekillendirebildiğini sorgular (Lim & Mukherjee, 2019). Yazarlar, küçük devletlerin zaman zaman bağımsızlıklarının bir kısmını güçlü bir ülkeye devredip karşılığında kârlı maddi faydalar elde edebildiğini kabul eder; ancak bu noktada kırılganlık ayrı bir mesele hâline gelir. Telci ve Rakipoğlu (2021), küçük devletlerde risk dengelemenin çekirdek unsurlarından birinin, iç kapasite inşa etmek için ekonomik fırsatları azamiye çıkarmak olduğunu ve bunun çeşitli aktörlerle çoklu ortaklıklar geliştirmeyi içerdiğini savunarak risk dengelemenin ekonomik boyutunu genişletir. Küçük devletler güçlü askerî ve ekonomik kaynaklardan yoksun oldukları için risk dengeleme davranışına yönelmeye daha yatkındır. Kuveyt örneğinde ekonomik faaliyet, bağımlılığı ve özerkliği yönetmek bakımından diplomatik ve askerî önlemler kadar önemlidir.",
+        "Böyle bir politikanın etkili biçimde uygulanması, bir politika setinin diğerini zayıflatmamasını güvence altına almayı gerektirir. Eleştirmenler, risk dengeleme davranışının nihayetinde belirsizlik üretebileceğini, bunun da özellikle büyük güçler hizalanma baskısı kurduğunda ittifakları zayıflatabileceğini ya da küçük devletleri güvenilmez gösterebileceğini savunur. Kuik ise risk dengelemenin kalıcı bir strateji değil, fakat geleneksel ittifak kurma teorilerinden daha uzun ömürlü olabilen pragmatik bir yaklaşım olduğunu ileri sürer. Küçük devletler açısından bu yaklaşımın etkililiği, işbirliği ile karşı dengeleme arasındaki hassas ayara bağlıdır (Kuik, 2023). Moğolistan’ın dış politikası belirgin risk dengeleme özellikleri sergiler. Büyük güçler arasında sıkışmış kara ile çevrili konumu nedeniyle Moğolistan, komşularıyla ticaret ve altyapı alanlarında işbirliği yaparken aynı zamanda ABD, Japonya ve Avrupa ile “Üçüncü Komşu” bağlarını güçlendirmektedir. Resmî ittifaklardan kaçınan Moğolistan, gelişmiş ülkeler ve uluslararası örgütlerle çok taraflı angajmanı ve diplomatik-güvenlik ilişkilerini çeşitlendirmeyi tercih ederken Çin ve Rusya ile istikrarlı ilişkilerini de sürdürmektedir. Bu yaklaşım, risk dengelemenin temel özelliğini—resmî ittifaklarda düşük profil sürdürürken değişken jeopolitik ortamda egemenliği ve özerkliği korumak için esnekliği muhafaza etmeyi—örneklemektedir. Buna rağmen Moğolistan, risk dengeleme çalışmalarında genellikle göz ardı edilmekte; bu literatür daha çok Çin’in yükselişi bağlamında Güneydoğu Asya ülkelerine odaklanmaktadır.",
+        "Bu araştırma boşlukları, Moğolistan’ın dış politika davranışının uluslararası belirsizliğin daha geniş bağlamı içinde, daha sıkı bir teorik çerçeve kullanılarak yeniden yorumlanmasını gerekli kılmaktadır. Özgün dış çevresine ve stratejik konumuna rağmen Moğolistan, risk dengeleme literatüründe yeterince incelenmemiştir (Hlaváček & Sanc, 2022). Bu çalışma, söz konusu boşluğu doldurmak amacıyla risk dengeleme teorisini kullanarak Moğolistan’ın Üçüncü Komşu Diplomasisi politikasını, riskleri azaltmak ve çıkarları azamiye çıkarmak üzere çok taraflı platformlardan yararlanan proaktif bir kurumsal dengeleme stratejisi olarak analiz etmektedir."
+      ]
+    },
+    {
+      "id": "tr-section-3",
+      "title": "Üçüncü Komşu Diplomasisi Altında Kurumsal Dengeleme",
+      "paragraphs": [
+        "Moğolistan’ın Üçüncü Komşu Diplomasisi yönündeki politikası ikili diplomasinin ötesine uzanır ve en iyi, ŞİÖ gibi çok taraflı örgütler içindeki kurumsal dengeleme çerçevesinde anlaşılabilir. Bu yaklaşım iki tamamlayıcı işleyiş mantığıyla tanımlanır: Aşırı bağımlılıkla ilişkili stratejik ve ekonomik riskleri azaltmayı amaçlayan risk dengeleme ile Moğolistan’ın jeopolitik ve ekonomik varlıklarının değerini ve etkisini artırmayı hedefleyen leveraging. Bu çift mantıklı çerçeve, Moğolistan’ın hesaplı ve proaktif kurumsal angajmanını açıklamak için tutarlı bir temel sunar."
+      ]
+    },
+    {
+      "id": "tr-section-4",
+      "title": "Üçüncü Komşu Diplomasisi Politikasının Evrimi",
+      "paragraphs": [
+        "İki kutuplu dönemin sona ermesi, Moğolistan’ın dış ilişkileri için pürüzsüz bir yol açmadı. Aksine, yeni ortaya çıkan çok kutuplu rekabet ve küresel belirsizlik ortamında dış politikanın giderek daha çok yönlü hâle geldiği bir bağlamda, daha karmaşık sorunlar ve uygun manevra ihtiyacı doğurdu (Dashdorj, 2003). Bu belirsiz ortamda Moğolistan’ın dış politika öncelikleri çoğu zaman risk dengelemenin esnek unsurlarına dayanır; bu, küçük devletlerin bir yandan riskleri hesaplayıp diğer yandan fırsatları değerlendirirken birçok müttefikle işbirliği yapıp bunlardan hiçbirine tam olarak hizalanmamasını içeren bir stratejidir (Kuik, 2021). Moğolistan’ın dış politikası iki kritik sütuna dayanmaktadır: Rusya ve Çin’le olduğu kadar ABD ve diğer gelişmiş Batı Avrupa ülkeleriyle, ayrıca Güney Kore ve Japonya gibi önemli Asya güçleriyle de olumlu ilişkiler geliştirmek (Hlaváček & Sanc, 2022). Moğolistan iki komşusuyla ya da Batı dünyasıyla tam teşekküllü bir ittifakı kabul etmeye isteksizdir. Bunun yerine dengeleme, bağımlılık oranını çoklu ortaklar arasında daha eşit biçimde yönetme, ticaret ortaklarını çeşitlendirme ve çeşitli alanlarda seçici davranma gibi çok sayıda pragmatik araç kullanır.",
+        "Sovyet birliklerinin Aralık 1992’de çekilmesi, Moğolistan’ın stratejik kırılganlıklarını açığa çıkardı: Sovyet yardımına bağımlılığı, sosyalist blok dışında sınırlı diplomatik bağlara sahip oluşu ve çeşitlendirilmiş güvenlik ortaklıklarından yoksunluğu (Bat-Erdene, 2021). Moğolistan, Sovyetler Birliği'nin dağılmasının ardından ciddi bir ekonomik gerileme yaşadı. Ülkenin tek siyasal hamisi artık yardım sağlayamaz hâle gelmişti; ayrıca 20. yüzyılda dünyadan izole kaldığı için serbest piyasa ve açık politika konusunda neredeyse sıfır farkındalıkla yeni bir döneme girmişti. Bu yeni olgu, Moğolistan’ı coğrafyasının, yönetişiminin ve siyasetinin tüm ağırlığını kendi başına taşımaya zorladı. Rusya ve Çin’le yeni bir ilişki türü kurma çabası içinde yeni Moğolistan, 1993’te Rusya ile “Dostane İlişkiler ve İşbirliği Antlaşması”nı (Guudai, 2014), 1994’te ise Çin’le “Dostluğu ve İşbirliğini Teşvik Antlaşması”nı imzaladı (Porter, 2009). Aynı yıl yetkililer üç önemli ulusal belge hazırladı: Ulusal Güvenlik Konsepti (NSC), Dış Politika Konsepti ve Askerî Doktrin (Soni, 2018).",
+        "1996 ile 2000 arasında, parlamenter seçimlerin ardından Moğolistan Demokrat Partisi iktidara geldi ve küreselleşmeden yararlanarak Moğolistan’ın reformlarını yoğunlaştırmayı amaçladı (Dashdorj, 2003). Parti liderlerinden Enkhsaikhan, 20. yüzyılda büyük güçlerin küçükleri fethettiğini; ancak gelecek yüzyılda kazananın, dünya işlerinde yavaş koşanları geride bırakarak hızlı hareket eden olacağını yazmıştı. Moğolistan, güçlü bir kalkınma hamlesi yürütüp küresel kalkınma ağına derinlemesine entegre olmaya yönelik fikir ve girişimlere aktif katkı sunarak iki komşusunun etkisini azaltmaya odaklandı (Dashdorj, 2003). Moğolistan’ın önde gelen politika yapıcıları, Rusya ve Çin’in ötesinde, yeni ve uzak ortaklarla Moğol toprağında gerçek bir çıkar ağı kuran küresel bir sistem yaratma ve güçlendirmenin aciliyetini kavramışlardır (Tserenpil, 1998). Bu ortam, Ulanbatur’un Rusya’ya geleneksel bağımlılığını çeşitlendirmesine ve hızla yükselen Çin’le karmaşık ilişkisini temkinli biçimde yönetmesine imkân tanıdı.",
+        "ABD’nin eski Dışişleri Bakanı James Baker, 1990’daki Moğolistan ziyareti sırasında Amerika Birleşik Devletleri’nin Moğolistan’ın üçüncü komşusu olduğunu söyleyerek “Üçüncü Komşu” kavramını ilk kez dillendiren isim oldu; böylece Moğolistan’ın iki bitişik komşusuyla ilişkisine müdahale etmeksizin üç büyük güçle de yoğun işbirliği ve yakın ortaklık kurabileceği bir anlayış ortaya koydu (Sanallkhundev, 2016). Baker’ın sözlerinden hareketle Üçüncü Komşu Diplomasisi politikası, Rusya ve Çin’in ötesindeki ülkelerle siyasal, ekonomik ve güvenlik ilişkileri geliştirerek dış ortaklıkları çeşitlendirme ve stratejik özerkliği koruma stratejisi olarak anlaşılabilir. Moğolistan dış politikasının ikincil yönü şöyledir: “Amerika Birleşik Devletleri, Japonya ve Almanya Federal Cumhuriyeti gibi Batı ve Doğu’nun yüksek derecede gelişmiş ülkeleriyle dostane ilişkiler geliştirmek. Aynı zamanda Hindistan, Kore Cumhuriyeti, Tayland, Singapur, Türkiye, Danimarka, Hollanda, Finlandiya, Avusturya, İsveç, İsviçre gibi ülkelerle dostane ilişkileri ilerletmeyi ve bu ülkelerin Moğolistan’daki ekonomik ve diğer çıkarlarını uygun bir düzeye çıkarmayı amaçlayan bir politika izlemek” (State Great Khural of Mongolia, 2011). Bu ikincil yön dikkate alındığında Moğolistan, gelişmiş demokratik devletlerle ikili bağlarını güçlendirmeye odaklanmıştır. Politika zamanla, esasen ikili bir dengeleme mekanizması olmaktan çıkıp daha geniş, çok boyutlu bir stratejiye dönüşmüş; daha sonra çok taraflı diplomasiyi ve kurumsal angajmanı da içermeye başlamıştır. Üçüncü Komşu Diplomasisi politikası, büyük güçler arasında yer alan, yetersiz askerî kapasiteye ve düşük nüfusa sahip bir ülke olan Moğolistan’ın her şeyden önce ulusal güvenlik kaygısından doğmuştur ve 2010 tarihli “Moğolistan Ulusal Güvenlik Konsepti”ne yansımıştır. Güncellenen belge, salt askerî odaktan uzaklaşıp ulusal varoluşu ekonomik ve çevresel istikrarla ilişkilendiren çok boyutlu bir yaklaşıma geçmiştir.",
+        "Moğolistan’ın yüksek derecede gelişmiş ülkelere ve uluslararası kuruluşlara yönelik dış politikası, NSC’nin 2010 versiyonunda açık biçimde görülmektedir. NSC, ülkenin dış önceliklerini ve dünya görüşünü ortaya koymakta; coğrafi dengelemeden değer temelli diplomasiye ve nihayet kurumsal angajmana doğru yaşanan kaymanın resmî ifadesini sunmaktadır. NSC’nin 3.1.1.5 maddesindeki erken formülasyonlar, Amerika Birleşik Devletleri, Japonya ve Güney Kore gibi “Üçüncü Komşu” olarak etiketlenen ülkelerle hayati dengeleyici ilişkiler sürdürmeye odaklanmıştır (Unified Legal Information System, 2010). NSC, insan hakları, serbest piyasalar ve hukukun üstünlüğü gibi liberal demokratik ilkeleri dış angajmanın normatif temelleri olarak giderek daha güçlü biçimde benimsemektedir. Coğrafi olarak uzak demokratik ortaklara yönelik bu ilk yönelim, NSC’nin erken bölümlerinde ayrıntılandırılır. NSC’nin 3.1.1.2 maddesinde şöyle denmektedir: “Moğolistan’ın bağımsızlığını ve egemenliğini sağlamanın temel yöntemleri siyasal ve diplomatik eylemler olacaktır. Buna göre yabancı devletler ve uluslararası kurumlarla aktif ilişkiler ve işbirliği kurmaya yönelik çok ayaklı bir dış politika uygulanacaktır” (Unified Legal Information System, 2010). Moğolistan’ın Üçüncü Komşu Diplomasisi, coğrafi dengeleme aracından daha karmaşık ve katmanlı bir dış politika stratejisine evrilmiştir. Moğolistan dış politikası, iki komşusuyla kurulmuş dostluk ve işbirliği sistemini bozmadan ABD, Batı Avrupa, Japonya ve Güney Kore gibi ülkelerle eşit işbirliği geliştirmeyi amaçlamaktadır. Dolayısıyla başlangıçta bu politika, Çin ve Rusya’nın ezici etkisinden gelebilecek baskıyı dengelemek üzere bu ülkelerle bağ kurmaya odaklanmıştır, denebilir. NSC’nin 3.1.1.5 maddesinde Moğolistan’ın üçüncü komşu ülkelerle ilişkisi açıkça şöyle ifade edilmiştir: “Bir ‘Üçüncü Komşu’ stratejisi uyarınca, gelişmiş demokrasilerle siyasal, ekonomik, kültürel ve insani alanlarda ikili ve çok taraflı işbirliği yürütülecektir” (Unified Legal Information System, 2010).",
+        "Haziran 2022’de Moğolistan Ulusal Güvenlik Konseyi Ofisi, temel belge 2010 NSC olmaya devam etmekle birlikte mevcut 2010 çerçevesinde kapsamlı bir değişiklik taslağı hazırladı. Bu revizyon, Rusya-Ukrayna savaşının etkileri ve Doğu Asya’daki değişen dinamikler gibi hızla dönüşen dış ortamın yanı sıra yönetime duyulan güvensizlik gibi iç meselelere yanıt veriyordu. Üçüncü Komşu Diplomasisi politikası artık stratejik olarak evrilmiş, ABD, Japonya ve Güney Kore gibi devletlerden ikili güvenceler sağlamaya odaklı bir çizgiden aktif biçimde çok taraflı kurumları araçsallaştıran bir yönelime kaymıştır; böylece çekirdeğinde ŞİÖ’nün yer aldığı “kurumsal üçüncü komşu” ağı inşa edilmektedir."
+      ]
+    },
+    {
+      "id": "tr-section-5",
+      "title": "Çifte Davranış Mantığı: Risk Dengeleme ve Kaldıraç Olarak Kullanma",
+      "paragraphs": [
+        "Ciorciari ve Haacke’ye (2019) göre risk dengeleme stratejisi, uluslararası ilişkilerde yaygın biçimde kullanılsa da, farklı araştırmacıların ona yüklediği açıklamalar ve tanımlar çeşitlendiği için gevşek ve tutarsız bir kavram görünümü kazanmıştır. Araştırmacıların makalelerinde bu tanımlardan birden fazlasını birlikte kullanması da yaygındır. Bu durum, devletin karşı karşıya bulunduğu koşullara bağlı olarak risk dengeleme şartlarının zaman zaman yeniden ayarlanabildiğini gösterir. Bu çalışmada risk dengeleme stratejisi, büyük güçlerle ilişkilerden ekonomik ve siyasal faydalar elde ederken tek bir güce aşırı bağımlı olmamak için alternatif ortaklıkları korumayı amaçlayan, çeşitli yaklaşımları ve politika esnekliğini içeren bir strateji olarak kavramsallaştırılmaktadır. Risk dengeleme stratejisi kararsız ya da nötr bir tutum almak anlamına gelmez; tersine, gelecekteki muhtemel yapısal riskleri en aza indirmeye dönük önleyici bir tedbirdir. Moğolistan bağlamında risk dengeleme, Çin ve Rusya’nın önderlik ettiği ŞİÖ ile işbirliği ilişkileri sürdürülürken; aynı anda “Üçüncü Komşu” ortaklardan ek güvenlik, diplomatik ve ekonomik destekler sağlama ve seçici kurumsal dengeleme çabaları biçiminde tezahür etmektedir.",
+        "Devletler en çok, yüksek düzeyde kaygı verici olmakla birlikte acil bir güvenlik tehdidi oluşturmayan uzun vadeli tehditlerle karşılaştıklarında risk dengeleme davranışını benimserler (Kuik, 2008). Bu yaklaşım, büyük güçlerle ticaretten ciddi ekonomik faydalar sağlayan fakat onlara siyasal olarak tam hizalanmaktan kaçınmak isteyen küçük ve orta ölçekli güçler için özellikle ikna edicidir. Ayrıca büyük güç rekabeti yoğunlaştıkça ve gelecekteki güç dağılımı belirsiz kaldıkça, devletler dengeleme ya da peşine takılma gibi kesin stratejiler benimsemek yerine politika esnekliğini tercih ederler (Goh, 2006). Bu bağlamlarda risk dengeleme stratejisi, uzun vadeli riskleri değerlendirme ve baskın komşuları karşısına almadan ulusal çıkarları ilerletme imkânı veren rasyonel bir strateji olarak ortaya çıkar.",
+        "Moğolistan’ın ŞİÖ ile kurumsal angajmanı ikili bir gerekçeye dayanmaktadır: Riskleri dengeleme yoluyla azaltmak ve kaldıraç etkisini güçlendirmek (Kuik, 2025). Risk dengeleme yoluyla riskleri azaltma mantığı doğası gereği savunmacı ve önleyicidir; Moğolistan’ın jeopolitik ve ekonomik bağlamındaki önemli kırılganlıkları gidermeye dönüktür. Yalnızca Çin ve Rusya ile çevrili, denize kıyısı olmayan bir ülke olan Moğolistan, stratejik bağımlılık ve baskı riskleriyle yüz yüzedir. Risk dengeleme stratejisi, kurumsal katılımı kullanarak riskleri çeşitlendirmeyi ve dayanıklılığı artırmayı amaçlar (Kuik & Rozman, 2015). Güvenlik alanında Ulanbatur’un, terörle mücadele, sınır aşan suçlar ve siber güvenlik gibi geleneksel olmayan güvenlik meselelerine odaklanan ŞİÖ öncülüğündeki çabalara katılması (Maduz, 2018), komşularıyla profesyonel güven inşa etmesine ve güvenilir iletişim kanalları kurmasına olanak verir. Bu, klasik bir askerî ittifak değil; daha ziyade, yakın güvenlik çevresini istikrara kavuşturan ve kalıcı tarafsızlığının inandırıcılığını güçlendiren usule dayalı bir “güvenlik ağı” işlevi gören temel bir güven artırıcı mekanizmadır (Kuik & Rozman, 2015). Bu mantık, tek bir transit koridora ya da pazara aşırı bağımlılığı önlemeye yönelik çabalarda da görülmektedir. Moğolistan, “Bozkır Yolu” programını ŞİÖ çerçevesi de dahil olmak üzere daha geniş bölgesel bağlantısallık tartışmaları içine taşıyarak ihracat ve ithalat hatlarının çeşitliliğini meşrulaştırmayı ve artırmayı hedeflemektedir (Dulbaa, 2018). Çok modlu bağlantısallığa yönelik bu kurumsal girişim, kara ile çevrili olmanın dayattığı temel kırılganlıklardan birini hafifletmeyi amaçlayan stratejik bir adımdır.",
+        "Risk dengeleme stratejisinin savunmacı yönünden farklı olarak, risk dengeleme aynı zamanda kaldıraç artırıcı bir işleve de sahip olabilir. Figiaconi’nin (2025), büyük güç olmayan ülkelerin büyük güçlerin uyguladığı sistemik baskıların üstesinden gelmek için kendi kapasitelerini kullanabilecekleri yönündeki tespitinden hareketle, Moğolistan kurumsal üyeliği basit bir tartışma zemininden müzakere ve rol yükseltme için dinamik bir platforma dönüştürmektedir. Moğolistan, ŞİÖ’deki gözlemci statüsünü yalnızca katılım için değil, sahip olduğu varlıkların önemini ve değerini artıracak bir diplomatik kaldıraç olarak kullanmaktadır. Özellikle koklaşabilir kömür, bakır ve nadir toprak elementleri gibi stratejik mineraller bakımından zengin mineral varlığı başlıca kaldıraç unsuru olarak işlev görmektedir. Moğolistan, kaynak geliştirme, ulaştırma ve sürdürülebilirlik konularını ŞİÖ komitelerinde gündeme taşıyarak ikili müzakereleri çok taraflı bir çerçeveye kaydırabilmekte; böylece bireysel ortaklara karşı pazarlık konumunu güçlendirebilecek kurumsal gözetim ve standartları dolaylı biçimde devreye sokmaktadır. Kuzeydoğu Asya ile Orta Asya arasında bir kavşak olma niteliği ise “geçiş noktası” kimliğini kurmak için kullanılır. Moğolistan, ulaştırma ve dijital bağlantısallık projelerini savunmak ve tartışma etkinlikleri düzenlemek gibi proaktif gündem kurma pratikleriyle kendisini bölgesel işbirliğinin kilit kolaylaştırıcısı olarak tanımlamakta ve bu rolünü öne çıkarmaktadır. Bu rol arayışının kurumsallaştırılması, uluslararası görünürlüğü artırmakta, dış “Üçüncü Komşu” yatırımlarını çekmekte ve nihayet coğrafi ve ekonomik özellikleri kalıcı diplomatik sermaye ve etkiye dönüştürmektedir. Moğolistan’ın ŞİÖ ile angajmanı somut faydalar da üretmektedir. Geleneksel olmayan güvenlik alanlarına ilişkin daha önce saptanan avantajlara ek olarak, ŞİÖ’nün özellikle zirve bildirilerinde vurgulanan bölgesel bağlantısallık ve demiryolu geliştirme gündemi (SCO, 2019; SCO, 2022), Moğolistan’ın ulusal kalkınma öncelikleriyle örtüşmektedir. ŞİÖ aynı zamanda Moğolistan’ın Rusya-Moğolistan-Çin üçlü ekonomik koridorunu ilerletmesi için kilit bir platform işlevi görmektedir; bu konu sonraki bölümde ele alınacaktır. Moğolistan’ın ŞİÖ’ye katılımı henüz ticaret ya da yatırımda ölçülebilir artışlar üretmemiş olsa da, örgütün ekonomik diyaloğa verdiği önem, Moğolistan’a kendi girişimlerini tanıtma, ulaşım koridorları geliştirme ve üye devletlerle ekonomik işbirliğini artırma fırsatı vermektedir.",
+        "Bu iki mantık birbirini izleyen ya da birbirini dışlayan mantıklar değildir; tersine, tek ve bütünlüklü bir stratejik çerçeve içinde dinamik biçimde birbirine bağlı ve karşılıklı olarak birbirini güçlendirir (Kuik, 2021). Risk dengeleme stratejisi, varoluşsal riskleri azaltarak kaldıraç arayışının güvenle sürdürülmesi için gerekli temeli oluşturur. Buna karşılık, Moğolistan’ın bölgesel etkisini ve müzakere gücünü artırması yoluyla sağlanan etkili leveraging, algılanan kırılganlığı azaltır ve risk dengeleme stratejilerinin inandırıcılığını ve etkinliğini güçlendirir. Risk dengeleme yoluyla bağımlılığı azaltmak ile kaldıraç kullanımı yoluyla etkiyi artırmak arasındaki bu etkileşim, Moğolistan’ın ŞİÖ çerçevesinde kurumsal denge kurma yaklaşımının merkezinde yer almaktadır."
+      ]
+    },
+    {
+      "id": "tr-section-6",
+      "title": "Stratejik Motivasyonlar: Risk Dengeleme ve Kaldıraç Kullanımının İtici Gücü",
+      "paragraphs": [
+        "Moğolistan’ın tarihsel bağlamı, ülkenin dış politika stratejisindeki uyarlanabilir risk dengeleme niteliğini açıklarken göz ardı edilemez. Çin ve Rusya arasında konumlanmış, denize kıyısı olmayan bir devlet olarak Moğolistan’ın dış çevresi, özellikle bu iki komşunun politikaları tarafından şekillendirilmiş; onlara kıyasla birçok alandaki asimetrik kapasite, stratejik kırılganlıklar ve baskılar, Moğolistan’ın risk dengeleme stratejisini benimsemesinde teşvik eden başlıca etkenler olmuştur. Soğuk Savaş boyunca Ulanbatur’un dış yönelimi onlarca yıl boyunca Sovyetler Birliği ile kurulan ideolojik hizalanma tarafından belirlenmiştir. 1990’lardaki demokratik devrimden sonra ise dış politika penceresi, Moğolistan’ın rasyonel ve özgül ulusal çıkarlarıyla tanımlanan unsurlarla yeniden biçimlendi. Piyasa ekonomisine geçiş, çok partili sistemin doğuşu ve Sovyetler Birliği’nin çöküşü sırasında yaşanan güç kaymasının yarattığı belirsizlik, Moğolistan’a yalnızca kendi ulusal çıkarlarını merkeze alan, dış telkinlerden bağımsız bir dış politika izleme fırsatı verdi. Böylece risk dengeleme pratiği, hem iç hem dış çevrede çakışan dönüşümlere verilen pragmatik bir yanıt olarak ortaya çıkmıştır."
+      ]
+    },
+    {
+      "id": "tr-section-7",
+      "title": "Güvenlik Risklerine Karşı Dengeleme",
+      "paragraphs": [
+        "Moğolistan’ın, özellikle güvenlik alanında ŞİÖ ile angajmanı, tampon devlet olarak hareket etmeyi ve istikrar arayışını hedefleyen stratejik bir adımdır. 2004’ten 2023’e kadar Moğolistan, gözlemci sıfatıyla ŞİÖ öncülüğünde düzenlenen terörle mücadele ve bölgesel güvenlik tatbikatlarına aralıklı olarak katılmıştır. Öte yandan Çin ve Rusya’nın ikili ve üçlü askerî ilişkilerinde somut bir büyüme görülmüştür. Bu farklılaşma, Moğolistan’ın bütünüyle görünmez olmaksızın sert güvenlik taahhütleri içine çekilmekten kaçınma niyetini göstermektedir; başka bir deyişle, tampon devlet rolünü korurken bölgesel güvenlik işbirliklerinde bir varlık sürdürmektedir.",
+        "Askerî işbirliği kapsamında iki yılda bir düzenlenen ortak tatbikatın adı “Barış Misyonu”dur. ŞİÖ içindeki bu olağan tatbikat, üye devletler arasında savunma ve güvenlik işbirliğini derinleştirmeyi, yeni meydan okumalar ve tehditlerle başa çıkma kapasitesini artırmayı ve bölgesel barış ile güvenliği birlikte korumayı amaçlar (Global Times, 2021). Peace Mission 2005 ve 2007 gibi erken dönem ŞİÖ ortak tatbikatları da bu çerçevede, terörle mücadeleye odaklanmıştır (Tumurkhuleg, 2023). Ancak Moğol tarafı açısından, Moğol demografik yapısı yalnızca 3,5 milyonluk toplam nüfus içinde etnik Moğolların yüzde 90’dan fazlasını oluşturduğu için (Embassy of Mongolia to the United States of America, n.d.), bu topluluk temelli meselelerin hiçbiri şu aşamada şiddet yoluyla ciddi biçimde yaşanmamaktadır ve diğer ŞİÖ üyeleriyle kıyaslanabilir değildir; bu nedenle Moğollar bu tür faaliyetlere katılmamıştır. Geçtiğimiz on yılda ŞİÖ’nün askerî faaliyetleri ölçek ve karmaşıklık bakımından genişleyerek yalnızca “üç kötülük”le mücadele amacını aşmıştır. Örneğin Peace Mission 2018 ve 2021, mekanize piyade unsurlarını, hava gücü entegrasyonunu ve çok uluslu ortak komuta yapılarını içermiş; böylece askerî blok benzeri bir mantıkta birlikte çalışabilirliğe ve stratejik hazırlığa doğru bir kaymayı göstermiştir. Buna paralel olarak Çin ve Rusya da, doğrudan ŞİÖ şemsiyesi altında olmamakla birlikte, Moğolistan’ı da içeren Vostok 2018 ve 2022 gibi binlerce askerin katıldığı tatbikatlar yoluyla ikili işbirliklerini artırmış; bu da bölgenin karmaşık güvenlik ortamını yansıtmıştır (Banerjee, 2022).",
+        "Mart 2020’de ŞİÖ, Birleşmiş Milletler Uyuşturucu ve Suç Ofisi (UNODC) ile işbirliği içinde, “Uyuşturucu Tehdidine Karşı Mücadelede ŞİÖ ve UNODC: Darknet Üzerinden Uyuşturucu Kaçakçılığına Karşı Koymak” başlığıyla üst düzey bir etkinlik düzenledi (SCO, 2020b). Etkinlikte, uyuşturucu kaçakçılığı suçlarının darknet üzerinden geliştiği ve uyuşturucuyla bağlantılı işlemlerin darknet faaliyetlerinin önemli bir payını oluşturduğu vurgulandı. ŞİÖ, bu artan gerilim karşısında uyuşturucu bağlantılı suçlarla üyelerinin ortak çabaları aracılığıyla mücadele etmenin daha etkili olduğunu saptamış ve internet üzerinden uyuşturucu dağıtımından sorumlu kanalları ortadan kaldırmayı amaçlayan “Spider Web” adlı uluslararası uyuşturucu karşıtı operasyona dikkat çekmiştir (SCO, 2020a). Etkinlik, uluslararası işbirliği ve kapsamlı stratejilerin önemini vurgulamıştır. Bu boşluk, Moğolistan’ın kurumsal risk dengeleme mekanizması olarak Ulanbatur Diyaloğu (UBD) ile giderilebilir. Moğolistan’ın 2014’te başlattığı UBD, hükümet yetkililerini, akademisyenleri ve politika uzmanlarını Kuzeydoğu Asya’da güvenlik ve işbirliğini tartışmak üzere bir araya getiren yarı resmî bir diyalog ve işbirliği platformu niteliğinde (Track 1.5) bir platformdur (Sukhbaatar, 2025). Bu yolla Moğolistan’ın UBD’si, bölgesel güvenlik için normatif bir kuluçka alanı işlevi görmekte; uyuşturucu karşıtı hedefleri ve geleneksel olmayan güvenlik meseleleri yoluyla ŞİÖ gibi daha geniş çerçevelere eklemlenebilmekte ve resmî üyelik yerine yumuşak uyum yoluyla Moğolistan’ın etkisini pekiştirmektedir.",
+        "Moğolistan’ın 2016’da kabul edilen Savunma Politikası belgesi, “Moğolistan’ın dış askerî tehditleri önleme politikası … komşu ülkelerle çok taraflı işbirliğini genişletmek ve bölgede askerî güvenin güçlendirilmesi sürecini desteklemektir” demektedir. Açık biçimde ifade edilmiş bu stratejik yönelim uyarınca Moğol Silahlı Kuvvetleri, Rusya ve Çin’le düzenli ikili tatbikatlar gerçekleştirmiş; Vostok 2018 ise, yukarıdaki ilkeye bütünüyle uygun biçimde, üçlü işbirliğini de içeren ilk tatbikat olmuştur (National Institute for Security Studies, 2018). Moğolistan için bu stratejik gereklilik, uzun süredir benimsediği tarafsızlık ve dünya genelindeki bağlantısız kimliğini bulanıklaştırma riskiyle birlikte gelmektedir. Buna rağmen Moğolistan’ın ortak askerî tatbikatları, ABD ile her yıl düzenlenen “Khaan Quest” ile Rusya ve Çin’le yapılan “Selenge-2024” ve “Steppe Partner-2024” tatbikatları dâhil olmak üzere üç güçle de yakından bağlantılıdır; ancak bunların hiçbiri düzenli askerî görev yükümlülüğü içermemektedir."
+      ]
+    },
+    {
+      "id": "tr-section-8",
+      "title": "Ekonomik Bağımlılığa Karşı Dengeleme",
+      "paragraphs": [
+        "Doğu, Orta ve Batı demiryolu hatlarına ilişkin Ulaştırma Koridoru rekabeti, ŞİÖ çerçevesinde Çin, Moğolistan ve Rusya arasındaki, her bir tarafın bölgesel bağlantısallığı kendi ulusal çıkarlarıyla uyumlu hâle getirmeye çalıştığı karmaşık pazarlıkları göstermektedir.",
+        "Kuşak ve Yol Girişimi’nin (KYG) altı temel koridorundan biri olan ve ŞİÖ’nün stratejik yönelimi içine yerleştirilmiş Çin-Moğolistan-Rusya Ekonomik Koridoru (Şekil 1) çatısı altında, Doğu Hattı, Orta Hat ve Batı Hattı olarak bilinen üç ana demiryolu önerisi, taraflardan birinin iki komşudan birine nispeten daha sempatik biçimde hizmet eden farklı çıkarlarını yansıtmaktadır. Bu stratejik koridorlar, Moğolistan’ın jeopolitik ve ekonomik çıkarlarını dengelemeye dönük stratejik hamlesi doğrultusunda belli bir sıra ile hayata geçirilebilir (Dorj & Davaasüren, 2020). Şekil 1. Moğolistan-Rusya-Çin Ekonomik Koridoru.",
+        "Çoibalsan–Huut–Zuunkhatavch güzergâhını içeren Doğu Koridoru, Çin’in çıkarları doğrultusunda savunulan bir hattır. Doğu hattı, Rusya’nın Borzya kentini Moğolistan’ın doğu eyaletlerine ve oradan da İç Moğolistan ile Çin’in kuzeydoğusundaki Jinzhou limanına bağlamakta; bunun 434,2 kilometresi Moğolistan topraklarında yer almaktadır (Government Agency for Policy Coordination on State Property, 2023). Projenin yılda 100.000 yolcu ile 20 milyon ton kömür, petrol, demir cevheri ve transit yük taşıması ve 15,38 yıllık bir geri ödeme süresine sahip olması beklenmektedir (Dorj & Davaasüren, 2020). Bu hattın başlıca kârlı yönü, Moğolistan, Rusya ve Çin’in görece az gelişmiş bölgelerinde, zengin kaynaklar nedeniyle yüksek ekonomik faaliyet potansiyeli taşıyan ticareti yoğunlaştırmasıdır. Bölgesel düzeyde ise, Kore Yarımadası’ndaki jeopolitik gerilimlerin azalması ve Kuzeydoğu Asya’da bağlantısallığın güçlenmesi durumunda—ki bu Moğolistan’ın aktif biçimde üzerinde çalıştığı bir meseledir—Doğu hattı tercih edilen seçenek olacaktır (Dorj & Davaasüren, 2020).",
+        "Moğolistan’ın ulaştırma kalkınma stratejisi, mevcut Orta Koridor’u tamamlayacak ek demiryolu koridorlarının oluşturulmasını vurgulamış; böylece Sainshand–Zamiin-Uud–Erenhot–Ulaantsav arasındaki demiryolu üzerindeki yükün önemli ölçüde hafifletilmesi amaçlanmıştır. Hâlihazırda Moğolistan’daki Orta Koridor demiryolu azami kapasiteyle işletilmektedir ve sınır aşan transit yük hacmini artırmak için kapasitenin genişletilmesi ve yatırım yapılması gerekmektedir (Dorj & Davaasüren, 2020). Moğolistan, 2022’de ulusal demiryolu ağını Çin sınırındaki Khangi–Mandal geçidine bağlayan Zuunbayan–Khangi demiryolunu tamamlamıştır (UN-OHRLLS, 2022). Bu demiryolu, Baotou ve Hohhot gibi büyük sanayi merkezlerine hizmet veren Çin’in İç Moğolistan demiryolu ağına erişim sağlar. Devam eden petrol rafinerisi projesi de dâhil olmak üzere Sainshand bölgesindeki sanayi projelerinin gelişimi, güney Moğolistan’daki demiryolu bağlantısının genişletilmesinin stratejik önemini daha da artırmıştır (Dorj & Davaasüren, 2020). Üçlü Ekonomik Koridor’un merkez demiryolu koridorunun 5.975 kilometreye ulaşması planlanmaktadır. Çin tarafındaki 328 kilometrelik Jining-Erenhot demiryolu hattı ile Rusya tarafındaki 254 kilometrelik Naushki-Ulaan-Ude hattı için fizibilite çalışmaları tamamlanmıştır (Ministry of Road and Transport of Mongolia, 2024). Fizibilite çalışması ayrıca Moğolistan tarafında Sukhbaatar-Zamiin-Uud demiryolu hattından uzanacak 1.087 kilometrelik ikinci bir hattın inşasını da içermektedir (Ministry of Road and Transport of Mongolia, 2023).",
+        "Batı Hattı boyunca demiryolu gelişimi sınırlı kalırken, karayolu ağı görece iyi durumdadır. Urumçi’ye uzanan ve Moğolistan topraklarında 725 kilometre uzunluğundaki AN-4 Asya Otoyolu Ağı (Ulaanbaishint-Ulgii-Khovd-Yarantaar) hâlihazırda iyi düzeydedir (Dorj & Davaasüren, 2020). Buna karşılık AN-32 ya da diğer adıyla Millennium Road enine hattı henüz tam anlamıyla geliştirilmemiştir ve komşu ülkeleri bağlama yönündeki uluslararası rolünü yerine getirmekten ziyade çoğunlukla yerel ihtiyaçlara hizmet etmektedir (Dorj & Davaasüren, 2020). 29 Mayıs 2024 itibarıyla Artssuuri-Altai-Nariinsukhait-Shiveekhuren demiryolu ağına ilişkin ana karayolu altyapısı tamamlanmıştır (Jargalsuren & Byambanaran, 2024). Altai şehrinin güneybatısından başlayıp Burgastai Limanı üzerinden Çin demiryoluna bağlanan ve Çin’in Xinjiang Bölgesi’ne uzanan bir yan hat önerilmiştir (Dorj & Davaasüren, 2020). Bu güzergâh Rusya’nın desteğini alabilir. Moğolistan’ın batı ihracat koridoru içinde yer alan Gashuunsukhait-Gantsmod sınır ötesi demiryolu da, Tavan Tolgoi yatağından Çin’e kömür ihracatını kolaylaştırmak üzere inşa edilmektedir. On altı yıllık gecikmenin ardından bu proje, madencilik kapasitesini genişletmek ve Moğolistan ile Çin arasındaki uzun vadeli kömür ticaretini istikrara kavuşturmak için yakın zamanda büyük bir devlet altyapı girişimi olarak önceliklendirilmiştir (Khaliun, 2025a).",
+        "Doğu ve batı güzergâhları henüz tamamlanmamıştır. Mevcut koşullar altında, Orta Koridor ilk uygulama için en stratejik ve pratik olarak en elverişli seçenek gibi görünmektedir. Bu koridor hâlihazırda, özellikle Çin’e yönelik madencilik ihracatı başta olmak üzere, sınır aşan ticaretin önemli bir kısmını taşımaktadır. Operasyonel durumda olmasının yanı sıra, ŞİÖ içindeki çok taraflı tartışmalar da bölgesel bağlantısallığın ve ulaşım koridorlarının geliştirilmesinin önemini vurgulamıştır. 2019 Bişkek ŞİÖ Zirvesi ve 2022 Semerkant ŞİÖ Zirvesi bildirileri, bölgede etkin ulaşım güzergâhları ve lojistik ağlarının geliştirilmesinin altını çizmiştir (SCO, 2019; SCO, 2022). Bu son bildiriler ışığında Orta Koridor, üç güzergâh arasında erken uygulama açısından en umut verici seçenek olarak öne çıkarken, diğer iki güzergâh ön planlama aşamasında kalmakta ve ilave güçlüklerle karşılaşmaktadır.",
+        "2025’te Moğolistan, Tavan Tolgoi kömür madenini doğrudan Çin’in demiryolu ağına bağlayan Gashuunsukhait-Gantsmod demiryolunun inşası için Çin’le yapılan anlaşmayı onaylamıştır. Moğolistan, 2025-2029 arasında 27 milyon ton kömür ihraç etmeyi taahhüt etmektedir. 2030’dan itibaren ise Çin’e 20 milyon ton taşınacaktır. On altı yıllık süre içinde Çin’de yaklaşık 247 milyon ton kömür tüketilecektir (Khaliun, 2025a). Bu, biçimsel olarak ikili bir proje olsa da, Moğolistan ŞİÖ’nün daha geniş çerçevesi içinde, örneğin Moğolistan Kalkınma Bankası’nın ortaklarından biri olduğu ŞİÖ Bankalararası Birliği ile ilişki kurarak (Amarsaikhan, 2016) düşük profilli varlığını diplomatik kanallar ve yerel politika aracılığıyla kullanmış ve elverişli ulaştırma koşulları güvence altına almaya çalışmıştır. Anlaşma IBA tarafından finanse edilmemiş olsa da, ŞİÖ büyük ölçüde Çin’in finansal liderliği altında şekillenmekte ve teknik olarak Moğolistan’ın Çin’le yaptığı bu anlaşma, ŞİÖ’nün kalkınma gündemlerine katılma çabası olarak görülebilmektedir."
+      ]
+    },
+    {
+      "id": "tr-section-9",
+      "title": "Kaynak Gücünü Kaldıraç Olarak Kullanma",
+      "paragraphs": [
+        "Jeopolitik ve ulusal güvenlik, Moğolistan’ın ŞİÖ’ye yönelik stratejik davranışının tek gerekçesi değildir; özellikle doğal kaynakları söz konusu olduğunda, egemenlik ve ulusal denetim üzerindeki iç gerilimler de belirleyici bir etkendir. Ülkenin en büyük maden yataklarından biri olan Tavan Tolgoi, hem üretim hem kârlılık bakımından, Moğolistan’ın iç otoritesini tesis etme çabasının sembolik ifadesidir. Bu kömür kaynağı, ülkenin bütçe gelirlerinin yüzde 20’sinden fazlasını oluşturmaktadır (Ocak-Ekim 2023 için 1,1 milyar dolar) (Kushhov, 2024). Özellikle Çin’den çok sayıda yatırımcıyı çekmekte ve bunlar defalarca ortak geliştirme önerileri sunmaktadır. Bununla birlikte, ekonomik bağımlılık ve ulusal özerkliğin kaybı korkusu nedeniyle Moğolistan, yabancı aktörlere kontrol edici bir pay verecek herhangi bir düzenlemeye girmekte isteksiz davranmıştır.",
+        "Kamuoyu muhalefeti, parlamenter denetim ve kurumsal gözetim, devletin Tavan Tolgoi’nin mülkiyetini devlet şirketi Erdenes-Tavan Tolgoi aracılığıyla elinde tutmasına yol açmıştır. Böylece Moğolistan, iç kurumların yabancıların baskın ekonomik hegemonyasına karşı egemenliğin koruyucusu gibi davrandığı bir içsel denge-denetim biçimi sergilemektedir. 2012’de Moğolistan hükümeti, devlet şirketi Erdenes-Tavan Tolgoi aracılığıyla şirketin yüzde 29’unu Londra ve Hong Kong borsalarında satmayı hedefleyen 3 milyar dolarlık bir halka arz planlamıştı (The Moscow Times, 2012). Projeye ilişkin Çin’in Shenhua’sı, ABD’den Peabody ve Rus-Moğol ortak konsorsiyumuyla daha önce yürütülen işbirliği girişimleri, hükümetin Japon ve Güney Koreli yatırımcılarla seçici ortaklıklar aramasının ardından sona erdirildi. Yabancıların stratejik sektörler üzerindeki denetimine dair toplumsal kaygılara yanıt olarak Moğolistan parlamentosu, Mayıs 2012’de madencilik, finans, medya ve telekomünikasyon gibi sektörlerde yabancı mülkiyeti sınırlamak amacıyla Stratejik Varlıklara Yabancı Yatırım Yasası’nı kabul etti (U.S. Department of State, 2013). Yasaya göre, bu sektörlerde faaliyet gösteren şirketlerde yabancı yatırımcıların payının yüzde 49’u aşmasına ya da 100 milyar Tugrik’i aşan ve devlet şirketlerini içeren işbirliği anlaşmalarına izin verilmiyordu (U.S. Department of State, 2013). İlk taslaktaki her hüküm aynen kabul edilmiş olsaydı, yatırımcılar açısından kısıtlamalar daha da katı olacaktı.",
+        "Doğal kaynakları, Moğolistan’ın uluslararası alandaki daha geniş diplomatik konumunu da pekiştirmektedir. Benzer biçimde, Moğolistan’ın ŞİÖ’deki uzun süreli gözlemci statüsü onu madencilik ve altyapı alanlarında muhtemel işbirliği biçimlerini araştırmaya yöneltmiş olsa da, bu Kuzeydoğu Asya ülkesi derinlerde, güçlü ülkelerin nüfuz ağına çekilerek ulusal stratejik denetimi tehlikeye atabilecek bir sürece direnmektedir. Tavan Tolgoi vakası, doğal kaynakların Moğolistan’ın kurumsal kaldıracında nasıl önemli bir rol oynadığını gösterir: bu kaynaklar, ülkenin ekonomik yapısını kendi egemenliğini yüceltecek biçimde şekillendirmekte ve böylece yabancı nüfuzun derinleşmesine karşı direnç üretmektedir."
+      ]
+    },
+    {
+      "id": "tr-section-10",
+      "title": "Rol Kimliğini Kaldıraç Olarak Kullanma",
+      "paragraphs": [
+        "2015 ile 2023 arasında Moğolistan, diplomatik rolünü güçlendirmek amacıyla ŞİÖ çerçevesindeki imajını öne çıkarmış; ŞİÖ zirvelerinde sunduğu önerilerin kabul oranı belirgin biçimde artmıştır. Moğolistan’ın ŞİÖ zirvelerindeki diplomatik söylemi, çevresel bir gözlemci konumundan altyapı geliştirme, geleneksel olmayan güvenlik ve denize kıyısı olmayan devletler için bağlantısallık gibi alanlarda normatif katkı sunan bir aktöre doğru evrilmiştir. Moğolistan cumhurbaşkanlarının zirve konuşmalarının niteliksel incelemesi, ülkenin retorik stratejisini ortaya koymaktadır.",
+        "Cumhurbaşkanı Tsakhiagiin Elbegdorj’un 2016 ŞİÖ Zirvesi’ndeki konuşması (Indra, 2016), Moğolistan’ın kendisini yapıcı ve entegre bir bölgesel aktör olarak kurmak için diplomatik jestleri nasıl kullandığını göstermektedir. Elbegdorj, tam üyeliğe yaklaşan Hindistan ve Pakistan ile ev sahibi ülkeyi art arda tebrik ederken kısa, akıcı bir dil kullanarak Moğolistan’ın uzlaştırıcı, işbirlikçi ve saygılı bir gözlemci imajını pekiştirir. Stratejik düzeyde ise, gözlemci devletlerin değerini artırmak amacıyla “6+5” toplantısını önermiştir. Bu kurumsal mekanizma aracılığıyla Moğolistan gibi gözlemciler ile tam üyeler arasında aktif etkileşim teşvik edilebilir; bu sayede Elbegdorj, Moğolistan için norm girişimcisi bir profil inşa etmeye çalışmıştır. Moğolistan’ın “muazzam transit ulaştırma potansiyeli”ne dair sözleri ve Rusya ile Çin’le kurulacak üçlü koridora yaptığı vurgu, Moğolistan’ın coğrafi konumunu kullanarak onu ŞİÖ, Avrasya Ekonomik Birliği (AEB) ve Çin’in KYG’si arasında eşgüdüm sağlayabilecek değerli bir bölgesel bağlayıcı olarak çerçevelemeyi amaçlamaktadır (Indra, 2016). Moğolistan’ın ŞİÖ’ye yönelik ihtiyatlı yaklaşımına benzer şekilde AEB’ye de üye olmadığı bilinmektedir. Bununla birlikte, 2025’te ticaret işbirliğini tam kurumsal bütünleşmeye gitmeden genişletmeyi amaçlayan geçici bir ticaret anlaşmasını onaylaması, blokla sınırlı ekonomik angajmanını göstermektedir (State Great Khural of Mongolia, 2025). Bu seçilmiş anlatılar, Moğolistan’ın ulusal kapasitelerini bölgesel kalkınma kaygılarıyla hizalayarak çok taraflı platformlar içindeki diplomatik faydalarını artırma yönündeki stratejik ilgisini açığa çıkarmaktadır. Elbegdorj’un söylemi, Moğolistan’ın dış politika rolünü temelde köprü kuran, katkı sunan ve uluslararası normları destekleyen bir yönelim olarak çerçeveler.",
+        "Moğolistan Cumhurbaşkanı Khaltmaagiin Battulga, 2018’de Çin’in Qingdao kentinde düzenlenen ŞİÖ Üye Devlet Başkanları Konseyi 18. Toplantısı Genel Oturumu’nda bir konuşma yapmıştır (Office of the President of Mongolia, 2018). Battulga’nın 2018 tarihli ŞİÖ konuşması, Moğolistan’ın stratejik konumlanmasını kapsamlı, çok taraflı, ekonomik işbirliğine açık ve davetkâr bir ülke olarak güçlendirmiştir. Battulga, ŞİÖ’nün genişleyen faaliyet alanını övmüş; bunu Moğolistan’ın bölgesel değerini artırma hedefiyle uyumlu görmüştür. Moğolistan’ı üyeler, gözlemciler ve diyalog ortakları arasında işbirliğine “gönüllü katkı sunan” ve “köprü” işlevi gören bir ülke olarak tanımlaması, ortaklık ve pratik bütünleşme temelli bir diplomatik yaklaşımı ifade etmektedir. “Hazırız”, “aktif biçimde çalışmak istiyoruz” ve “sizlerin de desteklemesini umuyoruz” gibi ifadeleri tekrar etmesi, ŞİÖ ülkeleri arasında işbirlikçi bir angajman tonunu yansıtmaktadır. Elbegdorj’da olduğu gibi Battulga’da da, Moğolistan’ın yakın komşularıyla kuracağı Ekonomik Koridor’un Çin’in KYG’si ve Rusya’nın AEB’siyle ilişkili geleceğine verilen ağırlık, katı blok mantığı yerine eşgüdüm arayan bağlantısallık odaklı bir tarafsızlık söylemini yansıtmaktadır (Office of the President of Mongolia, 2018). Ayrıca gözlemciler ve diyalog ortaklarının aktif katılımına ilişkin Elbegdorj’un “6+5”i gibi belirli bir mekanizma önermemiş olsa da, konuşmasına bu unsuru düşük profilli biçimde dahil etmesi, Moğolistan’ın ŞİÖ ülkeleriyle canlı etkileşim arzusunu sürdürdüğünü göstermektedir. Bu da Moğolistan’ın gözlemci olarak kalmayı tercih etmekle birlikte, ŞİÖ’nün daha da genişlemesinde önemli bir katkı sunucu olabileceğini düşündürdüğünü gösterir. Konuşmasının bütünü boyunca Battulga, Moğolistan’ın ŞİÖ içindeki dış politikasını tarafsız bir kolaylaştırıcı, pasif olmayan kararlı bir gözlemci ve bölgesel gündemlere proaktif katkı sunan bir aktör olarak savunmaktadır.",
+        "Moğolistan Cumhurbaşkanı Ukhnaagiin Khurelsukh, 2024’te Astana’da düzenlenen ŞİÖ Devlet Başkanları Konseyi Toplantısı’nda konuşmuştur (Office of the President of Mongolia, 2024). Khurelsukh’un konuşması, Moğolistan’ın dış politikasını “barışçıl, açık, çok ayaklı ve bağımsız dış politika” temelinde tanımlamakta; Moğolistan’ı “Transit Mongolia” olarak adlandırıp Asya ile Avrupa arasında bir bağ olduğuna vurgu yaparak ülkenin dış potansiyelini bölgesel bağlantısallık ve lojistik merkezilik anlatısı üzerinden kurmaktadır. “Bir Milyar Ağaç” girişimi ile 17. Taraflar Konferansı’na (COP17) ev sahipliği yapma hazırlıklarına yaptığı vurgu, sınırlı kaynaklarına rağmen geleneksel olmayan alanlarda aktif taahhüt göstererek Moğolistan’ın küresel düzeyde de önemli bir aktör olma iddiasını öne çıkarmaktadır. Ayrıca toplantıya katılan ülkelere Karayla Çevrili Gelişmekte Olan Ülkeler Uluslararası Düşünce Kuruluşu ile işbirliğini değerlendirme çağrısı yapması, Moğolistan’ın niş çok taraflı meselelerde liderlik etme çabasına işaret etmektedir (Office of the President of Mongolia, 2024). Genel olarak Khurelsukh’un sözleri ve dilsel davranışı, tarafsızlık, altyapı diplomasisi ve uluslararası meşruiyet üzerinden Moğolistan’ın bölgedeki diplomatik varlığını teşvik etmektedir.",
+        "Elbegdorj, Battulga ve Khurelsukh’un konuşmaları birlikte ele alındığında, Moğolistan’ın ŞİÖ içinde kendisini tarafsız, işbirlikçi ve stratejik açıdan ilgili bir devlet olarak sunduğu görülmektedir; zira ülkenin üyeler arasındaki ticareti güçlendirme potansiyeli vardır. Bu liderlerin söylemleri, Moğolistan’ı bir bağlayıcı devlet olarak konumlandırmakta ve uluslararası alandaki büyüklüğünden bağımsız olarak altyapı diplomasisi, yumuşak güç ve çok taraflı işbirliği yoluyla etki arayışını yansıtmaktadır."
+      ]
+    },
+    {
+      "id": "tr-section-11",
+      "title": "Moğolistan’ın Kurumsal Dengeleme Pratiği",
+      "paragraphs": [
+        "Kurumsal dengeleme, Moğolistan’ın daha geniş risk dengeleme stratejisinin merkezi unsurlarından biridir. Risk dengeleme, büyük güçlerle esnek ilişkileri sürdürmeye dönük genel bir politikayı ifade ederken, kurumsal dengeleme özellikle diplomatik seçenekleri genişletmek ve büyük güçlere bağımlılığı azaltmak amacıyla çok taraflı kurumların kullanılmasını ifade eder. Moğolistan’ın ŞİÖ ile angajmanı, çift stratejik mantığın kasıtlı biçimde uygulandığını; risk dengeleme ve kaldıraç kullanımının hedefli ve yenilikçi pratikler yoluyla hayata geçirildiğini göstermektedir. Bu yaklaşım, taktiksel esneklik ve girişimci özne kapasitesiyle öne çıkmakta; pasif üyeliğin kısıtlarını aşmaktadır. Moğolistan, seçici gömülülük, gündemi yeniden çerçeveleme ve kurumsal iç içe geçirme yoluyla özerklik ve etkiyi azamiye çıkarmak için katılımını aktif olarak biçimlendirmektedir. Bu pratikler, kurumsal dengelemenin somut mekanizmalarını açığa çıkararak küçük bir devletin çok taraflı bir platformu ulusal çıkarlarını ilerletecek stratejik bir araca nasıl dönüştürebileceğini göstermektedir."
+      ]
+    },
+    {
+      "id": "tr-section-12",
+      "title": "Seçici Gömülülük",
+      "paragraphs": [
+        "Moğolistan’ın tarafsızlık konusundaki muğlak tutumunun gerekçesi çok yönlüdür. Bir yandan örgütle ilişki içinde olmak Moğolistan’a yararlı temaslar sağlayabilir ve olumlu bir bölgesel atmosfer yaratabilir. Coğrafi olarak yalnızca Çin ve Rusya ile çevrili olan Moğolistan’ın varlığı ve gelecekteki gelişimi özünde bu iki ülkeyle bağlantılıdır. Moğolistan bu durumu derinden kavramış ve özellikle Rusya ile Çin’le ilişkilerini vurgulayarak stratejik ilişkilerini politika düzeyinde güçlendirmiştir. Öte yandan örgüte belli bir mesafe koymak, dış politikasında esnekliği korumasına yardım edebilir. ŞİÖ’ye tam üye değil de gözlemci devlet olarak angaje olmak, Moğolistan’a resmî hizalanma süreçlerine girmeden iyi niyet geliştirme fırsatı sunabilir.",
+        "Diğer üye devletler Moğolistan’ın Şanghay İşbirliği Örgütü’ne (ŞİÖ) katılımı konusunda açık bir tutum beyan etmemiş olsalar da, hem Rusya hem de Çin Moğolistan’ı tam üyeliği değerlendirmeye teşvik etmiştir. Örneğin, Rusya Dışişleri Bakanı Sergey Lavrov, Moğolistan’ı ŞİÖ üyeliği için “açık bir aday” olarak tanımlamış ve üye devletlerin Moğolistan’ın üyelik başvurusunu destekleyeceğini belirtmiştir. Ayrıca Çin de Moğolistan’a, ŞİÖ faaliyetlerine daha yüksek düzeyde katılması için resmî davette bulunmuştur (TASS, 2024; CGTN, 2018). 2004’ten beri Moğolistan yirmi yıldır gözlemci statüsünü sürdürmekte ve henüz tam üyeliğe geçmemiştir. Moğolistan’ın ŞİÖ’ye ilişkin temkinli muhasebesi, özellikle Kırım’ın işgalinden ve sonrasında gelen Batı yaptırımlarından kısa süre sonra Moskova ile Pekin arasında Şanghay’da imzalanan 2014 Ortak Bildiri ile belirginleşen Çin-Rusya stratejik hizalanmasındaki temel dönüşümler bağlamında anlaşılmalıdır. Bildiride Moğolistan’dan açıkça söz edilmese de, askerî, ekonomik ve bölgesel politika koordinasyonu dahil çeşitli alanlarda bağların derinleştirileceği taahhüt edilmektedir (Deutsche Welle, 2014). Bu durum, Avrasya’da daha birleşik bir blok duruşuna işaret etmekte ve kuşkusuz Batılı müttefiklere karşı konumlanmaktadır. Çin ve Rusya arasında kalan, kara ile çevrili küçük bir ülke olan Moğolistan açısından bu stratejik yakınlık ciddi ikilemler yaratabilir. Bu gelişme, Moğolistan’ın Batı’yla kurduğu çok taraflı angajmanları ve Üçüncü Komşu Diplomasisi politikasını daha da önemli kılarken, onu anti-Batıcı, blok temelli bir etkileşim ağına sürüklenmekten kaçınmaya yöneltmektedir.",
+        "Bu dış itki, Moğolistan’ın ŞİÖ içinde daha uzun süre gözlemci statüsünde kalmasına imkân tanıyabilir; ülke böylece tam üyeliğe bağlanmak yerine kurumsal angajmanı artırmayı bir risk dengeleme yaklaşımı olarak sürdürmeye istekli görünmektedir. Eski Dışişleri Bakanı Munkh-Orgil Tsend’in görüşüne göre, kâğıt üzerinde üyeliğe girmek ya da çekilmek kendini tatmin gibi sunulsa da gerçekte bunun gerçekleşmesi pek olası değildir, hatta neredeyse imkânsızdır. Tsend’in vurguladığı bir diğer önemli nokta, Moğolistan’ın zaten gözlemci statüsüyle bu örgütten yeterli bilgiyi aldığı, dolayısıyla tam üye olmanın daha iyi sonuçlar vermeyebileceğidir (Lkhagvajargal, 2018). Dışarıdan bakıldığında Moğolistan’ın tam üyeliği, onun uluslararası imajının bütünüyle iki büyük komşusunun etkisi altına girdiği şeklinde algılanmasına yol açabilir. Ayrıca Tsend, ŞİÖ’nün gerçek anlamda bir askerî örgüt olmadığını; ancak kuruluş tarihi ve gelişim evreleri dikkate alındığında bir yandan siyasal, diğer yandan askerî bloka dönüşme ihtimalinin yüksek olduğunu belirtmektedir. Jeopolitik açıdan da Çin-Rusya hizalanmasının artması, Moğolistan’ın diplomatik manevra alanını daraltmakta ve Üçüncü Komşu Diplomasisi ile Batı’yla çok taraflı angajmanlardan doğan gerçek ihtiyaçları daha da ağırlaştırmaktadır. Dolayısıyla Moğolistan’ın ŞİÖ üyeliği konusunda kararsızlığı yalnızca stratejik bir hesap değil, aynı zamanda jeopolitik çevresinde gelişen dış baskılara verilen isabetli bir yanıttır."
+      ]
+    },
+    {
+      "id": "tr-section-13",
+      "title": "Gündemin Yeniden Çerçevelenmesi",
+      "paragraphs": [
+        "Bu yeniden çerçeveleme aracılığıyla Moğolistan, uranyum taşımacılığının güvenliği meselesini “nükleer silahların yayılmasının önlenmesi” başlığından “sınır ötesi altyapının korunması” başlığına kaydırmıştır. Moğolistan’ın uranyum sektörü, geleneksel nükleer silahların yayılmasının önlenmesi kaygılarından sınır ötesi altyapının korunmasına doğru stratejik bir politika kayması yaşamıştır. Bu değişim, ülkenin ekonomik kalkınma ve jeopolitik konumlanma hedefleriyle bağlantılı sınır aşan amaçları nedeniyle gerçekleşmiştir. 1992’de Moğolistan’ın ilk Cumhurbaşkanı Punsalmaagiin Ochirbat, BM Genel Kurulu’nun 47. oturumunda konuşarak Moğolistan’ın nükleer silahtan arındırılmış bir bölge olacağını ilan etmiş ve bunun uluslararası güvence altına alınması için çalışacağını açıklamıştır (National University of Mongolia, 2017). BM Güvenlik Konseyi’nin beş daimî üyesi (P5), tek bir devletin inisiyatifiyle nükleer silahtan arındırılmış bölge oluşturulmasının uluslararası ilişkilerde eşi görülmemiş bir durum olması ve büyük güçlerin stratejik hesaplarını bozabilecek nitelik taşıması nedeniyle bu ilan karşısında şaşırmıştır. BM Genel Kurulu, Moğolistan ile P5’in konu üzerinde ortak zemine ulaşmasının ardından 1998’de “Moğolistan’ın Uluslararası Güvenliği ve Nükleer Silahsız Statüsü” başlıklı kararı kabul etmiştir. Moğolistan, dünya toplamının yüzde 1’ine karşılık gelen uranyum rezervleriyle 12. sıradadır (World Nuclear News, 2025). Uranyumun geleneksel algısı ise, onun son derece toksik ve tehlikeli olduğu ve bu alanın daha da geliştirilmesi açısından ciddi bir meydan okuma yarattığı yönündedir.",
+        "Bununla birlikte, uranyum madenciliği sektörünü geliştirmeye dönük yeni odak nedeniyle Moğolistan, uranyum gündemini “hiç kullanmama”dan “ekonomik fayda”ya kaydırmıştır. Moğolistan’ın zengin uranyum kaynaklarına sahip olduğu bilinmektedir; ancak uranyum madenciliği 1995’ten beri durmuş durumdaydı. Fransız Orano şirketi 1997’de Gobi Çölü’nde uranyum aramalarına başlamış, 2002 ve 2010 yıllarında sırasıyla Dulaan Uul ve Zuuvch Ovoo yataklarını keşfetmiştir. Orano Grubu ile Moğolistan Hükümeti, 2025’te Zuuvch Ovoo projesi için bir işbirliği anlaşması imzalama konusunda mutabakata varmış ve bu durum ülkeye yabancı yatırım çekmiştir. Moğolistan’da üretilecek yellowcake, deniz yoluyla Çin üzerinden Fransa’ya taşınacaktır. Çin’de 50’den fazla büyük ve küçük nükleer santral inşa edilmektedir (Khaliun, 2025b). Taşıma, Fransa ile Çin arasındaki bir anlaşma yoluyla koordine edilecek ve Çin’e topraklarının kullanımından belirli bir pay verileceği açıktır. Bu da Moğolistan ve ŞİÖ üyeleri açısından bu tür işbirliğinde yeni fırsatların önünü açmaktadır."
+      ]
+    },
+    {
+      "id": "tr-section-14",
+      "title": "Kurumsal İç İçe Geçirme ve Yenilik",
+      "paragraphs": [
+        "Moğolistan, yürüttüğü çabalar sayesinde “Göçebe Kültürel Mirasın Korunması Hakkında Kanun”da yer alan ilkelerin ŞİÖ Turizm İşbirliği Çerçevesi’ne dâhil edilmesini sağlamıştır. Kültürel bağışıklık çoğu ülkede çoğunlukla en üst düzeyde, ulusal güvenlik perspektifinden ele alınır. Örneğin, Moğollar göçebe halk olarak anılır; bu da onları yerleşik uygarlıklara sahip iki komşusundan en çok ayıran özelliktir. Moğol yurtları, geyik taşları ve kaya oymaları gibi somut mirasın yanı sıra, binlerce yıldır uygulanan süt ve et işleme yöntemleri gibi somut olmayan mirasın korunması, kültürel kimliğin sürdürülmesi açısından önemlidir. Moğolistan’ın göçebe kültürel mirasa bağlılığına ilişkin hukuki temeli, 2021’de revize edilen ve somut ve somut olmayan kültürel varlıkların korunması için kapsamlı bir çerçeve sunan “Kültürel Mirasın Korunması Hakkında Kanun”dur (Ankhtuya, 2022). Moğolistan ile Orta Asya ülkeleri arasındaki benzerlikler, paylaşılan tarihleri ve kültürel özellikleri dikkate alındığında makuldür. Bu da Moğolistan’ın ŞİÖ faaliyetleri içinde önemli konumunu kaldıraç olarak kullanabileceği bir başka alandır.",
+        "ŞİÖ’nün önceliklerinden biri insani işlerdir. ŞİÖ üye devletleri kültür, eğitim, çevre, gençlik politikası, spor, turizm ve medya gibi alanlarda pratik ve verimli işbirliğinin uygulanması konusunda geniş bir deneyim biriktirmiştir (Davaadorj & Damdinsuren, 2022). ŞİÖ üyesi devletler, kültürel ve insani işbirliğinin önemini kabul etmektedir. Astana Bildirisi, yerli halkların geleneksel kültürleri de dahil olmak üzere tarihî ve manevi mirasın korunması yönünde bir çerçeve ortaya koymuştur (SCO, 2024). Örgüt, 2024–2025 dönemi için ŞİÖ Turizm İşbirliği Programı’nı hayata geçirmek üzere kabul edilen Ortak Eylem Planı doğrultusunda, turizm alanında karşılıklı yarar sağlayan işbirliğinin kapsamını genişletmeyi ve üyeler arasında turizm altyapısını geliştirmeyi amaçlamaktadır.",
+        "Yerel mevzuat ile ŞİÖ’nün kültür ve turizm alanındaki bölgesel girişimleri arasındaki uyum dikkate alındığında, Moğolistan kültürel mirasın korunmasının daha geniş ölçekli standartlaştırılması ve bütünleştirilmesine katkı sağlayabilir. Bu karşılıklılık, yalnızca Moğolistan’ın kültürel diplomasisini değil, ŞİÖ’nün kültürel çeşitliliği ve sürdürülebilir turizm gelişimini teşvik etme hedeflerini de güçlendirmektedir."
+      ]
+    },
+    {
+      "id": "tr-section-15",
+      "title": "Sonuç",
+      "paragraphs": [
+        "1990’lardan bu yana Rusya ve Çin’in ötesinde dış ortaklarını çeşitlendirmeye ve çok taraflı diplomasisini genişletmeye çalışan Moğolistan, politika düzeyinde stratejik esnekliği benimseyerek Üçüncü Komşu Diplomasisi politikasını ilan etmekle önemli bir adım atmıştır. Bu yepyeni politikanın özü, özellikle ABD, AB, Japonya ve Güney Kore olmak üzere yüksek derecede gelişmiş ülkelerle siyasal ve ekonomik bağları güçlendirmek için elverişli bir ortam yaratmaktır (Aktamov et al., 2019). Batılı ülkeler Moğolistan’ı Doğu Asya’da stratejik bir varlık olarak görmüş ve ülkede demokrasi ile açık piyasa ekonomisini yerleştirmeye istekli olmuştur; bu nedenle Moğolistan, demokratik dönüşümün ilke ve yöntemlerini sınayacak bir deney alanı olarak da görülmüştür. Bu politika, uluslararası ilişkilerin öngörülemez dinamikleri içinde stratejik kırılganlığı azaltmaya ve kendi özerkliğini korumaya yöneliktir.",
+        "2004’te Moğolistan gibi ülkeler için özel bir gözlemci statüsü oluşturulmuştur (Adiya, 2023). Moğolistan’ın güvenliğinin güvencesi iki komşusuyla iyi ilişkilere dayanırken, ŞİÖ’ye katılmak yerine gözlemci statüsünü korumak, mevcut zorlu uluslararası ortamda Moğolistan’ın açık ve çok ayaklı dış politikasının diğer düzenli özellikleriyle ve “üçüncü” ülkelerin çıkarlarıyla çatışmayacak önemli bir konumdur. Bu nedenle Moğolistan’ın haklı gerekçelerle, ŞİÖ’ye üye olmak için başvuruda bulunmadığı söylenebilir (Li, 2018). Stratejik açıdan bunun dikkat çekici nedeni, çok ayaklı ve “Üçüncü Komşu” dış politikasıdır. ABD, AB ya da Güney Kore ve Japonya gibi Doğu Asya devleriyle ilişkilerin normal biçimde geliştirilmesi, süper güçler arasındaki tampon bölgede yer alan ülkenin hayatta kalmasının temel bir parçasıdır. Çin ve Rusya’nın yönlendirmesi altında işleyen ŞİÖ’ye tam üyelikten doğan bazı riskler vardır; bunlar arasında diplomatik bağımsızlığın ve katılım sonrasında üçüncü komşularla ilişkilerin olumsuz etkilenmesi ihtimali öne çıkmaktadır.",
+        "Moğolistan, süper güçlerden gelebilecek muhtemel baskılar karşısında gözlemci statüsüne tutunarak, gözlemcilere uygun mekanizmalar öneren özgün bir kural gündemi stratejik biçimde şekillendirmiştir. Bu yaklaşım, ulusal hedeflerin bölgesel ihtiyaçlarla buluşabileceği geniş fırsatlar sunmaktadır. Cumhurbaşkanı Elbegdorj’un “6+5” çerçevesinden, Khurelsukh’un ŞİÖ’ye taşınan çevresel işbirliği konuşmasına ve Battulga’nın bağlantısallık odaklı söylemine kadar, söylem temelli diplomasi yoluyla Moğolistan; tarafsızlık, katkı ve işbirliğini önceleyen bir dış politika için engelsiz bir yol açmıştır. Bunun nihai sonuçlarını görmek uzun ve sürekli bir uygulama gerektirse de çizgi tutarlıdır. Kurumsal denge ve çok taraflı gündem temelli yaklaşım, yalnızca Moğolistan’ın egemenliğini güvence altına almakla kalmamakta; aynı zamanda karmaşık bölgesel ortamlarda yenilikçi angajmanlar izleme kapasitesinin de temelini oluşturmaktadır. Bu da başka küçük ve orta ölçekli devletler için değerli bir deneyim sunmaktadır."
+      ]
+    }
+  ],
+  "keywords": [
+    "kaldıraç kullanımı",
+    "Moğolistan",
+    "risk dengeleme",
+    "Şanghay İşbirliği Örgütü",
+    "Üçüncü Komşu Diplomasisi"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Adiya, N. (2023). Монгол-Оросын хооронд байгуулсан гэрээ хэлэлцээрүүдийн зарим асуудлуудад хийсэн дүн шинжилгээ [Analysis of some issues regarding treaties and agreements concluded between Mongolia and Russia]. Journal of International Studies, 46(116), 89–112."
+    },
+    {
+      "id": "ref-2",
+      "text": "Aktamov, I. G., et al. (2019). Гурван хөршийн дундахь Монгол улс: Монголын улс төрийн үйл явцад нөлөөлөх гадаад хүчин зүйлс: Нэг сэдэвт зохиол [Mongolia between three neighbors: External factors affecting Mongolian political processes: A monograph]. Ulanbatur: National University of Mongolia Press."
+    },
+    {
+      "id": "ref-3",
+      "text": "Amarsaikhan, B. (2016). Development Bank of Mongolia becomes partner of SCO Interbank Consortium. Montsame News Agency. 13 Aralık 2025 tarihinde https://montsame.mn/en/read/125748 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-4",
+      "text": "Ankhtuya. (2022). Mongolia advances to prevent crimes and offenses against cultural property. News. MN. 19 Aralık 2025 tarihinde https://news.mn/en/798540/ adresinden alınmıştır."
+    },
+    {
+      "id": "ref-5",
+      "text": "Banerjee, R. (2022). The Vostok military exercises 2022: Three takeaways. Modern Diplomacy. 10 Aralık 2025 tarihinde https://moderndiplomacy.eu/2022/10/19/ the-vostok-military-exercises-2022-three-takeaways/ adresinden alınmıştır."
+    },
+    {
+      "id": "ref-6",
+      "text": "Bat-Erdene, B. (2021). Нүүдэл суудал: Монголчуудын түүх [Movement and settlement: The history of Mongols]. Ulanbatur: Nepko Publishing."
+    },
+    {
+      "id": "ref-7",
+      "text": "CGTN. (2018). China welcomes Mongolia to play bigger role in SCO. 13 Mart 2026 tarihinde https://news.cgtn. com/news/3d3d774e3445444d78457a6333566d54/index.html adresinden alınmıştır."
+    },
+    {
+      "id": "ref-8",
+      "text": "Ciorciari, J., & Haacke, J. (2019). Hedging in international relations: An introduction. International Relations of the Asia-Pacific, 19(3), 367–374."
+    },
+    {
+      "id": "ref-9",
+      "text": "Dashdorj, B. (2003). Евразийн геополитик, олон улсын харилцаа: Өнгөрсөн, одоо ба ирээдүй [Geopolitics for Eurasia and international relations: Past, present and future]. Ulanbatur: ADMON."
+    },
+    {
+      "id": "ref-10",
+      "text": "Davaadorj, U., & Damdinsuren, U. (2022). Монгол Улс Шанхайн Хамтын Ажиллагааны Байгууллагын гишүүнээр элсэх эсэх асуудлыг эдийн засгийн хамтын ажиллагааны аспектаар шинжлэх нь [Analyzing Mongolia’s potential membership in the Shanghai Cooperation Organization from the perspective of economic cooperation]. ПОЛИТОЛОГИ XX ЭРДЭМ ШИНЖИЛГЭЭНИЙ БИЧИГ, 20(570), 209–218."
+    },
+    {
+      "id": "ref-11",
+      "text": "Deutsche Welle. (2014). China’s Xi and Russia’s Putin vow to enhance ties. 18 Aralık 2025 tarihinde https://www. dw.com/en/chinas-xi-and-russias-putin-vow-to-enhance-ties/a-17648022 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-12",
+      "text": "Dorj, T., & Davaasüren, B. (2020). Гурван улсын эдийн засгийн коридорт Монгол улсын тээврийн дэд бүтцийн хөгжлийг уялдуулах шинэ хандлага [A new approach to coordinating Mongolia’s transport infrastructure development with the economic corridor of the three countries]. Мөнгө, Санхүү, Баялаг, 20, 49–65."
+    },
+    {
+      "id": "ref-13",
+      "text": "Dulbaa, A. (2018). Interconnectivity in the region of Eurasia: Mongolia’s presence in the SCO (Shanghai Cooperation Organization). International Relations and Diplomacy, 6(6), 319–324."
+    },
+    {
+      "id": "ref-14",
+      "text": "Embassy of Mongolia to the United States of America. (n.d.). About Mongolia: Demographics. 10 Aralık 2025 tarihinde https://mongolianembassy.us/about-mongolia/demographics/ adresinden alınmıştır."
+    },
+    {
+      "id": "ref-15",
+      "text": "Figiaconi, F. (2025). Choosing not to choose: Hedging as a category of neutrality. European Journal of International Security. Advance online publication. doi:10.1017/ eis. 2025.10009"
+    },
+    {
+      "id": "ref-16",
+      "text": "Global Times. (2021). A glance at SCO “Peace Mission” anti-terrorism drills. 10 Aralık 2025 tarihinde https:// www.globaltimes.cn/page/202109/1234443.shtml adresinden alınmıştır."
+    },
+    {
+      "id": "ref-17",
+      "text": "Goh, E. (2005). Meeting the China challenge: The U.S. in Southeast Asian regional security strategies (Policy Studies, 16). Washington, DC: East-West Center."
+    },
+    {
+      "id": "ref-18",
+      "text": "Goh, E. (2006). Understanding “hedging” in Asia-Pacific security. PacNet, 43(31), 1."
+    },
+    {
+      "id": "ref-19",
+      "text": "González-Pujol, I. (2024). Theorising the hedging strategy: National interests, objectives, and mixed foreign policy instruments. All Azimuth: A Journal of Foreign Policy and Peace, 13(1), 193–214."
+    },
+    {
+      "id": "ref-20",
+      "text": "Government Agency for Policy Coordination on State Property. (2023). Монгол Улсын зүүн босоо тэнхлэгийн төмөр зам, боомтын төлөвлөлт, бүтээн байгуулалтыг эрчимжүүлэх асуудлыг хэлэлцлээ [Discussions on intensifying the planning and construction of Mongolia’s eastern vertical axis railway and port]. 13 Aralık 2025 tarihinde https://pcsp.gov. mn/?p=6690 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-21",
+      "text": "Guudai, T. (2014). Conference speech in Монгол Улсын Гадаад бодлогын үзэл баримтлалын 20 жил [20 years of Mongolia’s foreign policy concept]. In L. Udval (Ed.), Diplomatic Academy at the Ministry of Foreign Affairs of Mongolia and Konrad Adenauer Stiftung. Ulanbatur: ADMON Print."
+    },
+    {
+      "id": "ref-22",
+      "text": "Haacke, J., & Ciorciari, J. (2022). Hedging as risk management: Insights from works on alignment, riskification, and strategy. IPC Working Paper No. 124. Ann Arbor: University of Michigan."
+    },
+    {
+      "id": "ref-23",
+      "text": "Hlaváček, P., & Sanc, D. (2022). Mongolian hedging strategy. Journal of Asian Security and International Affairs, 9(2), 318–346."
+    },
+    {
+      "id": "ref-24",
+      "text": "Indra. (2016). President addresses SCO meeting. Montsame News Agency. 13 Aralık 2025 tarihinde https:// montsame.mn/en/read/125764 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-25",
+      "text": "Jargalsuren, P., & Byambanaran, T. (2024). The construction of 6.9 km of the Shiveekhuren Port railway is complete. The Mongolian Mining Journal. 13 Mart 2026 tarihinde https://www.mongolianminingjournal. com/a/73508 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-26",
+      "text": "Khaliun, A. (2025a). Second agreement to link Mongolia and China by rail approved after 70 years. The Mongolian Mining Journal. 11 Aralık 2025 tarihinde https:// www.mongolianminingjournal.com/a/74164 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-27",
+      "text": "Koga, K. (2018). The concept of “hedging” revisited: The case of Japan’s foreign policy strategy in East Asia’s power shift. International Studies Review, 20(4), 633– 660."
+    },
+    {
+      "id": "ref-28",
+      "text": "Korolev, A. (2024). Between Scylla and Charybdis: Hedging and Australia’s foreign policy amid intensifying US–China rivalry. Journal of Indo-Pacific Affairs, 64– 83."
+    },
+    {
+      "id": "ref-29",
+      "text": "Kuik, C. (2008). The essence of hedging: Malaysia and Singapore’s response to a rising China. Contemporary Southeast Asia, 30(2), 159–185."
+    },
+    {
+      "id": "ref-30",
+      "text": "Kuik, C. (2021). Getting hedging right: A small state perspective. China International Strategy Review, 3(3), 300–315."
+    },
+    {
+      "id": "ref-31",
+      "text": "Kuik, C. (2023). Southeast Asia hedges between feasibility and desirability. East Asia Forum. 5 Aralık 2025 tarihinde https://eastasiaforum.org/2023/07/04/southeast-asia-hedges-between-feasibility-and-desirability/ adresinden alınmıştır."
+    },
+    {
+      "id": "ref-32",
+      "text": "Kuik, C. (2025). Hedging as a policy without pronouncement: A tale of three defense white papers. In New strategies in Southeast Asia (NIDS Joint Research Series No. 22, pp. 5–21). Tokyo: The National Institute for Defense Studies."
+    },
+    {
+      "id": "ref-33",
+      "text": "Kuik, C., & Rozman, G. (2015). Introduction to “Light or heavy hedging: Positioning between China and the United States.” In Joint U.S.-Korea Academic Studies (Vol. 26, pp. 1–9). Washington, DC: Korea Economic Institute of America."
+    },
+    {
+      "id": "ref-34",
+      "text": "Kushhov, B. (2024). Mongolia’s largest coal deposit: Year results and new initiatives. New Eastern Outlook. 13 Aralık 2025 tarihinde https://journal-neo. su/2024/01/17/mongolias-largest-coal-deposit-year-results-and-new-initiatives/ adresinden alınmıştır."
+    },
+    {
+      "id": "ref-35",
+      "text": "Li, C. (2018). Why Mongolia is showing interest in SCO. Global Times. 22 Aralık 2025 tarihinde https://www. globaltimes.cn/page/201806/1108418.shtml adresinden alınmıştır."
+    },
+    {
+      "id": "ref-36",
+      "text": "Lim, D., & Cooper, Z. (2015). Reassessing hedging: The logic of alignment in East Asia. Security Studies, 24(4), 696–727."
+    },
+    {
+      "id": "ref-37",
+      "text": "Lim, D., & Mukherjee, R. (2019). Hedging in South Asia: Balancing economic and security interests amid Sino-Indian competition. International Relations of the Asia-Pacific, 19(3), 493–522."
+    },
+    {
+      "id": "ref-38",
+      "text": "Lkhagvajargal, O. (2018). ШХАБ-д элсэх, эсэх асуудалд УИХ-ын гишүүд ийм байр суурьтай байна [This is the position of the members of parliament on the issue of whether to join the SCO]. iToim. 18 Aralık 2025 tarihinde https://itoim.mn/article/vjZCH/13137 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-39",
+      "text": "Maduz, L. (2018). Flexibility by design: The Shanghai Cooperation Organisation and the future of Eurasian cooperation (CSS Study). Center for Security Studies (CSS), ETH Zurich. 14 Mart 2026 tarihinde https:// css.ethz.ch/content/dam/ethz/special-interest/gess/ cis/center-for-securities-studies/pdfs/Maduz-080618- ShanghaiCooperation.pdf adresinden alınmıştır."
+    },
+    {
+      "id": "ref-40",
+      "text": "Ministry of Road and Transport of Mongolia. (2023). Шивээхүрэн-Сэхэ чиглэлийн төмөр замын ажил энэ сард эхэлнэ [Project on the Shiveekhuren-Ceke railway line begins this month]. 13 Aralık 2025 tarihinde https://mrt.gov.mn/i/3529 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-41",
+      "text": "Ministry of Road and Transport of Mongolia. (2024). Монгол-Орос-Хятадын эдийн засгийн коридорын төмөр замын төв коридорыг иж бүрэн шинэчлэх техник, эдийн засгийн үндэслэлийг гурван тал боловсруулж дуусгалаа [The three parties completed the technical and economic feasibility study for the comprehensive renovation of the central railway corridor of the Mongolia-Russia-China economic corridor]. 14 Mart 2026 tarihinde https://mrt.gov.mn/i/4319 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-42",
+      "text": "Nadin, R., Nijhar, I., & Mami, E. (2022). Shanghai Cooperation Organisation Summit 2022: Key takeaways. Overseas Development Institute. 23 Kasım 2025 tarihinde https://odi.org/en/insights/shanghai-cooperationorganisation-summit-2022-key-takeaways/ adresinden alınmıştır."
+    },
+    {
+      "id": "ref-43",
+      "text": "National Institute for Security Studies. (2018). Гурван улсын ашиг сонирхол, олон улсын ажиглагчдын үнэлгээ [Vostok-2018: Interests of three countries and international observers’ assessment]. 10 Aralık 2025 tarihinde https://niss.gov.mn/archives/917 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-44",
+      "text": "National University of Mongolia. (2017). Монгол Улс цөмийн зэвсэггүй бүс болсноо зарлан тунхагласын 25 жилийн ойд зориулсан эрдэм шинжилгээний хурал болов [Scientific conference held on the 25th anniversary of Mongolia’s declaration as a nuclear-weapon-free zone]. 18 Aralık 2025 tarihinde https://news. num.edu.mn/?p=42432 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-45",
+      "text": "Office of the President of Mongolia. (2018). President addresses 18th meeting of SCO Council of Heads of Member States. 13 Aralık 2025 tarihinde https://president.mn/en/2018/06/10/president-addresses-meeting-of-sco-council-of-heads-of-state/ adresinden alınmıştır."
+    },
+    {
+      "id": "ref-46",
+      "text": "Office of the President of Mongolia. (2024). President of Mongolia addresses the Shanghai Cooperation Organization Summit. 13 Aralık 2025 tarihinde https:// president.mn/en/2024/07/04/president-of-mongolia-addresses-the-shanghai-cooperation-organization-summit/ adresinden alınmıştır."
+    },
+    {
+      "id": "ref-47",
+      "text": "Porter, E. (2009). Mongolia, Northeast Asia and the United States: Seeking the right balance. Ritsumeikan Journal of Asia Pacific Studies, 26, 3–17."
+    },
+    {
+      "id": "ref-48",
+      "text": "Sanallkhundev, B. (2016). Орчин цагийн Монгол Улсын гадаад бодлого [Modern Mongolia’s foreign policy]. Олон Улсын харилцааны үндэс ба даяаршил. Ulanbatur: NUM Press."
+    },
+    {
+      "id": "ref-49",
+      "text": "SCO. (2015). Development strategy of the Shanghai Cooperation Organization until 2025. 2 Aralık 2025 tarihinde https://eng.sco-russia2020.ru/images/17/25/172516. pdf adresinden alınmıştır."
+    },
+    {
+      "id": "ref-50",
+      "text": "SCO. (2019). Bishkek Declaration of the Shanghai Cooperation Organisation’s Heads of State Council. 14 Mart 2026 tarihinde https://eng.sectsco.org/20190614/1626259. html adresinden alınmıştır."
+    },
+    {
+      "id": "ref-51",
+      "text": "SCO. (2020a). The Moscow Declaration of the Council of Heads of State of the Shanghai Cooperation Organisation. 10 Aralık 2025 tarihinde https://eng.sectsco. org/20201110/690356.html adresinden alınmıştır."
+    },
+    {
+      "id": "ref-52",
+      "text": "SCO. (2020b). UN and SCO: Countering drug trafficking via darknet. 10 Aralık 2025 tarihinde https://eng.sectsco.org/20200303/638450.html adresinden alınmıştır."
+    },
+    {
+      "id": "ref-53",
+      "text": "SCO. (2022). The Samarkand Declaration of the Heads of State Council of the Shanghai Cooperation Organisation. 14 Mart 2026 tarihinde https://eng.sectsco. org/20220916/1626299.html adresinden alınmıştır."
+    },
+    {
+      "id": "ref-54",
+      "text": "SCO. (2024). Astana Declaration of the Council of Heads of State of the Shanghai Cooperation Organization. 20 Aralık 2025 tarihinde https://eng.sectsco. org/20240709/1438929.html adresinden alınmıştır."
+    },
+    {
+      "id": "ref-55",
+      "text": "Soni, S. (2018). The geopolitical dilemma of small states in external relations: Mongolia’s tryst with “immediate” and “third” neighbours. Mongolian Journal of International Affairs, 20, 27–44."
+    },
+    {
+      "id": "ref-56",
+      "text": "State Great Khural of Mongolia. (2011). Concept of foreign policy of Mongolia, Annex to Resolution No. (2011), Section II, Article 12(B)."
+    },
+    {
+      "id": "ref-57",
+      "text": "State Great Khural of Mongolia. (2025). Монгол Улс болон Евразийн эдийн засгийн холбоо, түүний гишүүн орнууд хоорондын худалдааны түр хэлэлцээрийг соёрхон баталлаа [Mongolia ratifies interim trade agreement with the Eurasian Economic Union and its member states]. 14 Mart 2026 tarihinde https://www. parliament.mn/nn/76283/ adresinden alınmıştır."
+    },
+    {
+      "id": "ref-58",
+      "text": "Sukhbaatar, C. (2025). A decade of dialogue: Mongolia’s commitment to regional peace and stability. Institute for Strategic Studies. 13 Mart 2026 tarihinde https:// en.iss.gov.mn/?p=1717 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-59",
+      "text": "TASS. (2024). Mongolia is obvious next candidate for SCO membership—Lavrov. Russia News Agency. 13 Mart 2026 tarihinde https://tass.com/politics/1791147 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-60",
+      "text": "Telci, İ., & Rakipoğlu, M. (2021). Hedging as a survival strategy for small states: The case of Kuwait. All Azimuth: A Journal of Foreign Policy and Peace, 10(2), 213–229."
+    },
+    {
+      "id": "ref-61",
+      "text": "The Moscow Times. (2012). Foreign investors cautious as Mongolia forms government. 13 Aralık 2025 tarihinde https://www.themoscowtimes.com/2012/08/14/foreign-investors-cautious-as-mongolia-forms-government-a17013 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-62",
+      "text": "Tserenpil, G. (1998). Олон тулгуурт гадаад бодлого- Үндэсний аюулгүй байдлын чухал хүчин зүйл [Multi-pillar foreign policy—An important factor in national security]. Стратеги Судлал, 1, 5–11."
+    },
+    {
+      "id": "ref-63",
+      "text": "Tumurkhuleg, T. (2023). Does the Shanghai Cooperation represent an example of a military alliance? Mongolian Journal of International Affairs, 3, 59–107."
+    },
+    {
+      "id": "ref-64",
+      "text": "Tuvshintur, S. (2018). Eastern corridor development and regional connectivity [PowerPoint presentation]. 13 Mart 2026 tarihinde http://bipc.kr/2018/pt/session_3/ Saranjav_Tuvshintur.pdf adresinden alınmıştır."
+    },
+    {
+      "id": "ref-65",
+      "text": "Unified Legal Information System. (2010). The National Security Concept of Mongolia. 8 Aralık 2025 tarihinde https://legalinfo.mn/mn/detail/6163/2/208070 adresinden alınmıştır."
+    },
+    {
+      "id": "ref-66",
+      "text": "UN-OHRLLS. (2022). National report on the implementation of the Vienna Programme of Action for Landlocked Developing Countries: Mongolia. United Nations Office of the High Representative for the Least Developed Countries. 13 Mart 2026 tarihinde https://www. un.org/ohrlls/sites/www.un.org.ohrlls/files/national_ report_2022_vpoa-mongolia.pdf adresinden alınmıştır."
+    },
+    {
+      "id": "ref-67",
+      "text": "U.S. Department of State. (2013). 2013 investment climate statement—Mongolia. 21 Mart 2026 tarihinde https://2009-2017.state.gov/e/eb/rls/othr/ ics/2013/204697.htm adresinden alınmıştır."
+    },
+    {
+      "id": "ref-68",
+      "text": "Walt, S. (1987). The origins of alliances. New York: Cornell University Press."
+    },
+    {
+      "id": "ref-69",
+      "text": "World Nuclear News. (2025). Investment agreement signed for Mongolian uranium project. 18 Aralık 2025 tarihinde https://www.world-nuclear-news.org/articles/ investment-agreement-signed-for-mongolian-uranium-project adresinden alınmıştır."
+    },
+    {
+      "id": "ref-70",
+      "text": "Xinhua News. (2025). Mongolia’s foreign trade surges 12.3 pct in 2024. 2 Aralık 2025 tarihinde https://english. news.cn/20250110/d5b146d6436a4f5e9b8b8b4ee0ab9373/c.html adresinden alınmıştır."
+    },
+    {
+      "id": "ref-71",
+      "text": "Khaliun, A. (2025b). Монгол Улс уран олборлох дэлхийн тав дахь том үйлдвэртэй болно [Mongolia to become the world’s fifth largest uranium producer]. The Mongolian Mining Journal. 19 Aralık 2025 tarihinde https://www.mongolianminingjournal. com/a/74203 adresinden alınmıştır."
+    }
+  ],
+  "acknowledgements": "Bu makale, “Ulusal Sosyal Bilimler Vakfı Gençlik Programı” (21CGJ037) tarafından desteklenmektedir.",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-01.jpg",
+      "caption": "baskılar ve hassas bir nüfuz dengesiyle karşı karşıya kalmıştır (Harita: Mapsland, t.y.)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-02.jpg",
+      "caption": "(Fotoğraf: Sanghee Liu/Sydney Morning Herald, 2023)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-03.jpg",
+      "caption": "(Harita: Tuvshintur, 2018)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-04.jpg",
+      "caption": "(Harita: Mongolia.inc, 2024)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-05.jpg",
+      "caption": "(Fotoğraf: Inside Mongolia, 2025)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-06.jpg",
+      "caption": "(10 Haziran 2018) (Fotoğraf: Moğolistan Cumhurbaşkanlığı, 2018)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-07.jpg",
+      "caption": "(Fotoğraf: CGTN, 2018)."
+    }
+  ]
+}
