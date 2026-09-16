@@ -13,8 +13,7 @@
       "familyName": "Onishi",
       "orcid": "https://orcid.org/0009-0009-0475-3193",
       "affiliations": [
-        {"name": "Keio University", "nameTr": "Keio Üniversitesi", "nameEn": "Keio University", "country": "Japan", "ror": null},
-        {"name": "Kyoto University", "nameTr": "Kyoto Üniversitesi", "nameEn": "Kyoto University", "country": "Japan", "ror": null}
+        {"name": "Keio University and Kyoto University", "nameTr": "Keio Üniversitesi ve Kyoto Üniversitesi", "nameEn": "Keio University and Kyoto University", "country": "Japan", "ror": null}
       ]
     }
   ],
