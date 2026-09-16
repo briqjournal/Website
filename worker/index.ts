@@ -14,10 +14,37 @@ interface Env {
   };
 }
 
+const LEGACY_DOI_ARTICLE_REDIRECTS: Record<string, string> = {
+  "/en/emerging-trends-low-carbon-rules-international-trade-and-their-implications-the-belt-and-road": "/en/articles/emerging-trends-in-low-carbon-rules-for-international-trade-and-their-implications-for-the-belt-and-road-initiative/",
+  "/en/water-scarcity-and-the-global-food-crisis-the-context-climate-change": "/en/articles/water-scarcity-and-the-global-food-crisis-in-the-context-of-climate-change/",
+  "/en/reordering-the-world-regional-blocs-and-the-rise-multipolar-global-governance": "/en/articles/reordering-the-world-regional-blocs-and-the-rise-of-multipolar-global-governance/",
+  "/en/research-the-islamic-system-and-the-democratization-international-relations": "/en/articles/research-on-the-islamic-system-and-the-democratization-of-international-relations/",
+};
+
 const R2_PDF_PATH_PREFIXES = [
   "/assets/archive/pdfs/",
   "/assets/issues/",
 ] as const;
+
+function normalizedLegacyPath(pathname: string): string {
+  if (pathname === "/") return pathname;
+  return pathname.replace(/\/+$/, "");
+}
+
+function legacyDoiArticleRedirect(url: URL): Response | null {
+  const targetPath = LEGACY_DOI_ARTICLE_REDIRECTS[normalizedLegacyPath(url.pathname)];
+  if (!targetPath) return null;
+
+  const target = new URL(targetPath, url.origin);
+  target.search = url.search;
+  return new Response(null, {
+    status: 301,
+    headers: {
+      location: target.toString(),
+      "cache-control": "public, max-age=86400, s-maxage=604800",
+    },
+  });
+}
 
 function isR2PdfPath(pathname: string): boolean {
   return (
@@ -115,6 +142,8 @@ interface ExecutionContext {
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+    const legacyRedirect = legacyDoiArticleRedirect(url);
+    if (legacyRedirect) return legacyRedirect;
 
     if (isR2PdfPath(url.pathname)) {
       return servePdfFromR2(request, env.BRIQ_PDF, url.pathname);
