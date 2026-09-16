@@ -1,0 +1,322 @@
+name: Migrate and verify V7I2
+on:
+  push:
+    branches: [automation/v7i2-locale-split]
+permissions:
+  contents: write
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Migrate, verify, and safely fast-forward main
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+
+          cat > /tmp/migrate-v7i2.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+
+          const issuePath = 'content/issues/v07-i02.json';
+          const issue = JSON.parse(fs.readFileSync(issuePath, 'utf8'));
+          const proseSlugs = issue.articles.slice(0, 6);
+          const allSlugs = issue.articles;
+
+          const writeJson = (file, value) => {
+            fs.mkdirSync(path.dirname(file), { recursive: true });
+            fs.writeFileSync(file, JSON.stringify(value, null, 2) + '\n');
+          };
+          const note = (id, text) => ({ id, text });
+          const baseFulltext = (sections, footnotes = [], references = []) => ({
+            sections,
+            keywords: [],
+            footnotes,
+            references,
+            acknowledgements: '',
+            figures: [],
+          });
+
+          // Preserve the six already-reviewed bilingual texts exactly, only splitting
+          // the legacy container and moving article-history dates to canonical metadata.
+          for (const slug of proseSlugs) {
+            const dir = path.join('content/articles', slug, 'fulltext');
+            const currentPath = path.join(dir, 'current.json');
+            if (!fs.existsSync(currentPath)) {
+              if (fs.existsSync(path.join(dir, 'en.json')) && fs.existsSync(path.join(dir, 'tr.json'))) continue;
+              throw new Error(`${slug}: expected current.json or canonical locale pair`);
+            }
+            const current = JSON.parse(fs.readFileSync(currentPath, 'utf8'));
+            if (!current.en?.sections?.length || !current.tr?.sections?.length) throw new Error(`${slug}: current.json is not bilingual`);
+            writeJson(path.join(dir, 'en.json'), current.en);
+            writeJson(path.join(dir, 'tr.json'), current.tr);
+
+            const metaPath = path.join('content/articles', slug, 'metadata.json');
+            const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+            if (!meta.schemaVersion) {
+              if (!meta.received_date && current.metadata?.received) meta.received_date = current.metadata.received;
+              if (!meta.revised_date && current.metadata?.revised) meta.revised_date = current.metadata.revised;
+              if (!meta.accepted_date && current.metadata?.accepted) meta.accepted_date = current.metadata.accepted;
+              if (!meta.published_online_date) meta.published_online_date = '2026-03-01';
+              writeJson(metaPath, meta);
+            }
+            fs.unlinkSync(currentPath);
+          }
+
+          // Li Bai — rebuilt from the official Turkish and English PDFs, without
+          // running headers, page numbers, or citation-line extraction noise.
+          {
+            const slug = 'siir-li-bai-zor-yolculuk';
+            const dir = path.join('content/articles', slug, 'fulltext');
+            const trBio = 'Li Bai (Li Po) (701–762), Tang Hanedanı döneminin en büyük şairlerinden ve Çin edebiyatının simge isimlerinden biridir. “Ölümsüz Şair” unvanıyla anılan Li Bai, Çin kültüründe özgür ruhun, doğayla bütünleşmenin ve sezgisel bilgeliğin temsilcisi kabul edilir. Konfüçyüsçü düzen anlayışına mesafeli durarak Taoist düşünceden beslenmiş; şiirlerinde ay, dağlar, şarap, yolculuk ve yalnızlık imgeleriyle sınırsız bir evren kurmuştur. Klasik Çin şiirinin lüshi ve yuefu geleneklerini dönüştürerek, biçimsel kuralları içsel coşku lehine esnetmiş; bu yönüyle sonraki yüzyıllarda Çin şiirinin dilini ve imge dünyasını belirlemiştir. Tang sonrası şairler için hem estetik hem de ruhsal bir referans noktası olmuştur. Li Bai’nin etkisi Çin sınırlarını aşmıştır. Ezra Pound, Judith Gautier ve Arthur Waley gibi Batılı şair ve çevirmenler aracılığıyla modern dünya şiirine taşınmış; Doğu’nun lirik sezgisini Batı şiirine tanıtmıştır. Türkiye’de ise İlhan Berk ve Cemal Süreya gibi şairler onun imge özgürlüğünden ve kozmik duyarlılığından etkilenmiştir. Li Bai, bugün hâlâ Çin’in en çok ezberlenen ve şiirleri diğer dillere en çok çevrilen şairlerinden biridir.';
+            const enBio = 'Li Bai (also known as Li Po, 701–762) is one of the most eminent poets of the Tang Dynasty and a central figure in the classical Chinese literary canon. Revered as the “Immortal Poet”, Li Bai symbolizes spiritual freedom, harmony with nature, and intuitive wisdom within Chinese culture. Distancing himself from Confucian orthodoxy, he drew heavily on Daoist philosophy; his poetry is infused with recurring motifs of the moon, mountains, wine, travel, and solitude, through which he constructs a boundless, transcendental poetic universe. By reshaping the traditional “lüshi” and “yuefu” forms, Li Bai loosened rigid formal constraints in favor of lyrical spontaneity and emotional intensity. This stylistic transformation had a lasting impact on the language, imagery, and aesthetic orientation of Chinese poetry in the centuries that followed, establishing him as both an artistic and spiritual model for later poets. Li Bai’s influence extends far beyond China. Through the translations and adaptations of figures such as Ezra Pound, Judith Gautier, and Arthur Waley, his work entered modern world literature and introduced Eastern lyrical sensibility into Western poetic discourse. In Turkey, poets including İlhan Berk and Cemal Süreya have acknowledged his imaginative freedom and cosmic vision. Li Bai’s poems remain among the most memorized and widely translated in the world.';
+            const trPoem = [
+              'Altın fıçıda berrak şarap on bin kadehe bedel,',
+              'yeşim tabakta nadir yemekler on bin altına bedel.',
+              'Kadehi durdurur yemeği istemem,',
+              'kılıcı çeker etrafa bakarım içimde yoğun bir karmaşa',
+              'Sarı Nehri geçmek isterim buzla kaplanmış vadi,',
+              'tırmanırken karla kaplı Taihang Dağı.',
+              'Bir zamanlar nehirde oturup balık tutardık,',
+              'aniden bir tekneye binip güneşi hayal ederdik.',
+              'Zor yolculuk!',
+              'Zor yolculuk!',
+              'Çokça ayrılan yollar,',
+              'şimdi huzur nerede?',
+              'Kuvvetli rüzgârlarla dalgaları kırmanın vakti gelecek,',
+              'yelkenleri asıp denizlerde cesurca ilerlemenin.',
+            ];
+            const enPoem = [
+              'Pure wine costs, for the golden cup, ten thousand coppers a flagon,',
+              'And a jade plate of dainty food calls for a million coins.',
+              'I fling aside my food-sticks and cup, I cannot eat nor drink....',
+              'I pull out my dagger, I peer four ways in vain.',
+              'I would cross the Yellow River, but ice chokes the ferry;',
+              'I would climb the Taihang Mountains, but the sky is blind with snow....',
+              'I would sit and poise a fishing-pole, lazy by a brook –',
+              'But I suddenly dream of riding a boat, sailing for the sun....',
+              'Journeying is hard,',
+              'Journeying is hard.',
+              'There are many turnings –',
+              'Which am I to follow?....',
+              'I will mount a long wind some day and break the heavy waves',
+              'And set my cloudy sail straight and bridge the deep, deep sea.',
+            ];
+            writeJson(path.join(dir, 'tr.json'), baseFulltext([
+              { id: 'tr-section-1', title: 'Li Bai', paragraphs: [trBio] },
+              { id: 'tr-section-2', title: 'Zor Yolculuk', paragraphs: trPoem },
+            ], [note('note-1', 'Pamuk Öztürk, N. (2024). Li Bai’ın (李白) seçili şiirlerinde yer alan deyimlerin anlam bakımından incelenmesi. Şarkiyat Mecmuası, 45, 409–436. https://doi.org/10.26650/jos.1469252')]));
+            writeJson(path.join(dir, 'en.json'), baseFulltext([
+              { id: 'en-section-1', title: 'Li Bai', paragraphs: [enBio] },
+              { id: 'en-section-2', title: 'The Hard Road', paragraphs: enPoem },
+            ], [note('note-1', 'Li Bai. (2012). The Hard Road (行路难). [Translated poem]. In Li Bai – poems (Classic Poetry Series) [PDF]. PoemHunter.com – The World’s Poetry Archive. Retrieved February 2, 2026, from https://www.poemhunter.com/i/ebooks/pdf/li_bai_2012_8.pdf.') ]));
+            const legacy = path.join(dir, 'en-archive.json');
+            if (fs.existsSync(legacy)) fs.unlinkSync(legacy);
+          }
+
+          // Melih Cevdet Anday — rebuilt from the official PDFs.
+          {
+            const slug = 'siir-melih-cevdet-anday-telgrafhane';
+            const dir = path.join('content/articles', slug, 'fulltext');
+            const trBio = 'Melih Cevdet Anday veya asıl adıyla Muzaffer Melih (1915, Çanakkale – 28 Kasım 2002, İstanbul), şiir, roman, deneme, tiyatro ve çeviri gibi farklı türlerde birçok eser yazmış Türk yazar, şair, romancı, çevirmen ve gazetecidir. Lise mezuniyetinden sonra bir süre Hukuk Fakültesi’nde eğitim gördü. Daha sonra Ankara Üniversitesi Dil ve Tarih Coğrafya Fakültesi’ne kaydoldu. Fakat Devlet Demiryolları’ndaki memuriyetinden ötürü eğitimini yarıda bırakmak zorunda kaldı. Çalıştığı kurum tarafından sosyoloji eğitimi alması için Belçika’ya gönderilen Anday’ın 1936 yılında Varlık Dergisi’nde Ukde adlı şiiri yayımlandı. Şiir ve yazıları, Ses, Yaprak, Yeditepe, Papirüs, Yeni Ufuklar, Yeni Dergi, Soyut, Ataç, Dönem, Yön, Saçak, 2000’e Doğru, Aydınlık, Tercüman, Yeni İstanbul, Vakit, Ulus, Cumhuriyet gibi dergi ve gazetelerde yayınlandı. Orhan Veli ve Oktay Rifat ile birlikte 1941 yılında Garip akımını kurdular ve ilk ortak şiir kitabını çıkardılar. Milli Eğitim Bakanı Hasan Ali Yücel’in önerisiyle, Milli Eğitim Bakanlığı Neşriyat Müdürlüğü’nde memur olarak çalışmaya başladı. 1953-1955 yılları arasında Akşam Gazetesi’nin edebiyat ve sanat sayfasının editörlüğünü yaptı. 1956 yılında “Yan Yana” adlı şiir kitabı yayımlandı. Bu kitap soruşturmaya uğradı. 1979-1980’de ise UNESCO Genel Merkezi’nde Eğitim Müşaviri olarak çalıştı. Dilimize çok sayıda şiir çevirisi de yapmıştır. Kitaplarından bazıları şunlardır: Garip (1941, Orhan Veli ve Oktay Rifat’la birlikte), Sözcükler (1978), Ölümsüzlük Ardında Gılgamış (1981), Tanıdık Dünya (1984), Güneşte (1989), Yağmurun Altında (1995).';
+            const enBio = 'Melih Cevdet Anday (born Muzaffer Melih; 1915, Çanakkale – 28 November 2002, Istanbul) was a Turkish writer, poet, novelist, translator, and journalist who wrote numerous works in various genres, including poetry, novels, essays, plays, and translations. After graduating from high school, he briefly studied at the Faculty of Law. He later enrolled at Ankara University’s Faculty of Language-History and Geography. However, his studies were interrupted because he was working as a civil servant at the State Railways. Anday’s poem ‘Ukde’ was published in Varlık Magazine in 1936. His poems and writings were published in magazines and newspapers such as Ses, Yaprak, Yeditepe, Papirüs, Yeni Ufuklar, Yeni Dergi, Soyut, Ataç, Dönem, Yön, Saçak, 2000’e Doğru, Aydınlık, Tercüman, Yeni İstanbul, Vakit, Ulus, and Cumhuriyet. He established the Garip movement in 1941 with Orhan Veli and Oktay Rifat, a poetic movement that brought new forms and expressions to Turkish poetry, and published their first joint poetry collection. At the suggestion of the Minister of National Education, Hasan Ali Yücel, he began working as a civil servant at the Publications Directorate of the Ministry of National Education. Between 1953 and 1955, he edited the literature and arts page of the Akşam newspaper. In 1956, his poetry collection Yan Yana was published. This book was investigated. Between 1979 and 1980, he worked as an Education Advisor at UNESCO Headquarters. He has also translated numerous poems into Turkish. Some of his books are as follows: Garip (1941, Orhan Veli ve Oktay Rifat’la birlikte), Sözcükler (1978), Ölümsüzlük Ardında Gılgamış (1981), Tanıdık Dünya (1984), Güneşte (1989), Yağmurun Altında (1995).';
+            const trPoem = ['Uyuyamayacaksın','Memleketinin hâli','Seni seslerle uyandıracak','Oturup yazacaksın','Çünkü sen artık o eski sen değilsin','Sen şimdi ıssız bir telgrafhane gibisin','Durmadan sesler alacak','Sesler vereceksin','Uyuyamayacaksın','Düzelmeden memleketinin hâli','Düzelmeden dünyanın hâli','Gözüne uyku girmez ki','Uyumayacaksın','Bir sis çanı gibi gecenin içinde','Ta gün ışıyıncaya kadar','Vakur metin sade','Çalacaksın.'];
+            const enPoem = ['You won’t be able to sleep.','The dire state of your homeland,','Will awaken you with sounds.','You will sit and write.','Because you are no longer the old yourself,','Now, you are like an abandoned telegraph office.','Constantly receiving sounds,','Sending sounds.','You won’t be able to sleep,','Until the state of your motherland improves,','Until the state of the world endures.','Sleep won’t come to your eyes.','You won’t sleep,','Like a foghorn in the dark night.','Until the daylight breaks.','Dignified, calm, plain,','You will ring.'];
+            writeJson(path.join(dir, 'tr.json'), baseFulltext([
+              { id: 'tr-section-1', title: 'Melih Cevdet Anday', paragraphs: [trBio] },
+              { id: 'tr-section-2', title: 'Telgrafhane', paragraphs: trPoem },
+            ], [note('note-1', 'Anday, M. C. (1952). Telgrafhane. İstanbul: Yeditepe Yayınları.')]));
+            writeJson(path.join(dir, 'en.json'), baseFulltext([
+              { id: 'en-section-1', title: 'Melih Cevdet Anday', paragraphs: [enBio] },
+              { id: 'en-section-2', title: 'The Telegraph Office', paragraphs: enPoem },
+            ], [note('note-1', 'Translation: Latif Bolat')]));
+            const legacy = path.join(dir, 'en-archive.json');
+            if (fs.existsSync(legacy)) fs.unlinkSync(legacy);
+          }
+
+          // Zhang Yaxin photograph. The individual PDF is shared/Turkish; the English
+          // copy is reconstructed from the official English issue/article record.
+          {
+            const slug = 'zhang-yaxin';
+            const dir = path.join('content/articles', slug, 'fulltext');
+            writeJson(path.join(dir, 'tr.json'), baseFulltext([
+              { id: 'tr-section-1', title: 'Devrimci operalar', paragraphs: ['Devrimci operalar veya model operalar, Çin Kültür Devrimi (1966-1976) sırasında tasarlanmış bir dizi gösteriydi. Devrimciydiler ve Halk Kurtuluş Ordusu’nu, halkın cesaretini ve Mao Zedong’u ve düşüncelerinin yanı sıra Çin’deki komünizmin zaferini yüceltmeyi amaçlıyorlardı. 1969-74 Yılları arasında Xinhua Haber Ajansı’ndan bir fotoğrafçı olan Zhang Yaxin, bugüne kadar yeni Çin sanatı için bir kıstas haline gelecek olan opera dizisini fotoğrafladı. Ve bizzat fotoğrafların kendileri de, aktörlerin tüm enerjisini ve zamanın ruhunu yansıtan başyapıtlar haline geldi.'] },
+            ], [], [note('ref-1', 'Kaynak: visualhistory.livejournal.com/76487.html?ysclid=ml6eknrlos624962847')]));
+            writeJson(path.join(dir, 'en.json'), baseFulltext([
+              { id: 'en-section-1', title: 'Revolutionary operas', paragraphs: ['Revolutionary operas or model operas were a series of shows engineered during the Cultural Revolution (1966–1976) in China. They were revolutionary and intended to glorify the People’s Liberation Army, the bravery of the common people, and Mao Zedong and his thoughts on the victory of communism in China. Between 1969-74, Zhang Yaxin, a photographer from the Xinhua News Agency, photographed the entire series of the operas, which to this day serve as a benchmark for new Chinese art. And the photos themselves became masterpieces, showing all the energy of the actors and the very spirit of the times.'] },
+            ], [], [note('ref-1', 'Source: visualhistory.livejournal.com/76487.html?ysclid=ml6eknrlos624962847')]));
+          }
+
+          // Liu Chunhua painting.
+          {
+            const slug = 'liu-chunhua';
+            const dir = path.join('content/articles', slug, 'fulltext');
+            writeJson(path.join(dir, 'tr.json'), baseFulltext([
+              { id: 'tr-section-1', title: 'Anyuan’a Giderken Başkan Mao, 1967, tuval üzerine yağlıboya', paragraphs: ['Liu Chunhua’nın çalışması, berrak bir sabah ışıltısında, pitoresk tepelik bir manzara önünde yürüyen, bir ışıltıyla çevrili genç Mao’yu canlandırır. Hedefi, madencilerin grevine öncülük edeceği Anyuandır. Ölümsüz diyarlar ya da dağın sisli dumanlarıyla kaplı olağanüstü yerler, Çin resminde sıkça görülen manzara türleridir. Burada ise, modernliğin ipuçları bu dumanlı manzaraya özellikle yerleştirilmiş; kompozisyonun sol alt köşesinde bir telefon direği göze çarpar ve sağdaki bir barajdan su akar. Resim aynı zamanda yüzü, sıkılı yumruğu ve tüm duruşundaki azim ve kararlılığıyla Mao’nun ülkeyi devrime götürme kapasitesine sahip olduğunu gösteren etkileyici bir tasvirdir.'] },
+            ]));
+            writeJson(path.join(dir, 'en.json'), baseFulltext([
+              { id: 'en-section-1', title: 'Chairman Mao en Route to Anyuan, 1967, oil on canvas', paragraphs: ['Liu Chunhua’s work portrays a young Mao, surrounded by luminescence, walking through a picturesque hilly landscape under a clear morning sky. His destination is Anyuan, where he will lead a miners’ strike. The immortal realms, or the extraordinary place covered in the misty fumes of the mountain, are the kind of landscapes often seen in Chinese painting. In this one, hints of modernity are especially evident in the smoky landscape; a telephone pole is visible in the lower left corner of the composition, and water flows from a dam on the right. And the painting is also an impressive depiction that shows that Mao had the capacity to lead the country to revolution; His face, clenched fist, and entire posture express steadfastness and determination.'] },
+            ]));
+          }
+
+          // Shanghai People’s Fine Arts Publishing House poster.
+          {
+            const slug = 'sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu';
+            const dir = path.join('content/articles', slug, 'fulltext');
+            writeJson(path.join(dir, 'tr.json'), baseFulltext([
+              { id: 'tr-section-1', title: 'On bin hane, bir aile, bahar şehri doldurur (万户一家春满城), (1960 Mayıs)', paragraphs: ['105,5x75 + 106,5x76,5 cm.', 'Şanghay Halk Güzel Sanatlar Yayınevi, 1952 yılında kurulmuş ulusal düzeyde profesyonel bir güzel sanatlar yayınevidir. Yayınevi, güzel sanatlar ve fotoğrafçılıkla ilgili resim albümleri, süreli yayınlar, çizgi romanlar, resimler, duvar takvimleri, yaşam kitapları, seyahat okuma materyalleri, kaynak kitapları ve yardımcı kitaplar yayınlamakta uzmanlaşmıştır. Yayınevi, yetmiş yılı aşkın süredir her zaman “bilgiyi yaymak ve kültürü biriktirmek” ilkesini benimsemiştir. Şanghay Halk Güzel Sanatlar Yayınevi, 30 binden fazla kitap yayınlamış ve yurt içinde ve yurt dışında yaklaşık 300 ödül almıştır.'] },
+            ], [], [note('ref-1', 'Kaynak: https://chineseposters.net/posters/pc-1960-l-001-2')]));
+            writeJson(path.join(dir, 'en.json'), baseFulltext([
+              { id: 'en-section-1', title: 'Ten thousand households, one family, spring fills the city (万户一家春满城), (1960 May)', paragraphs: ['105.5x75 + 106.5x76.5 cm.', 'Shanghai People’s Fine Arts Publishing House is a national-level professional fine arts publishing house, founded in 1952. The publishing house specializes in publishing painting albums on fine arts and photography, periodicals, comic strips, pictures, wall calendars, life books, travel reading materials, reference books, and tool books. Over the past more than seventy years, the publishing house has always followed the principle of “spreading knowledge and accumulating culture”. Relying on its own efforts, Shanghai People’s Fine Arts Publishing House has published more than 30 thousand titles and received about 300 awards at home and abroad.'] },
+            ], [], [note('ref-1', 'Source: https://chineseposters.net/posters/pc-1960-l-001-2')]));
+          }
+
+          // Keep publication date explicit for every contribution and correct three
+          // English citation-label typos in the existing flat metadata.
+          for (const slug of allSlugs) {
+            const metaPath = path.join('content/articles', slug, 'metadata.json');
+            const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+            if (meta.schemaVersion === 2) {
+              meta.dates ??= {};
+              if (!meta.dates.published) meta.dates.published = '2026-03-01';
+            } else {
+              meta.published_online_date = '2026-03-01';
+              if (['zhang-yaxin','liu-chunhua','sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu'].includes(slug) && typeof meta.citation_en === 'string') {
+                meta.citation_en = meta.citation_en.replace(/^Atıf\s*/u, 'Citation \n ');
+              }
+            }
+            writeJson(metaPath, meta);
+          }
+
+          const catalogPath = 'content/catalog.json';
+          const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+          catalog.fulltext.localized = [...new Set([...(catalog.fulltext.localized ?? []), ...allSlugs])];
+          catalog.fulltext.current = (catalog.fulltext.current ?? []).filter((slug) => !allSlugs.includes(slug));
+          catalog.fulltext.en_archive = (catalog.fulltext.en_archive ?? []).filter((slug) => !allSlugs.includes(slug));
+          writeJson(catalogPath, catalog);
+          JS
+
+          cat > /tmp/write-v7i2-tests.mjs <<'JS'
+          import fs from 'node:fs';
+          const content = `import test from "node:test";
+          import assert from "node:assert/strict";
+          import fs from "node:fs";
+          import path from "node:path";
+
+          const issue = JSON.parse(fs.readFileSync("content/issues/v07-i02.json", "utf8"));
+          const catalog = JSON.parse(fs.readFileSync("content/catalog.json", "utf8"));
+          const prose = [
+            ["sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0", 5, 5, 13, 13],
+            ["cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis", 12, 12, 7, 7],
+            ["afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme", 14, 14, 55, 55],
+            ["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin", 12, 12, 30, 30],
+            ["hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi", 39, 39, 30, 30],
+            ["japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak", 5, 5, 4, 4],
+          ];
+          const read = (slug, locale) => JSON.parse(fs.readFileSync(path.join("content/articles", slug, "fulltext", locale + ".json"), "utf8"));
+          const published = (meta) => meta.schemaVersion === 2 ? meta.dates?.published : meta.published_online_date;
+
+          test("V7I2 uses only canonical locale-split full-text files", () => {
+            assert.equal(issue.articles.length, 11);
+            for (const slug of issue.articles) {
+              const dir = path.join("content/articles", slug, "fulltext");
+              assert.deepEqual(fs.readdirSync(dir).sort(), ["en.json", "tr.json"], slug);
+              assert.ok(catalog.fulltext.localized.includes(slug), slug);
+              assert.ok(!catalog.fulltext.current.includes(slug), slug);
+              assert.ok(!catalog.fulltext.en_archive.includes(slug), slug);
+              const meta = JSON.parse(fs.readFileSync(path.join("content/articles", slug, "metadata.json"), "utf8"));
+              assert.equal(published(meta), "2026-03-01", slug);
+            }
+          });
+
+          test("V7I2 preserves the six existing bilingual scholarly/opinion texts losslessly at the structural boundary", () => {
+            for (const [slug, trSections, enSections, trRefs, enRefs] of prose) {
+              const tr = read(slug, "tr"); const en = read(slug, "en");
+              assert.equal(tr.sections.length, trSections, slug + " tr sections");
+              assert.equal(en.sections.length, enSections, slug + " en sections");
+              assert.equal(tr.references?.length ?? 0, trRefs, slug + " tr refs");
+              assert.equal(en.references?.length ?? 0, enRefs, slug + " en refs");
+              assert.notDeepEqual(tr, en, slug + " locales");
+            }
+          });
+
+          test("V7I2 reconstructs poems and visual contributions without PDF extraction noise", () => {
+            for (const slug of issue.articles.slice(6)) {
+              const tr = read(slug, "tr"); const en = read(slug, "en");
+              const raw = JSON.stringify({tr,en});
+              assert.doesNotMatch(raw, /B R I q|Volu me|Sa yı|How to cite:|\\bAtıf:/u, slug);
+              assert.doesNotMatch(raw, /�|Ã.|Â.|â€|â€™/u, slug);
+              assert.ok(tr.sections?.length, slug + " tr");
+              assert.ok(en.sections?.length, slug + " en");
+            }
+            const liEn = JSON.stringify(read("siir-li-bai-zor-yolculuk", "en"));
+            assert.match(liEn, /li_bai_2012_8\\.pdf/u);
+            assert.doesNotMatch(liEn, /li_ bai|\\b248\\b/u);
+            const zhangEn = JSON.stringify(read("zhang-yaxin", "en"));
+            assert.match(zhangEn, /Revolutionary operas or model operas/u);
+            assert.doesNotMatch(zhangEn, /Devrimci operalar veya model operalar/u);
+          });
+
+          test("V7I2 preserves article-history dates from the legacy bilingual containers", () => {
+            const expected = {
+              "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0": ["2025-12-30", null, "2026-01-19"],
+              "cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis": ["2026-01-27", null, "2026-02-08"],
+              "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme": ["2025-11-16", "2025-12-30", "2026-02-07"],
+              "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin": ["2025-11-26", "2026-01-23", "2026-02-07"],
+              "hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi": ["2025-11-07", null, "2026-01-31"],
+              "japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak": ["2025-09-22", "2025-12-30", "2026-01-31"],
+            };
+            for (const [slug, dates] of Object.entries(expected)) {
+              const m = JSON.parse(fs.readFileSync(path.join("content/articles", slug, "metadata.json"), "utf8"));
+              const actual = m.schemaVersion === 2 ? [m.dates.received, m.dates.revised, m.dates.accepted] : [m.received_date ?? null, m.revised_date ?? null, m.accepted_date ?? null];
+              assert.deepEqual(actual, dates, slug);
+            }
+          });
+          `;
+          fs.writeFileSync('tests/v7i2-locale-fulltext.test.mjs', content.replace(/^          /gm, ''));
+          JS
+
+          apply_migration() {
+            node /tmp/migrate-v7i2.mjs
+            node /tmp/write-v7i2-tests.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i2-locale-fulltext.test.mjs
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_migration
+            npm test
+            npm run lint
+
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+              echo "main advanced during validation attempt $ATTEMPT; retrying"
+              continue
+            fi
+            if git diff --quiet; then
+              echo 'V7I2 migration already present on main.'
+              exit 0
+            fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content app tests
+            git commit -m 'Migrate Volume 7 Issue 2 to locale-split full text'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced after commit attempt $ATTEMPT; retrying"
+          done
+          echo 'main kept advancing; refusing unsafe push'
+          exit 1
