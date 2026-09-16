@@ -1,0 +1,285 @@
+name: V7I4 locale split
+on:
+  push:
+    branches: [automation/fix-comak-live-english]
+permissions:
+  contents: write
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Migrate verified V7I4 full texts
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v7i4-locale-split "$BASE"
+
+          node --input-type=module <<'NODE'
+          import { readFile, writeFile, rm } from 'node:fs/promises';
+          import { join } from 'node:path';
+          import { loadFullTextCollections } from './scripts/content-store.mjs';
+
+          const root=process.cwd();
+          const saudi='suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi';
+          const comak='turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik';
+          const localized=[saudi,comak];
+          const collections=await loadFullTextCollections(root);
+
+          for(const slug of localized){
+            const dir=join(root,'content/articles',slug,'fulltext');
+            const current=collections.current[slug];
+            if(!current?.tr?.sections?.length) throw new Error(`Missing current.tr for ${slug}`);
+            const en=slug===saudi ? collections.saudiEn : current.en;
+            if(!en?.sections?.length) throw new Error(`Missing verified English full text for ${slug}`);
+            await writeFile(join(dir,'en.json'),JSON.stringify(en,null,2)+'\n','utf8');
+            await writeFile(join(dir,'tr.json'),JSON.stringify(current.tr,null,2)+'\n','utf8');
+            await rm(join(dir,'current.json'));
+          }
+          await rm(join(root,'content/articles',saudi,'fulltext','en-archive.json'));
+          await rm(join(root,'content/articles',saudi,'fulltext','saudi-en.json'));
+
+          const cp=join(root,'content/catalog.json');
+          const catalog=JSON.parse(await readFile(cp,'utf8'));
+          catalog.fulltext.localized=localized;
+          catalog.fulltext.current=(catalog.fulltext.current||[]).filter(s=>!localized.includes(s));
+          catalog.fulltext.en_archive=(catalog.fulltext.en_archive||[]).filter(s=>s!==saudi);
+          delete catalog.fulltext.saudi_en;
+          await writeFile(cp,JSON.stringify(catalog,null,2)+'\n','utf8');
+
+          const issue=JSON.parse(await readFile(join(root,'content/issues/v07-i04.json'),'utf8'));
+          const common=['slug','volume','issue','year','author','authors','pages','doi','published_online_date','received_date','revised_date','accepted_date','orcids','shared_bilingual_pdf'];
+          const en=['season_en','title_en','abstract_en','keywords_en','citation_en','publication_type_en','source_en','pdf_en_source','pdf_en_local'];
+          const tr=['season_tr','title_tr','abstract_tr','keywords_tr','citation_tr','publication_type_tr','source_tr','pdf_tr_source','pdf_tr_local'];
+          for(const slug of issue.articles){
+            const mp=join(root,'content/articles',slug,'metadata.json');
+            const m=JSON.parse(await readFile(mp,'utf8'));
+            const out={};
+            for(const k of common) if(Object.hasOwn(m,k)) out[k]=m[k];
+            for(const k of en) if(Object.hasOwn(m,k)) out[k]=m[k];
+            for(const k of tr) if(Object.hasOwn(m,k)) out[k]=m[k];
+            for(const [k,v] of Object.entries(m)) if(!Object.hasOwn(out,k)) out[k]=v;
+            await writeFile(mp,JSON.stringify(out,null,2)+'\n','utf8');
+          }
+          NODE
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p=Path('scripts/content-store.mjs')
+          s=p.read_text()
+          new_tail=r'''async function readLocalizedFullText(root, slug, locale) {
+            assertSlug(slug, `${locale}.json`);
+            const record = await readJson(join(root, "content/articles", slug, "fulltext", `${locale}.json`));
+            if (Array.isArray(record.keywords)) record.keywords = normalizeKeywordList(record.keywords, locale);
+            return record;
+          }
+
+          export async function loadFullTextCollections(root = process.cwd()) {
+            const catalog = await loadCatalog(root);
+            const localizedSlugs = catalog.fulltext.localized || [];
+            const currentSlugs = catalog.fulltext.current || [];
+            const archiveSlugs = catalog.fulltext.en_archive || [];
+            assert(new Set(localizedSlugs).size === localizedSlugs.length, "Duplicate localized full-text slug.");
+            assert(new Set(currentSlugs).size === currentSlugs.length, "Duplicate current full-text slug.");
+            assert(new Set(archiveSlugs).size === archiveSlugs.length, "Duplicate English archive full-text slug.");
+
+            const localized = {};
+            for (const slug of localizedSlugs) localized[slug] = {
+              en: await readLocalizedFullText(root, slug, "en"),
+              tr: await readLocalizedFullText(root, slug, "tr"),
+            };
+
+            const current = {};
+            for (const slug of currentSlugs) current[slug] = await readFullTextRecord(root, slug, "current.json");
+
+            const enArchive = {};
+            for (const slug of archiveSlugs) enArchive[slug] = await readFullTextRecord(root, slug, "en-archive.json");
+
+            return { localized, current, enArchive };
+          }
+          '''
+          s2,n=re.subn(r'export async function loadFullTextCollections\(root = process\.cwd\(\)\) \{.*?\n\}',new_tail.strip(),s,flags=re.S)
+          if n!=1: raise SystemExit(f'content-store replacement count={n}')
+          p.write_text(s2+'\n')
+
+          Path('scripts/generate-fulltext-modules.mjs').write_text(r'''import { mkdir, rm, writeFile } from "node:fs/promises";
+          import { join, relative } from "node:path";
+          import { loadFullTextCollections } from "./content-store.mjs";
+
+          const root = process.cwd();
+          const appDir = join(root, "app");
+          const outputRoot = join(appDir, "generated-fulltext");
+          const localizedEnOutput = join(outputRoot, "localized", "en");
+          const localizedTrOutput = join(outputRoot, "localized", "tr");
+          const currentOutput = join(outputRoot, "current");
+          const archiveOutput = join(outputRoot, "en-archive");
+          const safeSlug = /^[a-z0-9-]+$/;
+
+          function assertSlug(slug, source) {
+            if (!safeSlug.test(slug)) throw new Error(`Unsafe article slug in ${source}: ${slug}`);
+          }
+
+          async function writeEntries(entries, directory, source) {
+            await mkdir(directory, { recursive: true });
+            for (const [slug, value] of entries) {
+              assertSlug(slug, source);
+              await writeFile(join(directory, `${slug}.json`), `${JSON.stringify(value)}\n`, "utf8");
+            }
+          }
+
+          const { localized, current, enArchive } = await loadFullTextCollections(root);
+          const localizedEntries = Object.entries(localized);
+          const localizedEnEntries = localizedEntries.map(([slug, value]) => [slug, value.en]);
+          const localizedTrEntries = localizedEntries.map(([slug, value]) => [slug, value.tr]);
+          const currentEntries = Object.entries(current);
+          const archiveEntries = Object.entries(enArchive);
+
+          await rm(outputRoot, { recursive: true, force: true });
+          await writeEntries(localizedEnEntries, localizedEnOutput, "localized English full text");
+          await writeEntries(localizedTrEntries, localizedTrOutput, "localized Turkish full text");
+          await writeEntries(currentEntries, currentOutput, "content current full text");
+          await writeEntries(archiveEntries, archiveOutput, "content English archive full text");
+          await mkdir(outputRoot, { recursive: true });
+
+          // Compatibility aggregates are generated for existing tests and legacy import tools.
+          // They are ignored by Git and are never canonical sources.
+          await writeFile(join(appDir, "article-fulltext-localized.json"), `${JSON.stringify(localized, null, 2)}\n`, "utf8");
+          await writeFile(join(appDir, "article-fulltext-current.json"), `${JSON.stringify(current, null, 2)}\n`, "utf8");
+          await writeFile(join(appDir, "article-fulltext-en-archive.json"), `${JSON.stringify(enArchive, null, 2)}\n`, "utf8");
+
+          const loaderLines = (entries, directory) => entries
+            .map(([slug]) => `  ${JSON.stringify(slug)}: () => import(${JSON.stringify(`./${directory}/${slug}.json`)}),`)
+            .join("\n");
+
+          const loaderSource = `// Generated by scripts/generate-fulltext-modules.mjs. Do not edit by hand.
+          type JsonModule = { default: unknown };
+
+          const localizedEnglishFullTextLoaders: Record<string, () => Promise<JsonModule>> = {
+          ${loaderLines(localizedEnEntries, "localized/en")}
+          };
+
+          const localizedTurkishFullTextLoaders: Record<string, () => Promise<JsonModule>> = {
+          ${loaderLines(localizedTrEntries, "localized/tr")}
+          };
+
+          const currentFullTextLoaders: Record<string, () => Promise<JsonModule>> = {
+          ${loaderLines(currentEntries, "current")}
+          };
+
+          const archiveEnglishFullTextLoaders: Record<string, () => Promise<JsonModule>> = {
+          ${loaderLines(archiveEntries, "en-archive")}
+          };
+
+          async function loadFrom(loaders: Record<string, () => Promise<JsonModule>>, slug: string) {
+            const loader = loaders[slug];
+            if (!loader) return undefined;
+            const module = await loader();
+            return module.default;
+          }
+
+          export function loadLocalizedFullText(slug: string, locale: "en" | "tr") {
+            return loadFrom(locale === "en" ? localizedEnglishFullTextLoaders : localizedTurkishFullTextLoaders, slug);
+          }
+
+          export function loadCurrentFullText(slug: string) {
+            return loadFrom(currentFullTextLoaders, slug);
+          }
+
+          export function loadArchiveEnglishFullText(slug: string) {
+            return loadFrom(archiveEnglishFullTextLoaders, slug);
+          }
+          `;
+
+          await writeFile(join(outputRoot, "loaders.ts"), loaderSource, "utf8");
+          console.log(`Generated ${localizedEntries.length} localized full-text pairs, ${currentEntries.length} legacy current modules, and ${archiveEntries.length} English archive modules in ${relative(root, outputRoot)}.`);
+          '''.replace(/^          /gm,''))
+
+          p=Path('app/components/ArticlePlatform.tsx')
+          s=p.read_text()
+          s=s.replace('''import {\n  loadArchiveEnglishFullText,\n  loadCurrentFullText,\n  loadSaudiEnglishFullText,\n} from "../generated-fulltext/loaders";''','''import {\n  loadArchiveEnglishFullText,\n  loadCurrentFullText,\n  loadLocalizedFullText,\n} from "../generated-fulltext/loaders";''')
+          s=s.replace('const SAUDI_CULTURAL_HEDGING_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";\n','')
+          s=s.replace('const COMAK_ENGLISH_FULLTEXT_SLUG = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";\n','')
+          pattern=r'''  const fullRecord = await loadCurrentFullText\(article\.slug\) as CurrentFullTextRecord \| undefined;.*?    : storedFullText;'''
+          replacement='''  const localizedFullText = await loadLocalizedFullText(article.slug, locale) as LocalizedFullText | undefined;
+            const fullRecord = localizedFullText ? undefined : await loadCurrentFullText(article.slug) as CurrentFullTextRecord | undefined;
+            const storedFullText = fullRecord?.[locale];
+            const archivedEnglishFullText = !localizedFullText && locale === "en"
+              ? await loadArchiveEnglishFullText(article.slug) as LocalizedFullText | undefined
+              : undefined;
+            const preferCurrentEnglish = article.volume === 7 && article.issue <= 3;
+            const legacyFullText = locale === "en"
+              ? preferCurrentEnglish
+                ? mergeLocalizedFullText(storedFullText, archivedEnglishFullText)
+                : mergeLocalizedFullText(archivedEnglishFullText, storedFullText)
+              : storedFullText;
+            const fullText = localizedFullText || legacyFullText;'''
+          s2,n=re.subn(pattern,replacement,s,flags=re.S)
+          if n!=1: raise SystemExit(f'ArticlePlatform replacement count={n}')
+          p.write_text(s2)
+
+          p=Path('tests/comak-english-fulltext.test.mjs')
+          s=p.read_text()
+          s=s.replace('const { current } = await loadFullTextCollections();\n  const record = current[slug];','const { localized } = await loadFullTextCollections();\n  const record = localized[slug];')
+          s=re.sub(r'\n\ntest\("keeps the canonical English record ahead of the broken archive extraction at render time".*?\n\}\);\n?$','''\n\ntest("uses locale-split canonical files without article-specific render exceptions", async () => {
+            const platform = await readFile(new URL("../app/components/ArticlePlatform.tsx", import.meta.url), "utf8");
+            assert.match(platform, /loadLocalizedFullText/u);
+            assert.doesNotMatch(platform, /COMAK_ENGLISH_FULLTEXT_SLUG/u);
+            assert.doesNotMatch(platform, /SAUDI_CULTURAL_HEDGING_SLUG/u);
+          });\n''',s,flags=re.S)
+          p.write_text(s)
+
+          p=Path('tests/keyword-case.test.mjs')
+          s=p.read_text()
+          s=s.replace('const { current, enArchive, saudiEn } = await loadFullTextCollections();','const { localized, current, enArchive } = await loadFullTextCollections();')
+          s=s.replace('''  for (const record of Object.values(current)) {''','''  for (const record of [...Object.values(localized), ...Object.values(current)]) {''',1)
+          s=re.sub(r'\n  for \(const keyword of saudiEn\?\.keywords \|\| \[\]\) \{.*?\n  \}\n','\n',s,flags=re.S)
+          s=s.replace('const { current } = await loadFullTextCollections();\n  const relations = current[','const { localized, current } = await loadFullTextCollections();\n  const relations = localized[',1)
+          s=s.replace('const { current } = await loadFullTextCollections();\n\n  for (const [slug, record] of Object.entries(current)) {','const { localized, current } = await loadFullTextCollections();\n\n  for (const [slug, record] of [...Object.entries(localized), ...Object.entries(current)]) {')
+          p.write_text(s)
+          PY
+
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+
+          node --input-type=module <<'NODE'
+          import { readFile, access } from 'node:fs/promises';
+          import { join } from 'node:path';
+          const slugs=['suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi','turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik'];
+          for(const slug of slugs){
+            for(const locale of ['en','tr']){
+              const p=join('content/articles',slug,'fulltext',`${locale}.json`);
+              const x=JSON.parse(await readFile(p,'utf8'));
+              if(!x.sections?.length) throw new Error(`No sections in ${p}`);
+            }
+            for(const legacy of ['current.json','en-archive.json','saudi-en.json']){
+              try{await access(join('content/articles',slug,'fulltext',legacy)); throw new Error(`Legacy file still exists: ${slug}/${legacy}`)}catch(e){if(e.code!=='ENOENT')throw e;}
+            }
+          }
+          const cat=JSON.parse(await readFile('content/catalog.json','utf8'));
+          if(cat.fulltext.localized?.length!==2) throw new Error('Expected 2 localized records');
+          if('saudi_en' in cat.fulltext) throw new Error('saudi_en remains');
+          NODE
+
+          node --test tests/keyword-case.test.mjs tests/comak-english-fulltext.test.mjs
+          git diff --check
+          npm ci --no-audit --no-fund
+          npm run build
+
+          grep -q 'Saudi Arabia’s pledge to achieve Vision 2030' dist/client/en/articles/saudi-arabias-complex-cultural-hedging-between-the-us-and-china/index.html
+          grep -q 'Power Transition and Geoeconomic Connectivity: The Belt and Road Initiative and the Middle Corridor' dist/client/en/articles/power-transition-and-geoeconomic-connectivity-in-eurasia-on-the-55th-anniversary-of-turkiye-china-diplomatic-relations/index.html
+
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content scripts app tests
+          git diff --cached --quiet && { echo 'No changes'; exit 0; }
+          git commit -m 'Start V7I4 locale-split full-text migration'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced; refusing push'; exit 1; }
+          git push origin HEAD:main
