@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_ENG-6-29.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2023-08-03",
+  "accepted_date": "2023-10-20",
+  "published_online_date": "2023-12-01"
 }
