@@ -1,0 +1,103 @@
+name: Fix V7I4 auditor false positive
+
+on:
+  push:
+    branches:
+      - automation/v7i4-final-regression-fix
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    name: Restore Aviation360 and validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      CI: "true"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore canonical source text, fully validate, and fast-forward main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+
+          cat > /tmp/fix-v7i4-auditor.py <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path.cwd()
+          saudi = root / "content/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi/fulltext/en.json"
+          mao = root / "content/articles/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/fulltext/en.json"
+          iqbal = root / "content/articles/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/fulltext/en.json"
+
+          data = json.loads(saudi.read_text(encoding="utf-8"))
+          raw = json.dumps(data, ensure_ascii=False)
+          broken = "AviationTeam (2024)"
+          canonical = "Aviation360 Team (2024)"
+          if broken in raw:
+              raw = raw.replace(broken, canonical)
+              data = json.loads(raw)
+              saudi.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          check = saudi.read_text(encoding="utf-8")
+          assert canonical in check, "canonical Aviation360 Team citation is missing"
+          assert broken not in check, "auditor false-positive form remains"
+
+          mao_text = mao.read_text(encoding="utf-8")
+          iqbal_text = iqbal.read_text(encoding="utf-8")
+          assert "clas479 sical" not in mao_text, "Mao PDF page artifact regressed"
+          assert "consolida471 tion" not in iqbal_text, "Iqbal PDF page artifact regressed"
+          PY
+
+          validate_v7i4() {
+            python /tmp/fix-v7i4-auditor.py
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test \
+              tests/comak-english-fulltext.test.mjs \
+              tests/current-issue-copy.test.mjs \
+              tests/iqbal-english-fulltext.test.mjs \
+              tests/jordan-english-fulltext.test.mjs \
+              tests/keyword-case.test.mjs \
+              tests/koshy-english-fulltext.test.mjs \
+              tests/mao-english-fulltext.test.mjs
+            git diff --check
+          }
+
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v7i4-false-positive-validate "$BASE"
+          validate_v7i4
+          npm ci --no-audit --no-fund
+          npm test
+          npm run lint
+
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+
+          for ATTEMPT in 1 2 3 4 5 6 7 8; do
+            git fetch origin main
+            FINAL_BASE="$(git rev-parse origin/main)"
+            git checkout -B v7i4-false-positive-final "$FINAL_BASE"
+            validate_v7i4
+
+            if git diff --quiet; then
+              echo 'Aviation360 citation is already canonical on latest main.'
+              exit 0
+            fi
+
+            git add content app
+            git commit -m 'Restore Aviation360 citation in V7I4 English full text'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$FINAL_BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced during attempt $ATTEMPT; rebasing exact fix onto latest main"
+          done
+
+          echo 'main kept advancing; refusing unsafe push after eight attempts'
+          exit 1
