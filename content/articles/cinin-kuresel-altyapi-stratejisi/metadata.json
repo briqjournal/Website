@@ -1,27 +1,82 @@
 {
-  "slug": "cinin-kuresel-altyapi-stratejisi",
-  "volume": 7,
-  "issue": 4,
-  "year": "2026",
-  "author": "Sanoop Sajan Koshy",
-  "pages": "497-500",
-  "published_online_date": "2026-09-01",
-  "orcids": [
-    "0000-0002-9000-4456"
+  "schemaVersion": 2,
+  "id": "cinin-kuresel-altyapi-stratejisi",
+  "articleType": {
+    "id": "book-review",
+    "tr": "Kitap İncelemesi",
+    "en": "Book Review",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "China’s Global Infrastructure Strategy",
+    "tr": "Çin’in Küresel Altyapı Stratejisi"
+  },
+  "authors": [
+    {
+      "displayName": "Sanoop Sajan Koshy",
+      "givenName": "Sanoop Sajan",
+      "familyName": "Koshy",
+      "orcid": "https://orcid.org/0000-0002-9000-4456",
+      "affiliations": [
+        {
+          "name": "Indian Institute of Technology Madras",
+          "nameTr": null,
+          "nameEn": "Indian Institute of Technology Madras",
+          "country": "India",
+          "ror": null
+        }
+      ]
+    }
   ],
-  "shared_bilingual_pdf": false,
-  "season_en": "Autumn",
-  "title_en": "China’s Global Infrastructure Strategy",
-  "abstract_en": "Abstract \n Strange, A. M. (2024). Chinese Global Infrastructure. (Elements in Global China). Cambridge University Press.",
-  "citation_en": "Koshy, S. S. (2026). China’s global infrastructure strategy. [Review of Chinese Global Infrastructure by A. M. Strange, 2024, Cambridge University Press]. BRIQ Belt & Road Initiative Quarterly, 7(4), 497-500.",
-  "source_en": "https://briqjournal.com/en/chinas-global-infrastructure-strategy",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Sanoop%20Sajan%20Koshy%20-%20BOOK%20REVIEW%20-%20China%E2%80%99s%20Global%20Infrastructure%20Strategy.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/cinin-kuresel-altyapi-stratejisi-en.pdf",
-  "season_tr": "Sonbahar",
-  "title_tr": "Çin’in Küresel Altyapı Stratejisi",
-  "abstract_tr": "Strange, A. M. (2024). Chinese Global Infrastructure. (Elements in Global China). Cambridge University Press.",
-  "citation_tr": "Koshy, S. S. (2026). Çin’in küresel altyapı stratejisi. [A. M. Strange’ın Chinese Global Infrastructure adlı kitabının incelemesi, 2024, Cambridge University Press]. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(4), 497-500.",
-  "source_tr": "https://briqjournal.com/cinin-kuresel-altyapi-stratejisi",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Sanoop%20Sajan%20Koshy%20-%20Kitap%20%C4%B0nceleme%20-%20%C3%87in%E2%80%99in%20K%C3%BCresel%20Altyap%C4%B1%20Stratejisi.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/cinin-kuresel-altyapi-stratejisi-tr.pdf"
+  "abstract": {
+    "en": "Strange, A. M. (2024). Chinese Global Infrastructure. (Elements in Global China). Cambridge University Press.",
+    "tr": "Strange, A. M. (2024). Chinese Global Infrastructure. (Elements in Global China). Cambridge University Press."
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2026-09-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 4,
+    "year": 2026,
+    "season": {"en": "Autumn", "tr": "Sonbahar"}
+  },
+  "pages": {"first": "497", "last": "500"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Koshy, S. S. (2026). China’s global infrastructure strategy. [Review of Chinese Global Infrastructure by A. M. Strange, 2024, Cambridge University Press]. BRIQ Belt & Road Initiative Quarterly, 7(4), 497-500.",
+    "tr": "Koshy, S. S. (2026). Çin’in küresel altyapı stratejisi. [A. M. Strange’ın Chinese Global Infrastructure adlı kitabının incelemesi, 2024, Cambridge University Press]. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(4), 497-500."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/chinas-global-infrastructure-strategy",
+    "tr": "https://briqjournal.com/cinin-kuresel-altyapi-stratejisi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Sanoop%20Sajan%20Koshy%20-%20BOOK%20REVIEW%20-%20China%E2%80%99s%20Global%20Infrastructure%20Strategy.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Sanoop%20Sajan%20Koshy%20-%20Kitap%20%C4%B0nceleme%20-%20%C3%87in%E2%80%99in%20K%C3%BCresel%20Altyap%C4%B1%20Stratejisi.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/cinin-kuresel-altyapi-stratejisi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/cinin-kuresel-altyapi-stratejisi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
