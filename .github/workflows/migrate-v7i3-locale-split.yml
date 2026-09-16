@@ -35,24 +35,16 @@ jobs:
 
           function repairEnglishReference(slug, ref) {
             let text = normalize(ref.text);
-
-            // PDF extraction frequently inserts whitespace inside a terminal URL/DOI.
-            // Compact only that terminal machine-readable tail, never prose globally.
             const httpIndex = text.search(/https?:\/\//i);
             if (httpIndex >= 0) {
               text = text.slice(0, httpIndex) + text.slice(httpIndex).replace(/\s+/g, '');
             } else {
               const doiIndex = text.search(/\bdoi:\s*10\./i);
-              if (doiIndex >= 0) {
-                text = text.slice(0, doiIndex) + text.slice(doiIndex).replace(/\s+/g, '');
-              }
+              if (doiIndex >= 0) text = text.slice(0, doiIndex) + text.slice(doiIndex).replace(/\s+/g, '');
             }
-
-            // Normalize citation typography damaged by PDF line wrapping.
             text = text.replace(/(\d)\s+\((\d+)\)/g, '$1($2)');
             text = text.replace(/(\d)[–-]\s+(\d)/g, '$1–$2');
 
-            // Verified against the official English PDFs / authoritative DOI record.
             if (slug === MORGAN && ref.id === 'ref-52' && /Osaka:\s*Sōgen-$/u.test(text)) {
               text = 'Yoshida, T. (2016). Nichibei gōdō iinkai no kenkyū: Nazo no kenryoku kōzō no shōtai ni semaru. Osaka: Sōgensha.';
             }
@@ -63,7 +55,6 @@ jobs:
               if (ref.id === 'ref-56') text = text.replace('https://10.5564/mjia.v20i0.1023', 'https://doi.org/10.5564/mjia.v20i0.1023');
               if (ref.id === 'ref-58') text = text.replace('Ев разийн', 'Евразийн').replace('[ Mongolia', '[Mongolia');
             }
-
             return { ...ref, text };
           }
 
@@ -95,9 +86,7 @@ jobs:
               fs.rmSync(currentPath);
             }
 
-            if (!fs.existsSync(enPath) || !fs.existsSync(trPath)) {
-              throw new Error(`Canonical locale pair missing after migration: ${slug}`);
-            }
+            if (!fs.existsSync(enPath) || !fs.existsSync(trPath)) throw new Error(`Canonical locale pair missing after migration: ${slug}`);
             for (const legacy of ['current.json', 'en-archive.json', 'saudi-en.json']) {
               const p = path.join(dir, legacy);
               if (fs.existsSync(p)) fs.rmSync(p);
@@ -122,27 +111,31 @@ jobs:
               const text = normalize(ref.text);
               if (/[-–—]\s*$/.test(text)) suspicious.push(`${slug} ${ref.id}: reference ends abruptly: ${text}`);
               const httpIndex = text.search(/https?:\/\//i);
-              if (httpIndex >= 0 && /\s/.test(text.slice(httpIndex))) {
-                suspicious.push(`${slug} ${ref.id}: whitespace remains inside terminal URL: ${text}`);
-              }
+              if (httpIndex >= 0 && /\s/.test(text.slice(httpIndex))) suspicious.push(`${slug} ${ref.id}: whitespace remains inside terminal URL: ${text}`);
               const doiIndex = text.search(/\bdoi:\s*10\./i);
-              if (doiIndex >= 0 && /\s/.test(text.slice(doiIndex))) {
-                suspicious.push(`${slug} ${ref.id}: whitespace remains inside DOI: ${text}`);
-              }
+              if (doiIndex >= 0 && /\s/.test(text.slice(doiIndex))) suspicious.push(`${slug} ${ref.id}: whitespace remains inside DOI: ${text}`);
             }
 
-            // Page-number artifacts belong in narrative/figure text, not between
-            // adjacent bibliography entries whose DOI may naturally end in digits.
             const narrative = narrativeText(en);
             const embeddedRegex = /(?<=[A-Za-z])\d{3}\s+(?=[A-Za-z])/g;
-            const matches = [...narrative.matchAll(embeddedRegex)];
-            for (const match of matches) {
+            for (const match of narrative.matchAll(embeddedRegex)) {
               const start = Math.max(0, match.index - 55);
               const end = Math.min(narrative.length, match.index + match[0].length + 55);
               suspicious.push(`${slug}: possible embedded PDF page token "${match[0]}" in …${narrative.slice(start, end).replace(/\n/g, ' ')}…`);
             }
             console.log(`OK ${slug}: EN ${en.sections.length} sections / TR ${tr.sections.length} sections`);
           }
+
+          // Catalog membership is data, not a runtime slug exception. Register the
+          // canonical pairs and remove the same slugs from all legacy collections.
+          const catalogPath = 'content/catalog.json';
+          const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+          const issueSlugs = new Set(issue.articles);
+          const localized = new Set([...(catalog.fulltext?.localized ?? []), ...issue.articles]);
+          catalog.fulltext.localized = catalog.article_order.filter((slug) => localized.has(slug));
+          catalog.fulltext.current = (catalog.fulltext.current ?? []).filter((slug) => !issueSlugs.has(slug));
+          catalog.fulltext.en_archive = (catalog.fulltext.en_archive ?? []).filter((slug) => !issueSlugs.has(slug));
+          fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 2) + '\n');
 
           if (suspicious.length) {
             console.error('\nSuspicious English extraction artifacts:');
@@ -155,7 +148,7 @@ jobs:
           import fs from 'node:fs';
           const issue = JSON.parse(fs.readFileSync('content/issues/v07-i03.json', 'utf8'));
           const slugs = JSON.stringify(issue.articles, null, 2);
-          fs.writeFileSync('tests/v7i3-locale-fulltext.test.mjs', `import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport fs from 'node:fs';\nimport path from 'node:path';\n\nconst slugs = ${slugs};\n\ntest('V7I3 uses only canonical locale-split full-text files', () => {\n  assert.equal(slugs.length, 8);\n  for (const slug of slugs) {\n    const dir = path.join('content', 'articles', slug, 'fulltext');\n    const names = fs.readdirSync(dir).sort();\n    assert.deepEqual(names, ['en.json', 'tr.json'], slug);\n    const en = JSON.parse(fs.readFileSync(path.join(dir, 'en.json'), 'utf8'));\n    const tr = JSON.parse(fs.readFileSync(path.join(dir, 'tr.json'), 'utf8'));\n    assert.ok(en.sections?.length, \`missing EN sections: \${slug}\`);\n    assert.ok(tr.sections?.length, \`missing TR sections: \${slug}\`);\n    const enText = en.sections.flatMap((s) => [s.title, ...(s.paragraphs ?? [])]).join(' ');\n    const trText = tr.sections.flatMap((s) => [s.title, ...(s.paragraphs ?? [])]).join(' ');\n    assert.notEqual(enText, trText, \`EN must not fall back to TR: \${slug}\`);\n  }\n});\n`);
+          fs.writeFileSync('tests/v7i3-locale-fulltext.test.mjs', `import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport fs from 'node:fs';\nimport path from 'node:path';\n\nconst slugs = ${slugs};\n\ntest('V7I3 uses only canonical locale-split full-text files', () => {\n  assert.equal(slugs.length, 8);\n  const catalog = JSON.parse(fs.readFileSync('content/catalog.json', 'utf8'));\n  for (const slug of slugs) {\n    const dir = path.join('content', 'articles', slug, 'fulltext');\n    const names = fs.readdirSync(dir).sort();\n    assert.deepEqual(names, ['en.json', 'tr.json'], slug);\n    assert.ok(catalog.fulltext.localized.includes(slug), \`not registered as localized: \${slug}\`);\n    assert.ok(!catalog.fulltext.current.includes(slug), \`still registered as current: \${slug}\`);\n    assert.ok(!catalog.fulltext.en_archive.includes(slug), \`still registered as archive: \${slug}\`);\n    const en = JSON.parse(fs.readFileSync(path.join(dir, 'en.json'), 'utf8'));\n    const tr = JSON.parse(fs.readFileSync(path.join(dir, 'tr.json'), 'utf8'));\n    assert.ok(en.sections?.length, \`missing EN sections: \${slug}\`);\n    assert.ok(tr.sections?.length, \`missing TR sections: \${slug}\`);\n    const enText = en.sections.flatMap((s) => [s.title, ...(s.paragraphs ?? [])]).join(' ');\n    const trText = tr.sections.flatMap((s) => [s.title, ...(s.paragraphs ?? [])]).join(' ');\n    assert.notEqual(enText, trText, \`EN must not fall back to TR: \${slug}\`);\n  }\n});\n`);
           JS
 
           apply_and_validate() {
