@@ -1,66 +1,159 @@
-name: Deep audit Volume 6 Issue 4 references
+name: Finalize Volume 6 Issue 4 source cleanup
 on:
   push:
     branches: [automation/v6i4-fulltext]
     paths: [.github/workflows/v6i4-audit.yml]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  audit:
+  fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Audit latest main references and formatting
+      - name: Apply final source and formatting corrections to latest main
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
-          git checkout --detach origin/main
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v6i4-final-fix "$BASE"
           python3 - <<'PY'
           from pathlib import Path
-          import json,re,difflib
-          issue=json.loads(Path('content/issues/v06-i04.json').read_text(encoding='utf-8'))
-          print('MAIN',__import__('subprocess').check_output(['git','rev-parse','HEAD'],text=True).strip())
-          def key(text):
-            text=text.lower()
-            text=re.sub(r'https?://\S+','',text)
-            text=re.sub(r'[^a-z0-9а-яçğıöşü]+',' ',text)
-            return ' '.join(text.split())[:100]
-          url_bad=re.compile(r'https?://\s|https?://\S*\s+\.(?:com|org|net|edu)|\.(?:com|org|net|edu)\s+[/a-z0-9]|https?://[^ ]*\s+[a-z0-9_-]+\.(?:com|org|net)',re.I)
-          split_bad=re.compile(r'\b(?:[A-Za-z]{2,})-\s+[A-Za-z]{2,}\b')
+          import json,re
+
+          ROOT=Path('.')
+          issue=json.loads((ROOT/'content/issues/v06-i04.json').read_text(encoding='utf-8'))
+
+          # Metadata punctuation cleanup plus verified Can Ulusoy dates.
           for slug in issue['articles']:
-            fp=Path('content/articles')/slug/'fulltext/current.json'
-            f=json.loads(fp.read_text(encoding='utf-8'))
-            tr=f['tr'].get('references',[]); en=f['en'].get('references',[])
-            print('\n###',slug,'TR',len(tr),'EN',len(en))
-            for loc,refs in [('TR',tr),('EN',en)]:
-              for i,r in enumerate(refs,1):
-                t=r.get('text','')
-                flags=[]
-                if 'https:// ' in t or 'http:// ' in t: flags.append('URL_AFTER_SCHEME_SPACE')
-                if re.search(r'\.(?:com|org|net|edu)\s+/',t,re.I): flags.append('URL_DOMAIN_SPACE')
-                if re.search(r'https?://\S+\.\s+(?:com|org|net|edu)',t,re.I): flags.append('URL_DOT_SPACE_TLD')
-                if re.search(r'https?://[^ ]+\s+[A-Za-z0-9_-]+/',t): flags.append('URL_INTERNAL_SPACE')
-                if re.search(r'\b[A-Za-z]{2,}-\s+[A-Za-z]{2,}\b',t): flags.append('WORD_HYPHEN_SPACE')
-                if flags: print(loc,'REF_FLAG',i,','.join(flags),repr(t))
-            if tr and en and len(tr)!=len(en):
-              a=[key(x.get('text','')) for x in tr]; b=[key(x.get('text','')) for x in en]
-              sm=difflib.SequenceMatcher(a=a,b=b,autojunk=False)
-              for tag,i1,i2,j1,j2 in sm.get_opcodes():
-                if tag!='equal':
-                  print('DIFF',tag,'TR',i1+1,i2,'EN',j1+1,j2)
-                  for i in range(i1,i2): print('  TR',i+1,tr[i].get('text',''))
-                  for j in range(j1,j2): print('  EN',j+1,en[j].get('text',''))
-            for loc in ('tr','en'):
-              d=f[loc]
-              ids=[str(n.get('id')) for n in d.get('footnotes',[])]
-              if len(ids)!=len(set(ids)): print(loc.upper(),'DUP_FOOTNOTE_IDS',ids)
-              # scan body for PDF soft-hyphen-style artifacts that should not appear on web
-              for si,s in enumerate(d.get('sections',[]),1):
-                for pi,p in enumerate(s.get('paragraphs',[]),1):
-                  hits=re.findall(r'\b[A-Za-z]{3,}-(?:[A-Za-z]{2,})\b',p)
-                  suspects=[h for h in hits if h.lower() in {'chi-nese','de-mocracy','presen-tations','interpre-tation','roman-ticism','en-throning','pur-ist','re-formist','re-juvenation','uncomplicat-edly','suffi-ciently','char-acters','pe-riod','de-bates','orga-nizations','se-cret','chi-na','cen-tury','mo-ve-ments'}]
-                  if suspects: print(loc.upper(),'BODY_FLAG',si,pi,suspects,repr(p[:220]))
+            p=ROOT/'content/articles'/slug/'metadata.json'
+            m=json.loads(p.read_text(encoding='utf-8'))
+            for field in ('title_tr','title_en','abstract_tr','abstract_en','citation_tr','citation_en'):
+              v=m.get(field)
+              if isinstance(v,str):
+                v=re.sub(r'\s+',' ',v.replace('\u00a0',' ')).strip()
+                v=re.sub(r'\s+([,.;:?!])',r'\1',v)
+                m[field]=v
+            if slug=='genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme':
+              m['received_date']='2025-02-05'
+              m['accepted_date']='2025-05-01'
+            p.write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          # Kolosovskiy: restore two references omitted from the Turkish extraction.
+          kp=ROOT/'content/articles/rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve/fulltext/current.json'
+          k=json.loads(kp.read_text(encoding='utf-8'))
+          tr=k['tr'].get('references',[]); en=k['en'].get('references',[])
+          def ident(t):
+            t=t.lower()
+            t=re.sub(r'https?://\S+','',t)
+            return re.sub(r'\W+',' ',t).strip()
+          have={ident(r.get('text','')) for r in tr}
+          for r in en:
+            rid=ident(r.get('text',''))
+            if rid and rid not in have and (r.get('text','').startswith('Ўзбекистон Республикаси Олий суди.') or r.get('text','').startswith('Эргашев, Б. (2024).')):
+              tr.append({'id':'','text':r.get('text','')})
+              have.add(rid)
+
+          # In this bibliography the URL is always the final part of each entry; remove PDF line-break spaces only inside that URL suffix.
+          def clean_k_ref(text):
+            text=re.sub(r'\s+',' ',text.replace('\u00a0',' ')).strip()
+            text=re.sub(r'\s+([,.;:?!])',r'\1',text)
+            m=re.search(r'https?://',text)
+            if m:
+              prefix=text[:m.start()].rstrip()
+              url=re.sub(r'\s+','',text[m.start():])
+              text=(prefix+' '+url).strip()
+            return text
+          for loc in ('tr','en'):
+            refs=k[loc].get('references',[])
+            for i,r in enumerate(refs,1):
+              r['id']=f'ref-{i}'
+              r['text']=clean_k_ref(r.get('text',''))
+          kp.write_text(json.dumps(k,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          # WEF: one remaining scheme-breaking PDF line wrap.
+          wp=ROOT/'content/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/fulltext/current.json'
+          w=json.loads(wp.read_text(encoding='utf-8'))
+          for loc in ('tr','en'):
+            for r in w[loc].get('references',[]):
+              r['text']=r.get('text','').replace('https:// www.','https://www.').replace('http:// www.','http://www.')
+          wp.write_text(json.dumps(w,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          # Young China: clear extraction-only spaces; retain genuine TR/EN bibliographic differences.
+          yp=ROOT/'content/articles/genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme/fulltext/current.json'
+          y=json.loads(yp.read_text(encoding='utf-8'))
+          for loc in ('tr','en'):
+            for r in y[loc].get('references',[]):
+              t=r.get('text','')
+              t=t.replace('/download/ pdf/','/download/pdf/')
+              t=t.replace('A NewLiterary History','A New Literary History')
+              if loc=='tr': t=t.replace('Ç in Kom ünist Partisi Nasıl Y ö netiliyor?', 'Çin Komünist Partisi Nasıl Yönetiliyor?')
+              r['text']=t
+          yp.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          # Refine Can Ulusoy affiliation to match the issue PDF byline plus department biography.
+          ap=ROOT/'app/authors.ts'
+          a=ap.read_text(encoding='utf-8')
+          a=a.replace('tr: "Kapadokya Üniversitesi, Siyaset Bilimi ve Uluslararası İlişkiler Bölümü, Türkiye",\n    en: "Department of Political Science and International Relations, Cappadocia University, Türkiye",',
+                      'tr: "Kapadokya Üniversitesi, İktisadi, İdari ve Sosyal Bilimler Fakültesi, Siyaset Bilimi ve Uluslararası İlişkiler Bölümü, Türkiye",\n    en: "Faculty of Economics, Administrative and Social Sciences, Department of Political Science and International Relations, Cappadocia University, Türkiye",')
+          ap.write_text(a,encoding='utf-8')
           PY
+
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,re
+          issue=json.loads(Path('content/issues/v06-i04.json').read_text(encoding='utf-8'))
+          k=json.loads(Path('content/articles/rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve/fulltext/current.json').read_text())
+          assert len(k['tr']['references'])==70, len(k['tr']['references'])
+          assert len(k['en']['references'])==70, len(k['en']['references'])
+          for loc in ('tr','en'):
+            assert [r['id'] for r in k[loc]['references']]==[f'ref-{i}' for i in range(1,71)]
+            assert any(r['text'].startswith('Ўзбекистон Республикаси Олий суди.') for r in k[loc]['references'])
+            assert any(r['text'].startswith('Эргашев, Б. (2024).') for r in k[loc]['references'])
+            for r in k[loc]['references']:
+              t=r['text']; m=re.search(r'https?://',t)
+              if m: assert not re.search(r'\s',t[m.start():]), (loc,t)
+          w=json.loads(Path('content/articles/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/fulltext/current.json').read_text())
+          assert len(w['tr']['references'])==35 and len(w['en']['references'])==35
+          assert 'https:// www.' not in ' '.join(r['text'] for r in w['tr']['references'])
+          y=json.loads(Path('content/articles/genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme/fulltext/current.json').read_text())
+          assert len(y['tr']['references'])==29 and len(y['en']['references'])==28
+          yall=' '.join(r['text'] for loc in ('tr','en') for r in y[loc]['references'])
+          assert '/download/ pdf/' not in yall and 'A NewLiterary History' not in yall
+          assert 'Ç in Kom ünist Partisi' not in yall
+          cm=json.loads(Path('content/articles/genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme/metadata.json').read_text())
+          assert cm['received_date']=='2025-02-05' and cm['accepted_date']=='2025-05-01'
+          authors=Path('app/authors.ts').read_text(encoding='utf-8')
+          assert 'İktisadi, İdari ve Sosyal Bilimler Fakültesi, Siyaset Bilimi ve Uluslararası İlişkiler Bölümü' in authors
+          # preserve all explicit issue categories and prevent fake document authors from returning.
+          expected={
+            'rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve':('Araştırma Makalesi','Research Article'),
+            'brics-terore-karsi-mucadele-stratejisi':('Zirve Bildirisi','Summit Declaration'),
+            'sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan':('Zirve Bildirisi','Summit Declaration'),
+            'dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi':('Araştırma Makalesi','Research Article'),
+            'genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme':('Araştırma Makalesi','Research Article'),
+            'wape-18-yillik-forumu':('Konferans Raporu','Conference Report'),
+            'hallac-siir':('Şiir','Poem'),'doksan-yedinci-sonnet-siir':('Şiir','Poem')}
+          for slug in issue['articles']:
+            m=json.loads((Path('content/articles')/slug/'metadata.json').read_text())
+            assert (m['publication_type_tr'],m['publication_type_en'])==expected[slug]
+            if slug in ('brics-terore-karsi-mucadele-stratejisi','sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan','wape-18-yillik-forumu'):
+              assert m['author']==''
+          print('Final V6I4 source audit passed')
+          PY
+
+          git diff --check
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content app/authors.ts
+          if git diff --cached --quiet; then echo 'No changes required'; exit 0; fi
+          git commit -m 'Complete Volume 6 Issue 4 source audit'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced during audit; refusing push'; exit 1; }
+          git push origin HEAD:main
