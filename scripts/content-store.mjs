@@ -2,12 +2,18 @@ import { readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 const safeSlug = /^[a-z0-9-]+$/;
+const comakArticleSlug = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
+const comakMissingReference = {
+  id: "ref-25a",
+  text: "Tekdal, V. (2023). Özgün Ama Tanıdık: Piyasa Temelli Bir Olgu Olarak Çin’in Uluslararası Altyapı Yatırımları. Mülkiye Dergisi, 47(4), 1331-1353. https://doi.org/10.25064/mulkiye.1300476",
+};
+
 const keywordSpacingFixes = new Map([
   ["BeltandRoadInitiative", "Belt and Road Initiative"],
   ["GlobalSouth", "Global South"],
   ["internationaldevelopmentcooperation", "international development cooperation"],
-  ["TürkiyeÇin ilişkileri", "Türkiye Çin ilişkileri"],
-  ["TürkiyeChina relations", "Türkiye China relations"],
+  ["TürkiyeÇin ilişkileri", "Türkiye-Çin ilişkileri"],
+  ["TürkiyeChina relations", "Türkiye-China relations"],
 ]);
 
 export const bilingualKeywordParityOverrides = new Map([
@@ -36,10 +42,10 @@ export const bilingualKeywordParityOverrides = new Map([
     tr: ["Çin", "çok boyutlu kültürel dengeleme", "hedging stratejisi", "Suudi Arabistan", "ABD"],
     en: ["China", "complex cultural hedging", "hedging strategy", "Saudi Arabia", "US"],
   }],
-  ["turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik", {
+  [comakArticleSlug, {
     source: "tr",
-    tr: ["güç geçişi", "jeoekonomik bağlantısallık", "Kuşak ve Yol Girişimi", "Orta Koridor", "Türkiye Çin ilişkileri"],
-    en: ["power transition", "geoeconomic connectivity", "Belt and Road Initiative", "Middle Corridor", "Türkiye China relations"],
+    tr: ["güç geçişi", "jeoekonomik bağlantısallık", "Kuşak ve Yol Girişimi", "Orta Koridor", "Türkiye-Çin ilişkileri"],
+    en: ["power transition", "geoeconomic connectivity", "Belt and Road Initiative", "Middle Corridor", "Türkiye-China relations"],
   }],
   ["filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun", {
     source: "en",
@@ -148,6 +154,36 @@ function normalizeFullTextKeywords(record, slug) {
   return record;
 }
 
+function repairComakArticleFullText(record, slug) {
+  if (slug !== comakArticleSlug || !record?.tr || !record?.en) return record;
+
+  const repairHeading = (locale, prefix, continuation) => {
+    const sections = record[locale]?.sections;
+    if (!Array.isArray(sections)) return;
+    const historical = sections.find((section) => section.id === `${locale}-section-4`);
+    const connectivity = sections.find((section) => section.id === `${locale}-section-5`);
+    if (historical?.paragraphs) {
+      historical.paragraphs = historical.paragraphs.filter((paragraph) => paragraph.trim() !== prefix);
+    }
+    if (connectivity) connectivity.title = `${prefix} ${continuation}`;
+  };
+
+  repairHeading("tr", "Güç Geçişi ve Jeoekonomik Bağlantısallık:", "Kuşak ve Yol Girişimi ile Orta Koridor");
+  repairHeading("en", "Power Transition and Geoeconomic Connectivity:", "The Belt and Road Initiative and the Middle Corridor");
+
+  for (const locale of ["tr", "en"]) {
+    const references = record[locale]?.references;
+    if (!Array.isArray(references)) continue;
+    if (!references.some((reference) => reference.text?.includes("10.25064/mulkiye.1300476"))) {
+      const laterTekdal = references.findIndex((reference) => reference.text?.startsWith("Tekdal, V. (2024)"));
+      const insertAt = laterTekdal >= 0 ? laterTekdal : references.length;
+      references.splice(insertAt, 0, { ...comakMissingReference });
+    }
+  }
+
+  return record;
+}
+
 export async function loadCatalog(root = process.cwd()) {
   const catalog = await readJson(join(root, "content/catalog.json"));
   assert(Array.isArray(catalog.issue_order), "content/catalog.json must define issue_order.");
@@ -213,7 +249,8 @@ export async function buildArchiveData(root = process.cwd()) {
 
 async function readFullTextRecord(root, slug, file) {
   assertSlug(slug, file);
-  return normalizeFullTextKeywords(await readJson(join(root, "content/articles", slug, "fulltext", file)), slug);
+  const record = normalizeFullTextKeywords(await readJson(join(root, "content/articles", slug, "fulltext", file)), slug);
+  return repairComakArticleFullText(record, slug);
 }
 
 export async function loadFullTextCollections(root = process.cwd()) {
