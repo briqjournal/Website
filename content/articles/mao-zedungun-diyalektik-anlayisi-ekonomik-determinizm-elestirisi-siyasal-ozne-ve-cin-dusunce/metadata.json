@@ -1,30 +1,82 @@
 {
-  "slug": "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce",
-  "volume": 7,
-  "issue": 4,
-  "year": "2026",
-  "author": "Can Ulusoy",
-  "pages": "477-496",
-  "published_online_date": "2026-09-01",
-  "received_date": "2026-06-07",
-  "revised_date": "2026-08-02",
-  "accepted_date": "2026-08-03",
-  "orcids": [
-    "0000-0002-4465-3201"
+  "schemaVersion": 2,
+  "id": "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce",
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Mao Zedong’s Dialectical Understanding: Critique of Economic Determinism, the Political Subject, and the Chinese Intellectual Tradition",
+    "tr": "Mao Zedung’un Diyalektik Anlayışı: Ekonomik Determinizm Eleştirisi, Siyasal Özne ve Çin Düşünce Geleneği"
+  },
+  "authors": [
+    {
+      "displayName": "Can Ulusoy",
+      "givenName": "Can",
+      "familyName": "Ulusoy",
+      "orcid": "https://orcid.org/0000-0002-4465-3201",
+      "affiliations": [
+        {
+          "name": "Department of Political Science and International Relations, Cappadocia University",
+          "nameTr": "Kapadokya Üniversitesi, Siyaset Bilimi ve Uluslararası İlişkiler Bölümü",
+          "nameEn": "Department of Political Science and International Relations, Cappadocia University",
+          "country": "Türkiye",
+          "ror": null
+        }
+      ]
+    }
   ],
-  "shared_bilingual_pdf": false,
-  "season_en": "Autumn",
-  "title_en": "Mao Zedong’s Dialectical Understanding: Critique of Economic Determinism, the Political Subject, and the Chinese Intellectual Tradition",
-  "abstract_en": "Abstract \n This study examines Mao Zedong’s understanding of dialectics and its political implications. It evaluates Mao’s thought through three principal dimensions: his critique of economic determinism and bureaucratic-technocratic socialism, his emphasis on the constitutive role of the masses in political struggle, and his engagement with China’s traditional intellectual heritage. Mao’s dialectical approach is examined comparatively in relation to Stalin’s interpretation of historical materialism. The findings show that Mao’s understanding of dialectics departs significantly from the classical Soviet approach centered on the economic base by emphasizing the role of culture, ideology, political struggle, and mass mobilization in social transformation. This perspective underpins his concept of the mass line, according to which socialism depends not only on the development of the productive forces but also on the active political participation of the masses. The study further argues that Mao’s dialectical thought emerged through the interaction of the Chinese intellectual tradition and Marxist theory, while his effort to accelerate revolutionary transformation through social contradictions generated a tension between traditional Chinese dialectics and the modern revolutionary-progressivist worldview. Consequently, Mao Zedong Thought offers an original theoretical framework for understanding economic determinism, the political subject, and social transformation.",
-  "citation_en": "Ulusoy, C. (2026). Mao Zedong’s Dialectical Understanding: Critique of Economic Determinism, the Political Subject, and the Chinese Intellectual Tradition. BRIQ Belt & Road Initiative Quarterly, 7(4), 477-496.",
-  "source_en": "https://briqjournal.com/en/mao-zedongs-dialectical-understanding-critique-economic-determinism-the-political-subject-and-the",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Can%20Ulusoy%20-%20Mao%20Zedong%E2%80%99s%20Dialectical%20Understanding%20Critique%20of%20Economic.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce-en.pdf",
-  "season_tr": "Sonbahar",
-  "title_tr": "Mao Zedung’un Diyalektik Anlayışı: Ekonomik Determinizm Eleştirisi, Siyasal Özne ve Çin Düşünce Geleneği",
-  "abstract_tr": "Bu çalışma, Mao Zedung’un diyalektik anlayışını ve bu anlayışın siyasal sonuçlarını incelemeyi amaçlamaktadır. Araştırma, Mao’nun düşüncesini üç temel eksen üzerinden değerlendirmektedir: Ekonomik determinizm ve bürokratik-teknokratik sosyalizm eleştirisi, kitlelerin siyasal mücadeledeki kurucu rolüne yaptığı vurgu ve Çin’in geleneksel düşünce mirasıyla kurduğu ilişki. Mao’nun diyalektiği, Sovyet Marksizmi ve özellikle Stalin’in tarihsel materyalizm yorumu ile karşılaştırmalı olarak ele alınmıştır. Araştırma sonucunda Mao’nun diyalektik anlayışının ekonomik altyapıyı merkeze alan klasik Sovyet yaklaşımından önemli ölçüde ayrıldığı tespit edilmiştir. Mao, toplumsal dönüşüm sürecinde kültürün, ideolojinin, siyasal mücadelenin ve kitlesel seferberliğin belirleyici rolünü vurgulamaktadır. Bu yaklaşım, onun kitle çizgisi anlayışının teorik temelini oluşturmaktadır. Mao’ya göre sosyalizmin gelişimi yalnızca üretici güçlerin ilerlemesine değil, kitlelerin siyasal süreçlere aktif katılımına da bağlıdır. Bu nedenle Stalin döneminde kurumsallaşan teknokratik ve bürokratik eğilimler Mao tarafından eleştirilmiştir. Çalışma, Mao’nun diyalektik anlayışının Çin düşünce geleneği ile Marksist teorinin etkileşimi içinde şekillendiğini ortaya koymaktadır. Bununla birlikte, Mao’nun siyasal pratiğinde toplumsal çelişkilerin devrimci dönüşümü hızlandıracak bir unsur olarak görülmesi, onun düşüncesinde geleneksel Çin diyalektiği ile modern ilerlemeci-devrimci anlayış arasında önemli bir gerilim yaratmıştır. Bu nedenle Mao Zedung Düşüncesi, bir siyasal ideoloji olmanın ötesinde, ekonomik determinizm, siyasal özne ve toplumsal dönüşüm ilişkilerine dair özgün tartışmalar üreten önemli bir düşünsel miras olarak değerlendirilebilir.",
-  "citation_tr": "Ulusoy, C. (2026). Mao Zedung’un Diyalektik Anlayışı: Ekonomik Determinizm Eleştirisi, Siyasal Özne ve Çin Düşünce Geleneği. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(4), 477-496.",
-  "source_tr": "https://briqjournal.com/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Can%20Ulusoy%20-%20Mao%20Zedung%E2%80%99un%20Diyalektik%20Anlay%C4%B1%C5%9F%C4%B1%20Ekonomik%20Determinizm%20Ele%C5%9Ftirisi%2C%20Siyasal%20%C3%96zne%20ve%20%C3%87in%20D%C3%BC%C5%9F%C3%BCnce%20Gelene%C4%9Fi.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce-tr.pdf"
+  "abstract": {
+    "en": "This study examines Mao Zedong’s understanding of dialectics and its political implications. It evaluates Mao’s thought through three principal dimensions: his critique of economic determinism and bureaucratic-technocratic socialism, his emphasis on the constitutive role of the masses in political struggle, and his engagement with China’s traditional intellectual heritage. Mao’s dialectical approach is examined comparatively in relation to Stalin’s interpretation of historical materialism. The findings show that Mao’s understanding of dialectics departs significantly from the classical Soviet approach centered on the economic base by emphasizing the role of culture, ideology, political struggle, and mass mobilization in social transformation. This perspective underpins his concept of the mass line, according to which socialism depends not only on the development of the productive forces but also on the active political participation of the masses. The study further argues that Mao’s dialectical thought emerged through the interaction of the Chinese intellectual tradition and Marxist theory, while his effort to accelerate revolutionary transformation through social contradictions generated a tension between traditional Chinese dialectics and the modern revolutionary-progressivist worldview. Consequently, Mao Zedong Thought offers an original theoretical framework for understanding economic determinism, the political subject, and social transformation.",
+    "tr": "Bu çalışma, Mao Zedung’un diyalektik anlayışını ve bu anlayışın siyasal sonuçlarını incelemeyi amaçlamaktadır. Araştırma, Mao’nun düşüncesini üç temel eksen üzerinden değerlendirmektedir: Ekonomik determinizm ve bürokratik-teknokratik sosyalizm eleştirisi, kitlelerin siyasal mücadeledeki kurucu rolüne yaptığı vurgu ve Çin’in geleneksel düşünce mirasıyla kurduğu ilişki. Mao’nun diyalektiği, Sovyet Marksizmi ve özellikle Stalin’in tarihsel materyalizm yorumu ile karşılaştırmalı olarak ele alınmıştır. Araştırma sonucunda Mao’nun diyalektik anlayışının ekonomik altyapıyı merkeze alan klasik Sovyet yaklaşımından önemli ölçüde ayrıldığı tespit edilmiştir. Mao, toplumsal dönüşüm sürecinde kültürün, ideolojinin, siyasal mücadelenin ve kitlesel seferberliğin belirleyici rolünü vurgulamaktadır. Bu yaklaşım, onun kitle çizgisi anlayışının teorik temelini oluşturmaktadır. Mao’ya göre sosyalizmin gelişimi yalnızca üretici güçlerin ilerlemesine değil, kitlelerin siyasal süreçlere aktif katılımına da bağlıdır. Bu nedenle Stalin döneminde kurumsallaşan teknokratik ve bürokratik eğilimler Mao tarafından eleştirilmiştir. Çalışma, Mao’nun diyalektik anlayışının Çin düşünce geleneği ile Marksist teorinin etkileşimi içinde şekillendiğini ortaya koymaktadır. Bununla birlikte, Mao’nun siyasal pratiğinde toplumsal çelişkilerin devrimci dönüşümü hızlandıracak bir unsur olarak görülmesi, onun düşüncesinde geleneksel Çin diyalektiği ile modern ilerlemeci-devrimci anlayış arasında önemli bir gerilim yaratmıştır. Bu nedenle Mao Zedung Düşüncesi, bir siyasal ideoloji olmanın ötesinde, ekonomik determinizm, siyasal özne ve toplumsal dönüşüm ilişkilerine dair özgün tartışmalar üreten önemli bir düşünsel miras olarak değerlendirilebilir."
+  },
+  "keywords": {
+    "en": ["dialectics", "traditional Chinese thought", "mass line", "Mao Zedong", "Mao Zedong Thought", "political subject"],
+    "tr": ["diyalektik", "geleneksel Çin düşüncesi", "kitle çizgisi", "Mao Zedung", "Mao Zedung Düşüncesi", "siyasal özne"]
+  },
+  "dates": {
+    "received": "2026-06-07",
+    "revised": "2026-08-02",
+    "accepted": "2026-08-03",
+    "published": "2026-09-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 4,
+    "year": 2026,
+    "season": {"en": "Autumn", "tr": "Sonbahar"}
+  },
+  "pages": {"first": "477", "last": "496"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Ulusoy, C. (2026). Mao Zedong’s Dialectical Understanding: Critique of Economic Determinism, the Political Subject, and the Chinese Intellectual Tradition. BRIQ Belt & Road Initiative Quarterly, 7(4), 477-496.",
+    "tr": "Ulusoy, C. (2026). Mao Zedung’un Diyalektik Anlayışı: Ekonomik Determinizm Eleştirisi, Siyasal Özne ve Çin Düşünce Geleneği. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(4), 477-496."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/mao-zedongs-dialectical-understanding-critique-economic-determinism-the-political-subject-and-the",
+    "tr": "https://briqjournal.com/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Can%20Ulusoy%20-%20Mao%20Zedong%E2%80%99s%20Dialectical%20Understanding%20Critique%20of%20Economic.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Can%20Ulusoy%20-%20Mao%20Zedung%E2%80%99un%20Diyalektik%20Anlay%C4%B1%C5%9F%C4%B1%20Ekonomik%20Determinizm%20Ele%C5%9Ftirisi%2C%20Siyasal%20%C3%96zne%20ve%20%C3%87in%20D%C3%BC%C5%9F%C3%BCnce%20Gelene%C4%9Fi.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
