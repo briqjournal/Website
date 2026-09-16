@@ -1,0 +1,40 @@
+name: Audit remaining V7I4 full texts
+on:
+  push:
+    branches: [automation/v7i4-remaining]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract English PDFs and collect sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          mkdir -p audit/iqbal audit/mao audit/koshy
+
+          curl -L --fail --retry 3 --connect-timeout 15 --max-time 120 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Iqbal%20Akhtar_The%20Paradox%20of%20Peak%20Palestinianism%20Transatlantic%20Public.pdf' -o /tmp/iqbal.pdf
+          curl -L --fail --retry 3 --connect-timeout 15 --max-time 120 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Can%20Ulusoy%20-%20Mao%20Zedong%E2%80%99s%20Dialectical%20Understanding%20Critique%20of%20Economic.pdf' -o /tmp/mao.pdf
+          curl -L --fail --retry 3 --connect-timeout 15 --max-time 120 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Sanoop%20Sajan%20Koshy%20-%20BOOK%20REVIEW%20-%20China%E2%80%99s%20Global%20Infrastructure%20Strategy.pdf' -o /tmp/koshy.pdf
+
+          for name in iqbal mao koshy; do
+            pdfinfo "/tmp/$name.pdf" > "audit/$name/pdfinfo.txt"
+            pdftotext -nopgbrk "/tmp/$name.pdf" "audit/$name/flow.txt"
+            pdftotext -layout -nopgbrk "/tmp/$name.pdf" "audit/$name/layout.txt"
+          done
+
+          cp content/articles/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/fulltext/current.json audit/iqbal/current.json
+          cp content/articles/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/fulltext/en-archive.json audit/iqbal/en-archive.json
+          cp content/articles/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/fulltext/current.json audit/mao/current.json
+          cp content/articles/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/fulltext/en-archive.json audit/mao/en-archive.json
+          cp content/articles/cinin-kuresel-altyapi-stratejisi/fulltext/current.json audit/koshy/current.json
+          cp content/articles/cinin-kuresel-altyapi-stratejisi/fulltext/en-archive.json audit/koshy/en-archive.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v7i4-remaining-audit
+          path: audit
+          retention-days: 1
