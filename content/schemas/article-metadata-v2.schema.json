@@ -22,10 +22,7 @@
   ],
   "properties": {
     "schemaVersion": { "const": 2 },
-    "id": {
-      "type": "string",
-      "pattern": "^[a-z0-9-]+$"
-    },
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
     "articleType": {
       "type": "object",
       "additionalProperties": false,
@@ -40,7 +37,7 @@
     "title": { "$ref": "#/$defs/localizedRequired" },
     "authors": {
       "type": "array",
-      "minItems": 1,
+      "minItems": 0,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -148,10 +145,7 @@
               "nameTr": { "type": ["string", "null"] },
               "nameEn": { "type": ["string", "null"] },
               "ror": { "type": ["string", "null"], "format": "uri" },
-              "awardNumbers": {
-                "type": "array",
-                "items": { "type": "string", "minLength": 1 }
-              }
+              "awardNumbers": { "type": "array", "items": { "type": "string", "minLength": 1 } }
             }
           }
         }
@@ -176,10 +170,7 @@
             "required": ["role", "authors"],
             "properties": {
               "role": { "type": "string", "minLength": 1 },
-              "authors": {
-                "type": "array",
-                "items": { "type": "string", "minLength": 1 }
-              }
+              "authors": { "type": "array", "items": { "type": "string", "minLength": 1 } }
             }
           }
         }
@@ -234,10 +225,7 @@
     },
     "references": {
       "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": true
-      }
+      "items": { "type": "object", "additionalProperties": true }
     }
   },
   "$defs": {
