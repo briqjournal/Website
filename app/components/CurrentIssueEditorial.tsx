@@ -38,7 +38,7 @@ export function CurrentIssueEditorial({
   const archivedCopy = archivedEditorials[`${volume}-${issueNumber}`]?.[locale];
   const copy = archivedCopy || {
     title: isEnglish ? "A New Era in West Asia" : "Batı Asya’da Yeni Dönem",
-    subtitle: isEnglish ? "Hegemonism Recedes, Regional Will Grows Stronger" : "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor",
+    subtitle: isEnglish ? "The Erosion of Hegemony and the Rise of Regional Agency" : "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor",
     paragraphs: isEnglish ? editorialEn : editorialTr,
   };
   const current = volume === 7 && issueNumber === 4;
