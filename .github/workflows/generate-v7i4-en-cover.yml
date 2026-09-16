@@ -1,4 +1,4 @@
-name: Generate V7I4 English cover
+name: Finalize V7I4 English issue fix
 
 on:
   push:
@@ -11,45 +11,77 @@ permissions:
   contents: write
 
 jobs:
-  generate-cover:
+  finalize:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Install PDF renderer
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
-
-      - name: Download the published English issue PDF
+      - name: Apply verified English cover and PDF fixes
         shell: bash
         run: |
           set -euo pipefail
-          curl --fail --location --retry 5 --retry-all-errors \
-            --user-agent 'BRIQ cover sync/1.0 (+https://briqjournal.com)' \
-            --output /tmp/briq-v7i4-en.pdf \
-            'https://briqjournal.com/sites/default/files/dergi-sayilari/2026-08/BRIQ%20Volume7%20Issue4%20AUTUMN%202026.pdf'
-          test "$(head -c 5 /tmp/briq-v7i4-en.pdf)" = '%PDF-'
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
 
-      - name: Render first page as the canonical English cover
+          cover = "/assets/archive/covers/cilt-7-sayi-4-en-v3.jpg"
+          english_pdf = "https://briqjournal.com/sites/default/files/dergi-sayilari/2026-08/BRIQ%20Volume7%20Issue4%20AUTUMN%202026.pdf"
+
+          def replace_once(path, old, new):
+              file = Path(path)
+              text = file.read_text(encoding="utf-8")
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f"Expected exactly one match in {path}, found {count}: {old!r}")
+              file.write_text(text.replace(old, new, 1), encoding="utf-8")
+
+          replace_once(
+              "app/components/HomeHeroSlider.tsx",
+              '      image: "/assets/current-issue.jpg",',
+              f'      image: "{cover}",',
+          )
+
+          replace_once(
+              "app/en/[...slug]/page.tsx",
+              '      coverSrc="/assets/current-issue-en.jpg"\n',
+              "",
+          )
+
+          replace_once(
+              "app/archive.ts",
+              '  return source\n    ? `/dosyalar/sayi/cilt-${record.volume}-sayi-${record.issue}/${locale}.pdf`\n    : null;',
+              '  return source || null;',
+          )
+
+          issue_path = Path("content/issues/v07-i04.json")
+          issue = json.loads(issue_path.read_text(encoding="utf-8"))
+          issue["cover_en"] = cover
+          issue["pdf_en_source"] = english_pdf
+          issue.pop("pdf_en_local", None)
+          issue_path.write_text(json.dumps(issue, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+          replace_once(
+              "scripts/localize-pdf-archive.py",
+              '    (7, 4, "en"): "/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf",',
+              '    (7, 4, "en"): "/assets/issues/briq-volume-7-issue-4-autumn-2026.pdf",',
+          )
+
+          generated_cover = Path("public/assets/archive/covers/cilt-7-sayi-4-en-v3.jpg")
+          if not generated_cover.is_file() or generated_cover.stat().st_size < 100_000:
+              raise SystemExit("Verified English cover asset is missing or unexpectedly small")
+
+          # This helper workflow is intentionally one-shot.
+          Path(".github/workflows/generate-v7i4-en-cover.yml").unlink()
+          PY
+
+      - name: Commit final fix
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p public/assets/archive/covers
-          pdftoppm -f 1 -singlefile -jpeg -r 180 -jpegopt quality=94 \
-            /tmp/briq-v7i4-en.pdf \
-            public/assets/archive/covers/cilt-7-sayi-4-en-v3
-          test -s public/assets/archive/covers/cilt-7-sayi-4-en-v3.jpg
-
-      - name: Commit generated cover
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'BRIQ Cover Bot'
+          git config user.name 'BRIQ Website Bot'
           git config user.email 'briq@briqjournal.com'
-          git add public/assets/archive/covers/cilt-7-sayi-4-en-v3.jpg
-          if git diff --cached --quiet; then
-            echo 'Cover already current.'
-            exit 0
-          fi
-          git commit -m 'Generate English Volume 7 Issue 4 cover'
+          git add -A
+          git diff --cached --check
+          git commit -m 'Fix English Volume 7 Issue 4 cover and PDF'
           git push origin HEAD:main
