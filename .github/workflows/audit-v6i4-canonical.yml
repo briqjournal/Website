@@ -1,0 +1,46 @@
+name: Audit Volume 6 Issue 4 Canonical Migration
+on:
+  push:
+    branches: [migration/v6i4-canonical]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit raw Volume 6 Issue 4 sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'JS'
+          const fs=require('fs');
+          const issue=JSON.parse(fs.readFileSync('content/issues/v06-i04.json','utf8'));
+          const report=[];
+          for(const slug of issue.articles){
+            const base=`content/articles/${slug}`;
+            const meta=JSON.parse(fs.readFileSync(`${base}/metadata.json`,'utf8'));
+            const files=fs.readdirSync(`${base}/fulltext`).filter(x=>x.endsWith('.json')).sort();
+            if(!files.includes('current.json')) throw new Error(`${slug}: current.json missing before migration`);
+            const current=JSON.parse(fs.readFileSync(`${base}/fulltext/current.json`,'utf8'));
+            if(!current.tr||!current.en) throw new Error(`${slug}: current.json lacks tr/en`);
+            const localeSummary={};
+            for(const locale of ['en','tr']){
+              const ft=current[locale];
+              const ids=(ft.sections||[]).map(s=>s.id);
+              const refs=(ft.references||[]).map(r=>typeof r==='string'?r:r?.text||'');
+              const badUrls=refs.filter(t=>{const m=t.match(/https?:\/\/[^)\]}]+/iu);return m&&/\s/u.test(m[0].replace(/\s+(?:\(?Erişim|\(?Accessed|\(?Retrieved).*$/iu,''));});
+              localeSummary[locale]={
+                keys:Object.keys(ft),
+                keywords:ft.keywords||[],
+                sections:(ft.sections||[]).length,
+                references:refs.length,
+                duplicateSectionIds:ids.filter((x,i)=>ids.indexOf(x)!==i),
+                badUrlCount:badUrls.length
+              };
+            }
+            report.push({slug,schemaVersion:meta.schemaVersion,articleType:meta.articleType?.id,metadataKeywords:meta.keywords,files,locales:localeSummary});
+          }
+          console.log(JSON.stringify(report,null,2));
+          if(report.length!==8) throw new Error(`Expected 8 contributions, got ${report.length}`);
+          JS
