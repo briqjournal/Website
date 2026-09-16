@@ -1,25 +1,65 @@
 {
   "schemaVersion": 2,
   "id": "70-yilinda-bandung-baglantisizliktan-hegemonyaciliga-karsi-milli-devletlerin-ortak-kalkinma-ve",
-  "articleType": {"id": "interview", "tr": "Röportaj", "en": "Interview", "peerReviewed": false},
+  "articleType": {
+    "id": "interview",
+    "tr": "Röportaj",
+    "en": "Interview",
+    "peerReviewed": false
+  },
   "title": {
     "en": "“70th anniversary of Bandung: from ‘non-alignment’ to shared development and cooperation of national states against hegemonism”",
     "tr": "“70. yılında Bandung: ‘Bağlantısızlık’tan, hegemonyacılığa karşı milli devletlerin ortak kalkınma ve işbirliğine”"
   },
   "authors": [
-    {"displayName": "Prof. Dr. Semih Koray", "givenName": "Semih", "familyName": "Koray", "orcid": null, "affiliations": []}
+    {
+      "displayName": "Prof. Dr. Semih Koray",
+      "givenName": "Semih",
+      "familyName": "Koray",
+      "orcid": null,
+      "affiliations": []
+    }
   ],
   "abstract": {
-    "en": "Whereas the Bandung Conference was a source of hope for humanity’s search for a new civilization, andthe Non-Aligned Movement was one of the initial stages of the road map to this civilization, today we arewitnessing the rise of a new civilization from Asia that constitutes an alternative to the imperialist systemin every sphere of life. The US offensive to destroy the national states of the developing world has led toa rediscovery of the importance of the “national state” as a key element of the Bandung spirit all over theworld. The US offensive triggered the resistance of national states and national armies. “Non-alignment,”which was a precondition for independence in the Oppressed and Developing World at the time of theBandung Conference, is no longer a decisive concept today. The Shanghai Cooperation Organization,BRICS, the Belt and Road Initiative, and related organizations and activities stand out as internationalformations in the developing world. The common characteristic of these formations is that the main factorthat unites and mobilizes the participating countries in the same direction is the common interests andgoals of the countries.",
+    "en": "Whereas the Bandung Conference was a source of hope for humanity’s search for a new civilization, and the Non-Aligned Movement was one of the initial stages of the road map to this civilization, today we are witnessing the rise of a new civilization from Asia that constitutes an alternative to the imperialist system in every sphere of life. The US offensive to destroy the national states of the developing world has led to a rediscovery of the importance of the “national state” as a key element of the Bandung spirit all over the world. The US offensive triggered the resistance of national states and national armies. “Non-alignment,” which was a precondition for independence in the Oppressed and Developing World at the time of the Bandung Conference, is no longer a decisive concept today. The Shanghai Cooperation Organization, BRICS, the Belt and Road Initiative, and related organizations and activities stand out as international formations in the developing world. The common characteristic of these formations is that the main factor that unites and mobilizes the participating countries in the same direction is the common interests and goals of the countries.",
     "tr": "Bandung Konferansı, insanlığın yeni bir uygarlık arayışı açısından bir umut kaynağı, Bağlantısızlar Hareketi de bu uygarlığa giden yol haritasının başlangıç aşamalarından biriyken, bugün Asya’dan hayatın her alanında emperyalist sisteme alternatif oluşturan yeni bir uygarlığın yükselişine tanık olmaktayız. ABD’nin Gelişmekte Olan Dünya’nın milli devletlerini yıkma taarruzu, bütün dünyada Bandung ruhunun ana unsurunu oluşturan “milli devlet”in öneminin yeniden ve daha derinden keşfine yol açtı. ABD’nin taarruzu, milli devletlerin ve milli orduların direnmesini tetikledi. Bandung Konferansı döneminde Ezilen ve Gelişmekte Olan Dünya’da bağımsızlığın önkoşulunu oluşturan “bağlantısızlık”, günümüzde belirleyici bir kavram olmaktan çıkmış durumda. Gelişmekte Olan Dünya’daki uluslararası oluşumlar olarak Şanghay İşbirliği Örgütü, BRICS, Kuşak ve Yol Girişimi ve bunlarla ilgili kuruluş ve etkinlikler öne çıkıyor. Bu oluşumların ortak özelliği, katılımcı ülkeleri birleştiren ve aynı doğrultuda seferber eden temel etkenin ülkelerin ortak çıkar ve hedefleri olarak alınması."
   },
-  "keywords": {"en": [], "tr": []},
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2025-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 3, "year": 2025, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "283", "last": "292"},
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2025-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 3,
+    "year": 2025,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "283",
+    "last": "292"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

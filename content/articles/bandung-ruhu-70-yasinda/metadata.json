@@ -1,25 +1,77 @@
 {
   "schemaVersion": 2,
   "id": "bandung-ruhu-70-yasinda",
-  "articleType": {"id": "review-article", "tr": "Derleme Makalesi", "en": "Review Article", "peerReviewed": true},
-  "title": {"en": "Bandung Spirit is 70 Years Old", "tr": "Bandung Ruhu 70 Yaşında"},
+  "articleType": {
+    "id": "review-article",
+    "tr": "Derleme Makalesi",
+    "en": "Review Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Bandung Spirit is 70 Years Old",
+    "tr": "Bandung Ruhu 70 Yaşında"
+  },
   "authors": [
-    {"displayName": "Prof. Dr. Cüneyt Akalın", "givenName": "Cüneyt", "familyName": "Akalın", "orcid": null, "affiliations": []}
+    {
+      "displayName": "Prof. Dr. Cüneyt Akalın",
+      "givenName": "Cüneyt",
+      "familyName": "Akalın",
+      "orcid": null,
+      "affiliations": []
+    }
   ],
   "abstract": {
-    "en": "The Asian-African Conference, referred to as the Bandung Conference, emerged as a beacon ofhope in a post-war world fraught with conflict between two political-ideological extremes, wherethe remnants of pre-war devastation remained and colonialism persisted. The Final Declarationof the Conference, ratified on April 24, 1955, is the essential text that influenced the frameworkof the post-colonial international community. The core tenets of the Final Declaration encompassthe eradication of colonialism, the sovereignty and parity of nations regardless of size, economicand cultural collaboration, resistance to racial discrimination, the right to self-determinationfor nations, and the promotion of peaceful coexistence. In the latter part of the 20th century,humanity significantly eradicated harsh colonialism, narrowed the disparity between small andlarge nations to a degree, and enhanced economic and cultural collaboration among developingcountries. In the latter half of the 20th century, the Bandung spirit, which originated the Non-Aligned Movement, is currently invigorating new regional organizations. Entities like BRICS,which challenge dollar supremacy and U.S. hegemony while advocating for a new internationalorder, along with the Shanghai Cooperation Organization (SCO), focused on combating terrorismand extremism, and numerous regional organizations, both large and small, remain influenced bythe Bandung Spirit.",
-    "tr": "Bandung Konferansı olarak bilinen Asya-Afrika Konferansı savaş sonrası dünyanın iki siyasal-ideolojik kutup arasında büyük bir gerginliğe sürüklendiği, savaş öncesi yıkıntılarının henüzkaldırılmamış, sömürgeciliğin tasfiye edilmemiş olduğu koşullarda, bir büyük umut kaynağı olarakışık saçmaya başladı. 24 Nisan 1955’te sonuçlanan Konferansın Sonuç Bildirgesi, sömürgeciliksonrası uluslararası toplumun yapısını şekillendiren temel belge niteliğindedir. Sonuç Bildirgesi’ninözü, sömürgeciliğin tasfiyesi, büyük-küçük ulusların bağımsızlığı ve eşitliği, ekonomik ve kültürelalanlarda işbirliği, ırk ayrımcılığına karış tavır, ulusların kaderini tayin hakkı ve barış içinde bir arayayaşama anlayışıdır. İnsanlık 20. yüzyılın ikinci yarısında vahşi sömürgeciliği büyük ölçüde tasfiye etti,küçük ve büyük uluslar arasındaki uçurum bir ölçüde giderildi, gelişme yolundaki ülkeler aralarındakiekonomik, kültürel işbirliğini artırdılar. 20. yüzyılın ikinci yarısında Bağlantısızlar Hareketi’nidoğuran Bandung Ruhu, günümüzde yeni bölgesel örgütlere hayat veriyor, dolar hakimiyetine,dolayısıyla ABD hegemonyasına karşı mücadele eden, yeni bir uluslararası düzen arayış içinde olanBRICS gibi örgütler, terörizme ve aşırılıklara karşı mücadeleyi esas alan Şangay İşbirliği Örgütü (ŞİÖ)gibi birliktelikler, irili ufaklı birçok bölgesel örgüt Bandung Ruhu’ndan esinlenmeye devam ediyor."
+    "en": "The Asian-African Conference, referred to as the Bandung Conference, emerged as a beacon of hope in a post-war world fraught with conflict between two political-ideological extremes, where the remnants of pre-war devastation remained and colonialism persisted. The Final Declaration of the Conference, ratified on April 24, 1955, is the essential text that influenced the framework of the post-colonial international community. The core tenets of the Final Declaration encompass the eradication of colonialism, the sovereignty and parity of nations regardless of size, economic and cultural collaboration, resistance to racial discrimination, the right to self-determination for nations, and the promotion of peaceful coexistence. In the latter part of the 20th century, humanity significantly eradicated harsh colonialism, narrowed the disparity between small and large nations to a degree, and enhanced economic and cultural collaboration among developing countries. In the latter half of the 20th century, the Bandung spirit, which originated the NonAligned Movement, is currently invigorating new regional organizations. Entities like BRICS, which challenge dollar supremacy and U.S. hegemony while advocating for a new international order, along with the Shanghai Cooperation Organization (SCO), focused on combating terrorism and extremism, and numerous regional organizations, both large and small, remain influenced by the Bandung Spirit.",
+    "tr": "Bandung Konferansı olarak bilinen Asya-Afrika Konferansı savaş sonrası dünyanın iki siyasalideolojik kutup arasında büyük bir gerginliğe sürüklendiği, savaş öncesi yıkıntılarının henüz kaldırılmamış, sömürgeciliğin tasfiye edilmemiş olduğu koşullarda, bir büyük umut kaynağı olarak ışık saçmaya başladı. 24 Nisan 1955’te sonuçlanan Konferansın Sonuç Bildirgesi, sömürgecilik sonrası uluslararası toplumun yapısını şekillendiren temel belge niteliğindedir. Sonuç Bildirgesi’nin özü, sömürgeciliğin tasfiyesi, büyük-küçük ulusların bağımsızlığı ve eşitliği, ekonomik ve kültürel alanlarda işbirliği, ırk ayrımcılığına karış tavır, ulusların kaderini tayin hakkı ve barış içinde bir araya yaşama anlayışıdır. İnsanlık 20. yüzyılın ikinci yarısında vahşi sömürgeciliği büyük ölçüde tasfiye etti, küçük ve büyük uluslar arasındaki uçurum bir ölçüde giderildi, gelişme yolundaki ülkeler aralarındaki ekonomik, kültürel işbirliğini artırdılar. 20. yüzyılın ikinci yarısında Bağlantısızlar Hareketi’ni doğuran Bandung Ruhu, günümüzde yeni bölgesel örgütlere hayat veriyor, dolar hakimiyetine, dolayısıyla ABD hegemonyasına karşı mücadele eden, yeni bir uluslararası düzen arayış içinde olan BRICS gibi örgütler, terörizme ve aşırılıklara karşı mücadeleyi esas alan Şangay İşbirliği Örgütü (ŞİÖ) gibi birliktelikler, irili ufaklı birçok bölgesel örgüt Bandung Ruhu’ndan esinlenmeye devam ediyor."
   },
   "keywords": {
-    "en": ["imperialism", "non-alignment", "Non-Aligned Movement", "right of nation to self-determination", "struggle against colonialism"],
-    "tr": ["Bağlantısızlık", "Bağlantısızlar Hareketi", "emperyalizm", "sömürgeciliğe karşı mücadele", "kendi kaderini tayin hakkı"]
+    "en": [
+      "imperialism",
+      "non-alignment",
+      "Non-Aligned Movement",
+      "right of nation to self-determination",
+      "struggle against colonialism"
+    ],
+    "tr": [
+      "Bağlantısızlık",
+      "Bağlantısızlar Hareketi",
+      "emperyalizm",
+      "sömürgeciliğe karşı mücadele",
+      "kendi kaderini tayin hakkı"
+    ]
   },
-  "dates": {"received": "2024-12-05", "revised": null, "accepted": "2025-01-30", "published": "2025-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 3, "year": 2025, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "311", "last": "330"},
+  "dates": {
+    "received": "2024-12-05",
+    "revised": null,
+    "accepted": "2025-01-30",
+    "published": "2025-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 3,
+    "year": 2025,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "311",
+    "last": "330"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

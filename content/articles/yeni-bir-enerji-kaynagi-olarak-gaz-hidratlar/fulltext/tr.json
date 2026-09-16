@@ -1,0 +1,542 @@
+{
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Giriş",
+      "paragraphs": [
+        "SU VE METANDAN OLUŞAN KRISTAL bileşikler olan gaz hidratlar, muazzam potansiyele sahip geleneksel olmayan bir enerji kaynağı olarak büyük ilgi çekmiştir. ‘Yanan buz’ olarak da bilinen metan hidratlar tüm okyanus kenarlarında meydana gelmektedir (Şekil 1 ve 2). Minshull vd., 2021 yılında yaptıkları çalışmada hidrat oluşumuna dair önemli kanıtların bulunduğu birçok bölgeyi tanımlamışlardır. Gaz hidrat birikimlerinin tabanı deniz tabanı topoğrafyasını takip eder ve sismik kesitlerde “Tabana Benzeyen Yansıtıcı (BSR)” olarak adlandırılır. BSR’lar çok kanallı sismik yansıma kesitlerinde hidratların tanımla-",
+        "nabilmesi için takip edilen bir yansımadır (Ojha & Sain, 2009). Hidratların tanımlanması ve analiz edilmesi önem taşımaktadır (Şekil 3). Öncelikle deniz çökeltilerinde ve donmuş bölgelerde bulunan bu doğal olarak oluşan bileşiklerin, bilinen tüm fosil yakıt rezervlerinin toplamından daha fazla enerji içerdiği tahmin edilmektedir. Gaz hidratlarda depolanan metan, kömür ve petrol gibi geleneksel hidrokarbonlara göre daha temiz yanan bir alternatifi temsil etmekte ve bu kaynağı küresel enerji güvenliği ve sürdürülebilirliğine umut verici bir katkı olarak konumlandırmaktadır (Şekil 2). Çifci (2020) çalışmasında gaz hidratlarının yer bilimi ve ülke ekonomisi için gelecekteki bir enerji kaynağı olarak önemini vurgulamaktadır.",
+        "Şekil 1. Su ve metandan oluşan kristal bileşikler olan gaz hidratların, önemi ve deniz çökellerinde ve don ayazı (permafrost) bölgelerindeki yerleri gösterilmektedir. Yüksek basınç ve düşük sıcaklıklarda metan, metan hidratı oluşturmak üzere bir buz kafesinin içinde hapsolur (Şekil: Çifci vd., baskıda).",
+        "Boswell ve Collett (2011)tarafından kavramsallaştırılan gaz hidrat kaynak piramidi, bu yatakları jeolojik ve ekonomik geri kazanılabilirliklerine göre kategorize etmektedir (Şekil 4). Kolayca çıkarılabilen birikimlerden geri kazanım için ileri teknolojiler gerektirenlere kadar kaynak erişilebilirliğindeki önemli çeşitliliği vurgulamaktadır. Bu çeşitlilik, kaynakların tam potansiyelini ortaya çıkarmak için yenilikçi çıkarma tekniklerine ve stratejik planlamaya duyulan ihtiyacın altını çizmektedir. Ayrıca, kıta kenarları ve Arktik bölgelerdeki yaygın dağılımları, enerji portföylerini çeşitlendirmek ve ithal yakıtlara bağımlılığı azaltmak isteyen ülkeler için fırsatlar sunmaktadır.",
+        "Yenilikçi çıkarma teknolojileri küresel araş-",
+        "tırma çabalarının odak noktası olmuştur. Basınç düşürme, ısıtma ve kimyasal püskürtme gibi yöntemler aktif olarak geliştirilmekte olup her biri benzersiz faydalar ve zorluklar sunmaktadır (Şekil 5). Bunlar arasında CO2 püskürtme metan geri kazanımı ve karbon tutma gibi uluslararası iklim değişikliği azaltma hedefleriyle uyumlu ikili faydası nedeniyle öne çıkmaktadır. Elektromanyetik ısıtma, mikrobiyolojik stimülasyon ve nanoteknoloji uygulamaları gibi yeni teknikler verimliliği artırmak, çevresel etkileri azaltmak ve ticari üretimin önündeki teknik engelleri aşmak için araştırılmaktadır. Çifci vd. (baskıda) çalışmalarında gaz hidratlarından bu üretim yöntemlerini irdelemektedir.",
+        "Şekil 2. Batı Karadeniz’de deniz tabanından elde edilen gaz hidratlar ve yakıldıklarındaki görüntüsü. (Şekil: TP-DEPARK Proje Raporu, 2018).",
+        "Şekil 3. Denizel tortullarda gaz hidratların tanımlanabilmesi için belirteç olan Tabana Benzeyen Yansıtıcıyı (BSR) gösteren jeofizik sismik yansıma kesiti yorumu (Şekil: Çifci vd., baskıda).",
+        "Japonya, Çin ve Amerika Birleşik Devletleri gibi ülkeler, bu yöntemleri iyileştirmek ve üretimi artırmak için saha testleri ve pilot projeler yürüterek araştırma ve geliştirmeye öncülük etmektedir. Örneğin, Japonya’nın Metan Hidrat Ar-Ge programı, basınç düşürme yoluyla hidratlardan metan çıkarmanın fizibilitesini göstererek bu alanda öncü olmuştur. Benzer şekilde Çin de açık deniz hidrat üretim denemelerinde önemli aşamalar kaydederek çıkarma teknolojileri ve çevresel güvenlik protokollerindeki ilerlemeleri sergilemiştir. Ülke, gaz hidratların keşfi ve üretimi konusunda yoğun araştırmalar yürütmekte ve bu alandaki bilimsel ve mühendislik çalışmalarına önemli yatırımlar yapmaktadır. Gaz hidratların çıkarılması, depolanması ve taşınması gibi süreçleri kapsayan üretim ve işleme teknolojileriyle ilgili",
+        "çok sayıda patente sahiptir.",
+        "Fosil yakıtlara alternatif bir kaynak olarak gaz hidratların potansiyeli, enerji güvenliği stratejileri açısından büyük önem taşıyor ve bu alandaki gelişmeleri ülke için stratejik bir öncelik haline getiriyor. Ülke, gaz hidrat üretiminde ticari uygulamalara geçiş için iyileştirmeler üzerinde çalışmakta ve bu süreçte çeşitli teknoloji geliştirme projeleri yürütmektedir. Gaz hidratlar alanındaki bu liderlik, hem ulusal enerji politikalarında hem de küresel enerji dinamiklerinde önemli bir rol oynamaktadır.",
+        "Küresel olarak Japonya, Çin, ABD, Hindistan, Güney Kore ve Kanada gibi ülkeler gaz hidratlar konusunda araştırma ve geliştirmeye öncülük etmekte, ileri teknolojilere ve saha testlerine önemli yatırımlar yapmaktadır.",
+        "Şekil 4. Bu yatakları jeolojik ve ekonomik geri kazanıla bilirliklerine göre sınıflandıran Gaz hidrat kaynak piramidi. (Şekil: Boswell & Collett, 2011).",
+        "Bu çabalar, şu anda ticari ölçekte üretimi sınırlayan önemli teknik ve ekonomik zorlukların üstesinden gelmeyi amaçlamaktadır. Gaz hidrat çıkarımının karbon yakalama ve depolama teknolojileriyle entegre edilmesi, çevresel açıdan sürdürülebilir bir enerji kaynağı olma potansiyelini daha da güçlendirmektedir. Uygun inovasyon ve uluslararası işbirliği ile gaz hidratlar on yıllar boyunca enerji sağlayabilir ve daha temiz enerjiye doğru küresel geçişte bir geçiş kaynağı olarak hizmet edebilir. Bu teknolojilerin geliştirilmesi, gaz hidratların ekonomik ve çevresel faydalarını ortaya çıkarmak ve onları gelecekteki enerji stratejilerinin temel taşı haline getirmek için çok önemli olacaktır. Çin, gaz hidrat üretim teknolojilerinde patent",
+        "sahipliği açısından dünyanın önde gelen ülkeleri arasında yer almaktadır. Bu durum, gaz hidrat araştırma ve geliştirme alanındaki aktif çabalarının bir sonucudur. Çin ayrıca gaz hidrat teknolojileriyle ilgili uluslararası işbirlikleri ve ortak araştırma projeleri yürütmekte, bilgi paylaşımını ve teknolojik yenilikleri teşvik etmektedir. Yakın geleceğin enerji kaynağı olarak kabul edilen “Gaz Hidratlar”, Türkiye’nin Ulusal Gaz Hidrat Projesi’nin ilk aşaması kapsamında pilot bir bölgede tespit edilmiş ve haritalanmıştır. Çok sayıda kurum ve üniversitenin dahil olduğu çoklu bilim dallarının iş birliği sayesinde gaz hidratların varlığı resmi olarak teyit edildi ve rezerv tahminleri yapıldı. Potansiyel bir enerji kaynağı olarak kabul",
+        "Şekil 5. Gaz hidratlardan doğal gaz elde etmek için uygulanabilecek üretim yöntemleri. Isı püskürtme, Basınç düşürme, kimyasal püskürtme ve CO2 değişimi, her biri benzersiz faydalar ve zorluklar sunar. (Şekil: Çifci vd., baskıda).",
+        "edilen gaz hidratların geniş ve önemli bir alanda keşfedilmesi, bu rezervi küresel enerji kaynakları dinamikleri göz önüne alındığında Türkiye’nin enerji geleceğini değiştirebilecek stratejik öneme sahip bir “oyun değiştirici” olarak konumlandırmaktadır. Karadeniz başta olmak üzere Türkiye’yi çevreleyen denizlerde mevcut gaz hidratı kaynakları Türkiye için stratejik bir avantaj oluşturuyor. Bu arada, Türkiye’nin, biricik avantajlarını rekabetçi üstünlüklere dönüştürmek gibi bir önceliği olması gerektiğine de işaret etmek yerinde olur. Karadeniz’de mevcut gaz rezervleri böyle bir avantaja işaret ediyor. Bu keşfin Türk araştırmacılar tarafından gerçekleştirilmiş olmasının yanı sıra, ulusal, bölgesel ve küresel ölçekte yankı uyandırma potansiyeline sahip bilimsel katkısı da büyük fırsatlara yol açabilir. Bu çerçevede, gaz hidratların diğer alanlardaki dağılımının harita-",
+        "lanması, tamamlanan pilot sahada ikinci aşamaya geçilmesi, pilot alanda mevcut üretim teknikleri kullanılarak gaz üretilmesi ve son aşamada ileri üretim teknolojilerine sahip ülkelerle işbirliğine gidilmesi bundan sonraki adımları oluşturmaktadır.",
+        "Bu makale, gaz hidrat gelişiminin çevresel, ekonomik ve jeopolitik etkilerini ele alarak araştırmaların mevcut durumunu, teknolojik ilerlemeleri ve potansiyel zorlukları incelemektedir. Gaz hidratların fosil yakıtlar ve daha temiz alternatifler arasındaki boşluğu doldurarak nasıl bir geçiş enerji kaynağı olarak hizmet edebileceğini araştırmaktadır. Ayrıca, bu umut verici kaynağın sorumlu bir şekilde kullanılması için birleşik standartların ve sürdürülebilir uygulamaların geliştirilmesinde uluslararası işbirliğinin önemini vurgulamaktadır."
+      ]
+    },
+    {
+      "id": "tr-section-2",
+      "title": "Gaz Hidratlardan Metan Üretim Yöntemleri",
+      "paragraphs": [
+        "Doğal gazın gaz hidratlardan çıkarılması, her biri belirli çevresel ve ekonomik sonuçlar doğuran çeşitli yöntemlerle gerçekleştirilebilir (Şekil 5). Bu bölümde bu yöntemler ve potansiyel etkileri daha ayrıntılı olarak incelenmektedir:"
+      ]
+    },
+    {
+      "id": "tr-section-3",
+      "title": "Basınçsızlaştırma",
+      "paragraphs": [
+        "Bu yöntem, gaz hidrat rezervuarı içindeki basıncın düşürülmesini ve böylece hidratların doğal gaza ayrışmasının sağlanmasını içerir. Basınçsızlaştırma ile ilişkili çevresel etkiler, rezervuarın mekanik yapısında potansiyel olarak çökme veya yüzey çökmesine yol açabilecek değişiklikleri içerebilir. Ayrıca, ayrışma süreci ısıyı emerek çevredeki suyun yerel olarak donmasına neden olur ve potansiyel olarak deniz ekosistemlerini etkiler. Ekonomik açıdan basınçsızlaştırma, karmaşık teknolojiler veya pahalı kimyasalların kullanımını gerektirmediği için diğer yöntemlere kıyasla genellikle daha ucuzdur (Boswell & Collett, 2011). Rezervuarın önemli bir bölümünü (%60’a kadar) yakalayarak verimli üretim potansiyeli sunar. Ancak, rezervuarın mekanik ve termodinamik özelliklerindeki değişiklikler nedeniyle verimlilik zaman içinde düşebilir. Ayrıca, bu yöntemin nispeten daha düşük enerji tüketimi, daha düşük işletme maliyetleri anlamına gelir."
+      ]
+    },
+    {
+      "id": "tr-section-4",
+      "title": "Isı Püskürtme",
+      "paragraphs": [
+        "Isı püskürtmede rezervuar sıcaklığı, sıcak su veya buhar enjeksiyonu ya da kuyu deliğinin ısıtılması yoluyla artırılır. Çevresel etkiler, suda yaşayan organizmalar için risk oluşturabilecek bitişik su katmanlarının potansiyel ısınmasını içerir (Lee & Lee 2014). Bunun da ötesinde",
+        "ısı püskürtmenin bu ısıyı üreten enerji kaynağı, katmana bu ısıyı taşıyan akışkanın sevk pompajı ve sistemlere bağlı olarak enerji maliyeti, CO2 salımı ve diğer sera gazı salım sorumlulukları da irdelenmelidir. Ayrıca, ısı püskürtmeleri yüksek enerji gereksinimleri önemli miktarda fosil yakıt tüketimini gerektirmekte ve bu da sera gazı emisyonlarının artmasına neden olmaktadır. Bu yöntem, buhar veya sıcak su üretimi ve püskürtmesi için ekipman ve enerjiye önemli miktarda ilk yatırım gerektirir. Rezervuarın neredeyse tamamen üretilmesini sağlayarak yüksek getiri elde etme potansiyeline sahip olsa da, üretilen gazın enerjisinin önemli bir kısmı rezervuarı ısıtmak için harcanır ve bu da net enerji çıktısını düşürür."
+      ]
+    },
+    {
+      "id": "tr-section-5",
+      "title": "Kimyasal Püskürtme",
+      "paragraphs": [
+        "Bu yöntemde, rezervuarın koşullarını değiştirmek ve gaz salınımını tetiklemek için glikol veya metanol gibi kimyasallar enjekte edilir. Ilgili çevresel etkiler, yeraltı suyu kaynaklarını kirletebilecek ve ekosistemlere zarar verebilecek potansiyel kimyasal sızıntıyı içerebilir [4]. Kullanılmış kimyasalların bertarafı da çevresel yönetim zorluklarını beraberinde getirmektedir. Ekonomik açıdan bakıldığında, kimyasal püskürtme, içerdiği kimyasallar nedeniyle önemli maliyetlere neden olur ve bu da işletme giderlerini önemli ölçüde artırır. Bu yöntem tipik olarak kapsamlı laboratuvar ve pilot ölçekli testler gerektirmekte, bu da araştırma ve geliştirme maliyetlerinin yükselmesine yol açmaktadır. Ayrıca, çevresel düzenlemelere ve atık yönetimi protokollerine uyum maliyetleri daha da artırabilir. Bununla birlikte, CO2 püskürtmesini metan üretimiyle birleştirmek, emisyonları azaltmak için çevresel krediler veya vergi teşvikleri sunarak potansiyel olarak uzun vadeli sürdürülebilirlik sağlayabilir."
+      ]
+    },
+    {
+      "id": "tr-section-6",
+      "title": "CO2 Püskürtme",
+      "paragraphs": [
+        "Bu yöntem, CO2’nin yakalanmasını ve enjekte edilerek rezervuar içindeki metanın yer değiştirmesini gerektirir. Birincil çevresel avantaj, atmosferik CO2 emisyonlarındaki potansiyel azalmadır ve bu da iklim değişikliğinin hafifletilmesine olumlu katkıda bulunur (Hovland & Judd, 2004). Bununla birlikte, CO2 püskürtmesi rezervuarın basınç dengesini bozabilir ve potansiyel olarak jeolojik denge sorunlarına neden olabilir."
+      ]
+    },
+    {
+      "id": "tr-section-7",
+      "title": "Gelişen Yöntemler",
+      "paragraphs": [
+        "Gaz püskürtmesi, mikrobiyolojik teknikler, ultrasonik stimülasyon ve elektrikli ısıtma dahil olmak üzere çeşitli yenilikçi yaklaşımlar araştırılmaktadır. Bu yöntemlerin her birinin kendine özgü çevresel etkileri vardır. Örneğin, mikrobiyolojik yöntemler ekosistemlerdeki mikrobiyal dengeleri bozabilir (Liu vd., 2012 ; Chong vd., 2016). Mikroorganizmaların biyolojik faaliyetleri yoluyla metan salınımını teşvik eden mikrobiyal metanojenez, özellikle düşük sıcaklık ve düşük basınç koşullarında çevresel olarak sürdürülebilir bir alternatif sunmaktadır. Buna karşılık, elektrikli ısıtma içeren yöntemler, kullanılan enerji kaynaklarına bağlı olarak çevresel etkiler taşıyabilecek önemli miktarda enerji girdisi gerektirir.",
+        "Gaz hidratlar üzerine yapılan çeşitli mikrobiyolojik araştırmalar, istikrarsızlaştırma yoluyla hidrat üretimi için biyolojik uygulamaların potansiyeline işaret etmektedir. Bunlar arasında CO2’nin mikrobiyal dönüşümünü, biyolojik yerinde metan üretimini ve hidratların kristalleşmesini engelleyen ve daha hızlı yeniden kristalleşmeyi veya “hafıza etkisini” ortadan kaldıran antifriz proteinleri (AFP’ler) üreten organizmaları içeren süreçler yer almaktadır. Bu kavramlar,",
+        "hidratlar için “yeşil inhibitörleri” ortaya çıkaracak teknikleri keşfetmek üzere daha fazla araştırma yapılmasını gerektirmektedir. Bu durum, dünya çapındaki önemli gaz hidrat birikimlerinden para kazanılmasıyla ilgili projelerde yer alan araştırmacılar için bir zorluk teşkil etmektedir: mikrobiyolojik süreçler, bunların ekonomik olarak geri kazanılmasının anahtarı olabilir (Jones, C. M. vd., 2010)."
+      ]
+    },
+    {
+      "id": "tr-section-8",
+      "title": "Ekonomik Değerlendirmeler",
+      "paragraphs": [
+        "Bu yöntemlerin çevresel etkilerinin anlaşılması ve azaltılması, sürdürülebilir enerji üretimi ve çevre yönetimi için çok önemlidir. Bu nedenle, her bir yöntemin uygulanması sırasında ayrıntılı çevresel etki değerlendirmeleri ve izleme protokolleri yürütülmelidir. Gaz hidratlardan doğal gaz üretiminin ekonomik uygulanabilirliği, kullanılan yönteme, teknolojik erişilebilirliğe, enerji piyasası koşullarına ve geçerli çevresel düzenlemelere bağlıdır (Jones vd., 2010). Yeni yöntemler genellikle önemli araştırma ve geliştirme harcamaları gerektirmekte ve geri dönüşleri teknolojilerin ticari başarısına bağlı olmaktadır. Yeni teknolojilerin uygulanması, öngörülemeyen teknik zorluklar veya optimum olmayan performans gibi operasyonel riskleri beraberinde getirebilir. Yüksek başlangıç maliyetleri ve teknik belirsizlikler göz önüne alındığında, ekonomik karlılığı en üst düzeye çıkarmak ve ilgili riskleri en aza indirmek için kapsamlı maliyet analizleri ve pilot projeler gereklidir."
+      ]
+    },
+    {
+      "id": "tr-section-9",
+      "title": "Jeopolitik ve Teknolojik Hususlar",
+      "paragraphs": [
+        "Gaz hidratlardan faydalanma potansiyeli, öncelikle bol doğal kaynaklara ve gelişmiş teknolojik kabiliyetlere sahip ülkelere fayda sağlamaktadır.",
+        "Şu anda birkaç ülke, gaz hidrat çıkarma alanında araştırma ve geliştirme girişimlerine öncülük etmekte ve kendilerini bu kaynaklardan yararlanmak üzere konumlandırmaktadır (Cherskiy & Tsarev, 1977)."
+      ]
+    },
+    {
+      "id": "tr-section-10",
+      "title": "Gelecek Projeler için Yenilikçi Yaklaşımlar",
+      "paragraphs": [
+        "Devam eden araştırmalar mevcut yöntemlerin verimliliğini artırmayı, çevresel etkileri azaltmayı ve ekonomik maliyetleri düşürmeyi amaçlamaktadır. Gelecekteki gaz hidrat projeleri için önerilen birkaç yenilikçi teknik şunlardır:"
+      ]
+    },
+    {
+      "id": "tr-section-11",
+      "title": "Mikrobiyolojik Süreçler",
+      "paragraphs": [
+        "Gaz hidratlar belirli mikro ve makrofauna ile yakından bağlantılıdır ve doğal gaz üretimi için hidrat destabilizasyonunu teşvik etmek üzere bu organizmalardan veya metabolik süreçlerinden yararlanma fırsatları sunar. Hidratlardan doğal gaz üretmek için üç temel yöntem tanımlanmıştır: Basınç destabilizasyonu, metanol kaynaklı destabilizasyon ve termal destabilizasyon. Deneysel bulgular, bu yöntemlerin işletme maliyetlerini karşılamaya yetecek koşullar altında işletilebileceğini ve mikrobiyal süreçlerin metanol kullanımı yoluyla hidrat ayrışmasını ve metan üretimini potansiyel olarak kolaylaştırabileceğini göstermektedir.",
+        "Mikrobiyal süreçler, hidratların doğal gaza dönüşümünü arttırmak için umut vaat etmektedir. Örneğin, her ikisi de metanotrofik özelliklere sahip olan Methylococcus capsulatus Bath ve Methylosinus trichosporium, yüksek sıcaklıklarda yetiştirilebilir ve bakıra toleranslı monooksijenaz aktivitesi göstererek metan dönüşümünde biyoteknolojik uygulamalar için uygun adaylar olarak konumlandırılabilir. Ayrıca, metan hid-",
+        "rat içeren çökeltilerdeki mikrobiyal topluluklara JS1, Planctomycetes ve Chloroflexi gibi gruplar hakimdir ve bu da hidrat destabilizasyonunda uygulanmaları için önemli bir potansiyele işaret etmektedir. Ayrıca, Acidimethylosilex fumarolicum SolV gibi organizmalar aşırı koşullar altında metan üzerinde büyüyebilir, bu da CO2 dönüştürücü mikrobiyal toplulukların metan hidratların kontrollü istikrarsızlaştırılmasını sağlayabileceğini düşündürmektedir. Pasifik Kuzeybatı Ulusal Laboratuvarı’nın çalışmaları da dahil olmak üzere devam eden araştırmalar, hidrat ayrışmasında mikrobiyal yöntemlerin rolünün altını çiziyor Chryseobacterium sp. C14 gibi organizmalardan elde edilen antifriz proteinlerinin hidrat kristalizasyonunu engelleme potansiyelini vurguluyor. Gaz hidratlar için ticari üretim yöntemleri geliştikçe, mikrobiyolojik süreçler sürdürülebilir gaz üretimini amaçlayan gelecekteki projelere entegrasyon için güçlü adaylardır (Inagaki vd., 2006 ; Heijmans vd., 2007 ; Yan vd., 2006 ; White, 2008).",
+        "Elektromanyetik Isıtma: Geleneksel ısıl uyarılmaya (termal stimulasyon) alternatif olarak elektromanyetik dalgalar, derin ve daha az erişilebilir rezervuarlarda bile ısıyı etkili bir şekilde dağıtabilir. Bu yöntem, yüksek enerji verimliliği ve düşük çevresel etkisi ile karakterize edilir.",
+        "Nanoteknoloji Uygulamaları: Nano boyutlu malzemelerin ve kimyasalların kullanımı hidratların çözünürlüğünü artırabilir veya gaz salınımını hızlandırmak için kimyasal reaksiyonları katalize edebilir. Ayrıca, nano parçacıklar rezervuar gözenekliliğini ve geçirgenliğini artırarak gaz akışını kolaylaştırabilir.",
+        "Geliştirilmiş CO2 Püskürtme: Bu yöntem, CO2’yi daha yüksek basınçlarda kullanarak daha verimli metan yer değiştirmesini kolaylaştırabilir ve aynı zamanda atmosferik CO2 azaltımına katkıda bulunabilir.",
+        "Ultrasonik veya Akustik Dalgalar: Bu yöntemler gaz hidrat çözünürlüğünü artırmayı ve hidrat yapısını bozarak metan salınımına yardımcı olmayı amaçlamaktadır.",
+        "Hibrit Yöntemler: Mevcut tekniklerin birleştirilmesi, üretim süreci boyunca birliktehareket edereketkiler yaratabilir. Örneğin, ısıl uyarılmanın (termal stimulasyon) kimyasal veya CO2 püskürtmeleri ile bütünleşik çözünürlüğü en iyi hale getirilebilir ve üretimi hızlandırabilir.",
+        "Bu yenilikçi teknikler, laboratuvar testleri ve pilot projeler yoluyla daha fazla doğrulamaya tabi tutulmalıdır. Gelecekteki uygulamalarda bu yaklaşımların çevresel uyumluluğu, ekonomik sürdürülebilirliği ve teknik fizibilitesi göz önünde bulundurulmalıdır. Bu yöntemlerin geliştirilmesiyle, gaz hidratlardan sürdürülebilir ve çevre dostu enerji üretimi potansiyeli gerçekleştirilebilir."
+      ]
+    },
+    {
+      "id": "tr-section-12",
+      "title": "Gaz Hidratlardan Enerji Üretimi",
+      "paragraphs": [
+        "Japonya, Çin, ABD, Kanada, Hindistan ve Güney Kore gibi ülkeler teknolojik yenilikler, stratejik yatırımlar ve ulusal enerji politikalarına uyum yoluyla gaz hidratlardan yararlanma kapasitelerini önemli ölçüde geliştirmiştir (Boswell vd., 2012) Gaz hidratların jeofizik yöntemlerle (çok kanallı sismik yansıma) tespiti, sondaj ve karot programları aracılığıyla kanıtlanmıştır (McConnell, 2019). Şekil 6 gaz hidratın temeli olan BSR’yi göstermektedir. Bu ülkeler, gaz hidratların potansiyel faydalarını kısa sürede en üst düzeye çıkarmayı amaçlayarak araştırma ve geliştirme (Ar-Ge) faaliyetlerine önemli kaynaklar ayırmaktadır. Gaz hidratların enerji portföylerinin çeşitlendirilmesinde ve daha temiz enerji sistemlerine geçişte kritik bir rol oynaması beklenmektedir ki bu da",
+        "Şekil 6. Cascadia bölgesinde Gaz hidratların tabanı, tabana benzeyen yansıtıcı (BSR)’e ulaşan sondaj derinliğini gösteren bir kesit örneği (Şekil: McConnell, 2019).",
+        "enerjinin sürdürülebilirliği ve çevresel etkileriyle ilgili küresel kaygılar göz önüne alındığında giderek daha önemli hale gelmektedir (Boswell & Collett, 2006).",
+        "Zhang ve arkadaşlarının 2012 yılında yayımladıkları bir- başka akademik makale, deniz gaz hidratlarının hem umut vadeden bir enerji kaynağı hem de potansiyel bir çevresel tehdit olarak ikili doğasını incelemektedir. Yazarlar, gaz hidratlarını gelecekteki bir enerji kaynağı olarak cazip kılan üç temel kaynak özelliğini vurgulamaktadırlar: Muazzam miktarı: Güvenilir tahminler, küresel yataklarda 10^13 ila 20×10^15 m³ metan gazı bulunduğunu ve bunun potansiyel olarak insanlığın enerji ihtiyacını yaklaşık 1.000 yıl boyunca karşılayabileceğini göstermektedir. Karbon içeriği (10×10^12 ton), tüm fosil yakıt minerallerinin toplamının iki katıdır. Temizliği: Kömür, petrol ve doğal gaza kıyasla daha az zararlı gaz içeren yüksek saflıkta metan bulundurmaktadır. Yüksek enerji yoğunluğu: Normal koşullar altında 1m³ gaz hidrat, 164m³ metana eşdeğerdir- bu, diğer konvansiyonel olmayan kaynakların 10 katı ve konvansiyonel doğal gazın 2-5 katı enerji yoğunluğuna sahiptir. Yazarlar, gaz hidrat destabilizasyonu ile ilişkili üç büyük çevresel riski tanımlamaktadırlar: Küresel Isınma: Metan, mol başına CO2’den 3,7 kat ve ağırlık olarak 20 kat daha yüksek küresel ısınma potansiyeline sahip güçlü bir sera gazıdır. Makale, tarihsel hızlı ısınma olaylarını (özellikle yaklaşık 55,6 milyon yıl önce gerçekleşen “Geç Paleosen Termal Maksimum”u) hidratlardan salınan büyük miktardaki metan gazına bağlamaktadır.",
+        "Deniz Tabanı Jeolojik Afetleri: Gaz hidratlar konsolidasyon örtüsünden yoksundur ve faz dönüşümüne eğilimlidir. Sıcaklık-basınç koşulları değiştiğinde, hidratlar ayrışabilir, metan salabilir ve potansiyel olarak denizaltı heyelanlarını tetik-",
+        "leyebilir. Ekolojik Afetler: Makale, büyük çaplı metan salınımlarını tarihsel yokoluş olaylarıyla ilişkilendirmekte ve hidrat ayrışmasının Paleosen-Eosen sınırı civarında (55 milyon yıl önce) bentik hayvanların 1/2 ila 2/3’ünün neslinin tükenmesine neden olduğunu öne süren kanıtları belirtmektedir. Tartışma bölümü, gaz hidratların önemli bir potansiyel enerji kaynağı olduğunu, ancak herhangi bir gelişmenin öncelikle güvenliği ve çevresel korumayı gözetmesi gerektiğini vurgulamaktadır. Bu dengeli değerlendirme, gaz hidratların hem umut vadeden bir enerji çözümü hem de potansiyel bir çevresel tehdit olarak karmaşık doğasını ortaya koymakta ve geliştirilmelerinde dikkatli, çevreye duyarlı yaklaşımlara duyulan ihtiyacı vurgulamaktadır (Zhen-guo vd., 2012).",
+        "Gaz hidratlar, özellikle geleneksel hidrokarbon rezervlerinin tükenmekte olduğu veya erişimin kısıtlı olduğu bölgelerde enerji güvenliğini artırma potansiyeli sunmaktadır. Bu kaynak, enerji ithalatına bağımlılığı azaltmak ve daha çeşitlendirilmiş ve dirençli bir enerji portföyü oluşturmak isteyen ülkeler için uygun bir seçenek olabilir."
+      ]
+    },
+    {
+      "id": "tr-section-13",
+      "title": "Çevresel Etkiler ve Teknolojik Hususlar",
+      "paragraphs": [
+        "Gaz hidrat çıkarımının çevresel etkileri hem fırsatlar hem de zorluklar sunmaktadır. Bir yandan gaz hidratlar, karbon yakalama ve depolama/kullanma (CCSU- Carbon Capture Storge and Use) gibi yenilikçi tekniklerle birleştirilirse karbon emisyonlarının azaltılmasına katkıda bulunabilir. Öte yandan, çıkarma süreci potansiyel metan sızıntıları ve diğer ekolojik rahatsızlıklar gibi riskler taşımaktadır ve bunların etkin bir şekilde yönetilmesi gerekmektedir. Sonuç olarak, sürdürülebilir ve sorumlu kalkınmayı sağlamak için titiz çevresel değerlendirmeler şarttır.",
+        "Potansiyeline rağmen, gaz hidratların ticari ölçekte üretimi teknik zorluklar nedeniyle engellenmektedir. Devam eden Ar-Ge çalışmaları, ileri çıkarma teknolojilerinin geliştirilmesi yoluyla bu engelleri aşmayı amaçlamaktadır. Bu nedenle enerji politikaları, ekonomik büyüme ve çevresel sürdürülebilirliği sağlarken teknolojik yenilikleri de desteklemelidir."
+      ]
+    },
+    {
+      "id": "tr-section-14",
+      "title": "Uluslararası İşbirliklerinin Rolü",
+      "paragraphs": [
+        "Gaz hidratların karmaşıklığı ve küresel önemi, birleşik standartlar, politikalar ve uygulamalar oluşturmak için uluslararası işbirliklerini gerekli kılmaktadır (International Energy Agency, 2018). Bu işbirlikleri, ortak Ar-Ge girişimlerini kolaylaştırarak ülkelerin uzmanlık ve kaynaklarını bir araya getirmelerini sağlar. Ayrıca, uluslararası standartların uyumlaştırılması, gaz hidrat çıkarımı sırasında çevresel ve güvenlik risklerinin yönetilmesi için kritik öneme sahiptir. Işbirliğine dayalı çerçeveler aynı zamanda koordineli politika geliştirme, eğitim programları ve yatırım stratejileri için de fırsatlar sunmaktadır ve bunların tümü gaz hidrat kaynaklarının sorumlu ve verimli bir şekilde kullanılması için gereklidir."
+      ]
+    },
+    {
+      "id": "tr-section-15",
+      "title": "Önemli Projeler ve Gelecek Yönelimleri",
+      "paragraphs": [
+        "Japonya, Çin ve Hindistan’daki kayda değer projeler, gaz hidrat çıkarma teknolojilerinin geliştirilmesine öncülük etmektedir (Matsumoto vd., 2013). Bu girişimler, gaz hidratlarla ilişkili teknik ve çevresel zorluklara dair değerli bilgiler sağlamakta ve potansiyel ticari uygulamalara yönelik önemli adımlar teşkil etmektedir. Bu projelerden elde edilen bulgular,",
+        "teknik engellerin aşılmasına, çevresel etkilerin en aza indirilmesine ve ekonomik verimliliğin optimize edilmesine yardımcı olarak diğer ülkeler için bir ölçüt teşkil edebilir. Gaz hidratların önemli enerji içeriği ve geniş dağılımı göz önüne alındığında, gelecekteki enerji tedarik stratejileri için kilit bir kaynak olarak konumlanmaktadırlar."
+      ]
+    },
+    {
+      "id": "tr-section-16",
+      "title": "Ekonomik Potansiyel ve Pazar Etkileri",
+      "paragraphs": [
+        "Gaz hidratların ekonomik uygulanabilirliği, devam eden araştırmaların önemli bir alanıdır. Çalışmalar genellikle termal stimülasyon, kimyasal püskürtme, basınçsızlaştırma ve CO2 püskürtme gibi çeşitli çıkarma tekniklerinin maliyet etkinliğini değerlendirmeye odaklanmaktadır (Matsumoto vd., 2013). Ayrıca, bu çalışmalar gaz hidratların küresel enerji piyasalarındaki rekabet gücünü incelemekte, enerji portföylerini çeşitlendirme ve enerji güvenliğini artırma potansiyellerini değerlendirmektedir. Çevresel düzenlemeler de, uyum ve risk azaltma ile ilgili maliyetler göz önüne alındığında, gaz hidrat projelerinin ekonomik sürdürülebilirliğinin belirlenmesinde önemli bir rol oynamaktadır (Jones vd., 2010). Jeopolitik analizler, gaz hidrat rezervlerinin ulusal enerji stratejileri üzerindeki etkilerini vurgulamaktadır. Önemli rezervlere sahip ülkeler, daha fazla enerji bağımsızlığı elde etmek için bu kaynaktan yararlanabilir ve böylece küresel enerji dinamiklerini etkileyebilir. Senaryo bazlı çalışmalar, çeşitli teknolojik ve piyasa koşulları altında gaz hidratların uzun vadeli ekonomik potansiyelini araştırarak, gelecekteki enerji sistemlerindeki rollerine ilişkin iç görüler sunmaktadır."
+      ]
+    },
+    {
+      "id": "tr-section-17",
+      "title": "Temel Politika Hususları",
+      "paragraphs": [
+        "Gaz hidratlar ve bunların enerji politikalarına entegrasyonu üzerine yapılan araştırmalardan birkaç temel husus ortaya çıkmaktadır:",
+        "Enerji Kaynaklarının Çeşitlendirilmesi: Gaz hidratların enerji portföylerine dahil edilmesi enerji güvenliğini artırır ve geleneksel hidrokarbonlara olan bağımlılığı azaltır. Bu durum özellikle rezervlerin tükenmekte olduğu veya geleneksel kaynaklara erişimin kısıtlı olduğu bölgeler için geçerlidir.",
+        "Enerji Güvenliği: Yüksek metan içeriğiyle gaz hidratlar, ithalat bağımlılığını azaltabilecek ve enerji politikalarında kendi kendine yeterliliği teşvik edebilecek stratejik bir enerji kaynağı olarak görülmektedir.",
+        "Çevresel Sürdürülebilirlik: CO2 püskürtmesi gibi çevreye duyarlı çıkarma teknikleri, sera gazı emisyonlarını azaltabilir ve böylece çevresel düzenlemeleri ve sürdürülebilirlik politikalarını etkileyebilir.",
+        "Ekonomik Kalkınma: Gaz hidrat kaynaklarının geliştirilmesi, özellikle kıyı bölgelerinde ve okyanus erişimi olan ülkelerde istihdam yaratılmasını ve ekonomik büyümeyi teşvik ederek, gelişmekte olan bu sektöre daha fazla yatırım yapılmasını sağlayabilir.",
+        "Uluslararası Işbirlikleri ve Politikalar: Gaz hidratların küresel önemi, bunların araştırılması, üretimi ve yönetimi için uluslararası standartlar ve protokoller gerektirmektedir. Uluslararası düzenlemelerin ve işbirliğinin güçlendirilmesi yenilikçi buluş teşvik edebilir ve çevresel sonuçları iyileştirebilir (International Energy Agency, 2018).."
+      ]
+    },
+    {
+      "id": "tr-section-18",
+      "title": "Bulgular",
+      "paragraphs": [
+        "Metanın gaz hidratlardan çeşitli yöntemlerle çıkarılması, hem çevresel hem de ekonomik sonuçlara ilişkin önemli bilgiler sağlamıştır.",
+        "“Basınçsızlaştırma”, rezervuardaki gazın %60’ına kadarını üretebilen uygun maliyetli bir teknik olarak ortaya çıkmıştır (Boswell & Collett, 2011). Bununla birlikte, deniz ekosistemlerini olumsuz etkileyebilecek çökme ve yerel donma gibi riskler taşımaktadır. Yöntemin daha düşük enerji tüketimi, işletme maliyetlerinin düşmesine katkıda bulunur, ancak rezervuar değişiklikleri nedeniyle verimlilik zaman içinde azalabilir.",
+        "“Isı Püskürtme”, potansiyel olarak neredeyse tam gaz üretimi sağlasa da, yüksek enerji gereksinimleri ve sera gazı emisyonlarının artmasına yol açan önemli fosil yakıt kullanımı ile ilgili zorluklarla karşı karşıyadır. Bu yöntem için yapılan ilk yatırım önemlidir ve üretilen enerjinin büyük bir kısmı rezervuarın ısıtılmasında harcanarak net enerji çıktısını azaltmaktadır.",
+        "“Kimyasal Püskürtme”, glikol veya metanol gibi kimyasalların kullanımını içerir ve potansiyel sızıntı ve yeraltı suyu kirliliği ile ilgili endişeleri artırır (Makogon vd., 2007). Sürdürülebilirlik için CO2 püskürtmesi metan üretimi ile birleştirmenin olası uzun vadeli faydalarına rağmen, kimyasallarla ilişkili yüksek maliyetler ve çevresel düzenlemelere uyum, bu yöntemi ekonomik açıdan külfetli hale getirmektedir.",
+        "“CO2 Püskürtme” atmosferik karbondioksit emisyonlarını potansiyel olarak azaltarak çevresel bir avantaj sunar (Hovland & Judd, 2004). Bununla birlikte, rezervuar içindeki basınç dengesini bozarak jeolojik stabilite sorunlarına yol açabilir.",
+        "“Mikrobiyolojik teknikler”, “ultrasonik stimülasyon” ve “elektromanyetik ısıtma” gibi yeni yöntemler araştırılmaktadır. Bu yenilikçi yaklaşımlar, çevresel etkileri en aza indirirken ekstraksiyon verimliliğini artırmayı amaçlamaktadır. Örneğin, mikrobiyolojik yöntemler uygun koşullar altında metan salınımını teşvik ederek sürdürülebilir bir alternatif sağlayabilir (Liu vd., 2012).",
+        "Japonya, Çin ve Amerika Birleşik Devletleri gibi ülkeler gaz hidrat çıkarma teknolojilerindeki gelişmelere öncülük etmektedir. Devam eden araştırmaları, teknik zorlukları ele almaya ve ekonomik uygulanabilirliği optimize etmeye odaklanmaktadır. Özellikle Japonya ve Çin, yakın zamanda ticari üretime geçmeye hazırlanıyor.",
+        "Gaz hidratlar enerji portföylerinin çeşitlendirilmesi ve ithal yakıtlara bağımlılığın azaltılması için bir fırsat sunmaktadır. Çevresel olarak, çıkarma işleminin karbon yakalama teknolojileriyle bütünleştirilmesi metan emisyonlarını azaltabilir ve sürdürülebilirliği teşvik edebilir.",
+        "Gaz hidratlar, kömür ve petrol gibi yüksek karbonlu yakıtlardan daha sürdürülebilir enerji sistemlerine geçişi kolaylaştıran bir ara enerji kaynağı olarak hareket etme potansiyeline sahiptir. Elektromanyetik ısıtma ve geliştirilmiş CO2 püskürtme gibi yenilikçi yöntemler, bu potansiyelin tam olarak hayata geçirilmesi için elzemdir.",
+        "Gaz hidrat çıkarımının karbon yakalama ve depolama/kullanma (CCSU) teknolojileriyle bütünleştirlmesi, çevresel açıdan sürdürülebilir bir enerji kaynağı olma potansiyelini daha",
+        "da güçlendirmektedir. Uygun yenilikçi buluş ve uluslararası iş birliği ile gaz hidratlar on yıllar boyunca enerji sağlayabilir ve daha temiz enerjiye doğru küresel geçişte bir geçiş kaynağı olarak hizmet edebilir. Bu teknolojilerin ilerletilmesi, gaz hidratların ekonomik ve çevresel faydalarını ortaya çıkarmak ve onları gelecekteki enerji stratejilerinin temel taşı haline getirmek için gerekli olacaktır.",
+        "Sonuç olarak, gaz hidratlar gelecekteki enerji taleplerini sürdürülebilir bir şekilde karşılama kapasitesine sahip uygulanabilir bir enerji kaynağını temsil etmektedir. Bunların başarılı bir şekilde kullanılması, teknolojik yeniliklerin devamına, uluslararası iş birliğine ve sağlam çevresel önlemlere bağlı olacaktır.",
+        "Ülkemizin öncelikli hedefleri arasında yerli ve milli kaynakların kullanılarak Türkiye’ nin enerjide dışa bağımlılığını azaltmak yer almaktadır. Dünya ekonomisinde söz sahibi büyük ülkelerin gaz hidratlarla ilgili yaptığı araştırmalar ve gelinen son noktanın gaz hidratlardan doğal gaz üretimine yönelik üretim testleri olduğu göz önünde bulundurulduğunda, ülkemizin süratle gaz hidrat araştırmaları için yaptığı faaliyetleri yerli ve milli kaynaklarla arttırması gerekliliği ortaya çıkmaktadır. Bu bağlamda izlenmesi gereken yol haritası Küçük, H.M., 2018 çalışmasında değinmiştir.",
+        "Aşağıdaki tablolarda gaz hidratlarından doğal gaz üretim yöntemlerinin karşılaştırması, gaz hidrat üretim yöntemlerinin avantaj ve dezavantajları, gaz hidrat üretim yöntemlerinin teknolojik olgunluk ve uygulama durumları özetlenmiştir.",
+        "Tablo 1. Gaz Hidratlardan Doğal Gaz Üretim Yöntemlerinin Karşılaştırılması",
+        "Tablo 1. Gaz Hidratlardan Doğal Gaz Üretim Yöntemlerinin Karşılaştırılması (devam)"
+      ]
+    },
+    {
+      "id": "tr-section-19",
+      "title": "Sonuç",
+      "paragraphs": [
+        "Karadeniz’de gaz hidratları araştırmaları alanında geçmişte yapılmış saha çalışmalarının sonuçlarına bakılırsa, mevcut rezervler 100 trilyon m3’ün üzerinde olabilir (Bazauk, vd. 2021). Karadeniz’in 470 bin km2 olan toplam alanının yaklaşık 200 bin km2’lik bölümü Türkiye’nin Münhasır Ekonomik Bölgesi (Deniz Yetki Alanı) içerisinde kalıyor. Mevcut rezervin ne kadarının Türkiye’nin tasarrufunda",
+        "olan alanda bulunduğuna dair kesin bilimsel veriler olmamakla birlikte, söz konusu kaynakların Türkiye’nin enerji gereksinimini çok uzun yıllar boyunca karşılamaya yeterli olacağı hesaplanmaktadır.",
+        "Gaz hidratların çıkarılması ve ekonomiye entegrasyonu mevcut yöntem ve teknolojiler kullanılarak gerçekleştirilebilir. Bu çıkarma tekniklerini iyileştirmeyi ve geliştirmeyi amaçlayan gelecekteki araştırmalar, patentli yeniliklere katkıda bulunacaktır.",
+        "Tablo 2. Gaz Hidrat Üretim Yöntemlerinin Avantajları ve Dezavantajları",
+        "Tablo 3. Gaz Hidrat Üretim Yöntemlerinin Teknolojik Olgunluk ve Uygulama Durumu",
+        "Çıkarılan gaz hidratlardan, buhar metan reformu (SMR) ve piroliz gibi işlemlerle mavi hidrojen veya sentez gazı üretilebilir. Bu yöntemler sadece hidrojen üretmekle kalmaz, aynı zamanda çok çeşitli gelişmiş malzemelerin üretiminde kullanılabilecek değerli yan ürünler olarak sentez gazı ve saf karbon da üretir.",
+        "Bu yaklaşım sadece sera gazlarının atmosfere salınmasını engellemekle kalmaz, aynı zamanda sürdürülebilir kalkınmayı da destekler. Dolayısıyla, gaz hidratların ekonomik kullanımı, bu kaynaklardan endüstriyel uygulamalar için yararlanırken küresel ısınma değişikliğini azaltmak için umut verici bir yol sunmaktadır.",
+        "Japonya, Çin ve Amerika Birleşik Devletleri, saha testleri ve çıkarma yöntemlerindeki önemli ilerlemelerle küresel gaz hidrat araştırma ve geliştirmesinde ön sıralarda yer almaktadır. Hindistan, Güney Kore ve Kanada da gaz hidrat rezervuarlarını keşfetme ve çıkarma teknolojilerini iyileştirme konusunda önemli ilerlemeler kaydetmektedir. Ticari üretim henüz gerçekleşmemiş olsa da, bu ülkeler teknik ve çevresel zorlukları ele alarak gelecekteki gelişim için zemin hazırlamaktadır. Önümüzdeki yıllarda Japonya ve Çin’in ticari üretime geçen ilk ülkeler arasında yer alması çok muhtemeldir.",
+        "Gaz hidratlar, fosil yakıtlar ile daha temiz enerji sistemleri arasındaki boşluğu dolduran bir geçiş enerji kaynağı olarak hizmet edebilir. Geniş metan rezervleriyle gaz hidratlar onlarca yıl boyunca enerji sağlama potansiyeline sahiptir ve enerji üretiminin çevresel etkilerini azaltma fırsatı sunar.",
+        "Özetle, gaz hidratların kapsamlı bir şekilde incelenmesi, enerji politikalarının şekillendirilmesi ve bu kaynaktan sürdürülebilir bir şekilde faydalanmak için gerekli çerçevelerin oluşturulması açısından elzemdir. Ulusların enerji güvenliği ve çevre",
+        "yönetimi konularındaki ortak çıkarları doğrultusunda gösterecekleri işbirliği çabaları, gaz hidratların geleceğin enerji kaynağı olma potansiyelinin hayata geçirilmesinde çok önemli bir rol oynayacaktır."
+      ]
+    }
+  ],
+  "keywords": [
+    "Çevresel sürdürülebilirlik",
+    "enerji güvenliği",
+    "gaz hidratlar",
+    "Türkiye Ulusal Gaz Hidrat Projesi",
+    "yeni enerji kaynakları"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Anderson, B. J., Boswell, R., Collett, T. S., Farrell, H., Ohtsuki, S., White, M., & Zyrianova, M. (2014). Iġnik Sikumi CO2-CH4 gaz hidrat değişimi saha denemesinin bulgularının gözden geçirilmesi. 8. Uluslararası Gaz Hidratları Konferansı Bildirileri, 1-8."
+    },
+    {
+      "id": "ref-2",
+      "text": "Bazauk, O., Sai, K., Lozynskyi, V., Petlovanti, M., Saik, P., (2021) “Karadeniz’de Heterojen Yapıya Sahip Gaz Hidrat Yataklarının Ayrışma Bölgelerinin Araştırılması” MDPI Energies."
+    },
+    {
+      "id": "ref-3",
+      "text": "Boswell, R., ve Collett, T.S., (2006). Gaz hidratları kaynak piramidi. Fire in the Ice, Methane Hydrate Newsletter, ABD Enerji Bakanlığı, Fosil Enerji Ofisi, Ulusal Enerji Teknoloji Laboratuvarı, s. 5-7."
+    },
+    {
+      "id": "ref-4",
+      "text": "Boswell, R., & Collett, T. S. (2011). “Gaz Hidrat Kaynağı: Mevcut Bilgi Durumunun Gözden Geçirilmesi.” Doğal Gaz Hidratları: Enerji Kaynağı Potansiyeli ve Çevresel Etkiler."
+    },
+    {
+      "id": "ref-5",
+      "text": "Boswell, R., Collett, T.S., Frye, M., Shedd, W., McConnell, D.R., ve Shelander, D., (2012) Kuzey Meksika Körfezi’nde yeraltı gaz hidratları. Marine and Petroleum Geology, cilt. 34, no. 1, s. 4-30, Haziran."
+    },
+    {
+      "id": "ref-6",
+      "text": "Boswell, R., Schoderbek, D., Collett, T. S., Ohtsuki, S., White, M., & Anderson, B. J. (2017). Iġnik Sikumi Saha Deneyi, Alaska Kuzey Yamacı: Gaz hidrat rezervuarlarında CO2–CH4 değişimi için tasarım, işlemler ve çıkarımlar. Enerji ve Yakıtlar, 31(1), 140-153."
+    },
+    {
+      "id": "ref-7",
+      "text": "Chen, L., Feng, Y., Okajima, J., Komiya, A., & Maruyama, S. (2017). 2017 Shenhu, Güney Çin Denizi metan hidrat çıkarma testi için üretim davranışı ve sayısal analiz. Doğal Gaz Bilimi ve Mühendisliği Dergisi, 53, 55-66."
+    },
+    {
+      "id": "ref-8",
+      "text": "Cherskiy, N.V., ve Tsarev, V.P., (1977) Dünya okyanuslarının dip çökeltilerinden doğal gazların aranması ve araştırılması ışığında rezervlerin değerlendirilmesi (Rusça). Geologiya Nefti i Geofizika, cilt 5, s. 21-31."
+    },
+    {
+      "id": "ref-9",
+      "text": "Chong, Z. R., Yang, S. H. B., Babu, P., Linga, P., & Li, X. S. (2016). Doğal gaz hidratlarının bir enerji kaynağı olarak incelenmesi: Beklentiler ve zorluklar. Uygulamalı Enerji, 162, 1633-1652."
+    },
+    {
+      "id": "ref-10",
+      "text": "Chong, Z.R., Yang, M., Khoo, B.C., Linga, P., (2016) Aşırı gaz ortamında metan hidrat oluşumu ve ayrışması üzerinde gözenekli ortamın boyut etkisi. Ind. Eng. Chem. Res., 55, 7981-7991. 7."
+    },
+    {
+      "id": "ref-11",
+      "text": "Jones, C. M., Dourado, J. D. A. ve Chaves, H. A. F. (2010). Gaz Hidratlar ve Mikrobiyolojik Süreçler. Arama ve Keşif. 80081."
+    },
+    {
+      "id": "ref-12",
+      "text": "Çifci, G., 2020. Gaz Hidratlar: Yakın Geleceğin Enerji Kaynağı BRIQ, Volume 2, Issue 1, Winter 2020-2021."
+    },
+    {
+      "id": "ref-13",
+      "text": "Çifci G., Parlaktuna M., Çelebi, S.S., Okay Günaydın, S., (baskıda). Gaz Hidratlardan Enerji üretimi, ENY2, Elsevier."
+    },
+    {
+      "id": "ref-14",
+      "text": "Collett, T. S., ve diğerleri (2015). “Kuzey Amerika’da Gaz Hidrat Üretiminin Ekonomik Uygulanabilirliği.” Doğal Gaz Hidratları: Enerji Kaynağı Potansiyeli ve Çevresel Etkiler."
+    },
+    {
+      "id": "ref-15",
+      "text": "Dallimore, S. R., Wright, J. F., Nixon, F. M., Kurihara, M., Yamamoto, K., Fujii, T., Fujii, K., Numasawa, M., Yasuda, M., & Imasato, Y. (2012). JOGMEC/NRCAN/AURORA Mallik gaz hidrat üretim araştırma kuyusunun 2007 üretim tepkisi özelliklerini etkileyen jeolojik ve gözenekli ortam faktörleri. Petrol Bilimi ve Mühendisliği Dergisi, 81, 45-55."
+    },
+    {
+      "id": "ref-16",
+      "text": "Dong, F., Zang, X., Li, D., Fan, S., & Liang, D. (2009). Yüksek konsantrasyonlu metanol ve etilen glikol çözeltisi enjeksiyonu ile propan hidrat ayrışmasının deneysel olarak incelenmesi. Enerji ve Yakıtlar, 23(3), 1563-1567."
+    },
+    {
+      "id": "ref-17",
+      "text": "Espinoza, D. N., & Santamarina, J. C. (2011).CH4-CO2 replasmanı sırasında hidrat taşıyan kumun P-dalgası izlenmesi. Uluslararası Sera Gazı Kontrolü Dergisi, 5(4), 1031-1038."
+    },
+    {
+      "id": "ref-18",
+      "text": "Feng, J. C., Wang, Y., Li, X. S., Li, G., & Chen, Z. Y. (2015). Basınç düşürme ve termal uyarının birleşimiyle gaz hidrat birikimi için üretim davranışı ve sayısal model. Uygulanan Enerji, 145, 25-33."
+    },
+    {
+      "id": "ref-19",
+      "text": "Fujii, T., Nakamizu, M., Tsuji, Y., Namikawa, T., Okui, T., Kawasaki, M., Ochiai, K., Nishimura, M., & Takano, O. (2018). Doğu Nankai Çukuru’ndaki metan hidratının kaynak değerlendirmesi Nankai Trough, Japonya. Y. Konno, Y. Masuda, Y. Takai (Eds.), Gaz Hidratlar 2: Jeolojik Bilim Sorunları ve Potansiyel Endüstriyel Uygulamalar (pp. 88-107). Wiley-VCH."
+    },
+    {
+      "id": "ref-20",
+      "text": "Hovland, M., & Judd, A. G. (2004). “Deniz Tabanı Metan Hidratları: Çevresel Etkileri Üzerine Bir Inceleme.” Çevre Bilimi ve Politikası."
+    },
+    {
+      "id": "ref-21",
+      "text": "Heijmans, K., ve diğerleri, (2007). Yeni bir Verrucomicrobia türü tarafından pH 1’in altında metanotrofi: Nature, v. 6, no. 450, p. 874-878."
+    },
+    {
+      "id": "ref-22",
+      "text": "Inagaki, F., ve diğerleri, (2006). Metan hidrat içeren derin deniz çökeltilerindeki mikropların biyocoğrafik dağılımı ve çeşitliliği,Pasifik Okyanusu Kenarındaki: PNAS, v. 103, no. 8, p. 2815-2820."
+    },
+    {
+      "id": "ref-23",
+      "text": "International Energy Agency (IEA) (2018)."
+    },
+    {
+      "id": "ref-24",
+      "text": "Islam, M. R. (2015). Geleneksel olmayan gaz hidratları: Termal uyarımın ve geleneksel olmayan kaynakların rolü. M. R. Islam (Ed.), Geleneksel Olmayan Gaz Hidratları (s. 231-263). Gulf Professional Publishing."
+    },
+    {
+      "id": "ref-25",
+      "text": "Jones, C. M., Dourado, J.D.A. and Chaves, H.A.F., (2010). Gaz Hidratları ve Mikrobiyolojik Prosesler. Arama ve Keşif. 80081."
+    },
+    {
+      "id": "ref-26",
+      "text": "Jung, J. W., Santamarina, J. C., & Soga, K. (2010). Hidrat taşıyan kumların gerilim-şekil değiştirme tepkisi: Ayrık eleman yöntemi simülasyonları kullanılarak sayısal çalışma. Jeofizik Araştırma Dergisi: Katı Dünya, 115(B6)."
+    },
+    {
+      "id": "ref-27",
+      "text": "Kamath, V. A., & Patil, S. L. (2013). Gözenekli ortamlarda basınç düşürme ve inhibitör enjeksiyonu ile gaz hidrat ayrışmasının deneysel çalışması. 7. Uluslararası Gaz Hidratları Konferansı Bildirileri, 1-10."
+    },
+    {
+      "id": "ref-28",
+      "text": "Koh, C. A., Sum, A. K., & Sloan, E. D. (2012). Gaz hidratlar: Buzlu kafeslerden enerjinin kilidini açmak. Uygulamalı Fizik Dergisi, 106(6), 061101."
+    },
+    {
+      "id": "ref-29",
+      "text": "Konno, Y., Masuda, Y., Hariguchi, Y., Kurihara, M., & Ouchi, H. (2010). Okyanus metan hidratlarından basınçsızlaştırma kaynaklı gaz üretiminin temel faktörleri. Enerji ve Yakıtlar, 24(3), 1736-1744."
+    },
+    {
+      "id": "ref-30",
+      "text": "Konno, Y., Fujii, T., Sato, A., Akamine, K., Naiki, M., Masuda, Y., Yamamoto, K., & Nagao, J. (2014). Japonya kıyılarında dünyanın ilk açık deniz metan hidrat üretim testinin temel bulguları: Gelecekteki ticari üretime doğru. Enerji ve Yakıtlar, 28(5), 3544-3553."
+    },
+    {
+      "id": "ref-31",
+      "text": "Küçük, H.M., 2018. Türkiye’nin Gaz Hidrat Yol Haritası Önerisi, World Energy Council, Dünya Enerji Konseyi Türk Milli Komitesi Petrol ve Doğal Gaz Çalışma Grubu PDG1."
+    },
+    {
+      "id": "ref-32",
+      "text": "Konno, Y., Masuda, Y., Hariguchi, Y., Kurihara, M., & Ouchi, H. (2010). Okyanus metan hidratlarından basınçsızlaştırma kaynaklı gaz üretiminin temel faktörleri. Enerji ve Yakıtlar,24(3), 1736-1744."
+    },
+    {
+      "id": "ref-33",
+      "text": "Lee, J., Park, S., & Sung, W. (2013). Hidrattan ayrışmış gazın basınçsızlaştırma şemasıyla üretkenliği üzerine deneysel bir çalışma. Gözenekli Ortamda Taşıma, 92(1), 69-81."
+    },
+    {
+      "id": "ref-34",
+      "text": "Lee, J., & Lee, K. (2014). “Gaz Hidrat Araştırmalarındaki Son Gelişmeler: Bir Inceleme.” Petrol Bilimi ve Mühendisliği Dergisi."
+    },
+    {
+      "id": "ref-35",
+      "text": "Li, B., Li, G., Li, X. S., Li, Q. P., Yang, B., Zhang, Y., & Chen, Z. Y. (2014). Deneysel ve sayısal çalışmalarla, pilot ölçekli bir hidrat simülatöründe, huff ve puff yöntemi kullanılarak metan hidratından gaz üretimi. Enerji ve Yakıtlar, 26(12), 7183-7194."
+    },
+    {
+      "id": "ref-36",
+      "text": "Li, X. S., Yang, B., Li, G., Li, B., Zhang, Y., & Chen, Z. Y. (2015). Gözenekli ortamda metan hidratından huff ve puff yöntemi ile gaz üretimi üzerine deneysel çalışma. Yakıt, 119, 102-110."
+    },
+    {
+      "id": "ref-37",
+      "text": "Li, X. S., Xu, C. G., Zhang, Y., Ruan, X. K., Li, G., & Wang, Y. (2016). Doğal gaz hidratından gaz üretiminin araştırılması: Bir inceleme. Uygulamalı Enerji, 172, 286-322."
+    },
+    {
+      "id": "ref-38",
+      "text": "Li, X. S., Xu, C. G., Zhang, Y., Ruan, X. K., & Li, G. (2018). Farklı basınç düşürme şemaları altında metan hidratının üretim davranışının deneysel olarak incelenmesi. Uygulamalı Enerji, 227, 710-718."
+    },
+    {
+      "id": "ref-39",
+      "text": "Liu, Y., Gamwo, I. K., & Myshakin, E. M. (2012). Hidrat çözünmesinde metanolün rolü. Fiziksel Kimya Dergisi B, 116(44), 13294-13301"
+    },
+    {
+      "id": "ref-40",
+      "text": "Liu, Y., ve diğerleri (2012). “Gaz Hidrat Kullanımının Çevresel Etki Değerlendirmesi: Bir Inceleme.” Energy Procedia"
+    },
+    {
+      "id": "ref-41",
+      "text": "Makogon, Y. F., ve diğerleri (2007). “Doğal Gaz Üretiminde Hidrat Oluşumu ve Önlenmesi. “Doğal Gaz Bilimi ve Mühendisliği Dergisi."
+    },
+    {
+      "id": "ref-42",
+      "text": "Matsumoto, R., ve diğerleri (2013). “Doğal Gaz Hidratlarının Küresel Enerji Arzındaki Rolü: Ekonomik Bir Perspektif.” Enerji Politikası."
+    },
+    {
+      "id": "ref-43",
+      "text": "McConnell ,D.R.(2019). Gaz hidrat arama, arama ve karakterizasyonu. Houston’da düzenlenen Kıyıötesi (offshore) Teknoloji Konferansı, USA, 6– 9May 2019, OTCOTC -29604-MS."
+    },
+    {
+      "id": "ref-44",
+      "text": "McGrail, B. P., Zhu, T., Hunter, R. B., White, M. D., Patil, S. L., & Kulkarni, A. S. (2007). CO2 ile gaz hidratlarının gelişmiş üretimi için yeni bir yöntem. AAPG Hedberg Konferansı Bildirileri “Doğal Gaz Hidratları: Enerji Kaynağı Potansiyeli ve Ilgili Jeolojik Tehlikeler “, 1-5."
+    },
+    {
+      "id": "ref-45",
+      "text": "METI (Ministry of Economy, Trade and Industry, Japan). (2017). FY 2016 Japonya Denizi’nde metan hidrat kaynağı geliştirme açık deniz üretim testi. METI Press Release."
+    },
+    {
+      "id": "ref-46",
+      "text": "G. Çifçi, S. S. Çelebi, M. Parlaktuna, A. Kaçar, S. O. Günaydın - Yeni Bir Enerji Kaynağı Olarak Gaz Hidratlar"
+    },
+    {
+      "id": "ref-47",
+      "text": "Minshull, T.A., Marín-Moreno, H., Betlem, P., Bialas, J., Buenz, S., Burwicz, E., Cameselle, A.L., Cifci, G., Giustiniani, M., Hillman, J.I.T., Hölz, S., Hopper, J.R., Ion, G., León, R., Magalhaes, V., Makovsky, Y., Mata, M.-P., Max, M.D., Nielsen, T., Okay, S., Ostrovsky, I., O’Neill, N., Pinheiro, L.M., Plaza-Faverola, A.A., Rey, D., Roy, S., Schwalenberg, K., Senger, K., Vadakkepuliyambatta, S., Vasilev, A., Vázquez, Juan.-Tomá., Avrupa’da hidrat oluşumu: Mevcut kanıtların gözden geçirilmesi, Deniz ve Petrol Jeolojisi (2019), doi: https://doi.org/10.1016/ j.marpetgeo.2019.08.014."
+    },
+    {
+      "id": "ref-48",
+      "text": "Moridis, G. J., Collett, T. S., Pooladi-Darvish, M., Hancock, S., Santamarina, C., Boswell, R., Kneafsey, T., Rutqvist, J., Kowalsky, M. B., Reagan, M. T., Sloan, E. D., Sum, A. K., & Koh, C. A. (2011). Gaz-hidrat yataklarından gaz üretiminin karşı karşıya olduğu zorluklar, belirsizlikler ve sorunlar. SPE Rezervuar Değerlendirmesi ve Mühendisliği, 14(01), 76-112."
+    },
+    {
+      "id": "ref-49",
+      "text": "Ojha, M., & Sain, K. 2009. Gaz hidratları ve serbest gaz bölgelerini kaydetmek için sismik nitelik analizleri: Makran birikim ödülüne uygulama. 32, 264-270."
+    },
+    {
+      "id": "ref-50",
+      "text": "Park, Y., Cha, M., Cha, J. H., Shin, K., Lee, H., Park, K. P., Huh, D. G., Lee, H. Y., Kim, S. J., & Lee, J. (2008). Karbondioksitin karmaşık gaz hidrat yapıları ile değiştirilmesi. 6. Uluslararası Gaz Hidratları Konferansı Bildirileri, 1-10."
+    },
+    {
+      "id": "ref-51",
+      "text": "Reagan, M. T., Moridis, G. J., Elliott, S. M., & Maltrud, M. (2010). Okyanus gazı hidrat ayrışmasının Arktik Okyanusu metan tüylerinin oluşumuna katkısı. Jeofizik Araştırma Dergisi: Okyanuslar, 116(C9)."
+    },
+    {
+      "id": "ref-52",
+      "text": "Ruppel, C. D., & Kessler, J. D. (2017). Iklim değişikliği ve metan hidratlarının etkileşimi. Jeofizik Incelemeleri, 55(1), 126-168."
+    },
+    {
+      "id": "ref-53",
+      "text": "Rutqvist, J., Moridis, G. J., Grover, T., & Collett, T. (2009). Permafrost ile ilişkili hidrat yataklarının basınçsızlaştırma kaynaklı gaz üretimine jeomekanik tepkisi. Petrol Bilimi ve Mühendisliği Dergisi, 67(1-2), 1-12."
+    },
+    {
+      "id": "ref-54",
+      "text": "Sahu, S. K., Yamada, Y., Tsuji, T., & Matsuoka, T. (2018). Kimyasal ajanların metan hidrat ayrışması üzerindeki etkileri: Bir inceleme. Doğal Gaz Bilimi ve Mühendisliği Dergisi,45, 581-593."
+    },
+    {
+      "id": "ref-55",
+      "text": "Sloan, E. D., & Koh, C. A. (2008). Doğal gazların klatrat hidratları (3rd ed.). CRC Baskısı."
+    },
+    {
+      "id": "ref-56",
+      "text": "Song, Y., Yang, L., Zhao, J., Liu, W., Yang, M., Li, Y., Liu, Y., & Li, Q. (2016). Çin’de doğal gaz hidrat araştırmalarının durumu: Bir inceleme. Yenilenebilir ve Sürdürülebilir Enerji Incelemeleri,59, 1498-1513."
+    },
+    {
+      "id": "ref-57",
+      "text": "Su, Z., He, Y., Wu, N., Zhang, K., & Moridis, G. J. (2021). Güney Çin Denizi’ndeki ilk gaz hidrat üretim testinden elde edilen gaz üretiminin değerlendirilmesi. Uygulamalı Enerji,290, 116574."
+    },
+    {
+      "id": "ref-58",
+      "text": "Sun, Z., Wang, R., Ma, R., Guo, K., & Fan, S. (2015). Doğal gaz hidrat üretimi üzerine hidrat oluşumunu kullanarak yüzey aktif maddenin etkisi. Enerji ve Yakıtlar, 17(5), 1180-1185."
+    },
+    {
+      "id": "ref-59",
+      "text": "TP-DEPARK Proje Raporu, 2018. Türkiye Petrolleri ve Dokuz Eylül Teknoloji Geliştirme A.Ş. ile Batı Karadeniz Pilot Alanda Gazhidrat Potansiyeli Etüt ve Araştırma Projesi."
+    },
+    {
+      "id": "ref-60",
+      "text": "Xu, C. G., Li, X. S., Ruan, X. K., Chen, Z. Y., & Yan, K. F. (2016). Gaz hidratı işletmesi ve ölçek büyütme araştırmaları üzerine pilot ölçekli araştırmalardaki ilerlemeler. Çin Kimya Mühendisliği Dergisi, 24(2), 271-281."
+    },
+    {
+      "id": "ref-61",
+      "text": "Yamamoto, K., Terao, Y., Fujii, T., Ikawa, T., Seki, M., Matsuzawa, M., & Kanno, T. (2014). Doğu Nankai Çukuru’ndaki ilk açık deniz metan hidrat üretim testinin operasyonel genel görünümü. Açık Deniz Teknolojisi Konferansı’nda (pp. 1-11)."
+    },
+    {
+      "id": "ref-62",
+      "text": "Yan, T., Zhou, Y.Q., Zhang, C.L., (2006). Meksika Körfezi’ndeki gaz hidratlar ve hidrokarbon sızıntıları ile ilişkili sedimanlardaki metanotroflar için fonksiyonel genlerin çeşitliliği: FEMS Microbiology Ecology, v. 57, no. 2, p. 251-259."
+    },
+    {
+      "id": "ref-63",
+      "text": "Yang, M., Song, Y., Ruan, X., Liu, Y., Zhao, J., & Li, Q. (2012). Sayısal simülasyon yoluyla hidrat bazlı doğal gaz depolama yöntemlerinin karşılaştırmalı analizi. Enerji ve Yakıtlar, 26(8), 4911-4918."
+    },
+    {
+      "id": "ref-64",
+      "text": "Walsh, M. R., Hancock, S. H., Wilson, S. J., Patil, S. L., Moridis, G. J., Boswell, R., Collett, T. S., Koh, C. A., & Sloan, E. D. (2009). Doğal gaz hidratlarından gaz üretiminin ticari uygulanabilirliğine ilişkin ön rapor. Enerji Ekonomisi, 31(5), 815-823."
+    },
+    {
+      "id": "ref-65",
+      "text": "White, M., (2008). Gelişmiş Gaz Hidrat Üretim Yöntemlerinin Karşılaştırmalı Değerlendirmesi: NETL Hidrat Programı Akran Değerlendirmesi, Pasifik Kuzeybatı Ulusal Laboratuvarı, Ağustos 2008."
+    },
+    {
+      "id": "ref-66",
+      "text": "Zhen-guo Z.,Yu W., Lian-feng G., Ying Z., Chang-shui Liu. (2012) “ Geleceğin Enerjisi, Çevresi ve Malzemeleri Konulu Uluslararası Konferans Deniz Gazı Hidratları: Geleceğin Enerjisi mi, Çevre Katili mi?”"
+    }
+  ],
+  "acknowledgements": "2003K120360 numaralı proje ile ekipman temini ve veri toplama, işleme ve yorumlama laboratuvarının kurulmasında verdikleri değerli destek için Devlet Planlama Teşkilatı’na (DPT) teşekkürü bir borç biliriz. Ekibimize, onlarca jeofizik (özellikle Orhan Atgın, Özkan Özel vb.), jeoloji (Talip Güngör, Altuğ Hasözbek, Namık Çağatay, Mine S. Kayserilioğlu vd.) ve kimya mühendisine (Esin Süzer, Hakan Alyürük, Enis Darılmaz vb), mikrobiyologlar (Burcu Omuzbüken), fiziksel oşinograf (Murat Gündüz), DEÜ araştırmacıları (Burcu Barın, Sermet Gündüz, H. Mert Küçük vd.), ODTÜ’den bilim insanları (Çağlar Söyüncü), İstanbul Üniversitesi (Hakan Hoşgörmez vd.), Ege Üniversitesi (Güven Özdemir) ve K. Gaz Hidrat araştırmaları sırasında projelerde çalışan diğer genç araştırıcılarımıza ve karşılaştığımız her sorunun üstesinden gelmemiz için bize omuz veren Piri Reis ve Dokuz Eylül 4 araştırma gemisi mürettebatına başta Kaptan Kemal Dursun’a teşekkür ederiz. Ayrıca DEÜ IMST öğretim üyelerine (Mustafa Ergün) ve kaybettiğimiz çok değerli meslektaşımız Prof. Dr. Aynur Kontaş’a GH araştırmalarına yaptığı değerli katkılardan dolayı teşekkür ederiz. Ruhu şad olsun. Ayrıca Moskova Devlet Üniversitesi’nden Prof. Michael Ivanoav’a Araştırma ile Eğitim (TTR) seferleri ile gaz hidrat araştırmalarına öncülük ettiği için teşekkür ediyor, sevgi ve saygı ile anıyoruz. Son olarak, bu makaleye değerli katkılarından dolayı Salih Ertan’a çok özel bir teşekkür göndermek isteriz. 371 G. Çifci, S. S. Çelebi, M. Parlaktuna, A. Kaçar, S. O. Günaydın - Yeni Bir Enerji Kaynağı Olarak Gaz Hidratlar",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-01.jpg",
+      "caption": "Şekil 1. Su ve metandan oluşan kristal bileşikler olan gaz hidratların, önemi ve deniz çökellerinde ve don ayazı (permafrost) bölgelerindeki yerleri gösterilmektedir. Yüksek basınç ve düşük sıcaklıklarda metan, metan hidratı oluşturmak üzere bir buz kafesinin içinde hapsolur (Şekil: Çifci vd., baskıda)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-02.jpg",
+      "caption": "Şekil 2. Batı Karadeniz’de deniz tabanından elde edilen gaz hidratlar ve yakıldıklarındaki görüntüsü. (Şekil: TP-DEPARK Proje Raporu, 2018)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-03.jpg",
+      "caption": "Şekil 3. Denizel tortullarda gaz hidratların tanımlanabilmesi için belirteç olan Tabana Benzeyen Yansıtıcıyı (BSR) gösteren jeofizik sismik yansıma kesiti yorumu (Şekil: Çifci vd., baskıda)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-04.jpg",
+      "caption": "Şekil 4. Bu yatakları jeolojik ve ekonomik geri kazanıla bilirliklerine göre sınıflandıran Gaz hidrat kaynak piramidi. (Şekil: Boswell & Collett, 2011)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-05.jpg",
+      "caption": "Şekil 5. Gaz hidratlardan doğal gaz elde etmek için uygulanabilecek üretim yöntemleri. Isı püskürtme, Basınç düşürme, kimyasal püskürtme ve CO2 değişimi, her biri benzersiz faydalar ve zorluklar sunar. (Şekil: Çifci vd., baskıda)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-06.jpg",
+      "caption": "Şekil 6. Cascadia bölgesinde Gaz hidratların tabanı, tabana benzeyen yansıtıcı (BSR)’e ulaşan sondaj derinliğini gösteren bir kesit örneği (Şekil: McConnell, 2019)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-07.jpg",
+      "caption": "Tablo 1. Gaz Hidratlardan Doğal Gaz Üretim Yöntemlerinin Karşılaştırılması"
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-08.jpg",
+      "caption": "Tablo 1. Gaz Hidratlardan Doğal Gaz Üretim Yöntemlerinin Karşılaştırılması (devam)"
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-09.jpg",
+      "caption": "Tablo 2. Gaz Hidrat Üretim Yöntemlerinin Avantajları ve Dezavantajları"
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-10.jpg",
+      "caption": "Tablo 3. Gaz Hidrat Üretim Yöntemlerinin Teknolojik Olgunluk ve Uygulama Durumu"
+    },
+    {
+      "id": "figure-11",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-11.jpg",
+      "caption": "Yeni Bir Enerji Kaynağı Olarak Gaz Hidratlar"
+    },
+    {
+      "id": "figure-12",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-12.jpg",
+      "caption": "Yeni Bir Enerji Kaynağı Olarak Gaz Hidratlar"
+    }
+  ]
+}
