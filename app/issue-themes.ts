@@ -26,7 +26,7 @@ const themes: Record<string, { tr: string; en: string }> = {
   "7-1": { tr: "İklim–Su–Gıda Krizi: Çözüm Yükselen Güney’de", en: "The Climate–Water–Food Crisis: Solutions from the Rising South" },
   "7-2": { tr: "Çin’e Özgü Sosyalizmin Ekonomi Politiği", en: "The Political Economy of Socialism with Chinese Characteristics" },
   "7-3": { tr: "Kültürel Miras Yağması: Emperyalist Hegemonya ve İade Mücadelesi", en: "Cultural Heritage Plunder: Imperialist Hegemony and the Struggle for Restitution" },
-  "7-4": { tr: "Batı Asya’da Yeni Dönem: Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor", en: "A New Era in West Asia: Hegemonism Recedes, Regional Agency Grows" },
+  "7-4": { tr: "Batı Asya’da Yeni Dönem: Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor", en: "A New Era in West Asia: The Erosion of Hegemony and the Rise of Regional Agency" },
 };
 
 export function issueTheme(volume: number, issue: number, locale: "tr" | "en") {
