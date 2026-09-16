@@ -91,6 +91,7 @@ type ArticleDetails = {
 };
 
 const SAUDI_CULTURAL_HEDGING_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";
+const HE_GANQIANG_TRANSLATION_SLUG = "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0";
 
 function keywordLabel(value: string, locale: "tr" | "en") {
   const language = locale === "tr" ? "tr-TR" : "en-US";
@@ -102,6 +103,17 @@ function cleanAbstractParagraphs(values: string[], locale: "tr" | "en") {
   return values
     .map((value, index) => index === 0 ? value.replace(heading, "").trim() : value.trim())
     .filter(Boolean);
+}
+
+function PublicationNoteCopy({ value, locale, articleSlug }: { value: string; locale: "tr" | "en"; articleSlug: string }) {
+  const credit = locale === "tr"
+    ? "Makalenin çevirisi Necati Demircan, editörlüğü Jessica Durdu tarafından yapılmıştır."
+    : "The article was translated by Necati Demircan and edited by Jessica Durdu.";
+  const text = articleSlug === HE_GANQIANG_TRANSLATION_SLUG ? `${value} ${credit}` : value;
+  const linkedNames = new Set(["Necati Demircan", "Jessica Durdu"]);
+  return <>{text.split(/(Necati Demircan|Jessica Durdu)/g).map((part, index) => linkedNames.has(part)
+    ? <a href={authorProfileHref(part, locale)} key={`${part}-${index}`}>{part}</a>
+    : part)}</>;
 }
 
 function OrcidBadge() {
@@ -456,7 +468,7 @@ export async function ArticlePlatform({
             {fullText && <ArticleFigures figures={fullText.figures} locale={locale} />}
             {supplementary.length ? <details className="article-accordion" id={locale === "tr" ? "ek-materyaller" : "supplementary"}><summary><span>{locale === "tr" ? "Ek materyaller" : "Supplementary information"}</span><b>{supplementary.length}</b></summary><div className="supplementary-links">{supplementary.map((item) => <a href={item.url} key={`${item.title}-${item.url}`} download>{item.title}<span>↓︎</span></a>)}</div></details> : null}
 
-            {fullText?.publicationNote && <details className="article-accordion article-publication-note" id={locale === "tr" ? "yayin-notu" : "publication-note"}><summary><span>{locale === "tr" ? "Yayın notu" : "Publication note"}</span><b>i</b></summary><div className="accordion-copy"><p>{fullText.publicationNote}</p></div></details>}
+            {fullText?.publicationNote && <details className="article-accordion article-publication-note" id={locale === "tr" ? "yayin-notu" : "publication-note"}><summary><span>{locale === "tr" ? "Yayın notu" : "Publication note"}</span><b>i</b></summary><div className="accordion-copy"><p><PublicationNoteCopy value={fullText.publicationNote} locale={locale} articleSlug={article.slug} /></p></div></details>}
 
             <Acknowledgements value={acknowledgements} locale={locale} />
             <ResearchStatements items={statements} locale={locale} />
