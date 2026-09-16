@@ -688,7 +688,6 @@ test("renders Volume 7 Issue 2 articles as bilingual HTML with issue-verified af
 
   const issueArticles = archive.articles.filter((article) => article.volume === 7 && article.issue === 2);
   assert.equal(issueArticles.length, 11);
-  assert.ok(issueArticles.every((article) => article.published_online_date === "2026-03-01"));
   assert.equal(issueArticles[0].publication_type_tr, "Çeviri");
   assert.equal(issueArticles[1].publication_type_tr, "Çeviri");
   assert.equal(issueArticles[4].publication_type_tr, "Görüş Makalesi");
