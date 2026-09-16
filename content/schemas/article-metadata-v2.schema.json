@@ -1,0 +1,267 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://briqjournal.com/schemas/article-metadata-v2.schema.json",
+  "title": "BRIQ Article Metadata v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "articleType",
+    "title",
+    "authors",
+    "abstract",
+    "keywords",
+    "dates",
+    "journal",
+    "pages",
+    "doi",
+    "language",
+    "license",
+    "urls"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 2 },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "articleType": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "tr", "en", "peerReviewed"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "tr": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 },
+        "peerReviewed": { "type": "boolean" }
+      }
+    },
+    "title": { "$ref": "#/$defs/localizedRequired" },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["displayName", "affiliations"],
+        "properties": {
+          "displayName": { "type": "string", "minLength": 1 },
+          "givenName": { "type": ["string", "null"] },
+          "familyName": { "type": ["string", "null"] },
+          "orcid": {
+            "type": ["string", "null"],
+            "pattern": "^(https://orcid\\.org/)?[0-9X]{4}-[0-9X]{4}-[0-9X]{4}-[0-9X]{4}$"
+          },
+          "affiliations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["name"],
+              "properties": {
+                "name": { "type": "string", "minLength": 1 },
+                "nameTr": { "type": ["string", "null"] },
+                "nameEn": { "type": ["string", "null"] },
+                "country": { "type": ["string", "null"] },
+                "ror": { "type": ["string", "null"], "format": "uri" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "abstract": { "$ref": "#/$defs/localizedNullable" },
+    "keywords": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "tr"],
+      "properties": {
+        "en": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "tr": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["received", "revised", "accepted", "published"],
+      "properties": {
+        "received": { "$ref": "#/$defs/dateNullable" },
+        "revised": { "$ref": "#/$defs/dateNullable" },
+        "accepted": { "$ref": "#/$defs/dateNullable" },
+        "published": { "$ref": "#/$defs/dateNullable" }
+      }
+    },
+    "journal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "issn", "eissn", "volume", "issue"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "titleTr": { "type": ["string", "null"] },
+        "issn": { "type": ["string", "null"] },
+        "eissn": { "type": ["string", "null"] },
+        "volume": { "type": "integer", "minimum": 1 },
+        "issue": { "type": "integer", "minimum": 1 },
+        "year": { "type": ["integer", "string", "null"] },
+        "season": { "$ref": "#/$defs/localizedNullable" }
+      }
+    },
+    "pages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["first", "last"],
+      "properties": {
+        "first": { "type": ["string", "null"] },
+        "last": { "type": ["string", "null"] }
+      }
+    },
+    "doi": { "type": ["string", "null"] },
+    "language": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["en", "tr"] }
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "funding": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "statement": { "$ref": "#/$defs/localizedNullable" },
+        "funders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string", "minLength": 1 },
+              "nameTr": { "type": ["string", "null"] },
+              "nameEn": { "type": ["string", "null"] },
+              "ror": { "type": ["string", "null"], "format": "uri" },
+              "awardNumbers": {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "conflictOfInterest": {
+      "oneOf": [
+        { "$ref": "#/$defs/localizedNullable" },
+        { "type": "null" }
+      ]
+    },
+    "authorContributions": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "statement": { "$ref": "#/$defs/localizedNullable" },
+        "creditRoles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["role", "authors"],
+            "properties": {
+              "role": { "type": "string", "minLength": 1 },
+              "authors": {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ethicsApproval": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "statement": { "$ref": "#/$defs/localizedNullable" },
+        "committeeName": { "$ref": "#/$defs/localizedNullable" },
+        "approvalDate": { "$ref": "#/$defs/dateNullable" },
+        "decisionNumber": { "type": ["string", "null"] }
+      }
+    },
+    "dataAvailability": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "statement": { "$ref": "#/$defs/localizedNullable" },
+        "repositoryName": { "type": ["string", "null"] },
+        "doi": { "type": ["string", "null"] },
+        "url": { "type": ["string", "null"], "format": "uri" }
+      }
+    },
+    "aiUse": {
+      "oneOf": [
+        { "$ref": "#/$defs/localizedNullable" },
+        { "type": "null" }
+      ]
+    },
+    "acknowledgements": {
+      "oneOf": [
+        { "$ref": "#/$defs/localizedNullable" },
+        { "type": "null" }
+      ]
+    },
+    "citation": { "$ref": "#/$defs/localizedNullable" },
+    "urls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "tr", "pdfEn", "pdfTr"],
+      "properties": {
+        "en": { "type": ["string", "null"] },
+        "tr": { "type": ["string", "null"] },
+        "pdfEn": { "type": ["string", "null"] },
+        "pdfTr": { "type": ["string", "null"] },
+        "pdfEnLocal": { "type": ["string", "null"] },
+        "pdfTrLocal": { "type": ["string", "null"] },
+        "sharedBilingualPdf": { "type": "boolean" }
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    }
+  },
+  "$defs": {
+    "localizedRequired": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "tr"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "tr": { "type": "string", "minLength": 1 }
+      }
+    },
+    "localizedNullable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "tr"],
+      "properties": {
+        "en": { "type": ["string", "null"] },
+        "tr": { "type": ["string", "null"] }
+      }
+    },
+    "dateNullable": {
+      "type": ["string", "null"],
+      "format": "date"
+    }
+  }
+}
