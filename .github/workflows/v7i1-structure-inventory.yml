@@ -1,0 +1,28 @@
+name: V7I1 structure inventory
+on:
+  push:
+    branches: [automation/v7i1-structure-inventory]
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          node <<'JS'
+          const fs=require('fs'), path=require('path');
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i01.json'));
+          for(const slug of issue.articles){
+            const m=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'metadata.json')));
+            const c=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'fulltext/current.json')));
+            console.log('\n###',slug);
+            console.log('META',JSON.stringify({type:m.articleType,dates:m.dates,pages:m.pages,doi:m.doi,keywords:m.keywords,funding:m.funding,coi:m.conflictOfInterest,data:m.dataAvailability,ai:m.aiUse}));
+            console.log('LEGACY_ROOT_META',JSON.stringify(c.metadata||null));
+            for(const l of ['en','tr']){
+              const x=c[l];
+              const ids=(x.sections||[]).map(s=>s.id); const dup=ids.filter((id,i)=>ids.indexOf(id)!==i);
+              console.log(l,JSON.stringify({sections:x.sections?.length,paragraphs:(x.sections||[]).reduce((n,s)=>n+(s.paragraphs||[]).length,0),refs:x.references?.length||0,footnotes:x.footnotes?.length||0,figures:x.figures?.length||0,keywords:x.keywords||[],dupIds:[...new Set(dup)],badIds:ids.filter(id=>!new RegExp('^'+l+'-section-\\d+$').test(id))}));
+            }
+          }
+          JS
