@@ -1,27 +1,48 @@
 {
-  "slug": "cin-abd-iliskilerinin-gelecegi",
-  "volume": 7,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2025-2026",
-  "author": "Yang Chen",
-  "title_tr": "Çin-ABD İlişkilerinin Geleceği",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/cin-abd-iliskilerinin-gelecegi",
-  "source_en": "https://briqjournal.com/en/the-future-china-us-relations",
-  "title_en": "The Future of China-U.S. Relations",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Yang, C. (2025). The Future of China-U.S. Relations. [Kitap İncelemesi: Ju, J. D.’nin The Great Power Competition and the World Order Re-Architecture adlı kitabı üzerine. Peking University Press, October 2024. ISBN: 978-7-301-35327-1]. BRIQ Kuşak ve Yol Girişimi Dergisi, 7 (1), 115-121.",
-  "citation_en": "Citation \n Yang, C. (2025). The Future of China-U.S. Relations. [Review of the book The Great Power Competition and the World Order Re-Architecture, by Ju, J. D., Peking University Press, October 2024. ISBN: 978-7-301-35327-1]. BRIQ Belt & Road Initiative Quarterly, 7 (1), 115-121.",
-  "pages": "115-121",
-  "doi": "10.67696/5y2r9u9d",
-  "orcids": [
-    "0000-0002-4840-6427"
+  "schemaVersion": 2,
+  "id": "cin-abd-iliskilerinin-gelecegi",
+  "articleType": {"id": "book-review", "tr": "Kitap İncelemesi", "en": "Book Review", "peerReviewed": false},
+  "title": {"en": "The Future of China-U.S. Relations", "tr": "Çin-ABD İlişkilerinin Geleceği"},
+  "authors": [
+    {
+      "displayName": "Yang Chen",
+      "givenName": "Chen",
+      "familyName": "Yang",
+      "orcid": "https://orcid.org/0000-0002-4840-6427",
+      "affiliations": [
+        {"name": "Shanghai University", "nameTr": "Şanghay Üniversitesi", "nameEn": "Shanghai University", "country": "China", "ror": null}
+      ]
+    }
   ],
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Yang%20Chen_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Yang%20Chen_EN.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/cin-abd-iliskilerinin-gelecegi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/cin-abd-iliskilerinin-gelecegi-en.pdf",
-  "shared_bilingual_pdf": false
+  "abstract": {"en": null, "tr": null},
+  "keywords": {
+    "en": ["China-U.S. Relations", "The China-U.S. trade war", "Great Power Competition"],
+    "tr": ["Çin-ABD İlişkileri", "Çin-ABD ticaret savaşı", "Büyük Güç Rekabeti"]
+  },
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2025-12-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 1, "year": "2025-2026", "season": {"en": "Winter", "tr": "Kış"}},
+  "pages": {"first": "115", "last": "121"},
+  "doi": "10.67696/5y2r9u9d",
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Yang, C. (2025). The Future of China-U.S. Relations. [Review of the book The Great Power Competition and the World Order Re-Architecture, by Ju, J. D., Peking University Press, October 2024. ISBN: 978-7-301-35327-1]. BRIQ Belt & Road Initiative Quarterly, 7(1), 115-121.",
+    "tr": "Yang, C. (2025). The Future of China-U.S. Relations. [Kitap İncelemesi: Ju, J. D.’nin The Great Power Competition and the World Order Re-Architecture adlı kitabı üzerine. Peking University Press, October 2024. ISBN: 978-7-301-35327-1]. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(1), 115-121."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/the-future-china-us-relations",
+    "tr": "https://briqjournal.com/cin-abd-iliskilerinin-gelecegi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Yang%20Chen_EN.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-11/Yang%20Chen_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/cin-abd-iliskilerinin-gelecegi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/cin-abd-iliskilerinin-gelecegi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
