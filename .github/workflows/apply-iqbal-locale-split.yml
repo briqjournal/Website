@@ -15,55 +15,70 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          git fetch origin main automation/v7i4-iqbal
+          git show origin/automation/v7i4-iqbal:scripts/repair-iqbal-fulltext.py > /tmp/repair-iqbal.py
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils
           URL='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Iqbal%20Akhtar_The%20Paradox%20of%20Peak%20Palestinianism%20Transatlantic%20Public.pdf'
           curl -L --fail --retry 3 --connect-timeout 15 --max-time 120 "$URL" -o /tmp/iqbal.pdf
           pdftotext -nopgbrk /tmp/iqbal.pdf /tmp/iqbal-flow.txt
-          git fetch origin main automation/v7i4-iqbal
-          git show origin/automation/v7i4-iqbal:scripts/repair-iqbal-fulltext.py > /tmp/repair-iqbal.py
-          git config user.name 'BRIQ Journal'
-          git config user.email 'briq@briqjournal.com'
 
-          BASE="$(git rev-parse origin/main)"
-          git checkout -B v7i4-iqbal-repair "$BASE"
-          git show origin/automation/v7i4-iqbal:tests/iqbal-english-fulltext.test.mjs > tests/iqbal-english-fulltext.test.mjs
-          python /tmp/repair-iqbal.py
-          node scripts/generate-archive-data.mjs
-          node scripts/generate-fulltext-modules.mjs
-          node scripts/generate-runtime-data.mjs
-          node --test tests/keyword-case.test.mjs tests/comak-english-fulltext.test.mjs tests/jordan-english-fulltext.test.mjs tests/koshy-english-fulltext.test.mjs tests/mao-english-fulltext.test.mjs tests/iqbal-english-fulltext.test.mjs
-          git diff --check
-          npm ci --no-audit --no-fund
-          npm run build
-          git add content tests app
-          git commit -m 'Repair and split Iqbal bilingual full text'
-          git fetch origin main
-          if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
-            git push origin HEAD:main
-            exit 0
-          fi
+          cat > /tmp/cleanup-v7i4.py <<'PY'
+          import json
+          import re
+          from pathlib import Path
 
-          echo 'main advanced during full build; reapplying the already validated migration to latest main'
-          for ATTEMPT in 1 2 3 4 5 6 7 8; do
-            git fetch origin main automation/v7i4-iqbal
-            BASE="$(git rev-parse origin/main)"
-            git checkout -B v7i4-iqbal-repair "$BASE"
+          root = Path.cwd()
+          slugs = [
+              "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce",
+              "filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun",
+          ]
+          embedded_page = re.compile(r"(?<=[A-Za-z])\d{3}\s+(?=[A-Za-z])")
+
+          for slug in slugs:
+              path = root / "content" / "articles" / slug / "fulltext" / "en.json"
+              data = json.loads(path.read_text(encoding="utf-8"))
+              for section in data.get("sections", []):
+                  section["title"] = embedded_page.sub("", section.get("title", ""))
+                  section["paragraphs"] = [embedded_page.sub("", paragraph) for paragraph in section.get("paragraphs", [])]
+              for figure in data.get("figures", []):
+                  caption = figure.get("caption")
+                  if isinstance(caption, str):
+                      figure["caption"] = embedded_page.sub("", caption)
+              searchable = "\n".join(
+                  [section.get("title", "") for section in data.get("sections", [])]
+                  + [paragraph for section in data.get("sections", []) for paragraph in section.get("paragraphs", [])]
+                  + [figure.get("caption", "") for figure in data.get("figures", [])]
+              )
+              assert not embedded_page.search(searchable), f"embedded PDF page number remains in {slug}"
+              path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          PY
+
+          apply_repairs() {
             git show origin/automation/v7i4-iqbal:tests/iqbal-english-fulltext.test.mjs > tests/iqbal-english-fulltext.test.mjs
             python /tmp/repair-iqbal.py
+            python /tmp/cleanup-v7i4.py
             node scripts/generate-archive-data.mjs
             node scripts/generate-fulltext-modules.mjs
             node scripts/generate-runtime-data.mjs
             node --test tests/keyword-case.test.mjs tests/comak-english-fulltext.test.mjs tests/jordan-english-fulltext.test.mjs tests/koshy-english-fulltext.test.mjs tests/mao-english-fulltext.test.mjs tests/iqbal-english-fulltext.test.mjs
             git diff --check
-            git add content tests app
-            git commit -m 'Repair and split Iqbal bilingual full text'
-            git fetch origin main
-            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
-              git push origin HEAD:main
-              exit 0
-            fi
-            echo "main advanced during quick attempt $ATTEMPT; retrying on latest main"
-          done
-          echo 'main kept advancing; refusing unsafe push after eight quick attempts'
-          exit 1
+          }
+
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v7i4-iqbal-validate "$BASE"
+          apply_repairs
+          npm ci --no-audit --no-fund
+          npm run build
+
+          git fetch origin main
+          FINAL_BASE="$(git rev-parse origin/main)"
+          git checkout -B v7i4-iqbal-final "$FINAL_BASE"
+          apply_repairs
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content tests app
+          git commit -m 'Repair and split Iqbal Akhtar bilingual full text'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$FINAL_BASE" || { echo 'main advanced during final validation; refusing push'; exit 1; }
+          git push origin HEAD:main
