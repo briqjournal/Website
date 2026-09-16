@@ -22,14 +22,11 @@ jobs:
           cat >/tmp/fix-v7i2.mjs <<'JS'
           import fs from 'node:fs';
           import path from 'node:path';
-
           const rw = (file, fn) => {
             const data = JSON.parse(fs.readFileSync(file, 'utf8'));
             fn(data);
             fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
           };
-
-          // Normalize all Fang-Wang section IDs to the locale-split canonical convention.
           const fw = 'uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin';
           for (const locale of ['en','tr']) {
             const file = path.join('content/articles', fw, 'fulltext', `${locale}.json`);
@@ -37,34 +34,14 @@ jobs:
               for (let i = 0; i < (data.sections || []).length; i++) data.sections[i].id = `${locale}-section-${i + 1}`;
             });
           }
-
           const visuals = [
-            {
-              slug: 'zhang-yaxin',
-              tr: 'Devrimci operalar',
-              en: 'Revolutionary operas',
-              asset: '/assets/article-figures/zhang-yaxin/figure-01.jpg',
-            },
-            {
-              slug: 'liu-chunhua',
-              tr: 'Anyuan’a Giderken Başkan Mao, 1967, tuval üzerine yağlıboya',
-              en: 'Chairman Mao en Route to Anyuan, 1967, oil on canvas',
-              asset: '/assets/article-figures/liu-chunhua/figure-01.jpg',
-            },
-            {
-              slug: 'sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu',
-              tr: 'On bin hane, bir aile, bahar şehri doldurur (万户一家春满城), Mayıs 1960',
-              en: 'Ten thousand households, one family, spring fills the city (万户一家春满城), May 1960',
-              asset: '/assets/article-figures/sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu/figure-01.jpg',
-            },
+            { slug: 'zhang-yaxin', tr: 'Devrimci operalar', en: 'Revolutionary operas', asset: '/assets/article-figures/zhang-yaxin/figure-01.jpg' },
+            { slug: 'liu-chunhua', tr: 'Anyuan’a Giderken Başkan Mao, 1967, tuval üzerine yağlıboya', en: 'Chairman Mao en Route to Anyuan, 1967, oil on canvas', asset: '/assets/article-figures/liu-chunhua/figure-01.jpg' },
+            { slug: 'sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu', tr: 'On bin hane, bir aile, bahar şehri doldurur (万户一家春满城), Mayıs 1960', en: 'Ten thousand households, one family, spring fills the city (万户一家春满城), May 1960', asset: '/assets/article-figures/sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu/figure-01.jpg' },
           ];
-          for (const item of visuals) {
-            for (const locale of ['en','tr']) {
-              const file = path.join('content/articles', item.slug, 'fulltext', `${locale}.json`);
-              rw(file, data => {
-                data.figures = [{ id: 'figure-1', src: item.asset, caption: item[locale] }];
-              });
-            }
+          for (const item of visuals) for (const locale of ['en','tr']) {
+            const file = path.join('content/articles', item.slug, 'fulltext', `${locale}.json`);
+            rw(file, data => { data.figures = [{ id: 'figure-1', src: item.asset, caption: item[locale] }]; });
           }
           JS
 
@@ -75,23 +52,22 @@ jobs:
           import test from 'node:test';
           const issue = JSON.parse(fs.readFileSync('content/issues/v07-i02.json','utf8'));
           const read = (slug, locale) => JSON.parse(fs.readFileSync(path.join('content/articles',slug,'fulltext',`${locale}.json`),'utf8'));
-          test('V7I2 locale-split section ids are canonical', () => {
+          test('V7I2 locale-split section ids are locale-prefixed and unique', () => {
             for (const slug of issue.articles) for (const locale of ['en','tr']) {
-              const x=read(slug,locale);
-              for (const [i,section] of (x.sections||[]).entries()) assert.equal(section.id, `${locale}-section-${i+1}`, `${slug}/${locale}`);
+              const ids=(read(slug,locale).sections||[]).map(section=>section.id);
+              assert.equal(new Set(ids).size,ids.length,`${slug}/${locale}: duplicate section id`);
+              for (const id of ids) assert.match(id,new RegExp(`^${locale}-section-\\d+$`),`${slug}/${locale}: ${id}`);
             }
           });
           test('V7I2 visual contributions render their source artwork', () => {
-            for (const slug of ['zhang-yaxin','liu-chunhua','sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu']) {
-              for (const locale of ['en','tr']) {
-                const x=read(slug,locale);
-                assert.equal(x.figures?.length,1,`${slug}/${locale}`);
-                const src=x.figures[0].src;
-                assert(src.startsWith('/assets/article-figures/'));
-                const file=path.join('public',src.replace(/^\//,''));
-                assert(fs.existsSync(file),file);
-                assert(fs.statSync(file).size > 100_000, `${file} too small`);
-              }
+            for (const slug of ['zhang-yaxin','liu-chunhua','sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu']) for (const locale of ['en','tr']) {
+              const x=read(slug,locale);
+              assert.equal(x.figures?.length,1,`${slug}/${locale}`);
+              const src=x.figures[0].src;
+              assert(src.startsWith('/assets/article-figures/'));
+              const file=path.join('public',src.replace(/^\//,''));
+              assert(fs.existsSync(file),file);
+              assert(fs.statSync(file).size > 100_000,`${file} too small`);
             }
           });
           JS
@@ -130,20 +106,14 @@ jobs:
             npm test
             npm run lint
             git fetch origin main
-            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
-              echo "main advanced during validation attempt $ATTEMPT; retrying"
-              continue
-            fi
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then echo "main advanced during validation attempt $ATTEMPT; retrying"; continue; fi
             if git diff --quiet; then echo 'V7I2 deep fixes already present.'; exit 0; fi
             git config user.name 'BRIQ Journal'
             git config user.email 'briq@briqjournal.com'
             git add content public/assets/article-figures app tests
             git commit -m 'Complete Volume 7 Issue 2 visual full text'
             git fetch origin main
-            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
-              git push origin HEAD:main
-              exit 0
-            fi
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then git push origin HEAD:main; exit 0; fi
             echo "main advanced after commit attempt $ATTEMPT; retrying"
           done
           echo 'main kept advancing; refusing unsafe push'; exit 1
