@@ -1,0 +1,28 @@
+name: Probe V6I3 inventory
+on:
+  push:
+    branches: [migration/v6i3-canonical]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print inventory
+        run: |
+          python3 <<'PY'
+          import json, pathlib
+          issue=json.load(open('content/issues/v06-i03.json'))
+          for i,slug in enumerate(issue['articles'],1):
+              p=pathlib.Path('content/articles')/slug
+              m=json.load(open(p/'metadata.json'))
+              print(f'### {i}. {slug}')
+              print('schema',m.get('schemaVersion'),'type',m.get('articleType'))
+              print('title',m.get('title'))
+              print('pages',m.get('pages'))
+              print('dates',m.get('dates'))
+              print('keywords',m.get('keywords'))
+              print('urls',m.get('urls'))
+              print('fulltext files',[x.name for x in (p/'fulltext').glob('*')])
+          PY
