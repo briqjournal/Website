@@ -79,6 +79,7 @@ jobs:
           for(const locale of ['en','tr']) {
             const x=read(ft(ertan,locale));
             editRefs(x,t=>t
+              .replace(/https:\/\/\s+doi\.org\//g,'https://doi.org/')
               .replace('https://doi.org/10.1146/annurev. ecolsys.30.1.539','https://doi.org/10.1146/annurev.ecolsys.30.1.539')
               .replace('https://doi.org/10.1186/s12302-014- 0034-1','https://doi.org/10.1186/s12302-014-0034-1')
               .replace('https://doi.org/10.1007/s11258-008- 9485-0','https://doi.org/10.1007/s11258-008-9485-0')
@@ -130,7 +131,6 @@ jobs:
             for(const locale of ['en','tr']) {
               const x=read(ft(slug,locale));
               if(JSON.stringify(m.keywords[locale]||[])!==JSON.stringify(x.keywords||[])) {
-                // Wenbo is already aligned; all intended asymmetries were handled explicitly above.
                 throw new Error(`${slug}/${locale}: unresolved keyword mismatch: ${JSON.stringify(m.keywords[locale])} vs ${JSON.stringify(x.keywords)}`);
               }
             }
@@ -191,6 +191,7 @@ jobs:
             git reset --hard "$BASE"
             git clean -fd
             apply_all
+            npm run build
             npm test
             npm run lint
             git fetch origin main
