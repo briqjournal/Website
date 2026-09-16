@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/272-287%20-%20Guo%20Xin%27gen%20-%20ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/turkiyenin-islamofobi-ile-mucadele-cabalari-yanitlar-motivasyonlar-ve-zorluklar-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/turkiyenin-islamofobi-ile-mucadele-cabalari-yanitlar-motivasyonlar-ve-zorluklar-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Araştırma Makalesi",
+  "publication_type_en": "Research Article",
+  "received_date": "2024-03-05",
+  "accepted_date": "2024-04-27",
+  "published_online_date": "2024-06-01"
 }
