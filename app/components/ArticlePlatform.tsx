@@ -90,6 +90,14 @@ type ArticleDetails = {
   publishedOnline?: string;
 };
 
+type ReviewedBookMetadata = {
+  authorsApa: string;
+  year: number | string;
+  title: string;
+  publisher: string;
+  isbn?: string | null;
+};
+
 const HE_GANQIANG_TRANSLATION_SLUG = "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0";
 
 function keywordLabel(value: string, locale: "tr" | "en") {
@@ -385,6 +393,7 @@ export async function ArticlePlatform({
     : ["Research Article", "Peer-reviewed Research Article"];
   const isResearchArticle = researchTypes.includes(articleType);
   const isBookReview = articleType === (locale === "tr" ? "Kitap İncelemesi" : "Book Review");
+  const reviewedBook = (article as ArchiveArticle & { reviewed_book?: ReviewedBookMetadata }).reviewed_book;
   const acknowledgements = articleAcknowledgements(article, fullText, locale);
   const statements = isResearchArticle ? researchStatementItems(article, fullText, locale) : [];
   const supplementary = fullText?.supplementary || [];
@@ -405,7 +414,11 @@ export async function ArticlePlatform({
   const abstractId = locale === "tr" ? "oz" : "abstract";
   const genericFullTextSectionTitle = locale === "tr" ? "tam metin" : "full text";
   const nav = [
-    ...(!isBookReview ? [{ id: abstractId, label: locale === "tr" ? "Öz" : "Abstract", level: 1 }] : []),
+    ...(isBookReview && reviewedBook
+      ? [{ id: locale === "tr" ? "incelenen-kitap" : "book-reviewed", label: locale === "tr" ? "İncelenen Kitap" : "Book Reviewed", level: 1 }]
+      : !isBookReview
+        ? [{ id: abstractId, label: locale === "tr" ? "Öz" : "Abstract", level: 1 }]
+        : []),
     ...(keywords.length ? [{ id: locale === "tr" ? "anahtar-kelimeler" : "keywords", label: locale === "tr" ? "Anahtar kelimeler" : "Keywords", level: 1 }] : []),
     ...(fullText?.sections.length ? [{ id: locale === "tr" ? "tam-metin" : "full-text-body", label: locale === "tr" ? "Tam Metin" : "Full Text", level: 1 }] : []),
     ...(fullText?.sections || [])
@@ -458,7 +471,10 @@ export async function ArticlePlatform({
         </aside>
 
         <article className="article-platform-content">
-          {!isBookReview && <section className="article-abstract" id={locale === "tr" ? "oz" : "abstract"}>
+          {isBookReview && reviewedBook ? <section className="article-abstract" id={locale === "tr" ? "incelenen-kitap" : "book-reviewed"}>
+            <h2>{locale === "tr" ? "İncelenen Kitap" : "Book Reviewed"}</h2>
+            <p>{reviewedBook.authorsApa} ({reviewedBook.year}). <cite>{reviewedBook.title}</cite>. {reviewedBook.publisher}.</p>
+          </section> : !isBookReview && <section className="article-abstract" id={locale === "tr" ? "oz" : "abstract"}>
             <h2>{locale === "tr" ? "Öz" : "Abstract"}</h2>
             {abstract.length ? abstract.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{locale === "tr" ? "Kaynak arşivinde bu içerik için ayrı bir özet metni bulunmamaktadır." : "The source archive does not contain a separate abstract for this contribution."}</p>}
           </section>}
