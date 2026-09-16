@@ -1,0 +1,56 @@
+name: V7I1 fast PDF audit
+on:
+  push:
+    branches: [automation/v7i1-fast-pdf-audit]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+          python3 -m pip install -q rapidfuzz
+      - shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json,re,tempfile,subprocess,urllib.request
+          from pathlib import Path
+          from rapidfuzz.fuzz import partial_ratio
+          issue=json.loads(Path('content/issues/v07-i01.json').read_text()); tmp=Path(tempfile.mkdtemp())
+          def norm(s):
+            s=(s or '').replace('\u00ad','').replace('’',"'").replace('“','"').replace('”','"')
+            s=re.sub(r'(?<=\w)-\s+(?=\w)','',s)
+            return re.sub(r'\s+',' ',s).strip().lower()
+          def pscore(p,t):
+            p=norm(p); t=norm(t)
+            if not p:return 100.0
+            if p in t:return 100.0
+            ws=p.split()
+            chunks=[]
+            if len(ws)<=35: chunks=[p]
+            else:
+              chunks=[' '.join(ws[:30]),' '.join(ws[max(0,len(ws)//2-15):len(ws)//2+15]),' '.join(ws[-30:])]
+            return sum(partial_ratio(c,t,score_cutoff=0) for c in chunks)/len(chunks)
+          for slug in issue['articles']:
+            m=json.loads(Path(f'content/articles/{slug}/metadata.json').read_text()); cur=json.loads(Path(f'content/articles/{slug}/fulltext/current.json').read_text())
+            print('\n###',slug)
+            for l,key in [('en','pdfEn'),('tr','pdfTr')]:
+              url=m['urls'].get(key); x=cur[l]; pdf=tmp/f'{slug}-{l}.pdf'; txt=tmp/f'{slug}-{l}.txt'
+              req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}); pdf.write_bytes(urllib.request.urlopen(req,timeout=40).read()); subprocess.run(['pdftotext','-raw',str(pdf),str(txt)],check=True,stdout=subprocess.DEVNULL)
+              src=txt.read_text(errors='replace'); paras=[p for s in x.get('sections',[]) for p in s.get('paragraphs',[]) if len(norm(p))>=80]; scores=[pscore(p,src) for p in paras]; lows=[(i,round(v,1),paras[i][:130]) for i,v in enumerate(scores) if v<78]
+              print(l,'paras',len(paras),'avg',round(sum(scores)/len(scores),1) if scores else None,'min',round(min(scores),1) if scores else None,'low<78',len(lows)); [print(' LOW',r) for r in lows[:20]]
+              ab=m.get('abstract',{}).get(l); print(l,'abstract',round(pscore(ab,src),1) if ab else None)
+              title=m.get('title',{}).get(l); print(l,'title',round(pscore(title,src),1) if title else None)
+              # show first/last PDF metadata area for date/declaration review
+              labels=[]
+              for lab in ['Received','Geliş Tarihi','Accepted','Kabul Tarihi','Funding','Finansman','Acknowledgement','Teşekkür','Conflict of Interest','Çıkar Çatışması','Data Availability','Veri Kullanılabilirliği']:
+                if lab.lower() in src.lower(): labels.append(lab)
+              print(l,'labels',labels)
+              # keywords around source
+              for marker in ['Keywords','Anahtar Kelimeler']:
+                mm=re.search(marker+r'\s*[:：]?\s*(.{0,350})',src,re.I|re.S)
+                if mm: print(l,marker,'SOURCE',norm(mm.group(1))[:300])
+          PY
