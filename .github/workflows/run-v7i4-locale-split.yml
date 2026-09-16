@@ -1,0 +1,39 @@
+name: Run V7I4 locale split
+on:
+  push:
+    branches: [automation/fix-comak-live-english]
+permissions:
+  contents: write
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Migrate, validate, and push
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v7i4-locale-split "$BASE"
+          git show origin/automation/fix-comak-live-english:scripts/migrate-v7i4-locale-split.mjs > /tmp/migrate-v7i4-locale-split.mjs
+          cp /tmp/migrate-v7i4-locale-split.mjs scripts/migrate-v7i4-locale-split.mjs
+          node scripts/migrate-v7i4-locale-split.mjs
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+          node --test tests/keyword-case.test.mjs tests/comak-english-fulltext.test.mjs
+          git diff --check
+          npm ci --no-audit --no-fund
+          npm run build
+          grep -q 'Saudi Arabia’s pledge to achieve Vision 2030' dist/client/en/articles/saudi-arabias-complex-cultural-hedging-between-the-us-and-china/index.html
+          grep -q 'Power Transition and Geoeconomic Connectivity: The Belt and Road Initiative and the Middle Corridor' dist/client/en/articles/power-transition-and-geoeconomic-connectivity-in-eurasia-on-the-55th-anniversary-of-turkiye-china-diplomatic-relations/index.html
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content scripts app tests
+          git commit -m 'Start V7I4 locale-split full-text migration'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced; refusing push'; exit 1; }
+          git push origin HEAD:main
