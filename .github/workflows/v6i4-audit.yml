@@ -22,7 +22,7 @@ jobs:
           from pathlib import Path
           import json,re,collections
           issue=json.loads(Path('content/issues/v06-i04.json').read_text(encoding='utf-8'))
-          print('ISSUE',issue['id'],len(issue['articles']))
+          print('ISSUE',f"v{issue['volume']:02d}-i{issue['issue']:02d}",len(issue['articles']))
           def ptype(m,loc):
             explicit=m.get('publication_type_tr' if loc=='tr' else 'publication_type_en')
             if explicit and explicit.strip(): return explicit.strip()
