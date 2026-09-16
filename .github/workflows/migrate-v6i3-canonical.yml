@@ -15,7 +15,9 @@ jobs:
       - name: Install extraction dependencies
         run: python3 -m pip install --quiet pymupdf pymupdf4llm
       - name: Rebuild Volume 6 Issue 3 from printed PDFs
-        run: python3 scripts/migrate-v6i3-canonical.py
+        run: |
+          for slug in china-reconstructs hendra-gunawan endonezya-posta-pulu; do mkdir -p "content/articles/$slug/fulltext"; done
+          python3 scripts/migrate-v6i3-canonical.py
       - name: Regenerate site data
         run: |
           node scripts/generate-archive-data.mjs
