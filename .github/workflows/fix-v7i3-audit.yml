@@ -11,102 +11,179 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Fix, verify, and safely fast-forward main
+      - name: Fix, fully verify, and safely fast-forward main
         shell: bash
         run: |
           set -euo pipefail
-          git fetch origin main
 
           cat > /tmp/sync-catalog-order.mjs <<'JS'
           import fs from 'node:fs';
-          const p='content/catalog.json';
-          const c=JSON.parse(fs.readFileSync(p,'utf8'));
-          const order=[];
-          for(const file of c.issue_order){
-            const issue=JSON.parse(fs.readFileSync(`content/issues/${file}`,'utf8'));
-            order.push(...(issue.articles??[]));
+          const p = 'content/catalog.json';
+          const catalog = JSON.parse(fs.readFileSync(p, 'utf8'));
+          const order = [];
+          for (const file of catalog.issue_order) {
+            const issue = JSON.parse(fs.readFileSync(`content/issues/${file}`, 'utf8'));
+            order.push(...(issue.articles ?? []));
           }
-          if(new Set(order).size!==order.length) throw new Error('Duplicate article slug across issue lists');
-          c.article_order=order;
-          fs.writeFileSync(p,JSON.stringify(c,null,2)+'\n');
+          if (new Set(order).size !== order.length) throw new Error('Duplicate article slug across issue lists');
+          catalog.article_order = order;
+          fs.writeFileSync(p, JSON.stringify(catalog, null, 2) + '\n');
           console.log(`Synchronized catalog.article_order to ${order.length} issue-listed articles.`);
           JS
 
           cat > /tmp/fix-v7i3.mjs <<'JS'
           import fs from 'node:fs';
           import path from 'node:path';
-          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i03.json','utf8'));
-          const REVIEW='kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi';
-          function repairReference(text){
-            let out=String(text??'');
-            const i=out.search(/https?:\/\//i);
-            if(i>=0){
-              const tail=out.slice(i); const marker=tail.match(/\s+(?:adresinden|adresine)\b/iu); const end=marker?.index??tail.length;
-              out=out.slice(0,i)+tail.slice(0,end).replace(/\s+/g,'')+tail.slice(end);
+          const issue = JSON.parse(fs.readFileSync('content/issues/v07-i03.json', 'utf8'));
+          const REVIEW = 'kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi';
+
+          function repairReference(text) {
+            let out = String(text ?? '');
+            const httpIndex = out.search(/https?:\/\//i);
+            if (httpIndex >= 0) {
+              const tail = out.slice(httpIndex);
+              const marker = tail.match(/\s+(?:adresinden|adresine)\b/iu);
+              const end = marker?.index ?? tail.length;
+              out = out.slice(0, httpIndex) + tail.slice(0, end).replace(/\s+/g, '') + tail.slice(end);
             }
-            return out.replace(/(\bdoi:\s*)(10\.[^\n]+)$/iu,(_m,prefix,doi)=>prefix+String(doi).replace(/\s+/g,''));
+            return out.replace(/(\bdoi:\s*)(10\.[^\n]+)$/iu, (_m, prefix, doi) => prefix + String(doi).replace(/\s+/g, ''));
           }
-          for(const slug of issue.articles){
-            const trPath=path.join('content/articles',slug,'fulltext','tr.json'); const tr=JSON.parse(fs.readFileSync(trPath,'utf8'));
-            tr.references=(tr.references??[]).map(ref=>({...ref,text:repairReference(ref.text)})); fs.writeFileSync(trPath,JSON.stringify(tr,null,2)+'\n');
-            const metaPath=path.join('content/articles',slug,'metadata.json'); const meta=JSON.parse(fs.readFileSync(metaPath,'utf8'));
-            if(!meta.published_online_date) meta.published_online_date='2026-06-01';
-            if(slug===REVIEW){meta.abstract_tr='';meta.abstract_en='';}
-            fs.writeFileSync(metaPath,JSON.stringify(meta,null,2)+'\n');
+
+          for (const slug of issue.articles) {
+            const trPath = path.join('content/articles', slug, 'fulltext', 'tr.json');
+            const tr = JSON.parse(fs.readFileSync(trPath, 'utf8'));
+            tr.references = (tr.references ?? []).map((ref) => ({ ...ref, text: repairReference(ref.text) }));
+            fs.writeFileSync(trPath, JSON.stringify(tr, null, 2) + '\n');
+
+            const metaPath = path.join('content/articles', slug, 'metadata.json');
+            const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+            if (!meta.published_online_date) meta.published_online_date = '2026-06-01';
+            if (slug === REVIEW) {
+              meta.abstract_tr = '';
+              meta.abstract_en = '';
+            }
+            fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + '\n');
           }
           JS
 
-          cat > /tmp/audit-v7i3-clean.mjs <<'JS'
-          import fs from 'node:fs'; import path from 'node:path';
-          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i03.json','utf8')); const catalog=JSON.parse(fs.readFileSync('content/catalog.json','utf8')); const errors=[];
-          const norm=v=>String(v??'').replace(/\s+/g,' ').trim();
-          function auditRef(slug,ref){
-            const s=norm(ref.text),i=s.search(/https?:\/\//i);
-            if(i>=0){const tail=s.slice(i),marker=tail.search(/\s+(?:adresinden|adresine)\b/iu),url=(marker>=0?tail.slice(0,marker):tail).replace(/[.,;:]$/,'');if(/\s/.test(url))errors.push(`${slug}: broken URL ${ref.id}: ${url}`);if(/^https:\/\/10\./i.test(url))errors.push(`${slug}: malformed DOI URL ${ref.id}: ${url}`)}
-            const d=s.match(/\bdoi:\s*(10\..*)$/iu);if(d&&/\s/.test(d[1]))errors.push(`${slug}: split DOI ${ref.id}: ${d[1]}`);
+          cat > /tmp/write-v7i3-integrity-test.mjs <<'JS'
+          import fs from 'node:fs';
+          const content = `import test from "node:test";
+          import assert from "node:assert/strict";
+          import fs from "node:fs";
+          import path from "node:path";
+
+          const issue = JSON.parse(fs.readFileSync("content/issues/v07-i03.json", "utf8"));
+          const catalog = JSON.parse(fs.readFileSync("content/catalog.json", "utf8"));
+          const reviewSlug = "kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi";
+          const normalize = (value) => String(value ?? "").replace(/\\s+/g, " ").trim();
+
+          function terminalUrl(text) {
+            const value = normalize(text);
+            const index = value.search(/https?:\\/\\//i);
+            if (index < 0) return null;
+            const tail = value.slice(index);
+            const marker = tail.search(/\\s+(?:adresinden|adresine)\\b/iu);
+            return (marker >= 0 ? tail.slice(0, marker) : tail).replace(/[.,;:]$/, "");
           }
-          for(const slug of issue.articles){
-            const dir=path.join('content/articles',slug,'fulltext'),files=fs.readdirSync(dir).sort();if(JSON.stringify(files)!==JSON.stringify(['en.json','tr.json']))errors.push(`${slug}: files ${files.join(',')}`);
-            const meta=JSON.parse(fs.readFileSync(path.join('content/articles',slug,'metadata.json'),'utf8'));if(meta.published_online_date!=='2026-06-01')errors.push(`${slug}: bad publication date`);
-            if(!catalog.fulltext.localized.includes(slug)||catalog.fulltext.current.includes(slug)||catalog.fulltext.en_archive.includes(slug))errors.push(`${slug}: catalog fulltext membership wrong`);
-            const en=JSON.parse(fs.readFileSync(path.join(dir,'en.json'),'utf8')),tr=JSON.parse(fs.readFileSync(path.join(dir,'tr.json'),'utf8'));
-            if(!en.sections?.length||!tr.sections?.length)errors.push(`${slug}: missing sections`);if(JSON.stringify(en)===JSON.stringify(tr))errors.push(`${slug}: locales identical`);if((en.keywords?.length??0)!==(tr.keywords?.length??0))errors.push(`${slug}: keyword mismatch`);
-            for(const ref of tr.references??[])auditRef(slug,ref);
-            for(const d of [en,tr])for(const s of d.sections??[])for(const p of s.paragraphs??[]){const m=String(p).match(/(?<=[A-Za-zÀ-ž])\d{3}\s+(?=[A-Za-zÀ-ž])/u);if(m)errors.push(`${slug}: embedded page token ${m[0]}`)}
-          }
-          const review=JSON.parse(fs.readFileSync('content/articles/kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi/metadata.json','utf8'));if(review.abstract_tr!==''||review.abstract_en!=='')errors.push('book review false abstract still present');
-          if(errors.length){console.error(errors.join('\n'));process.exit(2)} console.log('V7I3 content audit clean.');
+
+          test("V7I3 keeps canonical locale files and the June 2026 publication date", () => {
+            assert.equal(issue.articles.length, 8);
+            for (const slug of issue.articles) {
+              const dir = path.join("content/articles", slug, "fulltext");
+              assert.deepEqual(fs.readdirSync(dir).sort(), ["en.json", "tr.json"], slug);
+              assert.ok(catalog.fulltext.localized.includes(slug), slug);
+              assert.ok(!catalog.fulltext.current.includes(slug), slug);
+              assert.ok(!catalog.fulltext.en_archive.includes(slug), slug);
+              const metadata = JSON.parse(fs.readFileSync(path.join("content/articles", slug, "metadata.json"), "utf8"));
+              assert.equal(metadata.published_online_date, "2026-06-01", slug);
+            }
+          });
+
+          test("V7I3 Turkish references contain no PDF line-break corruption inside URLs or DOI strings", () => {
+            for (const slug of issue.articles) {
+              const tr = JSON.parse(fs.readFileSync(path.join("content/articles", slug, "fulltext", "tr.json"), "utf8"));
+              for (const reference of tr.references ?? []) {
+                const url = terminalUrl(reference.text);
+                if (url) {
+                  assert.doesNotMatch(url, /\\s/u, \`${slug} ${reference.id}: ${'${'}url}\`);
+                  assert.doesNotMatch(url, /^https:\\/\\/10\\./i, \`${slug} ${reference.id}: malformed DOI URL ${'${'}url}\`);
+                }
+                const doi = normalize(reference.text).match(/\\bdoi:\\s*(10\\..*)$/iu)?.[1];
+                if (doi) assert.doesNotMatch(doi, /\\s/u, \`${slug} ${reference.id}: split DOI ${'${'}doi}\`);
+              }
+            }
+          });
+
+          test("V7I3 has distinct bilingual text without embedded PDF page-number tokens", () => {
+            for (const slug of issue.articles) {
+              const dir = path.join("content/articles", slug, "fulltext");
+              const en = JSON.parse(fs.readFileSync(path.join(dir, "en.json"), "utf8"));
+              const tr = JSON.parse(fs.readFileSync(path.join(dir, "tr.json"), "utf8"));
+              assert.ok(en.sections?.length, slug);
+              assert.ok(tr.sections?.length, slug);
+              const enBody = en.sections.flatMap((section) => section.paragraphs ?? []).join(" ");
+              const trBody = tr.sections.flatMap((section) => section.paragraphs ?? []).join(" ");
+              assert.notEqual(enBody, trBody, slug);
+              for (const body of [enBody, trBody]) assert.doesNotMatch(body, /(?<=[A-Za-zÀ-ž])\\d{3}\\s+(?=[A-Za-zÀ-ž])/u, slug);
+            }
+          });
+
+          test("V7I3 book review does not publish the reviewed-book citation as an abstract", () => {
+            const metadata = JSON.parse(fs.readFileSync(path.join("content/articles", reviewSlug, "metadata.json"), "utf8"));
+            assert.equal(metadata.abstract_tr, "");
+            assert.equal(metadata.abstract_en, "");
+          });
+          `;
+          fs.writeFileSync('tests/v7i3-content-integrity.test.mjs', content.replace(/^          /gm, ''));
           JS
 
-          apply_fix(){
+          apply_fix() {
             node /tmp/sync-catalog-order.mjs
             node /tmp/fix-v7i3.mjs
-            node /tmp/audit-v7i3-clean.mjs
+            node /tmp/write-v7i3-integrity-test.mjs
             node scripts/generate-archive-data.mjs
             node scripts/generate-fulltext-modules.mjs
             node scripts/generate-runtime-data.mjs
-            node --test tests/v7i3-locale-fulltext.test.mjs tests/keyword-case.test.mjs
+            node --test tests/v7i3-locale-fulltext.test.mjs tests/v7i3-content-integrity.test.mjs tests/keyword-case.test.mjs
             git diff --check
           }
 
-          BASE="$(git rev-parse origin/main)"
-          git checkout -B v7i3-fix-verify "$BASE"
-          apply_fix
           npm ci --no-audit --no-fund
-          npm run build
-          node --test tests/v7i3-locale-fulltext.test.mjs tests/keyword-case.test.mjs tests/oai-pmh.test.mjs tests/rendered-html.test.mjs
 
           for ATTEMPT in 1 2 3 4 5 6; do
             git fetch origin main
-            FINAL_BASE="$(git rev-parse origin/main)"
-            git checkout -B v7i3-fix-push "$FINAL_BASE"
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
             apply_fix
-            if git diff --quiet; then echo 'V7I3 audit fixes already present on main.'; exit 0; fi
-            git config user.name 'BRIQ Journal'; git config user.email 'briq@briqjournal.com'
+
+            # Full repository suite includes a production build. Only a base that
+            # survives this full validation is eligible to be pushed.
+            npm test
+
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+              echo "main advanced during full validation attempt $ATTEMPT; retrying on the new head"
+              continue
+            fi
+
+            if git diff --quiet; then
+              echo 'V7I3 audit fixes already present on main.'
+              exit 0
+            fi
+
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
             git add content app tests
             git commit -m 'Clean and verify Volume 7 Issue 3 content'
+
             git fetch origin main
-            if [ "$(git rev-parse origin/main)" = "$FINAL_BASE" ]; then git push origin HEAD:main; exit 0; fi
-            echo "main advanced during attempt $ATTEMPT; retrying"
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced after commit attempt $ATTEMPT; retrying"
           done
-          echo 'main kept advancing; refusing unsafe push'; exit 1
+
+          echo 'main kept advancing; refusing unsafe push'
+          exit 1
