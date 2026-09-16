@@ -1,0 +1,60 @@
+name: One-time book review abstract and full-text nav fix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fix-book-review-abstract-and-fulltext-nav.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fix book review abstract rendering and duplicate full-text navigation
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('app/components/ArticlePlatform.tsx')
+          text = path.read_text(encoding='utf-8')
+
+          old = '''  const isResearchArticle = researchTypes.includes(articleType);\n  const acknowledgements = articleAcknowledgements(article, fullText, locale);'''
+          new = '''  const isResearchArticle = researchTypes.includes(articleType);\n  const isBookReview = articleType === (locale === "tr" ? "Kitap İncelemesi" : "Book Review");\n  const acknowledgements = articleAcknowledgements(article, fullText, locale);'''
+          if old not in text:
+              raise SystemExit('Could not find research/book-review insertion point')
+          text = text.replace(old, new, 1)
+
+          old = '''  const abstractId = locale === "tr" ? "oz" : "abstract";\n  const nav = [\n    { id: abstractId, label: locale === "tr" ? "Öz" : "Abstract", level: 1 },'''
+          new = '''  const abstractId = locale === "tr" ? "oz" : "abstract";\n  const genericFullTextSectionTitle = locale === "tr" ? "tam metin" : "full text";\n  const nav = [\n    ...(!isBookReview ? [{ id: abstractId, label: locale === "tr" ? "Öz" : "Abstract", level: 1 }] : []),'''
+          if old not in text:
+              raise SystemExit('Could not find navigation abstract block')
+          text = text.replace(old, new, 1)
+
+          old = '''    ...(fullText?.sections || [])\n      .filter((section) => section.toc !== false && section.level !== "subsection")\n      .map((section) => ({ id: section.id, label: section.title, level: 2 })),'''
+          new = '''    ...(fullText?.sections || [])\n      .filter((section) =>\n        section.toc !== false\n        && section.level !== "subsection"\n        && section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US") !== genericFullTextSectionTitle\n      )\n      .map((section) => ({ id: section.id, label: section.title, level: 2 })),'''
+          if old not in text:
+              raise SystemExit('Could not find full-text section nav filter')
+          text = text.replace(old, new, 1)
+
+          old = '''          <section className="article-abstract" id={locale === "tr" ? "oz" : "abstract"}>\n            <h2>{locale === "tr" ? "Öz" : "Abstract"}</h2>\n            {abstract.length ? abstract.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{locale === "tr" ? "Kaynak arşivinde bu içerik için ayrı bir özet metni bulunmamaktadır." : "The source archive does not contain a separate abstract for this contribution."}</p>}\n          </section>'''
+          new = '''          {!isBookReview && <section className="article-abstract" id={locale === "tr" ? "oz" : "abstract"}>\n            <h2>{locale === "tr" ? "Öz" : "Abstract"}</h2>\n            {abstract.length ? abstract.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{locale === "tr" ? "Kaynak arşivinde bu içerik için ayrı bir özet metni bulunmamaktadır." : "The source archive does not contain a separate abstract for this contribution."}</p>}\n          </section>}'''
+          if old not in text:
+              raise SystemExit('Could not find abstract render block')
+          text = text.replace(old, new, 1)
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+          git rm .github/workflows/fix-book-review-abstract-and-fulltext-nav.yml
+          git config user.name "BRIQ Journal"
+          git config user.email "briq@briqjournal.com"
+          git add app/components/ArticlePlatform.tsx
+          git commit -m "Hide abstracts on book reviews and dedupe full-text nav"
+          git pull --rebase origin main
+          git push origin HEAD:main
