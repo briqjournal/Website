@@ -72,3 +72,31 @@ test("V7I2 preserves article-history dates from the legacy bilingual containers"
     assert.deepEqual(actual, dates, slug);
   }
 });
+
+test("V7I2 reference URLs and DOI strings remain free of PDF line-break corruption", () => {
+  const normalize = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
+  const terminalUrl = (value) => {
+    const text = normalize(value);
+    const index = text.search(/https?:\/\//i);
+    if (index < 0) return null;
+    const tail = text.slice(index);
+    const markers = [/\s+\(?(?:Erişim|Retrieved|Accessed)\b/iu, /\s+(?:adresinden|adresine)\b/iu];
+    let end = tail.length;
+    for (const pattern of markers) {
+      const found = tail.search(pattern);
+      if (found >= 0) end = Math.min(end, found);
+    }
+    return tail.slice(0, end).replace(/[.,;:]$/, "");
+  };
+  for (const slug of issue.articles) {
+    for (const locale of ["tr", "en"]) {
+      const fulltext = read(slug, locale);
+      for (const record of [...(fulltext.references ?? []), ...(fulltext.footnotes ?? [])]) {
+        const url = terminalUrl(record.text);
+        if (url) assert.doesNotMatch(url, /\s/u, `${slug}/${locale}/${record.id}: ${url}`);
+        const doi = normalize(record.text).match(/\bdoi:\s*(10\..*)$/iu)?.[1];
+        if (doi) assert.doesNotMatch(doi, /\s/u, `${slug}/${locale}/${record.id}: ${doi}`);
+      }
+    }
+  }
+});
