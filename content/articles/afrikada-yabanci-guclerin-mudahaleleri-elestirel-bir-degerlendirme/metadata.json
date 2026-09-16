@@ -1,29 +1,54 @@
 {
-  "slug": "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme",
-  "volume": 7,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2026",
-  "author": "Belkacem Iratni",
-  "title_tr": "Afrika’da Yabancı Güçlerin Müdahaleleri: Eleştirel Bir Değerlendirme",
-  "abstract_tr": "Bu çalışma, Afrika kıtasının günümüzde karşı karşıya bulunduğu birçok yapısal sorunun, sömürgecilik döneminin toplumsal yapılar, kültürel değerler ve sömürgecilik sonrası yönetici elitlerin benimsediği ekonomik kalkınma modelleri üzerindeki kalıcı ve olumsuz etkilerinden kaynaklandığını ileri sürmektedir. Sömürgecilik süreci; sistematik şiddet, ırksal ayrımcılık, yerli halkların aşağılanması ve dışlanması gibi uygulamalarla şekillenmiş; katliamlara, beyaz yerleşimciler lehine toprakların zorla el değiştirmesine, metropol ülkelerin kalkınması için doğal kaynakların yoğun biçimde sömürülmesine ve yerli nüfusun siyasal hak ve özgürlüklerinin reddedilmesine yol açmıştır. Makale üç bölümden oluşmaktadır. Birinci bölüm, sömürgecilik mirasının sömürge sonrası devlet krizine etkilerini analiz ederek Afrika’daki yabancı müdahalelerin içsel nedenlerini tartışmaktadır. İkinci bölüm, Afrika’yı küresel güçlerin rekabet alanı olarak ele almakta; kıtanın hammadde kaynağı, vekâlet savaşlarının sahnesi ve büyük güçlerin jeopolitik hedeflerinin merkezi hâline gelişini incelemektedir. Üçüncü bölüm ise Afrika ülkelerinin yabancı müdahaleler ve iç işlerine yönelik dış müdahaleler karşısında geliştirmesi gereken stratejik ve kurumsal önlemleri değerlendirmektedir.",
-  "source_tr": "https://briqjournal.com/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme",
-  "source_en": "https://briqjournal.com/en/foreign-powers-interventions-africa-critical-assessment",
-  "title_en": "Foreign Powers’ Interventions in Africa: A Critical Assessment",
-  "abstract_en": "Abstract \n This study argues that many of Africa’s contemporary structural problems stem from the enduring legacy of colonialism, which has profoundly shaped social structures, cultural values, and post-colonial development strategies. Colonial rule was characterized by violence, racial discrimination, land expropriation, resource exploitation, and the systematic denial of political rights and cultural autonomy to indigenous populations. These historical dynamics continue to influence state fragility and external dependency. The article is organized into three sections. The first examines the internal roots of foreign intervention by analyzing the impact of colonial legacies on post-colonial state crises. The second conceptualizes Africa as a major arena of global power competition, emphasizing its role as a source of raw materials and a site of proxy conflicts. The final section discusses strategic and institutional measures African states can adopt to confront and manage external interference.",
-  "citation_tr": "Atıf \n Iratni, B. (2026). Afrika’da Yabancı Güçlerin Müdahaleleri: Eleştirel Bir Değerlendirme. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(2), 167-192.",
-  "citation_en": "Citation \n Iratni, B. (2026). Foreign Powers’ Interventions in Africa: A Critical Assessment. BRIQ Belt & Road Initiative Quarterly, 7(2), 167-192.",
-  "pages": "167-192",
-  "received_date": "2025-11-16",
-  "revised_date": "2025-12-30",
-  "accepted_date": "2026-02-07",
-  "published_online_date": "2026-03-01",
-  "publication_type_tr": "Araştırma Makalesi",
-  "publication_type_en": "Research Article",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-02/Belkacem%20Iratni_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-04/Belkacem%20Iratni_EN.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme",
+  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "title": {
+    "en": "Foreign Powers’ Interventions in Africa: A Critical Assessment",
+    "tr": "Afrika’da Yabancı Güçlerin Müdahaleleri: Eleştirel Bir Değerlendirme"
+  },
+  "authors": [
+    {
+      "displayName": "Belkacem Iratni",
+      "givenName": "Belkacem",
+      "familyName": "Iratni",
+      "orcid": "https://orcid.org/0009-0007-4747-8836",
+      "affiliations": [
+        {"name": "University of Algiers", "nameTr": "Cezayir Üniversitesi", "nameEn": "University of Algiers", "country": "Algeria", "ror": null}
+      ]
+    }
+  ],
+  "abstract": {
+    "en": "This study argues that many of Africa’s contemporary structural problems stem from the enduring legacy of colonialism, which has profoundly shaped social structures, cultural values, and post-colonial development strategies. Colonial rule was characterized by violence, racial discrimination, land expropriation, resource exploitation, and the systematic denial of political rights and cultural autonomy to indigenous populations. These historical dynamics continue to influence state fragility and external dependency. The article is organized into three sections. The first examines the internal roots of foreign intervention by analyzing the impact of colonial legacies on post-colonial state crises. The second conceptualizes Africa as a major arena of global power competition, emphasizing its role as a source of raw materials and a site of proxy conflicts. The final section discusses strategic and institutional measures African states can adopt to confront and manage external interference.",
+    "tr": "Bu çalışma, Afrika kıtasının günümüzde karşı karşıya bulunduğu birçok yapısal sorunun, sömürgecilik döneminin toplumsal yapılar, kültürel değerler ve sömürgecilik sonrası yönetici elitlerin benimsediği ekonomik kalkınma modelleri üzerindeki kalıcı ve olumsuz etkilerinden kaynaklandığını ileri sürmektedir. Sömürgecilik süreci; sistematik şiddet, ırksal ayrımcılık, yerli halkların aşağılanması ve dışlanması gibi uygulamalarla şekillenmiş; katliamlara, beyaz yerleşimciler lehine toprakların zorla el değiştirmesine, metropol ülkelerin kalkınması için doğal kaynakların yoğun biçimde sömürülmesine ve yerli nüfusun siyasal hak ve özgürlüklerinin reddedilmesine yol açmıştır. Makale üç bölümden oluşmaktadır. Birinci bölüm, sömürgecilik mirasının sömürge sonrası devlet krizine etkilerini analiz ederek Afrika’daki yabancı müdahalelerin içsel nedenlerini tartışmaktadır. İkinci bölüm, Afrika’yı küresel güçlerin rekabet alanı olarak ele almakta; kıtanın hammadde kaynağı, vekâlet savaşlarının sahnesi ve büyük güçlerin jeopolitik hedeflerinin merkezi hâline gelişini incelemektedir. Üçüncü bölüm ise Afrika ülkelerinin yabancı müdahaleler ve iç işlerine yönelik dış müdahaleler karşısında geliştirmesi gereken stratejik ve kurumsal önlemleri değerlendirmektedir."
+  },
+  "keywords": {
+    "en": ["Africa’s development", "colonial legacy", "ethnic conflicts", "foreign meddling", "post-colonial state crisis"],
+    "tr": ["Afrika’nın kalkınması", "sömürge mirası", "etnik çatışmalar", "dış müdahale", "sömürge sonrası devlet krizi"]
+  },
+  "dates": {"received": "2025-11-16", "revised": "2025-12-30", "accepted": "2026-02-07", "published": "2026-03-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 2, "year": 2026, "season": {"en": "Spring", "tr": "Bahar"}},
+  "pages": {"first": "167", "last": "192"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Iratni, B. (2026). Foreign Powers’ Interventions in Africa: A Critical Assessment. BRIQ Belt & Road Initiative Quarterly, 7(2), 167-192.",
+    "tr": "Iratni, B. (2026). Afrika’da Yabancı Güçlerin Müdahaleleri: Eleştirel Bir Değerlendirme. BRIQ Kuşak ve Yol Girişimi Dergisi, 7(2), 167-192."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/foreign-powers-interventions-africa-critical-assessment",
+    "tr": "https://briqjournal.com/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-04/Belkacem%20Iratni_EN.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-02/Belkacem%20Iratni_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
