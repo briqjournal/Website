@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/266-271%20-%20Xi%20Jinping-Conference%20Speech.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/modernlesmeye-giden-yolda-el-ele-verelim-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/modernlesmeye-giden-yolda-el-ele-verelim-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Konferans Konuşması",
+  "publication_type_en": "Conference Speech",
+  "published_online_date": "2024-06-01"
 }
