@@ -11,33 +11,39 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Rebuild, validate, and fast-forward main
+      - name: Apply validated migration to a stable main
         shell: bash
         run: |
           set -euo pipefail
-          git fetch origin main automation/v7i4-mao
-          BASE="$(git rev-parse origin/main)"
-          git checkout -B v7i4-mao-repair "$BASE"
-          git show origin/automation/v7i4-mao:scripts/repair-mao-fulltext.py > /tmp/repair-mao.py
-          sed -i 's|replace("https://doi.org/ ", "https://doi.org/")|replace("10.4312/ ", "10.4312/")|' /tmp/repair-mao.py
-          git show origin/automation/v7i4-mao:tests/mao-english-fulltext.test.mjs > tests/mao-english-fulltext.test.mjs
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils
           URL='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-09/Can%20Ulusoy%20-%20Mao%20Zedong%E2%80%99s%20Dialectical%20Understanding%20Critique%20of%20Economic.pdf'
           curl -L --fail --retry 3 --connect-timeout 15 --max-time 120 "$URL" -o /tmp/mao.pdf
           pdftotext -nopgbrk /tmp/mao.pdf /tmp/mao-flow.txt
-          python /tmp/repair-mao.py
-          node scripts/generate-archive-data.mjs
-          node scripts/generate-fulltext-modules.mjs
-          node scripts/generate-runtime-data.mjs
-          node --test tests/keyword-case.test.mjs tests/comak-english-fulltext.test.mjs tests/jordan-english-fulltext.test.mjs tests/koshy-english-fulltext.test.mjs tests/mao-english-fulltext.test.mjs
-          git diff --check
-          npm ci --no-audit --no-fund
-          npm run build
           git config user.name 'BRIQ Journal'
           git config user.email 'briq@briqjournal.com'
-          git add content tests app
-          git commit -m 'Repair and split Mao bilingual full text'
-          git fetch origin main
-          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced; refusing push'; exit 1; }
-          git push origin HEAD:main
+
+          for ATTEMPT in 1 2 3 4; do
+            git fetch origin main automation/v7i4-mao
+            BASE="$(git rev-parse origin/main)"
+            git checkout -B v7i4-mao-repair "$BASE"
+            git show origin/automation/v7i4-mao:scripts/repair-mao-fulltext.py > /tmp/repair-mao.py
+            sed -i 's|replace("https://doi.org/ ", "https://doi.org/")|replace("10.4312/ ", "10.4312/")|' /tmp/repair-mao.py
+            git show origin/automation/v7i4-mao:tests/mao-english-fulltext.test.mjs > tests/mao-english-fulltext.test.mjs
+            python /tmp/repair-mao.py
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/keyword-case.test.mjs tests/comak-english-fulltext.test.mjs tests/jordan-english-fulltext.test.mjs tests/koshy-english-fulltext.test.mjs tests/mao-english-fulltext.test.mjs
+            git diff --check
+            git add content tests app
+            git commit -m 'Repair and split Mao bilingual full text'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced during attempt $ATTEMPT; rebasing migration onto latest main"
+          done
+          echo 'main kept advancing; refusing unsafe push after four attempts'
+          exit 1
