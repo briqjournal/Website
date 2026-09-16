@@ -1,0 +1,42 @@
+name: Apply Koshy locale split
+on:
+  push:
+    branches: [automation/v7i4-remaining]
+permissions:
+  contents: write
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Migrate, validate, and fast-forward main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main automation/v7i4-remaining
+          BASE="$(git rev-parse origin/main)"
+          git checkout -B v7i4-koshy "$BASE"
+          git show origin/automation/v7i4-remaining:scripts/migrate-koshy-locale-split.mjs > /tmp/migrate-koshy.mjs
+          git show origin/automation/v7i4-remaining:tests/koshy-english-fulltext.test.mjs > tests/koshy-english-fulltext.test.mjs
+          node /tmp/migrate-koshy.mjs
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+          node --test tests/keyword-case.test.mjs tests/comak-english-fulltext.test.mjs tests/jordan-english-fulltext.test.mjs tests/koshy-english-fulltext.test.mjs
+          git diff --check
+          npm ci --no-audit --no-fund
+          npm run build
+          PAGE='dist/client/en/articles/chinas-global-infrastructure-strategy/index.html'
+          test -f "$PAGE"
+          grep -q 'A persistent weakness in Belt and Road Initiative scholarship' "$PAGE"
+          grep -q 'preference for higher quality and lower risk' "$PAGE"
+          ! grep -q 'KUŞAK VE YOL GİRİŞİMİ' "$PAGE"
+          git config user.name 'BRIQ Journal'
+          git config user.email 'briq@briqjournal.com'
+          git add content tests app
+          git commit -m 'Split Koshy bilingual full text'
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE" || { echo 'main advanced; refusing push'; exit 1; }
+          git push origin HEAD:main
