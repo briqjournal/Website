@@ -19,5 +19,11 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Yu%20Haijie%20ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/turkiyenin-afrika-icin-cok-boyutlu-stratejisi-ozellikler-temel-saikler-ve-gelecek-beklentileri-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/turkiyenin-afrika-icin-cok-boyutlu-stratejisi-ozellikler-temel-saikler-ve-gelecek-beklentileri-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Araştırma Makalesi",
+  "publication_type_en": "Research Article",
+  "received_date": "2024-03-20",
+  "revised_date": "2024-06-28",
+  "accepted_date": "2024-07-10",
+  "published_online_date": "2024-09-01"
 }
