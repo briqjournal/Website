@@ -10,6 +10,10 @@
     "0000-0002-9000-4456"
   ],
   "shared_bilingual_pdf": false,
+  "publication_type_en": "Book Review",
+  "publication_type_tr": "Kitap İncelemesi",
+  "peer_reviewed": false,
+  "scholarly": true,
   "season_en": "Autumn",
   "title_en": "China’s Global Infrastructure Strategy",
   "abstract_en": "Abstract \n Strange, A. M. (2024). Chinese Global Infrastructure. (Elements in Global China). Cambridge University Press.",
