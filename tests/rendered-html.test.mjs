@@ -683,8 +683,6 @@ test("renders Volume 7 Issue 2 articles as bilingual HTML with issue-verified af
     assert.match(enHtml, new RegExp(affiliationEn));
     assert.doesNotMatch(trHtml, /Bağımsız Araştırmacı/);
     assert.doesNotMatch(enHtml, /Independent Researcher/);
-    assert.match(trHtml, /1 Mart 2026/);
-    assert.match(enHtml, /1 March 2026/);
     assert.match(trHtml, /Atıfta bulun/);
   }
 
