@@ -1,26 +1,33 @@
 {
-  "slug": "yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak",
-  "volume": 3,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2022",
-  "author": "Ethem Sancak",
-  "title_tr": "Yeni Dünya, İpek Yolu’nun yarattığı evrensel değerler üzerinde zenginlik ve barışla kurulacak",
-  "abstract_tr": "Tarihî İpek Yolu insanlığı birleştirdi. Ne ile birleştirdi, savaş değil barışla birleştirdi. Yoksullukla, fakîrlikle değil; zenginlikle, refâhla, insanı temel almakla, insanı sevmekle, paraya tapmamakla birleştirdi. Bunlar hep Doğu’dan Batı’ya akan evrensel değerlerdir. Bugün de modern İpek Yolu bunu vadediyor zaten. Geçen gün, Çin Dışişleri Bakanı İslâm Devletleri Teşkîlâtı toplantısına katıldı, dedi ki ,“biz yeni bir dünyanın inşâsının peşindeyiz, yeni dünyayı inşâ edeceğimiz temel değerler sizin İslâm dininizde var. İnsanı temel almak, farklılıkları zenginlik görmek, komşusuna saygı göstermek, tahakküm etmemek”. Yeni dünya bu değerler üzerinde kurulacak. Kimse kimseyi öldürmeyecek, kimse kimseye despotluk yapmayacak. Modern İpek Yolu’nu inşâ edemezsek yeni uluslararası sistem kurulamaz. Zaten Biden’cılar, Atlantikçiler, paraya tapanlar, parayı tanrılaştıranlar, küreselciler bunun farkında oldukları için Modern İpek Yolu’nun inşâsını engellemeye çalışıyorlar. Başarılı olamayacaklar.",
-  "source_tr": "https://briqjournal.com/yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak",
-  "source_en": "https://briqjournal.com/en/the-new-world-be-established-achieving-wealth-and-peace-which-will-derive-the-universal-values",
-  "title_en": "The New World is to be established by achieving wealth and peace, which will derive from the universal values created by the Silk Road",
-  "abstract_en": "Abstract \n The Historical Silk Road united humanity. It united the regions with peace, not war. Not with poverty; with wealth, prosperity, taking people as a basis, loving people and not worshiping money. These are universal values that always flow from the East to the West. Today, the modern Silk Road promises the same. The other day, the Chinese Foreign Minister attended the meeting of the Organization of Islamic States and said, \"We are after the construction of a new world. The basic values on which we will build the new world exist in your religion of Islam. To be based on people, to see differences as richness, to respect one's neighbor, not to dominate\". The new world will be built on these values. Nobody will kill anybody. Nobody will despotate anybody. A new international system cannot be established if we cannot build the modern Silk Road. Atlanticists, money-worshippers, those who deify money, and globalists are trying to prevent the construction of the Modern Silk Road because they are aware of this. They will not succeed.",
-  "citation_tr": "Atıf \n Sancak, E. (2022). Yeni Dünya, İpek Yolu’nun yarattığı evrensel değerler üzerinde zenginlik ve barışla kurulacak (Röportajı yapan Fikret Akfırat). BRIQ Kuşak ve Yol Girişimi Dergisi, 3(4), 16-22.",
-  "citation_en": "Citation \n Sancak, E. (2022). The New World is to be established by achieving wealth and peace, which will derive from the universal values created by the Silk Road (Fikret Akfırat, Interviewer). BRIQ Belt & Road Initiative Quarterly, 3(4), 16-22.",
-  "pages": "16-22",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_TR-Sancak.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_ENG-Sancak.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Röportaj",
-  "publication_type_en": "Interview",
-  "published_online_date": "2022-09-01"
+  "schemaVersion": 2,
+  "id": "yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak",
+  "articleType": {"id": "interview", "tr": "Röportaj", "en": "Interview", "peerReviewed": false},
+  "title": {"en": "The New World is to be established by achieving wealth and peace, which will derive from the universal values created by the Silk Road", "tr": "Yeni Dünya, İpek Yolu’nun yarattığı evrensel değerler üzerinde zenginlik ve barışla kurulacak"},
+  "authors": [
+    {"displayName": "Ethem Sancak", "givenName": "Ethem", "familyName": "Sancak", "orcid": null, "affiliations": [{"name": "ES Investment", "nameTr": "ES Yatırım", "nameEn": "ES Investment", "country": "Türkiye", "ror": null}]}
+  ],
+  "contributors": [
+    {"displayName": "Fikret Akfırat", "givenName": "Fikret", "familyName": "Akfırat", "role": "interviewer", "orcid": null},
+    {"displayName": "Nilgün Yorgancı", "givenName": "Nilgün", "familyName": "Yorgancı", "role": "translator", "orcid": null}
+  ],
+  "abstract": {
+    "en": "The Historical Silk Road united humanity. It united the regions with peace, not war. Not with poverty; with wealth, prosperity, taking people as a basis, loving people and not worshiping money. These are universal values that always flow from the East to the West. Today, the modern Silk Road promises the same. The other day, the Chinese Foreign Minister attended the meeting of the Organization of Islamic States and said, \"We are after the construction of a new world. The basic values on which we will build the new world exist in your religion of Islam. To be based on people, to see differences as richness, to respect one's neighbor, not to dominate\". The new world will be built on these values. Nobody will kill anybody. Nobody will despotate anybody. A new international system cannot be established if we cannot build the modern Silk Road. Atlanticists, money-worshippers, those who deify money, and globalists are trying to prevent the construction of the Modern Silk Road because they are aware of this. They will not succeed.",
+    "tr": "Tarihî İpek Yolu insanlığı birleştirdi. Ne ile birleştirdi, savaş değil barışla birleştirdi. Yoksullukla, fakîrlikle değil; zenginlikle, refâhla, insanı temel almakla, insanı sevmekle, paraya tapmamakla birleştirdi. Bunlar hep Doğu’dan Batı’ya akan evrensel değerlerdir. Bugün de modern İpek Yolu bunu vadediyor zaten. Geçen gün, Çin Dışişleri Bakanı İslâm Devletleri Teşkîlâtı toplantısına katıldı, dedi ki ,“biz yeni bir dünyanın inşâsının peşindeyiz, yeni dünyayı inşâ edeceğimiz temel değerler sizin İslâm dininizde var. İnsanı temel almak, farklılıkları zenginlik görmek, komşusuna saygı göstermek, tahakküm etmemek”. Yeni dünya bu değerler üzerinde kurulacak. Kimse kimseyi öldürmeyecek, kimse kimseye despotluk yapmayacak. Modern İpek Yolu’nu inşâ edemezsek yeni uluslararası sistem kurulamaz. Zaten Biden’cılar, Atlantikçiler, paraya tapanlar, parayı tanrılaştıranlar, küreselciler bunun farkında oldukları için Modern İpek Yolu’nun inşâsını engellemeye çalışıyorlar. Başarılı olamayacaklar."
+  },
+  "keywords": {"en": [], "tr": []},
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2022-09-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 3, "issue": 4, "year": 2022, "season": {"en": "Autumn", "tr": "Güz"}},
+  "pages": {"first": "16", "last": "22"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {"en": "Sancak, E. (2022). The New World is to be established by achieving wealth and peace, which will derive from the universal values created by the Silk Road (Fikret Akfırat, Interviewer). BRIQ Belt & Road Initiative Quarterly, 3(4), 16-22.", "tr": "Sancak, E. (2022). Yeni Dünya, İpek Yolu’nun yarattığı evrensel değerler üzerinde zenginlik ve barışla kurulacak (Röportajı yapan Fikret Akfırat). BRIQ Kuşak ve Yol Girişimi Dergisi, 3(4), 16-22."},
+  "urls": {"en": "https://briqjournal.com/en/the-new-world-be-established-achieving-wealth-and-peace-which-will-derive-the-universal-values", "tr": "https://briqjournal.com/yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak", "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_ENG-Sancak.pdf", "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_TR-Sancak.pdf", "pdfEnLocal": "/assets/archive/pdfs/articles/yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak-en.pdf", "pdfTrLocal": "/assets/archive/pdfs/articles/yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak-tr.pdf", "sharedBilingualPdf": false}
 }
