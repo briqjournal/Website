@@ -1,0 +1,53 @@
+name: Inventory Volume 6 Issue 3 PDF Structure
+on:
+  push:
+    branches: [audit/v6i3-independent]
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract heading and visual candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet pymupdf
+          python3 <<'PY'
+          import pymupdf, json, pathlib, urllib.request, re
+          issue=json.load(open('content/issues/v06-i03.json'))
+          tmp=pathlib.Path('/tmp/v6i3-struct'); tmp.mkdir(exist_ok=True)
+          for slug in issue['articles']:
+            m=json.load(open(pathlib.Path('content/articles')/slug/'metadata.json'))
+            print('\n########',slug,'########')
+            for loc,key in [('en','pdfEn'),('tr','pdfTr')]:
+              u=m.get('urls',{}).get(key)
+              if not u: continue
+              p=tmp/f'{slug}-{loc}.pdf'
+              try: urllib.request.urlretrieve(u,p)
+              except Exception as e: print(loc,'ERR',e); continue
+              d=pymupdf.open(p)
+              print('\n--',loc,'pages',len(d),'--')
+              images=0
+              for pi,page in enumerate(d):
+                dic=page.get_text('dict',sort=False)
+                for bi,b in enumerate(dic['blocks']):
+                  if b.get('type')==1:
+                    images+=1
+                    if pi>0: print('IMG',pi+1,bi,tuple(round(x,1) for x in b['bbox']),b.get('width'),b.get('height'))
+                    continue
+                  if b.get('type')!=0: continue
+                  spans=[s for l in b['lines'] for s in l['spans'] if s['text'].strip()]
+                  if not spans: continue
+                  txt=' '.join(''.join(s['text'] for s in l['spans']).strip() for l in b['lines']).strip()
+                  maxsz=max(s['size'] for s in spans); minsz=min(s['size'] for s in spans)
+                  bold=sum(len(s['text']) for s in spans if re.search(r'(Bold|Semibold|Demi|Black)',s['font'],re.I))
+                  total=sum(len(s['text']) for s in spans)
+                  ratio=bold/max(total,1)
+                  # Heading-like or metadata-like short blocks; omit obvious page numbers/headers.
+                  if (maxsz>=10.8 or ratio>.70) and len(txt)<260 and not re.fullmatch(r'\d{1,4}',txt):
+                    if not re.search(r'BRIQ|B R I q|Volume 6|Cilt 6',txt,re.I):
+                      print('CAND',pi+1,tuple(round(x,1) for x in b['bbox']),'size',round(minsz,1),round(maxsz,1),'bold',round(ratio,2),'::',txt)
+              print('images_total',images)
+          PY
