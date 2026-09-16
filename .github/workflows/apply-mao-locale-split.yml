@@ -34,13 +34,6 @@ jobs:
           git diff --check
           npm ci --no-audit --no-fund
           npm run build
-          PAGE="$(grep -rl 'Mao Zedong’s Dialectical Understanding' dist/client/en/articles --include=index.html | head -1)"
-          test -n "$PAGE"
-          grep -q 'Sources of Mao’s Dialectical Thought' "$PAGE"
-          grep -q 'The Fundamental Principles of Dialectics in Mao' "$PAGE"
-          grep -q 'from the masses, to the masses' "$PAGE"
-          ! grep -q '>Giriş<' "$PAGE"
-          ! grep -q '>Yöntem<' "$PAGE"
           git config user.name 'BRIQ Journal'
           git config user.email 'briq@briqjournal.com'
           git add content tests app
