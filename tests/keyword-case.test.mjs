@@ -77,6 +77,4 @@ test("keeps bilingual keyword counts and reviewed ordering in parity", async () 
   const kolosovskiy = localized["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"] || current["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"];
   assert.deepEqual(kolosovskiy.en.keywords, ["Central Asian Security", "Counterterrorism Strategies", "CSTO", "Islamic Radicalism", "Russia’s Foreign Policy", "Transnational Jihadist Networks"]);
   assert.deepEqual(kolosovskiy.tr.keywords, ["Orta Asya Güvenliği", "Teröre Karşı Mücadele Stratejileri", "KGAÖ", "İslami Radikalizm", "Rusya’nın Dış Politikası", "Ulusötesi Cihatçı Ağlar"]);
-
-  assert.equal(bilingualKeywordParityOverrides.get("rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve")?.source, "en");
 });

@@ -1,28 +1,77 @@
 {
   "schemaVersion": 2,
   "id": "genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
   "title": {
     "en": "“Young China” and “Young Chinese”: Enlightenment, New Culture Movement, and New Political Formation in China",
     "tr": "“Genç Çin” ve “Genç Çinliler”: Çin’de Aydınlanma, Yeni Kültür Hareketi ve Yeni Siyasal Biçimlenme"
   },
   "authors": [
-    {"displayName": "Dr. Can Ulusoy", "givenName": "Can", "familyName": "Ulusoy", "orcid": "https://orcid.org/0000-0002-4465-3201", "affiliations": []}
+    {
+      "displayName": "Dr. Can Ulusoy",
+      "givenName": "Can",
+      "familyName": "Ulusoy",
+      "orcid": "https://orcid.org/0000-0002-4465-3201",
+      "affiliations": []
+    }
   ],
   "abstract": {
     "en": "The modernist content of the concept of Young China, first used by Liang Qichao (1873-1929) in 1900, was developed politically and culturally, especially after the 1911 Xinhai Revolution failed in a short time. “New Youth,” which can be considered a derivative of “Young China,” was not only a magazine name but also at the center of the “New Culture Movement,” which is called the first great cultural revolution of the “Young Chinese.” This movement describes an intellectual explosion, especially in culture, literature, philosophy, political theory, and women’s rights. The spark for this explosion was the patriotic youth struggle that began on May 4, 1919. This movement unleashed great intellectual energy and significantly impacted the political arena. After the discussions during this period, all kinds of monarchist ideas disappeared from China’s agenda. May 4 and the New Culture Movement played a significant role in the establishment of the Communist Party of China (CPC) and the spread of modernist ideas to the masses in China. Various organizations and movements belonging to the “Young Chinese,” which are part of the “Young” Movements in the world, have raised the flag of “democracy and science” while fighting against “tradition” with nationalist goals. Despite the contradictions between them and nationalism, the Chinese representatives of universalist modernist movements have tried to explain their prescriptions for China’s national liberation and establish their ties with nationalism. This period had an essential share in the mental worlds of the cadres who brought New China into being in 1949, reflecting the bond between Marxism and nationalism.",
     "tr": "İlk kez 1900’de Liang Qichao (1873-1929) tarafından kullanılan “Genç Çin” kavramının modernist içeriği, özellikle 1911 Xinhai Devrimi’nin kısa süre içinde akamete uğraması sonrasında politik ve kültürel olarak geliştirilmiştir. “Genç Çin”in bir türevi olarak düşünülebilecek Yeni Gençlik, bir dergi adı olmanın ötesinde, “Genç Çinliler”in ilk büyük kültür devrimi olarak adlandırılan “Yeni Kültür Hareketi”nin merkezinde yer almıştır. Bu hareket, kültür, edebiyat, felsefe, siyaset teorisi, kadın hakları gibi konular başta olmak üzere, adeta düşünsel manada yaşanılan bir patlamayı tanımlar. Bu patlamanın kıvılcımını ise 4 Mayıs 1919’da başlayan yurtsever gençlik mücadelesi çakmıştır. Düşünsel manada büyük bir enerjiyi açığa çıkaran bu hareket, siyasal alan için de önemli sonuçlar doğurmuştur. Bu dönem içinde yaşanan tartışmalardan sonra her türlü monarşist düşünce bu dönemle birlikte Çin’in gündeminden düşmüştür. Çin Komünist Partisi’nin (ÇKP) kuruluşu ve Çin’de modernist düşüncelerin kitlelere yayılmasında 4 Mayıs ve Yeni Kültür Hareketi’nin rolü büyüktür. Dünyadaki “Jön” Hareketlerinin bir parçası olan “Gen Çinliler”e ait çeşitli örgütlenmeler ve hareketler; milliyetçi hedeflerle “gelenek” ile mücadele ederken, “demokrasi ve bilim” bayrağını yükseltmiştir. Milliyetçilik ile aralarındaki çelişkilere rağmen, evrenselci modernist akımların Çinli temsilcileri, Çin’in milli kurtuluşu için reçetelerini açıklamaya gayret etmişler ve milliyetçilik ile bağlarını kurmaya çalışmışlardır. 1949’da Yeni Çin’i vücuda getiren kadroların Marksizm ve milliyetçilik bağını yansıtan zihin dünyalarında bu dönemin önemli bir payı vardır."
   },
   "keywords": {
-    "en": ["China", "CPC", "4 May", "New Culture Movement", "New Youth"],
-    "tr": ["Çin", "ÇKP", "4 Mayıs", "Yeni Kültür Hareketi", "Yeni Gençlik"]
+    "en": [
+      "China",
+      "4 May",
+      "New Culture Movement",
+      "New Youth",
+      "Communist Party of China"
+    ],
+    "tr": [
+      "Çin",
+      "Çin Komünist Partisi",
+      "4 Mayıs",
+      "Yeni Gençlik",
+      "Yeni Kültür Hareketi"
+    ]
   },
-  "dates": {"received": "2025-02-05", "revised": "2025-04-27", "accepted": "2025-05-01", "published": "2025-09-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 4, "year": 2025, "season": {"en": "Autumn", "tr": "Güz"}},
-  "pages": {"first": "449", "last": "470"},
+  "dates": {
+    "received": "2025-02-05",
+    "revised": "2025-04-27",
+    "accepted": "2025-05-01",
+    "published": "2025-09-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 4,
+    "year": 2025,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "449",
+    "last": "470"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,
