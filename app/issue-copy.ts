@@ -118,7 +118,7 @@ export const issueCopy: Record<string, IssueCopy> = {
   },
   "1-1": {
     tr: { title: "Uluslararası", subtitle: "Adil Düzenin Yolu" },
-    en: { title: "The Road to a Fair", subtitle: "International Order" },
+    en: { title: "The Road to a Fair International Order", subtitle: "" },
   },
 };
 
