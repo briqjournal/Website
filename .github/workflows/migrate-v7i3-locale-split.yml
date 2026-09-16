@@ -29,14 +29,15 @@ jobs:
           }
 
           const MORGAN = 'kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin';
+          const MONGOLIA = 'mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim';
           const suspicious = [];
           const normalize = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
 
           function repairEnglishReference(slug, ref) {
             let text = normalize(ref.text);
 
-            // PDF extraction frequently inserts whitespace inside a URL. In these
-            // references the URL is terminal, so compact only the terminal URL tail.
+            // PDF extraction frequently inserts whitespace inside a terminal URL/DOI.
+            // Compact only that terminal machine-readable tail, never prose globally.
             const httpIndex = text.search(/https?:\/\//i);
             if (httpIndex >= 0) {
               text = text.slice(0, httpIndex) + text.slice(httpIndex).replace(/\s+/g, '');
@@ -47,10 +48,20 @@ jobs:
               }
             }
 
-            // The official EN PDF breaks this bibliographic entry across a page footer.
-            // Restore the complete publisher name rather than preserving the extraction cut.
+            // Normalize citation typography damaged by PDF line wrapping.
+            text = text.replace(/(\d)\s+\((\d+)\)/g, '$1($2)');
+            text = text.replace(/(\d)[–-]\s+(\d)/g, '$1–$2');
+
+            // Verified against the official English PDFs / authoritative DOI record.
             if (slug === MORGAN && ref.id === 'ref-52' && /Osaka:\s*Sōgen-$/u.test(text)) {
               text = 'Yoshida, T. (2016). Nichibei gōdō iinkai no kenkyū: Nazo no kenryoku kōzō no shōtai ni semaru. Osaka: Sōgensha.';
+            }
+            if (slug === MONGOLIA) {
+              if (ref.id === 'ref-6') text = text.replace('Н үүдэл', 'Нүүдэл');
+              if (ref.id === 'ref-9') text = text.replace('Е вразийн', 'Евразийн');
+              if (ref.id === 'ref-19') text = text.replace('13(), 193–214', '13(1), 193–214');
+              if (ref.id === 'ref-56') text = text.replace('https://10.5564/mjia.v20i0.1023', 'https://doi.org/10.5564/mjia.v20i0.1023');
+              if (ref.id === 'ref-58') text = text.replace('Ев разийн', 'Евразийн').replace('[ Mongolia', '[Mongolia');
             }
 
             return { ...ref, text };
@@ -60,6 +71,12 @@ jobs:
             ...(data.sections ?? []).flatMap((s) => [s.title, ...(s.paragraphs ?? [])]),
             ...(data.footnotes ?? []).map((x) => x.text),
             ...(data.references ?? []).map((x) => x.text),
+            ...(data.figures ?? []).map((x) => x.caption),
+          ].map(normalize).filter(Boolean).join('\n');
+
+          const narrativeText = (data) => [
+            ...(data.sections ?? []).flatMap((s) => [s.title, ...(s.paragraphs ?? [])]),
+            ...(data.footnotes ?? []).map((x) => x.text),
             ...(data.figures ?? []).map((x) => x.caption),
           ].map(normalize).filter(Boolean).join('\n');
 
@@ -114,12 +131,15 @@ jobs:
               }
             }
 
+            // Page-number artifacts belong in narrative/figure text, not between
+            // adjacent bibliography entries whose DOI may naturally end in digits.
+            const narrative = narrativeText(en);
             const embeddedRegex = /(?<=[A-Za-z])\d{3}\s+(?=[A-Za-z])/g;
-            const matches = [...enBody.matchAll(embeddedRegex)];
+            const matches = [...narrative.matchAll(embeddedRegex)];
             for (const match of matches) {
               const start = Math.max(0, match.index - 55);
-              const end = Math.min(enBody.length, match.index + match[0].length + 55);
-              suspicious.push(`${slug}: possible embedded PDF page token "${match[0]}" in …${enBody.slice(start, end).replace(/\n/g, ' ')}…`);
+              const end = Math.min(narrative.length, match.index + match[0].length + 55);
+              suspicious.push(`${slug}: possible embedded PDF page token "${match[0]}" in …${narrative.slice(start, end).replace(/\n/g, ' ')}…`);
             }
             console.log(`OK ${slug}: EN ${en.sections.length} sections / TR ${tr.sections.length} sections`);
           }
