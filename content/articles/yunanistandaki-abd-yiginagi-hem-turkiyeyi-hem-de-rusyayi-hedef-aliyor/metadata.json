@@ -1,26 +1,32 @@
 {
-  "slug": "yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor",
-  "volume": 4,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2022-2023",
-  "author": "Konstantin Sivkov",
-  "title_tr": "Yunanistan’daki ABD yığınağı, hem Türkiye’yi hem de Rusya’yı hedef alıyor",
-  "abstract_tr": "Türkiye, Rusya, Çin, Hindistan ve İran dahil olmak üzere çok kutuplu dünya ülkelerinin hepsinin ortak stratejisi, Batı bloğuna karşı güçlerini birleştirmeyi amaçlıyor. Ve bence bu birliktelik, çoktan başlamış olan 3. Dünya Savaşı’nı nükleer bir savaşa dönüşmeden durduracak olan birlikteliktir. Türkiye, ABD’nin buyruklarına uymuyor, bağımsız politikalar oluşturuyor, Rusya ile iyi ilişkiler kuruyor. Bu politikaların ABD’nin hoşuna gitmediğini söyleyebiliriz. Bu koşullar altında ABD Türkiye’nin iplerini tekrar kendi eline geçirmek istiyor ve bu amaçla 2016 yılında Cumhurbaşkanı Recep Tayyip Erdoğan’a bir darbe girişimi düzenledi. Bu darbe girişimi Rusya’nın da desteği ile bozguna uğratıldı ancak ABD Türkiye’yi her açıdan kuşatmaya başladı. Yunanistan ve Güney Kıbrıs üzerinden geçen bu kuşatmaya karşı Türkiye bazı önlemler almaya başladı. Bu kuşatma hem Türkiye’yi hem de Rusya’yı içine almayı amaçlıyor. Bu net bir şekilde anlaşılmalı. Bu üsler öncelikle Türkiye’ye, daha sonra Rusya’ya yöneliktir. Rusya’nın çevrelenmesi başka araçlarla da sağlanıyor ancak bu noktada Türkiye, ABD’nin gözünde kilit hedeftir.",
-  "source_tr": "https://briqjournal.com/yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor",
-  "source_en": "https://briqjournal.com/en/us-build-greece-targets-both-turkiye-and-russia",
-  "title_en": "US build-up in Greece targets both Türkiye and Russia",
-  "abstract_en": "Abstract \n The common strategy of all multipolar world countries, including Türkiye, Russia, China, India,and Iran, has an element of joining forces against the Western bloc. And I believe this unionis the one that will stop a nuclear World War III. Türkiye does not obey the orders of the USA, establishes independent policies, and maintains good relations with Russia, all of which theUSA does not like at all. Under these circumstances, the US wants to take the reins of Türkiyeback into its own hands, and for this purpose, it organized a coup attempt against President Recep Tayyip Erdoğan in 2016. This coup attempt was defeated with the support of Russia as well, but the USA began to besiege Türkiye from every angle. Türkiye has started to take some\nmeasures against this siege passing through Greece and Southern Cyprus. This siege aims to engulf both Türkiye and Russia. This should be clearly understood. These bases are primarily aimed at Türkiye, then towards Russia. The containment of Russia is also achieved by other means, but at this point, Türkiye is a key target in the eyes of the United States.",
-  "citation_tr": "Atıf \n Sivkov, K. (2022) Yunanistan’daki ABD yığınağı, hem Türkiye’yi hem de Rusya’yı hedefliyor\n(Röportajı yapan Kubilay Çelik). BRIQ Kuşak ve Yol Girişimi Dergisi, 4(1), 26-31.",
-  "citation_en": "Citation \n Sivkov, K. (2022). US build-up in Greece targets both Türkiye and Russia. BRIQ Belt & Road Initiative Quarterly, 4(1), 26-31.",
-  "pages": "26-31",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Konstantin%20Sivkov_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Konstantin%20Sivkov_ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Röportaj",
-  "publication_type_en": "Interview",
-  "published_online_date": "2022-12-01"
+  "schemaVersion": 2,
+  "id": "yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor",
+  "articleType": {"id": "interview", "tr": "Röportaj", "en": "Interview", "peerReviewed": false},
+  "title": {"en": "US build-up in Greece targets both Türkiye and Russia", "tr": "Yunanistan’daki ABD yığınağı, hem Türkiye’yi hem de Rusya’yı hedef alıyor"},
+  "authors": [
+    {"displayName": "Konstantin Sivkov", "givenName": "Konstantin", "familyName": "Sivkov", "orcid": null, "affiliations": []}
+  ],
+  "contributors": [
+    {"displayName": "Kubilay Çelik", "givenName": "Kubilay", "familyName": "Çelik", "role": "interviewer", "orcid": null}
+  ],
+  "abstract": {
+    "en": "The common strategy of all multipolar world countries, including Türkiye, Russia, China, India,and Iran, has an element of joining forces against the Western bloc. And I believe this unionis the one that will stop a nuclear World War III. Türkiye does not obey the orders of the USA, establishes independent policies, and maintains good relations with Russia, all of which theUSA does not like at all. Under these circumstances, the US wants to take the reins of Türkiyeback into its own hands, and for this purpose, it organized a coup attempt against President Recep Tayyip Erdoğan in 2016. This coup attempt was defeated with the support of Russia as well, but the USA began to besiege Türkiye from every angle. Türkiye has started to take some measures against this siege passing through Greece and Southern Cyprus. This siege aims to engulf both Türkiye and Russia. This should be clearly understood. These bases are primarily aimed at Türkiye, then towards Russia. The containment of Russia is also achieved by other means, but at this point, Türkiye is a key target in the eyes of the United States.",
+    "tr": "Türkiye, Rusya, Çin, Hindistan ve İran dahil olmak üzere çok kutuplu dünya ülkelerinin hepsinin ortak stratejisi, Batı bloğuna karşı güçlerini birleştirmeyi amaçlıyor. Ve bence bu birliktelik, çoktan başlamış olan 3. Dünya Savaşı’nı nükleer bir savaşa dönüşmeden durduracak olan birlikteliktir. Türkiye, ABD’nin buyruklarına uymuyor, bağımsız politikalar oluşturuyor, Rusya ile iyi ilişkiler kuruyor. Bu politikaların ABD’nin hoşuna gitmediğini söyleyebiliriz. Bu koşullar altında ABD Türkiye’nin iplerini tekrar kendi eline geçirmek istiyor ve bu amaçla 2016 yılında Cumhurbaşkanı Recep Tayyip Erdoğan’a bir darbe girişimi düzenledi. Bu darbe girişimi Rusya’nın da desteği ile bozguna uğratıldı ancak ABD Türkiye’yi her açıdan kuşatmaya başladı. Yunanistan ve Güney Kıbrıs üzerinden geçen bu kuşatmaya karşı Türkiye bazı önlemler almaya başladı. Bu kuşatma hem Türkiye’yi hem de Rusya’yı içine almayı amaçlıyor. Bu net bir şekilde anlaşılmalı. Bu üsler öncelikle Türkiye’ye, daha sonra Rusya’ya yöneliktir. Rusya’nın çevrelenmesi başka araçlarla da sağlanıyor ancak bu noktada Türkiye, ABD’nin gözünde kilit hedeftir."
+  },
+  "keywords": {"en": [], "tr": []},
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2022-12-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 4, "issue": 1, "year": "2022-2023", "season": {"en": "Winter", "tr": "Kış"}},
+  "pages": {"first": "26", "last": "31"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {"en": "Sivkov, K. (2022). US build-up in Greece targets both Türkiye and Russia. BRIQ Belt & Road Initiative Quarterly, 4(1), 26-31.", "tr": "Sivkov, K. (2022). Yunanistan’daki ABD yığınağı, hem Türkiye’yi hem de Rusya’yı hedefliyor (Röportajı yapan Kubilay Çelik). BRIQ Kuşak ve Yol Girişimi Dergisi, 4(1), 26-31."},
+  "urls": {"en": "https://briqjournal.com/en/us-build-greece-targets-both-turkiye-and-russia", "tr": "https://briqjournal.com/yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor", "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Konstantin%20Sivkov_ENG.pdf", "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Konstantin%20Sivkov_TR.pdf", "pdfEnLocal": "/assets/archive/pdfs/articles/yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor-en.pdf", "pdfTrLocal": "/assets/archive/pdfs/articles/yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor-tr.pdf", "sharedBilingualPdf": false}
 }
