@@ -1,0 +1,35 @@
+name: Extract Jordan EN PDF
+on:
+  push:
+    branches: [automation/v7i4-jordan-fulltext]
+permissions:
+  contents: read
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract official English PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          URL='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2026-08/Li%20Sainan%20%26%20Li%20Xi%20-%20China-Arab%20Cooperation%20under%20the%20Digital%20Silk%20Road%20Framework%20A%20Case%20Study%20of%20Jordan.pdf'
+          curl -L --fail --retry 3 "$URL" -o /tmp/jordan-en.pdf
+          pdfinfo /tmp/jordan-en.pdf | sed -n '1,25p'
+          pdftotext -layout -nopgbrk /tmp/jordan-en.pdf jordan-en-layout.txt
+          pdftotext -nopgbrk /tmp/jordan-en.pdf jordan-en-flow.txt
+          echo '=== PAGE-LAYOUT EXCERPT ==='
+          sed -n '1,420p' jordan-en-layout.txt
+          echo '=== HEADING CANDIDATES ==='
+          grep -nE '^[[:space:]]{0,12}[A-Z][A-Za-z0-9 ,:&()–—/-]{3,90}$' jordan-en-layout.txt | head -120 || true
+          echo '=== REFERENCES MARKER ==='
+          grep -n -i -E '^[[:space:]]*References[[:space:]]*$' jordan-en-layout.txt || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jordan-en-extraction
+          path: |
+            jordan-en-layout.txt
+            jordan-en-flow.txt
+          retention-days: 1
