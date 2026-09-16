@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_ENG-Sancak.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Röportaj",
+  "publication_type_en": "Interview",
+  "published_online_date": "2022-09-01"
 }

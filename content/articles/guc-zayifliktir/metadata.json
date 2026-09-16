@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_ENG-BookReview.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/guc-zayifliktir-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/guc-zayifliktir-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Kitap İncelemesi",
+  "publication_type_en": "Book Review",
+  "received_date": "2022-06-06",
+  "accepted_date": "2022-06-14",
+  "published_online_date": "2022-09-01"
 }

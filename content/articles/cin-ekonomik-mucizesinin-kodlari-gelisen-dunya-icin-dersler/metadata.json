@@ -19,5 +19,9 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Deciphering%20the%20Chinese%20Economic%20Miracle%20Lessons%20for%20the%20Developing%20World%20-%20EFG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/cin-ekonomik-mucizesinin-kodlari-gelisen-dunya-icin-dersler-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/cin-ekonomik-mucizesinin-kodlari-gelisen-dunya-icin-dersler-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Araştırma Makalesi",
+  "publication_type_en": "Research Article",
+  "received_date": "2022-01-04",
+  "published_online_date": "2022-03-01"
 }

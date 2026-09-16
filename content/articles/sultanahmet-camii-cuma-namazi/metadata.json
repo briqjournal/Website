@@ -18,5 +18,8 @@
   "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Foto%C4%9Fraf%20-%20Cemil%20%C5%9Eahin_0.pdf",
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Photography%20Art%20-Cemil%20%C5%9Eahin.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/sultanahmet-camii-cuma-namazi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/sultanahmet-camii-cuma-namazi-en.pdf"
+  "pdf_en_local": "/assets/archive/pdfs/articles/sultanahmet-camii-cuma-namazi-en.pdf",
+  "publication_type_tr": "Fotoğraf",
+  "publication_type_en": "Photograph",
+  "published_online_date": "2022-03-01"
 }

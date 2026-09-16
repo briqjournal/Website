@@ -19,5 +19,9 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/The%20Dominant%20Position%20of%20the%20Public%20Economy%20is%20the%20Heart%20of%20Chinese%20Socialism%20-%20Ding%20Bing.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/kamu-ekonomisinin-hakim-konumu-cin-sosyalizminin-can-damaridir-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/kamu-ekonomisinin-hakim-konumu-cin-sosyalizminin-can-damaridir-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Görüş Makalesi",
+  "publication_type_en": "Perspective Article",
+  "accepted_date": "2022-01-24",
+  "published_online_date": "2022-03-01"
 }

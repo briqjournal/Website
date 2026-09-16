@@ -19,5 +19,11 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-02/The%20Mutual%20Construction%20of%20Image%20of%20China%20and%20Turkey%20Perceptions%2C%20Problems%2C%20and%20Policy%20Proposals.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/cin-ve-turkiye-imajlarinin-karsilikli-insasi-algilar-sorunlar-ve-politika-onerileri-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/cin-ve-turkiye-imajlarinin-karsilikli-insasi-algilar-sorunlar-ve-politika-onerileri-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Araştırma Makalesi",
+  "publication_type_en": "Research Article",
+  "received_date": "2021-10-27",
+  "revised_date": "2021-11-15",
+  "accepted_date": "2021-11-21",
+  "published_online_date": "2021-12-01"
 }

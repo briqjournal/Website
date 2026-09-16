@@ -19,5 +19,9 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Economic%20Policies%20of%20Kemalism%20in%20the%20Early%20Republican%20Era%20-%20Tolga%20Di%C5%9F%C3%A7i.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/erken-cumhuriyet-doneminde-kemalizmin-ekonomi-politikasi-1923-1938-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/erken-cumhuriyet-doneminde-kemalizmin-ekonomi-politikasi-1923-1938-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2022-02-12",
+  "published_online_date": "2022-03-01"
 }

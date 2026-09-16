@@ -19,5 +19,9 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Interactions%20Between%20Two%20Republics%20The%20Republic%20of%20Turkey%20and%20the%20Republic%20of%20China%20%281923-1949%29.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2021-10-23",
+  "published_online_date": "2021-12-01"
 }

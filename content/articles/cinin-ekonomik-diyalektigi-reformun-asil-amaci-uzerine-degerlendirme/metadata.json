@@ -19,5 +19,9 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Launch%20Remarks%20on%20China%E2%80%99s%20Economic%20Dialectic%20The%20Original%20Aspiration%20of%20Reform%20-%20John%20Bellamy%20Foster.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/cinin-ekonomik-diyalektigi-reformun-asil-amaci-uzerine-degerlendirme-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/cinin-ekonomik-diyalektigi-reformun-asil-amaci-uzerine-degerlendirme-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Kitap İncelemesi",
+  "publication_type_en": "Book Review",
+  "accepted_date": "2022-01-24",
+  "published_online_date": "2022-03-01"
 }

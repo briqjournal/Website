@@ -19,5 +19,11 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_16-43.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2021-12-29",
+  "revised_date": "2022-03-22",
+  "accepted_date": "2022-04-25",
+  "published_online_date": "2022-06-01"
 }

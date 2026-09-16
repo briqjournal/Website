@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_69-81.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/cilt-3-sayi-3-sanghay-hidrojen-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/sanghayda-hidrojen-enerji-endustrisi-uygulamalari-ve-gelisimi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Rapor",
+  "publication_type_en": "Report",
+  "published_online_date": "2022-06-01"
 }

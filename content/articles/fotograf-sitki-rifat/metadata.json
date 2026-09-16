@@ -18,5 +18,8 @@
   "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Foto%C4%9Fraf%20-%20SITKI%20FIRAT.pdf",
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Photography%20Art%20-%20SITKI%20FIRAT.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/fotograf-sitki-rifat-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/fotograf-sitki-rifat-en.pdf"
+  "pdf_en_local": "/assets/archive/pdfs/articles/fotograf-sitki-rifat-en.pdf",
+  "publication_type_tr": "Fotoğraf",
+  "publication_type_en": "Photograph",
+  "published_online_date": "2021-12-01"
 }

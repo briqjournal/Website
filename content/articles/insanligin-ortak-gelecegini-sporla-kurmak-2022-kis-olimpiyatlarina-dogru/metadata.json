@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Building%20the%20Shared%20Future%20of%20Humanity%20Through%20Sports%20Towards%20the%202022%20Winter%20Olympics.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/insanligin-ortak-gelecegini-sporla-kurmak-2022-kis-olimpiyatlarina-dogru-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/insanligin-ortak-gelecegini-sporla-kurmak-2022-kis-olimpiyatlarina-dogru-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Forum Raporu",
+  "publication_type_en": "Forum Report",
+  "published_online_date": "2021-12-01"
 }

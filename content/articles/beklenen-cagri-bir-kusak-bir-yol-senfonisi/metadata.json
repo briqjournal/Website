@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/POEM%20-%20The%20Awaited%20Call%20-%20H%C3%BCseyin%20Haydar.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/beklenen-cagri-bir-kusak-bir-yol-senfonisi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/beklenen-cagri-bir-kusak-bir-yol-senfonisi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Şiir",
+  "publication_type_en": "Poem",
+  "published_online_date": "2021-12-01"
 }

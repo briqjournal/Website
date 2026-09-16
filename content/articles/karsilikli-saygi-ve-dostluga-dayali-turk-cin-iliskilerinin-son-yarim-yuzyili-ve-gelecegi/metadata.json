@@ -19,5 +19,9 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/THE%20LAST%20SEMI-CENTURY%20AND%20THE%20FUTURE%20OF%20TURKISH-CHINESE%20RELATIONS%20BASED%20ON%20MUTUAL%20RESPECT%20AND%20FRIENDSHIP.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/cilt-3-sayi-1-turk-cin-iliskileri-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/karsilikli-saygi-ve-dostluga-dayali-turk-cin-iliskilerinin-son-yarim-yuzyili-ve-gelecegi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Görüş Makalesi",
+  "publication_type_en": "Perspective Article",
+  "received_date": "2021-10-28",
+  "published_online_date": "2021-12-01"
 }

@@ -19,5 +19,11 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/A%20Thousand%20Readers%2C%20A%20Thousand%20Hamlets%20A%20Chinese%20Scholar%E2%80%99s%20Response%20to%20the%20Ten%20Hot%20Issues%20about%20the%20Belt%20%26%20Road%20Initiative.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/bin-okur-bin-hamlet-bir-cinli-akademisyenin-kusak-ve-yol-girisimi-hakkindaki-10-onemli-soruya-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/bin-okur-bin-hamlet-bir-cinli-akademisyenin-kusak-ve-yol-girisimi-hakkindaki-10-onemli-soruya-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Kitap İncelemesi",
+  "publication_type_en": "Book Review",
+  "received_date": "2021-10-17",
+  "revised_date": "2021-10-19",
+  "accepted_date": "2021-11-03",
+  "published_online_date": "2021-12-01"
 }

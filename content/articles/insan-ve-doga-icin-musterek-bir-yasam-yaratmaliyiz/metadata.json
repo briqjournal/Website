@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_44-47.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/insan-ve-doga-icin-musterek-bir-yasam-yaratmaliyiz-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/insan-ve-doga-icin-musterek-bir-yasam-yaratmaliyiz-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Görüş Makalesi",
+  "publication_type_en": "Perspective Article",
+  "published_online_date": "2022-06-01"
 }

@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/The%20Establishment%20of%20Diplomatic%20Relations%20Between%20the%20Republic%20of%20Turkey%20and%20the%20People%E2%80%99s%20Republic%20of%20China%20%281960-1971%29.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Araştırma Makalesi",
+  "publication_type_en": "Research Article",
+  "received_date": "2021-11-05",
+  "revised_date": "2021-11-17",
+  "published_online_date": "2021-12-01"
 }

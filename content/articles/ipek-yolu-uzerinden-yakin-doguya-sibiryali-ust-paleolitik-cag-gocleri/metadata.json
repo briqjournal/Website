@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_ENG-G%C3%BCneri.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Araştırma Makalesi",
+  "publication_type_en": "Research Article",
+  "received_date": "2022-03-30",
+  "accepted_date": "2022-05-14",
+  "published_online_date": "2022-09-01"
 }

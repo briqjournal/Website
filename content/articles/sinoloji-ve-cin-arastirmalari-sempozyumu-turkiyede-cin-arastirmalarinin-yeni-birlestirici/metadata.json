@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/The%20Sinology%20and%20Chinese%20Studies%20Symposium%20A%20Brand-New%20Unifying%20Perspective%20of%20Chinese%20Studies%20in%20Turkey.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Sempozyum Raporu",
+  "publication_type_en": "Symposium Report",
+  "published_online_date": "2021-12-01"
 }

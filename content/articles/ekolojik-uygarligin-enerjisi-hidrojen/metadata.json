@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_48-65.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/ekolojik-uygarligin-enerjisi-hidrojen-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/ekolojik-uygarligin-enerjisi-hidrojen-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2021-12-14",
+  "accepted_date": "2022-05-05",
+  "published_online_date": "2022-06-01"
 }

@@ -18,5 +18,8 @@
   "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Resim%20-%20Kay%C4%B1han%20Keskinok.pdf",
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Painting%20-%20KAYIHAN%20KESK%C4%B0NOK.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/resim-kayihan-keskinok-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/resim-kayihan-keskinok-en.pdf"
+  "pdf_en_local": "/assets/archive/pdfs/articles/resim-kayihan-keskinok-en.pdf",
+  "publication_type_tr": "Resim",
+  "publication_type_en": "Painting",
+  "published_online_date": "2021-12-01"
 }

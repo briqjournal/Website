@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_84-86.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisiminin-ic-nedenleri-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisiminin-ic-nedenleri-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Kitap İncelemesi",
+  "publication_type_en": "Book Review",
+  "received_date": "2022-02-08",
+  "accepted_date": "2022-05-01",
+  "published_online_date": "2022-06-01"
 }

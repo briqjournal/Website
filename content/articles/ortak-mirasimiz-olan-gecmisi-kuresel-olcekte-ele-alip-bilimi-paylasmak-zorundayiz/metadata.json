@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_ENG-%C3%96zdo%C4%9Fan.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Röportaj",
+  "publication_type_en": "Interview",
+  "published_online_date": "2022-09-01"
 }

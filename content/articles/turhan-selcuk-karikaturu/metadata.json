@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Karikat%C3%BCr%20-%20Turhan%20Sel%C3%A7uk.pdf",
   "shared_bilingual_pdf": true,
   "pdf_tr_local": "/assets/archive/pdfs/articles/turhan-selcuk-karikaturu-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/turhan-selcuk-karikaturu-tr.pdf"
+  "pdf_en_local": "/assets/archive/pdfs/articles/turhan-selcuk-karikaturu-tr.pdf",
+  "publication_type_tr": "Karikatür",
+  "publication_type_en": "Cartoon",
+  "published_online_date": "2022-03-01"
 }

@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/BELT%20AND%20ROAD%20COOPERATION%20MARKS%20A%20NEW%20CHAPTER%20ON%20THE%2050TH%20ANNIVERSARY%20OF%20DIPLOMATIC%20RELATIONS%20BETWEEN%20CHINA%20AND%20TURKEY.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Görüş Makalesi",
+  "publication_type_en": "Perspective Article",
+  "published_online_date": "2021-12-01"
 }

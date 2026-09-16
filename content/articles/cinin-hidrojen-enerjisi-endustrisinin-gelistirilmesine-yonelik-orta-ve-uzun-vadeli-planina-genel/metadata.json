@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_66-68.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/cinin-hidrojen-enerjisi-endustrisinin-gelistirilmesine-yonelik-orta-ve-uzun-vadeli-planina-genel-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/cinin-hidrojen-enerjisi-endustrisinin-gelistirilmesine-yonelik-orta-ve-uzun-vadeli-planina-genel-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Rapor",
+  "publication_type_en": "Report",
+  "published_online_date": "2022-06-01"
 }

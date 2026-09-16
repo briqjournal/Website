@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Karikat%C3%BCr%20-%20R%C4%B1fat%20Mutlu%20-%20Tek%20Di%C5%9Fi%20Kalm%C4%B1%C5%9F%20Canavar.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/rifat-mutlu-tek-disi-kalmis-canavar-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/rifat-mutlu-tek-disi-kalmis-canavar-tr.pdf",
-  "shared_bilingual_pdf": true
+  "shared_bilingual_pdf": true,
+  "publication_type_tr": "Karikatür",
+  "publication_type_en": "Cartoon",
+  "published_online_date": "2021-12-01"
 }

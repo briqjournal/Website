@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-09/C3S4_ENG-Abdullaev.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Araştırma Makalesi",
+  "publication_type_en": "Research Article",
+  "received_date": "2022-02-18",
+  "accepted_date": "2022-03-10",
+  "published_online_date": "2022-09-01"
 }

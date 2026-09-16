@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/National-Democratic%20State%20and%20Development%20-%20Semih%20Koray.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/milli-demokratik-devlet-ve-kalkinma-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/milli-demokratik-devlet-ve-kalkinma-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Değerlendirme Makalesi",
+  "publication_type_en": "Evaluation Article",
+  "received_date": "2022-02-12",
+  "accepted_date": "2022-02-25",
+  "published_online_date": "2022-03-01"
 }

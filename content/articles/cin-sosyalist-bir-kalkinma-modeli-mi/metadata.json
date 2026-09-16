@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/China%20A%20Socialist%20Model%20of%20Development%20-%20Michael%20Roberts.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/cin-sosyalist-bir-kalkinma-modeli-mi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/cin-sosyalist-bir-kalkinma-modeli-mi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Araştırma Makalesi",
+  "publication_type_en": "Research Article",
+  "received_date": "2022-01-21",
+  "accepted_date": "2022-02-18",
+  "published_online_date": "2022-03-01"
 }
