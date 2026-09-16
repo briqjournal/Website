@@ -1,27 +1,40 @@
 {
-  "slug": "yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar",
-  "volume": 6,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2025",
-  "author": "Xiao Yongtao",
-  "title_tr": "Yükselen Orta Güçlerin Denge Diplomasisi: Kavramlar, Saikler ve Çıkarımlar",
-  "abstract_tr": "Son yıllarda Türkiye, Endonezya, Brezilya ve Suudi Arabistan gibi yükselen orta güçlerin (middle powers: orta büyüklükte devletler) küresel manzarada etkileri önemli ölçüde artarken, Kanada ve Avustralya gibi geleneksel orta güçler küresel güvenlik ve kalkınmayı etkileyen konularda dikkat çekici bir şekilde sessiz kalmıştır. Bu nedenle, sadece orta güçler arasında bir bölünme meydana gelmemiştir, aynı zamanda bu güçlerin kendilerine özgü diplomatik kalıpları ve dış davranış mantıkları da dikkate değerdir. Bu makale, gelişmekte olan ülkelerin ortak çıkarlarını temsil eden,“Küresel Güney”in liderleri ve çok kutuplu bir küresel düzenin destekleyicileri olarak hareket eden yükselen orta güçlerin uluslararası ekonomik yapı içinde yarı-çevresel bir konumda olduğunu ele almaktadır. Uluslararası düzenin dönüşümü sırasında, yükselen orta güçlerin yükselişi ve dengeleyici diplomasi modelleri çok kutupluluğu daha fazla teşvik edecektir.",
-  "source_tr": "https://briqjournal.com/yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar",
-  "source_en": "https://briqjournal.com/en/emerging-middle-powers-balancing-diplomacy-connotations-motivations-and-implications",
-  "title_en": "Emerging Middle Powers’ Balancing Diplomacy: Connotations, Motivations, and Implications",
-  "abstract_en": "Abstract \n With the rise of emerging middle powers during the past few years, such as Türkiye, Indonesia, Brazil, and Saudi Arabia, whose significant influences have been expanding in the global landscape, while traditional middle powers like Canada and Australia have been notably silent on issues impacting global security and development. Therefore, not only has the division occurred within middle powers, but their unique diplomatic patterns and logics of external behaviors are also worthy of attention. This article argues that emerging middle powers are in a semi-peripheral position within the international economic structure, representing the common interests of developing countries and acting as leaders of the “Global South” and promoters of a more multipolar global order. During the transformation of international order, the rise of emerging middle powers and their balancing diplomacy pattern will further promote multipolarization.",
-  "citation_tr": "Atıf \n Xiao Y. (2025). Yükselen Orta Güçlerin Denge Diplomasisi: Kavramlar, Saikler ve Çıkarımlar. BRIQ Kuşak ve Yol Girişimi Dergisi, 6(2), 211-224.",
-  "citation_en": "Citation \n Xiao Y. (2025). Emerging Middle Powers’ Balancing Diplomacy: Connotations, Motivations, and Implications. BRIQ Belt & Road Initiative Quarterly, 6(2), 211-224.",
-  "pages": "211-224",
-  "received_date": "2024-12-05",
-  "revised_date": "2025-02-08",
-  "accepted_date": "2025-02-05",
-  "published_online_date": "2025-03-01",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/6Xiao%20Yongtao_T%C3%9CRK%C3%87E.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/Xiao%20Yongtao_ENGLISH.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar",
+  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "title": {"en": "Emerging Middle Powers’ Balancing Diplomacy: Connotations, Motivations, and Implications", "tr": "Yükselen Orta Güçlerin Denge Diplomasisi: Kavramlar, Saikler ve Çıkarımlar"},
+  "authors": [
+    {"displayName": "Xiao Yongtao", "givenName": "Yongtao", "familyName": "Xiao", "orcid": null, "affiliations": []}
+  ],
+  "abstract": {
+    "en": "With the rise of emerging middle powers during the past few years, such as Türkiye, Indonesia, Brazil, and Saudi Arabia, whose significant influences have been expanding in the global landscape, while traditional middle powers like Canada and Australia have been notably silent on issues impacting global security and development. Therefore, not only has the division occurred within middle powers, but their unique diplomatic patterns and logics of external behaviors are also worthy of attention. This article argues that emerging middle powers are in a semi-peripheral position within the international economic structure, representing the common interests of developing countries and acting as leaders of the ‘Global South’ and promoters of a more multipolar global order. During the transformation of international order, the rise of emerging middle powers and their balancing diplomacy pattern will further promote multipolarization.",
+    "tr": "Son yıllarda Türkiye, Endonezya, Brezilya ve Suudi Arabistan gibi yükselen orta güçlerin küresel manzarada etkileri önemli ölçüde artarken, Kanada ve Avustralya gibi geleneksel orta güçler küresel güvenlik ve kalkınmayı etkileyen konularda dikkat çekici bir şekilde sessiz kalmıştır. Bu nedenle, sadece orta güçler arasında bir bölünme meydana gelmemiştir, aynı zamanda bu güçlerin kendilerine özgü diplomatik kalıpları ve dış davranış mantıkları da dikkate değerdir. Bu makale, gelişmekte olan ülkelerin ortak çıkarlarını temsil eden, ‘Küresel Güney’in liderleri ve çok kutuplu bir küresel düzenin destekleyicileri olarak hareket eden yükselen orta güçlerin uluslararası ekonomik yapı içinde yarı-çevresel bir konumda olduğunu ele almaktadır. Uluslararası düzenin dönüşümü sırasında, yükselen orta güçlerin yükselişi ve dengeleyici diplomasi modelleri çok kutupluluğu daha fazla teşvik edecektir."
+  },
+  "keywords": {"en": [], "tr": []},
+  "dates": {"received": "2024-12-05", "revised": "2025-02-08", "accepted": "2025-02-05", "published": "2025-03-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 2, "year": 2025, "season": {"en": "Spring", "tr": "Bahar"}},
+  "pages": {"first": "211", "last": "224"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Xiao, Y. (2025). Emerging Middle Powers’ Balancing Diplomacy: Connotations, Motivations, and Implications. BRIQ Belt & Road Initiative Quarterly, 6(2), 211-224.",
+    "tr": "Xiao, Y. (2025). Yükselen Orta Güçlerin Denge Diplomasisi: Kavramlar, Saikler ve Çıkarımlar. BRIQ Kuşak ve Yol Girişimi Dergisi, 6(2), 211-224."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/emerging-middle-powers-balancing-diplomacy-connotations-motivations-and-implications",
+    "tr": "https://briqjournal.com/yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/Xiao%20Yongtao_ENGLISH.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/6Xiao%20Yongtao_T%C3%9CRK%C3%87E.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

@@ -1,24 +1,46 @@
 {
-  "slug": "sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin",
-  "volume": 6,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2025",
-  "author": "Mao Zedung",
-  "title_tr": "Sun Yat-Sen’ın Ölümünün 13. Yıldönümü Ve Japonya’ya Karşı Savaşta Hayatını Kaybeden Askerler Içın Düzenlenen Anma Törenındekı Konuşma (12 Mart 1938)",
-  "abstract_tr": "Aşağıdaki metin, Sun Yat-Sen’in vefatının 13’üncü yıldönümü ve Japonya’ya karşı savaşta hayatını kaybeden askerler için 12 Mart 1938’de Yenan’da düzenlenen anma töreninde, Çin Halk Cumhuriyeti’nin kurucu lideri, büyük devrimci Mao Zedung’un yaptığı konuşmadır. Bu konuşma, 15 Mart 1938 tarihli Yeni Çin Gazetesi’nde (新中華報) yayımlanmıştır. Çince aslından BRIQ tarafından çevrilmiştir.",
-  "source_tr": "https://briqjournal.com/sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin",
-  "source_en": "https://briqjournal.com/en/speech-the-memorial-the-13th-anniversary-sun-yat-sens-death-and-the-commemoration-the-fallen",
-  "title_en": "Speech At The Memorıal For The 13th Annıversary Of Sun Yat-Sen’s Death And The Commemoration Of The Fallen Soldiers in The Anti-Japanese War (March 12, 1938)",
-  "abstract_en": "Abstract \n The following is a speech delivered by Mao Zedong, the great revolutionary and founding leader of the People 's Republic of China, at the commemoration of the 13th anniversary of Sun Yat-sen' s death and the soldiers who lost their lives in the war against Japan, held in Yan 'an on March 12, 1938. This speech was published in the New China Daily (新中華報) on March 15, 1938. Translated from the Chinese original by BRIQ.",
-  "citation_tr": "Atıf \n Mao, Z. (2025). Sun Yat-sen’in ölümünün 13. yıldönümü ve Japonya’ya karşı savaşta hayatını kaybeden askerler için düzenlenen anma törenindeki konuşma. BRIQ Kuşak ve Yol Girişimi Dergisi, 6(2), 199-204.",
-  "citation_en": "Citation \n Mao, Z. (2025). Speech at the memorial for the 13th anniversary of Sun Yat-sen’s death and the commemoration of the fallen soldiers in the anti-Japanese war. BRIQ Belt & Road Initiative Quarterly, 6(2), 199-204.",
-  "pages": "199-204",
-  "published_online_date": "2025-03-01",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/4Mao%20Zedung_Tarihten_T%C3%9CRK%C3%87E.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/Mao%20Zedong_History_ENGLISH.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin",
+  "articleType": {"id": "speech", "tr": "Konuşma", "en": "Speech", "peerReviewed": false},
+  "title": {
+    "en": "Speech at the Memorial for the 13th Anniversary of Sun Yat-sen’s Death and the Commemoration of the Fallen Soldiers in the Anti-Japanese War (March 12, 1938)",
+    "tr": "Sun Yat-sen’in Ölümünün 13. Yıldönümü ve Japonya’ya Karşı Savaşta Hayatını Kaybeden Askerler İçin Düzenlenen Anma Törenindeki Konuşma (12 Mart 1938)"
+  },
+  "authors": [
+    {"displayName": "Mao Zedong", "givenName": "Zedong", "familyName": "Mao", "orcid": null, "affiliations": []}
+  ],
+  "contributors": [
+    {"displayName": "BRIQ", "givenName": null, "familyName": null, "role": "translator", "orcid": null}
+  ],
+  "abstract": {
+    "en": "The following is a speech delivered by Mao Zedong, the great revolutionary and founding leader of the People’s Republic of China, at the commemoration of the 13th anniversary of Sun Yat-sen’s death and the soldiers who lost their lives in the war against Japan, held in Yan’an on March 12, 1938. This speech was published in the New China Daily (新中華報) on March 15, 1938. Translated from the Chinese original by BRIQ.",
+    "tr": "Aşağıdaki metin, Sun Yat-sen’in vefatının 13’üncü yıldönümü ve Japonya’ya karşı savaşta hayatını kaybeden askerler için 12 Mart 1938’de Yenan’da düzenlenen anma töreninde, Çin Halk Cumhuriyeti’nin kurucu lideri, büyük devrimci Mao Zedong’un yaptığı konuşmadır. Bu konuşma, 15 Mart 1938 tarihli Yeni Çin Gazetesi’nde (新中華報) yayımlanmıştır. Çince aslından BRIQ tarafından çevrilmiştir."
+  },
+  "keywords": {"en": [], "tr": []},
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2025-03-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 2, "year": 2025, "season": {"en": "Spring", "tr": "Bahar"}},
+  "pages": {"first": "199", "last": "204"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Mao, Z. (2025). Speech at the memorial for the 13th anniversary of Sun Yat-sen’s death and the commemoration of the fallen soldiers in the anti-Japanese war. BRIQ Belt & Road Initiative Quarterly, 6(2), 199-204.",
+    "tr": "Mao, Z. (2025). Sun Yat-sen’in ölümünün 13. yıldönümü ve Japonya’ya karşı savaşta hayatını kaybeden askerler için düzenlenen anma törenindeki konuşma. BRIQ Kuşak ve Yol Girişimi Dergisi, 6(2), 199-204."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/speech-the-memorial-the-13th-anniversary-sun-yat-sens-death-and-the-commemoration-the-fallen",
+    "tr": "https://briqjournal.com/sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/Mao%20Zedong_History_ENGLISH.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-03/4Mao%20Zedung_Tarihten_T%C3%9CRK%C3%87E.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
