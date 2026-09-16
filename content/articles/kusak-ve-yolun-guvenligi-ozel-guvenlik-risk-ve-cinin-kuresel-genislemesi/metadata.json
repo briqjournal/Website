@@ -1,8 +1,16 @@
 {
   "schemaVersion": 2,
   "id": "kusak-ve-yolun-guvenligi-ozel-guvenlik-risk-ve-cinin-kuresel-genislemesi",
-  "articleType": {"id": "book-review", "tr": "Kitap İncelemesi", "en": "Book Review", "peerReviewed": false},
-  "title": {"en": "Securing the Belt and Road: Private Security, Risk, and China’s Global Expansion", "tr": "Kuşak ve Yol’un Güvenliği: Özel Güvenlik, Risk ve Çin’in Küresel Genişlemesi"},
+  "articleType": {
+    "id": "book-review",
+    "tr": "Kitap İncelemesi",
+    "en": "Book Review",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Securing the Belt and Road: Private Security, Risk, and China’s Global Expansion",
+    "tr": "Kuşak ve Yol’un Güvenliği: Özel Güvenlik, Risk ve Çin’in Küresel Genişlemesi"
+  },
   "authors": [
     {
       "displayName": "Nora Maher",
@@ -10,18 +18,62 @@
       "familyName": "Maher",
       "orcid": "https://orcid.org/0000-0002-9858-8548",
       "affiliations": [
-        {"name": "Department of Political Science, May University in Cairo", "nameTr": "May Üniversitesi (MUC), Siyaset Bilimi Bölümü", "nameEn": "Department of Political Science, May University in Cairo", "country": "Egypt", "ror": null}
+        {
+          "name": "Department of Political Science, May University in Cairo",
+          "nameTr": "May Üniversitesi (MUC), Siyaset Bilimi Bölümü",
+          "nameEn": "Department of Political Science, May University in Cairo",
+          "country": "Egypt",
+          "ror": null
+        }
       ]
     }
   ],
-  "abstract": {"en": null, "tr": null},
-  "keywords": {"en": ["Securing the Belt and Road", "Private Security"], "tr": []},
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2026-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 3, "year": 2026, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "366", "last": "369"},
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [
+      "Securing The Belt And Road",
+      "Private Security"
+    ],
+    "tr": [
+      "Kuşak Ve Yol’un Güvenliği",
+      "Özel Güvenlik"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2026-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 3,
+    "year": 2026,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "366",
+    "last": "369"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

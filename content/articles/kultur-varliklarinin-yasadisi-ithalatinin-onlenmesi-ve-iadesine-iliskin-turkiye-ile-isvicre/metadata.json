@@ -1,7 +1,12 @@
 {
   "schemaVersion": 2,
   "id": "kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
   "title": {
     "en": "A Critical Analysis of the Agreement between Türkiye and Switzerland on Preventing Illicit Import and Facilitating the Repatriation of Cultural Property",
     "tr": "Kültür Varlıklarının Yasadışı İthalatının Önlenmesi ve İadesine İlişkin Türkiye ile İsviçre Arasındaki Anlaşmaya Eleştirisel Yaklaşım"
@@ -13,7 +18,13 @@
       "familyName": "Ekşi",
       "orcid": "https://orcid.org/0000-0002-9713-777X",
       "affiliations": [
-        {"name": "Faculty of Law, Marmara University (retired)", "nameTr": "Marmara Üniversitesi Hukuk Fakültesi (E)", "nameEn": "Marmara University Faculty of Law (r.)", "country": "Türkiye", "ror": null}
+        {
+          "name": "Faculty of Law, Marmara University (retired)",
+          "nameTr": "Marmara Üniversitesi Hukuk Fakültesi (E)",
+          "nameEn": "Marmara University Faculty of Law (r.)",
+          "country": "Türkiye",
+          "ror": null
+        }
       ]
     }
   ],
@@ -22,15 +33,53 @@
     "tr": "Milletlerarası anlaşmalar, kültür varlıklarının yasadışı ticaretinin önlenmesi ve ülkeler arasında işbirliğinin sağlanmasında önemli araçlardır. Ancak bazen kültürel miras açısından zengin ülkeler ile pazar ülkeleri arasındaki asimetrik güç ilişkileri milletlerarası anlaşmalara da yansımakta ve pazar ülkelerinin çıkarlarını önceleyen birtakım hükümlere satır aralarında yer verilmektedir. Türkiye ve İsviçre arasında yapılan kültür varlıklarının yasadışı ithalatının önlenmesi ve iadesine ilişkin anlaşma asimetrik yapının bir yansımasıdır. Milletlerarası anlaşmalarda, kültür varlıkları açısından zengin ülkeler aleyhine pazar ülkelerinin menfaatlerinin korunduğunu gösteren bazı asimetrik izler bulunmasına rağmen, bu durum anlaşmaların etkisiz olduğu anlamına gelmemektedir. Çalışmamızda ulusal ve uluslararası düzeyde kültür varlıklarının yasadışı ticaretiyle mücadelenin genel çerçevesi çizilecek; ardından konuya ilişkin milletlerarası anlaşmaların bu mücadeledeki rolüne temas edilecektir. Daha sonra Türkiye ile İsviçre arasında yapılan Anlaşma’da öngörülen yasadışı ticaretle mücadele yöntemleri ve iade mekanizmaları incelenecektir. Türkiye ile İsviçre arasında kültür varlıklarının yasadışı ihracatı ve ithalatıyla mücadelede karşılıklı iş birliği ve iade usullerini öngören Anlaşma kapsamında en fazla iade talebinde bulunacak ülke Türkiye’dir. Çalışmamızın son kısmında, Anlaşma’nın Türkiye’den yasa dışı yollarla İsviçre’ye götürülen kültür varlıklarının iadesinin etkin işleyişini olumsuz etkileyebilecek asimetrik yönleri ele alınacaktır."
   },
   "keywords": {
-    "en": ["asymmetrical provisions", "illicit import", "illicit trade in cultural property", "repatriation of cultural property", "Türkiye - Switzerland Agreement"],
-    "tr": ["asimetrik hükümler", "kültür varlıklarının iadesi", "kültür varlıklarının yasadışı ticareti", "Türkiye-İsviçre Anlaşması", "yasadışı ithalat"]
+    "en": [
+      "Asymmetrical Provisions",
+      "Repatriation Of Cultural Property",
+      "Illicit Trade In Cultural Property",
+      "Türkiye - Switzerland Agreement",
+      "Illicit Import"
+    ],
+    "tr": [
+      "Asimetrik Hükümler",
+      "Kültür Varlıklarının İadesi",
+      "Kültür Varlıklarının Yasadışı Ticareti",
+      "Türkiye-İsviçre Anlaşması",
+      "Yasadışı İthalat"
+    ]
   },
-  "dates": {"received": "2026-03-09", "revised": "2026-04-09", "accepted": "2026-04-11", "published": "2026-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 3, "year": 2026, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "276", "last": "301"},
+  "dates": {
+    "received": "2026-03-09",
+    "revised": "2026-04-09",
+    "accepted": "2026-04-11",
+    "published": "2026-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 3,
+    "year": 2026,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "276",
+    "last": "301"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

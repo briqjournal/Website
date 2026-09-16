@@ -1,8 +1,16 @@
 {
   "schemaVersion": 2,
   "id": "cin-abd-iliskilerinin-gelecegi",
-  "articleType": {"id": "book-review", "tr": "Kitap İncelemesi", "en": "Book Review", "peerReviewed": false},
-  "title": {"en": "The Future of China-U.S. Relations", "tr": "Çin-ABD İlişkilerinin Geleceği"},
+  "articleType": {
+    "id": "book-review",
+    "tr": "Kitap İncelemesi",
+    "en": "Book Review",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "The Future of China-U.S. Relations",
+    "tr": "Çin-ABD İlişkilerinin Geleceği"
+  },
   "authors": [
     {
       "displayName": "Yang Chen",
@@ -10,11 +18,20 @@
       "familyName": "Yang",
       "orcid": "https://orcid.org/0000-0002-4840-6427",
       "affiliations": [
-        {"name": "Shanghai University", "nameTr": "Şanghay Üniversitesi", "nameEn": "Shanghai University", "country": "China", "ror": null}
+        {
+          "name": "Shanghai University",
+          "nameTr": "Şanghay Üniversitesi",
+          "nameEn": "Shanghai University",
+          "country": "China",
+          "ror": null
+        }
       ]
     }
   ],
-  "abstract": {"en": null, "tr": null},
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
   "reviewedBook": {
     "authorsApa": "Ju, J. D.",
     "year": 2024,
@@ -23,15 +40,49 @@
     "isbn": "978-7-301-35327-1"
   },
   "keywords": {
-    "en": ["China-U.S. Relations", "The China-U.S. trade war", "Great Power Competition"],
-    "tr": ["Çin-ABD İlişkileri", "Çin-ABD ticaret savaşı", "Büyük Güç Rekabeti"]
+    "en": [
+      "China-U.S. Relations",
+      "The China-U.S. Trade War",
+      "Great Power Competition"
+    ],
+    "tr": [
+      "Çin-ABD İlişkileri",
+      "Çin-ABD Ticaret Savaşı",
+      "Büyük Güç Rekabeti"
+    ]
   },
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2025-12-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 1, "year": "2025-2026", "season": {"en": "Winter", "tr": "Kış"}},
-  "pages": {"first": "115", "last": "121"},
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2025-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 1,
+    "year": "2025-2026",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "115",
+    "last": "121"
+  },
   "doi": "10.67696/5y2r9u9d",
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

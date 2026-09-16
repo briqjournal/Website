@@ -33,8 +33,22 @@
     "tr": "Bu çalışma, Mao Zedung’un diyalektik anlayışını ve bu anlayışın siyasal sonuçlarını incelemeyi amaçlamaktadır. Araştırma, Mao’nun düşüncesini üç temel eksen üzerinden değerlendirmektedir: Ekonomik determinizm ve bürokratik-teknokratik sosyalizm eleştirisi, kitlelerin siyasal mücadeledeki kurucu rolüne yaptığı vurgu ve Çin’in geleneksel düşünce mirasıyla kurduğu ilişki. Mao’nun diyalektiği, Sovyet Marksizmi ve özellikle Stalin’in tarihsel materyalizm yorumu ile karşılaştırmalı olarak ele alınmıştır. Araştırma sonucunda Mao’nun diyalektik anlayışının ekonomik altyapıyı merkeze alan klasik Sovyet yaklaşımından önemli ölçüde ayrıldığı tespit edilmiştir. Mao, toplumsal dönüşüm sürecinde kültürün, ideolojinin, siyasal mücadelenin ve kitlesel seferberliğin belirleyici rolünü vurgulamaktadır. Bu yaklaşım, onun kitle çizgisi anlayışının teorik temelini oluşturmaktadır. Mao’ya göre sosyalizmin gelişimi yalnızca üretici güçlerin ilerlemesine değil, kitlelerin siyasal süreçlere aktif katılımına da bağlıdır. Bu nedenle Stalin döneminde kurumsallaşan teknokratik ve bürokratik eğilimler Mao tarafından eleştirilmiştir. Çalışma, Mao’nun diyalektik anlayışının Çin düşünce geleneği ile Marksist teorinin etkileşimi içinde şekillendiğini ortaya koymaktadır. Bununla birlikte, Mao’nun siyasal pratiğinde toplumsal çelişkilerin devrimci dönüşümü hızlandıracak bir unsur olarak görülmesi, onun düşüncesinde geleneksel Çin diyalektiği ile modern ilerlemeci-devrimci anlayış arasında önemli bir gerilim yaratmıştır. Bu nedenle Mao Zedung Düşüncesi, bir siyasal ideoloji olmanın ötesinde, ekonomik determinizm, siyasal özne ve toplumsal dönüşüm ilişkilerine dair özgün tartışmalar üreten önemli bir düşünsel miras olarak değerlendirilebilir."
   },
   "keywords": {
-    "en": ["dialectics", "traditional Chinese thought", "mass line", "Mao Zedong", "Mao Zedong Thought", "political subject"],
-    "tr": ["diyalektik", "geleneksel Çin düşüncesi", "kitle çizgisi", "Mao Zedung", "Mao Zedung Düşüncesi", "siyasal özne"]
+    "en": [
+      "Dialectics",
+      "Traditional Chinese Thought",
+      "Mass Line",
+      "Mao Zedong",
+      "Mao Zedong Thought",
+      "Political Subject"
+    ],
+    "tr": [
+      "Diyalektik",
+      "Geleneksel Çin Düşüncesi",
+      "Kitle Çizgisi",
+      "Mao Zedung",
+      "Mao Zedung Düşüncesi",
+      "Siyasal Özne"
+    ]
   },
   "dates": {
     "received": "2026-06-07",
@@ -50,11 +64,20 @@
     "volume": 7,
     "issue": 4,
     "year": 2026,
-    "season": {"en": "Autumn", "tr": "Sonbahar"}
+    "season": {
+      "en": "Autumn",
+      "tr": "Sonbahar"
+    }
   },
-  "pages": {"first": "477", "last": "496"},
+  "pages": {
+    "first": "477",
+    "last": "496"
+  },
   "doi": null,
-  "language": ["en", "tr"],
+  "language": [
+    "en",
+    "tr"
+  ],
   "license": {
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/"

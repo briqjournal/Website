@@ -78,9 +78,5 @@ test("keeps bilingual keyword counts and reviewed ordering in parity", async () 
   assert.deepEqual(kolosovskiy.en.keywords, ["Central Asian Security", "Counterterrorism Strategies", "CSTO", "Islamic Radicalism", "Russia’s Foreign Policy", "Transnational Jihadist Networks"]);
   assert.deepEqual(kolosovskiy.tr.keywords, ["Orta Asya Güvenliği", "Teröre Karşı Mücadele Stratejileri", "KGAÖ", "İslami Radikalizm", "Rusya’nın Dış Politikası", "Ulusötesi Cihatçı Ağlar"]);
 
-  assert.equal(bilingualKeywordParityOverrides.get("kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre")?.source, "tr");
-  assert.equal(bilingualKeywordParityOverrides.get("turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik")?.source, "tr");
-  assert.equal(bilingualKeywordParityOverrides.get("mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce")?.source, "tr");
-  assert.equal(bilingualKeywordParityOverrides.get("iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi")?.source, "tr");
   assert.equal(bilingualKeywordParityOverrides.get("rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve")?.source, "en");
 });

@@ -1,7 +1,12 @@
 {
   "schemaVersion": 2,
   "id": "mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
   "title": {
     "en": "Institutional Balancing in Mongolia’s Third Neighbor Diplomacy: Engagement with the Shanghai Cooperation Organization",
     "tr": "Moğolistan’ın Üçüncü Komşu Diplomasisi’nde Kurumsal Dengeleme: Şanghay İşbirliği Örgütü ile Etkileşim"
@@ -13,7 +18,13 @@
       "familyName": "Wang",
       "orcid": "https://orcid.org/0009-0000-0543-3719",
       "affiliations": [
-        {"name": "Department of History, Shanghai University", "nameTr": "Şanghay Üniversitesi, Tarih Bölümü", "nameEn": "Department of History, Shanghai University", "country": "China", "ror": null}
+        {
+          "name": "Department of History, Shanghai University",
+          "nameTr": "Şanghay Üniversitesi, Tarih Bölümü",
+          "nameEn": "Department of History, Shanghai University",
+          "country": "China",
+          "ror": null
+        }
       ]
     },
     {
@@ -22,7 +33,13 @@
       "familyName": "Luvsandandar",
       "orcid": "https://orcid.org/0009-0005-8843-6013",
       "affiliations": [
-        {"name": "College of Liberal Arts, Shanghai University", "nameTr": "Şanghay Üniversitesi, Liberal Sanatlar Fakültesi", "nameEn": "College of Liberal Arts, Shanghai University", "country": "China", "ror": null}
+        {
+          "name": "College of Liberal Arts, Shanghai University",
+          "nameTr": "Şanghay Üniversitesi, Liberal Sanatlar Fakültesi",
+          "nameEn": "College of Liberal Arts, Shanghai University",
+          "country": "China",
+          "ror": null
+        }
       ]
     }
   ],
@@ -31,15 +48,53 @@
     "tr": "Denize kıyısı olmayan ve kalıcı tarafsızlığa bağlı bir devlet olarak Moğolistan, Üçüncü Komşu Diplomasisi politikasını Şanghay İşbirliği Örgütü (ŞİÖ) içinde kurumsal dengeleme mekanizmasına stratejik biçimde dönüştürmüştür. Bu makale, Moğolistan’ın angajmanının ikili bir mantık tarafından yönlendirildiğini savunmaktadır: Risk dengeleme (hedging) ve kaldıraç kullanımı (leveraging). Moğolistan, bir yandan Çin ve Rusya’ya yönelik stratejik ve ekonomik bağımlılığını azaltmayı, diğer yandan ŞİÖ platformunu kullanarak coğrafi konumunun ve kaynak zenginliğinin değerini artırmayı amaçlamaktadır. Seçici katılım, gündemin yeniden çerçevelenmesi ve kurumsal iç içe geçirme yoluyla Moğolistan, gözlemci statüsünü özerklik ve etkiyi azamiye çıkaracak şekilde aktif olarak biçimlendirmektedir. Çalışma, Moğolistan’ın hesaplı ve yenilikçi yaklaşımının, ikincil devletlerin çok taraflı kurumları stratejik varlıklara dönüştürerek hem kurumsal dengeleme teorisini hem de çekişmeli bölgelerde küçük devlet diplomasisi pratiğini nasıl ilerletebileceğine dair güçlü bir model sunduğu sonucuna varmaktadır."
   },
   "keywords": {
-    "en": ["hedging", "leveraging", "Mongolia", "Shanghai Cooperation Organization", "Third Neighbor Diplomacy"],
-    "tr": []
+    "en": [
+      "Hedging",
+      "Leveraging",
+      "Mongolia",
+      "Shanghai Cooperation Organization",
+      "Third Neighbor Diplomacy"
+    ],
+    "tr": [
+      "Risk Dengeleme",
+      "Kaldıraç Kullanımı",
+      "Moğolistan",
+      "Şanghay İşbirliği Örgütü",
+      "Üçüncü Komşu Diplomasisi"
+    ]
   },
-  "dates": {"received": "2026-02-06", "revised": "2026-03-21", "accepted": "2026-04-25", "published": "2026-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 3, "year": 2026, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "338", "last": "365"},
+  "dates": {
+    "received": "2026-02-06",
+    "revised": "2026-03-21",
+    "accepted": "2026-04-25",
+    "published": "2026-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 3,
+    "year": 2026,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "338",
+    "last": "365"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

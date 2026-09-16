@@ -63,8 +63,20 @@
     "tr": "Bu makale, Türkiye Cumhuriyeti ile Çin Halk Cumhuriyeti arasındaki diplomatik ilişkilerin 55. yılında ikili ilişkileri güç geçişi, jeoekonomik bağlantısallık ve ekonomik karşılıklı bağımlılık çerçevesinde incelemektedir. Çalışmanın temel sorusu, Türkiye’nin Çin ile bütünleşen Avrasya üretim ve lojistik ağlarında ağırlıklı olarak transit ülke mi kaldığı, yoksa ortak üretim merkezine dönüşme yönünde ölçülebilir ilerleme mi kaydettiğidir. Araştırma, 1971-2026 dönemini kapsayan yapılandırılmış nitel doküman analizine dayanmaktadır. Resmî politika belgeleri, Türkiye’nin dış ticaret verileri, Dünya Bankası koridor raporları, yatırım duyuruları ve hakemli çalışmalar; lojistik kapasite, ticaretin teknoloji bileşimi, doğrudan yatırım, yerel katma değer ve teknoloji transferi göstergeleri üzerinden karşılaştırılmıştır. Bulgular, Türkiye’nin lojistik konumunun güçlendiğini, ancak üretim merkezi niteliğinin kurumsallaşmadığını göstermektedir. Türkiye, 2023’te Çin’e 3,3 milyar dolar ihracat yapmış, Çin’den 44,98 milyar dolar ithalat gerçekleştirmiş ve 41,7 milyar dolar açık vermiştir. Çin kaynaklı doğrudan yatırım stoku ise yaklaşık 9 milyar dolardır. Bu bulgu, ticaret asimetrisinin sürdüğünü de göstermektedir. Dünya Bankası, gerekli önlemlerle Orta Koridor hacminin 2030’da 11 milyon tona ulaşabileceğini öngörmektedir. Makale, transit ülke ile ortak üretim merkezi ayrımını ölçülebilir göstergelerle açıklamakta ve bağlantısallığın istikrar üretmesini dengeli bağımlılık, kurumsallaşma ve olumlu gelecek beklentilerine bağlamaktadır. Sonuç olarak Türkiye transit ağırlıklı bir ara konumdadır; dönüşüm, yerel tedarik, ortak Ar-Ge, teknoloji transferi ve üçüncü ülkelere ihracat sağlayan yatırımlara bağlıdır."
   },
   "keywords": {
-    "en": ["Belt and Road Initiative", "geoeconomic connectivity", "Middle Corridor", "power transition", "Türkiye-China relations"],
-    "tr": ["güç geçişi", "jeoekonomik bağlantısallık", "Kuşak ve Yol Girişimi", "Orta Koridor", "Türkiye-Çin ilişkileri"]
+    "en": [
+      "Power Transition",
+      "Geoeconomic Connectivity",
+      "Belt And Road Initiative",
+      "Middle Corridor",
+      "Türkiye-China Relations"
+    ],
+    "tr": [
+      "Güç Geçişi",
+      "Jeoekonomik Bağlantısallık",
+      "Kuşak Ve Yol Girişimi",
+      "Orta Koridor",
+      "Türkiye-Çin İlişkileri"
+    ]
   },
   "dates": {
     "received": "2026-07-03",
@@ -80,11 +92,20 @@
     "volume": 7,
     "issue": 4,
     "year": 2026,
-    "season": {"en": "Autumn", "tr": "Sonbahar"}
+    "season": {
+      "en": "Autumn",
+      "tr": "Sonbahar"
+    }
   },
-  "pages": {"first": "407", "last": "426"},
+  "pages": {
+    "first": "407",
+    "last": "426"
+  },
   "doi": null,
-  "language": ["en", "tr"],
+  "language": [
+    "en",
+    "tr"
+  ],
   "license": {
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/"

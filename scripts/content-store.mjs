@@ -2,12 +2,6 @@ import { readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 const safeSlug = /^[a-z0-9-]+$/;
-const comakArticleSlug = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
-const comakMissingReference = {
-  id: "ref-25a",
-  text: "Tekdal, V. (2023). Özgün Ama Tanıdık: Piyasa Temelli Bir Olgu Olarak Çin’in Uluslararası Altyapı Yatırımları. Mülkiye Dergisi, 47(4), 1331-1353. https://doi.org/10.25064/mulkiye.1300476",
-};
-
 const keywordSpacingFixes = new Map([
   ["BeltandRoadInitiative", "Belt and Road Initiative"],
   ["GlobalSouth", "Global South"],
@@ -17,96 +11,6 @@ const keywordSpacingFixes = new Map([
 ]);
 
 export const bilingualKeywordParityOverrides = new Map([
-  ["kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin", {
-    source: "en",
-    tr: ["Japonya’da Amerikan işgali", "funsho (yakılmış kitaplar)", "Genel Karargâh (GHQ)", "Nishio Kanji", "Müttefik Kuvvetler Yüksek Komutanlığı (SCAP)"],
-    en: ["American Occupation of Japan", "funsho (burned books)", "General Headquarters (GHQ)", "Nishio Kanji", "Supreme Commander for the Allied Powers (SCAP)"],
-  }],
-  ["kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre", {
-    source: "tr",
-    tr: ["asimetrik hükümler", "kültür varlıklarının iadesi", "kültür varlıklarının yasadışı ticareti", "Türkiye-İsviçre Anlaşması", "yasadışı ithalat"],
-    en: ["asymmetrical provisions", "repatriation of cultural property", "illicit trade in cultural property", "Türkiye - Switzerland Agreement", "illicit import"],
-  }],
-  ["cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege", {
-    source: "en",
-    tr: ["uyarlanabilir dönüşüm", "Kuşak ve Yol Girişimi", "Çin deneyimi", "kültürel yönetişim", "somut olmayan kültürel mirasın korunması"],
-    en: ["adaptive transformation", "Belt and Road Initiative", "Chinese experience", "cultural governance", "intangible cultural heritage protection"],
-  }],
-  ["mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim", {
-    source: "en",
-    tr: ["risk dengeleme", "kaldıraç kullanımı", "Moğolistan", "Şanghay İşbirliği Örgütü", "Üçüncü Komşu Diplomasisi"],
-    en: ["hedging", "leveraging", "Mongolia", "Shanghai Cooperation Organization", "Third Neighbor Diplomacy"],
-  }],
-  ["suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi", {
-    source: "en",
-    tr: ["Çin", "çok boyutlu kültürel dengeleme", "hedging stratejisi", "Suudi Arabistan", "ABD"],
-    en: ["China", "complex cultural hedging", "hedging strategy", "Saudi Arabia", "US"],
-  }],
-  [comakArticleSlug, {
-    source: "tr",
-    tr: ["güç geçişi", "jeoekonomik bağlantısallık", "Kuşak ve Yol Girişimi", "Orta Koridor", "Türkiye-Çin ilişkileri"],
-    en: ["power transition", "geoeconomic connectivity", "Belt and Road Initiative", "Middle Corridor", "Türkiye-China relations"],
-  }],
-  ["filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun", {
-    source: "en",
-    tr: ["İbrahim Anlaşmaları", "İran", "Filistincilik", "transatlantik ilişkiler", "iki devletli çözüm"],
-    en: ["Abraham Accords", "Iran", "Palestinianism", "transatlantic relations", "two-state solution"],
-  }],
-  ["mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce", {
-    source: "tr",
-    tr: ["diyalektik", "geleneksel Çin düşüncesi", "kitle çizgisi", "Mao Zedung", "Mao Zedung Düşüncesi", "siyasal özne"],
-    en: ["dialectics", "traditional Chinese thought", "mass line", "Mao Zedong", "Mao Zedong Thought", "political subject"],
-  }],
-  ["sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0", {
-    source: "en",
-    tr: ["Çin’in çağdaşlaşması", "ortak refah", "piyasa ekonomisi", "Marksist ekonomi", "Çin’e özgü sosyalizm"],
-    en: ["Chinese modernization", "common prosperity", "market economy", "Marxist economics", "socialism with Chinese characteristics"],
-  }],
-  ["cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis", {
-    source: "en",
-    tr: ["Çin’de ekonomik reform", "Marksist politik ekonomi", "Çin’e özgü sosyalist politik ekonomi", "sosyalizmin inşası", "sosyalist piyasa ekonomisi"],
-    en: ["economic reform in China", "Marxist political economy", "socialist political economy with Chinese characteristics", "socialist construction", "socialist market economy"],
-  }],
-  ["afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme", {
-    source: "en",
-    tr: ["Afrika’nın kalkınması", "sömürge dönemi mirası", "etnik çatışmalar", "yabancı müdahale", "sömürge sonrası devlet krizi"],
-    en: ["Africa’s development", "colonial legacy", "ethnic conflicts", "foreign meddling", "post-colonial state crisis"],
-  }],
-  ["uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin", {
-    source: "en",
-    tr: ["ASEAN", "Kuşak ve Yol Girişimi", "Küresel Güney", "uluslararası kalkınma işbirliği", "siyasallaşma"],
-    en: ["ASEAN", "Belt and Road Initiative", "Global South", "international development cooperation", "politicization"],
-  }],
-  ["hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi", {
-    source: "en",
-    tr: ["anti-komünizm", "Uluslararası Ödemeler Bankası (BIS)", "vekalet savaşı", "Nazi Almanyası", "ABD şirketleri"],
-    en: ["anti-communism", "Bank for International Settlements (BIS)", "Proxy war", "Nazi Germany", "US corporations"],
-  }],
-  ["japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak", {
-    source: "en",
-    tr: ["dışlayıcılık", "Japonya Komünist Partisi", "Japonya'da sağ ve sol", "Sanseito Partisi", "ABD"],
-    en: ["exclusionism", "Japanese Communist Party", "right wing and left wing in Japan", "Sanseito Party", "USA"],
-  }],
-  ["uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi", {
-    source: "en",
-    tr: ["KYG", "uluslararası ticaret için karbon kuralları", "SKDM", "karbon etiketleme"],
-    en: ["BRI", "carbon rules for international trade", "CBAM", "carbon labeling"],
-  }],
-  ["iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi", {
-    source: "tr",
-    tr: ["gıda güvencesi", "iklim akıllı tarım", "iklim değişikliği", "su güvenliği", "sürdürülebilir kalkınma"],
-    en: ["food security", "climate-smart agriculture", "climate change", "water security", "sustainable development"],
-  }],
-  ["dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi", {
-    source: "en",
-    tr: ["Çin’in yükselişi", "küresel kurumlar", "Küresel Güney", "çok kutuplu yönetişim", "bölgesel bloklar", "post-hegemonik düzen"],
-    en: ["China’s rise", "global institutions", "Global South", "multipolar governance", "regional blocs", "post-hegemonic order"],
-  }],
-  ["islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma", {
-    source: "en",
-    tr: ["demokratikleşme", "uluslararası ilişkiler", "islami sistem", "anlaşma sistemi", "haraç sistemi"],
-    en: ["democratization", "international relations", "islamic system", "treaty System", "tributary system"],
-  }],
   ["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve", {
     source: "en",
     tr: ["Orta Asya güvenliği", "teröre karşı mücadele stratejileri", "KGAÖ", "İslami radikalizm", "Rusya’nın dış politikası", "ulusötesi cihatçı ağlar"],
@@ -151,36 +55,6 @@ function normalizeFullTextKeywords(record, slug) {
   if (Array.isArray(record.keywords)) record.keywords = normalizeKeywordList(record.keywords, "en");
   if (record.tr) record.tr.keywords = normalizeKeywordList(record.tr.keywords, "tr");
   if (record.en) record.en.keywords = normalizeKeywordList(record.en.keywords, "en");
-  return record;
-}
-
-function repairComakArticleFullText(record, slug) {
-  if (slug !== comakArticleSlug || !record?.tr || !record?.en) return record;
-
-  const repairHeading = (locale, prefix, continuation) => {
-    const sections = record[locale]?.sections;
-    if (!Array.isArray(sections)) return;
-    const historical = sections.find((section) => section.id === `${locale}-section-4`);
-    const connectivity = sections.find((section) => section.id === `${locale}-section-5`);
-    if (historical?.paragraphs) {
-      historical.paragraphs = historical.paragraphs.filter((paragraph) => paragraph.trim() !== prefix);
-    }
-    if (connectivity) connectivity.title = `${prefix} ${continuation}`;
-  };
-
-  repairHeading("tr", "Güç Geçişi ve Jeoekonomik Bağlantısallık:", "Kuşak ve Yol Girişimi ile Orta Koridor");
-  repairHeading("en", "Power Transition and Geoeconomic Connectivity:", "The Belt and Road Initiative and the Middle Corridor");
-
-  for (const locale of ["tr", "en"]) {
-    const references = record[locale]?.references;
-    if (!Array.isArray(references)) continue;
-    if (!references.some((reference) => reference.text?.includes("10.25064/mulkiye.1300476"))) {
-      const laterTekdal = references.findIndex((reference) => reference.text?.startsWith("Tekdal, V. (2024)"));
-      const insertAt = laterTekdal >= 0 ? laterTekdal : references.length;
-      references.splice(insertAt, 0, { ...comakMissingReference });
-    }
-  }
-
   return record;
 }
 
@@ -250,7 +124,7 @@ export async function buildArchiveData(root = process.cwd()) {
 async function readFullTextRecord(root, slug, file) {
   assertSlug(slug, file);
   const record = normalizeFullTextKeywords(await readJson(join(root, "content/articles", slug, "fulltext", file)), slug);
-  return repairComakArticleFullText(record, slug);
+  return record;
 }
 
 async function readLocalizedFullText(root, slug, locale) {

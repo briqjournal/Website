@@ -30,7 +30,7 @@ test("keeps the Mao article in clean locale-split English full text", async () =
   assert.doesNotMatch(body, /\b(?:Giriş|Yöntem|Sonuç)\b/u);
   assert.doesNotMatch(body, /(?:B R I q •|Can Ulusoy- Mao Zedong)/u);
 
-  assert.deepEqual(record.en.keywords, ["Dialectics", "Mao Zedong", "Mao Zedong Thought", "Mass Line", "Political Subject", "Traditional Chinese Thought"]);
+  assert.deepEqual(record.en.keywords, ["Dialectics", "Traditional Chinese Thought", "Mass Line", "Mao Zedong", "Mao Zedong Thought", "Political Subject"]);
   assert.equal(record.en.references.length, 35);
   assert(record.en.references.some((reference) => reference.text.includes("10.4312/as.2019.7.1.55-73")));
   assert.equal(record.en.figures.length, 6);

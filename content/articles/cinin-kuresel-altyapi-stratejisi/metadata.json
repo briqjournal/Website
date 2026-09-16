@@ -50,11 +50,20 @@
     "volume": 7,
     "issue": 4,
     "year": 2026,
-    "season": {"en": "Autumn", "tr": "Sonbahar"}
+    "season": {
+      "en": "Autumn",
+      "tr": "Sonbahar"
+    }
   },
-  "pages": {"first": "497", "last": "500"},
+  "pages": {
+    "first": "497",
+    "last": "500"
+  },
   "doi": null,
-  "language": ["en", "tr"],
+  "language": [
+    "en",
+    "tr"
+  ],
   "license": {
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/"

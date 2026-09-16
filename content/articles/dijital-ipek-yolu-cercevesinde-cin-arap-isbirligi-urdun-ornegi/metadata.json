@@ -48,8 +48,20 @@
     "tr": "Çin’in öncülüğünü yaptığı Kuşak ve Yol Girişimi’nin temel bileşenlerinden biri olan Dijital İpek Yolu (DİY), ortak ülkelere telekomünikasyon, yapay zekâ, bulut bilişim, e-ticaret ve akıllı şehirler alanlarında stratejik fırsatlar sunmaktadır. Bu makale, Levant, Körfez ve Kuzey Afrika’nın kesişim noktasında yer alan Ürdün örneği üzerinden DİY çerçevesindeki Çin-Arap işbirliğini incelemektedir. Literatür analizine ve resmî raporlara dayanan çalışma, başta Huawei ve ZTE olmak üzere Çinli şirketlerin Ürdün’ün dijital altyapısının geliştirilmesinde, ağ kapsamının genişletilmesinde ve BİT eğitim programları aracılığıyla yerel insan kaynağının yetiştirilmesinde önemli bir rol oynadığını ortaya koymaktadır. İşbirliği aynı zamanda veri güvenliği kaygıları, düzenleyici çerçeveler arasındaki uyumsuzluk, beceri eksikliği ve jeopolitik baskılar gibi zorluklarla karşı karşıyadır. Makale, dijital yönetişimin iyileştirilmesi, hukuki çerçevelerin güçlendirilmesi ve stratejik yatırımlarla DİY’in Ürdün’ün dijital dönüşümünü hızlandırabileceğini, ekonomik dayanıklılığını artırabileceğini ve bölgesel bir dijital merkez olarak konumunu güçlendirebileceğini; böylece sürdürülebilir ve karşılıklı yarara dayalı Çin-Arap işbirliğini teşvik edebileceğini savunmaktadır."
   },
   "keywords": {
-    "en": ["China-Arab cooperation", "digital infrastructure", "Digital Silk Road", "digital transformation", "Jordan"],
-    "tr": ["Çin-Arap işbirliği", "dijital altyapı", "Dijital İpek Yolu", "dijital dönüşüm", "Ürdün"]
+    "en": [
+      "China-Arab Cooperation",
+      "Digital Infrastructure",
+      "Digital Silk Road",
+      "Digital Transformation",
+      "Jordan"
+    ],
+    "tr": [
+      "Çin-Arap İşbirliği",
+      "Dijital Altyapı",
+      "Dijital İpek Yolu",
+      "Dijital Dönüşüm",
+      "Ürdün"
+    ]
   },
   "dates": {
     "received": "2026-05-01",
@@ -65,11 +77,20 @@
     "volume": 7,
     "issue": 4,
     "year": 2026,
-    "season": {"en": "Autumn", "tr": "Sonbahar"}
+    "season": {
+      "en": "Autumn",
+      "tr": "Sonbahar"
+    }
   },
-  "pages": {"first": "427", "last": "446"},
+  "pages": {
+    "first": "427",
+    "last": "446"
+  },
   "doi": null,
-  "language": ["en", "tr"],
+  "language": [
+    "en",
+    "tr"
+  ],
   "license": {
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/"
@@ -85,7 +106,9 @@
         "nameTr": "Kuzeybatı Politeknik Üniversitesi",
         "nameEn": "Northwestern Polytechnical University",
         "ror": null,
-        "awardNumbers": ["D5000260296"]
+        "awardNumbers": [
+          "D5000260296"
+        ]
       }
     ]
   },

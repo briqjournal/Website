@@ -1,7 +1,12 @@
 {
   "schemaVersion": 2,
   "id": "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
   "title": {
     "en": "From Cultural Erasure to Historical Recovery: Nishio Kanji and the ‘Burned Books’ of American-Occupied Japan",
     "tr": "Kültürel Silinmeden Tarihsel Kurtarmaya: Nishio Kanji ve Amerikan İşgali Altındaki Japonya’nın ‘Yakılan Kitaplar’ı"
@@ -13,7 +18,13 @@
       "familyName": "Morgan",
       "orcid": null,
       "affiliations": [
-        {"name": "Faculty of Global Studies, Reitaku University", "nameTr": "Reitaku Üniversitesi, Küresel Çalışmalar Fakültesi", "nameEn": "Faculty of Global Studies, Reitaku University", "country": "Japan", "ror": null}
+        {
+          "name": "Faculty of Global Studies, Reitaku University",
+          "nameTr": "Reitaku Üniversitesi, Küresel Çalışmalar Fakültesi",
+          "nameEn": "Faculty of Global Studies, Reitaku University",
+          "country": "Japan",
+          "ror": null
+        }
       ]
     }
   ],
@@ -22,15 +33,53 @@
     "tr": "“Gelişmekte olan ülkelerde kültürel mirasın yağmalanması” yalnızca maddi kültürle sınırlı olmak zorunda değildir. Bugün “gelişmekte olan” kategorisinde yer almayan uluslar da kültürel yağmanın mağduru olmuş olabilir. Bu makalede, Amerikan işgal otoritelerinin İkinci Dünya Savaşı’ndan sonra işgal altındaki Japonya’da fiziksel koleksiyonlardan ve tarihsel-kültürel hafızadan çıkarılmasını emrettiği funsho’yu (yakılmış kitaplar) ele alıyorum. Makale, bu silme pratiğinin tarihsel ve kültürel sonuçlarının, yöntemi Amerikan egemenliğinin başka bölgelerdeki diğer örnekleriyle nasıl ilişkilendirdiğini incelemekte; ayrıca tarihçi Nishio Kanji ve başka kamusal entelektüeller de dahil olmak üzere Japon araştırmacıların Amerikan işgalinin tarihsel karartma girişimlerine karşı koymak amacıyla funsho’yu geri kazanma çabalarını ele almaktadır. Böylece yalnızca Amerika’nın Asya’daki varlığının değil, aynı zamanda Amerika’nın kendi sınırları içindeki eylemlerinin de Batı-merkezci olmayan ve doğru bir tarihini yeniden sahiplenme imkânı doğmaktadır."
   },
   "keywords": {
-    "en": ["American Occupation of Japan", "funsho", "General Headquarters", "GHQ", "Nishio Kanji", "Supreme Commander for the Allied Powers", "SCAP"],
-    "tr": ["funsho", "Genel Karargâh", "Japonya’da Amerikan işgali", "Müttefik Kuvvetler Yüksek Komutanlığı", "SCAP", "Nishio Kanji"]
+    "en": [
+      "American Occupation Of Japan",
+      "Funsho (Burned Books)",
+      "General Headquarters (GHQ)",
+      "Nishio Kanji",
+      "Supreme Commander For The Allied Powers (SCAP)"
+    ],
+    "tr": [
+      "Japonya’da Amerikan İşgali",
+      "Funsho (Yakılmış Kitaplar)",
+      "Genel Karargâh (GHQ)",
+      "Nishio Kanji",
+      "Müttefik Kuvvetler Yüksek Komutanlığı (SCAP)"
+    ]
   },
-  "dates": {"received": "2026-01-14", "revised": "2026-02-10", "accepted": "2026-04-06", "published": "2026-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 3, "year": 2026, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "254", "last": "269"},
+  "dates": {
+    "received": "2026-01-14",
+    "revised": "2026-02-10",
+    "accepted": "2026-04-06",
+    "published": "2026-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 3,
+    "year": 2026,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "254",
+    "last": "269"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

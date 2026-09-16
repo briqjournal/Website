@@ -1,7 +1,12 @@
 {
   "schemaVersion": 2,
   "id": "cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
   "title": {
     "en": "Safeguarding Intangible Cultural Heritage in China: Two Decades of Experience, Ongoing Challenges, and Pathways for the Future",
     "tr": "Çin’de Somut Olmayan Kültürel Mirasın Korunması: Yirmi Yıllık Deneyim, Süregelen Zorluklar ve Geleceğe Yönelik Yollar"
@@ -13,7 +18,13 @@
       "familyName": "Li",
       "orcid": "https://orcid.org/0009-0005-5419-6998",
       "affiliations": [
-        {"name": "Department of History, Zunyi Normal University", "nameTr": "Zunyi Normal Üniversitesi, Tarih Bölümü", "nameEn": "Department of History, Zunyi Normal University", "country": "China", "ror": null}
+        {
+          "name": "Department of History, Zunyi Normal University",
+          "nameTr": "Zunyi Normal Üniversitesi, Tarih Bölümü",
+          "nameEn": "Department of History, Zunyi Normal University",
+          "country": "China",
+          "ror": null
+        }
       ]
     },
     {
@@ -22,7 +33,13 @@
       "familyName": "Yang",
       "orcid": "https://orcid.org/0009-0001-7804-1772",
       "affiliations": [
-        {"name": "Department of History, Zunyi Normal University", "nameTr": "Zunyi Normal Üniversitesi, Tarih Bölümü", "nameEn": "Department of History, Zunyi Normal University", "country": "China", "ror": null}
+        {
+          "name": "Department of History, Zunyi Normal University",
+          "nameTr": "Zunyi Normal Üniversitesi, Tarih Bölümü",
+          "nameEn": "Department of History, Zunyi Normal University",
+          "country": "China",
+          "ror": null
+        }
       ]
     }
   ],
@@ -31,15 +48,53 @@
     "tr": "Son yirmi yılda Çin, yasal düzenlemeler, kurumsal eşgüdüm, teknolojik yenilik ve akademik katılım yoluyla somut olmayan kültürel mirasın korunmasında önemli ilerleme kaydetmiştir. Başlıca kazanımlar arasında kapsamlı bir hukukî ve politik çerçevenin kurulması, çok katmanlı bir envanter sisteminin geliştirilmesi, temsilî miras taşıyıcılarının yetiştirilmesi, topluluk temelli koruma pratiklerinin yaygınlaştırılması ve uluslararası değişim ile işbirliğinin genişletilmesi yer almaktadır. Bununla birlikte Çin’in SOKÜM koruma çabaları, hızlı modernleşmenin kuşaklararası aktarım üzerinde yarattığı baskılar, koruma kapasitesindeki bölgesel eşitsizlikler, ticarileşme ile kültürel özgünlük arasındaki gerilimler ve SOKÜM yönetişimine ilişkin uluslararası söylemi şekillendirmedeki sınırlılıklar gibi yapısal sorunlarla karşı karşıyadır. Bu makale, gelecek dönemdeki çabaların hükümet liderliği altında hukukî ve düzenleyici çerçevelerin iyileştirilmesine, bölgeler arası eşgüdüm mekanizmalarının güçlendirilmesine ve kültürel mirası turizm ile yerel kalkınmayla bütünleştiren sürdürülebilir modellerin araştırılmasına odaklanması gerektiğini savunmaktadır. Çalışma, politika analizi ve örnek olay incelemeleri aracılığıyla Çin’in pratik deneyimini eleştirel biçimde inceleyerek, özellikle kültürel yönetişim, mirasın sürdürülebilirliği ve kültürlerarası diyalog alanlarında Kuşak ve Yol Girişimi’ne katılan ülkeler için aktarılabilir içgörüler sunmayı; böylece küresel kültürel çeşitliliğin korunmasına katkıda bulunmayı amaçlamaktadır."
   },
   "keywords": {
-    "en": ["adaptive transformation", "Belt and Road Initiative", "Chinese experience", "cultural governance", "intangible cultural heritage protection"],
-    "tr": []
+    "en": [
+      "Adaptive Transformation",
+      "Belt And Road Initiative",
+      "Chinese Experience",
+      "Cultural Governance",
+      "Intangible Cultural Heritage Protection"
+    ],
+    "tr": [
+      "Uyarlanabilir Dönüşüm",
+      "Kuşak Ve Yol Girişimi",
+      "Çin Deneyimi",
+      "Kültürel Yönetişim",
+      "Somut Olmayan Kültürel Mirasın Korunması"
+    ]
   },
-  "dates": {"received": "2026-01-16", "revised": "2026-04-08", "accepted": "2026-04-19", "published": "2026-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 3, "year": 2026, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "302", "last": "325"},
+  "dates": {
+    "received": "2026-01-16",
+    "revised": "2026-04-08",
+    "accepted": "2026-04-19",
+    "published": "2026-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 3,
+    "year": 2026,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "302",
+    "last": "325"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

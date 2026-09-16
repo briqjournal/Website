@@ -33,8 +33,20 @@
     "tr": "7 Ekim 2023 sonrasındaki dönem, transatlantik kamuoyu ile Batılı ve Körfez Arap hükümetlerinin stratejik hesapları arasında çarpıcı bir uçuruma yol açmıştır. Amerika Birleşik Devletleri ve Batı Avrupa genelindeki anketler, İsrail’e desteğin tarihsel olarak en düşük düzeylere indiğini ve Filistinlilere yönelik sempatinin benzeri görülmemiş ölçüde arttığını gösterirken, Eylül 2025 itibarıyla Filistin’i tanıyan devletlerin sayısını 193 BM üyesinin 157’sine çıkaran bir devlet tanımaları dalgası yaşanmıştır. Bununla birlikte “Filistinciliğin” retorik düzeyde yüceltilmesi, Filistin devletinin kurulmasına giden makul herhangi bir yolun maddi olarak ortadan kalkmasıyla çakışmış, hatta tartışmaya açık biçimde bu süreci hızlandırmıştır. Haziran 2025’teki On İki Gün Savaşı’na ve İran’ın “Direniş Ekseni”nin zayıflatılmasına ilişkin güncel anketlerden ve stratejik analizlerden yararlanan bu makale, Washington, Kudüs ve Körfez monarşileri arasındaki stratejik yakınlaşmanın kamuoyundan farklı bir düzlemde işlediğini ileri sürmektedir. Yerleşimlerin rekor düzeyde genişlemesi, Filistin Yönetimi’nin meşruiyet kaybı, Hamas’ın imha edilmesi, Hizbullah liderliğinin ortadan kaldırılması, Esad rejiminin çöküşü ve İran’ın nükleer tesislerine yönelik saldırılar, sessiz Körfez-İsrail güvenlik işbirliğinin desteklediği, yükselmekte olan bir İsrail bölgesel hegemonyasına işaret etmektedir. Dolayısıyla transatlantik Filistincilik, Arap devletlerinin çıkarlarından kopmuş bir siyasal programdan ziyade performatif bir kimlik pratiği olarak işlemektedir. Retorik sahiplenmenin zirvesi, maddi imkânsızlıkla çakışmaktadır."
   },
   "keywords": {
-    "en": ["Abraham Accords", "Iran", "Palestinianism", "transatlantic relations", "two-state solution"],
-    "tr": ["İbrahim Anlaşmaları", "İran", "Filistincilik", "transatlantik ilişkiler", "iki devletli çözüm"]
+    "en": [
+      "Abraham Accords",
+      "Iran",
+      "Palestinianism",
+      "Transatlantic Relations",
+      "Two-State Solution"
+    ],
+    "tr": [
+      "İbrahim Anlaşmaları",
+      "İran",
+      "Filistincilik",
+      "Transatlantik İlişkiler",
+      "İki Devletli Çözüm"
+    ]
   },
   "dates": {
     "received": "2026-05-15",
@@ -50,11 +62,20 @@
     "volume": 7,
     "issue": 4,
     "year": 2026,
-    "season": {"en": "Autumn", "tr": "Sonbahar"}
+    "season": {
+      "en": "Autumn",
+      "tr": "Sonbahar"
+    }
   },
-  "pages": {"first": "447", "last": "476"},
+  "pages": {
+    "first": "447",
+    "last": "476"
+  },
   "doi": null,
-  "language": ["en", "tr"],
+  "language": [
+    "en",
+    "tr"
+  ],
   "license": {
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/"

@@ -1,7 +1,12 @@
 {
   "schemaVersion": 2,
   "id": "uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
   "title": {
     "en": "Emerging Trends in Low-Carbon Rules for International Trade and Their Implications for the Belt and Road Initiative",
     "tr": "Uluslararası Ticarette Düşük Karbon Kurallarında Ortaya Çıkan Eğilimler ve Kuşak-Yol Girişimi Üzerindeki Etkileri"
@@ -13,7 +18,13 @@
       "familyName": "Zhang",
       "orcid": "https://orcid.org/0009-0002-0162-2234",
       "affiliations": [
-        {"name": "Shanghai Academy of Social Sciences", "nameTr": "Şanghay Sosyal Bilimler Akademisi", "nameEn": "Shanghai Academy of Social Sciences", "country": "China", "ror": null}
+        {
+          "name": "Shanghai Academy of Social Sciences",
+          "nameTr": "Şanghay Sosyal Bilimler Akademisi",
+          "nameEn": "Shanghai Academy of Social Sciences",
+          "country": "China",
+          "ror": null
+        }
       ]
     },
     {
@@ -22,7 +33,13 @@
       "familyName": "Heng",
       "orcid": null,
       "affiliations": [
-        {"name": "Shanghai Academy of Social Sciences", "nameTr": "Şanghay Sosyal Bilimler Akademisi", "nameEn": "Shanghai Academy of Social Sciences", "country": "China", "ror": null}
+        {
+          "name": "Shanghai Academy of Social Sciences",
+          "nameTr": "Şanghay Sosyal Bilimler Akademisi",
+          "nameEn": "Shanghai Academy of Social Sciences",
+          "country": "China",
+          "ror": null
+        }
       ]
     }
   ],
@@ -31,15 +48,51 @@
     "tr": "Kuşak ve Yol Girişimi (KYG), yeşil kalkınmayı sürekli olarak temel bir ilke ve çekirdek felsefe olarak benimsemiştir ve KYG ülkelerinde endüstriyel yeşil dönüşümü, yeni enerji gelişimini, çevre yönetimini ve biyolojik çeşitliliğin korunmasını etkin bir şekilde teşvik etmektedir. KYG, dünyanın en önemli yeşil işbirliği platformlarından biri ve kilit konumda bir küresel kamuoyuna mal olmuş bir yapı haline gelmiş bulunuyor. Ancak, AB, ABD ve Japonya gibi ülkeler tarafından ithal ve ihraç malları için “Sınırda Karbon Düzenleme Mekanizması” (SKDM) ve karbon etiketleme gibi politikaların getirilmesiyle birlikte, uluslararası ticarette düşük karbon kurallarında yeni eğilimler ortaya çıkmaktadır. Bunlar arasında, öncülük sağlama avantajı için acımasız rekabet, düşük karbonlu ticaret engelleri için koalisyonların oluşumu, ticaret kısıtlamalarının çeşitlenmesi, kurumsal düşük karbonlu ürün tedarikinin genişlemesi ve karbonla ilgili ticaret kurallarının siyasallaşması yer almaktadır. Bu gelişen kurallar, ticaret uyum talepleri, endüstriyel karbon kilidi, karbon fiyatlandırma sınırlamaları ve yeni enerji emilim kontrolleri yoluyla KYG ülkelerinin ticareti, sanayi kalkınması ve yeni enerji gelişimi üzerinde baskı oluşturmakta ve böylece yeşil KYG’nin ilerleme hızını etkilemektedir. Bu zorluklarla başa çıkmak için KYG ülkeleri, SKDM geçiş döneminden yararlanarak koordineli önlemler uygulamalıdır. Bunlar arasında karbon muhasebesi standartlarının işbirliği içinde geliştirilmesi, karbon fiyatlandırma mekanizmalarının karşılıklı tanınması ve standartlaştırılmış karbon açıklama protokollerinin yanı sıra, çoğu ülkenin kolektif çıkarlarına hizmet eden ve kalkınma gerçeklikleriyle uyumlu bir düşük karbonlu ticaret kuralı sistemi oluşturmak üzere uluslararası kural yapım süreçlerine katılım yer almaktadır."
   },
   "keywords": {
-    "en": ["BRI", "carbon rules for international trade", "CBAM", "carbon labeling"],
-    "tr": ["karbon etiketleme", "KYG", "SKDM", "uluslararası ticaret için karbon kuralları"]
+    "en": [
+      "BRI",
+      "Carbon Rules For International Trade",
+      "CBAM",
+      "Carbon Labeling"
+    ],
+    "tr": [
+      "KYG",
+      "Uluslararası Ticaret İçin Karbon Kuralları",
+      "SKDM",
+      "Karbon Etiketleme"
+    ]
   },
-  "dates": {"received": "2025-07-15", "revised": "2025-09-16", "accepted": "2025-10-31", "published": "2025-12-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 1, "year": "2025-2026", "season": {"en": "Winter", "tr": "Kış"}},
-  "pages": {"first": "1", "last": "22"},
+  "dates": {
+    "received": "2025-07-15",
+    "revised": "2025-09-16",
+    "accepted": "2025-10-31",
+    "published": "2025-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 1,
+    "year": "2025-2026",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "1",
+    "last": "22"
+  },
   "doi": "10.67696/2v3z8f5e",
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

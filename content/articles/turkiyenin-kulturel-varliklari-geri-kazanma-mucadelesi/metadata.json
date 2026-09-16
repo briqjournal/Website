@@ -1,8 +1,16 @@
 {
   "schemaVersion": 2,
   "id": "turkiyenin-kulturel-varliklari-geri-kazanma-mucadelesi",
-  "articleType": {"id": "interview", "tr": "Röportaj", "en": "Interview", "peerReviewed": false},
-  "title": {"en": "Türkiye’s Struggle for the Restitution of Cultural Property", "tr": "Türkiye’nin Kültürel Varlıkları Geri Kazanma Mücadelesi"},
+  "articleType": {
+    "id": "interview",
+    "tr": "Röportaj",
+    "en": "Interview",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Türkiye’s Struggle for the Restitution of Cultural Property",
+    "tr": "Türkiye’nin Kültürel Varlıkları Geri Kazanma Mücadelesi"
+  },
   "authors": [
     {
       "displayName": "Zeynep Boz",
@@ -10,7 +18,13 @@
       "familyName": "Boz",
       "orcid": null,
       "affiliations": [
-        {"name": "Department for Combating Illicit Trafficking of Cultural Property, Ministry of Culture and Tourism", "nameTr": "Kültür ve Turizm Bakanlığı, Kaçakçılıkla Mücadele Dairesi Başkanlığı", "nameEn": "Department for Combating Illicit Trafficking of Cultural Property, Ministry of Culture and Tourism", "country": "Türkiye", "ror": null}
+        {
+          "name": "Department for Combating Illicit Trafficking of Cultural Property, Ministry of Culture and Tourism",
+          "nameTr": "Kültür ve Turizm Bakanlığı, Kaçakçılıkla Mücadele Dairesi Başkanlığı",
+          "nameEn": "Department for Combating Illicit Trafficking of Cultural Property, Ministry of Culture and Tourism",
+          "country": "Türkiye",
+          "ror": null
+        }
       ]
     }
   ],
@@ -19,15 +33,51 @@
     "tr": "“Yasadışı olarak yurtdışına çıkarılmış bulunan kültür varlıklarının iadesi için Bakanlığımızca başvurulan öncelikli yöntem muhatap ülke ve kurumla müzakereleri sürdürmek ve zaman içinde elde edilen ek kanıtları da dikkatlerine sunarak yapıcı bir ilişki tesis etmektir. Şunu öncelikle belirtmemiz gerekir ki, pazar ülkeler olarak adlandırılan Avrupa, Kuzey Amerika, Uzakdoğu ve Körfez ülkelerinde, kültür varlığı ya da kültürel miras olarak nitelendirilen varlıkları bulundurmak, satın almak ve satmak serbesttir ve koleksiyonların, adli bir soruşturma mevcut değilse sıkı bir şekilde denetlenmesi söz konusu değildir. Bununla birlikte, UNIDROIT gibi bazı uluslararası sözleşmeler ve UNESCO Sanat Piyasası Etik Kuralları gibi ilkelerle ortaya çıkan fiili durumun, alım-satım yapan tarafları, itibarları ve gelecekte maruz kalabilecekleri hukuki durumlar bakımından daha dikkatli bir köken araştırması yapmalarına teşvik edebileceği değerlendirilmektedir.”"
   },
   "keywords": {
-    "en": ["Ministry of Culture and Tourism", "Combating Illicit Trafficking", "archaeology", "UNESCO"],
-    "tr": ["Kültür ve Turizm Bakanlığı", "Kaçakçılıkla Mücadele", "arkeoloji", "UNESCO"]
+    "en": [
+      "Ministry Of Culture And Tourism",
+      "Combating Illicit Trafficking",
+      "Archaeology",
+      "UNESCO"
+    ],
+    "tr": [
+      "Kültür Ve Turizm Bakanlığı",
+      "Kaçakçılıkla Mücadele",
+      "Arkeoloji",
+      "UNESCO"
+    ]
   },
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2026-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 7, "issue": 3, "year": 2026, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "270", "last": "275"},
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2026-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 7,
+    "issue": 3,
+    "year": 2026,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "270",
+    "last": "275"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,
