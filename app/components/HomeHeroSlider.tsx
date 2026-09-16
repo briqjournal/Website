@@ -83,7 +83,7 @@ const slides = {
       eyebrow: "Volume 7 · Issue 4 · Autumn 2026",
       kicker: "Current issue",
       title: "A New Era in West Asia",
-      subtitle: "Hegemonism Recedes, Regional Agency Grows",
+      subtitle: "The Erosion of Hegemony and the Rise of Regional Agency",
       summary: "The new issue brings together work on West Asia’s changing order, Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy.",
       href: "/en/current-issue",
       action: "Explore the issue",
