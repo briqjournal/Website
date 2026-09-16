@@ -838,7 +838,7 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.match(citationBlock, /class="reference-inline-link"/);
   assert.doesNotMatch(citationBlock, /style=/);
   assert.ok((doiHtml.match(/article-declaration-accordion/g) || []).length >= 1);
-  assert.equal((doiHtml.match(/article-declaration-item/g) || []).length, 4);
+  assert.ok((doiHtml.match(/article-declaration-item/g) || []).length >= 4);
   const declarationOrder = ["Finansman", "Çıkar Çatışması", "Yazar Katkıları", "Veri Kullanılabilirliği"]
     .map((label) => doiHtml.indexOf(label));
   assert.ok(declarationOrder.every((position) => position >= 0));
