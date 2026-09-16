@@ -1,27 +1,51 @@
 {
-  "slug": "bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden",
-  "volume": 6,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2025",
-  "author": "Fang Xuting",
-  "title_tr": "Bandung Konferansı Öncesi ve Sonrasında Yeni Çin’in Dış Politikası: Bandung Konferansını Yeniden Düşünmek",
-  "abstract_tr": "Asya-Afrika Konferansı olarak da bilinen Bandung Konferansı, 1955 yılında Endonezya’nın Bandung kentinde gerçekleşti. Bu konferans, Asya ve Afrika uluslarının, sömürgeci güçlerin katılımı olmaksızın halklarının temel çıkarlarını müzakere ettikleri ilk önemli uluslararası toplantıydı. Çin Halk Cumhuriyeti’nin o dönemdeki diplomatik strateji çerçevesinin incelenmesi açısından Bandung Konferansı, Çin’in 1950’lerin başında çevre ülkelerle ilişkilerini yönetme ve geliştirme girişimlerinin bir devamı ve geliştirilmesini temsil ediyordu. Çin’in toplantıya aktif katılımı, gelişmekte olan ülkeler arasında dayanışma, özerklik ve işbirliğini savunan Üçüncü Dünya ilkeleriyle tutarlıydı. Bu, Yeni Çin’in özerk bir diplomatik yörünge arayışının önemli bir yönünü temsil etmekte ve “Bir Tarafa Yaslan” politikasından farklılıkları bir kenara bırakarak ortak zemin arama ve barış içinde bir arada yaşamayı teşvik etme yaklaşımına geçişi kolaylaştıran önemli bir olay teşkil etmektedir. Bandung Konferansı’ndan yetmiş yıl sonra, “birlik, dostluk, işbirliği, barış içinde bir arada yaşama ve farklılıkları bir kenara bırakarak ortak zemin arayışı” ile karakterize edilen Bandung Ruhu, Çin’in diplomatik stratejisinin evrimi üzerinde önemli ve kalıcı bir etki yaratmaya devam etmektedir.",
-  "source_tr": "https://briqjournal.com/bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden",
-  "source_en": "https://briqjournal.com/en/new-chinas-foreign-policy-and-after-the-bandung-conference-rethinking-the-bandung-conference",
-  "title_en": "New China’s Foreign Policy Before and After the Bandung Conference: Rethinking the Bandung Conference",
-  "abstract_en": "Abstract \n The Bandung Conference, also known as the inaugural Asian-African Conference, took placein Bandung, Indonesia, in 1955. It was the first significant international assembly of Asian andAfrican nations to deliberate on the essential interests of their peoples without the involvementof colonial powers. From the standpoint of examining the diplomatic strategy frameworkof the People’s Republic of China during that period, the Bandung Conference representeda continuation and enhancement of China’s initiatives to manage and cultivate relationswith surrounding nations in the early 1950s. China’s active involvement in the meeting wasconsistent with Third World principles, advocating for solidarity, autonomy, and collaborationamong developing countries. This represents a significant aspect of New China’s pursuit of anautonomous diplomatic trajectory and constitutes a pivotal event that facilitated the transitionfrom the “Leaning to One Side” policy to the approach of seeking common ground while settingaside differences and promoting peaceful coexistence. Seventy years post-Bandung Conference,the Bandung Spirit—characterized by “unity, friendship, cooperation, peaceful coexistence, andthe pursuit of common ground while setting aside differences”—continues to exert a significantand lasting influence on the evolution of China’s diplomatic strategy.",
-  "citation_tr": "Atıf \n Fang, X. (2025). Bandung Konferansı Öncesi ve Sonrasında Yeni Çin’in Dış Politikası: Bandung Konferansını Yeniden Düşünmek. BRIQ Kuşak ve Yol Girişimi Dergisi 6(3), 331-350",
-  "citation_en": "Citation \n Fang, X. (2025). New China’s Foreign Policy Before and After the Bandung Conference: Rethinking the Bandung Conference. BRIQ Belt & Road Initiative Quarterly 6(3), 331-350.",
-  "pages": "331-350",
-  "received_date": "2024-12-05",
-  "revised_date": "2025-01-05",
-  "accepted_date": "2025-01-10",
-  "published_online_date": "2025-06-01",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Fang%20Xuting_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Fang%20Xuting_ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden",
+  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "title": {"en": "New China’s Foreign Policy Before and After the Bandung Conference: Rethinking the Bandung Conference", "tr": "Bandung Konferansı Öncesi ve Sonrasında Yeni Çin’in Dış Politikası: Bandung Konferansını Yeniden Düşünmek"},
+  "authors": [
+    {
+      "displayName": "Fang Xuting",
+      "givenName": "Xuting",
+      "familyName": "Fang",
+      "orcid": "https://orcid.org/0009-0005-8646-0861",
+      "affiliations": [
+        {"name": "Center for Turkish Studies, Institute of Global Studies, Shanghai University", "nameTr": "Şanghay Üniversitesi Küresel Çalışmalar Enstitüsü, Türkiye Araştırmaları Merkezi", "nameEn": "Center for Turkish Studies, Institute of Global Studies, Shanghai University", "country": "China", "ror": null}
+      ]
+    }
+  ],
+  "abstract": {
+    "en": "The Bandung Conference, also known as the inaugural Asian-African Conference, took placein Bandung, Indonesia, in 1955. It was the first significant international assembly of Asian andAfrican nations to deliberate on the essential interests of their peoples without the involvementof colonial powers. From the standpoint of examining the diplomatic strategy frameworkof the People’s Republic of China during that period, the Bandung Conference representeda continuation and enhancement of China’s initiatives to manage and cultivate relationswith surrounding nations in the early 1950s. China’s active involvement in the meeting wasconsistent with Third World principles, advocating for solidarity, autonomy, and collaborationamong developing countries. This represents a significant aspect of New China’s pursuit of anautonomous diplomatic trajectory and constitutes a pivotal event that facilitated the transitionfrom the “Leaning to One Side” policy to the approach of seeking common ground while settingaside differences and promoting peaceful coexistence. Seventy years post-Bandung Conference,the Bandung Spirit—characterized by “unity, friendship, cooperation, peaceful coexistence, andthe pursuit of common ground while setting aside differences”—continues to exert a significantand lasting influence on the evolution of China’s diplomatic strategy.",
+    "tr": "Asya-Afrika Konferansı olarak da bilinen Bandung Konferansı, 1955 yılında Endonezya’nın Bandung kentinde gerçekleşti. Bu konferans, Asya ve Afrika uluslarının, sömürgeci güçlerin katılımı olmaksızın halklarının temel çıkarlarını müzakere ettikleri ilk önemli uluslararası toplantıydı. Çin Halk Cumhuriyeti’nin o dönemdeki diplomatik strateji çerçevesinin incelenmesi açısından Bandung Konferansı, Çin’in 1950’lerin başında çevre ülkelerle ilişkilerini yönetme ve geliştirme girişimlerinin bir devamı ve geliştirilmesini temsil ediyordu. Çin’in toplantıya aktif katılımı, gelişmekte olan ülkeler arasında dayanışma, özerklik ve işbirliğini savunan Üçüncü Dünya ilkeleriyle tutarlıydı. Bu, Yeni Çin’in özerk bir diplomatik yörünge arayışının önemli bir yönünü temsil etmekte ve “Bir Tarafa Yaslan” politikasından farklılıkları bir kenara bırakarak ortak zemin arama ve barış içinde bir arada yaşamayı teşvik etme yaklaşımına geçişi kolaylaştıran önemli bir olay teşkil etmektedir. Bandung Konferansı’ndan yetmiş yıl sonra, “birlik, dostluk, işbirliği, barış içinde bir arada yaşama ve farklılıkları bir kenara bırakarak ortak zemin arayışı” ile karakterize edilen Bandung Ruhu, Çin’in diplomatik stratejisinin evrimi üzerinde önemli ve kalıcı bir etki yaratmaya devam etmektedir."
+  },
+  "keywords": {
+    "en": ["Bandung Conference", "Asian and African countries", "New China’s diplomacy", "Leaning to One Side policy", "Peaceful coexistence", "Third World Theory"],
+    "tr": ["Bandung Konferansı", "Asya ve Afrika ülkeleri", "Yeni Çin diplomasisi", "Tek Tarafa Yaslanma politikası", "Barış içinde bir arada yaşama", "Üç Dünya Teorisi"]
+  },
+  "dates": {"received": "2024-12-05", "revised": "2025-01-05", "accepted": "2025-01-10", "published": "2025-06-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 3, "year": 2025, "season": {"en": "Summer", "tr": "Yaz"}},
+  "pages": {"first": "331", "last": "350"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Fang, X. (2025). New China’s Foreign Policy Before and After the Bandung Conference: Rethinking the Bandung Conference. BRIQ Belt & Road Initiative Quarterly 6(3), 331-350.",
+    "tr": "Fang, X. (2025). Bandung Konferansı Öncesi ve Sonrasında Yeni Çin’in Dış Politikası: Bandung Konferansını Yeniden Düşünmek. BRIQ Kuşak ve Yol Girişimi Dergisi 6(3), 331-350."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/new-chinas-foreign-policy-and-after-the-bandung-conference-rethinking-the-bandung-conference",
+    "tr": "https://briqjournal.com/bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Fang%20Xuting_ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Fang%20Xuting_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
