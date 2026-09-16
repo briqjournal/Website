@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-06/350-351%20-%20Mehmet%20Akif%20Ersoy%20-%20Poem.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/korkma-siir-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/korkma-siir-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Şiir",
+  "publication_type_en": "Poem",
+  "published_online_date": "2024-06-01"
 }
