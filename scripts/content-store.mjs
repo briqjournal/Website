@@ -22,16 +22,26 @@ function assertSlug(slug, context) {
   assert(safeSlug.test(slug), `Unsafe article slug in ${context}: ${slug}`);
 }
 
-function normalizeKeywordList(keywords) {
+function titleCaseKeyword(value, locale) {
+  const language = locale === "tr" ? "tr-TR" : "en-US";
+  return value.trim().replace(/\p{L}[\p{L}\p{M}]*(?:['’]\p{L}[\p{L}\p{M}]*)?/gu, (word) => {
+    const letters = word.replace(/[^\p{L}]/gu, "");
+    if (letters.length > 1 && letters === letters.toLocaleUpperCase(language)) return word;
+    const lower = word.toLocaleLowerCase(language);
+    return lower.replace(/\p{L}/u, (letter) => letter.toLocaleUpperCase(language));
+  });
+}
+
+function normalizeKeywordList(keywords, locale) {
   if (!Array.isArray(keywords)) return keywords;
-  return keywords.map((keyword) => keywordSpacingFixes.get(keyword) || keyword);
+  return keywords.map((keyword) => titleCaseKeyword(keywordSpacingFixes.get(keyword) || keyword, locale));
 }
 
 function normalizeFullTextKeywords(record) {
   if (!record) return record;
-  if (Array.isArray(record.keywords)) record.keywords = normalizeKeywordList(record.keywords);
-  if (record.tr) record.tr.keywords = normalizeKeywordList(record.tr.keywords);
-  if (record.en) record.en.keywords = normalizeKeywordList(record.en.keywords);
+  if (Array.isArray(record.keywords)) record.keywords = normalizeKeywordList(record.keywords, "en");
+  if (record.tr) record.tr.keywords = normalizeKeywordList(record.tr.keywords, "tr");
+  if (record.en) record.en.keywords = normalizeKeywordList(record.en.keywords, "en");
   return record;
 }
 
