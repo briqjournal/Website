@@ -239,7 +239,7 @@ export function ArticleRichText({
       <h2>{locale === "tr" ? "Tam Metin" : "Full Text"}</h2>
       <div className="article-fulltext-sections">
         {sections.map((section, sectionIndex) => (
-          <section className="article-body-section" id={section.id} key={section.id}>
+          <section className={`article-body-section${section.level === "subsection" ? " article-body-subsection" : ""}`} id={section.id} key={section.id}>
             {!genericSectionTitles.has(section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US")) && (
               section.level === "subsection" ? <h4>{section.title}</h4> : <h3>{section.title}</h3>
             )}
