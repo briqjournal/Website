@@ -1,26 +1,32 @@
 {
-  "slug": "turk-devletleri-teskilati-ile-rusya-ve-cinin-hedefleri-hicbir-sekilde-celismez",
-  "volume": 4,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2023",
-  "author": "Akmaral Batalova",
-  "title_tr": "Türk Devletleri Teşkilatı ile Rusya ve Çin’in hedefleri hiçbir şekilde çelişmez",
-  "abstract_tr": "\"ABD’nin askeri genişleme yoluyla küresel nüfuzunu sürdürmek ve güçlendirmek için askeri bir araç olarak NATO’ya ihtiyaç duyduğu açıktır. Aksine, Asya ülkeleri öncelikle ekonomilerinin istikrarlı gelişimiyle ilgileniyor ve tüm ülkelerle ekonomik olarak işbirliği yapmaya hazır. Bu nedenle, dünya düzeninin tüm kurallarının çiğnendiği bu koşullarda, Asya, bölge ülkelerinin ekonomilerinin dengelenebileceği ve barışçıl bir ortamın koşullarının sağlanabileceği güvenli bir gelecek yaratmaya ve bir ağırlık merkezi olmaya çalışıyor.”",
-  "source_tr": "https://briqjournal.com/turk-devletleri-teskilati-ile-rusya-ve-cinin-hedefleri-hicbir-sekilde-celismez",
-  "source_en": "https://briqjournal.com/en/the-objectives-the-organization-turkic-states-russia-and-china-are-not-odds",
-  "title_en": "The objectives of the Organization of Turkic States, Russia and China are not at odds",
-  "abstract_en": "Abstract \n “US needs NATO as a military instrument to maintain and strengthen its global influence through military expansion. On the contrary, Asian countries are primarily interested in the stable development of their economies and are ready to cooperate economically with all countries. For this reason, I think that, in these conditions, where all the rules of the world order are violated, Asia is trying to create a safe future where the economies of the countries in the region can be balanced and the conditions for a peaceful environment can be provided, creating a center of gravity.”",
-  "citation_tr": "Atıf \n Atıf: Batalova, A. (2023). Türk Devletleri Teşkilatı ile Rusya ve Çin’in hedefleri hiçbir şekilde çelişmez. (Röportajı yapan Ali Erdem Köz). BRIQ Kuşak ve Yol Girişimi Dergisi, 4(3), 62-67.",
-  "citation_en": "Citation \n How to cite: Batalova, A. (2023). The objectives of the Organization of Turkic States, Russia, and China are not at odds. (Ali Erdem Köz, Interviewer). BRIQ Belt & Road Initiative Quarterly, 4(3), 62-67.",
-  "pages": "62-67",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/Akmaral%20Batalova%20R%C3%B6portaj.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/Akmaral%20Batalova%20Interview.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/turk-devletleri-teskilati-ile-rusya-ve-cinin-hedefleri-hicbir-sekilde-celismez-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/turk-devletleri-teskilati-ile-rusya-ve-cinin-hedefleri-hicbir-sekilde-celismez-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Röportaj",
-  "publication_type_en": "Interview",
-  "published_online_date": "2023-06-01"
+  "schemaVersion": 2,
+  "id": "turk-devletleri-teskilati-ile-rusya-ve-cinin-hedefleri-hicbir-sekilde-celismez",
+  "articleType": {"id": "interview", "tr": "Röportaj", "en": "Interview", "peerReviewed": false},
+  "title": {"en": "The objectives of the Organization of Turkic States, Russia and China are not at odds", "tr": "Türk Devletleri Teşkilatı ile Rusya ve Çin’in hedefleri hiçbir şekilde çelişmez"},
+  "authors": [
+    {"displayName": "Akmaral Batalova", "givenName": "Akmaral", "familyName": "Batalova", "orcid": null, "affiliations": []}
+  ],
+  "contributors": [
+    {"displayName": "Ali Erdem Köz", "givenName": "Ali Erdem", "familyName": "Köz", "role": "interviewer", "orcid": null}
+  ],
+  "abstract": {
+    "en": "“US needs NATO as a military instrument to maintain and strengthen its global influence through military expansion. On the contrary, Asian countries are primarily interested in the stable development of their economies and are ready to cooperate economically with all countries. For this reason, I think that, in these conditions, where all the rules of the world order are violated, Asia is trying to create a safe future where the economies of the countries in the region can be balanced and the conditions for a peaceful environment can be provided, creating a center of gravity.”",
+    "tr": "“ABD’nin askeri genişleme yoluyla küresel nüfuzunu sürdürmek ve güçlendirmek için askeri bir araç olarak NATO’ya ihtiyaç duyduğu açıktır. Aksine, Asya ülkeleri öncelikle ekonomilerinin istikrarlı gelişimiyle ilgileniyor ve tüm ülkelerle ekonomik olarak işbirliği yapmaya hazır. Bu nedenle, dünya düzeninin tüm kurallarının çiğnendiği bu koşullarda, Asya, bölge ülkelerinin ekonomilerinin dengelenebileceği ve barışçıl bir ortamın koşullarının sağlanabileceği güvenli bir gelecek yaratmaya ve bir ağırlık merkezi olmaya çalışıyor.”"
+  },
+  "keywords": {"en": [], "tr": []},
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2023-06-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 4, "issue": 3, "year": 2023, "season": {"en": "Summer", "tr": "Yaz"}},
+  "pages": {"first": "62", "last": "67"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {"en": "Batalova, A. (2023). The objectives of the Organization of Turkic States, Russia, and China are not at odds. (Ali Erdem Köz, Interviewer). BRIQ Belt & Road Initiative Quarterly, 4(3), 62-67.", "tr": "Batalova, A. (2023). Türk Devletleri Teşkilatı ile Rusya ve Çin’in hedefleri hiçbir şekilde çelişmez. (Röportajı yapan Ali Erdem Köz). BRIQ Kuşak ve Yol Girişimi Dergisi, 4(3), 62-67."},
+  "urls": {"en": "https://briqjournal.com/en/the-objectives-the-organization-turkic-states-russia-and-china-are-not-odds", "tr": "https://briqjournal.com/turk-devletleri-teskilati-ile-rusya-ve-cinin-hedefleri-hicbir-sekilde-celismez", "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/Akmaral%20Batalova%20Interview.pdf", "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/Akmaral%20Batalova%20R%C3%B6portaj.pdf", "pdfEnLocal": "/assets/archive/pdfs/articles/turk-devletleri-teskilati-ile-rusya-ve-cinin-hedefleri-hicbir-sekilde-celismez-en.pdf", "pdfTrLocal": "/assets/archive/pdfs/articles/turk-devletleri-teskilati-ile-rusya-ve-cinin-hedefleri-hicbir-sekilde-celismez-tr.pdf", "sharedBilingualPdf": false}
 }
