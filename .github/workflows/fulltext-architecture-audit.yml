@@ -1,0 +1,110 @@
+name: Full-text architecture audit
+on:
+  push:
+    branches: [automation/fix-comak-live-english]
+    paths: [.github/workflows/fulltext-architecture-audit.yml]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Audit canonical and legacy full-text architecture
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git checkout --detach origin/main
+          node --input-type=module <<'NODE'
+          import { readFile, readdir, access } from 'node:fs/promises';
+          import { join } from 'node:path';
+
+          const root=process.cwd();
+          const catalog=JSON.parse(await readFile(join(root,'content/catalog.json'),'utf8'));
+          const current=catalog.fulltext.current || [];
+          const archive=catalog.fulltext.en_archive || [];
+          const cs=new Set(current), as=new Set(archive);
+          const overlap=current.filter(s=>as.has(s));
+          const currentOnly=current.filter(s=>!as.has(s));
+          const archiveOnly=archive.filter(s=>!cs.has(s));
+          const allArticles=catalog.article_order || [];
+          const neither=allArticles.filter(s=>!cs.has(s)&&!as.has(s));
+
+          const trWords=new Set('ve bir bu için ile olarak olan daha çok ise ancak gibi tarafından üzerine arasında de da mi mı mu mü veya hem her kadar sonra önce karşı içinde'.split(' '));
+          const enWords=new Set('the and of to in is for with on that as by from this are was were an a or between into through under among has have its their which'.split(' '));
+          const flatten=(x)=>{
+            if(!x) return '';
+            const a=[];
+            for(const s of x.sections||[]){a.push(s.title||'',...(s.paragraphs||[]));}
+            for(const r of x.references||[]) a.push(r.text||'');
+            return a.join('\n');
+          };
+          const lang=(text)=>{
+            const toks=(text.toLocaleLowerCase('tr-TR').match(/[\p{L}]+/gu)||[]);
+            let tr=0,en=0;
+            for(const t of toks){if(trWords.has(t))tr++; if(enWords.has(t))en++;}
+            if(tr>en*1.6 && tr>=8) return `tr(${tr}/${en})`;
+            if(en>tr*1.6 && en>=8) return `en(${tr}/${en})`;
+            return `mixed(${tr}/${en})`;
+          };
+          const stats=(x)=>({
+            sections:x?.sections?.length||0,
+            paragraphs:(x?.sections||[]).reduce((n,s)=>n+(s.paragraphs?.length||0),0),
+            refs:x?.references?.length||0,
+            figures:x?.figures?.length||0,
+            chars:flatten(x).length,
+            lang:lang(flatten(x)),
+          });
+          const norm=(t)=>t.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+          const similarity=(a,b)=>{
+            const A=new Set(norm(a).split(' ').filter(x=>x.length>3));
+            const B=new Set(norm(b).split(' ').filter(x=>x.length>3));
+            if(!A.size||!B.size)return 0;
+            let i=0; for(const x of A) if(B.has(x)) i++;
+            return i/Math.max(A.size,B.size);
+          };
+
+          console.log('=== COUNTS ===');
+          console.log(JSON.stringify({articles:allArticles.length,current:current.length,en_archive:archive.length,overlap:overlap.length,currentOnly:currentOnly.length,archiveOnly:archiveOnly.length,neither:neither.length,saudi_en:catalog.fulltext.saudi_en||null},null,2));
+
+          console.log('\n=== CURRENT+ARCHIVE OVERLAP ===');
+          for(const slug of overlap){
+            const cur=JSON.parse(await readFile(join(root,'content/articles',slug,'fulltext/current.json'),'utf8'));
+            const arc=JSON.parse(await readFile(join(root,'content/articles',slug,'fulltext/en-archive.json'),'utf8'));
+            const en=cur.en;
+            const s=similarity(flatten(en),flatten(arc));
+            console.log(JSON.stringify({slug,current_en:stats(en),archive:stats(arc),similarity:Number(s.toFixed(3))}));
+          }
+
+          console.log('\n=== CURRENT ONLY ===');
+          for(const slug of currentOnly){
+            const cur=JSON.parse(await readFile(join(root,'content/articles',slug,'fulltext/current.json'),'utf8'));
+            console.log(JSON.stringify({slug,tr:stats(cur.tr),en:stats(cur.en)}));
+          }
+
+          console.log('\n=== ARCHIVE ONLY SAMPLE/STRUCTURE ===');
+          let noisy=0, oneSection=0, empty=0;
+          const examples=[];
+          for(const slug of archiveOnly){
+            const arc=JSON.parse(await readFile(join(root,'content/articles',slug,'fulltext/en-archive.json'),'utf8'));
+            const st=stats(arc);
+            if(st.sections===1)oneSection++;
+            if(st.chars<100)empty++;
+            const txt=flatten(arc);
+            const fragments=(txt.match(/\b[a-z]{1,3}-\s/g)||[]).length + (txt.match(/\s[a-z]{1,3}\s[a-z]{1,3}-/g)||[]).length;
+            if(fragments>=3){noisy++; if(examples.length<20)examples.push({slug,...st,fragments});}
+          }
+          console.log(JSON.stringify({archiveOnly:archiveOnly.length,oneSection,empty,heuristicNoisy:noisy,examples},null,2));
+
+          console.log('\n=== NEITHER ===');
+          console.log(JSON.stringify(neither,null,2));
+
+          console.log('\n=== FULLTEXT SPECIAL KEYS ===');
+          console.log(JSON.stringify(catalog.fulltext,null,2));
+          NODE
+
+          echo '\n=== LEGACY CODE DEPENDENCIES ==='
+          grep -RIn --exclude-dir=node_modules --exclude-dir=.git -E 'en_archive|enArchive|en-archive|saudi_en|saudi-en|loadArchiveEnglishFullText|loadSaudiEnglishFullText|preferCurrentEnglish|mergeLocalizedFullText' scripts app tests content/catalog.json | head -n 500 || true
