@@ -67,6 +67,11 @@ export type ArchiveArticle = {
   pages?: string | null;
   doi?: string;
   orcids?: string[];
+  author_affiliations?: {
+    name: string;
+    tr?: string | null;
+    en?: string | null;
+  }[];
   received_date?: string | null;
   revised_date?: string | null;
   accepted_date?: string | null;

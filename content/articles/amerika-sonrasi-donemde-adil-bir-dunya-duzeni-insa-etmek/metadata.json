@@ -19,5 +19,12 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Building%20a%20Fair%20World%20Order%20in%20a%20Post-American%20Age.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/amerika-sonrasi-donemde-adil-bir-dunya-duzeni-insa-etmek-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/amerika-sonrasi-donemde-adil-bir-dunya-duzeni-insa-etmek-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "author_affiliations": [
+    {
+      "name": "Efe Can Gürcan",
+      "tr": "İstinye Üniversitesi, Uluslararası İlişkiler Bölümü",
+      "en": "Department of International Relations, İstinye University"
+    }
+  ]
 }

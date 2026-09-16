@@ -146,12 +146,14 @@ function ArticleAuthors({ article, locale, correspondingAuthor }: { article: Arc
         const orcid = article.orcids?.[index] || profile?.orcids[0];
         const email = authorEmail(name);
         const person = isPersonByline(name);
+        const storedAffiliation = article.author_affiliations?.find((entry) => authorId(entry.name) === authorId(name));
+        const articleAffiliation = locale === "tr" ? storedAffiliation?.tr : storedAffiliation?.en;
         return (
           <div className="article-author-row" key={`${name}-${index}`}>
             <div>
               {person ? <a className="author-profile-link" href={authorProfileHref(name, locale)}><span className="article-author-name">{name}</span></a> : <b>{name}</b>}
               {correspondingAuthor === name && <span className="corresponding-badge">{locale === "tr" ? "Sorumlu yazar" : "Corresponding author"}</span>}
-              <small>{authorAffiliation(name, locale)}</small>
+              <small>{articleAffiliation?.trim() || authorAffiliation(name, locale)}</small>
             </div>
             <span className="article-author-identifiers">
               {orcid && <a href={`https://orcid.org/${orcid}`} target="_blank" rel="noreferrer" title={`ORCID ${orcid}`}><OrcidBadge /><span>{orcid}</span></a>}
