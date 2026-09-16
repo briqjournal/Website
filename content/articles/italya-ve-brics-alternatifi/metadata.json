@@ -19,5 +19,11 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/FABRIZIO%20VERDE_0.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/italya-ve-brics-alternatifi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/italya-ve-brics-alternatifi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Görüş Makalesi",
+  "publication_type_en": "Perspective Article",
+  "received_date": "2022-11-17",
+  "revised_date": "2022-11-17",
+  "accepted_date": "2023-01-17",
+  "published_online_date": "2023-03-01"
 }

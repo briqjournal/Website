@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/Xi%20Jinping_0.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/cin-baris-icinde-bir-arada-yasamanin-bes-ilkesi-temelinde-dostluk-ve-isbirligini-gelistirmeye-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/cin-baris-icinde-bir-arada-yasamanin-bes-ilkesi-temelinde-dostluk-ve-isbirligini-gelistirmeye-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Konferans Konuşması",
+  "publication_type_en": "Conference Speech",
+  "published_online_date": "2023-03-01"
 }

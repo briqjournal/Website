@@ -18,5 +18,8 @@
   "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/Abrar%20Sabbah_karikat%C3%BCr.pdf",
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/Abrar%20Sabbah_Cartoon.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/yeniden-ayaga-kalkacagiz-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/yeniden-ayaga-kalkacagiz-en.pdf"
+  "pdf_en_local": "/assets/archive/pdfs/articles/yeniden-ayaga-kalkacagiz-en.pdf",
+  "publication_type_tr": "Karikatür",
+  "publication_type_en": "Cartoon",
+  "published_online_date": "2023-03-01"
 }

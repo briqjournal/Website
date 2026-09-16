@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Halil%20%C3%96zsara%C3%A7_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/turkiye-misir-ve-yunanistanin-savunma-harcamalari-denklemi-uzerinden-karaman-denizi-dogu-akdeniz-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/turkiye-misir-ve-yunanistanin-savunma-harcamalari-denklemi-uzerinden-karaman-denizi-dogu-akdeniz-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2022-10-15",
+  "accepted_date": "2022-10-30",
+  "published_online_date": "2022-12-01"
 }

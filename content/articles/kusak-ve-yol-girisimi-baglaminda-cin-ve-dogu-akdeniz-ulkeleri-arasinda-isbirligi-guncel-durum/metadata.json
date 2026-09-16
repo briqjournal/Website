@@ -19,5 +19,11 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/YE%20Zhangxu_0.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-baglaminda-cin-ve-dogu-akdeniz-ulkeleri-arasinda-isbirligi-guncel-durum-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-baglaminda-cin-ve-dogu-akdeniz-ulkeleri-arasinda-isbirligi-guncel-durum-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2022-11-21",
+  "revised_date": "2023-02-05",
+  "accepted_date": "2023-02-07",
+  "published_online_date": "2023-03-01"
 }

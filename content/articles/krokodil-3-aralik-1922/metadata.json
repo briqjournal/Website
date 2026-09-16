@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_Karikat%C3%BCr_TR.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/krokodil-3-aralik-1922-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/krokodil-3-aralik-1922-tr.pdf",
-  "shared_bilingual_pdf": true
+  "shared_bilingual_pdf": true,
+  "publication_type_tr": "Karikatür",
+  "publication_type_en": "Cartoon",
+  "published_online_date": "2023-09-01"
 }

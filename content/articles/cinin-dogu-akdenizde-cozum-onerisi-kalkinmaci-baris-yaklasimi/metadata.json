@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-12/Sun%20Degang_ENG_0.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/cinin-dogu-akdenizde-cozum-onerisi-kalkinmaci-baris-yaklasimi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/cinin-dogu-akdenizde-cozum-onerisi-kalkinmaci-baris-yaklasimi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Araştırma Makalesi",
+  "publication_type_en": "Research Article",
+  "received_date": "2022-10-09",
+  "accepted_date": "2022-10-24",
+  "published_online_date": "2022-12-01"
 }

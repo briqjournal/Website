@@ -18,5 +18,8 @@
   "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_DMITRIY%20BULIN_TR.pdf",
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_DMITRIY%20BULIN_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/bell-the-cat-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/bell-the-cat-en.pdf"
+  "pdf_en_local": "/assets/archive/pdfs/articles/bell-the-cat-en.pdf",
+  "publication_type_tr": "Fotoğraf",
+  "publication_type_en": "Photograph",
+  "published_online_date": "2023-06-01"
 }

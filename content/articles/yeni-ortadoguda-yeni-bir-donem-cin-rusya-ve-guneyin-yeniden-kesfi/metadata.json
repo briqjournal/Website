@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_Ramzy%20Baroud_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/yeni-ortadoguda-yeni-bir-donem-cin-rusya-ve-guneyin-yeniden-kesfi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/yeni-ortadoguda-yeni-bir-donem-cin-rusya-ve-guneyin-yeniden-kesfi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Görüş Makalesi",
+  "publication_type_en": "Perspective Article",
+  "received_date": "2023-04-08",
+  "accepted_date": "2023-05-02",
+  "published_online_date": "2023-06-01"
 }

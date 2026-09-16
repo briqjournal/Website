@@ -18,5 +18,8 @@
   "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_Foto%C4%9Fraf_TR.pdf",
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_Foto%C4%9Fraf_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/rgali-29-ekim-1933-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/rgali-29-ekim-1933-en.pdf"
+  "pdf_en_local": "/assets/archive/pdfs/articles/rgali-29-ekim-1933-en.pdf",
+  "publication_type_tr": "Fotoğraf",
+  "publication_type_en": "Photograph",
+  "published_online_date": "2023-09-01"
 }

@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_Emin%20G%C3%BCrses_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/nato-hatti-kontrolden-sathi-kontrole-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/nato-hatti-kontrolden-sathi-kontrole-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2023-04-10",
+  "accepted_date": "2023-05-06",
+  "published_online_date": "2023-06-01"
 }

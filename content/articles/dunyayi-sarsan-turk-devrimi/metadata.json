@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_C%C3%BCneytAkal%C4%B1n_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/dunyayi-sarsan-turk-devrimi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/dunyayi-sarsan-turk-devrimi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2023-05-26",
+  "accepted_date": "2023-07-07",
+  "published_online_date": "2023-09-01"
 }

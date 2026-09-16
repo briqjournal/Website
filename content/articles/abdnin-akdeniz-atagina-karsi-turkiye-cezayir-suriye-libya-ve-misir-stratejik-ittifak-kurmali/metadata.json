@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/SMAIL%20Debeche_0.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/abdnin-akdeniz-atagina-karsi-turkiye-cezayir-suriye-libya-ve-misir-stratejik-ittifak-kurmali-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Röportaj",
+  "publication_type_en": "Interview",
+  "published_online_date": "2023-03-01"
 }

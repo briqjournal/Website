@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_OgasawaraHiroyuki_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Röportaj",
+  "publication_type_en": "Interview",
+  "published_online_date": "2023-09-01"
 }

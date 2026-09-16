@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-03/Yevgeniy%20Haldey_foto%C4%9Fraf.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/futbol-taraftarlari-baku-1959-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/futbol-taraftarlari-baku-1959-tr.pdf",
-  "shared_bilingual_pdf": true
+  "shared_bilingual_pdf": true,
+  "publication_type_tr": "Fotoğraf",
+  "publication_type_en": "Photograph",
+  "published_online_date": "2023-03-01"
 }

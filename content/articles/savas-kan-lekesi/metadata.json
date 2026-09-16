@@ -18,5 +18,8 @@
   "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_NIZAR%20SABUR_TR.pdf",
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_NIZAR%20SABUR_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/savas-kan-lekesi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/savas-kan-lekesi-en.pdf"
+  "pdf_en_local": "/assets/archive/pdfs/articles/savas-kan-lekesi-en.pdf",
+  "publication_type_tr": "Resim",
+  "publication_type_en": "Painting",
+  "published_online_date": "2023-06-01"
 }

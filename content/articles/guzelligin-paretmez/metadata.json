@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_A%C5%9F%C4%B1kVeysel_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/guzelligin-paretmez-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/guzelligin-paretmez-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Şiir",
+  "publication_type_en": "Poem",
+  "published_online_date": "2023-09-01"
 }

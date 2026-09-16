@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-06/C4S3_Yi%20Shaoxuan%20%26%20Yang%20Chen_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/cin-nato-iliskileri-tarih-ve-gerceklik-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/cin-nato-iliskileri-tarih-ve-gerceklik-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2023-04-11",
+  "accepted_date": "2023-04-30",
+  "published_online_date": "2023-06-01"
 }

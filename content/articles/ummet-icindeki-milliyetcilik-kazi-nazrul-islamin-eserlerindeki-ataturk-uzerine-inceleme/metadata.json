@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_MohammadBas%C4%B1rUlHaqSinha_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/ummet-icindeki-milliyetcilik-kazi-nazrul-islamin-eserlerindeki-ataturk-uzerine-inceleme-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/ummet-icindeki-milliyetcilik-kazi-nazrul-islamin-eserlerindeki-ataturk-uzerine-inceleme-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2023-07-01",
+  "accepted_date": "2023-08-08",
+  "published_online_date": "2023-09-01"
 }

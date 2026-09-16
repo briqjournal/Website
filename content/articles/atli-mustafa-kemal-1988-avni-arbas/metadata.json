@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_Resim_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/atli-mustafa-kemal-1988-avni-arbas-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/atli-mustafa-kemal-1988-avni-arbas-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Resim",
+  "publication_type_en": "Painting",
+  "published_online_date": "2023-09-01"
 }

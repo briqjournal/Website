@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-09/C4S4_NecatiDemircan_YeZhanxu_ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/turk-devriminin-ckp-uzerindeki-etkisi-cai-hesenin-turkiye-yazilari-uzerine-inceleme-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/turk-devriminin-ckp-uzerindeki-etkisi-cai-hesenin-turkiye-yazilari-uzerine-inceleme-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Araştırma Makalesi",
+  "publication_type_en": "Research Article",
+  "received_date": "2023-06-02",
+  "accepted_date": "2023-07-14",
+  "published_online_date": "2023-09-01"
 }
