@@ -1,0 +1,225 @@
+name: Finalize Volume 7 Canonical Content
+on:
+  push:
+    branches: [fix/volume7-canonical-finalization]
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Finalize Volume 7 on latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+
+          cat >/tmp/finalize-volume7.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import { pathToFileURL } from 'node:url';
+
+          const read = p => JSON.parse(fs.readFileSync(p,'utf8'));
+          const write = (p,v) => fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n');
+          const issueSlugs = [];
+          const issueBySlug = new Map();
+          for (let issueNo=1; issueNo<=4; issueNo++) {
+            const issue=read(`content/issues/v07-i0${issueNo}.json`);
+            for (const slug of issue.articles) { issueSlugs.push(slug); issueBySlug.set(slug,issueNo); }
+          }
+          const v7 = new Set(issueSlugs);
+          if (v7.size !== 30) throw new Error(`Expected 30 unique Volume 7 contributions, got ${v7.size}`);
+
+          // Read the already-reviewed source-language decisions before removing the temporary override layer.
+          const storeUrl=pathToFileURL(path.resolve('scripts/content-store.mjs')).href+`?audit=${Date.now()}`;
+          const { bilingualKeywordParityOverrides } = await import(storeUrl);
+
+          function titleCaseKeyword(value, locale) {
+            const language = locale === 'tr' ? 'tr-TR' : 'en-US';
+            return value.trim().replace(/\p{L}[\p{L}\p{M}]*(?:['’]\p{L}[\p{L}\p{M}]*)?/gu, word => {
+              const letters=word.replace(/[^\p{L}]/gu,'');
+              if (letters.length>1 && letters===letters.toLocaleUpperCase(language)) return word;
+              const lower=word.toLocaleLowerCase(language);
+              return lower.replace(/\p{L}/u, letter=>letter.toLocaleUpperCase(language));
+            });
+          }
+          const normalizeKeywords=(values,locale)=>(Array.isArray(values)?values:[]).map(v=>titleCaseKeyword(v,locale));
+
+          function repairReferenceUrl(value) {
+            const text=String(value??'');
+            const start=text.search(/https?:\/\//iu);
+            if (start<0) return text;
+            const before=text.slice(0,start);
+            const tail=text.slice(start);
+            const markers=[
+              /\s+(?:adresinden|adresine)\b/iu,
+              /\s+(?:erişim tarihi|erişildi|erişim)\b/iu,
+              /\s+\(?(?:accessed|retrieved)\b/iu,
+            ];
+            let boundary=tail.length;
+            for (const marker of markers) {
+              const found=tail.search(marker);
+              if(found>=0) boundary=Math.min(boundary,found);
+            }
+            const url=tail.slice(0,boundary);
+            if(!/\s/u.test(url)) return text;
+            return before + url.replace(/\s+/gu,'') + tail.slice(boundary);
+          }
+          const textOf=r=>typeof r==='string'?r:r.text;
+          const withText=(r,t)=>typeof r==='string'?t:{...r,text:t};
+
+          for (const slug of issueSlugs) {
+            const base=path.join('content/articles',slug);
+            const metaPath=path.join(base,'metadata.json');
+            const meta=read(metaPath);
+            meta.keywords ??= {en:[],tr:[]};
+            const full={
+              en: read(path.join(base,'fulltext/en.json')),
+              tr: read(path.join(base,'fulltext/tr.json')),
+            };
+            const override=bilingualKeywordParityOverrides.get(slug);
+            for (const locale of ['en','tr']) {
+              const metaKw=normalizeKeywords(meta.keywords?.[locale]||[],locale);
+              const fullKw=normalizeKeywords(full[locale].keywords||[],locale);
+              let canonical;
+              if (override) {
+                canonical=normalizeKeywords(override[locale]||[],locale);
+              } else if (metaKw.length && !fullKw.length) {
+                canonical=metaKw;
+              } else if (!metaKw.length && fullKw.length) {
+                canonical=fullKw;
+              } else if (JSON.stringify(metaKw)===JSON.stringify(fullKw)) {
+                canonical=metaKw;
+              } else {
+                throw new Error(`${slug}/${locale}: unresolved keyword disagreement without reviewed override\nMETA ${JSON.stringify(metaKw)}\nFULL ${JSON.stringify(fullKw)}`);
+              }
+              meta.keywords[locale]=canonical;
+              full[locale].keywords=[...canonical];
+              full[locale].references=(full[locale].references||[]).map(r=>withText(r,repairReferenceUrl(textOf(r))));
+              write(path.join(base,`fulltext/${locale}.json`),full[locale]);
+            }
+            write(metaPath,meta);
+          }
+
+          // Repair the one clear interview-heading PDF extraction truncation using the complete Turkish source line.
+          {
+            const slug='anadolunun-kulturel-mirasini-koruma-ve-gelecege-aktarma-sorumlulugu';
+            const file=`content/articles/${slug}/fulltext/en.json`;
+            const data=read(file);
+            const section=data.sections?.[3];
+            if (!section) throw new Error('Özdoğan EN section 4 missing');
+            if (/Göbek-\s*$/u.test(section.title)) {
+              section.title='Göbeklitepe: A Shared Heritage of Humanity We can’t skip Göbeklitepe, professor. It’s very popular. And it’s important, too... Actually, the region as a whole is very important, but Göbeklitepe is quite popular.';
+            }
+            write(file,data);
+          }
+
+          // Volume 7 is localized canonical content now. Remove its old slug-specific keyword decisions and the obsolete Çomak repair path.
+          {
+            const file='scripts/content-store.mjs';
+            let s=fs.readFileSync(file,'utf8');
+            s=s.replace(/const comakArticleSlug = .*?;\nconst comakMissingReference = \{[\s\S]*?\n\};\n\n/u,'');
+            const mapStart=s.indexOf('export const bilingualKeywordParityOverrides = new Map([');
+            const mapEnd=s.indexOf('\n]);\n\nasync function readJson',mapStart);
+            if(mapStart<0||mapEnd<0) throw new Error('Could not locate keyword override map');
+            const retained=`export const bilingualKeywordParityOverrides = new Map([\n  ["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve", {\n    source: "en",\n    tr: ["Orta Asya güvenliği", "teröre karşı mücadele stratejileri", "KGAÖ", "İslami radikalizm", "Rusya’nın dış politikası", "ulusötesi cihatçı ağlar"],\n    en: ["Central Asian security", "counterterrorism strategies", "CSTO", "Islamic radicalism", "Russia’s foreign policy", "transnational jihadist networks"],\n  }],\n]);`;
+            s=s.slice(0,mapStart)+retained+s.slice(mapEnd+4);
+            const repairStart=s.indexOf('function repairComakArticleFullText(');
+            const repairEnd=s.indexOf('\nexport async function loadCatalog',repairStart);
+            if(repairStart>=0&&repairEnd>=0) s=s.slice(0,repairStart)+s.slice(repairEnd+1);
+            s=s.replace('  return repairComakArticleFullText(record, slug);','  return record;');
+            if(s.includes('repairComakArticleFullText')||s.includes('comakArticleSlug')||s.includes('comakMissingReference')) throw new Error('Obsolete Çomak repair code remains');
+            fs.writeFileSync(file,s);
+          }
+
+          // Remove obsolete tests that expected V7 keyword override entries to remain in the loader.
+          {
+            const file='tests/keyword-case.test.mjs';
+            let s=fs.readFileSync(file,'utf8');
+            const v7Needles=[
+              'kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre',
+              'turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik',
+              'mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce',
+              'iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi',
+            ];
+            s=s.split('\n').filter(line=>!v7Needles.some(slug=>line.includes(`bilingualKeywordParityOverrides.get("${slug}")`))).join('\n');
+            fs.writeFileSync(file,s);
+          }
+          JS
+
+          cat >/tmp/volume7-canonical-test.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          import test from 'node:test';
+          import { bilingualKeywordParityOverrides } from './scripts/content-store.mjs';
+          const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+          const expectedDates={1:'2025-12-01',2:'2026-03-01',3:'2026-06-01',4:'2026-09-01'};
+          const slugs=[]; const issueBySlug=new Map();
+          for(let n=1;n<=4;n++){const issue=read(`content/issues/v07-i0${n}.json`); for(const slug of issue.articles){slugs.push(slug); issueBySlug.set(slug,n);}}
+          const refText=r=>typeof r==='string'?r:r.text;
+          function urlPart(value){
+            const start=value.search(/https?:\/\//iu); if(start<0)return null;
+            const tail=value.slice(start); const markers=[/\s+(?:adresinden|adresine)\b/iu,/\s+(?:erişim tarihi|erişildi|erişim)\b/iu,/\s+\(?(?:accessed|retrieved)\b/iu];
+            let end=tail.length; for(const marker of markers){const i=tail.search(marker);if(i>=0)end=Math.min(end,i);} return tail.slice(0,end);
+          }
+          test('Volume 7 has 30 canonical metadata-v2 locale-split contributions',()=>{
+            assert.equal(new Set(slugs).size,30);
+            for(const slug of slugs){
+              const n=issueBySlug.get(slug); const base=`content/articles/${slug}`; const meta=read(`${base}/metadata.json`);
+              assert.equal(meta.schemaVersion,2,slug); assert.equal(meta.journal.volume,7,slug); assert.equal(meta.journal.issue,n,slug); assert.equal(meta.dates.published,expectedDates[n],slug);
+              assert.deepEqual(fs.readdirSync(`${base}/fulltext`).filter(x=>x.endsWith('.json')).sort(),['en.json','tr.json'],slug);
+              for(const l of ['en','tr']){
+                const ft=read(`${base}/fulltext/${l}.json`); assert.deepEqual(meta.keywords?.[l]||[],ft.keywords||[],`${slug}/${l} keyword source parity`);
+                const ids=new Set(); for(const section of ft.sections||[]){assert(section.id&&typeof section.id==='string',`${slug}/${l} section id`);assert(!ids.has(section.id),`${slug}/${l} duplicate ${section.id}`);ids.add(section.id);}
+                for(const [i,r] of (ft.references||[]).entries()){const url=urlPart(refText(r));if(url)assert.doesNotMatch(url,/\s/u,`${slug}/${l} ref ${i+1}: ${url}`);}
+              }
+              assert(!bilingualKeywordParityOverrides.has(slug),`${slug}: Volume 7 must not depend on keyword override`);
+            }
+          });
+          test('Volume 7 source fixes remain canonical',()=>{
+            const ertan=read('content/articles/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/metadata.json'); assert.equal(ertan.dates.accepted,'2025-11-01');
+            const oz=read('content/articles/anadolunun-kulturel-mirasini-koruma-ve-gelecege-aktarma-sorumlulugu/fulltext/en.json'); assert.match(oz.sections[3].title,/Göbeklitepe is quite popular\.$/u); assert.doesNotMatch(oz.sections[3].title,/Göbek-\s*$/u);
+            const store=fs.readFileSync('scripts/content-store.mjs','utf8'); assert(!store.includes('repairComakArticleFullText')); assert(!store.includes('comakArticleSlug'));
+          });
+          JS
+
+          apply_changes() {
+            node /tmp/finalize-volume7.mjs
+            cp /tmp/volume7-canonical-test.mjs tests/volume7-canonical-integrity.test.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i*.test.mjs tests/volume7-canonical-integrity.test.mjs
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_changes
+            npm test
+            npm run lint
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+              echo "main advanced during validation attempt $ATTEMPT; retrying"
+              continue
+            fi
+            if git diff --quiet; then echo 'Volume 7 canonical state already present.'; exit 0; fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content scripts tests app
+            git commit -m 'Finalize Volume 7 canonical content integrity'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced after validation attempt $ATTEMPT; retrying"
+          done
+          echo 'main kept advancing; refusing unsafe push'; exit 1
