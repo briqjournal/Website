@@ -19,5 +19,10 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_ENG-90-92.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/taliban-afgan-savas-agalarinin-hikayesi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/taliban-afgan-savas-agalarinin-hikayesi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Kitap İncelemesi",
+  "publication_type_en": "Book Review",
+  "received_date": "2023-09-06",
+  "accepted_date": "2023-10-03",
+  "published_online_date": "2023-12-01"
 }
