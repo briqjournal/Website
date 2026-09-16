@@ -14,6 +14,21 @@
     "0009-0006-3256-1197"
   ],
   "shared_bilingual_pdf": false,
+  "publication_type_en": "Research Article",
+  "publication_type_tr": "Araştırma Makalesi",
+  "peer_reviewed": true,
+  "scholarly": true,
+  "funding": {
+    "statement_en": "This thesis is the result of the stage research of 2026 Special Project for High-Quality Development of Humanities and Social Sciences Research at Northwestern Polytechnical University: Power, Technology, and Norms: Cyberspace Governance in GCC Countries and the Reshaping of the Middle East International Order under the Global Governance Initiative (Project No. D5000260296)",
+    "statement_tr": "Bu çalışma, Kuzeybatı Politeknik Üniversitesi bünyesinde yürütülen 2026 Beşeri ve Sosyal Bilimler Araştırmalarının Yüksek Nitelikli Gelişimi Özel Projesi kapsamında gerçekleştirilen “Güç, Teknoloji ve Normlar: Küresel Yönetişim Girişimi Çerçevesinde KİK Ülkelerinde Siber Uzay Yönetişimi ve Ortadoğu Uluslararası Düzeninin Yeniden Şekillendirilmesi” başlıklı aşama araştırmasının sonucudur (Proje No. D5000260296).",
+    "funders": [
+      {
+        "name_en": "Northwestern Polytechnical University",
+        "name_tr": "Kuzeybatı Politeknik Üniversitesi",
+        "grant_or_project_number": "D5000260296"
+      }
+    ]
+  },
   "season_en": "Autumn",
   "title_en": "China-Arab Cooperation under the Digital Silk Road Framework: A Case Study of Jordan",
   "abstract_en": "Abstract \n The Digital Silk Road (DSR), a key component of China's Belt and Road Initiative, offers partner countries strategic opportunities in telecommunications, artificial intelligence, cloud computing, e-commerce, and smart cities. This paper examines China-Arab cooperation under the DSR framework through a case study of Jordan, located at the crossroads of the Levant, the Gulf, and North Africa. Drawing on literature analysis, official reports, the study finds that Chinese companies, particularly Huawei and ZTE, have played a significant role in upgrading Jordan's digital infrastructure, expanding network coverage, and cultivating local talent through ICT training programs. The cooperation also faces challenges, including data security concerns, regulatory misalignment, skills shortages, and geopolitical pressures. The paper argues that, with improved digital governance, stronger legal frameworks, and strategic investment, the DSR can accelerate Jordan's digital transformation, enhance its economic resilience, and reinforce its position as a regional digital hub, thus fostering sustainable and mutually beneficial China-Arab cooperation.",
