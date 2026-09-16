@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Audit latest main canonical data
+      - name: Deep audit latest main canonical data
         shell: bash
         run: |
           set -euo pipefail
@@ -20,53 +20,29 @@ jobs:
           git checkout --detach origin/main
           python3 - <<'PY'
           from pathlib import Path
-          import json,re,collections
+          import json,re
           issue=json.loads(Path('content/issues/v06-i04.json').read_text(encoding='utf-8'))
-          print('ISSUE',f"v{issue['volume']:02d}-i{issue['issue']:02d}",len(issue['articles']))
-          def ptype(m,loc):
-            explicit=m.get('publication_type_tr' if loc=='tr' else 'publication_type_en')
-            if explicit and explicit.strip(): return explicit.strip()
-            text=' '.join(str(m.get(k) or '') for k in ['slug','title_tr','title_en','citation_tr','citation_en','abstract_tr','abstract_en']).lower()
-            if re.search(r'kitap incelemesi|book review|review of',text): return 'Kitap İncelemesi' if loc=='tr' else 'Book Review'
-            if re.search(r'röportaj|roportaj|interview|söyleşi',text): return 'Röportaj' if loc=='tr' else 'Interview'
-            if re.search(r'(^|[^a-zçğıöşü])şiir([^a-zçğıöşü]|$)|(^|[^a-z])poem([^a-z]|$)',text): return 'Şiir' if loc=='tr' else 'Poem'
-            if re.search(r'editörden|editorial',text): return 'Editörden' if loc=='tr' else 'Editorial'
-            return 'Araştırma Makalesi' if loc=='tr' else 'Research Article'
-          suspicious_word=re.compile(r'\b(?:chi-nese|de-mocracy|presen-tations|interpre-tation|roman-ticism|en-throning|pur-ist|re-formist|re-juvenation|uncomplicat-edly)\b',re.I)
+          print('MAIN',__import__('subprocess').check_output(['git','rev-parse','HEAD'],text=True).strip())
+          # Author profile availability
+          authors=Path('app/authors.ts').read_text(encoding='utf-8')
+          for name in ['Kolosovskiy Yan','Song Shuli','Cheng Enfu','Can Ulusoy','Füruğ Ferruhzad','Hasan İzzettin Dinamo']:
+            print('AUTHOR_PROFILE',name, bool(re.search(r'^[ \t]*'+re.escape(json.dumps(name,ensure_ascii=False))+r'\s*:\s*\{',authors,re.M)))
+          # Exact metadata/category audit
           for slug in issue['articles']:
-            mp=Path('content/articles')/slug/'metadata.json'
-            fp=Path('content/articles')/slug/'fulltext/current.json'
-            m=json.loads(mp.read_text(encoding='utf-8'))
-            f=json.loads(fp.read_text(encoding='utf-8'))
-            print('\n###',slug)
-            print('AUTHOR:',m.get('author'))
-            print('PAGES:',m.get('pages'))
-            print('TYPE_TR:',ptype(m,'tr'),'TYPE_EN:',ptype(m,'en'),'EXPLICIT:',m.get('publication_type_tr'),m.get('publication_type_en'))
-            for field in ['title_tr','title_en','abstract_tr','abstract_en','citation_tr','citation_en']:
-              v=m.get(field)
-              if not v: continue
-              hits=suspicious_word.findall(v)
-              flags=[]
-              if hits: flags.append('PDF-HYPHEN='+','.join(hits))
-              if '\n' in v: flags.append('NEWLINE')
-              if '\u00a0' in v: flags.append('NBSP')
-              if re.search(r'\s{2,}',v): flags.append('MULTISPACE')
-              if flags: print('META_FLAG',field,';'.join(flags),repr(v[:180]))
-            for loc in ['tr','en']:
-              d=f[loc]
-              secs=d.get('sections',[]); pars=[p for s in secs for p in s.get('paragraphs',[])]
-              refs=d.get('references',[]); foot=d.get('footnotes',[])
-              norm=lambda s: re.sub(r'\W+',' ',s.lower()).strip()
-              ctr=collections.Counter(norm(r.get('text','')) for r in refs)
-              dups=[k for k,v in ctr.items() if k and v>1]
-              short=[r for r in refs if len(r.get('text','').strip())<25]
-              contam=[(i+1,p[:100]) for i,p in enumerate(pars) if re.search(r'\b(?:How to cite|Atıf\s*:|Kaynak\s*:|Source\s*:)',p,re.I)]
-              broken=[(i+1,p[:120]) for i,p in enumerate(pars) if suspicious_word.search(p)]
-              print(loc.upper(),'sections',len(secs),'paragraphs',len(pars),'refs',len(refs),'footnotes',len(foot),'dups',len(dups),'shortrefs',len(short),'contam',len(contam),'broken',len(broken))
-              if refs:
-                print(loc.upper(),'REF_FIRST',refs[0].get('text','')[:220])
-                print(loc.upper(),'REF_LAST',refs[-1].get('text','')[:220])
-              for x in short[:5]: print(loc.upper(),'SHORTREF',x)
-              for x in contam[:5]: print(loc.upper(),'CONTAM',x)
-              for x in broken[:5]: print(loc.upper(),'BROKEN',x)
+            m=json.loads((Path('content/articles')/slug/'metadata.json').read_text(encoding='utf-8'))
+            print('META',slug,'author=',repr(m.get('author')),'pages=',repr(m.get('pages')),'types=',repr(m.get('publication_type_tr')),repr(m.get('publication_type_en')))
+          # WEF reference lists and footnotes, where TR/EN counts differ.
+          slug='dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi'
+          f=json.loads((Path('content/articles')/slug/'fulltext/current.json').read_text(encoding='utf-8'))
+          for loc in ('tr','en'):
+            print('\nWEF',loc.upper(),'REFERENCES',len(f[loc]['references']))
+            for i,r in enumerate(f[loc]['references'],1): print(f'{loc.upper()}REF{i:02d}',r.get('text',''))
+            print('WEF',loc.upper(),'FOOTNOTES',len(f[loc]['footnotes']))
+            for n in f[loc]['footnotes']: print(loc.upper(),'NOTE',n)
+          # Young China exact reference tails for verified split-vs-joined source entry.
+          slug='genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme'
+          f=json.loads((Path('content/articles')/slug/'fulltext/current.json').read_text(encoding='utf-8'))
+          for loc in ('tr','en'):
+            print('\nYOUNG',loc.upper(),'REFERENCES',len(f[loc]['references']))
+            for i,r in list(enumerate(f[loc]['references'],1))[-4:]: print(f'{loc.upper()}REF{i:02d}',r.get('text',''))
           PY
