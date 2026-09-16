@@ -19,5 +19,11 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-03/CILT5_SAYI2_ENG5_102-129.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/yeni-dunyanin-safaginda-afrika-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/yeni-dunyanin-safaginda-afrika-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "publication_type_tr": "Derleme Makalesi",
+  "publication_type_en": "Review Article",
+  "received_date": "2023-11-15",
+  "revised_date": "2024-01-10",
+  "accepted_date": "2024-01-16",
+  "published_online_date": "2024-03-01"
 }
