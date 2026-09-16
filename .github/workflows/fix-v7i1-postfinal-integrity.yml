@@ -1,0 +1,195 @@
+name: Fix V7I1 Postfinal Integrity
+on:
+  push:
+    branches: [audit/v7i1-integrity-fixes]
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply source-verified V7I1 fixes on latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund
+
+          cat >/tmp/fix-v7i1-postfinal.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+
+          const issue = JSON.parse(fs.readFileSync('content/issues/v07-i01.json','utf8'));
+          const read = file => JSON.parse(fs.readFileSync(file,'utf8'));
+          const write = (file,data) => fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');
+          const full = (slug,locale) => path.join('content/articles',slug,'fulltext',`${locale}.json`);
+          const textOf = ref => typeof ref === 'string' ? ref : ref.text;
+          const withText = (ref,text) => typeof ref === 'string' ? text : {...ref,text};
+
+          function repairReferenceUrl(value) {
+            let text = value;
+            const start = text.search(/https?:\/\//iu);
+            if (start < 0) return text;
+            const before = text.slice(0,start);
+            const tail = text.slice(start);
+            const markers = [
+              /\s+(?:adresinden|adresine)\b/iu,
+              /\s+\(?(?:accessed|retrieved)\b/iu,
+            ];
+            let boundary = tail.length;
+            for (const marker of markers) {
+              const found = tail.search(marker);
+              if (found >= 0) boundary = Math.min(boundary,found);
+            }
+            let url = tail.slice(0,boundary).replace(/\s+/gu,'');
+            const after = tail.slice(boundary);
+            url = url.replace(/\.jhtml\.\.$/u,'.jhtml.');
+            return before + url + after;
+          }
+
+          // References only: remove PDF column/line-wrap whitespace inside URL/DOI strings.
+          for (const slug of issue.articles) {
+            for (const locale of ['en','tr']) {
+              const file = full(slug,locale);
+              const data = read(file);
+              data.references = (data.references || []).map(ref => withText(ref,repairReferenceUrl(textOf(ref))));
+              write(file,data);
+            }
+          }
+
+          // Yang Chen book review: the PDF has only three genuine internal headings.
+          // The five phases are run-in paragraph leads, not section headings.
+          {
+            const slug='cin-abd-iliskilerinin-gelecegi';
+            const enFile=full(slug,'en');
+            const en=read(enFile);
+            if (en.sections.length === 8) {
+              const [intro,what,phases,p1,p3,p4,p5,response] = en.sections;
+              const phase1Body = p1.paragraphs[0].replace(/^Phase”\.\s*/u,'');
+              const phase2 = p1.paragraphs[1].replace(
+                /^Phase 2 \(1979-2015\): The “Small Power v\.s\. Great Power Phase”\.\s*/u,
+                '**Phase 2 (1979-2015): The “Small Power v.s. Great Power Phase”.** ',
+              );
+              const phase3Body = p3.paragraphs[0].replace(/^I” \(2016-2035\)\.\s*/u,'');
+              const phase4Body = p4.paragraphs[0].replace(/^Competition Phase II” \(2036-2060\)\.\s*/u,'');
+              const phase5Body = p5.paragraphs[0].replace(/^tence Phase” \(2061 onwards\)\.\s*/u,'');
+              phases.paragraphs = [
+                ...phases.paragraphs,
+                `**Phase 1 (1949-1978): The “Confrontation Phase”.** ${phase1Body}`,
+                phase2,
+                `China-U.S. relations are currently in the third phase, namely **“Great Power Competition Phase I” (2016-2035).** ${phase3Body}`,
+                `If China’s GDP catches up with that of the United States by 2035, China-U.S. relations will enter the fourth phase, namely **“Great Power Competition Phase II” (2036-2060).** ${phase4Body}`,
+                `${p4.paragraphs[1]} At that point, starting from 2061, China-U.S. relations will enter the fifth phase, namely the **“Competitive Coexistence Phase” (2061 onwards).** ${phase5Body}`,
+                p5.paragraphs[1],
+              ];
+              en.sections=[intro,what,phases,response];
+            }
+            en.sections.forEach((section,index)=>section.id=`en-section-${index+1}`);
+            for (const section of en.sections) {
+              section.paragraphs = section.paragraphs.map(p=>p.replace(/\blowcost labor\b/gu,'low-cost labor'));
+            }
+            write(enFile,en);
+
+            const trFile=full(slug,'tr');
+            const tr=read(trFile);
+            for (const section of tr.sections) {
+              section.paragraphs = section.paragraphs.map(p=>p.replace(/B üyük/gu,'Büyük').replace(/Çin- ABD/gu,'Çin-ABD'));
+            }
+            tr.sections.forEach((section,index)=>section.id=`tr-section-${index+1}`);
+            write(trFile,tr);
+          }
+          JS
+
+          cat >/tmp/v7i1-postfinal-test.mjs <<'JS'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import assert from 'node:assert/strict';
+          import test from 'node:test';
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i01.json','utf8'));
+          const read=(slug,l)=>JSON.parse(fs.readFileSync(path.join('content/articles',slug,'fulltext',`${l}.json`),'utf8'));
+          const text=r=>typeof r==='string'?r:r.text;
+
+          function urlPart(value) {
+            const normalized=String(value??'').replace(/\n/g,' ');
+            const start=normalized.search(/https?:\/\//iu);
+            if(start<0) return null;
+            const tail=normalized.slice(start);
+            const markers=[/\s+(?:adresinden|adresine)\b/iu,/\s+\(?(?:accessed|retrieved)\b/iu];
+            let end=tail.length;
+            for(const marker of markers){const found=tail.search(marker); if(found>=0) end=Math.min(end,found);}
+            return tail.slice(0,end).replace(/[.,;:]$/u,'');
+          }
+
+          test('V7I1 reference URLs and DOI URLs contain no PDF line-wrap whitespace',()=>{
+            for(const slug of issue.articles) for(const locale of ['en','tr']) {
+              for(const [index,ref] of (read(slug,locale).references||[]).entries()) {
+                const url=urlPart(text(ref));
+                if(url) assert.doesNotMatch(url,/\s/u,`${slug}/${locale} ref ${index+1}: ${url}`);
+              }
+            }
+          });
+
+          test('Yang Chen review follows the actual bilingual PDF heading hierarchy',()=>{
+            const slug='cin-abd-iliskilerinin-gelecegi';
+            const en=read(slug,'en'), tr=read(slug,'tr');
+            assert.deepEqual(en.sections.map(s=>s.title),['Full text','What is Great Power Competition?','The Five Phases of China-U.S. Relations','Contradictions in the Current World Order and China’s Response']);
+            assert.deepEqual(tr.sections.map(s=>s.title),['Tam metin','Büyük Güç Rekabeti Nedir?','Çin-ABD İlişkilerinde Beş Aşama','Mevcut Dünya Düzenindeki Çelişkiler ve Çin’in Tepkisi']);
+            const enFive=en.sections[2].paragraphs.join('\n');
+            const trFive=tr.sections[2].paragraphs.join('\n');
+            assert.match(enFive,/Phase 1 \(1949-1978\): The “Confrontation Phase”/u);
+            assert.match(enFive,/Great Power Competition Phase I” \(2016-2035\)/u);
+            assert.match(enFive,/Competitive Coexistence Phase” \(2061 onwards\)/u);
+            assert.doesNotMatch(JSON.stringify(en),/Coexis-|"title":\s*"If China|"title":\s*"China-U\.S\. relations are currently/u);
+            assert.match(trFive,/2010 yılında Çin’in imalat üretimi ABD’yi geçti/u);
+            assert.doesNotMatch(JSON.stringify(tr),/B üyük|Çin- ABD/u);
+          });
+
+          test('V7I1 audited bibliography cardinalities remain stable',()=>{
+            const expected=[[21,21],[33,33],[62,62],[73,74],[0,0]];
+            issue.articles.forEach((slug,index)=>{
+              assert.equal((read(slug,'en').references||[]).length,expected[index][0],`${slug}/en`);
+              assert.equal((read(slug,'tr').references||[]).length,expected[index][1],`${slug}/tr`);
+            });
+            const zhou=(read(issue.articles[3],'tr').references||[]).map(text).filter(x=>/^Zhou, L\.Y\. \(2009\)/u.test(x));
+            assert.equal(zhou.length,1,'Zhang-Liu TR-only Zhou reference');
+          });
+          JS
+
+          apply_all() {
+            node /tmp/fix-v7i1-postfinal.mjs
+            cp /tmp/v7i1-postfinal-test.mjs tests/v7i1-postfinal-integrity.test.mjs
+            node scripts/generate-archive-data.mjs
+            node scripts/generate-fulltext-modules.mjs
+            node scripts/generate-runtime-data.mjs
+            node --test tests/v7i1-content-integrity.test.mjs tests/v7i1-postfinal-integrity.test.mjs
+            git diff --check
+          }
+
+          for ATTEMPT in 1 2 3 4 5 6; do
+            git fetch origin main
+            BASE="$(git rev-parse origin/main)"
+            git reset --hard "$BASE"
+            git clean -fd
+            apply_all
+            npm test
+            npm run lint
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+              echo "main advanced during validation attempt $ATTEMPT; retrying"
+              continue
+            fi
+            if git diff --quiet; then echo 'V7I1 audited state already present.'; exit 0; fi
+            git config user.name 'BRIQ Journal'
+            git config user.email 'briq@briqjournal.com'
+            git add content app tests
+            git commit -m 'Fix Volume 7 Issue 1 post-audit integrity findings'
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" = "$BASE" ]; then
+              git push origin HEAD:main
+              exit 0
+            fi
+            echo "main advanced after validation attempt $ATTEMPT; retrying"
+          done
+          echo 'main kept advancing; refusing unsafe push'; exit 1
