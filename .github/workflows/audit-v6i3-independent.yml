@@ -1,0 +1,77 @@
+name: Audit Volume 6 Issue 3 Independent
+on:
+  push:
+    branches: [audit/v6i3-independent]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit issue metadata, full text, and source PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v pdftotext >/dev/null 2>&1; then sudo apt-get update && sudo apt-get install -y poppler-utils; fi
+          python3 <<'PY'
+          import json, os, re, subprocess, urllib.request, pathlib, unicodedata
+          issue=json.load(open('content/issues/v06-i03.json'))
+          tmp=pathlib.Path('/tmp/v6i3'); tmp.mkdir(exist_ok=True)
+          print('ISSUE', issue['volume'], issue['issue'], issue['year'], issue['season_en'], 'articles=',len(issue['articles']))
+          def norm(s):
+              s=unicodedata.normalize('NFKC', s or '')
+              s=s.replace('\u00ad','')
+              s=re.sub(r'(?<=\w)-\s*\n\s*(?=\w)','',s)
+              s=re.sub(r'\s+',' ',s).strip().lower()
+              return s
+          def pdf_text(url, slug, loc):
+              if not url: return None
+              p=tmp/f'{slug}-{loc}.pdf'; t=tmp/f'{slug}-{loc}.txt'
+              try:
+                  urllib.request.urlretrieve(url,p)
+                  subprocess.run(['pdftotext','-layout',str(p),str(t)],check=True)
+                  return t.read_text(errors='ignore')
+              except Exception as e:
+                  print('  PDFERR',loc,url,repr(e)); return None
+          for slug in issue['articles']:
+              base=pathlib.Path('content/articles')/slug
+              m=json.load(open(base/'metadata.json'))
+              files=sorted(p.name for p in (base/'fulltext').glob('*.json')) if (base/'fulltext').exists() else []
+              print('\n###',slug)
+              print(' type=',m.get('articleType'))
+              print(' title.tr=',m.get('title',{}).get('tr'))
+              print(' title.en=',m.get('title',{}).get('en'))
+              print(' pages=',m.get('pages'),' dates=',m.get('dates'))
+              print(' kw.tr=',m.get('keywords',{}).get('tr'))
+              print(' kw.en=',m.get('keywords',{}).get('en'))
+              print(' fulltext=',files)
+              print(' pdfEn=',m.get('urls',{}).get('pdfEn'))
+              print(' pdfTr=',m.get('urls',{}).get('pdfTr'))
+              for loc,key in [('en','pdfEn'),('tr','pdfTr')]:
+                  txt=pdf_text(m.get('urls',{}).get(key),slug,loc)
+                  if txt is None: continue
+                  n=norm(txt)
+                  title=m.get('title',{}).get(loc)
+                  abst=m.get('abstract',{}).get(loc)
+                  print(f'  {loc}: pdfchars={len(txt)} title_in_pdf={norm(title) in n if title else None} abstract_in_pdf={norm(abst) in n if abst else None}')
+                  hist=[ln.strip() for ln in txt.splitlines() if re.search(r'(Geliş Tarihi|Kabul Tarihi|Revizyon Tarihi|Received Date|Accepted Date|Revision Date|Received|Accepted)',ln,re.I)]
+                  if hist: print('   HISTORY',hist[:12])
+                  kw=[ln.strip() for ln in txt.splitlines() if re.search(r'^(Anahtar Kelimeler|Keywords)\s*:',ln.strip(),re.I)]
+                  if kw: print('   KEYWORDS',kw[:8])
+                  # Compare legacy fulltext prose against source PDF.
+                  legacy=base/'fulltext'/'en-archive.json' if loc=='en' else None
+                  if legacy and legacy.exists():
+                      d=json.load(open(legacy)); paras=[]
+                      for sec in d.get('sections',[]): paras += sec.get('paragraphs',[])
+                      refs=d.get('references',[])
+                      missing=[]
+                      for p in paras:
+                          ps=norm(p)
+                          if len(ps)>80 and ps not in n:
+                              # tolerate footnote markers/punctuation by checking long prefix
+                              pref=ps[:180]
+                              if pref not in n: missing.append(p[:180].replace('\n',' '))
+                      print(f'   LEGACY paragraphs={len(paras)} refs={len(refs)} unmatched_long={len(missing)}')
+                      for x in missing[:8]: print('    UNMATCHED',x)
+          PY
