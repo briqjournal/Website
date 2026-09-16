@@ -1,0 +1,41 @@
+name: Audit Volume 7 Diagnostics
+on:
+  push:
+    branches: [audit/volume7-overview-2]
+permissions:
+  contents: read
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print keyword and URL anomalies
+        run: |
+          node <<'JS'
+          const fs=require('fs'), path=require('path');
+          const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+          const text=r=>typeof r==='string'?r:r.text;
+          for(let n=1;n<=4;n++){
+            const issue=read(`content/issues/v07-i0${n}.json`);
+            for(const slug of issue.articles){
+              const meta=read(`content/articles/${slug}/metadata.json`);
+              for(const l of ['en','tr']){
+                const ft=read(`content/articles/${slug}/fulltext/${l}.json`);
+                const a=meta.keywords?.[l]||[], b=ft.keywords||[];
+                if(JSON.stringify(a)!==JSON.stringify(b)){
+                  console.log(`KEYWORDS issue=${n} slug=${slug} locale=${l}`);
+                  console.log('META '+JSON.stringify(a));
+                  console.log('FULL '+JSON.stringify(b));
+                }
+                (ft.references||[]).forEach((r,i)=>{
+                  const t=text(r);
+                  if(/https?:\/\/\s+/iu.test(t)||/https?:\/\/www\.\s+/iu.test(t)||/doi\.org\/\s+/iu.test(t))
+                    console.log(`BADURL issue=${n} slug=${slug} locale=${l} ref=${i+1} :: ${t}`);
+                });
+                (ft.sections||[]).forEach((s,i)=>{
+                  if(/-\s*$/u.test(s.title)) console.log(`HYPHENHEADING issue=${n} slug=${slug} locale=${l} idx=${i+1} :: ${s.title}`);
+                });
+              }
+            }
+          }
+          JS
