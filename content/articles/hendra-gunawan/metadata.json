@@ -1,23 +1,37 @@
 {
-  "slug": "hendra-gunawan",
-  "volume": 6,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2025",
-  "author": "Hendra Gunawan",
-  "title_tr": "HENDRA GUNAWAN*",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/hendra-gunawan",
-  "source_en": "https://briqjournal.com/en/hendra-gunawan",
-  "title_en": "HENDRA GUNAWAN*",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n [Hendra Gunawan resmi]. (2025). Savaşta Yaralanan Diponegoro (1982). BRIQ Kuşak ve Yol Girişimi Dergisi 6(3), 380.",
-  "citation_en": "Atıf \n [Painting by Hendra Gunawan]. (2025). Diponegoro Wounded at War (1982). BRIQ Belt & Road Initiative Quarterly 6(3), 380.",
-  "pages": null,
-  "published_online_date": "2025-06-01",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/RES%C4%B0M_TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/PAINTING_ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/hendra-gunawan-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/hendra-gunawan-en.pdf"
+  "schemaVersion": 2,
+  "id": "hendra-gunawan",
+  "articleType": {"id": "painting", "tr": "Resim", "en": "Painting", "peerReviewed": false},
+  "title": {"en": "Hendra Gunawan", "tr": "Hendra Gunawan"},
+  "authors": [
+    {"displayName": "Hendra Gunawan", "givenName": "Hendra", "familyName": "Gunawan", "orcid": null, "affiliations": []}
+  ],
+  "abstract": {"en": null, "tr": null},
+  "keywords": {"en": [], "tr": []},
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2025-06-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 3, "year": 2025, "season": {"en": "Summer", "tr": "Yaz"}},
+  "pages": {"first": "380", "last": "380"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "[Painting by Hendra Gunawan]. (2025). Diponegoro Wounded at War (1982). BRIQ Belt & Road Initiative Quarterly 6(3), 380.",
+    "tr": "[Hendra Gunawan resmi]. (2025). Savaşta Yaralanan Diponegoro (1982). BRIQ Kuşak ve Yol Girişimi Dergisi 6(3), 380."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/hendra-gunawan",
+    "tr": "https://briqjournal.com/hendra-gunawan",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/PAINTING_ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/RES%C4%B0M_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/hendra-gunawan-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/hendra-gunawan-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
