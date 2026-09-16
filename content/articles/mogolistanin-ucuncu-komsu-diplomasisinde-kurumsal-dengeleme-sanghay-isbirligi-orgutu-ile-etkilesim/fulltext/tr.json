@@ -448,7 +448,7 @@
       "text": "Khaliun, A. (2025b). Монгол Улс уран олборлох дэлхийн тав дахь том үйлдвэртэй болно [Mongolia to become the world’s fifth largest uranium producer]. The Mongolian Mining Journal. 19 Aralık 2025 tarihinde https://www.mongolianminingjournal.com/a/74203 adresinden alınmıştır."
     }
   ],
-  "acknowledgements": "Bu makale, “Ulusal Sosyal Bilimler Vakfı Gençlik Programı” (21CGJ037) tarafından desteklenmektedir.",
+  "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
@@ -485,5 +485,8 @@
       "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-07.jpg",
       "caption": "(Fotoğraf: CGTN, 2018)."
     }
-  ]
+  ],
+  "declarations": {
+    "funding": "Bu makale, “Ulusal Sosyal Bilimler Vakfı Gençlik Programı” (21CGJ037) tarafından desteklenmektedir."
+  }
 }

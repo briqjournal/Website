@@ -457,7 +457,7 @@
       "text": "Xinhua News. (2025). Mongolia’s foreign trade surges 12.3 pct in 2024. Retrieved December 2, 2025, from https://english.news.cn/20250110/d5b146d6436a4f5e9b8b-8b4ee0ab9373/c.html"
     }
   ],
-  "acknowledgements": "This article is supported by funding from the “National Social Science Foundation Youth Program” (21CGJ037).",
+  "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
@@ -494,5 +494,8 @@
       "src": "/assets/article-figures/mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim/figure-07.jpg",
       "caption": "called for elevating Mongolia’s ties with the SCO (Photo: CGTN, 2018)."
     }
-  ]
+  ],
+  "declarations": {
+    "funding": "This article is supported by funding from the “National Social Science Foundation Youth Program” (21CGJ037)."
+  }
 }
