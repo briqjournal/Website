@@ -14,10 +14,10 @@ function assertTitleCase(keyword, locale) {
 }
 
 test("normalizes every Turkish and English keyword to title case", async () => {
-  const { current, enArchive, saudiEn } = await loadFullTextCollections();
+  const { localized, current, enArchive } = await loadFullTextCollections();
   let count = 0;
 
-  for (const record of Object.values(current)) {
+  for (const record of [...Object.values(localized), ...Object.values(current)]) {
     for (const locale of ["tr", "en"]) {
       for (const keyword of record?.[locale]?.keywords || []) {
         assertTitleCase(keyword, locale);
@@ -33,17 +33,13 @@ test("normalizes every Turkish and English keyword to title case", async () => {
     }
   }
 
-  for (const keyword of saudiEn?.keywords || []) {
-    assertTitleCase(keyword, "en");
-    count += 1;
-  }
 
   assert(count > 0, "Expected at least one keyword to validate");
 });
 
 test("preserves acronyms while fixing known keyword spacing and casing", async () => {
-  const { current } = await loadFullTextCollections();
-  const relations = current["turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik"];
+  const { localized, current } = await loadFullTextCollections();
+  const relations = localized["turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik"];
   assert(relations.tr.keywords.includes("Türkiye-Çin İlişkileri"));
   assert(relations.en.keywords.includes("Türkiye-China Relations"));
 
@@ -57,9 +53,9 @@ test("preserves acronyms while fixing known keyword spacing and casing", async (
 });
 
 test("keeps bilingual keyword counts and reviewed ordering in parity", async () => {
-  const { current } = await loadFullTextCollections();
+  const { localized, current } = await loadFullTextCollections();
 
-  for (const [slug, record] of Object.entries(current)) {
+  for (const [slug, record] of [...Object.entries(localized), ...Object.entries(current)]) {
     const tr = record?.tr?.keywords || [];
     const en = record?.en?.keywords || [];
     assert.equal(tr.length, en.length, `Turkish/English keyword count mismatch for ${slug}`);

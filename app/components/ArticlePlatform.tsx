@@ -1,7 +1,7 @@
 import {
   loadArchiveEnglishFullText,
   loadCurrentFullText,
-  loadSaudiEnglishFullText,
+  loadLocalizedFullText,
 } from "../generated-fulltext/loaders";
 import { articleCitation, citationWithDoi } from "../article-citation";
 import {
@@ -90,9 +90,7 @@ type ArticleDetails = {
   publishedOnline?: string;
 };
 
-const SAUDI_CULTURAL_HEDGING_SLUG = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";
 const HE_GANQIANG_TRANSLATION_SLUG = "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0";
-const COMAK_ENGLISH_FULLTEXT_SLUG = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
 
 function keywordLabel(value: string, locale: "tr" | "en") {
   const language = locale === "tr" ? "tr-TR" : "en-US";
@@ -359,22 +357,19 @@ export async function ArticlePlatform({
   routeSlug?: string;
   details?: ArticleDetails;
 }) {
-  const fullRecord = await loadCurrentFullText(article.slug) as CurrentFullTextRecord | undefined;
+  const localizedFullText = await loadLocalizedFullText(article.slug, locale) as LocalizedFullText | undefined;
+  const fullRecord = localizedFullText ? undefined : await loadCurrentFullText(article.slug) as CurrentFullTextRecord | undefined;
   const storedFullText = fullRecord?.[locale];
-  const archivedEnglishFullText = locale === "en" && article.slug !== SAUDI_CULTURAL_HEDGING_SLUG
+  const archivedEnglishFullText = !localizedFullText && locale === "en"
     ? await loadArchiveEnglishFullText(article.slug) as LocalizedFullText | undefined
     : undefined;
-  const saudiEnglishFullText = locale === "en" && article.slug === SAUDI_CULTURAL_HEDGING_SLUG
-    ? await loadSaudiEnglishFullText() as LocalizedFullText
-    : undefined;
-  const archivedEnglishSource = saudiEnglishFullText || archivedEnglishFullText;
-  const preferCurrentEnglish = (article.volume === 7 && article.issue <= 3)
-    || article.slug === COMAK_ENGLISH_FULLTEXT_SLUG;
-  const fullText = locale === "en"
+  const preferCurrentEnglish = article.volume === 7 && article.issue <= 3;
+  const legacyFullText = locale === "en"
     ? preferCurrentEnglish
-      ? mergeLocalizedFullText(storedFullText, archivedEnglishSource)
-      : mergeLocalizedFullText(archivedEnglishSource, storedFullText)
+      ? mergeLocalizedFullText(storedFullText, archivedEnglishFullText)
+      : mergeLocalizedFullText(archivedEnglishFullText, storedFullText)
     : storedFullText;
+  const fullText = localizedFullText || legacyFullText;
   const displayReferences = fullText ? referencesWithUnlistedCitations(fullText.sections, fullText.references, locale) : [];
   const metadata = fullRecord?.metadata;
   const title = locale === "tr" ? article.title_tr : (article.title_en || article.title_tr);

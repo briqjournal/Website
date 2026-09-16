@@ -6,8 +6,8 @@ import { loadFullTextCollections } from "../scripts/content-store.mjs";
 const slug = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
 
 test("keeps the Çomak-Toker-Manioğlu article bilingual instead of duplicating Turkish into English", async () => {
-  const { current } = await loadFullTextCollections();
-  const record = current[slug];
+  const { localized } = await loadFullTextCollections();
+  const record = localized[slug];
 
   assert(record, "Expected current full-text record");
   assert.equal(record.tr.sections.length, 9);
@@ -48,8 +48,9 @@ test("keeps the Çomak-Toker-Manioğlu article bilingual instead of duplicating 
 });
 
 
-test("keeps the canonical English record ahead of the broken archive extraction at render time", async () => {
+test("uses locale-split canonical files without article-specific render exceptions", async () => {
   const platform = await readFile(new URL("../app/components/ArticlePlatform.tsx", import.meta.url), "utf8");
-  assert.match(platform, /const COMAK_ENGLISH_FULLTEXT_SLUG =/u);
-  assert.match(platform, /article\.slug === COMAK_ENGLISH_FULLTEXT_SLUG/u);
+  assert.match(platform, /loadLocalizedFullText/u);
+  assert.doesNotMatch(platform, /COMAK_ENGLISH_FULLTEXT_SLUG/u);
+  assert.doesNotMatch(platform, /SAUDI_CULTURAL_HEDGING_SLUG/u);
 });

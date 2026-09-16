@@ -253,20 +253,29 @@ async function readFullTextRecord(root, slug, file) {
   return repairComakArticleFullText(record, slug);
 }
 
+async function readLocalizedFullText(root, slug, locale) {
+  assertSlug(slug, `${locale}.json`);
+  const record = await readJson(join(root, "content/articles", slug, "fulltext", `${locale}.json`));
+  if (Array.isArray(record.keywords)) record.keywords = normalizeKeywordList(record.keywords, locale);
+  return record;
+}
+
 export async function loadFullTextCollections(root = process.cwd()) {
   const catalog = await loadCatalog(root);
+  const localizedSlugs = catalog.fulltext.localized || [];
   const currentSlugs = catalog.fulltext.current || [];
   const archiveSlugs = catalog.fulltext.en_archive || [];
+  assert(new Set(localizedSlugs).size === localizedSlugs.length, "Duplicate localized full-text slug.");
   assert(new Set(currentSlugs).size === currentSlugs.length, "Duplicate current full-text slug.");
   assert(new Set(archiveSlugs).size === archiveSlugs.length, "Duplicate English archive full-text slug.");
-
+  const localized = {};
+  for (const slug of localizedSlugs) localized[slug] = {
+    en: await readLocalizedFullText(root, slug, "en"),
+    tr: await readLocalizedFullText(root, slug, "tr"),
+  };
   const current = {};
   for (const slug of currentSlugs) current[slug] = await readFullTextRecord(root, slug, "current.json");
-
   const enArchive = {};
   for (const slug of archiveSlugs) enArchive[slug] = await readFullTextRecord(root, slug, "en-archive.json");
-
-  const saudiSlug = catalog.fulltext.saudi_en;
-  const saudiEn = saudiSlug ? await readFullTextRecord(root, saudiSlug, "saudi-en.json") : null;
-  return { current, enArchive, saudiEn, saudiSlug };
+  return { localized, current, enArchive };
 }
