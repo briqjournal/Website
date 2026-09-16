@@ -1,0 +1,156 @@
+name: Audit V7I1 deeply
+on:
+  push:
+    branches: [automation/v7i1-deep-audit]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils jq
+      - name: Audit canonical content against source PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          npm ci --no-audit --no-fund
+          python3 - <<'PY'
+          import json, os, re, subprocess, tempfile, urllib.request
+          from pathlib import Path
+          from difflib import SequenceMatcher
+
+          root=Path('.')
+          issue=json.loads((root/'content/issues/v07-i01.json').read_text())
+          print('ARTICLES', len(issue['articles']), issue['articles'])
+          assert len(issue['articles'])==5
+          catalog=json.loads((root/'content/catalog.json').read_text())
+          localized=set(catalog.get('fulltext',{}).get('localized',[]))
+          current=set(catalog.get('fulltext',{}).get('current',[]))
+          enarc=set(catalog.get('fulltext',{}).get('en_archive',[]))
+          print('CATALOG localized/current/en_archive',len(localized),len(current),len(enarc))
+
+          def norm(s):
+            s=s or ''
+            s=s.replace('\u00ad','').replace('’',"'").replace('“','"').replace('”','"')
+            s=re.sub(r'\s+',' ',s).strip().lower()
+            return s
+          def words(s): return re.findall(r"[\wÀ-žğüşöçıİĞÜŞÖÇ'-]+",norm(s),flags=re.UNICODE)
+          def seqratio(a,b): return SequenceMatcher(None,norm(a),norm(b)).ratio()
+          def paragraph_score(p, txt):
+            p=norm(p)
+            if len(p)<40: return 1.0 if p in norm(txt) else 0.0
+            t=norm(txt)
+            # exact-ish chunk coverage first
+            chunks=[p[i:i+180] for i in range(0,len(p),180) if len(p[i:i+180])>=80]
+            hits=sum(1 for c in chunks if c in t)
+            if chunks and hits==len(chunks): return 1.0
+            # token window fuzzy fallback
+            pw=words(p); tw=words(t)
+            if not pw or not tw: return 0.0
+            n=len(pw); step=max(20,n//5)
+            best=0
+            for i in range(0,max(1,len(tw)-n+1),step):
+              cand=' '.join(tw[i:i+n+30])
+              best=max(best,seqratio(' '.join(pw),cand))
+              if best>0.97: break
+            return best
+
+          tmp=Path(tempfile.mkdtemp(prefix='v7i1-audit-'))
+          problems=[]
+          summaries=[]
+          for slug in issue['articles']:
+            base=root/'content/articles'/slug
+            meta=json.loads((base/'metadata.json').read_text())
+            print('\n===',slug,'===')
+            print('type',meta.get('articleType'))
+            print('dates',meta.get('dates'))
+            print('pages',meta.get('pages'))
+            print('doi',meta.get('doi'))
+            print('authors',[a.get('displayName') for a in meta.get('authors',[])])
+            assert meta.get('schemaVersion')==2, f'{slug}: metadata not v2'
+            assert meta.get('journal',{}).get('volume')==7 and meta.get('journal',{}).get('issue')==1
+            if meta.get('dates',{}).get('published')!='2025-12-01': problems.append((slug,'published',meta.get('dates',{}).get('published')))
+            files=sorted(p.name for p in (base/'fulltext').glob('*') if p.is_file())
+            print('fulltext files',files)
+            if files != ['en.json','tr.json']: problems.append((slug,'fulltext-files',files))
+            if slug not in localized or slug in current or slug in enarc: problems.append((slug,'catalog-membership',(slug in localized,slug in current,slug in enarc)))
+            for locale in ['en','tr']:
+              f=json.loads((base/'fulltext'/f'{locale}.json').read_text())
+              ids=[s.get('id','') for s in f.get('sections',[])]
+              if len(ids)!=len(set(ids)): problems.append((slug,locale,'duplicate-section-id'))
+              for sid in ids:
+                if sid and not re.match(rf'^{locale}-section-\d+$',sid): problems.append((slug,locale,'bad-section-id',sid))
+              if meta.get('keywords',{}).get(locale,[]) != f.get('keywords',[]): problems.append((slug,locale,'keyword-mismatch',meta.get('keywords',{}).get(locale,[]),f.get('keywords',[])))
+              flat='\n'.join([s.get('title','')+'\n'+'\n'.join(s.get('paragraphs',[])) for s in f.get('sections',[])])
+              flat += '\n'+'\n'.join(r.get('text','') if isinstance(r,dict) else str(r) for r in f.get('references',[]))
+              if '\ufffd' in flat: problems.append((slug,locale,'replacement-char'))
+              # URL/DOI spaces from PDF line wrapping
+              for m in re.finditer(r'https?://\S*\s+\S*',flat):
+                frag=m.group(0)
+                if re.search(r'https?://[^\s]+\s+(?:[^\s]+\.)?[^\s]+',frag): problems.append((slug,locale,'possible-url-break',frag[:120]))
+              if re.search(r'10\.\d{4,9}/\S*\s+\S+',flat): problems.append((slug,locale,'possible-doi-break'))
+
+              pdfurl=meta.get('urls',{}).get('pdfEn' if locale=='en' else 'pdfTr')
+              if not pdfurl:
+                print(locale,'NO ARTICLE PDF URL')
+                continue
+              out=tmp/f'{slug}-{locale}.pdf'
+              req=urllib.request.Request(pdfurl,headers={'User-Agent':'Mozilla/5.0'})
+              try:
+                with urllib.request.urlopen(req,timeout=30) as r: out.write_bytes(r.read())
+              except Exception as e:
+                problems.append((slug,locale,'pdf-download',str(e))); continue
+              txtfile=out.with_suffix('.txt')
+              subprocess.run(['pdftotext','-layout',str(out),str(txtfile)],check=True)
+              txt=txtfile.read_text(errors='replace')
+              print(locale,'pdf-bytes',out.stat().st_size,'pdf-text-chars',len(txt))
+              # structural metadata presence
+              title=meta.get('title',{}).get(locale,'')
+              title_score=SequenceMatcher(None,norm(title),norm(txt[:5000])).quick_ratio() if title else 1
+              print(locale,'title-in-pdf',norm(title)[:70] in norm(txt))
+              # paragraph fidelity
+              paras=[]
+              for sec in f.get('sections',[]): paras += [p for p in sec.get('paragraphs',[]) if len(norm(p))>=80]
+              scores=[paragraph_score(p,txt) for p in paras]
+              low=[(i,s,paras[i][:120]) for i,s in enumerate(scores) if s<0.75]
+              print(locale,'paras',len(paras),'avg',round(sum(scores)/len(scores),4) if scores else None,'min',round(min(scores),4) if scores else None,'low<.75',len(low))
+              for row in low[:8]: print(' LOW',row)
+              if low: problems.append((slug,locale,'low-paragraphs',low[:8]))
+              # metadata abstract should appear substantially in source if present
+              ab=meta.get('abstract',{}).get(locale)
+              if ab:
+                asc=paragraph_score(ab,txt)
+                print(locale,'abstract-score',round(asc,4))
+                if asc<0.75: problems.append((slug,locale,'abstract-low',asc,ab[:100]))
+              # scan explicit declarations / history labels
+              for label in ['Funding','Finansman','Conflict of Interest','Çıkar Çatışması','Data Availability','Veri Kullanılabilirliği','Artificial Intelligence','Yapay Zekâ','Received','Geliş','Accepted','Kabul','Revised','Revizyon']:
+                if label.lower() in txt.lower(): print(locale,'PDF LABEL',label)
+              summaries.append((slug,locale,len(paras),sum(scores)/len(scores) if scores else None,min(scores) if scores else None))
+
+            # bilingual duplication check
+            en=json.loads((base/'fulltext/en.json').read_text()); tr=json.loads((base/'fulltext/tr.json').read_text())
+            def body(x): return norm(' '.join(p for s in x.get('sections',[]) for p in s.get('paragraphs',[])))
+            ratio=SequenceMatcher(None,body(en)[:20000],body(tr)[:20000]).ratio()
+            print('EN/TR body similarity',round(ratio,4))
+            if ratio>0.85 and len(body(en))>500: problems.append((slug,'suspicious-locale-duplication',ratio))
+
+          print('\n=== SUMMARIES ===')
+          for x in summaries: print(x)
+          print('\n=== PROBLEMS ===')
+          for p in problems: print(p)
+          print('PROBLEM_COUNT',len(problems))
+          PY
+
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+          npm test
+          npm run lint
