@@ -9,18 +9,25 @@ export function ArticleExplorer({ articles, locale = "tr" }: { articles: Archive
   const [query, setQuery] = useState("");
   const [year, setYear] = useState("all");
   const [volume, setVolume] = useState("all");
+  const [type, setType] = useState("all");
   const [pageSize, setPageSize] = useState(20);
   const [page, setPage] = useState(1);
   const years = [...new Set(articles.map((item) => item.year))].sort().reverse();
   const volumes = [...new Set(articles.map((item) => item.volume))].sort((a, b) => b - a);
+  const types = [...new Set(articles.map((item) => locale === "en" ? item.typeEn : item.typeTr).filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b, locale === "tr" ? "tr-TR" : "en-US"));
   const normalized = query.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US");
   const abstractIndex = useArticleSearchIndex(normalized.length >= 2);
   const filtered = useMemo(() => {
     return articles.filter((article) => {
       const text = `${article.titleTr} ${article.titleEn} ${article.author} ${article.doi} ${abstractIndex?.[article.slug] || ""}`.toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US");
-      return (year === "all" || article.year === year) && (volume === "all" || article.volume === Number(volume)) && (!normalized || text.includes(normalized));
+      const articleType = locale === "en" ? article.typeEn : article.typeTr;
+      return (year === "all" || article.year === year)
+        && (volume === "all" || article.volume === Number(volume))
+        && (type === "all" || articleType === type)
+        && (!normalized || text.includes(normalized));
     });
-  }, [abstractIndex, articles, locale, normalized, volume, year]);
+  }, [abstractIndex, articles, locale, normalized, type, volume, year]);
   const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize));
   const currentPage = Math.min(page, pageCount);
   const visible = filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize);
@@ -34,6 +41,7 @@ export function ArticleExplorer({ articles, locale = "tr" }: { articles: Archive
         <div className="article-filter-row">
           <label><span>{locale === "en" ? "Year" : "Yıl"}</span><select value={year} onInput={(event) => update(setYear, event.currentTarget.value)} onChange={(event) => update(setYear, event.target.value)}><option value="all">{locale === "en" ? "All" : "Tümü"}</option>{years.map((item) => <option key={item}>{item}</option>)}</select></label>
           <label><span>{locale === "en" ? "Volume" : "Cilt"}</span><select value={volume} onInput={(event) => update(setVolume, event.currentTarget.value)} onChange={(event) => update(setVolume, event.target.value)}><option value="all">{locale === "en" ? "All" : "Tümü"}</option>{volumes.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
+          <label><span>{locale === "en" ? "Type" : "Tür"}</span><select value={type} onInput={(event) => update(setType, event.currentTarget.value)} onChange={(event) => update(setType, event.target.value)}><option value="all">{locale === "en" ? "All types" : "Tüm türler"}</option>{types.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
           <label><span>{locale === "en" ? "Per page" : "Sayfa başına"}</span><select value={pageSize} onInput={(event) => { setPageSize(Number(event.currentTarget.value)); setPage(1); }} onChange={(event) => { setPageSize(Number(event.target.value)); setPage(1); }}><option>10</option><option>20</option><option>50</option></select></label>
           <strong>{filtered.length} {locale === "en" ? "results" : "sonuç"}</strong>
         </div>
