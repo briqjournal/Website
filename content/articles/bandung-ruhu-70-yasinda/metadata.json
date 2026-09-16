@@ -1,26 +1,43 @@
 {
-  "slug": "bandung-ruhu-70-yasinda",
-  "volume": 6,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2025",
-  "author": "Prof. Dr. Cüneyt Akalın",
-  "title_tr": "Bandung Ruhu 70 Yaşında",
-  "abstract_tr": "Bandung Konferansı olarak bilinen Asya-Afrika Konferansı savaş sonrası dünyanın iki siyasal-ideolojik kutup arasında büyük bir gerginliğe sürüklendiği, savaş öncesi yıkıntılarının henüzkaldırılmamış, sömürgeciliğin tasfiye edilmemiş olduğu koşullarda, bir büyük umut kaynağı olarakışık saçmaya başladı. 24 Nisan 1955’te sonuçlanan Konferansın Sonuç Bildirgesi, sömürgeciliksonrası uluslararası toplumun yapısını şekillendiren temel belge niteliğindedir. Sonuç Bildirgesi’ninözü, sömürgeciliğin tasfiyesi, büyük-küçük ulusların bağımsızlığı ve eşitliği, ekonomik ve kültürelalanlarda işbirliği, ırk ayrımcılığına karış tavır, ulusların kaderini tayin hakkı ve barış içinde bir arayayaşama anlayışıdır. İnsanlık 20. yüzyılın ikinci yarısında vahşi sömürgeciliği büyük ölçüde tasfiye etti,küçük ve büyük uluslar arasındaki uçurum bir ölçüde giderildi, gelişme yolundaki ülkeler aralarındakiekonomik, kültürel işbirliğini artırdılar. 20. yüzyılın ikinci yarısında Bağlantısızlar Hareketi’nidoğuran Bandung Ruhu, günümüzde yeni bölgesel örgütlere hayat veriyor, dolar hakimiyetine,dolayısıyla ABD hegemonyasına karşı mücadele eden, yeni bir uluslararası düzen arayış içinde olanBRICS gibi örgütler, terörizme ve aşırılıklara karşı mücadeleyi esas alan Şangay İşbirliği Örgütü (ŞİÖ)gibi birliktelikler, irili ufaklı birçok bölgesel örgüt Bandung Ruhu’ndan esinlenmeye devam ediyor.",
-  "source_tr": "https://briqjournal.com/bandung-ruhu-70-yasinda",
-  "source_en": "https://briqjournal.com/en/bandung-spirit-70-years-old",
-  "title_en": "Bandung Spirit is 70 Years Old",
-  "abstract_en": "Abstract \n The Asian-African Conference, referred to as the Bandung Conference, emerged as a beacon ofhope in a post-war world fraught with conflict between two political-ideological extremes, wherethe remnants of pre-war devastation remained and colonialism persisted. The Final Declarationof the Conference, ratified on April 24, 1955, is the essential text that influenced the frameworkof the post-colonial international community. The core tenets of the Final Declaration encompassthe eradication of colonialism, the sovereignty and parity of nations regardless of size, economicand cultural collaboration, resistance to racial discrimination, the right to self-determinationfor nations, and the promotion of peaceful coexistence. In the latter part of the 20th century,humanity significantly eradicated harsh colonialism, narrowed the disparity between small andlarge nations to a degree, and enhanced economic and cultural collaboration among developingcountries. In the latter half of the 20th century, the Bandung spirit, which originated the Non-Aligned Movement, is currently invigorating new regional organizations. Entities like BRICS,which challenge dollar supremacy and U.S. hegemony while advocating for a new internationalorder, along with the Shanghai Cooperation Organization (SCO), focused on combating terrorismand extremism, and numerous regional organizations, both large and small, remain influenced bythe Bandung Spirit.",
-  "citation_tr": "Atıf \n Akalın, C. (2025). Bandung Ruhu 70 Yaşında. BRIQ Kuşak ve Yol Girişimi Dergisi 6(3), 311- 330.",
-  "citation_en": "Citation \n Akalın, C. (2025). Bandung Spirit is 70 Years Old. BRIQ Belt & Road Initiative Quarterly, 6(3), 311-330.",
-  "pages": "311-330",
-  "received_date": "2024-12-05",
-  "accepted_date": "2025-01-30",
-  "published_online_date": "2025-06-01",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/C%C3%9CNEYT%20AKALIN_TR2.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/C%C3%9CNEYT%20AKALIN_ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/bandung-ruhu-70-yasinda-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/bandung-ruhu-70-yasinda-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "bandung-ruhu-70-yasinda",
+  "articleType": {"id": "review-article", "tr": "Derleme Makalesi", "en": "Review Article", "peerReviewed": true},
+  "title": {"en": "Bandung Spirit is 70 Years Old", "tr": "Bandung Ruhu 70 Yaşında"},
+  "authors": [
+    {"displayName": "Prof. Dr. Cüneyt Akalın", "givenName": "Cüneyt", "familyName": "Akalın", "orcid": null, "affiliations": []}
+  ],
+  "abstract": {
+    "en": "The Asian-African Conference, referred to as the Bandung Conference, emerged as a beacon ofhope in a post-war world fraught with conflict between two political-ideological extremes, wherethe remnants of pre-war devastation remained and colonialism persisted. The Final Declarationof the Conference, ratified on April 24, 1955, is the essential text that influenced the frameworkof the post-colonial international community. The core tenets of the Final Declaration encompassthe eradication of colonialism, the sovereignty and parity of nations regardless of size, economicand cultural collaboration, resistance to racial discrimination, the right to self-determinationfor nations, and the promotion of peaceful coexistence. In the latter part of the 20th century,humanity significantly eradicated harsh colonialism, narrowed the disparity between small andlarge nations to a degree, and enhanced economic and cultural collaboration among developingcountries. In the latter half of the 20th century, the Bandung spirit, which originated the Non-Aligned Movement, is currently invigorating new regional organizations. Entities like BRICS,which challenge dollar supremacy and U.S. hegemony while advocating for a new internationalorder, along with the Shanghai Cooperation Organization (SCO), focused on combating terrorismand extremism, and numerous regional organizations, both large and small, remain influenced bythe Bandung Spirit.",
+    "tr": "Bandung Konferansı olarak bilinen Asya-Afrika Konferansı savaş sonrası dünyanın iki siyasal-ideolojik kutup arasında büyük bir gerginliğe sürüklendiği, savaş öncesi yıkıntılarının henüzkaldırılmamış, sömürgeciliğin tasfiye edilmemiş olduğu koşullarda, bir büyük umut kaynağı olarakışık saçmaya başladı. 24 Nisan 1955’te sonuçlanan Konferansın Sonuç Bildirgesi, sömürgeciliksonrası uluslararası toplumun yapısını şekillendiren temel belge niteliğindedir. Sonuç Bildirgesi’ninözü, sömürgeciliğin tasfiyesi, büyük-küçük ulusların bağımsızlığı ve eşitliği, ekonomik ve kültürelalanlarda işbirliği, ırk ayrımcılığına karış tavır, ulusların kaderini tayin hakkı ve barış içinde bir arayayaşama anlayışıdır. İnsanlık 20. yüzyılın ikinci yarısında vahşi sömürgeciliği büyük ölçüde tasfiye etti,küçük ve büyük uluslar arasındaki uçurum bir ölçüde giderildi, gelişme yolundaki ülkeler aralarındakiekonomik, kültürel işbirliğini artırdılar. 20. yüzyılın ikinci yarısında Bağlantısızlar Hareketi’nidoğuran Bandung Ruhu, günümüzde yeni bölgesel örgütlere hayat veriyor, dolar hakimiyetine,dolayısıyla ABD hegemonyasına karşı mücadele eden, yeni bir uluslararası düzen arayış içinde olanBRICS gibi örgütler, terörizme ve aşırılıklara karşı mücadeleyi esas alan Şangay İşbirliği Örgütü (ŞİÖ)gibi birliktelikler, irili ufaklı birçok bölgesel örgüt Bandung Ruhu’ndan esinlenmeye devam ediyor."
+  },
+  "keywords": {
+    "en": ["imperialism", "non-alignment", "Non-Aligned Movement", "right of nation to self-determination", "struggle against colonialism"],
+    "tr": ["Bağlantısızlık", "Bağlantısızlar Hareketi", "emperyalizm", "sömürgeciliğe karşı mücadele", "kendi kaderini tayin hakkı"]
+  },
+  "dates": {"received": "2024-12-05", "revised": null, "accepted": "2025-01-30", "published": "2025-06-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 3, "year": 2025, "season": {"en": "Summer", "tr": "Yaz"}},
+  "pages": {"first": "311", "last": "330"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Akalın, C. (2025). Bandung Spirit is 70 Years Old. BRIQ Belt & Road Initiative Quarterly, 6(3), 311-330.",
+    "tr": "Akalın, C. (2025). Bandung Ruhu 70 Yaşında. BRIQ Kuşak ve Yol Girişimi Dergisi 6(3), 311-330."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/bandung-spirit-70-years-old",
+    "tr": "https://briqjournal.com/bandung-ruhu-70-yasinda",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/C%C3%9CNEYT%20AKALIN_ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/C%C3%9CNEYT%20AKALIN_TR2.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/bandung-ruhu-70-yasinda-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/bandung-ruhu-70-yasinda-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
