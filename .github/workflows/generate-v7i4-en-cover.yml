@@ -1,0 +1,55 @@
+name: Generate V7I4 English cover
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/generate-v7i4-en-cover.yml
+
+permissions:
+  contents: write
+
+jobs:
+  generate-cover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install PDF renderer
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: Download the published English issue PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 5 --retry-all-errors \
+            --user-agent 'BRIQ cover sync/1.0 (+https://briqjournal.com)' \
+            --output /tmp/briq-v7i4-en.pdf \
+            'https://briqjournal.com/sites/default/files/dergi-sayilari/2026-08/BRIQ%20Volume7%20Issue4%20AUTUMN%202026.pdf'
+          test "$(head -c 5 /tmp/briq-v7i4-en.pdf)" = '%PDF-'
+
+      - name: Render first page as the canonical English cover
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p public/assets/archive/covers
+          pdftoppm -f 1 -singlefile -jpeg -r 180 -jpegopt quality=94 \
+            /tmp/briq-v7i4-en.pdf \
+            public/assets/archive/covers/cilt-7-sayi-4-en-v3
+          test -s public/assets/archive/covers/cilt-7-sayi-4-en-v3.jpg
+
+      - name: Commit generated cover
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'BRIQ Cover Bot'
+          git config user.email 'briq@briqjournal.com'
+          git add public/assets/archive/covers/cilt-7-sayi-4-en-v3.jpg
+          if git diff --cached --quiet; then
+            echo 'Cover already current.'
+            exit 0
+          fi
+          git commit -m 'Generate English Volume 7 Issue 4 cover'
+          git push origin HEAD:main
