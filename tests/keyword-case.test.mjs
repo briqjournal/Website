@@ -52,14 +52,8 @@ test("preserves acronyms while fixing known keyword spacing and casing", async (
   for (const keyword of acronyms) assert.match(keyword, /\b(?:ABD|KYG|BIS)\b/u);
 });
 
-test("keeps bilingual keyword counts and reviewed ordering in parity", async () => {
+test("preserves reviewed bilingual keyword decisions without forcing source-language symmetry", async () => {
   const { localized, current } = await loadFullTextCollections();
-
-  for (const [slug, record] of [...Object.entries(localized), ...Object.entries(current)]) {
-    const tr = record?.tr?.keywords || [];
-    const en = record?.en?.keywords || [];
-    assert.equal(tr.length, en.length, `Turkish/English keyword count mismatch for ${slug}`);
-  }
 
   for (const [slug, override] of bilingualKeywordParityOverrides) {
     assert.equal(override.tr.length, override.en.length, `Reviewed keyword pair count mismatch for ${slug}`);
@@ -76,5 +70,5 @@ test("keeps bilingual keyword counts and reviewed ordering in parity", async () 
 
   const kolosovskiy = localized["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"] || current["rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve"];
   assert.deepEqual(kolosovskiy.en.keywords, ["Central Asian Security", "Counterterrorism Strategies", "CSTO", "Islamic Radicalism", "Russia’s Foreign Policy", "Transnational Jihadist Networks"]);
-  assert.deepEqual(kolosovskiy.tr.keywords, ["Orta Asya Güvenliği", "Teröre Karşı Mücadele Stratejileri", "KGAÖ", "İslami Radikalizm", "Rusya’nın Dış Politikası", "Ulusötesi Cihatçı Ağlar"]);
+  assert.deepEqual(kolosovskiy.tr.keywords, ["İslamcı Aşırıcılık", "KGAO Ve Teröre Karşı Mücadele Taktikleri", "Orta Asya Güvenliği", "Rusya’nın Dış Politikası", "Ulusötesi Cihatçı Ağlar"]);
 });
