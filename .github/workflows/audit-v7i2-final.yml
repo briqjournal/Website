@@ -1,0 +1,61 @@
+name: Final V7I2 integrity audit
+on:
+  push:
+    branches: [automation/v7i2-final-audit]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit canonical V7I2 content
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'JS'
+          const fs=require('fs'); const path=require('path');
+          const issue=JSON.parse(fs.readFileSync('content/issues/v07-i02.json','utf8'));
+          const catalog=JSON.parse(fs.readFileSync('content/catalog.json','utf8'));
+          const errors=[]; const warnings=[];
+          const normalize=s=>String(s??'').replace(/\s+/g,' ').trim();
+          function terminalUrl(text){
+            const value=normalize(text); const i=value.search(/https?:\/\//i); if(i<0)return null;
+            const tail=value.slice(i);
+            const markers=[/\s+\(?(?:Erişim|Retrieved|Accessed)\b/iu,/\s+(?:adresinden|adresine)\b/iu];
+            let end=tail.length; for(const re of markers){const m=tail.search(re); if(m>=0)end=Math.min(end,m)}
+            return tail.slice(0,end).replace(/[.,;:]$/,'');
+          }
+          for(const slug of issue.articles){
+            const dir=path.join('content/articles',slug,'fulltext');
+            const files=fs.readdirSync(dir).sort();
+            if(JSON.stringify(files)!==JSON.stringify(['en.json','tr.json'])) errors.push(`${slug}: files=${files.join(',')}`);
+            if(!catalog.fulltext.localized.includes(slug)||catalog.fulltext.current.includes(slug)||catalog.fulltext.en_archive.includes(slug)) errors.push(`${slug}: bad catalog membership`);
+            for(const locale of ['tr','en']){
+              const x=JSON.parse(fs.readFileSync(path.join(dir,`${locale}.json`),'utf8'));
+              const body=(x.sections??[]).flatMap(s=>s.paragraphs??[]).join('\n');
+              if(!x.sections?.length)errors.push(`${slug}/${locale}: no sections`);
+              if(/�|Ã.|Â.|â€|â€™/.test(JSON.stringify(x)))errors.push(`${slug}/${locale}: mojibake`);
+              const page=[...body.matchAll(/(?<=[A-Za-zÀ-ž])\d{3}\s+(?=[A-Za-zÀ-ž])/gu)];
+              if(page.length)errors.push(`${slug}/${locale}: embedded page token ${page[0][0]}`);
+              for(const ref of x.references??[]){
+                const s=normalize(ref.text); const url=terminalUrl(ref.text);
+                if(url&&/\s/u.test(url)) errors.push(`${slug}/${locale}/${ref.id}: split URL: ${url}`);
+                if(url&&/^https:\/\/10\./i.test(url)) errors.push(`${slug}/${locale}/${ref.id}: malformed DOI URL: ${url}`);
+                const doi=s.match(/\bdoi:\s*(10\..*)$/iu)?.[1];
+                if(doi&&/\s/u.test(doi)) errors.push(`${slug}/${locale}/${ref.id}: split DOI: ${doi}`);
+              }
+              for(const note of x.footnotes??[]){
+                const url=terminalUrl(note.text); if(url&&/\s/u.test(url))errors.push(`${slug}/${locale}/${note.id}: split footnote URL: ${url}`);
+              }
+            }
+            const tr=JSON.parse(fs.readFileSync(path.join(dir,'tr.json'),'utf8'));
+            const en=JSON.parse(fs.readFileSync(path.join(dir,'en.json'),'utf8'));
+            if(JSON.stringify(tr)===JSON.stringify(en))errors.push(`${slug}: identical locales`);
+            if((tr.keywords??[]).length!==(en.keywords??[]).length)errors.push(`${slug}: keyword count mismatch ${tr.keywords?.length??0}/${en.keywords?.length??0}`);
+          }
+          console.log(`Audited ${issue.articles.length} V7I2 contributions.`);
+          if(warnings.length)console.log('WARNINGS\n'+warnings.join('\n'));
+          if(errors.length){console.error('ERRORS\n'+errors.join('\n'));process.exit(2)}
+          console.log('V7I2 final integrity audit clean.');
+          JS
