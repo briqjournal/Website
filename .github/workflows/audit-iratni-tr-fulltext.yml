@@ -1,4 +1,4 @@
-name: Audit Iratni Turkish full text
+name: Repair Iratni Turkish full text
 
 on:
   push:
@@ -7,15 +7,18 @@ on:
       - '.github/workflows/audit-iratni-tr-fulltext.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  audit:
+  repair:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Audit Turkish PDF extraction against HTML source
+        with:
+          fetch-depth: 0
+      - name: Repair and validate Turkish full text
         run: |
+          git pull --rebase origin main
           python -m pip install --quiet pymupdf
           curl -L --fail --retry 3 'https://www.briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Belkacem%20Iratni_TR.pdf' -o /tmp/iratni-tr.pdf
           python <<'PY'
@@ -23,81 +26,252 @@ jobs:
           from pathlib import Path
           import pymupdf as fitz
 
-          p = Path('content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/tr.json')
+          root = Path('content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine')
+          p = root / 'fulltext' / 'tr.json'
           data = json.loads(p.read_text(encoding='utf-8'))
-          sections = data['sections']
+          by_id = {s['id']: s for s in data['sections']}
+          assert list(by_id) == [f'tr-section-{i}' for i in range(1, 8)]
 
-          def norm(s):
-              s = unicodedata.normalize('NFKC', s)
-              s = s.replace('\u00ad','').replace('’', "'").replace('“','"').replace('”','"')
-              return re.sub(r'\s+', ' ', s).strip()
-
+          # Verify the authoritative Turkish PDF and the article's source hierarchy.
           doc = fitz.open('/tmp/iratni-tr.pdf')
-          article_pages = []
-          for i, page in enumerate(doc):
-              txt = norm(page.get_text('text'))
-              if 'Cezayir Devrimci Diplomasisi' in txt or article_pages:
-                  article_pages.append(i)
-                  if 'Kaynakça' in txt and len(article_pages) > 2:
-                      break
-          print('ARTICLE_PAGES', article_pages)
+          pdf_raw = '\n'.join(page.get_text('text') for page in doc)
+          def norm(value):
+              value = unicodedata.normalize('NFKC', value).replace('\u00ad', '')
+              value = value.replace('’', "'").replace('“', '"').replace('”', '"')
+              value = re.sub(r'-\s*\n\s*', '', value)
+              return re.sub(r'\s+', ' ', value).strip()
+          pdf_text = norm(pdf_raw)
+          for needle in [
+              'Gana ve Mali\'nin FLN özgürlük savaşçılarına verdiği desteğin arkasında o vardı',
+              'Nadiren bahsedilen bir olay da Fidel Castro\'nun Cezayir\'e verdiği destektir',
+              'modern bir Devlet',
+              'Silahlı mücadelenin kullanımı ulusal egemenliğe erişim sağlamak için belirleyici olabilir',
+              'Cezayir\'in durumunda olduğu gibi',
+              'yönetilen bu gemi',
+              'ikinci Bandung',
+          ]:
+              assert norm(needle).lower() in pdf_text.lower(), needle
 
-          pdf_text = '\n'.join(doc[i].get_text('text') for i in article_pages)
-          pdf_norm = norm(pdf_text)
-          print('PDF_WORDS', len(pdf_norm.split()))
-          print('JSON_SECTIONS', [(s['title'], s.get('level'), len(s.get('paragraphs',[]))) for s in sections])
-          print('JSON_REFS', len(data.get('references',[])))
+          def find_index(ps, *, starts=None, ends=None, exact=None, contains=None):
+              matches = []
+              for i, value in enumerate(ps):
+                  ok = True
+                  if starts is not None: ok &= value.startswith(starts)
+                  if ends is not None: ok &= value.rstrip().endswith(ends)
+                  if exact is not None: ok &= value.strip() == exact
+                  if contains is not None: ok &= contains in value
+                  if ok: matches.append(i)
+              assert len(matches) == 1, (starts, ends, exact, contains, matches)
+              return matches[0]
 
-          print('\nSUSPICIOUS_BOUNDARIES')
-          for s in sections:
-              ps = s.get('paragraphs', [])
-              for i in range(len(ps)-1):
-                  a,b = ps[i].strip(), ps[i+1].strip()
-                  if (a and b and (not re.search(r'[.!?:;”"\)]$', a) or re.match(r'^[a-zçğıöşü]', b))):
-                      print(s['id'], i, '=>', a[-120:], '|||', b[:120])
+          def merge_pair(ps, *, first_ends=None, first_starts=None, second_starts=None):
+              i = find_index(ps, starts=first_starts, ends=first_ends)
+              assert i + 1 < len(ps), (i, len(ps))
+              if second_starts is not None:
+                  assert ps[i + 1].startswith(second_starts), (ps[i][-120:], ps[i + 1][:120])
+              ps[i] = ps[i].rstrip() + ' ' + ps[i + 1].lstrip()
+              del ps[i + 1]
+              return i
 
-          print('\nDUPLICATE_PARAGRAPHS')
-          seen = {}
-          for s in sections:
-              for i,p0 in enumerate(s.get('paragraphs', [])):
-                  k = norm(p0).lower()
-                  if k in seen:
-                      print('DUP', seen[k], 'AND', (s['id'],i), '::', p0[:180])
-                  else:
-                      seen[k] = (s['id'],i)
+          def remove_exact(ps, text):
+              i = find_index(ps, exact=text)
+              del ps[i]
 
-          print('\nSUSPICIOUS_SHORT_PARAGRAPHS')
-          for s in sections:
-              for i,p0 in enumerate(s.get('paragraphs', [])):
-                  if len(norm(p0).split()) <= 12:
-                      print(s['id'], i, repr(p0))
+          # Section 1 — undo column/page extraction splits and duplicate text.
+          s1 = by_id['tr-section-1']['paragraphs']
+          assert s1[0].startswith('NISAN 1955’TE GERÇEKLEŞTIRILEN BANDUNG Konferansı')
+          s1[0] = s1[0].replace('NISAN 1955’TE GERÇEKLEŞTIRILEN BANDUNG Konferansı', 'Nisan 1955’te gerçekleştirilen Bandung Konferansı', 1)
+          remove_exact(s1, 'Nadiren bahsedilen bir olay da Fidel Castro’nun Cezayir’e verdiği destektir.')
+          merge_pair(s1, first_ends='Gana ve Mali’nin FLN', second_starts='özgürlük savaşçılarına verdiği desteğin arkasında')
+          bullet_i = find_index(s1, starts='Büyük Güçlerden birinin hakimiyetindeki')
+          assert s1[bullet_i + 1].startswith('Büyük ve küçük, güçlü ve zayıf')
+          assert s1[bullet_i + 2].startswith('Her ülkenin kendi kaderini tayin etme hakkı')
+          assert s1[bullet_i + 3].strip() == 've'
+          assert s1[bullet_i + 4].startswith('Uluslararası anlaşmazlıkların çözümünde')
+          s1[bullet_i:bullet_i + 5] = [
+              '- Büyük Güçlerden birinin hakimiyetindeki herhangi bir askeri ya da ideolojik bloğa üye olunmaması,',
+              '- Büyük ve küçük, güçlü ve zayıf uluslar arasındaki ilişkilerde eşitliğe bağlılık,',
+              '- Her ülkenin kendi kaderini tayin etme hakkı ve',
+              '- Uluslararası anlaşmazlıkların çözümünde bir yöntem olarak güç kullanmaktan kaçınma (Rubinstein, 1970).',
+          ]
+          merge_pair(s1, first_ends='kurmaya karar verdi', second_starts='(Déclaration, 1962).')
 
-          print('\nHEADING_STYLES')
-          targets = [s['title'] for s in sections]
-          for i in article_pages:
-              page = doc[i]
-              for block in page.get_text('dict').get('blocks', []):
-                  if 'lines' not in block: continue
-                  lines=[]; spans=[]
-                  for ln in block['lines']:
-                      t=''.join(sp.get('text','') for sp in ln.get('spans',[])).strip()
-                      if t: lines.append(t)
-                      spans += ln.get('spans',[])
-                  text=norm(' '.join(lines))
-                  for h in targets:
-                      if norm(h).lower() == text.lower():
-                          print(i+1, h, max([float(sp.get('size',0)) for sp in spans] or [0]), sorted({sp.get('font','') for sp in spans}))
+          # Section 2 — restore source order and the sentence split across columns.
+          s2 = by_id['tr-section-2']['paragraphs']
+          merge_pair(s2, first_ends='Silahlı mücadelenin kullanımı ulusal', second_starts='egemenliğe erişim sağlamak için belirleyici olabilir')
+          def one(prefix):
+              found = [x for x in s2 if x.startswith(prefix)]
+              assert len(found) == 1, (prefix, len(found))
+              return found[0]
+          s2[:] = [
+              one('1963 yılında Addis Ababa’da'),
+              one('Ben Bella’nın söylemini takiben'),
+              one('Cezayirli liderler, bağımsızlık için savaşan'),
+              one('1964’te kabul edilen Cezayir Sözleşmesi’ne göre'),
+              one('Sömürgeciliğe karşı bir kurtuluş savaşında vücut bulan'),
+          ]
 
-          print('\nREFERENCE_URL_ISSUES')
-          for r in data.get('references', []):
-              t = r['text'] if isinstance(r,dict) else str(r)
-              if re.search(r'https?://\S*(?:adresinden|adresine)', t, re.I) or re.search(r'\.(?:html?|pdf)adresinden', t, re.I) or re.search(r'\d{4}num', t):
-                  print((r.get('id') if isinstance(r,dict) else '?'), t)
+          # Section 3 — repair mid-sentence page/column breaks and remove a repeated extraction fragment.
+          s3 = by_id['tr-section-3']['paragraphs']
+          merge_pair(s3, first_ends='Holden Roberto liderliğindeki', second_starts='Angola Ulusal Kurtuluş Hareketi')
+          merge_pair(s3, first_ends='birkaç yıl önce Cezayir’in', second_starts='durumunda olduğu gibi')
+          remove_exact(s3, 'Cezayir diplomasisi, 1990’lara kadar devam eden kurtuluş hareketlerinin bağımsızlık mücadelelerine diplomatik desteğin ön saflarında yer aldı.')
+          merge_pair(s3, first_ends='Ekvator Ginesi’nin (MAE) bağımsızlığına', second_starts='yol açan barış anlaşmalarıyla ilgili')
 
-          print('\nPDF_SNIPPETS_AROUND_KNOWN_AREAS')
-          needles = ['Fidel Castro', 'Gana ve Mali', 'modern bir Devlet', 'Cezayir Sözleşmesi', 'İsrail’e karşı', 'özgürlüğün ilk kurşunu', 'ikinci Bandung', 'Abdelaziz Bouteflika']
-          for needle in needles:
-              idx = pdf_norm.lower().find(norm(needle).lower())
-              print('\n--', needle, idx)
-              if idx >= 0: print(pdf_norm[max(0,idx-450):idx+1200])
+          # Section 4 — remove the malformed duplicate Mandela paragraph and repair broken sentences.
+          s4 = by_id['tr-section-4']['paragraphs']
+          merge_pair(s4, first_ends='tarafından yönetilen bu', second_starts='gemi, Süveyş Kanalı’ndan')
+          bad_mandela = [i for i, x in enumerate(s4) if x.startswith('1990’da hapisten çıktıktan sonra Mandela') and '(Larbi, 2014)' not in x]
+          assert len(bad_mandela) == 1, bad_mandela
+          del s4[bad_mandela[0]]
+          merge_pair(s4, first_ends='Apartheid güvenlik güçleri', second_starts='tarafından tutuklandı ve 27 yıl')
+
+          # Section 5 — remove page-flow duplicates and join sentences split by the PDF layout.
+          s5 = by_id['tr-section-5']['paragraphs']
+          duplicate_bandung = [i for i, x in enumerate(s5) if x.startswith('Kapsamlı diplomatik çabaların ardından Cezayirliler') and '(Perspective, 1973)' not in x]
+          assert len(duplicate_bandung) == 1, duplicate_bandung
+          del s5[duplicate_bandung[0]]
+          merge_pair(s5, first_ends='BM çatısı altında bir Dünya Enerji', second_starts='Konferansı önerisine tepki olarak')
+          remove_exact(s5, 'Amaç, ABD’nin OPEC üyesi ülkeleri petrol dışı gelişmekte olan ülkelere karşı kullanarak üçüncü dünya koalisyonunu zayıflatma manevralarına karşı koymaktı.')
+          merge_pair(s5, first_ends='Mart 1974’te Küba ve Güneydoğu Asya’ya gitti ve', second_starts='Temmuz 1975’te Kuzey-Güney diyaloğunun')
+          merge_pair(s5, first_ends='birincil dış gelir kaynakları olan petrol ve', second_starts='gaz fiyatlarında önemli bir düşüş')
+          duplicate_bouteflika = [i for i, x in enumerate(s5) if x.startswith('Abdelaziz Bouteflika’nın 1999’da iktidara gelmesinin ardından') and '(Iratni, 2015)' not in x]
+          assert len(duplicate_bouteflika) == 1, duplicate_bouteflika
+          del s5[duplicate_bouteflika[0]]
+          merge_pair(s5, first_ends='Varşova Paktı’nın dağılmasına rağmen sağlam kalmasına', second_starts='benzer şekilde, Bağlantısızlık')
+
+          # Section 6 — remove the repeated UNGA-vote sentence and repair two column breaks.
+          s6 = by_id['tr-section-6']['paragraphs']
+          remove_exact(s6, 'BM’deki oylama, çok sayıda Güney ülkesinin, ABD ve Avrupa Birliği’ne olan önemli ekonomik, mali ve askeri bağımlılıklarına rağmen Batılı konumlardan uzaklaştığını gösterdi.')
+          merge_pair(s6, first_ends='ideolojik bağlılıklara dayalı olarak uluslar arasındaki küresel', second_starts='bölünmeyi yansıtan bir paradigma')
+          merge_pair(s6, first_ends='Sahel-Sahra’da da bölgesel bir güç ve istikrar sağlayıcı bir güç olarak önemi nedeniyle geçici olabilir ve her iki', second_starts='bölgedeki dış müdahalelere rağmen')
+
+          # Obvious Turkish OCR/case artefacts that visibly damage the HTML.
+          replacements = {
+              'Iskandinavya': 'İskandinavya',
+              'Dış Ilişkiler': 'Dış İlişkiler',
+              'Ingiliz': 'İngiliz',
+              'ülklerinden': 'ülkelerinden',
+              'Israil': 'İsrail',
+              'Ispanya': 'İspanya',
+              'Ilişkin': 'İlişkin',
+              'Ilkeler': 'İlkeler',
+              'Islami': 'İslami',
+              'Islam Devleti': 'İslam Devleti',
+              'Italya': 'İtalya',
+              'Bilim Insanları': 'Bilim İnsanları',
+              'Bunu yanı sıra': 'Bunun yanı sıra',
+              'modern bir Devlet ”': 'modern bir Devlet”',
+          }
+          for section in data['sections']:
+              section['paragraphs'] = [
+                  __import__('functools').reduce(lambda value, item: value.replace(*item), replacements.items(), paragraph)
+                  for paragraph in section.get('paragraphs', [])
+              ]
+
+          # Remove a running-header artefact from the bibliography and repair extraction-broken URLs.
+          refs = [r for r in data.get('references', []) if not r.get('text', '').startswith('Belkacem Iratni- Cezayir Devrimci Diplomasisi')]
+          assert len(refs) == 31, len(refs)
+          url_replacements = {
+              '38523-sp-oau summitmay1963speeches.pdf': '38523-sp-oau_summit_may_1963_speeches.pdf',
+              'https://www.persee.fr/doc/afdi0066-30851959 num511468': 'https://www.persee.fr/doc/afdi_0066-3085_1959_num_5_1_1468',
+              'algerie-charted’alger1964.htm': 'algerie-charte_d’alger1964.htm',
+              'laguerre-froide-suite-et-fin': 'la-guerre-froide-suite-et-fin',
+              '19thnam-summ': '19th-nam-summ',
+              'entremouvements-rivaux24995581819218.html': 'entre-mouvements-rivaux_2499558_1819218.html',
+              'visionfor-2024-active-non-alignment-in-a-shiftingglobal-landscape': 'vision-for-2024-active-non-alignment-in-a-shifting-global-landscape',
+              '/policy-analysis/ algerias-foreign-policy-facing-crossroads': '/policy-analysis/algerias-foreign-policy-facing-crossroads',
+              'https://www.dzairtube.dz/en/': 'https://www.dzair-tube.dz/en/',
+              'https://www.un.rg/dppa/decolonization/en/about#:~:text=1960,a%20right%20to%20self%2': 'https://www.un.org/dppa/decolonization/en/about',
+              'Magazine ,': 'Magazine,',
+              'Etrangère ,': 'Etrangère,',
+              'Senouci.(2022)': 'Senouci. (2022)',
+              '(2020).Hommage': '(2020). Hommage',
+          }
+          for i, ref in enumerate(refs, 1):
+              text = ref['text']
+              for old, new in url_replacements.items():
+                  text = text.replace(old, new)
+              text = re.sub(r'(?<=\S)(adresinden alınmıştır\.)', r' \1', text)
+              ref['id'] = f'ref-{i}'
+              ref['text'] = text
+          data['references'] = refs
+
+          # Integrity checks for every defect repaired above.
+          body = '\n'.join(x for s in data['sections'] for x in s.get('paragraphs', []))
+          assert len(body.split()) > 6000
+          for bad in [
+              'Gana ve Mali’nin FLN\nözgürlük',
+              '\n(Declaration, 1962)',
+              'Nadiren bahsedilen bir olay da Fidel Castro’nun Cezayir’e verdiği destektir.\nNadiren',
+              'Cezayir ordusu beni bir adam yaptı\\" dedi',
+              'Dış Ilişkiler', 'Ingiliz', 'Israil', 'Ispanya', 'Ilişkin', 'Ilkeler', 'Islami', 'Islam Devleti', 'Italya',
+              'Bunu yanı sıra',
+          ]:
+              assert bad not in body, bad
+          normalized_paragraphs = []
+          for section in data['sections']:
+              for paragraph in section.get('paragraphs', []):
+                  key = re.sub(r'\s+', ' ', paragraph).strip().lower()
+                  assert key not in normalized_paragraphs, ('duplicate paragraph', paragraph[:160])
+                  normalized_paragraphs.append(key)
+          assert sum('Nadiren bahsedilen bir olay da Fidel Castro’nun Cezayir’e verdiği destektir.' in x for x in [body]) == 1
+          assert body.count('Cezayir diplomasisi, 1990’lara kadar devam eden kurtuluş hareketlerinin bağımsızlık mücadelelerine diplomatik desteğin ön saflarında yer aldı.') == 1
+          assert body.count('Kapsamlı diplomatik çabaların ardından Cezayirliler, Eylül 1973’te bağlantısız devletlerin dördüncü zirve konferansına başarıyla ev sahipliği yaptı') == 1
+          assert body.count('Abdelaziz Bouteflika’nın 1999’da iktidara gelmesinin ardından Cezayir diplomasisi') == 1
+          assert [s['level'] for s in data['sections']] == ['section','section','subsection','subsection','section','section','section']
+          for ref in data['references']:
+              assert 'Belkacem Iratni- Cezayir Devrimci Diplomasisi' not in ref['text']
+              for url in re.findall(r'https?://\S+', ref['text']):
+                  assert 'adresinden' not in url, url
+                  assert ' ' not in url, url
+
+          p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('SECTIONS', [(s['title'], s['level'], len(s['paragraphs'])) for s in data['sections']])
+          print('REFERENCES', len(data['references']))
           PY
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/tr.json
+          git commit -m 'Repair Iratni Turkish full text from source PDF'
+
+          npm ci
+          npm test
+          npm run lint
+
+          node --input-type=module <<'NODE'
+          import { pathToFileURL } from 'node:url';
+          const workerUrl = pathToFileURL(`${process.cwd()}/dist/server/index.js`);
+          workerUrl.searchParams.set('verify', `${Date.now()}`);
+          const { default: worker } = await import(workerUrl.href);
+          const env = { ASSETS: { fetch: async () => new Response('Not found', { status: 404 }) } };
+          const context = { waitUntil() {}, passThroughOnException() {} };
+          let url = 'https://briqjournal.com/tr/makaleler/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/';
+          let response = await worker.fetch(new Request(url, { headers: { accept: 'text/html' } }), env, context);
+          if ([301, 302, 307, 308].includes(response.status)) {
+            const location = response.headers.get('location');
+            if (!location) throw new Error(`redirect ${response.status} missing Location`);
+            url = new URL(location, url).href;
+            response = await worker.fetch(new Request(url, { headers: { accept: 'text/html' } }), env, context);
+          }
+          if (!response.ok) throw new Error(`target article render failed: ${response.status}`);
+          const html = await response.text();
+          for (const needle of ['Cezayir Devrimci Diplomasisi', 'Devrimcilerin “Mekke’si”', 'Diplomatik destek', 'Afrika özgürlük savaşçıları için silah ve askeri eğitim', 'Sonuç']) {
+            if (!html.includes(needle)) throw new Error(`target HTML missing: ${needle}`);
+          }
+          for (const bad of ['Dış Ilişkiler', 'Israil', 'Ispanya', 'Bilim Insanları', 'Bunu yanı sıra', 'Cezayir ordusu beni bir adam yaptı\\" dedi', '1954adresinden']) {
+            if (html.includes(bad)) throw new Error(`target HTML still contains extraction artefact: ${bad}`);
+          }
+          const fidel = (html.match(/Nadiren bahsedilen bir olay da Fidel Castro’nun Cezayir’e verdiği destektir\./g) || []).length;
+          if (fidel !== 1) throw new Error(`unexpected Fidel duplicate count: ${fidel}`);
+          console.log('TARGET_RENDER_OK', response.status, html.length);
+          NODE
+
+          # Build scripts can touch generated tracked files; keep only the audited source repair.
+          git reset --hard HEAD
+          rm .github/workflows/audit-iratni-tr-fulltext.yml
+          git add .github/workflows/audit-iratni-tr-fulltext.yml
+          git commit -m 'Remove one-time Iratni Turkish audit workflow'
+          git pull --rebase origin main
+          git push origin HEAD:main
