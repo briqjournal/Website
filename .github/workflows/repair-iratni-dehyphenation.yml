@@ -42,6 +42,7 @@ jobs:
           def norm(s):
               s = unicodedata.normalize('NFC', s).replace('\u00ad', '')
               s = re.sub(r'\s+', ' ', s).strip()
+              s = re.sub(r'(?<=[A-Za-z])-\s+(?=[a-z])', '', s)
               s = re.sub(r'\s+([,.;:?!])', r'\1', s)
               s = re.sub(r'\(\s+', '(', s)
               s = re.sub(r'\s+\)', ')', s)
