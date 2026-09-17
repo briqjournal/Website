@@ -68,7 +68,6 @@ jobs:
           assert 'Diplomatic support' in found
           assert 'Arms and military training for African freedom fighters' in found
 
-          # These two are subordinate headings within “The Mecca of the Revolutionaries” in the source layout.
           levels = ['section', 'section', 'subsection', 'subsection', 'section', 'section', 'section']
           for section, level in zip(data['sections'], levels):
               section['level'] = level
@@ -88,9 +87,15 @@ jobs:
           const { default: worker } = await import(workerUrl.href);
           const env = { ASSETS: { fetch: async () => new Response('Not found', { status: 404 }) } };
           const context = { waitUntil() {}, passThroughOnException() {} };
-          const path = '/en/articles/the-algerian-revolutionary-diplomacy-from-the-bandung-basic-initiation-to-a-new-concept-of-non-alignment/';
-          const response = await worker.fetch(new Request(`https://briqjournal.com${path}`, { headers: { accept: 'text/html' } }), env, context);
-          console.log('TARGET_STATUS', response.status);
+          let url = 'https://briqjournal.com/en/articles/the-algerian-revolutionary-diplomacy-from-the-bandung-basic-initiation-to-a-new-concept-of-non-alignment/';
+          let response = await worker.fetch(new Request(url, { headers: { accept: 'text/html' } }), env, context);
+          if ([301, 302, 307, 308].includes(response.status)) {
+            const location = response.headers.get('location');
+            if (!location) throw new Error(`redirect ${response.status} missing Location`);
+            url = new URL(location, url).href;
+            response = await worker.fetch(new Request(url, { headers: { accept: 'text/html' } }), env, context);
+          }
+          console.log('TARGET_STATUS', response.status, url);
           if (!response.ok) throw new Error(`target article render failed: ${response.status}`);
           const html = await response.text();
           for (const needle of ['The Algerian Revolutionary Diplomacy', 'The “Mecca” of the Revolutionaries', 'Diplomatic support', 'Conclusion']) {
