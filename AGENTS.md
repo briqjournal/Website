@@ -21,10 +21,6 @@ This repository powers the bilingual BRIQ journal site on Cloudflare Workers. Op
 7. For shared interface copy or behavior, check both Turkish and English. Do not invent translations for article content.
 8. Run the smallest relevant check locally; let CI run the full suite. Report the commit SHA and the URLs affected.
 
-## Interrupted task recovery
-
-If a task is interrupted or the user says “continue”, first inspect the current repository state and relevant files to determine what is already complete. Preserve completed work and continue from the first incomplete point. Do not restart the task from the beginning.
-
 ## Request classes
 
 - **Micro:** exact copy, metadata, deadline, link, or one isolated selector. Touch only the target data/component and a focused regression assertion when useful. Direct `main` is acceptable during staging.
