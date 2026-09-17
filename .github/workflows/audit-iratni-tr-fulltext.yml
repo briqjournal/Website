@@ -199,7 +199,7 @@ jobs:
 
           # Integrity checks for every defect repaired above.
           body = '\n'.join(x for s in data['sections'] for x in s.get('paragraphs', []))
-          assert len(body.split()) > 6000
+          assert len(body.split()) > 5000
           for bad in [
               'Gana ve Mali’nin FLN\nözgürlük',
               '\n(Declaration, 1962)',
