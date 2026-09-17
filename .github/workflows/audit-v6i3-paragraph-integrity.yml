@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/audit-v6i3-paragraph-integrity.py'
       - 'scripts/verify-v6i3-paragraph-candidates.py'
+      - 'scripts/inspect-v6i3-duplicates-declarations.py'
       - '.github/workflows/audit-v6i3-paragraph-integrity.yml'
 
 permissions:
@@ -22,3 +23,5 @@ jobs:
         run: python3 -m pip install --quiet pymupdf
       - name: Verify candidates against official PDF layout
         run: python3 scripts/verify-v6i3-paragraph-candidates.py
+      - name: Inspect duplicate and declaration candidates
+        run: python3 scripts/inspect-v6i3-duplicates-declarations.py
