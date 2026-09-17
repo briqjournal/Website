@@ -14,9 +14,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Preserve audit tooling and switch to latest main
+        run: |
+          cp scripts/audit-v6i3-independent.py /tmp/audit-v6i3-independent.py
+          cp scripts/probe-v6i3-suspicious.py /tmp/probe-v6i3-suspicious.py
+          git fetch origin main
+          echo "Auditing main at $(git rev-parse origin/main)"
+          git checkout -B audit-current origin/main
       - name: Install PDF audit dependency
         run: python3 -m pip install --quiet pymupdf
       - name: Run independent PDF audit
-        run: python3 scripts/audit-v6i3-independent.py
+        run: python3 /tmp/audit-v6i3-independent.py
       - name: Print suspicious-content contexts
-        run: python3 scripts/probe-v6i3-suspicious.py
+        run: python3 /tmp/probe-v6i3-suspicious.py
