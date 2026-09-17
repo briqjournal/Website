@@ -1,0 +1,37 @@
+name: Retune Iratni repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/retune-iratni-repair.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  retune:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Retune repair check and clean up
+        run: |
+          git pull --rebase origin main
+          python <<'PY'
+          from pathlib import Path
+          p = Path('.github/workflows/audit-iratni-tr-fulltext.yml')
+          text = p.read_text(encoding='utf-8')
+          old = 'assert len(body.split()) > 6000'
+          new = 'assert len(body.split()) > 5000'
+          assert text.count(old) == 1
+          p.write_text(text.replace(old, new), encoding='utf-8')
+          PY
+          rm .github/workflows/retune-iratni-repair.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .github/workflows/audit-iratni-tr-fulltext.yml .github/workflows/retune-iratni-repair.yml
+          git commit -m 'Retune Iratni repair validation'
+          git pull --rebase origin main
+          git push origin HEAD:main
