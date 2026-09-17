@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect canonical structure
+      - name: Apply source-verified fidelity finalizer
+        run: python3 scripts/finalize-v6i3-pdf-fidelity-v2.py
+      - name: Inspect finalized canonical structure
         run: |
           python3 <<'PY'
           import json,re,pathlib
@@ -20,16 +22,16 @@ jobs:
               p=pathlib.Path('content/articles')/slug/'fulltext'/f'{loc}.json'
               d=json.load(open(p))
               print(loc,'sections=',len(d.get('sections',[])),'refs=',len(d.get('references',[])),'figs=',len(d.get('figures',[])))
-              for s in d.get('sections',[]): print('  H',repr(s['title']),'paras',len(s.get('paragraphs',[])))
+              for s in d.get('sections',[]): print('  H',s.get('level','section'),repr(s['title']),'paras',len(s.get('paragraphs',[])))
               paras=[x for s in d.get('sections',[]) for x in s.get('paragraphs',[])]
               broken=[]
-              for i,x in enumerate(paras[:-1]):
-                y=paras[i+1]
-                if re.search(r'[A-Za-zÇĞİÖŞÜçğıöşü]-$',x) and re.match(r'^[a-zçğıöşü]',y): broken.append((x[-80:],y[:80]))
+              for s in d.get('sections',[]):
+                ps=s.get('paragraphs',[])
+                for x,y in zip(ps,ps[1:]):
+                  if re.search(r'[A-Za-zÇĞİÖŞÜçğıöşü]-$',x) and re.match(r'^[a-zçğıöşü]',y): broken.append((x[-80:],y[:80]))
               print('  broken_hyphen_boundaries=',len(broken))
-              for a,b in broken[:30]: print('   BROKEN',repr(a),'|',repr(b))
-              dup=sum(1 for a,b in zip(paras,paras[1:]) if a.strip()==b.strip())
-              print('  adjacent_duplicates=',dup)
-              badheaders=sum(1 for x in paras if re.search(r'B\s+R\s+I\s*[Qq].{0,50}(?:Volume|Cilt)',x,re.I))
-              print('  embedded_headers=',badheaders)
+              print('  repeated_page_numbers=',sum(1 for x in paras if re.fullmatch(r'(\d{3})\1',x)))
+              print('  exact_long_duplicates=',len(paras)-len({x for x in paras if len(x)>=80})-sum(1 for x in paras if len(x)<80))
           PY
+      - name: Show source diff
+        run: git diff --stat && git diff --check
