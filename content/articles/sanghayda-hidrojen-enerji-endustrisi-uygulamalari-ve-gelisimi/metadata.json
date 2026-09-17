@@ -1,26 +1,32 @@
 {
-  "slug": "sanghayda-hidrojen-enerji-endustrisi-uygulamalari-ve-gelisimi",
-  "volume": 3,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2022",
-  "author": "Şanghay Enerji Tasarruf Komisyonu Uzman Komitesi",
-  "title_tr": "Şanghay’da Hidrojen Enerji Endüstrisi Uygulamaları ve Gelişimi",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/sanghayda-hidrojen-enerji-endustrisi-uygulamalari-ve-gelisimi",
-  "source_en": "https://briqjournal.com/en/practice-and-development-the-hydrogen-energy-industry-shanghai",
-  "title_en": "Practice and Development of the Hydrogen Energy Industry in Shanghai",
-  "abstract_en": "Abstract \n With the deepening of China's energy revolution, the goal of “carbon peak and carbon neutrality\" is pushed forward, and the new energy and industrial system with the core values of building green, low- carbon, clean, environmental protection, safety and efficiency are advancing steadily. In combination with national policy guidance and support for developing the hydrogen energy industry, relying on its science and technology, good manufacturing technology, and resources, Shanghai has intervened in the hydrogen energy industry. Fuel cell development in the hydrogen energy industry is at the leading level in Shanghai. This paper introduces the basis, technology, development practice characteristics, and experience of the Shanghai hydrogen energy industry and puts forward suggestions and specific measures for its continued development.\n *The text retrieved from Qikan website (http://qikan.cqvip.com/Qikan/Article/Detail?id=7105396768), translated from Chinese to English by Onurcan Balcı.",
-  "citation_tr": "Atıf \n Şanghay Enerji Tasarruf Komisyonu Uzman Komitesi (2022). Şanghay’da Hidrojen Enerji Endüstrisi Uygulamaları ve Gelişimi.  Kuşak ve Yol Girişimi Dergisi (BRIQ) , 3(3), 75-87.",
-  "citation_en": "Citation \n Expert Committee of Shanghai Energy Conversation Comission (2022). Practice and development of the hydrogen energy industry in Shanghai, Belt & Road Initiative Quarterly (BRIQ), 3(3), 75-87.",
-  "pages": "75-87",
-  "pdf_tr_source": null,
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_69-81.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/cilt-3-sayi-3-sanghay-hidrojen-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/sanghayda-hidrojen-enerji-endustrisi-uygulamalari-ve-gelisimi-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Rapor",
-  "publication_type_en": "Report",
-  "published_online_date": "2022-06-01"
+  "schemaVersion": 2,
+  "id": "sanghayda-hidrojen-enerji-endustrisi-uygulamalari-ve-gelisimi",
+  "articleType": {"id": "report", "tr": "Rapor", "en": "Report", "peerReviewed": false},
+  "title": {"en": "Practice and Development of the Hydrogen Energy Industry in Shanghai", "tr": "Şanghay’da Hidrojen Enerji Endüstrisi Uygulamaları ve Gelişimi"},
+  "authors": [
+    {"displayName": "Expert Committee of Shanghai Energy Conservation Commission", "givenName": null, "familyName": null, "orcid": null, "affiliations": [{"name": "Shanghai Municipal Government", "nameTr": "Şanghay Belediye Hükümeti", "nameEn": "Shanghai Municipal Government", "country": "China", "ror": null}]}
+  ],
+  "contributors": [
+    {"displayName": "Onurcan Balcı", "givenName": "Onurcan", "familyName": "Balcı", "role": "translator", "orcid": null}
+  ],
+  "abstract": {
+    "en": "With the deepening of China's energy revolution, the goal of “carbon peak and carbon neutrality” is pushed forward, and the new energy and industrial system with the core values of building green, low-carbon, clean, environmental protection, safety and efficiency are advancing steadily. In combination with national policy guidance and support for developing the hydrogen energy industry, relying on its science and technology, good manufacturing technology, and resources, Shanghai has intervened in the hydrogen energy industry. Fuel cell development in the hydrogen energy industry is at the leading level in Shanghai. This paper introduces the basis, technology, development practice characteristics, and experience of the Shanghai hydrogen energy industry and puts forward suggestions and specific measures for its continued development.",
+    "tr": null
+  },
+  "keywords": {"en": ["Eco-civilization", "green development", "hydrogen energy", "industry", "Revolution"], "tr": []},
+  "dates": {"received": null, "revised": null, "accepted": null, "published": "2022-06-01"},
+  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 3, "issue": 3, "year": 2022, "season": {"en": "Summer", "tr": "Yaz"}},
+  "pages": {"first": "75", "last": "87"},
+  "doi": null,
+  "language": ["en", "tr"],
+  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {"en": "Expert Committee of Shanghai Energy Conversation Comission (2022). Practice and development of the hydrogen energy industry in Shanghai, Belt & Road Initiative Quarterly (BRIQ), 3(3), 75-87.", "tr": "Şanghay Enerji Tasarruf Komisyonu Uzman Komitesi (2022). Şanghay’da Hidrojen Enerji Endüstrisi Uygulamaları ve Gelişimi. Kuşak ve Yol Girişimi Dergisi (BRIQ), 3(3), 75-87."},
+  "urls": {"en": "https://briqjournal.com/en/practice-and-development-the-hydrogen-energy-industry-shanghai", "tr": "https://briqjournal.com/sanghayda-hidrojen-enerji-endustrisi-uygulamalari-ve-gelisimi", "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_69-81.pdf", "pdfTr": null, "pdfEnLocal": "/assets/archive/pdfs/articles/sanghayda-hidrojen-enerji-endustrisi-uygulamalari-ve-gelisimi-en.pdf", "pdfTrLocal": "/assets/archive/pdfs/cilt-3-sayi-3-sanghay-hidrojen-tr.pdf", "sharedBilingualPdf": false}
 }
