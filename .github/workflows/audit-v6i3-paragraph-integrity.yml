@@ -1,0 +1,19 @@
+name: V6I3 paragraph integrity diagnostic
+
+on:
+  push:
+    branches: [audit/v6i3-paragraph-integrity]
+    paths:
+      - 'scripts/audit-v6i3-paragraph-integrity.py'
+      - '.github/workflows/audit-v6i3-paragraph-integrity.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect current canonical V6I3 paragraph boundaries
+        run: python3 scripts/audit-v6i3-paragraph-integrity.py
