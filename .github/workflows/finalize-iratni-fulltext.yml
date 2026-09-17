@@ -127,5 +127,6 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/en-archive.json .github/workflows/finalize-iratni-fulltext.yml
           git commit -m 'Finalize Iratni full text hierarchy and schema'
+          git reset --hard HEAD
           git pull --rebase origin main
           git push origin HEAD:main
