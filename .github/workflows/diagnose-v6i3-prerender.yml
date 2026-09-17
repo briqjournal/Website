@@ -1,0 +1,59 @@
+name: Diagnose V6I3 prerender failure
+on:
+  push:
+    branches: [migration/v6i3-canonical]
+    paths:
+      - '.github/workflows/diagnose-v6i3-prerender.yml'
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Prepare latest main and migration tools
+        run: |
+          cp scripts/migrate-v6i3-canonical.py /tmp/migrate.py
+          cp scripts/postprocess-v6i3.py /tmp/postprocess.py
+          cp tests/v6i3-content-integrity.test.mjs /tmp/integrity.mjs
+          cp tests/v6i3-source-fidelity.test.mjs /tmp/fidelity.mjs
+          git fetch origin main
+          git show origin/main:content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/en-archive.json > /tmp/iratni-en.json
+          git checkout -B diagnose-v6i3 origin/main
+          cp /tmp/migrate.py scripts/migrate-v6i3-canonical.py
+          cp /tmp/postprocess.py scripts/postprocess-v6i3.py
+          cp /tmp/integrity.mjs tests/v6i3-content-integrity.test.mjs
+          cp /tmp/fidelity.mjs tests/v6i3-source-fidelity.test.mjs
+      - name: Patch mixed reference support and route logging
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          p=Path('scripts/postprocess-v6i3.py'); s=p.read_text()
+          old="""  for r in d.get('references',[]):\n   txt=r.get('text','')\n   txt=re.sub(r'(https?://\\S*?)\\s+(?=[A-Za-z0-9/?#._=&%-])',lambda m:m.group(1),txt)\n   r['text']=txt\n"""
+          new="""  for i,r in enumerate(d.get('references',[])):\n   if isinstance(r,str):\n    txt=r\n    txt=re.sub(r'(https?://\\S*?)\\s+(?=[A-Za-z0-9/?#._=&%-])',lambda m:m.group(1),txt)\n    d['references'][i]=txt\n   else:\n    txt=r.get('text','')\n    txt=re.sub(r'(https?://\\S*?)\\s+(?=[A-Za-z0-9/?#._=&%-])',lambda m:m.group(1),txt)\n    r['text']=txt\n"""
+          assert old in s
+          p.write_text(s.replace(old,new))
+          p=Path('scripts/prerender-static.mjs'); s=p.read_text()
+          old='''  const response = await render(pathname);\n  if (!response.ok) {\n    throw new Error(`Prerender failed for ${pathname}: HTTP ${response.status}`);\n  }'''
+          new='''  let response;\n  try {\n    response = await render(pathname);\n  } catch (error) {\n    console.error(`PRERENDER ROUTE CRASH: ${pathname}`);\n    console.error(error);\n    throw error;\n  }\n  if (!response.ok) {\n    console.error(`PRERENDER ROUTE HTTP FAILURE: ${pathname} -> ${response.status}`);\n    throw new Error(`Prerender failed for ${pathname}: HTTP ${response.status}`);\n  }'''
+          assert old in s
+          p.write_text(s.replace(old,new))
+          PY
+      - name: Install extraction dependencies
+        run: python3 -m pip install --quiet pymupdf pymupdf4llm
+      - name: Rebuild V6I3
+        run: |
+          for slug in china-reconstructs hendra-gunawan endonezya-posta-pulu; do mkdir -p "content/articles/$slug/fulltext"; done
+          python3 scripts/migrate-v6i3-canonical.py
+          cp /tmp/iratni-en.json content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/en.json
+          python3 scripts/postprocess-v6i3.py
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+          node --test tests/v6i3-content-integrity.test.mjs tests/v6i3-source-fidelity.test.mjs
+      - name: Install dependencies
+        run: npm ci
+      - name: Build with failing route diagnostics
+        run: npm run build
