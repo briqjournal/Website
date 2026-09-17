@@ -1,0 +1,103 @@
+name: Audit Iratni Turkish full text
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/audit-iratni-tr-fulltext.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit Turkish PDF extraction against HTML source
+        run: |
+          python -m pip install --quiet pymupdf
+          curl -L --fail --retry 3 'https://www.briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Belkacem%20Iratni_TR.pdf' -o /tmp/iratni-tr.pdf
+          python <<'PY'
+          import json, re, unicodedata
+          from pathlib import Path
+          import pymupdf as fitz
+
+          p = Path('content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/tr.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          sections = data['sections']
+
+          def norm(s):
+              s = unicodedata.normalize('NFKC', s)
+              s = s.replace('\u00ad','').replace('’', "'").replace('“','"').replace('”','"')
+              return re.sub(r'\s+', ' ', s).strip()
+
+          doc = fitz.open('/tmp/iratni-tr.pdf')
+          article_pages = []
+          for i, page in enumerate(doc):
+              txt = norm(page.get_text('text'))
+              if 'Cezayir Devrimci Diplomasisi' in txt or article_pages:
+                  article_pages.append(i)
+                  if 'Kaynakça' in txt and len(article_pages) > 2:
+                      break
+          print('ARTICLE_PAGES', article_pages)
+
+          pdf_text = '\n'.join(doc[i].get_text('text') for i in article_pages)
+          pdf_norm = norm(pdf_text)
+          print('PDF_WORDS', len(pdf_norm.split()))
+          print('JSON_SECTIONS', [(s['title'], s.get('level'), len(s.get('paragraphs',[]))) for s in sections])
+          print('JSON_REFS', len(data.get('references',[])))
+
+          print('\nSUSPICIOUS_BOUNDARIES')
+          for s in sections:
+              ps = s.get('paragraphs', [])
+              for i in range(len(ps)-1):
+                  a,b = ps[i].strip(), ps[i+1].strip()
+                  if (a and b and (not re.search(r'[.!?:;”"\)]$', a) or re.match(r'^[a-zçğıöşü]', b))):
+                      print(s['id'], i, '=>', a[-120:], '|||', b[:120])
+
+          print('\nDUPLICATE_PARAGRAPHS')
+          seen = {}
+          for s in sections:
+              for i,p0 in enumerate(s.get('paragraphs', [])):
+                  k = norm(p0).lower()
+                  if k in seen:
+                      print('DUP', seen[k], 'AND', (s['id'],i), '::', p0[:180])
+                  else:
+                      seen[k] = (s['id'],i)
+
+          print('\nSUSPICIOUS_SHORT_PARAGRAPHS')
+          for s in sections:
+              for i,p0 in enumerate(s.get('paragraphs', [])):
+                  if len(norm(p0).split()) <= 12:
+                      print(s['id'], i, repr(p0))
+
+          print('\nHEADING_STYLES')
+          targets = [s['title'] for s in sections]
+          for i in article_pages:
+              page = doc[i]
+              for block in page.get_text('dict').get('blocks', []):
+                  if 'lines' not in block: continue
+                  lines=[]; spans=[]
+                  for ln in block['lines']:
+                      t=''.join(sp.get('text','') for sp in ln.get('spans',[])).strip()
+                      if t: lines.append(t)
+                      spans += ln.get('spans',[])
+                  text=norm(' '.join(lines))
+                  for h in targets:
+                      if norm(h).lower() == text.lower():
+                          print(i+1, h, max([float(sp.get('size',0)) for sp in spans] or [0]), sorted({sp.get('font','') for sp in spans}))
+
+          print('\nREFERENCE_URL_ISSUES')
+          for r in data.get('references', []):
+              t = r['text'] if isinstance(r,dict) else str(r)
+              if re.search(r'https?://\S*(?:adresinden|adresine)', t, re.I) or re.search(r'\.(?:html?|pdf)adresinden', t, re.I) or re.search(r'\d{4}num', t):
+                  print((r.get('id') if isinstance(r,dict) else '?'), t)
+
+          print('\nPDF_SNIPPETS_AROUND_KNOWN_AREAS')
+          needles = ['Fidel Castro', 'Gana ve Mali', 'modern bir Devlet', 'Cezayir Sözleşmesi', 'İsrail’e karşı', 'özgürlüğün ilk kurşunu', 'ikinci Bandung', 'Abdelaziz Bouteflika']
+          for needle in needles:
+              idx = pdf_norm.lower().find(norm(needle).lower())
+              print('\n--', needle, idx)
+              if idx >= 0: print(pdf_norm[max(0,idx-450):idx+1200])
+          PY
