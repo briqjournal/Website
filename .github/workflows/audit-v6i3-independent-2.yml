@@ -18,3 +18,5 @@ jobs:
         run: python3 -m pip install --quiet pymupdf
       - name: Run independent PDF audit
         run: python3 scripts/audit-v6i3-independent.py
+      - name: Print suspicious-content contexts
+        run: python3 scripts/probe-v6i3-suspicious.py
