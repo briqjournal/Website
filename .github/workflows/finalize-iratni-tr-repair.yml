@@ -20,36 +20,20 @@ jobs:
         run: |
           python <<'PY'
           from pathlib import Path
-
           source = Path('.github/workflows/audit-iratni-tr-fulltext.yml').read_text(encoding='utf-8')
           marker = '        run: |\n'
           assert source.count(marker) == 1
           block = source.split(marker, 1)[1]
           lines = block.splitlines()
           script = '\n'.join(line[10:] if line.startswith('          ') else line for line in lines) + '\n'
-
-          old_check = """const fidel = (html.match(/Nadiren bahsedilen bir olay da Fidel Castro’nun Cezayir’e verdiği destektir\\./g) || []).length;
-if (fidel !== 1) throw new Error(`unexpected Fidel duplicate count: ${fidel}`);"""
-          new_check = """if (!html.includes('Nadiren bahsedilen bir olay da Fidel Castro’nun Cezayir’e verdiği destektir.')) {
-  throw new Error('target HTML missing cleaned Fidel passage');
-}"""
+          old_check = "const fidel = (html.match(/Nadiren bahsedilen bir olay da Fidel Castro’nun Cezayir’e verdiği destektir\\./g) || []).length;\nif (fidel !== 1) throw new Error(`unexpected Fidel duplicate count: ${fidel}`);"
+          new_check = "if (!html.includes('Nadiren bahsedilen bir olay da Fidel Castro’nun Cezayir’e verdiği destektir.')) {\n  throw new Error('target HTML missing cleaned Fidel passage');\n}"
           assert script.count(old_check) == 1
           script = script.replace(old_check, new_check)
-
-          old_tail = """# Build scripts can touch generated tracked files; keep only the audited source repair.
-git reset --hard HEAD
-rm .github/workflows/audit-iratni-tr-fulltext.yml
-git add .github/workflows/audit-iratni-tr-fulltext.yml
-git commit -m 'Remove one-time Iratni Turkish audit workflow'
-git pull --rebase origin main
-git push origin HEAD:main"""
-          new_tail = """# Build scripts can touch generated tracked files; keep only the audited source repair.
-git reset --hard HEAD
-git pull --rebase origin main
-git push origin HEAD:main"""
+          old_tail = "# Build scripts can touch generated tracked files; keep only the audited source repair.\ngit reset --hard HEAD\nrm .github/workflows/audit-iratni-tr-fulltext.yml\ngit add .github/workflows/audit-iratni-tr-fulltext.yml\ngit commit -m 'Remove one-time Iratni Turkish audit workflow'\ngit pull --rebase origin main\ngit push origin HEAD:main"
+          new_tail = "# Build scripts can touch generated tracked files; keep only the audited source repair.\ngit reset --hard HEAD\ngit pull --rebase origin main\ngit push origin HEAD:main"
           assert script.count(old_tail) == 1
           script = script.replace(old_tail, new_tail)
-
           target = Path('/tmp/iratni-repair.sh')
           target.write_text('set -euo pipefail\n' + script, encoding='utf-8')
           print('Prepared repair script:', target)
