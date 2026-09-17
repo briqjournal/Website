@@ -1,0 +1,243 @@
+name: Repair Iratni full text dehyphenation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/repair-iratni-dehyphenation.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rebuild clean English full text from source PDF
+        run: |
+          git pull --rebase origin main
+          python -m pip install --quiet pymupdf
+          curl -L --fail --retry 3 'https://www.briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Belkacem%20Iratni_ENG.pdf' -o /tmp/iratni.pdf
+          python <<'PY'
+          import json, re, unicodedata
+          import pymupdf as fitz
+          from pathlib import Path
+
+          root = Path('content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine')
+          out_path = root / 'fulltext' / 'en-archive.json'
+
+          headings = [
+              'Introduction',
+              'The “Mecca” of the Revolutionaries',
+              'Diplomatic support',
+              'Arms and military training for African freedom fighters',
+              'The Arduous Quest for a Militant Non-Aligned Movement',
+              'Adapting the Non-Aligned Movement to an Evolving Global Landscape',
+              'Conclusion',
+          ]
+
+          def norm(s):
+              s = unicodedata.normalize('NFC', s).replace('\u00ad', '')
+              s = re.sub(r'\s+', ' ', s).strip()
+              s = re.sub(r'\s+([,.;:?!])', r'\1', s)
+              s = re.sub(r'\(\s+', '(', s)
+              s = re.sub(r'\s+\)', ')', s)
+              return s
+
+          def canon_heading(s):
+              s = unicodedata.normalize('NFKD', s).replace('“', '').replace('”', '').replace('’', "'")
+              return re.sub(r'[^a-z0-9]+', '', s.lower())
+
+          heading_lookup = {canon_heading(h): h for h in headings}
+
+          def join_lines(lines):
+              return norm(' '.join(norm(x) for x in lines if norm(x)))
+
+          def block_infos(page):
+              flags = fitz.TEXT_DEHYPHENATE | fitz.TEXT_PRESERVE_WHITESPACE
+              d = page.get_text('dict', flags=flags)
+              infos = []
+              for block in d.get('blocks', []):
+                  if 'lines' not in block:
+                      continue
+                  lines, fonts, sizes = [], set(), []
+                  for line in block['lines']:
+                      text = ''.join(span.get('text', '') for span in line.get('spans', []))
+                      if text.strip():
+                          lines.append(text)
+                      for span in line.get('spans', []):
+                          fonts.add(span.get('font', ''))
+                          sizes.append(float(span.get('size', 0)))
+                  if not lines:
+                      continue
+                  x0, y0, x1, y1 = block['bbox']
+                  infos.append({
+                      'x0': x0, 'y0': y0, 'x1': x1, 'y1': y1,
+                      'lines': lines,
+                      'text': join_lines(lines),
+                      'fonts': fonts,
+                      'maxsize': max(sizes) if sizes else 0,
+                  })
+              return infos
+
+          def is_skip_block(b):
+              t = b['text']
+              if b['y0'] < 90 or b['y0'] > 705:
+                  return True
+              if re.fullmatch(r'\d{3}', t):
+                  return True
+              if 'Photograph:' in t:
+                  return True
+              if 'B R I q' in t or t.startswith('Belkacem Iratni- The Algerian Revolutionary Diplomacy'):
+                  return True
+              if any('MyriadPro-Semibold' in f for f in b['fonts']) and b['maxsize'] >= 12.0:
+                  return True
+              if b['maxsize'] <= 8.5:
+                  return True
+              return False
+
+          def sort_blocks(infos):
+              useful = [b for b in infos if not is_skip_block(b)]
+              return sorted(useful, key=lambda b: (0 if b['x0'] < 285 else 1, b['y0'], b['x0']))
+
+          doc = fitz.open('/tmp/iratni.pdf')
+          assert len(doc) == 22
+
+          sections, references = [], []
+          current = None
+          started = False
+          in_refs = False
+          ref_blocks = []
+          manual_started = set()
+
+          def start_section(title):
+              sec = {
+                  'id': f'en-section-{len(sections)+1}',
+                  'title': title,
+                  'paragraphs': [],
+                  'level': 'section',
+              }
+              sections.append(sec)
+              return sec
+
+          for pno in range(1, 22):
+              blocks = sort_blocks(block_infos(doc[pno]))
+              for b in blocks:
+                  manual = {
+                      11: ('The Arduous Quest for a Militant Non-Aligned Movement', 'R', 108.1),
+                      18: ('Adapting the Non-Aligned Movement to an Evolving Global Landscape', 'L', 108.7),
+                  }
+                  if pno in manual:
+                      title, col, y = manual[pno]
+                      in_col = (b['x0'] >= 285) if col == 'R' else (b['x0'] < 285)
+                      if in_col and b['y0'] >= y - 3 and pno not in manual_started:
+                          started = True
+                          current = start_section(title)
+                          manual_started.add(pno)
+                      if in_col and y - 3 <= b['y0'] <= y + 32 and any('MinionPro-Bold' in f for f in b['fonts']):
+                          continue
+
+                  nt = norm(b['text'])
+                  if nt == 'ABSTRACT' or nt.startswith('Keywords:'):
+                      continue
+
+                  hkey = canon_heading(nt)
+                  if hkey in heading_lookup:
+                      title = heading_lookup[hkey]
+                      if title == 'Introduction':
+                          started = True
+                      if not started:
+                          continue
+                      if not sections or sections[-1]['title'] != title:
+                          current = start_section(title)
+                      continue
+
+                  if nt == 'References':
+                      in_refs = True
+                      continue
+                  if in_refs:
+                      ref_blocks.append((pno, b))
+                      continue
+                  if not started or current is None or not nt:
+                      continue
+
+                  text = nt
+                  if current['title'] == 'Introduction' and not current['paragraphs']:
+                      text = re.sub(r'^THE BANDUNG CONFERENCE, CONDUCTED', 'The Bandung Conference, conducted', text)
+
+                  if current['paragraphs']:
+                      prev = current['paragraphs'][-1]
+                      prev_terminal = bool(re.search(r'[.!?…:”’"\)]$', prev))
+                      if not prev_terminal and not text.startswith('- '):
+                          current['paragraphs'][-1] = norm(prev + ' ' + text)
+                      else:
+                          current['paragraphs'].append(text)
+                  else:
+                      current['paragraphs'].append(text)
+
+          current_ref = ''
+          for pno, b in ref_blocks:
+              x = b['x0']
+              is_new = x < (78.0 if x < 285 else 296.0)
+              text = join_lines(b['lines'])
+              if not text:
+                  continue
+              if is_new:
+                  if current_ref:
+                      references.append(norm(current_ref))
+                  current_ref = text
+              else:
+                  current_ref = norm((current_ref + ' ' + text).strip())
+          if current_ref:
+              references.append(norm(current_ref))
+          references = [r for r in references if r and not re.fullmatch(r'\d{3}', r)]
+
+          titles = [s['title'] for s in sections]
+          assert titles == headings, titles
+          assert all(s['paragraphs'] for s in sections)
+          body_text = '\n'.join(p for s in sections for p in s['paragraphs'])
+          assert len(body_text.split()) > 6500, len(body_text.split())
+          assert len(references) >= 25, len(references)
+          assert body_text.startswith('The Bandung Conference, conducted in April 1955')
+
+          for bad in [
+              'pre-sence', 'effec- tively', 'colle- ctively', 'co-lonial', 're-volutionary',
+              'pro-viding', 'suscep- tible', 'empha-', 'Introduction repudiated any affiliation',
+              'United Nations Security Council (UNSC) and General References'
+          ]:
+              assert bad not in body_text, bad
+
+          data = {
+              'sections': sections,
+              'keywords': [
+                  'Algeria',
+                  'liberation movements',
+                  'New International Economic Order',
+                  'nonalignment',
+                  'revolutionary diplomacy',
+              ],
+              'footnotes': [],
+              'references': references,
+              'acknowledgements': '',
+              'figures': [],
+          }
+          out_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          hyphen_tokens = sorted(set(re.findall(r'\b[A-Za-z]+-[A-Za-z]+\b', body_text)))
+          print('SECTIONS', [(s['title'], len(s['paragraphs'])) for s in sections])
+          print('BODY_WORDS', len(body_text.split()))
+          print('REFERENCES', len(references))
+          print('HYPHEN_TOKENS', hyphen_tokens)
+          print('FIRST', sections[0]['paragraphs'][0][:240])
+          print('LAST', sections[-1]['paragraphs'][-1][-240:])
+          PY
+          node -e "JSON.parse(require('fs').readFileSync('content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/en-archive.json','utf8'));"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/en-archive.json
+          git commit -m 'Clean Iratni English full text extraction'
+          git pull --rebase origin main
+          git push origin HEAD:main
