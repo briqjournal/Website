@@ -1,0 +1,534 @@
+{
+  "sections": [
+    {
+      "id": "en-section-1",
+      "title": "Introduction",
+      "paragraphs": [
+        "GAS HYDRATES, CRYSTALLINE COMPOUNDS composed of water and methane, have captured significant attention as an unconventional energy resource with immense potential. Methane hydrates, also known as ‘burning ice,’ occur at all ocean margins (Figures 1 and 2). Minshull et al., 2021, identified a series of regions where there is substantial evidence for hydrate occurrence. The base of gas hydrate accumulations follows the seabed topography and is called “Bottom Simulated Reflectors (BSR)” in seismic sections. The bottom-simulating reflector (BSR) is a reflection event that is closely",
+        "associated with identifying hydrates in multichannel seismic reflection sections (Ojha & Sain, 2009). Identifying and analyzing hydrates is important (Figure 3). Found primarily in marine sediments and permafrost regions, these naturally occurring compounds are estimated to contain more energy than all known fossil fuel reserves combined. The methane stored in gas hydrates represents a cleaner-burning alternative to traditional hydrocarbons like coal and oil, positioning this resource as a promising contributor to universal energy security and sustainability (Figure 2). Çifci (2020) emphasizes the importance of gas hydrates as a future energy source for earth science and economics.",
+        "The gas hydrate resource pyramid, conceptualized by Boswell & Collett (2011) categorizes these deposits based on their geological and economic recoverability (Figure 4). It highlights the substantial variation in resource accessibility, ranging from easily extractable accumulations to those requiring advanced technologies for recovery. Such diversity underscores the need for innovative extraction techniques and strategic planning to unlock their full potential. Moreover, their widespread distribution in continental margins and Arctic regions presents opportunities for countries seeking to diversify their energy portfolios and reduce dependency on imported fuels.",
+        "Innovative extraction technologies have been a",
+        "focal point of global research efforts. Methods like depressurization, thermal stimulation, and chemical injection are under active development, each offering unique benefits and challenges (Figure 5). Among these, CO2 injection stands out due to its dual benefit of methane recovery and carbon sequestration, aligning with international climate change mitigation goals. Emerging techniques such as electromagnetic heating, microbiological stimulation, and nanotechnology applications are being explored to improve efficiency, reduce environmental impacts, and address the technical barriers to commercial production. Çifci et al., (in press) examines these production methods from gas hydrates.",
+        "Nations such as Japan, China, and the United States are leading in research and development, conducting field tests and pilot projects to refine these methods and scale up production. For instance, Japan’s Methane Hydrate R&D program has demonstrated the feasibility of extracting methane from hydrates through depressurization, making it a frontrunner in this domain. Similarly, China has achieved significant milestones with its offshore hydrate production trials, showcasing advancements in extraction technologies and environmental safety protocols. The country is conducting intensive research on the discovery and production of gas hydrates and making significant investments in scientific and engineering endeavors in",
+        "this field. It holds numerous patents related to production and processing technologies, encompassing processes such as extraction, storage, and transportation of gas hydrates.",
+        "The potential of gas hydrates as an alternative source to fossil fuels is of considerable importance for energy security strategies, making advancements in this area a strategic priority for the nation. The country is working on improvements to transition to commercial applications in gas hydrate production and is undertaking various technology development projects in this process. This leadership in the field of gas hydrates plays a significant role in both national energy policies and global energy dynamics.",
+        "Globally, nations such as Japan, China, the United States, India, South Korea, and Canada are leading research and development in gas hydrates, making substantial investments in advanced technologies and field tests. These efforts aim to overcome the significant technical and economic challenges currently limiting commercial-scale production. Integrating gas hydrate extraction with carbon capture and storage technologies further strengthens its potential as an environmentally sustainable energy source. With proper innovation and international collaboration, gas hydrates could supply energy for decades, serving as a transitional resource in the global shift toward cleaner energy. Advancing these",
+        "technologies will be essential for unlocking the economic and environmental benefits of gas hydrates, making them a cornerstone of future energy strategies. China is among the leading countries globally in terms of patent ownership in gas hydrate production technologies. This status is a result of its active efforts in gas hydrate research and development. China is also engaged in international collaborations and joint research projects concerning gas hydrate technologies, promoting knowledge sharing and technological innovations. “Gas Hydrates,” recognized as the energy source of the near future, have been identified and mapped in a pilot area as part of the first phase of Turkiye’s National Gas Hydrate Project.",
+        "Through multidisciplinary collaboration involving multiple institutions and universities, the presence of gas hydrates has been officially confirmed, and reserve estimations have been conducted. The discovery of gas hydrates, which are widely regarded as a potential energy resource, in an extensive and significant area positions this reserve as a “game-changer” with strategic importance, capable of altering Türkiye’s energy future when considering global energy resource dynamics. Türkiye’s proximity to significant gas hydrate deposits, particularly in the Black Sea, presents a notable strategic opportunity. It is imperative that Türkiye capitalizes on this unique positioning by transforming these inherent advantages into long-term competitive strengths. The confirmed gas reserves in the Black Sea exemplifies such potential. In addition to the fact that this discovery was achieved by Turkish researchers, its scientific contribution, which has the potential to resonate both nationally, regionally, and globally, could lead to immense opportunities. Within this framework, the next steps include mapping the distribution of gas hydrates in other areas, transitioning to the second phase in the completed pilot site, producing gas using existing production techniques in the pilot area, and, in the final phase, collaborating with countries that possess advanced production technologies.",
+        "This paper delves into the environmental, economic, and geopolitical implications of gas hydrate development, examining the current state of research, technological advancements, and potential challenges. It explores how gas hydrates could serve as a transitional energy resource, bridging the gap between fossil fuels and cleaner alternatives. Furthermore, the paper emphasizes the importance of international collaboration in developing unified standards and sustainable practices for responsible exploitation of this promising resource."
+      ]
+    },
+    {
+      "id": "en-section-2",
+      "title": "Methane Production Methods from Gas Hydrates",
+      "paragraphs": [
+        "The extraction of natural gas from gas hydrates can be accomplished through various methods, each of which presents specific environmental and economic implications (Figure 5). This section explores these methods and their potential effects in greater detail:"
+      ]
+    },
+    {
+      "id": "en-section-3",
+      "title": "Depressurization",
+      "paragraphs": [
+        "This method involves reducing the pressure within the gas hydrate reservoir, thereby inducing the dissociation of hydrates into natural gas. The environmental impacts associated with depressurization may include alterations in the mechanical structure of the reservoir, which can potentially lead to subsidence or surface collapse. Additionally, the dissociation process absorbs heat, causing local freezing of the surrounding water and potentially impacting marine ecosystems. Economically, depressurization is generally less expensive compared to other methods, as it does not require complex technologies or the use of costly chemicals (Boswell & Collett, 2011). It offers the potential for efficient production, capturing a substantial proportion of the reservoir (up to 60%).",
+        "However, efficiency may decline over time due to changes in the reservoir’s mechanical and thermodynamic characteristics. Furthermore, this method’s relatively lower energy consumption translates to reduced operational costs."
+      ]
+    },
+    {
+      "id": "en-section-4",
+      "title": "Thermal Injection",
+      "paragraphs": [
+        "In thermal injections, the reservoir temperature is increased through the injection of hot water or steam or by heating the wellbore. Environmental impacts include the potential warming of adjacent water layers, which could pose risks to aquatic organisms (Lee & Lee, 2014). Moreover, the high energy requirements of thermal injections necessitate substantial fossil fuel consumption, leading to increased greenhouse gas emissions. This method demands significant initial investment in equipment and energy for steam or hot water generation and injection. While it has the potential to achieve nearly complete production of the reservoir, yielding high returns, a considerable portion of the produced gas’s energy is expended in heating the reservoir, which lowers the net energy output."
+      ]
+    },
+    {
+      "id": "en-section-5",
+      "title": "Chemical Injection",
+      "paragraphs": [
+        "In this method, chemicals such as glycol or methanol are injected to alter the reservoir’s conditions and induce gas release. The associated environmental impacts may involve potential chemical leakage, which could contaminate groundwater sources and damage ecosystems (Makogon et al., 2007). The disposal of used chemicals further presents environmental management challenges. From an economic standpoint, chemical injection incurs substantial costs due to the chemicals involved, which significantly increase operational expenses. This method typically requires extensive laboratory and pilot-scale testing, leading to elevated research and development costs. Moreover, compliance with environmental regulations and waste management protocols can further raise costs. However, combining CO2 injection with methane production can potentially yield long-term sustainability by offering environmental credits or tax incentives for reducing emissions."
+      ]
+    },
+    {
+      "id": "en-section-6",
+      "title": "CO2 Injection",
+      "paragraphs": [
+        "This method entails capturing CO2 and displacing methane within the reservoir by injecting it. The primary environmental advantage is the potential reduction in atmospheric CO2 emissions, which contributes positively to mitigating climate change (Hovland & Judd, 2004). Nonetheless, CO₂ injection can disrupt the reservoir’s pressure balance, potentially causing geological instability issues."
+      ]
+    },
+    {
+      "id": "en-section-7",
+      "title": "Emerging Methods",
+      "paragraphs": [
+        "Several innovative approaches are under investigation, including gas injection, microbiological techniques, ultrasonic stimulation, and electrical heating. Each of these methods has unique environmental implications. For instance, microbiological methods might disrupt microbial balances within ecosystems (Liu et al., 2012 ; Chong et al., 2016). Microbial methanogenesis, which promotes methane release through the biological activities of microorganisms, offers an environmentally sustainable alternative, particularly in low-temperature and",
+        "low-pressure conditions. Conversely, methods involving electrical heating require significant energy input, which may carry environmental impacts contingent on the energy sources employed.",
+        "Various microbiological investigations of gas hydrates suggest the potential of biological applications for producing hydrates through destabilization. Among these are processes involving microbial conversion of CO₂, biological in-situ methane production, and organisms that produce antifreeze proteins (AFPs), which inhibit the crystallization of hydrates and eliminate more rapid recrystallization or “memory effect.” These concepts require more research to explore techniques to uncover “green inhibitors” for hydrates. This represents a challenge to researchers involved in projects related to monetizing the significant gas hydrate accumulations worldwide: microbiological processes may be the key to their economical recovery (Jones et al., 2010)."
+      ]
+    },
+    {
+      "id": "en-section-8",
+      "title": "Economic Considerations",
+      "paragraphs": [
+        "Understanding and mitigating the environmental impacts of these methods are crucial for sustainable energy production and environmental management. As such, detailed environmental impact assessments and monitoring protocols must be conducted during the implementation of each method. The economic viability of natural gas production from gas hydrates depends on the method employed, technological accessibility, energy market conditions, and prevailing environmental regulations (Jones et al., 2010). New methods generally require substantial research and development expenditures, with returns contingent upon the commercial",
+        "success of the technologies. The implementation of novel technologies can entail operational risks, such as unforeseen technical challenges or suboptimal performance. Given the high initial costs and technical uncertainties, comprehensive cost analyses and pilot projects are essential to maximize economic profitability and minimize associated risks."
+      ]
+    },
+    {
+      "id": "en-section-9",
+      "title": "Geopolitical and Technological Considerations",
+      "paragraphs": [
+        "The potential to exploit gas hydrates primarily benefits countries with abundant natural resources and advanced technological capabilities. Currently, several nations are leading research and development initiatives in the domain of gas hydrate extraction, positioning themselves to capitalize on these resources (Cherskiy & Tsarev, 1977)."
+      ]
+    },
+    {
+      "id": "en-section-10",
+      "title": "Innovative Approaches for Future Projects",
+      "paragraphs": [
+        "Ongoing research seeks to enhance the efficiency of existing methods, reduce environmental impacts, and lower economic costs. Several innovative techniques proposed for future gas hydrate projects include:"
+      ]
+    },
+    {
+      "id": "en-section-11",
+      "title": "Microbiological Processes",
+      "paragraphs": [
+        "Gas hydrates are closely linked to specific micro- and macrofauna, presenting opportunities to leverage these organisms or their metabolic processes to stimulate hydrate destabilization for natural gas production. Three primary methods for producing natural gas from hydrates are identified: pressure destabilization, methanol-induced destabilization, and thermal destabilization.",
+        "Experimental findings suggest that these methods can be operated under conditions sufficient to cover operational costs, with microbial processes potentially facilitating hydrate dissociation and methane production through the use of methanol.",
+        "Microbial processes hold promise for enhancing the conversion of hydrates to natural gas. For instance, Methylococcus capsulatus Bath and Methylosinus trichosporium, both of which possess methanotrophic capabilities, can be cultivated at elevated temperatures and demonstrate copper-tolerant monooxygenase activity, positioning them as viable candidates for biotechnological applications in methane conversion. Additionally, microbial communities in methane hydrate-bearing sediments are dominated by groups such as JS1, Planctomycetes, and Chloroflexi, indicating significant potential for their application in hydrate destabilization. Furthermore, organisms like Acidimethylosilex fumarolicum SolV can grow on methane under extreme conditions, suggesting that CO2-converting microbial communities could enable controlled destabilization of methane hydrates. Ongoing research, including studies from the Pacific Northwest National Laboratory, underscores the role of microbial methods in hydrate dissociation, highlighting the potential of antifreeze proteins from organisms like Chryseobacterium sp. C14 to inhibit hydrate crystallization. As commercial production methods for gas hydrates evolve, microbiological processes are strong candidates for integration into future projects aimed at sustainable gas production (Inagaki et al., 2006 ; Heijmans et al., 2007 ; Yan et al., 2006 ; White, 2008).",
+        "Electromagnetic Heating: As an alternative to traditional thermal stimulation, electromagnetic waves can effectively distribute heat even in deep and less accessible reservoirs. This method is characterized by its high energy efficiency and low environmental impact.",
+        "Nanotechnology Applications: The use of nano-sized materials and chemicals can enhance the solubility of hydrates or catalyze chemical reactions to accelerate gas release. Additionally, nanoparticles may improve reservoir porosity and permeability, facilitating gas flow.",
+        "Enhanced CO2 Injection: By utilizing CO2 at higher pressures, this method can facilitate more efficient methane displacement while simultaneously contributing to atmospheric CO2 reduction.",
+        "Ultrasonic or Acoustic Waves: These methods aim to increase gas hydrate solubility and aid in methane release by disrupting the hydrate structure.",
+        "Hybrid Methods: Combining existing techniques can generate synergistic effects throughout the extraction process. For example, integrating thermal stimulation with chemical or CO2 injections can optimize solubility and accelerate extraction.",
+        "These innovative techniques should undergo further validation through laboratory tests and pilot projects. Future applications must consider the environmental compatibility, economic sustainability, and technical feasibility of these approaches. By advancing these methods, the potential for sustainable and environmentally friendly energy production from gas hydrates can be realized."
+      ]
+    },
+    {
+      "id": "en-section-12",
+      "title": "Energy Production from Gas Hydrates",
+      "paragraphs": [
+        "Countries such as Japan, China, the USA, Canada, India, and South Korea have significantly advanced their capacities to exploit gas hydrates through technological innovation, strategic investments, and alignment with national energy policies (Boswell et al., 2012). Detection of gas hydrates through geophysical methods (seismic reflection) has been demonstrated through drilling and coring programs (McConnell, 2019). Figure 6 shows BSR, which is the base of gas hydrate. These nations are allocating substantial resources to research and development (R&D)",
+        "activities, aiming to maximize the potential benefits of gas hydrates soon. Gas hydrates are expected to play a critical role in diversifying energy portfolios and transitioning to cleaner energy systems, which is increasingly pertinent given global concerns about energy sustainability and environmental impacts (Boswell & Collett, 2006).",
+        "Another academic paper by Zhang et al. (2012) examines the dual nature of marine gas hydrates as both a promising energy resource and a potential environmental threat. The authors highlight three key resource characteristics that make gas hydrates appealing as a future energy source:",
+        "Enormous quantity: Credible estimates suggest 10^13 to 20×10^15 m³ of methane gas in global deposits, potentially meeting human energy needs for nearly 1,000 years.",
+        "The carbon content (10×10^12t) is twice that of all fossil fuel minerals combined. Cleanliness: Contains high-purity methane with fewer harmful gases compared to coal, oil, and natural gas. High energy density: 1m³ of gas hydrates equals 164m³ of methane under normal conditions - 10 times the energy density of other non-conventional sources and 2-5 times that of conventional natural gas. The authors identify three major environmental risks associated with gas hydrate destabilization: Global Warming: Methane is a potent greenhouse gas with 3.7 times the global warming potential of CO₂ by mole and 20 times by weight. The paper connects historical rapid warming events (particularly the “Latest Paleocene Thermal Maximum” about 55.6 million years ago) to massive methane releases from hydrates. Seabed Geological Disasters: Gas hydrates lack consolidation cap and are prone to phase transformation. When temperature-pressure conditions change, hydrates can dissociate, releasing methane and potentially triggering submarine landslides.",
+        "Ecological Disasters: The paper links massive methane releases to historical extinction events, noting evidence that suggests hydrate decomposition caused the extinction of 1/2 to 2/3 of benthic animals around the Paleocene-Eocene boundary (55 Ma). The discussion section emphasizes that while gas hydrates represent an important potential energy resource, any development must prioritize safety and environmental protection. This balanced assessment illustrates the complex nature of gas hydrates as both a promising energy solution and a potential environmental threat, highlighting the need for careful, environmentally conscious approaches to their development (Zhen-guo et al., 2012).",
+        "Gas hydrates offer the potential to enhance energy security, particularly in regions where conventional hydrocarbon reserves are depleting or access is constrained. This resource could be a viable option for countries seeking to reduce reliance on energy imports and establish a more diversified and resilient energy portfolio."
+      ]
+    },
+    {
+      "id": "en-section-13",
+      "title": "Environmental Implications and Technological Considerations",
+      "paragraphs": [
+        "The environmental implications of gas hydrate extraction present both opportunities and challenges. On one hand, gas hydrates could contribute to reducing carbon emissions if combined with innovative techniques such as carbon capture and storage/utilization (CCSU). On the other hand, the extraction process carries risks such as potential methane leaks and other ecological disturbances, which must be managed effectively. As a result, rigorous environmental assessments are essential to ensure sustainable and responsible development.",
+        "Despite its potential, the commercial-scale production of gas hydrates remains hindered by technical challenges. Ongoing R&D efforts aim to address these barriers through the development of advanced extraction technologies. Energy policies should therefore support technological innovation while ensuring economic growth and environmental sustainability."
+      ]
+    },
+    {
+      "id": "en-section-14",
+      "title": "Role of International Collaborations",
+      "paragraphs": [
+        "The complexity and global significance of gas hydrates necessitate international collaborations to establish unified standards, policies, and practices (International Energy Agency, 2018). These collaborations facilitate joint R&D initiatives, enabling countries to pool expertise and resources. Furthermore, harmonizing international standards is critical to managing environmental and safety risks during gas hydrate extraction. Collaborative frameworks also provide opportunities for coordinated policy development, training programs, and investment strategies, all of which are essential for the responsible and efficient utilization of gas hydrate resources."
+      ]
+    },
+    {
+      "id": "en-section-15",
+      "title": "Notable Projects and Future Directions",
+      "paragraphs": [
+        "Noteworthy projects in Japan, China, and India are leading the way in advancing gas hydrate extraction technologies (Matsumoto et al., 2013). These initiatives provide valuable insights into the technical and environmental challenges associated with gas hydrates and are essential steps toward potential commercial applications. The findings from these projects",
+        "may serve as benchmarks for other nations, helping to overcome technical hurdles, minimize environmental impacts, and optimize economic efficiency. Given the considerable energy content and wide distribution of gas hydrates, they are positioned as a key resource for future energy supply strategies."
+      ]
+    },
+    {
+      "id": "en-section-16",
+      "title": "Economic Potential and Market Implications",
+      "paragraphs": [
+        "The economic viability of gas hydrates is a key area of ongoing research. Studies generally focus on assessing the cost-effectiveness of various extraction techniques, such as thermal stimulation, chemical injection, depressurization, and CO2 injection (Matsumoto et al., 2013). Additionally, these studies examine the competitiveness of gas hydrates in global energy markets, evaluating their potential to diversify energy portfolios and enhance energy security. Environmental regulations also play a significant role in determining the economic sustainability of gas hydrate projects, given the costs associated with compliance and risk mitigation (Jones et al., 2010).",
+        "Geopolitical analyses highlight the implications of gas hydrate reserves for national energy strategies. Countries with substantial reserves may leverage this resource to achieve greater energy independence, thereby influencing global energy dynamics. Scenario-based studies further explore the long-term economic potential of gas hydrates under various technological and market conditions, offering insights into their role in future energy systems."
+      ]
+    },
+    {
+      "id": "en-section-17",
+      "title": "Key Policy Considerations",
+      "paragraphs": [
+        "Geveral key considerations emerge from research on gas hydrates and their integration into energy policies:",
+        "Diversification of Energy Resources: Incorporating gas hydrates into energy portfolios enhances energy security and reduces dependence on traditional hydrocarbons. This is particularly relevant for regions facing depleting reserves or restricted access to conventional resources.",
+        "Energy Security: With their high methane content, gas hydrates are seen as a strategic energy resource that could reduce import dependency and promote self-sufficiency in energy policies.",
+        "Environmental Sustainability: Environmentally responsible extraction techniques, such as CO2 injection, could mitigate greenhouse gas emissions, thereby influencing environmental regulations and sustainability policies.",
+        "Economic Development: The development of gas hydrate resources could stimulate job creation and economic growth, especially in coastal regions and countries with ocean access, driving further investment in this emerging sector.",
+        "International Collaborations and Policies: The global importance of gas hydrates necessitates international standards and protocols for their research, production, and management. Strengthening international regulations and cooperation can foster innovation and improve environmental outcomes (International Energy Agency, 2018)."
+      ]
+    },
+    {
+      "id": "en-section-18",
+      "title": "Results",
+      "paragraphs": [
+        "The extraction of methane from gas hydrates through various methods has yielded significant insights into both environmental and economic implications.",
+        "“Depressurization” emerged as a cost-effective technique, capable of producing up to 60% of the reservoir’s gas (Boswell & Collett, 2011). However, it poses risks such as subsidence and local freezing, which can adversely affect marine ecosystems. The method’s lower energy consumption contributes to reduced operational costs, although efficiency may diminish over time due to reservoir changes.",
+        "“Thermal Injection”, while potentially achieving nearly complete gas production, faces challenges related to high energy requirements and substantial fossil fuel use, leading to increased greenhouse gas emissions. The initial investment for this method is significant, and much of the energy produced is consumed in heating the reservoir, reducing net energy output.",
+        "“Chemical Injection” involves the use of chemicals like glycol or methanol, raising concerns about potential leakage and groundwater contamination (Makogon et al., 2007). The high costs associated with chemicals and compliance with environmental regulations make this method economically burdensome, despite the possible long-term benefits of combining CO₂ injection with methane production for sustainability.",
+        "“CO2 Injection” presents an environmental advantage by potentially reducing atmospheric carbon dioxide emissions (Hovland & Judd, 2004). However, it can disrupt the pressure balance within the reservoir, leading to geological stability issues.",
+        "Emerging methods such as “microbiological techniques,” “ultrasonic stimulation,” and “electromagnetic heating” are under investigation. These innovative approaches aim to enhance extraction efficiency while minimizing environmental impacts. For instance, microbiological methods could provide a sustainable alternative by promoting methane release under favorable conditions (Liu et al., 2012).",
+        "Countries like Japan, China, and the United States are leading advancements in gas hydrate extraction technologies. Their ongoing research focuses on addressing technical challenges and optimizing economic viability. Notably, Japan and China are poised to achieve commercial production soon.",
+        "Gas hydrates provide an opportunity to diversify energy portfolios and reduce reliance on imported fuels. Environmentally, integrating extraction with carbon capture technologies could mitigate methane emissions and promote sustainability.",
+        "Gas hydrates have the potential to act as an intermediary energy source, facilitating the transition from high-carbon fuels like coal and oil to more sustainable energy systems. Innovative methods, such as electromagnetic heating and enhanced CO2 injection, are essential for realizing their full potential.",
+        "The integration of gas hydrate extraction with carbon capture and storage/utilization",
+        "(CCSU) technologies further strengthens its potential as an environmentally sustainable energy source. With proper innovation and international collaboration, gas hydrates could supply energy for decades, serving as a transitional resource in the global shift toward cleaner energy. Advancing these technologies will be essential for unlocking the economic and environmental benefits of gas hydrates, making them a cornerstone of future energy strategies.",
+        "As a result, gas hydrates represent a viable energy source with the capability to meet future energy demands sustainably. Their successful utilization will depend on continued technological innovation, international collaboration, and robust environmental safeguards.",
+        "Our country’s primary goals include reducing Turkey’s external dependency on energy by using domestic and national resources. Considering the research conducted by major countries that have a say in the world economy on gas hydrates and the latest production tests for natural gas production from gas hydrates, it becomes clear that our country needs to rapidly increase its activities for gas hydrate research with domestic and national resources. In this context, the roadmap to be followed was mentioned in Küçük’s (2018) study.",
+        "The tables below summarize the comparison of natural gas production methods from gas hydrates, advantages and disadvantages of gas hydrate production methods, and technological maturity and application status of gas hydrate production methods.",
+        "(Table: Çifci et al., 2024)"
+      ]
+    },
+    {
+      "id": "en-section-19",
+      "title": "Conclusion",
+      "paragraphs": [
+        "The extraction of gas hydrates and their integration into the economy are feasible using existing methods and technologies. Future research aimed at refining and advancing these extraction techniques will contribute to patented innovations.",
+        "Field studies previously conducted in the Black Sea indicate that regional gas hydrate reserves may exceed 100 trillion cubic meters (Bazauk et al., 2021). Of the Black Sea’s total surface area (approximately 470,000 square kilometers), around 200,000 square kilometers fall within Türkiye’s Exclusive Economic Zone (EEZ). Although the exact volume of reserves within this jurisdiction has yet to be precisely determined, there is strong reason to believe they would be sufficient to meet the country’s energy needs for many years.",
+        "(Table: Çifci et al., 2024)",
+        "(Table: Çifci et al., 2024)",
+        "From the extracted gas hydrates, blue hydrogen or synthesis gas can be produced through processes such as steam methane reforming (SMR) and pyrolysis. These methods not only yield hydrogen but also generate synthesis gas and pure carbon as valuable by-products, which can be employed in the production of a wide range of advanced materials.",
+        "This approach not only prevents the release of greenhouse gases into the atmosphere but also supports sustainable development. Thus, the economic utilization of gas hydrates presents a promising avenue for mitigating climate change while harnessing these resources for industrial applications.",
+        "Japan, China, and the United States are at the forefront of global gas hydrate research and development, with significant advancements in field tests and extraction methods. India, South Korea, and Canada are also making substantial progress in exploring gas hydrate reservoirs and refining extraction technologies. While commercial production is yet to be realized, these nations are laying the groundwork for future development by addressing technical and environmental challenges. In the coming years, Japan and China are likely to be among the first to achieve commercial production.",
+        "Gas hydrates can serve as a transitional energy resource, bridging the gap between fossil fuels and cleaner energy systems. With their vast methane reserves, gas hydrates have the potential to supply energy for decades, offering an opportunity to reduce the environmental impact of energy production.",
+        "In sum, the comprehensive study of gas hydrates is essential for shaping energy policies and creating the frameworks necessary to sustainably harness this resource. The collaborative efforts of",
+        "nations, driven by shared interests in energy security and environmental stewardship, will play a crucial role in realizing the potential of gas hydrates as a future energy source."
+      ]
+    }
+  ],
+  "keywords": [
+    "Energy security",
+    "environmental sustainability",
+    "gas hydrates",
+    "new energy resources",
+    "Turkey National Gas Hydrate Project"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Anderson, B. J., Boswell, R., Collett, T. S., Farrell, H., Ohtsuki, S., White, M., & Zyrianova, M. (2014). Review of the findings of the Iġnik Sikumi CO2-CH4 gas hydrate exchange field trial. Proceedings of the 8th International Conference on Gas Hydrates, 1-8."
+    },
+    {
+      "id": "ref-2",
+      "text": "Bazauk, O., Sai, K., Lozynskyi, V., Petlovanti, M., Saik, P., (2021) Research into Dissociation Zones of Gas Hydrate Deposits with a Heterogeneous Structure in the Black Sea - MDPI Energies"
+    },
+    {
+      "id": "ref-3",
+      "text": "Boswell, R., ve Collett, T.S., (2006) The gas hydrates resource pyramid. Fire in the Ice, Methane Hydrate Newsletter, US Department of Energy, Office of Fossil Energy, National Energy Technology Laboratory, pp. 5–7."
+    },
+    {
+      "id": "ref-4",
+      "text": "Boswell, R., & Collett, T. S. (2011). “The Gas Hydrate Resource: A Review of the Current State of Knowledge.” Natural Gas Hydrates: Energy Resource Potential and Environmental Impacts."
+    },
+    {
+      "id": "ref-5",
+      "text": "Boswell, R., Collett, T.S., Frye, M., Shedd, W., McConnell, D.R., ve Shelander, D., (2012) Subsurface gas hydrates in the northern Gulf of Mexico. Marine and Petroleum Geology, vol. 34, no. 1, pp. 4–30, June."
+    },
+    {
+      "id": "ref-6",
+      "text": "Boswell, R., Schoderbek, D., Collett, T. S., Ohtsuki, S., White, M., & Anderson, B. J. (2017). The Iġnik Sikumi Field Experiment, Alaska North Slope: Design, operations, and implications for CO2–CH4 exchange in gas hydrate reservoirs. Energy & Fuels, 31(1), 140-153."
+    },
+    {
+      "id": "ref-7",
+      "text": "Chen, L., Feng, Y., Okajima, J., Komiya, A., & Maruyama, S. (2017). Production behavior and numerical analysis for 2017 methane hydrate extraction test of Shenhu, South China Sea. Journal of Natural Gas Science and Engineering, 53, 55-66."
+    },
+    {
+      "id": "ref-8",
+      "text": "Cherskiy, N.V., ve Tsarev, V.P., (1977) Evaluation of the reserves in the light of search and prospecting of natural gases from the bottom sediments of the world’s ocean (in Russian). Geologiya Nefti i Geofizika, vol. 5, pp. 21–31."
+    },
+    {
+      "id": "ref-9",
+      "text": "Chong, Z. R., Yang, S. H. B., Babu, P., Linga, P., & Li, X. S. (2016). Review of natural gas hydrates as an energy resource: Prospects and challenges. Applied Energy, 162, 1633-1652."
+    },
+    {
+      "id": "ref-10",
+      "text": "Chong, Z.R., Yang, M., Khoo, B.C., Linga, P., (2016) Size effect of porous media on methane hydrate formation and dissociation in an excess gas environment. Ind. Eng. Chem. Res., 55, 7981–7991."
+    },
+    {
+      "id": "ref-11",
+      "text": "Çifci,G., 2020. Gas Hydrates: The Energy Source of the Near Future, BRIQ, Volume 2, Issue 1, Winter 20202021."
+    },
+    {
+      "id": "ref-12",
+      "text": "Çifci G., Parlaktuna M., Çelebi, S.S., Okay Günaydın, S., (in press). Energy production from gas hydrates, ENY2, Elsevier."
+    },
+    {
+      "id": "ref-13",
+      "text": "Collett, T. S., et al. (2015). “Economic Viability of Gas Hydrate Production in North America.” Natural Gas Hydrates: Energy Resource Potential and Environmental Impacts."
+    },
+    {
+      "id": "ref-14",
+      "text": "Dallimore, S. R., Wright, J. F., Nixon, F. M., Kurihara, M., Yamamoto, K., Fujii, T., Fujii, K., Numasawa, M., Yasuda, M., & Imasato, Y. (2012). Geologic and porous media factors affecting the 2007 production response characteristics of the JOGMEC/NRCAN/AURORA Mallik gas hydrate production research well. Journal of Petroleum Science and Engineering, 81, 45-55."
+    },
+    {
+      "id": "ref-15",
+      "text": "Dong, F., Zang, X., Li, D., Fan, S., & Liang, D. (2009). Experimental investigation on propane hydrate dissociation by high concentration methanol and ethylene glycol solution injection. Energy & Fuels, 23(3), 15631567."
+    },
+    {
+      "id": "ref-16",
+      "text": "Espinoza, D. N., & Santamarina, J. C. (2011). P-wave monitoring of hydrate-bearing sand during CH4-CO2 replacement. International Journal of Greenhouse Gas Control, 5(4), 1031-1038."
+    },
+    {
+      "id": "ref-17",
+      "text": "Feng, J. C., Wang, Y., Li, X. S., Li, G., & Chen, Z. Y. (2015). Production behavior and numerical model for gas hydrate accumulation by the combination of depressurization and thermal stimulation. Applied Energy, 145, 25-33."
+    },
+    {
+      "id": "ref-18",
+      "text": "Fujii, T., Nakamizu, M., Tsuji, Y., Namikawa, T., Okui, T., Kawasaki, M., Ochiai, K., Nishimura, M., & Takano, O. (2018). Resource assessment of methane hydrate in the eastern Nankai Trough, Japan. In Y."
+    },
+    {
+      "id": "ref-19",
+      "text": "TP-DEPARK Project Report, 2018. “Gas Hydrate Potential Potential Study and Research Project in the Western Black Sea Pilot Area with Turkish Petroleum and Dokuz Eylül Technology Development INC”."
+    },
+    {
+      "id": "ref-20",
+      "text": "Konno, Y. Masuda, Y. Takai (Eds.), Gas Hydrates 2: Geoscience Issues and Potential Industrial Applications (pp. 88-107). Wiley-VCH."
+    },
+    {
+      "id": "ref-21",
+      "text": "Hovland, M., & Judd, A. G. (2004). “Seabed Methane Hydrates: A Review of Their Environmental Impact.Environmental Science & Policy."
+    },
+    {
+      "id": "ref-22",
+      "text": "Heijmans, K., et al., (2007). Methanotrophy below pH 1 by a new Verrucomicrobia species: Nature, v. 6, no. 450, p. 874-878."
+    },
+    {
+      "id": "ref-23",
+      "text": "Inagaki, F., et al., (2006). Biogeographical distribution and diversity of microbes in methane hydrate-bearing deep marine sediments on the Pacific Ocean Margin: PNAS, v. 103, no. 8, p. 2815-2820."
+    },
+    {
+      "id": "ref-24",
+      "text": "International Energy Agency (IEA) (2018). “Gas Hydrates: A Potential Future Energy Source”."
+    },
+    {
+      "id": "ref-25",
+      "text": "Islam, M. R. (2015). Unconventional gas hydrates: Role of thermal stimulation and unconventional resources. In M. R. Islam (Ed.), Unconventional Gas Hydrates (pp. 231-263). Gulf Professional Publishing."
+    },
+    {
+      "id": "ref-26",
+      "text": "Jones, C. M., Dourado, J.D.A. and Chaves, H.A.F., (2010). Gas Hydrates and Microbiological Processes. Search and Discovery. 80081."
+    },
+    {
+      "id": "ref-27",
+      "text": "Jung, J. W., Santamarina, J. C., & Soga, K. (2010). Stressstrain response of hydrate-bearing sands: Numerical study using distinct element method simulations. Journal of Geophysical Research: Solid Earth, 115(B6)."
+    },
+    {
+      "id": "ref-28",
+      "text": "Kamath, V. A., & Patil, S. L. (2013). Experimental study of gas hydrate dissociation in porous media by depressurization and inhibitor injection. Proceedings of the 7th International Conference on Gas Hydrates, 1-10."
+    },
+    {
+      "id": "ref-29",
+      "text": "Koh, C. A., Sum, A. K., & Sloan, E. D. (2012). Gas hydrates: Unlocking the energy from icy cages. Journal of Applied Physics, 106(6), 061101."
+    },
+    {
+      "id": "ref-30",
+      "text": "Konno, Y., Masuda, Y., Hariguchi, Y., Kurihara, M., & Ouchi, H. (2010). Key factors for depressurization-induced gas production from oceanic methane hydrates. Energy & Fuels, 24(3), 1736-1744."
+    },
+    {
+      "id": "ref-31",
+      "text": "Konno, Y., Fujii, T., Sato, A., Akamine, K., Naiki, M., Masuda, Y., Yamamoto, K., & Nagao, J. (2014). Key findings of the world’s first offshore methane hydrate production test off the coast of Japan: Toward future commercial production. Energy & Fuels, 28(5), 3544-3553."
+    },
+    {
+      "id": "ref-32",
+      "text": "Konno, Y., Masuda, Y., Hariguchi, Y., Kurihara, M., & Ouchi, H. (2010). Key factors for depressurization-induced gas production from oceanic methane hydrates. Energy & Fuels, 24(3), 1736-1744."
+    },
+    {
+      "id": "ref-33",
+      "text": "Küçük, H.M., 2018 Türkiye’s Gas Hydrate Road Map Proposal, World Energy Council, Turk Milli Komitesi, Oil and Gas Working Group PDG1."
+    },
+    {
+      "id": "ref-34",
+      "text": "Lee, J., Park, S., & Sung, W. (2013). An experimental study on the productivity of dissociated gas from hydrate by depressurization scheme. Transport in Porous Media, 92(1), 69-81."
+    },
+    {
+      "id": "ref-35",
+      "text": "Lee, J., & Lee, K. (2014). “Recent Advances in Gas Hydrate Research: A Review.” Journal of Petroleum Science and Engineering."
+    },
+    {
+      "id": "ref-36",
+      "text": "Li, B., Li, G., Li, X. S., Li, Q. P., Yang, B., Zhang, Y., & Chen, Z. Y. (2014). Gas production from methane hydrate in a pilot-scale hydrate simulator using the huff and puff method by experimental and numerical studies. Energy & Fuels, 26(12), 7183-7194."
+    },
+    {
+      "id": "ref-37",
+      "text": "Li, X. S., Yang, B., Li, G., Li, B., Zhang, Y., & Chen, Z. Y. (2015). Experimental study on gas production from methane hydrate in porous media by huff and puff method. Fuel, 119, 102-110."
+    },
+    {
+      "id": "ref-38",
+      "text": "Li, X. S., Xu, C. G., Zhang, Y., Ruan, X. K., Li, G., & Wang, Y. (2016). Investigation into gas production from natural gas hydrate: A review. Applied Energy, 172, 286-322."
+    },
+    {
+      "id": "ref-39",
+      "text": "Li, X. S., Xu, C. G., Zhang, Y., Ruan, X. K., & Li, G. (2018). Experimental investigation into the production behavior of methane hydrate under different depressurization schemes. Applied Energy, 227, 710-718."
+    },
+    {
+      "id": "ref-40",
+      "text": "Liu, Y., Gamwo, I. K., & Myshakin, E. M. (2012). Role of methanol in hydrate dissolution. Journal of Physical Chemistry B, 116(44), 13294-13301"
+    },
+    {
+      "id": "ref-41",
+      "text": "Liu, Y., et al. (2012). “Environmental Impact Assessment of Gas Hydrate Exploitation: A Review.” Energy Procedia."
+    },
+    {
+      "id": "ref-42",
+      "text": "Makogon, Y. F., et al. (2007). “Hydrate Formation and Its Prevention in Natural Gas Production.”Journal of Natural Gas Science and Engineering."
+    },
+    {
+      "id": "ref-43",
+      "text": "Matsumoto, R., et al. (2013). “The Role of Natural Gas Hydrates in Global Energy Supply: An Economic Perspective.” Energy Policy."
+    },
+    {
+      "id": "ref-44",
+      "text": "McConnell ,D.R. (2019).Gas Hydrate Prospecting Prospecting and Characterization.The Offshore Technology Conference held in Houston, Texas, USA, 6– 9May 2019 ,OTCOTC -29604 -MS ."
+    },
+    {
+      "id": "ref-45",
+      "text": "McGrail, B. P., Zhu, T., Hunter, R. B., White, M. D., Patil, S. L., & Kulkarni, A. S. (2007). A new method for enhanced production of gas hydrates with CO2. Proceedings of the AAPG Hedberg Conference “Natural Gas Hydrates: Energy Resource Potential and Associated Geologic Hazards”, 1-5."
+    },
+    {
+      "id": "ref-46",
+      "text": "G. Çifci, S. S. Çelebi, M. Parlaktuna, A. Kaçar, S. O. Günaydın - Gas Hydrates as a New Energy Resource"
+    },
+    {
+      "id": "ref-47",
+      "text": "METI (Ministry of Economy, Trade and Industry, Japan). (2017). FY 2016 methane hydrate resource development offshore production test in the Sea of Japan. METI Press Release."
+    },
+    {
+      "id": "ref-48",
+      "text": "Minshull, T.A., Marín-Moreno, H., Betlem, P., Bialas, J., Buenz, S., Burwicz, E., Cameselle, A.L., Cifci, G., Giustiniani, M., Hillman, J.I.T., Hölz, S., Hopper, J.R., Ion, G., León, R., Magalhaes, V., Makovsky, Y., Mata, M.-P., Max, M.D., Nielsen, T., Okay, S., Ostrovsky, I., O’Neill, N., Pinheiro, L.M., Plaza-Faverola, A.A., Rey, D., Roy, S., Schwalenberg, K., Senger, K., Vadakkepuliyambatta, S., Vasilev, A., Vázquez, Juan.-Tomá., Hydrate occurrence in Europe: A review of available evidence, Marine and Petroleum Geology (2019), doi: https://doi.org/10.1016/ j.marpetgeo.2019.08.014."
+    },
+    {
+      "id": "ref-49",
+      "text": "Moridis, G. J., Collett, T. S., Pooladi-Darvish, M., Hancock, S., Santamarina, C., Boswell, R., Kneafsey, T., Rutqvist, J., Kowalsky, M. B., Reagan, M. T., Sloan, E. D., Sum, A. K., & Koh, C. A. (2011). Challenges, uncertainties, and issues facing gas production from gas-hydrate deposits. SPE Reservoir Evaluation & Engineering, 14(01), 76112."
+    },
+    {
+      "id": "ref-50",
+      "text": "Ojha, M., & Sain, K. 2009. Seismic attributes for identifying gas-hydrates and free-gas zones: application to the Makran accretionary prism. 32, 264-270."
+    },
+    {
+      "id": "ref-51",
+      "text": "Park, Y., Cha, M., Cha, J. H., Shin, K., Lee, H., Park, K. P., Huh, D. G., Lee, H. Y., Kim, S. J., & Lee, J. (2008). Swapping carbon dioxide for complex gas hydrate structures. Proceedings of the 6th International Conference on Gas Hydrates, 1-10."
+    },
+    {
+      "id": "ref-52",
+      "text": "Reagan, M. T., Moridis, G. J., Elliott, S. M., & Maltrud, M. (2010). Contribution of oceanic gas hydrate dissociation to the formation of Arctic Ocean methane plumes. Journal of Geophysical Research: Oceans, 116(C9)."
+    },
+    {
+      "id": "ref-53",
+      "text": "Ruppel, C. D., & Kessler, J. D. (2017). The interaction of climate change and methane hydrates. Reviews of Geophysics, 55(1), 126-168."
+    },
+    {
+      "id": "ref-54",
+      "text": "Rutqvist, J., Moridis, G. J., Grover, T., & Collett, T. (2009). Geomechanical response of permafrost-associated hydrate deposits to depressurization-induced gas production. Journal of Petroleum Science and Engineering, 67(1-2), 1-12."
+    },
+    {
+      "id": "ref-55",
+      "text": "Sahu, S. K., Yamada, Y., Tsuji, T., & Matsuoka, T. (2018). Chemical agent effects on methane hydrate dissociation: A review. Journal of Natural Gas Science and Engineering, 45, 581-593."
+    },
+    {
+      "id": "ref-56",
+      "text": "Sloan, E. D., & Koh, C. A. (2008). Clathrate hydrates of natural gases (3rd ed.). CRC Press."
+    },
+    {
+      "id": "ref-57",
+      "text": "Song, Y., Yang, L., Zhao, J., Liu, W., Yang, M., Li, Y., Liu, Y., & Li, Q. (2016). The status of natural gas hydrate research in China: A review. Renewable and Sustainable Energy Reviews, 59, 1498-1513."
+    },
+    {
+      "id": "ref-58",
+      "text": "Su, Z., He, Y., Wu, N., Zhang, K., & Moridis, G. J. (2021). Evaluation of gas production from the first gas hydrate production test in the South China Sea. Applied Energy, 290, 116574."
+    },
+    {
+      "id": "ref-59",
+      "text": "Sun, Z., Wang, R., Ma, R., Guo, K., & Fan, S. (2015). Effect of surfactant on natural gas hydrate production by using hydrate formation. Energy & Fuels, 17(5), 11801185."
+    },
+    {
+      "id": "ref-60",
+      "text": "Xu, C. G., Li, X. S., Ruan, X. K., Chen, Z. Y., & Yan, K. F. (2016). Advances in pilot-scale investigations on gas hydrate exploitation and scale-up research. Chinese Journal of Chemical Engineering, 24(2), 271-281."
+    },
+    {
+      "id": "ref-61",
+      "text": "Yamamoto, K., Terao, Y., Fujii, T., Ikawa, T., Seki, M., Matsuzawa, M., & Kanno, T. (2014). Operational overview of the first offshore production test of methane hydrates in the Eastern Nankai Trough. In Offshore Technology Conference (pp. 1-11)."
+    },
+    {
+      "id": "ref-62",
+      "text": "Yan, T., Zhou, Y. Q., Zhang, C. L. (2006). Diversity of functional genes for methanotrophs in sediments associated with gas hydrates and hydrocarbon seeps in the Gulf of Mexico: FEMS Microbiology Ecology, v. 57, no. 2, p. 251-259."
+    },
+    {
+      "id": "ref-63",
+      "text": "Yang, M., Song, Y., Ruan, X., Liu, Y., Zhao, J., & Li, Q. (2012). Comparative analysis of hydrate-based natural gas storage methods through numerical simulation. Energy & Fuels, 26(8), 4911-4918."
+    },
+    {
+      "id": "ref-64",
+      "text": "Walsh, M. R., Hancock, S. H., Wilson, S. J., Patil, S. L., Moridis, G. J., Boswell, R., Collett, T. S., Koh, C. A., & Sloan, E. D. (2009). Preliminary report on the commercial viability of gas production from natural gas hydrates. Energy Economics, 31(5), 815-823."
+    },
+    {
+      "id": "ref-65",
+      "text": "White, M. (2008). Comparative Assessment of Advanced Gas Hydrate Production Methods: NETL Hydrate Program Peer Review, Pacific Northwest National Laboratory, Aug 2008."
+    },
+    {
+      "id": "ref-66",
+      "text": "Zhen-guo Z., Yu W., Lian-feng G., Ying Z., Chang-shui L., (2012) “International Conference on Fu-ture Energy, Environment, and Materials Marine Gas Hydrates: Future Energy or Environmental Kil-ler?”"
+    }
+  ],
+  "acknowledgements": "We are deeply indebted to the Turkish State Planning Organization (DPT) for their invaluable support in procuring equipment and establishing the data acquisition, processing, and interpretation laboratory through project 2003K120360. We would like to thank our Team, dozens of geophysical (especially Orhan Atgın, Özkan Özel etc), geological (Talip Güngör, Altuğ Hasözbek, Namık Çağatay et al.), and chemical engineers (Esin Süzer, Hakan Alyürük, Enis Darılmaz et al.), microbiologists (Burcu Omuzbüken), physical oceanographer (Murat Gündüz), DEU researchers (Burcu Barın, Sermet Gündüz, H. Mert Küçük and et al., scientists from METU (Çağlar Söyüncü), Istanbul University (Hakan Hoşgörmez, et al.), Ege University (Güven Özdemir), and K. Piri Reis and Dokuz Eylül 4 research vessels crews and Captain Kemal Dursun who worked on the projects during the Gas Hydrate researches and gave us a shoulder to overcome every problem we encountered. We also like to thank DEU IMST faculty members (Prof. Dr. Mustafa Ergün) and our colleague, Prof. Dr. Aynur Kontaş, whom we lost, for her precious contribution to GH research. May her soul rest in peace. Also,we thank Prof. Michael Ivanov from Moscow State University for pioneering gas hydrate research on Training Through Research (TTR) surveys at different seas, and we remember him with love and respect. Last but not least, we would like to send a very special thanks to Salih Ertan for his valuable contributions to this manuscript. 371 G. Çifci, S. S. Çelebi, M. Parlaktuna, A. Kaçar, S. O. Günaydın - Gas Hydrates as a New Energy Resource",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-01.jpg",
+      "caption": "Figure 1. This shows the importance and locations of gas hydrates in marine sediments and permafrost regions, which are crystalline compounds composed of water and methane. At high pressure and low temperatures, methane is trapped inside a cage of ice, which forms methane hydrate (Figure: Çifci et al., in press)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-02.jpg",
+      "caption": "Figure 2. Images of recovered gas hydrates from the seafloor and their appearance when burned in the western Black Sea (Figure: TP-DEPARK Project Report, 2018)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-03.jpg",
+      "caption": "Figure 3. Geophysics, seismic reflection section interpretation showing bottom-simulating reflector (BSR) as an indicator to identify gas hydrates in marine sediments (Figure: Çifci et al., in press)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-04.jpg",
+      "caption": "Figure 4. Gas hydrate resource pyramid, which categorizes these deposits based on their geological and economic recoverability (Figure: Boswell & Collett, 2011)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-05.jpg",
+      "caption": "Figure 5: Extraction methods in which natural gas can be extracted from gas hydrates. Depressurization, thermal stimulation, chemical injection and CO2 exchange, each of these methods offering unique benefits and challenges (Figure: Çifci et al., in press)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-06.jpg",
+      "caption": "Figure 6. An example from the Cascadia region showing drilling depth that reaches to BSR, the base of gas hydrates (Figure: McConnell, 2019)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-07.jpg",
+      "caption": "Table 1. Comparison of Natural Gas Production Methods from Gas Hydrates"
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-08.jpg",
+      "caption": "Table 1. Comparison of Natural Gas Production Methods from Gas Hydrates (continued)"
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-09.jpg",
+      "caption": "Table 2. Advantages and Disadvantages of Gas Hydrate Production Methods"
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-10.jpg",
+      "caption": "Table 3. Technological Maturity and Application Status of Gas Hydrate Production Methods"
+    },
+    {
+      "id": "figure-11",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-11.jpg",
+      "caption": "Gas Hydrates as a New Energy Resource"
+    },
+    {
+      "id": "figure-12",
+      "src": "/assets/article-figures/yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar/figure-12.jpg",
+      "caption": "Gas Hydrates as a New Energy Resource"
+    }
+  ]
+}

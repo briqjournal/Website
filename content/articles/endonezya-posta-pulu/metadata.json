@@ -1,17 +1,57 @@
 {
   "schemaVersion": 2,
   "id": "endonezya-posta-pulu",
-  "articleType": {"id": "poster", "tr": "Afiş", "en": "Poster", "peerReviewed": false},
-  "title": {"en": "Stamp of Indonesia", "tr": "Endonezya Posta Pulu"},
+  "articleType": {
+    "id": "poster",
+    "tr": "Afiş",
+    "en": "Poster",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Stamp of Indonesia",
+    "tr": "Endonezya Posta Pulu"
+  },
   "authors": [],
-  "abstract": {"en": null, "tr": null},
-  "keywords": {"en": [], "tr": []},
-  "dates": {"received": null, "revised": null, "accepted": null, "published": "2025-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 3, "year": 2025, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "381", "last": "381"},
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2025-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 3,
+    "year": 2025,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "381",
+    "last": "381"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

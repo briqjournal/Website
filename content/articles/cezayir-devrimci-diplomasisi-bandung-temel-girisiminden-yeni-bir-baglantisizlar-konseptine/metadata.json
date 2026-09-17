@@ -17,11 +17,19 @@
       "givenName": "Belkacem",
       "familyName": "Iratni",
       "orcid": "https://orcid.org/0009-0007-4747-8836",
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "University of Algiers 3",
+          "nameTr": "Cezayir Üniversitesi 3",
+          "nameEn": "University of Algiers 3",
+          "country": "Algeria",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
-    "en": "Following its independence in July 1962, Algeria commenced the application of non-alignment principles by supporting liberation movements, primarily in Africa, to eradicate Western colonialism. Algeria gradually sought to instill a new ethos in the Non-Alignment Movement, transcending mere formal pronouncements and the politics of passive neutrality. Consequently, it advocated for the integration of this movement in addressing global challenges and urged the formation of a New International Economic Order (NIEO) to enable Global South nations to assert control over their natural resources, reduce economic reliance on foreign entities, and establish a just and equitable international financial system. The article examines the progression of Algeria’s non-alignment policy since the Bandung Conference by analyzing its endeavors to attain political liberation for the southern hemisphere and its persistent efforts to reform the global economic system, perceived as harmful to developing nations' economic advancement and well-being. This revolutionary ethos, derived from the principles established at Bandung and evident in Algerian diplomatic conduct, warrants the recognition it truly merits.",
+    "en": "Following its independence in July 1962, Algeria commenced the application of nonalignment principles by supporting liberation movements, primarily in Africa, to eradicate Western colonialism. Algeria gradually sought to instill a new ethos in the Non-Alignment Movement, transcending mere formal pronouncements and the politics of passive neutrality. Consequently, it advocated for the integration of this movement in addressing global challenges and urged the formation of a New International Economic Order (NIEO) to enable Global South nations to assert control over their natural resources, reduce economic reliance on foreign entities, and establish a just and equitable international financial system. The article examines the progression of Algeria’s non-alignment policy since the Bandung Conference by analyzing its endeavors to attain political liberation for the southern hemisphere and its persistent efforts to reform the global economic system, perceived as harmful to developing nations' economic advancement and well-being. This revolutionary ethos, derived from the principles established at Bandung and evident in Algerian diplomatic conduct, warrants the recognition it truly merits.",
     "tr": "Temmuz 1962’de bağımsızlığını elde ettikten sonra Cezayir, Batı sömürgeciliğinden kurtulmak için özellikle Afrika’daki kurtuluş hareketlerine yardım ederek bağlantısızlık ilkelerini uygulamaya başladı. Cezayir, Bağlantısızlar Hareketi’ne resmi bildirgelerin ve pasif tarafsızlık politikasının ötesinde yeni bir ruh kazandırmaya yöneldi. Böylece Cezayir, bu hareketin uluslararası sorunların çözümüne dahil edilmesi ve Küresel Güney ülkelerinin kendi doğal kaynakları üzerinde kontrol sağlamalarına, ekonominin dışa bağımlılığını azaltmalarına, adil ve daha eşitlikçi bir uluslararası finans sistemi oluşturmalarını sağlayacak bir Yeni Uluslararası Ekonomik Düzen (NIEO) kurulması için çaba göstermiştir. Bu makale, Cezayir’in bağlantısızlık politikasının Bandung tarihi toplantısından bu yana geçirdiği süreci, güney yarımkürenin siyasi kurtuluşunu sağlama çabalarını ve gelişmekte olan ülkelerin ekonomik ilerleme ve refahına zarar verdiği düşünülen dünya ekonomik sisteminin mekanizmalarını değiştirmeye yönelik durmak bilmeyen arayışını inceleyerek analiz etmeye çalışmaktadır. Bandung’da ortaya konan ilkelerden türetilen ve Cezayir’in diplomatik davranışlarında açıkça görülen bu devrimci ruh, gerçekten hak ettiği takdiri görmeyi hak etmektedir."
   },
   "keywords": {
@@ -32,7 +40,13 @@
       "nonalignment",
       "revolutionary diplomacy"
     ],
-    "tr": []
+    "tr": [
+      "Bağlantısızlar Hareketi",
+      "Cezayir",
+      "devrimci diplomasi",
+      "kurtuluş hareketleri",
+      "Yeni Uluslararası Ekonomik Düzen"
+    ]
   },
   "dates": {
     "received": "2024-07-10",

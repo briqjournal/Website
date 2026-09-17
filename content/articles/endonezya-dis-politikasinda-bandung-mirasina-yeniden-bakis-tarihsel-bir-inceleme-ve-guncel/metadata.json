@@ -1,27 +1,117 @@
 {
   "schemaVersion": 2,
   "id": "endonezya-dis-politikasinda-bandung-mirasina-yeniden-bakis-tarihsel-bir-inceleme-ve-guncel",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
   "title": {
-    "en": "Revisiting the Bandung Legacy in Indonesian Foreign Policy: A Historical Review and Its Contemporary",
+    "en": "Revisiting the Bandung Legacy in Indonesian Foreign Policy: A Historical Review and Its Contemporary Implications",
     "tr": "Endonezya Dış Politikasında Bandung Mirasına Yeniden Bakış: Tarihsel Bir İnceleme ve Güncel Çıkarımlar"
   },
   "authors": [
-    {"displayName": "Zhang Qingyi", "givenName": "Qingyi", "familyName": "Zhang", "orcid": null, "affiliations": []},
-    {"displayName": "Du Donghui", "givenName": "Donghui", "familyName": "Du", "orcid": null, "affiliations": []}
+    {
+      "displayName": "Zhang Qingyi",
+      "givenName": "Qingyi",
+      "familyName": "Zhang",
+      "orcid": "https://orcid.org/0009-0000-8505-0741",
+      "affiliations": [
+        {
+          "name": "Department of Political Science, Shanghai University",
+          "nameTr": "Siyaset Bilimi Bölümü, Şanghay Üniversitesi",
+          "nameEn": "Department of Political Science, Shanghai University",
+          "country": "China",
+          "ror": null
+        }
+      ]
+    },
+    {
+      "displayName": "Du Donghui",
+      "givenName": "Donghui",
+      "familyName": "Du",
+      "orcid": "https://orcid.org/0009-0005-8912-1670",
+      "affiliations": [
+        {
+          "name": "Department of History, Shanghai University",
+          "nameTr": "Tarih Bölümü, Şanghay Üniversitesi",
+          "nameEn": "Department of History, Shanghai University",
+          "country": "China",
+          "ror": null
+        }
+      ]
+    }
   ],
   "abstract": {
-    "en": "During the Cold War, the intense confrontation between the United States and the Soviet Union,as well as their competition for influence in the Third World, compelled newly independentcountries like Indonesia to seek closer cooperation. The structure of the international system,the nature of the newly independent states, and Sukarno’s own anti-imperialist and anti-colonialstance contributed to Indonesia’s support for the Asian-African Conference. In the process ofpreparing for and hosting the Asian-African Conference, Indonesia effectively capitalized on itsadvantageous position as the host country and adeptly overcame various challenges to ensurethe seamless progression of the conference. The Bandung spirit of “solidarity, friendship, andcooperation” established during the Asian-African Conference has served as a guiding principlefor Indonesia’s diplomatic endeavors. During the Sukarno and Suharto eras, Indonesia continuedto advance its anti-colonial cause ; however, it increasingly became entangled in great powercompetition and resorted to military force in addressing the issues of Malaysia’s independenceand East Timor’s self-determination, thereby deviating from the principles upheld at the BandungConference. In the post-Suharto era, the Bandung spirit has returned as a guiding principle ofIndonesian foreign policy.",
-    "tr": "Soğuk Savaş sırasında ABD ve Sovyetler Birliği arasındaki yoğun çatışma ve Üçüncü Dünya’daki nüfuz mücadelesi, Endonezya gibi bağımsızlığını yeni kazanan ülkeleri daha yakın işbirliği arayışına itti. Uluslararası sistemin yapısı, yeni bağımsız devletlerin doğası ve Sukarno’nun kendi anti- emperyalist ve sömürge karşıtı duruşu Endonezya’nın Asya-Afrika Konferansı’na destek vermesini sağladı. Endonezya, Asya-Afrika Konferansı’na hazırlık sürecinde ev sahibi ülke olmanın avantajlı konumundan etkin bir şekilde yararlandı ve konferansın sorunsuz bir şekilde ilerlemesini sağlamak için çeşitli zorlukların üstesinden ustalıkla geldi. Asya-Afrika Konferansı sırasında oluşturulan “dayanışma, dostluk ve işbirliği”ne dayalı Bandung ruhu, Endonezya’nın diplomatik çabaları için yol gösterici bir ilke olarak hizmet etmiştir. Sukarno ve Suharto dönemlerinde Endonezya sömürge karşıtı davasını ilerletmeye devam etti. Ancak giderek büyük güç rekabetine dahil oldu ve Malezya’nın bağımsızlığı ve Doğu Timor’un kendi kaderini tayin etme konularını ele alırken askeri güce başvurdu. Böylece Bandung Konferansı’nda savunulan ilkelerden saptı. Suharto sonrası dönemde Bandung ruhu Endonezya dış politikasının yol gösterici bir ilkesi olarak geri dönmüştür."
+    "en": "During the Cold War, the intense confrontation between the United States and the Soviet Union, as well as their competition for influence in the Third World, compelled newly independent countries like Indonesia to seek closer cooperation. The structure of the international system, the nature of the newly independent states, and Sukarno’s own anti-imperialist and anti-colonial stance contributed to Indonesia’s support for the Asian-African Conference. In the process of preparing for and hosting the Asian-African Conference, Indonesia effectively capitalized on its advantageous position as the host country and adeptly overcame various challenges to ensure the seamless progression of the conference. The Bandung spirit of “solidarity, friendship, and cooperation” established during the Asian-African Conference has served as a guiding principle for Indonesia’s diplomatic endeavors. During the Sukarno and Suharto eras, Indonesia continued to advance its anti-colonial cause; however, it increasingly became entangled in great power competition and resorted to military force in addressing the issues of Malaysia’s independence and East Timor’s self-determination, thereby deviating from the principles upheld at the Bandung Conference. In the post-Suharto era, the Bandung spirit has returned as a guiding principle of Indonesian foreign policy.",
+    "tr": "Soğuk Savaş sırasında ABD ve Sovyetler Birliği arasındaki yoğun çatışma ve Üçüncü Dünya’daki nüfuz mücadelesi, Endonezya gibi bağımsızlığını yeni kazanan ülkeleri daha yakın işbirliği arayışına itti. Uluslararası sistemin yapısı, yeni bağımsız devletlerin doğası ve Sukarno’nun kendi antiemperyalist ve sömürge karşıtı duruşu Endonezya’nın Asya-Afrika Konferansı’na destek vermesini sağladı. Endonezya, Asya-Afrika Konferansı’na hazırlık sürecinde ev sahibi ülke olmanın avantajlı konumundan etkin bir şekilde yararlandı ve konferansın sorunsuz bir şekilde ilerlemesini sağlamak için çeşitli zorlukların üstesinden ustalıkla geldi. Asya-Afrika Konferansı sırasında oluşturulan “dayanışma, dostluk ve işbirliği”ne dayalı Bandung ruhu, Endonezya’nın diplomatik çabaları için yol gösterici bir ilke olarak hizmet etmiştir. Sukarno ve Suharto dönemlerinde Endonezya sömürge karşıtı davasını ilerletmeye devam etti. Ancak giderek büyük güç rekabetine dahil oldu ve Malezya’nın bağımsızlığı ve Doğu Timor’un kendi kaderini tayin etme konularını ele alırken askeri güce başvurdu. Böylece Bandung Konferansı’nda savunulan ilkelerden saptı. Suharto sonrası dönemde Bandung ruhu Endonezya dış politikasının yol gösterici bir ilkesi olarak geri dönmüştür."
   },
-  "keywords": {"en": [], "tr": []},
-  "dates": {"received": "2024-12-19", "revised": "2025-01-28", "accepted": "2025-02-10", "published": "2025-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 3, "year": 2025, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "293", "last": "310"},
+  "keywords": {
+    "en": [
+      "Anti-Colonial Movement",
+      "Bandung Conference",
+      "Bandung Spirit",
+      "Indonesia",
+      "Southeast Asia"
+    ],
+    "tr": [
+      "Bandung Konferansı",
+      "Bandung Ruhu",
+      "Endonezya",
+      "Güneydoğu Asya",
+      "Sömürgecilik Karşıtı Hareket"
+    ]
+  },
+  "dates": {
+    "received": "2024-12-19",
+    "revised": "2025-01-28",
+    "accepted": "2025-02-10",
+    "published": "2025-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 3,
+    "year": 2025,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "293",
+    "last": "310"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
-  "funding": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": {
+    "statement": {
+      "en": "This article is supported by funding from the “National Social Science Foundation Youth Program” (21CGJ037).",
+      "tr": "Bu makale “Ulusal Sosyal Bilimler Vakfı Gençlik Programı” (21CGJ037) tarafından desteklenmektedir."
+    },
+    "funders": [
+      {
+        "name": "National Social Science Foundation Youth Program",
+        "nameTr": "Ulusal Sosyal Bilimler Vakfı Gençlik Programı",
+        "nameEn": "National Social Science Foundation Youth Program",
+        "ror": null,
+        "awardNumbers": [
+          "21CGJ037"
+        ]
+      }
+    ]
+  },
   "conflictOfInterest": null,
   "authorContributions": null,
   "ethicsApproval": null,

@@ -1,8 +1,16 @@
 {
   "schemaVersion": 2,
   "id": "yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
-  "title": {"en": "Gas Hydrates as a New Energy Resource", "tr": "Yeni Bir Enerji Kaynağı Olarak Gaz Hidratlar"},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Gas Hydrates as a New Energy Resource",
+    "tr": "Yeni Bir Enerji Kaynağı Olarak Gaz Hidratlar"
+  },
   "authors": [
     {
       "displayName": "Prof. Dr. Günay Çifci",
@@ -10,7 +18,13 @@
       "familyName": "Çifci",
       "orcid": "https://orcid.org/0000-0002-4380-8056",
       "affiliations": [
-        {"name": "Institute of Marine Sciences and Technology, Dokuz Eylül University", "nameTr": "DEÜ Deniz Bilimleri ve Teknolojisi Enstitüsü", "nameEn": "Institute of Marine Sciences and Technology, Dokuz Eylül University", "country": "Türkiye", "ror": null}
+        {
+          "name": "Institute of Marine Sciences and Technology, Dokuz Eylül University",
+          "nameTr": "DEÜ Deniz Bilimleri ve Teknolojisi Enstitüsü",
+          "nameEn": "Institute of Marine Sciences and Technology, Dokuz Eylül University",
+          "country": "Türkiye",
+          "ror": null
+        }
       ]
     },
     {
@@ -19,7 +33,13 @@
       "familyName": "Çelebi",
       "orcid": "https://orcid.org/0000-0003-0993-9762",
       "affiliations": [
-        {"name": "Istanbul Health and Technology University, Department of Chemical Engineering", "nameTr": "İstanbul Sağlık ve Teknoloji Üniversitesi", "nameEn": "Istanbul Health and Technology University, Department of Chemical Engineering", "country": "Türkiye", "ror": null}
+        {
+          "name": "Istanbul Health and Technology University, Department of Chemical Engineering",
+          "nameTr": "İstanbul Sağlık ve Teknoloji Üniversitesi",
+          "nameEn": "Istanbul Health and Technology University, Department of Chemical Engineering",
+          "country": "Türkiye",
+          "ror": null
+        }
       ]
     },
     {
@@ -28,7 +48,13 @@
       "familyName": "Parlaktuna",
       "orcid": "https://orcid.org/0000-0001-6340-3307",
       "affiliations": [
-        {"name": "Petroleum and Natural Gas Engineering Department, Middle East Technical University", "nameTr": "ODTÜ Petrol ve Doğal Gaz Mühendisliği Bölümü", "nameEn": "Petroleum and Natural Gas Engineering Department, Middle East Technical University", "country": "Türkiye", "ror": null}
+        {
+          "name": "Petroleum and Natural Gas Engineering Department, Middle East Technical University",
+          "nameTr": "ODTÜ Petrol ve Doğal Gaz Mühendisliği Bölümü",
+          "nameEn": "Petroleum and Natural Gas Engineering Department, Middle East Technical University",
+          "country": "Türkiye",
+          "ror": null
+        }
       ]
     },
     {
@@ -37,7 +63,13 @@
       "familyName": "Kaçar",
       "orcid": "https://orcid.org/0000-0002-8705-3695",
       "affiliations": [
-        {"name": "Institute of Marine Sciences and Technology, Dokuz Eylül University", "nameTr": "DEÜ Deniz Bilimleri ve Teknolojisi Enstitüsü", "nameEn": "Institute of Marine Sciences and Technology, Dokuz Eylül University", "country": "Türkiye", "ror": null}
+        {
+          "name": "Institute of Marine Sciences and Technology, Dokuz Eylül University",
+          "nameTr": "DEÜ Deniz Bilimleri ve Teknolojisi Enstitüsü",
+          "nameEn": "Institute of Marine Sciences and Technology, Dokuz Eylül University",
+          "country": "Türkiye",
+          "ror": null
+        }
       ]
     },
     {
@@ -46,21 +78,68 @@
       "familyName": "Günaydın",
       "orcid": "https://orcid.org/0000-0002-6976-7854",
       "affiliations": [
-        {"name": "Institute of Marine Sciences and Technology, Dokuz Eylül University", "nameTr": "DEÜ Deniz Bilimleri ve Teknolojisi Enstitüsü", "nameEn": "Institute of Marine Sciences and Technology, Dokuz Eylül University", "country": "Türkiye", "ror": null}
+        {
+          "name": "Institute of Marine Sciences and Technology, Dokuz Eylül University",
+          "nameTr": "DEÜ Deniz Bilimleri ve Teknolojisi Enstitüsü",
+          "nameEn": "Institute of Marine Sciences and Technology, Dokuz Eylül University",
+          "country": "Türkiye",
+          "ror": null
+        }
       ]
     }
   ],
   "abstract": {
-    "en": "Gas hydrates, solid ice-like structures formed by water and methane molecules, are emerging asa critical future energy resource, offering abundant reserves of cleaner-burning methane. Thesereserves have the potential to enhance energy security, diversify energy portfolios, and supportthe transition from traditional hydrocarbons to more sustainable energy systems. Globally, nationssuch as Japan, China, the United States, India, South Korea, and Canada are leading research anddevelopment in gas hydrates, making substantial investments in advanced technologies and fieldtests. These efforts aim to overcome the significant technical and economic challenges currentlylimiting commercial-scale production. Türkiye’s proximity to significant gas hydrate deposits,particularly in the Black Sea, presents a notable strategic opportunity. It is imperative that Türkiyecapitalizes on this unique positioning by transforming these inherent advantages into long-termcompetitive strengths. The confirmed gas reserves in the Black Sea exemplifies such potential.",
-    "tr": "Su ve metan moleküllerinin oluşturduğu katı buz benzeri yapılar olan gaz hidratlar, daha temiz yananmetan için bol miktarda rezerv sunarak gelecekte kritik bir enerji kaynağı olarak ortaya çıkmaktadır. Burezervler enerji güvenliğini artırma, enerji portföylerini çeşitlendirme ve geleneksel hidrokarbonlardan dahasürdürülebilir enerji sistemlerine geçişi destekleme potansiyeline sahiptir. Nanoteknoloji, mikrobiyolojikyöntemler ve hibrit yaklaşımlar gibi yeni teknolojiler, verimliliği artırmak ve çevresel etkileri azaltmak içingeliştirilmektedir. Küresel olarak Japonya, Çin, ABD, Hindistan, Güney Kore ve Kanada gibi ülkeler gazhidratlar konusunda araştırma ve geliştirmeye öncülük etmekte, ileri teknolojilere ve saha testlerine önemliyatırımlar yapmaktadır. Yakın geleceğin enerji kaynağı olarak kabul edilen “Gaz Hidratlar”, Türkiye’nin UlusalGaz Hidrat Projesi’nin ilk aşaması kapsamında pilot bir bölgede tespit edilmiş ve haritalanmıştır. Karadenizbaşta olmak üzere Türkiye’yi çevreleyen denizlerde mevcut gaz hidratı kaynakları Türkiye için stratejik biravantaj oluşturuyor."
+    "en": "Gas hydrates, solid ice-like structures formed by water and methane molecules, are emerging as a critical future energy resource, offering abundant reserves of cleaner-burning methane. These reserves have the potential to enhance energy security, diversify energy portfolios, and support the transition from traditional hydrocarbons to more sustainable energy systems. Globally, nations such as Japan, China, the United States, India, South Korea, and Canada are leading research and development in gas hydrates, making substantial investments in advanced technologies and field tests. These efforts aim to overcome the significant technical and economic challenges currently limiting commercial-scale production. Türkiye’s proximity to significant gas hydrate deposits, particularly in the Black Sea, presents a notable strategic opportunity. It is imperative that Türkiye capitalizes on this unique positioning by transforming these inherent advantages into long-term competitive strengths. The confirmed gas reserves in the Black Sea exemplifies such potential.",
+    "tr": "Su ve metan moleküllerinin oluşturduğu katı buz benzeri yapılar olan gaz hidratlar, daha temiz yanan metan için bol miktarda rezerv sunarak gelecekte kritik bir enerji kaynağı olarak ortaya çıkmaktadır. Bu rezervler enerji güvenliğini artırma, enerji portföylerini çeşitlendirme ve geleneksel hidrokarbonlardan daha sürdürülebilir enerji sistemlerine geçişi destekleme potansiyeline sahiptir. Nanoteknoloji, mikrobiyolojik yöntemler ve hibrit yaklaşımlar gibi yeni teknolojiler, verimliliği artırmak ve çevresel etkileri azaltmak için geliştirilmektedir. Küresel olarak Japonya, Çin, ABD, Hindistan, Güney Kore ve Kanada gibi ülkeler gaz hidratlar konusunda araştırma ve geliştirmeye öncülük etmekte, ileri teknolojilere ve saha testlerine önemli yatırımlar yapmaktadır. Yakın geleceğin enerji kaynağı olarak kabul edilen “Gaz Hidratlar”, Türkiye’nin Ulusal Gaz Hidrat Projesi’nin ilk aşaması kapsamında pilot bir bölgede tespit edilmiş ve haritalanmıştır. Karadeniz başta olmak üzere Türkiye’yi çevreleyen denizlerde mevcut gaz hidratı kaynakları Türkiye için stratejik bir avantaj oluşturuyor."
   },
-  "keywords": {"en": ["Energy security", "environmental sustainability", "gas hydrates", "new energy resources", "Turkey National Gas Hydrate Project"], "tr": []},
-  "dates": {"received": "2024-12-03", "revised": null, "accepted": "2025-04-22", "published": "2025-06-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 3, "year": 2025, "season": {"en": "Summer", "tr": "Yaz"}},
-  "pages": {"first": "351", "last": "374"},
+  "keywords": {
+    "en": [
+      "Energy security",
+      "environmental sustainability",
+      "gas hydrates",
+      "new energy resources",
+      "Turkey National Gas Hydrate Project"
+    ],
+    "tr": [
+      "Çevresel sürdürülebilirlik",
+      "enerji güvenliği",
+      "gaz hidratlar",
+      "Türkiye Ulusal Gaz Hidrat Projesi",
+      "yeni enerji kaynakları"
+    ]
+  },
+  "dates": {
+    "received": "2024-12-03",
+    "revised": null,
+    "accepted": "2025-04-22",
+    "published": "2025-06-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 3,
+    "year": 2025,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "351",
+    "last": "374"
+  },
   "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,
