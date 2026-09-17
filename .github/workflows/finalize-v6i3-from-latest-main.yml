@@ -1,0 +1,65 @@
+name: Finalize V6I3 from latest main
+on:
+  push:
+    branches: [migration/v6i3-canonical]
+    paths:
+      - '.github/workflows/finalize-v6i3-from-latest-main.yml'
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Prepare latest main and migration tools
+        run: |
+          cp scripts/migrate-v6i3-canonical.py /tmp/migrate-v6i3-canonical.py
+          cp scripts/postprocess-v6i3.py /tmp/postprocess-v6i3.py
+          cp tests/v6i3-content-integrity.test.mjs /tmp/v6i3-content-integrity.test.mjs
+          cp tests/v6i3-source-fidelity.test.mjs /tmp/v6i3-source-fidelity.test.mjs
+          git fetch origin main
+          BASE=$(git rev-parse origin/main)
+          echo "$BASE" > /tmp/v6i3-base
+          git show origin/main:content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/en-archive.json > /tmp/iratni-en-clean.json
+          git checkout -B finalize/v6i3-canonical origin/main
+          cp /tmp/migrate-v6i3-canonical.py scripts/migrate-v6i3-canonical.py
+          cp /tmp/postprocess-v6i3.py scripts/postprocess-v6i3.py
+          cp /tmp/v6i3-content-integrity.test.mjs tests/v6i3-content-integrity.test.mjs
+          cp /tmp/v6i3-source-fidelity.test.mjs tests/v6i3-source-fidelity.test.mjs
+      - name: Install extraction dependencies
+        run: python3 -m pip install --quiet pymupdf pymupdf4llm
+      - name: Rebuild Issue 3 from printed PDFs
+        run: |
+          for slug in china-reconstructs hendra-gunawan endonezya-posta-pulu; do mkdir -p "content/articles/$slug/fulltext"; done
+          python3 scripts/migrate-v6i3-canonical.py
+          cp /tmp/iratni-en-clean.json content/articles/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/fulltext/en.json
+          python3 scripts/postprocess-v6i3.py
+      - name: Regenerate canonical site data
+        run: |
+          node scripts/generate-archive-data.mjs
+          node scripts/generate-fulltext-modules.mjs
+          node scripts/generate-runtime-data.mjs
+      - name: Run targeted Volume 6 Issue 3 tests
+        run: node --test tests/v6i3-content-integrity.test.mjs tests/v6i3-source-fidelity.test.mjs
+      - name: Install node dependencies
+        run: npm ci
+      - name: Run full repository tests
+        run: npm test
+      - name: Build production site
+        run: npm run build
+      - name: Lint
+        run: npm run lint
+      - name: Ensure main did not move during validation
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$(cat /tmp/v6i3-base)"
+      - name: Commit finalized Issue 3 branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content app public/assets/article-figures scripts/migrate-v6i3-canonical.py scripts/postprocess-v6i3.py tests/v6i3-content-integrity.test.mjs tests/v6i3-source-fidelity.test.mjs
+          git status --short
+          git commit -m "Finalize Volume 6 Issue 3 canonical full text"
+          git push --force-with-lease origin HEAD:finalize/v6i3-canonical
