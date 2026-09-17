@@ -1,4 +1,4 @@
-name: Probe V6I3 heading fonts
+name: Probe V6I3 section boundaries
 on:
   push:
     branches: [audit/v6i3-postmigration]
@@ -10,32 +10,35 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 -m pip install --quiet pymupdf
-      - name: Print heading candidates from PDF typography
+      - name: Compare canonical sections with PDF heading pages
         run: |
           python3 <<'PY'
           import json,pathlib,urllib.request,fitz,re
-          issue=json.load(open('content/issues/v06-i03.json'))
-          for slug in issue['articles'][:6]:
-            meta=json.load(open(pathlib.Path('content/articles')/slug/'metadata.json'))
+          slugs=[
+            'bandung-ruhu-70-yasinda',
+            'bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden',
+            '70-yilinda-bandung-baglantisizliktan-hegemonyaciliga-karsi-milli-devletlerin-ortak-kalkinma-ve',
+          ]
+          for slug in slugs:
             print('\n########',slug,'########')
+            meta=json.load(open(pathlib.Path('content/articles')/slug/'metadata.json'))
             for loc,key in [('en','pdfEn'),('tr','pdfTr')]:
+              print('\n-- CURRENT',loc,'--')
+              d=json.load(open(pathlib.Path('content/articles')/slug/'fulltext'/f'{loc}.json'))
+              for si,s in enumerate(d.get('sections',[]),1):
+                print(f'S{si} H={s["title"]!r}')
+                for pi,p in enumerate(s.get('paragraphs',[]),1):
+                  print(f'  P{pi}: {p[:220]}')
               url=meta['urls'][key]; p=f'/tmp/{slug}-{loc}.pdf'; urllib.request.urlretrieve(url,p)
-              doc=fitz.open(p); print('\n--',loc,'--')
-              seen=[]
+              doc=fitz.open(p)
+              print('\n-- PDF',loc,'--')
               for pno,page in enumerate(doc):
-                data=page.get_text('dict')
-                for block in data.get('blocks',[]):
-                  if 'lines' not in block: continue
-                  spans=[s for line in block['lines'] for s in line.get('spans',[])]
-                  if not spans: continue
-                  txt=' '.join(s['text'].strip() for s in spans if s['text'].strip())
-                  txt=re.sub(r'\s+',' ',txt).strip()
-                  if not txt or len(txt)>240: continue
-                  maxsize=max(s['size'] for s in spans)
-                  bold=any('bold' in s['font'].lower() for s in spans)
-                  if pno==0: continue
-                  if maxsize>=11.2 or (bold and maxsize>=10.5):
-                    key2=(txt,round(maxsize,1),bold)
-                    if key2 not in seen:
-                      seen.append(key2); print(f'p{pno+1:02d} size={maxsize:.1f} bold={bold}: {txt}')
+                text=page.get_text('text')
+                if slug=='bandung-ruhu-70-yasinda' and pno+1 not in (8,9,10): continue
+                if 'bandung-konferansi-oncesi' in slug and pno+1 not in (3,9,10,15,16): continue
+                if slug.startswith('70-yilinda') and pno+1 not in (2,3,6,9,10): continue
+                print(f'[[PAGE {pno+1}]]')
+                lines=[re.sub(r'\s+',' ',x).strip() for x in text.splitlines() if x.strip()]
+                for i,x in enumerate(lines):
+                  print(f'{i:03d}: {x}')
           PY
