@@ -1,0 +1,1 @@
+Trigger deployment after validated Iratni full-text repair.
