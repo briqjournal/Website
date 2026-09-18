@@ -306,185 +306,7 @@ const issueFourRecords = [
   },
 ];
 
-
-const issueSixOneRecords = [
-  {
-    slug: "roportaj-yesil-ve-dijital-donusum-kapsaminda-ar-ge-ve-yenilik-ekosistemini-harekete-geciriyoruz",
-    pages: [7, 20],
-    body: { tr: 7, en: 7 },
-    startContains: {
-      tr: "Bilim, teknoloji ve yenilik politikaları",
-      en: "Could you briefly summarise Türkiye’s approach",
-    },
-  },
-  {
-    slug: "kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi",
-    pages: [21, 36],
-    body: { tr: 21, en: 21 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "kusak-yol-gelisen-dunyanin-onculugunde-toplumu-bicimlendirmenin-tek-yolu",
-    pages: [37, 46],
-    body: { tr: 39, en: 39 },
-  },
-  {
-    slug: "yukselen-yeni-uygarligin-bilim-ve-teknolojide-kuresel-onderlik-hedefi",
-    pages: [47, 64],
-    body: { tr: 48, en: 48 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "devlet-farkli-politika-araclari-ile-aktif-piyasa-mudahalesini-surekli-hale-getirmeli",
-    pages: [65, 73],
-    body: { tr: 67, en: 67 },
-  },
-  {
-    slug: "turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi",
-    pages: [75, 92],
-    body: { tr: 76, en: 76 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "ikinci-cin-japon-savasi-sirasinda-rol-model-olarak-ankara-chongqing-bizim-ankaramiz",
-    pages: [93, 104],
-    body: { tr: 94, en: 94 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "kuresel-kalkinma-girisimi-ve-cinin-ortadogudaki-kalkinma-isbirligi-calismalari",
-    pages: [105, 123],
-    body: { tr: 106, en: 106 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "avrupayi-abd-liderligindeki-sanayisizlesmeden-kurtarmak",
-    pages: [125, 136],
-    body: { tr: 127, en: 127 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "ogrenmeye-ovgu",
-    pages: [137, 138],
-    body: { tr: 138, en: 138 },
-    autoHeadings: false,
-  },
-  {
-    slug: "sevgi-duvari",
-    pages: [139, 140],
-    body: { tr: 140, en: 140 },
-    autoHeadings: false,
-  },
-  {
-    slug: "abdnin-kurdugu-ekonomik-tuzak-isiginda-abd-cin-rekabetinin-mahiyeti",
-    pages: [141, 149],
-    body: { tr: 142, en: 142 },
-  },
-  {
-    slug: "operarios-isciler-1933",
-    pages: [151, 151],
-    body: { tr: 151, en: 151 },
-    autoHeadings: false,
-  },
-  {
-    slug: "yeni-nesil-nazizm-2023",
-    pages: [152, 152],
-    body: { tr: 152, en: 152 },
-    autoHeadings: false,
-  },
-];
-
-const issueSixTwoRecords = [
-  {
-    slug: "modernist-milliyetci-olarak-sun-yat-sen-ve-siyasal-mirasi",
-    pages: [7, 28],
-    body: { tr: 9, en: 8 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "cinin-erken-modernizasyonuna-sun-yat-senin-katkisi",
-    pages: [29, 44],
-    body: { tr: 31, en: 30 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "cinli-devrimcilerin-sun-yat-sen-ve-mustafa-kemal-arasindaki-benzerlikler-uzerine-gorusleri",
-    pages: [45, 58],
-    body: { tr: 47, en: 46 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin",
-    pages: [59, 64],
-    body: { tr: 59, en: 59 },
-    autoHeadings: false,
-  },
-  {
-    slug: "osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke",
-    pages: [65, 70],
-    body: { tr: 65, en: 65 },
-  },
-  {
-    slug: "yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar",
-    pages: [71, 84],
-    body: { tr: 73, en: 72 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "alter-kuresellesme-baglaminda-cin-fransiz-iliskileri",
-    pages: [85, 107],
-    body: { tr: 87, en: 86 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "kamu-diplomasisi-ozbekistanin-yabanci-ulkelerle-iliskilerini-guclendirmenin-bir-yolu",
-    pages: [109, 112],
-    body: { tr: 109, en: 109 },
-  },
-  {
-    slug: "hikaye-siir",
-    pages: [113, 114],
-    body: { tr: 114, en: 114 },
-  },
-  {
-    slug: "olu-su-siir",
-    pages: [115, 116],
-    body: { tr: 116, en: 116 },
-  },
-  {
-    slug: "ogonyok",
-    pages: [117, 117],
-    body: { tr: 117, en: 117 },
-  },
-  {
-    slug: "qi-baishi",
-    pages: [118, 118],
-    body: { tr: 118, en: 118 },
-  },
-  {
-    slug: "t-miyano-renkli-tasbaski",
-    pages: [119, 119],
-    body: { tr: 119, en: 119 },
-  },
-];
-
 const issueConfigs = {
-  "6-1": {
-    pdfs: {
-      tr: join(root, "tmp/pdfs/v6i1-tr.pdf"),
-      en: join(root, "tmp/pdfs/v6i1-en.pdf"),
-    },
-    records: issueSixOneRecords,
-    sourceLocale: { tr: "tr", en: "en" },
-  },
-  "6-2": {
-    pdfs: {
-      tr: join(root, "tmp/pdfs/v6i2-tr.pdf"),
-      en: join(root, "tmp/pdfs/v6i2-en.pdf"),
-    },
-    records: issueSixTwoRecords,
-    sourceLocale: { tr: "tr", en: "en" },
-  },
   "7-1": {
     pdfs: {
       tr: join(root, "tmp/pdfs/v7i1-tr.pdf"),
@@ -522,7 +344,7 @@ const issueConfigs = {
 };
 
 const issueConfig = issueConfigs[issueKey];
-if (!issueConfig) throw new Error(`Unknown issue ${issueKey}. Use 6-1, 6-2, 7-1, 7-2, 7-3, or 7-4.`);
+if (!issueConfig) throw new Error(`Unknown issue ${issueKey}. Use 7-1, 7-2, 7-3, or 7-4.`);
 const { pdfs, records } = issueConfig;
 
 const exactHeadings = new Set([
@@ -596,15 +418,6 @@ function looksLikeCaption(node) {
   return node.font.size <= 13 && /(Fotoğraf|Photo|Harita|Map|Kaynak|Source):/i.test(node.text);
 }
 
-function looksLikeCanonicalSectionHeading(node) {
-  return node.bold
-    && node.font.size >= 16
-    && node.font.size <= 17
-    && /MyriadPro-Semibold/i.test(node.font.family)
-    && /^#(?:bc2628|d11f27)$/i.test(node.font.color)
-    && !/^(?:ABSTRACT|ÖZ|Keywords:|Anahtar Kelimeler:)$/iu.test(node.text);
-}
-
 function looksLikeHeading(node) {
   if (exactHeadings.has(node.text)) return true;
   if (node.text.length > 105) return false;
@@ -643,8 +456,7 @@ function extractBlocks(pages, config, locale) {
 
   for (const page of selected) {
     for (const node of page.nodes) {
-      const canonicalSectionHeading = looksLikeCanonicalSectionHeading(node);
-      if (isNoise(node) && !exactHeadings.has(node.text) && !canonicalSectionHeading) continue;
+      if (isNoise(node) && !exactHeadings.has(node.text)) continue;
       if (captionTail && node.page === captionTail.page && node.top > captionTail.top && node.top - captionTail.top <= 42 && node.font.size <= 18) {
         captions[captions.length - 1] = dehyphenatedJoin(captions[captions.length - 1], node.text);
         captionTail = { page: node.page, top: node.top };
@@ -668,7 +480,7 @@ function extractBlocks(pages, config, locale) {
         else continue;
       }
 
-      if (canonicalSectionHeading || (config.autoHeadings !== false && looksLikeHeading(node))) {
+      if (looksLikeHeading(node)) {
         flushParagraph();
         if (heading) heading = dehyphenatedJoin(heading, node.text);
         else heading = node.text;
