@@ -1,26 +1,95 @@
 {
-  "slug": "kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler",
-  "volume": 2,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2021",
-  "author": "Doç. Dr. Şiir Kılkış",
-  "title_tr": "Kuşak ve Yol Girişimi'nde Ortak ve Sürdürülebilir Bir Gelecek için Bilime Dayalı Çözümler",
-  "abstract_tr": "Kuşak ve Yol coğrafyasında ortak ve sürdürülebilir bir geleceğin elde edilmesi için bilim, teknoloji ve yeniliğe dayalı gelişmeler ile ortak zorlukların üstesinden gelinmesi büyük öneme sahiptir. Çevre dostu teknolojiler, akıllı enerji sistemleri ve sürdürülebilir kentleşme, Çin ve Türkiye’nin kalkınma planlarında ana vurgu noktaları arasında yer almaktadır. Bilime dayalı çözümler ile bölgenin desteklenmesi için Pekin Bildirgesi’ne dayalı olarak Uluslararası Bilim Kuruluşları Birliği başlatılmıştır. Bu makale, bu Birlik’te yer alan bir ülke örneklemi için araştırma kapasitesini ve Sürdürülebilir Kalkınma Amaçları kapsamında seçilen göstergeleri karşılaştırmaktadır. Bu amaçlara hizmet eden bilgi üretimi dağılımları da analiz edilerek hedeflerin arasındaki bağlantıların ortaya konulması için özgün bir yaklaşım geliştirilmiş ve akor diyagramları ile görselleştirilmiştir. Elde edilen sonuçlara göre sürdürülebilir şehirler dahil olmak üzere bilgi üretiminde daha fazla odaklanılan amaçlar belirlenmiştir. Makalede, desteklenmekte olan ortak araştırma projeleri özetlenmekte, yeni bilimsel etkileşimlerinin yanı sıra sürdürülebilir kalkınmaya olan katkıları ele alınmakta ve 2050 yılına doğru kentleşmede beklenen artışlar ortaya konmaktadır. Kuşak ve Yol yöresinin araştırma kapasitesi için kanıta ve gözlemlere dayalı olarak, bugün için olduğu kadar gelecek yıllarda da bilim, teknoloji ve yeniliğe dayalı çözümleri güçlendirme fırsatları tartışılmaktadır. \n Anahtar Kelimeler: bilim, kentleşme, Kuşak ve Yol, Sürdürülebilir Kalkınma Amaçları, teknoloji",
-  "source_tr": "https://briqjournal.com/kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler",
-  "source_en": "https://briqjournal.com/en/science-based-solutions-shared-and-sustainable-future-the-belt-and-road-initiative",
-  "title_en": "Science-Based Solutions for a Shared and Sustainable Future in the Belt and Road Initiative",
-  "abstract_en": "Abstract \n Addressing common challenges for a shared and sustainable future in the Belt and Road region requires significant contributions from science, technology, and innovation. Green technologies, smart energy systems, and sustainable urbanization are among the central points of emphasis in the development plans of China and Turkey. Based on the Beijing Declaration, the Alliance of International Science Organizations was launched to support the region with science-based solutions. This study compares a sample of countries in this alliance based on research capacity as well as selected indicators under the Sustainable Development Goals. An original approach is then developed to compare knowledge production patterns across linkages in the goals based on combined searches that are visualized with chord diagrams. The results indicate the goals that are receiving more focus within knowledge production, including sustainable cities. Expected increases in urbanization are compared leading to the year 2050, and collaborative research projects that are supported by the alliance are discussed in connection with their contributions for sustainable development alongside new scientific interactions. The article concludes with evidence-based observations regarding research capacity in the Belt and Road region and opportunities for further strengthening solutions based on science, technology, and innovation now and in the decades ahead. \n Keywords:  Belt and Road, science, Sustainable Development Goals, technology, urbanization",
-  "citation_tr": "Atıf \n Kılkış, Ş. (2021). Kuşak ve Yol Girişimi’nde ortak ve sürdürülebilir bir gelecek için bilime dayalı çözümler. Kuşak ve Yol Girişimi Dergisi, 2 (2), 22-35.",
-  "citation_en": "Citation \n Kılkış, Ş. (2021). Science-based solutions for a shared and sustainable future in the Belt and Road Initiative. Belt & Road Initiative Quarterly, 2 (2), 22-37.",
-  "pages": "22-35",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%27nde%20Ortak%20ve%20S%C3%BCrd%C3%BCr%C3%BClebilir%20Bir%20Gelecek%20i%C3%A7in%20Bilime%20Dayal%C4%B1%20%C3%87%C3%B6z%C3%BCmler.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Science-Based%20Solutions%20for%20a%20Shared%20and%20Sustainable%20Future%20in%20the%20Belt%20and%20Road%20Initiative.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler-en.pdf",
-  "shared_bilingual_pdf": false,
-  "received_date": null,
-  "revised_date": "2021-02-24",
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler",
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Science-Based Solutions for a Shared and Sustainable Future in the Belt and Road Initiative",
+    "tr": "Kuşak ve Yol Girişimi'nde Ortak ve Sürdürülebilir Bir Gelecek için Bilime Dayalı Çözümler"
+  },
+  "authors": [
+    {
+      "displayName": "Şiir Kılkış",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "Addressing common challenges for a shared and sustainable future in the Belt and Road region requires significant contributions from science, technology, and innovation. Green technologies, smart energy systems, and sustainable urbanization are among the central points of emphasis in the development plans of China and Turkey. Based on the Beijing Declaration, the Alliance of International Science Organizations was launched to support the region with science-based solutions. This study compares a sample of countries in this alliance based on research capacity as well as selected indicators under the Sustainable Development Goals. An original approach is then developed to compare knowledge production patterns across linkages in the goals based on combined searches that are visualized with chord diagrams. The results indicate the goals that are receiving more focus within knowledge production, including sustainable cities. Expected increases in urbanization are compared leading to the year 2050, and collaborative research projects that are supported by the alliance are discussed in connection with their contributions for sustainable development alongside new scientific interactions. The article concludes with evidence-based observations regarding research capacity in the Belt and Road region and opportunities for further strengthening solutions based on science, technology, and innovation now and in the decades ahead.",
+    "tr": "Kuşak ve Yol coğrafyasında ortak ve sürdürülebilir bir geleceğin elde edilmesi için bilim, teknoloji ve yeniliğe dayalı gelişmeler ile ortak zorlukların üstesinden gelinmesi büyük öneme sahiptir. Çevre dostu teknolojiler, akıllı enerji sistemleri ve sürdürülebilir kentleşme, Çin ve Türkiye’nin kalkınma planlarında ana vurgu noktaları arasında yer almaktadır. Bilime dayalı çözümler ile bölgenin desteklenmesi için Pekin Bildirgesi’ne dayalı olarak Uluslararası Bilim Kuruluşları Birliği başlatılmıştır. Bu makale, bu Birlik’te yer alan bir ülke örneklemi için araştırma kapasitesini ve Sürdürülebilir Kalkınma Amaçları kapsamında seçilen göstergeleri karşılaştırmaktadır. Bu amaçlara hizmet eden bilgi üretimi dağılımları da analiz edilerek hedeflerin arasındaki bağlantıların ortaya konulması için özgün bir yaklaşım geliştirilmiş ve akor diyagramları ile görselleştirilmiştir. Elde edilen sonuçlara göre sürdürülebilir şehirler dahil olmak üzere bilgi üretiminde daha fazla odaklanılan amaçlar belirlenmiştir. Makalede, desteklenmekte olan ortak araştırma projeleri özetlenmekte, yeni bilimsel etkileşimlerinin yanı sıra sürdürülebilir kalkınmaya olan katkıları ele alınmakta ve 2050 yılına doğru kentleşmede beklenen artışlar ortaya konmaktadır. Kuşak ve Yol yöresinin araştırma kapasitesi için kanıta ve gözlemlere dayalı olarak, bugün için olduğu kadar gelecek yıllarda da bilim, teknoloji ve yeniliğe dayalı çözümleri güçlendirme fırsatları tartışılmaktadır."
+  },
+  "keywords": {
+    "en": [
+      "Belt and Road",
+      "science",
+      "Sustainable Development Goals",
+      "technology",
+      "urbanization"
+    ],
+    "tr": [
+      "bilim",
+      "kentleşme",
+      "Kuşak ve Yol",
+      "Sürdürülebilir Kalkınma Amaçları",
+      "teknoloji"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": "2021-02-24",
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 2,
+    "year": 2021,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "22",
+    "last": "35"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Kılkış, Ş. (2021). Science-based solutions for a shared and sustainable future in the Belt and Road Initiative. Belt & Road Initiative Quarterly, 2 (2), 22-37.",
+    "tr": "Kılkış, Ş. (2021). Kuşak ve Yol Girişimi’nde ortak ve sürdürülebilir bir gelecek için bilime dayalı çözümler. Kuşak ve Yol Girişimi Dergisi, 2 (2), 22-35."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/science-based-solutions-shared-and-sustainable-future-the-belt-and-road-initiative",
+    "tr": "https://briqjournal.com/kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Science-Based%20Solutions%20for%20a%20Shared%20and%20Sustainable%20Future%20in%20the%20Belt%20and%20Road%20Initiative.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%27nde%20Ortak%20ve%20S%C3%BCrd%C3%BCr%C3%BClebilir%20Bir%20Gelecek%20i%C3%A7in%20Bilime%20Dayal%C4%B1%20%C3%87%C3%B6z%C3%BCmler.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

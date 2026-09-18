@@ -1,25 +1,83 @@
 {
-  "slug": "sevgililer-tuvale-yagli-boya-ugur-durak",
-  "volume": 2,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2021",
-  "author": "Uğur Durak",
-  "title_tr": "Sevgililer - Tuvale Yağlı Boya",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/sevgililer-tuvale-yagli-boya-ugur-durak",
-  "source_en": "https://briqjournal.com/en/sevgililer-tuvale-yagli-boya-ugur-durak",
-  "title_en": "Lovers - Oil On Canvas",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n [Uğur Durak tablosu]. Sevgililer.  Kuşak ve Yol Girişimi Dergisi, 2 (2), 94.",
-  "citation_en": "Atıf \n [Painting by Uğur Durak]. Lovers. Belt & Road Initiative Quarterly, 2 (2), 94.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Sevgililer%20-%20Tuvale%20Ya%C4%9Fl%C4%B1%20Boya%20-%20U%C4%9Fur%20Durak.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Lovers%20-%20Oil%20On%20Canvas%20-%20U%C4%9Fur%20Durak.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/sevgililer-tuvale-yagli-boya-ugur-durak-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/sevgililer-tuvale-yagli-boya-ugur-durak-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "sevgililer-tuvale-yagli-boya-ugur-durak",
+  "articleType": {
+    "id": "painting",
+    "tr": "Resim",
+    "en": "Painting",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Lovers - Oil On Canvas",
+    "tr": "Sevgililer - Tuvale Yağlı Boya"
+  },
+  "authors": [
+    {
+      "displayName": "Uğur Durak",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 2,
+    "year": 2021,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "94",
+    "last": "94"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "[Painting by Uğur Durak]. Lovers. Belt & Road Initiative Quarterly, 2 (2), 94.",
+    "tr": "[Uğur Durak tablosu]. Sevgililer.  Kuşak ve Yol Girişimi Dergisi, 2 (2), 94."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/sevgililer-tuvale-yagli-boya-ugur-durak",
+    "tr": "https://briqjournal.com/sevgililer-tuvale-yagli-boya-ugur-durak",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Lovers%20-%20Oil%20On%20Canvas%20-%20U%C4%9Fur%20Durak.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Sevgililer%20-%20Tuvale%20Ya%C4%9Fl%C4%B1%20Boya%20-%20U%C4%9Fur%20Durak.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/sevgililer-tuvale-yagli-boya-ugur-durak-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/sevgililer-tuvale-yagli-boya-ugur-durak-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

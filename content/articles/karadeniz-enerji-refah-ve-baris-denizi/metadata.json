@@ -1,26 +1,95 @@
 {
-  "slug": "karadeniz-enerji-refah-ve-baris-denizi",
-  "volume": 2,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2021",
-  "author": "Prof. Dr. Birol Kılkış",
-  "title_tr": "Karadeniz: Enerji, Refah ve Barış Denizi",
-  "abstract_tr": "Mevcut makale, Kuşak ve Yol ülkeleri arasında uluslararası işbirliğiyle yaratıcı çözümlere yönelik Karadeniz’in daha kapsamlı, daha sürdürülebilir, çevre dostu ve disiplinlerarası bir platform olmada potansiyel rolünü ele almaktadır. Bu konsept, Kuşak ve Yol boyunca yer alan diğer uydu merkezlerle birlikte biri Çin diğeri Türkiye olmak üzere iki hidrojen araştırma merkezini temel almasına rağmen, faydaları yenilenebilir enerji, ulaşım ve refaha odaklanan oldukça geniş bir teknolojik kalkınma yelpazesinde tartışılmaktadır. Makalede ayrıca, Karadeniz etrafında yer alan altı ülkenin yakın işbirliğiyle denizleri zararlı ve tehlikeli H2S gaz yoğunluğundan temizlemenin sağlayacağı  yerel faydaları da incelenmektedir. \n Anahtar Kelimeler: ekserji, hidrojen ekonomisi, Karadeniz, KYG, yenilenebilir enerji",
-  "source_tr": "https://briqjournal.com/karadeniz-enerji-refah-ve-baris-denizi",
-  "source_en": "https://briqjournal.com/en/the-black-sea-sea-energy-prosperity-and-peace",
-  "title_en": "The Black Sea: A Sea of Energy, Prosperity, and Peace",
-  "abstract_en": "Abstract \n This paper discusses the potential role of the Black Sea in establishing a wider, more sustainable, environment-friendly, and interdisciplinary platform for innovative solutions with international cooperation among the Belt and Road Nations. Although this platform concept is based on two hydrogen research centers, one in China and the other in Turkey, with satellite centers along the entire Belt and Road, the benefits are discussed to fall out to a very wide spectrum of technological developments focusing on renewable energy, transportation, and welfare. The paper also argues the local benefit of cleaning the sea from harmful and dangerous concentrations of H2S gas by the close collaboration of the six countries around the Black Sea. \n Keywords:  Black Sea, BRI, exergy, hydrogen economy, renewable energy",
-  "citation_tr": "Atıf \n Kılkış, B. (2021). Karadeniz: Enerji, refah ve barış denizi. Kuşak ve Yol Girişimi Dergisi, 2 (2), 56-68.",
-  "citation_en": "Citation \n Kılkış, B. (2021). The Black Sea: A sea of energy, prosperity, and peace. Belt & Road Initiative Quarterly, 2 (2), 58-71.",
-  "pages": "56-68",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Karadeniz%20Enerji%2C%20Refah%20ve%20Bar%C4%B1%C5%9F%20Denizi.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/The%20Black%20Sea%20A%20Sea%20of%20Energy%2C%20Prosperity%2C%20and%20Peace.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/karadeniz-enerji-refah-ve-baris-denizi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/karadeniz-enerji-refah-ve-baris-denizi-en.pdf",
-  "shared_bilingual_pdf": false,
-  "received_date": "2021-01-21",
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "karadeniz-enerji-refah-ve-baris-denizi",
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "The Black Sea: A Sea of Energy, Prosperity, and Peace",
+    "tr": "Karadeniz: Enerji, Refah ve Barış Denizi"
+  },
+  "authors": [
+    {
+      "displayName": "Birol Kılkış",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "This paper discusses the potential role of the Black Sea in establishing a wider, more sustainable, environment-friendly, and interdisciplinary platform for innovative solutions with international cooperation among the Belt and Road Nations. Although this platform concept is based on two hydrogen research centers, one in China and the other in Turkey, with satellite centers along the entire Belt and Road, the benefits are discussed to fall out to a very wide spectrum of technological developments focusing on renewable energy, transportation, and welfare. The paper also argues the local benefit of cleaning the sea from harmful and dangerous concentrations of H2S gas by the close collaboration of the six countries around the Black Sea.",
+    "tr": "Mevcut makale, Kuşak ve Yol ülkeleri arasında uluslararası işbirliğiyle yaratıcı çözümlere yönelik Karadeniz’in daha kapsamlı, daha sürdürülebilir, çevre dostu ve disiplinlerarası bir platform olmada potansiyel rolünü ele almaktadır. Bu konsept, Kuşak ve Yol boyunca yer alan diğer uydu merkezlerle birlikte biri Çin diğeri Türkiye olmak üzere iki hidrojen araştırma merkezini temel almasına rağmen, faydaları yenilenebilir enerji, ulaşım ve refaha odaklanan oldukça geniş bir teknolojik kalkınma yelpazesinde tartışılmaktadır. Makalede ayrıca, Karadeniz etrafında yer alan altı ülkenin yakın işbirliğiyle denizleri zararlı ve tehlikeli H2S gaz yoğunluğundan temizlemenin sağlayacağı  yerel faydaları da incelenmektedir."
+  },
+  "keywords": {
+    "en": [
+      "Black Sea",
+      "BRI",
+      "exergy",
+      "hydrogen economy",
+      "renewable energy"
+    ],
+    "tr": [
+      "ekserji",
+      "hidrojen ekonomisi",
+      "Karadeniz",
+      "KYG",
+      "yenilenebilir enerji"
+    ]
+  },
+  "dates": {
+    "received": "2021-01-21",
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 2,
+    "year": 2021,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "56",
+    "last": "68"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Kılkış, B. (2021). The Black Sea: A sea of energy, prosperity, and peace. Belt & Road Initiative Quarterly, 2 (2), 58-71.",
+    "tr": "Kılkış, B. (2021). Karadeniz: Enerji, refah ve barış denizi. Kuşak ve Yol Girişimi Dergisi, 2 (2), 56-68."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/the-black-sea-sea-energy-prosperity-and-peace",
+    "tr": "https://briqjournal.com/karadeniz-enerji-refah-ve-baris-denizi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/The%20Black%20Sea%20A%20Sea%20of%20Energy%2C%20Prosperity%2C%20and%20Peace.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Karadeniz%20Enerji%2C%20Refah%20ve%20Bar%C4%B1%C5%9F%20Denizi.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/karadeniz-enerji-refah-ve-baris-denizi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/karadeniz-enerji-refah-ve-baris-denizi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
