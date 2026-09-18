@@ -1,23 +1,83 @@
 {
-  "slug": "cinin-yeni-koronavirus-zaturresine-karsi-savasi-mucadeleler-sonuclar-ve-yansimalar",
-  "volume": 1,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2020",
-  "author": "Gong Jianhua",
-  "title_tr": "Çin’in Yeni Koronavirüs Zatürresine Karşı Savaşı: Mücadeleler, Sonuçlar ve Yansımalar",
-  "abstract_tr": "Çin’in Wuhan kentinde aniden ortaya çıkan ve buradan, önce Çin’in diğer bölgeleri ve kısa süre zarfında diğer ülkelere de hızla yayılan ölümcül salgının toplumsal ve ekonomik etkileri bu makalenin ana konusudur. Sadece Çin ile sınırlı olmaksızın, tüm dünyada derin endişelere yol açan \"Yeni Koronavirüs\"e bağlı ölümcül zatürre ile ortaya çıkan süreç; neden, etki ve sonuçlarıyla ele alınmaktadır. Çin’in geliştirdiği refleks ile salgına müdahale tarzına değinildikten sonra, bu müdahale süreci boyunca meydana gelmiş olabilecek ihmaller üzerinde durulmaktadır. Göze çarpan ihmallerin giderilmesi yolunda, merkezi yönetimce alınan önlemler ve yapılan idari tasarruflar, üzerinde durulan konular arasındadır. Salgın süreci boyunca, merkezi ve yerel yönetimlerin benimsediği tutum, kamuoyu ve dış dünya ile ilişkileri de özetle ele alınarak, salgının sosyo-ekonomik bakımdan Çin üzerindeki olası etkileri de değerlendirilmektedir. Çin'in YKZ savaşı dünya çapında bir mücadele olup, Çin’in başarısı dünyaya güvenlik getirecektir.  YKZ salgınının başlangıcı aşamasında gelişen olaylar, bizlere “ortak bir geleceğe sahip bir insan topluluğu oluşturma” ihtiyacının önemini ve aciliyetini önemli ölçüde göstermektedir.",
-  "source_tr": "https://briqjournal.com/cinin-yeni-koronavirus-zaturresine-karsi-savasi-mucadeleler-sonuclar-ve-yansimalar",
-  "source_en": "https://briqjournal.com/en/chinas-novel-coronavirus-pneumonia-battle-responses-results-and-reflections",
-  "title_en": "China’s Novel Coronavirus Pneumonia Battle: Responses, Results, and Reflections",
-  "abstract_en": "Abstract \n This article focuses on the social and economic effects of a deadly epidemic that abruptly emerged in Wuhan, China and then spread to other regions of China as well as other countries in a short period of time. The “New Corona Virus” (NCV) caused deep worries, not only in China, but also the entire world. The present article addresses the outbreak, the way China responded to the epidemic, and the negligence that may have occurred during this intervention process. Succesful measures taken by the central government and administrative disposals to eliminate negligence are also tackled herein. The article discusses the attitudes adopted by central and local governments throughout the epidemic process and their relations with the public and the outside world as well as the possible socio-economic effects of the epidemic on China. Overall, this Chinese NPC battle can also be considered to be a world anti-epidemic war, and China’s success will bring nothing but security to the entire world. The NCV’s case reveals the extreme importance and urgency of the world’s need to “build a human community with a shared future”.",
-  "citation_tr": "Atıf \n Gong, J. (2020). Çin’in yeni koronavirüs zatürresine karşı savaşı: Mücadeleler, sonuçlar ve yansımalar. Kuşak ve Yol Girişimi Dergisi, 1 (2), 90-102.",
-  "citation_en": "Citation \n Gong, J. (2020). China’s novel coronavirus pneumonia battle: Responses, results, and reflections. Belt & Road Initiative Quarterly, 1 (2), 89-101.",
-  "pages": "90-102",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/%C3%87in%E2%80%99in%20Yeni%20Koronavir%C3%BCs%20Zat%C3%BCrresine%20Kar%C5%9F%C4%B1%20Sava%C5%9F%C4%B1%20M%C3%BCcadeleler%2C%20Sonu%C3%A7lar%20ve%20Yans%C4%B1malar.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/China%E2%80%99s%20Novel%20Coronavirus%20Pneumonia%20Battle%20Responses%2C%20Results%2C%20and%20Reflections.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/cinin-yeni-koronavirus-zaturresine-karsi-savasi-mucadeleler-sonuclar-ve-yansimalar-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/cinin-yeni-koronavirus-zaturresine-karsi-savasi-mucadeleler-sonuclar-ve-yansimalar-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "cinin-yeni-koronavirus-zaturresine-karsi-savasi-mucadeleler-sonuclar-ve-yansimalar",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "China’s Novel Coronavirus Pneumonia Battle: Responses, Results, and Reflections",
+    "tr": "Çin’in Yeni Koronavirüs Zatürresine Karşı Savaşı: Mücadeleler, Sonuçlar ve Yansımalar"
+  },
+  "authors": [
+    {
+      "displayName": "Gong Jianhua",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "This article focuses on the social and economic effects of a deadly epidemic that abruptly emerged in Wuhan, China and then spread to other regions of China as well as other countries in a short period of time. The “New Corona Virus” (NCV) caused deep worries, not only in China, but also the entire world. The present article addresses the outbreak, the way China responded to the epidemic, and the negligence that may have occurred during this intervention process. Succesful measures taken by the central government and administrative disposals to eliminate negligence are also tackled herein. The article discusses the attitudes adopted by central and local governments throughout the epidemic process and their relations with the public and the outside world as well as the possible socio-economic effects of the epidemic on China. Overall, this Chinese NPC battle can also be considered to be a world anti-epidemic war, and China’s success will bring nothing but security to the entire world. The NCV’s case reveals the extreme importance and urgency of the world’s need to “build a human community with a shared future”.",
+    "tr": "Çin’in Wuhan kentinde aniden ortaya çıkan ve buradan, önce Çin’in diğer bölgeleri ve kısa süre zarfında diğer ülkelere de hızla yayılan ölümcül salgının toplumsal ve ekonomik etkileri bu makalenin ana konusudur. Sadece Çin ile sınırlı olmaksızın, tüm dünyada derin endişelere yol açan \"Yeni Koronavirüs\"e bağlı ölümcül zatürre ile ortaya çıkan süreç; neden, etki ve sonuçlarıyla ele alınmaktadır. Çin’in geliştirdiği refleks ile salgına müdahale tarzına değinildikten sonra, bu müdahale süreci boyunca meydana gelmiş olabilecek ihmaller üzerinde durulmaktadır. Göze çarpan ihmallerin giderilmesi yolunda, merkezi yönetimce alınan önlemler ve yapılan idari tasarruflar, üzerinde durulan konular arasındadır. Salgın süreci boyunca, merkezi ve yerel yönetimlerin benimsediği tutum, kamuoyu ve dış dünya ile ilişkileri de özetle ele alınarak, salgının sosyo-ekonomik bakımdan Çin üzerindeki olası etkileri de değerlendirilmektedir. Çin'in YKZ savaşı dünya çapında bir mücadele olup, Çin’in başarısı dünyaya güvenlik getirecektir.  YKZ salgınının başlangıcı aşamasında gelişen olaylar, bizlere “ortak bir geleceğe sahip bir insan topluluğu oluşturma” ihtiyacının önemini ve aciliyetini önemli ölçüde göstermektedir."
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 2,
+    "year": 2020,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "90",
+    "last": "102"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Gong, J. (2020). China’s novel coronavirus pneumonia battle: Responses, results, and reflections. Belt & Road Initiative Quarterly, 1 (2), 89-101.",
+    "tr": "Gong, J. (2020). Çin’in yeni koronavirüs zatürresine karşı savaşı: Mücadeleler, sonuçlar ve yansımalar. Kuşak ve Yol Girişimi Dergisi, 1 (2), 90-102."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/chinas-novel-coronavirus-pneumonia-battle-responses-results-and-reflections",
+    "tr": "https://briqjournal.com/cinin-yeni-koronavirus-zaturresine-karsi-savasi-mucadeleler-sonuclar-ve-yansimalar",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/China%E2%80%99s%20Novel%20Coronavirus%20Pneumonia%20Battle%20Responses%2C%20Results%2C%20and%20Reflections.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/%C3%87in%E2%80%99in%20Yeni%20Koronavir%C3%BCs%20Zat%C3%BCrresine%20Kar%C5%9F%C4%B1%20Sava%C5%9F%C4%B1%20M%C3%BCcadeleler%2C%20Sonu%C3%A7lar%20ve%20Yans%C4%B1malar.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/cinin-yeni-koronavirus-zaturresine-karsi-savasi-mucadeleler-sonuclar-ve-yansimalar-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/cinin-yeni-koronavirus-zaturresine-karsi-savasi-mucadeleler-sonuclar-ve-yansimalar-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
