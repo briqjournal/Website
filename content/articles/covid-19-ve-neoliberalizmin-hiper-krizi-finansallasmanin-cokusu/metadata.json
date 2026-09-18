@@ -1,23 +1,102 @@
 {
-  "slug": "covid-19-ve-neoliberalizmin-hiper-krizi-finansallasmanin-cokusu",
-  "volume": 1,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2020",
-  "author": "Luis Kato Maldonado ve Guadalupe Huerta Moreno",
-  "title_tr": "COVID-19 ve Neoliberalizmin Hiper Krizi: Finansallaşmanın Çöküşü*",
-  "abstract_tr": "COVID-19 hastalığına neden olan SARS-CoV-2 virüsünün ortaya çıkmasıyla oluşan salgın krizi, neoliberal küreselleşmede büyümenin sınırlarını gözler önüne sermiştir. Tam da burada finansallaşma, küresel üretimi ve ticari faaliyetleri desteklemekten ziyade servetin, toplumun en zengin üyelerinin yararına yeniden dağıtılmasını sağlamada en etkili yol olduğunu göstermiştir. Finans piyasalarındaki varlıkların zarar görmesi ve likidite kaybı ile birlikte sanayileşmiş ülkelerdeki şirket ve özel sektör borçlarının yüksek seviyelere ulaşması ve gelişmekte olan ülkelerde kayıt dışı ekonominin öne çıkmasıyla küresel üretim zincirlerinin ve ticaretin felci daha da ilerlemiştir. Tüm bunlar birlikte ele alındığında, küresel ekonominin COVID-19 krizinden önceki durumuna dönmesi gibi bir olasılık imkansız hale gelecektir. Salgının tetiklediği günümüz neoliberalizminin hiper kriziyle birlikte küresel ticaret için elzem olan tedarik zincirlerinin karşılaştığı zorluklar, kamu ve şirket borçları piyasalarındaki ödememe riskini arttırmıştır. Kamu ve işletmeler için geçici likidite restorasyonu; belirsiz iyileşmeler, azalan yatırımlar, zayıflayan işletmeler, kitlesel işsizlik ve azalan hane gelirleri bağlamında ödeme aczinin reel sektörden finans sektörüne kaymasını sağlayacak yüksek miktarda borçlar verilmesiyle sağlanmıştır. Neoliberal kapitalizmin bu hiper krizinden çıkış, küreselleşmenin gelişmiş ülkelerdeki yüksek kârlı üretim zincirlerinin tedarik ihtiyacıyla yönlendirilen endüstriyel uzmanlaşma konumuna ittiği yerel pazarları temel alan yeni bir kalkınma stratejisiyle mümkün olabilir. Yüksek işsizlik ve artan yoksulluk oranlarının eşlik ettiği mevcut kriz, 21. yüzyılın geri kalanında sermaye ve emek arasındaki gelir dağılımının yapısını tanımlayacak olan, işçilerin daha iyi hayat şartları için vereceği küresel mücadeleyi belirleyecektir.\n Anahtar Kelimeler: borçlanma senetleri; finansallaşma; hiper kriz; küresel değer zincirleri; salgın",
-  "source_tr": "https://briqjournal.com/covid-19-ve-neoliberalizmin-hiper-krizi-finansallasmanin-cokusu",
-  "source_en": "https://briqjournal.com/en/covid-19-and-the-hyper-crisis-neoliberalism-the-breakdown-financialization",
-  "title_en": "COVID-19 and the Hyper-Crisis of Neoliberalism: The Breakdown of Financialization",
-  "abstract_en": "Abstract \n The pandemic crisis produced by the SARS-CoV-2 virus, which causes the disease COVID-19, has rapidly exposed the limits of growth in neoliberal globalization, where financialization, far from bolstering global productive and commercial activities, has proved to be merely an efficient means of redistributing wealth towards society’s wealthiest members. The paralysis of global productive chains and trade is exacerbated by the deterioration of financial-market assets and loss of liquidity, high levels of corporate and private debt in industrialized countries, and the prominence of the informal economy in developing countries. Taken together, these phenomena will make it impossible for the global economy to return to the way it functioned before the COVID-19 crisis. With the hyper-crisis of modern-day neoliberalism exacerbated by the pandemic, difficulties in the supply chains essential to global trade have increased the risks of default on sovereign and corporate debt markets. For both sectors – government and business – a temporary restoration of liquidity is mediated by issuing higher volumes of debt. In a context of uncertain recovery, falling investment, failing businesses, mass unemployment, and declining family income, this will shift insolvency from the real to the financial sector. The potential way out of this hyper-crisis of neoliberal capitalism should be a new development strategy based on domestic markets, which globalization has relegated to niches of industrial specialization dictated by the need for supplies in highly profitable productive chains in developed countries. The current crisis, with its attendant high unemployment and increase in poverty, will define workers’ global struggle for better living conditions, thereby defining the structure of income distribution between capital and labor for the rest of the 21st century.\n Keywords: Debt securities; financialization; global value chains; hyper-crisis; pandemic",
-  "citation_tr": "Atıf \n Maldonado, L. K. & Moreno,G. H. (2020). Covid-19 ve neoliberalizmin hiper krizi: Finansallaşmanın çöküşü. Kuşak ve Yol Girişimi Dergisi, 1 (3), 80-92.",
-  "citation_en": "Citation \n Maldonado, L.K. & Moreno, G.H. (2020). Covid-19 and the hyper-crisis of neoliberalism: The breakdown of financialization. Belt & Road Initiative Quarterly, 1 (3), 80-92.",
-  "pages": "80-92",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20LUIS%20KATO%20MALDONADO%20-%20GUADALUPE%20HUERTA%20MORENO.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20LUIS%20KATO%20MALDONADO%20-%20GUADALUPE%20HUERTA%20MORENO.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/covid-19-ve-neoliberalizmin-hiper-krizi-finansallasmanin-cokusu-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/covid-19-ve-neoliberalizmin-hiper-krizi-finansallasmanin-cokusu-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "covid-19-ve-neoliberalizmin-hiper-krizi-finansallasmanin-cokusu",
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "COVID-19 and the Hyper-Crisis of Neoliberalism: The Breakdown of Financialization",
+    "tr": "COVID-19 ve Neoliberalizmin Hiper Krizi: Finansallaşmanın Çöküşü*"
+  },
+  "authors": [
+    {
+      "displayName": "Luis Kato Maldonado",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    },
+    {
+      "displayName": "Guadalupe Huerta Moreno",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "The pandemic crisis produced by the SARS-CoV-2 virus, which causes the disease COVID-19, has rapidly exposed the limits of growth in neoliberal globalization, where financialization, far from bolstering global productive and commercial activities, has proved to be merely an efficient means of redistributing wealth towards society’s wealthiest members. The paralysis of global productive chains and trade is exacerbated by the deterioration of financial-market assets and loss of liquidity, high levels of corporate and private debt in industrialized countries, and the prominence of the informal economy in developing countries. Taken together, these phenomena will make it impossible for the global economy to return to the way it functioned before the COVID-19 crisis. With the hyper-crisis of modern-day neoliberalism exacerbated by the pandemic, difficulties in the supply chains essential to global trade have increased the risks of default on sovereign and corporate debt markets. For both sectors – government and business – a temporary restoration of liquidity is mediated by issuing higher volumes of debt. In a context of uncertain recovery, falling investment, failing businesses, mass unemployment, and declining family income, this will shift insolvency from the real to the financial sector. The potential way out of this hyper-crisis of neoliberal capitalism should be a new development strategy based on domestic markets, which globalization has relegated to niches of industrial specialization dictated by the need for supplies in highly profitable productive chains in developed countries. The current crisis, with its attendant high unemployment and increase in poverty, will define workers’ global struggle for better living conditions, thereby defining the structure of income distribution between capital and labor for the rest of the 21st century.",
+    "tr": "COVID-19 hastalığına neden olan SARS-CoV-2 virüsünün ortaya çıkmasıyla oluşan salgın krizi, neoliberal küreselleşmede büyümenin sınırlarını gözler önüne sermiştir. Tam da burada finansallaşma, küresel üretimi ve ticari faaliyetleri desteklemekten ziyade servetin, toplumun en zengin üyelerinin yararına yeniden dağıtılmasını sağlamada en etkili yol olduğunu göstermiştir. Finans piyasalarındaki varlıkların zarar görmesi ve likidite kaybı ile birlikte sanayileşmiş ülkelerdeki şirket ve özel sektör borçlarının yüksek seviyelere ulaşması ve gelişmekte olan ülkelerde kayıt dışı ekonominin öne çıkmasıyla küresel üretim zincirlerinin ve ticaretin felci daha da ilerlemiştir. Tüm bunlar birlikte ele alındığında, küresel ekonominin COVID-19 krizinden önceki durumuna dönmesi gibi bir olasılık imkansız hale gelecektir. Salgının tetiklediği günümüz neoliberalizminin hiper kriziyle birlikte küresel ticaret için elzem olan tedarik zincirlerinin karşılaştığı zorluklar, kamu ve şirket borçları piyasalarındaki ödememe riskini arttırmıştır. Kamu ve işletmeler için geçici likidite restorasyonu; belirsiz iyileşmeler, azalan yatırımlar, zayıflayan işletmeler, kitlesel işsizlik ve azalan hane gelirleri bağlamında ödeme aczinin reel sektörden finans sektörüne kaymasını sağlayacak yüksek miktarda borçlar verilmesiyle sağlanmıştır. Neoliberal kapitalizmin bu hiper krizinden çıkış, küreselleşmenin gelişmiş ülkelerdeki yüksek kârlı üretim zincirlerinin tedarik ihtiyacıyla yönlendirilen endüstriyel uzmanlaşma konumuna ittiği yerel pazarları temel alan yeni bir kalkınma stratejisiyle mümkün olabilir. Yüksek işsizlik ve artan yoksulluk oranlarının eşlik ettiği mevcut kriz, 21. yüzyılın geri kalanında sermaye ve emek arasındaki gelir dağılımının yapısını tanımlayacak olan, işçilerin daha iyi hayat şartları için vereceği küresel mücadeleyi belirleyecektir."
+  },
+  "keywords": {
+    "en": [
+      "Debt securities",
+      "financialization",
+      "global value chains",
+      "hyper-crisis",
+      "pandemic"
+    ],
+    "tr": [
+      "borçlanma senetleri",
+      "finansallaşma",
+      "hiper kriz",
+      "küresel değer zincirleri",
+      "salgın"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 3,
+    "year": 2020,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "80",
+    "last": "92"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Maldonado, L.K. & Moreno, G.H. (2020). Covid-19 and the hyper-crisis of neoliberalism: The breakdown of financialization. Belt & Road Initiative Quarterly, 1 (3), 80-92.",
+    "tr": "Maldonado, L. K. & Moreno,G. H. (2020). Covid-19 ve neoliberalizmin hiper krizi: Finansallaşmanın çöküşü. Kuşak ve Yol Girişimi Dergisi, 1 (3), 80-92."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/covid-19-and-the-hyper-crisis-neoliberalism-the-breakdown-financialization",
+    "tr": "https://briqjournal.com/covid-19-ve-neoliberalizmin-hiper-krizi-finansallasmanin-cokusu",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20LUIS%20KATO%20MALDONADO%20-%20GUADALUPE%20HUERTA%20MORENO.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20LUIS%20KATO%20MALDONADO%20-%20GUADALUPE%20HUERTA%20MORENO.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/covid-19-ve-neoliberalizmin-hiper-krizi-finansallasmanin-cokusu-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/covid-19-ve-neoliberalizmin-hiper-krizi-finansallasmanin-cokusu-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

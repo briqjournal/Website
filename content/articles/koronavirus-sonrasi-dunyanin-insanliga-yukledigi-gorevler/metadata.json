@@ -1,23 +1,83 @@
 {
-  "slug": "koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler",
-  "volume": 1,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2020",
-  "author": "Prof. Dr. Semih Koray",
-  "title_tr": "Koronavirüs Sonrası Dünyanın İnsanlığa Yüklediği Görevler",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler",
-  "source_en": "https://briqjournal.com/en/tasks-entrusted-humanity-the-post-coronavirus-world",
-  "title_en": "Tasks Entrusted to Humanity by the Post-Coronavirus World",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Koray,S. (2020). Koronavirüs sonrası dünyanın insanlığa yüklediği görevler. Kuşak ve Yol Girişimi Dergisi, 1 (3), 33-46.",
-  "citation_en": "Citation \n Koray, S. (2020). Tasks entrusted to humanity by the post-coronavirus world. Belt & Road Initiative Quarterly, 1 (3), 35-48.",
-  "pages": "33-46",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20SEM%C4%B0H%20KORAY.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20SEM%C4%B0H%20KORAY.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Tasks Entrusted to Humanity by the Post-Coronavirus World",
+    "tr": "Koronavirüs Sonrası Dünyanın İnsanlığa Yüklediği Görevler"
+  },
+  "authors": [
+    {
+      "displayName": "Semih Koray",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 3,
+    "year": 2020,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "33",
+    "last": "46"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Koray, S. (2020). Tasks entrusted to humanity by the post-coronavirus world. Belt & Road Initiative Quarterly, 1 (3), 35-48.",
+    "tr": "Koray,S. (2020). Koronavirüs sonrası dünyanın insanlığa yüklediği görevler. Kuşak ve Yol Girişimi Dergisi, 1 (3), 33-46."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/tasks-entrusted-humanity-the-post-coronavirus-world",
+    "tr": "https://briqjournal.com/koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20SEM%C4%B0H%20KORAY.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20SEM%C4%B0H%20KORAY.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
