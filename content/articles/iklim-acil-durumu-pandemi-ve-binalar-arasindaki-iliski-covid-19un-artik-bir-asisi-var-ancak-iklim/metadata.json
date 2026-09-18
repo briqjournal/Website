@@ -1,26 +1,95 @@
 {
-  "slug": "iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim",
-  "volume": 2,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2021",
-  "author": "Prof. Dr. Birol Kılkış",
-  "title_tr": "İklim Acil Durumu, Pandemi ve Binalar Arasındaki İlişki: COVID-19’un Artık Bir Aşısı Var Ancak İklim Acil Durumunun Yok",
-  "abstract_tr": "Bu makale iki tür karbondioksit gazı salımını tanımlamaktadır. Birinci tür, fosil yakıtların dahil olduğu endüstriyel süreç, elektrik üretimi ve ulaşım gibi kaynaklardan ve çiftlik atıklarından kaynaklanan doğrudan salımlarla ilgilidir. Şimdiye kadar belirtilmeyen ve dikkat edilmeyen ikinci tür, doğrudan fosil yakıtlar dahil olmasa bile, herhangi bir süreçte arz ve talep arasındaki ekserji uyuşmazlığıyla ilgilidir . \n Ekserji, herhangi bir enerji miktarı veya akışı için yararlı iş potansiyelidir. Bu makale, enerji arzı ve enerji talebi arasındaki (ekserji) uyumsuzluklar nedeniyle iklim acil durumu ve karbondioksit salımları arasında doğrudan bir bağlantı sunmaktadır; bu, yapılı çevrede uygun tasarım, kontrol ve sistem seçimi ile en aza indirilebilir. Bu tür neredeyse önlenebilir ekserji uyumsuzluklarının, fosil yakıt kullanımından kaynaklanan doğrudan salımlar kadar önemli olduğu ve bu tür yıkımların, güneş ve rüzgar enerjisi sistemleri dahil yeşil enerji sistemlerinde de gerçekleştiği gösterilmiştir. Makale ayrıca, ikinci tür salımların birinci tür doğrudan salımlar kadar iklim acil durumundan (küresel ısınma) sorumlu olduğunu da açıklamaktadır. Rüzgar enerjisiyle ısıtılan ev hakkında bir örnek verilmiş ve sahada fosil yakıt kullanılmamasına rağmen salımlardan sorumlu olduğu gösterilmiştir. Daha sonra bu makale, salım aşımları ile ek pandemi riski arasında doğrudan bir bağlantı kurmuş ve bu ek pandemi risklerinin çoğundan binaların sorumlu olduğunu tartışmıştır. \n Anahtar Kelimeler: CO 2 salımı, COVID-19, iklim acil durumu , küresel ısınma, salgına dayanıklı bina",
-  "source_tr": "https://briqjournal.com/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim",
-  "source_en": "https://briqjournal.com/en/the-relationship-between-climate-emergency-pandemics-and-buildings-covid-19-has-vaccine-now-climate",
-  "title_en": "The Relationship Between Climate Emergency, Pandemics, and Buildings: COVID-19 Has A Vaccine Now But Climate Emergency Has Not",
-  "abstract_en": "Abstract \n This paper identifies two types of carbon dioxide gas emissions. The first type concerns direct emissions, emanating from sources that involve fossil fuels, such as industrial process, power generation, transportation, and farm waste. The second type, which has not been accounted for so far, is concerned with exergy mismatches between the supply and demand in any given process, even if no fossil fuels are directly involved. Exergy is the useful work potential of any given amount or flow of energy. \n This paper presents a direct link between the climate emergency and carbon dioxide emissions due to quality (Exergy) mismatches between the energy supply and energy demand, which may be minimized by proper design, control, and system selection in the built environment. It is shown that these nearly avoidable exergy mismatches are as pressing as direct emissions from fossil fuel usage and such destructions also take place in green energy systems, including solar and wind energy systems. The paper further explains that these emissions are responsible for the climate emergency (Global warming) as direct emissions are. An example is given about a wind power-heated house, and it is shown that it is responsible for emissions despite no fossil fuel being involved on the site. The paper then establishes a direct link between emission exceedances and the additional pandemic risk to conclude that buildings are responsible for most of these additional pandemic risks. \n Keywords: Climate emergency, CO2 emissions, COVID-19, global warming, pandemic-resistant building",
-  "citation_tr": "Atıf \n Kılkış, B. (2021). İklim acil durumu, pandemi ve binalar arasındaki ilişki: COVID-19'un artık bir aşısı var ancak iklim acil durumunun yok. Kuşak ve Yol Dergisi, 2(3). 61-68",
-  "citation_en": "Citation \n Kılkış, B. (2021). The relationship between climate emergency, pandemicsi and buildings: COVID-19 has a vaccine now but climate emergency has not. Belt & Road Initiative Quarterly, 2(3). 61-68",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/%C4%B0klim%20Acil%20Durumu%2C%20Pandemi%20ve%20Binalar%20Aras%C4%B1ndaki%20%C4%B0li%C5%9Fki.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/The%20Relationship%20Between%20Climate%20Emergency%2C%20Pandemics%20and%20Buildings.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim-en.pdf",
-  "shared_bilingual_pdf": false,
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "The Relationship Between Climate Emergency, Pandemics, and Buildings: COVID-19 Has A Vaccine Now But Climate Emergency Has Not",
+    "tr": "İklim Acil Durumu, Pandemi ve Binalar Arasındaki İlişki: COVID-19’un Artık Bir Aşısı Var Ancak İklim Acil Durumunun Yok"
+  },
+  "authors": [
+    {
+      "displayName": "Birol Kılkış",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "This paper identifies two types of carbon dioxide gas emissions. The first type concerns direct emissions, emanating from sources that involve fossil fuels, such as industrial process, power generation, transportation, and farm waste. The second type, which has not been accounted for so far, is concerned with exergy mismatches between the supply and demand in any given process, even if no fossil fuels are directly involved. Exergy is the useful work potential of any given amount or flow of energy. \n This paper presents a direct link between the climate emergency and carbon dioxide emissions due to quality (Exergy) mismatches between the energy supply and energy demand, which may be minimized by proper design, control, and system selection in the built environment. It is shown that these nearly avoidable exergy mismatches are as pressing as direct emissions from fossil fuel usage and such destructions also take place in green energy systems, including solar and wind energy systems. The paper further explains that these emissions are responsible for the climate emergency (Global warming) as direct emissions are. An example is given about a wind power-heated house, and it is shown that it is responsible for emissions despite no fossil fuel being involved on the site. The paper then establishes a direct link between emission exceedances and the additional pandemic risk to conclude that buildings are responsible for most of these additional pandemic risks.",
+    "tr": "Bu makale iki tür karbondioksit gazı salımını tanımlamaktadır. Birinci tür, fosil yakıtların dahil olduğu endüstriyel süreç, elektrik üretimi ve ulaşım gibi kaynaklardan ve çiftlik atıklarından kaynaklanan doğrudan salımlarla ilgilidir. Şimdiye kadar belirtilmeyen ve dikkat edilmeyen ikinci tür, doğrudan fosil yakıtlar dahil olmasa bile, herhangi bir süreçte arz ve talep arasındaki ekserji uyuşmazlığıyla ilgilidir . \n Ekserji, herhangi bir enerji miktarı veya akışı için yararlı iş potansiyelidir. Bu makale, enerji arzı ve enerji talebi arasındaki (ekserji) uyumsuzluklar nedeniyle iklim acil durumu ve karbondioksit salımları arasında doğrudan bir bağlantı sunmaktadır; bu, yapılı çevrede uygun tasarım, kontrol ve sistem seçimi ile en aza indirilebilir. Bu tür neredeyse önlenebilir ekserji uyumsuzluklarının, fosil yakıt kullanımından kaynaklanan doğrudan salımlar kadar önemli olduğu ve bu tür yıkımların, güneş ve rüzgar enerjisi sistemleri dahil yeşil enerji sistemlerinde de gerçekleştiği gösterilmiştir. Makale ayrıca, ikinci tür salımların birinci tür doğrudan salımlar kadar iklim acil durumundan (küresel ısınma) sorumlu olduğunu da açıklamaktadır. Rüzgar enerjisiyle ısıtılan ev hakkında bir örnek verilmiş ve sahada fosil yakıt kullanılmamasına rağmen salımlardan sorumlu olduğu gösterilmiştir. Daha sonra bu makale, salım aşımları ile ek pandemi riski arasında doğrudan bir bağlantı kurmuş ve bu ek pandemi risklerinin çoğundan binaların sorumlu olduğunu tartışmıştır."
+  },
+  "keywords": {
+    "en": [
+      "Climate emergency",
+      "CO2 emissions",
+      "COVID-19",
+      "global warming",
+      "pandemic-resistant building"
+    ],
+    "tr": [
+      "CO 2 salımı",
+      "COVID-19",
+      "iklim acil durumu",
+      "küresel ısınma",
+      "salgına dayanıklı bina"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 3,
+    "year": 2021,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "61",
+    "last": "68"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Kılkış, B. (2021). The relationship between climate emergency, pandemicsi and buildings: COVID-19 has a vaccine now but climate emergency has not. Belt & Road Initiative Quarterly, 2(3). 61-68",
+    "tr": "Kılkış, B. (2021). İklim acil durumu, pandemi ve binalar arasındaki ilişki: COVID-19'un artık bir aşısı var ancak iklim acil durumunun yok. Kuşak ve Yol Dergisi, 2(3). 61-68"
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/the-relationship-between-climate-emergency-pandemics-and-buildings-covid-19-has-vaccine-now-climate",
+    "tr": "https://briqjournal.com/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/The%20Relationship%20Between%20Climate%20Emergency%2C%20Pandemics%20and%20Buildings.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/%C4%B0klim%20Acil%20Durumu%2C%20Pandemi%20ve%20Binalar%20Aras%C4%B1ndaki%20%C4%B0li%C5%9Fki.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

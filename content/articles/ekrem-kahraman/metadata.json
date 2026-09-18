@@ -1,25 +1,83 @@
 {
-  "slug": "ekrem-kahraman",
-  "volume": 2,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2021",
-  "author": "Ekrem Kahraman",
-  "title_tr": "Ekrem Kahraman",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/ekrem-kahraman",
-  "source_en": "https://briqjournal.com/en/ekrem-kahraman",
-  "title_en": "EKREM KAHRAMAN",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n [Resim, Ekrem Kahraman]. Gılgamışın trajedisi. Kuşak ve Yol Girişimi Dergisi , 2(3), 79.",
-  "citation_en": "Atıf \n [Painting by Ekrem Kahraman]. The tragedy of Gilgamesh. Belt & Road Initiative Quarterly , 2(3), 78.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/EKREM%20KAHRAMAN.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/EKREM%20KAHRAMAN_0.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/ekrem-kahraman-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/ekrem-kahraman-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "ekrem-kahraman",
+  "articleType": {
+    "id": "painting",
+    "tr": "Resim",
+    "en": "Painting",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "EKREM KAHRAMAN",
+    "tr": "Ekrem Kahraman"
+  },
+  "authors": [
+    {
+      "displayName": "Ekrem Kahraman",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 3,
+    "year": 2021,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": null,
+    "last": null
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "[Painting by Ekrem Kahraman]. The tragedy of Gilgamesh. Belt & Road Initiative Quarterly , 2(3), 78.",
+    "tr": "[Resim, Ekrem Kahraman]. Gılgamışın trajedisi. Kuşak ve Yol Girişimi Dergisi , 2(3), 79."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/ekrem-kahraman",
+    "tr": "https://briqjournal.com/ekrem-kahraman",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/EKREM%20KAHRAMAN_0.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/EKREM%20KAHRAMAN.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/ekrem-kahraman-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/ekrem-kahraman-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
