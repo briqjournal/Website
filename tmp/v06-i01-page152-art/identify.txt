@@ -1,0 +1,3 @@
+image-000.jpg 4 1419 CMYK
+image-001.jpg 215 76 CMYK
+image-002.jpg 1916 1729 CMYK
