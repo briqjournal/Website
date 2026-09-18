@@ -23,6 +23,6 @@ This file contains stable content conventions only. Article-specific facts must 
 
 ## Sources and corrections
 
-Prefer, in order: current canonical repository data, official BRIQ PDF/publication, verified project/editorial records, then authoritative external sources when genuinely needed.
+For factual verification, prefer the official BRIQ article/PDF and verified editorial records. Use the current repository to determine implementation state, not as automatic proof that an existing fact is correct. Use authoritative external sources only when the necessary information is not available from BRIQ sources.
 
 Correct the canonical article source first. Regenerate derived site data afterwards.
