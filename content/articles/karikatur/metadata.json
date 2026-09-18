@@ -18,5 +18,8 @@
   "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Karikat%C3%BCr%20-%20Turhan%20Sel%C3%A7uk.pdf",
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Cartoon%20-%20Turhan%20Sel%C3%A7uk.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/karikatur-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/karikatur-en.pdf"
+  "pdf_en_local": "/assets/archive/pdfs/articles/karikatur-en.pdf",
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }

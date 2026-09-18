@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/From%20the%20%E2%80%9CSilk%20Road%20of%20Health%E2%80%9D%20to%20the%20%E2%80%9CCommunity%20of%20Shared%20Future%20for%20Human%20Health%E2%80%9D%20in%20a%20Post-COVID-19%20World.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/covid-19-sonrasi-dunyada-saglik-ipek-yolundan-insan-sagligi-icin-ortak-gelecek-toplumuna-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/covid-19-sonrasi-dunyada-saglik-ipek-yolundan-insan-sagligi-icin-ortak-gelecek-toplumuna-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "received_date": "2021-02-18",
+  "revised_date": null,
+  "accepted_date": null
 }

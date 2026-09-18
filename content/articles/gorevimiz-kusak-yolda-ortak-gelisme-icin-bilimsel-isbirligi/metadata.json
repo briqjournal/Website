@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Our%20Mission%20Scientific%20Cooperation%20for%20Shared%20Development%20in%20the%20Belt%20%26%20Road.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/gorevimiz-kusak-yolda-ortak-gelisme-icin-bilimsel-isbirligi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/gorevimiz-kusak-yolda-ortak-gelisme-icin-bilimsel-isbirligi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }

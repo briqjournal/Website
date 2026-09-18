@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Science%20Has%20No%20Borders%2C%20but%20Scientists%20Have%20A%20Motherland.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/bilimin-siniri-yoktur-ama-bilim-insanlarinin-vatani-vardir-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/bilimin-siniri-yoktur-ama-bilim-insanlarinin-vatani-vardir-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }

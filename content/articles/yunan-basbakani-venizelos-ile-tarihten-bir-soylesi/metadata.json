@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/A%20Historical%20Interview%20With%20Greek%20Prime%20Minister%20Venizelos.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/yunan-basbakani-venizelos-ile-tarihten-bir-soylesi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/yunan-basbakani-venizelos-ile-tarihten-bir-soylesi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }

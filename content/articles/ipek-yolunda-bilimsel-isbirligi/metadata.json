@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Scientific%20Collaboration%20along%20the%20Silk%20Road.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/ipek-yolunda-bilimsel-isbirligi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/ipek-yolunda-bilimsel-isbirligi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "received_date": null,
+  "revised_date": "2021-02-21",
+  "accepted_date": null
 }
