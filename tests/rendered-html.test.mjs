@@ -1105,7 +1105,7 @@ test("renders linked season-coloured issue metadata and an always-visible DOI fi
   const [doiTr, doiEn, noDoiTr, noDoiEn] = await Promise.all(responses.map((response) => response.text()));
 
   const compactRecord = (html) => html.match(/<div class="article-record-compact">([\s\S]*?)<\/div><div class="publication-record-group">/)?.[1] || "";
-  const [doiTrRecord, doiEnRecord, noDoiTrRecord, noDoiEnRecord] = [doiTr, doiEn, noDoiTr, noDoiEn].map(compactRecord);
+  const [doiTrRecord, doiEnRecord, noDoiTrRecord, noDoiEnRecord] = [doiTr, doiEn, noDoiTr, noDoiEn]\n    .map((html) => compactRecord(html).replace(/<!-- -->/g, ""));
 
   assert.match(doiTrRecord, /<span>Cilt \/ Sayı<\/span>/);
   assert.match(doiEnRecord, /<span>Volume \/ Issue<\/span>/);
