@@ -1,9 +1,9 @@
 name: Build v05-i04 full-text candidates
 
 on:
-  push:
+  pull_request:
     branches:
-      - chore/v05-i04-fulltext-canonical
+      - main
     paths:
       - '.github/workflows/v05-i04-fulltext-extract.yml'
 
@@ -12,12 +12,14 @@ permissions:
 
 jobs:
   extract:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: chore/v05-i04-fulltext-canonical
 
       - name: Install PDF extraction tools
         run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
