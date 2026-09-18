@@ -75,6 +75,14 @@ jobs:
               }},
               skipFirstPortrait: true,
             }}'''
+              elif slug == "yeni-asya-jeopolitigi-baglaminda-turk-devletleri-teskilati":
+                  record = f'''{{
+              slug: "{slug}",
+              pages: [1, {last}],
+              body: {{ tr: 1, en: 1 }},
+              start: {{ tr: "Giriş", en: "Giriş" }},
+              skipFirstPortrait: true,
+            }}'''
               else:
                   record = f'''{{
               slug: "{slug}",
