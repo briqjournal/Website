@@ -64,6 +64,27 @@ jobs:
           subprocess.run(["git", "checkout", "--", "content/catalog.json"], check=True)
           PY
 
+      - name: Commit canonical candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          issue = json.loads(Path("content/issues/v05-i04.json").read_text(encoding="utf-8"))
+          paths = []
+          for slug in issue["articles"][:9]:
+              paths.append(f"content/articles/{slug}/fulltext")
+              fig = Path("public/assets/article-figures") / slug
+              if fig.exists():
+                  paths.append(str(fig))
+          subprocess.run(["git", "add", "--", *paths], check=True)
+          PY
+          git commit -m 'Build v05-i04 canonical prose candidates'
+          git push origin HEAD:chore/v05-i04-fulltext-canonical
+
       - name: Validate candidate structure
         shell: bash
         run: |
@@ -95,23 +116,3 @@ jobs:
           print("V05_I04_CANDIDATE_STRUCTURE_OK")
           PY
 
-      - name: Commit canonical candidates
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          python3 <<'PY'
-          import json, subprocess
-          from pathlib import Path
-          issue = json.loads(Path("content/issues/v05-i04.json").read_text(encoding="utf-8"))
-          paths = []
-          for slug in issue["articles"][:9]:
-              paths.append(f"content/articles/{slug}/fulltext")
-              fig = Path("public/assets/article-figures") / slug
-              if fig.exists():
-                  paths.append(str(fig))
-          subprocess.run(["git", "add", "--", *paths], check=True)
-          PY
-          git commit -m 'Build v05-i04 canonical prose candidates'
-          git push origin HEAD:chore/v05-i04-fulltext-canonical
