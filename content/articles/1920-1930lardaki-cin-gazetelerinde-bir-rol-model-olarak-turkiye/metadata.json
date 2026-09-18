@@ -19,5 +19,6 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Turkey%20as%20a%20Role%20Model%20in%20Chinese%20Newspapers%20of%201920-1930s.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/1920-1930lardaki-cin-gazetelerinde-bir-rol-model-olarak-turkiye-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/1920-1930lardaki-cin-gazetelerinde-bir-rol-model-olarak-turkiye-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "reviewed_book": {"authorsApa":"Wang, S. (Ed.)","year":2021,"title":"The Road of Turkey: Research and Review of Chinese Scholars","publisher":"Tianjin People’s Publishing House","isbn":null}
 }

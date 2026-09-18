@@ -19,5 +19,6 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/All%20Quiet%20on%20the%20Western%20Front.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/bati-cephesindeki-sessizlik-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/bati-cephesindeki-sessizlik-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "reviewed_book": {"authorsApa":"Lambsdorff, A. G.","year":2021,"title":"Wenn elefanten kämpfen: Deutschlands rolle in den kalten kriegen des 21. Jahrhunderts","publisher":"Propyläen Verlag","isbn":"978-3-549-10032-5"}
 }

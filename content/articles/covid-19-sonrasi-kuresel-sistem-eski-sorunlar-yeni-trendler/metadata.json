@@ -19,5 +19,6 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20SERDAR%20YURT%C3%87%C4%B0%C3%87EK%20-%20ENG.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "reviewed_book": {"authorsApa":"Center for Strategic Research of the Ministry of Foreign Affairs of the Republic of Turkey (SAM)","year":2020,"title":"Post-COVID-19 Global System: Old Problems, New Trends","publisher":"SAM Publications","isbn":null}
 }

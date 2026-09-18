@@ -10,6 +10,7 @@
     {"displayName": "İbrahim Orçun Göktürk", "givenName": "İbrahim Orçun", "familyName": "Göktürk", "role": "translator", "orcid": null}
   ],
   "abstract": {"en": null, "tr": null},
+  "reviewedBook": {"authorsApa":"Rachman, G.","year":2022,"title":"The Age of the Strongman: How the Cult of the Leader Threatens Democracy around the World","publisher":"The Bodley Head","isbn":"9781847926418"},
   "keywords": {"en": [], "tr": []},
   "dates": {"received": "2022-06-06", "revised": null, "accepted": "2022-06-14", "published": "2022-09-01"},
   "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 3, "issue": 4, "year": 2022, "season": {"en": "Autumn", "tr": "Güz"}},

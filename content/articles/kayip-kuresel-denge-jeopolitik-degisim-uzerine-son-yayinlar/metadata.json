@@ -7,7 +7,7 @@
     {"displayName": "Dominik Pietzcker", "givenName": "Dominik", "familyName": "Pietzcker", "orcid": "https://orcid.org/0000-0002-1420-9396", "affiliations": [{"name": "Macromedia University of Applied Sciences", "nameTr": "Macromedia Uygulamalı Bilimler Üniversitesi", "nameEn": "Macromedia University of Applied Sciences", "country": "Germany", "ror": null}]}
   ],
   "abstract": {"en": null, "tr": null},
-  "reviewedBook": null,
+  "reviewedBook": {"authorsApa":"Allison, G.; Braml, J.; Geinitz, C.; Röttgen, N.","year":"2017; 2022; 2022; 2022","title":"Destined for War: Can America and China Escape Thucydides’s Trap?; Die transatlantische Illusion: Die neue Weltordnung und wie wir uns darin behaupten können; Chinas Griff nach dem Westen: Wie sich Peking in unsere Wirtschaft einkauft; Nie wieder hilflos! Ein Manifest in Zeiten des Krieges","publisher":"Scribe Publishers; C.H. Beck Verlag; C.H. Beck Verlag; dtv Verlag","isbn":null},
   "keywords": {"en": [], "tr": []},
   "dates": {"received": "2022-11-06", "revised": null, "accepted": "2023-02-22", "published": "2023-03-01"},
   "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 4, "issue": 2, "year": 2023, "season": {"en": "Spring", "tr": "Bahar"}},

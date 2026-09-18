@@ -7,7 +7,7 @@
     {"displayName": "Zhang Lili", "givenName": "Lili", "familyName": "Zhang", "orcid": null, "affiliations": [{"name": "General Publishing House Co. Ltd., Shaanxi Normal University", "nameTr": "Shaanxi Normal Üniversitesi Genel Yayınevi", "nameEn": "General Publishing House Co. Ltd., Shaanxi Normal University", "country": "China", "ror": null}]}
   ],
   "abstract": {"en": null, "tr": null},
-  "reviewedBook": null,
+  "reviewedBook": {"authorsApa":"Shaanxi Normal University","year":"n.d.","title":"The Silk Road on the National Card (Volume I and Volume II)","publisher":"General Publishing House Co. Ltd., Shaanxi Normal University","isbn":null},
   "keywords": {"en": [], "tr": []},
   "dates": {"received": "2023-01-25", "revised": null, "accepted": "2023-01-27", "published": "2023-03-01"},
   "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 4, "issue": 2, "year": 2023, "season": {"en": "Spring", "tr": "Bahar"}},

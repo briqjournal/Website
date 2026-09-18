@@ -19,5 +19,6 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20VICTOR%20MANUEL%20ISIDRO%20LUNA.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "reviewed_book": {"authorsApa":"Ye, M.","year":2020,"title":"The Belt Road and Beyond: State-Mobilized Globalization in China 1998–2018","publisher":"Cambridge University Press","isbn":"978-1-108-85538-9"}
 }
