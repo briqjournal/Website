@@ -1,26 +1,95 @@
 {
-  "slug": "ipek-yolunda-bilimsel-isbirligi",
-  "volume": 2,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2021",
-  "author": "Prof. Dr. Uğur Murat Leloğlu",
-  "title_tr": "İpek Yolu'nda Bilimsel İşbirliği",
-  "abstract_tr": "Kuşak ve Yol Girişimi (KYG) Çin Hükümeti tarafından 2013 sonunda ilan edilen, ticaret yolları etrafında örülmüş dev bir kalkınma programıdır. Bilimsel ve teknolojik işbirliği KYG’nin ayrılmaz parçası olduğu için Uluslararası Bilim Kuruluşları Birliği (Alliance of International Science Organizations, ANSO) 2018 yılında hükümet dışı bir kuruluş olarak kurulmuştur. Bu çalışmada, öncelikle ülkeler arasında bilim ve teknoloji alanında etkin işbirliğinin koşulları tartışılmıştır. Ardından, literatürdeki bazı uluslararası işbirliği örüntülerine ilişkin sonuçlar gözden geçirilirken, araştırma ekosisteminin mevcut durumu da bilimsel makalelerin sayıları ve trendleri cinsinden analiz edilmiştir. Mevcut durumu dikkate alarak işbirliği mekanizmaları gözden geçirilmiş ve ANSO’nun ağ oluşturma aracı ve gelecekteki bir kuruluşun çekirdeği olarak hizmet görebileceği, ama uzun vadede hükümetler-arası bir kuruluşa ihtiyaç olduğu öne sürülmüştür. Avrupa Birliği’nin Çerçeve Programları ile bir karşılaştırmadan sonra, böyle bir yapıyı inşa ederken dayanılması gereken ana ilkeler tartışılmıştır. Temel olarak, bir “adil geri dönüş” ilkesi, esnek katkı payı seçenekleri bulunması ve basitleştirilmiş bürokratik işlemler önerilmiştir. KYG’nin dengeli ve kucaklayıcı ruhuna uygun olarak, uzun vadede beyin göçüne neden olacak baskın bir merkezin oluşmasını önleyecek mekanizmalar da önerilmiştir. Ardından, işbirliği alanlarının seçimine yönelik bir ölçüt kümesi önerilmiş ve bu ölçütlerin ışığı altında literatürde önerilmiş alanlar tartışılmıştır. \n Anahtar Kelimeler: bilim politikası, bilimsel işbirliği, hükümetler-arası kuruluşlar, inovasyon, Kuşak ve Yol Girişimi \n Giriş \n Kuşak ve Yol Girişimi’ne Kısa bir Bakış",
-  "source_tr": "https://briqjournal.com/ipek-yolunda-bilimsel-isbirligi",
-  "source_en": "https://briqjournal.com/en/scientific-collaboration-along-the-silk-road",
-  "title_en": "Scientific Collaboration along the Silk Road",
-  "abstract_en": "Abstract \n The Belt and Road Initiative (BRI) is an immense development program announced by the Chinese government in late 2013, which knitted around trade routes. Since scientific and technological cooperation is an integral part of BRI, the Alliance of International Science Organizations (ANSO) was established in 2018 as a non-governmental organization. In this work, conditions for effective cooperation in science and technology among countries are discussed first. Then, the research ecosystem's current situation is analyzed in terms of the number of scientific articles and trends while some results from the literature on international collaboration patterns are reviewed. Considering the current situation, scientific cooperation mechanisms are reviewed, and it is argued that ANSO can serve as a networking tool or seed for a future organization and that an inter-governmental body is necessary for the long run. After a short comparison with the Framework Programmes of the European Union, basic principles on which such a body should be established are discussed. A  “fair return” principle, availability of flexible contribution options and, simplified bureaucratic procedures are proposed. Mechanisms to avoid the creation of a dominant core that can cause a brain drain in the long term are also recommended following the balanced and inclusive spirit of BRI. Then, a set of criteria is proposed for the choice of cooperation areas, and the research areas suggested in the literature are discussed under the light of these criteria. \n Keywords:  Belt and Road Initiative, innovation, inter-governmental organizations, science policy, scientific collaboration \n Introduction \n Belt and Road Initiative at a Glance",
-  "citation_tr": "Atıf \n Leloğlu, U.M. (2021). İpek Yolu'nda bilimsel işbirliği. Kuşak ve Yol Girişimi Dergisi, 2 (2), 44-55.",
-  "citation_en": "Citation \n Leloğlu, U.M. (2021). Scientific collaboration along the Silk Road. Belt & Road Initiative Quarterly, 2 (2), 46-57.",
-  "pages": "44-55",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/ipek%20Yolu%27nda%20Bilimsel%20%C4%B0%C5%9Fbirli%C4%9Fi.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Scientific%20Collaboration%20along%20the%20Silk%20Road.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/ipek-yolunda-bilimsel-isbirligi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/ipek-yolunda-bilimsel-isbirligi-en.pdf",
-  "shared_bilingual_pdf": false,
-  "received_date": null,
-  "revised_date": "2021-02-21",
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "ipek-yolunda-bilimsel-isbirligi",
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Scientific Collaboration along the Silk Road",
+    "tr": "İpek Yolu'nda Bilimsel İşbirliği"
+  },
+  "authors": [
+    {
+      "displayName": "Uğur Murat Leloğlu",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "The Belt and Road Initiative (BRI) is an immense development program announced by the Chinese government in late 2013, which knitted around trade routes. Since scientific and technological cooperation is an integral part of BRI, the Alliance of International Science Organizations (ANSO) was established in 2018 as a non-governmental organization. In this work, conditions for effective cooperation in science and technology among countries are discussed first. Then, the research ecosystem's current situation is analyzed in terms of the number of scientific articles and trends while some results from the literature on international collaboration patterns are reviewed. Considering the current situation, scientific cooperation mechanisms are reviewed, and it is argued that ANSO can serve as a networking tool or seed for a future organization and that an inter-governmental body is necessary for the long run. After a short comparison with the Framework Programmes of the European Union, basic principles on which such a body should be established are discussed. A  “fair return” principle, availability of flexible contribution options and, simplified bureaucratic procedures are proposed. Mechanisms to avoid the creation of a dominant core that can cause a brain drain in the long term are also recommended following the balanced and inclusive spirit of BRI. Then, a set of criteria is proposed for the choice of cooperation areas, and the research areas suggested in the literature are discussed under the light of these criteria.",
+    "tr": "Kuşak ve Yol Girişimi (KYG) Çin Hükümeti tarafından 2013 sonunda ilan edilen, ticaret yolları etrafında örülmüş dev bir kalkınma programıdır. Bilimsel ve teknolojik işbirliği KYG’nin ayrılmaz parçası olduğu için Uluslararası Bilim Kuruluşları Birliği (Alliance of International Science Organizations, ANSO) 2018 yılında hükümet dışı bir kuruluş olarak kurulmuştur. Bu çalışmada, öncelikle ülkeler arasında bilim ve teknoloji alanında etkin işbirliğinin koşulları tartışılmıştır. Ardından, literatürdeki bazı uluslararası işbirliği örüntülerine ilişkin sonuçlar gözden geçirilirken, araştırma ekosisteminin mevcut durumu da bilimsel makalelerin sayıları ve trendleri cinsinden analiz edilmiştir. Mevcut durumu dikkate alarak işbirliği mekanizmaları gözden geçirilmiş ve ANSO’nun ağ oluşturma aracı ve gelecekteki bir kuruluşun çekirdeği olarak hizmet görebileceği, ama uzun vadede hükümetler-arası bir kuruluşa ihtiyaç olduğu öne sürülmüştür. Avrupa Birliği’nin Çerçeve Programları ile bir karşılaştırmadan sonra, böyle bir yapıyı inşa ederken dayanılması gereken ana ilkeler tartışılmıştır. Temel olarak, bir “adil geri dönüş” ilkesi, esnek katkı payı seçenekleri bulunması ve basitleştirilmiş bürokratik işlemler önerilmiştir. KYG’nin dengeli ve kucaklayıcı ruhuna uygun olarak, uzun vadede beyin göçüne neden olacak baskın bir merkezin oluşmasını önleyecek mekanizmalar da önerilmiştir. Ardından, işbirliği alanlarının seçimine yönelik bir ölçüt kümesi önerilmiş ve bu ölçütlerin ışığı altında literatürde önerilmiş alanlar tartışılmıştır."
+  },
+  "keywords": {
+    "en": [
+      "Belt and Road Initiative",
+      "innovation",
+      "inter-governmental organizations",
+      "science policy",
+      "scientific collaboration"
+    ],
+    "tr": [
+      "bilim politikası",
+      "bilimsel işbirliği",
+      "hükümetler-arası kuruluşlar",
+      "inovasyon",
+      "Kuşak ve Yol Girişimi"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": "2021-02-21",
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 2,
+    "year": 2021,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "44",
+    "last": "55"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Leloğlu, U.M. (2021). Scientific collaboration along the Silk Road. Belt & Road Initiative Quarterly, 2 (2), 46-57.",
+    "tr": "Leloğlu, U.M. (2021). İpek Yolu'nda bilimsel işbirliği. Kuşak ve Yol Girişimi Dergisi, 2 (2), 44-55."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/scientific-collaboration-along-the-silk-road",
+    "tr": "https://briqjournal.com/ipek-yolunda-bilimsel-isbirligi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Scientific%20Collaboration%20along%20the%20Silk%20Road.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/ipek%20Yolu%27nda%20Bilimsel%20%C4%B0%C5%9Fbirli%C4%9Fi.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/ipek-yolunda-bilimsel-isbirligi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/ipek-yolunda-bilimsel-isbirligi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
