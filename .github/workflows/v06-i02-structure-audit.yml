@@ -1,4 +1,4 @@
-name: Targeted v06-i02 unresolved page render
+name: Inspect extracted v06-i02 figure assets
 
 on:
   push:
@@ -11,40 +11,12 @@ permissions:
   contents: read
 
 jobs:
-  verify:
+  inspect:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
-      - name: Download official locale PDFs
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/v06
-          curl -L --fail --retry 4 --retry-all-errors 'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-03/BRIQ_Cilt6Say%C4%B12_2025BAHAR.pdf' -o /tmp/v06/tr.pdf
-          curl -L --fail --retry 4 --retry-all-errors 'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-03/BRIQ_Volume6SIssue2_2025Spring.pdf' -o /tmp/v06/en.pdf
-      - name: Render only unresolved verification pages
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/v06/rendered
-          pages='29 56 58 59 60 65 67 77 79 84 85 94 107 109 110 113 114 115 116'
-          for loc in en tr; do
-            for p in $pages; do
-              pdftoppm -f "$p" -l "$p" -singlefile -png -r 130 "/tmp/v06/$loc.pdf" "/tmp/v06/rendered/$loc-p$(printf '%03d' "$p")" >/dev/null 2>&1
-            done
-          done
-          echo '===== EN 59-70 LAYOUT TEXT ====='
-          pdftotext -layout -f 59 -l 70 /tmp/v06/en.pdf -
-          echo '===== TR 59-70 LAYOUT TEXT ====='
-          pdftotext -layout -f 59 -l 70 /tmp/v06/tr.pdf -
-          echo '===== EN 113-119 LAYOUT TEXT ====='
-          pdftotext -layout -f 113 -l 119 /tmp/v06/en.pdf -
-          echo '===== TR 113-119 LAYOUT TEXT ====='
-          pdftotext -layout -f 113 -l 119 /tmp/v06/tr.pdf -
       - uses: actions/upload-artifact@v4
         with:
-          name: v06-i02-unresolved-pdf-pages
-          path: /tmp/v06/rendered
+          name: v06-i02-extracted-figures
+          path: public/assets/article-figures/
           retention-days: 1
