@@ -159,6 +159,7 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
       "heading_match_ratio":round(heading_good/max(1,len(heading_rows)),3),
       "reference_match_ratio":round(ref_good/max(1,len(ref_rows)),3) if refs else 1.0,
       "first_anchor":first,"last_anchor":last,"headings":heading_rows,
+      "paragraph_assignments":assignments,
       "unmatched_paragraphs":unmatched,"nonmonotonic_assignments":monotonic,"duplicate_paragraphs":dup,
       "turkish_contamination_candidates":tr_contam,"cross_record_title_candidates":cross,
       "references_low_match":[x for x in ref_rows if x["score"]<0.24],
