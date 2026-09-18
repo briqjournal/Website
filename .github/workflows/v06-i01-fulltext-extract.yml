@@ -10,6 +10,7 @@ on:
 permissions:
   contents: write
 
+# rerun after physical-page offset correction
 jobs:
   extract:
     runs-on: ubuntu-latest
