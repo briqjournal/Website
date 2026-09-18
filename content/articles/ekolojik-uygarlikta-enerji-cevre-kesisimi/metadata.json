@@ -1,26 +1,95 @@
 {
-  "slug": "ekolojik-uygarlikta-enerji-cevre-kesisimi",
-  "volume": 2,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2021",
-  "author": "Salih Ertan",
-  "title_tr": "Ekolojik Uygarlıkta Enerji-Çevre Kesişimi",
-  "abstract_tr": "Bu çalışmada, biyokütleden elektrik, ısı ve biyoyakıt üretiminin, eko-uygarlık çağında önemli bir bileşen olduğunun altı çizilmektedir. Tarlada akaryakıt üretimi ve bu üretimin yapıldığı alandaki Ağaç Altı Ziraat uygulamasının, “Negatif Karbon Salımı” hedefine yönelik olarak, eko-uygarlık çağını karakterize eden İklim Değişikliği olgusu ile mücadelenin çok etkili bir aracı olduğu vurgulu biçimde ifade edilmektedir. Biyoyakıt üretimi ve “Karbon Yutağı” işlevini bir arada yerine getirmek üzere, Tarla Ormancılığı /Ara Ziraat /Enerji Tarlaları konusu, çalışmanın esas temasını oluşturmaktadır. Bu uygulamalar vasıtasıyla, atmosfere sera gazı salımı azaltılırken, aynı zamanda, atmosferde birikmiş bulunan mevcut sera gazlarının da azaltılması öngörülmektedir. Bu sayede, küresel ısınma ve bundan kaynaklı ikilim değişikliği olgusunun tek sorumlusu olan mevcut egemen düzenin aşılarak, ekolojik uygarlığın kurulması yolunda, “Negatif Karbon Salımı” hedefine yönelik adımların atılması mümkün olacaktır.. \n Anahtar Kelimeler:   Ara ziraat, enerji tarlası, karbon yutakları, negatif karbon salımı, tarla ormancılığı",
-  "source_tr": "https://briqjournal.com/ekolojik-uygarlikta-enerji-cevre-kesisimi",
-  "source_en": "https://briqjournal.com/en/energy-environment-nexus-eco-civilization",
-  "title_en": "Energy - Environment Nexus in Eco-Civilization",
-  "abstract_en": "Abstract \n In this study, electricity, heat, and biofuel production from biomass are demonstrated to be important components of the eco-civilization era. The production of fuel in farmlands and the practice of Under-Tree Agriculture (Agroforestry) in the area where “energy crops” in combination with multiple-function trees are grown are emphasised as highly effective means of combating the phenomenon of climate change. Combatting climate change to achieve the “Negative Carbon Emission” goal will characterise the eco-civilization era. The overarching aim is “Negative Carbon Emission”. Farm Forestry (Agroforestry) / Inter-cropping / Energy Farms makes up the major theme of the study to fulfil the function of biofuel production and “Carbon Sink” together. Through these practices, a reduction in greenhouse gas emissions into the atmosphere is envisaged with a simultaneous reduction in the existing greenhouse gases accumulated in the atmosphere. In this way, it will be possible to take steps towards the goal of “Negative Carbon Emission” in the way of establishing an Ecological Civilization by overcoming the existing dominant order, which is the sole responsibility of the phenomenon of global warming and the resulting climate change phenomenon. \n Keywords: Agroforestry, biofuel, climate change, energy farm, negative carbon emission",
-  "citation_tr": "Atıf \n Ertan, S. (2021). Ekolojik uygarlıkta enerji-çevre kesişimi. Kuşak ve Yol Girişimi Dergisi, 2(3). 48-60.",
-  "citation_en": "Citation \n Ertan, S. (2021). Energy-environment nexus in eco-civilization. Belt & Road Initiative Quarterly, 2(3). 48-60.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Ekolojik%20Uygarl%C4%B1kta%20Enerji-%C3%87evre%20Kesi%C5%9Fimi.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Energy%20-%20Environment%20Nexus%20in%20Eco-Civilization.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/ekolojik-uygarlikta-enerji-cevre-kesisimi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/ekolojik-uygarlikta-enerji-cevre-kesisimi-en.pdf",
-  "shared_bilingual_pdf": false,
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "ekolojik-uygarlikta-enerji-cevre-kesisimi",
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Energy - Environment Nexus in Eco-Civilization",
+    "tr": "Ekolojik Uygarlıkta Enerji-Çevre Kesişimi"
+  },
+  "authors": [
+    {
+      "displayName": "Salih Ertan",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "In this study, electricity, heat, and biofuel production from biomass are demonstrated to be important components of the eco-civilization era. The production of fuel in farmlands and the practice of Under-Tree Agriculture (Agroforestry) in the area where “energy crops” in combination with multiple-function trees are grown are emphasised as highly effective means of combating the phenomenon of climate change. Combatting climate change to achieve the “Negative Carbon Emission” goal will characterise the eco-civilization era. The overarching aim is “Negative Carbon Emission”. Farm Forestry (Agroforestry) / Inter-cropping / Energy Farms makes up the major theme of the study to fulfil the function of biofuel production and “Carbon Sink” together. Through these practices, a reduction in greenhouse gas emissions into the atmosphere is envisaged with a simultaneous reduction in the existing greenhouse gases accumulated in the atmosphere. In this way, it will be possible to take steps towards the goal of “Negative Carbon Emission” in the way of establishing an Ecological Civilization by overcoming the existing dominant order, which is the sole responsibility of the phenomenon of global warming and the resulting climate change phenomenon.",
+    "tr": "Bu çalışmada, biyokütleden elektrik, ısı ve biyoyakıt üretiminin, eko-uygarlık çağında önemli bir bileşen olduğunun altı çizilmektedir. Tarlada akaryakıt üretimi ve bu üretimin yapıldığı alandaki Ağaç Altı Ziraat uygulamasının, “Negatif Karbon Salımı” hedefine yönelik olarak, eko-uygarlık çağını karakterize eden İklim Değişikliği olgusu ile mücadelenin çok etkili bir aracı olduğu vurgulu biçimde ifade edilmektedir. Biyoyakıt üretimi ve “Karbon Yutağı” işlevini bir arada yerine getirmek üzere, Tarla Ormancılığı /Ara Ziraat /Enerji Tarlaları konusu, çalışmanın esas temasını oluşturmaktadır. Bu uygulamalar vasıtasıyla, atmosfere sera gazı salımı azaltılırken, aynı zamanda, atmosferde birikmiş bulunan mevcut sera gazlarının da azaltılması öngörülmektedir. Bu sayede, küresel ısınma ve bundan kaynaklı ikilim değişikliği olgusunun tek sorumlusu olan mevcut egemen düzenin aşılarak, ekolojik uygarlığın kurulması yolunda, “Negatif Karbon Salımı” hedefine yönelik adımların atılması mümkün olacaktır.."
+  },
+  "keywords": {
+    "en": [
+      "Agroforestry",
+      "biofuel",
+      "climate change",
+      "energy farm",
+      "negative carbon emission"
+    ],
+    "tr": [
+      "Ara ziraat",
+      "enerji tarlası",
+      "karbon yutakları",
+      "negatif karbon salımı",
+      "tarla ormancılığı"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 3,
+    "year": 2021,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "48",
+    "last": "60"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Ertan, S. (2021). Energy-environment nexus in eco-civilization. Belt & Road Initiative Quarterly, 2(3). 48-60.",
+    "tr": "Ertan, S. (2021). Ekolojik uygarlıkta enerji-çevre kesişimi. Kuşak ve Yol Girişimi Dergisi, 2(3). 48-60."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/energy-environment-nexus-eco-civilization",
+    "tr": "https://briqjournal.com/ekolojik-uygarlikta-enerji-cevre-kesisimi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Energy%20-%20Environment%20Nexus%20in%20Eco-Civilization.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Ekolojik%20Uygarl%C4%B1kta%20Enerji-%C3%87evre%20Kesi%C5%9Fimi.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/ekolojik-uygarlikta-enerji-cevre-kesisimi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/ekolojik-uygarlikta-enerji-cevre-kesisimi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
