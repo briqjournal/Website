@@ -2,9 +2,10 @@
   "sections": [
     {
       "id": "tr-section-1",
-      "title": "Tam metin",
+      "title": "T. MIYANO",
       "paragraphs": [
-        "*T. Miyano'nun bu eserinde Çin-Japon Savaşı (1894-1895) ve Rus-Japon Savaşı (1905) sırasında çıkarılan tahta baskılar geleneği sürdürülmektedir. Bu eserde, geleneksel teknik terk edilmiş ve yerine batı tarzı litografi benimsenmiştir. Muhtemelen Çin'e ihraç edilmek üzere yapılmıştır. Çin’deki devrim savaşından bir kesit, 1911 - Devrimci Kadınlar Ordusu’nun Nanking’e saldırısı*"
+        "Çin’deki devrim savaşından bir kesit, 1911 — Devrimci Kadınlar Ordusu’nun Nanking’e saldırısı",
+        "T. Miyano'nun bu eserinde Çin-Japon Savaşı (1894-1895) ve Rus-Japon Savaşı (1905) sırasında çıkarılan tahta baskılar geleneği sürdürülmektedir. Bu eserde, geleneksel teknik terk edilmiş ve yerine batı tarzı litografi benimsenmiştir. Muhtemelen Çin'e ihraç edilmek üzere yapılmıştır."
       ]
     }
   ],
@@ -16,12 +17,7 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/t-miyano-renkli-tasbaski/figure-01.jpg",
-      "caption": "* Renkli taşbaskı 34,8 x 46,5 cm (Japonya). (Kaynak: Wellcome Collection 581222i )"
-    },
-    {
-      "id": "figure-2",
-      "src": "/assets/article-figures/t-miyano-renkli-tasbaski/figure-02.jpg",
-      "caption": "Görsel 2"
+      "caption": "Çin’deki devrim savaşından bir kesit, 1911 — Devrimci Kadınlar Ordusu’nun Nanking’e saldırısı. Renkli taşbaskı 34,8 × 46,5 cm (Japonya). Kaynak: Wellcome Collection 581222i."
     }
   ]
 }
