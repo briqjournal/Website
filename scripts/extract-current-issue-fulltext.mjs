@@ -384,6 +384,7 @@ const issueConfigs = {
     },
     records: issueFiveFourRecords,
     sourceLocale: { tr: "tr", en: "en" },
+    extractImages: false,
   },
   "7-1": {
     pdfs: {
