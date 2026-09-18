@@ -3900,6 +3900,27 @@ footer h3 {
   line-height: 1.3;
 }
 
+.article-record-issue-link {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 9px;
+  border-radius: 2px;
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: filter .18s ease;
+}
+
+.article-record-issue-link:hover,
+.article-record-issue-link:focus-visible {
+  color: var(--white);
+  filter: brightness(.91);
+}
+
 .article-navigation > .publication-record-group,
 .article-navigation > .publication-doi {
   margin-top: 18px;
