@@ -1,25 +1,83 @@
 {
-  "slug": "sadik-ucok",
-  "volume": 2,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2021",
-  "author": "Sadık Üçok",
-  "title_tr": "Sadık Üçok",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/sadik-ucok",
-  "source_en": "https://briqjournal.com/en/sadik-ucok",
-  "title_en": "SADIK ÜÇOK",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n [Fotoğraf, Sadık Üçok]. Muş, Varto. Kuşak ve Yol Girişimi Dergisi , 2(3), 78.",
-  "citation_en": "Atıf \n [Photograph by Sadık Üçok]. Muş, Varto. Belt & Road Initiative Quarterly, 2(3), 79.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/SADIK%20%C3%9C%C3%87OK.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/SADIK%20%C3%9C%C3%87OK_0.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/sadik-ucok-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/sadik-ucok-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "sadik-ucok",
+  "articleType": {
+    "id": "photograph",
+    "tr": "Fotoğraf",
+    "en": "Photograph",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "SADIK ÜÇOK",
+    "tr": "Sadık Üçok"
+  },
+  "authors": [
+    {
+      "displayName": "Sadık Üçok",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 3,
+    "year": 2021,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": null,
+    "last": null
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "[Photograph by Sadık Üçok]. Muş, Varto. Belt & Road Initiative Quarterly, 2(3), 79.",
+    "tr": "[Fotoğraf, Sadık Üçok]. Muş, Varto. Kuşak ve Yol Girişimi Dergisi , 2(3), 78."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/sadik-ucok",
+    "tr": "https://briqjournal.com/sadik-ucok",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/SADIK%20%C3%9C%C3%87OK_0.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/SADIK%20%C3%9C%C3%87OK.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/sadik-ucok-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/sadik-ucok-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
