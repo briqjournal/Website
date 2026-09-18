@@ -12,5 +12,11 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/ogonyok/figure-01.jpg",
+      "caption": "Görsel 1"
+    }
+  ]
 }

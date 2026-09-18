@@ -53,5 +53,21 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke/figure-01.jpg",
+      "caption": "Visual 1"
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke/figure-02.jpg",
+      "caption": "Visual 2"
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke/figure-03.jpg",
+      "caption": "Visual 3"
+    }
+  ]
 }

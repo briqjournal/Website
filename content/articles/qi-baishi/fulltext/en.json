@@ -12,5 +12,11 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/qi-baishi/figure-01.jpg",
+      "caption": "**Source: https://www.comuseum.com/"
+    }
+  ]
 }

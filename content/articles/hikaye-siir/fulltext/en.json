@@ -12,5 +12,11 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/hikaye-siir/figure-01.jpg",
+      "caption": "Visual 1"
+    }
+  ]
 }

@@ -27,5 +27,11 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/kamu-diplomasisi-ozbekistanin-yabanci-ulkelerle-iliskilerini-guclendirmenin-bir-yolu/figure-01.jpg",
+      "caption": "dost bir ailede birleştirmektir” (Fotoğraf: Özbekistan Cumhuriyeti Türkiye Büyükelçiliği, t.y.)."
+    }
+  ]
 }

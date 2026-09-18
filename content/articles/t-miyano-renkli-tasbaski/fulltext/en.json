@@ -12,5 +12,16 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/t-miyano-renkli-tasbaski/figure-01.jpg",
+      "caption": "* chromolithograph 34.8 x 46.5 cm (Japan). (Source: Wellcome Collection 581222i)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/t-miyano-renkli-tasbaski/figure-02.jpg",
+      "caption": "Visual 2"
+    }
+  ]
 }
