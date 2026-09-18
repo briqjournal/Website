@@ -1,4 +1,4 @@
-name: Build v06-i01 full-text candidates
+name: Targeted v06-i01 recovery extraction
 
 on:
   push:
@@ -10,17 +10,16 @@ on:
 permissions:
   contents: write
 
-# rerun after physical-page offset correction
 jobs:
-  extract:
+  extract-targets:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Install PDF extraction tools
+      - name: Install PDF tools
         run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
 
       - name: Download official locale issue PDFs
@@ -33,112 +32,56 @@ jobs:
           pdfinfo tmp/pdfs/v6i1-tr.pdf | grep '^Pages:'
           pdfinfo tmp/pdfs/v6i1-en.pdf | grep '^Pages:'
 
-      - name: Extract issue full text
-        run: node scripts/extract-current-issue-fulltext.mjs 6-1
-
-      - name: Split candidates and represent visual-only record
+      - name: Extract only unfinished poem and art pages
         shell: bash
         run: |
           set -euo pipefail
+          out=tmp/v06-i01-targeted
+          rm -rf "$out"
+          mkdir -p "$out"
+
+          for locale in tr en; do
+            pdf="tmp/pdfs/v6i1-${locale}.pdf"
+            pdftotext -layout -f 137 -l 138 "$pdf" "$out/ogrenmeye-ovgu-${locale}.txt"
+            pdftotext -layout -f 139 -l 140 "$pdf" "$out/sevgi-duvari-${locale}.txt"
+            pdftotext -layout -f 152 -l 152 "$pdf" "$out/operarios-isciler-1933-${locale}.txt"
+            pdftotext -layout -f 153 -l 153 "$pdf" "$out/yeni-nesil-nazizm-2023-${locale}.txt"
+          done
+
+          mkdir -p "$out/nazism-images"
+          pdfimages -f 153 -l 153 -png tmp/pdfs/v6i1-tr.pdf "$out/nazism-images/image"
+          identify "$out"/nazism-images/*.png > "$out/nazism-images/identify.txt"
+
           python3 <<'PY'
-          import json
           from pathlib import Path
           import subprocess
 
-          issue = json.loads(Path("content/issues/v06-i01.json").read_text(encoding="utf-8"))
-          assert len(issue["articles"]) == 15
-          visual = "izmir-kizilcullu-koy-enstitusu"
-          extracted = [slug for slug in issue["articles"] if slug != visual]
-          assert len(extracted) == 14
-
-          for slug in extracted:
-              root = Path("content/articles") / slug / "fulltext"
-              current = root / "current.json"
-              data = json.loads(current.read_text(encoding="utf-8"))
-              for locale in ("en", "tr"):
-                  payload = data[locale]
-                  (root / f"{locale}.json").write_text(
-                      json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-                      encoding="utf-8",
-                  )
-              current.unlink()
-
-          empty = {
-              "sections": [],
-              "keywords": [],
-              "footnotes": [],
-              "references": [],
-              "acknowledgements": "",
-              "figures": [],
-          }
-          visual_root = Path("content/articles") / visual / "fulltext"
-          visual_root.mkdir(parents=True, exist_ok=True)
-          for locale in ("en", "tr"):
-              (visual_root / f"{locale}.json").write_text(
-                  json.dumps(empty, ensure_ascii=False, indent=2) + "\n",
-                  encoding="utf-8",
-              )
-
-          subprocess.run(["git", "checkout", "--", "content/catalog.json"], check=True)
+          root = Path("tmp/v06-i01-targeted/nazism-images")
+          candidates = []
+          for path in sorted(root.glob("*.png")):
+              w, h = map(int, subprocess.check_output(
+                  ["identify", "-format", "%w %h", str(path)], text=True
+              ).split())
+              cs = subprocess.check_output(
+                  ["identify", "-format", "%[colorspace]", str(path)], text=True
+              ).strip()
+              if w >= 400 and h >= 250 and not cs.lower().startswith("gray"):
+                  candidates.append((w*h, w, h, path))
+          if not candidates:
+              raise SystemExit("No usable image found on physical page 153")
+          candidates.sort(reverse=True)
+          _, w, h, src = candidates[0]
+          dst = root / "selected-figure-01.jpg"
+          subprocess.run(["convert", str(src), "-strip", "-quality", "90", str(dst)], check=True)
+          (root / "selected.txt").write_text(f"{src.name} {w}x{h}\n", encoding="utf-8")
           PY
 
-      - name: Validate candidate structure and locale separation
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 <<'PY'
-          import json, re
-          from pathlib import Path
-
-          issue = json.loads(Path("content/issues/v06-i01.json").read_text(encoding="utf-8"))
-          visual = "izmir-kizilcullu-koy-enstitusu"
-          long_slugs = set(issue["articles"][:9]) | {"abdnin-kurdugu-ekonomik-tuzak-isiginda-abd-cin-rekabetinin-mahiyeti"}
-
-          for slug in issue["articles"]:
-              for locale in ("en", "tr"):
-                  path = Path("content/articles") / slug / "fulltext" / f"{locale}.json"
-                  data = json.loads(path.read_text(encoding="utf-8"))
-                  required = {"sections","keywords","footnotes","references","acknowledgements","figures"}
-                  assert required.issubset(data), (slug, locale, set(data))
-                  assert isinstance(data["sections"], list)
-                  assert isinstance(data["keywords"], list)
-                  assert isinstance(data["footnotes"], list)
-                  assert isinstance(data["references"], list)
-                  assert isinstance(data["figures"], list)
-                  body = " ".join(p for s in data["sections"] for p in s.get("paragraphs", []))
-                  if slug == visual:
-                      assert data["sections"] == [] and body == "", (slug, locale)
-                      continue
-                  if slug in long_slugs:
-                      assert len(body) > 1000, (slug, locale, len(body))
-                  for i, section in enumerate(data["sections"], 1):
-                      assert section["id"] == f"{locale}-section-{i}", (slug, locale, section["id"])
-                      assert isinstance(section.get("title"), str)
-                      assert isinstance(section.get("paragraphs"), list)
-                  if locale == "en" and body:
-                      tr_marks = len(re.findall(r"\b(?:ve|bir|bu|için|olan|olarak|ile|Çin|Türkiye)\b", body, re.I))
-                      en_marks = len(re.findall(r"\b(?:the|and|of|to|in|for|with|China|Türkiye)\b", body, re.I))
-                      assert en_marks >= tr_marks, (slug, en_marks, tr_marks)
-          print("V06_I01_CANDIDATE_STRUCTURE_OK")
-          PY
-
-      - name: Commit canonical candidates
+      - name: Commit targeted recovery extracts
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          python3 <<'PY'
-          import json, subprocess
-          from pathlib import Path
-          issue = json.loads(Path("content/issues/v06-i01.json").read_text(encoding="utf-8"))
-          paths = []
-          for slug in issue["articles"]:
-              paths.append(f"content/articles/{slug}/fulltext")
-              fig = Path("public/assets/article-figures") / slug
-              if fig.exists():
-                  paths.append(str(fig))
-          subprocess.run(["git", "add", "--", *paths], check=True)
-          PY
-          git commit -m 'Build v06-i01 canonical full-text candidates'
+          git add -- tmp/v06-i01-targeted
+          git commit -m 'Extract remaining v06-i01 poem and art targets'
           git push origin HEAD:chore/v06-i01-fulltext-canonical
