@@ -4,7 +4,10 @@
       "id": "en-section-1",
       "title": "Full text",
       "paragraphs": [
-        "(The original Japanese text is taken from pages 84-88 of Sun Yat-sen’s ‘Pan-Asianism’ Speech Documents (1989). The text was translated into Turkish from the original Japanese version by İnan Öner. The English translation was done by BRIQ.) *İnan Öner was born in Berlin in 1974. He obtained his bachelor’s degree from the Department of Japanese Language and Literature at the Faculty of Language and History-Geography, Ankara University (AÜDTCF). He earned his master’s degree in 2001 from the Department of Language and Information Sciences Graduate School and College of Arts and Sciences, the University of Tokyo. 孫文・講演「大アジア主義」資料集 -1924年11月 日本と中国の岐路- 陳徳仁、安井三吉 法律文化社 1989年 東京 THE VESSEL FROM SHANGHAI, transporting Sun Yat-sen and his companions, set sail at eight o’clock in the morning on November 22. The vessel is presently navigating the expansive South China Sea. Light waves are present; however, the weather is pleasant, and the travel is secure. In the smoking room, Li Liejun, with a Kaiser mustache, and Dai Jitao, savoring his drink, engaged in an animated discussion characterized by exaggerated gestures. Sun Yat-sen, averse to maritime journeys, had retreated himself in his private cabin while his wife was nowhere to be seen.",
+        "(The original Japanese text is taken from pages 84-88 of Sun Yat-sen’s ‘Pan-Asianism’ Speech Documents (1989). The text was translated into Turkish from the original Japanese version by İnan Öner. The English translation was done by BRIQ.)",
+        "İnan Öner was born in Berlin in 1974. He obtained his bachelor’s degree from the Department of Japanese Language and Literature at the Faculty of Language and History-Geography, Ankara University (AÜDTCF). He earned his master’s degree in 2001 from the Department of Language and Information Sciences Graduate School and College of Arts and Sciences, the University of Tokyo.",
+        "Sun Yat-sen undertook his last trip to Japan in November 1924, four months before his demise. On November 22, Sun Yat-sen departed from Shanghai, arrived in Nagasaki on November 23, visited Kobe on November 24, and convened the notable “Pan-Asianism” conference on November 28 following several meetings. During his visit to Japan, Sun Yat Sen conducted interviews with Japanese journalists, articulating the concepts he presented at the “Pan-Asianism” conference in an effort to communicate his message to the Japanese people. Below is the Turkish translation of the interview conducted by Murata Shiro, the Shanghai correspondent for the Osaka Mainichi Shimbun, published on November 23, 1924. The original Japanese text is taken from the book of Documents of Sun Yat-sen’s ‘Pan-Asianism’ Speech (1989).",
+        "THE VESSEL FROM SHANGHAI, transporting Sun Yat-sen and his companions, set sail at eight o’clock in the morning on November 22. The vessel is presently navigating the expansive South China Sea. Light waves are present; however, the weather is pleasant, and the travel is secure. In the smoking room, Li Liejun, with a Kaiser mustache, and Dai Jitao, savoring his drink, engaged in an animated discussion characterized by exaggerated gestures. Sun Yat-sen, averse to maritime journeys, had retreated himself in his private cabin while his wife was nowhere to be seen.",
         "Upon the vessel disembarking from Wusong, I (Ed. n.: reporter Murata) proceeded to Dai Jitao’s cabin and engaged in an extensive conversation with him. Dai Jitao articulated in Japanese, with a fluency that even native speakers could not attain, having relinquished the rigidity of his previous perspective from two or three years prior and embraced a more adaptable approach: “Following my visit to your country in the winter of 1920, numerous developments transpired in the subsequent four years.",
         "Duan Qirui in Tientsin (Tianjin) is anticipating our arrival. We must arrive at the earliest opportunity. Today in China, there exists just one individual who genuinely embodies hope for the Japanese country with fervent sincerity, and that is our teacher Sun Yat-sen. Our teacher Sun Yat-sen asserts that the Japanese nation is China’s sole ally.",
         "After the European war, during the Washington Conference, many perspectives emerged in China. Nonetheless, the collaboration between Japan and China has increasingly become arduous. Historically, numerous misunderstandings have occurred; nonetheless, we now deem it essential to relinquish the past and pursue a new direction. When Wu Peifu recognized the absence of a retreat following his defeat at Shanhai Pass, a nation stated that if they advanced into the Yangtze River, they would provide him with substantial support and urged him to proceed southward. Without this incentive, Wu Peifu would not have traversed the Yangtze. We are certain that England was the country that inspired him. We have urged England to reassess its position, and it appears that England has now renounced its strategy of endorsing Wu Peifu. I can only sustain this movement if I am independent. I wish to discuss the result in this context. The fundamental source of the unrest in China originates elsewhere rather than domestically. American and European nations are contemplating a collaborative governance or partition of China. Informed by this dream, they engage with China, instigating turmoil through coercion, as only such turmoil can facilitate either collaborative governance or fragmentation within China.",
@@ -38,7 +41,7 @@
       "title": "Wu Peifu’s Southward Advance and Britain",
       "paragraphs": [
         "“The question of a Council of Elders in Tientsin is a kind of rumor. The purpose of my visit to Tientsin is only to express my views. The disturbances in China are caused not by internal politics but by external disturbances. I think that instead of entering the world of politics when the strength of our country is not yet sufficient, it is better for us to remain outside and, in cooperation with our comrades in various countries, urge foreign countries to reconsider their policies. I think that if I were to enter the world of politics directly, there would immediately be a conflict with foreign countries. For example, if I were in power, I would hesitate to attack England. However, if I were in opposition, I could communicate with the British people and counteract the wrong policies of the British government through public opinion. I do not engage in politics for fear of losing the effectiveness of these activities. Following his defeat at the Battle of Shanhai Pass, Wu Peifu was confronted with a situation where he had no viable options for retreat. At this juncture, a nation offered him their support, contingent on his entry into the Yangtze region. This encouragement was instrumental in persuading Wu Peifu to undertake a strategic shift in his course, leading him to embark on a southward journey along the Yangtze. It is highly probable that the nation in question was Britain, whose actions and motivations remain a subject of historical analysis. We have approached our associates in Britain, both the general public and the government, to request a re-evaluation of this policy. However, it would appear that Britain has now abandoned its support for Wu Peifu.",
-        "In order to proceed with our endeavors, it is essential that we be independent.2"
+        "In order to proceed with our endeavors, it is essential that we be independent."
       ]
     },
     {
@@ -50,24 +53,24 @@
     }
   ],
   "keywords": [],
-  "footnotes": [],
+  "footnotes": [
+    {
+      "id": "2",
+      "text": "Translator’s Note: In the newspaper report, Sun Yat-sen's remarks on the issue of ‘Wu Peifu's withdrawal from the Shanhai pass’ and Dai Jiatao's remarks above on the same subject are given in similar sentences."
+    }
+  ],
   "references": [],
   "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
       "src": "/assets/article-figures/osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke/figure-01.jpg",
-      "caption": "Visual 1"
+      "caption": "Pages 84-85 of the Documents of Sun Yat-sen's “Pan-Asianism” Speech (1989)."
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke/figure-02.jpg",
-      "caption": "Visual 2"
-    },
-    {
-      "id": "figure-3",
-      "src": "/assets/article-figures/osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke/figure-03.jpg",
-      "caption": "Visual 3"
+      "caption": "Pages 86-87 of the Documents of Sun Yat-sen's “Pan-Asianism” Speech (1989)."
     }
   ]
 }
