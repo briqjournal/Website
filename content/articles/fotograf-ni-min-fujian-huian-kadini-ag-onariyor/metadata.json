@@ -1,22 +1,83 @@
 {
-  "slug": "fotograf-ni-min-fujian-huian-kadini-ag-onariyor",
-  "volume": 1,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2020",
-  "author": "Ni Min",
-  "title_tr": "Fotoğraf - Ni Min - Fujian Hui'an Kadını Ağ Onarıyor",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/fotograf-ni-min-fujian-huian-kadini-ag-onariyor",
-  "source_en": "https://briqjournal.com/en/photograph-fujian-huian-maidens-weaving-net",
-  "title_en": "Photograph – Fujian Hui’an Maiden’s Weaving Net",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n [Ni Min fotoğrafı]. Fujian Hui’an kadını ağ onarıyor. Kuşak ve Yol Girişimi Dergisi, 1 (4), 94.",
-  "citation_en": "Atıf \n [Photograph of Ni Min]. Fujian Hui’an maiden’s weaving net. Belt & Road Initiative Quarterly, 1 (4), 94.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/NI%20MIN%20-%20TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/NI%20MIN%20-%20ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/fotograf-ni-min-fujian-huian-kadini-ag-onariyor-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/fotograf-ni-min-fujian-huian-kadini-ag-onariyor-en.pdf"
+  "schemaVersion": 2,
+  "id": "fotograf-ni-min-fujian-huian-kadini-ag-onariyor",
+  "articleType": {
+    "id": "photograph",
+    "tr": "Fotoğraf",
+    "en": "Photograph",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Photograph – Fujian Hui’an Maiden’s Weaving Net",
+    "tr": "Fotoğraf - Ni Min - Fujian Hui'an Kadını Ağ Onarıyor"
+  },
+  "authors": [
+    {
+      "displayName": "Ni Min",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 4,
+    "year": 2020,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "94",
+    "last": "94"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "[Photograph of Ni Min]. Fujian Hui’an maiden’s weaving net. Belt & Road Initiative Quarterly, 1 (4), 94.",
+    "tr": "[Ni Min fotoğrafı]. Fujian Hui’an kadını ağ onarıyor. Kuşak ve Yol Girişimi Dergisi, 1 (4), 94."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/photograph-fujian-huian-maidens-weaving-net",
+    "tr": "https://briqjournal.com/fotograf-ni-min-fujian-huian-kadini-ag-onariyor",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/NI%20MIN%20-%20ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/NI%20MIN%20-%20TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/fotograf-ni-min-fujian-huian-kadini-ag-onariyor-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/fotograf-ni-min-fujian-huian-kadini-ag-onariyor-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
