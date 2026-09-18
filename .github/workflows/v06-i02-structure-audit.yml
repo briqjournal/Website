@@ -1,4 +1,4 @@
-name: Targeted v06-i02 PDF verification
+name: Targeted v06-i02 unresolved page render
 
 on:
   push:
@@ -16,8 +16,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Install PDF tools
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Download official locale PDFs
         shell: bash
         run: |
@@ -25,44 +24,27 @@ jobs:
           mkdir -p /tmp/v06
           curl -L --fail --retry 4 --retry-all-errors 'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-03/BRIQ_Cilt6Say%C4%B12_2025BAHAR.pdf' -o /tmp/v06/tr.pdf
           curl -L --fail --retry 4 --retry-all-errors 'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-03/BRIQ_Volume6SIssue2_2025Spring.pdf' -o /tmp/v06/en.pdf
-      - name: Print targeted structural/caption evidence and render matching pages
+      - name: Render only unresolved verification pages
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p /tmp/v06/rendered
-          python3 <<'PY'
-          import re, subprocess
-          from pathlib import Path
-
-          marker = re.compile(r'(Photo:|Fotoğraf:|Source:|Kaynak:|Figure|Şekil|Table|Tablo|Visual|Görsel|whet-|BRI-\s*CS|aponca|Sun flag|Nanchang|Tiananmen|Wellcome|comuseum)', re.I)
-          headings = re.compile(r'^(Introduction|Conclusion|References|Notes|Acknowledg|Giriş|Sonuç|Kaynakça|Notlar|Teşekkür|Rusya’nın|The Transformation|Opinions by Sun|Wu Peifu|The Dreams|Yükselen Orta|The Connotation|Balancing Diplomacy|The Motivations|The Implications|Globalization|China between|Alter-Globalization|Sino-French)', re.I)
-          render_pages=set()
-          for loc in ('en','tr'):
-              pdf=f'/tmp/v06/{loc}.pdf'
-              print(f'===== {loc.upper()} TARGETED PDF EVIDENCE =====')
-              for p in range(7,120):
-                  raw=subprocess.check_output(['pdftotext','-layout','-f',str(p),'-l',str(p),pdf,'-'],text=True,errors='replace')
-                  lines=[ln.rstrip() for ln in raw.splitlines()]
-                  hits=[]
-                  for i,ln in enumerate(lines):
-                      if marker.search(ln) or headings.search(ln.strip()):
-                          lo=max(0,i-2); hi=min(len(lines),i+3)
-                          hits.extend(lines[lo:hi])
-                  if hits:
-                      print(f'--- {loc.upper()} PDF PAGE {p} ---')
-                      seen=[]
-                      for ln in hits:
-                          if ln not in seen:
-                              seen.append(ln)
-                              print(ln)
-                      render_pages.add((loc,p))
-          for loc,p in sorted(render_pages):
-              out=f'/tmp/v06/rendered/{loc}-p{p:03d}'
-              subprocess.run(['pdftoppm','-f',str(p),'-l',str(p),'-singlefile','-png','-r','120',f'/tmp/v06/{loc}.pdf',out],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
-          print('RENDERED_PAGES', ' '.join(f'{loc}:{p}' for loc,p in sorted(render_pages)))
-          PY
+          pages='29 56 58 59 60 65 67 77 79 84 85 94 107 109 110 113 114 115 116'
+          for loc in en tr; do
+            for p in $pages; do
+              pdftoppm -f "$p" -l "$p" -singlefile -png -r 130 "/tmp/v06/$loc.pdf" "/tmp/v06/rendered/$loc-p$(printf '%03d' "$p")" >/dev/null 2>&1
+            done
+          done
+          echo '===== EN 59-70 LAYOUT TEXT ====='
+          pdftotext -layout -f 59 -l 70 /tmp/v06/en.pdf -
+          echo '===== TR 59-70 LAYOUT TEXT ====='
+          pdftotext -layout -f 59 -l 70 /tmp/v06/tr.pdf -
+          echo '===== EN 113-119 LAYOUT TEXT ====='
+          pdftotext -layout -f 113 -l 119 /tmp/v06/en.pdf -
+          echo '===== TR 113-119 LAYOUT TEXT ====='
+          pdftotext -layout -f 113 -l 119 /tmp/v06/tr.pdf -
       - uses: actions/upload-artifact@v4
         with:
-          name: v06-i02-targeted-pdf-pages
+          name: v06-i02-unresolved-pdf-pages
           path: /tmp/v06/rendered
           retention-days: 1
