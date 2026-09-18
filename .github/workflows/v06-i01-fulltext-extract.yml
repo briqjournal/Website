@@ -1,4 +1,4 @@
-name: Targeted v06-i01 recovery extraction
+name: Probe remaining v06-i01 art page
 
 on:
   push:
@@ -11,9 +11,9 @@ permissions:
   contents: write
 
 jobs:
-  extract-targets:
+  probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,41 +22,27 @@ jobs:
       - name: Install PDF tools
         run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
 
-      - name: Download official locale issue PDFs
+      - name: Download official Turkish issue PDF
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p tmp/pdfs
           curl -L --fail --retry 4 --retry-all-errors 'https://briqjournal.com/sites/default/files/dergi-sayilari/2024-12/BRIQ%20Cilt6Sayi1.pdf' -o tmp/pdfs/v6i1-tr.pdf
-          curl -L --fail --retry 4 --retry-all-errors 'https://briqjournal.com/sites/default/files/dergi-sayilari/2024-12/BRIQ%20Volume6Issue1.pdf' -o tmp/pdfs/v6i1-en.pdf
-          pdfinfo tmp/pdfs/v6i1-tr.pdf | grep '^Pages:'
-          pdfinfo tmp/pdfs/v6i1-en.pdf | grep '^Pages:'
 
-      - name: Extract only unfinished poem and art pages
+      - name: Probe physical page 152 only
         shell: bash
         run: |
           set -euo pipefail
-          out=tmp/v06-i01-targeted
+          out=tmp/v06-i01-page152-art
           rm -rf "$out"
           mkdir -p "$out"
-
-          for locale in tr en; do
-            pdf="tmp/pdfs/v6i1-${locale}.pdf"
-            pdftotext -layout -f 137 -l 138 "$pdf" "$out/ogrenmeye-ovgu-${locale}.txt"
-            pdftotext -layout -f 139 -l 140 "$pdf" "$out/sevgi-duvari-${locale}.txt"
-            pdftotext -layout -f 152 -l 152 "$pdf" "$out/operarios-isciler-1933-${locale}.txt"
-            pdftotext -layout -f 153 -l 153 "$pdf" "$out/yeni-nesil-nazizm-2023-${locale}.txt"
-          done
-
-          mkdir -p "$out/nazism-images"
-          pdfimages -f 153 -l 153 -list tmp/pdfs/v6i1-tr.pdf > "$out/nazism-images/list.txt"
-          pdfimages -f 153 -l 153 -all tmp/pdfs/v6i1-tr.pdf "$out/nazism-images/image" || true
-          pdftoppm -f 153 -l 153 -singlefile -jpeg -r 180 tmp/pdfs/v6i1-tr.pdf "$out/nazism-images/page-153"
+          pdfimages -f 152 -l 152 -list tmp/pdfs/v6i1-tr.pdf > "$out/list.txt"
+          pdfimages -f 152 -l 152 -all tmp/pdfs/v6i1-tr.pdf "$out/image" || true
+          pdftoppm -f 152 -l 152 -singlefile -jpeg -r 180 tmp/pdfs/v6i1-tr.pdf "$out/page-152"
           python3 <<'PY'
           from pathlib import Path
           import subprocess
-
-          root = Path("tmp/v06-i01-targeted/nazism-images")
+          root = Path("tmp/v06-i01-page152-art")
           lines = []
           for path in sorted(root.glob("image-*")):
               try:
@@ -69,12 +55,12 @@ jobs:
           (root / "identify.txt").write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf-8")
           PY
 
-      - name: Commit targeted recovery extracts
+      - name: Commit page probe
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f -- tmp/v06-i01-targeted
-          git commit -m 'Extract remaining v06-i01 poem and art targets'
+          git add -f -- tmp/v06-i01-page152-art
+          git commit -m 'Extract remaining v06-i01 art page'
           git push origin HEAD:chore/v06-i01-fulltext-canonical
