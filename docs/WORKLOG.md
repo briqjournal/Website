@@ -2,22 +2,38 @@
 
 Keep this file short. It is a recovery checkpoint for unfinished work, not a project history. Remove completed items instead of accumulating an archive.
 
-## Book review metadata
+## Single-article publication record
+
+**Status:** not implemented
+
+- Remove the compact-record `Published / Yayın` row.
+- In `Volume / Issue` / `Cilt / Sayı`, show the season in parentheses beside the numbers.
+- Render that issue value with the issue/cover accent color and link it to the issue page.
+- Replace the removed publication row with an always-visible `DOI` row. Link the DOI when present; leave the value empty when the article has no DOI yet.
+- This UI task does not itself invent or assign missing DOI values.
+
+## Volume 2 editorial dates
+
+**Status:** incomplete
+
+- Continue evidence-backed `received`, `revised`, and `accepted` date completion for Volume 2 canonical metadata.
+- Research articles require an explicit revision-history check; book reviews require received/accepted verification from the editorial correspondence where the PDF is insufficient.
+- Use official PDFs plus verified project email/Drive/Yandex evidence. Leave unresolved dates `null`; never infer them.
+- Do not redo the Volume 3 or Volume 4 verified-spreadsheet updates already present in the repository.
+
+## Metadata v2 migration
 
 **Status:** in progress
 
-**Goal:** ensure every identifiable BRIQ book review exposes validated reviewed-book metadata.
+- Next unit: `v03-i01`. All 14 current records in that issue are still legacy (no `schemaVersion: 2`).
+- After `v03-i01`, continue issue-by-issue through Volume 2 and Volume 1.
+- Preserve verified bibliographic/editorial data while migrating; do not manufacture missing fields.
 
-**Persisted baseline**
-- v2 `reviewedBook` is supported by the metadata schema and runtime adapter.
-- `content/articles/cin-abd-iliskilerinin-gelecegi/metadata.json` is a verified populated example.
+## Canonical full-text migration
 
-**Remaining**
-- Detect remaining book reviews, including legacy or historically mislabelled records.
-- Verify the reviewed book from the official article PDF/citation or another authoritative BRIQ source.
-- v2 records: populate `reviewedBook`.
-- legacy records: populate the renderer-compatible `reviewed_book`.
-- Leave genuinely unresolved fields unresolved; do not infer missing bibliographic facts.
+**Status:** in progress
 
-**Recovery**
-Inspect current metadata first and resume from the first incomplete record. Do not repeat repository-wide scans merely because a previous chat was interrupted.
+- Repository checkpoint: 49 canonical `fulltext/en.json` + `fulltext/tr.json` pairs remain alongside 191 legacy `en-archive.json` files; `current.json` and `saudi-en.json` are absent.
+- Next unit: `v06-i02` — 13/13 records still use `en-archive.json`, with 0 canonical EN/TR pairs.
+- Then continue with `v06-i01` and earlier issues. `v06-i01` currently has 0 canonical pairs; 14/15 records have `en-archive.json` and one visual record has no legacy full-text file.
+- Rebuild corrupted English from the official English PDF; never substitute Turkish full text on English pages. Retire legacy files only after the canonical locale files are validated.
