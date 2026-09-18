@@ -1,23 +1,102 @@
 {
-  "slug": "cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi",
-  "volume": 1,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2020",
-  "author": "Sultan H.E.M. ve Degang Sun",
-  "title_tr": "Çin’in Sudan ve Güney Sudan’daki Çatışma Çözümüne Katılımı: Bir “Yaratıcı Arabuluculuk” Örneği",
-  "abstract_tr": "Bu makalede, Çin’in Sudan ve Güney Sudan’daki çatışmaya, bölgedeki pratik çıkarlarını korumak için ihtiyatlı katılımıyla verdiği yanıt irdelenmektedir. Pekin, Darfur ve Güney Sudan’daki çatışmayı çözmek için büyük çabalar gösterirken yapıcı angajman ve yaratıcı arabuluculuk için yeni bir paradigma benimsemeye çalışmıştır. Çin’in Sudan ve Güney Sudan’daki çatışmaya yanıtı, bir yandan başka bir devletin içişlerine karışmama ilkesine riayet ederken bir diğer yandan da ulusal çıkarlarını koruma ve büyük güç kimliğini şekillendirme ikileminden etkilenmektedir. Bu makalede, Çin’in bölgedeki ulusal çıkarlarının türü ve kapsamı ile bunun Çin’in çatışmaya verdiği yanıt ve sürece katılım araçlarıyla olan ilgisi analiz edilmektedir. Çin’in çatışma çözümüne dahil olmasını yaratıcı arabuluculuğun karışmama ilkesiyle nasıl bağdaştığını açıklamak için çok taraflı güvenlik konularına iştirakinde yeni bir “yaratıcı arabuluculuk” kavramı ortaya koymak amaçlanmaktadır.\n  Anahtar Kelimeler:  Arabuluculuk diplomasisi, çatışma çözümü, Çin, Güney Sudan, Sudan.",
-  "source_tr": "https://briqjournal.com/cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi",
-  "source_en": "https://briqjournal.com/en/chinas-participation-the-conflict-resolution-sudan-and-south-sudan-case-creative-mediation",
-  "title_en": "China’s Participation in the Conflict Resolution in Sudan and South Sudan: A Case of “Creative Mediation”",
-  "abstract_en": "Abstract \n This article explains China’s response to the conflict in Sudan and South Sudan through its cautious involvement to protect its practical interests in this region. Beijing has made great efforts to improve conflict resolution in Darfur and South Sudan and has attempted to adopt a new paradigm for constructive engagement and creative mediation. Its response to the conflict in Sudan and South Sudan is driven by the dilemma of protecting national interests and shaping its great power identity, along with adhering to the principle of non-interference. This article also analyzes China’s national interests in the region and its relevance to China’s response to conflict and participation tools. It puts forward a new concept of ‘creative mediation’ to explain China’s participation in multilateral security affairs and engagement in conflict resolution. Moreover, the article explores how such a creative mediation is compatible with China’s principle of non-interference. \n Keywords:  China, conflict resolution, mediation diplomacy, South Sudan, Sudan",
-  "citation_tr": "Atıf \n Sultan, H.E.M. & Sun, D. (2020). Çin’in Sudan ve Güney Sudan’daki çatışma çözümüne katılımı: Bir “yaratıcı arabuluculuk” örneği. Kuşak ve Yol Girişimi Dergisi, 1 (2), 6-23.",
-  "citation_en": "Citation \n Sultan, H.E.M. & Sun, D. (2020). China’s participation in the conflict resolution in Sudan and South Sudan: A case of “creative mediation”. Belt & Road Initiative Quarterly, 1 (2), 6-23.",
-  "pages": "6-23",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/%C3%87in%E2%80%99in%20Sudan%20ve%20G%C3%BCney%20Sudan%E2%80%99daki%20%C3%87at%C4%B1%C5%9Fma%20%C3%87%C3%B6z%C3%BCm%C3%BCne%20Kat%C4%B1l%C4%B1m%C4%B1%20Bir%20%E2%80%9CYarat%C4%B1c%C4%B1%20Arabuluculuk%E2%80%9D%20%C3%96rne%C4%9Fi.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/China%E2%80%99s%20Participation%20in%20the%20Conflict%20Resolution%20in%20Sudan%20and%20South%20Sudan%20A%20Case%20of%20%E2%80%9CCreative%20Mediation%E2%80%9D.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi",
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "China’s Participation in the Conflict Resolution in Sudan and South Sudan: A Case of “Creative Mediation”",
+    "tr": "Çin’in Sudan ve Güney Sudan’daki Çatışma Çözümüne Katılımı: Bir “Yaratıcı Arabuluculuk” Örneği"
+  },
+  "authors": [
+    {
+      "displayName": "Hend ElMahly Mahhoud Sultan",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    },
+    {
+      "displayName": "Degang Sun",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "This article explains China’s response to the conflict in Sudan and South Sudan through its cautious involvement to protect its practical interests in this region. Beijing has made great efforts to improve conflict resolution in Darfur and South Sudan and has attempted to adopt a new paradigm for constructive engagement and creative mediation. Its response to the conflict in Sudan and South Sudan is driven by the dilemma of protecting national interests and shaping its great power identity, along with adhering to the principle of non-interference. This article also analyzes China’s national interests in the region and its relevance to China’s response to conflict and participation tools. It puts forward a new concept of ‘creative mediation’ to explain China’s participation in multilateral security affairs and engagement in conflict resolution. Moreover, the article explores how such a creative mediation is compatible with China’s principle of non-interference.",
+    "tr": "Bu makalede, Çin’in Sudan ve Güney Sudan’daki çatışmaya, bölgedeki pratik çıkarlarını korumak için ihtiyatlı katılımıyla verdiği yanıt irdelenmektedir. Pekin, Darfur ve Güney Sudan’daki çatışmayı çözmek için büyük çabalar gösterirken yapıcı angajman ve yaratıcı arabuluculuk için yeni bir paradigma benimsemeye çalışmıştır. Çin’in Sudan ve Güney Sudan’daki çatışmaya yanıtı, bir yandan başka bir devletin içişlerine karışmama ilkesine riayet ederken bir diğer yandan da ulusal çıkarlarını koruma ve büyük güç kimliğini şekillendirme ikileminden etkilenmektedir. Bu makalede, Çin’in bölgedeki ulusal çıkarlarının türü ve kapsamı ile bunun Çin’in çatışmaya verdiği yanıt ve sürece katılım araçlarıyla olan ilgisi analiz edilmektedir. Çin’in çatışma çözümüne dahil olmasını yaratıcı arabuluculuğun karışmama ilkesiyle nasıl bağdaştığını açıklamak için çok taraflı güvenlik konularına iştirakinde yeni bir “yaratıcı arabuluculuk” kavramı ortaya koymak amaçlanmaktadır."
+  },
+  "keywords": {
+    "en": [
+      "China",
+      "conflict resolution",
+      "mediation diplomacy",
+      "South Sudan",
+      "Sudan"
+    ],
+    "tr": [
+      "Arabuluculuk diplomasisi",
+      "çatışma çözümü",
+      "Çin",
+      "Güney Sudan",
+      "Sudan"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 2,
+    "year": 2020,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "6",
+    "last": "23"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Sultan, H.E.M. & Sun, D. (2020). China’s participation in the conflict resolution in Sudan and South Sudan: A case of “creative mediation”. Belt & Road Initiative Quarterly, 1 (2), 6-23.",
+    "tr": "Sultan, H.E.M. & Sun, D. (2020). Çin’in Sudan ve Güney Sudan’daki çatışma çözümüne katılımı: Bir “yaratıcı arabuluculuk” örneği. Kuşak ve Yol Girişimi Dergisi, 1 (2), 6-23."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/chinas-participation-the-conflict-resolution-sudan-and-south-sudan-case-creative-mediation",
+    "tr": "https://briqjournal.com/cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/China%E2%80%99s%20Participation%20in%20the%20Conflict%20Resolution%20in%20Sudan%20and%20South%20Sudan%20A%20Case%20of%20%E2%80%9CCreative%20Mediation%E2%80%9D.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/%C3%87in%E2%80%99in%20Sudan%20ve%20G%C3%BCney%20Sudan%E2%80%99daki%20%C3%87at%C4%B1%C5%9Fma%20%C3%87%C3%B6z%C3%BCm%C3%BCne%20Kat%C4%B1l%C4%B1m%C4%B1%20Bir%20%E2%80%9CYarat%C4%B1c%C4%B1%20Arabuluculuk%E2%80%9D%20%C3%96rne%C4%9Fi.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

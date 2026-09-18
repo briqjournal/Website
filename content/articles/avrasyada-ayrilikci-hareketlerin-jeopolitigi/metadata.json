@@ -1,23 +1,95 @@
 {
-  "slug": "avrasyada-ayrilikci-hareketlerin-jeopolitigi",
-  "volume": 1,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2020",
-  "author": "Prof. Dr. Emin Gürses",
-  "title_tr": "Avrasya’da Ayrılıkçı Hareketlerin Jeopolitiği",
-  "abstract_tr": "Tarihsel olarak global hegemonya mücadelesinde, coğrafi güç merkezlerinin belirli dönemlerde yer değiştirdiği görülmüştür. 15. ve 16. yüzyıllarda deniz ticareti ve deniz gücü dünya çekim merkezini Batı coğrafyasına taşımış ve Asya durgunluk dönemine girmişti. Gücün bir bölgeden başka bir bölgeye geçişi üretimin-ticaretin ya da ticaret yollarının kontrolünün el değiştirmesiyle doğrudan bağlantılı olduğu görülmüştür. 20. yüzyılın son çeyreğinde dünya ekonomisindeki dinamizm, yeniden Asya’ya doğru bir kayış göstermiş, Batı merkezli güçlerin, bu gelişmenin önünü kesmeye çalıştıkları dikkati çekmiştir. Güç merkezinin Asya coğrafyasına kaymasının engellenmesi için sürdürülen yoğun çaba, 20. yüzyılın son çeyreği ve 21. yüzyılın  ilk çeyreğinde Avrasya coğrafyasında yoğun bir rekabete dönüşmüştür. Bu rekabette taraf olan güçler kendi konumlarını korumak  ve rakiplerin önünü kesmek için  öne çıkma potansiyeli yüksek olan ülkelerin iç işlerine değişik biçimlerde müdahalede bulunma çabaları olarak  yıkıcı faaliyetleri (subversive activities) öne çıkarmışlardır. Benzer yıkıcı faaliyetlere karşı direnebilen güçler yeni kurulacak olan uluslararası sistemde kendilerine etkin bir yer edilebileceklerdir. Günümüzde en önemli yıkıcı faaliyetlerden biri olarak olarak öne çıktığı görülen ayrılıkçı hareketlerin yarattığı istikrarsızlık, hegemon güçlerce rakiplerin sistemdeki hegemonya yarışından dışlanmasının önünü açmak için kullanılmaya çalışılmaktadır. \n   Anahtar Kelimeler: Avrasya, hegemonya mücadelesi, jeopolitik, uluslararası sistem, yıkıcı faaliyetler.",
-  "source_tr": "https://briqjournal.com/avrasyada-ayrilikci-hareketlerin-jeopolitigi",
-  "source_en": "https://briqjournal.com/en/the-geopolitics-separatist-movements-eurasia",
-  "title_en": "The Geopolitics of Separatist Movements in Eurasia",
-  "abstract_en": "Abstract \n Historically, the struggle for global hegemony has seen geographical power centers move from one region to another. In the 15th and 16th centuries, maritime trade and sea power shifted the world’s center of weight to the West. At that time Asia entered a period of stagnation. It has been observed that the transition of power is directly associated with the change of control of global production networks and trade routes. In the last quarter of the 20th century, the dynamism in the world economy at long last shifted back towards Asia. It is noteworthy that Western-based powers are now trying to block this development. The intensive efforts by Western powers to prevent the power center from shifting to Asia have turned into fierce competition in the Eurasian region. The forces that are parties to this competition have backed subversive activities as an effort to intervene in the internal affairs of countries with high potential to stand out, to protect their positions and defeat opponents. The forces that can resist similar destructive activities will take an active place in the new international system. Today, the instability created by separatist movements, which we currently observe as one of the most salient destructive activities, is a tool used by the prevailing hegemonic forces to exclude potential rivals in the race for hegemony. \n Keywords: Destructive activities, Eurasia, geopolitics, hegemony struggle, international system.",
-  "citation_tr": "Atıf \n Gürses, E. (2020). Avrasya’da ayrılıkçı hareketlerin jeopolitiği. Kuşak ve Yol Girişimi Dergisi, 1 (2), 49-66.",
-  "citation_en": "Citation \n Gürses, E. (2020). The geopolitics of separatist movements in Eurasia. Belt & Road Initiative Quarterly, 1 (2), 48-64.",
-  "pages": "49-66",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Avrasya%E2%80%99da%20Ayr%C4%B1l%C4%B1k%C3%A7%C4%B1%20Hareketlerin%20Jeopoliti%C4%9Fi.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/The%20Geopolitics%20of%20Separatist%20Movements%20in%20Eurasia.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/avrasyada-ayrilikci-hareketlerin-jeopolitigi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/avrasyada-ayrilikci-hareketlerin-jeopolitigi-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "avrasyada-ayrilikci-hareketlerin-jeopolitigi",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "The Geopolitics of Separatist Movements in Eurasia",
+    "tr": "Avrasya’da Ayrılıkçı Hareketlerin Jeopolitiği"
+  },
+  "authors": [
+    {
+      "displayName": "Emin Gürses",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "Historically, the struggle for global hegemony has seen geographical power centers move from one region to another. In the 15th and 16th centuries, maritime trade and sea power shifted the world’s center of weight to the West. At that time Asia entered a period of stagnation. It has been observed that the transition of power is directly associated with the change of control of global production networks and trade routes. In the last quarter of the 20th century, the dynamism in the world economy at long last shifted back towards Asia. It is noteworthy that Western-based powers are now trying to block this development. The intensive efforts by Western powers to prevent the power center from shifting to Asia have turned into fierce competition in the Eurasian region. The forces that are parties to this competition have backed subversive activities as an effort to intervene in the internal affairs of countries with high potential to stand out, to protect their positions and defeat opponents. The forces that can resist similar destructive activities will take an active place in the new international system. Today, the instability created by separatist movements, which we currently observe as one of the most salient destructive activities, is a tool used by the prevailing hegemonic forces to exclude potential rivals in the race for hegemony.",
+    "tr": "Tarihsel olarak global hegemonya mücadelesinde, coğrafi güç merkezlerinin belirli dönemlerde yer değiştirdiği görülmüştür. 15. ve 16. yüzyıllarda deniz ticareti ve deniz gücü dünya çekim merkezini Batı coğrafyasına taşımış ve Asya durgunluk dönemine girmişti. Gücün bir bölgeden başka bir bölgeye geçişi üretimin-ticaretin ya da ticaret yollarının kontrolünün el değiştirmesiyle doğrudan bağlantılı olduğu görülmüştür. 20. yüzyılın son çeyreğinde dünya ekonomisindeki dinamizm, yeniden Asya’ya doğru bir kayış göstermiş, Batı merkezli güçlerin, bu gelişmenin önünü kesmeye çalıştıkları dikkati çekmiştir. Güç merkezinin Asya coğrafyasına kaymasının engellenmesi için sürdürülen yoğun çaba, 20. yüzyılın son çeyreği ve 21. yüzyılın  ilk çeyreğinde Avrasya coğrafyasında yoğun bir rekabete dönüşmüştür. Bu rekabette taraf olan güçler kendi konumlarını korumak  ve rakiplerin önünü kesmek için  öne çıkma potansiyeli yüksek olan ülkelerin iç işlerine değişik biçimlerde müdahalede bulunma çabaları olarak  yıkıcı faaliyetleri (subversive activities) öne çıkarmışlardır. Benzer yıkıcı faaliyetlere karşı direnebilen güçler yeni kurulacak olan uluslararası sistemde kendilerine etkin bir yer edilebileceklerdir. Günümüzde en önemli yıkıcı faaliyetlerden biri olarak olarak öne çıktığı görülen ayrılıkçı hareketlerin yarattığı istikrarsızlık, hegemon güçlerce rakiplerin sistemdeki hegemonya yarışından dışlanmasının önünü açmak için kullanılmaya çalışılmaktadır."
+  },
+  "keywords": {
+    "en": [
+      "Destructive activities",
+      "Eurasia",
+      "geopolitics",
+      "hegemony struggle",
+      "international system"
+    ],
+    "tr": [
+      "Avrasya",
+      "hegemonya mücadelesi",
+      "jeopolitik",
+      "uluslararası sistem",
+      "yıkıcı faaliyetler"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 2,
+    "year": 2020,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "49",
+    "last": "66"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Gürses, E. (2020). The geopolitics of separatist movements in Eurasia. Belt & Road Initiative Quarterly, 1 (2), 48-64.",
+    "tr": "Gürses, E. (2020). Avrasya’da ayrılıkçı hareketlerin jeopolitiği. Kuşak ve Yol Girişimi Dergisi, 1 (2), 49-66."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/the-geopolitics-separatist-movements-eurasia",
+    "tr": "https://briqjournal.com/avrasyada-ayrilikci-hareketlerin-jeopolitigi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/The%20Geopolitics%20of%20Separatist%20Movements%20in%20Eurasia.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Avrasya%E2%80%99da%20Ayr%C4%B1l%C4%B1k%C3%A7%C4%B1%20Hareketlerin%20Jeopoliti%C4%9Fi.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/avrasyada-ayrilikci-hareketlerin-jeopolitigi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/avrasyada-ayrilikci-hareketlerin-jeopolitigi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
