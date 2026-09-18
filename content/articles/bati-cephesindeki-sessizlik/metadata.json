@@ -1,33 +1,90 @@
 {
-  "slug": "bati-cephesindeki-sessizlik",
-  "volume": 2,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2021",
-  "author": "Dominik Pietzcker",
-  "title_tr": "Batı Cephesindeki Sessizlik*",
-  "abstract_tr": "Lambsdorff, A.G. (2021). \n Wenn elefanten kämpfen: \n Deutschlands rolle in den kalten kriegen des 21. Jahrhunderts. \n Berlin: Propyläen Verlag. \n DOMINIK PIETZCKER **",
-  "source_tr": "https://briqjournal.com/bati-cephesindeki-sessizlik",
-  "source_en": "https://briqjournal.com/en/all-quiet-the-western-front",
-  "title_en": "All Quiet on the Western Front",
-  "abstract_en": "Abstract \n Lambsdorff, A.G. (2021). \n Wenn elefanten kämpfen: \n Deutschlands rolle in den kalten \n kriegen des 21. Jahrhunderts. \n Berlin: Propyläen Verlag. \n DOMINIK PIETZCKER **",
-  "citation_tr": "Atıf \n Atıf: Pietzcker, D. (2021). Batı cephesindeki sessizlik. [Kitap incelemesi Wenn elefanten kämpfen: Deutschlands rolle in den kalten kregen des 21. Jahrhunderts, Lambsdor, A.G.].  Kuşak ve Yol Girişimi Dergisi, 2(3), 70-72.",
-  "citation_en": "Citation \n Pietzcker, D. (2021). All quiet on the western front. [Review of the book Wenn elefanten kämpfen: Deutschlands rolle in den kalten kregen des 21. Jahrhunderts, by Lambsdor, A.G.]. Belt & Road Initiative Quarterly, 2(3), 70-73.",
-  "pages": "70-72",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Bat%C4%B1%20Cephesindeki%20Sessizlik.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/All%20Quiet%20on%20the%20Western%20Front.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/bati-cephesindeki-sessizlik-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/bati-cephesindeki-sessizlik-en.pdf",
-  "shared_bilingual_pdf": false,
-  "reviewed_book": {
+  "schemaVersion": 2,
+  "id": "bati-cephesindeki-sessizlik",
+  "articleType": {
+    "id": "book-review",
+    "tr": "Kitap İncelemesi",
+    "en": "Book Review",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "All Quiet on the Western Front",
+    "tr": "Batı Cephesindeki Sessizlik*"
+  },
+  "authors": [
+    {
+      "displayName": "Dominik Pietzcker",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "Lambsdorff, A.G. (2021). \n Wenn elefanten kämpfen: \n Deutschlands rolle in den kalten \n kriegen des 21. Jahrhunderts. \n Berlin: Propyläen Verlag. \n DOMINIK PIETZCKER **",
+    "tr": "Lambsdorff, A.G. (2021). \n Wenn elefanten kämpfen: \n Deutschlands rolle in den kalten kriegen des 21. Jahrhunderts. \n Berlin: Propyläen Verlag. \n DOMINIK PIETZCKER **"
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": "2021-05-04",
+    "revised": "2021-05-10",
+    "accepted": "2021-05-23",
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 3,
+    "year": 2021,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "70",
+    "last": "72"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Pietzcker, D. (2021). All quiet on the western front. [Review of the book Wenn elefanten kämpfen: Deutschlands rolle in den kalten kregen des 21. Jahrhunderts, by Lambsdor, A.G.]. Belt & Road Initiative Quarterly, 2(3), 70-73.",
+    "tr": "Pietzcker, D. (2021). Batı cephesindeki sessizlik. [Kitap incelemesi Wenn elefanten kämpfen: Deutschlands rolle in den kalten kregen des 21. Jahrhunderts, Lambsdor, A.G.].  Kuşak ve Yol Girişimi Dergisi, 2(3), 70-72."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/all-quiet-the-western-front",
+    "tr": "https://briqjournal.com/bati-cephesindeki-sessizlik",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/All%20Quiet%20on%20the%20Western%20Front.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Bat%C4%B1%20Cephesindeki%20Sessizlik.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/bati-cephesindeki-sessizlik-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/bati-cephesindeki-sessizlik-tr.pdf",
+    "sharedBilingualPdf": false
+  },
+  "reviewedBook": {
     "authorsApa": "Lambsdorff, A. G.",
     "year": 2021,
     "title": "Wenn elefanten kämpfen: Deutschlands rolle in den kalten kriegen des 21. Jahrhunderts",
     "publisher": "Propyläen Verlag",
     "isbn": "978-3-549-10032-5"
-  },
-  "received_date": "2021-05-04",
-  "revised_date": "2021-05-10",
-  "accepted_date": "2021-05-23"
+  }
 }
