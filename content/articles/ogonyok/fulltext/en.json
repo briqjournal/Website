@@ -2,9 +2,10 @@
   "sections": [
     {
       "id": "en-section-1",
-      "title": "Full text",
+      "title": "OGONYOK",
       "paragraphs": [
-        "The cover of the magazine Ogonyok published in tsarist Russia, issue No. 42 dated October 15 (28), 1911, entitled ‘Revolution in China’ From private photos taken for Ogonyok magazine"
+        "The cover of the magazine Ogonyok published in tsarist Russia, issue No. 42 dated October 15 (28), 1911, entitled ‘Revolution in China’",
+        "*From private photos taken for Ogonyok magazine"
       ]
     }
   ],
@@ -16,7 +17,7 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/ogonyok/figure-01.jpg",
-      "caption": "Visual 1"
+      "caption": "Ogonyok, No. 42, October 15 (28), 1911 — “Revolution in China”"
     }
   ]
 }
