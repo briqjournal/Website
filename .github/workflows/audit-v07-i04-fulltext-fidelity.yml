@@ -34,6 +34,8 @@ jobs:
           path: |
             .audit/fulltext-fidelity/v07-i04/report.json
             .audit/fulltext-fidelity/v07-i04/report.md
+            .audit/fulltext-fidelity/v07-i04/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/en/*.pdf
+            .audit/fulltext-fidelity/v07-i04/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi/en/*.pdf
             .audit/fulltext-fidelity/v07-i04/*/*/raw.txt
             .audit/fulltext-fidelity/v07-i04/*/*/pages/*.txt
             .audit/fulltext-fidelity/v07-i04/*/*/renders/*.png
