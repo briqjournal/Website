@@ -20,5 +20,14 @@
   "pdf_tr_local": "/assets/archive/pdfs/articles/macaes-b-2019-kusak-ve-yol-cinli-bir-dunya-duzeni-londra-hurst-company-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/macaes-b-2019-kusak-ve-yol-cinli-bir-dunya-duzeni-londra-hurst-company-en.pdf",
   "shared_bilingual_pdf": false,
-  "reviewed_book": {"authorsApa":"Maçães, B.","year":2019,"title":"Belt and Road: A Chinese World Order","publisher":"Hurst & Company","isbn":null}
+  "reviewed_book": {
+    "authorsApa": "Maçães, B.",
+    "year": 2019,
+    "title": "Belt and Road: A Chinese World Order",
+    "publisher": "Hurst & Company",
+    "isbn": null
+  },
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }

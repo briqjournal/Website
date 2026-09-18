@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/Collaboration%20for%20A%20New%20Civilization%20That%20Will%20Transcend%20Time%20and%20Space.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/zaman-ve-mekani-asacak-yeni-bir-medeniyet-icin-isbirligi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/zaman-ve-mekani-asacak-yeni-bir-medeniyet-icin-isbirligi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }

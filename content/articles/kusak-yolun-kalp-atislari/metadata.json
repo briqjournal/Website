@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/Heartbeats%20of%20Belt%20%26%20Road.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/kusak-yolun-kalp-atislari-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/kusak-yolun-kalp-atislari-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }

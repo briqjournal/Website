@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/My%20Soul%20Has%20Caught%20Your%20Scent%20Verses%20By%20Y%C3%BBnus%20Emre%2C%20%28Anatolia%2C%20XIII-XIV%20Centuries%29.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/senin-kokun-duydu-canim-yunus-emre-misralari-anadolu-xiii-xiv-yuzyillar-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/senin-kokun-duydu-canim-yunus-emre-misralari-anadolu-xiii-xiv-yuzyillar-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }
