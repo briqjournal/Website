@@ -329,6 +329,7 @@ const issueSixTwoRecords = [
     slug: "sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin",
     pages: [59, 64],
     body: { tr: 59, en: 59 },
+    autoHeadings: false,
   },
   {
     slug: "osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke",
@@ -387,7 +388,6 @@ const issueConfigs = {
     },
     records: issueSixTwoRecords,
     sourceLocale: { tr: "tr", en: "en" },
-    extractImages: false,
   },
   "7-1": {
     pdfs: {
@@ -500,6 +500,15 @@ function looksLikeCaption(node) {
   return node.font.size <= 13 && /(Fotoğraf|Photo|Harita|Map|Kaynak|Source):/i.test(node.text);
 }
 
+function looksLikeCanonicalSectionHeading(node) {
+  return node.bold
+    && node.font.size >= 16
+    && node.font.size <= 17
+    && /MyriadPro-Semibold/i.test(node.font.family)
+    && /^#(?:bc2628|d11f27)$/i.test(node.font.color)
+    && !/^(?:ABSTRACT|ÖZ|Keywords:|Anahtar Kelimeler:)$/iu.test(node.text);
+}
+
 function looksLikeHeading(node) {
   if (exactHeadings.has(node.text)) return true;
   if (node.text.length > 105) return false;
@@ -538,7 +547,8 @@ function extractBlocks(pages, config, locale) {
 
   for (const page of selected) {
     for (const node of page.nodes) {
-      if (isNoise(node) && !exactHeadings.has(node.text)) continue;
+      const canonicalSectionHeading = looksLikeCanonicalSectionHeading(node);
+      if (isNoise(node) && !exactHeadings.has(node.text) && !canonicalSectionHeading) continue;
       if (captionTail && node.page === captionTail.page && node.top > captionTail.top && node.top - captionTail.top <= 42 && node.font.size <= 18) {
         captions[captions.length - 1] = dehyphenatedJoin(captions[captions.length - 1], node.text);
         captionTail = { page: node.page, top: node.top };
@@ -562,7 +572,7 @@ function extractBlocks(pages, config, locale) {
         else continue;
       }
 
-      if (looksLikeHeading(node)) {
+      if (canonicalSectionHeading || (config.autoHeadings !== false && looksLikeHeading(node))) {
         flushParagraph();
         if (heading) heading = dehyphenatedJoin(heading, node.text);
         else heading = node.text;
