@@ -1,26 +1,83 @@
 {
-  "slug": "pekin-bildirgesi",
-  "volume": 2,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2021",
-  "author": "Pekin Bildirgesi",
-  "title_tr": "Pekin Bildirgesi",
-  "abstract_tr": "Kuşak ve Yol Girişimi çerçevesinde düzenlenen Ulusal Bilimsel Kuruluşların Birinci Uluslararası Bilim Forumu'nda kabul edildi",
-  "source_tr": "https://briqjournal.com/pekin-bildirgesi",
-  "source_en": "https://briqjournal.com/en/beijing-declaration",
-  "title_en": "Beijing Declaration",
-  "abstract_en": "Abstract \n Issued at the First International Science Forum of National Scientific Organizations on the Belt and Road Initiative",
-  "citation_tr": "Atıf \n Ulusal Bilimsel Kuruluşların Birinci Uluslararası Bilim Forumu. (2021). Pekin Bildirgesi. Kuşak ve Yol Girişimi Dergisi, 2 (2), 20-21.",
-  "citation_en": "Citation \n First International Science Forum of National Scientific Organizations. (2021). Beijing Declaration. Belt & Road Initiative Quarterly, 2 (2), 20-21.",
-  "pages": "20-21",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%20%C3%A7er%C3%A7evesinde%20d%C3%BCzenlenen%20Ulusal%20Bilimsel%20Kurulu%C5%9Flar%C4%B1n%20Birinci%20Uluslararas%C4%B1%20Bilim%20Forumu%27nda%20kabul%20edildi.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Issued%20at%20the%20First%20International%20Science%20Forum%20of%20National%20Scientific%20Organizations%20on%20the%20Belt%20and%20Road%20Initiative.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/pekin-bildirgesi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/pekin-bildirgesi-en.pdf",
-  "shared_bilingual_pdf": false,
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "pekin-bildirgesi",
+  "articleType": {
+    "id": "declaration",
+    "tr": "Bildirge",
+    "en": "Declaration",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Beijing Declaration",
+    "tr": "Pekin Bildirgesi"
+  },
+  "authors": [
+    {
+      "displayName": "Pekin Bildirgesi",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "Issued at the First International Science Forum of National Scientific Organizations on the Belt and Road Initiative",
+    "tr": "Kuşak ve Yol Girişimi çerçevesinde düzenlenen Ulusal Bilimsel Kuruluşların Birinci Uluslararası Bilim Forumu'nda kabul edildi"
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 2,
+    "year": 2021,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "20",
+    "last": "21"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "First International Science Forum of National Scientific Organizations. (2021). Beijing Declaration. Belt & Road Initiative Quarterly, 2 (2), 20-21.",
+    "tr": "Ulusal Bilimsel Kuruluşların Birinci Uluslararası Bilim Forumu. (2021). Pekin Bildirgesi. Kuşak ve Yol Girişimi Dergisi, 2 (2), 20-21."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/beijing-declaration",
+    "tr": "https://briqjournal.com/pekin-bildirgesi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Issued%20at%20the%20First%20International%20Science%20Forum%20of%20National%20Scientific%20Organizations%20on%20the%20Belt%20and%20Road%20Initiative.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%20%C3%A7er%C3%A7evesinde%20d%C3%BCzenlenen%20Ulusal%20Bilimsel%20Kurulu%C5%9Flar%C4%B1n%20Birinci%20Uluslararas%C4%B1%20Bilim%20Forumu%27nda%20kabul%20edildi.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/pekin-bildirgesi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/pekin-bildirgesi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
