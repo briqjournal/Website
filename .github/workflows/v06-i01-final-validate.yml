@@ -1,0 +1,128 @@
+name: Validate v06-i01 final migration
+
+on:
+  push:
+    branches:
+      - chore/v06-i01-fulltext-canonical
+    paths:
+      - '.github/workflows/v06-i01-final-validate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      CI: "true"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.0
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run full tests and verified build
+        run: npm test
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Render every v06-i01 route in both locales
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from "node:assert/strict";
+          import { readFile } from "node:fs/promises";
+
+          const archive = JSON.parse(await readFile("app/archive-data.json", "utf8"));
+          const issue = JSON.parse(await readFile("content/issues/v06-i01.json", "utf8"));
+
+          function slugifyEnglishTitle(value) {
+            return value
+              .normalize("NFKD")
+              .replace(/\p{M}/gu, "")
+              .replace(/&/g, " and ")
+              .replace(/[’']/g, "")
+              .toLocaleLowerCase("en-US")
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/^-+|-+$/g, "")
+              .replace(/-{2,}/g, "-");
+          }
+
+          const englishSlugBases = archive.articles.map((article) =>
+            article.title_en?.trim() ? slugifyEnglishTitle(article.title_en) : article.slug,
+          );
+          const englishSlugCounts = new Map();
+          for (const slug of englishSlugBases) {
+            englishSlugCounts.set(slug, (englishSlugCounts.get(slug) || 0) + 1);
+          }
+
+          function englishArticleSlug(turkishSlug) {
+            const index = archive.articles.findIndex((article) => article.slug === turkishSlug);
+            assert.notEqual(index, -1, `missing archive record: ${turkishSlug}`);
+            const article = archive.articles[index];
+            const base = englishSlugBases[index] || article.slug;
+            return englishSlugCounts.get(base) > 1
+              ? `${base}-volume-${article.volume}-issue-${article.issue}`
+              : base;
+          }
+
+          async function renderPath(pathname) {
+            const workerUrl = new URL("./dist/server/index.js", import.meta.url);
+            workerUrl.searchParams.set("v06i01", `${Date.now()}-${pathname}`);
+            const { default: worker } = await import(workerUrl.href);
+            return worker.fetch(
+              new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }),
+              { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
+              { waitUntil() {}, passThroughOnException() {} },
+            );
+          }
+
+          const rendered = new Map();
+          for (const slug of issue.articles) {
+            const enSlug = englishArticleSlug(slug);
+            const paths = [`/tr/makaleler/${slug}`, `/en/articles/${enSlug}`];
+            for (const path of paths) {
+              const response = await renderPath(path);
+              assert.equal(response.status, 200, path);
+              const html = await response.text();
+              assert.match(html, /<main\b/i, path);
+              rendered.set(path, html);
+            }
+          }
+
+          const poemA = "ogrenmeye-ovgu";
+          const poemB = "sevgi-duvari";
+          const artA = "operarios-isciler-1933";
+          const artB = "yeni-nesil-nazizm-2023";
+
+          const poemATr = rendered.get(`/tr/makaleler/${poemA}`);
+          const poemAEn = rendered.get(`/en/articles/${englishArticleSlug(poemA)}`);
+          const poemBTr = rendered.get(`/tr/makaleler/${poemB}`);
+          const poemBEn = rendered.get(`/en/articles/${englishArticleSlug(poemB)}`);
+          assert.match(poemATr, /Bertolt Brecht/);
+          assert.match(poemAEn, /Bertolt Brecht/);
+          assert.match(poemBTr, /Can Yücel/);
+          assert.match(poemBEn, /Can Yücel/);
+
+          const artATr = rendered.get(`/tr/makaleler/${artA}`);
+          const artAEn = rendered.get(`/en/articles/${englishArticleSlug(artA)}`);
+          const artBTr = rendered.get(`/tr/makaleler/${artB}`);
+          const artBEn = rendered.get(`/en/articles/${englishArticleSlug(artB)}`);
+          assert.match(artATr, /Tarsila/);
+          assert.match(artAEn, /Tarsila/);
+          assert.doesNotMatch(artATr, /Köy Enstitüleri/);
+          assert.doesNotMatch(artAEn, /Village Institutes/);
+          assert.match(artBTr, /Massoud Shojai/);
+          assert.match(artBEn, /Massoud Shojai/);
+          assert.doesNotMatch(artBTr, /Operários/);
+          assert.doesNotMatch(artBEn, /Operários/);
+
+          console.log(`Rendered ${issue.articles.length * 2} v06-i01 article routes successfully.`);
+          NODE
