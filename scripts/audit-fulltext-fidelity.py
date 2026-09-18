@@ -92,6 +92,7 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
     if not url: raise RuntimeError(f"Missing official PDF URL for {slug} {loc}")
     work=out_root/slug/loc; pdf=work/f"{slug}-{loc}.pdf"
     download(url,pdf)
+    (work/"raw.txt").write_text(run(["pdftotext","-raw",str(pdf),"-"]), encoding="utf-8")
     page_texts=extract_pages(pdf,work/"pages")
     headings,paras,refs,notes,figs=flatten_canonical(j)
     assignments=[]; unmatched=[]
