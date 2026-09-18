@@ -1091,3 +1091,36 @@ test("preserves Volume 7 PDF hierarchy, metadata, and compact archive/PDF naviga
   assert.match(waterHtml, /Concrete Solutions and Recommendations for the Climate-Water-Food Triple Crisis/);
   assert.doesNotMatch(waterHtml, /Concrete Solutions and Recommendations for the Triple Crisis of Climate, Water, and Food/);
 });
+
+
+test("renders linked season-coloured issue metadata and an always-visible DOI field on article pages", async () => {
+  const doiSlug = "cin-abd-iliskilerinin-gelecegi";
+  const noDoiSlug = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
+  const responses = await Promise.all([
+    renderPath(`/tr/makaleler/${doiSlug}`),
+    renderPath(`/en/articles/${englishArticleSlug(doiSlug)}`),
+    renderPath(`/tr/makaleler/${noDoiSlug}`),
+    renderPath(`/en/articles/${englishArticleSlug(noDoiSlug)}`),
+  ]);
+  const [doiTr, doiEn, noDoiTr, noDoiEn] = await Promise.all(responses.map((response) => response.text()));
+
+  const compactRecord = (html) => html.match(/<div class="article-record-compact">([\s\S]*?)<\/div><div class="publication-record-group">/)?.[1] || "";
+  const [doiTrRecord, doiEnRecord, noDoiTrRecord, noDoiEnRecord] = [doiTr, doiEn, noDoiTr, noDoiEn].map(compactRecord);
+
+  assert.match(doiTrRecord, /<span>Cilt \/ Sayı<\/span>/);
+  assert.match(doiEnRecord, /<span>Volume \/ Issue<\/span>/);
+  assert.match(doiTrRecord, /class="article-record-issue-link"[^>]*href="\/tr\/arsiv\/cilt-7-sayi-1"[^>]*style="[^"]*background-color:#1f6668[^"]*"[^>]*>7 \/ 1 \(Kış\)<\/a>/);
+  assert.match(doiEnRecord, /class="article-record-issue-link"[^>]*href="\/en\/archive\/volume-7-issue-1"[^>]*style="[^"]*background-color:#1f6668[^"]*"[^>]*>7 \/ 1 \(Winter\)<\/a>/);
+  assert.match(noDoiTrRecord, /class="article-record-issue-link"[^>]*href="\/tr\/guncel-sayi"[^>]*style="[^"]*background-color:#713349[^"]*"[^>]*>7 \/ 4 \(Sonbahar\)<\/a>/);
+  assert.match(noDoiEnRecord, /class="article-record-issue-link"[^>]*href="\/en\/current-issue"[^>]*style="[^"]*background-color:#713349[^"]*"[^>]*>7 \/ 4 \(Autumn\)<\/a>/);
+
+  for (const record of [doiTrRecord, doiEnRecord, noDoiTrRecord, noDoiEnRecord]) {
+    assert.doesNotMatch(record, /<span>(?:Yayın|Published)<\/span>/);
+    assert.match(record, /<span>DOI<\/span>/);
+  }
+
+  assert.match(doiTrRecord, /<span>DOI<\/span><b><a href="https:\/\/doi\.org\/10\.67696\/5y2r9u9d"/);
+  assert.match(doiEnRecord, /<span>DOI<\/span><b><a href="https:\/\/doi\.org\/10\.67696\/5y2r9u9d"/);
+  assert.match(noDoiTrRecord, /<span>DOI<\/span><b><\/b>/);
+  assert.match(noDoiEnRecord, /<span>DOI<\/span><b><\/b>/);
+});
