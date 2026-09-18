@@ -1,28 +1,95 @@
 {
-  "slug": "turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971",
-  "volume": 3,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2021-2022",
-  "author": "Barış Adıbellİ",
-  "title_tr": "Türkiye Cumhuriyeti ile Çin Halk Cumhuriyeti Arasında Diplomatik İlişkilerin Kurulması (1960-1971)",
-  "abstract_tr": "Bu makale, Türkiye ve Çin arasında diplomatik ilişkilerin kurulmasına imkan veren iki ülke arasındaki gelişmeleri ele almaktadır. Asya’nın iki kadim ülkesi ve halkı arasındaki ilişkiler oldukça zorlu bir süreçten sonra kurulduğu söylenebilmektedir. İki ülke arasındaki ilişkilerin kaderini ve seyrini belirleyen, Soğuk Savaş döneminin koşulları olmuştur. Farklı ideolojik bloklarda olan iki ülkenin diplomatik ilişki kurması, Soğuk Savaş ikliminde oldukça zor olmuştur. Türkiye’de siyasette ve toplumda hakim olan komünizm karşıtı düşünce iki ülke arasında ilişkilerin kurulmasında en büyük direnç noktasını oluşturmuştur. Bu nedenle mevcut makalede, Türkiye ile Çin arasında diplomatik ilişkilerin kurulması sürecindeki ideolojik ve siyasi dinamiklere odaklanılmaktadır. Kuşkusuz bu tartışmalara 1971 askeri muhtırasının yaratmış olduğu siyasi iklimin de katkısı olmuştur. Öte yandan Çin’in ayrıca Birleşmiş Milletler üyeliği ve Tayvan’ın (Milliyetçi Çin) Birleşmiş Milletlerden çıkarılması ve Türkiye’nin bu süreçteki duruşu da iki ülke arasındaki ilişkilerin kurulmasında rol oynamıştır. Bu çalışma Türkiye ile Çin arasında diplomatik ilişkilerin kurulmasının 50’nci yıldönümü münasebetiyle iki ülke arasındaki ilişkilerin kurulmasına giden süreci incelemektedir. Çalışmada ağırlıklı olarak dönemin gazete haberleri, Dışişleri Bakanlığı kaynakları ve TBMM’de yapılan konuşmalar temel alınmıştır. \n Anahtar Kelimeler: ABD, Çin, Kıbrıs, Tayvan, Türkiye",
-  "source_tr": "https://briqjournal.com/turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971",
-  "source_en": "https://briqjournal.com/en/the-establishment-diplomatic-relations-between-the-republic-turkey-and-the-peoples-republic-china",
-  "title_en": "The Establishment of Diplomatic Relations Between the Republic of Turkey and the People’s Republic of China (1960-1971)*",
-  "abstract_en": "Abstract \n This study examines the process leading to the establishment of relations between Turkey and China on the occasion of the 50th anniversary of this development. One could argue that the relationship between the two ancient countries of Asia and their people was established through a very difficult process shaped by the Cold War environment. Establishing a diplomatic relationship between the two countries, which were in different ideological camps, was an extremely challenging task in a Cold War climate. It is important to point out that opposition to communism, which used to dominate Turkish politics and society, constitutes the main obstacle to the establishment of connections between the two countries in this period. Therefore, this article focuses on ideological and political dynamics. Undoubtedly, the political climate created by the 1971 military memorandum was an important landmark in this process. On the other hand, China’s membership in the United Nations and Taiwan’s (Nationalist China) removal from the United Nations –alongside Turkey’s stance in this process– played an important role in the establishment of relations between the two countries. \n Keywords: China, Cyprus, Taiwan, the USA, Turkey",
-  "citation_tr": "Atıf \n Adıbelli, B. (2021/2022). Türkiye Cumhuriyeti ile Çin Halk Cumhuriyeti arasında diplomatik ilişkilerin kurulması (1960-1971). Kuşak ve Yol Girişimi Dergisi, 3(1), 50-73.",
-  "citation_en": "Citation \n Adıbelli, B. (2021/2022). The Establishment of Diplomatic Relations between the Republic of Turkey and the People’s Republic of China (1960-1971). Belt & Road Initiative Quarterly, 3(1), 50-73.",
-  "pages": "50-73",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/T%C3%BCrkiye%20Cumhuriyeti%20ile%20%C3%87in%20Halk%20Cumhuriyeti%20Aras%C4%B1nda%20Diplomatik%20%C4%B0li%C5%9Fkilerin%20Kurulmas%C4%B1%20%281960-1971%29.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/The%20Establishment%20of%20Diplomatic%20Relations%20Between%20the%20Republic%20of%20Turkey%20and%20the%20People%E2%80%99s%20Republic%20of%20China%20%281960-1971%29.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Araştırma Makalesi",
-  "publication_type_en": "Research Article",
-  "received_date": "2021-11-05",
-  "revised_date": "2021-11-17",
-  "published_online_date": "2021-12-01"
+  "schemaVersion": 2,
+  "id": "turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971",
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "The Establishment of Diplomatic Relations Between the Republic of Turkey and the People’s Republic of China (1960-1971)*",
+    "tr": "Türkiye Cumhuriyeti ile Çin Halk Cumhuriyeti Arasında Diplomatik İlişkilerin Kurulması (1960-1971)"
+  },
+  "authors": [
+    {
+      "displayName": "Barış Adıbellİ",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "This study examines the process leading to the establishment of relations between Turkey and China on the occasion of the 50th anniversary of this development. One could argue that the relationship between the two ancient countries of Asia and their people was established through a very difficult process shaped by the Cold War environment. Establishing a diplomatic relationship between the two countries, which were in different ideological camps, was an extremely challenging task in a Cold War climate. It is important to point out that opposition to communism, which used to dominate Turkish politics and society, constitutes the main obstacle to the establishment of connections between the two countries in this period. Therefore, this article focuses on ideological and political dynamics. Undoubtedly, the political climate created by the 1971 military memorandum was an important landmark in this process. On the other hand, China’s membership in the United Nations and Taiwan’s (Nationalist China) removal from the United Nations –alongside Turkey’s stance in this process– played an important role in the establishment of relations between the two countries.",
+    "tr": "Bu makale, Türkiye ve Çin arasında diplomatik ilişkilerin kurulmasına imkan veren iki ülke arasındaki gelişmeleri ele almaktadır. Asya’nın iki kadim ülkesi ve halkı arasındaki ilişkiler oldukça zorlu bir süreçten sonra kurulduğu söylenebilmektedir. İki ülke arasındaki ilişkilerin kaderini ve seyrini belirleyen, Soğuk Savaş döneminin koşulları olmuştur. Farklı ideolojik bloklarda olan iki ülkenin diplomatik ilişki kurması, Soğuk Savaş ikliminde oldukça zor olmuştur. Türkiye’de siyasette ve toplumda hakim olan komünizm karşıtı düşünce iki ülke arasında ilişkilerin kurulmasında en büyük direnç noktasını oluşturmuştur. Bu nedenle mevcut makalede, Türkiye ile Çin arasında diplomatik ilişkilerin kurulması sürecindeki ideolojik ve siyasi dinamiklere odaklanılmaktadır. Kuşkusuz bu tartışmalara 1971 askeri muhtırasının yaratmış olduğu siyasi iklimin de katkısı olmuştur. Öte yandan Çin’in ayrıca Birleşmiş Milletler üyeliği ve Tayvan’ın (Milliyetçi Çin) Birleşmiş Milletlerden çıkarılması ve Türkiye’nin bu süreçteki duruşu da iki ülke arasındaki ilişkilerin kurulmasında rol oynamıştır. Bu çalışma Türkiye ile Çin arasında diplomatik ilişkilerin kurulmasının 50’nci yıldönümü münasebetiyle iki ülke arasındaki ilişkilerin kurulmasına giden süreci incelemektedir. Çalışmada ağırlıklı olarak dönemin gazete haberleri, Dışişleri Bakanlığı kaynakları ve TBMM’de yapılan konuşmalar temel alınmıştır."
+  },
+  "keywords": {
+    "en": [
+      "China",
+      "Cyprus",
+      "Taiwan",
+      "the USA",
+      "Turkey"
+    ],
+    "tr": [
+      "ABD",
+      "Çin",
+      "Kıbrıs",
+      "Tayvan",
+      "Türkiye"
+    ]
+  },
+  "dates": {
+    "received": "2021-11-05",
+    "revised": "2021-11-17",
+    "accepted": null,
+    "published": "2021-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 3,
+    "issue": 1,
+    "year": "2021-2022",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "50",
+    "last": "73"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Adıbelli, B. (2021/2022). The Establishment of Diplomatic Relations between the Republic of Turkey and the People’s Republic of China (1960-1971). Belt & Road Initiative Quarterly, 3(1), 50-73.",
+    "tr": "Adıbelli, B. (2021/2022). Türkiye Cumhuriyeti ile Çin Halk Cumhuriyeti arasında diplomatik ilişkilerin kurulması (1960-1971). Kuşak ve Yol Girişimi Dergisi, 3(1), 50-73."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/the-establishment-diplomatic-relations-between-the-republic-turkey-and-the-peoples-republic-china",
+    "tr": "https://briqjournal.com/turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/The%20Establishment%20of%20Diplomatic%20Relations%20Between%20the%20Republic%20of%20Turkey%20and%20the%20People%E2%80%99s%20Republic%20of%20China%20%281960-1971%29.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/T%C3%BCrkiye%20Cumhuriyeti%20ile%20%C3%87in%20Halk%20Cumhuriyeti%20Aras%C4%B1nda%20Diplomatik%20%C4%B0li%C5%9Fkilerin%20Kurulmas%C4%B1%20%281960-1971%29.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin-kurulmasi-1960-1971-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

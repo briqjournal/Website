@@ -1,16 +1,83 @@
 {
-  "slug": "diplomatik-iliskilerin-50-yilinda-ortaya-cikan-gercek-cin-ve-turkiye-birlikte-yukselecek",
-  "volume": 3,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2021-2022",
-  "author": "Fikret Akfırat",
-  "title_tr": "Diplomatik İlişkilerin 50. Yılı’nda Ortaya Çıkan Gerçek: Çin ve Türkiye Birlikte Yükselecek",
-  "abstract_tr": null,
-  "title_en": "The Truth Revealed on the 50th Anniversary of Diplomatic Relations: China and Türkiye Will Rise Together",
-  "abstract_en": null,
-  "publication_type_tr": "Editörden",
-  "publication_type_en": "Editorial",
-  "published_online_date": "2021-12-01"
+  "schemaVersion": 2,
+  "id": "diplomatik-iliskilerin-50-yilinda-ortaya-cikan-gercek-cin-ve-turkiye-birlikte-yukselecek",
+  "articleType": {
+    "id": "editorial",
+    "tr": "Editörden",
+    "en": "Editorial",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "The Truth Revealed on the 50th Anniversary of Diplomatic Relations: China and Türkiye Will Rise Together",
+    "tr": "Diplomatik İlişkilerin 50. Yılı’nda Ortaya Çıkan Gerçek: Çin ve Türkiye Birlikte Yükselecek"
+  },
+  "authors": [
+    {
+      "displayName": "Fikret Akfırat",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2021-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 3,
+    "issue": 1,
+    "year": "2021-2022",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": null,
+    "last": null
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": null,
+    "tr": null
+  },
+  "urls": {
+    "en": null,
+    "tr": null,
+    "pdfEn": null,
+    "pdfTr": null,
+    "pdfEnLocal": null,
+    "pdfTrLocal": null,
+    "sharedBilingualPdf": false
+  }
 }

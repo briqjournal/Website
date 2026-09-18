@@ -1,26 +1,83 @@
 {
-  "slug": "cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni",
-  "volume": 3,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2021-2022",
-  "author": "Liu Shaobin",
-  "title_tr": "ÇİN VE TÜRKİYE’NİN DİPLOMATİK İLİŞKİLERİNİN KURULUŞUNUN 50. YILDÖNÜMÜNDE KUŞAK VE YOL İŞBİRLİĞİ YENİ BİR SAYFA AÇIYOR",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni",
-  "source_en": "https://briqjournal.com/en/belt-and-road-cooperation-marks-new-chapter-the-50th-anniversary-diplomatic-relations-between-china",
-  "title_en": "BELT AND ROAD COOPERATION MARKS A NEW CHAPTER ON THE 50TH ANNIVERSARY OF DIPLOMATIC RELATIONS BETWEEN CHINA AND TURKEY",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Liu, S. (2021/2022). Çin ve Türkiye’nin diplomatik ilişkilerinin kuruluşunun 50. yıldönümünde Kuşak ve Yol işbirliği yeni bir sayfa açıyor. Kuşak ve Yol Girişimi Dergisi, 3(1), 12-15.",
-  "citation_en": "Citation \n Liu, S. (2021/2022). Belt and Road cooperation marks a new chapter on the 50th anniversary of diplomatic relations between China and Turkey. Belt & Road Initiative Quarterly, 3(1), 12-15.",
-  "pages": "12-15",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/%C3%87%C4%B0N%20VE%20T%C3%9CRK%C4%B0YE%E2%80%99N%C4%B0N%20D%C4%B0PLOMAT%C4%B0K%20%C4%B0L%C4%B0%C5%9EK%C4%B0LER%C4%B0N%C4%B0N%20KURULU%C5%9EUNUN%2050.%20YILD%C3%96N%C3%9CM%C3%9CNDE%20KU%C5%9EAK%20VE%20YOL%20%C4%B0%C5%9EB%C4%B0RL%C4%B0%C4%9E%C4%B0%20YEN%C4%B0%20B%C4%B0R%20SAYFA%20A%C3%87IYOR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/BELT%20AND%20ROAD%20COOPERATION%20MARKS%20A%20NEW%20CHAPTER%20ON%20THE%2050TH%20ANNIVERSARY%20OF%20DIPLOMATIC%20RELATIONS%20BETWEEN%20CHINA%20AND%20TURKEY.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Görüş Makalesi",
-  "publication_type_en": "Perspective Article",
-  "published_online_date": "2021-12-01"
+  "schemaVersion": 2,
+  "id": "cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Article",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "BELT AND ROAD COOPERATION MARKS A NEW CHAPTER ON THE 50TH ANNIVERSARY OF DIPLOMATIC RELATIONS BETWEEN CHINA AND TURKEY",
+    "tr": "ÇİN VE TÜRKİYE’NİN DİPLOMATİK İLİŞKİLERİNİN KURULUŞUNUN 50. YILDÖNÜMÜNDE KUŞAK VE YOL İŞBİRLİĞİ YENİ BİR SAYFA AÇIYOR"
+  },
+  "authors": [
+    {
+      "displayName": "Liu Shaobin",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2021-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 3,
+    "issue": 1,
+    "year": "2021-2022",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "12",
+    "last": "15"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Liu, S. (2021/2022). Belt and Road cooperation marks a new chapter on the 50th anniversary of diplomatic relations between China and Turkey. Belt & Road Initiative Quarterly, 3(1), 12-15.",
+    "tr": "Liu, S. (2021/2022). Çin ve Türkiye’nin diplomatik ilişkilerinin kuruluşunun 50. yıldönümünde Kuşak ve Yol işbirliği yeni bir sayfa açıyor. Kuşak ve Yol Girişimi Dergisi, 3(1), 12-15."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/belt-and-road-cooperation-marks-new-chapter-the-50th-anniversary-diplomatic-relations-between-china",
+    "tr": "https://briqjournal.com/cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/BELT%20AND%20ROAD%20COOPERATION%20MARKS%20A%20NEW%20CHAPTER%20ON%20THE%2050TH%20ANNIVERSARY%20OF%20DIPLOMATIC%20RELATIONS%20BETWEEN%20CHINA%20AND%20TURKEY.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/%C3%87%C4%B0N%20VE%20T%C3%9CRK%C4%B0YE%E2%80%99N%C4%B0N%20D%C4%B0PLOMAT%C4%B0K%20%C4%B0L%C4%B0%C5%9EK%C4%B0LER%C4%B0N%C4%B0N%20KURULU%C5%9EUNUN%2050.%20YILD%C3%96N%C3%9CM%C3%9CNDE%20KU%C5%9EAK%20VE%20YOL%20%C4%B0%C5%9EB%C4%B0RL%C4%B0%C4%9E%C4%B0%20YEN%C4%B0%20B%C4%B0R%20SAYFA%20A%C3%87IYOR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/cin-ve-turkiyenin-diplomatik-iliskilerinin-kurulusunun-50-yildonumunde-kusak-ve-yol-isbirligi-yeni-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

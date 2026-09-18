@@ -1,26 +1,83 @@
 {
-  "slug": "beklenen-cagri-bir-kusak-bir-yol-senfonisi",
-  "volume": 3,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2021-2022",
-  "author": "Hüseyin Haydar",
-  "title_tr": "BEKLENEN ÇAĞRI (Bir Kuşak Bir Yol Senfonisi)",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/beklenen-cagri-bir-kusak-bir-yol-senfonisi",
-  "source_en": "https://briqjournal.com/en/the-awaited-call-one-belt-one-road-symphony",
-  "title_en": "The Awaited Call (One Belt One Road Symphony)*",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Haydar, H. (2021/2022). Beklenen çağrı. Kuşak ve Yol Girişimi Dergisi, 3(1), 74.",
-  "citation_en": "Atıf \n Haydar, H. (2021/2022). The awaited call. Belt & Road Initiative Quarterly, 3(1), 74.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/%C5%9Eiir%20-%20BEKLENEN%20%C3%87A%C4%9ERI.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/POEM%20-%20The%20Awaited%20Call%20-%20H%C3%BCseyin%20Haydar.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/beklenen-cagri-bir-kusak-bir-yol-senfonisi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/beklenen-cagri-bir-kusak-bir-yol-senfonisi-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Şiir",
-  "publication_type_en": "Poem",
-  "published_online_date": "2021-12-01"
+  "schemaVersion": 2,
+  "id": "beklenen-cagri-bir-kusak-bir-yol-senfonisi",
+  "articleType": {
+    "id": "poem",
+    "tr": "Şiir",
+    "en": "Poem",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "The Awaited Call (One Belt One Road Symphony)*",
+    "tr": "BEKLENEN ÇAĞRI (Bir Kuşak Bir Yol Senfonisi)"
+  },
+  "authors": [
+    {
+      "displayName": "Hüseyin Haydar",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2021-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 3,
+    "issue": 1,
+    "year": "2021-2022",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "74",
+    "last": "74"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Haydar, H. (2021/2022). The awaited call. Belt & Road Initiative Quarterly, 3(1), 74.",
+    "tr": "Haydar, H. (2021/2022). Beklenen çağrı. Kuşak ve Yol Girişimi Dergisi, 3(1), 74."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/the-awaited-call-one-belt-one-road-symphony",
+    "tr": "https://briqjournal.com/beklenen-cagri-bir-kusak-bir-yol-senfonisi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/POEM%20-%20The%20Awaited%20Call%20-%20H%C3%BCseyin%20Haydar.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/%C5%9Eiir%20-%20BEKLENEN%20%C3%87A%C4%9ERI.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/beklenen-cagri-bir-kusak-bir-yol-senfonisi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/beklenen-cagri-bir-kusak-bir-yol-senfonisi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
