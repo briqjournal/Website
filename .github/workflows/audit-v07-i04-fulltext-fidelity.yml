@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - audit/v07-i04-fulltext-fidelity
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
