@@ -1,23 +1,83 @@
 {
-  "slug": "ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi",
-  "volume": 1,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2020",
-  "author": "Assoc. Prof. Dr Yang Chen",
-  "title_tr": "Ortadoğu’da Güvenlik İkileminin Çin’in Kuşak ve Yol Girişimi’ne Etkisi",
-  "abstract_tr": "Ortadoğu’nun güvenliği sağlanmadan dünya barışı gerçekleştirilemez. Hal böyle olduğundan, bu makale takip eden sorular ışığında bölgenin mevcut güvenlik sorunlarına odaklanır: Ortadoğu’nun mevcut güvenlik durumu nedir? Ortadoğu’daki güvenlik ikileminin sebepleri nelerdir? Ortadoğu güvenlik sorununun Çin’in Kuşak ve Yol Girişimi’ne olumsuz etkileri nelerdir? Ve Çin Ortadoğu’daki güvenlik ikilemini çözmek için neler önermektedir?",
-  "source_tr": "https://briqjournal.com/ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi",
-  "source_en": "https://briqjournal.com/en/the-middle-eastern-security-dilemma-and-its-impact-chinas-belt-and-road-initiative",
-  "title_en": "The Middle Eastern Security Dilemma and Its Impact on China’s Belt and Road Initiative",
-  "abstract_en": "Abstract \n World peace cannot be attained without ensuring Middle Eastern security. This being so, the present article focuses on current security issues in this region, with special attention to the following questions: What is the current security situation in the Middle East? What are the causes of the security dilemma in the Middle East? What kind of negative impact may the Middle East security have on China’s Belt and Road Initiative? And what does China propose to resolve the security dilemma in the Middle East?",
-  "citation_tr": "Atıf \n Yang, C. (2020). Ortadoğu’da güvenlik ikileminin Çin’in Kuşak ve Yol Girişimi’ne etkisi. Kuşak ve Yol Girişimi Dergisi, 1 (2), 37-48.",
-  "citation_en": "Citation \n Yang, C. (2020).  The Middle Eastern security dilemma and its impact on China’s Belt and Road Initiative. Belt & Road Initiative Quarterly, 1 (2), 36-47.",
-  "pages": "37-48",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Ortado%C4%9Fu%E2%80%99da%20G%C3%BCvenlik%20%C4%B0kileminin%20%C3%87in%E2%80%99in%20Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%E2%80%99ne%20Etkisi.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/The%20Middle%20Eastern%20Security%20Dilemma%20and%20Its%20Impact%20on%20China%E2%80%99s%20Belt%20and%20Road%20Initiative.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "The Middle Eastern Security Dilemma and Its Impact on China’s Belt and Road Initiative",
+    "tr": "Ortadoğu’da Güvenlik İkileminin Çin’in Kuşak ve Yol Girişimi’ne Etkisi"
+  },
+  "authors": [
+    {
+      "displayName": "Yang Chen",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "World peace cannot be attained without ensuring Middle Eastern security. This being so, the present article focuses on current security issues in this region, with special attention to the following questions: What is the current security situation in the Middle East? What are the causes of the security dilemma in the Middle East? What kind of negative impact may the Middle East security have on China’s Belt and Road Initiative? And what does China propose to resolve the security dilemma in the Middle East?",
+    "tr": "Ortadoğu’nun güvenliği sağlanmadan dünya barışı gerçekleştirilemez. Hal böyle olduğundan, bu makale takip eden sorular ışığında bölgenin mevcut güvenlik sorunlarına odaklanır: Ortadoğu’nun mevcut güvenlik durumu nedir? Ortadoğu’daki güvenlik ikileminin sebepleri nelerdir? Ortadoğu güvenlik sorununun Çin’in Kuşak ve Yol Girişimi’ne olumsuz etkileri nelerdir? Ve Çin Ortadoğu’daki güvenlik ikilemini çözmek için neler önermektedir?"
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 2,
+    "year": 2020,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "37",
+    "last": "48"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Yang, C. (2020).  The Middle Eastern security dilemma and its impact on China’s Belt and Road Initiative. Belt & Road Initiative Quarterly, 1 (2), 36-47.",
+    "tr": "Yang, C. (2020). Ortadoğu’da güvenlik ikileminin Çin’in Kuşak ve Yol Girişimi’ne etkisi. Kuşak ve Yol Girişimi Dergisi, 1 (2), 37-48."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/the-middle-eastern-security-dilemma-and-its-impact-chinas-belt-and-road-initiative",
+    "tr": "https://briqjournal.com/ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/The%20Middle%20Eastern%20Security%20Dilemma%20and%20Its%20Impact%20on%20China%E2%80%99s%20Belt%20and%20Road%20Initiative.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Ortado%C4%9Fu%E2%80%99da%20G%C3%BCvenlik%20%C4%B0kileminin%20%C3%87in%E2%80%99in%20Ku%C5%9Fak%20ve%20Yol%20Giri%C5%9Fimi%E2%80%99ne%20Etkisi.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

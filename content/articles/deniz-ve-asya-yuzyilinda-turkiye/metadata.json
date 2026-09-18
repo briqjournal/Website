@@ -1,23 +1,83 @@
 {
-  "slug": "deniz-ve-asya-yuzyilinda-turkiye",
-  "volume": 1,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2020",
-  "author": "Cem Gürdeniz",
-  "title_tr": "Deniz ve Asya Yüzyılında Türkiye",
-  "abstract_tr": "16 Temmuz 2016 sonrası Atlantik’ten Avrasya’ya rota değiştiren ve Mustafa Kemal jeopolitiğine geri dönmek zorunda kalan bir Türkiye var. Bu, günlük siyasetin değil, zamanı gelmiş bir uyanışın ve hayatta kalma güdüsünün jeopolitik refleksidir. Türk-Rus işbirliği Levant sahilinden Mağrip sahiline doğru genişletilmelidir. Bu eksene Türk-Çin yakınlaşması ve özellikle iki ülke arasında ekonomik, siyasi ve askeri işbirliğinin geliştirilmesi de eklenmelidir. Kırım, Sinciang Uygur Özerk Bölgesi ve Kuzey Kıbrıs Türk Cumhuriyeti'nin (KKTC) geleceği konuları Türkiye, Çin ve Rusya Federasyonu arasında ilişkilerin geleceğine çok yaratıcı seçenekler sunabilir.",
-  "source_tr": "https://briqjournal.com/deniz-ve-asya-yuzyilinda-turkiye",
-  "source_en": "https://briqjournal.com/en/turkey-the-century-the-sea-and-asia",
-  "title_en": "Turkey in the Century of the Sea and Asia",
-  "abstract_en": "Abstract \n After July 16, 2016, a turning point in our recent history, Turkey was compelled to turn back to the geopolitics once adopted by Mustafa Kemal. Thus, Turkey changed its route from Atlantic to Eurasia.  This is in fact not an outcome of daily politics, but rather a result of a geopolitical reflex of daily awakening and the urge to survive. Turkish-Russian cooperation should expand from the Levant Coast to the region covering Maghreb Coast as well. Turkish-Chinese rapprochement and, in particular, the development of economic, political and military cooperation between the two countries should be added to this axis of cooperation. Within the framework of the said tripartite cooperation, many creative options can be formulated with regard to the issues of Crimea, Xinqiang Uighur Autonomous Region and the future of the TRNC, within the scope of the future of relations among the three countries.",
-  "citation_tr": "Atıf \n Gürdeniz, C. (2020). Deniz ve Asya yüzyılında Türkiye. Kuşak ve Yol Girişimi Dergisi, 1 (2), 84-89.",
-  "citation_en": "Citation \n Gürdeniz, C. (2020). Turkey in the century of the sea and Asia. Belt & Road Initiative Quarterly, 1 (2), 81-88.",
-  "pages": "84-89",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Deniz%20ve%20Asya%20Y%C3%BCzy%C4%B1l%C4%B1nda%20T%C3%BCrkiye.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Turkey%20in%20the%20Century%20of%20the%20Sea%20and%20Asia.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/deniz-ve-asya-yuzyilinda-turkiye-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/deniz-ve-asya-yuzyilinda-turkiye-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "deniz-ve-asya-yuzyilinda-turkiye",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Turkey in the Century of the Sea and Asia",
+    "tr": "Deniz ve Asya Yüzyılında Türkiye"
+  },
+  "authors": [
+    {
+      "displayName": "Cem Gürdeniz",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "After July 16, 2016, a turning point in our recent history, Turkey was compelled to turn back to the geopolitics once adopted by Mustafa Kemal. Thus, Turkey changed its route from Atlantic to Eurasia.  This is in fact not an outcome of daily politics, but rather a result of a geopolitical reflex of daily awakening and the urge to survive. Turkish-Russian cooperation should expand from the Levant Coast to the region covering Maghreb Coast as well. Turkish-Chinese rapprochement and, in particular, the development of economic, political and military cooperation between the two countries should be added to this axis of cooperation. Within the framework of the said tripartite cooperation, many creative options can be formulated with regard to the issues of Crimea, Xinqiang Uighur Autonomous Region and the future of the TRNC, within the scope of the future of relations among the three countries.",
+    "tr": "16 Temmuz 2016 sonrası Atlantik’ten Avrasya’ya rota değiştiren ve Mustafa Kemal jeopolitiğine geri dönmek zorunda kalan bir Türkiye var. Bu, günlük siyasetin değil, zamanı gelmiş bir uyanışın ve hayatta kalma güdüsünün jeopolitik refleksidir. Türk-Rus işbirliği Levant sahilinden Mağrip sahiline doğru genişletilmelidir. Bu eksene Türk-Çin yakınlaşması ve özellikle iki ülke arasında ekonomik, siyasi ve askeri işbirliğinin geliştirilmesi de eklenmelidir. Kırım, Sinciang Uygur Özerk Bölgesi ve Kuzey Kıbrıs Türk Cumhuriyeti'nin (KKTC) geleceği konuları Türkiye, Çin ve Rusya Federasyonu arasında ilişkilerin geleceğine çok yaratıcı seçenekler sunabilir."
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 2,
+    "year": 2020,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "84",
+    "last": "89"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Gürdeniz, C. (2020). Turkey in the century of the sea and Asia. Belt & Road Initiative Quarterly, 1 (2), 81-88.",
+    "tr": "Gürdeniz, C. (2020). Deniz ve Asya yüzyılında Türkiye. Kuşak ve Yol Girişimi Dergisi, 1 (2), 84-89."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/turkey-the-century-the-sea-and-asia",
+    "tr": "https://briqjournal.com/deniz-ve-asya-yuzyilinda-turkiye",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Turkey%20in%20the%20Century%20of%20the%20Sea%20and%20Asia.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/Deniz%20ve%20Asya%20Y%C3%BCzy%C4%B1l%C4%B1nda%20T%C3%BCrkiye.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/deniz-ve-asya-yuzyilinda-turkiye-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/deniz-ve-asya-yuzyilinda-turkiye-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
