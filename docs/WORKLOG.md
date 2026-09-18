@@ -2,14 +2,6 @@
 
 Keep this file short. It is a recovery checkpoint for unfinished work, not a project history. Remove completed items instead of accumulating an archive.
 
-## Metadata v2 migration
-
-**Status:** in progress
-
-- Next unit: `v01-i01`. The canonical issue file contains 7 current records.
-- Then continue issue-by-issue through the remaining Volume 1 issues.
-- Preserve verified bibliographic/editorial data while migrating; do not manufacture missing fields.
-
 ## Canonical full-text migration
 
 **Status:** in progress
