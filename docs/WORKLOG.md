@@ -6,7 +6,7 @@ Keep this file short. It is a recovery checkpoint for unfinished work, not a pro
 
 **Status:** in progress
 
-- Next unit: `v01-i04`. The canonical issue file contains 9 current records.
+- Next unit: `v01-i03`. The canonical issue file contains 11 current records.
 - Then continue issue-by-issue through the remaining Volume 1 issues.
 - Preserve verified bibliographic/editorial data while migrating; do not manufacture missing fields.
 

@@ -1,24 +1,90 @@
 {
-  "slug": "covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler",
-  "volume": 1,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2020",
-  "author": "Serdar Yurtçiçek",
-  "title_tr": "COVID-19 Sonrası Küresel Sistem: Eski Sorunlar, Yeni Trendler",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler",
-  "source_en": "https://briqjournal.com/en/book-review-post-covid-19-global-system-old-problems-new-trends",
-  "title_en": "Book Review – Post-COVID-19 Global System: Old Problems, New Trends",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Yurtçiçek, S. (2020). [Kitap incelemesi COVID-19 sonrası küresel sistem: Eski sorunlar, yeni trendler , SAM]. Kuşak ve Yol Girişimi Dergisi, 1 (4), 91-93.",
-  "citation_en": "Citation \n Yurtçiçek, S. ( 2020). [Review of the book Post-covid-19 global system: Old problems, new trends , by SAM]. Belt & Road Initiative Quarterly, 1 (4), 91-93",
-  "pages": "91-93",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-09/BRIQ_TURKCE%20-%204.%20SAYI%20-%20SERDAR%20YURT%C3%87%C4%B0%C3%87EK%20-%20TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20SERDAR%20YURT%C3%87%C4%B0%C3%87EK%20-%20ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler-en.pdf",
-  "shared_bilingual_pdf": false,
-  "reviewed_book": {"authorsApa":"Center for Strategic Research of the Ministry of Foreign Affairs of the Republic of Turkey (SAM)","year":2020,"title":"Post-COVID-19 Global System: Old Problems, New Trends","publisher":"SAM Publications","isbn":null}
+  "schemaVersion": 2,
+  "id": "covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler",
+  "articleType": {
+    "id": "book-review",
+    "tr": "Kitap İncelemesi",
+    "en": "Book Review",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Book Review – Post-COVID-19 Global System: Old Problems, New Trends",
+    "tr": "COVID-19 Sonrası Küresel Sistem: Eski Sorunlar, Yeni Trendler"
+  },
+  "authors": [
+    {
+      "displayName": "Serdar Yurtçiçek",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 4,
+    "year": 2020,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "91",
+    "last": "93"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Yurtçiçek, S. ( 2020). [Review of the book Post-covid-19 global system: Old problems, new trends , by SAM]. Belt & Road Initiative Quarterly, 1 (4), 91-93",
+    "tr": "Yurtçiçek, S. (2020). [Kitap incelemesi COVID-19 sonrası küresel sistem: Eski sorunlar, yeni trendler , SAM]. Kuşak ve Yol Girişimi Dergisi, 1 (4), 91-93."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/book-review-post-covid-19-global-system-old-problems-new-trends",
+    "tr": "https://briqjournal.com/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20SERDAR%20YURT%C3%87%C4%B0%C3%87EK%20-%20ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-09/BRIQ_TURKCE%20-%204.%20SAYI%20-%20SERDAR%20YURT%C3%87%C4%B0%C3%87EK%20-%20TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler-tr.pdf",
+    "sharedBilingualPdf": false
+  },
+  "reviewedBook": {
+    "authorsApa": "Center for Strategic Research of the Ministry of Foreign Affairs of the Republic of Turkey (SAM)",
+    "year": 2020,
+    "title": "Post-COVID-19 Global System: Old Problems, New Trends",
+    "publisher": "SAM Publications",
+    "isbn": null
+  }
 }

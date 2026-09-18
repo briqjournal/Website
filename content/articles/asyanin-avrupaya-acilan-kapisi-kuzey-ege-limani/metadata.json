@@ -1,23 +1,95 @@
 {
-  "slug": "asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani",
-  "volume": 1,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2020",
-  "author": "Dr. Ersel Zafer Oral",
-  "title_tr": "Asya’nın Avrupa’ya Açılan Kapısı: Kuzey Ege Limanı",
-  "abstract_tr": "Kuzey Ege Limanı, 30 yılı aşkın süredir gündemde olmasına rağmen günümüze kadar hayata geçememiştir. Küreselleşmenin yaygınlaşması ile birlikte transit yükün ve transit limanların\nöneminin artması, bölgedeki transit yüke hizmet vermek üzere planlanan Kuzey Ege Limanı’nı tekrar gündeme getirmiştir. Türkiye’nin önemli tarım, turizm, madencilik ve sanayi bölgelerinden biri olan Ege Bölgesi, bu özelliği sayesinde önemli bir dış ticaret potansiyeline sahiptir. “Kuzey Ege Limanı Projesi”, Ege Bölgesi’nin artan yük talebini karşılamak amacıyla uzun dönemli bir çözüm olarak geliştirilmiştir. Doğu ve Orta Akdeniz, Ege Denizi ve Karadeniz ülkelerine aktarılacak yükler için en elverişli konumlardan birine sahiptir. Coğrafi konumu sayesinde limanın çok kısa aktarma süreleri ile otuzdan fazla ülkeye erişim imkânı vardır. Bu özelliği ile Kuşak ve Yol Projesi’nin önemli aktarma merkezlerinden birisi olmaya adaydır. Kuzey Ege Limanı, dış ticarette Ege Bölgesi’nin büyük potansiyelini harekete geçirebilecek bir projedir. Bu özelliği ile gerek limana talip olacak yatırımcı için gerekse de Kuzey Ege Limanı’nın etki sahasında kalan ülkeler ile ticaretini büyütmek isteyenler için önemli bir fırsattır. Kuzey Ege Limanı, sadece Çin ve diğer Uzak Doğu ülkelerinden gelen mallar için bir transfer limanı olmanın ötesinde, Ege Bölgesi ve Türkiye’nin diğer bölgelerinde KYG’nin temel ilke ve hedefleri doğrultusunda yapılacak işbirliği çerçevesinde üretilecek malların sevk edileceği bir liman olma özelliği ve ayrıcalığına da sahip olacaktır.\n Anahtar Kelimeler: Çin; Ege Denizi; İzmir; Kuşak ve Yol Girişimi; Kuzey Ege Limanı",
-  "source_tr": "https://briqjournal.com/asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani",
-  "source_en": "https://briqjournal.com/en/asias-gate-europe-the-north-aegean-port",
-  "title_en": "Asia’s Gate to Europe: The North Aegean Port*",
-  "abstract_en": "Abstract \n The North Aegean Port has been on the agenda for more than 30 years, however; it has not come to life until today. With the spread of globalization, the increasing importance of transit loads and transit ports has brought the North Aegean Port, which is planned to serve the transit load in the region, into the agenda again. Aegean Region is one of the most important agricultural, tourism, mining and industrial regions in Turkey. The North Aegean (Çandarlı) Port has been planned to serve transhipment loads in order to meet increasing cargo volume in the long term. The North Aegean Port is one of the most favourable locations for cargo to be transferred to the Eastern and Middle Mediterranean, Aegean and Black Sea countries. Thanks to its geographical location, the port can reach more than thirty countries with very short transfer times. With this feature, it is a candidate to be one of the important transfer centers for the Belt and Road Project. The North Aegean Port is a project that can activate the great potential of the Aegean Region in foreign trade. With this feature, it is an important opportunity both for potential investors and those who want to expand their trade with the countries that are under the influence of the North Aegean Port. The North Aegean Port is more than just a transfer port for goods from China and other Far East countries. In a similar vein, the North Aegean Port has the potential and privilege to become a strategic port where goods can be both produced and shipped as a result of cooperative efforts made in the Aegean Region and other regions in line with the basic principles and targets of BRI.\n Keywords: Aegean Sea; Belt and Road Initiative; China; Izmir; North Aegean Port",
-  "citation_tr": "Atıf \n Oral, E. Z. (2020). Asya’nın Avrupa’ya açılan kapısı: Kuzey Ege Limanı. Kuşak ve Yol Girişimi Dergisi, 1 (4), 34-42.",
-  "citation_en": "Citation \n Oral, E. Z. (2020). Asia’s gate to Europe: The North Aegean Port. Belt & Road Initiative Quarterly, 1 (4), 34-42.",
-  "pages": "34-42",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%204.%20SAYI%20-%20ERSEL%20ZAFER%20ORAL%20-%20TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20ERSEL%20ZAFER%20ORAL%20-%20ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani",
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Asia’s Gate to Europe: The North Aegean Port*",
+    "tr": "Asya’nın Avrupa’ya Açılan Kapısı: Kuzey Ege Limanı"
+  },
+  "authors": [
+    {
+      "displayName": "Ersel Zafer Oral",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "The North Aegean Port has been on the agenda for more than 30 years, however; it has not come to life until today. With the spread of globalization, the increasing importance of transit loads and transit ports has brought the North Aegean Port, which is planned to serve the transit load in the region, into the agenda again. Aegean Region is one of the most important agricultural, tourism, mining and industrial regions in Turkey. The North Aegean (Çandarlı) Port has been planned to serve transhipment loads in order to meet increasing cargo volume in the long term. The North Aegean Port is one of the most favourable locations for cargo to be transferred to the Eastern and Middle Mediterranean, Aegean and Black Sea countries. Thanks to its geographical location, the port can reach more than thirty countries with very short transfer times. With this feature, it is a candidate to be one of the important transfer centers for the Belt and Road Project. The North Aegean Port is a project that can activate the great potential of the Aegean Region in foreign trade. With this feature, it is an important opportunity both for potential investors and those who want to expand their trade with the countries that are under the influence of the North Aegean Port. The North Aegean Port is more than just a transfer port for goods from China and other Far East countries. In a similar vein, the North Aegean Port has the potential and privilege to become a strategic port where goods can be both produced and shipped as a result of cooperative efforts made in the Aegean Region and other regions in line with the basic principles and targets of BRI.",
+    "tr": "Kuzey Ege Limanı, 30 yılı aşkın süredir gündemde olmasına rağmen günümüze kadar hayata geçememiştir. Küreselleşmenin yaygınlaşması ile birlikte transit yükün ve transit limanların\nöneminin artması, bölgedeki transit yüke hizmet vermek üzere planlanan Kuzey Ege Limanı’nı tekrar gündeme getirmiştir. Türkiye’nin önemli tarım, turizm, madencilik ve sanayi bölgelerinden biri olan Ege Bölgesi, bu özelliği sayesinde önemli bir dış ticaret potansiyeline sahiptir. “Kuzey Ege Limanı Projesi”, Ege Bölgesi’nin artan yük talebini karşılamak amacıyla uzun dönemli bir çözüm olarak geliştirilmiştir. Doğu ve Orta Akdeniz, Ege Denizi ve Karadeniz ülkelerine aktarılacak yükler için en elverişli konumlardan birine sahiptir. Coğrafi konumu sayesinde limanın çok kısa aktarma süreleri ile otuzdan fazla ülkeye erişim imkânı vardır. Bu özelliği ile Kuşak ve Yol Projesi’nin önemli aktarma merkezlerinden birisi olmaya adaydır. Kuzey Ege Limanı, dış ticarette Ege Bölgesi’nin büyük potansiyelini harekete geçirebilecek bir projedir. Bu özelliği ile gerek limana talip olacak yatırımcı için gerekse de Kuzey Ege Limanı’nın etki sahasında kalan ülkeler ile ticaretini büyütmek isteyenler için önemli bir fırsattır. Kuzey Ege Limanı, sadece Çin ve diğer Uzak Doğu ülkelerinden gelen mallar için bir transfer limanı olmanın ötesinde, Ege Bölgesi ve Türkiye’nin diğer bölgelerinde KYG’nin temel ilke ve hedefleri doğrultusunda yapılacak işbirliği çerçevesinde üretilecek malların sevk edileceği bir liman olma özelliği ve ayrıcalığına da sahip olacaktır."
+  },
+  "keywords": {
+    "en": [
+      "Aegean Sea",
+      "Belt and Road Initiative",
+      "China",
+      "Izmir",
+      "North Aegean Port"
+    ],
+    "tr": [
+      "Çin",
+      "Ege Denizi",
+      "İzmir",
+      "Kuşak ve Yol Girişimi",
+      "Kuzey Ege Limanı"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 4,
+    "year": 2020,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "34",
+    "last": "42"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Oral, E. Z. (2020). Asia’s gate to Europe: The North Aegean Port. Belt & Road Initiative Quarterly, 1 (4), 34-42.",
+    "tr": "Oral, E. Z. (2020). Asya’nın Avrupa’ya açılan kapısı: Kuzey Ege Limanı. Kuşak ve Yol Girişimi Dergisi, 1 (4), 34-42."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/asias-gate-europe-the-north-aegean-port",
+    "tr": "https://briqjournal.com/asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20ERSEL%20ZAFER%20ORAL%20-%20ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%204.%20SAYI%20-%20ERSEL%20ZAFER%20ORAL%20-%20TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

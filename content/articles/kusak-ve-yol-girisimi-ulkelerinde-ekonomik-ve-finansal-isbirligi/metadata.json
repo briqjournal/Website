@@ -1,23 +1,83 @@
 {
-  "slug": "kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi",
-  "volume": 1,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2020",
-  "author": "Serhat Latifoğlu",
-  "title_tr": "Kuşak ve Yol Girişimi Ülkelerinde Ekonomik ve Finansal İşbirliği",
-  "abstract_tr": "Altyapısı ve tasarımı akıllıca yapılmış olan Kuşak ve Yol Girişimi’nin (KYG), dünya ekonomisi ve finansal piyasalarında bugünlerde yaşadığımız büyük ekonomik krizin de etkisiyle kısa sürede ağırlığını artıracağı ve dünya ekonomisinde çok önemli bir yer tutacağı aşikardır. Bu makale, esasen KYG’nin ekonomik etkilerine odaklanacak, KYG ülkelerinin finansal işbirliği ve entegrasyonu için birtakım öneriler getirecektir. KYG’yi doğrudan destekleyen finansal kuruluşların dışında çift taraflı ve çok taraflı bölgesel bankalar, Çin’in kamu ve ticari bankaları, Varlık Fonları, emeklilik fonları gibi çok çeşitli finansal kuruluşların KYG ülkelerine finansal alternatifler sunduğunu görüyoruz. KYG ülkeleri finansal piyasalarında işlemleri kolaylaştırmak ve KYG’ye özgü finansal ürünlerin geliştirilmesi için ortak bir clearing (takas) kurumu veya Takasbank kurulması büyük bir avantaj sağlayabilir. Ortak bir KYG Varlık Fonu kurulması KYG projelerini hızlandırıcı ve ekonomilerini destekleyici bir etki yapacaktır.",
-  "source_tr": "https://briqjournal.com/kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi",
-  "source_en": "https://briqjournal.com/en/kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi",
-  "title_en": "The Belt and Road Initiative: Economic and Financial Cooperation",
-  "abstract_en": "Abstract \n It seems that the Belt & Road Initiative’s (BRI) main strategy is wisely designed and due to the world economic crisis it will play an important role in the world economy and global financial markets. This article will mainly focus on the economic effects of BRI and provide suggestions for financial cooperation and the integration of the counties involved. Besides the financial institutions and funds that directly support BRI, various institutions such as bilateral and multilateral regional banks, and China’s public and commercial banks, wealth and pension funds could also offer financial alternatives to BRI countries. Establishing a joint clearing institution or a Clearing Bank could significantly facilitate transactions in financial markets, particularly for BRI countries interested in developing financial products specific to their needs. Establishing a joint Wealth Fund of the BRI countries will boost investment projects and support national economies.",
-  "citation_tr": "Atıf \n Latifoğlu, S. (2020). Kuşak ve Yol Girişimi ülkelerinde ekonomik ve finansal işbirliği. Kuşak ve Yol Girişimi Dergisi, 1 (4), 73-84.",
-  "citation_en": "Citation \n Latifoğlu, S. (2020). The Belt and Road Initiative: Economic and financial cooperation. Belt & Road Initiative Quarterly, 1 (4), 74-84.",
-  "pages": "73-84",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%204.%20SAYI%20-%20SERHAT%20LAT%C4%B0FO%C4%9ELU%20-%20TR_0.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20SERHAT%20LAT%C4%B0FO%C4%9ELU%20-%20ENG_0.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "The Belt and Road Initiative: Economic and Financial Cooperation",
+    "tr": "Kuşak ve Yol Girişimi Ülkelerinde Ekonomik ve Finansal İşbirliği"
+  },
+  "authors": [
+    {
+      "displayName": "Serhat Latifoğlu",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "It seems that the Belt & Road Initiative’s (BRI) main strategy is wisely designed and due to the world economic crisis it will play an important role in the world economy and global financial markets. This article will mainly focus on the economic effects of BRI and provide suggestions for financial cooperation and the integration of the counties involved. Besides the financial institutions and funds that directly support BRI, various institutions such as bilateral and multilateral regional banks, and China’s public and commercial banks, wealth and pension funds could also offer financial alternatives to BRI countries. Establishing a joint clearing institution or a Clearing Bank could significantly facilitate transactions in financial markets, particularly for BRI countries interested in developing financial products specific to their needs. Establishing a joint Wealth Fund of the BRI countries will boost investment projects and support national economies.",
+    "tr": "Altyapısı ve tasarımı akıllıca yapılmış olan Kuşak ve Yol Girişimi’nin (KYG), dünya ekonomisi ve finansal piyasalarında bugünlerde yaşadığımız büyük ekonomik krizin de etkisiyle kısa sürede ağırlığını artıracağı ve dünya ekonomisinde çok önemli bir yer tutacağı aşikardır. Bu makale, esasen KYG’nin ekonomik etkilerine odaklanacak, KYG ülkelerinin finansal işbirliği ve entegrasyonu için birtakım öneriler getirecektir. KYG’yi doğrudan destekleyen finansal kuruluşların dışında çift taraflı ve çok taraflı bölgesel bankalar, Çin’in kamu ve ticari bankaları, Varlık Fonları, emeklilik fonları gibi çok çeşitli finansal kuruluşların KYG ülkelerine finansal alternatifler sunduğunu görüyoruz. KYG ülkeleri finansal piyasalarında işlemleri kolaylaştırmak ve KYG’ye özgü finansal ürünlerin geliştirilmesi için ortak bir clearing (takas) kurumu veya Takasbank kurulması büyük bir avantaj sağlayabilir. Ortak bir KYG Varlık Fonu kurulması KYG projelerini hızlandırıcı ve ekonomilerini destekleyici bir etki yapacaktır."
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 4,
+    "year": 2020,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "73",
+    "last": "84"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Latifoğlu, S. (2020). The Belt and Road Initiative: Economic and financial cooperation. Belt & Road Initiative Quarterly, 1 (4), 74-84.",
+    "tr": "Latifoğlu, S. (2020). Kuşak ve Yol Girişimi ülkelerinde ekonomik ve finansal işbirliği. Kuşak ve Yol Girişimi Dergisi, 1 (4), 73-84."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi",
+    "tr": "https://briqjournal.com/kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20SERHAT%20LAT%C4%B0FO%C4%9ELU%20-%20ENG_0.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%204.%20SAYI%20-%20SERHAT%20LAT%C4%B0FO%C4%9ELU%20-%20TR_0.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/kusak-ve-yol-girisimi-ulkelerinde-ekonomik-ve-finansal-isbirligi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

@@ -1,23 +1,83 @@
 {
-  "slug": "iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap",
-  "volume": 1,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2020",
-  "author": "Mesud Sadrmohammadi",
-  "title_tr": "İran’da Atatürk ve Millî Mücadele Konusunda İlk Kitap",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap",
-  "source_en": "https://briqjournal.com/en/history-the-first-book-about-ataturk-ever-published-iran",
-  "title_en": "History – The First Book About Atatürk Ever Published in Iran",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Sadrmohammadi, M. (2020). İran’da Atatürk ve millî mücadele konusunda ilk kitap. Kuşak ve Yol Girişimi Dergisi, 1 (4), 85-90.",
-  "citation_en": "Citation \n Sadrmohammadi, M. (2020). The first book about Atatürk ever published in Iran. Belt & Road Initiative Quarterly, 1 (4), 85-90.",
-  "pages": "85-90",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-09/BRIQ_TURKCE%20-%204.%20SAYI%20-%20MESUD%20SADRMOHAMMAD%C4%B0%20-%20ENG.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20MESUD%20SADRMOHAMMAD%C4%B0%20-%20TR.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "History – The First Book About Atatürk Ever Published in Iran",
+    "tr": "İran’da Atatürk ve Millî Mücadele Konusunda İlk Kitap"
+  },
+  "authors": [
+    {
+      "displayName": "Mesud Sadrmohammadi",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 4,
+    "year": 2020,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "85",
+    "last": "90"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Sadrmohammadi, M. (2020). The first book about Atatürk ever published in Iran. Belt & Road Initiative Quarterly, 1 (4), 85-90.",
+    "tr": "Sadrmohammadi, M. (2020). İran’da Atatürk ve millî mücadele konusunda ilk kitap. Kuşak ve Yol Girişimi Dergisi, 1 (4), 85-90."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/history-the-first-book-about-ataturk-ever-published-iran",
+    "tr": "https://briqjournal.com/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20MESUD%20SADRMOHAMMAD%C4%B0%20-%20TR.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-09/BRIQ_TURKCE%20-%204.%20SAYI%20-%20MESUD%20SADRMOHAMMAD%C4%B0%20-%20ENG.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

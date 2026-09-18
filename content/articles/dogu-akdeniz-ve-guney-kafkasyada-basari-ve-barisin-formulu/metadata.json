@@ -1,23 +1,83 @@
 {
-  "slug": "dogu-akdeniz-ve-guney-kafkasyada-basari-ve-barisin-formulu",
-  "volume": 1,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2020",
-  "author": "Dr. Mehmet Perinçek",
-  "title_tr": "Doğu Akdeniz ve Güney Kafkasya’da Başarı ve Barışın Formülü",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/dogu-akdeniz-ve-guney-kafkasyada-basari-ve-barisin-formulu",
-  "source_en": "https://briqjournal.com/en/the-formula-success-and-peace-the-eastern-mediterranean-and-southern-caucasus",
-  "title_en": "The Formula of Success and Peace in the Eastern Mediterranean and Southern Caucasus*",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Perinçek, M. (2020). Doğu Akdeniz ve Güney Kafkasya’da başarı ve barışın formülü. Kuşak ve Yol Girişimi Dergisi, 1 (4), 55-72.",
-  "citation_en": "Citation \n Perinçek, M. (2020). The formula of success and peace in the Eastern Mediterranean and Southern Caucasus. Belt & Road Initiative Quarterly, 1 (4), 55-73.",
-  "pages": "55-72",
-  "pdf_tr_source": null,
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20MEHMET%20PER%C4%B0N%C3%87EK%20-%20ENG_0.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/cilt-1-sayi-4-dogu-akdeniz-guney-kafkasya-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/dogu-akdeniz-ve-guney-kafkasyada-basari-ve-barisin-formulu-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "dogu-akdeniz-ve-guney-kafkasyada-basari-ve-barisin-formulu",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "The Formula of Success and Peace in the Eastern Mediterranean and Southern Caucasus*",
+    "tr": "Doğu Akdeniz ve Güney Kafkasya’da Başarı ve Barışın Formülü"
+  },
+  "authors": [
+    {
+      "displayName": "Mehmet Perinçek",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 4,
+    "year": 2020,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "55",
+    "last": "72"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Perinçek, M. (2020). The formula of success and peace in the Eastern Mediterranean and Southern Caucasus. Belt & Road Initiative Quarterly, 1 (4), 55-73.",
+    "tr": "Perinçek, M. (2020). Doğu Akdeniz ve Güney Kafkasya’da başarı ve barışın formülü. Kuşak ve Yol Girişimi Dergisi, 1 (4), 55-72."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/the-formula-success-and-peace-the-eastern-mediterranean-and-southern-caucasus",
+    "tr": "https://briqjournal.com/dogu-akdeniz-ve-guney-kafkasyada-basari-ve-barisin-formulu",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20MEHMET%20PER%C4%B0N%C3%87EK%20-%20ENG_0.pdf",
+    "pdfTr": null,
+    "pdfEnLocal": "/assets/archive/pdfs/articles/dogu-akdeniz-ve-guney-kafkasyada-basari-ve-barisin-formulu-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/cilt-1-sayi-4-dogu-akdeniz-guney-kafkasya-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
