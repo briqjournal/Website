@@ -2,24 +2,49 @@
   "schemaVersion": 2,
   "id": "mustafa-kemal-ataturkun-halkcilik-ve-devletcilik-ilkesi-sun-yat-senin-siyasi-dusuncesiyle",
   "articleType": {
-    "id": "review-article",
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
     "peerReviewed": true
   },
-  "title": {},
-  "authors": [],
+  "title": {
+    "en": "Mustafa Kemal Atatürk’ün Halkçılık ve Devletçilik İlkesi: Sun Yat-sen’in Siyasi Düşüncesiyle Karşılaştırma*",
+    "tr": "Mustafa Kemal Atatürk’ün Halkçılık ve Devletçilik İlkesi: Sun Yat-sen’in Siyasi Düşüncesiyle Karşılaştırma*"
+  },
+  "authors": [
+    {
+      "displayName": "Wang Sanyi",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
   "abstract": {
-    "en": null,
-    "tr": null
+    "en": "Mustafa Kemal Atatürk and Sun Yat-sen are both great men who overturned the old system to open a new era and have ideas and guidelines for governing countries. Among the six principles of Kemalism, Halkçılık and Devletçilik have similar contents to Sun Yat-sen's The Principle of Democracy and The Principle of Livelihood. Kemal Atatürk does not literally mention \"civil rights\" and \"people’s livelihood” in six principles, but in Halkçılık asserts “people’s rule” rather than autocracy, advocates that power comes from the people, and that the responsibility of the government is to seek welfare for the people. Kemal Atatürk’s Devletçilik focuses on the state-led planned economy and protecting the private property of farmers, like in Sun Yat-sen’s Thought of Livelihood. This paper consists of three parts. The first part compares Mustafa Kemal Atatürk and Sun Yat-sen’s main contributions and key thoughts, the second part Halkçılık and Devletçilik of Mustafa Kemal Atatürk and Sun Yat-sen’s corresponding thought, and the third part the historical background and objective conditions of their ideas.",
+    "tr": "Mustafa Kemal Atatürk ve Sun Yat-sen, yeni bir dönem açmak için eski sistemi deviren, ülkeleri yönetmek için fikir ve yönergeleri olan büyük adamlardır. Kemalizmin altı ilkesinden Halkçılık ve Devletçilik, Sun Yat-sen’in Demokrasi İlkesi ve Geçim İlkesi ile benzer içeriklere sahiptir. Kemal Atatürk, “medeni haklardan” ve “halkın geçiminden” altı ilkede tam anlamıyla bahsetmez, ancak Halkçılık’ta otokrasiden ziyade “halk yönetimi”ni ileri sürer, gücün halktan geldiğini ve hükümetin sorumluluğunun halk için refah aramak olduğunu savunur. Kemal Atatürk’ün Devletçiliği, Sun Yat-sen’in Geçim Düşüncesi’nde olduğu gibi, devlet güdümlü planlı ekonomi ve çiftçilerin özel mülkiyetinin korunmasına odaklanmaktadır. Bu makale üç bölümden oluşmaktadır. Birinci bölüm Mustafa Kemal Atatürk ve Sun Yat-sen’in temel katkıları ve temel düşüncelerini karşılaştırır, ikinci bölümde Mustafa Kemal Atatürk’ün Halkçılık ve Devletçiliği ile Sun Yat-sen’in ilgili düşüncesi, üçüncü bölümde ise fikirlerinin tarihsel arka planı ve nesnel koşulları yer almaktadır."
   },
   "keywords": {
-    "en": [],
-    "tr": []
+    "en": [
+      "Comparison",
+      "devletçilik",
+      "halkçılık",
+      "Mustafa Kemal Atatürk",
+      "Sun Yat-sen"
+    ],
+    "tr": [
+      "Devletçilik",
+      "halkçılık",
+      "karşılaştırma",
+      "Mustafa Kemal Atatürk",
+      "Sun Yat-sen"
+    ]
   },
   "dates": {
     "received": null,
-    "revised": null,
-    "accepted": null,
-    "published": null
+    "revised": "2021-10-21",
+    "accepted": "2021-11-17",
+    "published": "2021-12-01"
   },
   "journal": {
     "title": "BRIQ Belt & Road Initiative Quarterly",
@@ -28,11 +53,15 @@
     "eissn": "2718-0581",
     "volume": 3,
     "issue": 1,
-    "season": {}
+    "year": "2021-2022",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
   },
   "pages": {
-    "first": "[object Object]",
-    "last": "[object Object]"
+    "first": "40",
+    "last": "49"
   },
   "doi": null,
   "language": [
@@ -51,16 +80,16 @@
   "aiUse": null,
   "acknowledgements": null,
   "citation": {
-    "en": null,
-    "tr": null
+    "en": "Wang, S. (2021/2022). Mustafa Kemal Atatürk’s halkçılık and devletçilik: A comparison with Sun Yat-sen’s political thought. Belt & Road Initiative Quarterly, 3(1), 40-49.",
+    "tr": "Wang, S. (2021/2022). Mustafa Kemal Atatürk’ün halkçılık ve devletçilik ilkesi: Sun Yatsen’in siyasi düşüncesiyle karşılaştırma. Kuşak ve Yol Girişimi Dergisi, 3(1), 40-49."
   },
   "urls": {
-    "en": null,
-    "tr": null,
-    "pdfEn": null,
-    "pdfTr": null,
-    "pdfEnLocal": null,
-    "pdfTrLocal": null,
+    "en": "https://briqjournal.com/en/mustafa-kemal-ataturkun-halkcilik-ve-devletcilik-ilkesi-sun-yat-senin-siyasi-dusuncesiyle",
+    "tr": "https://briqjournal.com/mustafa-kemal-ataturkun-halkcilik-ve-devletcilik-ilkesi-sun-yat-senin-siyasi-dusuncesiyle",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Mustafa%20Kemal%20Atat%C3%BCrk%E2%80%99s%20Halk%C3%A7%C4%B1l%C4%B1k%20and%20Devlet%C3%A7ilik%20A%20Comparison%20with%20Sun%20Yat-sen%E2%80%99s%20Political%20Thought.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Mustafa%20Kemal%20Atat%C3%BCrk%E2%80%99%C3%BCn%20Halk%C3%A7%C4%B1l%C4%B1k%20ve%20Devlet%C3%A7ilik%20%C4%B0lkesi%20Sun%20Yat-sen%E2%80%99in%20Siyasi%20D%C3%BC%C5%9F%C3%BCncesiyle%20Kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rma.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/mustafa-kemal-ataturkun-halkcilik-ve-devletcilik-ilkesi-sun-yat-senin-siyasi-dusuncesiyle-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/mustafa-kemal-ataturkun-halkcilik-ve-devletcilik-ilkesi-sun-yat-senin-siyasi-dusuncesiyle-tr.pdf",
     "sharedBilingualPdf": false
   }
 }
