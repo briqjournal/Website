@@ -1,25 +1,83 @@
 {
-  "slug": "fotograf-0",
-  "volume": 2,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2021",
-  "author": "Sevtap İnal",
-  "title_tr": "Fotoğraf",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/fotograf-0",
-  "source_en": "https://briqjournal.com/en/photograph",
-  "title_en": "Photograph",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n [Sevtap İnal fotoğrafı]. Çin. Kuşak ve Yol Girişimi Dergisi, 2 (2), 93.",
-  "citation_en": "Atıf \n [Photograph by Sevtap İnal]. China. Belt & Road Initiative Quarterly, 2 (2), 93.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Foto%C4%9Fraf%20-%20Sevtap%20%C4%B0nal.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Photograph%20-%20Sevtap%20%C4%B0nal.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/fotograf-0-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/fotograf-0-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "fotograf-0",
+  "articleType": {
+    "id": "photograph",
+    "tr": "Fotoğraf",
+    "en": "Photograph",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Photograph",
+    "tr": "Fotoğraf"
+  },
+  "authors": [
+    {
+      "displayName": "Sevtap İnal",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 2,
+    "year": 2021,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "93",
+    "last": "93"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "[Photograph by Sevtap İnal]. China. Belt & Road Initiative Quarterly, 2 (2), 93.",
+    "tr": "[Sevtap İnal fotoğrafı]. Çin. Kuşak ve Yol Girişimi Dergisi, 2 (2), 93."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/photograph",
+    "tr": "https://briqjournal.com/fotograf-0",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Photograph%20-%20Sevtap%20%C4%B0nal.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Foto%C4%9Fraf%20-%20Sevtap%20%C4%B0nal.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/fotograf-0-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/fotograf-0-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
