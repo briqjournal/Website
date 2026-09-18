@@ -1,23 +1,92 @@
 {
-  "slug": "covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor",
-  "volume": 1,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2020",
-  "author": "Şeref Ateş",
-  "title_tr": "COVID-19 HUB, Tüm Dünyayı Korona Pandemisine Karşı Bilinçlendiriyor*",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor",
-  "source_en": "https://briqjournal.com/en/covid-19-hub-raises-the-awareness-the-entire-world-against-the-corona-pandemic",
-  "title_en": "COVID-19 HUB Raises the Awareness of the Entire World Against the Corona Pandemic*",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Ateş, Ş. (2020).   COVID-19 HUB, tüm dünyayı korona pandemisine karşı bilinçlendiriyor (Röportajı yapan Deniz Renkveren). Kuşak ve Yol Girişimi Dergisi, 1 (3), 103-110. COVID-19 HUB sitesinden alınmıştır.",
-  "citation_en": "Citation \n Ateş, Ş. (2020). COVID-19 HUB raises the awareness of the entire world against the corona pandemic. Belt & Road Initiative Quarterly, 1 (3), 103-110. Retrieved from COVID-19 HUB website.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20%C5%9EEREF%20ATE%C5%9E.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20%C5%9EEREF%20ATE%C5%9E.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor",
+  "articleType": {
+    "id": "interview",
+    "tr": "Röportaj",
+    "en": "Interview",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "COVID-19 HUB Raises the Awareness of the Entire World Against the Corona Pandemic*",
+    "tr": "COVID-19 HUB, Tüm Dünyayı Korona Pandemisine Karşı Bilinçlendiriyor*"
+  },
+  "authors": [
+    {
+      "displayName": "Şeref Ateş",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 3,
+    "year": 2020,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "103",
+    "last": "110"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Ateş, Ş. (2020). COVID-19 HUB raises the awareness of the entire world against the corona pandemic. Belt & Road Initiative Quarterly, 1 (3), 103-110. Retrieved from COVID-19 HUB website.",
+    "tr": "Ateş, Ş. (2020).   COVID-19 HUB, tüm dünyayı korona pandemisine karşı bilinçlendiriyor (Röportajı yapan Deniz Renkveren). Kuşak ve Yol Girişimi Dergisi, 1 (3), 103-110. COVID-19 HUB sitesinden alınmıştır."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/covid-19-hub-raises-the-awareness-the-entire-world-against-the-corona-pandemic",
+    "tr": "https://briqjournal.com/covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20%C5%9EEREF%20ATE%C5%9E.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20%C5%9EEREF%20ATE%C5%9E.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor-tr.pdf",
+    "sharedBilingualPdf": false
+  },
+  "contributors": [
+    {
+      "displayName": "Deniz Renkveren",
+      "givenName": null,
+      "familyName": null,
+      "role": "Interviewer",
+      "orcid": null
+    }
+  ]
 }

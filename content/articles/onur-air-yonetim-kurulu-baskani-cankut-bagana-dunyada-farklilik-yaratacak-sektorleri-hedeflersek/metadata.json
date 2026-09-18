@@ -1,23 +1,92 @@
 {
-  "slug": "onur-air-yonetim-kurulu-baskani-cankut-bagana-dunyada-farklilik-yaratacak-sektorleri-hedeflersek",
-  "volume": 1,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2020",
-  "author": "Mehmet Adnan Akfırat",
-  "title_tr": "Onur Air Yönetim Kurulu Başkanı Cankut BAGANA: “Dünyada Farklılık Yaratacak Sektörleri Hedeflersek, Krizden Kazançlı Çıkarız!”",
-  "abstract_tr": "Cankut Bagana I ̇ stanbul Üniversitesi Hukuk Fakültesinde tahsil görmüştür. 1965 yılında tur rehberi olarak kariyerine başlayan Bagana, 1975 yılına kadar turizm endüstirisinde çeşitli alanlarda yönetici olarak çalışmıştır. 1975 yılında Incoming Tour acentesini kurmuş ve 1980 yılında ise Ten Tour’un kurucu ve ortaklarından biri olarak yer almıştır. 1985’te Ten Tour’da çalışmaya başlamıştır. 1994’te Onur Air’in Ten Tour’a katılmasından sonra 1995-2013 yılları arasında Onur Air’in Başkanlığını yapmıştır. 1999-2006 ve 2012-2013 yılları arasında Onur Air Genel Müdürü olarak çalışmıştır. 2013 yılından beri Onur Air’in Başkanlığını yapan Bagana; Fransızca, Almanca, İngilizce ve İtalyanca bilmektedir. \n   “Neoliberal ekonominin sonunu, Covid 19 salgını hızlandırmıştır. Bizce Türkiye eğer dünyada farklılık yaratacağı kalemleri hedef alırsa, bu krizden kazançlı çıkar. Üreteceğiz… Seçilmiş sektörlerimizin önümüzdeki 20-30 sene değişmemesi gerekir. Dünyanın en iyisi olacağız. Satacağız ve satın alacağız. Lojistik gücümüzle transit ticaret imkanlarımızla. Kısacası hem üreteceğiz hem ticaret yapacağız bütün dünya ile. Gelişmekte olan  ülkeler arasında dersini iyi çalışan ve net değişmez hedefler koyan milletler hiçbir şeyi yıkmadan bugünden yarına rahatlıkla geçebilirler. Yalnız, doğru ve dünyada farklılık yaratabilecek hedefleri katı ve inatçı disiplin içinde götürmeleri şartı ile.”",
-  "source_tr": "https://briqjournal.com/onur-air-yonetim-kurulu-baskani-cankut-bagana-dunyada-farklilik-yaratacak-sektorleri-hedeflersek",
-  "source_en": "https://briqjournal.com/en/chairman-the-board-directors-onur-air-cankut-bagana-if-turkey-defines-and-sets-the-goals-will-make",
-  "title_en": "Chairman of the Board of Directors of Onur Air Cankut BAGANA: “If Turkey Defines and Sets the Goals That Will Make A Difference in the World, It Will Benefit From This Crisis!”*",
-  "abstract_en": "Abstract \n Mr. Bagana graduated from the Faculty of Law, Istanbul University. He started his career as tour leader in 1965 and worked as manager in different working areas of the tourism industry until 1975. He established Incoming Travel Agency in 1975 and joined Ten Tour as one of the founders and shareholders in 1980. In 1985, he started to work personally in Ten Tour. He served as Onur Air joined with Ten Tour in 1994. He is President of Onur Air since 2013. He speaks French, German, English and Italian. \n   *  Translated by Salih Ertan\n We think that if Turkey defines and sets the goals that will make a difference in the world, it will benefit from this crisis. We shall produce. The sectors selected and assigned highest priority should not change for the next 20-30 years. We will be the best in the world. We will sell and buy products. Our efforts will be backed up by our logistics power, coupled with transit trade opportunities. In short, we will both produce and trade with the whole world. Those nations who study their lesson well and set clear and fixed goals for themselves can easily transit to tomorrow’s world without the need to demolish today’s world. However, this is only true as long as they carry on the goals that make a difference in the world, with strict and persistent discipline.",
-  "citation_tr": "Atıf \n Bagana, C. (2020). Onur Air yönetim kurulu başkanı Cankut Bagana: “Dünyada farklılık yaratacak sektörleri hedeflersek, krizden kazançlı çıkarız!” (Röportajı yapan Adnan Akfırat). Kuşak ve Yol Girişimi Dergisi, 1 (3), 16-18.",
-  "citation_en": "Citation \n Bagana, C. (2020). Chairman of the board of directors of Onur Air Cankut Bagana: “If Turkey defines and sets the goals that will make a difference in the world, ıt will benefit from this crisis!” (Adnan Akfırat, Interviwer). Belt & Road Initiative Quarterly, 1 (3), 18-20.",
-  "pages": "16-18",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20CANKUT%20BAGANA.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20CANKUT%20BAGANA.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/onur-air-yonetim-kurulu-baskani-cankut-bagana-dunyada-farklilik-yaratacak-sektorleri-hedeflersek-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/onur-air-yonetim-kurulu-baskani-cankut-bagana-dunyada-farklilik-yaratacak-sektorleri-hedeflersek-en.pdf",
-  "shared_bilingual_pdf": false
+  "schemaVersion": 2,
+  "id": "onur-air-yonetim-kurulu-baskani-cankut-bagana-dunyada-farklilik-yaratacak-sektorleri-hedeflersek",
+  "articleType": {
+    "id": "interview",
+    "tr": "Röportaj",
+    "en": "Interview",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Chairman of the Board of Directors of Onur Air Cankut BAGANA: “If Turkey Defines and Sets the Goals That Will Make A Difference in the World, It Will Benefit From This Crisis!”*",
+    "tr": "Onur Air Yönetim Kurulu Başkanı Cankut BAGANA: “Dünyada Farklılık Yaratacak Sektörleri Hedeflersek, Krizden Kazançlı Çıkarız!”"
+  },
+  "authors": [
+    {
+      "displayName": "Cankut Bagana",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "Mr. Bagana graduated from the Faculty of Law, Istanbul University. He started his career as tour leader in 1965 and worked as manager in different working areas of the tourism industry until 1975. He established Incoming Travel Agency in 1975 and joined Ten Tour as one of the founders and shareholders in 1980. In 1985, he started to work personally in Ten Tour. He served as Onur Air joined with Ten Tour in 1994. He is President of Onur Air since 2013. He speaks French, German, English and Italian. \n   *  Translated by Salih Ertan\n We think that if Turkey defines and sets the goals that will make a difference in the world, it will benefit from this crisis. We shall produce. The sectors selected and assigned highest priority should not change for the next 20-30 years. We will be the best in the world. We will sell and buy products. Our efforts will be backed up by our logistics power, coupled with transit trade opportunities. In short, we will both produce and trade with the whole world. Those nations who study their lesson well and set clear and fixed goals for themselves can easily transit to tomorrow’s world without the need to demolish today’s world. However, this is only true as long as they carry on the goals that make a difference in the world, with strict and persistent discipline.",
+    "tr": "Cankut Bagana I ̇ stanbul Üniversitesi Hukuk Fakültesinde tahsil görmüştür. 1965 yılında tur rehberi olarak kariyerine başlayan Bagana, 1975 yılına kadar turizm endüstirisinde çeşitli alanlarda yönetici olarak çalışmıştır. 1975 yılında Incoming Tour acentesini kurmuş ve 1980 yılında ise Ten Tour’un kurucu ve ortaklarından biri olarak yer almıştır. 1985’te Ten Tour’da çalışmaya başlamıştır. 1994’te Onur Air’in Ten Tour’a katılmasından sonra 1995-2013 yılları arasında Onur Air’in Başkanlığını yapmıştır. 1999-2006 ve 2012-2013 yılları arasında Onur Air Genel Müdürü olarak çalışmıştır. 2013 yılından beri Onur Air’in Başkanlığını yapan Bagana; Fransızca, Almanca, İngilizce ve İtalyanca bilmektedir. \n   “Neoliberal ekonominin sonunu, Covid 19 salgını hızlandırmıştır. Bizce Türkiye eğer dünyada farklılık yaratacağı kalemleri hedef alırsa, bu krizden kazançlı çıkar. Üreteceğiz… Seçilmiş sektörlerimizin önümüzdeki 20-30 sene değişmemesi gerekir. Dünyanın en iyisi olacağız. Satacağız ve satın alacağız. Lojistik gücümüzle transit ticaret imkanlarımızla. Kısacası hem üreteceğiz hem ticaret yapacağız bütün dünya ile. Gelişmekte olan  ülkeler arasında dersini iyi çalışan ve net değişmez hedefler koyan milletler hiçbir şeyi yıkmadan bugünden yarına rahatlıkla geçebilirler. Yalnız, doğru ve dünyada farklılık yaratabilecek hedefleri katı ve inatçı disiplin içinde götürmeleri şartı ile.”"
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 3,
+    "year": 2020,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "16",
+    "last": "18"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Bagana, C. (2020). Chairman of the board of directors of Onur Air Cankut Bagana: “If Turkey defines and sets the goals that will make a difference in the world, ıt will benefit from this crisis!” (Adnan Akfırat, Interviwer). Belt & Road Initiative Quarterly, 1 (3), 18-20.",
+    "tr": "Bagana, C. (2020). Onur Air yönetim kurulu başkanı Cankut Bagana: “Dünyada farklılık yaratacak sektörleri hedeflersek, krizden kazançlı çıkarız!” (Röportajı yapan Adnan Akfırat). Kuşak ve Yol Girişimi Dergisi, 1 (3), 16-18."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/chairman-the-board-directors-onur-air-cankut-bagana-if-turkey-defines-and-sets-the-goals-will-make",
+    "tr": "https://briqjournal.com/onur-air-yonetim-kurulu-baskani-cankut-bagana-dunyada-farklilik-yaratacak-sektorleri-hedeflersek",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20CANKUT%20BAGANA.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20CANKUT%20BAGANA.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/onur-air-yonetim-kurulu-baskani-cankut-bagana-dunyada-farklilik-yaratacak-sektorleri-hedeflersek-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/onur-air-yonetim-kurulu-baskani-cankut-bagana-dunyada-farklilik-yaratacak-sektorleri-hedeflersek-tr.pdf",
+    "sharedBilingualPdf": false
+  },
+  "contributors": [
+    {
+      "displayName": "Mehmet Adnan Akfırat",
+      "givenName": null,
+      "familyName": null,
+      "role": "Interviewer",
+      "orcid": null
+    }
+  ]
 }

@@ -1,24 +1,90 @@
 {
-  "slug": "ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018",
-  "volume": 1,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2020",
-  "author": "Victor Manuel Isidro Luna",
-  "title_tr": "Ye, M. (2020). The Belt Road and Beyond: State-Mobilized Globalization in China 1998-2018",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018",
-  "source_en": "https://briqjournal.com/en/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018",
-  "title_en": "Ye, M. (2020). The Belt Road and beyond: State-Mobilized Globalization in China 1998-2018.",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Luna, V.M.I. (2020). [The Belt Road and Beyond: State-Mobilized Globalization in China 1998-2018, Ye, M.]. Kuşak ve Yol Girişimi Dergisi, 1 (3), 93-96.",
-  "citation_en": "Citation \n Luna, V. M.I. (2020). [Review of the book The Belt Road and beyond: State-mobilized globalization in China 1998-2018 , by Ye, M.]. Belt & Road Initiative Quarterly, 1 (3), 93-95.",
-  "pages": "93-96",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20VICTOR%20MANUEL%20ISIDRO%20LUNA.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20VICTOR%20MANUEL%20ISIDRO%20LUNA.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018-en.pdf",
-  "shared_bilingual_pdf": false,
-  "reviewed_book": {"authorsApa":"Ye, M.","year":2020,"title":"The Belt Road and Beyond: State-Mobilized Globalization in China 1998–2018","publisher":"Cambridge University Press","isbn":"978-1-108-85538-9"}
+  "schemaVersion": 2,
+  "id": "ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018",
+  "articleType": {
+    "id": "book-review",
+    "tr": "Kitap İncelemesi",
+    "en": "Book Review",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Ye, M. (2020). The Belt Road and beyond: State-Mobilized Globalization in China 1998-2018.",
+    "tr": "Ye, M. (2020). The Belt Road and Beyond: State-Mobilized Globalization in China 1998-2018"
+  },
+  "authors": [
+    {
+      "displayName": "Victor Manuel Isidro Luna",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 1,
+    "issue": 3,
+    "year": 2020,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": "93",
+    "last": "96"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Luna, V. M.I. (2020). [Review of the book The Belt Road and beyond: State-mobilized globalization in China 1998-2018 , by Ye, M.]. Belt & Road Initiative Quarterly, 1 (3), 93-95.",
+    "tr": "Luna, V.M.I. (2020). [The Belt Road and Beyond: State-Mobilized Globalization in China 1998-2018, Ye, M.]. Kuşak ve Yol Girişimi Dergisi, 1 (3), 93-96."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018",
+    "tr": "https://briqjournal.com/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-04/BRIQ_INGILIZCE%20-%203.%20SAYI%20-%20VICTOR%20MANUEL%20ISIDRO%20LUNA.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_TURKCE%20-%203.%20SAYI%20-%20VICTOR%20MANUEL%20ISIDRO%20LUNA.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018-tr.pdf",
+    "sharedBilingualPdf": false
+  },
+  "reviewedBook": {
+    "authorsApa": "Ye, M.",
+    "year": 2020,
+    "title": "The Belt Road and Beyond: State-Mobilized Globalization in China 1998–2018",
+    "publisher": "Cambridge University Press",
+    "isbn": "978-1-108-85538-9"
+  }
 }
