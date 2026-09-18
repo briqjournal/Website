@@ -6,7 +6,7 @@ Keep this file short. It is a recovery checkpoint for unfinished work, not a pro
 
 **Status:** in progress
 
-- Next unit: `v02-i04`. All 10 current records in that issue are still legacy (no `schemaVersion: 2`).
+- Next unit: `v02-i03`. All 8 current records in that issue are still legacy (no `schemaVersion: 2`).
 - Then continue issue-by-issue through the remaining Volume 2 and Volume 1 issues.
 - Preserve verified bibliographic/editorial data while migrating; do not manufacture missing fields.
 
