@@ -382,14 +382,14 @@ const issueSixOneRecords = [
   },
   {
     slug: "operarios-isciler-1933",
-    pages: [152, 152],
-    body: { tr: 152, en: 152 },
+    pages: [151, 151],
+    body: { tr: 151, en: 151 },
     autoHeadings: false,
   },
   {
     slug: "yeni-nesil-nazizm-2023",
-    pages: [151, 151],
-    body: { tr: 151, en: 151 },
+    pages: [152, 152],
+    body: { tr: 152, en: 152 },
     autoHeadings: false,
   },
 ];
