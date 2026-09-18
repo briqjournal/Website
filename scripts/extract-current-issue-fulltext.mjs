@@ -311,7 +311,7 @@ const issueSixOneRecords = [
   {
     slug: "roportaj-yesil-ve-dijital-donusum-kapsaminda-ar-ge-ve-yenilik-ekosistemini-harekete-geciriyoruz",
     pages: [7, 20],
-    body: { tr: 8, en: 8 },
+    body: { tr: 7, en: 7 },
     startContains: {
       tr: "Bilim, teknoloji ve yenilik politikaları",
       en: "Could you briefly summarise Türkiye’s approach",
@@ -320,7 +320,7 @@ const issueSixOneRecords = [
   {
     slug: "kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi",
     pages: [21, 36],
-    body: { tr: 22, en: 22 },
+    body: { tr: 21, en: 21 },
     start: { tr: "Giriş", en: "Introduction" },
   },
   {
@@ -331,7 +331,7 @@ const issueSixOneRecords = [
   {
     slug: "yukselen-yeni-uygarligin-bilim-ve-teknolojide-kuresel-onderlik-hedefi",
     pages: [47, 64],
-    body: { tr: 49, en: 49 },
+    body: { tr: 48, en: 48 },
     start: { tr: "Giriş", en: "Introduction" },
   },
   {
@@ -342,19 +342,19 @@ const issueSixOneRecords = [
   {
     slug: "turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi",
     pages: [75, 92],
-    body: { tr: 77, en: 77 },
+    body: { tr: 76, en: 76 },
     start: { tr: "Giriş", en: "Introduction" },
   },
   {
     slug: "ikinci-cin-japon-savasi-sirasinda-rol-model-olarak-ankara-chongqing-bizim-ankaramiz",
     pages: [93, 104],
-    body: { tr: 95, en: 95 },
+    body: { tr: 94, en: 94 },
     start: { tr: "Giriş", en: "Introduction" },
   },
   {
     slug: "kuresel-kalkinma-girisimi-ve-cinin-ortadogudaki-kalkinma-isbirligi-calismalari",
     pages: [105, 123],
-    body: { tr: 107, en: 107 },
+    body: { tr: 106, en: 106 },
     start: { tr: "Giriş", en: "Introduction" },
   },
   {
