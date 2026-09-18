@@ -462,10 +462,16 @@ export async function ArticlePlatform({
         <aside className="article-navigation">
           <ArticleStaticToc items={nav} locale={locale} />
           <div className="article-record-compact">
-            <div><span>{locale === "tr" ? "Cilt / Sayı" : "Volume / Issue"}</span><b>{article.volume} / {article.issue}</b></div>
+            <div>
+              <span>{locale === "tr" ? "Cilt / Sayı" : "Volume / Issue"}</span>
+              <b>
+                <a className="article-record-issue-link" href={issueHref} style={{ backgroundColor: issueColor }}>
+                  {article.volume} / {article.issue} ({locale === "tr" ? article.season_tr : article.season_en})
+                </a>
+              </b>
+            </div>
             <div><span>{locale === "tr" ? "Sayfa" : "Pages"}</span><b>{article.pages || "—"}</b></div>
-            <div><span>{locale === "tr" ? "Yayın" : "Published"}</span><b>{locale === "tr" ? article.season_tr : article.season_en} {article.year}</b></div>
-            {article.doi && <div className="publication-doi"><span>DOI</span><b><a href={`https://doi.org/${article.doi}`} target="_blank" rel="noreferrer">{article.doi}</a></b></div>}
+            <div className="publication-doi"><span>DOI</span><b>{article.doi ? <a href={`https://doi.org/${article.doi}`} target="_blank" rel="noreferrer">{article.doi}</a> : null}</b></div>
           </div>
           <PublicationRecord locale={locale} history={history} />
         </aside>

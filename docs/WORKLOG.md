@@ -2,16 +2,6 @@
 
 Keep this file short. It is a recovery checkpoint for unfinished work, not a project history. Remove completed items instead of accumulating an archive.
 
-## Single-article publication record
-
-**Status:** not implemented
-
-- Remove the compact-record `Published / Yayın` row.
-- In `Volume / Issue` / `Cilt / Sayı`, show the season in parentheses beside the numbers.
-- Render that issue value with the issue/cover accent color and link it to the issue page.
-- Replace the removed publication row with an always-visible `DOI` row. Link the DOI when present; leave the value empty when the article has no DOI yet.
-- This UI task does not itself invent or assign missing DOI values.
-
 ## Volume 2 editorial dates
 
 **Status:** incomplete
