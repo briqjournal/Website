@@ -3921,6 +3921,12 @@ footer h3 {
   filter: brightness(.91);
 }
 
+.article-record-compact > .publication-doi {
+  grid-column: 1 / -1;
+  padding-left: 0;
+  border-left: 0;
+}
+
 .article-navigation > .publication-record-group,
 .article-navigation > .publication-doi {
   margin-top: 18px;
