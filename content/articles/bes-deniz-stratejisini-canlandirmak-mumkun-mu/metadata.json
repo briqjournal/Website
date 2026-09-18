@@ -1,25 +1,102 @@
 {
-  "slug": "bes-deniz-stratejisini-canlandirmak-mumkun-mu",
-  "volume": 2,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2020-2021",
-  "author": "Dr. Bassam Abu Abdullah ve Dr. Zıad Ayoub Arbache",
-  "title_tr": "Beş Deniz Stratejisini Canlandırmak Mümkün Mü?",
-  "abstract_tr": "Suriye, kültürel mirasına ve gelecek vizyonuna dayanarak 2004 yılında bölgesel işbirliğini geliştirmek için Beş Deniz Girişimi’ni başlattı. Bu girişim, çok sayıda yeni paradigma ve terminolojinin gün yüzüne çıkmasını tetikledi. Özellikle 2010-2011’den bu yana, hem Ortadoğu’daki çatışma sahnesinde hem de uluslararası alanda hemen hemen her şeyi etkileyen birçok değişiklik gerçekleşti. Beş Deniz Girişimi’ne zarar veren dokuz yıllık savaşın ve küresel kapitalizmin, en ilkel şekliyle kurmaya çalıştığı hegemonyadaki başarısızlığının ardından artık, bölgesel ve uluslararası aktörler arasındaki ortak çıkarlara dayanan ve bölgesel çeşitliliğe saygı duyan, aşırılıktan uzak gerçek bir seçeneği ortaya koyma zamanıdır. Ortadoğu ülkeleri ortak sorunlarla yüzleştiğinden, bu sorunlara getirilen çözüm önerileri birlikte formüle edilir ve gerçekleştirilirse bu öneriler daha etkili olacaktır. Nihayetinde, kalkınma Ortadoğu’da barışı sağlamanın tek yoludur ve ortak sorunlara kalıcı çözümler ancak “kalkınma yoluyla barış” çerçevesinde gerçekleştirilebilir. Güneybatı Asya’nın yeniden inşasını sağlayarak ve Suriye’nin, Akdeniz, Hint Okyanusu, Kızıldeniz, Hazar Denizi ve Karadeniz’in kesişiminde yer alan ayrıcalıklı jeopolitik konumu sayesinde bir altyapı ağı oluşturacak olan “Beş Deniz Stratejisi” ile Kuşak ve Yol Girişimi’nin (KYG) birleştirilmesi, böyle bir çözümü sağlayabilir. Bu birleştirilmiş stratejiyle tam bir bütünlük sağlanması, Ortadoğu ülkelerinin birçoğu için bir on yılı daha israf etmekten kaçınmanın en iyi yolu olarak görünüyor. \n Anahtar Kelimeler: beş deniz, jeopolitik, Kuşak ve Yol Girişimi, Ortadoğu, Suriye  \n Beş Deniz Stratejisi: Kökeni ve Gelişimi",
-  "source_tr": "https://briqjournal.com/bes-deniz-stratejisini-canlandirmak-mumkun-mu",
-  "source_en": "https://briqjournal.com/en/how-revive-the-five-seas-strategy-the-syrian-vision",
-  "title_en": "How to Revive the Five Seas Strategy The Syrian Vision?",
-  "abstract_en": "Abstract \n Based on its cultural heritage and future vision, Syria launched the Five Seas Initiative in 2004, with the intention of improving regional cooperation. This initiative triggered a plethora of new paradigms and terminologies that address several developments expected to influence both the Middle Eastern conflict theater and the international landscape, particularly in the period 2010-2011 After nine years of war that served to undermine the Five Seas Initiative, and upon the failure of the hegemony of global capitalism in its crude forms, it is now time to put forward a real alternative based on common interests between regional and international actors, which would respect regional diversity away from extremism. Since Middle Eastern countries share common problems, proposed solutions to these problems would be more effective if they were formulated and carried out collectively. Ultimately, development is the only way to bring peace to the Middle East, and a lasting solution to shared problems can only be reached within the framework of “Peace Through Development”. The combination of the “Five Seas Strategy” and the Belt & Road Initiative (BRI) would provide such a solution by reconstructing southwest Asia and creating a network of infrastructures thanks to Syria’s privileged geopolitical position at the intersection of the Mediterranean, the Indian Ocean, the Red Sea, the Caspian Sea, and the Black Sea. Full engagement with this combined strategy seems to be the best way to avoid another wasted decade for the majority of Middle Eastern countries. \n Keywords: Belt and Road Initiative, five seas, geopolitics, Middle East, Syria \n The Five Seas Strategy: Its Origins and Development in Context",
-  "citation_tr": "Atıf \n Abdullah, B. & Arbache, Z.A. (2020/2021). Beş Deniz Stratejisini canlandırmak mümkün mü? Kuşak ve Yol Girişimi Dergisi, 2 (1), 6-22.",
-  "citation_en": "Citation \n Abdullah, B. & Arbache, Z.A. (2020/2021). How to revive the “Five Seas Strategy”? The Syrian vision. Belt & Road Initiative Quarterly, 2 (1), 6-22.",
-  "pages": "6-22",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/Be%C5%9F%20Deniz%20Stratejisini%20Canland%C4%B1rmak%20M%C3%BCmk%C3%BCn%20M%C3%BC.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/How%20to%20Revive%20the%20Five%20Seas%20Strategy%20The%20Syrian%20Vision.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/bes-deniz-stratejisini-canlandirmak-mumkun-mu-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/bes-deniz-stratejisini-canlandirmak-mumkun-mu-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "bes-deniz-stratejisini-canlandirmak-mumkun-mu",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "How to Revive the Five Seas Strategy The Syrian Vision?",
+    "tr": "Beş Deniz Stratejisini Canlandırmak Mümkün Mü?"
+  },
+  "authors": [
+    {
+      "displayName": "Bassam Abu Abdullah",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    },
+    {
+      "displayName": "Zıad Ayoub Arbache",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "Based on its cultural heritage and future vision, Syria launched the Five Seas Initiative in 2004, with the intention of improving regional cooperation. This initiative triggered a plethora of new paradigms and terminologies that address several developments expected to influence both the Middle Eastern conflict theater and the international landscape, particularly in the period 2010-2011 After nine years of war that served to undermine the Five Seas Initiative, and upon the failure of the hegemony of global capitalism in its crude forms, it is now time to put forward a real alternative based on common interests between regional and international actors, which would respect regional diversity away from extremism. Since Middle Eastern countries share common problems, proposed solutions to these problems would be more effective if they were formulated and carried out collectively. Ultimately, development is the only way to bring peace to the Middle East, and a lasting solution to shared problems can only be reached within the framework of “Peace Through Development”. The combination of the “Five Seas Strategy” and the Belt & Road Initiative (BRI) would provide such a solution by reconstructing southwest Asia and creating a network of infrastructures thanks to Syria’s privileged geopolitical position at the intersection of the Mediterranean, the Indian Ocean, the Red Sea, the Caspian Sea, and the Black Sea. Full engagement with this combined strategy seems to be the best way to avoid another wasted decade for the majority of Middle Eastern countries.",
+    "tr": "Suriye, kültürel mirasına ve gelecek vizyonuna dayanarak 2004 yılında bölgesel işbirliğini geliştirmek için Beş Deniz Girişimi’ni başlattı. Bu girişim, çok sayıda yeni paradigma ve terminolojinin gün yüzüne çıkmasını tetikledi. Özellikle 2010-2011’den bu yana, hem Ortadoğu’daki çatışma sahnesinde hem de uluslararası alanda hemen hemen her şeyi etkileyen birçok değişiklik gerçekleşti. Beş Deniz Girişimi’ne zarar veren dokuz yıllık savaşın ve küresel kapitalizmin, en ilkel şekliyle kurmaya çalıştığı hegemonyadaki başarısızlığının ardından artık, bölgesel ve uluslararası aktörler arasındaki ortak çıkarlara dayanan ve bölgesel çeşitliliğe saygı duyan, aşırılıktan uzak gerçek bir seçeneği ortaya koyma zamanıdır. Ortadoğu ülkeleri ortak sorunlarla yüzleştiğinden, bu sorunlara getirilen çözüm önerileri birlikte formüle edilir ve gerçekleştirilirse bu öneriler daha etkili olacaktır. Nihayetinde, kalkınma Ortadoğu’da barışı sağlamanın tek yoludur ve ortak sorunlara kalıcı çözümler ancak “kalkınma yoluyla barış” çerçevesinde gerçekleştirilebilir. Güneybatı Asya’nın yeniden inşasını sağlayarak ve Suriye’nin, Akdeniz, Hint Okyanusu, Kızıldeniz, Hazar Denizi ve Karadeniz’in kesişiminde yer alan ayrıcalıklı jeopolitik konumu sayesinde bir altyapı ağı oluşturacak olan “Beş Deniz Stratejisi” ile Kuşak ve Yol Girişimi’nin (KYG) birleştirilmesi, böyle bir çözümü sağlayabilir. Bu birleştirilmiş stratejiyle tam bir bütünlük sağlanması, Ortadoğu ülkelerinin birçoğu için bir on yılı daha israf etmekten kaçınmanın en iyi yolu olarak görünüyor."
+  },
+  "keywords": {
+    "en": [
+      "Belt and Road Initiative",
+      "five seas",
+      "geopolitics",
+      "Middle East",
+      "Syria"
+    ],
+    "tr": [
+      "beş deniz",
+      "jeopolitik",
+      "Kuşak ve Yol Girişimi",
+      "Ortadoğu",
+      "Suriye"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 1,
+    "year": "2020-2021",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "6",
+    "last": "22"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Abdullah, B. & Arbache, Z.A. (2020/2021). How to revive the “Five Seas Strategy”? The Syrian vision. Belt & Road Initiative Quarterly, 2 (1), 6-22.",
+    "tr": "Abdullah, B. & Arbache, Z.A. (2020/2021). Beş Deniz Stratejisini canlandırmak mümkün mü? Kuşak ve Yol Girişimi Dergisi, 2 (1), 6-22."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/how-revive-the-five-seas-strategy-the-syrian-vision",
+    "tr": "https://briqjournal.com/bes-deniz-stratejisini-canlandirmak-mumkun-mu",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/How%20to%20Revive%20the%20Five%20Seas%20Strategy%20The%20Syrian%20Vision.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/Be%C5%9F%20Deniz%20Stratejisini%20Canland%C4%B1rmak%20M%C3%BCmk%C3%BCn%20M%C3%BC.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/bes-deniz-stratejisini-canlandirmak-mumkun-mu-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/bes-deniz-stratejisini-canlandirmak-mumkun-mu-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

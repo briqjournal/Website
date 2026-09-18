@@ -1,25 +1,83 @@
 {
-  "slug": "fotograf-omer-burhanoglu",
-  "volume": 2,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2020-2021",
-  "author": "Ömer Burhanoğlu",
-  "title_tr": "Fotoğraf - Ömer Burhanoğlu",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/fotograf-omer-burhanoglu",
-  "source_en": "https://briqjournal.com/en/photograph-omer-burhanoglu",
-  "title_en": "Photograph - Ömer Burhanoğlu",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n [Ömer Burhanoğlu fotoğrafı]. Söğüt/Marmaris. Kuşak ve Yol Girişimi Dergisi, 2 (1), 94.",
-  "citation_en": "Citation \n [Photograph of Ömer Burhanoğlu]. Söğüt/Marmaris. Belt & Road Initiative Quarterly, 2 (1), 94.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/%C3%96mer%20Burhano%C4%9Flu%20-%20TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/%C3%96mer%20Burhano%C4%9Flu%20-%20ENG.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/fotograf-omer-burhanoglu-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/fotograf-omer-burhanoglu-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "fotograf-omer-burhanoglu",
+  "articleType": {
+    "id": "photograph",
+    "tr": "Fotoğraf",
+    "en": "Photograph",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Photograph - Ömer Burhanoğlu",
+    "tr": "Fotoğraf - Ömer Burhanoğlu"
+  },
+  "authors": [
+    {
+      "displayName": "Ömer Burhanoğlu",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 1,
+    "year": "2020-2021",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "94",
+    "last": "94"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "[Photograph of Ömer Burhanoğlu]. Söğüt/Marmaris. Belt & Road Initiative Quarterly, 2 (1), 94.",
+    "tr": "[Ömer Burhanoğlu fotoğrafı]. Söğüt/Marmaris. Kuşak ve Yol Girişimi Dergisi, 2 (1), 94."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/photograph-omer-burhanoglu",
+    "tr": "https://briqjournal.com/fotograf-omer-burhanoglu",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/%C3%96mer%20Burhano%C4%9Flu%20-%20ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/%C3%96mer%20Burhano%C4%9Flu%20-%20TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/fotograf-omer-burhanoglu-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/fotograf-omer-burhanoglu-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

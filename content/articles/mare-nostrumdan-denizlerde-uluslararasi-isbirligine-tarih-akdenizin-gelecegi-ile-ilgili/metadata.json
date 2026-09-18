@@ -1,25 +1,95 @@
 {
-  "slug": "mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili",
-  "volume": 2,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2020-2021",
-  "author": "Dominik Pietzcker",
-  "title_tr": "“Mare Nostrum”dan Denizlerde Uluslararası İşbirliğine: Tarih, Akdeniz’in Geleceği İle İlgili Beklentilere Nasıl Yapıcı Yanıtlar Sunabilir?",
-  "abstract_tr": "Akdeniz bölgesi, eski çağlardan bu yana her türlü siyasi ve iktisadi düzenin yükselişine ve düşüşüne tanıklık etti. İnsan toplumlarının her daim laboratuvarı ve değişik dinlerin, felsefelerin, etnik grupların kaynaştığı yer oldu. Akdeniz ülkeleri muazzam kültürel ve estetik başarılara şahit oldu ancak aynı zamanda yıkım ve barbarca eylemleri de yaşadı.  Akdeniz, en güçlü siyasi kavramlardan biri olan ‘Batı ve Doğu yarıküre’ fikrini doğurdu. Küresel kapitalizmin ve transatlantik ticaretin başlamasıyla Akdeniz, stratejik öneminin ve ekonomik ivmesinin çoğunu kaybetti. Ancak bu durgunluk tek seçenek değil. Bugün Çin’in yeni bir dünya gücü olarak yükselmesiyle birlikte Akdeniz ve buradaki bölgesel güçler de yeni fırsatlar yakalıyor. İşin özü katılımcılıktır. Büyük olasılıkla da buradaki başlangıç noktası karşılıklı anlayış olacaktır. Akdeniz’deki hassas dengelerin istikrara kavuşmasına katkıda bulunacak unsurlar yalnızca uluslararası işbirliği, küresel ticaret ve kültürel alışveriştir. Bu nedenle, önümüzdeki soru şudur: Akdeniz’in bugünkü siyasi ve iktisadi potansiyelini keşfetmek ve daha iyi anlamak için tarihten hangi dersler çıkarılabilir? Tarihteki Akdeniz ile bugünkü Akdeniz arasındaki çarpıcı benzerlikleri gösteren bazı tarihsel betimlemeler varlığını ısrarlı bir biçimde sürdürür ve şaşırtıcı şekilde geri döner. \n Anahtar Kelimeler: Akdeniz, Atlas Okyanusu, doğu yarıküre, hegemonya, yeni dünya düzeni",
-  "source_tr": "https://briqjournal.com/mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili",
-  "source_en": "https://briqjournal.com/en/mare-nostrumto-international-maritime-cooperation-how-history-can-offer-constructive-answers-future",
-  "title_en": "From “Mare Nostrum”to International Maritime Cooperation: How History Can Offer Constructive Answers to Future Prospects in the Mediterranean",
-  "abstract_en": "Abstract \n Since antiquity, the Mediterranean region witnessed the rise and fall of all kinds of political and economic systems. It has always been the laboratory of human societies, a melting pot of different religions, philosophies and ethnic groups. Mediterranean countries saw astonishing cultural and aesthetic achievements, but also experienced destruction and acts of barbarism. The Mediterranean gave birth to one of the most powerful political concepts, the idea of the occidental and oriental hemisphere. With the beginning of global capitalism and transatlantic trade, the Mediterranean lost much of its strategic importance and economic momentum. But stagnation is never an option. Today, with the rise of China as the new global player, the Mediterranean and its regional powers gain new options, too. Participation is the key, and mutual understanding a possible beginning. Only international cooperation, global trade and cultural exchange will help to stabilize the vulnerable equilibrium in the Mediterranean. So, what lessons can be learned from history to better understand and explore today’s political and economic potential of the Mediterranean? Some historical figurations persist or have a surprising coming-back, indicating some striking parallels between the Mediterranean of history and the present day. \n Keywords: Atlantic Ocean, eastern hemisphere, hegemony, Mediterranean Sea, new world order",
-  "citation_tr": "Atıf \n Pietzcker, D. (2020/2021). “Mare Nostrum”dan denizlerde uluslararası işbirliğine: Tarih, Akdeniz’in geleceği ile ilgili beklentilere nasıl yapıcı yanıtlar sunabilir? Kuşak ve Yol Girişimi Dergisi, 2 (1), 49-60.",
-  "citation_en": "Citation \n Pietzcker, D. (2020/2021). From “Mare Nostrum” to international maritime cooperation: How history can offer constructive answers to future prospects in the Mediterranean. Belt & Road Initiative Quarterly, 2 (1), 51-62.",
-  "pages": "49-60",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/Mare%20Nostrumdan1%20Denizlerde%20Uluslararas%C4%B1%20%C4%B0%C5%9Fbirli%C4%9Fine%20Tarih%2C%20Akdeniz%E2%80%99in%20Gelece%C4%9Fi%20%C4%B0le%20%C4%B0lgili%20Beklentilere%20Nas%C4%B1l%20Yap%C4%B1c%C4%B1%20Yan%C4%B1tlar%20Sunabilir.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/From%20%E2%80%9CMare%20Nostrum1%E2%80%9Dto%20International%20Maritime%20Cooperation%20How%20History%20Can%20Offer%20Constructive%20Answers%20to%20Future%20Prospects%20in%20the%20Mediterranean.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili",
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "From “Mare Nostrum”to International Maritime Cooperation: How History Can Offer Constructive Answers to Future Prospects in the Mediterranean",
+    "tr": "“Mare Nostrum”dan Denizlerde Uluslararası İşbirliğine: Tarih, Akdeniz’in Geleceği İle İlgili Beklentilere Nasıl Yapıcı Yanıtlar Sunabilir?"
+  },
+  "authors": [
+    {
+      "displayName": "Dominik Pietzcker",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "Since antiquity, the Mediterranean region witnessed the rise and fall of all kinds of political and economic systems. It has always been the laboratory of human societies, a melting pot of different religions, philosophies and ethnic groups. Mediterranean countries saw astonishing cultural and aesthetic achievements, but also experienced destruction and acts of barbarism. The Mediterranean gave birth to one of the most powerful political concepts, the idea of the occidental and oriental hemisphere. With the beginning of global capitalism and transatlantic trade, the Mediterranean lost much of its strategic importance and economic momentum. But stagnation is never an option. Today, with the rise of China as the new global player, the Mediterranean and its regional powers gain new options, too. Participation is the key, and mutual understanding a possible beginning. Only international cooperation, global trade and cultural exchange will help to stabilize the vulnerable equilibrium in the Mediterranean. So, what lessons can be learned from history to better understand and explore today’s political and economic potential of the Mediterranean? Some historical figurations persist or have a surprising coming-back, indicating some striking parallels between the Mediterranean of history and the present day.",
+    "tr": "Akdeniz bölgesi, eski çağlardan bu yana her türlü siyasi ve iktisadi düzenin yükselişine ve düşüşüne tanıklık etti. İnsan toplumlarının her daim laboratuvarı ve değişik dinlerin, felsefelerin, etnik grupların kaynaştığı yer oldu. Akdeniz ülkeleri muazzam kültürel ve estetik başarılara şahit oldu ancak aynı zamanda yıkım ve barbarca eylemleri de yaşadı.  Akdeniz, en güçlü siyasi kavramlardan biri olan ‘Batı ve Doğu yarıküre’ fikrini doğurdu. Küresel kapitalizmin ve transatlantik ticaretin başlamasıyla Akdeniz, stratejik öneminin ve ekonomik ivmesinin çoğunu kaybetti. Ancak bu durgunluk tek seçenek değil. Bugün Çin’in yeni bir dünya gücü olarak yükselmesiyle birlikte Akdeniz ve buradaki bölgesel güçler de yeni fırsatlar yakalıyor. İşin özü katılımcılıktır. Büyük olasılıkla da buradaki başlangıç noktası karşılıklı anlayış olacaktır. Akdeniz’deki hassas dengelerin istikrara kavuşmasına katkıda bulunacak unsurlar yalnızca uluslararası işbirliği, küresel ticaret ve kültürel alışveriştir. Bu nedenle, önümüzdeki soru şudur: Akdeniz’in bugünkü siyasi ve iktisadi potansiyelini keşfetmek ve daha iyi anlamak için tarihten hangi dersler çıkarılabilir? Tarihteki Akdeniz ile bugünkü Akdeniz arasındaki çarpıcı benzerlikleri gösteren bazı tarihsel betimlemeler varlığını ısrarlı bir biçimde sürdürür ve şaşırtıcı şekilde geri döner."
+  },
+  "keywords": {
+    "en": [
+      "Atlantic Ocean",
+      "eastern hemisphere",
+      "hegemony",
+      "Mediterranean Sea",
+      "new world order"
+    ],
+    "tr": [
+      "Akdeniz",
+      "Atlas Okyanusu",
+      "doğu yarıküre",
+      "hegemonya",
+      "yeni dünya düzeni"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 1,
+    "year": "2020-2021",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "49",
+    "last": "60"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Pietzcker, D. (2020/2021). From “Mare Nostrum” to international maritime cooperation: How history can offer constructive answers to future prospects in the Mediterranean. Belt & Road Initiative Quarterly, 2 (1), 51-62.",
+    "tr": "Pietzcker, D. (2020/2021). “Mare Nostrum”dan denizlerde uluslararası işbirliğine: Tarih, Akdeniz’in geleceği ile ilgili beklentilere nasıl yapıcı yanıtlar sunabilir? Kuşak ve Yol Girişimi Dergisi, 2 (1), 49-60."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/mare-nostrumto-international-maritime-cooperation-how-history-can-offer-constructive-answers-future",
+    "tr": "https://briqjournal.com/mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/From%20%E2%80%9CMare%20Nostrum1%E2%80%9Dto%20International%20Maritime%20Cooperation%20How%20History%20Can%20Offer%20Constructive%20Answers%20to%20Future%20Prospects%20in%20the%20Mediterranean.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/Mare%20Nostrumdan1%20Denizlerde%20Uluslararas%C4%B1%20%C4%B0%C5%9Fbirli%C4%9Fine%20Tarih%2C%20Akdeniz%E2%80%99in%20Gelece%C4%9Fi%20%C4%B0le%20%C4%B0lgili%20Beklentilere%20Nas%C4%B1l%20Yap%C4%B1c%C4%B1%20Yan%C4%B1tlar%20Sunabilir.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

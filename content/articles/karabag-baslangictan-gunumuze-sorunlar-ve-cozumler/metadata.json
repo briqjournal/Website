@@ -1,25 +1,95 @@
 {
-  "slug": "karabag-baslangictan-gunumuze-sorunlar-ve-cozumler",
-  "volume": 2,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2020-2021",
-  "author": "Dr.Arif Acaloğlu",
-  "title_tr": "Karabağ: Başlangıçtan Günümüze Sorunlar ve Çözümler",
-  "abstract_tr": "Uzun süreden beri bölge devletlerini ve küresel güçleri meşgul eden Karabağ sorunu, 27 Eylül 2020’de başlayan 2. Karabağ Savaşı'yla tekrar küresel gündemin merkezine oturdu. Askeri harekat artık durdurulmuş olsa da, 30 yıldan fazla bir süre devam eden bu çatışmanın hemen sonlanmayacağı, Azerbaycan’ın toprak bütünlüğü sağlanıncaya kadar devam ettirileceği, barış sürecinde zorlu tartışmalar yaşanacağı açıktır. En baştan beri konuyla ilgili çok sayıda akademik ve popüler yayın yapıldı, bitmez tükenmez toplantılar düzenlendi. Bununla beraber konunun derli toplu biçimde ele alındığı; tarihsel, etnik, kültürel, mezhepsel, siyasal ve hukuki boyutların bütüncül bir bakış açısıyla değerlendirildiği çalışmalar çok da fazla değildir. Oysa Karabağ bölgesindeki halkın ekonomik uğraş alanları ve yöntemleri, mezhepsel özellikleri, etnik yapısı, siyasi tarihi, dış ilişkileri gibi hususlar, uzun yıllardır yaşanan bu çatışmaların arka planının yanı sıra, seyir özelliklerini ve muhtemel sonuçlarını anlamak açısından önemlidir. Çatışan tarafların öne sürdükleri tezlerde bu hususlara (özellikle ilk başlarda) birinci dereceden önem verilmekteydi. Bütün bunların bir arada ele alınması bir dizi zorluklarla karşılaşsa da, en azından temel başlıkların birbiriyle bağlantısı kurularak, olayların kökenleri ve gelişim sürecine ilişkin bir kanaat oluşturulabilir. Bu çalışmada siyasal tartışmaların yoğun ortamında gözardı edilen bazı hususlar da dikkat alınarak, konuyla ilgili bütüncül bir yaklaşım denemesi gerçekleştirildi. \n Anahtar Kelimeler: Azerbaycan, barış inşası, çatışma, Ermanistan, Karabağ",
-  "source_tr": "https://briqjournal.com/karabag-baslangictan-gunumuze-sorunlar-ve-cozumler",
-  "source_en": "https://briqjournal.com/en/problems-and-solutions-the-karabakh-conflict-the-beginning-today",
-  "title_en": "Problems and Solutions in the Karabakh Conflict: From the Beginning to Today",
-  "abstract_en": "Abstract \n The Karabakh conflict –which had preoccupied regional and global powers for a prolonged period– has once again become the center of attention with the Second Karabakh War that started on September 27, 2020. Despite the end of military operations, it is clear that this conflict, which lasted for more than 30 years, will not be solved immediately, and that there will be long arguments during the peace negotiations until the territorial integrity of Azerbaijan is secured. From the very beginning of the conflict, long-drawn meetings were organized, and many works have been published in academic and popular literature about the issue. However, there is a significant lack of studies that holistically address the historical, ethnic, cultural, religious, political, and legal aspects of the problem. One could argue that the matters of foreign relations, political history, ethnic composition, religious characteristics, and the economic life of the people living in Karabakh are of particular importance in understanding not only the background of the conflict but also its trajectory and possible outcomes. Such matters have shaped a large part of the arguments of the opposing sides, especially in the early days of the conflict. Despite the difficulties in dealing with these matters all at once, it is possible to establish an overall opinion on the causes and the progression of events by revealing the connections between the major topics at hand. In this work, an attempt is made for a more holistic approach to the matter by taking into consideration certain points that are often overlooked in the heat of political arguments. \n Keywords: Armenia, Azerbaijan, conflict, Karabakh, peace building",
-  "citation_tr": "Atıf \n Acaloğlu, A. (2020/2021). Karabağ: Başlangıçtan günümüze sorunlar ve çözümler. Kuşak ve Yol Girişimi Dergisi, 2 (1), 76-93.",
-  "citation_en": "Citation \n Acaloğlu, A. (2020/2021). Problems and solutions in the Karabakh conflict: From the beginning to today. Belt & Road Initiative Quarterly, 2 (1), 77-93.",
-  "pages": "76-93",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/Karaba%C4%9F%20Ba%C5%9Flang%C4%B1%C3%A7tan%20G%C3%BCn%C3%BCm%C3%BCze%20Sorunlar%20ve%20%C3%87%C3%B6z%C3%BCmler.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/Problems%20and%20Solutions%20in%20the%20Karabakh%20Conflict%20From%20the%20Beginning%20to%20Today.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/karabag-baslangictan-gunumuze-sorunlar-ve-cozumler-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/karabag-baslangictan-gunumuze-sorunlar-ve-cozumler-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "karabag-baslangictan-gunumuze-sorunlar-ve-cozumler",
+  "articleType": {
+    "id": "perspective-piece",
+    "tr": "Görüş Makalesi",
+    "en": "Perspective Piece",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Problems and Solutions in the Karabakh Conflict: From the Beginning to Today",
+    "tr": "Karabağ: Başlangıçtan Günümüze Sorunlar ve Çözümler"
+  },
+  "authors": [
+    {
+      "displayName": "Arif Acaloğlu",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "The Karabakh conflict –which had preoccupied regional and global powers for a prolonged period– has once again become the center of attention with the Second Karabakh War that started on September 27, 2020. Despite the end of military operations, it is clear that this conflict, which lasted for more than 30 years, will not be solved immediately, and that there will be long arguments during the peace negotiations until the territorial integrity of Azerbaijan is secured. From the very beginning of the conflict, long-drawn meetings were organized, and many works have been published in academic and popular literature about the issue. However, there is a significant lack of studies that holistically address the historical, ethnic, cultural, religious, political, and legal aspects of the problem. One could argue that the matters of foreign relations, political history, ethnic composition, religious characteristics, and the economic life of the people living in Karabakh are of particular importance in understanding not only the background of the conflict but also its trajectory and possible outcomes. Such matters have shaped a large part of the arguments of the opposing sides, especially in the early days of the conflict. Despite the difficulties in dealing with these matters all at once, it is possible to establish an overall opinion on the causes and the progression of events by revealing the connections between the major topics at hand. In this work, an attempt is made for a more holistic approach to the matter by taking into consideration certain points that are often overlooked in the heat of political arguments.",
+    "tr": "Uzun süreden beri bölge devletlerini ve küresel güçleri meşgul eden Karabağ sorunu, 27 Eylül 2020’de başlayan 2. Karabağ Savaşı'yla tekrar küresel gündemin merkezine oturdu. Askeri harekat artık durdurulmuş olsa da, 30 yıldan fazla bir süre devam eden bu çatışmanın hemen sonlanmayacağı, Azerbaycan’ın toprak bütünlüğü sağlanıncaya kadar devam ettirileceği, barış sürecinde zorlu tartışmalar yaşanacağı açıktır. En baştan beri konuyla ilgili çok sayıda akademik ve popüler yayın yapıldı, bitmez tükenmez toplantılar düzenlendi. Bununla beraber konunun derli toplu biçimde ele alındığı; tarihsel, etnik, kültürel, mezhepsel, siyasal ve hukuki boyutların bütüncül bir bakış açısıyla değerlendirildiği çalışmalar çok da fazla değildir. Oysa Karabağ bölgesindeki halkın ekonomik uğraş alanları ve yöntemleri, mezhepsel özellikleri, etnik yapısı, siyasi tarihi, dış ilişkileri gibi hususlar, uzun yıllardır yaşanan bu çatışmaların arka planının yanı sıra, seyir özelliklerini ve muhtemel sonuçlarını anlamak açısından önemlidir. Çatışan tarafların öne sürdükleri tezlerde bu hususlara (özellikle ilk başlarda) birinci dereceden önem verilmekteydi. Bütün bunların bir arada ele alınması bir dizi zorluklarla karşılaşsa da, en azından temel başlıkların birbiriyle bağlantısı kurularak, olayların kökenleri ve gelişim sürecine ilişkin bir kanaat oluşturulabilir. Bu çalışmada siyasal tartışmaların yoğun ortamında gözardı edilen bazı hususlar da dikkat alınarak, konuyla ilgili bütüncül bir yaklaşım denemesi gerçekleştirildi."
+  },
+  "keywords": {
+    "en": [
+      "Armenia",
+      "Azerbaijan",
+      "conflict",
+      "Karabakh",
+      "peace building"
+    ],
+    "tr": [
+      "Azerbaycan",
+      "barış inşası",
+      "çatışma",
+      "Ermanistan",
+      "Karabağ"
+    ]
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 1,
+    "year": "2020-2021",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "76",
+    "last": "93"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Acaloğlu, A. (2020/2021). Problems and solutions in the Karabakh conflict: From the beginning to today. Belt & Road Initiative Quarterly, 2 (1), 77-93.",
+    "tr": "Acaloğlu, A. (2020/2021). Karabağ: Başlangıçtan günümüze sorunlar ve çözümler. Kuşak ve Yol Girişimi Dergisi, 2 (1), 76-93."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/problems-and-solutions-the-karabakh-conflict-the-beginning-today",
+    "tr": "https://briqjournal.com/karabag-baslangictan-gunumuze-sorunlar-ve-cozumler",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/Problems%20and%20Solutions%20in%20the%20Karabakh%20Conflict%20From%20the%20Beginning%20to%20Today.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-01/Karaba%C4%9F%20Ba%C5%9Flang%C4%B1%C3%A7tan%20G%C3%BCn%C3%BCm%C3%BCze%20Sorunlar%20ve%20%C3%87%C3%B6z%C3%BCmler.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/karabag-baslangictan-gunumuze-sorunlar-ve-cozumler-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/karabag-baslangictan-gunumuze-sorunlar-ve-cozumler-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
