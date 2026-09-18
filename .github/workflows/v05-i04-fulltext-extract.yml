@@ -86,6 +86,7 @@ jobs:
           subprocess.run(["git", "add", "--", *paths], check=True)
           PY
           git commit -m 'Build v05-i04 canonical prose candidates'
+          git pull --rebase origin chore/v05-i04-fulltext-canonical
           git push origin HEAD:chore/v05-i04-fulltext-canonical
 
       - name: Validate candidate structure
