@@ -1,4 +1,5 @@
 name: Build v05-i04 full-text candidates
+# text-first rerun
 
 on:
   pull_request:
