@@ -2,21 +2,40 @@
   "sections": [
     {
       "id": "tr-section-1",
-      "title": "Tam metin",
+      "title": "CAHİT KÜLEBİ",
       "paragraphs": [
-        "Senin dudakların pembe Ellerin beyaz, Al tut ellerimi bebek Tut biraz! Benim doğduğum köylerde Ceviz ağaçları yoktu, Ben bu yüzden serinliğe hasretim Okşa biraz! Benim doğduğum köylerde Buğday tarlaları yoktu, Dağıt saçlarını bebek Savur biraz! Benim doğduğum köyleri Akşamları eşkıyalar basardı, Ben bu yüzden yalnızlığı hiç sevmem Konuş biraz! Benim doğduğum köylerde İnsanlar gülmesini bilmezdi, Ben bu yüzden böyle naçar kalmışım Gül biraz! Benim doğduğum köylerde Kuzey rüzgarları eserdi, Hep bu yüzden dudaklarım çatlaktır Öp biraz! Sen Türkiye gibi aydınlık ve güzelsin! Benim doğduğum köyler de güzeldi Sen de anlat doğduğun yerleri, Anlat biraz!"
+        "*Cahit Külebi (1917-1997), Tokat’ın Zile ilçesi Çeltek köyünde (20 Aralık 1917) doğdu. Ortaöğrenimini 1936’da Sivas Lisesi’nde, yükseköğrenimini 1940'ta İstanbul Yüksek Öğretmen Okulu Türk Dili ve Edebiyatı Bölümü’nde tamamladı. İsviçre’ye kültür ataşesi ve öğrenci müfettişi olarak atandı. Yurda dönünce Milli Eğitim Bakanlığı’nda başmüfettişlik ve kültür müsteşar yardımcılığı yaptı. Türk Dil Kurumu Genel Sekreterliği’ni üstlendi (1978-1982). İlk şiiri 1938’de “Gençlik” dergisinde yayımlandı. Şiirlerinde Anadolu halkının yaşamını işledi. Batı kaynaklı şiir akımlarına ve döneminin edebiyatının yerel yansımalarına değil, Türk kültürünün ulusal kaynaklarına değer verdi. Mustafa Kemal Atatürk ve Türk Kurtuluş Savaşını anlatan şiirler kaleme aldı. “Yeni Halk Şiiri” akımının öncülüğünü yaptı. Şiirlerine okul kitaplarında yer verildi. Yapıtlarıyla 1955 Türk Dil Kurumu Edebiyat Ödülü’nü, 1981 Yeditepe Şiir Ödülü’nü ve 1996 Cumhurbaşkanlığı Kültür ve Sanat Büyük Ödülünü kazandı. 1983’te SODEP ve Sosyal Demokrat Halkçı Parti kuruculuğu, Merkez Yönetim Kurulu üyeliği yaptı. 20 Haziran 1997'de Ankara’da hayatını kaybeden usta şair, Niksar’da toprağa verilmiştir."
+      ]
+    },
+    {
+      "id": "tr-section-2",
+      "title": "HİKAYE",
+      "paragraphs": [
+        "Senin dudakların pembe  \nEllerin beyaz,  \nAl tut ellerimi bebek  \nTut biraz!",
+        "Benim doğduğum köylerde  \nCeviz ağaçları yoktu,  \nBen bu yüzden serinliğe hasretim  \nOkşa biraz!",
+        "Benim doğduğum köylerde  \nBuğday tarlaları yoktu,  \nDağıt saçlarını bebek  \nSavur biraz!",
+        "Benim doğduğum köyleri  \nAkşamları eşkıyalar basardı,  \nBen bu yüzden yalnızlığı hiç sevmem  \nKonuş biraz!",
+        "Benim doğduğum köylerde  \nİnsanlar gülmesini bilmezdi,  \nBen bu yüzden böyle naçar kalmışım  \nGül biraz!",
+        "Benim doğduğum köylerde  \nKuzey rüzgarları eserdi,  \nHep bu yüzden dudaklarım çatlaktır  \nÖp biraz!",
+        "Sen Türkiye gibi aydınlık ve güzelsin!  \nBenim doğduğum köyler de güzeldi  \nSen de anlat doğduğun yerleri,  \nAnlat biraz!",
+        "1944"
       ]
     }
   ],
   "keywords": [],
   "footnotes": [],
-  "references": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Külebi, C. (1998). Hikaye. Bütün Şiirleri (s. 14), Adam Yayınları."
+    }
+  ],
   "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
       "src": "/assets/article-figures/hikaye-siir/figure-01.jpg",
-      "caption": "Görsel 1"
+      "caption": "Cahit Külebi"
     }
   ]
 }
