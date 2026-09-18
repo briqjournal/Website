@@ -1,0 +1,275 @@
+{
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Giriş",
+      "paragraphs": [
+        "KALKINMA, DÜNYA ÇAPINDAKİ TÜM ÜLKELER için temel bir hedeftir, ancak dünya nüfusunun büyük bir kısmı, “gelişmiş” ülkeler yerine genellikle “gelişmekte olan” veya “yükselen” olarak sınıflandırılan ülkelerde yaşamaktadır. Dünya genelinde geniş alanlara yayılan ve dünya nüfusunun büyük bölümünü oluşturan bu ülkeler, gelişmiş ülkelerdeki yaşam standartlarına ulaşmak konusunda zorlu engellerle karşı karşıyadır. Kalkınmayı ölçmek için hangi ölçüt -ister gayri safi yurtiçi hasıla (GSYH) gibi ekonomik göstergeler, ister sağlık ve eğitim gibi sosyal metrikler veya çevresel sürdürülebilirlik endeksleri- kullanılırsa kullanılsın, çok sayıda ülke hâlâ “gelişmiş” veya “yüksek gelirli” sınıflandırmasına girememektedir.",
+        "Afrika, Latin Amerika, Asya ve Okyanusya’nın bazı bölgelerini içeren bu ülkeler için kalkınma sorunu, yalnızca akademik bir mesele değil, doğrudan milyarlarca insanın günlük yaşamını etkileyen ve acil çözüm bekleyen bir olgudur. Kalkınma hızını artırmak, yaşam kalitesini iyileştirmek ve çevresel sürdürülebilirliği dengelemek, 21. yüzyılın en büyük zorlukları arasında yer almaktadır. Bu acil ihtiyaca yanıt olarak ortaya çıkan “Küresel Güney” kavramı, “çoğunlukla Güney Yarımküre’de bulunan ve dünya nüfusunun yaklaşık yüzde 80’ine ev sahipliği yapan tüm yükselen ve gelişmekte olan ülkeler” olarak tanımlanabilir (Büyüktanır Karacan ve Ruffini, 2023). Bu terim sadece coğrafi bir referans değil, aynı zamanda siyasi ve ekonomik bir tanımlamadır. Küresel Güney, sömürgecilik, ekonomik marjinalleşme ve kalkınma mücadeleleri gibi ortak tarihsel deneyimlere sahip ülkelerin yanı sıra, daha varlıklı olan Küresel Kuzey’e yetişme arzusunu da temsil etmektedir. “Küresel Doğu” terimi de aynı ülke grubunu belirtmek için kullanılabilir (Sun ve Yang, 2024).",
+        "Kalkınma çabalarında kritik bir faktör, bilim, teknoloji ve yenilik (BTY) sistemlerinin oynadığı roldür. Ekonomik büyüme, toplumsal ilerleme ve hatta çevresel sürdürülebilirliğin bir ülkenin BTY yeteneklerinin gücüne bağlı olduğu konusunda bilim insanları, politika yapıcılar ve kalkınma uzmanları arasında yaygın bir görüş birliği vardır. Gelişmiş BTY sistemleri, teknolojik gelişmeleri hızlandırır, yeni endüstriler yaratır, verimliliği artırır ve sağlık hizmetlerinden iklim değişikliğine kadar çeşitli toplumsal sorunlara çözümler sunar. Aslında, birçok gelişmiş ülke, refahının büyük bir kısmını sürekli olarak büyümelerini destekleyen sağlam ve yerleşik yenilik ekosistemlerine borçludur.",
+        "Küresel Güney ülkeleri için güçlü BTY sistemleri kurmanın önemi her zamankinden daha fazladır. Dünya, şu anda hızlı ve derin bir dönüşüm sürecinden geçmektedir: Tedarik zincirleri yeniden yapılandırılmakta, jeopolitik dinamikler hızla değişmekte ve iklim değişikliği insan toplumlarına benzeri görülmemiş riskler getirmektedir. Bu değişimler, Küresel Güney ülkeleri için hem zorluklar hem de fırsatlar yaratmaktadır. Bir yandan, ticaretteki aksamalar, ekonomik dalgalanmalar ve çevresel felaketler gibi yeni tehditlerle başa çıkmak zorundadırlar. Öte yandan, küresel ekonominin yeniden yapılandırılması, bu ülkelerin küresel değer zincirlerine daha derinlemesine entegre olmaları ve gelişen teknolojileri benimseyerek bazı kalkınma aşamalarını atlamaları için fırsatlar sunmaktadır.",
+        "Ancak, BTY sistemleri açısından Küresel Güney ile Küresel Kuzey’in gelişmiş ülkeleri arasındaki fark belirgindir. Bu farkın kapatılması, yalnızca kademeli iyileştirmelerle değil, güçlü, son derece verimli ve iyi koordine edilmiş yenilik sistemlerinin kurulmasıyla mümkündür. Dahası, bu sistemler, hızla değişen küresel koşullara yanıt verebilecek esnekliğe ve uyum yeteneğine sahip olmalıdır.",
+        "Bu acil ihtiyaçlara rağmen, Küresel Güney, bu tür sistemleri kurmakta önemli engellerle karşı karşıyadır. Başlıca zorluklar arasında araştırma ve geliştirme (Ar-Ge) için yetersiz finansman, zayıf kurumsal kapasite, nitelikli profesyonel eksikliği, yetenekli bireylerin daha iyi fırsatlar aramak için yurt dışına gitmesi olarak tanımlanan “beyin göçü” olgusu ve en önemlisi bilginin tekelleştirilmesi yer almaktadır. Ayrıca, birçok Küresel Güney ülkesi, siyasi istikrarsızlık, yolsuzluk ve zayıf yönetim gibi BTY altyapısına uzun vadeli yatırımı engelleyen sorunlarla mücadele etmektedir. Bunun yanı sıra, iklim değişikliği ve çevresel bozulmanın etkileri bu ülkeleri orantısız bir şekilde etkilemekte, kalkınma zorluklarına ek bir karmaşıklık katmanı eklemektedir.",
+        "Bu engellerin üstesinden gelmek, çok yönlü bir yaklaşım gerektirir. Küresel Güney’deki ulusal hükümetler, yeniliği ve bilimsel ilerlemeyi teşvik eden etkili politikalar uygulamalıdır, ancak bu çabalar tek başına yeterli olmayacaktır. Zorluklar, yalnızca ulusal düzeyde çözülebilecek kadar küçük ve izole değildir. Bu nedenle, uluslararası işbirliği hayati önem taşımaktadır. Bölgesel ve küresel ortaklıklar, kaynakların bir araya getirilmesi, bilginin paylaşılması ve çabaların koordine edilmesine yardımcı olarak tüm taraflar için sinerji yaratabilir.",
+        "Bu makale, bu acil sorunları kapsamlı bir şekilde incelemektedir. İlk olarak, Küresel Güney ülkelerinde etkin BTY sistemlerinin kurulması önünde ulusal düzeydeki engeller ele alınmaktadır. Ardından, ulusal düzeydeki çözümler tartışılmakta ve Küresel Güney ülkelerinin BTY hedeflerini desteklemek için uluslararası işbirliğinin gerekli olduğu gösterilmektedir. Makale, uluslararası bağlamdaki zorlukların analizine ilerlemekte, Küresel Güney ülkelerinin uluslararası işbirliğini teşvik eden çeşitli uluslararası organizasyonları listelemekte ve işbirliği modellerini tartışmaktadır. Son olarak, BTY sistemlerini güçlendirmek ve 21. yüzyılın zorluklarıyla başa çıkmak için gerekli yenilik ekosistemlerini inşa etmek amacıyla ortak projeleri destekleyen bir organizasyon modeli önerilmektedir."
+      ]
+    },
+    {
+      "id": "tr-section-2",
+      "title": "Zayıf Sanayi Altyapısı ve Yenilik Sistemlerindeki Rolü",
+      "paragraphs": [
+        "İkinci büyük zorluk, Küresel Güney ülkelerinin sanayi altyapılarının zayıflığıdır. İyi işleyen bir yenilik sisteminde, sanayi sektörleri yalnızca yeni teknolojilere ve ürünlere talep yaratarak değil, aynı zamanda araştırma ve yenilik sonuçlarını daha geniş ekonomiye entegre ederek de kilit bir rol oynar. Sanayi yenilikleri ticarileştirir ve bu da daha fazla araştırma ve geliştirmeyi teşvik eder. Ne yazık ki, Küresel Güney’in büyük bir bölümündeki sanayi sektörleri gelişmemiş durumdadır ve çoğunlukla gelişmiş ülkelerden ithal edilen teknolojilere bağlıdır.",
+        "Bu bölgelerdeki sanayi genellikle düşük maliyetli, emek-yoğun üretime yöneliktir ve yüksek teknolojiye dayalı, yenilik odaklı sektörlerden ziyade bu alanlarda faaliyet göstermektedir. Teknolojik ilerlemeler ve ekonomik büyüme için motor işlevi görebilecek olan yerel sanayiler, genellikle ulusal yenilik sistemini destekleyecek kadar güçlü değildir. Gelişmiş teknolojilere yönelik yeterli talep yaratmadıkları gibi, yeniliği teşvik eden küresel değer zincirlerine de anlamlı bir katkı sağlamazlar.",
+        "İş gücü ve sanayi zorluklarının ötesinde, birçok Küresel Güney ülkesinde yasal ve kültürel ortam da yeniliği engellemektedir. Güçlü bir yenilik sistemi, fikri mülkiyeti koruyan, Ar-Ge fonlamasını düzenleyen ve girişimciliği teşvik eden yasalar gerektirir. Ne yazık ki, birçok Küresel Güney ülkesinde bu yasal çerçeveler ya zayıf ya da yanlıdır. Çoğunlukla yasalar, yerel yeniliği teşvik etmek yerine, çok uluslu şirketlerin haklarını koruma amacını taşır.",
+        "Ayrıca, bu ülkelerin pek çoğundaki kültürel ortam, geleneksel olarak girişimciliği teşvik etmemektedir (Davids vd., 2021) (Adegbile vd., 2021). Birçok genç, toplumsal normlar veya destek sistemlerinin eksikliği nedeniyle girişimcilik faaliyetlerinde bulunmaktan kaçınmaktadır. Forje (2009), birçok Küresel Güney ülkesinin sömürge geçmişinin, risk alma ve yenilik yapma eğilimlerini bastırarak, girişimcilik içgüdülerini azalttığını ve bu nedenle risk alma ve yeniliğin değersiz görüldüğü bir miras yarattığını öne sürmektedir.",
+        "Kültürel engellere ek olarak, yaygın yolsuzluk ve nepotizm, yenilik sistemlerinin inşasında ciddi zorluklar teşkil etmektedir. Yolsuzluk (Senadjki vd., 2021) (Panagiotakopoulos, 2020), kurumların itibarını sarsar, kaynakları yanlış tahsis eder ve liyakatin çoğunlukla kişisel bağlantılar lehine göz ardı edildiği bir ortam yaratır. Bu durum, yetenekli bireyleri sistemden uzaklaştırır ve rekabeti, dolayısıyla da yeniliği engeller. Nepotizm ise bu sorunları daha da pekiştirir; kayırmacılığı teşvik eder ve gerçek yenilikçilerin ortaya çıkma şansını azaltır."
+      ]
+    },
+    {
+      "id": "tr-section-3",
+      "title": "Ulusal Yenilik Sistemlerini Geliştirme: Zorluklar, Fırsatlar ve Stratejik Yaklaşımlar",
+      "paragraphs": [
+        "Küresel Güney’de güçlü ve sürdürülebilir bir yenilik sistemi kurmak, pek çok engelle dolu zorlu bir görevdir. Bu ülkeler beyin göçü, zayıf sanayi altyapısı, kırılgan yasal çerçeveler ve gelişmemiş araştırma altyapısı gibi sorunlarla karşı karşıyadır. Ancak, ileriye dönük yol zor olsa da, aşılamaz değildir. Anahtar, her ülkenin kendine özgü sosyo-ekonomik ve politik koşullarına uygun politikalar tasarlamaktır. Tarihin de gösterdiği gibi, gelişmiş ülkelerin politikalarını doğrudan Küresel Güney’e taşımak genellikle etkili olmamaktadır (Jauhiainen ve Hooli, 2017) (Jauhiainen ve Hooli, 2019). Küresel Güney ülkelerinin kendi içinde de oldukça heterojen olduğu düşünüldüğünde, uygun politikalar farklılık gösterebilir. Ancak bu makale, temel yaklaşımlar üzerine odaklanmaktadır.",
+        "Küresel Güney’deki yenilik sistemleri için en acil sorunlardan biri, yetenekli iş gücünün sürekli olarak Küresel Kuzey’e kaymasıdır. Yıllar boyunca, ülkeler bu beyin göçünü zorlayıcı önlemlerle, örneğin zorunlu hizmet gereksinimleriyle durdurmaya çalışmıştır. Ne yazık ki, bu çabalar genellikle sınırlı yararlar sağlamıştır. Ancak son dönemdeki küresel dinamiklerdeki değişiklikler, potansiyel bir değişimi işaret etmektedir. Almanya gibi ülkeler yabancı yetenekleri çekmeye yönelik politikalar geliştirse de (Cerna ve Chou, 2023), artan yabancı düşmanlığı, göçmen karşıtı politikalar ve Kuzey ülkelerindeki ekonomik durgunluk, beyin göçünü yavaşlatmaya başlamaktadır. Bu çekim faktörlerindeki azalmanın, kaynak ülkelerin yetişmiş iş gücünün kalmasını daha cazip hale getirecek çözümlere odaklanması için bir fırsat sunduğunu söyleyebiliriz.",
+        "Yetişmiş iş gücünü elde tutmak, kısıtlayıcı politikalar yürürlüğe koymaktan çok (Marsh ve Oyelere, 2018) profesyonel tatmin sunan, adil ücretlendirme ve destekleyici bir çalışma atmosferi sağlamakla ilgilidir. Örneğin, Yunanistan’da Panagiotakopoulos (2020), beyin göçünü tetikleyen ana etkenlerin finansal değil, yönetişim sorunları, yolsuzluk ve toplumsal değerlerin aşınmasıyla ilgili olduğunu göstermiştir. Adesoto ve Osunkaya (2018), eğitimli insanların becerilerini kullanabileceği işlerin bulunmamasını itici faktörlerden biri olarak belirtmiştir. Korsi (2022), geleneksel itici ve çekici faktörlerin yanı sıra, sosyal ağların ve medeni durumun giderek daha önemli hale geldiğini, bu yüzden iyi yönetişim ve demokratik ilkelerin uygulanmasının beyin göçünü yavaşlatabileceğini öne sürmektedir.",
+        "Ancak bu öneriler, genel kalkınma düzeyine ve dolayısıyla yenilik sistemine bağlı olup bir kısır döngü yaratmaktadır. Genel yenilik ekosistemini iyileştirmek için yaygın kurumsal reformlara ulaşmak zaman alabilirken, bir ülke içinde üniversiteler, araştırma merkezleri ve teknoloji parkları gibi “mükemmeliyet adaları” yaratmak, acil bir küçük ölçekli çözüm sağlayabilir. Daha iyi altyapı, yönetişim ve yaşam koşullarıyla donatılmış bu yenilik merkezleri, beyin göçünü yavaşlatmaya ve yerli yetenekleri geliştirmeye yardımcı olabilir.",
+        "Küresel Güney için bir diğer önemli faktör, belirli güçlü yönler ve kalkınma hedefleriyle uyumlu araştırma önceliklerini belirlemektir. Altenburg (2009), gelişmiş ülkelerle yüksek teknoloji alanlarında rekabet etmenin genellikle ne mümkün ne de tavsiye edilebilir olduğunu öne sürmektedir. Bunun yerine, mevcut teknolojilerin uygulanması ve yaygınlaştırılmasına odaklanmak daha pragmatik bir yaklaşım olabilir. Kanımızca, bu alanlarda bir temel inşa etmek önemli olsa da, yüksek teknoloji gelişiminden tamamen vazgeçmek kısa vadeli olacaktır. Confraria ve arkadaşları (2017), sınırlı kaynakların, ülkenin karşılaştırmalı avantajının olduğu niş alanlara odaklanmasının, küresel düzeyde rekabet edebilmek için gereken kritik kütleyi oluşturabileceğini öne sürmektedir. Daha sonra açıklanacağı gibi, benzer zorluklar ve hedeflere sahip komşu ülkeler arasında bölgesel işbirliği bu süreci kolaylaştırabilir. Kaynakları bir araya getirerek ve bilgiyi paylaşarak, Küresel Güney ülkeleri uzmanlık ve finansman eksikliklerini aşabilirler.",
+        "İyi işleyen bir yenilik sistemi, üniversiteler, sanayi ve hükümet arasındaki yakın işbirliğini gerektirir. “Üçlü sarmal” modeli (Etzkowitz ve Leydesdorff, 2000), inovasyonu desteklemek için bu üç sütun arasındaki kritik etkileşimleri vurgulamaktadır (Kadhila vd., 2024). Anahtar sektörlere odaklanmış teknoloji parkları ve devlet laboratuvarlarının kurulması, bu işbirliğini hızlandırabilir. Ancak zorluk, bu modellerin Küresel Güney ülkelerinin kendine özgü sosyal, ekonomik ve politik koşullarına uyarlanmasında yatmaktadır. Bir bölgede işe yarayan bir şey, yönetim, kaynaklar ve sanayi kabiliyetlerindeki büyük farklılıklar nedeniyle başka bir bölgede işe yaramayabilir (Owuondo, 2023).",
+        "Bu nedenle, başarılı bir yenilik sistemi için evrensel bir şablon yoktur. Politika yapıcılar, benzer ülkelerin başarılarından ve başarısızlıklarından yararlanmalı ve stratejileri yerel gerçeklikleri yansıtacak şekilde şekillendirmelidir. Uluslararası işbirliği ve bilgi paylaşım platformları burada kritik bir rol oynayabilir; ülkeler birbirlerinden öğrenirken, kendi özgün ihtiyaçlarına uygun yaklaşımları özelleştirme fırsatı bulabilirler.",
+        "Küresel Güney’de yeniliği hızlandırmak için en umut verici yollarından biri, daha gelişmiş ülkelerden teknoloji transferidir. Bu süreç, ortaklıklar, doğrudan yabancı yatırımlar ve ortak girişimler gibi resmi mekanizmalar veya dolaylı olarak sızıntı etkileri yoluyla gerçekleşebilir. Ancak Vietnam’dan elde edilen araştırmalar, teknoloji sızıntısının genellikle çalışanların hareketliliği veya spin-off firmalar yoluyla otomatik olarak gerçekleşmediğini göstermektedir. Bunun yerine, bilgi yoğun kümeler içindeki sosyal etkileşimlerin daha büyük bir rol oynadığı gözlemlenmiştir (Ngo 2020). Genel olarak, sızıntı etkileri önemli bir mekanizma olarak öne çıkmamaktadır.",
+        "Diğer yandan, teknoloji transferinin başarılı olduğu örnekler de vardır. Hatta bir teknolojik alana daha sonraki bir aşamada giriş yapılmasının, teknoloji belirli bir noktaya ulaştığında avantaj sunduğu nadir durumlar da vardır (geç-gelen avantajı) (Leloglu, 2009). Ancak başarılı teknoloji transferi, alıcı ülkenin bu teknolojileri özümseyip adapte edebilme kapasitesine bağlıdır (Leloglu ve Kocaoglan, 2008) (Nasief ve Basahal, 2023). Özümseme kapasitesi, bir ülkenin teknolojiyi özümseme, iyileştirme ve ticarileştirme yeteneği, nitelikli insan sermayesi, destekleyici kurumlar ve güçlü bir sanayi altyapısı gerektirir. Bu temel unsurlar olmadan, en ileri teknolojiler bile kök salmayabilir.",
+        "Küresel Güney ülkelerinin işlevsel bir yenilik sistemi oluştururken karşılaştığı önemli zorluklardan biri, BTY destek mekanizmalarının finansmanıdır. Bu ülkelerin birçoğu, kırılgan Ar-Ge destek sistemlerini zorlayan mali krizlerle sık sık karşılaşmaktadır. Ar-Ge bütçelerindeki ani kesintiler ilerlemeyi durdurabilir, projeleri sekteye uğratabilir ve yerel teknolojik kapasite inşasında ivme kaybına yol açabilir. Uluslararası Para Fonu’nun (IMF) teşvik ettiği uluslararası kuruluşlar tarafından uygulanan Washington Mutabakatı gibi politikalar, sıklıkla teknolojik yeniliğin rolünü göz ardı ederek bu mali yükü daha da artırmaktadır (Birdsall, De La Torre ve Valencia Caicedo 2010). Ar-Ge harcamalarının GSYİH’nin yüzdesi olarak geliştirilmiş ülkelerdeki seviyelere (yüzde 2’nin üstü) çıkarılması, yeniliği teşvik etmek için kritik önem taşımaktadır. Ancak bu, yenilik sisteminin değer zincirine etkin bir şekilde entegre edilmesiyle mümkün olup, önceki alt bölümlerde ele alınan daha geniş yapısal sorunların çözümüyle yakından ilişkilidir.",
+        "Özetle, başarılı bir yenilik sisteminin bileşenleri birbirine derinlemesine bağlıdır ve böyle bir sistemin geliştirilmesi bütüncül ve tutarlı bir yaklaşım gerektirir. Küresel Güney ülkeleri, kendine özgü koşullarını yansıtan uzun vadeli BTY politikalarını hayata geçirmelidir. Ulusal sistemlerin verimliliğini ve etkinliğini artırmak amacıyla benzer ülkelerin politika başarılarını ve başarısızlıklarını inceleyip yerel koşullara uyarlamak kritik önem taşır; bu, zaman ve kaynak kaybını önlemek için gereklidir. Ancak aşağıda açıklandığı üzere, bunu uluslararası organizasyonlar aracılığıyla yapmak daha etkili olacaktır."
+      ]
+    },
+    {
+      "id": "tr-section-4",
+      "title": "Uluslararası Bağlamda Sorunlar: Kuzey-Güney İşbirliğinde Dengesizlik",
+      "paragraphs": [
+        "Gelişmekte olan ülkelerin bilim, teknoloji ve yenilikte sıçrama yapabilmesi için özellikle Küresel Kuzey ve Güney arasındaki uluslararası işbirliği uzun zamandır önemli bir mekanizma olarak görülmektedir. Ancak pratikte bu işbirliği idealist vizyondan oldukça uzak kalmaktadır. Birçok işbirliği anlaşmasında iyi niyetli çerçeveler ortaya konmasına rağmen, Küresel Güney genellikle ikincil bir pozisyonda kalmakta ve uzun vadeli kalkınma çıkarları göz ardı edilmektedir.",
+        "Kuzey-Güney işbirliğinde en önemli sorunlardan biri, faydaların eşit olmayan dağılımıdır. İlk bakışta bu tür işbirlikleri, daha gelişmiş ülkelerden Küresel Güney’e kaynak ve bilgi aktarımı sağlar gibi görünse de, çoğunlukla Güney’den yetenekli işgücünün daha iyi fırsatlar için Kuzey’e göç etmesine yol açmaktadır. Ayrıca Güney, Kuzey’deki uygulamalı araştırmalara destek sağlayan temel bilimsel araştırmalarla sınırlandırılmakta ve kendi teknolojik yeteneklerini ilerletmesi için gereken bilgi ve altyapıya erişememektedir. Bu dinamik, Küresel Güney’i bağımsız bir yaratım veya yenilikçilik merkezi olmak yerine Kuzey teknolojilerinin bir tüketicisi olma konumuna sıkıştırarak, mevcut döngüyü pekiştirmektedir (Gomes, 2023).",
+        "Bunun yanında, özellikle araştırma projeleri biçiminde gerçekleşen bu işbirlikleri, genellikle yerel araştırmacıları güçlendirememektedir. “Helikopter araştırma” olarak adlandırılan bu sorun özellikle dikkat çekicidir; Güneyli araştırmacılar sadece saha çalışmaları yapmak için kullanılırken, beceri veya bilgi aktarımı anlamında önemli bir kazanım elde edilememektedir. Bu tür işbirlikleri, yerel bilimsel kapasite üzerinde kalıcı bir etki bırakmamakta ve Kuzeyli araştırmacılar ile kurumların hâkimiyetini pekiştirmektedir (Büyüktanır Karacan ve Ruffini 2023). Szczygielski ve arkadaşlarının (2017) AB fonları üzerine yaptığı bir çalışma, yerel hükümet araştırma desteklerinin daha az gelişmiş ülkelerde yeniliği teşvik etmede etkili olduğunu gösterirken, dışarıdan sağlanan AB fonlarının ise yeniliği çoğu zaman engellediğini ortaya koymuştur. Kuzey-Güney işbirliğinde daha büyük bir güç dengesizliği göz önünde bulundurulduğunda, olumsuz etkinin bu durumlarda daha da güçlü olduğu varsayılabilir.",
+        "Bazen bu işbirliğinin doğası, Kuzey’in politika belgelerinde açıkça belirtilmektedir. Örneğin, AB’nin BTY alanındaki işbirliği stratejisini geliştirmekle görevlendirilen bir uzman grubu, önceliklerin ana hedeflerini Birliğin rekabet gücünü desteklemek, toplumsal zorluklarla başa çıkmak ve AB dış politikalarına destek sağlamak olarak raporlamıştır (Serger ve Remøe, 2012).",
+        "Günümüzde dünya, Wallerstein’ın (2020) öne sürdüğü gibi, merkez ve çevre olarak iki kutba ayrılmış durumdadır. Merkez ülkeler, sermaye-yoğun üretimi tekelinde bulundurarak yüksek teknoloji ürünlerini üretip satarken, çevre ülkeler ham madde ve ucuz iş gücü sağlamaktadır. Bu kendi kendini pekiştiren dengesizlik, bilginin de merkezde yoğunlaşmasıyla iki kutup arasındaki uçurumu derinleştirmektedir. Bu bağlamda, uluslararası işbirliği alanında artan bir endişe, bilginin tekelleşmesidir (Rikap, 2023) (Nathan, 2024). İleri teknolojilerin giderek Küresel Kuzey’de, özellikle çok uluslu şirketlerin elinde yoğunlaşmasıyla, Kuzey ve Güney arasındaki teknolojik yeteneklerdeki fark daha da büyümektedir. Yapay zekanın yükselmesi ve çok uluslu şirketlerin veri merkezlerine sahip olması bu trendi hızlandırmıştır. Bu şirketler artık geniş miktarda veri, kaynak ve altyapıyı kontrol ederek, Küresel Güney ülkelerinin küresel yenilik sistemlerinde anlamlı bir şekilde rekabet etmelerini veya katılmalarını daha da zorlaştırmaktadır.",
+        "Bu tekelleşme, yenilik sistemlerini inşa etmeye çalışan Küresel Güney ülkeleri için ciddi bir zorluk oluşturmaktadır. Geçmişte bazı ülkeler, Ar-Ge ve teknoloji transferine yönelik stratejik yatırımlarla bu farkı kapatabilmişti. Ancak, son teknoloji giderek daha merkezi ve özel mülkiyete tabi hale geldikçe, Küresel Güney ülkelerinin kendi yenilik sistemlerini kurmaları, küresel değer zincirlerine entegre olmaları ve ekonomilerini geçmişe kıyasla yükseltmeleri daha da zorlaşmaktadır."
+      ]
+    },
+    {
+      "id": "tr-section-5",
+      "title": "Güney-Güney İşbirliği",
+      "paragraphs": [
+        "Küresel ekonomik ve teknolojik sistemlerin artan karmaşıklığı, Küresel Güney’deki ülkelerin tek tek bağımsız yenilik sistemleri geliştirmelerini ve güçlü çok uluslu şirketlerle ve genel olarak Kuzey’le rekabet etmelerini zorlaştırmıştır. Bu durum, birçok ülkeyi gelişmekte olan ülkeler arasında karşılıklı destek ve ortak kalkınma hedeflerine dayalı bir strateji olan Güney-Güney işbirliğine yöneltmiştir. Böyle bir işbirliği, özellikle BTY gibi alanlarda kaynakları bir araya getirmek, bilgi paylaşmak ve kapasite oluşturmak için uygun bir yol sunmaktadır.",
+        "Göreceli olarak kaynak açısından zengin olan bir Küresel Güney ülkesinin birçok ülke ile kapsamlı ikili işbirliğine girdiği birçok örnek vardır. Örneğin, Simelane (2023), Güney Afrika’nın birçok ülke ile yürüttüğü ikili işbirliklerinin sonuçlarını ele almaktadır. Ancak Afrika ülkelerindeki altyapı eksikliği, üniversite personelinin yetersiz finansman nedeniyle sadece eğitime odaklanması ve beyin göçü gibi zorluklar belirlenmiştir. Doğası gereği, tek bir ülke etrafında yıldız topolojisine göre örgütlenen modeller, optimal çözümler sunma eğiliminde değildir.",
+        "Hindistan, Afrika ülkeleriyle yürüttüğü ikili işbirliği programlarının yanı sıra, Afrika kıtasına yönelik daha geniş kapsamlı bir program da yürütmektedir (Sharma ve Varshney, 2023). Afrika’da kapasite geliştirmeyi hedefleyen burslar ve eğitim programları bu ülkeler için faydalı olsa da, çok taraflı programlar kapasite geliştirmede daha da yardımcı olabilir. Diğer yandan Hindistan, Güneydoğu Asya Ülkeleri Birliği (ASEAN) ve Bengal Körfezi Çok Sektörlü Teknik ve Ekonomik İşbirliği Girişimi (BIMSTEC) gibi bölgesel örgütler çerçevesinde bilimsel ve teknolojik işbirliğine de katılmaktadır.",
+        "Benzer şekilde, Liu ve arkadaşları, Çin’in Kuşak ve Yol Girişimi kapsamında yürüttüğü bilim ve teknoloji işbirliğini özetlemektedir (Liu, vd., 2023). 2016’dan 2021’e kadar, Çin Bilim ve Teknoloji Bakanlığı, insan değişimi, ortak laboratuvarlar, bilim ve teknoloji parkları ve teknoloji transferine odaklanarak binin üzerinde proje yürütmüştür. Eğitim Bakanlığı ise eğitim işbirliğini geliştirmiş ve Çin Ulusal Doğa Bilimleri Vakfı, 2016-2022 yılları arasında yaklaşık bin projeyi desteklemiştir. Ayrıca, Çin Bilimler Akademisi (CAS), Kuşak ve Yol Uluslararası Bilimsel Kuruluşlar İttifakı’nı (ANSO) kurmuştur. Bu büyük ölçekli girişim, Güney-Güney işbirliği çerçevesinde önemli kapasite geliştirme sonuçları doğurmuş olsa da, yukarıda bahsedilen örneklerde olduğu gibi bazı zorluklarla karşılaşmaktadır.",
+        "İkinci bir işbirliği kategorisi, bölgesel örgütler çerçevesinde gerçekleşir. Birçok uluslararası örgüt, özellikle Küresel Güney’de, BTY alanında kapasite geliştirmeye odaklanmaktadır. Bu tür örgütlerin tam olmayan bir listesi Tablo 1’de verilmiştir.",
+        "Bu örgütlerin etkinliğini veya verimliliğini değerlendiren az sayıda rapor bulunduğundan, çeşitli örgüt modellerini karşılaştırmak zordur. Örneğin, Ridley ve Offiong (2022), Afrika Birliği tarafından kabul edilen (African Union, 2014) Afrika 2024 Bilim, Teknoloji ve Yenilik Stratejisi’ni (STISA-2024) değerlendirmiştir. Ridley ve Offiong (2022), STISA-2024’ün ilk beş yılında birçok Afrika ülkesinin BTY politikaları geliştirdiğini, finansal kaynakların çeşitlendiğini ve yayın ile patent sayılarında önemli bir artış olduğunu gözlemlemiştir. Ancak sadece birkaç ülkenin önemli ilerleme kaydettiği, bazı ülkelerin daha da geri kaldığı, yenilik ve girişimciliğin sadece birkaç merkezde yoğunlaştığı ve çoğu fonun Afrika dışından sağlandığı belirtilmiştir. Diğer kıtalardaki benzer girişimlerden ders alınmasının gerekliliği vurgulanmıştır.",
+        "Bazı örgütler, üyelerine BTY politikalarını geliştirmelerine yardımcı olan koordinasyon veya danışma kurulları olarak başlamakta ve ardından ortak projeleri finanse edecek mekanizmalar kurmaktadır. Bazı gevşek modeller, projeyi koordine eder ve ortaklar kendi bilim fonlama kuruluşlarından destek alırken, en güçlü modeller ortak bir fon oluşturur ve projelere bu fondan rekabetçi bir şekilde destek verir. Avrupa Birliği Çerçeve Programlarına benzer güçlü modellerin maksimum etkinliği sağlama ihtimali daha yüksektir. Ancak bu tür modeller, çok sınırlı kaynaklara sahip ülkeler için uygun olmayabilir ve bu ülkeler sağladıkları fon oranında projelerde pay elde edemeyebilirler. Bu nedenle, ortak projelerin finanse edilmesi için yapılandırılmış fakat esnek bir model gereklidir.",
+        "Literatürde, bölgesel örgütler için bir model önerilmiştir (Leloğlu, 2021). Bu model, katılımcıların esnek fon katkılarıyla adil bir getiri ilkesini izleyerek belirli bir araştırma alanını tanımlamalarını önermektedir. Bu, bölgesel veya küresel düzeyde verimli ve etkili bir bilimsel ve teknolojik işbirliği yaratabilir. Tablo 1’de listelenen örgütler arasında BRICS BTY Çerçeve Programı (BRICS STI FP) buna en yakın modeldir. Artan üye sayısı ile BRICS, Küresel Güney’in bir araya gelip ortak zorlukları koordine bir şekilde ele almasına olanak sağlayan bir platform sunarak liderlik rolü üstlenmeye uygun bir konumdadır. BRICS ayrıca, bölgesel örgütler arasında işbirliğini kolaylaştırma, en iyi uygulamaları paylaşma ve bilgi ve kaynakların değişimini teşvik etme rolünü de üstlenebilir.",
+        "Ayrıca, Asya-Pasifik Uzay İşbirliği Örgütü (APS- CO) gibi tematik örgütlerin oluşturulması teşvik edilmelidir (Yan 2021). Burada önemli olan, başlangıçtan itibaren fonlama kurallarının belirlenmesidir. Dengeli katılımla oluşturulmuş bu tür yapılar, Güney-Güney ilişkilerinde, Jouili’nin de uyarıda bulunduğu (Jouili, 2021) Kuzey-Güney ilişkilerinde görülen eşitsizliklerin ortaya çıkması tehlikesini engelleyebilir."
+      ]
+    },
+    {
+      "id": "tr-section-6",
+      "title": "Sonuç",
+      "paragraphs": [
+        "Küresel Güney’deki yenilik sistemlerinin karşılaştığı zorluklar, yetersiz finansman, yetersiz altyapı, uluslararası işbirliğinde eşit olmayan güç dinamikleri ve gelişmiş ülkelerin bilgi ve teknolojiyi tekelleştirmesi gibi çok yönlüdür. Kuzey-Güney işbirlikleri, gelişmekte olan bölgelerde büyümeyi teşvik etmek amacıyla yapılsa da, sıklıkla mevcut dengesizlikleri pekiştirerek Küresel Güney’in kendi kendine yeterli yenilik sistemleri kurma konusundaki özerkliğini sınırlamıştır. Bununla birlikte, Güney-Güney işbirliği, paylaşılan büyüme ve karşılıklı kapasite geliştirme için daha adil bir alternatif yol sunmaktadır.",
+        "Kaynakları bir araya getirerek, bölgesel ve çok taraflı ortaklıkları teşvik ederek ve bilim ve teknoloji alanında ortak kapasite oluşturarak, Küresel Güney ülkeleri yenilik ekosistemlerini güçlendirebilir. Bölgesel ve küresel kapsamda faaliyet gösteren birçok uluslararası örgüt, bu ülkelerde BTY kapasitesini güçlendirmeyi hedeflemektedir. Ancak, bu örgütlerin örgütsel modellerini ve politikalarını karşılaştırmak kolay değildir. Gözlemlenen belirgin bir eğilim, bu örgütlerin sıklıkla koordinasyon organlarından veya danışma kuruluşlarından, doğrudan fon sağlayarak Ar-Ge projelerini destekleyen yapılara doğru evrilmesi ve böylece daha büyük bir etki yaratmasıdır. BRICS BTY Çerçeve Programı (BRICS STI FP), BRICS ülkeleri arasında ortak araştırma girişimleri ve teknoloji transferini teşvik etmede önemli ilerleme kaydeden Güney-Güney BTY işbirliğinin en gelişmiş modellerinden biridir. BRICS STI FP’nin başarısı ve elde edilen deneyimler, benzer bölgesel örgütler için değerli bir referans noktası olarak hizmet ederken deneyimleri paylaşarak ve uyarlanabilir şablonlar sağlayarak işbirliği modellerinin geliştirilmesine katkı sağlayabilir.",
+        "Sürdürülebilir ve rekabetçi bir yenilik ortamı oluşturmak için, Küresel Güney ülkeleri dayanıklı ve bütünleşik yenilik sistemleri geliştirmeye devam etmelidir. Bu, yapılandırılmış fakat esnek bir fonlama ve işbirliği modeli benimsemeyi ve küresel piyasa baskılarına dayanabilecek altyapıyı inşa etmeyi içerir. Sonuç olarak, daha dengeli bir küresel yenilik ortamına ulaşmak, Küresel Güney’i küresel ölçekte rekabet edebilir hale getirecek ve bölge genelinde sürdürülebilir, kapsayıcı kalkınmayı teşvik edecektir."
+      ]
+    }
+  ],
+  "keywords": [],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Adegbile, A. S., Sarpong D., ve Cao, D. (2021). Industry–university collaborations in emerging economies: A legitimacy perspective. IEEE Transactions on Engineering Management, 70(7): 2381-2393."
+    },
+    {
+      "id": "ref-2",
+      "text": "Adesote, S. A., ve Osunkoya, O. A. (2018). The brain drain, skilled labour migration and its impact on Africa’s development, 1990s-2000s. Journal of Pan African Studies 12(1): 395."
+    },
+    {
+      "id": "ref-3",
+      "text": "African Union. (2014). Science, technology and innovation strategy for Africa 2024 ."
+    },
+    {
+      "id": "ref-4",
+      "text": "Altenburg, T. (2009). Building inclusive innovation systems in developing countries: Challenges for IS research. Handbook of Innovation and Developing Countries: Building Domestic Capabilities in a Global Setting i ç inde, yazan B. Lundvall, K. Joseph, C. Chaminade ve J. Vang, 33-56. Cheltenham, UK: Edward Elgar."
+    },
+    {
+      "id": "ref-5",
+      "text": "Birdsall, N., De La Torre A., ve Caicedo, F. V. (2010). The Washington consensus: assessing a damaged brand, (213) . Policy Research Working Paper, Center for Global Development Working Paper."
+    },
+    {
+      "id": "ref-6",
+      "text": "B ü y ü ktanir Karacan, D., ve Ruffini , P. B. (2023). Science diplomacy in the Global South—an introduction. Science and Public Policy 50 (4): 742-748."
+    },
+    {
+      "id": "ref-7",
+      "text": "Cerna, L., ve Chou, M. H. (2023). Talent migration governance and the COVID-19 pandemic: Comparing Germany and Singapore. Journal of Immigrant & Refugee Studies, 21(1): 73-88."
+    },
+    {
+      "id": "ref-8",
+      "text": "Confraria, H., Godinho, M. M., ve Wang, L. (2017). Determinants of citation impact: A comparative analysis of the Global South versus the Global North. Research Policy 46(1): 265-279."
+    },
+    {
+      "id": "ref-9",
+      "text": "Davids, N., Tengeh R., ve Duffett R. (2021). The influence of culture on the development of youth entrepreneurs in a selected suburb in Cape Town. EUREKA: Social and Humanities 2: 24-37."
+    },
+    {
+      "id": "ref-10",
+      "text": "Ernst, S. (2015). The Paradox of High-Skilled Migration: Is the Brain Drain the Best Antidote to the Brain Drain? Doctoral dissertation, Brandeis University."
+    },
+    {
+      "id": "ref-11",
+      "text": "Etzkowitz, H. ve Leydesdorff, L. (2000). The dynamics of innovation: from National Systems and “Mode 2” to a Triple Helix of university–industry–government relations. Research policy 29(2): 109-123."
+    },
+    {
+      "id": "ref-12",
+      "text": "Forje, L. C. (2009). A historical development of entrepreneurship in the Cameroon economy from 1960-2007. Journal of Asia Entrepreneurship and Sustainability 5(3): 1."
+    },
+    {
+      "id": "ref-13",
+      "text": "Gomes, C. (2023). Responsibilities of the Governments of Developing Countries in Building Up South–South STI Diplomacy. Science, Technology and Innovation Diplomacy in Developing Countries. Research for Development i ç inde, yazan V. Ittekkot ve J.K. Baweja, 183-197. Singapore: Springer."
+    },
+    {
+      "id": "ref-14",
+      "text": "Jauhiainen, J. S., ve Hooli, L. (2017). Indigenous knowledge and developing countries’ innovation systems: The case of Namibia. International Journal of Innovation Studies 1(1): 89-106."
+    },
+    {
+      "id": "ref-15",
+      "text": "Jussi, S. J. & Lauri, H. (2019). Innovation for development in Africa . London: Routledge."
+    },
+    {
+      "id": "ref-16",
+      "text": "Jouili, M. (2021). South–South Cooperation: A new development paradigm. South-South Cooperation in the 21st Century: New challenges i ç inde, yazan H. EL. Molero ve R. G. M. Delgado, 199-248. University of Los Andes."
+    },
+    {
+      "id": "ref-17",
+      "text": "Kadhila, N., Malatji K. S., ve Malatji, M. J. (2024). Higher Education: Towards a Model for Successful University-Industry Collaboration in Africa. The Sustainability of Higher Education in Sub-Saharan Africa: Quality Assurance Perspectives i ç inde, yazan P. Neema-Abooki, 251- 280. Palgrave Macmillan."
+    },
+    {
+      "id": "ref-18",
+      "text": "Korsi, L. (2022). Do we go or do we stay? Drivers of migration from the Global South to the Global North. African Journal of Development Studies, 12(1): 71-87."
+    },
+    {
+      "id": "ref-19",
+      "text": "Leloglu, U. M. (2009). Latecomer advantage in space technologies: A Posse Ad Esse. Data Systems in Aerospace, DASIA 2009. Istanbul, Turkey."
+    },
+    {
+      "id": "ref-20",
+      "text": "Leloglu, U. M. (2021). Scientific Collaboration along the Silk Road. Belt & Road Initiative Quarterly, 2(2): 46-57."
+    },
+    {
+      "id": "ref-21",
+      "text": "Leloglu, U. M., ve Kocaoglan, E. (2008). Establishing space industry in developing countries: Opportunities and difficulties. Advances in Space Research 42(11): 1879-1886."
+    },
+    {
+      "id": "ref-22",
+      "text": "Liu, W., Li, J., Xiao, G., Song, Z., Qu, J., Wang, Y. ve Chen, F. (2023). Research on science and technology cooperation pattern of the Belt and Road Initiative. Bulletin of Chinese Academy of Sciences 38(9): 1246- 1255."
+    },
+    {
+      "id": "ref-23",
+      "text": "Marsh, R. R. ve Oyelere, R. U. (2018). Global migration of talent: Drain, gain, and transnational impacts. International Scholarships in Higher Education: Pathways to Social Change 209-234."
+    },
+    {
+      "id": "ref-24",
+      "text": "Nasief, Y., ve Basahal, A. (2023). Innovation: The Unconventional Gateway to the Middle East. Doing Business in the Middle East: A Research-Based Practitioners’ Guide i ç inde, yazan P. Budhwar ve V. Pereira, 222-234. Routledge."
+    },
+    {
+      "id": "ref-25",
+      "text": "Nathan, D. (2024). Knowledge and Global Inequality Since 1800: Interrogating the Present as History. Cambridge University Press."
+    },
+    {
+      "id": "ref-26",
+      "text": "Ngo, T. N. B. (2020). Knowledge Spillovers & its Relation with Innovation at Firm Level Within a Knowledge-Intensive Cluster in Developing Countries: A Case Study of QTSC, Vietnam. Doctoral dissertation, University of Huddersfield."
+    },
+    {
+      "id": "ref-27",
+      "text": "Owuondo, J. (2023). Fostering Educational Development and Innovation in the Global South: Incentivizing Research and Development (R&D). International Journal of Research and Scientific Innovation (IJRSI), 10: 186."
+    },
+    {
+      "id": "ref-28",
+      "text": "Panagiotakopoulos, A. (2020). Investigating the factors affecting brain drain in Greece: looking beyond the obvious. World Journal of Entrepreneurship, Management and Sustainable Development, 16(3): 207-218."
+    },
+    {
+      "id": "ref-29",
+      "text": "Ridley, R. G. ve Offiong, E. O. (2022). Contextualising STISA-20241 Africa’s STI Implementation Report 2014–2019. UNESCO Liaison Office in Addis Ababa."
+    },
+    {
+      "id": "ref-30",
+      "text": "Rikap, C. (2023). The expansionary strategies of intellectual monopolies: Google and the digitalization of healthcare. Economy and Society, 52(1): 110-136."
+    },
+    {
+      "id": "ref-31",
+      "text": "Senadjki, A., Ogbeibu, S., Yip, C. Y., Au Yong, H. N. ve Senadjki, M. (2021). The impact of corruption and university education on African innovation: evidence from emerging African economies. SN Business & Economics, 1(5): 65."
+    },
+    {
+      "id": "ref-32",
+      "text": "Serger, S. S. ve Rem ø e, S. O. (2012). International cooperation in science, technology and innovation: strategies for a changing world: Report of the Expert Group established to support the further development of an EU international STI cooperation strategy. Technical Report, European Commission Directorate-General for Research and Innovation."
+    },
+    {
+      "id": "ref-33",
+      "text": "Sharma, J., ve Varshney, S. K. (2023). Role of India in South–South Cooperation to Achieve Sustainable Development Goals. Science, Technology and Innovation Diplomacy in Developing Countries. Research for Development i ç inde, yazan V. Ittekkot ve J.K. Baweja, 201-217. Singapore: Springer."
+    },
+    {
+      "id": "ref-34",
+      "text": "Simelone, C. (2023). In Search for Scientific Collaboration: South Africa’s Science Diplomacy Towards Africa. Science, Technology and Innovation Diplomacy in Developing Countries. Research for Development i ç inde, yazan V. Ittekkot ve J.K. Baweja, 219-232. Singapore: Springer."
+    },
+    {
+      "id": "ref-35",
+      "text": "Stark, O., Helmenstein, C. ve Prskawetz, A. (1997). A brain gain with a brain drain. Economics letters, 55(2): 227-234."
+    },
+    {
+      "id": "ref-36",
+      "text": "Sun, D., ve Y. Yang. 2024. China’s Greater Periphery Diplomacy in the New Era of the Emerging “Global East”. Belt & Road Initiative Quarterly 5(4): 366-385."
+    },
+    {
+      "id": "ref-37",
+      "text": "Szczygielski, K., Grabowski, W., Pamukcu, M. T. ve Tandogan, V. S. (2017=. Does government support for private innovation matter? Firm-level evidence from two catching-up countries. Research Policy, 46(1): 219-237."
+    },
+    {
+      "id": "ref-38",
+      "text": "Wallerstein, I. (2020). World-systems analysis: An introduction. Duke University Press."
+    },
+    {
+      "id": "ref-39",
+      "text": "Yan, Y. (2021). Capacity building in regional space cooperation: Asia-pacific space cooperation organization. Advances in Space Research 67(1): 597-616."
+    }
+  ],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi/figure-01.jpg",
+      "caption": "(Fotoğraf: CGTN, 2024)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi/figure-02.jpg",
+      "caption": "1. Kuşak ve Yol Bilim ve Teknoloji Değişim Konferansı düzenlendi (Fotoğraf: Xinhua, 2023)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi/figure-03.jpg",
+      "caption": "Planı'nı başlattığını duyurdu (Fotoğraf: Global Times, 2024)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi/figure-04.jpg",
+      "caption": "(Fotoğraf: AB Komisyonu, 2024)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi/figure-05.jpg",
+      "caption": "Görsel 5"
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi/figure-06.jpg",
+      "caption": "Görsel 6"
+    }
+  ]
+}
