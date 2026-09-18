@@ -49,31 +49,24 @@ jobs:
           done
 
           mkdir -p "$out/nazism-images"
-          pdfimages -f 153 -l 153 -png tmp/pdfs/v6i1-tr.pdf "$out/nazism-images/image"
-          identify "$out"/nazism-images/*.png > "$out/nazism-images/identify.txt"
-
+          pdfimages -f 153 -l 153 -list tmp/pdfs/v6i1-tr.pdf > "$out/nazism-images/list.txt"
+          pdfimages -f 153 -l 153 -all tmp/pdfs/v6i1-tr.pdf "$out/nazism-images/image" || true
+          pdftoppm -f 153 -l 153 -singlefile -jpeg -r 180 tmp/pdfs/v6i1-tr.pdf "$out/nazism-images/page-153"
           python3 <<'PY'
           from pathlib import Path
           import subprocess
 
           root = Path("tmp/v06-i01-targeted/nazism-images")
-          candidates = []
-          for path in sorted(root.glob("*.png")):
-              w, h = map(int, subprocess.check_output(
-                  ["identify", "-format", "%w %h", str(path)], text=True
-              ).split())
-              cs = subprocess.check_output(
-                  ["identify", "-format", "%[colorspace]", str(path)], text=True
-              ).strip()
-              if w >= 400 and h >= 250 and not cs.lower().startswith("gray"):
-                  candidates.append((w*h, w, h, path))
-          if not candidates:
-              raise SystemExit("No usable image found on physical page 153")
-          candidates.sort(reverse=True)
-          _, w, h, src = candidates[0]
-          dst = root / "selected-figure-01.jpg"
-          subprocess.run(["convert", str(src), "-strip", "-quality", "90", str(dst)], check=True)
-          (root / "selected.txt").write_text(f"{src.name} {w}x{h}\n", encoding="utf-8")
+          lines = []
+          for path in sorted(root.glob("image-*")):
+              try:
+                  dims = subprocess.check_output(
+                      ["identify", "-format", "%w %h %[colorspace]", str(path)], text=True
+                  ).strip()
+                  lines.append(f"{path.name} {dims}")
+              except subprocess.CalledProcessError:
+                  pass
+          (root / "identify.txt").write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf-8")
           PY
 
       - name: Commit targeted recovery extracts
