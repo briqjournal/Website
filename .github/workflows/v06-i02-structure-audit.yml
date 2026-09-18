@@ -1,0 +1,83 @@
+name: Audit v06-i02 PDF structure
+
+on:
+  push:
+    branches:
+      - chore/v06-i02-fulltext-canonical
+    paths:
+      - '.github/workflows/v06-i02-structure-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Download official issue PDFs
+        run: |
+          mkdir -p /tmp/v06
+          curl -L --fail --retry 4 'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-03/BRIQ_Cilt6Say%C4%B12_2025BAHAR.pdf' -o /tmp/v06/tr.pdf
+          curl -L --fail --retry 4 'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-03/BRIQ_Volume6SIssue2_2025Spring.pdf' -o /tmp/v06/en.pdf
+          pdftohtml -xml -hidden /tmp/v06/en.pdf /tmp/v06/en.xml >/dev/null 2>&1
+          pdftohtml -xml -hidden /tmp/v06/tr.pdf /tmp/v06/tr.xml >/dev/null 2>&1
+      - name: Build structural audit
+        run: |
+          python3 <<'PY'
+          import html, json, re
+          from pathlib import Path
+
+          def clean(s):
+              s=re.sub(r'<br\s*/?>',' ',s,flags=re.I)
+              s=re.sub(r'<[^>]+>','',s)
+              return re.sub(r'\s+',' ',html.unescape(s)).strip()
+
+          def parse(path):
+              raw=Path(path).read_text(encoding='utf-8',errors='replace')
+              fonts={}
+              for m in re.finditer(r'<fontspec\b[^>]*id="(\d+)"[^>]*size="([\d.]+)"[^>]*family="([^"]*)"[^>]*color="([^"]*)"\s*/>',raw):
+                  fonts[m.group(1)]={'size':float(m.group(2)),'family':m.group(3),'color':m.group(4)}
+              pages=[]
+              for pm in re.finditer(r'<page\b[^>]*number="(\d+)"[^>]*>([\s\S]*?)</page>',raw):
+                  p=int(pm.group(1))
+                  if not (7 <= p <= 119): continue
+                  for m in re.finditer(r'<text\b[^>]*top="([\d.]+)"[^>]*left="([\d.]+)"[^>]*width="([\d.]+)"[^>]*height="([\d.]+)"[^>]*font="(\d+)"[^>]*>([\s\S]*?)</text>',pm.group(2)):
+                      t=clean(m.group(6))
+                      if not t: continue
+                      f=fonts.get(m.group(5),{})
+                      pages.append({
+                          'page':p,'top':float(m.group(1)),'left':float(m.group(2)),
+                          'size':f.get('size',0),'family':f.get('family',''),'color':f.get('color',''),
+                          'bold':bool(re.search(r'<(?:b|strong)>',m.group(6),re.I)),'text':t
+                      })
+              return pages
+
+          out={}
+          anchors={'en':{'Introduction','Conclusion','References','Notes','Acknowledgements','Acknowledgments'},
+                   'tr':{'Giriş','Sonuç','Kaynakça','Notlar','Teşekkür'}}
+          for loc in ('en','tr'):
+              nodes=parse(f'/tmp/v06/{loc}.xml')
+              anchor_styles={(n['size'],n['family'],n['color'],n['bold']) for n in nodes if n['text'] in anchors[loc]}
+              candidates=[]
+              for n in nodes:
+                  style=(n['size'],n['family'],n['color'],n['bold'])
+                  if len(n['text']) > 180: continue
+                  if n['top'] < 105 or n['top'] > 1060: continue
+                  if re.fullmatch(r'\d{1,4}',n['text']): continue
+                  if style in anchor_styles or (n['bold'] and 13 <= n['size'] <= 24) or (15 <= n['size'] <= 24 and n['color'].lower() not in ('#000000','#231f20','#1a1a1a')):
+                      candidates.append(n)
+              out[loc]={'anchor_styles':[list(x) for x in sorted(anchor_styles,key=str)],'candidates':candidates}
+          Path('ops/v06-i02-structure-audit.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Commit audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add ops/v06-i02-structure-audit.json
+          git commit -m 'Add temporary v06-i02 PDF structure audit'
+          git push origin HEAD:chore/v06-i02-fulltext-canonical
