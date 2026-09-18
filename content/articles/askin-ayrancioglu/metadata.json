@@ -1,26 +1,83 @@
 {
-  "slug": "askin-ayrancioglu",
-  "volume": 2,
-  "issue": 3,
-  "season_tr": "Yaz",
-  "season_en": "Summer",
-  "year": "2021",
-  "author": "Aşkın Ayrancıoğlu",
-  "title_tr": "Aşkın Ayrancıoğlu",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/askin-ayrancioglu",
-  "source_en": null,
-  "title_en": null,
-  "abstract_en": null,
-  "citation_tr": "Atıf \n [Karikatür, Aşkın Ayrancıoğlu]. Kuşak ve Yol Girişimi Dergisi, 2(3), 80.",
-  "citation_en": null,
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/A%C5%9EKIN%20AYRANCIO%C4%9ELU_0.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/A%C5%9EKIN%20AYRANCIO%C4%9ELU_0.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/askin-ayrancioglu-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/askin-ayrancioglu-tr.pdf",
-  "shared_bilingual_pdf": true,
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "askin-ayrancioglu",
+  "articleType": {
+    "id": "cartoon",
+    "tr": "Karikatür",
+    "en": "Cartoon",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Aşkın Ayrancıoğlu",
+    "tr": "Aşkın Ayrancıoğlu"
+  },
+  "authors": [
+    {
+      "displayName": "Aşkın Ayrancıoğlu",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 3,
+    "year": 2021,
+    "season": {
+      "en": "Summer",
+      "tr": "Yaz"
+    }
+  },
+  "pages": {
+    "first": null,
+    "last": null
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": null,
+    "tr": "[Karikatür, Aşkın Ayrancıoğlu]. Kuşak ve Yol Girişimi Dergisi, 2(3), 80."
+  },
+  "urls": {
+    "en": null,
+    "tr": "https://briqjournal.com/askin-ayrancioglu",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/A%C5%9EKIN%20AYRANCIO%C4%9ELU_0.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/A%C5%9EKIN%20AYRANCIO%C4%9ELU_0.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/askin-ayrancioglu-tr.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/askin-ayrancioglu-tr.pdf",
+    "sharedBilingualPdf": true
+  }
 }
