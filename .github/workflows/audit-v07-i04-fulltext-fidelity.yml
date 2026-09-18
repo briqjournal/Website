@@ -34,5 +34,6 @@ jobs:
           path: |
             .audit/fulltext-fidelity/v07-i04/report.json
             .audit/fulltext-fidelity/v07-i04/report.md
+            .audit/fulltext-fidelity/v07-i04/*/*/raw.txt
             .audit/fulltext-fidelity/v07-i04/*/*/pages/*.txt
             .audit/fulltext-fidelity/v07-i04/*/*/renders/*.png
