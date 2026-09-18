@@ -306,89 +306,7 @@ const issueFourRecords = [
   },
 ];
 
-const issueSixTwoRecords = [
-  {
-    slug: "modernist-milliyetci-olarak-sun-yat-sen-ve-siyasal-mirasi",
-    pages: [7, 28],
-    body: { tr: 9, en: 8 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "cinin-erken-modernizasyonuna-sun-yat-senin-katkisi",
-    pages: [29, 44],
-    body: { tr: 31, en: 30 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "cinli-devrimcilerin-sun-yat-sen-ve-mustafa-kemal-arasindaki-benzerlikler-uzerine-gorusleri",
-    pages: [45, 58],
-    body: { tr: 47, en: 46 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin",
-    pages: [59, 64],
-    body: { tr: 59, en: 59 },
-    autoHeadings: false,
-  },
-  {
-    slug: "osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke",
-    pages: [65, 70],
-    body: { tr: 65, en: 65 },
-  },
-  {
-    slug: "yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar",
-    pages: [71, 84],
-    body: { tr: 73, en: 72 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "alter-kuresellesme-baglaminda-cin-fransiz-iliskileri",
-    pages: [85, 107],
-    body: { tr: 87, en: 86 },
-    start: { tr: "Giriş", en: "Introduction" },
-  },
-  {
-    slug: "kamu-diplomasisi-ozbekistanin-yabanci-ulkelerle-iliskilerini-guclendirmenin-bir-yolu",
-    pages: [109, 112],
-    body: { tr: 109, en: 109 },
-  },
-  {
-    slug: "hikaye-siir",
-    pages: [113, 114],
-    body: { tr: 114, en: 114 },
-  },
-  {
-    slug: "olu-su-siir",
-    pages: [115, 116],
-    body: { tr: 116, en: 116 },
-  },
-  {
-    slug: "ogonyok",
-    pages: [117, 117],
-    body: { tr: 117, en: 117 },
-  },
-  {
-    slug: "qi-baishi",
-    pages: [118, 118],
-    body: { tr: 118, en: 118 },
-  },
-  {
-    slug: "t-miyano-renkli-tasbaski",
-    pages: [119, 119],
-    body: { tr: 119, en: 119 },
-  },
-];
-
 const issueConfigs = {
-  "6-2": {
-    pdfs: {
-      tr: join(root, "tmp/pdfs/v6i2-tr.pdf"),
-      en: join(root, "tmp/pdfs/v6i2-en.pdf"),
-    },
-    records: issueSixTwoRecords,
-    sourceLocale: { tr: "tr", en: "en" },
-  },
   "7-1": {
     pdfs: {
       tr: join(root, "tmp/pdfs/v7i1-tr.pdf"),
@@ -426,7 +344,7 @@ const issueConfigs = {
 };
 
 const issueConfig = issueConfigs[issueKey];
-if (!issueConfig) throw new Error(`Unknown issue ${issueKey}. Use 6-2, 7-1, 7-2, 7-3, or 7-4.`);
+if (!issueConfig) throw new Error(`Unknown issue ${issueKey}. Use 7-1, 7-2, 7-3, or 7-4.`);
 const { pdfs, records } = issueConfig;
 
 const exactHeadings = new Set([
@@ -500,15 +418,6 @@ function looksLikeCaption(node) {
   return node.font.size <= 13 && /(Fotoğraf|Photo|Harita|Map|Kaynak|Source):/i.test(node.text);
 }
 
-function looksLikeCanonicalSectionHeading(node) {
-  return node.bold
-    && node.font.size >= 16
-    && node.font.size <= 17
-    && /MyriadPro-Semibold/i.test(node.font.family)
-    && /^#(?:bc2628|d11f27)$/i.test(node.font.color)
-    && !/^(?:ABSTRACT|ÖZ|Keywords:|Anahtar Kelimeler:)$/iu.test(node.text);
-}
-
 function looksLikeHeading(node) {
   if (exactHeadings.has(node.text)) return true;
   if (node.text.length > 105) return false;
@@ -547,8 +456,7 @@ function extractBlocks(pages, config, locale) {
 
   for (const page of selected) {
     for (const node of page.nodes) {
-      const canonicalSectionHeading = looksLikeCanonicalSectionHeading(node);
-      if (isNoise(node) && !exactHeadings.has(node.text) && !canonicalSectionHeading) continue;
+      if (isNoise(node) && !exactHeadings.has(node.text)) continue;
       if (captionTail && node.page === captionTail.page && node.top > captionTail.top && node.top - captionTail.top <= 42 && node.font.size <= 18) {
         captions[captions.length - 1] = dehyphenatedJoin(captions[captions.length - 1], node.text);
         captionTail = { page: node.page, top: node.top };
@@ -572,7 +480,7 @@ function extractBlocks(pages, config, locale) {
         else continue;
       }
 
-      if (canonicalSectionHeading || (config.autoHeadings !== false && looksLikeHeading(node))) {
+      if (looksLikeHeading(node)) {
         flushParagraph();
         if (heading) heading = dehyphenatedJoin(heading, node.text);
         else heading = node.text;
