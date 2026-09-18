@@ -1,8 +1,236 @@
 {
-  "sections": [],
-  "keywords": [],
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Giriş",
+      "paragraphs": [
+        "SON YILLARDA DÜNYADA EN ÇOK KONUŞULAN sektörlerin başında tarım geliyor. İklim değişikliği, açlık, savaşlar, kaoslar, gıda fiyatları tarımı daha fazla konuşulur hale getirdi. Tarımsal üretim dünyada yalnızca beslenmek, beslenmeyi iyileştirmek için değil, aynı zamanda birçok ülkenin temel ekonomik kaynaklarından olduğu için de önemlidir. Tarımsal üretim sadece açlığı sona erdirmez aynı zamanda ekonomik ve sosyal kalkınmanın anahtarı olarak da önemli bir rol oynar. Bunlardan hareketle, tarımsal üretim son 15-20 yılda çok daha uluslararası hale geldi. Tarım ve gıda ticareti artan lojistik ve beslenme çeşitliliğinin yanı sıra artan sorunlar nedeniyle de uluslararası boyutta daha fazla yer almaya başlamıştır. Artık çok daha yüksek miktar ve değerlerde tarım ve gıdanın ticareti yapılıyor. Bu durumda bir yandan dünyada tarımda uluslararası bütünleşme arayışları artmakta, diğer yandan ülkeler daha fazla ticaretin yollarını arar hale gelmiştir. Ticaretteki ilerlemeler ülkeleri tarımsal alanda büyütmüş ve adeta oyun kurucu hale getirmiştir. Büyük bir potansiyele sahip Türk Dünyası tarımı güç birliği yaparak dünya tarımında önemli bir rol oynayabilir. Türkiye sahip olduğu bilgi ve teknoloji birikimini bu coğrafyaya taşıyarak bölgesel tarım ekonomisinin ve ticaretini büyütebilir ve bunda öncü rol oynayabilir. Dünyada tarımsal üretimde onuncu sırada yer alan Türkiye, Türk Dünyası ülkeleri ile gelişecek tarım ticareti yoluyla dünyada üye ülkeler ile birlikte daha fazla söz sahibi olabilecektir."
+      ]
+    },
+    {
+      "id": "tr-section-2",
+      "title": "Türkiye Tarımının Temel Dinamikleri",
+      "paragraphs": [
+        "Türkiye; zengin biyoçeşitliliği, tarıma dayalı sanayinin varlığı, doğal yapısı, iklimsel özellikleri, coğrafi konumu ve 55’e yakın ürünün üretiminde dünyada ilk 10 sırada yer almasıyla önemli rekabet avantajına sahip bir ülkedir (FAO, 2022). Türkiye hem Asya ve Avrupa kıtalarını birbirine bağlaması ve hem de Avrupa kıtası gibi zengin bir talep merkezine yakın olması nedeniyle tarımda önemli bir oyuncu konumunda yer almaktadır. Diğer yandan Orta Asya’nın verimli doğal kaynak ve topraklarına sahip ülkeler ile işbirliği geliştirme yolunda olması Türkiye için olduğu gibi, Orta Asya ülkeleri için de gelecekte önemli fırsatlar sunmaktadır. Fırsatların rasyonel ve sürdürülebilir değerlendirilmesi kazan-kazan ilkesine göre ülkelerin ekonomik, tarımsal ve ticari kapasitesi artıracaktır.",
+        "Tarım sektörünün, gayri safi yurtiçi hâsıla (GSYH) içerisindeki göreli önemi yıllar içinde azalmakla birlikte, reel olarak üretim istikrarlı bir artış eğilimi göstermiştir. 1980 yılında tarım sektörü milli gelirden %25.8 pay alırken, 1980’li yıllarda izlenen iktisadi politikaların etkisiyle bu pay düşüşe geçmiş ve 2022 yılında tarım sektörünün GSYH’ye katkısı %4.8 olarak gerçekleşmiştir. 2022 yılında tarım sektörü %0.6 oranında büyümüş ve %5.4 olarak gerçekleşen ekonomik büyümeye katkısı sınırlı olarak gerçekleşmiştir.",
+        "Türkiye’de tarımın genel durumuna bakıldığında, küresel tarım ve gıda ekonomisinde önemli bir noktaya eriştiği görülür. Özellikle sebze, meyve, tahıl ve hayvansal üretimi üç kattan fazla bir artış göstermiştir. Örneğin 2002-2020 döneminde süt üretimi 8.4 milyon tondan 22.96 milyon tona; et üretimi 420 bin tondan 1.2 milyon tona; tohum üretimi 145 bin tondan 1.24 milyon tona; yem bitkisi üretimi 758 bin tondan 2.46 milyon tona; meyve üretimi 14,5 milyon tondan 23,6 milyon tona; sebze üretimi 25.8 milyon tondan 31.2 milyon tona ve tahıl üretimi 30.83 milyon tondan 37.2 milyon tona çıkmıştır (Tarım ve Orman Bakanlığı ve FAO verileri). Yine son 20 yılda ayçiçeği, mısır, patates, soğan, muz, nar, çay ve çilek üretimi genelde süreklilik arz eden bir artış göstermiştir. Buğday, şeker pancarı, kayısı, antepfıstığı, incir, kırmızı et üretiminde ise dalgalı bir üretim yapısının ortaya çıktığı görülür."
+      ]
+    },
+    {
+      "id": "tr-section-3",
+      "title": "Dünya Tarımı ve Türkiye’nin-Tük Dünyası Ülkelerinin Yeri",
+      "paragraphs": [
+        "2023 yılı itibarıyla dünyanın en çok tarımsal ürün üreten ve de dünya tarımına yön veren 10 ülkesi Çin, ABD, Brezilya, Hindistan, Rusya, Fransa, Meksika, Japonya, Almanya ve Türkiye’dir. Bu ilk 10 tarım üreticisi ülke hem üretimleriyle hem de dünya nüfusunun beslenmesine katkılarıyla küresel tarım sektöründe önemli birer rol oynamaktadır. Bu ülkeler tahıl, meyve, sebze, et ve et ürünleri, süt ve süt ürünleri, su ürünleri gibi çeşitli tarım ürünleri üreterek ihracatta bulunmakta ve küresel tarım ekonomisinde önemli misyonlar üstlenmektedir.",
+        "Şekil 2’de görüleceği gibi, dünyada en fazla tarımsal üretimde bulunan ülke 1 milyar 095 milyon ton ile Çin’dir. Türkiye 107 milyon ton üretimi ile 10’ncu sırada yer almaktadır.",
+        "Tabloda görüleceği gibi, Türk Devletleri Teşkilatı’na (TDT) üye Kazakistan, Kırgızistan, Özbekistan ile gözlemci üyeler Macaristan, Türkmenistan ve KKTC bu listede yer almayıp, üyelerden bir tek Türkiye yer almaktadır. Bu durum Türkiye’nin hem dünyadaki konumu ve hem de TDT’ndaki yeri açısından önemlidir. TDT ülkeleri Türkiye liderliğinde tarımda yeni bir tarımsal bütünleşme yoluyla tarımda öncü konumuna gelebilir.",
+        "Dünyanın en çok tarımsal üretimde bulunan ülkelerinin tarımsal durumları incelendiğinde şunlar ön plana çıkmaktadır (geeksforgeeks, 2024):"
+      ]
+    },
+    {
+      "id": "tr-section-4",
+      "title": "Dünyanın En Büyük Üretici Ülkesi - Çin",
+      "paragraphs": [
+        "Çin, dünyanın gıda arzına büyük katkı sağlayan ülkedir. 1,095 milyon ton tarımsal ürün üreterek dünyanın en büyük üreticisidir. Çin üretim, fiyat ve verimlilik alanlarında küresel gelişimleri oluşturmaktadır. Dünya tarım topraklarının %10,6’sına sahip olan Çin, küresel çıktının da %30’dan fazlasını elde etmektedir. Gıda arz güvenliğini elinde bulundurmak isteyen Çin; Asya, Avrupa ve Afrika gibi farklı coğrafyalarda tarım arazileri ve küresel tarım şirketleri satın almakta, küresel tarım üretiminde elini güçlendirmek için büyük çaba sarf etmektedir.",
+        "· Çin, pirinç, buğday ve mısır gibi temel ürünlerin önde gelen üreticisidir. Aynı zamanda meyve, sebze ve çay, pamuk ve tütün gibi belirli ürünlerin yetiştirilmesinde de uzmanlaşmıştır.",
+        "· Çin, ekilebilir arazilerin %7’sine sahip olmasına rağmen dünya nüfusunun %22’sini besliyor. Yirminci yüzyılda Çin, büyük nüfusunu beslemek için mücadele etti.",
+        "· Çin’de büyük bir sığır sektörü var ve en popüler et domuz eti. Ayrıca iç talebi karşılamak için büyük miktarda tavuk, sığır eti ve süt ürünleri de üretmektedir.",
+        "· Çin, sektör çıktısını ve verimliliğini artırmak için tarımsal araştırma ve geliştirmeye, ileri tarım tekniklerine ve makineleşmeye yatırım yaptı.",
+        "Amerika Birleşik Devletleri (ABD), 605 milyon ton tarımsal ürün üreterek dünyanın en büyük ikinci tarım üreticisi konumundadır.",
+        "· Amerika Birleşik Devletleri mısır, soya fasulyesi, buğday ve pamuk gibi temel ürünlerin önemli bir üreticisidir. Ayrıca badem, narenciye ve üzüm gibi özel ürünlerin üretiminde de uzmanlaşmıştır.",
+        "· Amerika Birleşik Devletleri’nde büyükbaş hayvan, kümes hayvanları ve domuz etinin tarımsal üretime büyük katkı sağladığı gelişen bir hayvancılık endüstrisi var. Aynı zamanda önemli miktarda süt ürünleri de üretmektedir.",
+        "· Amerika Birleşik Devletleri, tahıl, et, süt ürünleri, meyve ve sebzeler de dahil olmak üzere dünyanın önde gelen tarım ürünleri ihracatçılarından biridir. Küresel gıda güvenliği ve ticareti açısından önemlidir.",
+        "ABD’de mısır, 247 milyon 882 bin ton üretimle en büyük mahsul oldu. Soya fasulyesi 74 milyon 598 bin ton ile ikinci sırada yer alıyor.",
+        "Brezilya, 522 milyon ton tarımsal ürün üreterek dünyanın üçüncü büyük tarım üreticisidir.",
+        "· Brezilya, verimli topraklar, iyi iklim ve bol su gibi birçok farklı türde mahsulün üretilmesine olanak sağlayan geniş tarımsal kaynaklarla donatılmıştır.",
+        "· Brezilya büyük bir soya fasulyesi, şeker kamışı, mısır, kahve ve portakal üreticisidir. Dünyanın en büyük soya fasulyesi ve et tedarikçisidir.",
+        "· Brezilya’nın hayvancılık sektörü büyüyor; sığır, kümes hayvanları ve domuz eti üretimi, tarımsal üretimin ve ihracat gelirlerinin büyük bir kısmına katkıda bulunuyor.",
+        "· Brezilya’nın 2,1 milyar dönüm arazisi var ve bunun 867,4 milyon dönümü ekim için kullanılıyor.",
+        "Brezilya, 522 milyon ton tarımsal ürün üreterek dünyanın üçüncü büyük tarım üreticisidir.",
+        "· Brezilya, verimli topraklar, iyi iklim ve bol su gibi birçok farklı türde mahsulün üretilmesine olanak sağlayan geniş tarımsal kaynaklarla donatılmıştır.",
+        "· Brezilya büyük bir soya fasulyesi, şeker kamışı, mısır, kahve ve portakal üreticisidir. Dünyanın en büyük soya fasulyesi ve et tedarikçisidir.",
+        "· Brezilya’nın hayvancılık sektörü büyüyor; sığır, kümes hayvanları ve domuz eti üretimi, tarımsal üretimin ve ihracat gelirlerinin büyük bir kısmına katkıda bulunuyor.",
+        "· Brezilya’nın 2,1 milyar dönüm arazisi var ve bunun 867,4 milyon dönümü ekim için kullanılıyor.",
+        "Hindistan, 319 milyon ton tarımsal ürün üreterek dünyanın dördüncü büyük tarım üreticisi konumundadır.",
+        "· Hindistan’ın çeşitli coğrafi ve iklim koşulları, pirinç, buğday ve darı gibi tahılların yanı sıra baklagiller, yağlı tohumlar, meyveler ve sebzeler de dâhil olmak üzere birçok farklı mahsulü desteklemektedir.",
+        "· Pirinç ve buğday, dünyanın en büyük üreticilerinden biri olan Hindistan’da temel ürünlerdir. Ayrıca Hindistan nohut, mercimek ve fasulye gibi bakliyatların da önemli bir üreticisidir.",
+        "· Hindistan’da büyükbaş hayvan, manda, kümes hayvanları ve keçilerin tarımsal üretime büyük katkı sağladığı büyük bir hayvancılık sektörü bulunmaktadır. Hindistan dünyanın en büyük süt üreticisi olduğundan süt üretimi özellikle önemlidir.",
+        "· Hint tarımı, Hintlilerin geçim kaynaklarının yaklaşık %58’ini sağlıyor. En son verilere göre tarım, nüfusun yarısının temel gelir kaynağıdır ve GSYİH’nın %17 ila %18’ini oluşturmaktadır.",
+        "Rusya, dünyanın gıda tedarikine büyük katkı sağlamakta ve 262 milyon ton tarımsal ürün üreterek dünyanın en büyük beşinci tarım üreticisidir.",
+        "· Rusya’nın birden fazla iklim bölgesini kapsayan geniş arazi alanı, tahıllar, yağlı tohumlar ve hayvancılık da dahil olmak üzere tarımsal üretim için birçok olanak sağlıyor.",
+        "· Rusya’da buğday, arpa ve mısır gibi tahıllar yaygın olarak yetiştiriliyor ve ülke dünyanın önde gelen buğday ihracatçılarından biri. Ayrıca ayçiçeği ve soya fasulyesi gibi yağlı tohumlar da tarımsal verimliliğe önemli katkılar sağlamaktadır.",
+        "· Rusya’nın hayvancılık sektörü genişliyor; iç talebi karşılamak ve ihracat pazarlarını desteklemek için inek, domuz ve kümes hayvanı üretimi sürekli artıyor.",
+        "· Tahıl tarımı, toplam ekili alanın yaklaşık yarısını oluşturur. Ülkenin tahılının %70’ini üretiyor.",
+        "Fransa, 184 milyon ton tarımsal ürün üreterek dünyanın gıda tedarikine büyük katkı sağlayan 6’ncı ülkesidir.",
+        "· Fransa, tamamı tarımın temel maddeleri olan buğday, arpa, mısır ve şeker pancarının yetiştirilmesiyle ön plana çıkmaktadır. Ayrıca Fransa, ülkenin büyük bir kısmına yayılan üzüm bağlarıyla şarap üretimiyle ünlüdür.",
+        "· Büyükbaş hayvancılık, sığır, koyun, kümes hayvanları ve süt ürünleri üretiminin ülkenin tarımsal üretimine önemli ölçüde katkıda bulunduğu Fransız tarımının bir diğer önemli yönüdür.",
+        "· Fransa şarap, süt ürünleri, tahıllar ve lüks gıdalar da dahil olmak üzere büyük bir tarım ürünleri ihracatçısıdır.",
+        "· Fransa’da 730 binden fazla çiftlik bulunmaktadır ve nüfusun yaklaşık %7’si geçimini tarımdan veya balıkçılık veya ormancılık gibi ilgili sektörlerden sağlamaktadır.",
+        "Meksika, 158 milyon ton tarımsal üretimiyle dünyanın yedinci en büyük üreticisidir ve gıda tedarikine büyük katkı sağlamaktadır.",
+        "· Mısır (mısır), fasulye ve şili biberi, Meksika tarımının başlıca ürünleridir ve ülkenin çeşitli mutfak ve kültürel geçmişini temsil eder.",
+        "· Meksika’da sığır, kümes hayvanları ve domuz eti üretiminin ülkenin tarımsal üretimine önemli katkılar sağladığı büyük bir hayvancılık sektörü bulunmaktadır.",
+        "· Meksika, meyve, sebze, avokado, çilek ve bira ihraç eden önemli bir tarım ihracatçısıdır. Amerika Birleşik Devletleri’ne yakınlığı ve önemli ticari bağlantıları ihracat potansiyelinin artmasına yardımcı oluyor.",
+        "· Meksika’da tarım arazinin yaklaşık %15’ini kaplar ve hayvancılık da yaklaşık %50 oranında katkıda bulunur.",
+        "Japonya 150 milyon ton tarımsal ürün üreterek dünyanın en büyük sekizinci tarım üreticisidir.",
+        "· Japonya, arazi kısıtlamaları nedeniyle pirinç, sebze ve meyve gibi yüksek değerli malların yanı sıra çay ve çiçek gibi özel ürünlere odaklanıyor.",
+        "· Japonya, sınırlı arazide çalışırken verimliliği artırmak için hassas tarım, robot teknolojisi ve dikey tarım gibi modern tarım teknolojilerini uygulamasıyla ünlüdür.",
+        "· Japonya’da tarım GSYİH’nın yalnızca %2’sini oluştururken, nüfusun yaklaşık %10’u çiftliklerde yaşıyor.",
+        "· Pirinci tahıllar, deniz ürünleri, sebzeler, dağ otları ve diğer malzemelerle birleştiren geleneksel Japon mutfak kültürünü tamamen destekliyorlar.",
+        "Almanya, 124 milyon ton tarımsal ürün üreterek dünyanın gıda tedarikine 9 uncu sıradan büyük katkı sağlamaktadır.",
+        "· Almanya’nın önde gelen tarım ürünleri arasında buğday, şeker pancarı, lahana, arpa, domuz, tavuk, patates, süt, tahıllar ve çoğu bölgede meyve, sebze ve şarap yer alıyor.",
+        "· Ormancılık ve tarım ülke yüzölçümünün yaklaşık %80’ini kaplar. 1997’de eski batı eyaletlerinde aile çiftlikleri egemendi.",
+        "· Alman çiftçilerin yaklaşık %87’si 124 dönümlük arazide tarım yapıyor. Almanya’da üzüm bağları nehir vadilerinin güney ve batı kesimlerini kaplar.",
+        "· Almanya, süt ürünleri, et, meyve ve sebze dâhil olmak üzere büyük bir tarım ihracatçısıdır.",
+        "Türkiye, dünyanın gıda arzına büyük katkı sağlamaktadır. 107 milyon ton tarımsal üretimiyle dünyanın en büyük onuncu tarım üreticisidir. Önemli bir tarım üreticisi olan Türkiye, çeşitli ürünleri yetiştirmekte ve tahıl, meyve, sebze ve hayvancılık üretimiyle ön plana çıkmaktadır.",
+        "Türkiye verimli ovalar, kıyı bölgeleri ve engebeli araziler de dâhil olmak üzere çeşitli ürünlerin üretimine olanak tanıyan uygunluğu yüksek bir tarım coğrafyasına sahiptir.",
+        "• Türkiye buğday, arpa ve mısır gibi tahılların yanı sıra narenciye, üzüm, fındık, kayısı, antepfıstığı ve incir gibi meyvelerin de aralarında bulunduğu çeşitli ürünlerin üretiminde uzmanlaşmıştır.",
+        "• Türkiye’de ayrıca hem iç hem de uluslararası pazarlara yönelik et, süt ürünleri ve kümes hayvanı ürünleri üreten büyük bir hayvancılık sektörü bulunmaktadır.",
+        "• Tarım, Türkiye ekonomisi için hayati öneme sahiptir; GSYİH’nın yaklaşık %5-6’sına katkıda bulunur ve nüfusun yaklaşık %20’sine istihdam sağlar.",
+        "Türkiye tarımı son yirmi yıllık süre içerisinde ABD Doları bazında %94 oranında büyüme göstermiştir. Türkiye ile üretim değeri açısından mukayese edilen Çin (%477.20), Hindistan (%377.63), Endonezya (%354.27), Tayland (%271.72), Bangladeş (%264.12), Mısır (%218.44), Brezilya (%20 6.79) ve Malezya (%204.96) gibi ülkelerde büyüme daha fazla gerçekleşmiştir. Bu ülkeler hem coğrafi büyüklük hem de nüfus olarak Türkiye’den ayrılmaktadır. Ancak Türkiye tarımı (%94.11), ABD (%81.11), İspanya (%64.28), Fransa (%48.91), Güney Kore (%42.56) ve İtalya (%24.62) gibi ülkelerin tarımına göre de daha fazla ilerleme kaydetmiştir. Türkiye dünya tarım alanları açısından sahip olduğu %0.8’lik paya kıyasla küresel tarım çıktısının %1.29’undan fazlasını üretmektedir. Türkiye, Kazakistan ve Arjantin’e göre daha az tarım toprağına sahip olmasına karşılık daha fazla ürün elde etmektedir. Uluslararası ticaret açısından ise küresel tarım ihracatının %1.57’sini, ithalatın ise %1.14’lük kısmını gerçekleştirmektedir (Merdan, 2024 ve İstikbal, 2022).",
+        "Dünyada tarımsal dış ticaret hacmi FAO 2020 yılı verilerine göre 2.92 trilyon ABD Dolarıdır. Yaklaşık 4 trilyon USD olan tarımsal üretim değerinin %73’ü ülkeler arası dışsatım/ dışalıma konu olmaktadır. 2020 yılında dünya tarım ürünleri ihracatında 139.6 milyar USD ve %9.57 payı ile ilk sırayı ABD almaktadır. Diğer önemli tarım ürünleri ihracatçısı ülkeler ise Hollanda, Brezilya, Almanya, Çin, Fransa ve İspanya olarak sıralanmaktadır. Türkiye ise 20.7 milyar USD ile 23. sırada yer almaktadır. Tarım ürünleri ithalatında 172.46 milyar USD ve %11.31 payı ile ilk sırayı Çin almaktadır. ABD, Almanya, Hollanda, Japonya, İngiltere, Fransa diğer önemli ithalatçı ülkeler arasındadır. Türkiye ise 15.2 milyar USD ile ihracatta olduğu gibi ithalatta da 23. sırada yer almaktadır. 2020 yılında ülkemiz tarım ürünleri ihracatının toplam ihracat içerisindeki payı %12.21, tarım ürünleri ithalatının toplam ithalat içerisindeki payı %6.93 olarak gerçekleşmiştir (FAO, 2021 ve TAGEM, 2021).",
+        "Türkiye tarımsal dış ticareti için yapılan projeksiyonlardan elde edilen sonuçlara göre 2020 yılında 20.7 milyar USD olarak gerçekleşen ihracatın 2021 yılı için elde edilen ortalama değerler ile 21.5 milyar USD ve takip eden yıllardaki artışlar ile 2025 yılında ortalama 25.1 milyar USD olarak gerçekleşmesi, aynı şekilde 2020 yılında 15.2 milyar USD olarak gerçekleşen ithalatın 2021 yılı için elde edilen ortalama değerler ile 15.7 milyar USD ve takip eden yıllardaki artışlar ile 2025 yılında ortalama 18.4 milyar USD olarak gerçekleşmesi öngörülmektedir (FAO, 2021 ve TAGEM, 2021).",
+        "2005 yılında 702 milyar USD olan tarım ürünleri ihracatı 2010 yılında 1.15 trilyon USD, 2015 yılında 1.39 trilyon USD’ye ulaşmıştır. 2020 verileri itibariyle dünya toplam tarımsal ürün ihracatı 1.6 trilyon USD olarak gerçekleşmiştir. Dünya tarımsal ürün ihracatında 134.1 milyar USD ile “Etler ve yenilen sakatat” ilk sırayı almaktadır. 130.7 milyar USD ile “Yenilen meyveler ve sert kabuklu meyveler” diğer en önemli ihracat faslıdır. “Meşrubat, alkollü içkiler ve sirke”, “Tahıl”, “Balıklar, kabuklu hayvanlar, yumuşakçalar” diğer önemli ihracat kalemlerini oluşturmaktadır. 2020 yılında dünya tarım ürünleri ihracatında 139.6 milyar USD ve %9.57 payı ile ilk sırayı ABD almaktadır. Diğer önemli tarım ürünleri ihracatçısı ülkeler ise Hollanda, Brezilya, Almanya, Çin, Fransa ve İspanya olarak sıralanmaktadır. Türkiye ise 20.71 milyar USD ile 23. sırada yer almaktadır (FAO, 2021 ve TAGEM, 2021).",
+        "2005 yılında 740.3 milyar USD olan tarım ürünleri ithalatı 2010 yılında 1.18 trilyon USD ve 2015 yılında 1.42 trilyon USD’ye ulaşmıştır. 2020 verileri itibariyle dünya toplam tarımsal ürün ithalatı 1,6 trilyon USD olarak gerçekleşmiştir. Dünya tarımsal ürün ithalatında 139.1 milyar USD ile “Yenilen meyveler ve sert kabuklu meyveler” ilk sırayı almaktadır. 135.1 milyar USD ile “Etler ve yenilen sakatat” diğer en önemli ithalat ürünleridir. Tahıl, meşrubat, alkollü içkiler ve sirke, yağlı tohum ve meyveler; muhtelif tane, tohum, balıklar, kabuklu hayvanlar, yumuşakçalar ve diğerleri önemli ithalat kalemlerini oluşturmaktadır. Tarım ürünleri ithalatında 172.46 milyar USD ve %11.31 payı ile ilk sırayı Çin almaktadır. ABD, Almanya, Hollanda, Japonya, İngiltere, Fransa diğer önemli ithalatçı ülkeler arasındadır. Türkiye ise 16 milyar USD pay ile ihracatta olduğu gibi ithalatta da 23. sırada yer almaktadır (FAO, 2021; TAGEM, 2021).",
+        "Dünya tarımsal dış ticaret hacmi 2001 yılında 940.03 milyar USD olarak gerçekleşirken, bu değer yıllar içerisinde artarak 2020 yılında 3 trilyon USD’ye yaklaşmıştır. Hem ihracat hem de ithalat artışı neticesinde dünya tarımsal dış ticaret hacmi 2001 yılına oranla 2020 yılına kadar yaklaşık 3 katına çıkmıştır (TAGEM, 2021).",
+        "2001 yılında 4.07 milyar USD olarak gerçekleşen Türkiye tarım ürünleri ihracatı yıllar içerisinde önemli artışlar gerçekleştirerek 2020 yılında 20.71 milyar USD’ye ulaşarak 2001 yılına yaklaşık 5 kat artış göstermiştir. 2001 yılında tarım ürünleri ihracatının genel ihracat içerisindeki payı %12.99 olarak gerçekleşmiş, 2008 yılında ise %8.21 ile en düşük paya sahip olmuştur. Zaman içerisinde artışlar yaşanmış ve 2020 yılında tarım ürünleri ihracatının genel ihracat içerisindeki payı %12.21 olarak gerçekleşmiştir.",
+        "Türkiye tarım ürünleri ihracatında ABD, Hollanda, Almanya ve Fransa önemli ihracat pazarlarıdır. Türkiye tarımsal ürün ihracatında 2020 yılı verilerine göre 4.83 milyar USD ile “Yenilen meyveler ve sert kabuklu meyveler,” ilk sırayı almaktadır. 2.36 milyar USD ile “Sebzeler, meyveler, sert kabuklu meyveler ve diğer kısımlar,” diğer en önemli ihracat ürünlerindendir. Sırasıyla, “Tahıl, un, nişasta veya süt müstahzarları, pastacılık ürünleri”, “Yenilen sebzeler ve bazı kök ve yumrular”, “Hayvansal ve bitkisel katı ve sıvı yağlar”, “Değirmencilik ürünleri, malt; nişasta, inülin, buğday glüteni” Türkiye’nin diğer önemli ihracat kalemlerini oluşturmaktadır. Türkiye tarım ürünleri ihracatı 2005-2020 arasında %165, 2015-2020 arasında %24 artış göstermiştir (TAGEM,2021).",
+        "Ülkeler bazında ihracat gelişmeleri incelendiğinde ilk sıralarda yer alan ülkelerin yıllar itibarıyla genelde aynı olduğu görülür. 2020 yılında; ABD 193 milyar USD’lik ihracat ve %9.5 pay ile lider ülke konumundadır. ABD’yi Brezilya 135.1 milyar USD (%6.7), Hollanda 121.8 milyar USD (%6), Almanya 87.4 milyar USD (%4.3) ve Çin 95.8 milyar USD (%4.8) ile takip etmiştir. Türkiye yaklaşık 30 milyar USD’lik tarım ürünleri ihracatı ile 21’inci sırada yer almıştır ve küresel ihracattan %1.5 pay almıştır.",
+        "2001 yılında 1,55 milyar USD olarak gerçekleşen Türkiye tarım ürünleri ithalatı yıllar içerisinde önemli artışlar gerçekleştirerek 2020 yılında 15,2 milyar USD’ye ulaşmıştır. 2020 yılında ithalat 2001 yılına göre yaklaşık 9 katlık bir artış göstermiştir. 2001 yılında tarım ürünleri ithalatının genel ithalat içerisindeki payı %3,75 olarak gerçekleşmiştir. Tarım ürünleri ithalatında yaşanan artışlar neticesinde 2020 yılında tarım ürünleri ithalatının payı %6,93 olarak gerçekleşmiştir. En çok tarım ürünleri ithalatı yapılan ülkeler arasında ise ABD, Çin, Almanya ve Hollanda ilk sıralarda yer almaktadır. 2005 yılında 3,46 milyar USD olan tarım ürünleri ithalatı 2010 yılında 7,68 milyar USD, 2015 yılında 11,24 milyar USD'ye ulaşmıştır. 2020 verileri itibariyle Türkiye toplam tarımsal ürün ithalatı 15,21 milyar USD olarak gerçekleşmiştir. Türkiye tarımsal ürün ithalatında 2020 yılı verilerine göre 3,28 milyar USD ile “Tahıl” ilk sırayı ve 2,38 milyar USD ile “Yağlı tohum ve meyveler; muhtelif tane, tohum” ikinci sırayı almaktadır. Sırasıyla gıda sanayiinin kalıntı ve döküntüleri ile hayvansal ve bitkisel katı ve sıvı yağlar fasılları ise diğer önemli ithalat kalemlerini oluşturmaktadır (TAGEM,2021)."
+      ]
+    },
+    {
+      "id": "tr-section-5",
+      "title": "Türk Dünyası Devletlerinin Tarımsal Ticareti",
+      "paragraphs": [
+        "Ülkelerin tarımda yaratılan katma değer miktarı 94 milyar USD’dir. Azerbaycan 3.8 milyar USD, Kazakistan 11.5 milyar USD, Kırgızistan 1.3 milyar USD, Türkiye 58.5 milyar USD, Özbekistan 18.9 milyar USD pay almaktadır. Türk Dünyası ülkeleri arasında tarım ticareti 5 milyar USD’dir. Türk Dünyası devletlerinin toplam tarım İhracatı ise 43.3 milyar USD’dır. Bu durumda Türk Dünyası devletlerinin dünya tarım ihracatındaki payı %2-3’lerle ifade edilebilmektedir.",
+        "Burada bir noktayı da belirtmek gerekiyor; dünyada sağlıklı atıştırmalıklara-yiyeceklere olan talebin giderek artması Türkiye’nin ihracatta lider olduğu fındık, üzüm, incir, kiraz, kayısı gibi meyvelere ve kurutulmuş ürünlere olan talebi artırmaktadır. Bu talep artışının fiyatlara katma değer artışı yoluyla yansıyacağı ve Türkiye’nin başta Avrupa ve Amerika pazarlarında olmak üzere küresel düzeyde ihracat hacmini büyüteceği öngörülmektedir. İşte burada Türk Dünyası devletleri ile bu ürünlerde işbirliği yapılarak hem ürün artışı hem de daha fazla ekonomik kazanım yolları elde edilebilecektir."
+      ]
+    },
+    {
+      "id": "tr-section-6",
+      "title": "Sonuç Yerine: Türkiye’nin Türk Dünyası Tarımında Oyun Kuruculuğu İçin Anahtarlar",
+      "paragraphs": [
+        "Türkiye’nin Orta Asya ülkeleriyle olan tarımsal ticareti oldukça merkezi konumda bulunması nedeniyle stratejik bir önem taşımaktadır. Dünyanın onuncu büyük tarım üreticisi Türkiye, Orta Asya’daki dolayısıyla Türk Dünyası devletleriyle tarım ürünleri ticaretinde güçlü bir konuma ve avantaja sahip olup çeşitli tarım ürünlerini bu bölgeye ihraç etmektedir. Türkiye bu coğrafyaya ülkelere göre değişmekle birlikte öncelikle bilgi, teknoloji, buğday, arpa, pamuk, sebze, meyve ve bitkisel yağlar gibi ürünler ihraç etmektedir. Türkiye’nin yüksek kaliteli gıda işleme teknolojileri ve tarım makineleri de bu ülkeler için caziptir.",
+        "Türkiye’nin Orta Asya ile tarımsal ticaretinin önemli bir kısmı, Türk Devletleri Teşkilatı (TDT) ve Orta Koridor Projesi gibi uluslararası işbirliği ve ulaşım projeleriyle desteklenmektedir. Bu girişimler, Türkiye’nin Orta Asya ülkeleriyle ticari ve ekonomik ilişkilerini daha da güçlendirmektedir. Orta Koridor Projesi, Türkiye’nin Orta Asya ile kara ve demir yolu bağlantılarını geliştirerek tarım ürünleri ticaretinin artmasına da katkı sağlamaktadır. İşte Türkiye bu noktada sahip olduğu birikim, teknoloji potansiyeli ve Orta Asya ülkeleriyle olan tarımsal ticareti sayesinde Türk Dünyası tarımında oyun kurucu pozisyonunu alabilir ve güçlendirebilir. Türkiye’nin tarımsal araştırma ve inovasyon alanında bilgi paylaşımı ve kapasite geliştirme projeleri ile, tarım alanındaki üniversite eğitim-yayım çalışmalarının varlığı ülkeler arasındaki ticaretin sürdürülebilir bir şekilde oluşmasına daha fazla katkı sağlayacaktır. Yani, coğrafi konumu, tarımsal ürün çeşitliliği, tarımsal eğitim- AR-GE ile yayım çalışmaları ve uluslararası işbirlikleri sayesinde Türkiye, bu coğrafyadaki ticaret hacmini ve ağırlığını Türk Dünyası devletlerin ortak çıkarı doğrultusunda artırma rolünü başarıyla yerine getirebilir.",
+        "Türkiye tarımda, gıdada sahip olduğu çeşitlilik ve üretim potansiyeli ve fırsatlarla başta Türk Dünyası devletleri olmak üzere Orta Asya ülkeleri ile geniş bir yelpazede tarım-gıda ticaretini gerçekleştirebilir. Türkiye’nin bu coğrafyaya ihraç edebileceği, ticaretini geliştirebileceği ürünler şunlar olabilir; · Meyve ve sebzeler · Tahıllar ve baklagiller · Kuruyemiş ve yağlı tohumlar · Zeytin ve zeytinyağı, Antep fıstığı · Baharatlar ve tıbbi-aromatik bitkiler · Çay · Hayvansal ürünler · Yumurta ve kanatlı ürünleri · Hazır gıdalar ve işlenmiş ürünler · Gıda katkı maddeleri ve işlenmiş tarım ürünleri Kuşkusuz Türkiye’nin satabileceği bu tarım-gıda ürünleri hem taze hem de işlenmiş yapılarda olabilir. İhracat potansiyeli olan bu ürünler, kalite ve bulundurulabilirlik avantajlarıyla bu pazarlar rekabet şansını daha fazla elde edebilir. Ayrıca, Türkiye’nin gelişmiş lojistik ve nakliye ağları sayesinde hem bu ürünler hızlı ve güvenli bir şekilde hedef pazarlara ulaştırılabilir hem de Türk Dünyası devletlerinin ürünlerinin de değerlendirilmesine katkıda bulunabilir.",
+        "Türkiye’nin Türk Dünyası tarımında oyun kuruculuğu için elinde olan ve bu coğrafyaya katkı sağlayabilecek anahtar alanlar vardır. Bunların yerinde ve zamanında kullanılması tüm ülkelere kazanç getirecektir. Türkiye’nin bu anahtar alanlardaki potansiyel rolü, hem kendi ekonomisini güçlendirebilir hem de aynı çıkar doğrultusundaki ülkelerin tarım-gıda sektörünü geliştirmelerine katkı sağlayacaktır. Bu anahtarlardan bazıları şunlardır; · Stratejik konum ve lojistik · Ticaret anlaşmaları, ticari ilişkilerin güçlendirilmesi ve güçlü tarım-gıda diplomasisi · Gelişmiş tarım-gıda teknolojileri, know-how birikimi ve bilgi-deneyim paylaşımı · Yüksek değerli yatırımlar ve ortak girişim alanları · Pazar araştırması, hedef pazarlar oluşturma ve dünya pazarlarına erişebilme · Yüksek standartlarda gıda güvenliği, kaliteli ürün-sertifikasyon ve sınırda-yerinde kalite kontrolü · Eğitim-yayım programları, akademik çalışma ortamı ve kapasite gelişimi · Dünya ile bütünleşmiş nitelikli ve deneyimli işgücü Sonuç olarak; Türkiye, Asya ile Avrupa arasında stratejik bir köprü olarak önemli bir jeopolitik konuma sahiptir. Bu konum, Türkiye’yi tarım-gıda koridorları, enerji koridorları, ticaret yolları açısından önemli kılmaktadır. Türkiye gelinen noktada ekonomik açıdan çok yönlü işbirliklerine ve farklı ticaret anlaşmalarına yönelmektedir. Çin’in Kuşak ve Yol İnisiyatifi’ne katılımı ve Afrika ile artan ticaret bağları, BRICS ülkeleri ile görüşmeler Türkiye’nin çok kutuplu dünya düzeninde tarımsal üretimde ve dış ticaretinde ekonomik çeşitliliğini ve etkinliğini artıracaktır."
+      ]
+    }
+  ],
+  "keywords": [
+    "Orta Asya",
+    "tarım",
+    "tarımsal gelişme",
+    "Türk Dünyası",
+    "Türkiye"
+  ],
   "footnotes": [],
-  "references": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "CGTN. (2023). 30 Temmuz 2024 tarihinde https://news. cgtn.com/news/2023-05-14/China-Central-Asia-economic-trade-cooperation-gets-tangible-results-1jNk5azhEYM/index.html adresinden alındı."
+    },
+    {
+      "id": "ref-2",
+      "text": "FAO. (2021). 1 Temmuz 2024 tarihinde http://www.fao.org/ faostat/en/#data/ adresinden alındı."
+    },
+    {
+      "id": "ref-3",
+      "text": "FAO. (2024). 5 Temmuz 2024 tarihinde www.fao.org adresinden alındı."
+    },
+    {
+      "id": "ref-4",
+      "text": "Geeksforgeeks. (2024). 10 Temmuz 2024 tarihinde https:// www.geeksforgeeks.org/agricultural-producing-countries-in-the-world/ adresinden alındı."
+    },
+    {
+      "id": "ref-5",
+      "text": "Setav. (2022). 1 Temmuz 2024 tarihinde https://www.setav. org/assets/uploads/2022/05/A374.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-6",
+      "text": "TBB. (2023). 2 Temmuz 2024 tarihinde https://www.tbb. org.tr/Content/Upload/Dokuman/8960/Tarim_Sektor_ Raporu_130723.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-7",
+      "text": "İstikbal, D. (2022). Küresel Trendler Çerçevesinde Türkiye Tarımının Gelişimi ve Gelecek Vizyonu. Siyaset, Ekonomi ve Toplum Araştırmaları Vakfı Yayınları, Sayı:374, s.1-23."
+    },
+    {
+      "id": "ref-8",
+      "text": "Merdan, K. 2024. “Türkiye’nin Tarım Sektörü: Tarımının Dünü, Bugünü ve Yarını”. Bingöl Üniversitesi İktisadi ve İdari Bilimler Fakültesi Dergisi. Cilt: 8, Sayı: 1, s. 47-70."
+    },
+    {
+      "id": "ref-9",
+      "text": "OECD/FAO. (2023). 31 Temmuz 2024 tarihinde https:// openknowledge.fao.org/server/api/core/bitstreams/30a4511b-6b25-47e9-be3e-751bbfa86057/content adresinden alındı."
+    },
+    {
+      "id": "ref-10",
+      "text": "SBB. (2020). 30 Temmuz 2024 tarihinde https://www.sbb. gov.tr/tarim-ve-gida-gostergeleri/ adresinden alındı."
+    },
+    {
+      "id": "ref-11",
+      "text": "TAGEM. (2021). Tarımsal Dış Ticaret Sektör Politika Belgesi 2021-2025. s.1-83, Ankara."
+    },
+    {
+      "id": "ref-12",
+      "text": "Tarimorman. (2024). 5 Temmuz 2024 tarihinde www.tarimorman.gov.tr adresinden alındı."
+    },
+    {
+      "id": "ref-13",
+      "text": "Tarım ve Orman Bakanlığı. (2023). 29 Temmuz 2024 tarihinde https://cevreselgostergeler.csb.gov.tr/iyi-tarim-uygulamalari-i-85838 adresinden alındı."
+    },
+    {
+      "id": "ref-14",
+      "text": "TDT. (2023). 31 Temmuz 2024 tarihinde https://www. turkicstates.org/tr/yayinlar/turk-devletlerinin-ekonomik-gorunumu-2023-yillik-raporu_29 adresinden alındı."
+    },
+    {
+      "id": "ref-15",
+      "text": "TUİK. (2024). 5 Temmuz 2024 tarihinde www.tuik.gov.tr adresinden alındı."
+    },
+    {
+      "id": "ref-16",
+      "text": "TÜSİAD, 1991. “21. Yüzyıla Doğru Türkiye: Geleceğe Dönük Bir Atılım Stratejisi,” TÜSİAD Yayınları, İstanbul."
+    }
+  ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-01.jpg",
+      "caption": "Görsel 1"
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-02.jpg",
+      "caption": "Görsel 2"
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-03.jpg",
+      "caption": "Görsel 3"
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-04.jpg",
+      "caption": "Görsel 4"
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-05.jpg",
+      "caption": "Görsel 5"
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-06.jpg",
+      "caption": "Görsel 6"
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-07.jpg",
+      "caption": "Görsel 7"
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-08.jpg",
+      "caption": "Görsel 8"
+    }
+  ]
 }
