@@ -2,9 +2,10 @@
   "sections": [
     {
       "id": "tr-section-1",
-      "title": "Tam metin",
+      "title": "OGONYOK",
       "paragraphs": [
-        "Çarlık Rusya’sında çıkan Ogonyok dergisinin, 15 (28) Ekim 1911 tarihli 42 no’lu sayısının ‘Çin’de Devrim’ başlıklı kapağı"
+        "Çarlık Rusya’sında çıkan Ogonyok dergisinin, 15 (28) Ekim 1911 tarihli 42 no’lu sayısının ‘Çin’de Devrim’ başlıklı kapağı",
+        "*Ogonyok dergisi için çekilmiş özel fotoğraflardan"
       ]
     }
   ],
@@ -16,7 +17,7 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/ogonyok/figure-01.jpg",
-      "caption": "Görsel 1"
+      "caption": "Ogonyok, No: 42, 15 (28) Ekim 1911 — “Çin’de Devrim”"
     }
   ]
 }
