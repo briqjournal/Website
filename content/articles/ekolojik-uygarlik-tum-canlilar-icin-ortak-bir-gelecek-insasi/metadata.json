@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Ecological%20Civilization%20Building%20a%20Shared%20Future%20for%20All%20Life%20on%20Earth.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/ekolojik-uygarlik-tum-canlilar-icin-ortak-bir-gelecek-insasi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/ekolojik-uygarlik-tum-canlilar-icin-ortak-bir-gelecek-insasi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }

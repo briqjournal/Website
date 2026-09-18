@@ -20,5 +20,14 @@
   "pdf_tr_local": "/assets/archive/pdfs/articles/1920-1930lardaki-cin-gazetelerinde-bir-rol-model-olarak-turkiye-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/1920-1930lardaki-cin-gazetelerinde-bir-rol-model-olarak-turkiye-en.pdf",
   "shared_bilingual_pdf": false,
-  "reviewed_book": {"authorsApa":"Wang, S. (Ed.)","year":2021,"title":"The Road of Turkey: Research and Review of Chinese Scholars","publisher":"Tianjin People’s Publishing House","isbn":null}
+  "reviewed_book": {
+    "authorsApa": "Wang, S. (Ed.)",
+    "year": 2021,
+    "title": "The Road of Turkey: Research and Review of Chinese Scholars",
+    "publisher": "Tianjin People’s Publishing House",
+    "isbn": null
+  },
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }

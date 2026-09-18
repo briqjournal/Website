@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/Energy%20-%20Environment%20Nexus%20in%20Eco-Civilization.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/ekolojik-uygarlikta-enerji-cevre-kesisimi-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/ekolojik-uygarlikta-enerji-cevre-kesisimi-en.pdf",
-  "shared_bilingual_pdf": false
+  "shared_bilingual_pdf": false,
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }

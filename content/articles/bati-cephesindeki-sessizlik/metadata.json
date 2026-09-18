@@ -20,5 +20,14 @@
   "pdf_tr_local": "/assets/archive/pdfs/articles/bati-cephesindeki-sessizlik-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/bati-cephesindeki-sessizlik-en.pdf",
   "shared_bilingual_pdf": false,
-  "reviewed_book": {"authorsApa":"Lambsdorff, A. G.","year":2021,"title":"Wenn elefanten kämpfen: Deutschlands rolle in den kalten kriegen des 21. Jahrhunderts","publisher":"Propyläen Verlag","isbn":"978-3-549-10032-5"}
+  "reviewed_book": {
+    "authorsApa": "Lambsdorff, A. G.",
+    "year": 2021,
+    "title": "Wenn elefanten kämpfen: Deutschlands rolle in den kalten kriegen des 21. Jahrhunderts",
+    "publisher": "Propyläen Verlag",
+    "isbn": "978-3-549-10032-5"
+  },
+  "received_date": "2021-05-04",
+  "revised_date": "2021-05-10",
+  "accepted_date": "2021-05-23"
 }

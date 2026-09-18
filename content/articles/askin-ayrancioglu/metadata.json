@@ -19,5 +19,8 @@
   "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-07/A%C5%9EKIN%20AYRANCIO%C4%9ELU_0.pdf",
   "pdf_tr_local": "/assets/archive/pdfs/articles/askin-ayrancioglu-tr.pdf",
   "pdf_en_local": "/assets/archive/pdfs/articles/askin-ayrancioglu-tr.pdf",
-  "shared_bilingual_pdf": true
+  "shared_bilingual_pdf": true,
+  "received_date": null,
+  "revised_date": null,
+  "accepted_date": null
 }
