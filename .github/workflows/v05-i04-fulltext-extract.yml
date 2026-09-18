@@ -70,7 +70,7 @@ jobs:
               pages: [1, {last}],
               body: {{ tr: 1, en: 1 }},
               startContains: {{
-                tr: "Son 10-15 yılda",
+                tr: "Dünyada, özellikle son 10-15 yıldır",
                 en: "In the past 10-15 years",
               }},
               skipFirstPortrait: true,
