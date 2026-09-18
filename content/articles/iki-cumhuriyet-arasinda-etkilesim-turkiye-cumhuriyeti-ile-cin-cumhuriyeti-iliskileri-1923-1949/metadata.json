@@ -1,27 +1,95 @@
 {
-  "slug": "iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949",
-  "volume": 3,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2021-2022",
-  "author": "Necati Demircan",
-  "title_tr": "İki Cumhuriyet Arasında Etkileşim: Türkiye Cumhuriyeti ile Çin Cumhuriyeti İlişkileri (1923-1949)",
-  "abstract_tr": "Yapılan literatür araştırmasında, Türkiye Cumhuriyeti ile Çin Cumhuriyeti ( 中华民国 ) ilişkilerini değerlendiren çalışmaların, Atatürk dönemindeki Çin ile ilişkiler veya genel ikili ilişkileri inceleyen kısıtlı ve dar kaynaklı çalışmalar olduğu görülmektedir. 1923-1949 yılları arasında, Türkiye Cumhuriyeti ile Çin Cumhuriyeti ikili ilişkileri açısından tanımlayıcı bir çalışmaya ihtiyaç olduğu görülmüştür. Benzer devrim ve reformlar gerçekleştirmiş iki Cumhuriyet arasında dostane ilişkiler 1926 yılında kurulmuştur. Çin’de Atatürk ve Türkiye’deki devrim hakkında birçok kitap, gazete yorumu, makale yayınlanmıştır. Çinli heyetler Türk devrimini incelemek için Türkiye’ye çeşitli ziyaretler gerçekleştirmiştir. İkinci Dünya Savaşı’nın yarattığı kaos ortamında zaman zaman ikili ilişkiler, kesintiye uğrasa da devam ettirilmiştir. Bu çalışmada, Türkiye Cumhuriyeti ile Çin Cumhuriyeti arasındaki ilişkiler, Başbakanlık Cumhuriyet Arşivleri, Dışişleri Bakanlığı Arşivleri, dönemin Cumhuriyet, Ulus, Milliyet, Akşam gazetesi arşivleri ve Çinli kaynaklar incelenerek değerlendirilmiştir. \n Anahtar Kelimeler: Çin Cumhuriyeti, Mustafa Kemal Atatürk, Sun Yat Sen, Türkiye, Üç Halk İlkesi",
-  "source_tr": "https://briqjournal.com/iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949",
-  "source_en": "https://briqjournal.com/en/interactions-between-two-republics-the-republic-turkey-and-the-republic-china-1923-1949",
-  "title_en": "Interactions Between Two Republics: The Republic of Turkey and the Republic of China (1923-1949)",
-  "abstract_en": "Abstract \n The years between 1923 and 1949 are a lost period in terms of bilateral relations between Turkey and the Republic of China ( 中华民国 ). Research conducted in this area is limited; studies examining Chinese relations of the Atatürk period or general bilateral relations are limited, too. Friendly relations between the two Republics, which had similar revolutions and reforms, were established in 1926, allowing them to influence each other ideologically. Especially in China, many books, newspaper reviews, and articles were published about Atatürk and the Turkish Revolution. Chinese delegations have made various visits to Turkey to study the Turkish Revolution. Even though bilateral relations have been been occasionally interrupted in periods as by the Second World War era, the general trend was toward continuity. This study evaluates the relations between Turkey and the Republic of China by examining the Prime Ministry archives, Presidency Archives, Ministry of Foreign Affairs Archives, and newspaper archives of the period (Cumhuriyet, Ulus, Milliyet, and Akşam), and Chinese sources. \n Keywords: Mustafa Kemal Atatürk, Republic of China, Sun Yat-Sen, Three Principles of the People, Turkey",
-  "citation_tr": "Atıf \n Demircan, N. (2021/2022). İki cumhuriyet arasında etkileşim: Türkiye Cumhuriyeti ile  Çin Cumhuriyeti ilişkileri (1923-1949). Kuşak ve Yol Girişimi Dergisi, 3(1), 26-39.",
-  "citation_en": "Citation \n Demircan, N. (2021/2022). Interactions Between Two Republics: The Republic of Turkey and the Republic of China. Belt & Road Initiative Quarterly, 3(1), 26-39.",
-  "pages": "26-39",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/%C4%B0ki%20Cumhuriyet%20Aras%C4%B1nda%20Etkile%C5%9Fim%20T%C3%BCrkiye%20Cumhuriyeti%20ile%20%C3%87in%20Cumhuriyeti%20%C4%B0li%C5%9Fkileri%20%281923-1949%29_0.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Interactions%20Between%20Two%20Republics%20The%20Republic%20of%20Turkey%20and%20the%20Republic%20of%20China%20%281923-1949%29.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Derleme Makalesi",
-  "publication_type_en": "Review Article",
-  "received_date": "2021-10-23",
-  "published_online_date": "2021-12-01"
+  "schemaVersion": 2,
+  "id": "iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949",
+  "articleType": {
+    "id": "review-article",
+    "tr": "Derleme Makalesi",
+    "en": "Review Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Interactions Between Two Republics: The Republic of Turkey and the Republic of China (1923-1949)",
+    "tr": "İki Cumhuriyet Arasında Etkileşim: Türkiye Cumhuriyeti ile Çin Cumhuriyeti İlişkileri (1923-1949)"
+  },
+  "authors": [
+    {
+      "displayName": "Necati Demircan",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": "The years between 1923 and 1949 are a lost period in terms of bilateral relations between Turkey and the Republic of China ( 中华民国 ). Research conducted in this area is limited; studies examining Chinese relations of the Atatürk period or general bilateral relations are limited, too. Friendly relations between the two Republics, which had similar revolutions and reforms, were established in 1926, allowing them to influence each other ideologically. Especially in China, many books, newspaper reviews, and articles were published about Atatürk and the Turkish Revolution. Chinese delegations have made various visits to Turkey to study the Turkish Revolution. Even though bilateral relations have been been occasionally interrupted in periods as by the Second World War era, the general trend was toward continuity. This study evaluates the relations between Turkey and the Republic of China by examining the Prime Ministry archives, Presidency Archives, Ministry of Foreign Affairs Archives, and newspaper archives of the period (Cumhuriyet, Ulus, Milliyet, and Akşam), and Chinese sources.",
+    "tr": "Yapılan literatür araştırmasında, Türkiye Cumhuriyeti ile Çin Cumhuriyeti ( 中华民国 ) ilişkilerini değerlendiren çalışmaların, Atatürk dönemindeki Çin ile ilişkiler veya genel ikili ilişkileri inceleyen kısıtlı ve dar kaynaklı çalışmalar olduğu görülmektedir. 1923-1949 yılları arasında, Türkiye Cumhuriyeti ile Çin Cumhuriyeti ikili ilişkileri açısından tanımlayıcı bir çalışmaya ihtiyaç olduğu görülmüştür. Benzer devrim ve reformlar gerçekleştirmiş iki Cumhuriyet arasında dostane ilişkiler 1926 yılında kurulmuştur. Çin’de Atatürk ve Türkiye’deki devrim hakkında birçok kitap, gazete yorumu, makale yayınlanmıştır. Çinli heyetler Türk devrimini incelemek için Türkiye’ye çeşitli ziyaretler gerçekleştirmiştir. İkinci Dünya Savaşı’nın yarattığı kaos ortamında zaman zaman ikili ilişkiler, kesintiye uğrasa da devam ettirilmiştir. Bu çalışmada, Türkiye Cumhuriyeti ile Çin Cumhuriyeti arasındaki ilişkiler, Başbakanlık Cumhuriyet Arşivleri, Dışişleri Bakanlığı Arşivleri, dönemin Cumhuriyet, Ulus, Milliyet, Akşam gazetesi arşivleri ve Çinli kaynaklar incelenerek değerlendirilmiştir."
+  },
+  "keywords": {
+    "en": [
+      "Mustafa Kemal Atatürk",
+      "Republic of China",
+      "Sun Yat-Sen",
+      "Three Principles of the People",
+      "Turkey"
+    ],
+    "tr": [
+      "Çin Cumhuriyeti",
+      "Mustafa Kemal Atatürk",
+      "Sun Yat Sen",
+      "Türkiye",
+      "Üç Halk İlkesi"
+    ]
+  },
+  "dates": {
+    "received": "2021-10-23",
+    "revised": null,
+    "accepted": null,
+    "published": "2021-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 3,
+    "issue": 1,
+    "year": "2021-2022",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "26",
+    "last": "39"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Demircan, N. (2021/2022). Interactions Between Two Republics: The Republic of Turkey and the Republic of China. Belt & Road Initiative Quarterly, 3(1), 26-39.",
+    "tr": "Demircan, N. (2021/2022). İki cumhuriyet arasında etkileşim: Türkiye Cumhuriyeti ile  Çin Cumhuriyeti ilişkileri (1923-1949). Kuşak ve Yol Girişimi Dergisi, 3(1), 26-39."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/interactions-between-two-republics-the-republic-turkey-and-the-republic-china-1923-1949",
+    "tr": "https://briqjournal.com/iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Interactions%20Between%20Two%20Republics%20The%20Republic%20of%20Turkey%20and%20the%20Republic%20of%20China%20%281923-1949%29.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/%C4%B0ki%20Cumhuriyet%20Aras%C4%B1nda%20Etkile%C5%9Fim%20T%C3%BCrkiye%20Cumhuriyeti%20ile%20%C3%87in%20Cumhuriyeti%20%C4%B0li%C5%9Fkileri%20%281923-1949%29_0.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/iki-cumhuriyet-arasinda-etkilesim-turkiye-cumhuriyeti-ile-cin-cumhuriyeti-iliskileri-1923-1949-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
