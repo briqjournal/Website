@@ -306,7 +306,85 @@ const issueFourRecords = [
   },
 ];
 
+
+const issueFiveFourRecords = [
+  {
+    slug: "yukselen-kuresel-dogunun-yeni-caginda-cinin-genis-cevresel-diplomasisi",
+    pages: [6, 25],
+    body: { tr: 7, en: 7 },
+    start: { tr: "Giriş", en: "Introduction" },
+    skipFirstPortrait: true,
+  },
+  {
+    slug: "yeni-asya-jeopolitigi-baglaminda-turk-devletleri-teskilati",
+    pages: [26, 37],
+    body: { tr: 27, en: 27 },
+    start: { tr: "Giriş", en: "Giriş" },
+    skipFirstPortrait: true,
+  },
+  {
+    slug: "turk-devletleri-teskilati-rusya-cin-ve-irani-da-kapsamali",
+    pages: [38, 43],
+    body: { tr: 39, en: 39 },
+    startContains: {
+      tr: "Son 10-15 yılda",
+      en: "In the past 10-15 years",
+    },
+    skipFirstPortrait: true,
+  },
+  {
+    slug: "kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi",
+    pages: [44, 49],
+    body: { tr: 45, en: 45 },
+    start: { tr: "Giriş", en: "Introduction" },
+    skipFirstPortrait: true,
+  },
+  {
+    slug: "turkiyenin-turk-devletlerinin-butunlesmesindeki-etkin-rolu-baglam-uygulama-ve-etki",
+    pages: [50, 68],
+    body: { tr: 51, en: 51 },
+    start: { tr: "Giriş", en: "Introduction" },
+    skipFirstPortrait: true,
+  },
+  {
+    slug: "orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu",
+    pages: [70, 86],
+    body: { tr: 71, en: 71 },
+    start: { tr: "Giriş", en: "Introduction" },
+    skipFirstPortrait: true,
+  },
+  {
+    slug: "turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin",
+    pages: [88, 94],
+    body: { tr: 89, en: 89 },
+    start: { tr: "Giriş", en: "Introduction" },
+    skipFirstPortrait: true,
+  },
+  {
+    slug: "turkiyenin-afrika-icin-cok-boyutlu-stratejisi-ozellikler-temel-saikler-ve-gelecek-beklentileri",
+    pages: [96, 115],
+    body: { tr: 97, en: 97 },
+    start: { tr: "Giriş", en: "Introduction" },
+    skipFirstPortrait: true,
+  },
+  {
+    slug: "yeni-bir-dunyanin-dogusu-tarihin-sonu-mu",
+    pages: [116, 135],
+    body: { tr: 117, en: 117 },
+    start: { tr: "Giriş", en: "Introduction" },
+    skipFirstPortrait: true,
+  },
+];
+
 const issueConfigs = {
+  "5-4": {
+    pdfs: {
+      tr: join(root, "tmp/pdfs/v5i4-tr.pdf"),
+      en: join(root, "tmp/pdfs/v5i4-en.pdf"),
+    },
+    records: issueFiveFourRecords,
+    sourceLocale: { tr: "tr", en: "en" },
+  },
   "7-1": {
     pdfs: {
       tr: join(root, "tmp/pdfs/v7i1-tr.pdf"),
@@ -344,7 +422,7 @@ const issueConfigs = {
 };
 
 const issueConfig = issueConfigs[issueKey];
-if (!issueConfig) throw new Error(`Unknown issue ${issueKey}. Use 7-1, 7-2, 7-3, or 7-4.`);
+if (!issueConfig) throw new Error(`Unknown issue ${issueKey}. Use 5-4, 7-1, 7-2, 7-3, or 7-4.`);
 const { pdfs, records } = issueConfig;
 
 const exactHeadings = new Set([
@@ -418,6 +496,15 @@ function looksLikeCaption(node) {
   return node.font.size <= 13 && /(Fotoğraf|Photo|Harita|Map|Kaynak|Source):/i.test(node.text);
 }
 
+function looksLikeCanonicalSectionHeading(node) {
+  return node.bold
+    && node.font.size >= 16
+    && node.font.size <= 17
+    && /MyriadPro-Semibold/i.test(node.font.family)
+    && /^#(?:bc2628|d11f27)$/i.test(node.font.color)
+    && !/^(?:ABSTRACT|ÖZ|Keywords:|Anahtar Kelimeler:)$/iu.test(node.text);
+}
+
 function looksLikeHeading(node) {
   if (exactHeadings.has(node.text)) return true;
   if (node.text.length > 105) return false;
@@ -456,7 +543,8 @@ function extractBlocks(pages, config, locale) {
 
   for (const page of selected) {
     for (const node of page.nodes) {
-      if (isNoise(node) && !exactHeadings.has(node.text)) continue;
+      const canonicalSectionHeading = looksLikeCanonicalSectionHeading(node);
+      if (isNoise(node) && !exactHeadings.has(node.text) && !canonicalSectionHeading) continue;
       if (captionTail && node.page === captionTail.page && node.top > captionTail.top && node.top - captionTail.top <= 42 && node.font.size <= 18) {
         captions[captions.length - 1] = dehyphenatedJoin(captions[captions.length - 1], node.text);
         captionTail = { page: node.page, top: node.top };
@@ -480,7 +568,7 @@ function extractBlocks(pages, config, locale) {
         else continue;
       }
 
-      if (looksLikeHeading(node)) {
+      if (canonicalSectionHeading || looksLikeHeading(node)) {
         flushParagraph();
         if (heading) heading = dehyphenatedJoin(heading, node.text);
         else heading = node.text;
