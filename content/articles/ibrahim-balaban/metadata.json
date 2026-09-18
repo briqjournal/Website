@@ -1,25 +1,83 @@
 {
-  "slug": "ibrahim-balaban",
-  "volume": 2,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2021",
-  "author": "admin",
-  "title_tr": "İbrahim Balaban",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/ibrahim-balaban",
-  "source_en": "https://briqjournal.com/en/ibrahim-balaban",
-  "title_en": "İbrahim Balaban",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n How to cite: [Painting by İbrahim Balaban]. Belt & Road Initiative Quarterly, 2(4), 76.",
-  "citation_en": "Atıf \n How to cite: [Painting by İbrahim Balaban]. Belt & Road Initiative Quarterly, 2(4), 76.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/%C4%B0brahim%20Balaban%20TR.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/%C4%B0brahim%20Balaban%20En.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/ibrahim-balaban-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/ibrahim-balaban-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "ibrahim-balaban",
+  "articleType": {
+    "id": "painting",
+    "tr": "Resim",
+    "en": "Painting",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "İbrahim Balaban",
+    "tr": "İbrahim Balaban"
+  },
+  "authors": [
+    {
+      "displayName": "İbrahim Balaban",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2021-09-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 4,
+    "year": 2021,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "76",
+    "last": "76"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "[Painting by İbrahim Balaban]. Belt & Road Initiative Quarterly, 2(4), 76.",
+    "tr": "[Painting by İbrahim Balaban]. Belt & Road Initiative Quarterly, 2(4), 76."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/ibrahim-balaban",
+    "tr": "https://briqjournal.com/ibrahim-balaban",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/%C4%B0brahim%20Balaban%20En.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/%C4%B0brahim%20Balaban%20TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/ibrahim-balaban-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/ibrahim-balaban-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

@@ -1,25 +1,83 @@
 {
-  "slug": "ipek-yolunun-geri-donusu",
-  "volume": 2,
-  "issue": 4,
-  "season_tr": "Güz",
-  "season_en": "Autumn",
-  "year": "2021",
-  "author": "admin",
-  "title_tr": "İpek Yolu'nun Geri Dönüşü",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/ipek-yolunun-geri-donusu",
-  "source_en": "https://briqjournal.com/en/back-the-silk-road",
-  "title_en": "Back to the Silk Road",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Atıf: [Fotoğraf, China Global Television Network, CGTN]. İpek Yolu'nun geri dönüşü. Kuşak ve Yol Girişimi Dergisi, 2(4), 77.",
-  "citation_en": "Atıf \n How to cite: [Photograph by China Global Television Network, CGTN]. Back to the Silk Road. Belt & Road Initiative Quarterly, 2(4), 77.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/%C4%B0pek%20Yolu%27nun%20Geri%20D%C3%B6n%C3%BC%C5%9F%C3%BC.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/Back%20to%20The%20Silk%20Road.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/ipek-yolunun-geri-donusu-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/ipek-yolunun-geri-donusu-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "ipek-yolunun-geri-donusu",
+  "articleType": {
+    "id": "photograph",
+    "tr": "Fotoğraf",
+    "en": "Photograph",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Back to the Silk Road",
+    "tr": "İpek Yolu'nun Geri Dönüşü"
+  },
+  "authors": [
+    {
+      "displayName": "China Global Television Network, CGTN",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2021-09-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 4,
+    "year": 2021,
+    "season": {
+      "en": "Autumn",
+      "tr": "Güz"
+    }
+  },
+  "pages": {
+    "first": "77",
+    "last": "77"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "[Photograph by China Global Television Network, CGTN]. Back to the Silk Road. Belt & Road Initiative Quarterly, 2(4), 77.",
+    "tr": "[Fotoğraf, China Global Television Network, CGTN]. İpek Yolu'nun geri dönüşü. Kuşak ve Yol Girişimi Dergisi, 2(4), 77."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/back-the-silk-road",
+    "tr": "https://briqjournal.com/ipek-yolunun-geri-donusu",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/Back%20to%20The%20Silk%20Road.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-10/%C4%B0pek%20Yolu%27nun%20Geri%20D%C3%B6n%C3%BC%C5%9F%C3%BC.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/ipek-yolunun-geri-donusu-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/ipek-yolunun-geri-donusu-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
