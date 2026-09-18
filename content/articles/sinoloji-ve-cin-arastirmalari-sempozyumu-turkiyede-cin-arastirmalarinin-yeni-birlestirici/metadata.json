@@ -1,26 +1,83 @@
 {
-  "slug": "sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici",
-  "volume": 3,
-  "issue": 1,
-  "season_tr": "Kış",
-  "season_en": "Winter",
-  "year": "2021-2022",
-  "author": "Anıl Solmaz",
-  "title_tr": "Sinoloji ve Çin Araştırmaları Sempozyumu: Türkiye’de Çin Araştırmalarının Yeni Birleştirici Perspektifi",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici",
-  "source_en": "https://briqjournal.com/en/the-sinology-and-chinese-studies-symposium-brand-new-unifying-perspective-chinese-studies-turkey",
-  "title_en": "The Sinology and Chinese Studies Symposium: A Brand-New Unifying Perspective of Chinese Studies in Turkey",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n Solmaz, A. (2021/2022). Sinoloji ve Çin araştırmaları sempozyumu: Türkiye’de Çin araştırmalarının yeni birleştirici perspektifi. Kuşak ve Yol Girişimi Dergisi, 3(1), 76-82.",
-  "citation_en": "Citation \n Solmaz, A. (2021/2022). The Sinology and Chinese studies symposium: A brand-new unifying perspective of Chinese Studies in Turkey. Belt & Road Initiative Quarterly, 3(1), 76-82.",
-  "pages": "76-82",
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Sinoloji%20ve%20%C3%87in%20Ara%C5%9Ft%C4%B1rmalar%C4%B1%20Sempozyumu%20-%20T%C3%BCrkiye%E2%80%99de%20%C3%87in%20Ara%C5%9Ft%C4%B1rmalar%C4%B1n%C4%B1n%20Yeni%20Birle%C5%9Ftirici%20Perspektifi.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/The%20Sinology%20and%20Chinese%20Studies%20Symposium%20A%20Brand-New%20Unifying%20Perspective%20of%20Chinese%20Studies%20in%20Turkey.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici-en.pdf",
-  "shared_bilingual_pdf": false,
-  "publication_type_tr": "Sempozyum Raporu",
-  "publication_type_en": "Symposium Report",
-  "published_online_date": "2021-12-01"
+  "schemaVersion": 2,
+  "id": "sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici",
+  "articleType": {
+    "id": "symposium-report",
+    "tr": "Sempozyum Raporu",
+    "en": "Symposium Report",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "The Sinology and Chinese Studies Symposium: A Brand-New Unifying Perspective of Chinese Studies in Turkey",
+    "tr": "Sinoloji ve Çin Araştırmaları Sempozyumu: Türkiye’de Çin Araştırmalarının Yeni Birleştirici Perspektifi"
+  },
+  "authors": [
+    {
+      "displayName": "Anıl Solmaz",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": "2021-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 3,
+    "issue": 1,
+    "year": "2021-2022",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "76",
+    "last": "82"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "Solmaz, A. (2021/2022). The Sinology and Chinese studies symposium: A brand-new unifying perspective of Chinese Studies in Turkey. Belt & Road Initiative Quarterly, 3(1), 76-82.",
+    "tr": "Solmaz, A. (2021/2022). Sinoloji ve Çin araştırmaları sempozyumu: Türkiye’de Çin araştırmalarının yeni birleştirici perspektifi. Kuşak ve Yol Girişimi Dergisi, 3(1), 76-82."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/the-sinology-and-chinese-studies-symposium-brand-new-unifying-perspective-chinese-studies-turkey",
+    "tr": "https://briqjournal.com/sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/The%20Sinology%20and%20Chinese%20Studies%20Symposium%20A%20Brand-New%20Unifying%20Perspective%20of%20Chinese%20Studies%20in%20Turkey.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-12/Sinoloji%20ve%20%C3%87in%20Ara%C5%9Ft%C4%B1rmalar%C4%B1%20Sempozyumu%20-%20T%C3%BCrkiye%E2%80%99de%20%C3%87in%20Ara%C5%9Ft%C4%B1rmalar%C4%B1n%C4%B1n%20Yeni%20Birle%C5%9Ftirici%20Perspektifi.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/sinoloji-ve-cin-arastirmalari-sempozyumu-turkiyede-cin-arastirmalarinin-yeni-birlestirici-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
