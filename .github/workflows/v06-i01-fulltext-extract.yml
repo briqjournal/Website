@@ -1,0 +1,143 @@
+name: Build v06-i01 full-text candidates
+
+on:
+  push:
+    branches:
+      - chore/v06-i01-fulltext-canonical
+    paths:
+      - '.github/workflows/v06-i01-fulltext-extract.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF extraction tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
+
+      - name: Download official locale issue PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p tmp/pdfs
+          curl -L --fail --retry 4 --retry-all-errors 'https://briqjournal.com/sites/default/files/dergi-sayilari/2024-12/BRIQ%20Cilt6Sayi1.pdf' -o tmp/pdfs/v6i1-tr.pdf
+          curl -L --fail --retry 4 --retry-all-errors 'https://briqjournal.com/sites/default/files/dergi-sayilari/2024-12/BRIQ%20Volume6Issue1.pdf' -o tmp/pdfs/v6i1-en.pdf
+          pdfinfo tmp/pdfs/v6i1-tr.pdf | grep '^Pages:'
+          pdfinfo tmp/pdfs/v6i1-en.pdf | grep '^Pages:'
+
+      - name: Extract issue full text
+        run: node scripts/extract-current-issue-fulltext.mjs 6-1
+
+      - name: Split candidates and represent visual-only record
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json
+          from pathlib import Path
+          import subprocess
+
+          issue = json.loads(Path("content/issues/v06-i01.json").read_text(encoding="utf-8"))
+          assert len(issue["articles"]) == 15
+          visual = "izmir-kizilcullu-koy-enstitusu"
+          extracted = [slug for slug in issue["articles"] if slug != visual]
+          assert len(extracted) == 14
+
+          for slug in extracted:
+              root = Path("content/articles") / slug / "fulltext"
+              current = root / "current.json"
+              data = json.loads(current.read_text(encoding="utf-8"))
+              for locale in ("en", "tr"):
+                  payload = data[locale]
+                  (root / f"{locale}.json").write_text(
+                      json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+                      encoding="utf-8",
+                  )
+              current.unlink()
+
+          empty = {
+              "sections": [],
+              "keywords": [],
+              "footnotes": [],
+              "references": [],
+              "acknowledgements": "",
+              "figures": [],
+          }
+          visual_root = Path("content/articles") / visual / "fulltext"
+          visual_root.mkdir(parents=True, exist_ok=True)
+          for locale in ("en", "tr"):
+              (visual_root / f"{locale}.json").write_text(
+                  json.dumps(empty, ensure_ascii=False, indent=2) + "\n",
+                  encoding="utf-8",
+              )
+
+          subprocess.run(["git", "checkout", "--", "content/catalog.json"], check=True)
+          PY
+
+      - name: Validate candidate structure and locale separation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json, re
+          from pathlib import Path
+
+          issue = json.loads(Path("content/issues/v06-i01.json").read_text(encoding="utf-8"))
+          visual = "izmir-kizilcullu-koy-enstitusu"
+          long_slugs = set(issue["articles"][:9]) | {"abdnin-kurdugu-ekonomik-tuzak-isiginda-abd-cin-rekabetinin-mahiyeti"}
+
+          for slug in issue["articles"]:
+              for locale in ("en", "tr"):
+                  path = Path("content/articles") / slug / "fulltext" / f"{locale}.json"
+                  data = json.loads(path.read_text(encoding="utf-8"))
+                  required = {"sections","keywords","footnotes","references","acknowledgements","figures"}
+                  assert required.issubset(data), (slug, locale, set(data))
+                  assert isinstance(data["sections"], list)
+                  assert isinstance(data["keywords"], list)
+                  assert isinstance(data["footnotes"], list)
+                  assert isinstance(data["references"], list)
+                  assert isinstance(data["figures"], list)
+                  body = " ".join(p for s in data["sections"] for p in s.get("paragraphs", []))
+                  if slug == visual:
+                      assert data["sections"] == [] and body == "", (slug, locale)
+                      continue
+                  if slug in long_slugs:
+                      assert len(body) > 1000, (slug, locale, len(body))
+                  for i, section in enumerate(data["sections"], 1):
+                      assert section["id"] == f"{locale}-section-{i}", (slug, locale, section["id"])
+                      assert isinstance(section.get("title"), str)
+                      assert isinstance(section.get("paragraphs"), list)
+                  if locale == "en" and body:
+                      tr_marks = len(re.findall(r"\b(?:ve|bir|bu|için|olan|olarak|ile|Çin|Türkiye)\b", body, re.I))
+                      en_marks = len(re.findall(r"\b(?:the|and|of|to|in|for|with|China|Türkiye)\b", body, re.I))
+                      assert en_marks >= tr_marks, (slug, en_marks, tr_marks)
+          print("V06_I01_CANDIDATE_STRUCTURE_OK")
+          PY
+
+      - name: Commit canonical candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          issue = json.loads(Path("content/issues/v06-i01.json").read_text(encoding="utf-8"))
+          paths = []
+          for slug in issue["articles"]:
+              paths.append(f"content/articles/{slug}/fulltext")
+              fig = Path("public/assets/article-figures") / slug
+              if fig.exists():
+                  paths.append(str(fig))
+          subprocess.run(["git", "add", "--", *paths], check=True)
+          PY
+          git commit -m 'Build v06-i01 canonical full-text candidates'
+          git push origin HEAD:chore/v06-i01-fulltext-canonical
