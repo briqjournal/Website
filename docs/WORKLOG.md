@@ -2,15 +2,6 @@
 
 Keep this file short. It is a recovery checkpoint for unfinished work, not a project history. Remove completed items instead of accumulating an archive.
 
-## Volume 2 editorial dates
-
-**Status:** incomplete
-
-- Continue evidence-backed `received`, `revised`, and `accepted` date completion for Volume 2 canonical metadata.
-- Research articles require an explicit revision-history check; book reviews require received/accepted verification from the editorial correspondence where the PDF is insufficient.
-- Use official PDFs plus verified project email/Drive/Yandex evidence. Leave unresolved dates `null`; never infer them.
-- Do not redo the Volume 3 or Volume 4 verified-spreadsheet updates already present in the repository.
-
 ## Metadata v2 migration
 
 **Status:** in progress
