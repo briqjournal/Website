@@ -2,14 +2,28 @@
   "sections": [
     {
       "id": "tr-section-1",
-      "title": "Tam metin",
+      "title": "Bertolt Brecht",
       "paragraphs": [
         "*Bertolt Brecht, 20. yüzyılın en etkili oyun yazarlarından ve şairlerinden biri olarak kabul edilir. Eserleri arasında besteci Kurt Weill ile birlikte yazdığı The Threepenny Opera (1928), Mother Courage and Her Children (1941), The Good Person of Szechwan (1943) ve The Resistible Rise of Arturo Ui (1958) bulunmaktadır. Brecht, 1898'de Bavyera'nın Augsburg şehrinde doğdu ve iki dünya savaşı hayatını ve eserlerini doğrudan etkiledi. Öğrenciyken şiir yazdı, Münih Ludwig Maximilian Üniversitesi'nde tıp okudu. Birinci Dünya Savaşı sırasında askerlik hizmetinden sonra, yazarlık ve tiyatro için tıp çalışmalarını bıraktı. Bağımsız Sosyal Demokrat Parti üyesi olan Brecht, 1919'dan 1921'e kadar sosyalist yayınlarda tiyatro eleştirisi yazdı. Oyunları 1930'larda Almanya'da yasaklandı ve 1933'te sürgüne gitti. 1949'da Doğu Berlin'e taşındı ve Berliner Ensemble adlı bir tiyatro topluluğunu yönetti. Çeşitli türlerde şiirler yazdı, bunlar arasında dönemin politik olayları ile ilgili olanlar, müziğe uyarladığı ve sahnelediği oyunları için yazdığı şarkılar ve politik şiirler yer alıyor. Bertolt Brecht 1956 yılında hayatını kaybetti."
+      ]
+    },
+    {
+      "id": "tr-section-2",
+      "title": "Öğrenmeye Övgü",
+      "paragraphs": [
+        "Öğren en basiti. Zamanıdır.  \nSakın geç deme.  \nÖğren abeceyi, çok bir şey değil gerçi  \nÖğren ama, başla.  \nKoru kendini yılgınlıktan.  \nHer şeyi öğrenmelisin  \nÇünkü sensin artık yönetecek olan.",
+        "Köprü altındaki, öğren!  \nÖğren, demir parmaklıklar ardındaki!  \nEv kadını, öğren!  \nÖğren, altmış yaşındaki!  \nKimsesiz çocuk, okul ara kendine  \nBilim ara, soğuktan kıkırdayan.  \nSarıl kitaba, aç insan. Silahtır o  \nÇünkü sensin artık yönetecek olan",
+        "Çekinme soru sormaktan arkadaş!  \nEnayi yerine koydurma kendini  \nAlın teri dökmeden bellediği şeyi  \nBiliyor sayılmaz insan.  \nGeçir gözden hesap pusulasını  \nUnutma, sana ödetilecek faturası  \nParmak bas üstüne her rakamın  \nNerden çıkmış, sor bakalım  \nÇünkü sensin artık yönetecek olan."
       ]
     }
   ],
   "keywords": [],
-  "footnotes": [],
+  "footnotes": [
+    {
+      "id": "note-1",
+      "text": "Brecht, B. (2008). Öğrenmeye Övgü (Çev. Ataol Behramoğlu). Dünya Şiir Antolojisi Cilt 1. 115 (Ed. Behramoğlu A.-İnce Ö.) İstanbul: Sosyal Yayınları."
+    }
+  ],
   "references": [],
   "acknowledgements": "",
   "figures": [

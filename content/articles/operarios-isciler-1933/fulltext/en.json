@@ -2,21 +2,26 @@
   "sections": [
     {
       "id": "en-section-1",
-      "title": "Full text",
+      "title": "Operários (Workers), 1933",
       "paragraphs": [
-        "*In Türkiye, Village Institutes (Turkish: Köy Enstitüleri) were founded in the initial years of the Republican Revolution to deliver education and training in rural areas, cultivating local individuals as educators to guide villagers in several fields, including health and agriculture. In 1937, the “Law on Village Instructors” was established to train educators for imparting literacy and mathematics in rural schools. Under the auspices of the “Law on Village Instructor Courses and Village Teacher Schools” enacted in 1939, village teacher schools were established in Eskişehir, İzmir, Kırklareli, Kastamonu, and Samsun. In 1940, the “Law on Village Institutes” consolidated existing village teacher schools into village institutes, prioritizing rural education and development. Village Institutes are distinctive educational establishments found in Turkey. During that period, the rural population constituted approximately 85%. The overwhelming majority lacked education. The Village Institutes created an educational paradigm that integrated industry and labor with art and creativity through workshops. In 1946, concurrently with Turkey’s alignment with the Atlantic bloc, the Village Institutes were disbanded. Individuals raised at the Village Institute traveled to rural areas to educate the illiterate populace. A multitude of poets, writers, and scientists have also arisen from the ranks of educators. * Association of New Generation Village Institutes (Yeni Kuşak Köy Enstitülüler Derneği)"
+        "* ‘Operários’ (Workers) has a significant place in Brazilian modern art, as it is considered to be the first painting with a social theme. It is also the largest painting Tarsila ever made and presents a pyramid of human heads all exhausted and fatigued. She created this work inspired by Sao Paolo itself, from industrial society. Its she says: She did everything based on photographs and on the visual memory of certain people she knew. The racial diversity shown in this painting truly stands as a representation of the modern and racially mixed society of Brazil. Behind these workers, smokestacks and buildings represent Sao Paolo’s increasingly industrialized landscape."
       ]
     }
   ],
   "keywords": [],
-  "footnotes": [],
+  "footnotes": [
+    {
+      "id": "note-1",
+      "text": "1933 Oil on canvas. 150 x 205 cm."
+    }
+  ],
   "references": [],
   "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
       "src": "/assets/article-figures/operarios-isciler-1933/figure-01.jpg",
-      "caption": "Visual 1"
+      "caption": "Operários (Workers), 1933"
     }
   ]
 }
