@@ -1,25 +1,83 @@
 {
-  "slug": "karikatur",
-  "volume": 2,
-  "issue": 2,
-  "season_tr": "Bahar",
-  "season_en": "Spring",
-  "year": "2021",
-  "author": "Turhan Selçuk",
-  "title_tr": "Karikatür",
-  "abstract_tr": null,
-  "source_tr": "https://briqjournal.com/karikatur",
-  "source_en": "https://briqjournal.com/en/cartoon",
-  "title_en": "Cartoon",
-  "abstract_en": null,
-  "citation_tr": "Atıf \n [Turhan Selçuk karikatürü]. Kuşak ve Yol Girişimi Dergisi, 2 (2), 95.",
-  "citation_en": "Atıf \n [Cartoon by Turhan Selçuk]. Belt & Road Initiative Quarterly, 2 (2), 95.",
-  "pages": null,
-  "pdf_tr_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Karikat%C3%BCr%20-%20Turhan%20Sel%C3%A7uk.pdf",
-  "pdf_en_source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Cartoon%20-%20Turhan%20Sel%C3%A7uk.pdf",
-  "pdf_tr_local": "/assets/archive/pdfs/articles/karikatur-tr.pdf",
-  "pdf_en_local": "/assets/archive/pdfs/articles/karikatur-en.pdf",
-  "received_date": null,
-  "revised_date": null,
-  "accepted_date": null
+  "schemaVersion": 2,
+  "id": "karikatur",
+  "articleType": {
+    "id": "cartoon",
+    "tr": "Karikatür",
+    "en": "Cartoon",
+    "peerReviewed": false
+  },
+  "title": {
+    "en": "Cartoon",
+    "tr": "Karikatür"
+  },
+  "authors": [
+    {
+      "displayName": "Turhan Selçuk",
+      "givenName": null,
+      "familyName": null,
+      "orcid": null,
+      "affiliations": []
+    }
+  ],
+  "abstract": {
+    "en": null,
+    "tr": null
+  },
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": null,
+    "revised": null,
+    "accepted": null,
+    "published": null
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 2,
+    "issue": 2,
+    "year": 2021,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "95",
+    "last": "95"
+  },
+  "doi": null,
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "funding": null,
+  "conflictOfInterest": null,
+  "authorContributions": null,
+  "ethicsApproval": null,
+  "dataAvailability": null,
+  "aiUse": null,
+  "acknowledgements": null,
+  "citation": {
+    "en": "[Cartoon by Turhan Selçuk]. Belt & Road Initiative Quarterly, 2 (2), 95.",
+    "tr": "[Turhan Selçuk karikatürü]. Kuşak ve Yol Girişimi Dergisi, 2 (2), 95."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/cartoon",
+    "tr": "https://briqjournal.com/karikatur",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Cartoon%20-%20Turhan%20Sel%C3%A7uk.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2021-03/Karikat%C3%BCr%20-%20Turhan%20Sel%C3%A7uk.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/karikatur-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/karikatur-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
