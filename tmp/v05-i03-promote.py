@@ -43,7 +43,11 @@ def dehyphenated_join(left, right):
         return left
     if right[0] in ".,;:!?)]}":
         return left + right
-    if left.endswith(("-", "‐")) and (right[0].islower() or right[0].isdigit()):
+    if left.endswith(("-", "‐")) and right[0].islower():
+        return left[:-1] + right
+    if left.endswith(("-", "‐")) and right[0].isdigit():
+        if re.search(r"\d{4}-\d{2}-$", left):
+            return left + right
         return left[:-1] + right
     return left + " " + right
 
@@ -127,7 +131,7 @@ def parse_article1_tr_refs():
     left_refs = parse_reference_segments(after_marker(left, "Kaynakça"))
     right_refs = parse_reference_segments(right)
     refs = left_refs + right_refs
-    refs = [r for r in refs if re.search(r"\(\d{4}[a-z]?\)", r)]
+    refs = [r for r in refs if not r.startswith("Küresel Girişimi Bağlamında")]
     return [{"id": f"ref-{i+1}", "text": r} for i, r in enumerate(refs)]
 
 def parse_islamophobia_refs(locale):
