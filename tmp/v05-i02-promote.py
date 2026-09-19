@@ -97,7 +97,7 @@ def set_figures(d,slug,captions):
 
 # 1 Africa at Dawn — first extracted image is the author portrait; preserve 11 published content visuals.
 slug=prose[0]
-shift_assets(slug,range(2,13))
+# The production directory already contains the 11 verified body visuals; the author portrait was excluded upstream.
 caps={
 "en":[
 "At the Berlin Conference, borders were drawn with a ruler. In 1913, almost all of Africa was colonised by Europe (Photo: NDLA, 2024).",
