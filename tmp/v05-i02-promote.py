@@ -247,7 +247,7 @@ for loc in ("en","tr"):
     d=load(slug,loc)
     # first 3 questions are exact candidate headings. Final question spans a pull-quote heading + question fragment.
     exact=qs[loc][:3]
-    starts=[next(i for i,s in enumerate(d["sections"]) if s["title"]==t) for t in exact]
+    starts=[next(i for i,s in enumerate(d["sections"]) if t in s["title"]) for t in exact]
     final_start=next(i for i,s in enumerate(d["sections"]) if ("Africa prefers Türkiye" in s["title"] if loc=="en" else "Afrika, Türkiye’yi" in s["title"]))
     bounds=starts+[final_start,len(d["sections"])]
     out=[]
