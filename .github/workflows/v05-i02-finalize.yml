@@ -1,0 +1,139 @@
+name: Finalize v05-i02 canonical migration
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/v05-i02-finalize.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chore/v05-i02-fulltext-canonical
+          fetch-depth: 0
+
+      - name: Remove temporary v05-i02 migration artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm -r --ignore-unmatch tmp/v05-i02*
+          git rm -r --ignore-unmatch .github/workflows/v05-i02-*.yml
+          git rm -r --ignore-unmatch tests/*v05-i02* scripts/*v05-i02*
+
+      - name: Verify final v05-i02 canonical state
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json, pathlib, re
+
+          root = pathlib.Path(".")
+          issue = json.loads((root / "content/issues/v05-i02.json").read_text())
+          assert len(issue["articles"]) == 14
+          cross = {}
+
+          for slug in issue["articles"]:
+              assert not (root / "content/articles" / slug / "fulltext/en-archive.json").exists(), slug
+              for loc in ("en", "tr"):
+                  path = root / "content/articles" / slug / "fulltext" / f"{loc}.json"
+                  assert path.is_file(), path
+                  data = json.loads(path.read_text())
+                  sections = data.get("sections") or []
+                  assert sections, (slug, loc, "sections")
+                  ids = {}
+                  for key in ("sections", "references", "footnotes", "figures"):
+                      values = [x.get("id") for x in data.get(key, []) if x.get("id")]
+                      assert len(values) == len(set(values)), (slug, loc, key, "duplicate ids")
+                  paragraphs = []
+                  for section in sections:
+                      paragraphs.extend(section.get("paragraphs") or [])
+                  normalized = []
+                  for paragraph in paragraphs:
+                      text = paragraph if isinstance(paragraph, str) else paragraph.get("text", "")
+                      norm = re.sub(r"\s+", " ", text).strip().lower()
+                      if len(norm) >= 120:
+                          normalized.append(norm)
+                  assert len(normalized) == len(set(normalized)), (slug, loc, "duplicate paragraph")
+                  for norm in normalized:
+                      key = (loc, norm)
+                      owner = cross.get(key)
+                      assert owner in (None, slug), (owner, slug, loc, "cross-record contamination")
+                      cross[key] = slug
+                  for ref in data.get("references") or []:
+                      text = ref.get("text", "")
+                      years = len(re.findall(r"\((?:18|19|20)\d{2}(?:[a-z]|,\s*[^)]*)?\)\.", text))
+                      years += len(re.findall(r"\((?:n\.d\.|t\.y\.)\)\.", text, flags=re.I))
+                      retrieved = text.count("Retrieved") + text.count("adresinden")
+                      assert years <= 1 and retrieved <= 1, (slug, loc, ref.get("id"), "fused reference")
+                      assert not re.search(r"(?:https?://www\.|www\.)\s+[A-Za-z]|(?:https?://|doi\.org/)\s+", text, flags=re.I), (slug, loc, ref.get("id"), "URL wrap")
+                  for figure in data.get("figures") or []:
+                      assert figure.get("caption", "").strip(), (slug, loc, figure.get("id"), "blank caption")
+                      prefix = f"/assets/article-figures/{slug}/"
+                      assert figure.get("src", "").startswith(prefix), (slug, loc, figure.get("id"), "foreign asset")
+                      assert (root / "public" / figure["src"].lstrip("/")).is_file(), (slug, loc, figure.get("id"), "missing asset")
+
+          poem_shapes = {
+              ("isyan-tutanaklari", "en"): 26,
+              ("isyan-tutanaklari", "tr"): 26,
+              ("afrikanin-kalbinde-sabah", "en"): 48,
+              ("afrikanin-kalbinde-sabah", "tr"): 49,
+          }
+          for (slug, loc), expected in poem_shapes.items():
+              data = json.loads((root / "content/articles" / slug / "fulltext" / f"{loc}.json").read_text())
+              poem = data["sections"][-1]["paragraphs"][-1]
+              assert len(poem.split("\n")) == expected, (slug, loc, "poem structure")
+
+          catalog = json.loads((root / "content/catalog.json").read_text())
+          legacy = set(catalog["fulltext"]["en_archive"])
+          assert not legacy.intersection(issue["articles"])
+          assert len(legacy) == 126
+
+          worklog = (root / "docs/WORKLOG.md").read_text()
+          section = worklog.split("## Canonical full-text migration", 1)[1].split("\n## ", 1)[0]
+          assert "Completed unit: `v05-i02`" in section
+          assert "Next unit: `v05-i01`" in section
+
+          leftovers = [
+              p for p in root.rglob("*")
+              if p.is_file() and (
+                  str(p).startswith("tmp/v05-i02")
+                  or str(p).startswith(".github/workflows/v05-i02-")
+                  or (str(p).startswith("tests/") and "v05-i02" in p.name)
+                  or (str(p).startswith("scripts/") and "v05-i02" in p.name)
+              )
+          ]
+          assert not leftovers, leftovers
+          print("v05-i02 canonical final-state verification passed")
+          PY
+          git diff --cached --check
+
+      - name: Install dependencies
+        run: npm run install:ci
+
+      - name: Full tests and build
+        run: npm test
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Validate built rendering artifact
+        run: npm run validate:artifact
+
+      - name: Commit final cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Finalize v05-i02 canonical migration cleanup'
+          git pull --rebase origin chore/v05-i02-fulltext-canonical
+          git push origin HEAD:chore/v05-i02-fulltext-canonical
