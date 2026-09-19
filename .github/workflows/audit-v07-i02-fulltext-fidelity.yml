@@ -42,6 +42,30 @@ jobs:
               p=subprocess.run(["pdfimages","-list",str(pdf)],text=True,capture_output=True,check=True)
               (root/"tmp/v07-i02-fidelity/pdfimages"/f"{slug}.txt").write_text(p.stdout)
           PY
+      - name: Capture visual-caption context
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, re
+          root=pathlib.Path(".")
+          report=json.loads((root/".audit/fulltext-fidelity/v07-i02/report.json").read_text())
+          out=[]
+          def squash(s): return " ".join(s.split())
+          for r in report["locales"]:
+              for cand in r.get("published_visual_label_candidates") or []:
+                  page=cand["page"]
+                  p=root/".audit/fulltext-fidelity/v07-i02"/r["slug"]/r["locale"]/"pages"/f"p{page:03}.txt"
+                  lines=p.read_text(errors="replace").splitlines()
+                  target=squash(cand["text"])
+                  idx=next((i for i,line in enumerate(lines) if squash(line)==target),None)
+                  if idx is None:
+                      idx=next((i for i,line in enumerate(lines) if target in squash(line)),None)
+                  lo=max(0,(idx or 0)-7); hi=min(len(lines),(idx or 0)+5)
+                  out.append({"slug":r["slug"],"locale":r["locale"],"page":page,"candidate":cand["text"],
+                              "context":[squash(x) for x in lines[lo:hi] if squash(x)]})
+          dest=root/"tmp/v07-i02-fidelity/visual-context.json"
+          dest.parent.mkdir(parents=True,exist_ok=True)
+          dest.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
+          PY
       - name: Preserve compact audit evidence
         run: |
           mkdir -p tmp/v07-i02-fidelity
@@ -72,6 +96,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f tmp/v07-i02-fidelity/report.json tmp/v07-i02-fidelity/report.md tmp/v07-i02-fidelity/compact.json tmp/v07-i02-fidelity/pdfimages
+          git add -f tmp/v07-i02-fidelity/report.json tmp/v07-i02-fidelity/report.md tmp/v07-i02-fidelity/compact.json tmp/v07-i02-fidelity/pdfimages tmp/v07-i02-fidelity/visual-context.json
           git commit -m "chore: capture v07-i02 fidelity audit evidence"
+          git pull --rebase origin audit/v07-i02-fulltext-fidelity
           git push
