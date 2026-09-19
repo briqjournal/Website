@@ -10,7 +10,7 @@
       "pdf_pages": 26,
       "canonical_paragraphs": 70,
       "canonical_references": 70,
-      "canonical_figures": 0,
+      "canonical_figures": 9,
       "canonical_tokens": 9427,
       "pdf_extracted_tokens": 10848,
       "paragraph_match_ratio": 0.986,
@@ -122,7 +122,53 @@
         }
       ],
       "metadata_leakage_candidates": [],
-      "figure_caption_matches": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "On November 28, 2024, in Astana, the CSTO Collective Security Council held a session under the chairmanship of the President of the Republic of Kazakhstan, Kassym-Jomart Tokayev (Photo: CSTO website, 2024)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "“Historically a center of Islamic scholarship, it became a hotspot for radicalization due to its dense religiosity and economic marginalization” (Map: Russian International Affairs Council, 2013)."
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "“The Syrian conflict played a pivotal role in enhancing the operational capabilities of Central Asian jihadist groups” (Photo: CGTN, nd.)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "An image image from the CSTO's anti-terrorist exercise in Tajikistan. The CSTO is a pivotal regional entity established under the 1992 Collective Security Treaty, designed to safeguard member states from external threats"
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "“The CSTO’s counterterrorism capabilities were tested during Kazakhstan’s unrest in January 2022” (Photo: CSTO website, 2022)."
+        },
+        {
+          "page": 16,
+          "score": 1.0,
+          "caption": "“This digital dimension of terrorism suggests that there must be enhanced internal coordination among CSTO member states, as well as collaboration with external actors, including Middle Eastern countries, China, the Unit"
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "Tajik President Emomali Rahmon (center), Kyrgyz President Sadyr Japarov (left) and Uzbek President Shavkat Mirziyoyev signed a treaty on the junction point of their national borders in Khujand, Tajikistan, March 31, 2025"
+        },
+        {
+          "page": 20,
+          "score": 1.0,
+          "caption": "Members of the East Turkistan Islamic Movement terrorist organization in Syria (Photo: Asiatimes, 2024)."
+        },
+        {
+          "page": 22,
+          "score": 1.0,
+          "caption": "“Despite prevailing Western narratives that see Central Asia as an arena of Sino-Russian rivalry, the reality demonstrates a complementary partnership between the two powers in enhancing regional security” (Photo: Sochi "
+        }
+      ],
       "figure_captions_low_match": [],
       "published_visual_label_candidates": [
         {
@@ -177,7 +223,7 @@
       "pdf_pages": 26,
       "canonical_paragraphs": 69,
       "canonical_references": 70,
-      "canonical_figures": 0,
+      "canonical_figures": 9,
       "canonical_tokens": 8780,
       "pdf_extracted_tokens": 10484,
       "paragraph_match_ratio": 0.942,
@@ -324,7 +370,53 @@
         }
       ],
       "metadata_leakage_candidates": [],
-      "figure_caption_matches": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "28 Kasım 2024’te Astana'da Kazakistan Cumhuriyeti Cumhurbaşkanı Kasım Cömert Tokayev'in başkanlığında KGAÖ Kolektif Güvenlik Konseyi oturumu düzenlendi (Fotoğraf: CSTO web sitesi, 2024)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "“Bir zamanlar İslami eğitimin merkezi olan Fergana Vadisi, yoğun dindarlığı ve ekonomik marjinalleşmesi nedeniyle aşırılık için bir üreme alanı haline gelmiştir” (Harita: Harita Genel Müdürlüğü, t.y.)"
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "“Orta Asyalı cihatçı grupların operasyonel becerileri Suriye krizi sayesinde önemli ölçüde gelişmiştir” (Fotoğraf: CGTN, t.y.)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "KGAÖ’nün Tacikistan’daki anti terör tatbikatından bir görüntü. 1992’de imzalanan Kolektif Güvenlik Antlaşması ile kurulan önemli bir bölgesel örgüt olan KGAÖ’nün misyonu, operasyonel ve stratejik çerçeveler uygulayarak ü"
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "“Ocak 2022’de Kazakistan’da yaşanan kargaşa sırasında KGAÖ’nün teröre karşı mücadele kabiliyetleri test edilmiştir” (Fotoğraf: CSTO websitesi, 2022)."
+        },
+        {
+          "page": 16,
+          "score": 1.0,
+          "caption": "“Terörizmin dijital boyutu, KGAÖ üyesi devletler arasında daha iyi bir iç koordinasyonun yanı sıra Ortadoğu ülkeleri, Çin, ABD ve uluslararası örgütler gibi dış aktörlerle de işbirliği yapılması gerektiğini göstermektedi"
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "Tacikistan Cumhurbaşkanı Emomali Rahmon (ortada), Kırgızistan Cumhurbaşkanı Sadyr Japarov (solda) ve Özbekistan Cumhurbaşkanı Şavkat Mirziyoyev 31 Mart 2025 tarihinde Tacikistan'ın Hucend kentinde ulusal sınırlarının bir"
+        },
+        {
+          "page": 20,
+          "score": 1.0,
+          "caption": "Doğu Türkistan İslami Hareketi adlı terör örgütünün üyeleri Suriye’de (Fotoğraf: Asiatimes, 2024)."
+        },
+        {
+          "page": 22,
+          "score": 1.0,
+          "caption": "“Orta Asya’yı bir Çin-Rusya rekabet alanı olarak gösteren popüler Batı anlatılarının aksine, gerçekler iki ülkenin bölgesel istikrarı güçlendirmek için birlikte çalıştığını göstermektedir” (Fotoğraf: Soçi Avrasya Entegra"
+        }
+      ],
       "figure_captions_low_match": [],
       "published_visual_label_candidates": [
         {
@@ -382,7 +474,7 @@
       "pdf_pages": 4,
       "canonical_paragraphs": 5,
       "canonical_references": 1,
-      "canonical_figures": 0,
+      "canonical_figures": 2,
       "canonical_tokens": 1096,
       "pdf_extracted_tokens": 1387,
       "paragraph_match_ratio": 1.0,
@@ -455,7 +547,18 @@
         }
       ],
       "metadata_leakage_candidates": [],
-      "figure_caption_matches": [],
+      "figure_caption_matches": [
+        {
+          "page": 2,
+          "score": 1.0,
+          "caption": "The 16th Meeting of the BRICS Summit was held from October 22 to 24, 2024, in Kazan, Russia, under the theme “Strengthening Multilateralism for Fair Global Development and Security” (Photo: bric.br, 2025)."
+        },
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "A photo from the 2025 Leaders Summit in Rio de Janeiro (Photo: Isabela Castilho/BRICS Brasil, 2025)."
+        }
+      ],
       "figure_captions_low_match": [],
       "published_visual_label_candidates": [
         {
@@ -481,7 +584,7 @@
       "pdf_pages": 4,
       "canonical_paragraphs": 6,
       "canonical_references": 1,
-      "canonical_figures": 0,
+      "canonical_figures": 2,
       "canonical_tokens": 958,
       "pdf_extracted_tokens": 1249,
       "paragraph_match_ratio": 1.0,
@@ -549,7 +652,18 @@
         }
       ],
       "metadata_leakage_candidates": [],
-      "figure_caption_matches": [],
+      "figure_caption_matches": [
+        {
+          "page": 2,
+          "score": 1.0,
+          "caption": "BRICS 16. Zirve Toplantısı 22-24 Ekim 2024’te Rusya'nın Kazan şehrinde “Adil Küresel Kalkınma ve Güvenlik için Çok Taraflılığın Güçlendirilmesi” teması altında gerçekleştirilmiştir (Fotoğraf: bric.br, 2025)."
+        },
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "Rio de Janeiro'da düzenlenen 2025 Liderler Zirvesi'nden bir görüntü (Fotoğraf: Isabela Castilho/BRICS Brasil, 2025)."
+        }
+      ],
       "figure_captions_low_match": [],
       "published_visual_label_candidates": [
         {
@@ -759,7 +873,7 @@
       "pdf_pages": 32,
       "canonical_paragraphs": 48,
       "canonical_references": 35,
-      "canonical_figures": 0,
+      "canonical_figures": 9,
       "canonical_tokens": 12798,
       "pdf_extracted_tokens": 14946,
       "paragraph_match_ratio": 0.958,
@@ -874,7 +988,53 @@
         }
       ],
       "metadata_leakage_candidates": [],
-      "figure_caption_matches": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "In 1987, the European Management Forum changed its name to the World Economic Forum to reflect its global membership and the fact that economic policy was at the forefront of its activities (Photo: WEF website, n.d.)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "“In 1982, at the first informal gathering of world economic leaders organized as part of the Forum, US President Reagan, addressing the participants via satellite, explicitly demanded that the capitalist camp maintain it"
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "“Under the neoliberal paradigm that dominates the WEF, the institution not only proves structurally incapable of proposing effective governance strategies for global economic crises but also perpetuates the squandering o"
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "“The World Economic Forum’s membership capital demonstrates structural symbiosis with its corporate members’ capital accumulation processes, materially manifested through capital circuits operationalized in initiatives l"
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "Graphic. Tech companies that have laid off the most employees in 2024. “Extremely exploitative working systems systematically extract absolute surplus value through time deprivation, while large-scale layoffs by tech oli"
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "\"With the deepening process of capital liberalization, inequality within the capitalist-dominated global economic system has been intensifying\" (Cartoon: Global Times, 2025)."
+        },
+        {
+          "page": 16,
+          "score": 1.0,
+          "caption": "“Historically, capitalist hegemony has undergone three spatio-temporal iterations. Currently, it is undergoing a paradigmatic reconstruction to become digital capital hegemony (platform capitalism)” (Illustration: Monthl"
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "“From the establishment of the forum in 1971 to the onset of the 2008 global financial crisis, financial capital underwent a qualitative transformation into a derivatives-dominated accumulation regime” (Photo: WEF websit"
+        },
+        {
+          "page": 22,
+          "score": 1.0,
+          "caption": "“The global financial crisis triggered by the 2008 US subprime mortgage crisis has made it increasingly obvious that the trend of economic globalization, which was led by the developed countries in the West, has gone int"
+        }
+      ],
       "figure_captions_low_match": [],
       "published_visual_label_candidates": [
         {
@@ -926,7 +1086,7 @@
       "pdf_pages": 32,
       "canonical_paragraphs": 52,
       "canonical_references": 35,
-      "canonical_figures": 0,
+      "canonical_figures": 9,
       "canonical_tokens": 10538,
       "pdf_extracted_tokens": 12650,
       "paragraph_match_ratio": 0.865,
@@ -1100,7 +1260,53 @@
         }
       ],
       "metadata_leakage_candidates": [],
-      "figure_caption_matches": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "Avrupa Yönetim Forumu, 1987 yılınd küresel çaptaki etkisini ve faaliyetlerinde ekonomi politikasının ön planda olduğunu vurgulamak amacıyla adını Dünya Ekonomik Forumu olarak değiştirdi (Fotoğraf: WEF websitesi, t.y.)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "“1982 yılındaki Forum kapsamında düzenlenen dünya ekonomi liderlerinin ilk gayri resmi buluşmasında, uydu aracılığıyla katılımcılara seslenen ABD Başkanı Reagan, kapitalist kampın Sovyetler Birliği liderliğindeki sosyali"
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "\"WEF’i yönlendiren neoliberal paradigma altında, bu kurum küresel ekonomik krizler için etkili yönetişim stratejileri önerme konusunda yapısal olarak yetersiz kalmakla kalmaz, aynı zamanda rant arayışına dayalı faaliyetl"
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "“Dünya Ekonomik Forumu’nun üyelik sermayesi, kurumsal üyelerinin sermaye birikim süreçleriyle yapısal bir simbiyoz sergilemektedir. Bu simbiyoz, Tropikal Orman İttifakı ve Küresel Plastik Eylem Ortaklığı gibi girişimlerd"
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "Grafik. 2024’te en çok çalışanı işten çıkaran teknoloji şirketleri. “Son derece sömürücü çalışma sistemleri, zaman yoksunluğu yoluyla sistematik olarak mutlak artı değer elde ederken, Microsoft, Twitter ve Apple gibi tek"
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "\"Sermayenin serbestleşmesi sürecinin derinleşmesiyle birlikte, kapitalist egemen küresel ekonomik sistem içindeki eşitsizlik de yoğunlaşmaktadır\" (Karikatür: Global Times, 2025)."
+        },
+        {
+          "page": 16,
+          "score": 1.0,
+          "caption": "\"Tarihsel olarak kapitalist hegemonya üç mekânsal-zamansal yineleme geçirmiştir. Şu anda ise dijital sermaye hegemonyasına (platform kapitalizmi) doğru paradigmatik bir yeniden yapılanma sürecinden geçmektedir\" (Çizim: M"
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "“WEF’in 1971’de kurulmasından 2008 küresel mali krizinin başlangıcına kadar, mali sermaye türevlerin egemen olduğu bir birikim rejimine doğru niteliksel bir dönüşüm geçirmiştir” (Fotoğraf: WEF websitesi, 2024)."
+        },
+        {
+          "page": 22,
+          "score": 1.0,
+          "caption": "“2008 ABD subprime mortgage krizinin tetiklediği küresel mali krizin de etkisiyle, Batı’daki gelişmiş ülkelerin öncülük ettiği dünyadaki ekonomik küreselleşme eğiliminin tersine dönüşü giderek daha belirgin hale gelmişti"
+        }
+      ],
       "figure_captions_low_match": [],
       "published_visual_label_candidates": [
         {
@@ -1163,7 +1369,7 @@
       "pdf_pages": 22,
       "canonical_paragraphs": 51,
       "canonical_references": 28,
-      "canonical_figures": 0,
+      "canonical_figures": 8,
       "canonical_tokens": 8608,
       "pdf_extracted_tokens": 10580,
       "paragraph_match_ratio": 0.98,
@@ -1244,7 +1450,48 @@
       "empty_sections": [],
       "short_sections": [],
       "metadata_leakage_candidates": [],
-      "figure_caption_matches": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "College students in Zhenjiang, Jiangsu province, hold a flag of the Communist Youth League to celebrate the upcoming 100th anniversary of the May Fourth Movement, April 15, 2019 (Photo: China Daily, 2019)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "La Jeunesse, or New Youth, was one of the most influential magazines in modern China. Chen Duxiu, editor-in-chief of the magazine, introduced many new ideas such as individualism, democracy and humanism (Photo: Shanghai "
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "The Tiger (Jiayin) was founded in Tokyo, Japan, in May 1914 (Jiayin year according to the lunar calendar). It was originally a monthly magazine. Its initiator was Hu Hanmin, and its editor-in-chief was Qiu Tong (Zhang Sh"
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "On May 7, 1919, teachers and students of Beijing Normal University warmly welcomed the eight students arrested on May 4 back to school (Photo: Beijing Normal University, 2021)."
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "“The CPC’s claim to the patriotic and nationalist stance of May 4 at all times is critical in strengthening the idea that class struggle and the struggle for independence are inseparable from each other in the democratic"
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "A page from Chen Duxiu's letter to Hu Shih in New Youth on the subject of “color.” After the May 4th Movement, in September 1919, Li Dazhao edited the “Marxist Special Issue” of New Youth and published the article “My Vi"
+        },
+        {
+          "page": 16,
+          "score": 0.886,
+          "caption": "“Apart from New Youth, essential publications such as Weekly Review, The Morning Post, and Beijing News, and the thought workshops led by anarchists in universities were also among the centers of current discussi-ons” (P"
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "Shanghai youth on parade (Photo: Peking University, n.d.)."
+        }
+      ],
       "figure_captions_low_match": [],
       "published_visual_label_candidates": [
         {
@@ -1295,7 +1542,7 @@
       "pdf_pages": 22,
       "canonical_paragraphs": 44,
       "canonical_references": 29,
-      "canonical_figures": 0,
+      "canonical_figures": 8,
       "canonical_tokens": 6839,
       "pdf_extracted_tokens": 8766,
       "paragraph_match_ratio": 0.932,
@@ -1398,7 +1645,48 @@
         }
       ],
       "metadata_leakage_candidates": [],
-      "figure_caption_matches": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "Jiangsu eyaletinin Zhenjiang kentindeki üniversite öğrencileri, 4 Mayıs Hareketi’nin 100. yıldönümünü kutlamak için Komünist Gençlik Birliği bayrağı tutuyor (Fotoğraf: China Daily, 2019)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "La Jeunesse ya da Yeni Gençlik, modern Çin’in en etkili dergilerinden biriydi. Derginin genel yayın yönetmeni Chen Duxiu, bireycilik, demokrasi ve hümanizm gibi birçok yeni fikri tanıttı (Fotoğraf: Shanghai Daily, 2017)."
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "Kaplan (Jiayin), Mayıs 1914’te (ay takvimine göre Jiayin yılı) Tokyo, Japonya’da kuruldu. Başlangıçta aylık bir dergiydi. Başlatıcısı Hu Hanmin, baş editörü ise Qiu Tong (Zhang Shizhao) idi. Chen Duxiu ve Li Dazhao, aylı"
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "7 Mayıs 1919’da Pekin Normal Üniversitesi’nin öğretmenleri ve öğrencileri, 4 Mayıs’ta tutuklanan sekiz öğrenciyi okula geri döndüklerinde sıcak bir şekilde karşıladılar (Fotoğraf: Pekin Normal Üniversitesi, 2021)."
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "“4 Mayıs’ın yurtsever ve milliyetçi tutumuna, ÇKP’nin her dönem sahip çıkması, sınıf mücadelesi ile bağımsızlık mücadelesinin demokratik devrim sürecinde birbirinden ayrılmaz olduğunu savunan düşüncenin güçlenmesinde kri"
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "Chen Duxiu’nun Yeni Gençlik dergisinde Hu Shih’e “renk” konusuyla ilgili yazdığı mektuptan bir sayfa. 4 Mayıs Hareketi’nden sonra, Eylül 1919’da Li Dazhao, New Youth dergisinin “Marksist Özel Sayısı”nı hazırladı ve “Mark"
+        },
+        {
+          "page": 16,
+          "score": 1.0,
+          "caption": "“Yeni Gençlik dışında Weekly Review, The Morning Post ve Pekin News gibi önemli yayınlar ile üniversitelerde özellikle anarşistlerin önderlik ettiği düşünce atölyeleri de güncel tartışmaların merkezlerindendir” (Fotoğraf"
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "Shanghai gençlerinin geçit töreni (Fotoğraf: Peking Üniversitesi, t.y.)."
+        }
+      ],
       "figure_captions_low_match": [],
       "published_visual_label_candidates": [
         {
@@ -1451,7 +1739,7 @@
       "pdf_pages": 11,
       "canonical_paragraphs": 52,
       "canonical_references": 0,
-      "canonical_figures": 0,
+      "canonical_figures": 4,
       "canonical_tokens": 4433,
       "pdf_extracted_tokens": 4957,
       "paragraph_match_ratio": 0.981,
@@ -1522,7 +1810,28 @@
       "empty_sections": [],
       "short_sections": [],
       "metadata_leakage_candidates": [],
-      "figure_caption_matches": [],
+      "figure_caption_matches": [
+        {
+          "page": 2,
+          "score": 1.0,
+          "caption": "On August 6, WAPE convened its Council members meeting, occurring at least annually (Photo: BRIQ, 2025)."
+        },
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "Prof. Dr. Cheng Enfu, President of WAPE, delivers the opening speech (Photo: BRIQ, 2025)."
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "WAPE Vice President and BRIQ Chairman Adnan Akfırat delivers the opening speech (Photo: BRIQ, 2025)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "Group photo of Forum participants in front of Yeditepe University Rectorate (Photo: BRIQ, 2025)."
+        }
+      ],
       "figure_captions_low_match": [],
       "published_visual_label_candidates": [
         {
@@ -1557,7 +1866,7 @@
       "pdf_pages": 11,
       "canonical_paragraphs": 53,
       "canonical_references": 0,
-      "canonical_figures": 0,
+      "canonical_figures": 4,
       "canonical_tokens": 3831,
       "pdf_extracted_tokens": 4339,
       "paragraph_match_ratio": 0.981,
@@ -1628,7 +1937,28 @@
       "empty_sections": [],
       "short_sections": [],
       "metadata_leakage_candidates": [],
-      "figure_caption_matches": [],
+      "figure_caption_matches": [
+        {
+          "page": 2,
+          "score": 1.0,
+          "caption": "Forum, 6 Ağustos’ta WAPE’nin en az yılda bir kez yapılan Konsey üyeleri toplantısı ile başladı (Fotoğraf: BRIQ, 2025)."
+        },
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "WAPE Başkanı Prof. Dr. Cheng Enfu, açış konuşmasını yapıyor (Fotoğraf: BRIQ, 2025)."
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "WAPE Başkan Yardımcısı, BRIQ Yönetim Kurulu Başkanı Adnan Akfırat açış konuşmasını yapıyor (Fotoğraf: BRIQ, 2025)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "Forum katılımcılarının Yeditepe Üniversitesi Rektörlüğü önünde grup fotoğrafı (Fotoğraf: BRIQ, 2025)."
+        }
+      ],
       "figure_captions_low_match": [],
       "published_visual_label_candidates": [
         {
@@ -1661,7 +1991,7 @@
       "status": null,
       "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/POEM%20-%20FORUGH%20FARROKHZAD.pdf",
       "pdf_pages": 2,
-      "canonical_paragraphs": 7,
+      "canonical_paragraphs": 6,
       "canonical_references": 0,
       "canonical_figures": 0,
       "canonical_tokens": 141,
@@ -1681,11 +2011,11 @@
       },
       "last_anchor": {
         "section": 0,
-        "paragraph": 6,
-        "text": "*Translated from Turkish to English by BRIQ (Edited by Hüseyin Haydar and Latif Bolat)*",
+        "paragraph": 5,
+        "text": "Your name,  \nis on everyone’s lips.",
         "page": 2,
         "score": 1.0,
-        "sample": "*Translated from Turkish to English by BRIQ (Edited by Hüseyin Haydar and Latif Bolat)*"
+        "sample": "Your name,  \nis on everyone’s lips."
       },
       "headings": [
         {
@@ -1720,7 +2050,7 @@
       "status": null,
       "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/%C5%9E%C4%B0%C4%B0R%20-%20F%C3%9CRU%C4%9E%20FERRUHZAD-%20TR.pdf",
       "pdf_pages": 2,
-      "canonical_paragraphs": 7,
+      "canonical_paragraphs": 6,
       "canonical_references": 1,
       "canonical_figures": 0,
       "canonical_tokens": 99,
@@ -1740,11 +2070,11 @@
       },
       "last_anchor": {
         "section": 0,
-        "paragraph": 6,
-        "text": "*Çeviri: M. Babek*",
+        "paragraph": 5,
+        "text": "adın,  \ndolaşıyor dillerde",
         "page": 2,
         "score": 1.0,
-        "sample": "*Çeviri: M. Babek*"
+        "sample": "adın,  \ndolaşıyor dillerde"
       },
       "headings": [
         {
@@ -1779,7 +2109,7 @@
       "status": null,
       "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-09/POEM%20-%20HASAN%20%C4%B0ZZETT%C4%B0N%20D%C4%B0NAMO.pdf",
       "pdf_pages": 2,
-      "canonical_paragraphs": 5,
+      "canonical_paragraphs": 4,
       "canonical_references": 0,
       "canonical_figures": 0,
       "canonical_tokens": 155,
@@ -1799,11 +2129,11 @@
       },
       "last_anchor": {
         "section": 0,
-        "paragraph": 4,
-        "text": "*Translated from Turkish to English by BRIQ (Edited by Hüseyin Haydar and Latif Bolat)*",
+        "paragraph": 3,
+        "text": "You have no universe other than your old dreams.  \nEveryone is an enemy to your poetry, your thoughts, your bread,  \nOnly a single yellow light seeps through the centuries to come.",
         "page": 2,
         "score": 1.0,
-        "sample": "*Translated from Turkish to English by BRIQ (Edited by Hüseyin Haydar and Latif Bolat)*"
+        "sample": "You have no universe other than your old dreams.  \nEveryone is an enemy to your poetry, your thoughts, your bread,  \nOnly a single yellow light seeps through the centuries to come."
       },
       "headings": [
         {
