@@ -150,4 +150,5 @@ jobs:
           git add -f -- tmp/v05-i03-candidates tmp/v05-i03-evidence
           git diff --cached --check
           git commit -m 'Capture v05-i03 article-PDF candidates'
+          git pull --rebase origin chore/v05-i03-fulltext-canonical
           git push origin HEAD:chore/v05-i03-fulltext-canonical
