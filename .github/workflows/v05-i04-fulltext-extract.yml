@@ -43,6 +43,7 @@ jobs:
             pages="$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')"
             local first=$((pages > 2 ? pages - 2 : 1))
             pdftotext -layout -f "$first" -l "$pages" "$pdf" "$report_dir/$key.txt"
+            pdftotext -raw -f "$first" -l "$pages" "$pdf" "$report_dir/$key.raw.txt"
             printf '%s pages=%s captured=%s-%s\n' "$key" "$pages" "$first" "$pages"
           }
 
