@@ -54,5 +54,16 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/cin-abd-iliskilerinin-gelecegi/figure-01-tr.png",
+      "caption": "“Çin, Üçüncü Dünya’da önemli bir etkiye sahipti ve bu da onu dünya sahnesinde göz ardı edilemeyecek bir güç haline getirdi”. Mao Zedung, Asya, Afrika ve Latin Amerika'dan gelen gençlerle, 1959 (Fotoğraf: Hou Bol/China Daily, 2017) (Fotoğraf: China Daily, 2017)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/cin-abd-iliskilerinin-gelecegi/figure-02-tr.jpg",
+      "caption": "“2016’dan sonra Çin, büyük güç rekabeti için gerekli ön koşulları yerine getirdi ve o zamandan beri Çin ve ABD, büyük güç rekabeti aşamasına girdi” (Fotoğraf: Global Times, 2020)."
+    }
+  ]
 }

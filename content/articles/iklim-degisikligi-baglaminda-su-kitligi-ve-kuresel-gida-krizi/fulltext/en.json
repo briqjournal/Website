@@ -425,5 +425,56 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-01-en.png",
+      "caption": "Studies show that the Global North is mainly responsible for today's climate crisis (Infographic: The Purpletide, 2023)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-02-en.jpg",
+      "caption": "In Sub-Saharan Africa, prolonged droughts significantly reduce agricultural productivity and cause widespread water shortages (Photo: UN Women, 2023)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-03-en.jpg",
+      "caption": "Figure 1. Per capita freshwater availability in Türkiye. Graph showing the use of groundwater resources in Turkey (Graphic: FAO, 2025)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-04-en.jpg",
+      "caption": "Figure 2. Groundwater withdrawal/usage rate. Per capita freshwater consumption graph in Turkey (Graphic: FAO, 2025)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-05-en.jpg",
+      "caption": "The countries most at risk from climate change. Based on data from the University of Notre-Dame’s ND-Gain Index, the map ranks 181 countries on their vulnerability to climate change and how ready they are to adapt to a warming planet (Map: ILRI, 2022)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-06-en.jpg",
+      "caption": "Şekil 3. Food loss and waste during 2010 - 2025. Food loss graph by year in Turkey (2010-2025) (FAO, 2025)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-07-en.jpg",
+      "caption": "“Developing countries demand a mechanism to share the costs of the climate crisis equitably. In contrast, developed countries are reluctant to recognize their responsibilities and make concrete financial commitments” (Infographic: Eurodad, n.d.)."
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-08-en.jpg",
+      "caption": "“It is necessary to reiterate and emphasize that traditional agricultural and livestock practices are no longer sustainable under the adverse environmental conditions caused by climate change” (Photo: MIT CEEPR, 2019)."
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-09-en.jpg",
+      "caption": "The Paulownia - Canola Intercropping Experiment implemented in Pergamum-Izmir in 2006, aiming to produce biodiesel from canola oil. (Left to right) Salih Ertan, Prof. Xhu Zhaohua, İbrahim Yavaşça (owner of the farm)."
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-10-en.jpg",
+      "caption": "“Releasing GMOs into the environment carries serious risks for biodiversity, ecosystem functioning through gene flow (genetic contamination) and hybridization with uncertain consequences, and ultimately for the interaction between nature and the socioeconomic structure” (Photo: Non-GMO Report, n.d.)."
+    }
+  ]
 }

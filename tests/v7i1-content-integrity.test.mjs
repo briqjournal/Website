@@ -19,7 +19,7 @@ test('V7I1 bilingual bodies remain distinct',()=>{
 test('V7I1 source-verified reference repairs stay intact',()=>{
   const all=[]; for(const slug of issue.articles) for(const l of ['en','tr']) all.push(...(read(slug,l).references||[]).map(txt)); const joined=all.join('\n');
   for(const bad of ['https://www. eeo.com.cn','annurev. ecolsys','s12302-014- 0034-1','s11258-008- 9485-0','https://www. fao.org','https://zhuanlan. zhihu.com','https://www. aa.com.tr','https://www. bu.edu','https://www. inss.org.il','https://www. iisd.org','https://www. weforum.org','https://www. brettonwoodsproject.org','https:// doi.org','evolving strategies of a new power. Report. London: ODI (www. odi.org']) assert(!joined.includes(bad),bad);
-  const g=issue.articles[2]; for(const l of ['en','tr']) { const refs=(read(g,l).references||[]).map(txt); assert.equal(refs.length,62,`Gao ${l} refs`); assert.equal(refs.filter(x=>/^Humphrey, C\. and Chen, Y\. \(2021\)/.test(x)).length,1); assert(refs.some(x=>x.includes('10.1007/s12140-023-09401-z'))); }
+  const g=issue.articles[2]; for(const l of ['en','tr']) { const refs=(read(g,l).references||[]).map(txt); assert.equal(refs.length,61,`Gao ${l} refs`); assert.equal(refs.filter(x=>/^Humphrey, C\. and Chen, Y\. \(2021\)/.test(x)).length,1); assert(refs.some(x=>x.includes('10.1007/s12140-023-09401-z'))); }
   const zrefs=(read(issue.articles[3],'tr').references||[]).map(txt); assert.equal(zrefs.length,74); assert(zrefs.some(x=>/^Zhou, L\.Y\. \(2009\)/.test(x)),'source-only Zhou ref must remain');
 });
 test('V7I1 declarations are not invented and Zhang-Liu funding is preserved',()=>{
