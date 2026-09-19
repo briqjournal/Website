@@ -1,114 +1,76 @@
-name: Extract v07-i02 verified figure assets
+name: Final validate v07-i02 full-text fidelity
 
 on:
   push:
     branches:
       - audit/v07-i02-fulltext-fidelity
     paths:
-      - tmp/v07-i02-assets-trigger.txt
+      - tmp/v07-i02-final-trigger.txt
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  extract-assets:
+  validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      CI: "true"
     steps:
       - name: Check out branch
         uses: actions/checkout@v4
         with:
           ref: audit/v07-i02-fulltext-fidelity
-      - name: Install extraction dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y poppler-utils
-          python3 -m pip install --user pillow
-      - name: Extract verified published visuals
-        run: |
-          python3 - <<'PY'
-          import json, pathlib, shutil, subprocess, tempfile, urllib.request
-          from PIL import Image
-
-          root=pathlib.Path(".")
-          mapping={
-            "sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0":
-              [("en",4),("en",6),("en",8),("en",10),("en",12)],
-            "cine-ozgu-sosyalist-politik-ekonomiye-genel-bakis":
-              [("en",4),("en",6),("en",8),("en",10),("en",14),("en",16),("en",18),("en",20),("tr",22)],
-            "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme":
-              [("en",4),("en",6),("en",8),("en",10),("en",12),("en",14),("en",16),("en",18),("en",20),("en",22)],
-            "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin":
-              [("en",4),("en",6),("en",8),("en",10),("en",12),("en",13),("en",16),("en",18),("en",20),("en",22),("en",24),("en",26)],
-            "hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi":
-              [("en",5),("en",10),("en",12)],
-            "japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak":
-              [("en",4),("en",5),("en",7)],
-          }
-
-          cache={}
-          def get_pdf(slug,loc):
-              key=(slug,loc)
-              if key in cache: return cache[key]
-              meta=json.loads((root/"content/articles"/slug/"metadata.json").read_text())
-              url=(meta.get("urls") or {}).get("pdfEn" if loc=="en" else "pdfTr")
-              if not url: raise RuntimeError(f"missing PDF URL: {slug} {loc}")
-              dest=pathlib.Path("/tmp")/f"{slug}-{loc}.pdf"
-              req=urllib.request.Request(url,headers={"User-Agent":"BRIQ-v07-i02-fidelity-assets/1.0"})
-              with urllib.request.urlopen(req,timeout=90) as r, open(dest,"wb") as out:
-                  shutil.copyfileobj(r,out)
-              cache[key]=dest
-              return dest
-
-          for slug,specs in mapping.items():
-              outdir=root/"public/assets/article-figures"/slug
-              outdir.mkdir(parents=True,exist_ok=True)
-              for idx,(loc,page) in enumerate(specs,1):
-                  pdf=get_pdf(slug,loc)
-                  with tempfile.TemporaryDirectory() as td:
-                      prefix=pathlib.Path(td)/"img"
-                      subprocess.run(["pdfimages","-png","-f",str(page),"-l",str(page),str(pdf),str(prefix)],
-                                     check=True,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,text=True)
-                      candidates=[]
-                      for p in pathlib.Path(td).glob("img-*"):
-                          try:
-                              with Image.open(p) as im:
-                                  area=im.width*im.height
-                                  is_color=im.mode not in ("1","L","LA")
-                                  candidates.append((1 if is_color else 0,area,p,im.width,im.height,im.mode))
-                          except Exception:
-                              pass
-                      if not candidates: raise RuntimeError(f"no embedded image: {slug} {loc} p{page}")
-                      candidates.sort(reverse=True,key=lambda x:(x[0],x[1]))
-                      _,_,chosen,w,h,mode=candidates[0]
-                      with Image.open(chosen) as im:
-                          im=im.convert("RGB")
-                          im.thumbnail((1800,1800),Image.Resampling.LANCZOS)
-                          dest=outdir/f"figure-{idx:02}.jpg"
-                          im.save(dest,"JPEG",quality=88,optimize=True,progressive=True)
-                          print(f"{slug} figure-{idx:02} <- {loc} p{page}: {w}x{h} {mode} -> {im.width}x{im.height} {dest.stat().st_size} bytes")
-          PY
-      - name: Validate canonical asset references
+      - name: Install PDF tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Run complete issue fidelity audit
+        run: python3 scripts/audit-fulltext-fidelity.py v07-i02
+      - name: Check issue-wide hard failures
         run: |
           python3 - <<'PY'
           import json, pathlib
-          root=pathlib.Path(".")
-          issue=json.loads((root/"content/issues/v07-i02.json").read_text())
-          missing=[]
-          for slug in issue["articles"]:
-              for loc in ("en","tr"):
-                  j=json.loads((root/"content/articles"/slug/"fulltext"/f"{loc}.json").read_text())
-                  for fig in j.get("figures") or []:
-                      src=fig.get("src")
-                      if src and src.startswith("/") and not (root/"public"/src.lstrip("/")).exists():
-                          missing.append((slug,loc,src))
-          if missing: raise SystemExit(f"missing figure assets: {missing}")
-          print("All canonical figure assets resolve.")
+          p=pathlib.Path(".audit/fulltext-fidelity/v07-i02/report.json")
+          data=json.loads(p.read_text())
+          failures=[]
+          summary=[]
+          for r in data["locales"]:
+              if r.get("status") == "article_pdf_unavailable":
+                  summary.append({"slug":r["slug"],"locale":r["locale"],"status":r["status"]})
+                  continue
+              hard={
+                "duplicate_paragraphs":r.get("duplicate_paragraphs") or [],
+                "duplicate_footnote_ids":r.get("duplicate_footnote_ids") or [],
+                "metadata_leakage_candidates":r.get("metadata_leakage_candidates") or [],
+                "turkish_contamination_candidates":r.get("turkish_contamination_candidates") or [],
+                "cross_record_title_candidates":r.get("cross_record_title_candidates") or [],
+                "figure_captions_low_match":r.get("figure_captions_low_match") or [],
+                "missing_figure_assets":r.get("missing_figure_assets") or [],
+              }
+              for key,value in hard.items():
+                  if value: failures.append((r["slug"],r["locale"],key,value))
+              summary.append({
+                "slug":r["slug"],"locale":r["locale"],
+                "figures":r.get("canonical_figures"),
+                "figure_caption_match_ratio":r.get("figure_caption_match_ratio"),
+                "references_low_match":len(r.get("references_low_match") or []),
+                "nonmonotonic":len(r.get("nonmonotonic_assignments") or []),
+                "empty_sections":len(r.get("empty_sections") or []),
+              })
+          print(json.dumps(summary,ensure_ascii=False,indent=2))
+          if failures:
+              print(json.dumps(failures,ensure_ascii=False,indent=2))
+              raise SystemExit("hard fidelity audit failures remain")
           PY
-      - name: Commit verified figure assets
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/assets/article-figures
-          git commit -m "fix: restore v07-i02 published figure assets"
-          git pull --rebase origin audit/v07-i02-fulltext-fidelity
-          git push
+      - name: Run v07-i02 regression test
+        run: node --test tests/v7i2-content-integrity.test.mjs
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.0
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Build and test
+        run: npm test
+      - name: Lint
+        run: npm run lint
