@@ -262,5 +262,46 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/figure-01.jpg",
+      "caption": "Algerian, Tunisian, and Moroccan delegates at the Bandung Conference (Photograph: Algeria 360, 2017)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/figure-02.jpg",
+      "caption": "Algerian leader Ahmed Ben Bella (left) meets with Che Guevara (center) and Fidel Castro during his visit to Cuba in 1962 (Photograph: Picyrl, n.d.)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/figure-03.jpg",
+      "caption": "All-African People’s Conference held in Ghana, 1958 (Photograph: Toward Freedom, 2023)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/figure-04.jpg",
+      "caption": "Houari Boumedienne, President of the Revolutionary Council and of the Council of Ministers of Algeria, is seen addressing the UN Assembly (Photograph: UN, 1974)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/figure-05.jpg",
+      "caption": "Houari Boumedienne and Gamal AbdelNasser, 1967 (Photograph: OrientXXI, 2017)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/figure-06.jpg",
+      "caption": "Fidel Castro, the Cuban leader, addresses the Non-Aligned Movement Summit in Algeria alongside Algerian President Boumedienne, 1973 (Photograph: Cuban Ministry of Foreign Affairs, 2023)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/figure-07.jpg",
+      "caption": "Delegations and participants of the First Conference of Heads of State or Government of Non-Aligned Countries (Photograph: UNESCO, n.d)."
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine/figure-08.jpg",
+      "caption": "Algerian President Abdelmadjid Tebboune reiterated in his address at the Non-Aligned Movement (NAM) Contact Group Summit, held in Baku, Azerbaijan, Algeria’s continued commitment to NAM’s principles and goals (Photograph: Presidency of the Rebublic of Azerbaijan, 2023)."
+    }
+  ]
 }
