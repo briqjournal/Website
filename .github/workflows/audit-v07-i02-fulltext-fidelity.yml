@@ -6,6 +6,7 @@ on:
       - audit/v07-i02-fulltext-fidelity
     paths:
       - .github/workflows/audit-v07-i02-fulltext-fidelity.yml
+      - scripts/audit-fulltext-fidelity.py
 
 permissions:
   contents: write
