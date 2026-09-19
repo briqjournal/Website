@@ -1,4 +1,4 @@
-name: Capture v05-i04 bibliography evidence
+name: Extract v05-i04 nonstandard visuals
 
 on:
   pull_request:
@@ -12,63 +12,76 @@ permissions:
   contents: write
 
 jobs:
-  recover:
+  extract:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: chore/v05-i04-fulltext-canonical
 
-      - name: Install PDF text tools
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Install PDF and image tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
 
-      - name: Capture only bibliography pages from individual official PDFs
+      - name: Extract only the three nonstandard visual records
         shell: bash
         run: |
           set -euo pipefail
           work="$(mktemp -d)"
           trap 'rm -rf "$work"' EXIT
-          report_dir='tmp/v05-i04-fidelity'
-          rm -rf "$report_dir"
-          mkdir -p "$report_dir"
+          evidence='tmp/v05-i04-nonstandard-evidence'
+          rm -rf "$evidence"
+          mkdir -p "$evidence"
 
-          dump_tail() {
-            local key="$1" url="$2"
-            local pdf="$work/$key.pdf"
+          extract_one() {
+            local slug="$1" url="$2"
+            local pdf="$work/$slug.pdf"
+            local raw="$work/$slug-images"
+            local out="public/assets/article-figures/$slug"
+            mkdir -p "$raw" "$out"
             curl -L --fail --retry 4 --retry-all-errors "$url" -o "$pdf"
-            local pages
-            pages="$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')"
-            local first=$((pages > 2 ? pages - 2 : 1))
-            pdftotext -layout -f "$first" -l "$pages" "$pdf" "$report_dir/$key.txt"
-            pdftotext -raw -f "$first" -l "$pages" "$pdf" "$report_dir/$key.raw.txt"
-            printf '%s pages=%s captured=%s-%s\n' "$key" "$pages" "$first" "$pages"
+            pdfinfo "$pdf" > "$evidence/$slug.pdfinfo.txt"
+            pdftotext -layout "$pdf" "$evidence/$slug.txt"
+            pdfimages -list "$pdf" > "$evidence/$slug-images.txt"
+            pdfimages -png "$pdf" "$raw/image"
+
+            local best="" best_score=-1
+            : > "$evidence/$slug-candidates.txt"
+            while IFS= read -r file; do
+              local width height colorspace area color_bonus score
+              read -r width height <<< "$(identify -format '%w %h' "$file")"
+              colorspace="$(identify -format '%[colorspace]' "$file")"
+              area=$((width * height))
+              color_bonus=0
+              if [[ ! "$colorspace" =~ ^Gray ]]; then color_bonus=1000000000; fi
+              score=$((area + color_bonus))
+              printf '%s | %sx%s | %s | score=%s\n' "$(basename "$file")" "$width" "$height" "$colorspace" "$score" >> "$evidence/$slug-candidates.txt"
+              if (( width >= 500 && height >= 300 && score > best_score )); then
+                best="$file"; best_score="$score"
+              fi
+            done < <(find "$raw" -maxdepth 1 -type f -name '*.png' | sort)
+
+            test -n "$best"
+            rm -rf "$out"
+            mkdir -p "$out"
+            convert "$best" -strip -quality 90 "$out/figure-01.jpg"
+            printf 'selected=%s\n' "$(basename "$best")" >> "$evidence/$slug-candidates.txt"
+            identify -verbose "$out/figure-01.jpg" | sed -n '1,35p' > "$evidence/$slug-selected.txt"
           }
 
-          while IFS='|' read -r key url; do
-            dump_tail "$key" "$url"
-          done <<'EOF'
-          africa-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Yu%20Haijie%20ENG.pdf
-          africa-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Yu%20Haijie_C5S4.pdf
-          integration-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Du%20Donghui%20ENG.pdf
-          integration-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Du%20Donghui_C5S4.pdf
-          newworld-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Akmaral%20Batalova%20ENG.pdf
-          newworld-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Akmaral%20Batalova_C5S4.pdf
-          newasia-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Osman%20Can%20%C3%9Cnver%20ENG.pdf
-          newasia-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Osman%20Can%20%C3%9Cnver_C5S4.pdf
-          globaleast-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Degang%20Sun%20%26%20Yingqi%20Yang%20ENG.pdf
-          globaleast-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Degang%20Sun%20%26%20Yingqi%20Yang_C5S4.pdf
-          EOF
+          extract_one 'erzurum-sokaklari-1916' 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/PHOTOGRAPH%20ENG.pdf'
+          extract_one 'hasat-2022' 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/PAINTING%20ENG.pdf'
+          extract_one 'karikatur-molla-nasraddin-dergisinin-7-nisan-1906-tarihli-ilk-kapagi' 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/CARTOON%20ENG.pdf'
 
-      - name: Commit temporary evidence
+      - name: Commit targeted image evidence
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f -- tmp/v05-i04-fidelity
-          git commit -m 'Capture v05-i04 bibliography evidence'
-          git pull --rebase origin chore/v05-i04-fulltext-canonical
+          git add -f -- tmp/v05-i04-nonstandard-evidence public/assets/article-figures/erzurum-sokaklari-1916 public/assets/article-figures/hasat-2022 public/assets/article-figures/karikatur-molla-nasraddin-dergisinin-7-nisan-1906-tarihli-ilk-kapagi
+          git diff --cached --quiet && exit 0
+          git commit -m 'Extract v05-i04 nonstandard visual assets'
           git push origin HEAD:chore/v05-i04-fulltext-canonical
