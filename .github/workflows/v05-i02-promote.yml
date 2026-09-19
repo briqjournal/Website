@@ -1,9 +1,9 @@
 name: Promote v05-i02 prose canonical full text
 
 on:
-  push:
+  pull_request:
     branches:
-      - chore/v05-i02-fulltext-canonical
+      - main
     paths:
       - '.github/workflows/v05-i02-promote.yml'
 
@@ -17,6 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: chore/v05-i02-fulltext-canonical
           fetch-depth: 0
       - name: Promote and validate repaired prose records v4
         run: python3 tmp/v05-i02-promote.py
