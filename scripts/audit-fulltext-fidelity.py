@@ -109,6 +109,10 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
     for r in refs:
         p,s=best_page(r,page_texts)
         ref_rows.append({"page":p,"score":round(s,3),"sample":r[:180]})
+    note_rows=[]
+    for n in notes:
+        p,s=best_page(n,page_texts)
+        note_rows.append({"page":p,"score":round(s,3),"sample":n[:180]})
     fig_rows=[]
     for f in figs:
         p,s=best_page(f,page_texts)
@@ -137,9 +141,21 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
             cross.append({"slug":other_slug,"title_anchor":anchor})
     first=assignments[0] if assignments else None; last=assignments[-1] if assignments else None
     ref_good=sum(1 for x in ref_rows if x["score"]>=0.24)
+    note_good=sum(1 for x in note_rows if x["score"]>=0.24)
+    fig_good=sum(1 for x in fig_rows if x["score"]>=0.24)
     heading_good=sum(1 for x in heading_rows if x["score"]>=0.45)
     para_good=sum(1 for x in assignments if len(tokens(x["text"]))<12 or x["score"]>=0.28)
-    canonical_tokens=sum(len(tokens(x["text"])) for x in paras)+sum(len(tokens(x)) for x in refs)
+    canonical_tokens=sum(len(tokens(x["text"])) for x in paras)+sum(len(tokens(x)) for x in refs)+sum(len(tokens(x)) for x in notes)
+    note_ids=[str(x.get("id") or "") for x in (j.get("footnotes") or []) if isinstance(x,dict) and x.get("id") is not None]
+    duplicate_note_ids=[k for k,c in Counter(note_ids).items() if c>1]
+    section_stats=[{"id":str(x.get("id") or ""),"title":str(x.get("title") or ""),"paragraphs":len(x.get("paragraphs") or [])} for x in (j.get("sections") or [])]
+    empty_sections=[x for x in section_stats if x["paragraphs"]==0]
+    short_sections=[x for x in section_stats if x["paragraphs"]==1]
+    leakage=[]
+    for x in paras:
+        t=x["text"].strip()
+        if re.match(r"^(keywords?|anahtar\s+kelimeler)\s*:",t,re.I) or re.match(r"^(how\s+to\s+cite|atıf)\s*:",t,re.I):
+            leakage.append({"section":x["section"],"paragraph":x["paragraph"],"sample":t[:240]})
     pdf_tokens=sum(len(tokens(x)) for x in page_texts)
     suspicious_pages={1,len(page_texts)}
     for x in unmatched[:30]: suspicious_pages.add(x["page"])
@@ -147,6 +163,8 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
     if ref_rows:
         suspicious_pages.update([x["page"] for x in ref_rows if x["score"]<0.24][:10])
         suspicious_pages.add(max(x["page"] for x in ref_rows))
+    if note_rows:
+        suspicious_pages.update([x["page"] for x in note_rows if x["score"]<0.24][:10])
     render_pages(pdf,suspicious_pages,work/"renders",f"{slug}-{loc}")
     missing_assets=[]
     for f in j.get("figures") or []:
@@ -159,12 +177,20 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
       "paragraph_match_ratio":round(para_good/max(1,len(assignments)),3),
       "heading_match_ratio":round(heading_good/max(1,len(heading_rows)),3),
       "reference_match_ratio":round(ref_good/max(1,len(ref_rows)),3) if refs else 1.0,
+      "footnote_match_ratio":round(note_good/max(1,len(note_rows)),3) if notes else 1.0,
+      "figure_caption_match_ratio":round(fig_good/max(1,len(fig_rows)),3) if figs else 1.0,
       "first_anchor":first,"last_anchor":last,"headings":heading_rows,
       "paragraph_assignments":assignments,
       "unmatched_paragraphs":unmatched,"nonmonotonic_assignments":monotonic,"duplicate_paragraphs":dup,
       "turkish_contamination_candidates":tr_contam,"cross_record_title_candidates":cross,
       "references_low_match":[x for x in ref_rows if x["score"]<0.24],
-      "figure_caption_matches":fig_rows,"missing_figure_assets":missing_assets,
+      "footnotes_low_match":[x for x in note_rows if x["score"]<0.24],
+      "duplicate_footnote_ids":duplicate_note_ids,
+      "empty_sections":empty_sections,"short_sections":short_sections,
+      "metadata_leakage_candidates":leakage,
+      "figure_caption_matches":fig_rows,
+      "figure_captions_low_match":[x for x in fig_rows if x["score"]<0.24],
+      "missing_figure_assets":missing_assets,
       "rendered_pages":sorted(suspicious_pages)
     }
 
@@ -184,7 +210,7 @@ def main():
     (out/"report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     lines=[f"# Full-text fidelity audit: {a.issue}",""]
     for r in results:
-        lines += [f"## {r['slug']} [{r['locale']}]",f"- PDF pages: {r['pdf_pages']}",f"- Paragraph match ratio: {r['paragraph_match_ratio']}",f"- Heading match ratio: {r['heading_match_ratio']}",f"- Reference match ratio: {r['reference_match_ratio']}",f"- Unmatched paragraphs: {len(r['unmatched_paragraphs'])}",f"- Non-monotonic paragraph assignments: {len(r['nonmonotonic_assignments'])}",f"- Duplicate canonical paragraphs: {len(r['duplicate_paragraphs'])}",f"- Turkish contamination candidates: {len(r['turkish_contamination_candidates'])}",f"- Cross-record title candidates: {len(r['cross_record_title_candidates'])}",f"- Missing figure assets: {len(r['missing_figure_assets'])}",f"- Rendered pages: {', '.join(map(str,r['rendered_pages']))}",""]
+        lines += [f"## {r['slug']} [{r['locale']}]",f"- PDF pages: {r['pdf_pages']}",f"- Paragraph match ratio: {r['paragraph_match_ratio']}",f"- Heading match ratio: {r['heading_match_ratio']}",f"- Reference match ratio: {r['reference_match_ratio']}",f"- Footnote match ratio: {r['footnote_match_ratio']}",f"- Figure-caption match ratio: {r['figure_caption_match_ratio']}",f"- Unmatched paragraphs: {len(r['unmatched_paragraphs'])}",f"- Non-monotonic paragraph assignments: {len(r['nonmonotonic_assignments'])}",f"- Duplicate canonical paragraphs: {len(r['duplicate_paragraphs'])}",f"- Duplicate footnote IDs: {len(r['duplicate_footnote_ids'])}",f"- Empty sections: {len(r['empty_sections'])}",f"- One-paragraph sections: {len(r['short_sections'])}",f"- Metadata leakage candidates: {len(r['metadata_leakage_candidates'])}",f"- Turkish contamination candidates: {len(r['turkish_contamination_candidates'])}",f"- Cross-record title candidates: {len(r['cross_record_title_candidates'])}",f"- Low-match figure captions: {len(r['figure_captions_low_match'])}",f"- Missing figure assets: {len(r['missing_figure_assets'])}",f"- Rendered pages: {', '.join(map(str,r['rendered_pages']))}",""]
     (out/"report.md").write_text("\n".join(lines),encoding="utf-8")
     print((out/"report.md").read_text(encoding="utf-8"))
 
