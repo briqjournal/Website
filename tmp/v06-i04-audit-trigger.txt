@@ -1,0 +1,1 @@
+run v06-i04 full-text fidelity audit
