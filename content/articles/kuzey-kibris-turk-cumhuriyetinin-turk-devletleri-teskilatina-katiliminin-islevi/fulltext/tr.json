@@ -61,19 +61,11 @@
   "references": [
     {
       "id": "ref-1",
-      "text": "Harita. (2024). 6 Ağustos 2024 tarihinde https://www.hari-"
+      "text": "Harita. (2024). 6 Ağustos 2024 tarihinde https://www.harita.gov.tr/urun/kibris-adasi-fiziki-haritasi/277 adresinden alındı."
     },
     {
       "id": "ref-2",
-      "text": "Harita. (2024). 6 Ağustos 2024 tarihinde https://www.harita.gov.tr/urun/kibris-adasi-fiziki-haritasi/277adresinden ta.gov.tr/urun/kibris-adasi-fiziki-haritasi/277adresinden alındı. alındı."
-    },
-    {
-      "id": "ref-3",
-      "text": "UAB. (2021). 6 Ağustos 2024 tarihinde https://www.uab.gov."
-    },
-    {
-      "id": "ref-4",
-      "text": "UAB. (2021). 6 Ağustos 2024 tarihinde https://www.uab.gov. tr/haberler/suveys-kanalina-alternatif-en-uygun-tasitr/haberler/suveys-kanalina-alternatif-en-uygun-tasima-rotasi adresinden alındı. ma-rotasi adresinden alındı."
+      "text": "UAB. (2021). 6 Ağustos 2024 tarihinde https://www.uab.gov.tr/haberler/suveys-kanalina-alternatif-en-uygun-tasima-rotasi adresinden alındı."
     }
   ],
   "acknowledgements": "",
@@ -81,7 +73,7 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi/figure-01.jpg",
-      "caption": "Akdeniz’de stratejik ve coğraﬁ bakımdan eşsiz bir konum ve öneme sahiptir (Harita: Harita, 2024)."
+      "caption": "Türk Dünyası’nın en güneyde kalan bağımsız Türk Cumhuriyeti olan Kuzey Kıbrıs Türk Cumhuriyeti’nin üzerinde bulunduğu Kıbrıs adası, üç kıtanın kesişme noktasında yer alan Akdeniz’in üçüncü büyük adasıdır. Ada, Doğu Akdeniz’de stratejik ve coğrafi bakımdan eşsiz bir konum ve öneme sahiptir (Harita: Harita, 2024)."
     }
   ]
 }

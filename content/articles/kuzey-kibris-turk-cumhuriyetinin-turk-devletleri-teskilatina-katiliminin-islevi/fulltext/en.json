@@ -60,19 +60,11 @@
   "references": [
     {
       "id": "ref-1",
-      "text": "Google Map. (2024). Retrieved August 6, 2024 from"
+      "text": "Google Map. (2024). Retrieved August 6, 2024 from https://www.google.com/maps/place/Cyprus/@35.118149,32.751992,9z/data=!4m6!3m5!1s0x14e764b096001523:0x82cf174482833a6d!8m2!3d34.9869601!4d33.1688883!16s%2Fg%2F121_zrk7?hl=en&entry=ttu"
     },
     {
       "id": "ref-2",
-      "text": "Google Map. (2024). Retrieved August 6, 2024 from h t t p s : / / w w w. g o o g l e . c o m / m a p s / p l a c e / C y p h t t p s : / / w w w. g o o g l e . c o m / m a p s / p l a c e / C y p rus/@35.118149,32.751992,9z/data=!4m6!3m5!1s0x14erus/@35.118149,32.751992,9z/data=!4m6!3m5!1s0x14e- 764b096001523:0x82cf174482833a6d!8m2!3d34.9869601 764b096001523:0x82cf174482833a6d!8m2!3d34.9869601 !4d33.1688883!16s%2Fg%2F121_zrk7?hl=en&entry=ttu !4d33.1688883!16s%2Fg%2F121_zrk7?hl=en&entry=ttu"
-    },
-    {
-      "id": "ref-3",
-      "text": "UAB. (2021). Retrieved August 6, 2024 from https://www.uab."
-    },
-    {
-      "id": "ref-4",
-      "text": "UAB. (2021). Retrieved August 6, 2024 from https://www.uab. gov. tr/haberler/suveys-kanalina-alternatif-en-uygun-tasigov. tr/haberler/suveys-kanalina-alternatif-en-uygun-tasima-rotasi ma-rotasi"
+      "text": "UAB. (2021). Retrieved August 6, 2024 from https://www.uab.gov.tr/haberler/suveys-kanalina-alternatif-en-uygun-tasima-rotasi"
     }
   ],
   "acknowledgements": "",
@@ -80,7 +72,7 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi/figure-01.jpg",
-      "caption": "(Map: Google Map, 2024)."
+      "caption": "The island of Cyprus, on which the Turkish Republic of Northern Cyprus, the southernmost independent Turkish Republic of the Turkic World, is located, is the third largest island in the Mediterranean at the intersection of three continents. The island has a unique strategic and geographical position and importance in the Eastern Mediterranean (Map: Google Map, 2024)."
     }
   ]
 }
