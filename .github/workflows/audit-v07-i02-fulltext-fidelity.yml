@@ -43,7 +43,7 @@ jobs:
             "turkish_contamination_candidates","cross_record_title_candidates",
             "references_low_match","footnotes_low_match","duplicate_footnote_ids",
             "empty_sections","short_sections","metadata_leakage_candidates",
-            "figure_caption_matches","figure_captions_low_match","missing_figure_assets","rendered_pages"
+            "figure_caption_matches","figure_captions_low_match","published_visual_label_candidates","missing_figure_assets","rendered_pages"
           ]
           for r in data["locales"]:
             compact["locales"].append({k:r.get(k) for k in keys})
