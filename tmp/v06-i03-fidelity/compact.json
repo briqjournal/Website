@@ -1,0 +1,3068 @@
+{
+  "issue": "v06-i03",
+  "records": 11,
+  "locales": [
+    {
+      "slug": "cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Belkacem%20Iratni_ENG.pdf",
+      "pdf_pages": 22,
+      "canonical_paragraphs": 73,
+      "canonical_references": 32,
+      "canonical_figures": 0,
+      "canonical_tokens": 7786,
+      "pdf_extracted_tokens": 9398,
+      "paragraph_match_ratio": 0.986,
+      "heading_match_ratio": 0.714,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "The Bandung Conference, conducted in April 1955, invigorated the Algerian struggle spearheaded by the National Liberation Front (FLN) against French colonial domination by seeking robust international diplomatic backing to attain national sovereignty. During the Soummam Congress in August 1956, the wartime FLN established its ideological and doctrinal tenets, which repudiated any affiliation with the West, the Eastern Bloc, or other nations, in keeping with the ethos of the Bandung Conference. Following its independence in July 1962, Algeria commenced the application of non-alignment principles by supporting liberation movements, primarily in Africa, to eliminate Western colonialism. Algeria gradually sought to instill a new ethos in the Non-Alignment Movement, transcending mere formal pronouncements and the politics of passive neutrality.",
+        "page": 2,
+        "score": 0.646,
+        "sample": "The Bandung Conference, conducted in April 1955, invigorated the Algerian struggle spearheaded by the National Liberation Front (FLN) against French colonial domination by seeking "
+      },
+      "last_anchor": {
+        "section": 6,
+        "paragraph": 2,
+        "text": "Amidst these uncertainties, the Non-Aligned Movement can serve as a stabilizing influence, facilitating the reconciliation between East and West as well as between North and South. Furthermore, it has the potential to serve as a pivotal catalyst for international collaboration, facilitating the reform of the United Nations, promoting broader multilateralism, and preventing the dominance of a single global power.",
+        "page": 21,
+        "score": 0.554,
+        "sample": "Amidst these uncertainties, the Non-Aligned Movement can serve as a stabilizing influence, facilitating the reconciliation between East and West as well as between North and South."
+      },
+      "headings": [
+        {
+          "title": "Introduction",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "The “Mecca” of the Revolutionaries",
+          "page": 6,
+          "score": 1.0
+        },
+        {
+          "title": "Diplomatic support",
+          "page": 7,
+          "score": 1.0
+        },
+        {
+          "title": "Arms and military training for African freedom fighters",
+          "page": 10,
+          "score": 0.6
+        },
+        {
+          "title": "The Arduous Quest for a Militant Non-Aligned Movement",
+          "page": 12,
+          "score": 0.6
+        },
+        {
+          "title": "Adapting the Non-Aligned Movement to an Evolving Global Landscape",
+          "page": 19,
+          "score": 0.5
+        },
+        {
+          "title": "Conclusion",
+          "page": 0,
+          "score": 0.0
+        }
+      ],
+      "unmatched_paragraphs": [
+        {
+          "section": 0,
+          "paragraph": 15,
+          "text": "Following the nation’s independence, Algerian diplomacy not only revitalized but also elevated with great dedication the revolutionary ideals it had developed during its struggle against French domination. During the meeting convened in Tripoli in June 1962, just days prior to the declaration of independence in July 1962, the National Council of the Algerian Revolution (CNRA) resolved to establish “a modern state founded on democratic, anti-imperialist, and anti-feudal principles, achievable solely through the initiative, vigilance, and direct oversight of the populace” (Déclaration, 1962). The revolutionary spirit of the Algerian war of liberation persisted in independent Algeria, aiming to supplant the oppressive colonial regime with a popular political system committed to fostering the political emancipation and economic advancement of the Global South.",
+          "page": 5,
+          "score": 0.274,
+          "sample": "Following the nation’s independence, Algerian diplomacy not only revitalized but also elevated with great dedication the revolutionary ideals it had developed during its struggle a"
+        }
+      ],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 4,
+          "text": "(Photograph: Algeria 360, 2017)."
+        },
+        {
+          "page": 6,
+          "text": "Cuba in 1962 (Photograph: Picyrl, n.d.)."
+        },
+        {
+          "page": 8,
+          "text": "(Photograph: Toward Freedom, 2023)."
+        },
+        {
+          "page": 10,
+          "text": "is seen addressing the UN Assembly (Photograph: UN, 1974)."
+        },
+        {
+          "page": 12,
+          "text": "(Photograph: OrientXXI, 2017)."
+        },
+        {
+          "page": 14,
+          "text": "President Boumedienne, 1973 (Photograph: Cuban Ministry of Foreign Affairs, 2023)."
+        },
+        {
+          "page": 16,
+          "text": "(Photograph: UNESCO, n.d)."
+        },
+        {
+          "page": 18,
+          "text": "goals (Photograph: Presidency of the Rebublic of Azerbaijan, 2023)."
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        5,
+        22
+      ]
+    },
+    {
+      "slug": "cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Belkacem%20Iratni_TR.pdf",
+      "pdf_pages": 22,
+      "canonical_paragraphs": 80,
+      "canonical_references": 31,
+      "canonical_figures": 8,
+      "canonical_tokens": 6419,
+      "pdf_extracted_tokens": 8044,
+      "paragraph_match_ratio": 0.963,
+      "heading_match_ratio": 0.714,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "Nisan 1955’te gerçekleştirilen Bandung Konferansı, ulusal egemenliği elde etmek için güçlü bir uluslararası diplomatik destek arayışına giren Ulusal Kurtuluş Cephesi’nin (FLN) Fransız sömürge egemenliğine karşı öncülük ettiği Cezayir mücadelesini canlandırdı. Ağustos 1956’daki Soummam Kongresi sırasında, savaş zamanı FLN, Bandung Konferansı’nın ruhuna uygun olarak Batı, Doğu Bloku veya diğer uluslarla herhangi bir bağı reddeden ideolojik ve doktriner ilkelerini belirledi. Temmuz 1962’de bağımsızlığını kazanmasının ardından Cezayir, Batı sömürgeciliğini ortadan kaldırmak için başta Afrika’da olmak üzere kurtuluş hareketlerini destekleyerek bağlantısızlık ilkelerini uygulamaya başladı. Cezayir Bağlantısızlık Hareketi’ne, resmi açıklamaları ve pasif tarafsızlık politikasını aşan yeni bir ruh aşılamaya çalıştı.",
+        "page": 3,
+        "score": 0.435,
+        "sample": "Nisan 1955’te gerçekleştirilen Bandung Konferansı, ulusal egemenliği elde etmek için güçlü bir uluslararası diplomatik destek arayışına giren Ulusal Kurtuluş Cephesi’nin (FLN) Fran"
+      },
+      "last_anchor": {
+        "section": 6,
+        "paragraph": 2,
+        "text": "Bu belirsizliklerin ortasında, Bağlantısızlar Hareketi, Doğu ile Batı ve Kuzey ile Güney arasındaki uzlaşmayı kolaylaştırarak istikrar sağlayıcı bir etki görevi görebilir. Bunun yanı sıra, uluslararası iş birliğinin temel katalizörü olarak hizmet etme, Birleşmiş Milletler’in reformunu kolaylaştırma, daha geniş kapsamlı çok taraflılığı teşvik etme ve tek bir küresel gücün hakimiyetini önleme potansiyeline sahiptir.",
+        "page": 21,
+        "score": 0.367,
+        "sample": "Bu belirsizliklerin ortasında, Bağlantısızlar Hareketi, Doğu ile Batı ve Kuzey ile Güney arasındaki uzlaşmayı kolaylaştırarak istikrar sağlayıcı bir etki görevi görebilir. Bunun ya"
+      },
+      "headings": [
+        {
+          "title": "Giriş",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Devrimcilerin “Mekke’si”",
+          "page": 6,
+          "score": 1.0
+        },
+        {
+          "title": "Diplomatik destek",
+          "page": 3,
+          "score": 1.0
+        },
+        {
+          "title": "Afrika özgürlük savaşçıları için silah ve askeri eğitim",
+          "page": 10,
+          "score": 0.6
+        },
+        {
+          "title": "Militan Bağlantısızlar Hareketi için Zorlu Arayış",
+          "page": 12,
+          "score": 0.8
+        },
+        {
+          "title": "Bağlantısızlar Hareketi’ni Değişen Uluslararası Bağlama Uyarlama",
+          "page": 18,
+          "score": 0.8
+        },
+        {
+          "title": "Sonuç",
+          "page": 0,
+          "score": 0.0
+        }
+      ],
+      "unmatched_paragraphs": [
+        {
+          "section": 0,
+          "paragraph": 17,
+          "text": "Belgrad Zirvesi’ne katılanlar Doğu/Batı çatışmasından kaçınmakta kararlı olsalar da, zirve sırasında ve sonrasında Bağlantısızlar Hareketi’nin önde gelen üyeleri arasında tarafsızlık ve bağlantısızlığın yorumlanmasına ilişkin anlaşmazlıklar ortaya çıktı. Bu anlaşmazlıklar, Soğuk Savaş’ta taraf olmayı reddedenler ile küresel düzeni yeniden tanımlamak ve iki karşıt blok tarafından karakterize edilen güç dengesine itiraz etmek için Bağlantısızlar Hareketi’nin etki ve kapasitelerinden yararlanmayı savunanları karşı karşıya getirdi. Bu bölünme, Batı kapitalist bloğuyla uyumlu liberal piyasa ekonomisi değerlerini destekleyen devletler ile Doğu bloğuyla uyumlu sosyalist bir kalkınma yörüngesini savunanlar arasındaki siyasi ve ideolojik çatışmalarla ilgiliydi.",
+          "page": 5,
+          "score": 0.233,
+          "sample": "Belgrad Zirvesi’ne katılanlar Doğu/Batı çatışmasından kaçınmakta kararlı olsalar da, zirve sırasında ve sonrasında Bağlantısızlar Hareketi’nin önde gelen üyeleri arasında tarafsızl"
+        },
+        {
+          "section": 2,
+          "paragraph": 2,
+          "text": "Cezayir, halk tarafından benimsenen ve sömürgeciliği taviz vermeksizin ülkelerinden söküp atmaya adanmış kurtuluş hareketlerini desteklemiştir. Bu duruş, Cezayir kurtuluş savaşının devrimci ruhu ve bağımsızlık kazanıldığında sosyalist bir kalkınma yolunu seçme taahhüdüyle de uyumluydu. Sonuç olarak Cezayir, Jonas Savimbi liderliğindeki Angola’nın UNITA’sı veya Holden Roberto liderliğindeki Angola Ulusal Kurtuluş Hareketi (FLNA) gibi sömürgeci yöneticilere karşı uzlaşmacı olarak algılanan veya Batı yanlısı eğilimler sergileyen kurtuluş güçleriyle arasına mesafe koymuştur.",
+          "page": 7,
+          "score": 0.266,
+          "sample": "Cezayir, halk tarafından benimsenen ve sömürgeciliği taviz vermeksizin ülkelerinden söküp atmaya adanmış kurtuluş hareketlerini desteklemiştir. Bu duruş, Cezayir kurtuluş savaşının"
+        },
+        {
+          "section": 4,
+          "paragraph": 18,
+          "text": "Abdelaziz Bouteflika’nın 1999’da iktidara gelmesinin ardından Cezayir diplomasisi uluslararası meselelere yoğun bir şekilde dahil oldu ve öncelikli olarak nükleer silahsızlanma, küresel ekonomik kaygılar, Afrika’da Sürdürülebilir Kalkınma Gündemi ve Afrika’nın son kolonisi olarak görülen Batı Sahra’da kendi kaderini tayin etme arayışına odaklandı (Iratni, 2015). Bununla birlikte, Bouteflika’nın 2005’ten 2019’daki ölümüne kadar devam eden hastalığı, Cezayir’in küresel sahnedeki katılımını bastırdı. Kuzey Atlantik Antlaşması Örgütü’nün (NATO) Sovyetler Birliği ve Varşova Paktı’nın dağılmasına rağmen sağlam kalmasına benzer şekilde, Bağlantısızlık sadece Soğuk Savaş’ın sona ermesi ve Doğu ve Batı bloklarının ortadan kalkması nedeniyle azalmadı. Çok sayıda siyasi gözlemci, hareketin amacının kaybolduğunu iddia ediyor. Soğuk Savaş’ın sona ermesi, Doğu ile Batı arasındaki ideolojik bölünmeyi azalttı, rekabetlerini yumuşattı ve koalisyonların etkinliğini zayıflattı. 1990’lardan 2020’lerin başına kadar düzenlenen zirveler, bağlantısız hareketin faaliyetleri üzerinde olumlu bir etki yaratmadı. Cezayir, bu hareketin birçok katılımcısı gibi, onu canlandırmaya çalıştı ve Küresel Güney’in siyasi kurtuluşu için Bandung ruhuna sadık kaldı.",
+          "page": 18,
+          "score": 0.271,
+          "sample": "Abdelaziz Bouteflika’nın 1999’da iktidara gelmesinin ardından Cezayir diplomasisi uluslararası meselelere yoğun bir şekilde dahil oldu ve öncelikli olarak nükleer silahsızlanma, kü"
+        }
+      ],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "Cezayirli, Tunuslu ve Faslı delegeler Bandung Konferansı’nda (Fotoğraf: Algeria 360, 2017)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "Cezayir lideri Ahmed Ben Bella (solda), 1962 yılında Küba'ya yaptığı ziyaret sırasında Che Guevara (ortada) ve Fidel Castro ile bir arada (Fotoğraf: Picyrl, t.y)"
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "Gana'da düzenlenen Tüm Afrika Halkları Konferansı, 1958 (Fotoğraf: Toward Freedom, 2023)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "Cezayir Devrim Konseyi ve Bakanlar Kurulu Başkanı Houari Boumediene, BM Genel Kurulu'na hitap ederken görülüyor (Fotoğraf: BM, 1974)."
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "Houari Boumedienne ve Cemal Abdülnasır, 1967 (Fotoğraf: OrientXXI, 2017)."
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "Küba lideri Fidel Castro Cezayir’de düzenlenen Bağlantısızlar Hareketi Zirvesi’nde kürsüde konuşurken, arkada Cezayir Devlet Başkanı Boumedienne, 1973 (Fotoğraf: Küba Dışişleri Bakanlığı, 2023)."
+        },
+        {
+          "page": 16,
+          "score": 1.0,
+          "caption": "Birinci Bağlantısız Ülkeler Devlet ve Hükümet Başkanları Konferansı delegasyonları (Fotoğraf: UNESCO, t.y.)."
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "Cezayir Cumhurbaşkanı Abdelmadjid Tebboune, Azerbaycan'ın başkenti Bakü'de düzenlenen Bağlantısızlar Hareketi (NAM) Temas Grubu Zirvesi'nde yaptığı konuşmada Cezayir'in NAM'ın ilke ve hedeflerine olan bağlılığını yineled"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 4,
+          "text": "(Fotoğraf: Algeria 360, 2017)."
+        },
+        {
+          "page": 6,
+          "text": "Fidel Castro ile bir arada (Fotoğraf: Picyrl, t.y)"
+        },
+        {
+          "page": 8,
+          "text": "(Fotoğraf: Toward Freedom, 2023)."
+        },
+        {
+          "page": 10,
+          "text": "görülüyor (Fotoğraf: BM, 1974)."
+        },
+        {
+          "page": 12,
+          "text": "(Fotoğraf: OrientXXI, 2017)."
+        },
+        {
+          "page": 14,
+          "text": "Cezayir Devlet Başkanı Boumedienne, 1973 (Fotoğraf: Küba Dışişleri Bakanlığı, 2023)."
+        },
+        {
+          "page": 16,
+          "text": "(Fotoğraf: UNESCO, t.y.)."
+        },
+        {
+          "page": 18,
+          "text": "hedeflerine olan bağlılığını yineledi (Fotoğraf: Azerbaycan Cumhurbaşkanlığı, 2023)"
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        5,
+        7,
+        18,
+        22
+      ]
+    },
+    {
+      "slug": "70-yilinda-bandung-baglantisizliktan-hegemonyaciliga-karsi-milli-devletlerin-ortak-kalkinma-ve",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Semih%20Koray_ENG.pdf",
+      "pdf_pages": 10,
+      "canonical_paragraphs": 42,
+      "canonical_references": 0,
+      "canonical_figures": 4,
+      "canonical_tokens": 2950,
+      "pdf_extracted_tokens": 3848,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 0.75,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "What was the role of the Bandung Conference and the Non-Aligned Movement for the developing world in the post-World War II world geopolitical alignment?",
+        "page": 2,
+        "score": 0.571,
+        "sample": "What was the role of the Bandung Conference and the Non-Aligned Movement for the developing world in the post-World War II world geopolitical alignment?"
+      },
+      "last_anchor": {
+        "section": 2,
+        "paragraph": 21,
+        "text": "It is thanks to the strategic approach adopted by the conference and the Non-Aligned Movement that the Bandung Conference has left a valuable legacy to humanity despite all the changes in the world in the past 70 years. It would be in Turkey’s interest above all to learn the necessary lessons from both the grave mistake it made during the Bandung Conference and the experience of Bandung that sheds light on today.",
+        "page": 10,
+        "score": 0.594,
+        "sample": "It is thanks to the strategic approach adopted by the conference and the Non-Aligned Movement that the Bandung Conference has left a valuable legacy to humanity despite all the cha"
+      },
+      "headings": [
+        {
+          "title": "Interview",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "The Path of National States against Imperialism",
+          "page": 3,
+          "score": 0.833
+        },
+        {
+          "title": "The Dynamics of Multipolarity: How Today Differs from Yesterday",
+          "page": 6,
+          "score": 0.5
+        },
+        {
+          "title": "The Strategy Turkey Needs",
+          "page": 9,
+          "score": 1.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [
+        {
+          "previous": {
+            "section": 1,
+            "paragraph": 7,
+            "text": "When the shadow of the rivalry between the two superpowers was lifted over the world and the United States came into direct confrontation with the nation-states, the global alignment was radically transformed. The conservative classes and sections of societies have also come to see with the naked eye that the life they want to preserve is no longer threatened by communism but by the United States. The US offensive to destroy the national states",
+            "page": 5,
+            "score": 0.634,
+            "sample": "When the shadow of the rivalry between the two superpowers was lifted over the world and the United States came into direct confrontation with the nation-states, the global alignme"
+          },
+          "current": {
+            "section": 1,
+            "paragraph": 8,
+            "text": "of the developing world has led to a rediscovery of the importance of the “national state” as a central element of the Bandung spirit all over the world. The US offensive triggered the resistance of national states and national armies.",
+            "page": 2,
+            "score": 0.892,
+            "sample": "of the developing world has led to a rediscovery of the importance of the “national state” as a central element of the Bandung spirit all over the world. The US offensive triggered"
+          }
+        }
+      ],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [
+        {
+          "id": "en-section-4",
+          "title": "The Strategy Turkey Needs",
+          "paragraphs": 0
+        }
+      ],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "On September 1-6, 1961, the first NAM Summit was held in Belgrade, the capital of Yugoslavia, led by the founding fathers of the Non-Aligned Movement. (from left to right) Shri Jawaharlal Nehru of India, Kwame Nkrumah of"
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "Today, the Shanghai Cooperation Organization (SCO), BRICS, the Belt and Road Initiative, and related organizations and activities stand out as international formations in the developing world. The 22nd meeting of the Cou"
+        },
+        {
+          "page": 9,
+          "score": 1.0,
+          "caption": "Collaboration with regional nations, Eurasia, and the developing world is not only advantageous for Turkey but also essential for its interests (Photograph: Global Times, 2022)."
+        },
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "“70th anniversary of Bandung: from ‘non-alignment’ to shared development and cooperation of national states against hegemonism”"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 4,
+          "text": "Gamal Abdel Nasser of Egypt, Sukarno of Indonesia, Josip Broz Tito of Yugoslavia (Photograph: NAMyouth, n.d.)."
+        },
+        {
+          "page": 8,
+          "text": "Heads of State of the SCO on September 16, 2022, in Samarkand, Uzbekistan (Photograph: Xinhua, 2022)."
+        },
+        {
+          "page": 9,
+          "text": "also essential for its interests (Photograph: Global Times, 2022)."
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        2,
+        5,
+        10
+      ]
+    },
+    {
+      "slug": "70-yilinda-bandung-baglantisizliktan-hegemonyaciliga-karsi-milli-devletlerin-ortak-kalkinma-ve",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Semih%20Koray_TR.pdf",
+      "pdf_pages": 10,
+      "canonical_paragraphs": 51,
+      "canonical_references": 0,
+      "canonical_figures": 4,
+      "canonical_tokens": 2873,
+      "pdf_extracted_tokens": 3248,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 0.75,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "Tam metin",
+        "page": 0,
+        "score": 0.0,
+        "sample": "Tam metin"
+      },
+      "last_anchor": {
+        "section": 2,
+        "paragraph": 23,
+        "text": "Bandung Konferansı’nın arada geçen 70 yılda dünyada yaşanan bunca değişime karşın insanlığa değerli bir miras bırakmış olması, konferansın ve Bağlantısızlar Hareketi’nin benimsediği stratejik yaklaşım sayesindedir. Ülkemizin hem Bandung Konferansı sırasında yapmış olduğu vahim hatadan, hem de Bandung’un bugüne ışık tutan deneyiminden gerekli dersleri çıkarması, her şeyden önce Türkiye’nin yararına olacaktır.",
+        "page": 10,
+        "score": 0.511,
+        "sample": "Bandung Konferansı’nın arada geçen 70 yılda dünyada yaşanan bunca değişime karşın insanlığa değerli bir miras bırakmış olması, konferansın ve Bağlantısızlar Hareketi’nin benimsediğ"
+      },
+      "headings": [
+        {
+          "title": "Röportaj",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Emperyalizme Karşı Milli Devletlerin Önündeki Yol",
+          "page": 4,
+          "score": 0.8
+        },
+        {
+          "title": "Çok Kutupluluğun Dinamikleri ve Bugünün Dünden Farkı",
+          "page": 6,
+          "score": 0.833
+        },
+        {
+          "title": "Türkiye’nin İhtiyacı Olan Strateji",
+          "page": 9,
+          "score": 1.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [
+        {
+          "previous": {
+            "section": 1,
+            "paragraph": 0,
+            "text": "70. yıldönümünde Bağlantısızlar Hareketi’nin amaç ve hedefleri açısından değerlendirilecek olursa, günümüz dünyasında nasıl bir ekonomik ve siyasi tablo söz konusudur? Bandung Konferansı’nın toplandığı ve Bağlantısızlar Hareketi’nin kurulduğu dönem ile bugün arasındaki benzerlikler ve farklılıklar nelerdir?",
+            "page": 4,
+            "score": 0.281,
+            "sample": "70. yıldönümünde Bağlantısızlar Hareketi’nin amaç ve hedefleri açısından değerlendirilecek olursa, günümüz dünyasında nasıl bir ekonomik ve siyasi tablo söz konusudur? Bandung Konf"
+          },
+          "current": {
+            "section": 1,
+            "paragraph": 1,
+            "text": "Prof. Dr. Semih Koray: Bandung Konferansı, insanlığın yeni bir uygarlık arayışı açısından bir umut kaynağı, Bağlantısızlar Hareketi de bu uygarlığa giden yol haritasının başlangıç aşamalarından biriyken, bugün Asya’dan hayatın her alanında emperyalist sisteme alternatif oluşturan yeni bir uygarlığın yükselişine tanık olmaktayız.",
+            "page": 2,
+            "score": 0.921,
+            "sample": "Prof. Dr. Semih Koray: Bandung Konferansı, insanlığın yeni bir uygarlık arayışı açısından bir umut kaynağı, Bağlantısızlar Hareketi de bu uygarlığa giden yol haritasının başlangıç "
+          }
+        },
+        {
+          "previous": {
+            "section": 2,
+            "paragraph": 3,
+            "text": "Günümüzde artık iki “süper devlet” arasındaki hegemonya mücadelesi döneminde olduğu gibi ne iki kutuplu bir dünya, ne de Sovyetler Birliği’nin dağılmasından sonra kısa bir süre için gündeme gelmiş olan tek kutuplu bir dünya söz konusu. Dünya daha önce de değindiğimiz gibi çok kutuplu hale gelmiş durumda ve bu süreç, hayatın değişik alanlarını da kapsayacak biçimde gelişme ve derinleşmesini sürdürüyor. Hatta bu çok kutupluluğun etkileri, ABD’nin kendi içine ve dolayısıyla Atlantik Sistemine de yansımış durumda. ABD bugün kurulduğundan bu yana Amerikan İç Savaşı’ndan sonraki en derin bölünmesini yaşıyor ve bu bölünme Atlantik Sistemine de bir bütün olarak yansıyor.",
+            "page": 6,
+            "score": 0.611,
+            "sample": "Günümüzde artık iki “süper devlet” arasındaki hegemonya mücadelesi döneminde olduğu gibi ne iki kutuplu bir dünya, ne de Sovyetler Birliği’nin dağılmasından sonra kısa bir süre içi"
+          },
+          "current": {
+            "section": 2,
+            "paragraph": 4,
+            "text": "Onun için Bandung Konferansı döneminde Ezilen ve Gelişmekte Olan Dünya’da bağımsızlığın önkoşulunu oluşturan “bağlantısızlık”, günümüzde belirleyici bir kavram olmaktan çıkmış durumda. Bağlantısızlar Hareketi’nin varlığını hâlâ biçimsel olarak sürdürüyor olmasına karşın, bugün Gelişmekte Olan Dünya’daki uluslararası oluşumlar olarak Şanghay İşbirliği Örgütü, BRICS, Kuşak ve Yol Girişimi ve bunlarla ilgili kuruluş ve etkinlikler öne çıkıyor. Bu oluşumların ortak özelliği, katılımcı ülkeleri birleştiren ve aynı doğrultuda seferber eden temel etkenin ülkelerin ortak çıkar ve hedefleri olarak alınması.",
+            "page": 2,
+            "score": 0.792,
+            "sample": "Onun için Bandung Konferansı döneminde Ezilen ve Gelişmekte Olan Dünya’da bağımsızlığın önkoşulunu oluşturan “bağlantısızlık”, günümüzde belirleyici bir kavram olmaktan çıkmış duru"
+          }
+        }
+      ],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [
+        {
+          "id": "tr-section-4",
+          "title": "Türkiye’nin İhtiyacı Olan Strateji",
+          "paragraphs": 0
+        }
+      ],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "Bağlantısızlar Hareketi’nin kurucu babaları liderliğinde ilk NAM Zirvesi Yugoslavya’nın başkenti Belgrad’da 1-6 Eylül 1961’de gerçekleştirilmiştir. (soldan sağa) Hindistan'dan Shri Jawaharlal Nehru, Gana'dan Kwame Nkruma"
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "Bugün Gelişmekte Olan Dünya’daki uluslararası oluşumlar olarak Şanghay İşbirliği Örgütü (ŞİÖ), BRICS, Kuşak ve Yol Girişimi ve bunlarla ilgili kuruluş ve etkinlikler öne çıkıyor. ŞİÖ’nün Özbekistan’ın Semerkant kentinde "
+        },
+        {
+          "page": 9,
+          "score": 1.0,
+          "caption": "Bölge ülkeleriyle, Avrasya’yla, Gelişmekte Olan Dünya ile işbirliği, yalnızca Türkiye’ye yakışan değil, aynı zamanda Türkiye’nin ihtiyacı olan bir işbirliğidir (Fotoğraf: Global Times, 2022)."
+        },
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "“70. yılında Bandung: ‘Bağlantısızlık’tan, hegemonyacılığa karşı milli devletlerin ortak kalkınma ve işbirliğine”"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 4,
+          "text": "Cemal Abdülnasır, Endonezya'dan Sukarno, Yugoslavya'dan Josip Broz Tito (Fotoğraf: NAMyouth, t.y.)."
+        },
+        {
+          "page": 8,
+          "text": "düzenlenen 22’nci Zirvesi’nde liderler bir arada (Fotoğraf: Xinhua, 2022)."
+        },
+        {
+          "page": 9,
+          "text": "zamanda Türkiye’nin ihtiyacı olan bir işbirliğidir (Fotoğraf: Global Times, 2022)."
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        2,
+        4,
+        6,
+        10
+      ]
+    },
+    {
+      "slug": "endonezya-dis-politikasinda-bandung-mirasina-yeniden-bakis-tarihsel-bir-inceleme-ve-guncel",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/ZHANG%20QINGYI%20%26%20DU%20DONGHUI_ENG.pdf",
+      "pdf_pages": 18,
+      "canonical_paragraphs": 74,
+      "canonical_references": 63,
+      "canonical_figures": 5,
+      "canonical_tokens": 7262,
+      "pdf_extracted_tokens": 8502,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 0.778,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "THE FIRST ASIAN-AFRICAN CONFERENCE TOOK place on April 18, 1955, in Bandung, Indonesia. It brought together representatives from 29 Asian and African countries to discuss issues of common interest. The event was significant, as it was the first international event hosted by Indonesia after gaining independence (Portal Informasi Indonesia, 2019) and also the world’s inaugural intercontinental conference (Kemlu, 2019). Additionally, it provided a groundbreaking platform for Asian and African nations to have comprehensive discussions on regional affairs without any participation from official representatives of colonial powers. The conference not only strengthened the ties among emerging independent nations and pushed forward the process of global decolonization but also laid a foundation of equality and inclusiveness for multilateral cooperation among developing countries (Portal Kemlu, 2020; 2022).",
+        "page": 2,
+        "score": 0.562,
+        "sample": "THE FIRST ASIAN-AFRICAN CONFERENCE TOOK place on April 18, 1955, in Bandung, Indonesia. It brought together representatives from 29 Asian and African countries to discuss issues of"
+      },
+      "last_anchor": {
+        "section": 8,
+        "paragraph": 0,
+        "text": "Indonesia emerged from the anti-colonial struggle, achieving independence with much effort. During the Cold War, it was imperative to swiftly identify novel methods to convey its political interest. The Asian-African Conference in Bandung was shaped by various elements, including systemic polarization, the characteristics of newly independent nations, and Sukarno’s anti-colonial and anti-imperialist philosophy. Overcoming challenges in planning, preparation, and conference execution, Indonesia, as host country, took the lead in proposing a vision and making a significant contribution to the conference’s success. The successful convening of the Bandung Conference signified the initial emergence of Asian and African nations as an independent political force globally, while also fostering the influential Bandung Spirit and informing Indonesia’s diplomatic strategy. In some historical epochs, Indonesia diverged from the diplomatic tenets set forth at the Bandung Conference, leading to its eventual diplomatic isolation and a deterioration of its international stature. Throughout the democratic transition, Indonesia has revitalized the Bandung Spirit, enhancing relations with China and actively participating in the formation of the ASEAN community while preserving an independent and flexible position in the strategic rivalry between China and the United States. The Bandung spirit has proven its importance in Indonesia’s diplomatic endeavors throughout the past seventy years, encompassing both positive and negative aspects, while also acting as a foundational principle for promoting solidarity and collaboration among nations in the Global South.",
+        "page": 17,
+        "score": 0.532,
+        "sample": "Indonesia emerged from the anti-colonial struggle, achieving independence with much effort. During the Cold War, it was imperative to swiftly identify novel methods to convey its p"
+      },
+      "headings": [
+        {
+          "title": "Introduction",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Why did Indonesia Initiate the Bandung Conference?",
+          "page": 3,
+          "score": 1.0
+        },
+        {
+          "title": "Reconfiguration of Global Powers Necessitates Third World Nations Uniting for Mutual Support",
+          "page": 3,
+          "score": 0.556
+        },
+        {
+          "title": "The Recently Liberated Indonesia was in Urgent Need of Asserting its Sovereignty and Independence",
+          "page": 5,
+          "score": 0.636
+        },
+        {
+          "title": "Sukarno’s Firm Anti-Imperialist and Anti-Colonialist Stance",
+          "page": 6,
+          "score": 0.6
+        },
+        {
+          "title": "Bandung Conference and Indonesia’s Domestic Diplomacy",
+          "page": 7,
+          "score": 0.8
+        },
+        {
+          "title": "Indonesia’s Inheritance or Divergence from the Bandung Legacy",
+          "page": 11,
+          "score": 0.6
+        },
+        {
+          "title": "The Transformation of Indonesian Diplomacy and its Contribution to Fostering the Bandung Spirit",
+          "page": 15,
+          "score": 0.6
+        },
+        {
+          "title": "Conclusion",
+          "page": 0,
+          "score": 0.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [
+        {
+          "id": "en-section-8",
+          "title": "The Transformation of Indonesian Diplomacy and its Contribution to Fostering the Bandung Spirit",
+          "paragraphs": 0
+        }
+      ],
+      "short_sections": [
+        {
+          "id": "en-section-2",
+          "title": "Why did Indonesia Initiate the Bandung Conference?",
+          "paragraphs": 1
+        },
+        {
+          "id": "en-section-9",
+          "title": "Conclusion",
+          "paragraphs": 1
+        }
+      ],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "President Sukarno reads the Declaration of Independence of the Republic of Indonesia in Jakarta on August 17, 1945 (Photograph: UMSU Law School, 2024)."
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "The Bogor Conference convened on December 24-29, 1954, at Bogor Palace in Java province (Photograph: National Archives of the Republic of Indonesia, 2023)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "President Sukarno speaking at the Bandung Conference (Photograph: SMKAA, 2024)."
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "Indonesia was one of the founding members of the Group of 77, established in 1964 to reduce dependence on developed countries and promote solidarity, cooperation, and development within the Global South (Photograph: G 77"
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "Under the Suharto-led regime from 1965 to 1966, many Communist Party members and leftists were persecuted, resulting in hundreds of thousands of massacres. Here members of the party are being transported to a prison in t"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 6,
+          "text": "August 17, 1945 (Photograph: UMSU Law School, 2024)."
+        },
+        {
+          "page": 8,
+          "text": "(Photograph: National Archives of the Republic of Indonesia, 2023)."
+        },
+        {
+          "page": 10,
+          "text": "(Photograph: SMKAA, 2024)."
+        },
+        {
+          "page": 12,
+          "text": "(Photograph: G 77, n.d.)."
+        },
+        {
+          "page": 14,
+          "text": "the capital, Jakarta (Photograph: [NTB Scanpix] Norwegian Refugee Council, 2015)."
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        18
+      ]
+    },
+    {
+      "slug": "endonezya-dis-politikasinda-bandung-mirasina-yeniden-bakis-tarihsel-bir-inceleme-ve-guncel",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/ZHANG%20QINGYI%20%26%20DU%20DONGHUI_TR.pdf",
+      "pdf_pages": 18,
+      "canonical_paragraphs": 68,
+      "canonical_references": 63,
+      "canonical_figures": 5,
+      "canonical_tokens": 6413,
+      "pdf_extracted_tokens": 7790,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 0.444,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "İLK ASYA-AFRİKA KONFERANSI 18 NİSAN 1955 tarihinde Endonezya’nın Bandung kentinde gerçekleşti. Konferans, 29 Asya ve Afrika ülkesinden temsilcileri ortak ilgi alanlarına giren konuları görüşmek üzere bir araya getirdi. Etkinlik, Endonezya’nın bağımsızlığını kazandıktan sonra ev sahipliği yaptığı ilk uluslararası etkinlik (Portal Informasi Indonesia, 2019) ve aynı zamanda dünyanın ilk kıtalararası konferansı olması bakımından önemliydi (Kemlu, 2019). Ayrıca, Asya ve Afrika ülkelerinin sömürgeci güçlerin resmi temsilcilerinin katılımı olmaksızın bölgesel meseleler hakkında kapsamlı tartışmalar yapabilmeleri için çığır açan bir platform sağlamıştır. Konferans sadece gelişmekte olan bağımsız uluslar arasındaki bağları güçlendirmek ve küresel dekolonizasyon sürecini ilerletmekle kalmamış, aynı zamanda gelişmekte olan ülkeler arasında çok taraflı işbirliği için eşitlik ve kapsayıcılığın temelini atmıştır (Portal Kemlu, 2020; 2022). Böylece, Asya ve Afrika ülkeleri uluslararası sahnede bağımsız bir siyasi güç olarak ortaya çıkmaya başlamıştır. Ayrıca Asya ve Afrika ülkeleri, devletlerarası ilişkileri yönetmek için Barış İçinde Bir Arada Yaşamanın Beş İlkesi’ne dayanan on ilke oluşturmuş ve böylece dayanışma, dostluk ve işbirliğinden oluşan Bandung Ruhu’nu teşvik etmiştir. Bu kalıcı ruh büyük bir pratik öneme sahiptir ve gelişmekte olan ülkeler arasındaki uluslararası alışverişler üzerinde bugüne kadar derin bir etki yaratmıştır (Arsip Nasional Republik Indonesia, 2012).",
+        "page": 3,
+        "score": 0.514,
+        "sample": "İLK ASYA-AFRİKA KONFERANSI 18 NİSAN 1955 tarihinde Endonezya’nın Bandung kentinde gerçekleşti. Konferans, 29 Asya ve Afrika ülkesinden temsilcileri ortak ilgi alanlarına giren konu"
+      },
+      "last_anchor": {
+        "section": 8,
+        "paragraph": 0,
+        "text": "Endonezya sömürgecilik karşıtı bir mücadeleden doğmuş ve büyük çabalar sonucunda bağımsızlığını kazanmıştır. Soğuk Savaş sırasında, siyasi çıkarlarını gerçekleştirmek için hızla yeni yöntemler belirlemek zorunluydu. Bandung’daki Asya-Afrika Konferansı, sistemik kutuplaşma, yeni bağımsızlığını kazanan ulusların özellikleri ve Sukarno’nun sömürgecilik karşıtı ve anti-emperyalist felsefesi gibi çeşitli unsurlar tarafından şekillendirildi. Planlama, hazırlık ve konferansın yürütülmesindeki zorlukların üstesinden gelen Endonezya, ev sahibi ülke olarak bir vizyon önermiş ve konferansın başarısına öncülük ederek önemli bir katkıda bulunmuştur. Bandung Konferansı’nın başarılı bir şekilde yapılması, Asya ve Afrika ülkelerinin küresel sahnede özerk bir siyasi güç olarak ortaya çıkışına işaret etmekle kalmamış, aynı zamanda geniş çapta etki yaratan Bandung Ruhu’nun doğmasına yol açmış ve Endonezya’nın diplomatik davranışları için rehberlik sağlamıştır. Belirli tarihsel dönemlerde Endonezya, Bandung Konferansı’nda belirlenen diplomatik ilkelerden sapmış, bu da daha sonra diplomatik izolasyonuna ve uluslararası konumunun gerilemesine neden olmuştur. Demokratik geçiş döneminde Endonezya Bandung Ruhunu yeniden canlandırmış, Çin ile ilişkilerini derinleştirmiş, ASEAN topluluğunun kurulmasına aktif olarak katkıda bulunmuş ve Çin ile ABD arasındaki stratejik rekabette özerk ve uyarlanabilir bir duruş sergilemiştir. Bandung ruhu, Endonezya’nın son yetmiş yıldaki diplomatik uygulamalarında hem olumlu hem de olumsuz açılardan önemini göstermekle kalmamış, aynı zamanda Küresel Güney’deki uluslar arasında dayanışma ve işbirliğini teşvik etmek için yol gösterici bir ilke olarak hizmet etmiştir.",
+        "page": 17,
+        "score": 0.444,
+        "sample": "Endonezya sömürgecilik karşıtı bir mücadeleden doğmuş ve büyük çabalar sonucunda bağımsızlığını kazanmıştır. Soğuk Savaş sırasında, siyasi çıkarlarını gerçekleştirmek için hızla ye"
+      },
+      "headings": [
+        {
+          "title": "Giriş",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Endonezya Neden Bandung Konferansı’na Öncülük Etmiştir?",
+          "page": 3,
+          "score": 0.8
+        },
+        {
+          "title": "Küresel Güçlerin Yeniden Yapılandırılması Üçüncü Dünya Ülkelerinin Karşılıklı Destek İçin Birleşmesini Gerektiriyor",
+          "page": 4,
+          "score": 0.4
+        },
+        {
+          "title": "Yakın Zamanda Özgürlüğüne Kavuşan Endonezya’nın, Egemenliğini ve Bağımsızlığını Savunmaya Acil İhtiyacı Vardı",
+          "page": 5,
+          "score": 0.4
+        },
+        {
+          "title": "Sukarno’nun Kararlı Anti-Emperyalist ve Anti-Sömürgeci Duruşu",
+          "page": 7,
+          "score": 0.6
+        },
+        {
+          "title": "Bandung Konferansı ve Endonezya’nın İç Diplomasisi",
+          "page": 7,
+          "score": 0.833
+        },
+        {
+          "title": "Endonezya’nın Bandung Mirasını Devralması ve Ondan Uzaklaşması",
+          "page": 11,
+          "score": 0.833
+        },
+        {
+          "title": "Endonezya Diplomasisinin Dönüşümü ve Bandung Ruhunun Geliştirilmesine Katkısı",
+          "page": 15,
+          "score": 0.4
+        },
+        {
+          "title": "Sonuç",
+          "page": 0,
+          "score": 0.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [
+        {
+          "id": "tr-section-2",
+          "title": "Endonezya Neden Bandung Konferansı’na Öncülük Etmiştir?",
+          "paragraphs": 1
+        },
+        {
+          "id": "tr-section-9",
+          "title": "Sonuç",
+          "paragraphs": 1
+        }
+      ],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "Başkan Sukarno, 17 Ağustos 1945’te Jakarta’da Endonezya Cumhuriyeti Bağımsızlık Bildirgesi’ni okuyor (Fotoğraf: UMSU Hukuk Fakültesi, 2024)."
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "Bogor Konferansı, 24-29 Aralık 1954’te Cava ilindeki Bogor Sarayı’nda toplandı (Fotoğraf: Endonezya Cumhuriyeti Ulusal Arşivleri, 2023)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "Başkan Sukarno, Bandung Konferansı’nda konuşurken (Fotoğraf: SMKAA, 2024)."
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "Endonezya, gelişmiş ülkelere bağımlılığı azaltmayı ve Küresel Güney içinde dayanışma, işbirliği ve kalkınmayı geliştirmeyi amaçlayan ve 1964 yılında kurulan 77 Grubu’nun kurucu üyelerinden biriydi (Fotoğraf: G 77, t.y.)."
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "Suharto liderliğindeki rejim yönetiminde 1965’ten 1966’ya kadar çok sayıda Komünist Parti üyesi ve solcu zulme maruz kaldı ve yüz binlerce kişi katledildi. Parti üyeleri başkent Cakarta’daki bir hapishaneye nakledilirken"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 6,
+          "text": "(Fotoğraf: UMSU Hukuk Fakültesi, 2024)."
+        },
+        {
+          "page": 8,
+          "text": "(Fotoğraf: Endonezya Cumhuriyeti Ulusal Arşivleri, 2023)."
+        },
+        {
+          "page": 10,
+          "text": "(Fotoğraf: SMKAA, 2024)."
+        },
+        {
+          "page": 12,
+          "text": "(Fotoğraf: G 77, t.y.)."
+        },
+        {
+          "page": 14,
+          "text": "(Fotoğraf: [NTB Scanpix] Norveç Mülteci Konseyi, 2015)."
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        18
+      ]
+    },
+    {
+      "slug": "bandung-ruhu-70-yasinda",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/C%C3%9CNEYT%20AKALIN_ENG.pdf",
+      "pdf_pages": 20,
+      "canonical_paragraphs": 101,
+      "canonical_references": 51,
+      "canonical_figures": 7,
+      "canonical_tokens": 6781,
+      "pdf_extracted_tokens": 7981,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 0.818,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "THE UNASSUMING INTERNATIONAL conference, convened in 1955 in a secluded region of Asia, Bandung, Indonesia, emerged as one of the most significant international gatherings of the 20th century. This year commemorates the 70th anniversary of the conference. The Asia-Africa Conference, referred to as the Bandung Conference, emerged as a beacon of optimism, illuminating the circumstances of a post-war world",
+        "page": 2,
+        "score": 0.571,
+        "sample": "THE UNASSUMING INTERNATIONAL conference, convened in 1955 in a secluded region of Asia, Bandung, Indonesia, emerged as one of the most significant international gatherings of the 2"
+      },
+      "last_anchor": {
+        "section": 10,
+        "paragraph": 8,
+        "text": "The Bandung Spirit proclaimed to the world the commencement of a new epoch. A cursory examination of the international landscape recognizes the Bandung Spirit’s contribution to the significant transformations occurring. Currently, the Bandung Spirit extends beyond the Asia-Africa context, permeating all five continents and the globe.",
+        "page": 19,
+        "score": 0.581,
+        "sample": "The Bandung Spirit proclaimed to the world the commencement of a new epoch. A cursory examination of the international landscape recognizes the Bandung Spirit’s contribution to the"
+      },
+      "headings": [
+        {
+          "title": "Introduction",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "The Global Landscape Prior to the Bandung Conference",
+          "page": 5,
+          "score": 0.8
+        },
+        {
+          "title": "Asian Relations Conference in Delhi",
+          "page": 7,
+          "score": 1.0
+        },
+        {
+          "title": "China’s Contributions",
+          "page": 9,
+          "score": 1.0
+        },
+        {
+          "title": "Indonesia’s Contributions",
+          "page": 9,
+          "score": 1.0
+        },
+        {
+          "title": "Bandung-Asia-Africa Conference",
+          "page": 10,
+          "score": 1.0
+        },
+        {
+          "title": "Nehru-Zorlu conflict during the conference",
+          "page": 12,
+          "score": 1.0
+        },
+        {
+          "title": "Bandung Conference in Turkish Press",
+          "page": 13,
+          "score": 1.0
+        },
+        {
+          "title": "Western Positions on Bandung",
+          "page": 14,
+          "score": 1.0
+        },
+        {
+          "title": "Non-Alignement Movement After Bandung",
+          "page": 16,
+          "score": 1.0
+        },
+        {
+          "title": "Conclusion",
+          "page": 0,
+          "score": 0.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [
+        {
+          "previous": {
+            "section": 10,
+            "paragraph": 6,
+            "text": "The Bandung Spirit endures to this day. A testament to this is the commemoration of Bandung’s 70th anniversary through a series of events. The Indonesia-Africa meetings in Bali and the China-Africa meetings in Beijing address various issues faced by developing countries (Independent, 2024).",
+            "page": 18,
+            "score": 0.525,
+            "sample": "The Bandung Spirit endures to this day. A testament to this is the commemoration of Bandung’s 70th anniversary through a series of events. The Indonesia-Africa meetings in Bali and"
+          },
+          "current": {
+            "section": 10,
+            "paragraph": 7,
+            "text": "In the latter part of the 20th century, humanity significantly eradicated severe colonialism, diminished the disparity between small and large nations to a degree, and enhanced economic and cultural collaboration among developing countries.",
+            "page": 2,
+            "score": 0.8,
+            "sample": "In the latter part of the 20th century, humanity significantly eradicated severe colonialism, diminished the disparity between small and large nations to a degree, and enhanced eco"
+          }
+        }
+      ],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [
+        {
+          "id": "en-section-4",
+          "title": "China’s Contributions",
+          "paragraphs": 0
+        }
+      ],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "High-Level Commemorative Meeting on 60th Anniversary of the Non-Alignment Movement (NAM) held in Belgrade on October 11-12, 2021 (Photograph: Ministry of Foreign Affairs of the Republic of Serbia, 2021)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "Front and back cover of the August 1972 issue of Gidra, a revolutionary monthly newspaper-magazine published from 1969 to 1974. During this period, the use of napalm and other chemical weapons in Vietnam was often compar"
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "Jawaharlal Nehru, greeting Dr. Burhaneddin, Head of Delegation of Malay, at the Asian Relations Conference held in New Delhi on 31st March and 1st April 1947 (Photograph: Malaya Ganapathy, 2022)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "Delegations from 29 Asian and African countries and regions participated in the Asia-Africa Conference held in Bandung, Indonesia, on April 18-24, 1955 (Photograph: Qian Sijie/Xinhua, 1955)."
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "President Dwight D. Eisenhower (right) with Secretary of State John Foster Dulles (Photograph: George Washington University, NSA Archive, n.d.)."
+        },
+        {
+          "page": 16,
+          "score": 1.0,
+          "caption": "The emergence of the Non-Aligned Movement, which was to be formalized in 1961, had consequences that affected international balances, such as the Asian-African countries becoming an influential bloc within the United Nat"
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "On June 28, 2024, China solemnly celebrated the 70th anniversary of the Five Principles of Peaceful Coexistence, which also marked the Bandung Conference (Photograph: Global Times, 2024)."
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 4,
+          "text": "October 11-12, 2021 (Photograph: Ministry of Foreign Affairs of the Republic of Serbia, 2021)."
+        },
+        {
+          "page": 6,
+          "text": "Vietnam was often compared to the atomic bomb dropped on Hiroshima (Photograph: Gidra, 1972)."
+        },
+        {
+          "page": 8,
+          "text": "New Delhi on 31st March and 1st April 1947 (Photograph: Malaya Ganapathy, 2022)."
+        },
+        {
+          "page": 10,
+          "text": "Bandung, Indonesia, on April 18-24, 1955 (Photograph: Qian Sijie/Xinhua, 1955)."
+        },
+        {
+          "page": 14,
+          "text": "(Photograph: George Washington University, NSA Archive, n.d.)."
+        },
+        {
+          "page": 16,
+          "text": "balances, such as the Asian-African countries becoming an influential bloc within the United Nations (Photograph: NAMyouth, n.d.)."
+        },
+        {
+          "page": 18,
+          "text": "which also marked the Bandung Conference (Photograph: Global Times, 2024)."
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        2,
+        18,
+        20
+      ]
+    },
+    {
+      "slug": "bandung-ruhu-70-yasinda",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/C%C3%9CNEYT%20AKALIN_TR2.pdf",
+      "pdf_pages": 20,
+      "canonical_paragraphs": 91,
+      "canonical_references": 52,
+      "canonical_figures": 7,
+      "canonical_tokens": 5407,
+      "pdf_extracted_tokens": 6819,
+      "paragraph_match_ratio": 0.956,
+      "heading_match_ratio": 0.818,
+      "reference_match_ratio": 0.981,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "1955 YILINDA ASYA’NIN UZAK BİR KÖŞESİNDE, Endonezya’nın Cava Adasındaki Bandung kentinde toplanan mütevazı görünümlü konferans, 20. yüzyılın en önemli uluslararası toplantılarından biridir. Bu yıl, Konferansın 70. Yılı kutlanıyor. Bandung Konferansı olarak bilinen Asya-Afrika Konferansı, savaş sonrası dünyanın iki siyasal-ideolojik kutup arasında büyük bir gerginliğe sürüklendiği, savaş öncesi yıkıntılarının henüz kaldırılmamış, sömürgeciliğin tasfiye edilmemiş olduğu koşullarda, bir büyük umut kaynağı olarak ışık saçmaya başladı. Bu konferans, yeni bir dünyanın doğuşunun işaretlerini vererek, iki süper devletin dayatmalarına karşı bağımsız, başı dik yaşamakta kararlı ülkelerden oluşan Bağlantısızlar (Bloksuzlar Hareketi) Hareketi’nin temellerini oluşturmuştur (Burke, 2006).",
+        "page": 3,
+        "score": 0.356,
+        "sample": "1955 YILINDA ASYA’NIN UZAK BİR KÖŞESİNDE, Endonezya’nın Cava Adasındaki Bandung kentinde toplanan mütevazı görünümlü konferans, 20. yüzyılın en önemli uluslararası toplantılarından"
+      },
+      "last_anchor": {
+        "section": 10,
+        "paragraph": 6,
+        "text": "Bandung Ruhu, günümüzde Asya-Afrika çerçevesini aşarak, beş kıtaya yayılıyor.",
+        "page": 18,
+        "score": 0.5,
+        "sample": "Bandung Ruhu, günümüzde Asya-Afrika çerçevesini aşarak, beş kıtaya yayılıyor."
+      },
+      "headings": [
+        {
+          "title": "Giriş",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Bandung Öncesi Uluslararası Ortam",
+          "page": 5,
+          "score": 1.0
+        },
+        {
+          "title": "Delhi Asya İlişkileri Konferansı",
+          "page": 7,
+          "score": 1.0
+        },
+        {
+          "title": "Çin’in Katkıları",
+          "page": 9,
+          "score": 1.0
+        },
+        {
+          "title": "Endonezya’nın Katkıları",
+          "page": 9,
+          "score": 1.0
+        },
+        {
+          "title": "Bandung’daki Asya-Afrika Konferansı",
+          "page": 10,
+          "score": 1.0
+        },
+        {
+          "title": "Konferansta Nehru-Zorlu çatışması",
+          "page": 12,
+          "score": 1.0
+        },
+        {
+          "title": "Türk Basınında Bandung Konferansı",
+          "page": 13,
+          "score": 1.0
+        },
+        {
+          "title": "Bandung hakkında Batılıların Tavrı",
+          "page": 14,
+          "score": 1.0
+        },
+        {
+          "title": "Bandung Sonrası Bağlantısızlar Hareketi",
+          "page": 16,
+          "score": 1.0
+        },
+        {
+          "title": "Sonuç",
+          "page": 0,
+          "score": 0.0
+        }
+      ],
+      "unmatched_paragraphs": [
+        {
+          "section": 0,
+          "paragraph": 6,
+          "text": "Bir başka anma etkinliği, Asya’da yaşandı. Tarihi konferansın 60. Yılında Bandung’da bir araya gelen, aralarında Çin Devlet Başkanı Xi Jinping , Endonezya Devlet Başkanı Joko Widodo ile Swaziland Kralı Mswati’nin de aralarında bulunduğu bir gurup lider, yerel saat ile 09.20 de Savoy Homann Otelinden Bandung Konferansı’nın yapıldığı Bağımsızlık Binası’na yürüdü. Anma etkinliği aynı mekanda, Bağımsızlık Binasında yapıldı (Saragih, 2015). Endonezya Devlet Başkanı Joko Widodo, Çin Devlet Başkanı Xi Jinping, Zimbabwe Devlet Başkanı Robert Mugabe, Myanmar Devlet Başkanı U Thein Sein, Mısır Başbakanı İbrahim Mahlab ve Venezuela Devlet Başkan Yardımcısı Yardımcısı Jorge Arreaza yaptıkları konuşmalarda gelişmekte olan ülkelerin hak ve çıkarlarını korumalarında ve gelişmelerinde büyük sorunlarla karşı karşıya kaldıklarına dikkat çektiler, ortak refah için yaptıkları çalışmaların önemine işaret ederek, Bandung Ruhu’nu övdüler (China Daily, 2015a). Xi Jinping Bandung Ruhu’ndan esinlenen Asya-Afrika ülkelerinin el ele vererek güçlendiklerini, bölgesel düzeyde işbirliğini artırarak ilerlemeler kaydettiklerini, bölgesel/uluslararası düzeyde giderek artan roller üstlendiklerini vurguladı (Xi, 2015).",
+          "page": 3,
+          "score": 0.228,
+          "sample": "Bir başka anma etkinliği, Asya’da yaşandı. Tarihi konferansın 60. Yılında Bandung’da bir araya gelen, aralarında Çin Devlet Başkanı Xi Jinping , Endonezya Devlet Başkanı Joko Widod"
+        },
+        {
+          "section": 5,
+          "paragraph": 10,
+          "text": "Yıldızı Bandung’da parlayanlardan biri Mısır Başbakanı Cemal Abdülnasır’dır. Abdülnasır, İsrail’i sert biçimde eleştirerek konunun gündeme alınmasını talep eder, Güney Afrika’daki ırk ayrımını üzüntü ile karşıladığını, kınadığını belirtir. Nasır, ülkesi ile Asya ve Afrika milletleri arasındaki işbirliğinin genişletilmesine taraftar olduğunu belirtir. Nasır milletlerarası münasebetlerin düzenlenmesinde ve dünya gerginliğinin azaltılmasında, küçük devletlerin, yapıcı rollerini oynamak hakkına sahip olduklarını; Mısır Hükümeti’nin, Birleşmiş Milletler Teşkilatı’nın, barış ve emniyeti sağlayacak ve bunun idamesini temin edecek bir müessese olduğuna inandığını, bu teşkilatı desteklemeye devam edeceğini belirtir (Ayın Tarihi, 1955).",
+          "page": 11,
+          "score": 0.222,
+          "sample": "Yıldızı Bandung’da parlayanlardan biri Mısır Başbakanı Cemal Abdülnasır’dır. Abdülnasır, İsrail’i sert biçimde eleştirerek konunun gündeme alınmasını talep eder, Güney Afrika’daki "
+        },
+        {
+          "section": 5,
+          "paragraph": 12,
+          "text": "Konuşma sırasında Filipinler delegesine arkasını dönen Nehru’nun, Zhou Enlai’ın konuşmasını alkışlarla desteklediği görülür.",
+          "page": 12,
+          "score": 0.2,
+          "sample": "Konuşma sırasında Filipinler delegesine arkasını dönen Nehru’nun, Zhou Enlai’ın konuşmasını alkışlarla desteklediği görülür."
+        },
+        {
+          "section": 10,
+          "paragraph": 4,
+          "text": "Bandung Ruhu günümüzde hala canlılığını koruyor. Bunun bir kanıtı Bandung’un 70. yılının yılı çeşitli etkinliklerle anılmış olmasıdır. Bali’de düzenlenen Endonezya-Afrika, ve Pekin’de düzenlenen Çin-Afrika toplantılarında gelişmekte olan ülkelerin çeşitli sorunları tartışılır (Independent, 2024).",
+          "page": 17,
+          "score": 0.167,
+          "sample": "Bandung Ruhu günümüzde hala canlılığını koruyor. Bunun bir kanıtı Bandung’un 70. yılının yılı çeşitli etkinliklerle anılmış olmasıdır. Bali’de düzenlenen Endonezya-Afrika, ve Pekin"
+        }
+      ],
+      "nonmonotonic_assignments": [
+        {
+          "previous": {
+            "section": 9,
+            "paragraph": 11,
+            "text": "1964 yılında Kahire’de yapılan Bağlantısızlar toplantısına 60 devlet katıldı. Bu sayı, o yıllarda dünyadaki bağımsız devletlerin yarısına eşitti.",
+            "page": 17,
+            "score": 0.8,
+            "sample": "1964 yılında Kahire’de yapılan Bağlantısızlar toplantısına 60 devlet katıldı. Bu sayı, o yıllarda dünyadaki bağımsız devletlerin yarısına eşitti."
+          },
+          "current": {
+            "section": 10,
+            "paragraph": 0,
+            "text": "24 Nisan 1955’te sonuçlanan Konferansın Sonuç Bildirgesi, sömürgecilik sonrası uluslararası toplumun yapısını şekillendiren temel belge niteliğindedir. Geniş bir özeti ekte sunulan Sonuç Bildirgesi’nin özü, sömürgeciliğin tasfiyesi, büyük-küçük ulusların bağımsızlığı ve eşitliği, ekonomik ve kültürel alanlarda işbirliği, ırk ayrımcılığına karış tavır, ulusların kaderini tayin hakkı ve barış içinde bir araya yaşama anlayışıdır.",
+            "page": 2,
+            "score": 0.833,
+            "sample": "24 Nisan 1955’te sonuçlanan Konferansın Sonuç Bildirgesi, sömürgecilik sonrası uluslararası toplumun yapısını şekillendiren temel belge niteliğindedir. Geniş bir özeti ekte sunulan"
+          }
+        },
+        {
+          "previous": {
+            "section": 10,
+            "paragraph": 2,
+            "text": "Sonuç Bildirgesi’nin ilanı ile çalışmalarını tamamlayan Bandung Konferansı, milletlerarası politika alanında Asya-Afrika ülkelerinin Birleşmiş Milletler içinde etkili bir blok olarak belirmeleri, 1961 yılında resmîleşecek olan Bağlantısızlar Grubu’nun ortaya çıkması, Asya-Afrika ülkelerinin Birleşmiş Milletler içinde etkili bir blok olarak belirmeleri gibi uluslararası dengeleri etkileyen sonuçları doğurur. Bunun o dönemde dünya barışına ve istikrara büyük katkılarda bulunduğu sonraları yaşanan olaylarla açıkça ortaya çıkmıştı.",
+            "page": 17,
+            "score": 0.392,
+            "sample": "Sonuç Bildirgesi’nin ilanı ile çalışmalarını tamamlayan Bandung Konferansı, milletlerarası politika alanında Asya-Afrika ülkelerinin Birleşmiş Milletler içinde etkili bir blok olar"
+          },
+          "current": {
+            "section": 10,
+            "paragraph": 3,
+            "text": "İnsanlık 20. yüzyılın ikinci yarısında vahşi sömürgeciliği büyük ölçüde tasfiye etti, küçük ve büyük uluslar arasındaki uçurum bir ölçüde giderildi, gelişme yolundaki ülkeler aralarındaki ekonomik, kültürel işbirliğini artırdılar. 20. yüzyılın ikinci yarısında Bağlantısızlar Hareketi’ni doğuran Bandung Ruhu, günümüzde yeni bölgesel örgütlere hayat veriyor, dolar hakimiyetine, dolayısıyla ABD hegemonyasına karşı mücadele eden, yeni bir uluslararası düzen arayış içinde olan BRICS gibi örgütler, terörizme ve aşırılıklara karşı mücadeleyi esas alan Şangay İşbirliği Örgütü (ŞİÖ) gibi birliktelikler, irili ufaklı birçok bölgesel örgüt Bandung Ruhu’ndan esinlenmeye devam ediyor.",
+            "page": 2,
+            "score": 1.0,
+            "sample": "İnsanlık 20. yüzyılın ikinci yarısında vahşi sömürgeciliği büyük ölçüde tasfiye etti, küçük ve büyük uluslar arasındaki uçurum bir ölçüde giderildi, gelişme yolundaki ülkeler arala"
+          }
+        }
+      ],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [
+        {
+          "page": 19,
+          "score": 0.2,
+          "sample": "Cumhuriyet. (1955). Komünizm Bandung’da Hezimete Uğradı. (29 Nisan)."
+        }
+      ],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "60. Yıldönümü’nde Bağlantısızlar Hareketinin Yüksek Düzeyli Toplantısı 11-12 Ekim 2021’de Belgrad’da yapıldı (Fotoğraf: Sırbistan Dışişleri Bakanlığı, 2021)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "1969’dan 1974’e kadar yayınlanan devrimci bir aylık dergi olan Gidra'nın Ağustos 1972 sayısının ön ve arka kapağı. Bu dönemde sık sık Vietnam’da napalm ve diğer kimyasal silahların kullanılması, Hiroşima'ya atılan atom b"
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "Jawaharlal Nehru, 31 Mart-1 Nisan 1947’de Yeni Delhi'de düzenlenen Asya İlişkileri Konferansı’nda Malay Delegasyonu Başkanı Dr. Burhaneddin’i selamlarken (Fotoğraf: Malaya Ganapathy, 2022)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "18-24 Nisan 1955’te Endonezya’nın Bandung kentinde toplanan Asya-Afrika Konferansı’na 29 Asya ve Afrika ülkesi ve bölgesinin hükümet heyetleri katıldı (Fotoğraf: Qian Sijie/ Xinhua, 1955)."
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "ABD Başkanı Dwight D. Eisenhower (sağda) Dışişleri Bakanı John Foster Dulles ile (Fotoğraf: George Washington Üniversitesi NSA Arşivi, t.y.)."
+        },
+        {
+          "page": 16,
+          "score": 1.0,
+          "caption": "1961 yılında resmileşecek olan Bağlantısızlar Grubu’nun ortaya çıkması, Asya-Afrika ülkelerinin Birleşmiş Milletler içinde etkili bir blok olarak belirmeleri gibi uluslararası dengeleri etkileyen sonuçları doğurur (Fotoğ"
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "Çin, 28 Haziran 2024’te Bandung Konferansı’na da damgasını vuran Barış İçinde Bir Arada Yaşamanın Beş İlkesi’nin 70. yıldönümünü büyük bir coşkuyla kutladı (Fotoğraf: Global Times, 2024)."
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 4,
+          "text": "(Fotoğraf: Sırbistan Dışişleri Bakanlığı, 2021)."
+        },
+        {
+          "page": 6,
+          "text": "atom bombasına benzetiliyordu (Fotoğraf: Gidra, 1972)."
+        },
+        {
+          "page": 8,
+          "text": "Delegasyonu Başkanı Dr. Burhaneddin’i selamlarken (Fotoğraf: Malaya Ganapathy, 2022)."
+        },
+        {
+          "page": 10,
+          "text": "bölgesinin hükümet heyetleri katıldı (Fotoğraf: Qian Sijie/ Xinhua, 1955)."
+        },
+        {
+          "page": 14,
+          "text": "(Fotoğraf: George Washington Üniversitesi NSA Arşivi, t.y.)."
+        },
+        {
+          "page": 16,
+          "text": "etkili bir blok olarak belirmeleri gibi uluslararası dengeleri etkileyen sonuçları doğurur (Fotoğraf: NAMyouth, t.y.)."
+        },
+        {
+          "page": 18,
+          "text": "70. yıldönümünü büyük bir coşkuyla kutladı (Fotoğraf: Global Times, 2024)."
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        2,
+        3,
+        11,
+        12,
+        17,
+        19,
+        20
+      ]
+    },
+    {
+      "slug": "bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Fang%20Xuting_ENG.pdf",
+      "pdf_pages": 20,
+      "canonical_paragraphs": 65,
+      "canonical_references": 35,
+      "canonical_figures": 6,
+      "canonical_tokens": 7984,
+      "pdf_extracted_tokens": 9180,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 0.727,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "FOLLOWING THE ESTABLISHMENT OF the People’s Republic of China in 1949, the nation rapidly encountered diplomatic isolation due to a complicated international landscape. Western nations, spearheaded by the United States, claiming ideological disparities and global strategic interests, declined to acknowledge the new Chinese government and sought to restrict its advancement through economic",
+        "page": 2,
+        "score": 0.51,
+        "sample": "FOLLOWING THE ESTABLISHMENT OF the People’s Republic of China in 1949, the nation rapidly encountered diplomatic isolation due to a complicated international landscape. Western nat"
+      },
+      "last_anchor": {
+        "section": 10,
+        "paragraph": 1,
+        "text": "Since the 18th National Congress of the Communist Party of China, China has entered a new era, with the Central Committee, led by Xi Jinping, introducing the concept of building a community with a shared future for mankind. This is a significant enrichment and development of the idea of peaceful coexistence in the modern context. Amid challenges to globalization and complexities in international relations, China adheres to the Five Principles of Peaceful Coexistence, advocating for dialogue and consultation to resolve differences and promoting the construction of a new type of international relations and a community with a shared future for mankind. This initiative is the best continuation, promotion, and elevation of the principles of peaceful coexistence, providing new answers to the questions of “what kind of world to build and how to build it” in the current era (Wang, 2024). During the Bandung Conference, China successfully broke Western isolation and blockades, establishing itself as a reliable partner for Third World countries. Today, through multilateral platforms such as the BRICS cooperation mechanism and G20 summits, China collaborates with developing countries to advocate for reforms in the global governance system. The Belt and Road Initiative, proposed in 2013, emphasizes infrastructure construction and economic cooperation to enhance connectivity with countries along its routes. This demonstrates China’s commitment to peaceful development and international cooperation, reflecting the enduring value of the Bandung Conference in contemporary global strategies.",
+        "page": 19,
+        "score": 0.626,
+        "sample": "Since the 18th National Congress of the Communist Party of China, China has entered a new era, with the Central Committee, led by Xi Jinping, introducing the concept of building a "
+      },
+      "headings": [
+        {
+          "title": "Introduction",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Before the Bandung Conference: From “Leaning to One Side” to peaceful coexistence",
+          "page": 3,
+          "score": 0.556
+        },
+        {
+          "title": "The historical logic of the “one-sided” diplomatic strategy",
+          "page": 3,
+          "score": 0.6
+        },
+        {
+          "title": "One of the important manifestations of “Leaning to One Side”: The Korean War",
+          "page": 4,
+          "score": 0.4
+        },
+        {
+          "title": "The Proposal of the Five Principles of Peaceful Coexistence",
+          "page": 7,
+          "score": 1.0
+        },
+        {
+          "title": "In the Bandung Conference: Exploration of New Diplomatic Routes",
+          "page": 9,
+          "score": 0.5
+        },
+        {
+          "title": "Preparation for the Conference: The Indonesian Initiative and the Bogor Conference",
+          "page": 9,
+          "score": 0.5
+        },
+        {
+          "title": "Conference process: Zhou Enlai’s diplomatic practice",
+          "page": 11,
+          "score": 0.8
+        },
+        {
+          "title": "Outcome of the Conference: The Ten Principles of Bandung",
+          "page": 15,
+          "score": 0.667
+        },
+        {
+          "title": "After the Bandung Conference: The evolution of Chinese Foreign policy",
+          "page": 16,
+          "score": 0.571
+        },
+        {
+          "title": "Conclusion",
+          "page": 0,
+          "score": 0.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [
+        {
+          "id": "en-section-2",
+          "title": "Before the Bandung Conference: From “Leaning to One Side” to peaceful coexistence",
+          "paragraphs": 0
+        },
+        {
+          "id": "en-section-6",
+          "title": "In the Bandung Conference: Exploration of New Diplomatic Routes",
+          "paragraphs": 0
+        }
+      ],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "On February 14, 1950, the Sino-Soviet Treaty of Friendship, Alliance and Mutual Assistance was signed in Moscow. Premier and Foreign Minister Zhou Enlai signed the treaty on behalf of the Chinese government. This was the"
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "The Chinese People's Volunteers fought alongside the Korean people and army in the War of Resistance to US Aggression and Aid to Korea (Photograph: Zhihu, n.d.)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "On September 30, 1956, Mao Zedong, Zhu De, Zhou Enlai and others welcomed Indonesian President Sukarno and his entourage at the Capital Airport (Photograph: The Paper, 2019)."
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "During a break in the Bandung Conference from April 18-24, 1955, people from all parties asked Premier Zhou Enlai to sign a souvenir (Photograph: Qian Sijie/Xinhua, 1955)."
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "The Observer Delegation from Palestine, Mufti Amien El Husaini, with the Prime Minister of the PRC, Zou Enlai, during the Bandung Conference (Photograph: UNESCO, 2015)."
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "The “Three Worlds” strategic concept was elaborated by Deng Xiaoping at the United Nations on April 10, 1974 (Photograph: UN, 2020)."
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 4,
+          "text": "This was the first treaty signed between New China and a foreign country (Photograph: China.org, n.d.)."
+        },
+        {
+          "page": 6,
+          "text": "Aggression and Aid to Korea (Photograph: Zhihu, n.d.)."
+        },
+        {
+          "page": 10,
+          "text": "and his entourage at the Capital Airport (Photograph: The Paper, 2019)."
+        },
+        {
+          "page": 12,
+          "text": "Premier Zhou Enlai to sign a souvenir (Photograph: Qian Sijie/Xinhua, 1955)."
+        },
+        {
+          "page": 14,
+          "text": "during the Bandung Conference (Photograph: UNESCO, 2015)."
+        },
+        {
+          "page": 18,
+          "text": "(Photograph: UN, 2020)."
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        20
+      ]
+    },
+    {
+      "slug": "bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/Fang%20Xuting_TR.pdf",
+      "pdf_pages": 20,
+      "canonical_paragraphs": 66,
+      "canonical_references": 35,
+      "canonical_figures": 6,
+      "canonical_tokens": 6933,
+      "pdf_extracted_tokens": 8341,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 0.818,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "1949’DA ÇIN HALK CUMHURIYETI’NIN kurulmasının ardından ülke, karmaşık bir uluslararası ortam nedeniyle hızla diplomatik izolasyonla karşılaştı. Amerika Birleşik Devletleri’nin (ABD) başını çektiği Batılı ülkeler, ideolojik farklılıkları ve küresel stratejik çıkarlarını öne sürerek yeni Çin hükümetini tanımayı reddetti ve ekonomik yaptırımlar ve askeri gözdağı yoluyla ilerlemesini kısıtlamaya çalıştı. O zamana kadar, Soğuk Savaş çerçevesi çoktan kurulmuş ve ABD’nin Çin’e yönelik tutumu, Çin Komünist Partisi’ni ABD ile işbirliğinden vazgeçmeye, hayatta kalmak ve güvenlik için Sovyetler Birliği (SB) ile ittifakı tercih etmeye ve “Tek Tarafa Yaslanma” diplomatik yaklaşımını benimsemeye zorlamıştı. “Tek Tarafa Yaslanma” bu dönemde Yeni Çin’in diplomatik stratejisinin temel ilkesi olarak ortaya çıktı ve devrimci diplomasisinin önemli bir tezahürü olarak hizmet etti. Bu durum Yeni Çin’i giderek izolasyonun üstesinden gelmek, anti-emperyalist ve sömürgecilik karşıtı girişimleri destekleyerek gelişmekte olan ülkelerle işbirliğini teşvik etmek ve daha sonra uluslararası sisteme dahil olmaya zemin oluşturmak amacıyla bir yol aramaya zorladı. Nisan 1955’te 29 Asya ve Afrika ülkesinden delegeler Endonezya’nın Bandung kentinde, Bandung Konferansı olarak bilinen ilk Asya-Afrika Konferansı için bir araya geldi. Bandung Konferansı, Batılı sömürgeci güçler hariç olmak üzere, Asya ve Afrika ülkelerinin, bölgesel meseleleri ve halklarının kaygılarını görüşmek üzere bir araya geldiği ilk kapsamlı uluslararası toplantıdır. Bandung Konferansı, Çin’in diplomatik stratejisinin başlangıçta baskın olan “Tek Tarafa Yaslanma” devrimci ideolojisinden, anlaşmazlıkları bir kenara bırakarak ortak zemin arama ve barış içinde bir arada yaşamayı teşvik etme politikasına değişimini ortaya koymaktadır.",
+        "page": 3,
+        "score": 0.489,
+        "sample": "1949’DA ÇIN HALK CUMHURIYETI’NIN kurulmasının ardından ülke, karmaşık bir uluslararası ortam nedeniyle hızla diplomatik izolasyonla karşılaştı. Amerika Birleşik Devletleri’nin (ABD"
+      },
+      "last_anchor": {
+        "section": 10,
+        "paragraph": 2,
+        "text": "Bandung Konferansı sırasında Çin, Batı’nın izolasyon ve ablukalarını başarılı bir şekilde kırarak kendisini Üçüncü Dünya ülkeleri için güvenilir bir ortak olarak kabul ettirmiştir. Bugün Çin, BRICS işbirliği mekanizması ve G20 zirveleri gibi çok taraflı platformlar aracılığıyla, küresel yönetişim sisteminde reformları savunmak için gelişmekte olan ülkelerle işbirliği yapmaktadır. 2013’te önerilen Kuşak ve Yol Girişimi, güzergahları üzerindeki ülkelerle bağlantıyı arttırmak için altyapı inşası ve ekonomik işbirliğini vurgulamaktadır. Bu, Çin’in barışçıl kalkınma ve uluslararası işbirliğine olan bağlılığını göstermekte ve Bandung Konferansı’nın çağdaş küresel stratejilerdeki kalıcı değerini yansıtmaktadır.",
+        "page": 19,
+        "score": 0.494,
+        "sample": "Bandung Konferansı sırasında Çin, Batı’nın izolasyon ve ablukalarını başarılı bir şekilde kırarak kendisini Üçüncü Dünya ülkeleri için güvenilir bir ortak olarak kabul ettirmiştir."
+      },
+      "headings": [
+        {
+          "title": "Giriş",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Bandung Konferansı'ndan önce: “Tek Tarafa Yaslanmaktan” Barış İçinde Bir Arada Yaşamaya",
+          "page": 3,
+          "score": 0.778
+        },
+        {
+          "title": "“Tek taraflı” diplomatik stratejinin tarihsel mantığı",
+          "page": 3,
+          "score": 0.8
+        },
+        {
+          "title": "“Tek Tarafa Yaslanma”nın Önemli Örneklerinden Biri: Kore Savaşı",
+          "page": 5,
+          "score": 0.5
+        },
+        {
+          "title": "Barış İçinde Bir Arada Yaşamanın Beş İlkesi Önerisi",
+          "page": 7,
+          "score": 1.0
+        },
+        {
+          "title": "Bandung Konferansı: Yeni Diplomatik Yolların Keşfi",
+          "page": 9,
+          "score": 0.8
+        },
+        {
+          "title": "Konferans için Hazırlık: Endonezya Girişimi ve Bogor Konferansı",
+          "page": 9,
+          "score": 0.6
+        },
+        {
+          "title": "Konferans süreci: Zhou Enlai’nin diplomatik pratiği",
+          "page": 11,
+          "score": 0.8
+        },
+        {
+          "title": "Konferansın Sonucu: Bandung’un On İlkesi",
+          "page": 14,
+          "score": 1.0
+        },
+        {
+          "title": "Bandung Konferansı Sonrası: Çin Dış Politikasının Evrimi",
+          "page": 16,
+          "score": 0.833
+        },
+        {
+          "title": "Sonuç",
+          "page": 0,
+          "score": 0.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [
+        {
+          "id": "tr-section-2",
+          "title": "Bandung Konferansı'ndan önce: “Tek Tarafa Yaslanmaktan” Barış İçinde Bir Arada Yaşamaya",
+          "paragraphs": 0
+        },
+        {
+          "id": "tr-section-6",
+          "title": "Bandung Konferansı: Yeni Diplomatik Yolların Keşfi",
+          "paragraphs": 0
+        },
+        {
+          "id": "tr-section-7",
+          "title": "Konferans için Hazırlık: Endonezya Girişimi ve Bogor Konferansı",
+          "paragraphs": 0
+        }
+      ],
+      "short_sections": [
+        {
+          "id": "tr-section-1",
+          "title": "Giriş",
+          "paragraphs": 1
+        }
+      ],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "14 Şubat 1950’de Moskova'da Çin-Sovyet Dostluk, İttifak ve Karşılıklı Yardım Antlaşması imzalandı. Anlaşmayı Çin hükümeti adına Başbakan ve Dışişleri Bakanı Zhou Enlai imzaladı. Bu, Yeni Çin ile yabancı bir ülke arasında"
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "Çin Halk Gönüllüleri, ABD Saldırganlığına Karşı Direniş ve Kore'ye Yardım Savaşı'nda Kore halkı ve ordusuyla birlikte savaştı (Fotoğraf: Zhihu, t.y.)."
+        },
+        {
+          "page": 10,
+          "score": 1.0,
+          "caption": "30 Eylül 1956’da Mao Zedung, Zhu De, Zhou Enlai ve diğer Çin yöneticileri Endonezya Devlet Başkanı Sukarno ve maiyetini Başkent Havaalanı’nda karşıladılar (Fotoğraf: The Paper, 2019)."
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "Bandung Konferansı'na ara verildiği sırada her partiden insan Başbakan Zhou Enlai'den hatıra olarak imza istedi (Fotoğraf: Qian Sijie/Xinhua, 1955)."
+        },
+        {
+          "page": 14,
+          "score": 1.0,
+          "caption": "Filistin'den gelen Gözlemci Heyet temsilcisi Müftü Amien El Husaini, Bandung Konferansı sırasında ÇHC Başbakanı Zhou Enlai ile birlikte (Fotoğraf: UNESCO, 2015)."
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "“Üç Dünya” stratejik konsepti Deng Xiaoping tarafından 10 Nisan 1974 tarihinde Birleşmiş Milletler’de ayrıntılandırıldı (Fotoğraf: BM, 2020)."
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 4,
+          "text": "imzalanan ilk antlaşmaydı (Fotoğraf: China.org, t.y.)."
+        },
+        {
+          "page": 6,
+          "text": "birlikte savaştı (Fotoğraf: Zhihu, t.y.)."
+        },
+        {
+          "page": 10,
+          "text": "ve maiyetini Başkent Havaalanı’nda karşıladılar (Fotoğraf: The Paper, 2019)."
+        },
+        {
+          "page": 12,
+          "text": "(Fotoğraf: Qian Sijie/Xinhua, 1955)."
+        },
+        {
+          "page": 14,
+          "text": "ÇHC Başbakanı Zhou Enlai ile birlikte (Fotoğraf: UNESCO, 2015)."
+        },
+        {
+          "page": 18,
+          "text": "ayrıntılandırıldı (Fotoğraf: BM, 2020)."
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        20
+      ]
+    },
+    {
+      "slug": "yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/G.%20%C3%87ifci%2C%20S.%20S.%20%C3%87elebi%2C%20M.%20Parlaktuna%2C%20A.%20Ka%C3%A7ar%2C%20S.%20O.%20G%C3%BCnayd%C4%B1n_ENG.pdf",
+      "pdf_pages": 24,
+      "canonical_paragraphs": 79,
+      "canonical_references": 66,
+      "canonical_figures": 12,
+      "canonical_tokens": 6405,
+      "pdf_extracted_tokens": 8145,
+      "paragraph_match_ratio": 0.987,
+      "heading_match_ratio": 0.789,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "GAS HYDRATES, CRYSTALLINE COMPOUNDS composed of water and methane, have captured significant attention as an unconventional energy resource with immense potential. Methane hydrates, also known as ‘burning ice,’ occur at all ocean margins (Figures 1 and 2). Minshull et al., 2021, identified a series of regions where there is substantial evidence for hydrate occurrence. The base of gas hydrate accumulations follows the seabed topography and is called “Bottom Simulated Reflectors (BSR)” in seismic sections. The bottom-simulating reflector (BSR) is a reflection event that is closely",
+        "page": 3,
+        "score": 0.566,
+        "sample": "GAS HYDRATES, CRYSTALLINE COMPOUNDS composed of water and methane, have captured significant attention as an unconventional energy resource with immense potential. Methane hydrates"
+      },
+      "last_anchor": {
+        "section": 18,
+        "paragraph": 9,
+        "text": "nations, driven by shared interests in energy security and environmental stewardship, will play a crucial role in realizing the potential of gas hydrates as a future energy source.",
+        "page": 21,
+        "score": 0.56,
+        "sample": "nations, driven by shared interests in energy security and environmental stewardship, will play a crucial role in realizing the potential of gas hydrates as a future energy source."
+      },
+      "headings": [
+        {
+          "title": "Introduction",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Methane Production Methods from Gas Hydrates",
+          "page": 8,
+          "score": 1.0
+        },
+        {
+          "title": "Depressurization",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Thermal Injection",
+          "page": 9,
+          "score": 1.0
+        },
+        {
+          "title": "Chemical Injection",
+          "page": 8,
+          "score": 1.0
+        },
+        {
+          "title": "CO2 Injection",
+          "page": 4,
+          "score": 1.0
+        },
+        {
+          "title": "Emerging Methods",
+          "page": 9,
+          "score": 1.0
+        },
+        {
+          "title": "Economic Considerations",
+          "page": 10,
+          "score": 1.0
+        },
+        {
+          "title": "Geopolitical and Technological Considerations",
+          "page": 10,
+          "score": 0.667
+        },
+        {
+          "title": "Innovative Approaches for Future Projects",
+          "page": 10,
+          "score": 1.0
+        },
+        {
+          "title": "Microbiological Processes",
+          "page": 10,
+          "score": 1.0
+        },
+        {
+          "title": "Energy Production from Gas Hydrates",
+          "page": 10,
+          "score": 1.0
+        },
+        {
+          "title": "Environmental Implications and Technological Considerations",
+          "page": 13,
+          "score": 0.75
+        },
+        {
+          "title": "Role of International Collaborations",
+          "page": 14,
+          "score": 1.0
+        },
+        {
+          "title": "Notable Projects and Future Directions",
+          "page": 14,
+          "score": 1.0
+        },
+        {
+          "title": "Economic Potential and Market Implications",
+          "page": 14,
+          "score": 1.0
+        },
+        {
+          "title": "Key Policy Considerations",
+          "page": 15,
+          "score": 1.0
+        },
+        {
+          "title": "Results",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Conclusion",
+          "page": 0,
+          "score": 0.0
+        }
+      ],
+      "unmatched_paragraphs": [
+        {
+          "section": 16,
+          "paragraph": 3,
+          "text": "Environmental Sustainability: Environmentally responsible extraction techniques, such as CO2 injection, could mitigate greenhouse gas emissions, thereby influencing environmental regulations and sustainability policies.",
+          "page": 15,
+          "score": 0.211,
+          "sample": "Environmental Sustainability: Environmentally responsible extraction techniques, such as CO2 injection, could mitigate greenhouse gas emissions, thereby influencing environmental r"
+        }
+      ],
+      "nonmonotonic_assignments": [
+        {
+          "previous": {
+            "section": 17,
+            "paragraph": 9,
+            "text": "The integration of gas hydrate extraction with carbon capture and storage/utilization",
+            "page": 16,
+            "score": 0.778,
+            "sample": "The integration of gas hydrate extraction with carbon capture and storage/utilization"
+          },
+          "current": {
+            "section": 17,
+            "paragraph": 10,
+            "text": "(CCSU) technologies further strengthens its potential as an environmentally sustainable energy source. With proper innovation and international collaboration, gas hydrates could supply energy for decades, serving as a transitional resource in the global shift toward cleaner energy. Advancing these technologies will be essential for unlocking the economic and environmental benefits of gas hydrates, making them a cornerstone of future energy strategies.",
+            "page": 6,
+            "score": 0.552,
+            "sample": "(CCSU) technologies further strengthens its potential as an environmentally sustainable energy source. With proper innovation and international collaboration, gas hydrates could su"
+          }
+        }
+      ],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [
+        {
+          "id": "en-section-2",
+          "title": "Methane Production Methods from Gas Hydrates",
+          "paragraphs": 1
+        },
+        {
+          "id": "en-section-4",
+          "title": "Thermal Injection",
+          "paragraphs": 1
+        },
+        {
+          "id": "en-section-5",
+          "title": "Chemical Injection",
+          "paragraphs": 1
+        },
+        {
+          "id": "en-section-6",
+          "title": "CO2 Injection",
+          "paragraphs": 1
+        },
+        {
+          "id": "en-section-9",
+          "title": "Geopolitical and Technological Considerations",
+          "paragraphs": 1
+        },
+        {
+          "id": "en-section-10",
+          "title": "Innovative Approaches for Future Projects",
+          "paragraphs": 1
+        },
+        {
+          "id": "en-section-14",
+          "title": "Role of International Collaborations",
+          "paragraphs": 1
+        }
+      ],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "Figure 1. This shows the importance and locations of gas hydrates in marine sediments and permafrost regions, which are crystalline compounds composed of water and methane. At high pressure and low temperatures, methane "
+        },
+        {
+          "page": 5,
+          "score": 1.0,
+          "caption": "Figure 2. Images of recovered gas hydrates from the seafloor and their appearance when burned in the western Black Sea (Figure: TP-DEPARK Project Report, 2018)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "Figure 3. Geophysics, seismic reflection section interpretation showing bottom-simulating reflector (BSR) as an indicator to identify gas hydrates in marine sediments (Figure: Çifci et al., in press)."
+        },
+        {
+          "page": 7,
+          "score": 1.0,
+          "caption": "Figure 4. Gas hydrate resource pyramid, which categorizes these deposits based on their geological and economic recoverability (Figure: Boswell & Collett, 2011)."
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "Figure 5: Extraction methods in which natural gas can be extracted from gas hydrates. Depressurization, thermal stimulation, chemical injection and CO2 exchange, each of these methods offering unique benefits and challen"
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "Figure 6. An example from the Cascadia region showing drilling depth that reaches to BSR, the base of gas hydrates (Figure: McConnell, 2019)."
+        },
+        {
+          "page": 17,
+          "score": 1.0,
+          "caption": "Table 1. Comparison of Natural Gas Production Methods from Gas Hydrates"
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "Table 1. Comparison of Natural Gas Production Methods from Gas Hydrates (continued)"
+        },
+        {
+          "page": 19,
+          "score": 1.0,
+          "caption": "Table 2. Advantages and Disadvantages of Gas Hydrate Production Methods"
+        },
+        {
+          "page": 20,
+          "score": 1.0,
+          "caption": "Table 3. Technological Maturity and Application Status of Gas Hydrate Production Methods"
+        },
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "Gas Hydrates as a New Energy Resource"
+        },
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "Gas Hydrates as a New Energy Resource"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 3,
+          "text": "composed of water and methane, have captured (Figure 3). Found primarily in marine sediments"
+        },
+        {
+          "page": 3,
+          "text": "raphy and is called “Bottom Simulated Reflectors and sustainability (Figure 2). Çifci (2020) emphasi-"
+        },
+        {
+          "page": 4,
+          "text": "recoverability (Figure 4). It highlights the subs- offering unique benefits and challenges (Figure"
+        },
+        {
+          "page": 4,
+          "text": "Figure 1. This shows the importance and locations of gas hydrates in marine sediments and permafrost regions, which"
+        },
+        {
+          "page": 4,
+          "text": "trapped inside a cage of ice, which forms methane hydrate (Figure: Çifci et al., in press)."
+        },
+        {
+          "page": 5,
+          "text": "Figure 2. Images of recovered gas hydrates from the seafloor and their appearance when burned in the western"
+        },
+        {
+          "page": 5,
+          "text": "Black Sea (Figure: TP-DEPARK Project Report, 2018)."
+        },
+        {
+          "page": 6,
+          "text": "Figure 3. Geophysics, seismic reflection section interpretation showing bottom-simulating reflector (BSR)"
+        },
+        {
+          "page": 6,
+          "text": "as an indicator to identify gas hydrates in marine sediments (Figure: Çifci et al., in press)."
+        },
+        {
+          "page": 7,
+          "text": "Figure 4. Gas hydrate resource pyramid, which categorizes these deposits based on their geological and economic"
+        },
+        {
+          "page": 7,
+          "text": "recoverability (Figure: Boswell & Collett, 2011)."
+        },
+        {
+          "page": 8,
+          "text": "Figure 5: Extraction methods in which natural gas can be extracted from gas hydrates. Depressurization, thermal"
+        },
+        {
+          "page": 8,
+          "text": "(Figure: Çifci et al., in press)."
+        },
+        {
+          "page": 8,
+          "text": "mic implications (Figure 5). This section explores chemicals (Boswell & Collett, 2011). It offers the"
+        },
+        {
+          "page": 12,
+          "text": "Figure 6 shows BSR, which is the base of gas tential environmental threat. The authors highli-"
+        },
+        {
+          "page": 12,
+          "text": "Figure 6. An example from the Cascadia region showing drilling depth that reaches to BSR, the base of gas hydrates"
+        },
+        {
+          "page": 12,
+          "text": "(Figure: McConnell, 2019)."
+        },
+        {
+          "page": 17,
+          "text": "Table 1. Comparison of Natural Gas Production Methods from Gas Hydrates"
+        },
+        {
+          "page": 18,
+          "text": "Table 1. Comparison of Natural Gas Production Methods from Gas Hydrates (continued)"
+        },
+        {
+          "page": 18,
+          "text": "(Table: Çifci et al., 2024)"
+        },
+        {
+          "page": 19,
+          "text": "Table 2. Advantages and Disadvantages of Gas Hydrate Production Methods"
+        },
+        {
+          "page": 19,
+          "text": "(Table: Çifci et al., 2024)"
+        },
+        {
+          "page": 20,
+          "text": "Table 3. Technological Maturity and Application Status of Gas Hydrate Production Methods"
+        },
+        {
+          "page": 20,
+          "text": "(Table: Çifci et al., 2024)"
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        6,
+        15,
+        16,
+        24
+      ]
+    },
+    {
+      "slug": "yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/G.%20%C3%87ifci%2C%20S.%20S.%20%C3%87elebi%2C%20M.%20Parlaktuna%2C%20A.%20Ka%C3%A7ar%2C%20S.%20O.%20G%C3%BCnayd%C4%B1n_TR.pdf",
+      "pdf_pages": 24,
+      "canonical_paragraphs": 72,
+      "canonical_references": 66,
+      "canonical_figures": 12,
+      "canonical_tokens": 5930,
+      "pdf_extracted_tokens": 7688,
+      "paragraph_match_ratio": 0.931,
+      "heading_match_ratio": 0.789,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "SU VE METANDAN OLUŞAN KRISTAL bileşikler olan gaz hidratlar, muazzam potansiyele sahip geleneksel olmayan bir enerji kaynağı olarak büyük ilgi çekmiştir. ‘Yanan buz’ olarak da bilinen metan hidratlar tüm okyanus kenarlarında meydana gelmektedir (Şekil 1 ve 2). Minshull vd., 2021 yılında yaptıkları çalışmada hidrat oluşumuna dair önemli kanıtların bulunduğu birçok bölgeyi tanımlamışlardır. Gaz hidrat birikimlerinin tabanı deniz tabanı topoğrafyasını takip eder ve sismik kesitlerde “Tabana Benzeyen Yansıtıcı (BSR)” olarak adlandırılır. BSR’lar çok kanallı sismik yansıma kesitlerinde hidratların tanımlanabilmesi için takip edilen bir yansımadır (Ojha & Sain, 2009). Hidratların tanımlanması ve analiz edilmesi önem taşımaktadır (Şekil 3). Öncelikle deniz çökeltilerinde ve donmuş bölgelerde bulunan bu doğal olarak oluşan bileşiklerin, bilinen tüm fosil yakıt rezervlerinin toplamından daha fazla enerji içerdiği tahmin edilmektedir. Gaz hidratlarda depolanan metan, kömür ve petrol gibi geleneksel hidrokarbonlara göre daha temiz yanan bir alternatifi temsil etmekte ve bu kaynağı küresel enerji güvenliği ve sürdürülebilirliğine umut verici bir katkı olarak konumlandırmaktadır (Şekil 2). Çifci (2020) çalışmasında gaz hidratlarının yer bilimi ve ülke ekonomisi için gelecekteki bir enerji kaynağı olarak önemini vurgulamaktadır.",
+        "page": 4,
+        "score": 0.515,
+        "sample": "SU VE METANDAN OLUŞAN KRISTAL bileşikler olan gaz hidratlar, muazzam potansiyele sahip geleneksel olmayan bir enerji kaynağı olarak büyük ilgi çekmiştir. ‘Yanan buz’ olarak da bili"
+      },
+      "last_anchor": {
+        "section": 18,
+        "paragraph": 8,
+        "text": "yönetimi konularındaki ortak çıkarları doğrultusunda gösterecekleri işbirliği çabaları, gaz hidratların geleceğin enerji kaynağı olma potansiyelinin hayata geçirilmesinde çok önemli bir rol oynayacaktır.",
+        "page": 21,
+        "score": 0.368,
+        "sample": "yönetimi konularındaki ortak çıkarları doğrultusunda gösterecekleri işbirliği çabaları, gaz hidratların geleceğin enerji kaynağı olma potansiyelinin hayata geçirilmesinde çok öneml"
+      },
+      "headings": [
+        {
+          "title": "Giriş",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Gaz Hidratlardan Metan Üretim Yöntemleri",
+          "page": 9,
+          "score": 1.0
+        },
+        {
+          "title": "Basınçsızlaştırma",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Isı Püskürtme",
+          "page": 8,
+          "score": 1.0
+        },
+        {
+          "title": "Kimyasal Püskürtme",
+          "page": 5,
+          "score": 1.0
+        },
+        {
+          "title": "CO2 Püskürtme",
+          "page": 5,
+          "score": 1.0
+        },
+        {
+          "title": "Gelişen Yöntemler",
+          "page": 10,
+          "score": 1.0
+        },
+        {
+          "title": "Ekonomik Değerlendirmeler",
+          "page": 10,
+          "score": 1.0
+        },
+        {
+          "title": "Jeopolitik ve Teknolojik Hususlar",
+          "page": 10,
+          "score": 1.0
+        },
+        {
+          "title": "Gelecek Projeler için Yenilikçi Yaklaşımlar",
+          "page": 11,
+          "score": 1.0
+        },
+        {
+          "title": "Mikrobiyolojik Süreçler",
+          "page": 10,
+          "score": 1.0
+        },
+        {
+          "title": "Gaz Hidratlardan Enerji Üretimi",
+          "page": 12,
+          "score": 1.0
+        },
+        {
+          "title": "Çevresel Etkiler ve Teknolojik Hususlar",
+          "page": 13,
+          "score": 1.0
+        },
+        {
+          "title": "Uluslararası İşbirliklerinin Rolü",
+          "page": 14,
+          "score": 1.0
+        },
+        {
+          "title": "Önemli Projeler ve Gelecek Yönelimleri",
+          "page": 14,
+          "score": 1.0
+        },
+        {
+          "title": "Ekonomik Potansiyel ve Pazar Etkileri",
+          "page": 14,
+          "score": 1.0
+        },
+        {
+          "title": "Temel Politika Hususları",
+          "page": 15,
+          "score": 1.0
+        },
+        {
+          "title": "Bulgular",
+          "page": 0,
+          "score": 0.0
+        },
+        {
+          "title": "Sonuç",
+          "page": 0,
+          "score": 0.0
+        }
+      ],
+      "unmatched_paragraphs": [
+        {
+          "section": 10,
+          "paragraph": 3,
+          "text": "Nanoteknoloji Uygulamaları: Nano boyutlu malzemelerin ve kimyasalların kullanımı hidratların çözünürlüğünü artırabilir veya gaz salınımını hızlandırmak için kimyasal reaksiyonları katalize edebilir. Ayrıca, nano parçacıklar rezervuar gözenekliliğini ve geçirgenliğini artırarak gaz akışını kolaylaştırabilir.",
+          "page": 11,
+          "score": 0.25,
+          "sample": "Nanoteknoloji Uygulamaları: Nano boyutlu malzemelerin ve kimyasalların kullanımı hidratların çözünürlüğünü artırabilir veya gaz salınımını hızlandırmak için kimyasal reaksiyonları "
+        },
+        {
+          "section": 16,
+          "paragraph": 0,
+          "text": "Gaz hidratlar ve bunların enerji politikalarına entegrasyonu üzerine yapılan araştırmalardan birkaç temel husus ortaya çıkmaktadır:",
+          "page": 15,
+          "score": 0.25,
+          "sample": "Gaz hidratlar ve bunların enerji politikalarına entegrasyonu üzerine yapılan araştırmalardan birkaç temel husus ortaya çıkmaktadır:"
+        },
+        {
+          "section": 16,
+          "paragraph": 4,
+          "text": "Ekonomik Kalkınma: Gaz hidrat kaynaklarının geliştirilmesi, özellikle kıyı bölgelerinde ve okyanus erişimi olan ülkelerde istihdam yaratılmasını ve ekonomik büyümeyi teşvik ederek, gelişmekte olan bu sektöre daha fazla yatırım yapılmasını sağlayabilir.",
+          "page": 15,
+          "score": 0.259,
+          "sample": "Ekonomik Kalkınma: Gaz hidrat kaynaklarının geliştirilmesi, özellikle kıyı bölgelerinde ve okyanus erişimi olan ülkelerde istihdam yaratılmasını ve ekonomik büyümeyi teşvik ederek,"
+        },
+        {
+          "section": 16,
+          "paragraph": 5,
+          "text": "Uluslararası Işbirlikleri ve Politikalar: Gaz hidratların küresel önemi, bunların araştırılması, üretimi ve yönetimi için uluslararası standartlar ve protokoller gerektirmektedir. Uluslararası düzenlemelerin ve işbirliğinin güçlendirilmesi yenilikçi buluş teşvik edebilir ve çevresel sonuçları iyileştirebilir (International Energy Agency, 2018)..",
+          "page": 15,
+          "score": 0.242,
+          "sample": "Uluslararası Işbirlikleri ve Politikalar: Gaz hidratların küresel önemi, bunların araştırılması, üretimi ve yönetimi için uluslararası standartlar ve protokoller gerektirmektedir. "
+        },
+        {
+          "section": 17,
+          "paragraph": 7,
+          "text": "Gaz hidratlar enerji portföylerinin çeşitlendirilmesi ve ithal yakıtlara bağımlılığın azaltılması için bir fırsat sunmaktadır. Çevresel olarak, çıkarma işleminin karbon yakalama teknolojileriyle bütünleştirilmesi metan emisyonlarını azaltabilir ve sürdürülebilirliği teşvik edebilir.",
+          "page": 16,
+          "score": 0.269,
+          "sample": "Gaz hidratlar enerji portföylerinin çeşitlendirilmesi ve ithal yakıtlara bağımlılığın azaltılması için bir fırsat sunmaktadır. Çevresel olarak, çıkarma işleminin karbon yakalama te"
+        }
+      ],
+      "nonmonotonic_assignments": [
+        {
+          "previous": {
+            "section": 0,
+            "paragraph": 5,
+            "text": "Fosil yakıtlara alternatif bir kaynak olarak gaz hidratların potansiyeli, enerji güvenliği stratejileri açısından büyük önem taşıyor ve bu alandaki gelişmeleri ülke için stratejik bir öncelik haline getiriyor. Ülke, gaz hidrat üretiminde ticari uygulamalara geçiş için iyileştirmeler üzerinde çalışmakta ve bu süreçte çeşitli teknoloji geliştirme projeleri yürütmektedir. Gaz hidratlar alanındaki bu liderlik, hem ulusal enerji politikalarında hem de küresel enerji dinamiklerinde önemli bir rol oynamaktadır.",
+            "page": 6,
+            "score": 0.541,
+            "sample": "Fosil yakıtlara alternatif bir kaynak olarak gaz hidratların potansiyeli, enerji güvenliği stratejileri açısından büyük önem taşıyor ve bu alandaki gelişmeleri ülke için stratejik "
+          },
+          "current": {
+            "section": 0,
+            "paragraph": 6,
+            "text": "Küresel olarak Japonya, Çin, ABD, Hindistan, Güney Kore ve Kanada gibi ülkeler gaz hidratlar konusunda araştırma ve geliştirmeye öncülük etmekte, ileri teknolojilere ve saha testlerine önemli yatırımlar yapmaktadır.",
+            "page": 3,
+            "score": 1.0,
+            "sample": "Küresel olarak Japonya, Çin, ABD, Hindistan, Güney Kore ve Kanada gibi ülkeler gaz hidratlar konusunda araştırma ve geliştirmeye öncülük etmekte, ileri teknolojilere ve saha testle"
+          }
+        }
+      ],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [
+        {
+          "id": "tr-section-2",
+          "title": "Gaz Hidratlardan Metan Üretim Yöntemleri",
+          "paragraphs": 1
+        },
+        {
+          "id": "tr-section-3",
+          "title": "Basınçsızlaştırma",
+          "paragraphs": 1
+        },
+        {
+          "id": "tr-section-5",
+          "title": "Kimyasal Püskürtme",
+          "paragraphs": 1
+        },
+        {
+          "id": "tr-section-6",
+          "title": "CO2 Püskürtme",
+          "paragraphs": 1
+        },
+        {
+          "id": "tr-section-8",
+          "title": "Ekonomik Değerlendirmeler",
+          "paragraphs": 1
+        },
+        {
+          "id": "tr-section-10",
+          "title": "Gelecek Projeler için Yenilikçi Yaklaşımlar",
+          "paragraphs": 1
+        },
+        {
+          "id": "tr-section-14",
+          "title": "Uluslararası İşbirliklerinin Rolü",
+          "paragraphs": 1
+        },
+        {
+          "id": "tr-section-16",
+          "title": "Ekonomik Potansiyel ve Pazar Etkileri",
+          "paragraphs": 1
+        }
+      ],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 4,
+          "score": 1.0,
+          "caption": "Şekil 1. Su ve metandan oluşan kristal bileşikler olan gaz hidratların, önemi ve deniz çökellerinde ve don ayazı (permafrost) bölgelerindeki yerleri gösterilmektedir. Yüksek basınç ve düşük sıcaklıklarda metan, metan hid"
+        },
+        {
+          "page": 5,
+          "score": 1.0,
+          "caption": "Şekil 2. Batı Karadeniz’de deniz tabanından elde edilen gaz hidratlar ve yakıldıklarındaki görüntüsü. (Şekil: TP-DEPARK Proje Raporu, 2018)."
+        },
+        {
+          "page": 6,
+          "score": 1.0,
+          "caption": "Şekil 3. Denizel tortullarda gaz hidratların tanımlanabilmesi için belirteç olan Tabana Benzeyen Yansıtıcıyı (BSR) gösteren jeofizik sismik yansıma kesiti yorumu (Şekil: Çifci vd., baskıda)."
+        },
+        {
+          "page": 7,
+          "score": 1.0,
+          "caption": "Şekil 4. Bu yatakları jeolojik ve ekonomik geri kazanıla bilirliklerine göre sınıflandıran Gaz hidrat kaynak piramidi. (Şekil: Boswell & Collett, 2011)."
+        },
+        {
+          "page": 8,
+          "score": 1.0,
+          "caption": "Şekil 5. Gaz hidratlardan doğal gaz elde etmek için uygulanabilecek üretim yöntemleri. Isı püskürtme, Basınç düşürme, kimyasal püskürtme ve CO2 değişimi, her biri benzersiz faydalar ve zorluklar sunar. (Şekil: Çifci vd.,"
+        },
+        {
+          "page": 12,
+          "score": 1.0,
+          "caption": "Şekil 6. Cascadia bölgesinde Gaz hidratların tabanı, tabana benzeyen yansıtıcı (BSR)’e ulaşan sondaj derinliğini gösteren bir kesit örneği (Şekil: McConnell, 2019)."
+        },
+        {
+          "page": 17,
+          "score": 1.0,
+          "caption": "Tablo 1. Gaz Hidratlardan Doğal Gaz Üretim Yöntemlerinin Karşılaştırılması"
+        },
+        {
+          "page": 18,
+          "score": 1.0,
+          "caption": "Tablo 1. Gaz Hidratlardan Doğal Gaz Üretim Yöntemlerinin Karşılaştırılması (devam)"
+        },
+        {
+          "page": 19,
+          "score": 1.0,
+          "caption": "Tablo 2. Gaz Hidrat Üretim Yöntemlerinin Avantajları ve Dezavantajları"
+        },
+        {
+          "page": 20,
+          "score": 1.0,
+          "caption": "Tablo 3. Gaz Hidrat Üretim Yöntemlerinin Teknolojik Olgunluk ve Uygulama Durumu"
+        },
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "Yeni Bir Enerji Kaynağı Olarak Gaz Hidratlar"
+        },
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "Yeni Bir Enerji Kaynağı Olarak Gaz Hidratlar"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [
+        {
+          "page": 4,
+          "text": "SU VE METANDAN OLUŞAN KRISTAL edilmesi önem taşımaktadır (Şekil 3). Öncelikle"
+        },
+        {
+          "page": 4,
+          "text": "da meydana gelmektedir (Şekil 1 ve 2). Minshull ratlarda depolanan metan, kömür ve petrol gibi"
+        },
+        {
+          "page": 4,
+          "text": "Şekil 1. Su ve metandan oluşan kristal bileşikler olan gaz hidratların, önemi ve deniz çökellerinde ve don ayazı"
+        },
+        {
+          "page": 4,
+          "text": "oluşturmak üzere bir buz kafesinin içinde hapsolur (Şekil: Çifci vd., baskıda)."
+        },
+        {
+          "page": 5,
+          "text": "göre kategorize etmektedir (Şekil 4). Kolayca çı- benzersiz faydalar ve zorluklar sunmaktadır (Şekil"
+        },
+        {
+          "page": 5,
+          "text": "Şekil 2. Batı Karadeniz’de deniz tabanından elde edilen gaz hidratlar ve yakıldıklarındaki görüntüsü."
+        },
+        {
+          "page": 5,
+          "text": "(Şekil: TP-DEPARK Proje Raporu, 2018)."
+        },
+        {
+          "page": 6,
+          "text": "Şekil 3. Denizel tortullarda gaz hidratların tanımlanabilmesi için belirteç olan Tabana Benzeyen Yansıtıcıyı (BSR)"
+        },
+        {
+          "page": 6,
+          "text": "gösteren jeofizik sismik yansıma kesiti yorumu (Şekil: Çifci vd., baskıda)."
+        },
+        {
+          "page": 7,
+          "text": "Şekil 4. Bu yatakları jeolojik ve ekonomik geri kazanıla bilirliklerine göre sınıflandıran Gaz hidrat kaynak piramidi."
+        },
+        {
+          "page": 7,
+          "text": "(Şekil: Boswell & Collett, 2011)."
+        },
+        {
+          "page": 8,
+          "text": "Şekil 5. Gaz hidratlardan doğal gaz elde etmek için uygulanabilecek üretim yöntemleri."
+        },
+        {
+          "page": 8,
+          "text": "zorluklar sunar. (Şekil: Çifci vd., baskıda)."
+        },
+        {
+          "page": 9,
+          "text": "şitli yöntemlerle gerçekleştirilebilir (Şekil 5). Bu irdelenmelidir. Ayrıca, ısı püskürtmeleri yüksek"
+        },
+        {
+          "page": 12,
+          "text": "Bu yenilikçi teknikler, laboratuvar testleri ve Şekil 6 gaz hidratın temeli olan BSR’yi göster-"
+        },
+        {
+          "page": 12,
+          "text": "Şekil 6. Cascadia bölgesinde Gaz hidratların tabanı, tabana benzeyen yansıtıcı (BSR)’e ulaşan sondaj derinliğini"
+        },
+        {
+          "page": 12,
+          "text": "gösteren bir kesit örneği (Şekil: McConnell, 2019)."
+        },
+        {
+          "page": 17,
+          "text": "Tablo 1. Gaz Hidratlardan Doğal Gaz Üretim Yöntemlerinin Karşılaştırılması"
+        },
+        {
+          "page": 18,
+          "text": "Tablo 1. Gaz Hidratlardan Doğal Gaz Üretim Yöntemlerinin Karşılaştırılması (devam)"
+        },
+        {
+          "page": 19,
+          "text": "Tablo 2. Gaz Hidrat Üretim Yöntemlerinin Avantajları ve Dezavantajları"
+        },
+        {
+          "page": 20,
+          "text": "Tablo 3. Gaz Hidrat Üretim Yöntemlerinin Teknolojik Olgunluk ve Uygulama Durumu"
+        }
+      ],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        3,
+        6,
+        11,
+        15,
+        16,
+        24
+      ]
+    },
+    {
+      "slug": "sahte-siir",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/AGUS%20R.%20SARJONO_POEM_ENG.pdf",
+      "pdf_pages": 2,
+      "canonical_paragraphs": 3,
+      "canonical_references": 0,
+      "canonical_figures": 1,
+      "canonical_tokens": 394,
+      "pdf_extracted_tokens": 436,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 1.0,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "Agus R. Sarjono was born on July 27, 1962 in Bandung, West Java. He graduated from the Department of Literature at IKIP Bandung Indonesia in 1988. He completed his MA at the University of Indonesia in 2002. Outside Indonesia, his poems, short stories, and plays have been published in various journals in Malaysia, Brunei, Germany, France, the Netherlands, Poland, the United Kingdom, and the United States. His poems have been included in more than 20 anthologies. He was an editor of the literary journal Horison. He worked as a lecturer at the Department of Theatre in Bandung and as the Program Director of the Jakarta Arts Council from 2002 to 2006. He was a writer-in-residence at the International Institute of Asian Studies (IIAS) in Leiden from February to October 2001, with the permission of the Poets of All Nations Foundation. From December 2002 to March 2003 he was a writer-inresidence of the Heinrich-Böll Foundation in Langenbroich, Germany.",
+        "page": 1,
+        "score": 0.974,
+        "sample": "Agus R. Sarjono was born on July 27, 1962 in Bandung, West Java. He graduated from the Department of Literature at IKIP Bandung Indonesia in 1988. He completed his MA at the Univer"
+      },
+      "last_anchor": {
+        "section": 1,
+        "paragraph": 1,
+        "text": "Aveling, H. (2007). Indonesian literature after Reformasi: The tongues of women. Kritika Kultura, issue 8, pp. 9-53.",
+        "page": 2,
+        "score": 0.786,
+        "sample": "Aveling, H. (2007). Indonesian literature after Reformasi: The tongues of women. Kritika Kultura, issue 8, pp. 9-53."
+      },
+      "headings": [
+        {
+          "title": "AGUS R. SARJONO",
+          "page": 1,
+          "score": 1.0
+        },
+        {
+          "title": "FAKE POEM (Sajak Palsu)",
+          "page": 2,
+          "score": 1.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [
+        {
+          "id": "en-section-1",
+          "title": "AGUS R. SARJONO",
+          "paragraphs": 1
+        }
+      ],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 2,
+          "score": 1.0,
+          "caption": "Fake Poem (Sajak Palsu)"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "slug": "sahte-siir",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/AGUS%20R.%20SARJONO_%C5%9E%C4%B0%C4%B0R_TR.pdf",
+      "pdf_pages": 2,
+      "canonical_paragraphs": 2,
+      "canonical_references": 0,
+      "canonical_figures": 1,
+      "canonical_tokens": 214,
+      "pdf_extracted_tokens": 361,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 1.0,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "“Günaydın han’fendi, günaydın bey’fendi” diyor öğrenci Sahte kibarlık ile. Ve çalışıyorlar sahte tarihi Sahte ders kitaplarında yazan. Okul bitti mi Dehşete düşüyorlar gördüklerinde karnelerini. Üniversiteye giremediler öyle değil mi; O zaman evine gidiyorlar öğretmenlerinin, Sahte saygılarını sunmak ve para dolu bir zarf vermek için. Değiştirsin diye öğretmenler, eski sahte karneleri Yeni sahte karnelerle. Nice dönem geçer Ve onlar doğarlar yeniden, ne olarak? Sahte iktisatçı, sahte avukat, sahte mühendis, sahte bilimci, Sahte öğretmen, sahte bilgin, sahte sanatçı olur kimileri. Koştururlar, sahte ekonomiye dayalı Sahte kalkınma politikalarıyla doldurmak için ceplerini. Görürler sahte ihracata, sahte ithalata dayalı Sahte ticareti, sunarak sahte yüksek kalite ürünleri. Sahte bankalar; sahte armağanlar Ve sahte ikramiyeler vermekle meşguller; Sahte merkez bankasının sahte görevlilerince İmzalanmış sahte güvence mektupları üstünden Kredi verirken sessizce. Sahte döviz kuru üzerinden dönen Sahte para ile alışveriş yapar toplum ise. Uymaz sahte paralar sahte değişim değerine, Çökene dek bütün yapı, bütün düzen Ve çökertene dek kriz, sahte hükümetleri, Sahte kötü şans ile. Sahte halk ise sevinç ile Haykırır ve tartışırlar sahte düşünceleri Sahte seminerlerde, kutlarlar gelişini Sahte demokrasinin, Çok alacalı bulacalıdır o demokrasi Ve çok ama çok ama çok sahte.",
+        "page": 2,
+        "score": 1.0,
+        "sample": "“Günaydın han’fendi, günaydın bey’fendi” diyor öğrenci Sahte kibarlık ile. Ve çalışıyorlar sahte tarihi Sahte ders kitaplarında yazan. Okul bitti mi Dehşete düşüyorlar gördüklerind"
+      },
+      "last_anchor": {
+        "section": 0,
+        "paragraph": 1,
+        "text": "Çeviri: Ulaş Başar Gezgin Gezgin, U.B. (2017). Dünyayı Şiirle Dolaşmak: 2000’den 2017’ye Dünya Şiiri Çevirileri [Globetrotting via Poetry: World Poetry Translations – Comp. and trans. Ulas Basar Gezgin].",
+        "page": 2,
+        "score": 0.88,
+        "sample": "Çeviri: Ulaş Başar Gezgin Gezgin, U.B. (2017). Dünyayı Şiirle Dolaşmak: 2000’den 2017’ye Dünya Şiiri Çevirileri [Globetrotting via Poetry: World Poetry Translations – Comp. and tra"
+      },
+      "headings": [
+        {
+          "title": "SAHTE ŞİİR",
+          "page": 2,
+          "score": 1.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "Sahte Şiir"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "slug": "39-harbi",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/ENVER%20G%C3%96K%C3%87E_POEM_ENG.pdf",
+      "pdf_pages": 2,
+      "canonical_paragraphs": 2,
+      "canonical_references": 0,
+      "canonical_figures": 1,
+      "canonical_tokens": 272,
+      "pdf_extracted_tokens": 556,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 1.0,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "I wish I could go or go ... If I were to leave the land for a moment I know this is the way It is a river, an army And an adventure, a journey belonging to people But should I see migration, victory, defeat If I were to see Who are those who chain those I call friends? I kept my open and Turkish palms Warm It was for frozen Hands, Now I am coming without bandages, without ointment, helpless Shrapnel wounded arms! Now I come from far away without permission and for you Waiting for news from bullet wounds I am not a stranger or I have a lack of acquaintance And forgottenness. If I were to climb, if I were to climb, even if it were a mountain, Would I hear, would I hear the cannon fire My hero who climbed over a horse's neck That abandoned land That burning village That overturned car That under a tank Are your loved ones? Coal would be processed, The pen would write, the road would be paved, The sun would be greeted, At the beginning of each day If I were to be there, if I were to see If I were to see, is everything in its place? I became your enemy, the war of 939 You made me lose my friends, You made me sad You made me miserable You made me a poet! A thousand thanks to you Great suffering You taught me to love You taught me the truth You taught me people 1945",
+        "page": 2,
+        "score": 1.0,
+        "sample": "I wish I could go or go ... If I were to leave the land for a moment I know this is the way It is a river, an army And an adventure, a journey belonging to people But should I see "
+      },
+      "last_anchor": {
+        "section": 0,
+        "paragraph": 1,
+        "text": "Translated from Turkish into English by BRIQ. Edited by Hüseyin Haydar and Latif Bolat.",
+        "page": 2,
+        "score": 0.727,
+        "sample": "Translated from Turkish into English by BRIQ. Edited by Hüseyin Haydar and Latif Bolat."
+      },
+      "headings": [
+        {
+          "title": "WAR OF 39",
+          "page": 1,
+          "score": 1.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "War of 39"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "slug": "39-harbi",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/ENVER%20G%C3%96K%C3%87E_%C5%9E%C4%B0%C4%B0R_TR.pdf",
+      "pdf_pages": 2,
+      "canonical_paragraphs": 2,
+      "canonical_references": 0,
+      "canonical_figures": 1,
+      "canonical_tokens": 165,
+      "pdf_extracted_tokens": 346,
+      "paragraph_match_ratio": 1.0,
+      "heading_match_ratio": 1.0,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": {
+        "section": 0,
+        "paragraph": 0,
+        "text": "Gitsem de gitsem ... Bir an için terk-i diyar etsem Biliyorum şu giden yoldur Nehirdir, ordudur Ve insanlara ait bir macera, bir sefer Ama Hicret mi, zafer mi, bozgun mu görsem Görsem Dost dediklerime zincir vuranlar kimdir? Açık ve Türkiyeli avuçlarımı Sıcak sakladım Buz tutmuş Eller içindi, Şimdi sargısız, merhemsiz, çaresiz geliyorum Şarapnel yarası kollar! Şimdi uzaklardan teklifsiz ve senin için geliyorum Kurşun yaralarından haber beklediğim Yabancı değilim yoksa Bir tanışmazlığım vardır Ve unutulmuşluğum. Çıksam, çıksam dağ olsa da yücesine Duyar mıyım, duyar mıyım top seslerini At boynundan aşan yiğidim Şu terkedilmiş toprak Şu yanan köy Şu devrilmiş araba Şu tank altındaki Senin sevdiklerin mi? Kömür işlenirdi, Kalem oynardı, yol döşenirdi, Güneşe selam durulurdu, Her gün başında Varsam görsem Görsem her şey yerli yerinde mi? Sana düşman oldum 939 harbi Beni dostlarımdan ettin, Beni mahzun ettin Sefil ettin Şair ettin! Sana bin teşekkür Büyük ızdırap Bana sevmeyi Bana hakikatı Bana insanları öğrettin 1945",
+        "page": 2,
+        "score": 1.0,
+        "sample": "Gitsem de gitsem ... Bir an için terk-i diyar etsem Biliyorum şu giden yoldur Nehirdir, ordudur Ve insanlara ait bir macera, bir sefer Ama Hicret mi, zafer mi, bozgun mu görsem Gör"
+      },
+      "last_anchor": {
+        "section": 0,
+        "paragraph": 1,
+        "text": "Fuat, M. (1998). Çağdaş Türk Şiiri Antolojisi, II cilt, s. 543, Adam Yayınları.",
+        "page": 2,
+        "score": 1.0,
+        "sample": "Fuat, M. (1998). Çağdaş Türk Şiiri Antolojisi, II cilt, s. 543, Adam Yayınları."
+      },
+      "headings": [
+        {
+          "title": "39 HARBİ",
+          "page": 1,
+          "score": 1.0
+        }
+      ],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "39 Harbi"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "slug": "china-reconstructs",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/FOTO%C4%9ERAF_TR_0.pdf",
+      "pdf_pages": 1,
+      "canonical_paragraphs": 0,
+      "canonical_references": 0,
+      "canonical_figures": 1,
+      "canonical_tokens": 0,
+      "pdf_extracted_tokens": 64,
+      "paragraph_match_ratio": 0.0,
+      "heading_match_ratio": 0.0,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": null,
+      "last_anchor": null,
+      "headings": [],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "China Reconstructs"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1
+      ]
+    },
+    {
+      "slug": "china-reconstructs",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/FOTO%C4%9ERAF_TR.pdf",
+      "pdf_pages": 1,
+      "canonical_paragraphs": 0,
+      "canonical_references": 0,
+      "canonical_figures": 1,
+      "canonical_tokens": 0,
+      "pdf_extracted_tokens": 64,
+      "paragraph_match_ratio": 0.0,
+      "heading_match_ratio": 0.0,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": null,
+      "last_anchor": null,
+      "headings": [],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "China Reconstructs"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1
+      ]
+    },
+    {
+      "slug": "hendra-gunawan",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/PAINTING_ENG.pdf",
+      "pdf_pages": 1,
+      "canonical_paragraphs": 0,
+      "canonical_references": 0,
+      "canonical_figures": 1,
+      "canonical_tokens": 0,
+      "pdf_extracted_tokens": 221,
+      "paragraph_match_ratio": 0.0,
+      "heading_match_ratio": 0.0,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": null,
+      "last_anchor": null,
+      "headings": [],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "Hendra Gunawan"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1
+      ]
+    },
+    {
+      "slug": "hendra-gunawan",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/RES%C4%B0M_TR.pdf",
+      "pdf_pages": 1,
+      "canonical_paragraphs": 0,
+      "canonical_references": 0,
+      "canonical_figures": 1,
+      "canonical_tokens": 0,
+      "pdf_extracted_tokens": 177,
+      "paragraph_match_ratio": 0.0,
+      "heading_match_ratio": 0.0,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": null,
+      "last_anchor": null,
+      "headings": [],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "Hendra Gunawan"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1
+      ]
+    },
+    {
+      "slug": "endonezya-posta-pulu",
+      "locale": "en",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/POSTER_ENG.pdf",
+      "pdf_pages": 1,
+      "canonical_paragraphs": 0,
+      "canonical_references": 0,
+      "canonical_figures": 1,
+      "canonical_tokens": 0,
+      "pdf_extracted_tokens": 66,
+      "paragraph_match_ratio": 0.0,
+      "heading_match_ratio": 0.0,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": null,
+      "last_anchor": null,
+      "headings": [],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "Stamp of Indonesia"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1
+      ]
+    },
+    {
+      "slug": "endonezya-posta-pulu",
+      "locale": "tr",
+      "status": null,
+      "pdf_url": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/AF%C4%B0%C5%9E_TR.pdf",
+      "pdf_pages": 1,
+      "canonical_paragraphs": 0,
+      "canonical_references": 0,
+      "canonical_figures": 1,
+      "canonical_tokens": 0,
+      "pdf_extracted_tokens": 47,
+      "paragraph_match_ratio": 0.0,
+      "heading_match_ratio": 0.0,
+      "reference_match_ratio": 1.0,
+      "footnote_match_ratio": 1.0,
+      "figure_caption_match_ratio": 1.0,
+      "first_anchor": null,
+      "last_anchor": null,
+      "headings": [],
+      "unmatched_paragraphs": [],
+      "nonmonotonic_assignments": [],
+      "duplicate_paragraphs": [],
+      "turkish_contamination_candidates": [],
+      "cross_record_title_candidates": [],
+      "references_low_match": [],
+      "footnotes_low_match": [],
+      "duplicate_footnote_ids": [],
+      "empty_sections": [],
+      "short_sections": [],
+      "metadata_leakage_candidates": [],
+      "figure_caption_matches": [
+        {
+          "page": 1,
+          "score": 1.0,
+          "caption": "Endonezya Posta Pulu"
+        }
+      ],
+      "figure_captions_low_match": [],
+      "published_visual_label_candidates": [],
+      "missing_figure_assets": [],
+      "rendered_pages": [
+        1
+      ]
+    }
+  ]
+}
