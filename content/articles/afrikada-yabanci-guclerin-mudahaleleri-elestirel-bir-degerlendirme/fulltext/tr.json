@@ -386,7 +386,7 @@
     },
     {
       "id": "ref-49",
-      "text": "Toulemonde, M. (2021). Inside the Great African Land Rush. https://www.theafricareport.com/77291/inside-the-great-africanland-rush/ (Erişim tarihi: 22 Eylül 2025)."
+      "text": "Toulemonde, M. (2021). Inside the Great African Land Rush. 22 Eylül 2025 tarihinde https://www.theafricareport.com/77291/inside-the-great-african-land-rush/ adresinden alınmıştır."
     },
     {
       "id": "ref-50",
@@ -414,5 +414,56 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-01.jpg",
+      "caption": "“Sömürgelerin metropol ülkelere ekonomik bağımlılığı ve Afrika’daki yönetici elitlerin batılılaşması da yabancı müdahalelerin bahanesini oluşturmaktadır” (Harita: bigsiteofhistory.com, t. y.)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-02.jpg",
+      "caption": "“Afrika, dünya çapında en fazla yabancı müdahalenin yaşandığı kıtadır” (Çizim: SALC, 2025)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-03.jpg",
+      "caption": "“Afrika’daki sömürgecilik sonrası devlet, genellikle sosyoekonomik faktörlerden kaynaklanan kabileler arasındaki gerilimleri yeniden üretti.” 2023’te Sudan’daki çatışmalardan kaçan insanların güneye göçünden bir görüntü (Fotoğraf: CGTN, 2023)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-04.jpg",
+      "caption": "“Çoğu Afrika ülkesinin, hammaddeleri endüstriyel ürünlere dönüştürme kapasiteleri zayıftır ve ekonomileri halen hammadde temellidir” (Çizim: AESC, 2024)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-05.jpg",
+      "caption": "“Afrika’da faaliyet gösteren yabancı güçler arasında Japonya, ham maddelerinin neredeyse %100'ünü ithal eden ve sürekli büyüyen sanayisinin çok ihtiyaç duyduğu kritik mineral yatakları veya enerji rezervlerini aramak zorunda kalmaya mahkum olan tek ülkedir” (Çizim: Global Times, 2025)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-06.jpg",
+      "caption": "Afrika’da yabancı üsler (Harita: ISS, 2019)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-07.jpg",
+      "caption": "“Batı yarımkürenin büyük güçleri, Afrika’da terörizmi ortadan kaldırmada veya çatışmaları önlemede başarısız olmuşlardır” (Photo: Daily News Egypt, 2020)."
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-08.jpg",
+      "caption": "“2030 yılına kadar Afrika nüfusunun %75’i 35 yaşın altında olacak ve 15-24 yaş arası genç Afrikalıların sayısı 2080 yılında 500 milyona ulaşacaktır” (Fotoğraf: The Sudan Times, 2024)."
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-09.jpg",
+      "caption": "“Afrika Birliği tarafından başlatılan ‘Afrika sorunlarına Afrika çözümleri’ sloganı ve ‘Afrika’da Silahları Sessiz Tutun’ girişimi boşa çıkmamalıdır” (Fotoğraf: AU, 2016)."
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-10.jpg",
+      "caption": "“Afrika Birliği, 2015 yılında, kıtanın kalkınması ve bölgesel entegrasyonunun önümüzdeki 50 yıl içinde nasıl gerçekleştirileceğine dair bir strateji olan ‘Gündem 2063: İstediğimiz Afrika’ girişimini ortaya koydu” (Fotoğraf: AUDA, 2022)."
+    }
+  ]
 }

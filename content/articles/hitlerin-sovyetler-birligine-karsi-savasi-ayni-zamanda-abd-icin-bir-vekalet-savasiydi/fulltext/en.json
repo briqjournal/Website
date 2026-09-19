@@ -290,7 +290,7 @@
     },
     {
       "id": "en-section-31",
-      "title": "No Bombing of German and US Arms",
+      "title": "No Bombing of German and US Arms Factories!",
       "paragraphs": [
         "The US and England bombed 131 cities in Germany, at the end of the war, but mainly the city centers. Half a million civilians were killed – the arms factories, both US and German, were not bombed (United States Strategic Bombing Survey, 1945).",
         "The Wehrmacht was supposed to be wellequipped to fight the advancing Red Army. This was also evident in the well-known bombing of the city of Dresden at the end of the war in February 1945: British and US bombers dropped their deadly cargo only on the inhabited city center, as US bombers did a few months later in Hiroshima and Nagasaki."
@@ -502,5 +502,21 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi/figure-01.jpg",
+      "caption": "Woodrow Wilson inspecting troops in London en route to Paris (Photo: The World War, n. d.)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi/figure-02.jpg",
+      "caption": "“With the rearmament that began in 1935, Ford and GM ultimately produced 90,000 and 130,000 military vehicles for the Wehrmacht, respectively” (Illustration: Rick Nobles, Chronicle/Sfgate, 2007)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi/figure-03.jpg",
+      "caption": "Former President Hoover at the Reich Chancellery with Chancellor Adolf Hitler and Hugh Wilson, March 8, 1938 (Photo: National Archives, 2017)."
+    }
+  ]
 }

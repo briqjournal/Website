@@ -232,7 +232,7 @@
     },
     {
       "id": "ref-10",
-      "text": "Britannica. (n. d.). Partition of Africa. https://www.britannica.com/topic/Western-colonialism/Partition-of-Africa (Accessed: September 22, 2025)."
+      "text": "Britannica. (n. d.). Partition of Africa. Retrieved September 22, 2025, from https://www.britannica.com/topic/Western-colonialism/Partition-of-Africa."
     },
     {
       "id": "ref-11",
@@ -252,7 +252,7 @@
     },
     {
       "id": "ref-15",
-      "text": "Global Terrorism Index. (2023). Relief Web. https://reliefweb.int/report/world/global-terrorism-index-2023 (Accessed: September 22, 2025)."
+      "text": "Global Terrorism Index. (2023). Relief Web. Retrieved September 22, 2025, from https://reliefweb.int/report/world/global-terrorism-index-2023."
     },
     {
       "id": "ref-16",
@@ -416,5 +416,56 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-01.jpg",
+      "caption": "“The economic dependency of the colonies on the metropolis and the westernization of African ruling elites also reinforce the justification of foreign interventions” (Map: bigsiteofhistory.com, n. d.)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-02.jpg",
+      "caption": "“Africa accounts for the most significant number of foreign interventions worldwide” (Illustration: SALC, 2025)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-03.jpg",
+      "caption": "“The post-colonial state in Africa reproduced tensions between tribes, which generally stemmed from socioeconomic factors.” A view of people fleeing the clashes in Sudan migrating south in 2023 (Photo: CGTN, 2023)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-04.jpg",
+      "caption": "“Most African countries still rely on raw-material-based economies with weak capacity to transform raw materials into industrial products” (Illustration: AESC, 2024)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-05.jpg",
+      "caption": "“Japan is the only foreign power involved in Africa to import nearly 100% of its raw materials and to remain doomed to search for critical mineral deposits or energy reserves so badly required by its ever-booming industry” (Illustration: Global Times, 2025)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-06.jpg",
+      "caption": "Foreign military bases in Africa (Map: ISS, 2019)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-07.jpg",
+      "caption": "“Major powers from the Western Hemispherehave failed to eradicate terrorism or prevent conflicts in Africa” (Photo: Daily News Egypt, 2020)."
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-08.jpg",
+      "caption": "“By 2030, 75% of the African population will be under 35, and the number of young Africans aged 15-24 will reach 500 million in 2080” (Photo: The Sudan Times, 2024)."
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-09.jpg",
+      "caption": "“The slogan ‘African solutions to African problems’ and the initiative ‘Keep the Guns Shut in Africa’ launched by the African Union (AU) should not remain vain” (Photo: AU, 2016)."
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme/figure-10.jpg",
+      "caption": "“AU has also proposed ‘Agenda 2063: The Africa we want’ initiative in 2015, through which it outlined a strategy for the continent’s development and regional integration to be achieved over the next 50 years” (Photo: AUDA, 2022)."
+    }
+  ]
 }
