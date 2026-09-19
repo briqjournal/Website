@@ -1,0 +1,3 @@
+image-000.png | 215x76 | sRGB | score=1000016340
+image-001.png | 1220x1629 | sRGB | score=1001987380
+selected=image-001.png

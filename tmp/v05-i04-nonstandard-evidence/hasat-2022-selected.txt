@@ -1,0 +1,35 @@
+Image:
+  Filename: public/assets/article-figures/hasat-2022/figure-01.jpg
+  Permissions: rw-r--r--
+  Format: JPEG (Joint Photographic Experts Group JFIF format)
+  Mime type: image/jpeg
+  Class: DirectClass
+  Geometry: 1900x1517+0+0
+  Resolution: 28x28
+  Print size: 67.8571x54.1786
+  Units: PixelsPerCentimeter
+  Colorspace: sRGB
+  Type: TrueColor
+  Base type: Undefined
+  Endianness: Undefined
+  Depth: 8-bit
+  Channel depth:
+    red: 8-bit
+    green: 8-bit
+    blue: 8-bit
+  Channel statistics:
+    Pixels: 2882300
+    Red:
+      min: 0  (0)
+      max: 255 (1)
+      mean: 143.821 (0.564004)
+      standard deviation: 76.7402 (0.300942)
+      kurtosis: -1.33804
+      skewness: -0.173909
+      entropy: 0.982475
+    Green:
+      min: 0  (0)
+      max: 255 (1)
+      mean: 137.087 (0.537595)
+      standard deviation: 87.0688 (0.341446)
+      kurtosis: -1.57784
