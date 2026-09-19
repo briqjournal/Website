@@ -39,6 +39,10 @@ def join_parts(parts):
     out=re.sub(r"\s+"," ",out).strip()
     out=out.replace("https:// ","https://").replace("http:// ","http://")
     out=re.sub(r"(?<=/)\s+(?=[A-Za-z0-9%])","",out)
+    out=re.sub(r"(?<=\.)\s+(?=(?:com|org|gov|edu|net|cn|fr|tr|uk|eg|ma|de|info)\b)","",out,flags=re.I)
+    out=re.sub(r"(?i)(tarihinde)(?=https?://)",r"\1 ",out)
+    out=re.sub(r"(?i)(?<=\S)(adresinden\s+(?:alındı|alınmıştır))",r" \1",out)
+    out=re.sub(r"(?<=\.)(?=[A-ZÇĞİÖŞÜ][a-zçğıöşü]{2,}[^.]{0,100}\((?:18|19|20)\d{2})"," ",out)
     return out
 
 def parse_refs(slug,loc):
@@ -56,8 +60,8 @@ def parse_refs(slug,loc):
         if re.match(r"^\d{2,3}$",x): continue
         if x.startswith("BRIQ ") or x.startswith("B R I q"): continue
         filtered.append(x)
-    start_rx=re.compile(r"^[\u200cA-Za-zÇĞİÖŞÜçğıöşü0-9\[\]ÁÉÖÜŞİ].{0,190}\((?:18|19|20)\d{2}[a-z]?\)\.")
-    nd_rx=re.compile(r"^[\u200cA-Za-zÇĞİÖŞÜçğıöşü0-9\[\]].{0,190}\((?:n\.d\.|t\.y\.)\)\.")
+    start_rx=re.compile(r"^[\u200c]?(?:[A-Za-zÇĞİÖŞÜçğıöşüÁÉ][A-Za-zÇĞİÖŞÜçğıöşüÁÉ]{1,}|\[).{0,190}\((?:18|19|20)\d{2}[a-z]?\)\.")
+    nd_rx=re.compile(r"^[\u200c]?(?:[A-Za-zÇĞİÖŞÜçğıöşü][A-Za-zÇĞİÖŞÜçğıöşü]{1,}|\[).{0,190}\((?:n\.d\.|t\.y\.)\)\.")
     entries=[]; cur=[]
     for x in filtered:
         is_start=bool(start_rx.match(x) or nd_rx.match(x))
@@ -68,7 +72,7 @@ def parse_refs(slug,loc):
     if cur: entries.append(join_parts(cur))
     # Discard obvious page-header debris and split rare fused references at an in-line new author/year.
     cleaned=[]
-    inner=re.compile(r"(?<=\.)\s+(?=[A-ZÇĞİÖŞÜ\[][A-Za-zÇĞİÖŞÜçğıöşü0-9 .,'’&|–—-]{1,100}\((?:18|19|20)\d{2}[a-z]?\)\.)")
+    inner=re.compile(r"(?<=\.)\s+(?=(?:[A-ZÇĞİÖŞÜ][A-Za-zÇĞİÖŞÜçğıöşü]{1,}|\[)[A-Za-zÇĞİÖŞÜçğıöşü0-9 .,'’&|–—-]{1,100}\((?:18|19|20)\d{2}[a-z]?\)\.)")
     for e in entries:
         for part in inner.split(e):
             part=part.strip()
