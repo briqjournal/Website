@@ -1,0 +1,80 @@
+[
+  {
+    "page": 4,
+    "num": 1,
+    "type": "image",
+    "width": 1910,
+    "height": 1057,
+    "color": "cmyk",
+    "comp": 4,
+    "bpc": 8,
+    "enc": "image",
+    "interp": "no",
+    "file": "p04-n001.jpg"
+  },
+  {
+    "page": 6,
+    "num": 2,
+    "type": "image",
+    "width": 1880,
+    "height": 1280,
+    "color": "cmyk",
+    "comp": 4,
+    "bpc": 8,
+    "enc": "jpeg",
+    "interp": "no",
+    "file": "p06-n002.jpg"
+  },
+  {
+    "page": 7,
+    "num": 3,
+    "type": "image",
+    "width": 1920,
+    "height": 1248,
+    "color": "cmyk",
+    "comp": 4,
+    "bpc": 8,
+    "enc": "jpeg",
+    "interp": "no",
+    "file": "p07-n003.jpg"
+  },
+  {
+    "page": 9,
+    "num": 4,
+    "type": "image",
+    "width": 1920,
+    "height": 1338,
+    "color": "cmyk",
+    "comp": 4,
+    "bpc": 8,
+    "enc": "jpeg",
+    "interp": "no",
+    "file": "p09-n004.jpg"
+  },
+  {
+    "page": 11,
+    "num": 5,
+    "type": "image",
+    "width": 1920,
+    "height": 1084,
+    "color": "cmyk",
+    "comp": 4,
+    "bpc": 8,
+    "enc": "jpeg",
+    "interp": "no",
+    "file": "p11-n005.jpg"
+  },
+  {
+    "page": 14,
+    "num": 6,
+    "type": "image",
+    "width": 1340,
+    "height": 1173,
+    "color": "cmyk",
+    "comp": 4,
+    "bpc": 8,
+    "enc": "jpeg",
+    "interp": "no",
+    "file": "p14-n006.jpg"
+  }
+]
