@@ -1,4 +1,4 @@
-name: Recover targeted v05-i04 fidelity sources
+name: Capture v05-i04 bibliography evidence
 
 on:
   pull_request:
@@ -22,10 +22,10 @@ jobs:
           fetch-depth: 0
           ref: chore/v05-i04-fulltext-canonical
 
-      - name: Install targeted PDF tools
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
+      - name: Install PDF text tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
 
-      - name: Recover confirmed missing figures and bibliography-page evidence
+      - name: Capture only bibliography pages from individual official PDFs
         shell: bash
         run: |
           set -euo pipefail
@@ -35,48 +35,19 @@ jobs:
           rm -rf "$report_dir"
           mkdir -p "$report_dir"
 
-          fetch_pdf() {
-            local url="$1" out="$2"
-            curl -L --fail --retry 4 --retry-all-errors "$url" -o "$out"
+          dump_tail() {
+            local key="$1" url="$2"
+            local pdf="$work/$key.pdf"
+            curl -L --fail --retry 4 --retry-all-errors "$url" -o "$pdf"
+            local pages
+            pages="$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')"
+            local first=$((pages > 2 ? pages - 2 : 1))
+            pdftotext -layout -f "$first" -l "$pages" "$pdf" "$report_dir/$key.txt"
+            printf '%s pages=%s captured=%s-%s\n' "$key" "$pages" "$first" "$pages"
           }
-
-          crop_render() {
-            local pdf="$1" page="$2" x_pct="$3" y_pct="$4" w_pct="$5" h_pct="$6" out="$7" tag="$8"
-            pdftoppm -f "$page" -l "$page" -singlefile -jpeg -r 180 "$pdf" "$work/$tag"
-            read -r width height < <(identify -format '%w %h' "$work/$tag.jpg")
-            x=$((width * x_pct / 100))
-            y=$((height * y_pct / 100))
-            cw=$((width * w_pct / 100))
-            ch=$((height * h_pct / 100))
-            echo "$tag page render: ${width}x${height}; crop=${cw}x${ch}+${x}+${y}"
-            mkdir -p "$(dirname "$out")"
-            convert "$work/$tag.jpg" -crop "${cw}x${ch}+${x}+${y}" +repage -strip -quality 90 "$out"
-            identify "$out"
-          }
-
-          dump_last_page() {
-            local pdf="$1" out="$2"
-            local last
-            last="$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')"
-            test -n "$last"
-            pdftotext -layout -f "$last" -l "$last" "$pdf" "$out"
-            echo "wrote $out from page $last"
-          }
-
-          fetch_pdf 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Ersin%20Tatar_C5S4.pdf' "$work/tatar-tr.pdf"
-          fetch_pdf 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/B%C4%B0rol%20K%C4%B1lk%C4%B1%C5%9F%20ENG.pdf' "$work/carbon-en.pdf"
-
-          crop_render "$work/tatar-tr.pdf" 5 6 43 88 42 \
-            'public/assets/article-figures/kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi/figure-02.jpg' \
-            tatar
-          crop_render "$work/carbon-en.pdf" 6 15 14 70 35 \
-            'public/assets/article-figures/turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin/figure-03.jpg' \
-            carbon
 
           while IFS='|' read -r key url; do
-            pdf="$work/$key.pdf"
-            fetch_pdf "$url" "$pdf"
-            dump_last_page "$pdf" "$report_dir/$key.txt"
+            dump_tail "$key" "$url"
           done <<'EOF'
           africa-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Yu%20Haijie%20ENG.pdf
           africa-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Yu%20Haijie_C5S4.pdf
@@ -90,20 +61,13 @@ jobs:
           globaleast-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Degang%20Sun%20%26%20Yingqi%20Yang_C5S4.pdf
           EOF
 
-      - name: Commit targeted recovery evidence and assets
+      - name: Commit temporary evidence
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- \
-            tmp/v05-i04-fidelity \
-            public/assets/article-figures/kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi/figure-02.jpg \
-            public/assets/article-figures/turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin/figure-03.jpg
-          if git diff --cached --quiet; then
-            echo 'No recovery changes.'
-            exit 0
-          fi
-          git commit -m 'Capture targeted v05-i04 fidelity evidence'
+          git add -- tmp/v05-i04-fidelity
+          git commit -m 'Capture v05-i04 bibliography evidence'
           git pull --rebase origin chore/v05-i04-fulltext-canonical
           git push origin HEAD:chore/v05-i04-fulltext-canonical
