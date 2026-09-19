@@ -1,5 +1,5 @@
 name: Promote verified v05-i03 prose
-# rerun after hardened two-column reference parsing
+# rerun after final Turkish reference filter fix
 
 on:
   push:
