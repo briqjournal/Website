@@ -31,7 +31,6 @@ jobs:
         run: python3 scripts/repair-v07-i04-confirmed-fidelity.py
 
       - name: Commit durable repair checkpoint
-        if: github.event_name == 'push'
         run: |
           git add \
             content/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi/fulltext/en.json \
