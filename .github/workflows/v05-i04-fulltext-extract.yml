@@ -1,4 +1,4 @@
-name: Recover missing v05-i04 first-nine figures
+name: Recover targeted v05-i04 fidelity sources
 
 on:
   pull_request:
@@ -15,22 +15,30 @@ jobs:
   recover:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: chore/v05-i04-fulltext-canonical
 
-      - name: Install targeted image tools
+      - name: Install targeted PDF tools
         run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
 
-      - name: Recover only the two confirmed missing first-nine figures
+      - name: Recover confirmed missing figures and bibliography-page evidence
         shell: bash
         run: |
           set -euo pipefail
           work="$(mktemp -d)"
           trap 'rm -rf "$work"' EXIT
+          report_dir='tmp/v05-i04-fidelity'
+          rm -rf "$report_dir"
+          mkdir -p "$report_dir"
+
+          fetch_pdf() {
+            local url="$1" out="$2"
+            curl -L --fail --retry 4 --retry-all-errors "$url" -o "$out"
+          }
 
           crop_render() {
             local pdf="$1" page="$2" x_pct="$3" y_pct="$4" w_pct="$5" h_pct="$6" out="$7" tag="$8"
@@ -46,34 +54,56 @@ jobs:
             identify "$out"
           }
 
-          tatar_url='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Ersin%20Tatar_C5S4.pdf'
-          carbon_url='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/B%C4%B0rol%20K%C4%B1lk%C4%B1%C5%9F%20ENG.pdf'
-          curl -L --fail --retry 4 --retry-all-errors "$tatar_url" -o "$work/tatar.pdf"
-          curl -L --fail --retry 4 --retry-all-errors "$carbon_url" -o "$work/carbon.pdf"
+          dump_last_page() {
+            local pdf="$1" out="$2"
+            local last
+            last="$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')"
+            test -n "$last"
+            pdftotext -layout -f "$last" -l "$last" "$pdf" "$out"
+            echo "wrote $out from page $last"
+          }
 
-          # Physical page 5: map itself, excluding surrounding prose and the separate caption box.
-          crop_render "$work/tatar.pdf" 5 6 43 88 42 \
+          fetch_pdf 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Ersin%20Tatar_C5S4.pdf' "$work/tatar-tr.pdf"
+          fetch_pdf 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/B%C4%B0rol%20K%C4%B1lk%C4%B1%C5%9F%20ENG.pdf' "$work/carbon-en.pdf"
+
+          crop_render "$work/tatar-tr.pdf" 5 6 43 88 42 \
             'public/assets/article-figures/kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi/figure-02.jpg' \
             tatar
-
-          # Physical page 6: Figure 3 chart itself, excluding surrounding prose and the separate caption box.
-          crop_render "$work/carbon.pdf" 6 15 14 70 35 \
+          crop_render "$work/carbon-en.pdf" 6 15 14 70 35 \
             'public/assets/article-figures/turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin/figure-03.jpg' \
             carbon
 
-      - name: Commit recovered assets
+          while IFS='|' read -r key url; do
+            pdf="$work/$key.pdf"
+            fetch_pdf "$url" "$pdf"
+            dump_last_page "$pdf" "$report_dir/$key.txt"
+          done <<'EOF'
+          africa-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Yu%20Haijie%20ENG.pdf
+          africa-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Yu%20Haijie_C5S4.pdf
+          integration-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Du%20Donghui%20ENG.pdf
+          integration-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Du%20Donghui_C5S4.pdf
+          newworld-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Akmaral%20Batalova%20ENG.pdf
+          newworld-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Akmaral%20Batalova_C5S4.pdf
+          newasia-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Osman%20Can%20%C3%9Cnver%20ENG.pdf
+          newasia-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Osman%20Can%20%C3%9Cnver_C5S4.pdf
+          globaleast-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Degang%20Sun%20%26%20Yingqi%20Yang%20ENG.pdf
+          globaleast-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Degang%20Sun%20%26%20Yingqi%20Yang_C5S4.pdf
+          EOF
+
+      - name: Commit targeted recovery evidence and assets
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- \
+            tmp/v05-i04-fidelity \
             public/assets/article-figures/kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi/figure-02.jpg \
             public/assets/article-figures/turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin/figure-03.jpg
           if git diff --cached --quiet; then
-            echo 'No asset changes.'
+            echo 'No recovery changes.'
             exit 0
           fi
-          git commit -m 'Recover missing v05-i04 first-nine figure assets'
+          git commit -m 'Capture targeted v05-i04 fidelity evidence'
           git pull --rebase origin chore/v05-i04-fulltext-canonical
           git push origin HEAD:chore/v05-i04-fulltext-canonical
