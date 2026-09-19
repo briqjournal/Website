@@ -9,7 +9,7 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   audit:
@@ -18,9 +18,32 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: audit/v07-i04-fulltext-fidelity
 
       - name: Install PDF tools
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          python3 -m pip install pymupdf
+
+      - name: Apply confirmed fidelity repairs
+        run: python3 scripts/repair-v07-i04-confirmed-fidelity.py
+
+      - name: Commit durable repair checkpoint
+        if: github.event_name == 'push'
+        run: |
+          git add \
+            content/articles/suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi/fulltext/en.json \
+            content/articles/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/fulltext/en.json
+          if git diff --cached --quiet; then
+            echo "No canonical repair changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Repair v07-i04 English full-text fidelity"
+          git push origin HEAD:audit/v07-i04-fulltext-fidelity
 
       - name: Run fidelity audit
         run: python3 scripts/audit-fulltext-fidelity.py v07-i04
