@@ -34,12 +34,24 @@
         "· Çin, pirinç, buğday ve mısır gibi temel ürünlerin önde gelen üreticisidir. Aynı zamanda meyve, sebze ve çay, pamuk ve tütün gibi belirli ürünlerin yetiştirilmesinde de uzmanlaşmıştır.",
         "· Çin, ekilebilir arazilerin %7’sine sahip olmasına rağmen dünya nüfusunun %22’sini besliyor. Yirminci yüzyılda Çin, büyük nüfusunu beslemek için mücadele etti.",
         "· Çin’de büyük bir sığır sektörü var ve en popüler et domuz eti. Ayrıca iç talebi karşılamak için büyük miktarda tavuk, sığır eti ve süt ürünleri de üretmektedir.",
-        "· Çin, sektör çıktısını ve verimliliğini artırmak için tarımsal araştırma ve geliştirmeye, ileri tarım tekniklerine ve makineleşmeye yatırım yaptı.",
+        "· Çin, sektör çıktısını ve verimliliğini artırmak için tarımsal araştırma ve geliştirmeye, ileri tarım tekniklerine ve makineleşmeye yatırım yaptı."
+      ]
+    },
+    {
+      "id": "tr-section-5",
+      "title": "Dünyanın 2’nci Büyük Üreticisi Ülkesi - ABD",
+      "paragraphs": [
         "Amerika Birleşik Devletleri (ABD), 605 milyon ton tarımsal ürün üreterek dünyanın en büyük ikinci tarım üreticisi konumundadır.",
         "· Amerika Birleşik Devletleri mısır, soya fasulyesi, buğday ve pamuk gibi temel ürünlerin önemli bir üreticisidir. Ayrıca badem, narenciye ve üzüm gibi özel ürünlerin üretiminde de uzmanlaşmıştır.",
         "· Amerika Birleşik Devletleri’nde büyükbaş hayvan, kümes hayvanları ve domuz etinin tarımsal üretime büyük katkı sağladığı gelişen bir hayvancılık endüstrisi var. Aynı zamanda önemli miktarda süt ürünleri de üretmektedir.",
         "· Amerika Birleşik Devletleri, tahıl, et, süt ürünleri, meyve ve sebzeler de dahil olmak üzere dünyanın önde gelen tarım ürünleri ihracatçılarından biridir. Küresel gıda güvenliği ve ticareti açısından önemlidir.",
-        "ABD’de mısır, 247 milyon 882 bin ton üretimle en büyük mahsul oldu. Soya fasulyesi 74 milyon 598 bin ton ile ikinci sırada yer alıyor.",
+        "ABD’de mısır, 247 milyon 882 bin ton üretimle en büyük mahsul oldu. Soya fasulyesi 74 milyon 598 bin ton ile ikinci sırada yer alıyor."
+      ]
+    },
+    {
+      "id": "tr-section-6",
+      "title": "Dünyanın 3’üncü Büyük Üretici Ülkesi - Brezilya",
+      "paragraphs": [
         "Brezilya, 522 milyon ton tarımsal ürün üreterek dünyanın üçüncü büyük tarım üreticisidir.",
         "· Brezilya, verimli topraklar, iyi iklim ve bol su gibi birçok farklı türde mahsulün üretilmesine olanak sağlayan geniş tarımsal kaynaklarla donatılmıştır.",
         "· Brezilya büyük bir soya fasulyesi, şeker kamışı, mısır, kahve ve portakal üreticisidir. Dünyanın en büyük soya fasulyesi ve et tedarikçisidir.",
@@ -49,37 +61,79 @@
         "· Brezilya, verimli topraklar, iyi iklim ve bol su gibi birçok farklı türde mahsulün üretilmesine olanak sağlayan geniş tarımsal kaynaklarla donatılmıştır.",
         "· Brezilya büyük bir soya fasulyesi, şeker kamışı, mısır, kahve ve portakal üreticisidir. Dünyanın en büyük soya fasulyesi ve et tedarikçisidir.",
         "· Brezilya’nın hayvancılık sektörü büyüyor; sığır, kümes hayvanları ve domuz eti üretimi, tarımsal üretimin ve ihracat gelirlerinin büyük bir kısmına katkıda bulunuyor.",
-        "· Brezilya’nın 2,1 milyar dönüm arazisi var ve bunun 867,4 milyon dönümü ekim için kullanılıyor.",
+        "· Brezilya’nın 2,1 milyar dönüm arazisi var ve bunun 867,4 milyon dönümü ekim için kullanılıyor."
+      ]
+    },
+    {
+      "id": "tr-section-7",
+      "title": "Dünyanın 4’üncü Büyük Üretici Ülkesi - Hindistan",
+      "paragraphs": [
         "Hindistan, 319 milyon ton tarımsal ürün üreterek dünyanın dördüncü büyük tarım üreticisi konumundadır.",
         "· Hindistan’ın çeşitli coğrafi ve iklim koşulları, pirinç, buğday ve darı gibi tahılların yanı sıra baklagiller, yağlı tohumlar, meyveler ve sebzeler de dâhil olmak üzere birçok farklı mahsulü desteklemektedir.",
         "· Pirinç ve buğday, dünyanın en büyük üreticilerinden biri olan Hindistan’da temel ürünlerdir. Ayrıca Hindistan nohut, mercimek ve fasulye gibi bakliyatların da önemli bir üreticisidir.",
         "· Hindistan’da büyükbaş hayvan, manda, kümes hayvanları ve keçilerin tarımsal üretime büyük katkı sağladığı büyük bir hayvancılık sektörü bulunmaktadır. Hindistan dünyanın en büyük süt üreticisi olduğundan süt üretimi özellikle önemlidir.",
-        "· Hint tarımı, Hintlilerin geçim kaynaklarının yaklaşık %58’ini sağlıyor. En son verilere göre tarım, nüfusun yarısının temel gelir kaynağıdır ve GSYİH’nın %17 ila %18’ini oluşturmaktadır.",
+        "· Hint tarımı, Hintlilerin geçim kaynaklarının yaklaşık %58’ini sağlıyor. En son verilere göre tarım, nüfusun yarısının temel gelir kaynağıdır ve GSYİH’nın %17 ila %18’ini oluşturmaktadır."
+      ]
+    },
+    {
+      "id": "tr-section-8",
+      "title": "Dünyanın 5’inci Büyük Üretici Ülkesi - Rusya",
+      "paragraphs": [
         "Rusya, dünyanın gıda tedarikine büyük katkı sağlamakta ve 262 milyon ton tarımsal ürün üreterek dünyanın en büyük beşinci tarım üreticisidir.",
         "· Rusya’nın birden fazla iklim bölgesini kapsayan geniş arazi alanı, tahıllar, yağlı tohumlar ve hayvancılık da dahil olmak üzere tarımsal üretim için birçok olanak sağlıyor.",
         "· Rusya’da buğday, arpa ve mısır gibi tahıllar yaygın olarak yetiştiriliyor ve ülke dünyanın önde gelen buğday ihracatçılarından biri. Ayrıca ayçiçeği ve soya fasulyesi gibi yağlı tohumlar da tarımsal verimliliğe önemli katkılar sağlamaktadır.",
         "· Rusya’nın hayvancılık sektörü genişliyor; iç talebi karşılamak ve ihracat pazarlarını desteklemek için inek, domuz ve kümes hayvanı üretimi sürekli artıyor.",
-        "· Tahıl tarımı, toplam ekili alanın yaklaşık yarısını oluşturur. Ülkenin tahılının %70’ini üretiyor.",
+        "· Tahıl tarımı, toplam ekili alanın yaklaşık yarısını oluşturur. Ülkenin tahılının %70’ini üretiyor."
+      ]
+    },
+    {
+      "id": "tr-section-9",
+      "title": "Dünyanın 6’ncı Büyük Üretici Ülkesi - Fransa",
+      "paragraphs": [
         "Fransa, 184 milyon ton tarımsal ürün üreterek dünyanın gıda tedarikine büyük katkı sağlayan 6’ncı ülkesidir.",
         "· Fransa, tamamı tarımın temel maddeleri olan buğday, arpa, mısır ve şeker pancarının yetiştirilmesiyle ön plana çıkmaktadır. Ayrıca Fransa, ülkenin büyük bir kısmına yayılan üzüm bağlarıyla şarap üretimiyle ünlüdür.",
         "· Büyükbaş hayvancılık, sığır, koyun, kümes hayvanları ve süt ürünleri üretiminin ülkenin tarımsal üretimine önemli ölçüde katkıda bulunduğu Fransız tarımının bir diğer önemli yönüdür.",
         "· Fransa şarap, süt ürünleri, tahıllar ve lüks gıdalar da dahil olmak üzere büyük bir tarım ürünleri ihracatçısıdır.",
-        "· Fransa’da 730 binden fazla çiftlik bulunmaktadır ve nüfusun yaklaşık %7’si geçimini tarımdan veya balıkçılık veya ormancılık gibi ilgili sektörlerden sağlamaktadır.",
+        "· Fransa’da 730 binden fazla çiftlik bulunmaktadır ve nüfusun yaklaşık %7’si geçimini tarımdan veya balıkçılık veya ormancılık gibi ilgili sektörlerden sağlamaktadır."
+      ]
+    },
+    {
+      "id": "tr-section-10",
+      "title": "Dünyanın 7’nci Büyük Üretici Ülkesi - Meksika",
+      "paragraphs": [
         "Meksika, 158 milyon ton tarımsal üretimiyle dünyanın yedinci en büyük üreticisidir ve gıda tedarikine büyük katkı sağlamaktadır.",
         "· Mısır (mısır), fasulye ve şili biberi, Meksika tarımının başlıca ürünleridir ve ülkenin çeşitli mutfak ve kültürel geçmişini temsil eder.",
         "· Meksika’da sığır, kümes hayvanları ve domuz eti üretiminin ülkenin tarımsal üretimine önemli katkılar sağladığı büyük bir hayvancılık sektörü bulunmaktadır.",
         "· Meksika, meyve, sebze, avokado, çilek ve bira ihraç eden önemli bir tarım ihracatçısıdır. Amerika Birleşik Devletleri’ne yakınlığı ve önemli ticari bağlantıları ihracat potansiyelinin artmasına yardımcı oluyor.",
-        "· Meksika’da tarım arazinin yaklaşık %15’ini kaplar ve hayvancılık da yaklaşık %50 oranında katkıda bulunur.",
+        "· Meksika’da tarım arazinin yaklaşık %15’ini kaplar ve hayvancılık da yaklaşık %50 oranında katkıda bulunur."
+      ]
+    },
+    {
+      "id": "tr-section-11",
+      "title": "Dünyanın 8’inci Büyük Üretici Ülkesi - Japonya",
+      "paragraphs": [
         "Japonya 150 milyon ton tarımsal ürün üreterek dünyanın en büyük sekizinci tarım üreticisidir.",
         "· Japonya, arazi kısıtlamaları nedeniyle pirinç, sebze ve meyve gibi yüksek değerli malların yanı sıra çay ve çiçek gibi özel ürünlere odaklanıyor.",
         "· Japonya, sınırlı arazide çalışırken verimliliği artırmak için hassas tarım, robot teknolojisi ve dikey tarım gibi modern tarım teknolojilerini uygulamasıyla ünlüdür.",
         "· Japonya’da tarım GSYİH’nın yalnızca %2’sini oluştururken, nüfusun yaklaşık %10’u çiftliklerde yaşıyor.",
-        "· Pirinci tahıllar, deniz ürünleri, sebzeler, dağ otları ve diğer malzemelerle birleştiren geleneksel Japon mutfak kültürünü tamamen destekliyorlar.",
+        "· Pirinci tahıllar, deniz ürünleri, sebzeler, dağ otları ve diğer malzemelerle birleştiren geleneksel Japon mutfak kültürünü tamamen destekliyorlar."
+      ]
+    },
+    {
+      "id": "tr-section-12",
+      "title": "Dünyanın 9’uncu Büyük Üretici Ülkesi - Almanya",
+      "paragraphs": [
         "Almanya, 124 milyon ton tarımsal ürün üreterek dünyanın gıda tedarikine 9 uncu sıradan büyük katkı sağlamaktadır.",
         "· Almanya’nın önde gelen tarım ürünleri arasında buğday, şeker pancarı, lahana, arpa, domuz, tavuk, patates, süt, tahıllar ve çoğu bölgede meyve, sebze ve şarap yer alıyor.",
         "· Ormancılık ve tarım ülke yüzölçümünün yaklaşık %80’ini kaplar. 1997’de eski batı eyaletlerinde aile çiftlikleri egemendi.",
         "· Alman çiftçilerin yaklaşık %87’si 124 dönümlük arazide tarım yapıyor. Almanya’da üzüm bağları nehir vadilerinin güney ve batı kesimlerini kaplar.",
-        "· Almanya, süt ürünleri, et, meyve ve sebze dâhil olmak üzere büyük bir tarım ihracatçısıdır.",
+        "· Almanya, süt ürünleri, et, meyve ve sebze dâhil olmak üzere büyük bir tarım ihracatçısıdır."
+      ]
+    },
+    {
+      "id": "tr-section-13",
+      "title": "Dünyanın 10’uncu Büyük Üretici Ülkesi - Türkiye",
+      "paragraphs": [
         "Türkiye, dünyanın gıda arzına büyük katkı sağlamaktadır. 107 milyon ton tarımsal üretimiyle dünyanın en büyük onuncu tarım üreticisidir. Önemli bir tarım üreticisi olan Türkiye, çeşitli ürünleri yetiştirmekte ve tahıl, meyve, sebze ve hayvancılık üretimiyle ön plana çıkmaktadır.",
         "Türkiye verimli ovalar, kıyı bölgeleri ve engebeli araziler de dâhil olmak üzere çeşitli ürünlerin üretimine olanak tanıyan uygunluğu yüksek bir tarım coğrafyasına sahiptir.",
         "• Türkiye buğday, arpa ve mısır gibi tahılların yanı sıra narenciye, üzüm, fındık, kayısı, antepfıstığı ve incir gibi meyvelerin de aralarında bulunduğu çeşitli ürünlerin üretiminde uzmanlaşmıştır.",
@@ -98,7 +152,7 @@
       ]
     },
     {
-      "id": "tr-section-5",
+      "id": "tr-section-14",
       "title": "Türk Dünyası Devletlerinin Tarımsal Ticareti",
       "paragraphs": [
         "Ülkelerin tarımda yaratılan katma değer miktarı 94 milyar USD’dir. Azerbaycan 3.8 milyar USD, Kazakistan 11.5 milyar USD, Kırgızistan 1.3 milyar USD, Türkiye 58.5 milyar USD, Özbekistan 18.9 milyar USD pay almaktadır. Türk Dünyası ülkeleri arasında tarım ticareti 5 milyar USD’dir. Türk Dünyası devletlerinin toplam tarım İhracatı ise 43.3 milyar USD’dır. Bu durumda Türk Dünyası devletlerinin dünya tarım ihracatındaki payı %2-3’lerle ifade edilebilmektedir.",
@@ -106,7 +160,7 @@
       ]
     },
     {
-      "id": "tr-section-6",
+      "id": "tr-section-15",
       "title": "Sonuç Yerine: Türkiye’nin Türk Dünyası Tarımında Oyun Kuruculuğu İçin Anahtarlar",
       "paragraphs": [
         "Türkiye’nin Orta Asya ülkeleriyle olan tarımsal ticareti oldukça merkezi konumda bulunması nedeniyle stratejik bir önem taşımaktadır. Dünyanın onuncu büyük tarım üreticisi Türkiye, Orta Asya’daki dolayısıyla Türk Dünyası devletleriyle tarım ürünleri ticaretinde güçlü bir konuma ve avantaja sahip olup çeşitli tarım ürünlerini bu bölgeye ihraç etmektedir. Türkiye bu coğrafyaya ülkelere göre değişmekle birlikte öncelikle bilgi, teknoloji, buğday, arpa, pamuk, sebze, meyve ve bitkisel yağlar gibi ürünler ihraç etmektedir. Türkiye’nin yüksek kaliteli gıda işleme teknolojileri ve tarım makineleri de bu ülkeler için caziptir.",
@@ -195,42 +249,42 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-01.jpg",
-      "caption": "Görsel 1"
+      "caption": "Şekil 1. Türkiye’de İyi Tarım Uygulamaları Üretim Alanı ve Miktarı (2007-2022) (Şekil: Tarım ve Orman Bakanlığı, 2023)."
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-02.jpg",
-      "caption": "Görsel 2"
+      "caption": "Şekil 2. Dünyanın En Çok Tarımsal Ürün Üreten 10 Ülkesi Listesi (Şekil: geeksforgeeks, 2024)."
     },
     {
       "id": "figure-3",
       "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-03.jpg",
-      "caption": "Görsel 3"
+      "caption": "Şekil 3. Türk Devletleri Teşkilatı Üye ve Gözlemcilerinin Genel Görünümü (Ocak-Aralık 2023) (Şekil: TDT, 2023)."
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-04.jpg",
-      "caption": "Görsel 4"
+      "caption": "Şekil 4. Çin-Orta Asya Ticaret Yapısı Gelişimi (2022) (Şekil: CGTN, 2023)."
     },
     {
       "id": "figure-5",
       "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-05.jpg",
-      "caption": "Görsel 5"
+      "caption": "Şekil 5. Türkiye’de Tarımsal Milli Gelir (Milyar/Yüzde) (Şekil: SBB, 2020)."
     },
     {
       "id": "figure-6",
       "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-06.jpg",
-      "caption": "Görsel 6"
+      "caption": "Şekil 6. Tarımsal ve Endüstriyel Ticarette Büyüme (Şekil: OECD/FAO, 2023)."
     },
     {
       "id": "figure-7",
       "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-07.jpg",
-      "caption": "Görsel 7"
+      "caption": "Şekil 7. Türkiye’de Tarım ve Gıda Ürünleri Toplam Dış Ticareti (2002-2019) (Şekil: SBB, 2020)."
     },
     {
       "id": "figure-8",
       "src": "/assets/article-figures/orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu/figure-08.jpg",
-      "caption": "Görsel 8"
+      "caption": "Şekil 8. Türk Devletleri Teşkilatı Üye ve Gözlemci Üye Ülkelerinin GSYİH Büyümeleri Karşılaştırması (Ocak-Aralık 2023)."
     }
   ]
 }
