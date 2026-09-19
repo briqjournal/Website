@@ -1,0 +1,74 @@
+name: Capture v05-i04 bibliography evidence
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/v05-i04-fulltext-extract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: chore/v05-i04-fulltext-canonical
+
+      - name: Install PDF text tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: Capture only bibliography pages from individual official PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          work="$(mktemp -d)"
+          trap 'rm -rf "$work"' EXIT
+          report_dir='tmp/v05-i04-fidelity'
+          rm -rf "$report_dir"
+          mkdir -p "$report_dir"
+
+          dump_tail() {
+            local key="$1" url="$2"
+            local pdf="$work/$key.pdf"
+            curl -L --fail --retry 4 --retry-all-errors "$url" -o "$pdf"
+            local pages
+            pages="$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')"
+            local first=$((pages > 2 ? pages - 2 : 1))
+            pdftotext -layout -f "$first" -l "$pages" "$pdf" "$report_dir/$key.txt"
+            pdftotext -raw -f "$first" -l "$pages" "$pdf" "$report_dir/$key.raw.txt"
+            printf '%s pages=%s captured=%s-%s\n' "$key" "$pages" "$first" "$pages"
+          }
+
+          while IFS='|' read -r key url; do
+            dump_tail "$key" "$url"
+          done <<'EOF'
+          africa-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Yu%20Haijie%20ENG.pdf
+          africa-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Yu%20Haijie_C5S4.pdf
+          integration-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Du%20Donghui%20ENG.pdf
+          integration-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Du%20Donghui_C5S4.pdf
+          newworld-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Akmaral%20Batalova%20ENG.pdf
+          newworld-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Akmaral%20Batalova_C5S4.pdf
+          newasia-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Osman%20Can%20%C3%9Cnver%20ENG.pdf
+          newasia-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Osman%20Can%20%C3%9Cnver_C5S4.pdf
+          globaleast-en|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Degang%20Sun%20%26%20Yingqi%20Yang%20ENG.pdf
+          globaleast-tr|https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Degang%20Sun%20%26%20Yingqi%20Yang_C5S4.pdf
+          EOF
+
+      - name: Commit temporary evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f -- tmp/v05-i04-fidelity
+          git commit -m 'Capture v05-i04 bibliography evidence'
+          git pull --rebase origin chore/v05-i04-fulltext-canonical
+          git push origin HEAD:chore/v05-i04-fulltext-canonical
