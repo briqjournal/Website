@@ -326,5 +326,51 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/figure-01-tr.png",
+      "caption": "Avrupa Yönetim Forumu, 1987 yılınd küresel çaptaki etkisini ve faaliyetlerinde ekonomi politikasının ön planda olduğunu vurgulamak amacıyla adını Dünya Ekonomik Forumu olarak değiştirdi (Fotoğraf: WEF websitesi, t.y.)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/figure-02-tr.jpg",
+      "caption": "“1982 yılındaki Forum kapsamında düzenlenen dünya ekonomi liderlerinin ilk gayri resmi buluşmasında, uydu aracılığıyla katılımcılara seslenen ABD Başkanı Reagan, kapitalist kampın Sovyetler Birliği liderliğindeki sosyalist kampa karşı muhalif pozisyonunu sürdürmesini açıkça talep etti”. İlk Dünya Ekonomi Liderleri Gayriresmi Toplantısından bir görüntü (Fotoğraf: WEF websitesi, n.d.)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/figure-03-tr.jpg",
+      "caption": "\"WEF’i yönlendiren neoliberal paradigma altında, bu kurum küresel ekonomik krizler için etkili yönetişim stratejileri önerme konusunda yapısal olarak yetersiz kalmakla kalmaz, aynı zamanda rant arayışına dayalı faaliyetler yoluyla sermaye kaynaklarının israfını da sürdürür\" (Fotoğraf: Bluediamondgallery, t.y.)"
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/figure-04-tr.jpg",
+      "caption": "“Dünya Ekonomik Forumu’nun üyelik sermayesi, kurumsal üyelerinin sermaye birikim süreçleriyle yapısal bir simbiyoz sergilemektedir. Bu simbiyoz, Tropikal Orman İttifakı ve Küresel Plastik Eylem Ortaklığı gibi girişimlerde işlevselleştirilen sermaye devreleri aracılığıyla somut olarak ortaya çıkmaktadır” (Fotoğraf: globalplasticaction.org ve tropicalforestalliance.org, t.y.)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/figure-05-tr.png",
+      "caption": "Grafik. 2024’te en çok çalışanı işten çıkaran teknoloji şirketleri. “Son derece sömürücü çalışma sistemleri, zaman yoksunluğu yoluyla sistematik olarak mutlak artı değer elde ederken, Microsoft, Twitter ve Apple gibi teknoloji oligopolleri tarafından yapılan büyük ölçekli işten çıkarmalar, endüstriyel yedek orduyu yapay olarak genişletmektedir” (Grafik: bestbrokers, 2024)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/figure-06-tr.jpg",
+      "caption": "\"Sermayenin serbestleşmesi sürecinin derinleşmesiyle birlikte, kapitalist egemen küresel ekonomik sistem içindeki eşitsizlik de yoğunlaşmaktadır\" (Karikatür: Global Times, 2025)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/figure-07-tr.jpg",
+      "caption": "\"Tarihsel olarak kapitalist hegemonya üç mekânsal-zamansal yineleme geçirmiştir. Şu anda ise dijital sermaye hegemonyasına (platform kapitalizmi) doğru paradigmatik bir yeniden yapılanma sürecinden geçmektedir\" (Çizim: Monthly Review, t.y.)."
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/figure-08-tr.jpg",
+      "caption": "“WEF’in 1971’de kurulmasından 2008 küresel mali krizinin başlangıcına kadar, mali sermaye türevlerin egemen olduğu bir birikim rejimine doğru niteliksel bir dönüşüm geçirmiştir” (Fotoğraf: WEF websitesi, 2024)."
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi/figure-09-tr.jpg",
+      "caption": "“2008 ABD subprime mortgage krizinin tetiklediği küresel mali krizin de etkisiyle, Batı’daki gelişmiş ülkelerin öncülük ettiği dünyadaki ekonomik küreselleşme eğiliminin tersine dönüşü giderek daha belirgin hale gelmiştir” (Karikatür: Baker Library, t.y.)."
+    }
+  ]
 }

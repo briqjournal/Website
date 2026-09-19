@@ -88,5 +88,26 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/wape-18-yillik-forumu/figure-01-tr.jpg",
+      "caption": "Forum, 6 Ağustos’ta WAPE’nin en az yılda bir kez yapılan Konsey üyeleri toplantısı ile başladı (Fotoğraf: BRIQ, 2025)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/wape-18-yillik-forumu/figure-02-tr.jpg",
+      "caption": "WAPE Başkanı Prof. Dr. Cheng Enfu, açış konuşmasını yapıyor (Fotoğraf: BRIQ, 2025)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/wape-18-yillik-forumu/figure-03-tr.jpg",
+      "caption": "WAPE Başkan Yardımcısı, BRIQ Yönetim Kurulu Başkanı Adnan Akfırat açış konuşmasını yapıyor (Fotoğraf: BRIQ, 2025)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/wape-18-yillik-forumu/figure-04-tr.jpg",
+      "caption": "Forum katılımcılarının Yeditepe Üniversitesi Rektörlüğü önünde grup fotoğrafı (Fotoğraf: BRIQ, 2025)."
+    }
+  ]
 }

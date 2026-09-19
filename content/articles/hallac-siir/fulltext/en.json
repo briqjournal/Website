@@ -9,13 +9,17 @@
         "While you  \non the gallows  \nsilent and frozen,  \nwe remained spectators  \nto the duty-bound executioners.",
         "wherever the morning wind  \nscattered your ashes  \na hero emerged  \nfrom the earth",
         "In the streets of Nişabur  \nthe drunkards of midnight  \nslowly  \nsing their crimson red songs",
-        "Your name,  \nis on everyone’s lips.",
-        "*Translated from Turkish to English by BRIQ (Edited by Hüseyin Haydar and Latif Bolat)*"
+        "Your name,  \nis on everyone’s lips."
       ]
     }
   ],
   "keywords": [],
-  "footnotes": [],
+  "footnotes": [
+    {
+      "id": "1",
+      "text": "Translated from Turkish to English by BRIQ (Edited by Hüseyin Haydar and Latif Bolat)"
+    }
+  ],
   "references": [],
   "acknowledgements": "",
   "figures": []

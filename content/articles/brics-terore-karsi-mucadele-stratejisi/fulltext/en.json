@@ -39,5 +39,16 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/brics-terore-karsi-mucadele-stratejisi/figure-01-en.jpg",
+      "caption": "The 16th Meeting of the BRICS Summit was held from October 22 to 24, 2024, in Kazan, Russia, under the theme “Strengthening Multilateralism for Fair Global Development and Security” (Photo: bric.br, 2025)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/brics-terore-karsi-mucadele-stratejisi/figure-02-en.jpg",
+      "caption": "A photo from the 2025 Leaders Summit in Rio de Janeiro (Photo: Isabela Castilho/BRICS Brasil, 2025)."
+    }
+  ]
 }
