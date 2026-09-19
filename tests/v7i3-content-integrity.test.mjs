@@ -72,3 +72,37 @@ test("V7I3 book review does not publish the reviewed-book citation as an abstrac
     assert.equal(metadata.abstract_en, "");
   }
 });
+
+
+test("V7I3 preserves the PDF-verified fidelity repairs", () => {
+  const root = "content/articles";
+
+  const swiss = JSON.parse(fs.readFileSync(path.join(root, "kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre", "fulltext", "en.json"), "utf8"));
+  assert.equal(swiss.sections[0].title, "Introduction");
+  assert.equal(swiss.sections[0].paragraphs.length, 5);
+  assert.match(swiss.sections[0].paragraphs[0], /^Annual data on the illicit trade in cultural property/i);
+  assert.doesNotMatch(swiss.sections[0].paragraphs.join(" "), /Keywords:\s*asymmetrical provisions/i);
+
+  const ich = JSON.parse(fs.readFileSync(path.join(root, "cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege", "fulltext", "en.json"), "utf8"));
+  assert.deepEqual(ich.footnotes.map((note) => note.id), ["1", "2"]);
+  assert.match(ich.footnotes[0].text, /^The Hezhe Imakan tradition constitutes a vital component/);
+  assert.match(ich.footnotes[1].text, /^The Asia-Pacific Centre is a UNESCO Category 2 Centre/);
+
+  const mongolia = JSON.parse(fs.readFileSync(path.join(root, "mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim", "fulltext", "en.json"), "utf8"));
+  assert(!mongolia.sections.some((section) => section.title === "Figure 1. Mongolia-Russia-China Economic Corridor"));
+  assert.equal(mongolia.figures[2].caption, "Figure 1. Mongolia-Russia-China Economic Corridor (Map: Tuvshintur, 2018).");
+  assert.match(mongolia.figures[1].caption, /^“The Soviet withdrawal of its troops/);
+
+  const review = JSON.parse(fs.readFileSync(path.join(root, reviewSlug, "fulltext", "en.json"), "utf8"));
+  assert.match(review.figures[0].caption, /^“Looking ahead, the book examines future developments shaping security along the BRI\.”/);
+  assert.equal(review.figures[1].caption, "Arduino, A. (2018). China’s Private Army: Protecting the New Silk Road. Singapore: Palgrave Pivot.");
+
+  for (const slug of issue.articles) {
+    for (const locale of ["en", "tr"]) {
+      const fulltext = JSON.parse(fs.readFileSync(path.join(root, slug, "fulltext", `${locale}.json`), "utf8"));
+      for (const figure of fulltext.figures ?? []) {
+        assert.doesNotMatch(figure.caption, /^(?:Figure|Şekil)\s+\d+$/u, `${slug} ${locale} ${figure.id}`);
+      }
+    }
+  }
+});
