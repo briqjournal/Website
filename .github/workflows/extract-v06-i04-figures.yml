@@ -1,0 +1,68 @@
+name: Extract v06-i04 published figures
+
+on:
+  push:
+    branches:
+      - audit/v06-i04-fulltext-fidelity
+    paths:
+      - tmp/v06-i04-assets-trigger.txt
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/v06-i04-fulltext-fidelity
+          fetch-depth: 0
+      - name: Install PDF tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Reuse fidelity audit download/extraction
+        run: python3 scripts/audit-fulltext-fidelity.py v06-i04
+      - name: Extract published content images
+        run: |
+          rm -rf tmp/v06-i04-extracted
+          python3 - <<'PY'
+          import json, pathlib, shutil, subprocess
+          root=pathlib.Path('.audit/fulltext-fidelity/v06-i04')
+          out=pathlib.Path('tmp/v06-i04-extracted')
+          manifest={'issue':'v06-i04','locales':[]}
+          for pdf in sorted(root.glob('*/*/*.pdf')):
+              loc=pdf.parent.name
+              slug=pdf.parent.parent.name
+              rawdir=out/slug/loc/'raw'
+              rawdir.mkdir(parents=True,exist_ok=True)
+              prefix=rawdir/'img'
+              subprocess.run(['pdfimages','-all',str(pdf),str(prefix)],check=True)
+              listing=subprocess.check_output(['pdfimages','-list',str(pdf)],text=True,stderr=subprocess.STDOUT)
+              images=[]; pages={}
+              for line in listing.splitlines():
+                  parts=line.split()
+                  if len(parts)<15 or not parts[0].isdigit() or not parts[1].isdigit(): continue
+                  page=int(parts[0]); num=int(parts[1]); typ=parts[2]
+                  if typ!='image' or page<=1: continue
+                  matches=sorted(rawdir.glob(f'img-{num:03d}.*'))
+                  if not matches: continue
+                  src=matches[0]; suffix=src.suffix.lower()
+                  destdir=out/slug/loc/'selected'; destdir.mkdir(parents=True,exist_ok=True)
+                  dest=destdir/f'p{page:03d}-n{num:03d}{suffix}'
+                  shutil.copy2(src,dest)
+                  pagefile=root/slug/loc/'pages'/f'p{page:03d}.txt'
+                  if str(page) not in pages and pagefile.exists(): pages[str(page)]=pagefile.read_text(encoding='utf-8')
+                  images.append({'page':page,'num':num,'type':typ,'width':int(parts[3]),'height':int(parts[4]),'temp_path':str(dest).replace('\\','/')})
+              shutil.rmtree(rawdir,ignore_errors=True)
+              manifest['locales'].append({'slug':slug,'locale':loc,'images':images,'pages':pages})
+          out.mkdir(parents=True,exist_ok=True)
+          (out/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Commit extracted evidence
+        run: |
+          git config user.name "BRIQ Journal"
+          git config user.email "briq@briqjournal.com"
+          git add -f tmp/v06-i04-extracted
+          git commit -m "chore: extract v06-i04 published figures"
+          git push origin HEAD:audit/v06-i04-fulltext-fidelity
