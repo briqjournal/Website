@@ -17,6 +17,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 3
 - Missing figure assets: 0
 - Rendered pages: 1, 14
 
@@ -37,6 +38,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 3
 - Missing figure assets: 0
 - Rendered pages: 1, 7, 9, 12, 14
 
@@ -57,6 +59,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 8
 - Missing figure assets: 0
 - Rendered pages: 1, 24
 
@@ -77,6 +80,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 9
 - Missing figure assets: 0
 - Rendered pages: 1, 7, 24
 
@@ -97,6 +101,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 7
 - Missing figure assets: 0
 - Rendered pages: 1, 24, 26
 
@@ -117,6 +122,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 7
 - Missing figure assets: 0
 - Rendered pages: 1, 11, 26
 
@@ -137,6 +143,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 11
 - Missing figure assets: 0
 - Rendered pages: 1, 19, 28
 
@@ -157,6 +164,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 11
 - Missing figure assets: 0
 - Rendered pages: 1, 23, 26, 28
 
@@ -177,6 +185,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 2
 - Missing figure assets: 0
 - Rendered pages: 1, 18
 
@@ -197,6 +206,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 2
 - Missing figure assets: 0
 - Rendered pages: 1, 10, 18
 
@@ -217,6 +227,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 4
 - Missing figure assets: 0
 - Rendered pages: 1, 2, 6, 8
 
@@ -237,6 +248,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 4
 - Missing figure assets: 0
 - Rendered pages: 1, 2, 4, 7, 8
 
@@ -257,6 +269,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 0
 - Missing figure assets: 0
 - Rendered pages: 1, 2
 
@@ -277,6 +290,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 0
 - Missing figure assets: 0
 - Rendered pages: 1, 2
 
@@ -297,6 +311,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 0
 - Missing figure assets: 0
 - Rendered pages: 1, 2
 
@@ -317,6 +332,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 0
 - Missing figure assets: 0
 - Rendered pages: 1, 2
 
@@ -340,6 +356,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 0
 - Missing figure assets: 0
 - Rendered pages: 1
 
@@ -360,6 +377,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 0
 - Missing figure assets: 0
 - Rendered pages: 1
 
@@ -380,6 +398,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 0
 - Missing figure assets: 0
 - Rendered pages: 1
 
@@ -400,6 +419,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 0
 - Missing figure assets: 0
 - Rendered pages: 1
 
@@ -420,5 +440,6 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
+- Published visual-label candidates: 0
 - Missing figure assets: 0
 - Rendered pages: 1
