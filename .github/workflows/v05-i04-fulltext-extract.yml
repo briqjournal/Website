@@ -1,4 +1,4 @@
-name: Extract v05-i04 nonstandard visuals
+name: Verify v05-i04 canonical full text
 
 on:
   pull_request:
@@ -9,79 +9,128 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  extract:
-    if: github.actor != 'github-actions[bot]'
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
           ref: chore/v05-i04-fulltext-canonical
 
-      - name: Install PDF and image tools
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
-
-      - name: Extract only the three nonstandard visual records
+      - name: Validate all 14 canonical locale records
         shell: bash
         run: |
-          set -euo pipefail
-          work="$(mktemp -d)"
-          trap 'rm -rf "$work"' EXIT
-          evidence='tmp/v05-i04-nonstandard-evidence'
-          rm -rf "$evidence"
-          mkdir -p "$evidence"
+          python3 - <<'PY'
+          import json, re
+          from collections import defaultdict
+          from pathlib import Path
 
-          extract_one() {
-            local slug="$1" url="$2"
-            local pdf="$work/$slug.pdf"
-            local raw="$work/$slug-images"
-            local out="public/assets/article-figures/$slug"
-            mkdir -p "$raw" "$out"
-            curl -L --fail --retry 4 --retry-all-errors "$url" -o "$pdf"
-            pdfinfo "$pdf" > "$evidence/$slug.pdfinfo.txt"
-            pdftotext -layout "$pdf" "$evidence/$slug.txt"
-            pdfimages -list "$pdf" > "$evidence/$slug-images.txt"
-            pdfimages -png "$pdf" "$raw/image"
+          root=Path('.')
+          issue=json.loads((root/'content/issues/v05-i04.json').read_text())
+          slugs=issue['articles']
+          assert len(slugs)==14, len(slugs)
+          required={'sections','keywords','footnotes','references','acknowledgements','figures'}
+          paragraph_owners=defaultdict(set)
+          failures=[]
 
-            local best="" best_score=-1
-            : > "$evidence/$slug-candidates.txt"
-            while IFS= read -r file; do
-              local width height colorspace area color_bonus score
-              read -r width height <<< "$(identify -format '%w %h' "$file")"
-              colorspace="$(identify -format '%[colorspace]' "$file")"
-              area=$((width * height))
-              color_bonus=0
-              if [[ ! "$colorspace" =~ ^Gray ]]; then color_bonus=1000000000; fi
-              score=$((area + color_bonus))
-              printf '%s | %sx%s | %s | score=%s\n' "$(basename "$file")" "$width" "$height" "$colorspace" "$score" >> "$evidence/$slug-candidates.txt"
-              if (( width >= 500 && height >= 300 && score > best_score )); then
-                best="$file"; best_score="$score"
-              fi
-            done < <(find "$raw" -maxdepth 1 -type f -name '*.png' | sort)
+          for slug in slugs:
+              for locale in ('en','tr'):
+                  path=root/'content/articles'/slug/'fulltext'/f'{locale}.json'
+                  if not path.exists():
+                      failures.append(f'missing {path}')
+                      continue
+                  try:
+                      data=json.loads(path.read_text())
+                  except Exception as e:
+                      failures.append(f'invalid JSON {path}: {e}')
+                      continue
+                  missing=required-set(data)
+                  if missing:
+                      failures.append(f'{path}: missing keys {sorted(missing)}')
+                  for key in ('sections','keywords','footnotes','references','figures'):
+                      if not isinstance(data.get(key),list):
+                          failures.append(f'{path}: {key} is not a list')
+                  if not isinstance(data.get('acknowledgements'),str):
+                      failures.append(f'{path}: acknowledgements is not a string')
 
-            test -n "$best"
-            rm -rf "$out"
-            mkdir -p "$out"
-            convert "$best" -strip -quality 90 "$out/figure-01.jpg"
-            printf 'selected=%s\n' "$(basename "$best")" >> "$evidence/$slug-candidates.txt"
-            identify -verbose "$out/figure-01.jpg" | sed -n '1,35p' > "$evidence/$slug-selected.txt"
+                  for sec in data.get('sections',[]):
+                      if not isinstance(sec,dict) or not isinstance(sec.get('id'),str) or not isinstance(sec.get('title'),str) or not isinstance(sec.get('paragraphs'),list):
+                          failures.append(f'{path}: malformed section')
+                          continue
+                      for p in sec['paragraphs']:
+                          if not isinstance(p,str) or not p.strip():
+                              failures.append(f'{path}: empty/non-string paragraph')
+                              continue
+                          norm=re.sub(r'\s+',' ',p).strip().lower()
+                          if len(norm)>=120:
+                              paragraph_owners[norm].add((slug,locale))
+
+                  for collection in ('footnotes','references','figures'):
+                      ids=[str(x.get('id')) for x in data.get(collection,[]) if isinstance(x,dict)]
+                      if len(ids)!=len(set(ids)):
+                          failures.append(f'{path}: duplicate {collection} ids')
+
+                  for fig in data.get('figures',[]):
+                      src=fig.get('src','')
+                      cap=fig.get('caption','')
+                      if not src.startswith('/assets/') or not (root/'public'/src.lstrip('/')).exists():
+                          failures.append(f'{path}: missing figure asset {src}')
+                      if not isinstance(cap,str) or not cap.strip():
+                          failures.append(f'{path}: empty figure caption {fig.get("id")}')
+                      if re.fullmatch(r'(?:Visual|Görsel|Figure|Şekil)\s+\d+[.]?',cap.strip(),re.I):
+                          failures.append(f'{path}: generic figure caption {cap}')
+
+          for text,owners in paragraph_owners.items():
+              distinct={s for s,l in owners}
+              if len(distinct)>1:
+                  failures.append(f'cross-record duplicate paragraph across {sorted(distinct)}: {text[:100]}')
+
+          visual_expected={
+              'erzurum-sokaklari-1916',
+              'hasat-2022',
+              'karikatur-molla-nasraddin-dergisinin-7-nisan-1906-tarihli-ilk-kapagi'
           }
+          for slug in visual_expected:
+              for locale in ('en','tr'):
+                  data=json.loads((root/'content/articles'/slug/'fulltext'/f'{locale}.json').read_text())
+                  if len(data.get('figures',[]))!=1:
+                      failures.append(f'{slug} {locale}: expected exactly one verified figure')
 
-          extract_one 'erzurum-sokaklari-1916' 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/PHOTOGRAPH%20ENG.pdf'
-          extract_one 'hasat-2022' 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/PAINTING%20ENG.pdf'
-          extract_one 'karikatur-molla-nasraddin-dergisinin-7-nisan-1906-tarihli-ilk-kapagi' 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/CARTOON%20ENG.pdf'
+          for slug in ('siir-vietnam-savasimiz','siir-iki-kor'):
+              for locale in ('en','tr'):
+                  data=json.loads((root/'content/articles'/slug/'fulltext'/f'{locale}.json').read_text())
+                  body='\n'.join(p for s in data['sections'] for p in s['paragraphs'])
+                  if '  \n' not in body:
+                      failures.append(f'{slug} {locale}: poem line structure missing')
+                  if not data.get('footnotes'):
+                      failures.append(f'{slug} {locale}: published source/translator notes missing')
 
-      - name: Commit targeted image evidence
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f -- tmp/v05-i04-nonstandard-evidence public/assets/article-figures/erzurum-sokaklari-1916 public/assets/article-figures/hasat-2022 public/assets/article-figures/karikatur-molla-nasraddin-dergisinin-7-nisan-1906-tarihli-ilk-kapagi
-          git diff --cached --quiet && exit 0
-          git commit -m 'Extract v05-i04 nonstandard visual assets'
-          git push origin HEAD:chore/v05-i04-fulltext-canonical
+          expected_archives={
+              'yukselen-kuresel-dogunun-yeni-caginda-cinin-genis-cevresel-diplomasisi',
+              'yeni-asya-jeopolitigi-baglaminda-turk-devletleri-teskilati',
+              'turk-devletleri-teskilati-rusya-cin-ve-irani-da-kapsamali',
+              'kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi',
+              'turkiyenin-turk-devletlerinin-butunlesmesindeki-etkin-rolu-baglam-uygulama-ve-etki',
+              'orta-asyanin-tarimsal-gelisiminde-ve-ticaretinde-turkiyenin-aktif-oyun-kuruculugu',
+              'turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin',
+              'turkiyenin-afrika-icin-cok-boyutlu-stratejisi-ozellikler-temel-saikler-ve-gelecek-beklentileri',
+              'yeni-bir-dunyanin-dogusu-tarihin-sonu-mu',
+              'siir-vietnam-savasimiz',
+              'siir-iki-kor',
+              'hasat-2022'
+          }
+          actual={s for s in slugs if (root/'content/articles'/s/'fulltext/en-archive.json').exists()}
+          if actual!=expected_archives:
+              failures.append(f'archive set mismatch: actual={sorted(actual)}')
+
+          if failures:
+              print('\n'.join('FAIL: '+x for x in failures))
+              raise SystemExit(1)
+          print('PASS: 14 records / 28 locale files satisfy the canonical contract.')
+          print('PASS: no cross-record duplicate canonical paragraphs detected.')
+          print('PASS: all referenced figure assets exist and all captions are non-generic.')
+          print('PASS: the 12 expected legacy archives are present and ready for retirement.')
+          PY
