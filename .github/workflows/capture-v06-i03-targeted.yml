@@ -1,0 +1,35 @@
+name: Capture v06-i03 targeted text evidence
+
+on:
+  push:
+    branches:
+      - audit/v06-i03-fulltext-fidelity
+    paths:
+      - tmp/v06-i03-targeted-trigger.txt
+
+permissions:
+  contents: write
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/v06-i03-fulltext-fidelity
+      - name: Install PDF tools
+        run: sudo apt-get update >/dev/null && sudo apt-get install -y poppler-utils >/dev/null
+      - name: Capture pages
+        run: |
+          mkdir -p tmp/v06-i03-targeted
+          curl -L --fail --retry 3 -A 'BRIQ-fidelity-audit/1.0' -o /tmp/bandung-spirit-en.pdf 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/C%C3%9CNEYT%20AKALIN_ENG.pdf'
+          curl -L --fail --retry 3 -A 'BRIQ-fidelity-audit/1.0' -o /tmp/indonesia-en.pdf 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/ZHANG%20QINGYI%20%26%20DU%20DONGHUI_ENG.pdf'
+          pdftotext -layout -f 8 -l 11 /tmp/bandung-spirit-en.pdf tmp/v06-i03-targeted/bandung-spirit-en-p8-11.txt
+          pdftotext -layout -f 12 -l 17 /tmp/indonesia-en.pdf tmp/v06-i03-targeted/indonesia-en-p12-17.txt
+      - name: Commit evidence
+        run: |
+          git config user.name "BRIQ Journal"
+          git config user.email "briq@briqjournal.com"
+          git add -f tmp/v06-i03-targeted
+          git commit -m "chore: capture v06-i03 targeted text evidence"
+          git push origin HEAD:audit/v06-i03-fulltext-fidelity
