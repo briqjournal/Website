@@ -198,7 +198,7 @@ for loc in ("en","tr"):
 slug=prose[3]
 for loc,marker,note in [
 ("en","THE CONFLICT IN WESTERN SAHARA","Sub-headings added by BRIQ."),
-("tr","BATI SAHRA’DAKİ ÇATIŞMA","Ara başlıklar BRIQ tarafından konulmuştur."),
+("tr","AFRİKA’NIN SON SÖMÜRGESİ BATI SAHRA’DA","Ara başlıklar BRIQ tarafından konulmuştur."),
 ]:
     d=load(slug,loc); sec=d["sections"][0]
     joined=" ".join(sec["paragraphs"])
