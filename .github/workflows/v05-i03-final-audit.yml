@@ -1,0 +1,177 @@
+name: Audit final v05-i03 canonical migration
+
+on:
+  push:
+    branches:
+      - chore/v05-i03-fulltext-canonical
+    paths:
+      - '.github/workflows/v05-i03-final-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit all 13 canonical records
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json, re
+          from collections import defaultdict
+          from pathlib import Path
+
+          root=Path(".")
+          issue=json.loads((root/"content/issues/v05-i03.json").read_text())
+          slugs=issue["articles"]
+          assert len(slugs)==13, len(slugs)
+
+          prose=slugs[:8]
+          poems=set(slugs[8:10])
+          visuals=set(slugs[10:])
+          required={"sections","keywords","footnotes","references","acknowledgements","figures"}
+
+          expected_refs={
+            slugs[0]: {"en":32,"tr":32},
+            slugs[1]: {"en":0,"tr":0},
+            slugs[2]: {"en":0,"tr":0},
+            slugs[3]: {"en":45,"tr":45},
+            slugs[4]: {"en":59,"tr":58},
+            slugs[5]: {"en":41,"tr":42},
+            slugs[6]: {"en":0,"tr":0},
+            slugs[7]: {"en":0,"tr":0},
+          }
+          expected_figures={
+            slugs[0]:9, slugs[1]:5, slugs[2]:3, slugs[3]:6,
+            slugs[4]:12, slugs[5]:11, slugs[6]:4, slugs[7]:2,
+            slugs[8]:0, slugs[9]:0, slugs[10]:1, slugs[11]:1, slugs[12]:1,
+          }
+
+          paragraph_owners=defaultdict(list)
+          all_asset_paths=set()
+          summary={}
+
+          def norm(s):
+              return re.sub(r"\s+"," ",s).strip()
+
+          def url_tokens(text):
+              return re.findall(r'https?://[^\s]+', text)
+
+          bad_url_patterns=[
+              re.compile(r"TA-ZARA"),
+              re.compile(r"202303-22"),
+              re.compile(r"china-isset-to"),
+              re.compile(r"china-is-set-tobecome"),
+              re.compile(r"f57697d183b343ffbf-1d730f4ccd2651"),
+              re.compile(r"0c4a41ad20f74ef1a-5e45b6b76b4f775"),
+              re.compile(r"2565a015763c-4398b78f9be00f9753a7"),
+              re.compile(r"f3e98613157749eb89eca6a3491d-044b"),
+          ]
+
+          for slug in slugs:
+              meta=json.loads((root/"content/articles"/slug/"metadata.json").read_text())
+              assert meta["journal"]["volume"]==5 and meta["journal"]["issue"]==3, slug
+              full=root/"content/articles"/slug/"fulltext"
+              assert not (full/"current.json").exists(), slug
+              assert not (full/"saudi-en.json").exists(), slug
+
+              summary[slug]={}
+              for locale in ("en","tr"):
+                  p=full/f"{locale}.json"
+                  assert p.exists(), (slug,locale)
+                  d=json.loads(p.read_text())
+                  assert required.issubset(d), (slug,locale,set(d))
+                  assert isinstance(d["sections"],list)
+                  assert isinstance(d["references"],list)
+                  assert isinstance(d["footnotes"],list)
+                  assert isinstance(d["figures"],list)
+                  assert isinstance(d["keywords"],list)
+
+                  ids=[s["id"] for s in d["sections"]]
+                  assert ids==[f"{locale}-section-{i}" for i in range(1,len(ids)+1)], (slug,locale,ids)
+                  assert len({r["id"] for r in d["references"]})==len(d["references"]), (slug,locale,"duplicate ref IDs")
+                  assert len({n["id"] for n in d["footnotes"]})==len(d["footnotes"]), (slug,locale,"duplicate note IDs")
+                  assert len({f["id"] for f in d["figures"]})==len(d["figures"]), (slug,locale,"duplicate figure IDs")
+
+                  paras=[norm(x) for s in d["sections"] for x in s.get("paragraphs",[]) if norm(x)]
+                  body=" ".join(paras)
+
+                  if slug in prose:
+                      assert len(body)>1200, (slug,locale,len(body))
+                      assert d["sections"], (slug,locale,"no sections")
+                      assert len(d["references"])==expected_refs[slug][locale], (slug,locale,len(d["references"]))
+                  elif slug in poems:
+                      assert len(d["sections"])>=2, (slug,locale,"poem sections")
+                      poem_text="\n".join(x for s in d["sections"][1:] for x in s.get("paragraphs",[]))
+                      assert "\n" in poem_text, (slug,locale,"poetry flattened")
+                  elif slug in visuals:
+                      assert d["sections"], (slug,locale,"context missing")
+
+                  assert len(d["figures"])==expected_figures[slug], (slug,locale,len(d["figures"]))
+                  for fig in d["figures"]:
+                      src=fig.get("src","")
+                      assert src.startswith(f"/assets/article-figures/{slug}/"), (slug,locale,src)
+                      disk=root/"public"/src.lstrip("/")
+                      assert disk.is_file() and disk.stat().st_size>1000, (slug,locale,src)
+                      assert norm(fig.get("caption","")), (slug,locale,"empty figure caption")
+                      all_asset_paths.add(src)
+
+                  forbidden=("How to cite:","Atıf:","B R I q","Volume 5 Issue 3","Cilt 5 Sayı 3")
+                  for marker in forbidden:
+                      assert marker not in body, (slug,locale,"front matter leakage",marker)
+
+                  local_seen=set()
+                  for para in paras:
+                      if len(para)>=160:
+                          assert para not in local_seen, (slug,locale,"duplicate paragraph",para[:100])
+                          local_seen.add(para)
+                          paragraph_owners[(locale,para)].append(slug)
+
+                  for ref in d["references"]:
+                      text=ref["text"]
+                      assert "\n" not in text, (slug,locale,ref["id"])
+                      assert not text.startswith("http"), (slug,locale,"standalone URL reference",ref)
+                      for rx in bad_url_patterns:
+                          assert not rx.search(text), (slug,locale,"line-wrap URL corruption",ref)
+                      for u in url_tokens(text):
+                          assert "adresinden" not in u and "alındı" not in u, (slug,locale,"suffix glued into URL",u)
+
+                  summary[slug][locale]={
+                      "sections":len(d["sections"]),
+                      "paragraphs":len(paras),
+                      "references":len(d["references"]),
+                      "footnotes":len(d["footnotes"]),
+                      "figures":len(d["figures"]),
+                  }
+
+          cross=[]
+          for (locale,para),owners in paragraph_owners.items():
+              uniq=sorted(set(owners))
+              if len(uniq)>1:
+                  cross.append((locale,uniq,para[:160]))
+          assert not cross, cross[:20]
+
+          # Interview-specific recovery anchors.
+          sayed_en=json.loads((root/"content/articles"/slugs[1]/"fulltext/en.json").read_text())
+          assert sayed_en["sections"][0]["title"].startswith("How does/how do you Pakistan view China"), "Sayed opening question"
+          assert sayed_en["sections"][0]["paragraphs"][0].startswith("Mushahid Hussain Sayed:"), "Sayed opening answer"
+          akram_en=json.loads((root/"content/articles"/slugs[6]/"fulltext/en.json").read_text())
+          akram_tr=json.loads((root/"content/articles"/slugs[6]/"fulltext/tr.json").read_text())
+          assert len(akram_en["sections"])==5 and len(akram_tr["sections"])==5
+          assert len(akram_en["footnotes"])==1 and len(akram_tr["footnotes"])==1
+
+          # Locale-specific published bibliography difference: EN Africa has NL China Embassy; TR does not.
+          africa_en=json.loads((root/"content/articles"/slugs[4]/"fulltext/en.json").read_text())
+          africa_tr=json.loads((root/"content/articles"/slugs[4]/"fulltext/tr.json").read_text())
+          assert any(r["text"].startswith("NL China Embassy.") for r in africa_en["references"])
+          assert not any(r["text"].startswith("NL China Embassy.") for r in africa_tr["references"])
+
+          print(json.dumps(summary,ensure_ascii=False,indent=2))
+          print("V05_I03_FINAL_CANONICAL_AUDIT_OK")
+          PY
+          git diff --check
