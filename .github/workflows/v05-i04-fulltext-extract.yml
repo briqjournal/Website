@@ -32,39 +32,32 @@ jobs:
           work="$(mktemp -d)"
           trap 'rm -rf "$work"' EXIT
 
-          extract_largest_pdfimage() {
-            local pdf="$1" page="$2" out="$3" prefix="$4"
-            rm -f "$work/${prefix}"-*.png
-            pdfimages -f "$page" -l "$page" -png "$pdf" "$work/${prefix}"
-            local best="" best_area=0
-            shopt -s nullglob
-            for img in "$work/${prefix}"-*.png; do
-              read -r width height < <(identify -format '%w %h' "$img")
-              area=$((width * height))
-              echo "$prefix candidate $(basename "$img"): ${width}x${height} area=${area} colorspace=$(identify -format '%[colorspace]' "$img")"
-              if (( width >= 400 && height >= 250 && area > best_area )); then
-                best="$img"
-                best_area="$area"
-              fi
-            done
-            test -n "$best"
+          crop_render() {
+            local pdf="$1" page="$2" x_pct="$3" y_pct="$4" w_pct="$5" h_pct="$6" out="$7" tag="$8"
+            pdftoppm -f "$page" -l "$page" -singlefile -jpeg -r 180 "$pdf" "$work/$tag"
+            read -r width height < <(identify -format '%w %h' "$work/$tag.jpg")
+            x=$((width * x_pct / 100))
+            y=$((height * y_pct / 100))
+            cw=$((width * w_pct / 100))
+            ch=$((height * h_pct / 100))
+            echo "$tag page render: ${width}x${height}; crop=${cw}x${ch}+${x}+${y}"
             mkdir -p "$(dirname "$out")"
-            convert "$best" -strip -quality 90 "$out"
+            convert "$work/$tag.jpg" -crop "${cw}x${ch}+${x}+${y}" +repage -strip -quality 90 "$out"
             identify "$out"
           }
 
           tatar_url='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Ersin%20Tatar_C5S4.pdf'
-          carbon_url='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/B%C4%B0rol%20K%C4%B1lk%C4%B1%C5%9F_C5S4.pdf'
+          carbon_url='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/B%C4%B0rol%20K%C4%B1lk%C4%B1%C5%9F%20ENG.pdf'
           curl -L --fail --retry 4 --retry-all-errors "$tatar_url" -o "$work/tatar.pdf"
           curl -L --fail --retry 4 --retry-all-errors "$carbon_url" -o "$work/carbon.pdf"
 
-          extract_largest_pdfimage \
-            "$work/tatar.pdf" 5 \
+          # Physical page 5: map itself, excluding surrounding prose and the separate caption box.
+          crop_render "$work/tatar.pdf" 5 6 43 88 42 \
             'public/assets/article-figures/kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi/figure-02.jpg' \
             tatar
 
-          extract_largest_pdfimage \
-            "$work/carbon.pdf" 6 \
+          # Physical page 6: Figure 3 chart itself, excluding surrounding prose and the separate caption box.
+          crop_render "$work/carbon.pdf" 6 15 14 70 35 \
             'public/assets/article-figures/turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin/figure-03.jpg' \
             carbon
 
