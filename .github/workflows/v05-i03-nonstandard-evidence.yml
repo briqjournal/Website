@@ -103,7 +103,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -f -- tmp/v05-i03-nonstandard-evidence
-          git diff --cached --check
           git commit -m 'Capture v05-i03 nonstandard PDF evidence'
           git pull --rebase origin chore/v05-i03-fulltext-canonical
           git push origin HEAD:chore/v05-i03-fulltext-canonical
