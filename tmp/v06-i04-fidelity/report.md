@@ -1,0 +1,337 @@
+# Full-text fidelity audit: v06-i04
+
+## rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve [en]
+- PDF pages: 26
+- Paragraph match ratio: 0.986
+- Heading match ratio: 0.636
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 1
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 2
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 9
+- Missing figure assets: 0
+- Rendered pages: 1, 23, 26
+
+## rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve [tr]
+- PDF pages: 26
+- Paragraph match ratio: 0.942
+- Heading match ratio: 0.727
+- Reference match ratio: 0.971
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 4
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 2
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 9
+- Missing figure assets: 0
+- Rendered pages: 1, 3, 5, 7, 16, 26
+
+## brics-terore-karsi-mucadele-stratejisi [en]
+- PDF pages: 4
+- Paragraph match ratio: 1.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 3
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 2
+- Missing figure assets: 0
+- Rendered pages: 1, 4
+
+## brics-terore-karsi-mucadele-stratejisi [tr]
+- PDF pages: 4
+- Paragraph match ratio: 1.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 2
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 2
+- Missing figure assets: 0
+- Rendered pages: 1, 4
+
+## sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan [en]
+- PDF pages: 4
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 1
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 4
+
+## sanghay-isbirligi-orgutu-devlet-baskanlari-konseyinin-terorizm-ayrilikcilik-ve-asiriciliga-yol-acan [tr]
+- PDF pages: 4
+- Paragraph match ratio: 0.95
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 2
+- Non-monotonic paragraph assignments: 1
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 3, 4
+
+## dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi [en]
+- PDF pages: 32
+- Paragraph match ratio: 0.958
+- Heading match ratio: 0.727
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 2
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 8
+- Missing figure assets: 0
+- Rendered pages: 1, 4, 13, 32
+
+## dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi [tr]
+- PDF pages: 32
+- Paragraph match ratio: 0.865
+- Heading match ratio: 0.545
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 7
+- Non-monotonic paragraph assignments: 1
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 9
+- Missing figure assets: 0
+- Rendered pages: 1, 8, 10, 11, 13, 18, 20, 23, 24, 28, 32
+
+## genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme [en]
+- PDF pages: 22
+- Paragraph match ratio: 0.98
+- Heading match ratio: 0.714
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 1
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 8
+- Missing figure assets: 0
+- Rendered pages: 1, 11, 22
+
+## genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme [tr]
+- PDF pages: 22
+- Paragraph match ratio: 0.932
+- Heading match ratio: 0.571
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 3
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 8
+- Missing figure assets: 0
+- Rendered pages: 1, 8, 9, 11, 22
+
+## wape-18-yillik-forumu [en]
+- PDF pages: 11
+- Paragraph match ratio: 0.981
+- Heading match ratio: 0.8
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 1
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 4
+- Missing figure assets: 0
+- Rendered pages: 1, 3, 11
+
+## wape-18-yillik-forumu [tr]
+- PDF pages: 11
+- Paragraph match ratio: 0.981
+- Heading match ratio: 0.4
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 1
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 4
+- Missing figure assets: 0
+- Rendered pages: 1, 3, 11
+
+## hallac-siir [en]
+- PDF pages: 2
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 2
+
+## hallac-siir [tr]
+- PDF pages: 2
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 2
+
+## doksan-yedinci-sonnet-siir [en]
+- PDF pages: 2
+- Paragraph match ratio: 1.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 2
+
+## doksan-yedinci-sonnet-siir [tr]
+- PDF pages: 2
+- Paragraph match ratio: 1.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 2
