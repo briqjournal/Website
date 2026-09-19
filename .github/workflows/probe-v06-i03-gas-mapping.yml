@@ -1,0 +1,44 @@
+name: Probe v06-i03 gas figure mapping
+
+on:
+  push:
+    branches:
+      - audit/v06-i03-fulltext-fidelity
+    paths:
+      - tmp/v06-i03-gas-probe-trigger.txt
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/v06-i03-fulltext-fidelity
+      - name: Install PDF and image tools
+        run: sudo apt-get update >/dev/null && sudo apt-get install -y poppler-utils imagemagick >/dev/null
+      - name: Compare production assets to official PDF images
+        run: |
+          slug='yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar'
+          curl -L --fail --retry 3 -A 'BRIQ-fidelity-audit/1.0' -o /tmp/gas-en.pdf 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/G.%20%C3%87ifci%2C%20S.%20S.%20%C3%87elebi%2C%20M.%20Parlaktuna%2C%20A.%20Ka%C3%A7ar%2C%20S.%20O.%20G%C3%BCnayd%C4%B1n_ENG.pdf'
+          curl -L --fail --retry 3 -A 'BRIQ-fidelity-audit/1.0' -o /tmp/gas-tr.pdf 'https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-06/G.%20%C3%87ifci%2C%20S.%20S.%20%C3%87elebi%2C%20M.%20Parlaktuna%2C%20A.%20Ka%C3%A7ar%2C%20S.%20O.%20G%C3%BCnayd%C4%B1n_TR.pdf'
+          mkdir -p /tmp/enimgs /tmp/trimgs
+          pdfimages -all /tmp/gas-en.pdf /tmp/enimgs/img >/dev/null
+          pdfimages -all /tmp/gas-tr.pdf /tmp/trimgs/img >/dev/null
+          echo '=== PRODUCTION ==='
+          for f in public/assets/article-figures/$slug/*; do
+            printf '%s\t' "$(basename "$f")"
+            identify -format '%wx%h %m\t' "$f"
+            sha256sum "$f" | cut -d' ' -f1
+          done
+          echo '=== EN PDF EXTRACTED ==='
+          for f in /tmp/enimgs/*; do
+            printf '%s\t' "$(basename "$f")"
+            identify -format '%wx%h %m\t' "$f" 2>/dev/null || printf 'unknown\t'
+            sha256sum "$f" | cut -d' ' -f1
+          done
+          echo '=== TR PDF EXTRACTED ==='
+          for f in /tmp/trimgs/*; do
+            printf '%s\t' "$(basename "$f")"
+            identify -format '%wx%h %m\t' "$f" 2>/dev/null || printf 'unknown\t'
+            sha256sum "$f" | cut -d' ' -f1
+          done
