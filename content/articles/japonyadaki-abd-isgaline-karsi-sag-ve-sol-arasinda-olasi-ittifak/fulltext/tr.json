@@ -105,5 +105,21 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak/figure-01.jpg",
+      "caption": "29 Aralık 2024 tarihinde çekilen hava fotoğrafında, Okinawa’daki ABD’nin Japonya Kuvvetleri’nin Makiminato Hizmet Alanı ve Futenma Hava Üssü görülüyor (Fotoğraf: CGTN, 2025)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak/figure-02.jpg",
+      "caption": "Şekil: JKP’nin A-B bloğundan A-C bloğuna stratejik geçişi (Şekil: Onishi, 2026)"
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak/figure-03.jpg",
+      "caption": "21 Mayıs 2023'te Japonya'nın Hiroşima kentinde G7 Zirvesi'ni protesto etmek için toplanan halk (Fotoğraf: Xinhua, 2023)."
+    }
+  ]
 }

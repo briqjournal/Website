@@ -112,5 +112,31 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0/figure-01.jpg",
+      "caption": "“Marksist bilimsel teorinin rehberliğine sahip olmak, partimizin sağlam inancının ve kararlılığının temelidir ve tarihsel inisiyatifi kavramamızı sağlar” (Fotoğraf: Xinhua, 2022)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0/figure-02.jpg",
+      "caption": "“Yüksek düzeyli bir sosyalist piyasa ekonomisi sistemi, kamu sektörü ekonomisine dayanmalı ve Komünist Parti önderliğindeki işçi-köylü ittifakı ve kamu sektörü ekonomisine dayalı devlet yönetimiyle sınırlandırılmalıdır” (Çizim: VCG/CGTN, 2025)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0/figure-03.jpg",
+      "caption": "“Çin tarzı çağdaşlaşmanın iki temel anlam içerdiğini unutmamalıyız: Bilimsel sosyalizm ve Çin’in ulusal koşulları.” Delegeler, 22 Ekim 2022’de Çin Komünist Partisi’nin 20. Ulusal Kongresi’nin kapanış oturumunda (Fotoğraf: Xinhua, 2022)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0/figure-04.jpg",
+      "caption": "“Çağdaş dünya kapitalizminin halen emperyalizm aşamasında olduğunu ve uluslararası ekonomik ilişkilerin sosyalist ekonomik sistem ile çağdaş kapitalist ekonomik sistem arasındaki karşıtlığı içerdiğini tam olarak kabul etmeliyiz” (Fotoğraf: WEF, 2025)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0/figure-05.jpg",
+      "caption": "“Ekonomik açılımın genişletilmesinin her zaman ulusal ekonominin bağımsızlığına ve kendi kendine yeterliliğine bağlı olduğu ve ona hizmet ettiği vurgulanmalıdır” (Çizim: Liu Xiangya/Global Times, 2025)."
+    }
+  ]
 }

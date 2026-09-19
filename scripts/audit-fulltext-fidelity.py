@@ -89,7 +89,8 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
     ft_path=root/"content"/"articles"/slug/"fulltext"/f"{loc}.json"
     j=json.loads(ft_path.read_text(encoding="utf-8"))
     url=(meta.get("urls") or {}).get("pdfEn" if loc=="en" else "pdfTr")
-    if not url: raise RuntimeError(f"Missing official PDF URL for {slug} {loc}")
+    if not url:
+        return {"slug":slug,"locale":loc,"status":"article_pdf_unavailable","pdf_url":None}
     work=out_root/slug/loc; pdf=work/f"{slug}-{loc}.pdf"
     download(url,pdf)
     (work/"raw.txt").write_text(run(["pdftotext","-raw",str(pdf),"-"]), encoding="utf-8")
@@ -156,6 +157,17 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
         t=x["text"].strip()
         if re.match(r"^(keywords?|anahtar\s+kelimeler)\s*:",t,re.I) or re.match(r"^(how\s+to\s+cite|atıf)\s*:",t,re.I):
             leakage.append({"section":x["section"],"paragraph":x["paragraph"],"sample":t[:240]})
+    visual_label_re=re.compile(r"\b(?:photo|photograph|figure|fig\.?|table|chart|map|illustration|cartoon|fotoğraf|şekil|tablo|grafik|harita|çizim|karikatür)\s*(?::|\d)",re.I)
+    visual_label_candidates=[]
+    seen_visual=set()
+    for page_no,page_text in enumerate(page_texts,1):
+        for line in page_text.splitlines():
+            line=" ".join(line.split())
+            if not line or len(line)>500 or not visual_label_re.search(line): continue
+            key=(page_no,norm(line))
+            if key in seen_visual: continue
+            seen_visual.add(key)
+            visual_label_candidates.append({"page":page_no,"text":line[:500]})
     pdf_tokens=sum(len(tokens(x)) for x in page_texts)
     suspicious_pages={1,len(page_texts)}
     for x in unmatched[:30]: suspicious_pages.add(x["page"])
@@ -190,6 +202,7 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
       "metadata_leakage_candidates":leakage,
       "figure_caption_matches":fig_rows,
       "figure_captions_low_match":[x for x in fig_rows if x["score"]<0.24],
+      "published_visual_label_candidates":visual_label_candidates,
       "missing_figure_assets":missing_assets,
       "rendered_pages":sorted(suspicious_pages)
     }
@@ -210,7 +223,10 @@ def main():
     (out/"report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     lines=[f"# Full-text fidelity audit: {a.issue}",""]
     for r in results:
-        lines += [f"## {r['slug']} [{r['locale']}]",f"- PDF pages: {r['pdf_pages']}",f"- Paragraph match ratio: {r['paragraph_match_ratio']}",f"- Heading match ratio: {r['heading_match_ratio']}",f"- Reference match ratio: {r['reference_match_ratio']}",f"- Footnote match ratio: {r['footnote_match_ratio']}",f"- Figure-caption match ratio: {r['figure_caption_match_ratio']}",f"- Unmatched paragraphs: {len(r['unmatched_paragraphs'])}",f"- Non-monotonic paragraph assignments: {len(r['nonmonotonic_assignments'])}",f"- Duplicate canonical paragraphs: {len(r['duplicate_paragraphs'])}",f"- Duplicate footnote IDs: {len(r['duplicate_footnote_ids'])}",f"- Empty sections: {len(r['empty_sections'])}",f"- One-paragraph sections: {len(r['short_sections'])}",f"- Metadata leakage candidates: {len(r['metadata_leakage_candidates'])}",f"- Turkish contamination candidates: {len(r['turkish_contamination_candidates'])}",f"- Cross-record title candidates: {len(r['cross_record_title_candidates'])}",f"- Low-match figure captions: {len(r['figure_captions_low_match'])}",f"- Missing figure assets: {len(r['missing_figure_assets'])}",f"- Rendered pages: {', '.join(map(str,r['rendered_pages']))}",""]
+        if r.get("status") == "article_pdf_unavailable":
+            lines += [f"## {r['slug']} [{r['locale']}]", "- Article-level official PDF unavailable; requires issue-level or other authoritative publication evidence.", ""]
+            continue
+        lines += [f"## {r['slug']} [{r['locale']}]",f"- PDF pages: {r['pdf_pages']}",f"- Paragraph match ratio: {r['paragraph_match_ratio']}",f"- Heading match ratio: {r['heading_match_ratio']}",f"- Reference match ratio: {r['reference_match_ratio']}",f"- Footnote match ratio: {r['footnote_match_ratio']}",f"- Figure-caption match ratio: {r['figure_caption_match_ratio']}",f"- Unmatched paragraphs: {len(r['unmatched_paragraphs'])}",f"- Non-monotonic paragraph assignments: {len(r['nonmonotonic_assignments'])}",f"- Duplicate canonical paragraphs: {len(r['duplicate_paragraphs'])}",f"- Duplicate footnote IDs: {len(r['duplicate_footnote_ids'])}",f"- Empty sections: {len(r['empty_sections'])}",f"- One-paragraph sections: {len(r['short_sections'])}",f"- Metadata leakage candidates: {len(r['metadata_leakage_candidates'])}",f"- Turkish contamination candidates: {len(r['turkish_contamination_candidates'])}",f"- Cross-record title candidates: {len(r['cross_record_title_candidates'])}",f"- Low-match figure captions: {len(r['figure_captions_low_match'])}",f"- Published visual-label candidates: {len(r['published_visual_label_candidates'])}",f"- Missing figure assets: {len(r['missing_figure_assets'])}",f"- Rendered pages: {', '.join(map(str,r['rendered_pages']))}",""]
     (out/"report.md").write_text("\n".join(lines),encoding="utf-8")
     print((out/"report.md").read_text(encoding="utf-8"))
 

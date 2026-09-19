@@ -107,5 +107,21 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak/figure-01.jpg",
+      "caption": "An aerial photo shows the United States Forces Japan’s Makiminato Service Area and Air Station Futenma in Okinawa Prefecture, December 29, 2024 (Photo: CGTN, 2025)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak/figure-02.jpg",
+      "caption": "Figure: JCP’s Strategic Shift from the A-B bloc to the A-C bloc (Figure: Onishi, 2026)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/japonyadaki-abd-isgaline-karsi-sag-ve-sol-arasinda-olasi-ittifak/figure-03.jpg",
+      "caption": "People rally in a protest against the G7 Summit in Hiroshima, Japan, May 21, 2023 (Photo: Xinhua, 2023)."
+    }
+  ]
 }
