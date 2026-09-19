@@ -1,4 +1,4 @@
-name: Rebuild v05-i04 prose from individual PDFs
+name: Recover missing v05-i04 first-nine figures
 
 on:
   pull_request:
@@ -12,164 +12,75 @@ permissions:
   contents: write
 
 jobs:
-  extract:
+  recover:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: chore/v05-i04-fulltext-canonical
 
-      - name: Install PDF extraction tools
+      - name: Install targeted image tools
         run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
 
-      - name: Rebuild nine prose records from official individual PDFs
+      - name: Recover only the two confirmed missing first-nine figures
         shell: bash
         run: |
           set -euo pipefail
-          python3 <<'PY'
-          import json
-          import os
-          import re
-          import shutil
-          import subprocess
-          from pathlib import Path
+          work="$(mktemp -d)"
+          trap 'rm -rf "$work"' EXIT
 
-          issue = json.loads(Path("content/issues/v05-i04.json").read_text(encoding="utf-8"))
-          slugs = issue["articles"][:9]
-          assert len(slugs) == 9
-          base_script = Path("scripts/extract-current-issue-fulltext.mjs").read_text(encoding="utf-8")
-          tmp = Path("tmp")
-          pdf_dir = tmp / "pdfs"
-          pdf_dir.mkdir(parents=True, exist_ok=True)
+          extract_largest_pdfimage() {
+            local pdf="$1" page="$2" out="$3" prefix="$4"
+            rm -f "$work/${prefix}"-*.png
+            pdfimages -f "$page" -l "$page" -png "$pdf" "$work/${prefix}"
+            local best="" best_area=0
+            shopt -s nullglob
+            for img in "$work/${prefix}"-*.png; do
+              read -r width height < <(identify -format '%w %h' "$img")
+              area=$((width * height))
+              echo "$prefix candidate $(basename "$img"): ${width}x${height} area=${area} colorspace=$(identify -format '%[colorspace]' "$img")"
+              if (( width >= 400 && height >= 250 && area > best_area )); then
+                best="$img"
+                best_area="$area"
+              fi
+            done
+            test -n "$best"
+            mkdir -p "$(dirname "$out")"
+            convert "$best" -strip -quality 90 "$out"
+            identify "$out"
+          }
 
-          for slug in slugs:
-              print(f"=== TARGET {slug} ===", flush=True)
-              meta = json.loads((Path("content/articles") / slug / "metadata.json").read_text(encoding="utf-8"))
-              en_url = meta["urls"]["pdfEn"]
-              tr_url = meta["urls"]["pdfTr"]
-              en_pdf = pdf_dir / "v5i4-en.pdf"
-              tr_pdf = pdf_dir / "v5i4-tr.pdf"
+          tatar_url='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/Ersin%20Tatar_C5S4.pdf'
+          carbon_url='https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-09/B%C4%B0rol%20K%C4%B1lk%C4%B1%C5%9F_C5S4.pdf'
+          curl -L --fail --retry 4 --retry-all-errors "$tatar_url" -o "$work/tatar.pdf"
+          curl -L --fail --retry 4 --retry-all-errors "$carbon_url" -o "$work/carbon.pdf"
 
-              subprocess.run(["curl", "-L", "--fail", "--retry", "4", "--retry-all-errors", en_url, "-o", str(en_pdf)], check=True)
-              subprocess.run(["curl", "-L", "--fail", "--retry", "4", "--retry-all-errors", tr_url, "-o", str(tr_pdf)], check=True)
+          extract_largest_pdfimage \
+            "$work/tatar.pdf" 5 \
+            'public/assets/article-figures/kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi/figure-02.jpg' \
+            tatar
 
-              def pages(pdf):
-                  out = subprocess.check_output(["pdfinfo", str(pdf)], text=True)
-                  for line in out.splitlines():
-                      if line.startswith("Pages:"):
-                          return int(line.split(":", 1)[1].strip())
-                  raise RuntimeError(f"No page count for {pdf}")
+          extract_largest_pdfimage \
+            "$work/carbon.pdf" 6 \
+            'public/assets/article-figures/turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin/figure-03.jpg' \
+            carbon
 
-              last = max(pages(en_pdf), pages(tr_pdf))
-              if slug == "turk-devletleri-teskilati-rusya-cin-ve-irani-da-kapsamali":
-                  record = f'''{{
-              slug: "{slug}",
-              pages: [1, {last}],
-              body: {{ tr: 1, en: 1 }},
-              startContains: {{
-                tr: "Dünyada, özellikle son 10-15 yıldır",
-                en: "In the past 10-15 years",
-              }},
-              skipFirstPortrait: true,
-            }}'''
-              elif slug == "yeni-asya-jeopolitigi-baglaminda-turk-devletleri-teskilati":
-                  record = f'''{{
-              slug: "{slug}",
-              pages: [1, {last}],
-              body: {{ tr: 1, en: 1 }},
-              start: {{ tr: "Giriş", en: "Giriş" }},
-              skipFirstPortrait: true,
-            }}'''
-              else:
-                  record = f'''{{
-              slug: "{slug}",
-              pages: [1, {last}],
-              body: {{ tr: 1, en: 1 }},
-              start: {{ tr: "Giriş", en: "Introduction" }},
-              skipFirstPortrait: true,
-            }}'''
-
-              pattern = r'const issueFiveFourRecords = \[[\s\S]*?\n\];\n\nconst issueConfigs = \{'
-              replacement = "const issueFiveFourRecords = [\n  " + record + ",\n];\n\nconst issueConfigs = {"
-              patched, count = re.subn(pattern, replacement, base_script, count=1)
-              if count != 1:
-                  raise RuntimeError("Could not patch issueFiveFourRecords")
-              patched = patched.replace(
-                  'records: issueFiveFourRecords,\n    sourceLocale: { tr: "tr", en: "en" },\n    extractImages: false,',
-                  'records: issueFiveFourRecords,\n    sourceLocale: { tr: "tr", en: "en" },\n    extractImages: true,',
-                  1,
-              )
-
-              target_script = tmp / "extract-v05-i04-target.mjs"
-              target_script.write_text(patched, encoding="utf-8")
-              subprocess.run(["node", str(target_script), "5-4"], check=True)
-
-              root = Path("content/articles") / slug / "fulltext"
-              current = root / "current.json"
-              data = json.loads(current.read_text(encoding="utf-8"))
-              for locale in ("en", "tr"):
-                  payload = data[locale]
-                  (root / f"{locale}.json").write_text(
-                      json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-                      encoding="utf-8",
-                  )
-              current.unlink()
-              subprocess.run(["git", "checkout", "--", "content/catalog.json"], check=True)
-
-          shutil.rmtree(pdf_dir, ignore_errors=True)
-          (tmp / "extract-v05-i04-target.mjs").unlink(missing_ok=True)
-          PY
-
-      - name: Validate rebuilt prose candidates
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 <<'PY'
-          import json
-          from pathlib import Path
-
-          issue = json.loads(Path("content/issues/v05-i04.json").read_text(encoding="utf-8"))
-          required = {"sections", "keywords", "footnotes", "references", "acknowledgements", "figures"}
-          for slug in issue["articles"][:9]:
-              for locale in ("en", "tr"):
-                  path = Path("content/articles") / slug / "fulltext" / f"{locale}.json"
-                  data = json.loads(path.read_text(encoding="utf-8"))
-                  assert required.issubset(data), (slug, locale, set(data))
-                  assert isinstance(data["sections"], list) and data["sections"], (slug, locale)
-                  body = " ".join(p for s in data["sections"] for p in s.get("paragraphs", []))
-                  assert len(body) > 700, (slug, locale, len(body))
-                  for i, section in enumerate(data["sections"], 1):
-                      assert section["id"] == f"{locale}-section-{i}", (slug, locale, section["id"])
-                  assert not (Path("content/articles") / slug / "fulltext" / "current.json").exists()
-              print(slug, "OK")
-          PY
-
-      - name: Commit rebuilt prose candidates
+      - name: Commit recovered assets
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          python3 <<'PY'
-          import json
-          import subprocess
-          from pathlib import Path
-
-          issue = json.loads(Path("content/issues/v05-i04.json").read_text(encoding="utf-8"))
-          paths = []
-          for slug in issue["articles"][:9]:
-              paths.extend([
-                  f"content/articles/{slug}/fulltext/en.json",
-                  f"content/articles/{slug}/fulltext/tr.json",
-              ])
-              fig = Path("public/assets/article-figures") / slug
-              if fig.exists():
-                  paths.append(str(fig))
-          subprocess.run(["git", "add", "--", *paths], check=True)
-          PY
-          git commit -m 'Rebuild v05-i04 prose from individual official PDFs'
+          git add -- \
+            public/assets/article-figures/kuzey-kibris-turk-cumhuriyetinin-turk-devletleri-teskilatina-katiliminin-islevi/figure-02.jpg \
+            public/assets/article-figures/turk-devletleri-teskilati-ve-kusak-yol-birlikteliginde-yeni-bir-karbon-piyasasinin-olusturulmasinin/figure-03.jpg
+          if git diff --cached --quiet; then
+            echo 'No asset changes.'
+            exit 0
+          fi
+          git commit -m 'Recover missing v05-i04 first-nine figure assets'
           git pull --rebase origin chore/v05-i04-fulltext-canonical
           git push origin HEAD:chore/v05-i04-fulltext-canonical
