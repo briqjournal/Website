@@ -1,4 +1,5 @@
 name: Finalize v05-i04 migration cleanup
+# one-time cleanup after verified replacement
 
 on:
   pull_request:
