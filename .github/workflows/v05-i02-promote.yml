@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Promote and validate repaired prose records
+      - name: Promote and validate repaired prose records v2
         run: python3 tmp/v05-i02-promote.py
       - name: Commit prose canonical batch
         shell: bash
