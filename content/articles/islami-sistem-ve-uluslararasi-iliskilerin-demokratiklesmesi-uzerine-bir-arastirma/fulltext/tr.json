@@ -506,5 +506,56 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/figure-01-tr.jpg",
+      "caption": "“İslami Sistem uzun bir süre istikrarlı bir şekilde var olmuştur”. İslam’ın yayılışı haritası (Harita: OER Project, t.y.)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/figure-02-tr.jpg",
+      "caption": "“İslam imparatorluklarının varlığı, çok sayıda kültür merkezini birbirine bağlayarak daha büyük kültürel bölgeler oluşturmak üzere çok sayıda kültürün bir arada yaşamasını ve karşılıklı alışverişini sağlamıştır”. Günümüzde İslam Dünyası (Harita: Oxford University, t.y.)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/figure-03-tr.jpg",
+      "caption": "“1529’da ve 1683’te, Osmanlı birlikleri Viyana kapılarına dayanarak, Avrupa’da yaygın korku yaymıştır. Ancak, İmparatorluğun zirvesi aynı zamanda uzun vadeli düşüşünün başlangıcına da işaret etmiştir”. 1683 kuşatmasından bir sahne (Fotoğraf: Warhistorynetwork, 2002)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/figure-04-tr.jpg",
+      "caption": "“Karlofça Antlaşması bir dönüm noktası olmuş, Osmanlı İmparatorluğunun Avrupa güçleri koalisyonuna toprak kaybettiği ilk önemli örnek olmuştur” (Fotoğraf: Wikimedia Commons, t.y.)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/figure-05-tr.png",
+      "caption": "“Osmanlı İmparatorluğu içindeki bağımsızlık hareketleri ivme kazandı ve ‘Avrupa'nın Hasta Adamı’nı iç isyanlar ve dış istilalarla birlikte derin bir krize sürükledi”. 1. Dünya Savaşı sırasında Osmanlı İmparatorluğu'na karşı Arap İsyanı'nda yer alan Yerli Bedevi Deve Süvarileri üyeleri (Fotoğraf: History Collection, 2017)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/figure-06-tr.jpg",
+      "caption": "İslam İşbirliği Teşkilatı gibi kuruluşlar, İslam ülkelerinin küresel meselelerde ortak tutumlar sergilemelerine ve çıkarlarını korumalarına olanak tanıyan önemli bir rol oynamaktadır. Olağanüstü Arap ve İslam Zirvesi 11 Kasım 2024, Riyad, Suudi Arabistan (Fotoğraf: OIC, 2024)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/figure-07-tr.jpg",
+      "caption": "“İslam içinde bir kavram olarak yeniden canlanma (Tajdid), İslam tarihinde yerleşik bir gelenektir ve Müslüman toplumun inancın özgün kaynaklarına periyodik olarak dönmesi gerektiği inancını yansıtır” (Fotoğraf: Politics & Society Institute, 2025)."
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/figure-08-tr.jpg",
+      "caption": "“OAPEC’in ‘petrol silahını’ kullanması, Batı ülkelerinin 1973-197’teki ekonomik krizini doğrudan etkilemek suretiyle, küresel ekonomi ve uluslararası siyasi yapı üzerinde derin bir etki yarattı” (Fotoğraf: Qatar News Agency, 2024)."
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/figure-09-tr.jpg",
+      "caption": "“Batı, İsrail’in Arap komşularıyla çatışmalarında sarsılmaz destek sağlamıştır”. 19 Mart 2025'te Gazze Şehri'nin güneyindeki Sabra mahallesinde İsrail'in bombardımanı sonucu en az 25 Filistinli öldü ve düzinelercesi yaralandı (Fotoğraf: China Daily, 2025)."
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma/figure-10-tr.jpg",
+      "caption": "“2025’te İran’a yönelik potansiyel bir ABD-İsrail askeri saldırısı, Ortadoğu’daki Amerikan üstünlüğüne yönelik son büyük bölgesel meydan okuyucuyu ortadan kaldırma girişimi olarak görülebilir”. İran’ın başkenti Tahran yakınlarında İsrail’in saldırısı sonucu alev alan bir petrol depolama tesisi, 15 Haziran 2025 (Fotoğraf: China Daily, 2025)."
+    }
+  ]
 }

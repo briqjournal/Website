@@ -40,5 +40,16 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/brics-terore-karsi-mucadele-stratejisi/figure-01-tr.jpg",
+      "caption": "BRICS 16. Zirve Toplantısı 22-24 Ekim 2024’te Rusya'nın Kazan şehrinde “Adil Küresel Kalkınma ve Güvenlik için Çok Taraflılığın Güçlendirilmesi” teması altında gerçekleştirilmiştir (Fotoğraf: bric.br, 2025)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/brics-terore-karsi-mucadele-stratejisi/figure-02-tr.jpg",
+      "caption": "Rio de Janeiro'da düzenlenen 2025 Liderler Zirvesi'nden bir görüntü (Fotoğraf: Isabela Castilho/BRICS Brasil, 2025)."
+    }
+  ]
 }

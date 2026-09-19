@@ -259,5 +259,51 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-01-tr.jpg",
+      "caption": "“AB, ABD ve Japonya gibi gelişmiş ekonomilerin, iklim değişikliğini ele alma kisvesi altında kendileri için elverişli ticaret kuralları formüle ederken, pazar hâkimiyetlerini kullanabilmekte ve diğer ülkeleri bu kuralları kabul etmeye zorlayabilmektedir” (Karikatür: Global Times, 2023)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-02-tr.png",
+      "caption": "Tablo 1. AB SKDM Önerilerindeki Değişiklikler"
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-03-tr.png",
+      "caption": "(Tablo: Wenbo & Quan, 2025)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-04-tr.png",
+      "caption": "Tablo 2. Ürün Yaşam Döngüsü Karbon Emisyonlarına Dayalı Bazı AB Ticaret Politikaları. (Tablo: Wenbo & Quan, 2025)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-05-tr.jpg",
+      "caption": "3 Temmuz 2025’te çekilen bir hava fotoğrafı, Çin'in güneybatısındaki Guizhou Eyaleti’ne bağlı Weining’deki Yi-Hui-Miao Özerk Bölgesi’nde tarımsal amaçlı bir güneş enerjisi santralini gösteriyor (Fotoğraf: Xinhua, 2025)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-06-tr.jpg",
+      "caption": "Çin, yeşil işbirliği, yeşil altyapı, yeşil finans ve çevre dostu yatırımların ortaklaşa ilerletilmesi için platformlar kurmak amacıyla KYG katılımcı ülkeleriyle aktif olarak çalışmaktadır (Çizim: China Daily, 2025)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-07-tr.jpg",
+      "caption": "Power China tarafından Endonezya'nın Batı Java eyaletinde inşa edilen Cirata Solar Yüzer Fotovoltaik Santrali (Fotoğraf: Global Times, 2024)."
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-08-tr.jpg",
+      "caption": "“Batı ekonomileri, karbon ticaret bariyerlerinden oluşan ticaret kısıtlama kuralları sistemi kurarsa, “net-sıfır” hedefleri kisvesi altında tek taraflı ticaret engellerini yaymaları muhtemeldir” (Fotoğraf: Generation Climate Europe, 2022)."
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-09-tr.png",
+      "caption": "Tablo 3. KYG Ülkelerinde Karbon Piyasası Gelişim Durumu. ICAP’ın Emissions Trading Worldwide Status Report 2025 (Küresel Emisyon Ticareti Durum Raporu 2025) raporundan derlenmiştir (Tablo: Wenbo & Quan, 2025)."
+    }
+  ]
 }

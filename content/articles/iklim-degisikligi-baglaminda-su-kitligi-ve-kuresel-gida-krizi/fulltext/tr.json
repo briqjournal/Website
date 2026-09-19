@@ -424,5 +424,56 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-01-tr.png",
+      "caption": "Araştırmalar, günümüzdeki iklim krizinin asıl sorumlusunun Küresel Kuzey olduğunu ortaya koymaktadır (İnfografik: The Purpletide, 2023)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-02-tr.jpg",
+      "caption": "Sahra Altı Afrika’da, uzun süreli kuraklıklar tarımsal verimliliği büyük ölçüde azaltmakta ve yaygın su kıtlıklarına neden olmaktadırlar (Fotoğraf: UN Women, 2023)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-03-tr.jpg",
+      "caption": "Şekil 1. Yeraltı su kaynaklarından çekiş/kullanım oranı. Türkiye’deki yer altı su kaynakları kullanımı grafiği (Grafik: FAO, 2025)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-04-tr.jpg",
+      "caption": "Şekil 2. Türkiye’de kişi başına düşen tatlı su kullanım miktarı. Türkiye’de kişi başı tatlı su kullanım grafiği (Grafik: FAO, 2025)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-05-tr.jpg",
+      "caption": "İklim değişikliğinden dolayı en çok risk altında olan ülkeler. Notre-Dame Üniversitesi'nin ND-Gain Endeksi verilerine dayanan harita, 181 ülkeyi iklim değişikliğine karşı kırılganlıkları ve ısınan bir gezegene uyum sağlamaya ne kadar hazır oldukları açısından sıralıyor (Harita: ILRI, 2022)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-06-tr.jpg",
+      "caption": "Şekil 3. 2010 - 2025 yılları boyunca gıda kaybı ve israfı. Türkiye’de yıllara göre (2010-2025) gıda kaybı grafiği (Grafik: FAO, 2025)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-07-tr.png",
+      "caption": "“Gelişmekte olan ülkeler, İklim Krizi’nin maliyetlerini adil bir şekilde paylaşacak bir mekanizma talep etmekte, gelişmiş ülkeler ise bu konudaki yükümlülüklerini tanımak ve somut bir finansman taahhüdü vermekte isteksiz davranmaktadır” (Infografik: Eurodad, t.y.)."
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-08-tr.jpg",
+      "caption": "“İklim değişikliği etkilerine dayanıklı yeni arazi kullanım modellerinin tasarlanarak hayata geçirilmesi gıda güvencesini sağlamak bakımından yaşamsal bir önem taşımaktadır” (Fotoğraf: MIT CEEPR, 2019)."
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-09-tr.jpg",
+      "caption": "Paulownia - Kanola Ara Ziraatı Deneyi, 2006 yılında Bergama-İzmir'de gerçekleştirildi ve kanola yağından biyodizel üretmeyi amaçlıyor. Soldan sağa: Salih Ertan, Prof. Xhu Zhaohua, İbrahim Yavaşça (çiftlik sahibi)."
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/iklim-degisikligi-baglaminda-su-kitligi-ve-kuresel-gida-krizi/figure-10-tr.jpg",
+      "caption": "GDO’ların çevreye salınması gen akışı (genetik bulaşma - kirlenme) ve melezleşme yoluyla biyolojik çeşitlilik ve ekosistemin işleyişinin sonuçları belirsiz şekilde etkilenmesiyle, nihayetinde doğa ile sosyoekonomik yapının etkileşim üzerinde ciddi riskler yaratabilir (Fotoğraf: Non-GMO Report, t.y.)."
+    }
+  ]
 }
