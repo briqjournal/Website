@@ -17,7 +17,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
-- Published visual-label candidates: 3
+- Published visual-label candidates: 5
 - Missing figure assets: 0
 - Rendered pages: 1, 14
 
@@ -38,7 +38,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
-- Published visual-label candidates: 3
+- Published visual-label candidates: 5
 - Missing figure assets: 0
 - Rendered pages: 1, 7, 9, 12, 14
 
@@ -101,7 +101,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
-- Published visual-label candidates: 7
+- Published visual-label candidates: 10
 - Missing figure assets: 0
 - Rendered pages: 1, 24, 26
 
@@ -122,7 +122,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
-- Published visual-label candidates: 7
+- Published visual-label candidates: 10
 - Missing figure assets: 0
 - Rendered pages: 1, 11, 26
 
@@ -143,7 +143,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
-- Published visual-label candidates: 11
+- Published visual-label candidates: 13
 - Missing figure assets: 0
 - Rendered pages: 1, 19, 28
 
@@ -164,7 +164,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
-- Published visual-label candidates: 11
+- Published visual-label candidates: 13
 - Missing figure assets: 0
 - Rendered pages: 1, 23, 26, 28
 
@@ -185,7 +185,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
-- Published visual-label candidates: 2
+- Published visual-label candidates: 3
 - Missing figure assets: 0
 - Rendered pages: 1, 18
 
@@ -206,7 +206,7 @@
 - Turkish contamination candidates: 0
 - Cross-record title candidates: 0
 - Low-match figure captions: 0
-- Published visual-label candidates: 2
+- Published visual-label candidates: 3
 - Missing figure assets: 0
 - Rendered pages: 1, 10, 18
 
