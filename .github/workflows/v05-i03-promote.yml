@@ -1,4 +1,5 @@
 name: Promote verified v05-i03 prose
+# rerun after hardened two-column reference parsing
 
 on:
   push:
