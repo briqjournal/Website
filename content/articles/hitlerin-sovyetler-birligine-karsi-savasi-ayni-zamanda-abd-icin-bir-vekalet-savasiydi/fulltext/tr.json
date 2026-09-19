@@ -506,5 +506,21 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi/figure-01.jpg",
+      "caption": "Woodrow Wilson, Paris’e giderken Londra’da birlikleri denetliyor (Fotoğraf: The World War, t. y.)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi/figure-02.jpg",
+      "caption": "“1935’te başlayan yeniden silahlanmayla, Ford ve GM nihayetinde Wehrmacht için sırasıyla 90.000 ve 130.000 askeri araç üretti” (Çizim: Rick Nobles, Chronicle/Sfgate, 2007)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/hitlerin-sovyetler-birligine-karsi-savasi-ayni-zamanda-abd-icin-bir-vekalet-savasiydi/figure-03.jpg",
+      "caption": "Eski Başkan Hoover, 8 Mart 1938'de Reich Şansölyeliği'nde Şansölye Adolf Hitler ve Hugh Wilson ile birlikte (Fotoğraf: National Archives, 2017)."
+    }
+  ]
 }
