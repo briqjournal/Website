@@ -38,11 +38,16 @@ jobs:
           python3 - <<'PY'
           import pathlib, re, subprocess
           xml=pathlib.Path("/tmp/v05-i03-page14.xml").read_text(errors="replace")
-          pm=re.search(r'<page\b[^>]*width="([\d.]+)"[^>]*height="([\d.]+)"[^>]*>([\s\S]*?)</page>',xml)
+          pm=re.search(r'<page\b([^>]*)>([\s\S]*?)</page>',xml)
           if not pm:
               raise SystemExit("page 14 XML not found")
-          pw,ph=int(round(float(pm.group(1)))),int(round(float(pm.group(2))))
-          tags=re.findall(r'<image\b[^>]*/>',pm.group(3))
+          attrs=pm.group(1)
+          wm=re.search(r'width="([\d.]+)"',attrs)
+          hm=re.search(r'height="([\d.]+)"',attrs)
+          if not wm or not hm:
+              raise SystemExit(f"page dimensions not found: {attrs}")
+          pw,ph=int(round(float(wm.group(1)))),int(round(float(hm.group(1))))
+          tags=re.findall(r'<image\b[^>]*/>',pm.group(2))
           boxes=[]
           for tag in tags:
               vals={}
