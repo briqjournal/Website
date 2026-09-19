@@ -157,7 +157,7 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
         t=x["text"].strip()
         if re.match(r"^(keywords?|anahtar\s+kelimeler)\s*:",t,re.I) or re.match(r"^(how\s+to\s+cite|atıf)\s*:",t,re.I):
             leakage.append({"section":x["section"],"paragraph":x["paragraph"],"sample":t[:240]})
-    visual_label_re=re.compile(r"\b(?:photo|photograph|figure|fig\.?|table|chart|map|fotoğraf|şekil|tablo|grafik|harita)\s*(?::|\d)",re.I)
+    visual_label_re=re.compile(r"\b(?:photo|photograph|figure|fig\.?|table|chart|map|illustration|cartoon|fotoğraf|şekil|tablo|grafik|harita|çizim|karikatür)\s*(?::|\d)",re.I)
     visual_label_candidates=[]
     seen_visual=set()
     for page_no,page_text in enumerate(page_texts,1):
