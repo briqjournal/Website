@@ -87,5 +87,26 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/wape-18-yillik-forumu/figure-01-en.jpg",
+      "caption": "On August 6, WAPE convened its Council members meeting, occurring at least annually (Photo: BRIQ, 2025)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/wape-18-yillik-forumu/figure-02-en.jpg",
+      "caption": "Prof. Dr. Cheng Enfu, President of WAPE, delivers the opening speech (Photo: BRIQ, 2025)."
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/wape-18-yillik-forumu/figure-03-en.jpg",
+      "caption": "WAPE Vice President and BRIQ Chairman Adnan Akfırat delivers the opening speech (Photo: BRIQ, 2025)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/wape-18-yillik-forumu/figure-04-en.jpg",
+      "caption": "Group photo of Forum participants in front of Yeditepe University Rectorate (Photo: BRIQ, 2025)."
+    }
+  ]
 }
