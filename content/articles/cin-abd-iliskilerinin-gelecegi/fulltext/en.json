@@ -55,5 +55,16 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/cin-abd-iliskilerinin-gelecegi/figure-01-en.png",
+      "caption": "“In terms of global governance, China wielded significant influence in the Third World, making it a force that could not be ignored on the world stage”. Mao Zedong with youth from Asia, Africa, and Latin America, 1959 (Photo: Hou Bol/China Daily, 2017)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/cin-abd-iliskilerinin-gelecegi/figure-02-en.jpg",
+      "caption": "“After 2016, China met the prerequisite conditions for great power competition, and since then, China and the United States have entered the phase of great power competition” (Photo: Global Times, 2020)."
+    }
+  ]
 }

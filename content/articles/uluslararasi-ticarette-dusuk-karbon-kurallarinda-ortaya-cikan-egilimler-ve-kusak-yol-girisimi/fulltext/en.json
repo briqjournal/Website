@@ -262,5 +262,51 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-01-en.jpg",
+      "caption": "“Developed economies, such as the EU, the U.S., and Japan, can leverage their market dominance to formulate trade rules favorable to themselves under the guise of addressing climate change, while compelling other countries to accept them” (Cartoon: Global Times, 2023)."
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-02-en.png",
+      "caption": "Table 1. Changes in EU CBAM Proposals"
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-03-en.png",
+      "caption": "Table 1. Changes in EU CBAM Proposals (continued). (Table: Wenbo & Quan, 2025)."
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-04-en.png",
+      "caption": "Table 2. Some EU Trade Policies Based on Product Life-cycle Carbon Emissions. (Table: Wenbo & Quan, 2025)."
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-05-en.jpg",
+      "caption": "An aerial drone photo taken on July 3, 2025 shows a solar power station for agricultural use in the Yi-Hui-Miao Autonomous County of Weining, southwest China's Guizhou Province (Photo: Xinhua, 2025)."
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-06-en.jpg",
+      "caption": "China has actively worked with participating countries to establish platforms for green cooperation, jointly advancing green infrastructure, green finance, and environmentally friendly investments (Illustration: China Daily, 2025)."
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-07-en.jpg",
+      "caption": "The Cirata Solar Floating Photovoltaic Power Plant, constructed by Power China, in Indonesia's West Java province (Fotoğraf: Global Times, 2024)."
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-08-en.jpg",
+      "caption": "“If Western economies establish a system of trade restriction rules comprising carbon trade barriers, they will likely propagate unilateral trade barriers under the guise of “net-zero” objectives” (Photo: Generation Climate Europe, 2022)."
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/uluslararasi-ticarette-dusuk-karbon-kurallarinda-ortaya-cikan-egilimler-ve-kusak-yol-girisimi/figure-09-en.png",
+      "caption": "Table 1-6: Progress of Carbon Market Development in BRI Countries. Compiled from the ICAP’s Emissions Trading Worldwide Status Report 2025 (Table: Wenbo & Quan, 2025)."
+    }
+  ]
 }

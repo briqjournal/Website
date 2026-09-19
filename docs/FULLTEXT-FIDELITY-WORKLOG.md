@@ -18,6 +18,11 @@
   - Africa EN/TR: repaired the confirmed bibliography/reference defects.
   - Restored the published figure/caption inventories for the six prose records and committed the verified corresponding figure assets, preserving legitimate EN/TR differences.
   - Post-repair whole-issue regression found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, cross-record title contamination, English/Turkish contamination, low-match repaired figure captions, or missing figure assets.
+- Completed unit: `v07-i01`. All 5 records / 10 EN-TR locale records were checked against the official locale PDFs.
+  - Yang Chen EN/TR: restored the published heading hierarchy and paragraph continuity, including the five-phase China-U.S. relations section.
+  - Repaired confirmed bibliography/reference corruption, including PDF line-wrap damage in URLs/DOIs and the fragmented Gao bibliography entry; preserved the legitimate Zhang-Liu EN/TR bibliography difference and the TR-only Zhou reference.
+  - Restored the published figure/caption inventories for all five records and committed the verified locale-specific production figure assets.
+  - Post-repair issue-wide regression found no duplicate canonical paragraphs, duplicate footnote IDs, cross-record paragraph contamination, or missing/undersized referenced figure assets.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v07-i01`.
+**Next unit:** `v06-i04`.

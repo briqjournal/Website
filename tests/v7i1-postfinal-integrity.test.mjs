@@ -42,7 +42,7 @@ test('Yang Chen review follows the actual bilingual PDF heading hierarchy',()=>{
 });
 
 test('V7I1 audited bibliography cardinalities remain stable',()=>{
-  const expected=[[21,21],[33,33],[62,62],[73,74],[0,0]];
+  const expected=[[21,21],[33,33],[61,61],[73,74],[0,0]];
   issue.articles.forEach((slug,index)=>{
     assert.equal((read(slug,'en').references||[]).length,expected[index][0],`${slug}/en`);
     assert.equal((read(slug,'tr').references||[]).length,expected[index][1],`${slug}/tr`);
