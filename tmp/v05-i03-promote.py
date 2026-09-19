@@ -43,7 +43,7 @@ def dehyphenated_join(left, right):
         return left
     if right[0] in ".,;:!?)]}":
         return left + right
-    if left.endswith(("-", "‐")) and right[0].islower():
+    if left.endswith(("-", "‐")) and (right[0].islower() or right[0].isdigit()):
         return left[:-1] + right
     return left + " " + right
 
@@ -90,7 +90,7 @@ def parse_reference_segments(segments):
         if not seg.strip():
             continue
         stripped = seg.strip()
-        if stripped in {"References", "Kaynakça"}:
+        if stripped in {"References", "Kaynakça"} or stripped.isdigit() or "B R I q" in stripped:
             continue
         leading = len(seg) - len(seg.lstrip(" "))
         is_new = leading <= 1
@@ -127,14 +127,18 @@ def parse_article1_tr_refs():
     left_refs = parse_reference_segments(after_marker(left, "Kaynakça"))
     right_refs = parse_reference_segments(right)
     refs = left_refs + right_refs
+    refs = [r for r in refs if re.search(r"\(\d{4}[a-z]?\)", r)]
     return [{"id": f"ref-{i+1}", "text": r} for i, r in enumerate(refs)]
 
 def parse_islamophobia_refs(locale):
     page = raw_text(ISLAMOPHOBIA, locale).split("\f")[15]
     split = 96 if locale == "en" else 95
-    left = column(page, 0, split)
-    right = column(page, split, None)
+    lines = page.splitlines()
     marker = "References" if locale == "en" else "Kaynakça"
+    marker_index = next(i for i, line in enumerate(lines) if marker in line)
+    scoped = "\n".join(lines[marker_index:])
+    left = column(scoped, 0, split)
+    right = column(scoped, split, None)
     left_refs = parse_reference_segments(after_marker(left, marker))
     right_refs = parse_reference_segments(right)
     refs = left_refs + right_refs
@@ -148,8 +152,16 @@ def parse_africa_refs(locale):
     split22 = 90 if locale == "en" else 85
     marker = "References" if locale == "en" else "Kaynakça"
     right21 = parse_reference_segments(after_marker(column(p21, split21, None), marker))
-    left22 = parse_reference_segments(column(p22, 0, split22))
-    right22 = parse_reference_segments(column(p22, split22, None))
+    lines22 = p22.splitlines()
+    first = next((i for i, line in enumerate(lines22) if line.strip()), 0)
+    start = first + 1
+    while start < len(lines22) and lines22[start].strip():
+        start += 1
+    while start < len(lines22) and not lines22[start].strip():
+        start += 1
+    scoped22 = "\n".join(lines22[start:])
+    left22 = parse_reference_segments(column(scoped22, 0, split22))
+    right22 = parse_reference_segments(column(scoped22, split22, None))
     refs = right21 + left22 + right22
     return [{"id": f"ref-{i+1}", "text": r} for i, r in enumerate(refs)]
 
