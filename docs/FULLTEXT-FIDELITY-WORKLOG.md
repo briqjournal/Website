@@ -13,6 +13,11 @@
   - Mongolia EN: removed a figure caption misclassified as a section and restored those paragraphs to the published section hierarchy.
   - Restored published figure/caption wording across the issue where canonical captions were truncated or generic; verified the corresponding figure assets against the PDFs.
   - Post-repair whole-issue audit found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, cross-record title contamination, English/Turkish contamination, low-match repaired figure captions, or missing figure assets.
+- Completed unit: `v07-i02`. The complete 11-record issue was audited against the available official locale publication evidence.
+  - Rügemer EN/TR: restored the published section heading “No Bombing of German and US Arms Factories!” / “Alman ve ABD Silah Fabrikalarının Bombalanmaması!”.
+  - Africa EN/TR: repaired the confirmed bibliography/reference defects.
+  - Restored the published figure/caption inventories for the six prose records and committed the verified corresponding figure assets, preserving legitimate EN/TR differences.
+  - Post-repair whole-issue regression found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, cross-record title contamination, English/Turkish contamination, low-match repaired figure captions, or missing figure assets.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v07-i02`.
+**Next unit:** `v07-i01`.
