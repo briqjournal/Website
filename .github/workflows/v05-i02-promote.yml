@@ -19,7 +19,7 @@ jobs:
         with:
           ref: chore/v05-i02-fulltext-canonical
           fetch-depth: 0
-      - name: Promote and validate repaired prose records v4
+      - name: Promote and validate repaired prose records v5
         run: python3 tmp/v05-i02-promote.py
       - name: Commit prose canonical batch
         shell: bash
