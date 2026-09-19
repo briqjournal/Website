@@ -29,6 +29,13 @@
   - Ninety-Seventh Sonnet EN: preserved the published four-stanza line structure and moved the translator credit out of the poem body into note data; the Turkish four-stanza body and source reference were preserved.
   - Prose body/order/reference/footnote signals were checked against the PDFs; apparent remaining low-match and non-monotonic cases were attributable to two-column layout, pull-quote repetition, hyphenation, or Cyrillic extraction rather than confirmed canonical defects, so correct content was preserved.
   - Post-repair whole-issue audit found no duplicate canonical paragraphs, duplicate footnote IDs, cross-record title contamination, English/Turkish contamination, low-match repaired figure captions, or missing figure assets.
+- Completed unit: `v06-i03`. All 11 records / 22 EN-TR locale records were checked against the official locale PDFs.
+  - Algeria EN: restored the eight published photograph/caption entries using the already-verified shared production assets; the Turkish eight-photo inventory was preserved.
+  - Bandung interview EN/TR: removed the front-matter author portrait from the body figure inventory and restored the published “The Strategy Turkey Needs” / “Türkiye’nin İhtiyacı Olan Strateji” section boundary. TR-only archive leakage (“Tam metin” and two English paragraphs) was removed.
+  - Bandung Spirit EN: repaired two-column extraction corruption around “China’s Contributions” and “Indonesia’s Contributions”, rejoining the split Zhou Enlai paragraph, removing the duplicated pull-quote text, and restoring the published section order. Indonesian foreign-policy EN: restored the post-Suharto material to “The Transformation of Indonesian Diplomacy and its Contribution to Fostering the Bandung Spirit”.
+  - Sahte Şiir and 39 Harbi EN/TR: restored the published line structure, separated translator/source notes from verse, removed front-matter portraits from body figures, and preserved legitimate locale-specific note/reference differences.
+  - Gas Hydrates EN/TR: verified the table assets against embedded PDF images and repaired the Table 2 / Table 3 caption mapping for the split production assets.
+  - Post-repair issue-wide regression and reusable PDF audit found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, cross-record title contamination, low-match repaired figure captions, or missing figure assets; remaining low-match/non-monotonic signals were confirmed as two-column layout, pull-quote, hyphenation, or extraction noise.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v06-i03`.
+**Next unit:** `v06-i02`.
