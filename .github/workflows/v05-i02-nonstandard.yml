@@ -1,0 +1,150 @@
+name: Promote v05-i02 non-standard records
+
+on:
+  push:
+    branches:
+      - chore/v05-i02-fulltext-canonical
+    paths:
+      - '.github/workflows/v05-i02-nonstandard.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build canonical poems and visual records
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json, pathlib, re, shutil
+          root=pathlib.Path(".")
+          ev=root/"tmp/v05-i02-evidence"
+
+          def write(slug,loc,data):
+              out=root/"content/articles"/slug/"fulltext"
+              out.mkdir(parents=True,exist_ok=True)
+              (out/f"{loc}.json").write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+
+          def shell(sections, notes=None, figures=None):
+              return {"sections":sections,"keywords":[],"footnotes":notes or [],"references":[],"acknowledgements":"","figures":figures or []}
+
+          def clean_lines(text):
+              out=[]
+              for raw in text.splitlines():
+                  s=raw.strip().replace("\f","").strip()
+                  if not s or s.isdigit() or re.match(r"^B\s*R\s*I\s*[Qq]",s):
+                      continue
+                  if s in {"POEM","ŞİİR","PHOTOGRAPH","FOTOĞRAF","PAINTING","RESiM","AFİŞ","POSTER"}:
+                      continue
+                  out.append(s)
+              return out
+
+          # Hüseyin Haydar poem
+          for loc in ("en","tr"):
+              text=(ev/"isyan-tutanaklari"/f"{loc}-raw.txt").read_text()
+              lines=clean_lines(text)
+              bio_start=next(i for i,x in enumerate(lines) if x.startswith("*Hüseyin") or x.startswith("*Türkçenin"))
+              cite_start=next(i for i,x in enumerate(lines) if x.startswith("How to cite:") or x.startswith("Atıf:"))
+              bio=" ".join(lines[bio_start:cite_start])
+              title_marker="MINUTES OF THE REBELLION*" if loc=="en" else "İSYAN TUTANAKLARI"
+              ti=next(i for i,x in enumerate(lines) if x==title_marker)
+              start=ti+1
+              title2="Lumumba! Lumumba!"
+              if lines[start]==title2: start+=1
+              poem=[]
+              for x in lines[start:]:
+                  if x.startswith("*The poem was translated"): break
+                  poem.append(x)
+              title=("MINUTES OF THE REBELLION: Lumumba! Lumumba!" if loc=="en" else "İSYAN TUTANAKLARI: Lumumba! Lumumba!")
+              notes=[{"id":"note-1","text":"The poem was translated from Turkish into English by Onurcan Balcı and Furkan Çirkin."}] if loc=="en" else []
+              write("isyan-tutanaklari",loc,shell([
+                  {"id":f"{loc}-section-1","title":"Hüseyin Haydar","paragraphs":[bio]},
+                  {"id":f"{loc}-section-2","title":title,"paragraphs":["  \n".join(poem)]},
+              ],notes))
+
+          # Patrice Lumumba poem
+          for loc in ("en","tr"):
+              text=(ev/"afrikanin-kalbinde-sabah"/f"{loc}-raw.txt").read_text()
+              lines=clean_lines(text)
+              bio_start=next(i for i,x in enumerate(lines) if x.startswith("*Patrice"))
+              note_start=next(i for i,x in enumerate(lines) if x.startswith("Lumumba, P. E."))
+              bio=" ".join(lines[bio_start:note_start])
+              cite_start=next(i for i,x in enumerate(lines[note_start:],start=note_start) if x.startswith("How to cite:") or x.startswith("Atıf:"))
+              note=" ".join(lines[note_start:cite_start])
+              title="Dawn in the Heart of Africa" if loc=="en" else "Afrika’nın kalbinde sabah"
+              ti=next(i for i,x in enumerate(lines[cite_start:],start=cite_start) if x==title)
+              poem=lines[ti+1:]
+              write("afrikanin-kalbinde-sabah",loc,shell([
+                  {"id":f"{loc}-section-1","title":"Patrice Emery Lumumba","paragraphs":[bio]},
+                  {"id":f"{loc}-section-2","title":title,"paragraphs":["  \n".join(poem)]},
+              ],[{"id":"note-1","text":note}]))
+
+          visuals={
+            "pipo-icen-zosali-kadin-1941":{
+              "asset":("en-images/candidate-002.jpg"),
+              "author":"Anne Fischer",
+              "en":{"caption":"Xhosa woman smoking a pipe, Transkei, South Africa, 1941.","bio":"*Anne Fischer (1914-1986) was born in Berlin and trained as a photographer's apprentice in a portrait studio in Germany. In 1937 she came to Cape Town as a Jewish refugee. There she gained a reputation as a good portrait photographer. By the 1960s she was regarded as Cape Town's leading wedding and theatre photographer. Many leading female photographers of the period trained in her studio. Fischer took documentary photographs in Langa, in rural areas of the former Transkei and Basutoland, and in Genadendal.","note":"Reproduced from the Anne Fischer Photograph Collection, permission of the University of Cape Town."},
+              "tr":{"caption":"Pipo içen Zosalı kadın, 1941.","bio":"*Anne Fischer (1914-1986) Berlin’de doğdu. Almanya'da bir portre stüdyosunda fotoğrafçı çırağı olarak eğitim aldı. 1937’de bir Yahudi mülteci olarak Cape Town’a geldi. Orada iyi bir portre fotoğrafçısı olarak ün kazandı. 1960’lara gelindiğinde Cape Town’un önde gelen düğün ve tiyatro fotoğrafçısı olarak görülüyordu. Dönemin birçok önde gelen kadın fotoğrafçısı onun stüdyosunda eğitim aldı. Fischer, Langa’da, eski Transkei ve Basutoland’ın kırsal bölgelerinde ve Genadendal’da belgesel fotoğraflar çekti.","note":"Cape Town Üniversitesi izniyle Anne Fischer Fotoğraf Koleksiyonu’ndan alınmıştır."},
+            },
+            "moordaki-vantrilok-ve-tellal-1923":{
+              "asset":"en-images/candidate-001.jpg","author":"Paul Klee",
+              "en":{"caption":"Ventriloquist and Crier in the Moor (1923).","bio":"The aesthetics of traditional African sculpture became a powerful influence among European artists who formed an avant-garde in the development of modern art. Paul Klee was also one of them. Klee created transcendental symbolic images while German Expressionist painters referenced African aesthetics through calm colour tones and dynamic, unorthodox formal approaches to depict the anxieties of modern life. He developed a very special abstract style in which mystical connotations are arouse, in paintings like his Ventriloquist and Crier in the Moor; Every detail of the figure stands out like a collage with the driving force of the ‘grid’ background consisting of earth tones. Imaginary beasts float within a transparent ventriloquist who appears to be all belly. This creatures, we see in the ventriloquist, most likely to symbolise the bizarre voices feels like rise out of him. And a stray fish, looks like it’s about to enter the ventriloquist, as if impressed by the revelry above it.","note":"Watercolour and transferred printing ink on paper, bordered with ink, mounted on cardboard."},
+              "tr":{"caption":"Moor’daki Vantrilok ve Tellal (1923).","bio":"Geleneksel Afrika heykeli estetiğinin, modern sanatın gelişiminde ‘avangard’ bir rol oynayan Avrupalı sanatçılar arasında güçlü bir etkisi oldu. Paul Klee de onlardan biriydi. Paul Klee soyut sembolik imgeler yaratırken, Alman Ekspresyonist ressamlar modern yaşamın kaygılarını tasvir etmek için sakin renk tonları ve dinamik, alışılmışın dışında biçimsel yaklaşımlar aracılığıyla Afrika estetiğine atıfta bulunuyordu. Klee, ‘Moor’daki Vantrilok ve Tellal’ gibi çalışmalarında, mistik çağrışımların uyandırıldığı çok özel bir soyut üslup geliştirdi; Toprak tonlarından oluşan ‘ızgara’ arka planın itici gücüyle bir kolaj gibi öne çıkan figürün her detayı göze çarpıyor. Hayali canavarlar, tamamen göbek şeklinde görünen şeffaf bir vantriloğun içinde süzülüyor. Bu yaratıklar, büyük olasılıkla ondan yükselen tuhaf sesleri simgeliyor. Ve başıboş bir balık, sanki yukarıdaki şenlikten etkilenmiş gibi, vantriloka girmek üzereymiş gibi görünüyor.","note":"Karton üzerine monte edilmiş kağıt üzerine sulu boya ve mürekkep baskı."},
+            },
+            "baris-icin-savasirken-unutma-1962":{
+              "asset":"tr-images/candidate-002.jpg","author":"Viktor Borisovich Koretskiy",
+              "en":{"caption":"Don’t Forget While Fighting for Peace (1962).","bio":"It is a poster series titled “Boryas Za Mir - Ne Zabıvay” (Don’t Forget While Fighting for Peace) by Viktor Borisovich Koretskiy (1909-1998), who created the most famous Soviet posters. This series of posters on the theme of peace and the struggle for independence was published in Moscow in 1962.","note":"[Viktor Borisovich Koretskiy]. (1962). Boryas Za Mir – Ne Zabıvay. Albom-Vıystavka, İzdatelstvo \"Sovyetskaya Rossiya\", Moskva."},
+              "tr":{"caption":"Barış İçin Savaşırken Unutma (1962).","bio":"En ünlü Sovyet posterlerine imza atan Viktor Borisovich Koretskiy’in (1909-1998) hazırladığı “Boryas Za Mir – Ne Zabıvay” (Barış İçin Savaşırken Unutma) başlıklı poster dizisidir. Sergilenen barış ve bağımsızlık mücadelesi temalı bu poster serisi, 1962 yılında Moskova’da yayımlanmıştır.","note":"[Viktor Borisovich Koretskiy]. (1962). Boryas Za Mir – Ne Zabıvay. Albom-Vıystavka, İzdatelstvo \"Sovyetskaya Rossiya\", Moskva."},
+            },
+          }
+          for slug,cfg in visuals.items():
+              asset_dir=root/"public/assets/article-figures"/slug
+              asset_dir.mkdir(parents=True,exist_ok=True)
+              source=ev/slug/cfg["asset"]
+              shutil.copy2(source,asset_dir/"figure-01.jpg")
+              src=f"/assets/article-figures/{slug}/figure-01.jpg"
+              for loc in ("en","tr"):
+                  v=cfg[loc]
+                  write(slug,loc,shell([
+                      {"id":f"{loc}-section-1","title":cfg["author"],"paragraphs":[v["bio"]]},
+                  ],[{"id":"note-1","text":v["note"]}],[{"id":"figure-1","src":src,"caption":v["caption"]}]))
+          PY
+      - name: Validate non-standard records
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json, pathlib
+          root=pathlib.Path(".")
+          slugs=["isyan-tutanaklari","afrikanin-kalbinde-sabah","pipo-icen-zosali-kadin-1941","moordaki-vantrilok-ve-tellal-1923","baris-icin-savasirken-unutma-1962"]
+          for slug in slugs:
+              for loc in ("en","tr"):
+                  d=json.loads((root/"content/articles"/slug/"fulltext"/f"{loc}.json").read_text())
+                  assert d["sections"]
+                  assert [s["id"] for s in d["sections"]]==[f"{loc}-section-{i}" for i in range(1,len(d["sections"])+1)]
+                  if slug in slugs[:2]:
+                      assert "\n" in d["sections"][-1]["paragraphs"][0]
+                      assert not d["figures"]
+                  else:
+                      assert len(d["figures"])==1
+                      p=root/"public"/d["figures"][0]["src"].lstrip("/")
+                      assert p.is_file() and p.stat().st_size>100000
+          print("V05_I02_NONSTANDARD_OK")
+          PY
+      - name: Commit non-standard batch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- content/articles/isyan-tutanaklari/fulltext content/articles/afrikanin-kalbinde-sabah/fulltext content/articles/pipo-icen-zosali-kadin-1941/fulltext content/articles/moordaki-vantrilok-ve-tellal-1923/fulltext content/articles/baris-icin-savasirken-unutma-1962/fulltext public/assets/article-figures/pipo-icen-zosali-kadin-1941 public/assets/article-figures/moordaki-vantrilok-ve-tellal-1923 public/assets/article-figures/baris-icin-savasirken-unutma-1962
+          git commit -m 'Promote v05-i02 poems and visual records'
+          git pull --rebase origin chore/v05-i02-fulltext-canonical
+          git push origin HEAD:chore/v05-i02-fulltext-canonical
