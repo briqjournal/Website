@@ -23,6 +23,25 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Run reusable fidelity audit
         run: python3 scripts/audit-fulltext-fidelity.py v07-i02
+      - name: Inventory embedded PDF images
+        run: |
+          mkdir -p tmp/v07-i02-fidelity/pdfimages
+          python3 - <<'PY'
+          import json, pathlib, subprocess, urllib.request
+          root=pathlib.Path(".")
+          issue=json.loads((root/"content/issues/v07-i02.json").read_text())
+          for slug in issue["articles"]:
+              meta=json.loads((root/"content/articles"/slug/"metadata.json").read_text())
+              url=(meta.get("urls") or {}).get("pdfEn")
+              if not url:
+                  continue
+              pdf=pathlib.Path("/tmp")/f"{slug}.pdf"
+              req=urllib.request.Request(url,headers={"User-Agent":"BRIQ-fidelity-inventory/1.0"})
+              with urllib.request.urlopen(req,timeout=90) as r, open(pdf,"wb") as out:
+                  out.write(r.read())
+              p=subprocess.run(["pdfimages","-list",str(pdf)],text=True,capture_output=True,check=True)
+              (root/"tmp/v07-i02-fidelity/pdfimages"/f"{slug}.txt").write_text(p.stdout)
+          PY
       - name: Preserve compact audit evidence
         run: |
           mkdir -p tmp/v07-i02-fidelity
@@ -53,6 +72,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f tmp/v07-i02-fidelity/report.json tmp/v07-i02-fidelity/report.md tmp/v07-i02-fidelity/compact.json
+          git add -f tmp/v07-i02-fidelity/report.json tmp/v07-i02-fidelity/report.md tmp/v07-i02-fidelity/compact.json tmp/v07-i02-fidelity/pdfimages
           git commit -m "chore: capture v07-i02 fidelity audit evidence"
           git push
