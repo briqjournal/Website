@@ -89,7 +89,8 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
     ft_path=root/"content"/"articles"/slug/"fulltext"/f"{loc}.json"
     j=json.loads(ft_path.read_text(encoding="utf-8"))
     url=(meta.get("urls") or {}).get("pdfEn" if loc=="en" else "pdfTr")
-    if not url: raise RuntimeError(f"Missing official PDF URL for {slug} {loc}")
+    if not url:
+        return {"slug":slug,"locale":loc,"status":"article_pdf_unavailable","pdf_url":None}
     work=out_root/slug/loc; pdf=work/f"{slug}-{loc}.pdf"
     download(url,pdf)
     (work/"raw.txt").write_text(run(["pdftotext","-raw",str(pdf),"-"]), encoding="utf-8")
@@ -210,6 +211,9 @@ def main():
     (out/"report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     lines=[f"# Full-text fidelity audit: {a.issue}",""]
     for r in results:
+        if r.get("status") == "article_pdf_unavailable":
+            lines += [f"## {r['slug']} [{r['locale']}]", "- Article-level official PDF unavailable; requires issue-level or other authoritative publication evidence.", ""]
+            continue
         lines += [f"## {r['slug']} [{r['locale']}]",f"- PDF pages: {r['pdf_pages']}",f"- Paragraph match ratio: {r['paragraph_match_ratio']}",f"- Heading match ratio: {r['heading_match_ratio']}",f"- Reference match ratio: {r['reference_match_ratio']}",f"- Footnote match ratio: {r['footnote_match_ratio']}",f"- Figure-caption match ratio: {r['figure_caption_match_ratio']}",f"- Unmatched paragraphs: {len(r['unmatched_paragraphs'])}",f"- Non-monotonic paragraph assignments: {len(r['nonmonotonic_assignments'])}",f"- Duplicate canonical paragraphs: {len(r['duplicate_paragraphs'])}",f"- Duplicate footnote IDs: {len(r['duplicate_footnote_ids'])}",f"- Empty sections: {len(r['empty_sections'])}",f"- One-paragraph sections: {len(r['short_sections'])}",f"- Metadata leakage candidates: {len(r['metadata_leakage_candidates'])}",f"- Turkish contamination candidates: {len(r['turkish_contamination_candidates'])}",f"- Cross-record title candidates: {len(r['cross_record_title_candidates'])}",f"- Low-match figure captions: {len(r['figure_captions_low_match'])}",f"- Missing figure assets: {len(r['missing_figure_assets'])}",f"- Rendered pages: {', '.join(map(str,r['rendered_pages']))}",""]
     (out/"report.md").write_text("\n".join(lines),encoding="utf-8")
     print((out/"report.md").read_text(encoding="utf-8"))
