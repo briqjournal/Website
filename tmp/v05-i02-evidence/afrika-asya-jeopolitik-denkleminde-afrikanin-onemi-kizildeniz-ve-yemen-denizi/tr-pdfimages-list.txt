@@ -1,0 +1,11 @@
+page   num  type   width height color comp bpc  enc interp  object ID x-ppi y-ppi size ratio
+--------------------------------------------------------------------------------------------
+   1     0 image     215    76  cmyk    4   8  jpeg   no        13  0   300   303 11.0K  17%
+   5     1 image    1000   575  cmyk    4   8  image  no       117  0   152   150  303K  14%
+   6     2 image    1913  1105  cmyk    4   8  jpeg   no       130  0   279   273  840K  10%
+   9     3 image    1900  1270  cmyk    4   8  jpeg   no       140  0   300   324  486K 5.2%
+  12     4 image    1920  1054  cmyk    4   8  jpeg   no       148  0   301   322  746K 9.4%
+  14     5 image    1920  1249  cmyk    4   8  jpeg   no       154  0   301   330  759K 8.1%
+  16     6 image    1920  1280  cmyk    4   8  jpeg   no       160  0   281   279  763K 7.9%
+  17     7 image    1196   565  cmyk    4   8  jpeg   no       164  0   179   188  292K  11%
+  21     8 image    1920  1313  cmyk    4   8  jpeg   no       174  0   318   368  683K 6.9%
