@@ -1,0 +1,32 @@
+name: Promote v05-i02 prose canonical full text
+
+on:
+  push:
+    branches:
+      - chore/v05-i02-fulltext-canonical
+    paths:
+      - '.github/workflows/v05-i02-promote.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Promote and validate prose records
+        run: python3 tmp/v05-i02-promote.py
+      - name: Commit prose canonical batch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- content/articles public/assets/article-figures tmp/v05-i02-promotion-summary.json
+          git commit -m 'Promote v05-i02 prose canonical full text'
+          git pull --rebase origin chore/v05-i02-fulltext-canonical
+          git push origin HEAD:chore/v05-i02-fulltext-canonical
