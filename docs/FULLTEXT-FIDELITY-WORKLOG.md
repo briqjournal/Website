@@ -23,6 +23,12 @@
   - Repaired confirmed bibliography/reference corruption, including PDF line-wrap damage in URLs/DOIs and the fragmented Gao bibliography entry; preserved the legitimate Zhang-Liu EN/TR bibliography difference and the TR-only Zhou reference.
   - Restored the published figure/caption inventories for all five records and committed the verified locale-specific production figure assets.
   - Post-repair issue-wide regression found no duplicate canonical paragraphs, duplicate footnote IDs, cross-record paragraph contamination, or missing/undersized referenced figure assets.
+- Completed unit: `v06-i04`. All 8 records / 16 EN-TR locale records were checked against the official locale PDFs.
+  - Restored the published locale-specific figure/caption inventories and verified production assets for the five illustrated prose records: Russia/CSTO (9 figures per locale), BRICS Counter-Terrorism Strategy (2), World Economic Forum critique (9), Young China (8), and WAPE forum report (4). The SCO declaration and both poem records correctly remain without figures.
+  - Hallaç EN/TR: preserved the published six-stanza line structure and moved the translator credit out of the poem body into note data.
+  - Ninety-Seventh Sonnet EN: preserved the published four-stanza line structure and moved the translator credit out of the poem body into note data; the Turkish four-stanza body and source reference were preserved.
+  - Prose body/order/reference/footnote signals were checked against the PDFs; apparent remaining low-match and non-monotonic cases were attributable to two-column layout, pull-quote repetition, hyphenation, or Cyrillic extraction rather than confirmed canonical defects, so correct content was preserved.
+  - Post-repair whole-issue audit found no duplicate canonical paragraphs, duplicate footnote IDs, cross-record title contamination, English/Turkish contamination, low-match repaired figure captions, or missing figure assets.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v06-i04`.
+**Next unit:** `v06-i03`.
