@@ -1,0 +1,57 @@
+name: Audit v07-i02 full-text fidelity
+
+on:
+  push:
+    branches:
+      - audit/v07-i02-fulltext-fidelity
+    paths:
+      - .github/workflows/audit-v07-i02-fulltext-fidelity.yml
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: audit/v07-i02-fulltext-fidelity
+      - name: Install PDF tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Run reusable fidelity audit
+        run: python3 scripts/audit-fulltext-fidelity.py v07-i02
+      - name: Preserve compact audit evidence
+        run: |
+          mkdir -p tmp/v07-i02-fidelity
+          cp .audit/fulltext-fidelity/v07-i02/report.json tmp/v07-i02-fidelity/report.json
+          cp .audit/fulltext-fidelity/v07-i02/report.md tmp/v07-i02-fidelity/report.md
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path(".audit/fulltext-fidelity/v07-i02/report.json")
+          data=json.loads(p.read_text())
+          compact={"issue":data["issue"],"records":data["records"],"locales":[]}
+          keys=[
+            "slug","locale","pdf_url","pdf_pages","canonical_paragraphs","canonical_references",
+            "canonical_figures","canonical_tokens","pdf_extracted_tokens","paragraph_match_ratio",
+            "heading_match_ratio","reference_match_ratio","footnote_match_ratio",
+            "figure_caption_match_ratio","first_anchor","last_anchor","headings",
+            "unmatched_paragraphs","nonmonotonic_assignments","duplicate_paragraphs",
+            "turkish_contamination_candidates","cross_record_title_candidates",
+            "references_low_match","footnotes_low_match","duplicate_footnote_ids",
+            "empty_sections","short_sections","metadata_leakage_candidates",
+            "figure_caption_matches","figure_captions_low_match","missing_figure_assets","rendered_pages"
+          ]
+          for r in data["locales"]:
+            compact["locales"].append({k:r.get(k) for k in keys})
+          Path("tmp/v07-i02-fidelity/compact.json").write_text(json.dumps(compact,ensure_ascii=False,indent=2)+"\n")
+          PY
+      - name: Commit compact audit evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f tmp/v07-i02-fidelity/report.json tmp/v07-i02-fidelity/report.md tmp/v07-i02-fidelity/compact.json
+          git commit -m "chore: capture v07-i02 fidelity audit evidence"
+          git push
