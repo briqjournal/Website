@@ -1,0 +1,122 @@
+name: Promote verified v05-i03 prose
+
+on:
+  push:
+    branches:
+      - chore/v05-i03-fulltext-canonical
+    paths:
+      - '.github/workflows/v05-i03-promote.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install targeted figure tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
+
+      - name: Compose the verified layered page-14 figure
+        shell: bash
+        run: |
+          set -euo pipefail
+          url=$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("content/articles/cinin-uc-kuresel-girisimi-baglaminda-ortadogu-politikasinin-seyri/metadata.json")
+          print(json.loads(p.read_text())["urls"]["pdfEn"])
+          PY
+          )
+          curl -L --fail --retry 3 "$url" -o /tmp/v05-i03-article1.pdf
+          pdftohtml -f 14 -l 14 -xml -hidden -nodrm /tmp/v05-i03-article1.pdf /tmp/v05-i03-page14.xml >/dev/null 2>&1
+          python3 - <<'PY'
+          import pathlib, re, subprocess
+          xml=pathlib.Path("/tmp/v05-i03-page14.xml").read_text(errors="replace")
+          pm=re.search(r'<page\b[^>]*width="([\d.]+)"[^>]*height="([\d.]+)"[^>]*>([\s\S]*?)</page>',xml)
+          if not pm:
+              raise SystemExit("page 14 XML not found")
+          pw,ph=int(round(float(pm.group(1)))),int(round(float(pm.group(2))))
+          tags=re.findall(r'<image\b[^>]*/>',pm.group(3))
+          boxes=[]
+          for tag in tags:
+              vals={}
+              for key in ("top","left","width","height"):
+                  m=re.search(fr'{key}="([\d.]+)"',tag)
+                  if not m: break
+                  vals[key]=int(round(float(m.group(1))))
+              if len(vals)==4 and vals["width"]>400 and vals["height"]>250:
+                  boxes.append(vals)
+          if len(boxes)!=2:
+              raise SystemExit(f"expected two overlapping image layers, got {boxes}")
+          left=min(b["left"] for b in boxes); top=min(b["top"] for b in boxes)
+          right=max(b["left"]+b["width"] for b in boxes)
+          bottom=max(b["top"]+b["height"] for b in boxes)
+          subprocess.run([
+              "pdftoppm","-f","14","-l","14","-singlefile","-png",
+              "-scale-to-x",str(pw),"-scale-to-y",str(ph),
+              "/tmp/v05-i03-article1.pdf","/tmp/v05-i03-page14"
+          ],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+          out=pathlib.Path("tmp/v05-i03-figure-evidence/cinin-uc-kuresel-girisimi-baglaminda-ortadogu-politikasinin-seyri/images/p14-composite.jpg")
+          subprocess.run([
+              "convert","/tmp/v05-i03-page14.png",
+              "-crop",f"{right-left}x{bottom-top}+{left}+{top}","+repage",
+              "-strip","-quality","90",str(out)
+          ],check=True)
+          print(f"composite bbox={left},{top},{right-left},{bottom-top} page={pw}x{ph}")
+          PY
+          rm -f /tmp/v05-i03-article1.pdf /tmp/v05-i03-page14*
+
+      - name: Repair and promote prose candidates
+        run: python3 tmp/v05-i03-promote.py
+
+      - name: Validate promoted canonical structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import json
+          from pathlib import Path
+          issue=json.loads(Path("content/issues/v05-i03.json").read_text())
+          prose=issue["articles"][:8]
+          required={"sections","keywords","footnotes","references","acknowledgements","figures"}
+          for slug in prose:
+              for locale in ("en","tr"):
+                  p=Path("content/articles")/slug/"fulltext"/f"{locale}.json"
+                  d=json.loads(p.read_text())
+                  assert required.issubset(d), (slug,locale)
+                  assert d["sections"], (slug,locale)
+                  assert all(f.get("src","").startswith(f"/assets/article-figures/{slug}/") for f in d["figures"]), (slug,locale)
+                  for fig in d["figures"]:
+                      assert (Path("public")/fig["src"].lstrip("/")).exists(), (slug,locale,fig)
+          print("V05_I03_PROSE_PROMOTION_OK")
+          PY
+          git diff --check
+
+      - name: Commit durable prose batch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          issue=json.loads(Path("content/issues/v05-i03.json").read_text())
+          paths=[]
+          for slug in issue["articles"][:8]:
+              paths.append(f"content/articles/{slug}/fulltext/en.json")
+              paths.append(f"content/articles/{slug}/fulltext/tr.json")
+              paths.append(f"public/assets/article-figures/{slug}")
+          subprocess.run(["git","add","--",*paths],check=True)
+          subprocess.run(["git","add","-f","--","tmp/v05-i03-promotion-summary.json"],check=True)
+          PY
+          git diff --cached --check
+          git commit -m 'Promote verified v05-i03 prose full text'
+          git pull --rebase origin chore/v05-i03-fulltext-canonical
+          git push origin HEAD:chore/v05-i03-fulltext-canonical
