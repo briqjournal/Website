@@ -2,29 +2,20 @@
   "sections": [
     {
       "id": "en-section-1",
-      "title": "AGUS R. SARJONO",
-      "paragraphs": [
-        "Agus R. Sarjono was born on July 27, 1962 in Bandung, West Java. He graduated from the Department of Literature at IKIP Bandung Indonesia in 1988. He completed his MA at the University of Indonesia in 2002. Outside Indonesia, his poems, short stories, and plays have been published in various journals in Malaysia, Brunei, Germany, France, the Netherlands, Poland, the United Kingdom, and the United States. His poems have been included in more than 20 anthologies. He was an editor of the literary journal Horison. He worked as a lecturer at the Department of Theatre in Bandung and as the Program Director of the Jakarta Arts Council from 2002 to 2006. He was a writer-in-residence at the International Institute of Asian Studies (IIAS) in Leiden from February to October 2001, with the permission of the Poets of All Nations Foundation. From December 2002 to March 2003 he was a writer-inresidence of the Heinrich-Böll Foundation in Langenbroich, Germany."
-      ]
-    },
-    {
-      "id": "en-section-2",
       "title": "FAKE POEM (Sajak Palsu)",
       "paragraphs": [
-        "Good morning sir, good morning ma’am, the school children say with fake politeness. Then they study fake history from fake text-books. When school is finished they are horrified to see the range of their fake marks. Unable to enter university, they go to their teachers’ homes to offer their fake respect and envelopes full of money. With fake smiles, the teachers pretend to refuse, then finally accept the envelopes and make fake promises that they will change the old fake marks for new fake marks. The semesters pass, and they are born as fake economists, fake lawyers, fake agricultural scientists, fake engineers. Some become fake teachers, scholars, and artists. Passionately they rush to take advantage of fake developmental policies based on fake economics. They witness fake trading based on fake exports and fake imports, offering fake quality goods. Fake banks busily offer fake bonuses and gifts, while silently providing loans based on fake letters of security signed by fake officials from the fake state banking authority. Society trades with fake money supported by fake exchange rates. Fake currencies snarl at fake exchange rates until the whole structure collapses and the crisis destroys the fake government through fake bad luck. The fake people shout with fake delight and debate fake concepts at fake seminars, honouring the arrival of a fake democracy,",
-        "Aveling, H. (2007). Indonesian literature after Reformasi: The tongues of women. Kritika Kultura, issue 8, pp. 9-53."
+        "Good morning sir, good morning ma’am, the school children say  \nwith fake politeness. Then they study fake history  \nfrom fake text-books. When school is finished  \nthey are horrified to see the range  \nof their fake marks. Unable to enter university,  \nthey go to their teachers’ homes to offer  \ntheir fake respect and envelopes  \nfull of money. With fake smiles,  \nthe teachers pretend to refuse, then finally  \naccept the envelopes and make fake promises  \nthat they will change the old fake marks  \nfor new fake marks. The semesters pass,  \nand they are born as fake economists, fake lawyers,  \nfake agricultural scientists, fake engineers.  \nSome become fake teachers, scholars,  \nand artists. Passionately they rush to take advantage  \nof fake developmental policies based on fake economics.  \nThey witness fake trading based on fake exports  \nand fake imports, offering fake quality goods.  \nFake banks busily offer fake bonuses and gifts,  \nwhile silently providing loans based on fake  \nletters of security signed by fake officials  \nfrom the fake state banking authority.  \nSociety trades with fake money supported  \nby fake exchange rates.  \nFake currencies snarl at fake exchange rates  \nuntil the whole structure collapses  \nand the crisis destroys the fake government  \nthrough fake bad luck. The fake people  \nshout with fake delight and debate fake concepts  \nat fake seminars, honouring the arrival  \nof a fake democracy,"
       ]
     }
   ],
   "keywords": [],
   "footnotes": [],
-  "references": [],
-  "acknowledgements": "",
-  "figures": [
+  "references": [
     {
-      "id": "figure-1",
-      "src": "/assets/article-figures/sahte-siir/figure-01.jpg",
-      "caption": "Fake Poem (Sajak Palsu)"
+      "id": "ref-1",
+      "text": "Aveling, H. (2007). Indonesian literature after Reformasi: The tongues of women. Kritika Kultura, issue 8, pp. 9-53."
     }
-  ]
+  ],
+  "acknowledgements": "",
+  "figures": []
 }
