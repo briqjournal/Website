@@ -230,7 +230,7 @@ def interview_sections(d, desired):
 
 # 5 Ahmet Kavas — four actual interview questions, two published figures; author portrait excluded.
 slug=prose[4]
-shift_assets(slug,[2,3])
+# The two verified body figures are already normalized as figure-01/02; the portrait was excluded upstream.
 qs={
 "en":[
 "What is the current state of relations between Türkiye and African countries? How many countries are we in relation with, and at what level? Are there any particularly prominent countries or sub-regions?",
@@ -293,7 +293,7 @@ for loc in ("en","tr"):
 
 # 9 Egypt history — remove abstract/author leakage, retain the actual opening body, two archival body images; author portrait excluded.
 slug=prose[8]
-shift_assets(slug,[2,3])
+# The two verified archival body figures are already normalized as figure-01/02; the author portrait was excluded upstream.
 caps={
 "en":["In 1925, while Türkiye was dealing with revolutions and rebellions, it did not forget its Egyptian brothers and a sports competition was organized to support them against the British domination in the region. Despite those painful years, Egyptian artists visited Türkiye due to sincere relations. Cumhurbaşkanlığı Devlet Arşivi (CDA), 180. 09\\3.19.1, 1925.","The Turkish announcer described this match as follows: The game could not rise above the average. There are very few admirable elements in the Turkish game. If the Turks faced any Dutch team, they would most likely be defeated. While talking about the second half, which started with four goals scored by the Egyptians, the informant mentions that there was a remarkable movement among the public; The audience, which was initially limited to 2000, has now reached 5000. Aladdin scored a goal and saved the honor of the Turks. The Egyptians played football the English way, and the Turks played their games slowly. The Turkish team's reserves did so little work that there was no harm in leaving them in Istanbul. Cumhurbaşkanlığı Devlet Arşivi (CDA), 180. 09\\3.19.1, 1925."],
 "tr":["1925 yılında Türkiye devrimlerle, isyanlarla uğraşırken Mısırlı kardeşlerini unutmamış bölgedeki İngiliz tahakkümüne karşı destek için spor müsabakası düzenlenmişti. O sancılı yıllara rağmen samimi münasebetlerden ötürü Mısırlı sanatçılar Türkiye’yi ziyaret ettiler. Cumhurbaşkanlığı Devlet Arşivi (CDA), 180. 09\\3.19.1, 1925.","Türk spiker bu maçı şöyle anlatmıştı: Oyun ortalamanın üzerine çıkamadı. Türk oyununda hayranlık uyandıran unsurlar çok azdır. Türkler herhangi bir Hollanda takımıyla karşılaşsaydı büyük ihtimalle mağlup olurdu. Mısırlıların attığı dört golle başlayan ikinci yarıdan bahsederken, muhbir halk arasında dikkat çekici bir hareketlilik yaşandığını belirtiyor; Başlangıçta 2000 kişiyle sınırlı olan seyirci sayısı artık 5000'e ulaştı. Alaaddin bir gol attı ve Türklerin şerefini kurtardı. Mısırlılar İngiliz usulü futbol oynadı, Türkler ise ağır oynadı. Türk takımının yedekleri o kadar az iş yaptı ki onları İstanbul'da bırakmanın hiçbir sakıncası yoktu. Cumhurbaşkanlığı Devlet Arşivi (CDA), 180. 09\\3.19.1, 1925."]}
