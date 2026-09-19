@@ -39,12 +39,19 @@ test("keeps the Çomak-Toker-Manioğlu article bilingual instead of duplicating 
   assert(record.en.keywords.includes("Türkiye-China Relations"));
 
   assert.equal(record.tr.references.length, 32);
-  assert.equal(record.en.references.length, 32);
+  assert.equal(record.en.references.length, 31);
   assert(record.tr.references.some((reference) => reference.text.includes("10.25064/mulkiye.1300476")));
-  assert(record.en.references.some((reference) => reference.text.includes("10.25064/mulkiye.1300476")));
+  assert(!record.en.references.some((reference) => reference.text.includes("10.25064/mulkiye.1300476")));
+  assert(record.en.references.some((reference) => reference.text.startsWith("Republic of Türkiye Ministry of Foreign Affairs.")));
+  assert(record.en.references.some((reference) => reference.text.includes("Retrieved July 27, 2026")));
 
+  assert.equal(
+    record.en.sections[5].title,
+    "Structural Asymmetries and the Transition from a Transit Country to a Joint Production Hub",
+  );
   assert(record.en.figures.every((figure) => /[A-Za-z]/u.test(figure.caption)));
-  assert.equal(record.en.figures[2].caption, "Table 1: Indicators used to distinguish a transit country from a joint production hub");
+  assert.equal(record.en.figures[0].caption, "The Middle Corridor connects China and Europe through Central Asia and Türkiye and integrates with the Belt and Road Initiative (BRI) (Map: Valdai Club, 2023).");
+  assert.equal(record.en.figures[2].caption, "Table 1. Indicators Used to Distinguish a Transit Country from a Joint Production Hub");
 });
 
 
