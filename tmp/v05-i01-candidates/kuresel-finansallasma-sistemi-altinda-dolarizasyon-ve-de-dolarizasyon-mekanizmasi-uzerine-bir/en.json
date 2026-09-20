@@ -121,16 +121,28 @@
   ],
   "footnotes": [
     {
-      "id": "1",
+      "id": "note-1",
       "text": "The countries include Poland, Croatia, Türkiye, Egypt, Hungary, Chile, Mexico, Israel, Belarus, Peru, Romania, Albania, and others."
     },
     {
-      "id": "2",
+      "id": "note-2",
       "text": "Including countries such as Cambodia, Laos, Myanmar, and Vietnam."
     },
     {
-      "id": "3",
-      "text": "In 1974, the United States signed the \"Unwavering Agreement\" with Saudi Arabia, citing the guarantee of Saudi security, in exchange for the Organization of the Petroleum Exporting Countries (OPEC) designating the U.S. dollar as the sole currency for pricing oil and conducting trade settlements. ⁴ The large-scale commodification of futures contracts on commodities is a hallmark of the formation of the global financialization system. Energy, as an essential commodity, saw the emergence of futures contracts in the 1970s, and it matured during the 1980s. This indicates that the massive financialization of commodities occurred in the 1980s, around the time of the establishment of the Washington Consensus. As analyzed later in the text, the formation of the global financialization system is built upon the financialization of commodities, with the assurance of the neoliberal regime. ⁵ Commodity financialization builds upon the use value of a commodity, exploring its potential for investment and financing while incorporating additional financial attributes. These additional attributes can be analogous to those of currency, making commodities with traits such as scarcity, storability, and liquidity suitable candidates for financialization. Non-renewable, exceedingly scarce, highly liquid, and readily storable commodities manifest more pronounced financial attributes. Among these commodities, significant globally demanded items closely interconnected with industrialization, such as crude oil, non-ferrous metals, agricultural products, iron ore, and coal, are commonly referred to as bulk commodities. ⁶ The fundamental distinction between the global financialized system and other currency systems is rooted in its transformative impact on the traditional demarcation between a nation’s commodity market and financial market within the circulation domain. This paradigmatic shift serves to bridge the previously existing gap between commodity and financial markets and culminates in the establishment of a closed-loop structure in the international financial market, commonly referred to as the “commodity-finance- U.S. dollar-commodity” cycle."
+      "id": "note-3",
+      "text": "In 1974, the United States signed the \"Unwavering Agreement\" with Saudi Arabia, citing the guarantee of Saudi security, in exchange for the Organization of the Petroleum Exporting Countries (OPEC) designating the U.S. dollar as the sole currency for pricing oil and conducting trade settlements."
+    },
+    {
+      "id": "note-4",
+      "text": "The large-scale commodification of futures contracts on commodities is a hallmark of the formation of the global financialization system. Energy, as an essential commodity, saw the emergence of futures contracts in the 1970s, and it matured during the 1980s. This indicates that the massive financialization of commodities occurred in the 1980s, around the time of the establishment of the Washington Consensus. As analyzed later in the text, the formation of the global financialization system is built upon the financialization of commodities, with the assurance of the neoliberal regime."
+    },
+    {
+      "id": "note-5",
+      "text": "Commodity financialization builds upon the use value of a commodity, exploring its potential for investment and financing while incorporating additional financial attributes. These additional attributes can be analogous to those of currency, making commodities with traits such as scarcity, storability, and liquidity suitable candidates for financialization. Non-renewable, exceedingly scarce, highly liquid, and readily storable commodities manifest more pronounced financial attributes. Among these commodities, significant globally demanded items closely interconnected with industrialization, such as crude oil, non-ferrous metals, agricultural products, iron ore, and coal, are commonly referred to as bulk commodities."
+    },
+    {
+      "id": "note-6",
+      "text": "The fundamental distinction between the global financialized system and other currency systems is rooted in its transformative impact on the traditional demarcation between a nation’s commodity market and financial market within the circulation domain. This paradigmatic shift serves to bridge the previously existing gap between commodity and financial markets and culminates in the establishment of a closed-loop structure in the international financial market, commonly referred to as the “commodity-finance- U.S. dollar-commodity” cycle."
     }
   ],
   "references": [
@@ -144,11 +156,11 @@
     },
     {
       "id": "ref-3",
-      "text": "CGTN. (2017). Was 2017 the year that Chinese fintech grew up?. Retrieved July 20, 2023 from https://news.cgtn.com/news/ 3341544f79637a6333566d54/index.html"
+      "text": "CGTN. (2017). Was 2017 the year that Chinese fintech grew up?. Retrieved July 20, 2023 from https://news.cgtn.com/news/3341544f79637a6333566d54/index.html"
     },
     {
       "id": "ref-4",
-      "text": "CGTN. (2022). Dollar hegemony: The world’s trouble with the U.S. currency. Retrieved July 20, 2023 from https://news.cgtn.com/news/2022- 06-15/Dollar-hegemony-The-world-s-trouble-with-the-U-S-currency-1aT0olLji48/index.html"
+      "text": "CGTN. (2022). Dollar hegemony: The world’s trouble with the U.S. currency. Retrieved July 20, 2023 from https://news.cgtn.com/news/2022-06-15/Dollar-hegemony-The-world-s-trouble-with-the-U-S-currency-1aT0olLji48/index.html"
     },
     {
       "id": "ref-5",
@@ -184,7 +196,7 @@
     },
     {
       "id": "ref-13",
-      "text": "IMF. (2023). The Dollar Glut. Retrieved July 20, 2023 https://www.imf.org/ external/np/exr/center/mm/eng/mm_sc_03.htm"
+      "text": "IMF. (2023). The Dollar Glut. Retrieved July 20, 2023 https://www.imf.org/external/np/exr/center/mm/eng/mm_sc_03.htm"
     },
     {
       "id": "ref-14",
@@ -312,7 +324,7 @@
     },
     {
       "id": "ref-45",
-      "text": "Xie, F., Xiaolu, K., Zhi, L. (2022). Financialisation of developing and emerging economies and China’s experience: how China resists financialisation. Cambridge Journal of Economics, beac037, https://doi. org/10.1093/cje/beac037."
+      "text": "Xie, F., Xiaolu, K., Zhi, L. (2022). Financialisation of developing and emerging economies and China’s experience: how China resists financialisation. Cambridge Journal of Economics, beac037, https://doi.org/10.1093/cje/beac037."
     },
     {
       "id": "ref-46",
@@ -336,32 +348,32 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir/figure-01.jpg",
-      "caption": "thus increasing the likelihood of a financial crisis (Photo: CGTN, 2022)."
+      "caption": "Dollarization is believed to lead to financial instability in a country, thus increasing the likelihood of a financial crisis (Photo: CGTN, 2022)."
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir/figure-02.jpg",
-      "caption": "account deficit and maintaining confidence in the dollar (Photo: IMF, 2023)."
+      "caption": "In his testimony to the US Congress in 1960, economist Robert Triffin identified a fundamental problem in the international monetary system. This problem, known as the Triffin Dilemma, is the contradiction between printing dollars to cover the current account deficit and maintaining confidence in the dollar (Photo: IMF, 2023)."
     },
     {
       "id": "figure-3",
       "src": "/assets/article-figures/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir/figure-03.jpg",
-      "caption": "financial resource allocation (Photo: CGTN, 2017)."
+      "caption": "UN Global Crisis Response Group calculations, based on (April 2023) IMF World Economic Outlook (Graph: UNCATD, 2023). Figure 1. Public Debt is Growing Faster in The Developing World."
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir/figure-04.jpg",
-      "caption": "(Photo: Monthly Review, 2018)."
+      "caption": "The advancement of modern communication technology can effectively reduce information asymmetry, alleviate corporate financing difficulties and improve the efficiency of financial resource allocation (Photo: CGTN, 2017)."
     },
     {
       "id": "figure-5",
       "src": "/assets/article-figures/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir/figure-05.jpg",
-      "caption": "Visual 5"
+      "caption": "The shift towards financialisation led to the rapid domination of financial monopoly capital in the global economy (Photo: Monthly Review, 2018)."
     },
     {
       "id": "figure-6",
       "src": "/assets/article-figures/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir/figure-06.jpg",
-      "caption": "Visual 6"
+      "caption": "Figure 2. The Progression of International Market Dollar Circulation (Cheng & Lu, 2023)."
     }
   ]
 }
