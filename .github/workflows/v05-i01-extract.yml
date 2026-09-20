@@ -1,0 +1,90 @@
+name: v05-i01 prose extraction
+
+on:
+  push:
+    branches:
+      - chore/v05-i01-fulltext-canonical
+    paths:
+      - '.github/workflows/v05-i01-extract.yml'
+      - 'tmp/v05-i01-extractor.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Install extraction tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
+
+      - name: Download authoritative locale PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf tmp/v05-i01-pdfs tmp/v05-i01-candidates
+          mkdir -p tmp/v05-i01-pdfs
+          python3 - <<'PY'
+          import json, pathlib, subprocess
+          slugs = [
+            "kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir",
+            "cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi",
+            "cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen",
+            "dunya-ekonomisinin-dolardan-arindirilmasi",
+            "abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu",
+          ]
+          for slug in slugs:
+              meta=json.loads(pathlib.Path("content/articles",slug,"metadata.json").read_text())
+              for locale,key in (("en","pdfEn"),("tr","pdfTr")):
+                  url=meta["urls"][key]
+                  out=pathlib.Path("tmp/v05-i01-pdfs",f"{slug}-{locale}.pdf")
+                  subprocess.run(["curl","-L","--fail","--retry","3","--retry-delay","2","-o",str(out),url],check=True)
+          PY
+
+      - name: Build prose candidates and assets
+        run: node tmp/v05-i01-extractor.mjs 5-1
+
+      - name: Summarize candidates
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          root=pathlib.Path("tmp/v05-i01-candidates")
+          summary=[]
+          for d in sorted(p for p in root.iterdir() if p.is_dir()):
+              for locale in ("en","tr"):
+                  p=d/f"{locale}.json"
+                  j=json.loads(p.read_text())
+                  summary.append({
+                    "slug":d.name,"locale":locale,
+                    "sections":[{"title":s.get("title"),"paragraphs":len(s.get("paragraphs",[]))} for s in j.get("sections",[])],
+                    "keywords":j.get("keywords",[]),
+                    "footnotes":len(j.get("footnotes",[])),
+                    "references":len(j.get("references",[])),
+                    "figures":len(j.get("figures",[])),
+                    "captions":[f.get("caption") for f in j.get("figures",[])],
+                  })
+          (root/"summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2)+"\n")
+          PY
+
+      - name: Commit durable candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf tmp/v05-i01-pdfs
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f tmp/v05-i01-candidates
+          git add public/assets/article-figures
+          if git diff --cached --quiet; then
+            echo "No extraction changes"
+            exit 0
+          fi
+          git commit -m "Build v05-i01 prose candidates and figure assets"
+          git push origin HEAD:chore/v05-i01-fulltext-canonical
