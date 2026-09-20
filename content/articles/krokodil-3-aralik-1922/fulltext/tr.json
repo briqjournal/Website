@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Karikatür",
+      "paragraphs": [
+        "Yayın hayatına 1922 yılında başlayan, bir dönem tirajı 6,5 milyona kadar çıkan SSCB’nin en önemli haftalık mizah-karikatür dergisi “Krokodil” de Türkiye’deki gelişmeleri sıkça sayfalarına taşımıştı. Bu karikatür, 3 Aralık 1922 tarihli sayısında yayımlanmıştır. Ay yıldızın üzerinde “TBMM” yazısı ve “Babı Ali” yazılı tahtın üzerinde oturan padişahın tahttan indirilme kararı gösterilmektedir."
+      ]
+    }
+  ],
+  "keywords": [],
+  "footnotes": [
+    {
+      "id": "note-1",
+      "text": "[Karikatür]. (1922). Padişahın tahttan indirilişi. Krokodil (Sovyet Karikatür Dergisi)."
+    }
+  ],
+  "references": [],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/krokodil-3-aralik-1922/figure-01.jpg",
+      "caption": "BMM kararıyla padişahın tahttan indirilişi"
+    }
+  ]
+}
