@@ -315,6 +315,7 @@ const issueFiveOneRecords = [
     slug: "kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir",
     pages: [1, 24], body: { tr: 1, en: 1 },
     start: { tr: "Giriş", en: "Introduction" },
+    headingMode: "strict",
     pdfs: { tr: join(root,"tmp/v05-i01-pdfs/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir-tr.pdf"), en: join(root,"tmp/v05-i01-pdfs/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir-en.pdf") },
   },
   {
@@ -325,34 +326,38 @@ const issueFiveOneRecords = [
       en: "What has been the global economic impact of US"
     },
     skipFirstPortrait: true,
+    headingMode: "questions",
     pdfs: { tr: join(root,"tmp/v05-i01-pdfs/cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi-tr.pdf"), en: join(root,"tmp/v05-i01-pdfs/cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi-en.pdf") },
   },
   {
     slug: "cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen",
     pages: [1, 20], body: { tr: 1, en: 1 },
     startContains: {
-      tr: "KÜRESEL POLITIK EKONOMI SISTEMI",
+      tr: "KÜRESEL",
       en: "THE GLOBAL POLITICAL ECONOMY HAS"
     },
+    headingMode: "strict",
     pdfs: { tr: join(root,"tmp/v05-i01-pdfs/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen-tr.pdf"), en: join(root,"tmp/v05-i01-pdfs/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen-en.pdf") },
   },
   {
     slug: "dunya-ekonomisinin-dolardan-arindirilmasi",
     pages: [1, 6], body: { tr: 1, en: 1 },
     startContains: {
-      tr: "TARIHSEL OLARAK RUSYA",
+      tr: "TARIHSEL",
       en: "HISTORICALLY, RUSSIA JOINED THE DOLLAR"
     },
     skipFirstPortrait: true,
+    headingMode: "strict",
     pdfs: { tr: join(root,"tmp/v05-i01-pdfs/dunya-ekonomisinin-dolardan-arindirilmasi-tr.pdf"), en: join(root,"tmp/v05-i01-pdfs/dunya-ekonomisinin-dolardan-arindirilmasi-en.pdf") },
   },
   {
     slug: "abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu",
     pages: [1, 20], body: { tr: 1, en: 1 },
     startContains: {
-      tr: "ABD’NIN (AMERIKA",
+      tr: "ABD’NIN",
       en: "THE MOVES THAT THE US MADE RIGHT"
     },
+    headingMode: "strict",
     pdfs: { tr: join(root,"tmp/v05-i01-pdfs/abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu-tr.pdf"), en: join(root,"tmp/v05-i01-pdfs/abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu-en.pdf") },
   },
 ];
@@ -757,18 +762,26 @@ function extractBlocks(pages, config, locale) {
         continue;
       }
       const explicitHeading = exactHeadings.has(node.text);
-      const minimumFontSize = mode === "body" ? 14 : 10;
-      if (!explicitHeading && (node.font.size < minimumFontSize || node.font.size > 19)) continue;
-      if (/^(Jason Morgan|Nuray Ekşi|Li Ning|Wang Jiani).+ - /i.test(node.text)) continue;
-
+      let justStarted = false;
       if (!started) {
         const exact = config.start?.[locale];
         const contains = config.startContains?.[locale];
-        if ((exact && node.text === exact) || (contains && node.text.includes(contains))) started = true;
-        else continue;
+        if ((exact && node.text === exact) || (contains && node.text.includes(contains))) {
+          started = true;
+          justStarted = true;
+        } else continue;
       }
 
-      if (canonicalSectionHeading || looksLikeHeading(node)) {
+      const minimumFontSize = mode === "body" ? 14 : 10;
+      if (!explicitHeading && !justStarted && (node.font.size < minimumFontSize || node.font.size > 19)) continue;
+      if (/^(Jason Morgan|Nuray Ekşi|Li Ning|Wang Jiani).+ - /i.test(node.text)) continue;
+
+      const configuredHeading =
+        config.headingMode === "strict" ? false :
+        config.headingMode === "questions" ? (node.bold && /\?$/.test(node.text)) :
+        looksLikeHeading(node);
+
+      if (canonicalSectionHeading || explicitHeading || configuredHeading) {
         flushParagraph();
         if (heading) heading = dehyphenatedJoin(heading, node.text);
         else heading = node.text;
