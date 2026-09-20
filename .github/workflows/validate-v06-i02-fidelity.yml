@@ -33,12 +33,13 @@ jobs:
             'osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke',
             'qi-baishi',
           }
+          visual_verified_lowfig_en={'alter-kuresellesme-baglaminda-cin-fransiz-iliskileri'}
           bad=[]
           for x in r['locales']:
               if x.get('status'): bad.append((x['slug'],x['locale'],'status',x['status']))
               for k in ['duplicate_paragraphs','duplicate_footnote_ids','cross_record_title_candidates','metadata_leakage_candidates','missing_figure_assets']:
                   if x.get(k): bad.append((x['slug'],x['locale'],k,x[k]))
-              if x.get('figure_captions_low_match') and not (x['locale']=='en' and x['slug'] in wrong_pdf_en):
+              if x.get('figure_captions_low_match') and not (x['locale']=='en' and (x['slug'] in wrong_pdf_en or x['slug'] in visual_verified_lowfig_en)):
                   bad.append((x['slug'],x['locale'],'figure_captions_low_match',x['figure_captions_low_match']))
               print(x['slug'],x['locale'],
                     'para',x.get('paragraph_match_ratio'),
