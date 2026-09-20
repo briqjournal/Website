@@ -45,3 +45,5 @@ jobs:
           git add -f tmp/v05-i01-vector-evidence.json
           git commit -m "Capture v05-i01 vector figure coordinates"
           git push origin HEAD:chore/v05-i01-fulltext-canonical
+
+# trigger vector probe
