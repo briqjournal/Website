@@ -67,6 +67,11 @@
   - No new confirmed fidelity defect was found, so the already-correct canonical records were preserved. The migration-verified repairs remain intact: one Turkish multipolarity figure caption, bibliography line-wrap repairs, and IMF/V-Lab URL normalization; body/section order, references, footnotes, locale separation, poem structure, captions, and the 25 referenced production figure assets remain unchanged.
   - A fresh current-tree regression across all 22 canonical locale records found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, or empty sections. The two poem records and three visual/non-standard records remain in their verified published structures.
   - The branch-level full-text fidelity workflow is the final post-audit PDF-backed verification for this no-repair unit.
+- Completed unit: `v04-i04`. All 12 records / 24 EN-TR canonical locale records were audited against the official locale-PDF evidence, reusing the completed canonical-migration evidence after verifying that no v04-i04 metadata, canonical full-text file, issue record, or production figure asset changed between the migration merge (`e4cba5e689a7117fd8a21cd4238614a9ebb11a75`) and the fidelity base (`82b832c823a2ee99e2eab49330a6c86a6ed12ad7`).
+  - Misafir / Guest, Güzelliğin On Par'etmez / If This Love Did Not Exist, and Doğu Tabletleri — Doksan Dokuzuncu Tablet, Ata / Eastern Tablets — Ninety-Ninth Tablet, Ata EN/TR: removed the page-1 author-biography front matter from the canonical poem bodies while preserving the published verse exactly (11 lines; five four-line stanzas; and 38 lines respectively) and retaining all locale-specific source/translation notes.
+  - The six prose/interview/review records were otherwise preserved. The migration-verified Cai Hesen Turkish paragraph-order repair remains intact; fresh regression found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, or empty sections.
+  - The three visual/non-standard records were preserved with their verified production images and context. Krokodil correctly remains without a genuine English text locale: the English canonical body stays explicitly empty while the shared published cartoon asset is preserved, rather than substituting Turkish prose.
+  - The final branch-level official-PDF fidelity workflow and normal build/test/lint are the merge gates; no temporary audit artifacts are committed.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v04-i04`.
+**Next unit:** `v04-i03`.
