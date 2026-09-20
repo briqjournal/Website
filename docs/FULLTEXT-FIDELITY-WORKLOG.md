@@ -58,6 +58,11 @@
   - The eight prose records were preserved after body/order/reference/footnote/caption checks found no additional confirmed canonical defects. Their published figure inventories and production assets were verified against the retained page-aware official-PDF evidence; the intentional front-matter portrait/mask exclusions in the Sayed interview, Akram interview, and Marxism record remain correct, and the Middle East article's previously verified page-14 composite figure was preserved.
   - The three visual/non-standard records (Altai shepherd girl, The Watermelon Seller, and the Satirikon cartoon) were preserved after their context text, notes, captions, and production assets matched the official publication evidence.
   - The post-repair whole-issue fidelity audit actually executed against the official locale PDFs and passed; build/test/lint also passed on the repair checkpoint.
+- Completed unit: `v05-i02`. All 14 records / 28 EN-TR locale records were checked against the official locale PDFs, reusing the retained migration evidence because the issue's canonical and production-asset files had not changed since the canonical migration merge.
+  - İsyan Tutanakları / Minutes of the Rebellion and Afrika’nın Kalbinde Sabah / Dawn in the Heart of Africa EN/TR: removed author-biography front matter from the canonical poem bodies while preserving the published 26-line and 48/49-line poem structures and the locale-specific source/translation notes.
+  - The nine prose/interview records were preserved after paragraph/order/reference/footnote/caption checks found no additional confirmed canonical defects. Their published figure inventories matched the migration-verified counts and production assets, including the intentional author-portrait exclusions in Africa at Dawn, the Ahmet Kavas interview, the Bovdunov interview, and the Egypt history record; the already-verified normalized body assets were preserved.
+  - The three visual records (Xhosa woman smoking a pipe, Ventriloquist and Crier in the Moor, and Don’t Forget While Fighting for Peace) were preserved after their context text, notes, captions, and artwork assets matched the official publication evidence; locale-specific embedded-image renditions were not treated as contamination.
+  - The post-repair whole-issue fidelity audit actually executed against the official locale PDFs and passed; build/test/lint also passed on the repair checkpoint.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v05-i02`.
+**Next unit:** `v05-i01`.
