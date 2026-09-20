@@ -6,6 +6,7 @@ on:
       - "content/articles/**/fulltext/*.json"
       - "public/assets/article-figures/**"
       - "scripts/audit-fulltext-fidelity.py"
+      - "docs/FULLTEXT-FIDELITY-WORKLOG.md"
       - ".github/workflows/fulltext-fidelity-audit.yml"
 
 permissions:
