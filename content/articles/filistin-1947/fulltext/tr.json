@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Live Journal",
+      "paragraphs": [
+        "Sekiz yaşında bir Arap çocuk, ağabeyi ve arkadaşlarıyla birlikte Kudüs'ün girişini savunuyor."
+      ]
+    }
+  ],
+  "keywords": [],
+  "footnotes": [
+    {
+      "id": "note-1",
+      "text": "[Fotoğraf]. (1947). Filistin. Live Journal (https://humus.livejournal.com)."
+    }
+  ],
+  "references": [],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/filistin-1947/figure-01.jpg",
+      "caption": "Filistin (1947)."
+    }
+  ]
+}
