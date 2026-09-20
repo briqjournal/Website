@@ -2,13 +2,6 @@
   "sections": [
     {
       "id": "tr-section-1",
-      "title": "CAHİT KÜLEBİ",
-      "paragraphs": [
-        "*Cahit Külebi (1917-1997), Tokat’ın Zile ilçesi Çeltek köyünde (20 Aralık 1917) doğdu. Ortaöğrenimini 1936’da Sivas Lisesi’nde, yükseköğrenimini 1940'ta İstanbul Yüksek Öğretmen Okulu Türk Dili ve Edebiyatı Bölümü’nde tamamladı. İsviçre’ye kültür ataşesi ve öğrenci müfettişi olarak atandı. Yurda dönünce Milli Eğitim Bakanlığı’nda başmüfettişlik ve kültür müsteşar yardımcılığı yaptı. Türk Dil Kurumu Genel Sekreterliği’ni üstlendi (1978-1982). İlk şiiri 1938’de “Gençlik” dergisinde yayımlandı. Şiirlerinde Anadolu halkının yaşamını işledi. Batı kaynaklı şiir akımlarına ve döneminin edebiyatının yerel yansımalarına değil, Türk kültürünün ulusal kaynaklarına değer verdi. Mustafa Kemal Atatürk ve Türk Kurtuluş Savaşını anlatan şiirler kaleme aldı. “Yeni Halk Şiiri” akımının öncülüğünü yaptı. Şiirlerine okul kitaplarında yer verildi. Yapıtlarıyla 1955 Türk Dil Kurumu Edebiyat Ödülü’nü, 1981 Yeditepe Şiir Ödülü’nü ve 1996 Cumhurbaşkanlığı Kültür ve Sanat Büyük Ödülünü kazandı. 1983’te SODEP ve Sosyal Demokrat Halkçı Parti kuruculuğu, Merkez Yönetim Kurulu üyeliği yaptı. 20 Haziran 1997'de Ankara’da hayatını kaybeden usta şair, Niksar’da toprağa verilmiştir."
-      ]
-    },
-    {
-      "id": "tr-section-2",
       "title": "HİKAYE",
       "paragraphs": [
         "Senin dudakların pembe  \nEllerin beyaz,  \nAl tut ellerimi bebek  \nTut biraz!",
@@ -31,11 +24,5 @@
     }
   ],
   "acknowledgements": "",
-  "figures": [
-    {
-      "id": "figure-1",
-      "src": "/assets/article-figures/hikaye-siir/figure-01.jpg",
-      "caption": "Cahit Külebi"
-    }
-  ]
+  "figures": []
 }

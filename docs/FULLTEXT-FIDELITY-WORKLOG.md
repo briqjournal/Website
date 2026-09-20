@@ -36,6 +36,12 @@
   - Sahte Şiir and 39 Harbi EN/TR: restored the published line structure, separated translator/source notes from verse, removed front-matter portraits from body figures, and preserved legitimate locale-specific note/reference differences.
   - Gas Hydrates EN/TR: verified the table assets against embedded PDF images and repaired the Table 2 / Table 3 caption mapping for the split production assets.
   - Post-repair issue-wide regression and reusable PDF audit found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, cross-record title contamination, low-match repaired figure captions, or missing figure assets; remaining low-match/non-monotonic signals were confirmed as two-column layout, pull-quote, hyphenation, or extraction noise.
+- Completed unit: `v06-i02`. All 13 records / 26 EN-TR locale records were checked against the official locale publication evidence.
+  - Hikaye / Tale and Ölü Su / Dead Water EN/TR: removed author-biography front matter from canonical poem bodies, preserved the published stanza/line structure, removed front-matter author portraits from body figures, and kept translator/source material in note/reference data.
+  - Alter-globalization EN/TR: restored the complete published Figure 2 caption and Eurostat source, repaired the corrupted Gürcan-Gedik bibliography entry, and visually verified that the apparent second page-12 photo label was embedded image text rather than a missing canonical figure.
+  - Sun Yat-sen political-legacy EN/TR, Chinese-revolutionaries EN/TR, and emerging-middle-powers TR: repaired confirmed PDF-extraction corruption in bibliography entries, including split Turkish characters, broken URLs, omitted BRIQ journal/volume details, and the published Edström spelling. Legitimate locale-specific bibliography differences, including the 2019a/2019b entry, were preserved.
+  - Osaka interview EN and Qi Baishi EN were not rewritten from Turkish: their metadata-designated English PDF source points to the Turkish/shared PDF, so the English canonical records were preserved rather than using a Turkish fallback.
+  - Post-repair focused regression and the reusable issue-wide PDF audit found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, cross-record title contamination, missing figure assets, or unresolved repaired-caption defects. Remaining low-match/non-monotonic signals were attributable to documented wrong-locale source links, two-column layout, hyphenation, or visually verified embedded-image/extraction noise.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v06-i02`.
+**Next unit:** `v06-i01`.
