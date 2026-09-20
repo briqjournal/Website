@@ -1,8 +1,27 @@
 {
-  "sections": [],
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "İzmir Kızılçullu Köy Enstitüsü",
+      "paragraphs": [
+        "*Köy Enstitüleri; Cumhuriyet Devrimi’nin ilk yıllarında köylerde eğitim ve öğretim işlerini görmek, sağlık ve ziraat dahil olmak üzere çeşitli konularda köylüye öncülük etmek üzere, köylerden gelenleri öğretmen olarak yetiştirmek amacıyla kurulmuştur. Köy okullarında okuma yazma, matematik öğretimi için eğitici eleman yetiştirmek amacı ile 1937’de “Köy Eğitmenleri Yasası” çıkarılmıştır. 1939’da kabul edilen “Köy Eğitmen Kursları ile Köy Öğretmen Okulları Yasası” çerçevesinde Eskişehir, İzmir, Kırklareli, Kastamonu, Samsun illerinde köy öğretmen okulları açılmıştır. 1940 yılındaki “Köy Enstitüleri Yasası” ile daha önce açılmış ve eğitim öğretim yapmakta olan köy öğretmen okulları da köy enstitüleri statüsü altında toplanmış ve köyde üretim ve kalkınma ön plana alınmıştır. Köy Enstitüleri Türkiye’ye özgü eğitim kurumlarıdır. Dönemin koşullarında kırsal nüfus % 85’e yakındır. Büyük bir çoğunluk ise eğitimsizdir. Köy Enstitüleri’nde, atölyelerde, üretimin ve iş gücünün, sanat ve yaratıcılıkla birleştirildiği bir eğitim modeli uygulanmıştır. 1946 yılında, Türkiye’nin Atlantik kampına katılmasına paralel olarak Köy Enstitüleri kapatılmıştır. Köy Enstitüleri’nden yetişip köylere giderek eğitimsiz halkı aydınlatan öğretmenlerin arasından ayrıca onlarca şair, yazar, bilim insanı çıkmıştır."
+      ]
+    }
+  ],
   "keywords": [],
-  "footnotes": [],
+  "footnotes": [
+    {
+      "id": "note-1",
+      "text": "Yeni Kuşak Köy Enstitülüler Derneği"
+    }
+  ],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/izmir-kizilcullu-koy-enstitusu/figure-01.jpg",
+      "caption": "İzmir Kızılçullu Köy Enstitüsü"
+    }
+  ]
 }
