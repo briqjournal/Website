@@ -1,0 +1,994 @@
+                                                                                                      Görüş Makalesi
+
+
+
+
+     Çok Kutupluluk Meydan Okuması:
+     Doların Sarsılan Üstünlüğü ve
+     ABD Hegemonyasının Değişen
+     Dinamiklerini Anlamak
+
+     Efe Can Gürcan*
+     Doç. Dr.
+     London School of Economics Misafir Öğretim Üyesi
+
+
+
+
+     *Doç. Dr. Efe Can Gürcan, yüksek lisansını Montreal Üniversitesi Uluslararası Çalışmalar
+     Programı’nda ve doktorasını Simon Fraser Üniversitesi Sosyoloji ve Antropoloji Bölümü’nde
+     tamamlamıştır. Saint Benoît Fransız Lisesi ve Koç Üniversitesi Uluslararası İlişkiler Bölümü
+     mezunudur. İngilizce, Fransızca ve İspanyolca bilmektedir. Latin Amerika ve Avrasya’da
+     uluslararası kalkınma, uluslararası politik ekonomi ile siyasal sosyoloji alanlarında uzmanlık
+     kazanmıştır. Yabancı, ulusal ve hakemli platformlarda beş kitap ve onlarca makale yayımlamıştır.
+     London School of Economics and Political Science’ta (LSE) ziyaretçi kıdemli araştırmacı olarak
+     görevini sürdürmektedir. Aynı zamanda Kuşak ve Yol Çalışmaları Uygulama ve Araştırma
+     Merkezi Müdürlüğü, Türk Şehitlikleri İmar Vakfı Mütevelli Heyeti Üyeliği, Kanada Manitoba
+     Üniversitesi’nin Jeopolitik Ekonomi Araştırmalar Merkezi’nde Araştırma Üyeliği, Şangay
+     Üniversitesi Küresel Araştırmalar Enstitüsü Ziyaretçi Akademisyenliği görevlerini yürütmektedir.
+     Gürcan, eski bir Kanada Sosyal Bilimler ve Beşeri Bilimler Araştırma Konseyi (SSHRC)-Joseph-
+     Armand Bombardier (A Kategorisi) bursiyeridir. 2014’te Amerikan Sosyoloji Derneği’nden Albert
+     Szymanski Ödülü, 2021’de Türkiye Bilimler Akademisi’nden Üstün Başarılı Genç Bilim İnsanı
+     Ödülü ve 2023’te Dünya Politik Ekonomi Derneği (WAPE) tarafından Üstün Başarı Ödülü’ne
+     layık görülmüştür. 2021 yılında Türk Genç Bilim Akademisi’ne üye olmuştur. 2022’de Routledge
+     tarafından yayımlanan son kitabı, neoliberal dönemde emperyalizmin dönüşümünü ele almaktadır
+     (Imperialism after the Neoliberal Turn).
+
+     E-posta: E.Gurcan@lse.ac.uk                           ORCID: http://orcid.org/0000-0002-5415-3163
+
+     Geliş Tarihi: 25.10.2023
+     Kabul Tarihi: 10.11.2023
+
+
+     Atıf: Gürcan, E.C.. (2023). Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD
+     Hegemonyasının Değişen Dinamiklerini Anlamak. BRIQ Kuşak ve Yol Girişimi Dergisi, 5(1), 40-59.
+
+
+
+40
+Efe Can Gürcan - Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD Hegemonyasının Değişen Dinamiklerini Anlamak
+
+
+
+
+                                                            ÖZ
+     Küresel politik ekonomi sistemi, onlarca yıl boyunca ABD hegemonyasının temel dayanak noktaları arasında
+     yer alan doların belirleyici varlığının gölgesinde kalmıştır. Doların yükselişi, ekonomik değerinin ötesinde,
+     jeopolitik anlamda da ABD’nin stratejik etkisinin bir simgesi haline gelmiştir. Ancak, çok kutuplu bir küresel
+     düzenin başlangıcına tanıklık ettiğimiz bu dönemde, doların her yönüyle etkinliğinin azalmaya başlayabileceği
+     yönünde artan beklentiler bulunmaktadır. Mevcut makale, şu temel sorular etrafında şekillenmektedir: Küresel
+     siyasal ekonominin çok kutuplulaşması, ABD dolarının hâkimiyetinin hem algısal hem de nesnel gerçekliğini
+     nasıl şekillendirmektedir? Doların eriyen üstünlüğü, ABD hegemonyasının geleceğini ve küresel ekonomik
+     dengeleri nasıl etkileyebilir? Bu büyük dönüşümün öncülüğünde hangi yükselen güçler bulunmaktadır
+     ve bu gidişatı etkilemek için hangi stratejik araçları kullanmaktadır? Jeopolitik Analiz Sistemi yöntemini
+     kullanan bu çalışma, çok kutuplulaşan bir dünya ile doların küresel konumunun yeniden yapılandırılması
+     arasındaki çok yönlü ilişkileri aydınlatmayı amaçlamaktadır. Bununla birlikte, mevcut durumun ABD için
+     stratejik sonuçlarına ve gelecekteki küresel ekonomik manzarayı tanımlayacak olan dönüşümlere açıklık
+     getirmeyi hedeflemektedir. Bulgular, de-dolarizasyon girişimlerine öncülük eden ana güç olarak Çin’in öne
+     çıktığını göstermektedir. Ancak bu çabalar, mevcut aşamada kesin ve somut bir dönüşümden ziyade belirli
+     seviyede bir iradenin dışa vurumu gibi görünmekte olup, ana gidişat “post-hegemonik” bir bağlamda “varlık
+     çeşitlendirmesi” yönündedir. Bu eğilimlerin belirgin göstergeleri arasında, RMB’nin uluslararasılaşması
+     lehine CIPS, UnionPay ve Dijital Yuan’ın hayata geçirilmesiyle somutlaşan ekonomi politikaları yer alır.
+     Bu politikalar, alternatif para birimlerine dayalı çift taraflı ticaretin yaygınlaşması, petrol ticaretinin dolar
+     dışı para birimlerinde yapılma eğilimi, swap anlaşmaları ve BRICS para birimi projesi gibi uygulamalarla
+     tamamlanmaktadır. Kurumsal olarak ise söz konusu süreç Yeni Kalkınma Bankası, ŞİÖ, Asya Altyapı Yatırım
+     Bankası ve Kuşak-Yol Girişimi gibi yapılarla desteklenmektedir. Dolar hâkimiyetinin ABD dış politikasının
+     manipülatif bir aracı olarak görülmesi, ABD hegemonyasında hissedilen azalma ve ABD dolarına olan
+     güvenin azalması, gelişmekte olan ülkeleri para birimlerini çeşitlendirmeye yönlendirmektedir. Bu ivme,
+     özellikle Güney-Güney işbirliği çerçevesinde, Çin’in proaktif tutumuyla belirginleşmektedir.
+
+     Anahtar Kelimeler: : ABD hegemonyası, çok kutuplulaşma, de-dolarizasyon, dolar hâkimiyeti, jeopolitik analiz
+     sistemi
+
+
+
+
+KÜRESEL POLITIK EKONOMI SISTEMI,                                 dinamiklerini yeniden şekillendirme iradesiyle dola-
+onlarca yıl boyunca ABD hegemonyasının temel da-                 rın küresel hâkimiyetinin mutlakıyetine gölge düşür-
+yanak noktaları arasında yer alan doların belirleyici            mektedir.
+varlığının gölgesinde kalmıştır. Doların yükselişi,                  Mevcut makale, şu temel sorular etrafında şekil-
+ekonomik değerinin ötesinde, jeopolitik anlamda da               lenmektedir: Küresel siyasal ekonominin çok kutup-
+ABD’nin stratejik etkisinin bir simgesi haline gelmiş-           lulaşması, ABD dolarının hakimiyetinin hem algısal
+tir. Ancak, çok kutuplu bir küresel düzenin başlangı-            hem de nesnel gerçekliğini nasıl şekillendirmektedir?
+cına tanıklık ettiğimiz bu dönemde, doların her yö-              Doların eriyen üstünlüğü, ABD hegemonyasının ge-
+nüyle etkinliğinin azalmaya başlayabileceği yönünde              leceğini ve küresel ekonomik dengeleri nasıl etkileye-
+artan beklentiler bulunmaktadır. Farklı ekonomik                 bilir? Bu büyük dönüşümün öncülüğünde hangi yük-
+ve siyasal etkilere sahip çoklu güç merkezlerinin be-            selen güçler bulunmaktadır ve bu gidişatı etkilemek
+lirmesi, uluslararası ekonomik ilişkilerin geleneksel            için hangi stratejik araçları kullanmaktadır?
+
+                                                                                                                                 41
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+        Bu çalışma, çok kutuplulaşan bir dünya ile doların          devletin (veya devletler grubunun) “küresel siyasi ekono-
+     küresel konumunun yeniden yapılandırılması arasın-             miyi örgütleme, düzenleme ve istikrarlı tutma konusunda
+     daki çok yönlü ilişkileri aydınlatmayı amaçlamaktadır.         baskın rol oynadığı” bir duruma tekabül eder (Du Boff,
+     Bununla birlikte, mevcut durumun ABD için stratejik            2003, s. 1). Özellikle, II. Dünya Savaşı’nın ardından, ABD
+     sonuçlarına ve gelecekteki küresel ekonomik manzarayı          emperyalizmi, emperyalist sistemi yönlendiren kilit unsur
+     tanımlayacak olan dönüşümlere açıklık getirmeyi hedef-         olarak ortaya çıkmıştır ve kendisini küresel hegemonya
+     lemektedir. Jeopolitik Analiz Sistemi (JAS) yöntemini          ilişkilerinin merkezinde konumlandırmaya başlamıştır.
+     (Cattaruzza, 2020; Cattaruzza & Limonier, 2019) kulla-         Burada “hegemonya” durumunun mutlak düzeyde rıza
+     nan makale, ayrıca çok kutuplu yapı dahilinde yükselen         gerektirmediğini belirtmek gerekir. Tersine hegemonya,
+                                                                    rıza ve zorlamanın farklı derecelerde incelikli bir etkile-
+                                                                    şimini içerir. Bu tür etkileşimler; belirgin bir muhalefetin
+                                                                    varlığına karşın, istikrar adına uluslararası düzenin ve
+        II. Dünya Savaşı’nın ardından,
+                                                                    ittifaklar sisteminin, genel çıkar doğrultusunda hareket
+        ABD kendisini küresel                                       ettiğini iddia eden bir hegemonik güç tarafından yönlen-
+        hegemonik ilişkilerin                                       dirilmesi çabalarını ifade eder (Gürcan, 2022b). Örneğin,
+        merkezinde konumlandırmaya                                  2000’li yıllardan önceki dönemde, ABD’nin liderliğinin
+        başlamıştır.                                                ekonomik üstünlüğü, küresel yönetimdeki sözde güveni-
+                                                                    lirliği, algılanan askeri dokunulmazlığı, kültürel çekiciliği
+     aktörlerin stratejilerini ve eylemlerini ayrıntılı olarak      ve doların egemenliği ile ilişkilendirilmesi; bu nedenle de
+     incelemektedir. JAS, ülkelerin ekonomik yaklaşımlarını,        ABD’nin küresel liderlikte alternatifsiz olduğu yönündeki
+     jeopolitik gereksinimlerini ve stratejik ittifaklarını, ken-   yaygın inanç, ABD hegemonyasını somut bir şekilde ör-
+     dilerine özgü tarihsel ve sosyo-kültürel arka planları ile     neklemektedir.
+     birlikte değerlendirme olanağı tanır. Makale, bu yöntem             Araştırma bağlamında önemli bir diğer terim ise “çok
+     aracılığıyla küresel politik ekonominin karşı karşıya ol-      kutuplulaşma”dır. Bu terim, siyasal, ekonomik ve askeri et-
+     duğu yeni zorluklar ve fırsatları kapsamlı bir şekilde ele     kinin daha eşit dağılmasıyla birlikte birden fazla devletin
+     almaktadır. Bu çerçevede, makalenin ilk kısmı araştır-         sistemik öneminin artmasına koşut küresel güç dengelerin-
+     mayı şekillendiren kavramsal ve metodolojik arka pla-          de gerçekleşen dönüşümü tanımlar (Gürcan, 2019b). “Do-
+     nın açıklanmasına ayrılmıştır. İkinci ve son kısım ise çok     lar hegemonyası” terimi ise ABD dolarının, uluslararası re-
+     kutupluluğun ve doların azalan etkisinin görgül olarak         zervlerde en çok kullanılan para pirimi, hakim hesap birimi
+     incelenmesine odaklanmaktadır.                                 ve başlıca ödeme aracı olarak yaygın şekilde benimsendiği
+                                                                    bir durumu anlatır. Söz konusu statü, hem rızaya dayalı
+              Kuramsal ve Yöntemsel Çerçeve                         hem de zorlayıcı yöntemler aracılığıyla elde edilir. Bu çerçe-
+                                                                    vede, “dolarizasyon” dolar hegemonyasının bir sonucudur
+     Kapsamlı ve tutarlı bir analiz sağlayabilmek adına, çok        ve ABD dolarının rezerv değeri, hesap birimi ve değişim
+     kutuplulaşma ve de-dolarizasyon ilişkisi üzerine ince-         aracı olarak kullanılmasını içeren bir süreçten doğar. Böy-
+     lememize rehberlik edecek kavramsal ve metodolojik             lelikle, başlıca üç farklı dolarizasyon türünden bahsetmek
+     bir çerçeve oluşturarak başlamak faydalı olacaktır. ABD        mümkündür. Finansal dolarizasyon, varlıkların ve yüküm-
+     hegemonyası, mevcut araştırmada kilit bir terim olarak         lülüklerin dolarizasyonuyla ilgiliyken, işlem dolarizasyonu
+     karşımıza çıkar. Bu bağlamda “ABD hegemonyası”, tek bir        ödeme sistemine ilişkindir. Fiyat dolarizasyonu ise mal ve
+
+
+42
+Efe Can Gürcan - Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD Hegemonyasının Değişen Dinamiklerini Anlamak
+
+
+
+
+               Çok kutuplulaşan bir dünya ile doların küresel konumunun yeniden yapılandırılması arasında
+                               çok yönlü ilişkiler bulunmaktadır (Fotoğraf: CGTN, 2021).
+
+
+
+
+hizmetler için fiyatlandırma birimlerini ilgilendirir (Vidal,        2022; Yang & Ziaojing, 2017).
+vd., 2022; Basosi, 2021; Levy-Yeyati, 2021).                             Bununla ilgili son olarak, de-dolarizasyon terimi ise do-
+    Bu bağlamda, gelişen dünya için dolarizasyonun olum-             ların hakimiyetinde algılanan veya gerçek anlamda yaşanan
+suz sonuçlarını kısaca ele almak da önemlidir. ABD’nin para          gerilemeyi ve “dolara olan bağımlılığı başarıyla azaltan an-
+politikasındaki değişiklikler, gelişen ekonomilerde sık sık          ti-dolar politikalarını (McDowell, 2023, s. 5)” ifade eder. Bu
+borç, döviz kuru ve finans krizlerine yol açmıştır. Önem-            şekilde de-dolarizasyon, ABD hegemonyasının aleyhine kü-
+li örnekler arasında 1980’lerde Latin Amerika borç krizi,            resel siyasi ekonominin çok kutuplulaşmasını harekete geçi-
+1990’larda Asya finansal krizi ve 2018’de Türkiye, Brezilya,         ren ve aynı zamanda çok kutuplulaşma ile güçlenen önemli
+Arjantin ve diğer ekonomilerde ABD doları faiz oranların-            bir etken olarak değerlendirilebilir.
+daki artışla tetiklenen döviz kuru krizleri bulunmaktadır.               De-dolarizasyon gibi çok kutupluğu ilgilendiren olgula-
+Genel olarak konuşursak, yüksek düzeyde dolarizasyo-                 rın incelenmesinde, Jeopolitik Analiz Sistemi (JAS), bu tür
+na sahip finansal sistemler, bu tür krizlere daha sık maruz          olguların kendine içkin jeopolitik karakterinin göz önünde
+kalmaktadır. Bu nedenle, dolarizasyon genellikle yüksek ve           bulundurulmasına ortam sağlamasından dolayı önemli bir
+istikrarsız enflasyon, döviz kuru dalgalanmaları ve disiplin-        işlevselliğe sahiptir. Çok kutuplulukla uyumluluğa sahip
+siz parasal politika ile ilişkilendirilir. Ayrıca, döviz eşleşmesi   görgül bağlamından bağımsız olarak, JAS’ın temel faydası
+sorunlarıyla karşı karşıya kalan hane halkları, işletmeler ve        ise jeopolitik analize sistematik bir yaklaşım sunmasıdır. Bu
+finansal aracıların finansal istikrarını olumsuz etkileyen           şekilde yapılandırılmış bir metodoloji, tüm ilgili öğelerin
+bilanço ve likidite sorunlarının riskini artırır. Dahası dola-       kapsamlı bir şekilde göz önünde bulundurulmasını sağlar
+rizasyon, gerçek ekonomiyi olumsuz etkileyerek büyümede              ve önemli etkenlerin atlanmasını engeller. Ayrıca, farklı et-
+azalma ve çıktıda artan istikrarsızlıklara yol açabilir (Naceur,     kenler arasındaki bağlantıları ve etkileşimleri aydınlatır ve
+Hosny & Hadjian, 2019; Xueying, Dongsheng & Ruiling,                 karmaşık verilerin tutarlı bir görsel temsilini sunar.
+
+
+                                                                                                                                      43
+                                                                                                                                      43
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+         Bu çalışmada JAS, aktör merkezli, coğrafi, ilişkisel, sos-   rek çalışmanın inceleme nesnelerinin analiz edilmesinden
+     yo-ekonomik, tipolojik, çok ölçekli, zamansal ve sembolik        oluşur ve önceden belirlenen aktörlerin, bölgelerin ve iliş-
+     perspektiflere dayanarak analizimizin temel parametrele-         kilerin jeopolitik, ekonomik ve kültürel boyutlarına odak-
+     rini belirlemeye yardımcı olmaktadır. Burada Cattaruzza          lanan beş farklı prosedürü içerir. Burada ilk olarak, jeo-
+     ve Limonier’nin (2019) çerçevesinden uyarlanan JAS me-           politik aktörlerin, bölgelerin ve ilişkilerin sosyo-politik ve
+     todolojisi, genel haliyle iki adımdan oluşur. Birinci aşama,     ekonomik doğası incelenerek aktörlerin ana karakteri de-
+     çalışmanın inceleme nesnelerini, yani ana aktörleri, bölge-      ğerlendirilir. JAS’daki tipoloji öğesine gelirsek, aktörlerin
+     leri ve ilişkileri tanımlamaktan oluşur.                         saldırgan, savunmacı, rakip, mağdur, ombudsman, savaşçı
+                                                                      veya savaş dışı gibi konumsal özellikleri saptanır. Mevcut
+                                                                      araştırma özelinde, ABD “gerileyen bir hegemon” olarak
+         JAS metodolojisinde ikinci ana                               karşımıza çıkarken, Çin bir “iddiacı devlet (Desai, 2013)”
+         adım, ilk adımda belirlenen                                  olarak görünmektedir. Ayrıca bölgeler, operasyonel arena-
+         aktörlerin, bölgelerin ve ilişkilerin                        lar, harekete geçirici çerçeveler veya çekişme noktaları ola-
+                                                                      rak stratejik önemlerine göre kategorize edilebilir. Örne-
+         jeopolitik, ekonomik ve kültürel
+                                                                      ğin araştırma bağlamında, gelişen dünya coğrafyası, güç
+         boyutlarına odaklanan beş farklı
+                                                                      çekişmelerinin bir öznesi olarak karşımıza çıkar. İlişkilerin
+         prosedürü içerir.
+                                                                      de tipolojisi değerlendirilmelidir. Örneğin, çatışmaların
+                                                                      açık veya gizli, silahlı veya silahsız, simetrik veya asimet-
+         Burada ilk olarak, devletler, uluslararası örgütler, top-    rik olduğu değerlendirilebilir (Cattaruzza, 2020; Cattaruz-
+     lumsal gruplar ve şirketler gibi kilit aktörlerin tanımlan-      za & Limonier, 2019). Bu araştırmada, de-dolarizasyon ile
+     masını gerekir. Araştırma bağlamında beliren kilit aktör-        ilgili rekabetler genel olarak silahsız bir rekabete tekabül
+     ler arasında ABD, Çin, ve Rusya gibi ülkeler ile BRICS+          ederken, iddiacı devletler tarafından yönlendirilen alter-
+     (Brezilya, Rusya, Hindistan, Çin, Güney Afrika+), Asya           natif işbirliği mekanizmaları, daha sonra derinlemesine
+     Altyapı Yatırım Bankası, Şanghay İşbirliği Örgütü (ŞİÖ)          irdelenecek olan “post-hegemonik” (Gürcan, 2020) bir
+     ve Kuşak-Yol Girişimi gibi bir dizi uluslararası örgüt ve        karaktere sahiptir.
+     düzenleme bulunmaktadır. Bu aktörler, mevcut araştır-                JAS’ın ikinci adımındaki bir diğer prosedür ise ak-
+     manın faili parametrelerini belirlemektedir. Bunu, söz           törlerin, bölgelerin ve ilişkilerin mekansal büyüklüğü ve
+     konusu aktörlerin dahil olduğu ve/ya gündeme getirdiği           erişimini (yani ölçeklerini) incelemektir. Burada asıl olan,
+     coğrafi bölgelerin incelenmesi takip eder. Örneğin mevcut        aktörlerin etki alanlarının genişliğini, bölgelerin ‘yerel’den
+     araştırmada, siyasal ve ekonomik bölgeler öne çıkmakta-          ‘küresel’e doğru genişliğini ve ilişkilerin jeopolitik sonuç-
+     dır. Son olarak, JAS metodolojisinin ilk adımında, söz           larının boyutunu hesaba katabilmektir. Mevcut çalışmada,
+     konusu aktörlerin kurdukları ve sürdürdükleri ilişkilerin        çok kutuplulaşmanın ve de-dolarizasyon çabalarının etki-
+     kapsamlı bir analizi gerçekleştirilir. Bu ilişkiler, siyasi,     lerinin küresel ölçeği öne çıkmaktadır. Bu durum ise kü-
+     ekonomik veya kültürel olsun, çeşitli işbirliği ve rekabet       resel politik ekonomi dahilinde para biriminin çeşitlendi-
+     dinamiklerini kapsar (Cattaruzza, 2020; Cattaruzza & Li-         rilmesi doğrultusunda gelişen yavaş eğilimlere işaret eder.
+     monier, 2019). Ukrayna çatışması, de-dolarizasyon politi-        Ayrıca JAS, zamansal boyutu da hesaba katar ve bu şekilde
+     kaları ve alternatif uluslararası işbirliği mekanizmaları, bu    aktörler, bölgeler ve çatışmaları çevreleyen tarihsel bağla-
+     çalışmada ele alınan ilişkilerin bir parçasıdır.                 mı öne çıkarır. Mevcut araştırma özelinde, çok kutuplulaş-
+         İkinci aşama, gerekli analitik parametreleri belirleye-      ma ve de-dolarizasyon süreçlerinin başlangıcı 2000’lerin
+
+44
+    Efe Can Gürcan - Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD Hegemonyasının Değişen Dinamiklerini Anlamak
+
+
+
+
+                                      Şekil 1. Jeopolitik Analiz Sisteminde De-Dolarizasyon
+                                                                           İNCELEME NESNELERİ
+
+    ANALİTİK                       Aktörler                              Bölgeler                                              İlişkiler
+ PARAMETRELER
+
+
+                        Ülkeler (ABD, Çin, Rusya gibi
+                               başlıca aktörler)             Devlet ve uluslararası örgütlerin    Ağırlıklı olarak politik-ekonomik rekabet, yaptırımlar, silahlı
+Ana Karakter/Nitelik                                         kapsadığı siyasal ve ekonomik          çatışmalar (örn. Ukrayna çatışması ve de-dolarizasyona
+                            Uluslararası örgütler                        bölgeler                           etkisi) ve alternatif işbirliği mekanizmaları
+                        (KYG, BRICS+, Asya Altyapı
+                          Yatırım Bankası, ŞİÖ vb.)
+
+
+                                                               Bölgelerin bir “güç rekabeti         ABD ile silahsız rekabetin “post-hegemonyacı işbirliği”
+                       “Gerileyen hegemon” olarak ABD      çerçevesi” olarak kullanılması (örn.        çerçevesinde değerlendirilmesi (örn. Çin’in RMB’yi
+      Tipoloji                                               de-dolarizasyon politikalarının      uluslararasılaştırma iradesi ve politikaları, CIPS, UnionPay,
+                        “İddiacı devlet” olarak Çin ve     gelişen dünyanın çeşitli bölgelerine   Dijital Yuan, ikili ticarette ve enerji ticaretinde alternatif para
+                        alternatif uluslararası örgütler             yoğunlaşması)                 birimlerinin kullanımı, swap anlaşmaları, Yeni Kalkınma
+                                                                                                                 Bankası, BRICS Para Birimi vb.)
+
+
+Ölçek/Mekansal Boyut     Küresel ve bölgesel aktörler          Küresel ve bölgesel alanlar         Dünya siyaseti açısından küresel ve bölgesel sonuçlar (örn.
+                                                                                                           para biriminde çeşitlendirmeye gidilmesi)
+
+
+                         2000’lerden itibaren iddiacı         2000’lerden itibaren gelişen
+  Zamansal Boyut          güçlerin yükselişinin ivme       dünyanın yeniden siyasallaştırılması    2000’lerden itibaren uzun erimli rekabetin ivme kazanması
+                                  kazanması
+
+
+                       Dolar hakimiyetinin bir “zorbalık   “Gelişen dünya”nın bir “mücadele
+  Sembolik Temsil         aracı” olarak algılanması         ve direniş alanı” olarak tasavvur                        “Güney-Güney işbirliği”
+                                                                         edilmesi
+
+
+                                      Tablo (Cattaruzza & Limonier, 2019) kaynağına dayanmaktadır.
+
+
+
+    başlarına kadar izlenebilir, ki bu dönem de araştırma-                           Jeopolitik Analiz Sistemi Bağlamında
+    nın zamansal parametrelerini belirler. Son olarak, ak-                           De-Dolarizasyonu Yeniden Düşünmek
+    törlerin kendi konumlarını nasıl meşrulaştırdıkları,
+    bölgesel anlatıların jeopolitik girişimler üzerindeki et-                  Doların uluslararası parasal gücü, ABD’nin küresel hege-
+    kisi ve ilişkilerin sembolik temsili incelenir (Cattaruzza,                monyasını sürdürme ve ilerletme konusunda belirleyici
+    2020; Cattaruzza & Limonier, 2019). Çok kutuplulaşma                       olmuştur. 2. Dünya Savaşı’nın ardından ABD, uluslara-
+    özelinde mevcut analiz, dolar hakimiyetinin, iddiacı                       rası yardımlar, kredi desteği ve ticaret bağlantıları gibi
+    devletler tarafından giderek daha fazla zorlayıcı bir araç                 araçları kullanarak yabancı ekonomilerin kilit sektörle-
+    olarak algılandığını ortaya koymaktadır ve gelişmekte                      rini doların değerine ve istikrarına bağlamıştır. Bu üs-
+    olan dünya, bir çekişme ve direniş alanı olarak ortaya                     tünlük, ABD’nin maceracı askeri faaliyetlerini finanse
+    çıkmaktadır. Söz konusu durum ise 2000’ler boyunca                         etmek ve müttefiklere destek amacıyla sağlanan kredi ve
+    “Güney-Güney işbirliği” gündemini hızlandırmıştır                          yatırımlar için neredeyse sınırsız miktarda para basabil-
+    (Gürcan, 2019b). Şekil 1, bir sonraki bölümde görgül                       mesini mümkün kılmıştır. Bu şekilde ise ABD’nin jeo-
+    olarak tartışılacak olan JAS analizinin şematik temsilini                  politik hedeflerine uygun hareket etmesi kolaylaşmıştır
+    sağlamaktadır.                                                             (Gürcan, 2022a; Gürcan & Donduran, 2023).
+
+                                                                                                                                                                   45
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+         Hegemonik bir perspektiften bakıldığında, bu eşsiz      Simpson-Bell, 2021; Gürcan, 2019b; Yuan, 2018; IMF,
+     konum “fahiş ayrıcalık” olarak adlandırılmıştır (Co-        2023).
+     hen, 2012: 17) ve ABD’ye iç makroekonomik politikada            2023 yılında, özellikle Silicon Valley Bankası gibi etki-
+     daha fazla esneklik sağlamıştır. Birçok müttefik ülke ise   li bir banka olmak üzere üç ABD bankasının çöküşü, kü-
+     ABD merkezli küresel politik ekonomiye karşı gelme          resel finans sisteminde büyük bir şok etkisi yaratmıştır.
+     gücünü kendilerinde görmemekteydi, çünkü ABD’nin            Bu durum, ABD Merkez Bankası’nın faiz oranlarını kes-
+     hedefleriyle uyumlu hareket etmek, hayati kredilere ve      kin bir şekilde artırmasının sonucu olarak ABD Hazine
+     yardımlara erişimle ödüllendirilmekteydi. Aksi taktirde     menkul kıymetlerinin değerindeki düşüşle doğrudan
+     ekonomik istikrarsızlığa düşmek kaçınılmazdı. Tabii,        bağlantılıydı. Bütün bunlar, ABD bankacılık sisteminde-
+     Uluslararası Para Fonu ve Dünya Bankası gibi kuruluşlar     ki zayıflıkları göstermekle kalmamış, aynı zamanda ya-
+     doların üstünlüğünü daha da kurumsallaştırmıştır (Ci-       tırımcıların ABD finansal varlıklarına olan güvenini de
+     orciari, 2014; Vasudevan, 2021; Yuan, 2018).                etkilemiştir. Özellikle, Silicon Valley Bankası’nın mevdu-
+                                                                 atlarının önemli bir kısmını, faiz oranı artışları nedeniyle
+                                                                 değerleri düşen Hazine bonoları ve kısmen diğer devlet
+                                                                 garantili menkul kıymetlere yatırmış olması, ABD cin-
+        2023 yılında, özellikle Silicon Valley
+                                                                 sinden varlıklara aşırı bağımlılığın risklerini ortaya koy-
+        Bankası gibi etkili bir banka olmak
+                                                                 maktadır. Bu varlıklar değer kaybettikçe ABD dolarının
+        üzere üç ABD bankasının çöküşü,
+                                                                 daha zayıf duruma düşmesi göz önüne alındığında, dolar
+        küresel finans sisteminde büyük bir                      ve ABD’nin diğer finansal enstrümanlarına aşırı derece-
+        şok etkisi yaratmıştır.                                  de bağımlı kalmanın olası tehlikeleri öne çıkmıştır (Ca-
+                                                                 udevilla, 2023).
+         ABD dolarına duyulan küresel güven, bunun üstün-            Daniel McDowell (2023), ABD’nin dış politikasının
+     lüğünün temelini oluşturmuştur. Söz konusu güven,           ve doların stratejik kullanımının, giderek daha fazla kü-
+     ABD’nin küresel üretime yönelik geçmiş katkılarına,         resel çapta bir siyasal risk olarak algılandığını vurgula-
+     eşsiz askeri gücüne, teknolojik liderliğine ve sağlam bir   maktadır. Bu algı, ABD’ye yönelik kaygıları nedeniyle
+     hizmet sektörü aracılığıyla para biriminin satın alma gü-   hükümetler nezdinde dolar bağımlılığını azaltma arzu-
+     cünü sürdürme kapasitesine dayanmaktadır. Ancak, son        sunu artırmaktadır. McDowell (2023), doların stratejik
+     dönemdeki jeopolitik dönüşümler, daha doğrusu dünya         kullanımında yaptırımların, ABD hegemonyasına mey-
+     politikasının çok kutuplulaşması bu küresel güveni za-      dan okuyan yükselen güçlere karşı kullanılan başlıca
+     yıflatmaktadır (Gürcan, 2022a; Gürcan & Donduran,           araç olduğunu vurgular. Birincil yaptırımlar, hedeflenen
+     2023). Çin’in yüksek teknolojili ürünlerin önde gelen       bireyi, şirketi veya hükümeti doğrudan dolar bazlı finan-
+     üreticisi ve ihracatçısı olarak yükselmesi, 2007-2008 fi-   sal sistemden izole etmeyi amaçlar. Buna karşılık, ikincil
+     nansal krizinin etkileri ve ABD’nin Afganistan, Irak ve     yaptırımlar, yabancı finansal kurumlar üzerinden, hede-
+     Suriye gibi ülkelerde uğradığı askeri yenilgiler, doların   fi küresel finans ağlarından dolaylı olarak dışlamak için
+     tartışılmaz konumuna dair ciddi soru işaretleri doğur-      tasarlanmıştır. McDowell’a (2023) göre, ABD’nin doları
+     muştur. Özellikle, ABD dolarının küresel rezervlerdeki      stratejik kullanma sıklığı ve yaptırımlar tarihi seviyede
+     payı 2000 yılında yaklaşık %70 iken, 2023 yılının ikin-     gözle görülür bir artış sergilemiştir. Özellikle Obama ve
+     ci çeyreğinde %58,8’e düşmüştür ki bu oran son çeyrek       Trump yönetimleri altında, finansal yaptırımlar yaygın
+     yüzyılın en düşük seviyelerinden biridir (Arslanalp &       bir araç haline gelmiştir. Yaptırımlarla ilgili Başkanlık
+
+46
+Efe Can Gürcan - Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD Hegemonyasının Değişen Dinamiklerini Anlamak
+
+
+
+
+      Birçok müttefik ülke ise ABD merkezli küresel politik ekonomiye karşı gelme gücünü kendilerinde görmemekteydi,
+        çünkü ABD’nin hedefleriyle uyumlu hareket etmek, hayati kredilere ve yardımlara erişimle ödüllendirilmekteydi
+                                                (Fotoğraf: China Daily, 2022).
+
+
+
+
+Kararnameleri'nin sayısı, 2000 yılında 22 iken, 2020 so-        olmak üzere birçok önemli Latin Amerika ülkesinde,
+nuna kadar yaklaşık %500 artarak 94’e ulaşmıştır. Bu ka-        bu bağımlılığı azaltmaya yönelik, de-dolarizasyon ola-
+rarnamelerden bazıları, uyuşturucu kaçakçılığı ve terörle       rak bilinen bir eğilim görünmeye başlamıştır. Yine de,
+mücadele benzeri çabalar dahilinde devlet dışı kurum-           de-dolarizasyon hızı Peru gibi diğer ülkelerde daha yavaş
+lar gibi doğrudan yabancı hükümetlere bağlı olmayan             seyretmektedir ve söz konusu sürecin bölgesel düzlemde
+aktörlere yöneliktir, ancak bunların çoğunluğu devlet           kademeli bir şekilde sürdürülmesi beklenmektedir. Ni-
+odaklı yaptırım programlarından oluşur. ABD, bir reji-          tekim, Latin Amerika ülkelerinin de-dolarizasyon çaba-
+me yakın bireyleri ve kuruluşları kara listeye alarak veya      larının ağırlıklı bir kısmı, kademeli, teşvik temelli yakla-
+doğrudan hükümet yetkililerini ve devlet kurumlarını            şımlar içermektedir. Buna rağmen, Arjantin bankacılık
+hedef alarak baskı uygular (McDowell, 2023).                    sektöründeki dolarizasyon oranında belirgin bir azalma
+    ABD dolarına yönelik küresel güvenin azalmasının ve         yaşanmıştır ve Brezilya’nın dolara dayalı kamu borcunda
+ABD yaptırımlarından kaynaklanan tehdit algısının art-          önemli bir daralma görülmüştür. Belki de bu eğilimin
+masının sonuçları, özellikle gelişen dünyada belirgin bir       daha çarpıcı bir örneği, 2000’lerin ortalarına kadar dün-
+şekilde görülebilir. Bu durumun güçlü bir örneği Latin          yanın en dolarize ekonomilerinden birine sahip Boliv-
+Amerika’da mevcuttur. Dünyadaki diğer bölgelere göre,           ya’dır. 2002 yılında, mevduat dolarizasyon oranı %93’ün
+Latin Amerika tarihsel olarak ABD dolarına yüksek dü-           üzerindeydi. Ancak, sol politikaların uygulanması ve
+zeyde bağımlılık sergilemiştir. Ancak son dönemde Bo-           makroekonomik istikrar, hem bölgesel hem de küresel
+livya, Arjantin, Brezilya, Meksika ve Venezuela da dahil        düzeyde en önemli dolarizasyon azaltma çabalarından
+
+
+                                                                                                                                 47
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+     birine yol açmıştır.                                       nin dolar dışı para birimleriyle ticaret yapmaya açık
+         2019’a gelindiğinde, yabancı para cinsinden mev-       olduğuna ilişkin açıklaması büyük bir öneme sahiptir.
+     duatların oranı keskin bir şekilde %13.8’e düşmüştür.      Suudi Arabistan, özellikle petrol ticareti bağlamında
+     Bolivya, dolar merkezli bir ekonomiden uzaklaşarak,        ABD dolarıyla uzun süredir devam eden bir ilişkiye
+     ABD dolarına bağlı dış şoklara karşı kırılganlığını        sahip olmuştur. Bu ilişki, “petrodolar” sistemi olarak
+     azaltmış ve ekonomik tabanını çeşitlendirmiştir (Shar-     adlandırılır ve yaklaşık yarım yüzyıl boyunca doların
+     ma, 2023; Quenan & Edgardo, 2007; Levy-Yeyati,             egemenliğinin temel yapı taşı olmuştur. Suudi Arabis-
+     2021). Bu eğilim, 2000’lerde Latin Amerika solunun eşi     tan’ın diğer para birimleriyle ticaret yapmaya açık ol-
+     benzeri görülmemiş yükselişi bağlamında, çok kutup-        ması, tarihsel olarak ABD dolarının küresel konumu-
+     lulaşmada önemli bir katalizör olarak ortaya çıkmıştır     nu güçlendiren küresel enerji ticaretinde potansiyel bir
+     ki BRICS+’nın önemli bir bileşeni olan Lula Brezilyası     değişimin işareti olabilir. Yakın dönemde, Çin Devlet
+     da bu eğilime dahil edilmelidir (Gürcan, 2019b).           Başkanı Xi Jinping’in Körfez ülkelerinin petrol tica-
+                                                                retimde Renminbi’nin (RMB, yuan) kabul edilmesine
+                                                                yönelik söylemi de aynı bağlamda değerlendirilme-
+        Çin’in bir iddiacı devlet olarak                        lidir. Bu gelişme, Çin’in para birimini uluslararasılaş-
+                                                                tırma ve ABD dolarının egemenliğine meydan okuma
+        çabaları, belki de en keskin ifadesini
+                                                                çabalarının bir göstergesidir. Eğer Suudi Arabistan ve
+        sahip olduğu ABD Hazine bonoları
+                                                                potansiyel olarak diğer Körfez ülkeleri RMB ya da di-
+        ve ulusal varlık fonlarının miktarında,
+                                                                ğer para birimleriyle petrolü ticareti yapmaya başlarsa,
+        Şanghay gibi şehirlerin küresel finans
+                                                                doların küresel enerji piyasalarındaki hakim konumu
+        merkezi olarak ortaya çıkışında ve                      önemli ölçüde zayıflayabilir (Caudevilla, 2023).
+        doğrudan yatırımlar ile kalkınma ve                         Ayrıca, 2023 Mart’ında Çinli ve Fransız enerji şir-
+        kredi desteğinde yakaladığı çıkışta                     ketlerinin bir LNG anlaşmasını RMB ile sonuçlandır-
+        bulur.                                                  ma konusunda anlaşma sağlaması tarihi bir öneme
+                                                                sahiptir. ABD doları dışında bir para biriminde gerçek-
+        Bu noktada, küresel politik ekonominin çok kutup-       leşen böyle bir işlem, özellikle hayati enerji sektöründe
+     lulaşmasının, sadece Latin Amerika solunun yükselişi       dolar aleyhine çeşitlenme yönünde güçlü bir sinyaldir.
+     ve “sosyal adalet odaklı bölgeciliği”nde değil, aynı za-   Enerji anlaşmalarının önemi göz önüne alındığında,
+     manda Avrasya’nın ŞİÖ, Avrasya Ekonomik Birliği, ve        dolar dışındaki para birimlerinde işlemler yapmak,
+     Kolektif Güvenlik Antlaşması Örgütü’nde en keskin          gelecekteki ticaret anlaşmaları için bir öncül oluştu-
+     ifadesini bulan “güvenlik odaklı bölgeciliği” ve BRI-      rabilir. Çin’in Arap Körfez ülkeleriyle RMB tahsilatı
+     CS+6, Kuşak-Yol Girişimi ve Asya Altyapı Yatırım           için Shanghai Petrol ve Doğal Gaz Borsası’nı kullanma
+     Bankası gibi diğer alternatif işbirliği mekanizmala-       yönündeki son hamlesi de eşit derecede önemlidir ve
+     rında da vücut bulduğunu belirtmek gerekir (Gürcan,        enerji ticaretinde ABD dolarını devre dışı bırakma yö-
+     2019b, 2019a, 2020). Bu kuruluşlar, önümüzdeki yıllar-     nünde stratejik bir çaba olarak görülmektedir. Körfez
+     da de-dolarizasyonun başlıca birer aracı olarak hizmet     ve Çin arasındaki ticarete konu olan büyük miktarda
+     edebilir.                                                  petrol ve gaz ilişkisi göz önüne alındığında, bu deği-
+        Yakın zaman önce, 2023 Dünya Ekonomik Foru-             şiklik, küresel enerji piyasalarında ABD dolarına yöne-
+     mu’nda Suudi Arabistan’ın Maliye Bakanı’nın ülkesi-        lik talep üzerinde önemli bir etki sağlayabilir. Nükleer
+
+48
+Efe Can Gürcan - Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD Hegemonyasının Değişen Dinamiklerini Anlamak
+
+
+
+
+           RMB’nin ilerlemesi takdir edilebilir bir durumdur, ancak RMB küresel olarak hakim para birimlerine
+             kesin bir meydan okuma gerçekleştirmekten henüz uzaktadır (Fotoğraf: China Daily, 2023).
+
+
+
+enerji için de benzer bir durum söz konusudur. 2023’te          temini yeniden düzenlemenin gerekliliğini vurgulamış-
+Bangladeş ve Rusya arasında bir nükleer santral işlemi          tır. Bireysel olarak ülkelerden bağımsız bir uluslararası
+için RMB kullanılması konusundaki anlaşma, önemli               rezerv para birimi önermiş ve küresel ekonomik krizde
+altyapı ve kalkınma projeleri için ABD dolarına alter-          zayıflayan doların anahtar bir etken olduğunu belirt-
+natif arayan ülkelerin başka bir girişimidir. Özellikle,        miştir. Bu ortam, Kuşak-Yol Girişimi ve Asya Altyapı
+geleneksel olarak dolarla denomine edilmiş enerji iş-           Yatırım Bankası gibi girişimler aracılığıyla Çin’in RMB
+lemlerine katılan bir ülke olan Rusya’nın, bu kadar             bazlı bir ticaret çerçevesi kurma kapasitesi üzerine
+büyük bir anlaşmada RMB’yi kullanmaya açık olması               tartışmaları teşvik etmiştir. Nitekim Kuşak-Yol Girişi-
+dikkat çekicidir (Sharma, 2023).                                mi’ne katılan ülkeler giderek Çin ile ticaretlerinde RM-
+    Bu evrilen manzara içerisinde Çin, küresel finan-           B’yi kabul etmeye başlamaktadır. Ayrıca, Nisan 2023’te
+sal etkisini artırma fırsatını kullanmaktadır. Aslında,         Arjantin, Çin ithalatları için ABD doları yerine RMB
+Çin’in dolar merkezli küresel finans sistemini reforme          kullanma kararı almıştır. Brezilya ve Çin de, ticari ve
+etmeye yönelik çabaları, 1997 Asya finansal krizini ta-         finansal işlemlerini kendi para birimleriyle yürütmeyi
+kiben başlamıştır. O zamanlar Çin Halk Bankası’nın              kabul etmiştir. Ek olarak, “petroyuan” kavramı, yükse-
+Başkanı olan Dai Xianglong, 1999 yılında, uluslarara-           len çok kutupluluk dahilinde küresel petrol ticaretinde
+sı rezerv paraları olarak birkaç ulusal paranın baskın          ABD dolarının hakimiyetine meydan okuma potansi-
+rolünün neden olduğu istikrarsızlığın, ayrıca mevcut            yeliyle giderek daha fazla ilgi görmektedir. Çin’in Rusya
+sistemin ödemeler dengesi sorununa çare bulamama-               ile yaptığı petrol sözleşmeleri çoğunlukla RMB cin-
+sının uluslararası finansal krizlere yol açtığını ifade         sindendir ve İran, Irak, Venezuela ve Endonezya gibi
+etmiştir. 2007–2008 küresel finansal krizin ardından,           ülkeler de Çin ve Rusya ile yaptıkları anlaşmalarda
+Dai’nin halefi Zhou Xiaochuan, uluslararası para sis-           benzer uygulamalarda bulunmaktadır.
+
+                                                                                                                                 49
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+          Çin, 2018 BRICS Zirvesi’ni takiben Şanghay Ulus-         sini sahip olduğu ABD Hazine bonoları ve ulusal varlık
+     lararası Enerji Borsası’nda RMB cinsinden petrol vadeli       fonlarının miktarında, Şanghay gibi şehirlerin küresel
+     işlemler harekete geçirmiştir. RMB cinsinden fiyatlan-        finans merkezi olarak ortaya çıkışında ve doğrudan
+     dırılan bu vadeli işlemler, Şanghay ve Hong Kong Altın        yatırımlar ile kalkınma ve kredi desteğinde yakaladı-
+     Borsaları’nda altına da dönüştürülebilmektedir. Bu geliş-     ğı çıkışta bulur (Gürcan, 2022a; Gürcan & Donduran,
+     me, dünyanın en büyük petrol ithalatçısı olan Çin’e, altın    2023; Kokubun, 2003). Çin, bu yollarla RMB’yi uluslara-
+     kullanarak yurt içinde petrol ticareti yapma ve tedarikçi-    rasılaştırarak, de-dolarizasyon sürecine aktif olarak kat-
+     lerin RMB ödemelerini hemen altına dönüştürme olana-          kıda bulunmaktadır ve bütün iniş ve çıkışlarına karşın
+     ğı sağlar. Şangay Borsası’nda işlem gören RMB bazlı pet-      uzun süredir devam eden ABD finansal hegemonyasına
+     rol vadeli işlemler, Londra’da işlem gören Brent ve New       meydan okumaktadır. Özellikle 2007-2008 döneminde
+     York’ta işlem gören WTI petrol vadeli işlemlerine göre        patlak veren ABD finansal krizinin ardından, RMB’nin
+     hacim açısından hala geride kalsa da, Tokyo ve Duba-          uluslararasılaşmasında yeni bir ivme sağlandığı belir-
+     i’deki benzer ürünlerin performansını geride bırakmış-        tilmelidir. Bu krizin küresel ölçeği, mevcut ABD hege-
+     tır. Bu bağlamda önemli bir kilometre taşı, 2023 yılında      monyasını gölgelemektedir (Gürcan, 2022a; Gürcan &
+     Çin ve Suudi Arabistan’ın RMB kullanarak petrol ticareti      Donduran, 2023). Söz konusu dönem dahilinde, 2009
+     yapma konusunda anlaşmaya varmaları olmuştur. Bu              yılı Çin yetkililerinin bir dizi kritik önlemler almasına
+     anlaşma, “petro-yuan anlaşması” olarak bilinmektedir.         sahne olmuştur. Başlangıçta Hong Kong’da denizaşırı
+     Körfez İşbirliği Konseyi ülkeleri de RMB’nin benimsen-        RMB banka hesaplarına onay verilmiştir ve bu izin di-
+     mesini ciddi olarak değerlendirmektedir (Zongyuan &           ğer bölgelere doğru genişletilmiştir. Hong Kong’da RMB
+     Papa, 2022; Siddiqui, 2023; Soni & Jain, 2023; Gouvea &       tahvilleri ihraç edilmeye başlanmıştır. RMB, uluslararası
+     Gutierrez, 2023).                                             ticaret işlemlerini faturalandırmak ve sonuçlandırmak
+                                                                   için daha sık kullanılmaya başlanmıştır. Çin Halk Ban-
+                                                                   kası ve çeşitli diğer merkez bankaları arasında swap hat-
+        Çin’in finansal çabalarındaki bir                          ları kurulmuştur (Gürcan, 2022a; Gürcan & Donduran,
+        diğer kritik dönüm noktası ise                             2023; Kroeber, 2018).
+        Dijital Yuan’ın oluşturulmasıdır.                              2015 yılına gelindiğinde, RMB’nin artan önemi,
+        2017’de Devlet Konseyi tarafından                          Uluslararası Para Fonu’nun rezerv para birimi sepetine
+        onaylanan dijital para birimi girişimi                     dahil edilmesiyle nihayet tanınmıştır ve RMB dünya-
+        günümüze kadar önemli ilerlemeler                          nın en önemli beş para birimi arasında konumlandırıl-
+        kaydetmiştir.                                              mıştır. RMB’nin yükselişi, 2022’nin üçüncü çeyreğinde
+                                                                   %2.76’ya çıkan küresel para rezervlerindeki artan pa-
+         Bu bağlamda, Çin, bir “iddiacı devlet (Desai, 2013)”      yıyla daha da anlaşılabilir. Bu başarıya karşın, küresel
+     olarak ortaya çıkmıştır. İddiacı devletler, uluslararası      ödemelerde en aktif beşinci para birimi olan RMB,
+     sistemde hâkimiyet için hakim devletlerle rekabet ede-        ABD dolarının hakim %41.38 payı ile hala gölgelen-
+     cek “maddi yeteneklere (Keersmaeker, 2017, s. 25)” ve         mektedir (RMB Tracker Document Centre, 2022). Kro-
+     “[kendi] projelerini teşvik edip genişleterek küresel siya-   eber (2018) yerinde bir şekilde belirttiği üzere, RMB’nin
+     sal değişimi teşvik etme potansiyeline sahip olan (Gür-       ilerlemesi takdir edilebilir bir durumdur, ancak RMB
+     can, 2019b, p. 6)” devlet türüne tekabül eder. Çin’in bir     küresel olarak hakim para birimlerine kesin bir meydan
+     iddiacı devlet olarak çabaları, belki de en keskin ifade-     okuma gerçekleştirmekten henüz uzaktadır.
+
+
+50
+Efe Can Gürcan - Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD Hegemonyasının Değişen Dinamiklerini Anlamak
+
+
+
+
+                                    Şekil 2. RMB Sınır Ötesi Ödemelerin Gelişimi
+
+
+
+
+                     RMB'nin bir ekonominin Çin'e yaptığı toplam ödemelerdeki payı olarak ölçülen,
+                             sınır ötesi ödemelerdeki RMB'nin gelişimi (Grafik: IMF, 2023).
+
+
+
+
+    RMB’nin uluslararasılaşma yolculuğunda önemli bir           Çin dışındaki bankalarla işlem yapmak için SWIFT me-
+gelişme, dolar merkezli SWIFT’e bir alternatif olarak ta-       sajlaşma sistemine bağımlılığı belirgin bir zafiyet olarak
+sarlanan Sınır Ötesi Bankalararası Ödeme Sistemi’nin            belirmektedir. Bütün bunlara karşın, Eichengreen’in
+(CIPS) oluşturulmasıdır. 2015’te kurulan CIPS, kurulu-          (2022) ifade ettiği gibi, SWIFT’in ABD tarafından silaha
+şunun ikinci çeyreğinde 5.7 trilyon yuan değerinde işlem        dönüştürülmesi potansiyeli küçümsenemez.
+kaydetmiştir ve bu rakam yaklaşık %113’lük bir büyü-                Mart 2023’te, RMB’nin Çin’in sınır ötesi işlemlerinde
+me ile 2020’nin üçüncü çeyreğinde şaşırtıcı bir şekilde         en çok kullanılan para birimi olarak doları geçtiğini be-
+12.14 trilyon yuan’a çıkmıştır (Gürcan, 2022a; Gürcan &         lirtmekte fayda vardır. RMB’nin ağırlığı, tüm ödemelerin
+Donduran, 2023; Borst, 2016). Ayrıca, 2018 yılına gelin-        %48.4’üne denk gelmektedir (Reuters, 2023; Sharma,
+diğinde, CIPS işlemlerinin %60’ı ABD doları dışındaki           2023). Çin’in ABD dolarına olan bağımlılığını azaltma
+para birimlerinde gerçekleştirilmiştir (Kida vd., 2019).        ve kendi para birimi olan RMB’nin uluslararası statüsü-
+SWIFT’in gerisinde kalmasına rağmen, CIPS’in artan              nü güçlendirme çabaları, küresel finansal diplomasiye
+payı inkar edilemez boyuttadır ve bu durum, SWIFT               önemli bir katkı teşkil eder. Bu çabaların ayrılmaz bir
+işlemlerinde RMB’nin beşinci sırasıyla daha da öne çık-         parçası, gelişmekte olan ülkelerle para birimi swap an-
+maktadır. RMB; ABD doları, Euro, İngiliz Sterlini ve            laşmalarının yaygınlaştırılmasıdır. 2017 yılına gelindi-
+Japon Yeni gibi kurulu devlerin ardından gelmektedir            ğinde, Çin, 35 ülke ile 500 milyar doları aşkın swap
+(Barton, 2021). Ancak CIPS’in, küresel dolar üstünlüğü-         anlaşmaları gerçekleştirmişti (Heep, 2014; Plubell
+ne denge sağlama potansiyeline sahip olmasına rağmen,           & Siyao, 2017). Yakalanan bu ivme sürdürülmüştür.
+
+
+                                                                                                                                 51
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+     2020 yılına gelindiğinde Çin, ikili swap anlaşması portfö-           ları, diğer yenilikçi finansal girişimlerinde de ortaya çık-
+     yünü 3,5 trilyon yuan (yaklaşık 554 milyar dolar) değerin-           maktadır. Çin’in 2002’de başlatılan UnionPay kredi kartı
+     de 41 ülkeyi kapsayacak şekilde genişletmiştir (Gürcan,              sistemi, küresel olarak tanınmış kredi kartı devleri Visa ve
+     2022a; Gürcan & Donduran, 2023; Tran, 2022).                         MasterCard’a bir rakip olarak kurulmuştur. 2019’a gelin-
+                                                                          diğinde UnionPay, dolaşımdaki kredi kartlarının %45’ine
+                                                                          sahip olarak küresel kredi kartı pazarında yüksek bir konu-
+                                                                          ma erişmiştir. Bu önemli gelişme sadece pazar rekabeti ile
+         Çin, Kuşak-Yol Girişimi dahilinde çeşitli
+                                                                          ilgili değildir. UnionPay benzeri girişimler; Batı yaptırım-
+         projeleri finanse ederek RMB'nin                                 ları nedeniyle, Türkiye, Rusya, İran ve Küba gibi ülkelerin
+         kullanılmasını teşvik edebilir ve hatta                          hakim uluslararası ödeme sistemlerinden yabancılaşmala-
+         zorunlu kılabilir, böylece küresel                               rı durumunda alternatif bir finansal can simidi sunmakta-
+         kullanımını sağlayabilir.                                        dır (Gürcan, 2022a; Gürcan & Donduran, 2023; Finextra
+                                                                          Research, 2019; Russell, 2015; Slawotsky, 2020).
+         Uluslararası politik ekonominin çok kutuplulaşmasına                 Çin’in finansal çabalarındaki bir diğer kritik dönüm
+     koşut, aynı dönemde ikili swap hatları küresel olarak be-            noktası ise Dijital Yuan’ın oluşturulmasıdır. 2017’de Dev-
+     lirgin bir ilerleme kaydetmiştir. 2007’de miktarı sadece bir         let Konseyi tarafından onaylanan dijital para birimi giri-
+     avuç kadar olan ikili swap hatlarının sayısı, 2020 sonunda           şimi günümüze kadar önemli ilerlemeler kaydetmiştir.
+     91’e çıkmıştır ki bu artışın ABD'nin finansal hegemon-               2021 PwC Küresel Merkez Bankası Dijital Para Birimleri
+     yasındaki göreceli düşüşte bir dönüm noktası teşkil eden             (CBDC) Endeksine göre, Çin, sadece Bahamalar ve Kam-
+     “Büyük Durgunluk” tarafından tetiklendiğini burada be-               boçya’nın gerisinde kalarak, sağlam ve ileri CBDC pro-
+     lirtmek gerekir (Perks vd., 2021). İlk bakışta, ikili swap           jelerine sahip ülkeler arasında en yüksek üçüncü sırayı
+     hatlarının yaygınlaşması Çin’in artan finansal etkisini özel-        tutmaktadır. Dijital Yuan’ın deneme aşamalarının ivmesi
+     likle öne çıkarmasa da, bunu Çin’in “finansal devlet ida-            dikkate değer olup, 2022 sonuna kadar dolaşımdaki top-
+     resi” felsefesi çerçevesinde yorumlamak yerinde olacaktır.           lam değer yaklaşık 14 milyara ulaşmıştır (Gürcan, 2022a;
+     McDowell (2023) tarafından belirtildiği gibi, bu yaklaşım,           Gürcan & Donduran, 2023; Çin Halk Cumhuriyeti Devlet
+     ulusal finansal ve parasal çıkarların dış politika hedeflerine       Konseyi, 2023).
+     koşulmasını gerektirir. Armijo ve Katada (2015) tarafından               Dijital Yuan’ın avantajları çok yönlüdür. Finansal işlem-
+     kavramsallaştırıldığı üzere finansal devlet idaresi; ulusal          leri hızlandırmanın ötesinde, blockchain destekli teknoloji-
+     hükümetlerin siyasi, ekonomik veya finansal politikaların-           nin kullanımı, Çin’in kapsamlı finansal gözetim ve senkro-
+     da sürekli olarak dış politika hedeflerini gerçekleştirmek           nizasyon yeteneğini artırmaktadır ki bunlar, rekabetçi bir
+     için kendi iç ya da küresel finansal varlıklarını bilinçli bir       ekonomiyi sürdürmek için kilit niteliktedir (Kshetri, 2023).
+     şekilde kullanmalarını ifade eder. Çin’in durumunda, sayı-           Ayrıca Dijital Yuan, diğer ülkelerin Batı yaptırımlarından
+     sı yükselen ikili swap hatlarının yanı sıra artan ikili ticaret      kaçınmaları için alternatif bir yol sunabilir. Ayrıca bu gi-
+     hacmi, çok-kutuplulaşma yönünde gelişen karşılıklı ilişki-           rişim, Çin’in Yapay Zeka alanındaki ayağı pekiştirilebilir
+     leri işaret eder. Bu tür ilişkiler, Çin’in finansal devlet idaresi   ve Çin’in mobil ödeme sistemlerinin küresel yayılımı için
+     modelinin yapı taşını oluşturur (Gürcan, 2022a; Gürcan &             sağlam bir zemin hazırlayabilir. Bu çabaların olası sonuçları
+     Donduran, 2023; Lin vd., 2016; Song & Xia, 2020; Zhang               arasında, Çin’in hem finansal hem de teknolojik alanlar-
+     vd., 2017).                                                          da küresel bir öncüye dönüşmesi ve uluslararası norm ve
+         Çin’in de-dolarizasyona yönelik proaktif adımları ve             standartları belirleme yeteneği geliştirmesi yer alır (Gürcan,
+     RMB’yi uluslararası bir para birimi olarak tesis etme çaba-          2022a; Gürcan & Donduran, 2023; Slawotsky, 2020).
+
+
+52
+Efe Can Gürcan - Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD Hegemonyasının Değişen Dinamiklerini Anlamak
+
+
+
+
+                    Çin’in de-dolarizasyon yönündeki itici gücü ve RMB'yi uluslararasılaştırma çabaları
+                        sadece doğrudan finansal araçlarla sınırlı değildir (Fotoğraf: CGTN, 2019).
+
+
+
+    Çin’in de-dolarizasyon yönündeki itici gücü ve RM-          ğa odaklansa da, Kuşak-Yol Girişimi’nin önemli finansal
+B’yi uluslararasılaştırma çabaları sadece doğrudan finan-       sonuçları da bulunmaktadır. Çin, Kuşak-Yol Girişimi da-
+sal araçlarla sınırlı değildir. Çin, aynı zamanda stratejik     hilinde çeşitli projeleri finanse ederek RMB’nin kullanıl-
+kurumsal girişimleriyle ve küresel arenada liderliğiyle de      masını teşvik edebilir ve hatta zorunlu kılabilir, böylece
+öne çıkmaktadır. Bu bağlamda, Çin’in kurumsal liderliği,        küresel kullanımını sağlayabilir. Eğer Kuşak-Yol Girişimi
+küresel siyasette “gündem belirleyici” ve “norm yapıcı” ola-    projeleri esas olarak RMB üzerinden gerçekleştirilirse, bu
+rak kendini giderek daha fazla göstermektedir. Çin, küresel     durum RMB için talebin artmasına neden olabilir ve böy-
+yönetişime basit bir katılımcı olmanın ötesinde, kendisini      lelikle Çin, RMB’yi uluslararasılaştırarak ABD dolarının
+ön planda tutmayı, diyalogları yönlendirmeyi ve normları        hakimiyetine meydan okuyabilir (Gürcan, 2022a; Gürcan
+şekillendirmeyi hedeflemektedir. Çin’in bu proaktif rolü,       & Donduran, 2023).
+bu ülkeye RMB’yi destekleyebilecek şekilde uluslararası iş-         Benzer şekilde, Asya Altyapı Yatırım Bankası’nın
+birliklerinin yönelimini belirleme yeteneği kazandırmak-        Çin’in girişimiyle kurulması, küresel finansal manzara-
+tadır. Ayrıca, birçok uluslararası aktörün gönüllü olarak       nın yeniden şekillenmesine katkıda bulunan bir diğer
+Çin liderliğindeki girişimlere katılmaları, bu girişimlerin     kritik hamledir. Yalnızca altyapıya adanmış dünyanın ilk
+kapsayıcı ve kapsamlı olarak algılandığının bir göstergesi-     çok taraflı kalkınma bankası olarak gösterilen ve merke-
+dir. Geniş kapsamlı katılım, söz konusu girişimlere sadece      zi Pekin’de bulunan Asya Altyapı Yatırım Bankası, Çin’in
+güvenilirlik kazandırmakla kalmaz, aynı zamanda bun-            finansal hedeflerini daha da ileri taşımak için kurumsal
+ların erişimlerini ve etkilerini genişleterek Çin’in finansal   mekanizmaları nasıl stratejik olarak kullandığını örnek-
+enstrümanlarının daha geniş kabulü için sağlam bir zemin        lendirir (Wilson, 2017). Çin, bu banka aracılığıyla yatı-
+hazırlar (Gürcan, 2022a; Gürcan & Donduran, 2023).              rımlara önderlik ederek, özellikle Asya kıtasının büyük
+    Kuşak-Yol Girişimi, Çin’in en hırslı küresel projelerin-    ölçekli altyapı projelerinde RMB’yi tanıtmak için kapsa-
+den biri olarak öne çıkmaktadır. Her ne kadar bu girişim        yıcı bir platform sağlar (Gürcan, 2022a; Gürcan & Don-
+esas olarak kıtalar arası altyapı kalkınması ve bağlanırlı-     duran, 2023).
+
+
+                                                                                                                                 53
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+         Benzer şekilde, Şanghay İşbirliği Örgütü (ŞİÖ) üyeleri-      çatışması gibi olayların ardından daha da büyümüştür. Bu
+     nin 2022’deki Özbekistan zirvesinde yerel para birimlerin-       bağlamda, 2023 BRICS Zirvesi önemli bir gelişme olarak
+     de yürütülen ticareti genişletme gündemlerini önceleme           görülmelidir. Zirve sonucunda altı yeni üyenin (Arjantin,
+     kararı, ABD dolarına olan küresel güveni daha da zayıfla-        Mısır, Etiyopya, İran, Suudi Arabistan ve Birleşik Arap
+     tan stratejik bir hamle olarak görülebilir. ŞİÖ, herhangi bir    Emirlikleri) bloğa kabul edilmesiyle BRICS+6 oluşturul-
+     bölgesel örgüt olarak görülmemelidir. Dünyanın en büyük          muştur. Bu genişletilmiş grup, küresel GSYİH’nin en az
+     ekonomilerine, bir başka deyişle Çin ve Rusya’ya ev sahip-       %30’unu ve küresel nüfusun %46.5’ini temsil edecektir.
+     liği yapmaktadır ve üye devletler toplamda dünya nüfu-           Ayrıca, BRICS’in ortak bir BRICS para birimi oluşturma
+     sunun ve GSYİH’nın önemli bir kısmını oluşturmaktadır.           konusundaki yeni gündemi, dolara bağımlılığın yarattığı
+     Dolayısıyla ŞİÖ’nün aldığı kararlar, dünyada önemli bir          endişelere doğrudan bir yanıt olarak anlaşılabilir. Yeni bir
+     ağırlığa sahiptir ve küresel düzlemdeki ekonomik eğilimle-       BRICS para birimi için teknik ve yazılım altyapısının hazır
+     ri etkileyebilir. Çin’in ŞİÖ’nün önde gelen bir üyesi olması,    olduğu belirtilmektedir, ancak bu para biriminin hayata
+     ileride RMB’nin uluslararasılaştırılmasını kolaylaştırabile-     geçirilmesi öncelikle üye ülkelerin fikir birliğine varmala-
+     cektir ve böylelikle RMB’nin bölgesel ticarette dolara bir al-   rını gerektirmektedir. İlk etapta BRICS üyesi üç devlet baş-
+     ternatif olarak daha güçlü bir şekilde konumlandırılmasını       kanının desteği, bu girişimin geleceği konusunda iyimser
+     sağlayabilir (Zongyuan, 2022).                                   bir tablo sunmaktadır. Ayrıca, büyük petrol üreticisi ülke-
+                                                                      lerin dahil edilmesiyle, BRICS+6’nın küresel petrol üreti-
+                                                                      mindeki payı %43.1’e yükselme ihtimaline sahiptir. Eğer bu
+        ABD dolarının devam eden                                      ülkeler petrol ticareti için alternatif para birimlerini kabul
+        hakimiyetine karşın, Çin’in RMB’yi                            ederse, bu durum küresel petrol piyasasında doların rolü-
+        uluslararasılaştırma çabaları ve                              nü önemli ölçüde azaltabilir. Yeni Kalkınma Bankası’nın
+        kurumsal düzlemdeki öncü rolü, de-                            de-dolarizasyon için gerçekleştirdiği üç yıllık plan ve yerel
+        dolarizasyonun “post-hegemonik”                               para birimleri üzerinden kredilerin giderek yaygınlaşması,
+        doğasını yansıtmaktadır.                                      BRICS’in ABD dolarına olan bağımlılığını azaltma irade-
+                                                                      sini yansıtmaktadır. Yeni Kalkınma Bankası ve Koşullu
+         De-dolarizasyonun kurumsal dinamikleri BRICS+’ya             Rezerv Düzenlemesi gibi finansal işbirliği mekanizmaları,
+     kadar uzanmaktadır. BRICS'in Yeni Kalkınma Bankası               aynı gündemin birer uzantısıdır. Bu ortam, ileride BRI-
+     (NDB), yerel para birimlerini kullanarak kredi program-          CS+6 içindeki merkez bankası politikalarını ve ikili ticaret
+     ları geliştirmek dahil birtakım önemli girişimlerin başını       ilişkilerini de şekillendirecektir. Nitekim, Rusya Bankası
+     çekmiştir. Buna ek olarak, BRICS ülkelerine kayıtlı ulusal       gibi BRICS merkez bankaları, halihazırda rezerv varlıkla-
+     tahvil programları yaratmıştır. Belki de en önemlisi, Panda      rını çeşitlendirerek, altın gibi varlıklar lehine ABD Hazine
+     tahvilleri olarak bilinen ve Çin’de ülke dışı kuruluşlar ta-     menkul kıymetlerindeki hisselerini sınırlamaya yönel-
+     rafından RMB cinsinden çıkarılan tahvillerin en önemli           mektedir. Ayrıca, Rusya ve Çin arasındaki iki taraflı ticaret
+     kamusal katılımcısı olarak ortaya çıkmıştır (Zongyuan &          düzenlemelerinde ABD dolarının azalan kullanımı, yerel
+     Papa, 2022).                                                     para birimleri lehine yükselen bir tercihi göstermektedir.
+         Doların yaptırımlar ve diğer cezai tedbirler için bir araç   BRICS Pay sistemi ve SWIFT ağına diğer alternatif düzen-
+     olarak kullanılması, dünyada birçok ülkeyi ABD’nin politi-       lemeler üzerinden BRICS’in yeni sınır ötesi ödeme meka-
+     ka kararlarının ekonomik sonuçlarından endişe duymaya            nizmaları geliştirmesi, ABD’nin denetimindeki finansal
+     sevk ederek yabancılaştırmakta ve yeni alternatifler arayı-      yapılara bağımlılığı azaltma iradesini de göstermektedir.
+     şına sokmaktadır. Bu tür endişeler, günümüzde Ukrayna            BRICS ülkeleri arasında UnionPay’in artan kabulü de ben-
+
+
+54
+Efe Can Gürcan - Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD Hegemonyasının Değişen Dinamiklerini Anlamak
+
+
+
+
+zer yönde bir gelişmedir (Ifimes, 2023; Kumar, 2023; Liu &         artış oranı ile Çin, Rusya’nın edinimlerinden sonra dünya-
+Papa, 2022; Ramos, 2023; Steinbock, 2023; teleSUR, 2023).          da ikinci sırayı almıştır. Söz konusu artış, Çin’in rezervlerin-
+     ABD dolarının devam eden hakimiyetine karşın, Çin’in          de 2009’dan bu yana neredeyse yüzde 60’lık bir artışa işaret
+RMB’yi uluslararasılaştırma çabaları ve kurumsal düzlem-           etmektedir ve bu ülkeyi, Rusya’yı geride bırakarak dünya-
+deki öncü rolü, de-dolarizasyonun “post-hegemonik” do-             nın en büyük beşinci altın sahibi haline getirmiştir. Ayrıca
+ğasını yansıtmaktadır. Mevcut durumda de-dolarizasyon,             Çin, dünyanın en büyük altın tüketicisi ve ikinci en büyük
+para birimi varlıklarını çeşitlendirmek isteyen gelişen ül-        ithalatçısı olarak tanınmaktadır (Siddiqui, 2023; McDowell,
+keler arasında yeni yükselen bir eğilimi temsil etmektedir.        2023; Lan, 2017).
+Bu bağlamda, “post-hegemonya” kavramı, sadece ABD’nin                  2014 Ukrayna krizinin ardından Batılı hükümetler, çe-
+küresel etkisinin göreceli olarak azalması ve alternatif güç       şitli sektörlerde Rusya’ya karşı yaptırımlar uygulamaktadır.
+merkezlerinin yükselmesini kapsamamakta, aynı zaman-               Özellikle ABD ve Avrupa tarafından finansal ödeme siste-
+da artan Güney-Güney işbirliğini de içermektedir. Ayrıca           mini hedef alan yaptırımlara karşılık olarak Rusya, 2014
+post-hegemonya durumu, çeşitli aktörlerin ABD’yi gölgede           yılında Rusya Bankası Finansal Mesaj Aktarım Sistemi’ni
+bırakma çabaları sırasında büyük ekonomik, askeri ve jeo-          (SPFS) başlatmıştır. Eylül 2022 itibarıyla, dünya genelin-
+politik engellerle yüzleşirken ortaya çıkan sayısız karmaşık-      de 440 banka müşterisi SPFS’ye erişim sağlamıştır. Dahası
+lık ve çelişkiyi de yansıtmaktadır (Gürcan, 2020).                 Rusya, 1 Nisan 2022’de “Ruble Ödeme Emri”ni uygulamaya
+     Çok kutupluluğun ve de-dolarizasyon sürecinin birbi-          koymuştur. Bu düzenleme, doğal gaz satın almak isteyen
+riyle etkileşim halinde hızlandığı bir ortamda, dünya gene-        Batı Avrupa ülkelerinin, yabancı para birimlerini yatır-
+linde merkez bankalarının altın ediniminde dikkate değer           mak üzere Rus Doğalgaz Endüstri Bankası'nda bir ruble
+bir artış yaşanmaktadır. Mevcut durumda merkez banka-              hesabı açmalarını şart koşmaktadır. Ayrıca, Mart ve Mayıs
+ları, 1950’lerden bu yana görülmemiş bir seviyede, küresel         2018 arasında, Rusya’nın elindeki ABD Hazine bonolarının
+yıllık altın talebinin yaklaşık üçte birine sahiptir. Bu eğilim,   değerinde dikkate değer bir azalma yaşanmıştır ve bu da
+Büyük Durgunluk’un ertesinde ABD’nin finansal hakimi-              Rusya’nın finansal stratejisinde başka bir önemli kilometre
+yetinin görece düşüşüyle önemli ölçüde körüklenmiştir.             taşına işaret etmektedir. etmektedir (Yan, 2023; Zongyuan
+Merkez bankaları tarafından tutulan parasal altın rezervle-        & Papa, 2022; McDowell, 2023).
+ri, 1990 ve 2000'ler boyunca azalmıştı. Ancak, 2008 küresel            2020’ye gelindiğinde, Rusya’nın rezervlerinin yaklaşık
+finansal krizi, altını merkez bankalarının gözünde değerli         %30’u ABD doları cinsindendi, ancak sadece %10’u ABD
+bir finansal varlık olarak yeniden ilgi odağı haline getirmiş-     içinde tutuluyordu. Rusya’da hem özel sektörde hem de
+tir. Son zamanlarda yükselen uluslararası altın biriktirme         kamu sektöründe dolar cinsinden borçların oranı, 2015’in
+eğilimi, parasal altın rezervlerinde artış bildiren 49 ülkede      dördüncü çeyreğinde yaklaşık %70 ile zirve yapmasına kar-
+özellikle gözlemlenmektedir. Rusya, Türkiye ve Çin bu lis-         şın, daha sonra kademeli olarak azalmıştır. 2020 itibarıyla,
+te dahilinde en dikkat çekici ülkeler arasındadır. Bir başka       Rus şirketlerinin toplam borcunun dolar cinsinden payı
+deyişle, ağır yaptırımlarla karşı karşıya kalan ve dolayısıyla     yaklaşık %50’ye düşerek önemli bir azalma göstermiştir.
+dolar sisteminden izole edilen Venezuela, altına yönelen tek       2020’nin dördüncü çeyreğinde, Rus ihracatının ABD do-
+ülke değildir. SWIFT mesajlaşmasını petrol ve bankacılık           ları cinsinden yapılan kısmının oranı ilk kez %50'nin altı-
+işlemleri için kullanamayan İran’ın da, Türkiye’ye petrol          na düşmüştür. Ayrıca bu noktada Rusya'nın, 2013’ten bu
+ihracatı karşılığında fiziksel altın kabul etmeye başladığı        yana uluslararası ticarette ABD dolarına olan bağımlılığını
+bildirilmiştir. Çin ise Temmuz 2015’te, sahip olduğu altın         BRICS ülkeleri arasında en çok azaltan ülke olduğunun
+rezervleri konusunda uzun süren sessizliğinin ardından             vurgulanması gerekir (Yan, 2023; Zongyuan & Papa, 2022;
+2009’dan bu yana 604 ton altın edindiğini açıklamıştır. Bu         McDowell, 2023).
+
+
+                                                                                                                                      55
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+         Rusya’ya uygulanan yaptırımların RMB’nin uluslarara-          yönelik yaptırımları ve Suriye çatışmasında Kürt güçle-
+     sılaşmasını kolaylaştırdığı belirtilmelidir. 2015 yılında, bir    rinin rolü de dahil olmak üzere birkaç konuda fikir ayrı-
+     kamu bankası olarak Çin Kalkınma Bankası’nın, Rusya’nın           lığına düşmüştür. İlişkiler, 2016’da Cumhurbaşkanı Recep
+     iki büyük bankası Sberbank ve VTB Grubu ile 6 milyar              Tayyip Erdoğan’ı devirmeyi amaçlayan başarısız bir darbe
+     yuan tutarında bir kredi hattı kurması önemli bir gelişme         girişiminin ardından daha da kötüleşmiştir. Erdoğan daha
+     olmuştur. 2018’in ikinci çeyreğine kadar, Rusya Merkez            sonra açıkça ABD’yi darbecileri desteklemekle suçlamıştır.
+     Bankası dolar rezervlerini %10’dan fazla azaltırken, RMB          Bu gergin ilişki, 2017’de ABD’nin Türkiye'yi finansal yap-
+     rezervlerini aynı oranda artırmıştır. 2019’un başlarında,         tırımlarla tehdit etmesiyle en düşük seviyeye ulaşmıştır ve
+     Rusya'nın merkez bankası, RMB’ye yönelik önemli yatırım-          sonunda 2018’in sonlarında cezai önlemler uygulamıştır.
+     lar yaparak, Rusya’nın döviz rezervlerindeki RMB payını           Söz konusu eylemler ABD-Türkiye ilişkilerini derinden
+     %5’ten %15’e yükseltmiştir. Ayrıca, devlete ait Gazprom’un        etkilemiştir ve Türkiye’yi ABD dolarına olan bağımlılığına
+     bir yan kuruluşu ve Rusya’nın üçüncü büyük petrol üreticisi       alternatifler aramaya yöneltmiştir (Gürcan, 2020, s. 128;
+     Gazprom Neft, 2015'in başlarından bu yana Çin’e petrol sa-        McDowell, 2023) Özellikle 2018’den itibaren Türkiye, ABD
+     tışını RMB karşılığında gerçekleştirmektedir. Rusya ve Çin        tarafından uygulanan bir dizi yaptırımla karşı karşıya kal-
+     arasındaki parasal ilişkiler diğer alanlarda da genişlemek-       mış, bu durum da Batı ittifakı içinde önemli bir gerilim ya-
+     tedir. Örneğin, Rusya’nın ikinci en büyük bankası VTB,            ratmıştır (New York Times, 2018; Sharp, 2023). Bu gelişme-
+     işlemlerini kendi yerel para birimiyle yapmak üzere Bank          lere koşut Türkiye, Batı dışı çok taraflı örgütlerle ilişkilerini
+     of China ile bir anlaşmaya varmıştır. Her iki ülke de ikili ti-   derinleştirme arzusunu birçok kez dile getirmiştir. Ankara,
+     caretlerinde ABD dolarını atlayarak kendi para birimlerini        ŞİÖ ve BRICS’e üye olma niyetini defalarca belirtmiştir ki
+     kullanmayı tercih ettiklerini açıklamıştır. Rus ve Çin ban-       bu örgütler Batı merkezli küresel düzene alternatifler su-
+     kaları arasındaki işbirliği daha da büyümeye devam etmek-         nan başlıca platformlar arasındadır (Reuters, 2022; TASS,
+     tedir. Bir kamu bankası olarak Çin İhracat İthalat Bankası,       2018). Ayrıca, Türkiye’nin Kuşak-Yol Girişimi ile olan et-
+     Batılı piyasalardan kesilen Rus bankalarına yardım etmeyi         kileşimi dikkate değerdir. Kuşak-Yol Girişimi çerçevesinde
+     kabul etmiştir. Belki daha da önemlisi, dünyanın en büyük         Türkiye, Orta Koridor Girişimi’ndeki rolünü öne çıkarmak-
+     enerji ithalatçısı Çin ve en büyük enerji üreticisi Rusya’yı      ta, böylelikle Çin’i Avrupa’ya bağlayan kritik bir köprü gö-
+     içeren Çin-Rusya gaz anlaşmaları, ABD dolarının küresel           revi üstlenmekte ve Avrasya’daki jeopolitik ve jeoekonomik
+     bir petro-para olarak hakimiyetini sarsabilir. Nitekim, 2014      önemini pekiştirmektedir (Türkiye Cumhuriyeti Dışişleri
+     ve 2018 yılları arasında Rusya ve Çin, ikili ticaretlerinde       Bakanlığı, t.y.). Türkiye’nin doğuya doğru eğilimine bir
+     doların rolünü %20’den fazla azaltmıştır. 2020’nin sonuna         başka örnek ise Asya Altyapı Yatırım Bankası ile olan yakın
+     kadar, en az 23 Rus bankası Çin’in SWIFT ödeme sistemine          ilişkileridir. Esasen Çin’in girişimiyle ortaya çıkan Asya Alt-
+     alternatif olarak geliştirdiği CIPS’e katılmıştır (Lan, 2017;     yapı Yatırım Bankası, Türkiye’yi başlıca ortaklarından biri
+     McDowell, 2023; Zongyuan & Papa, 2022).                           olarak görmektedir ve daha şimdiden Ankara’nın altyapı
+         Son olarak, Türkiye hakkında birkaç söz söylemek ge-          projelerini desteklemek için önemli fonlar sağlamıştır. Tür-
+     rekir. Günümüz jeopolitiğinde Türkiye, benzersiz ve çoğu          kiye, Asya Altyapı Yatırım Bankası içinde %2.54 oy payına
+     zaman paradoksal bir pozisyonda yer almaktadır. Tarihsel          sahiptir. Hindistan ve Endonezya’nın ardından Türkiye,
+     olarak Batılı çıkarlarla özdeşleşen Türkiye, Kuzey Atlantik       Asya Altyapı Yatırım Bankası kredilerinden en fazla yarar-
+     Antlaşması Örgütü (NATO)’nün stratejik bir üyesi olmuş            lanan üçüncü ülke olarak ortaya çıkmıştır. 2019 itibariyle
+     ve geleneksel olarak ABD’nin yakın bir müttefiki olarak           Türkiye, Asya Altyapı Yatırım Bankası tarafından sağlanan
+     kabul edilmiştir. Ancak, Ankara ile Washington arasındaki         toplam kredilerin %11’ini almıştır. Bu fonların büyük ço-
+     ikili ilişkiler 2010’lardan itibaren belirgin gerilimlere sahne   ğunluğu esasen enerji sektörüne tahsis edilmiştir (Gürcan,
+     olmuştur (Gürcan, 2020, s. 128). İki ülke, ABD’nin İran’a         2022a, s. 613).
+
+56
+Efe Can Gürcan - Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD Hegemonyasının Değişen Dinamiklerini Anlamak
+
+
+
+
+    Rusya’ya benzer bir hamle ile Türkiye’nin merkez ban-       leme ve potansiyel finansal zafiyetlerini sınırlama iradesini
+kası, artan ABD yaptırımlarına yanıt olarak altın rezerv-       örneklemektedir. Ancak, bütün bu çabalarına ve dolar ha-
+lerini önemli ölçüde artırmıştır. 2000’den 2016’ya kadar        kimiyetine karşı söylemsel çıkışlarına rağmen, Türkiye’nin
+yaklaşık 100 metrik ton altın rezervi bulunduran Türkiye,       dolardan uzaklaşma konusunda sınırlı bir başarı elde etti-
+2017’de sadece Rusya’nın gerisinde kalarak dünyanın en          ği görülmektedir. 2017’deki ABD yaptırım tehditlerini ve
+büyük ikinci ulusal altın alıcısı olmuştur. Dahası, Türkiye     2018’deki gerçek yaptırımları takiben elde edilen verilerde,
+altın rezervlerini sadece artırmakla kalmamış, aynı za-         Türkiye’nin ticaret uygulamalarında dolardan önemli bir
+manda bu rezervleri yeniden konumlandırmıştır. 2018’in          sapma henüz gözlemlenmemiştir (McDowell, 2023).
+başlarında, yaklaşan ABD yaptırımları gölgesinde, Türki-
+ye’nin yaklaşık 220 milyar dolarlık altını New York Federal                               Sonuç
+Rezervi’nden kendi topraklarına aktardığı bildirilmiştir
+(McDowell, 2023). 2022’de Türkiye, sadece İsviçre, Çin,         JAS çerçevesinden bakıldığında, ABD’nin bankacılık kriz-
+Birleşik Krallık ve Hindistan’ın gerisinde kalarak dünyanın     lerinin, ABD dolarının görece zayıflayan konumunun ve
+en büyük beşinci altın ithalatçısı olarak gösterilmektedir.     Suudi Arabistan gibi önemli küresel oyuncuların ABD
+2023’ün ikinci çeyreğine gelindiğinde, Türkiye altın re-        dolarına alternatifler dillendirmeleri gibi çeşitli etkenlerin
+zervleri açısından dünyanın en büyük on ülkesi arasında         birleşik etkisinin, daha geniş bir de-dolarizasyon akımına
+konumlanmıştır (Statista, 2022; 2023)                           katkıda bulunduğu anlaşılmaktadır. “De-dolarizasyon” te-
+    Bu altın politikalarının yanı sıra Türkiye, önemli birta-   rimi, uluslararası ticaret ve finansta ABD dolarına olan ba-
+kım takas anlaşmaları da gerçekleştirmiştir. Örneğin Tür-       ğımlılığın azaltılmasına yönelik küresel bir harekete işaret
+kiye Cumhuriyet Merkez Bankası (TCMB), Ekim 2017’de             eder. Söz konusu hareket, birçok ülke ve işletmeyi para bi-
+İran ile yerel para birimi takas düzenlemesine girişmiştir.     rimi rezervlerini ve ticaret uygulamalarını çeşitlendirmeye
+Bu hamle, aynı zamanda ABD yaptırımlarına maruz kalan           teşvik ederek potansiyel olarak doların baskın rolünü azal-
+Tahran ile Ankara’nın de-dolarizasyon yönündeki çıkarla-        tabilir. Ancak bu süreç, 2000’lerde ivme kazanan küresel
+rını uyumlu hale getirmektedir. TCMB, ABD’nin Yaban-            politik ekonominin çok kutuplaşması bağlamı dışında ta-
+cı Varlıkları Kontrol Ofisi’nin (OFAC) iki Türk yetkiliye       savvur edilemez. Özellikle, ABD hegemonyasının başlıca
+Magnitsky yaptırımları uygulamasının hemen ardından             rakibi olarak Çin, de-dolarizasyonun öncü aktörü olarak
+Katar ile bir yerel para birimi takas anlaşması imzalamıştır.   ortaya çıkmıştır. Çin’in geçtiğimiz on yıllarda gösterdiği
+Bu gelişmeyi takiben Türkiye, Rusya ve İran ile bir yerel       çabalar, RMB’nin uluslararasılaşması yönünde kesin bir
+para birimi ticaret anlaşması tesis ederek petrol, doğal gaz    adıma işaret etmektedir ve bu sayede Çin, küresel finan-
+ve diğer emtiaların ticaretinde dolar bağımlılığını azaltma-    sın evrilen dinamiklerinde dikkate değer bir rakip olarak
+yı taahhüt etmiştir. Ekim 2019’da, Türkiye ve Rusya, sınır      kendini konumlandırmaktadır. ABD dolarının süregelen
+ötesi işlemlerde ruble ve lirayı kullanma ve SWIFT yerine       üstünlüğüne karşın, Çin’in ulusal para biriminin etkisin-
+Rus mesajlaşma sistemini kullanma konusunda bir anlaş-          deki genişleme, küresel ayak izini genişletmeye ve küresel
+mayı resmîleştirmiştir (McDowell, 2023). Burada vurgu-          ekonomik dinamiklerdeki konumunu ilerletmeye yönelik
+lanmalıdır ki 2018’den itibaren Ankara, swap çabalarına         iradesini yansıtmaktadır.
+hız vermiştir. 2022 itibariyle, bu anlaşmaların kümülatif           Çin’in RMB’yi uluslararası sahnede yaygınlaştırmaya ve
+değeri etkileyici bir şekilde 28 milyar doları bulmuştur. Bu    ABD dolarının hegemonyasına meydan okumaya yönelik
+takas düzenlemeleri Çin, Katar, Güney Kore, Birleşik Arap       çabalarının çok yönlü doğasının iyi kavranması gerekir. Bu
+Emirlikleri ve Azerbaycan dahil olmak üzere birçok ülkeyi       çabalar, sadece para birimi özelinde düşünülmemelidir;
+kapsamaktadır (Soylu, 2022). Bu tür girişimler, Türkiye’nin     aynı zamanda Çin’in daha kapsamlı stratejik girişimleri
+ekonomik bağlarını çeşitlendirme, bağımlılıklarını denge-       ve küresel kurumsal liderliğiyle derinden bağlantılıdır.
+
+                                                                                                                                 57
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+     Çin, yeni uluslararası proje ve kurumlara öncülük edip           değişim, doların döviz rezervlerindeki ağırlığının azalma-
+     bunları yönlendirerek, dolaylı olarak RMB’nin dünya ge-          sında ve alternatif para birimleriyle yapılan ticaret işlem-
+     nelinde artan kabulünü ve kullanımını destekleyen yollar         lerinin artmasında gözlemlenmektedir. Gözlemlenen en
+     ve platformlar oluşturmaktadır. Bu bağlamda, BRICS+6,            somut değişim ise doların döviz rezervlerindeki payında-
+     Kuşak-Yol Girişimi, ŞİÖ ve Asya Altyapı Yatırım Banka-           dır. Ani ve büyük bir değişiklik olmamış olsa da, RMB’nin
+     sı’nın eylemleriyle şekillenen finansal manzara, swap an-        küresel kullanımındaki istikrarlı ilerleme, onun “küçük
+     laşmalarının yaygınlaşması, Dijital Yuan’ın, UnionPay’in,        para birimi” statüsünden “büyük bir güçlü para birimi”-
+     CIPS’in yükselişi ve enerji ticaretinin diğer para birim-        ne dönüşümünü göstermektedir. Ancak, döviz işlemleri,
+     lerinde gerçekleşmesi; ABD dolarının egemenliğinin,              borçlanma ve ödeme takası gibi geniş finansal piyasaları
+     “post-hegemonik” bir bağlamda Güney-Güney işbirliği              ve ağları gerektiren alanlarda dolar hala hakim konumu-
+     üzerinden aktif olarak sorgulandığının açık bir işaretidir.      nu korumaktadır. Küresel finans sistemini yeniden şekil-
+     Kuşkusuz, ABD’nin doları bir silah olarak kullandığına           lendirmek için BRICS+ ülkelerinin, küresel düzeyde dolar
+     yönelik algının yaygınlaşması ve gelişen dünyanın ABD            bağımlılığını azaltma yönünde liderliklerini pekiştirmeleri
+     hegemonyasına karşı bir direniş merkezi olarak yükselişi,        gerekmektedir (Siddiqui, 2023; Rana & Chan, 2022; Li,
+     bu dönüşümleri hızlandırmaktadır. Gelişen ülkeler, ABD           2023; Chan & Mingjiang, 2022).
+     siyasetlerinin yol açtığı ekonomik risklerden korunmak
+     için alternatifler geliştirmek ve uygulamak üzere yeni işbir-                                        Kaynakça
+     likleri geliştirmektedir.                                        Armijo, L. E., & Katada, S. N. (2015). Theorizing the Financial Statecraft of Emerging Powers.
+                                                                           New Political Economy, 20(1), 42–62. https://doi.org/10.1080/13563467.2013.866082
+         Son olarak, Türkiye’den de kısaca bahsetmek gerekir.         Arslanalp, S., & Simpson-Bell, C. (2021). US Dollar Share of Global Foreign Exchange
+     Ülkemiz, çok yönlü dış politika çabaları üzerinden Batı          Reserves Drops to 25-Year Low. IMF Blog. https://blogs.imf.org/2021/ 05/05/us-dollar sha-
+                                                                           re-of-global-foreign-exchange-reserves-drops-to-25-year-low
+     güçleri ile Doğu’da ortaya çıkan yeni işbirlikleri arasında      Barton, S. (2021). Yuan’s Popularity for Global Payments Hits Five-Year High. Bloomberg.
+                                                                           https://www.bloomberg.com/news/articles/2021-02-18/yuan-spopularity- for-cross-
+     bir denge kurmaya çalışmaktadır. Önemle belirtmek gere-               border-payments-hits-five-year-high
+                                                                      Basosi, D. (2021). Dollar Hegemony. In I. Ness & Z. Cope (Eds.), The Palgrave Encyclopedia of
+     kir ki, ABD dolarının küresel finans sistemlerindeki ezici            Imperialism and Anti-Imperialism (pp. 113–130). Palgrave Macmillan.
+                                                                      Borst, N. (2016). CIPS and the International Role of the Renminbi. Federal Reserve Bank
+     üstünlüğü, yaptırımlar eşliğinde Türk ekonomisi için va-              of San Francisco. https://www.frbsf.org/banking/asia-program/pacific-exchangeblog/
+                                                                           cips-and-the-international-role-of-the-renminbi
+     roluşsal bir tehdit oluşturmaya devam etmektedir. Ancak          Cattaruzza, A. (2020). Defence studies and geographic methodology: From the practical to the
+                                                                           critical approach. In D. Deschaux-Dutard (Ed.), Research Methods in Defence Studies: A
+     Türkiye, giriştiği swap anlaşmalarıyla gözlemlendiği üze-             Multidisciplinary Overview (pp. 15–30). Routledge.
+
+     re, proaktif finans diplomasisi yoluyla bu zorlukları artan      Cattaruzza, A., & Limonier, K. (2019). Introduction à la géopolitique. Armand Colin.
+                                                                      Caudevilla, O. (2023). What role can the digital yuan play in de-dollarization? Asia News
+     bir ustalıkla yönetmeye çalışmaktadır ve çok kutupluluk               Network. https://asianews.network/what-role-can-the-digital-yuan-play-in-de-
+                                                                           dollarization
+     bağlamında şekillenen küresel de-dolarizasyon sürecine           CGTN. (2019). Why the trend of de-dollarization is inevitable. 9 Kasım 2023 tarihinde şu ad-
+                                                                           resten alındı: https://news.cgtn.com/news/2019-11-20/Why-the-trend-of-de-dollarizati-
+     dolaylı katkılarda bulunmaktadır.                                     on-is-inevitable-LMr0kapXTG/index.html
+                                                                      CGTN. (2021). The Heat: Global economies face challenges as they seek to rebound from pan-
+         Genel olarak, ABD dolarına bağımlılığı azaltma çaba-              demic. 9 Kasım 2023 tarihinde şu adresten alındı: https://america.cgtn.com/2021/07/30/
+                                                                           the-heat-global-economies-face-challenges-as-they-seek-to-rebound-from-pandemic
+     larının önemli bir sembolik değere sahip olduğu sonucu-          Chan, E. & Mingjiang, L. (2022). Renminbi Internationalisation and US Dollar Hegemony.
+                                                                           RSIS Commentary, S. Rajaratnam School of International Studies (RSIS), Nanyang Tech-
+     na varılabilir, ancak yeni belirmekte olan bu irade pratik            nological University, N. 120.
+                                                                      China Daily. (2022). Washington uses dollar to maintain global hegemony [Shi Yu's carica-
+     düzlemde hala sınırlı ve tamamlanmamış bir durumdadır.                ture]. 9 Kasım 2023 tarihinde şu adresten alındı: https://www.chinadailyhk.com/artic-
+                                                                           le/290314#Washington-uses-dollar-to-maintain-global-hegemony
+     ABD dolarının hakimiyetinde gözle görülür, yavaş bir azal-       China Daily. (2023). Get real. 9 Kasım 2023 tarihinde şu adresten alındı: https://www.chinada-
+                                                                           ily.com.cn/a/202304/20/WS64407ac7a310b-6054face9de.html
+     ma vardır. Uluslararası Para Fonu (IMF), son zamanlarda          Ciorciari, J. D. (2014). China’s Structural Power Deficit and Influence Gap in the Monetary
+     doların uluslararası banka rezervleri içindeki rolünde ya-            Policy Arena. Asian Survey, 54(5), 869–893. https://doi.org/10.1525/as.2014.54.5.869
+                                                                      Cohen, B. J. (2012). The Benefits and Costs of an International Currency: Getting the Calculus
+     vaş bir azalma olduğunu, bu durumun doların statüsünün                Right. Open Economies Review, 23(1), 13–31. https://doi.org/10.1007/s11079-011-9216-
+                                                                           2
+     zayıflattığını bizzat saptamıştır. Döviz rezervlerinin çeşit-    Desai, R. (2013). Geopolitical economy: After US hegemony, globalization and empire. Pluto
+                                                                           Press ; Distributed in the United States exclusively by Palgrave Macmillan.
+     lendirilmesi ve dolar dışı para birimleri kullanılarak ticaret   Du Boff, R. B. (2003). US hegemony: Continuing decline, enduring danger. Monthly Review,
+                                                                           557, 1–15.
+     yapılması gibi alanlarda doların hakimiyetini azaltılmasına      Eichengreen, B. (2022). What Money Can’t Buy: The Limits of Economic Power. Foreign
+     yönelik ilerlemeler kaydedilmiştir. Başka bir deyişle bu              Affairs, 101, 64–73.
+
+
+
+58
+Efe Can Gürcan - Çok Kutupluluk Meydan Okuması: Doların Sarsılan Üstünlüğü ve ABD Hegemonyasının Değişen Dinamiklerini Anlamak
+
+
+
+
+Finextra Research. (2019). China’s growth cements UnionPay as world’s largest card scheme.           Republic of Türkiye Ministry of Foreign Affairs. (n.d.). Türkiye’s Multilateral Transportation
+      https://www.finextra.com/pressarticle/80435/chinas-growth-cements-unionpay-as-                     Policy. https://www.mfa.gov.tr/turkey_s-multilateral-transportation-             p olic y.
+      worlds-largest-card-scheme                                                                         en.mfa#:~:text=Trans%2DCaspian%20East%2DWest%2DMiddle%20Corridor%2
+Gouvea, R. & Gutierrez, M. (2023). De-Dollarization: The Harbinger of a New Globalization                0Initiative%20shortly%20named,the%20efforts%20to%20revive%20the
+      Architecture?. Theoretical Economics Letters, 13(4), 791–807.                                  Reuters. (2022). Turkey’s Erdogan targets joining Shanghai Cooperation Organisation, media
+                                                                                                         reports say. https://www.reuters.com/world/middle-east/turkeys-erdogan-targets-joi-
+Gürcan, E. C. (2019a). Geopolitical Economy of Post-hegemonic Regionalism in Latin America               ning-shanghai-cooperation-organisation-media-2022-09-17/
+      and Eurasia. In P. Zarembka (Ed.), Class history and class practices in the periphery of
+      capitalism (First editon, pp. 59–86). Emerald Publishing.                                      Reuters. (2023). Yuan overtakes dollar to become most-used currency in China’s cross-border
+                                                                                                         transactions. https://www.reuters.com/markets/currencies/yuan-overtakes-dollar-beco-
+Gürcan, E. C. (2019b). Multipolarization, South-South Cooperation and the Rise of Post-
+      Hegemonic Governance. Routledge.                                                                   me-most-used-currency-chinas-cross-border-transactions-2023-04-26
+Gürcan, E. C. (2020). The construction of “post-hegemonic multipolarity” in Eurasia: A               RMB Tracker Document Centre. (2022). Swift. https://www.swift.com/our-solutions/
+      comparative perspective. The Japanese Political Economy, 46(2–3), 127–151. https://doi.           compliance-and-shared-services/business-intelligence/renminbi/rmb-tracker/rmbtrac-
+      org/10.1080/2329194X.2020.1839911                                                                 ker- document-centre
+Gürcan, E. C. (2022a). Çin’in Finansal Hegemonyasının Yükselişi. In M. H. Caşın, S. Kısacık, &       Russell, C. (2015). Who’ll Win? Visa and MasterCard Versus UnionPay—CKGSB. CKGSB
+      C. Donduran (Eds.), 21. Yüzyılda Bütün Boyutlarıyla Çin Halk Cumhuriyeti (pp. 598–                 Knowledge. https://english.ckgsb.edu.cn/knowledges/wholl-win-visaand- mastercard-
+      618). Nobel Akademik.                                                                              versus-unionpay
+Gürcan, E. C. (2022b). Imperialism after the neoliberal turn. Routledge.                             Sharma, V. B. (2023). Debates around De-dollarisation and Yuan Internationalisation. Modern
+                                                                                                         Diplomacy. https://moderndiplomacy.eu/2023/04/30/debates-around-de-dollarisation-
+Gürcan, E. C., & Donduran, C. (2023). The economic and institutional dynamics of China’s
+      growing financial influence: A “structural power” perspective. The Japanese Political              and-yuan-internationalisation
+      Economy, 49(1), 109–135. https://doi.org/10.1080/2329194X.2023.2184387                         Sharp, A. (2023). U.S. Imposes Landmark Sanctions on Turkey. http s : / / f ore i g np o l i c y.
+Heep, S. (2014). China in global finance: Domestic financial repression and international                 com/2023/09/14/us-turkey-sanctions-russia-ukraine-shipping-nato/
+      financial power. Springer.                                                                     Siddiqui, K. (2023). De-dollarisation, Currency Wars and the End of US Dollar Hegemony. The
+Ifimes. (2023). 2023 World: BRICS – De-dollarization Summit. https://www.ifimes.org/en/                   World Financial Review, August-September, 1–13.
+      researches/2023-world-brics-de-dollarization-summit/5205
+                                                                                                     Slawotsky, J. (2020). US Financial Hegemony: The Digital Yuan and Risks of Dollar De-
+IMF. (2023). Currency Composition of Official Foreign Exchange Reserves. https://data.imf.               Weaponization. Fordham International Law Journal, 44(1), 39–100.
+      org/?sk=e6a5f467-c14b-4aa8-9f6d-5a09ec4e62a4
+                                                                                                     Song, K., & Xia, L. (2020). Bilateral swap agreement and renminbi settlement in cross-border
+IMF. (2023). Renminbi Usage in Cross-Border Payments: Regional Patterns and the Role of                  trade. Economic and Political Studies, 8(3), 355–373. https://doi.org/10.1080/20954816.20
+      Swaps Lines and Offshore Clearing Banks. 9 Kasım 2023 tarihinde şu adresten alındı:                20.1780818
+      https://www.elibrary.imf.org/view/journals/001/2023/077/article-A001-en.xml?Article-
+      Tabs=                                                                                          Soni, N. & Jain, P. (2023). Challenges to the Us Dollar Hegemony and Emergence of Yuan in
+Keersmaeker, G. de. (2017). Polarity, balance of power and international relations theory: Post-          the Current Multipolar World. Korea Review of International Studies, 16(1), 53–73.
+      Cold war and the 19th century compared. Palgrave Macmillan.                                    Soylu, R. (2022). Turkey’s love affair with currency swaps explained. Middle East Eye.
+Kida, K., Kubota, M., & Cho, Y. (2019). Rise of the Yuan: China-Based Payment Settlements                 https://www.middleeasteye.net/news/turkey-central-bank-swap-deals-love-explained
+      Jump 80%. https://asia.nikkei.com/Business/ Markets/Rise-of-the-yuan-China-based-              Statista. (2023). Gold reserves of largest gold holding countries worldwide as of 2nd quarter
+      payment-settlements-jump-80
+                                                                                                           2023. https://www.statista.com/statistics/267998/countries-with-the-largest-gold-
+Kokubun, R. (2003). China and Japan in the Age of Globalization. Japanese Economy, 31(3–4),                reserves/
+      108–119. https://doi.org/10.1080/2329194X.2004.11045179
+                                                                                                     Statista. (2022). Leading gold importing countries worldwide in 2022 based on value (in bil-
+Kroeber, A. (2018). China as a Global Financial Power. In W. Wu & M. W. Frazier (Eds.), The                lion U.S. dollars). https://www.statista.com/statistics/920874/gold-import-value-by-lea-
+      Sage Handbook of Contemporary China (pp. 447–458). Sage.                                             ding-country/
+Kshetri, N. (2023). China’s Digital Yuan: Motivations of the Chinese Government and Potenti-         Steinbock, D. (2023). The Coming BRICS Currency Diversification. https://www.chinausfocus.
+      al          Global Effects. Journal of Contemporary China, 32(139), 87–105. https://doi.            com/finance-economy/the-coming-brics-currency-diversification-24834
+      org/10.1080/10670564.2022.2052441
+                                                                                                     TASS. (2018). BRICS talks Turkey: Erdogan’s wish to join group cannot be fulfilled now, expert
+Kumar, R. (2023). BRICS: 15th Summit and Beyond. https://www.idsa.in/issuebrief/BRICS-                   says. https://tass.com/world/1015343
+      15th-Summit-and-Beyond-RKumar 280823#:~:text=The%20event%20gained%20excep-
+      tional%20significance,new%20members%20of%20the%20group                                         teleSUR. (2023). BRICS Currency to Facilitate International Settlements: Glazyev. h t t p s : / /
+Lan, C. (2017). Currency Wars and the Erosion of Dollar Hegemony. Michigan Journal of                     www.telesurenglish.net/news/BRICS-Currency-to-Facilitate-International- S e t t l e -
+                                                                                                          ments-Glazyev-20231024-0007.html
+      International Law, 38(1), 57–119.
+                                                                                                     The State Council of the & People’s Republic of China. (2023). Digital Yuan in Circulation Hits
+Levy-Yeyati, E. (2021). Financial dollarization and de-dollarization in the new millennium.               13.61 Bln Yuan in 2022. http://english.www.gov.cn/archive/statistics/ 202301/25/content_
+      Latin American Reserve, Working Paper Series, January.                                              WS63d0ca26c6d0a757729e607d.html
+Li, Yuefen. (2023). Trends, reasons and prospects of de-dollarization. South Center, Working         Tran, H. (2022). Internationalization of the Renmibi via Bilateral Swap Lines. Atlantic Council.
+      Paper Series, No. 181, Geneva.                                                                      https://www.atlanticcouncil.org/blogs/econographics/internationalization- of-the-renmi-
+Lin, Z., Zhan, W., & Cheung, Y. (2016). China’s Bilateral Currency Swap Lines. China & World              bi-via-bilateral-swap-lines
+      Economy, 24(6), 19–42. https://doi.org/10.1111/cwe.12179                                       Vasudevan, R. (2021). Dollar Standard and Imperialism. In I. Ness & Z. Cope (Eds.), The
+Liu, Z. Z., & Papa, M. (2022). Can BRICS De-dollarize the Global Financial System? (1st ed.).            Palgrave Encyclopedia of Imperialism and anti-Imperialism (pp. 602–613). Springer.
+      Cambridge University Press. https://doi.org/10.1017/9781009029544
+                                                                                                     Vidal, J. A., et. al. (2022). Policies for transactional de-dollarization: A laboratory study. Journal
+McDowell, D. (2023). Bucking the buck: US financial sanctions and the international backlash
+      against the dollar. Oxford University Press.                                                        of Economic Behavior & Organization, 200(1), 31–54.
+Naceur, S. B., Hosny, A. & Hadjian, G. (2019). How to de-dollarize financial systems in the          Wilson, J. D. (2017). What Does China Want from the Asian Infrastructure Investment Bank?
+                                                                                                         Perth USAsia Centre. https://researchrepository.murdoch.edu.au/ id/eprint/37439
+      Caucasus and Central Asia?. Empirical Economics, 56(1), 1979–1999.
+                                                                                                     Xueying, W., Dongsheng, D. & Ruiling, L. (2022). The Evolving International Monetary
+New York Times. (2018). U.S. Imposes Sanctions on Turkish Officials Over Detained American               System: Will Dollar Hegemony Outlive the Digital Revolution?. In P. B. Rana & J.
+      Pastor. https://www.nytimes.com/2018/08/01/world/europe/us-sanctions-turkey-                       Xianbai (Eds.), From Centralised to Decentralising Global Economic Architecture (pp.
+      pastor.html
+                                                                                                         131–160). Springer.
+Palley, T. (2022). Theorizing dollar hegemony, Part 1: the political economic foundations of
+      exorbitant privilege. Post-Keynesian Economics Society, Working Paper Series, No.              Yan, C. (2023). The Impact of Russia's "De Dollarization" on the International Status of the US
+      2220.                                                                                               Dollar. Academic Journal of Business & Management, 5(2), 17–21.
+Perks, M., Yudong, R., Jongsoon, S., & Tokuoka, K. (2021). Evolution of Bilateral Swap Lines.        Yang, L. & Ziaojing, Z. (2017). Internal and External Imbalances and Currency Hegemony. In
+      IMF Working Paper, WP/21/210.                                                                      P.          B. Rana & J. Xianbai (Eds.), Imbalance and Rebalance (pp. 119–149). Springer.
+Plubell, A. M., & Siyao, L. (2017). A Snapshot of Renminbi Internationalization Trends under         Yuan, T. (2018). The Dual-Center Global Financial System. Springer Singapore.           https://doi.
+      One Belt One Road Initiative. MPEA Legal & Regulatory Bulletin, 9–11.                              org/10.1007/978-981-10-7993-1
+Quenan, C. & Edgardo, T. (2007). Changing the focus of the exchange rate regimes debate in           Zhang, F., Yu, M., Yu, J., & Jin, Y. (2017). The Effect of RMB Internationalization on Belt and
+      emerging economies: causes and scope of de-dollarization in Latin America. Conference              Road Initiative: Evidence from Bilateral Swap Agreements. Emerging Markets Finance
+      on “Ouverture et innovation sur les marchés financiers émergents,” Beijing, China.
+                                                                                                         and Trade, 53(12), 2845–2857. https://doi.org/10.1080/1540496X.2017.1382346
+Ramos, J. (2023). BRICS Bank Implementing 3-Year De-Dollarization Plan.               https://wat-
+      cher.guru/news/brics-bank-implementing-3-year-de-dollarization-plan                            Zongyuan, Z. L. (2022). China Is Quietly Trying to Dethrone the Dollar. Foreign Policy.
+                                                                                                         https://foreignpolicy.com/2022/09/21/china-yuan-us-dollar-sco-currency
+Rana, P. B. & Chan. E. (2022). Reforming the Global Reserve System. In W. Wu & M. W.
+      Frazier (Eds.), From Centralised to Decentralising Global Economic Architecture: The           Zongyuan, Z. L. & Papa, M. (2022). Can BRICS De-dollarize the Global Financial System?.
+      Asian Perspective (pp. 113–130). Palgrave Macmillan.                                               Cambridge University Press.
+
+
+
+
+                                                                                                                                                                                                              59
+

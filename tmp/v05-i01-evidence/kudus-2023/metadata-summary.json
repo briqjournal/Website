@@ -1,0 +1,31 @@
+{
+  "slug": "kudus-2023",
+  "title": {
+    "en": "Jarusalem (2023)",
+    "tr": "Kudüs (2023)"
+  },
+  "type": {
+    "id": "painting",
+    "tr": "Resim",
+    "en": "Painting",
+    "peerReviewed": false
+  },
+  "pages": {
+    "first": "94",
+    "last": "94"
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/jarusalem-2023",
+    "tr": "https://briqjournal.com/kudus-2023",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_ENG-94.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-94.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/kudus-2023-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/kudus-2023-tr.pdf",
+    "sharedBilingualPdf": false
+  },
+  "contributors": null,
+  "language": [
+    "en",
+    "tr"
+  ]
+}

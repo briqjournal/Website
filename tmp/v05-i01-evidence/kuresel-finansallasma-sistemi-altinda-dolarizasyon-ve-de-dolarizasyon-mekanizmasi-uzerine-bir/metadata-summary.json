@@ -1,0 +1,39 @@
+{
+  "slug": "kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir",
+  "title": {
+    "en": "Research on the Mechanism of Dollarization and De-dollarization under the Global Financialization System",
+    "tr": "Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme"
+  },
+  "type": {
+    "id": "review-article",
+    "tr": "Derleme Makalesi",
+    "en": "Review Article",
+    "peerReviewed": true
+  },
+  "pages": {
+    "first": "6",
+    "last": "29"
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/research-the-mechanism-dollarization-and-de-dollarization-under-the-global-financialization-system",
+    "tr": "https://briqjournal.com/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_ENG-6-29.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-6-29.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir-tr.pdf",
+    "sharedBilingualPdf": false
+  },
+  "contributors": [
+    {
+      "displayName": "Yasin Okyay",
+      "givenName": "Yasin",
+      "familyName": "Okyay",
+      "role": "translator",
+      "orcid": null
+    }
+  ],
+  "language": [
+    "en",
+    "tr"
+  ]
+}

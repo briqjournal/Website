@@ -1,0 +1,39 @@
+{
+  "slug": "taliban-afgan-savas-agalarinin-hikayesi",
+  "title": {
+    "en": "Taliban: The Story of the Afghan Warlords",
+    "tr": "Taliban: Afgan Savaş Ağalarının Hikayesi"
+  },
+  "type": {
+    "id": "book-review",
+    "tr": "Kitap İncelemesi",
+    "en": "Book Review",
+    "peerReviewed": false
+  },
+  "pages": {
+    "first": "90",
+    "last": "92"
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/taliban-the-story-the-afghan-warlords",
+    "tr": "https://briqjournal.com/taliban-afgan-savas-agalarinin-hikayesi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_ENG-90-92.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-90-92.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/taliban-afgan-savas-agalarinin-hikayesi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/taliban-afgan-savas-agalarinin-hikayesi-tr.pdf",
+    "sharedBilingualPdf": false
+  },
+  "contributors": [
+    {
+      "displayName": "BRIQ",
+      "givenName": null,
+      "familyName": null,
+      "role": "translator",
+      "orcid": null
+    }
+  ],
+  "language": [
+    "en",
+    "tr"
+  ]
+}

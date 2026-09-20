@@ -1,0 +1,39 @@
+{
+  "slug": "cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi",
+  "title": {
+    "en": "“Systematizing Alternative Financial Cooperation is the Key to the Solution”",
+    "tr": "“Çözümün Anahtarı, Alternatif Finansal İşbirliğinin Sistematik Hale Getirilmesi”"
+  },
+  "type": {
+    "id": "interview",
+    "tr": "Röportaj",
+    "en": "Interview",
+    "peerReviewed": false
+  },
+  "pages": {
+    "first": "30",
+    "last": "39"
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/systematizing-alternative-financial-cooperation-the-key-the-solution",
+    "tr": "https://briqjournal.com/cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_ENG-30-39.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-30-39.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi-tr.pdf",
+    "sharedBilingualPdf": false
+  },
+  "contributors": [
+    {
+      "displayName": "Efe Can Gürcan",
+      "givenName": "Efe Can",
+      "familyName": "Gürcan",
+      "role": "interviewer",
+      "orcid": "https://orcid.org/0000-0002-5415-3163"
+    }
+  ],
+  "language": [
+    "en",
+    "tr"
+  ]
+}

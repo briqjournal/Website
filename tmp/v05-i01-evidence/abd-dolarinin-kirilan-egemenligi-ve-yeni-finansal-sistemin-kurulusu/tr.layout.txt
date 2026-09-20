@@ -1,0 +1,871 @@
+                                                                                              Hakemli Derleme Makalesi
+
+
+
+
+ABD Dolarının Kırılan Egemenliği
+ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+  Serhat Latİfoğlu*
+  Serbest Fon Yöneticisi
+
+
+
+
+*Serhat Latifoğlu serbest fon yöneticisidir. Finans kariyerinin ilk 11 yılında Türkiye’de çeşitli yatırım
+bankalarının ve aracı kurumların türev piyasalar departmanlarında çalışmıştır. Söz konusu kurumların
+hemen hepsinde yurt içi ve yurt dışı türev piyasalar departmanlarını kurmuştur. Serhat Latifoğlu son
+10 yılda çeşitli amaçlarla fonlar ve şirketler kurmuş ve yönetmiştir. Bunlardan en önemlisi İsviçre’de
+kurulan ilk Türkiye türev arbitraj fonu olmuştur. Bununla birlikte halen Londra’da kurduğu Versum
+Wealth isimli özel varlık fonunu yönetmektedir. Söz konusu varlık fonu çeşitli iş dallarında üretim
+yapan şirketlere destek olmaktadır. Ayrıca uluslararası piyasalarda işlem yapan, davranışsal finans
+ilkeleriyle çalışan ve yapay zekaya dayalı bir fonu yönetmekte ve Türkiye’de ilk 100 içinde yer alan
+bazı şirketlere finansal danışmanlık yapmaktadır. Marmara Üniversitesi İİBF Maliye mezunudur ve
+Yale Üniversitesi Davranışsal Ekonomi Sertifikası başta olmak üzere çok sayıda profesyonel sertifika
+sahibidir. Rumeli Türkleri Derneği/Rumeli Balkan Federasyonu, RUYİAD ve Karadeniz Vakfı gibi
+sivil toplum kuruluşlarının yönetimi ve/veya kurullarında faaliyette bulunmuştur.
+
+
+E-mail: serhat@versumwealth.com
+
+
+
+
+Geliş Tarihi: 21.02.2023
+Kabul Tarihi: 10.07.2023
+
+
+
+Atıf: Latifoğlu, S. (2023). ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu.
+BRIQ Kuşak ve Yol Girişimi Dergisi, 5(1), 66-85.
+                                           Serhat Latifoğlu - ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+
+                                                         ÖZ
+
+    2008 finansal krizinden sonra gelişmiş Batı ülkeleri uzun yıllar süren bir durgunluk sürecine girdi.
+    Aşırı finansallaşan Batı ülkelerinin ekonomileri söz konusu finansallaşmanın verdiği zararları telafi
+    etmekte oldukça zorlandı. Kriz sürecinde ve sonrasında üretime ağırlık veren Çin gibi ülkeler ise krizden
+    büyüyerek ve güçlenerek çıktılar. Batı’nın uluslararası kurumları ABD’nin iradesiyle kurulan uluslararası
+    finansal sistemin verdiği zararı karşılamak için yoğun çaba gösterdiler. Ancak atılan adımlarda öncelik
+    ABD ve Batı ülkelerine verildi. 2008 sonrası yaşanan süreçte ABD doları ve onun egemen olduğu
+    finansal sistem büyük bir güven kaybına uğradı. Ve bu sisteme alternatif olarak bazı örgütler çalışmalara
+    başladılar. ŞİÖ (Şanghay İşbirliği Örgütü), BRICS (Brezilya, Rusya, Hindistan, Çin ve Güney Afrika)
+    gibi bağımsız gelişen ülkelerin üyelerinden oluşan örgütler bir dizi somut adım atarak yeni bir finansal
+    sistemin altyapısını oluşturdular. Yeni finansal sistemin amacı, dolarizasyonu en aza indirerek, alternatif
+    uluslararası finansal kuruluşları kurarak ABD’nin finansal egemenliğini etkisiz hale getirmektir. ABD’nin
+    finansal egemenliğinin kırılmasında dört temel bacak bulunuyor: İkili ve çok taraflı ticari anlaşmalarda
+    milli paraların kullanılması, yeni uluslararası yatırım bankalarının kurulması, tüketim tarafında milli
+    kredi kartları sistemlerinin kurulması, merkez bankası rezervlerinde dolara alternatif para birimleri ve
+    altının rezerv olarak kullanımının yaygınlaşması. Bu yazının konusu ABD’nin finansal egemenliğini
+    gerilemeye başlaması ve yeni finansal sistemin kurulması sürecinde BRICS’in attığı adımlar, ikili ve çok
+    taraflı ticari ilişkilerde swap anlaşmalarının önemi, Çin ve Rusya’nın 2010’ların ortalarından başlayarak
+    kurdukları finansal altyapının seyridir. Tüm bu başlıklar kurulan Yeni Finansal Sistem’in temel taşlarını
+    ifade etmektedir.
+
+
+    Anahtar Kelimeler: BRICS, dolarizasyon, dijitalleşme, 5R, Yeni Finansal Sistem.
+
+
+
+
+ABD’NIN (AMERIKA BIRLEŞIK DEVLETLERI)                        ğımlıdır. ABD doları sık sık manipüle edilerek
+1945’ten hemen sonra başladığı ve ortaya çıkan               hem yüksek kâr elde ediliyor hem de finansal
+koşullarda yaptığı hamleler, dünya finansal                  piyasalara hükmediliyor.
+sistemine egemen olmasını sağladı. ABD’nin                      2. ABD dolar egemenliği ile ekonomik
+finansal egemenliği, ekonomik anlamda ulus-                  krizini ihraç ediyor.
+lararası tekellerin çıkarlarına hizmet eden ve                  ABD’nin borç krizi her geçen gün derin-
+yüksek kârlılık elde etmesini sağlayan bir özel-             leşiyor. Washington, ABD Merkez Bankası
+lik gösteriyor. ABD’nin finansal egemenliği                  (FED) aracılığıyla doların arzını ayarlayarak
+dört temel kaynaktan besleniyor:                             borcunu ve diğer finansal sorunlarını kendine
+   1. ABD dolarının spekülasyonu üstünden                    bağımlı ülkelere ihraç ediyor. FED’in Kovid
+kar elde ediliyor.                                           19 Salgını öncesinde izlediği aşırı genişleme-
+   ABD doları dünyanın en önemli takas, öde-                 ci politikalar dolar varlıklarını azaltmasına ve
+me ve rezerv para birimidir. Çoğu ülkenin                    çok sayıda ülkenin enflasyon ithal etmesine
+para sistemi büyük ölçüde ABD dolarına ba-                   neden oldu.
+
+                                                                                                                                    67
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+         3. Uluslararası ticaretin kontrolü ve ekonomik       altında bırakılıyor. ABD, finansal bilgi iletim sis-
+     istihbarata erişim sağlanıyor.                           temlerine belirli yaptırımlar uygulayarak yaptırım
+         CHIPS (Clearing House Interbank Payments             uygulanan ülkeleri uluslararası dolar sisteminden
+     System: Takas Odası Bankalararası Ödeme Siste-           izole edebilir ve böylece uluslararası finansman ve
+     mi), uluslararası ölçekte ABD dolarının trafiğinin       ticaretlerine ciddi şekilde zarar verebilir.
+     takibini sağlar. 1973’te kurulan SWIFT (Society              ABD Hazine Bakanlığı Yabancı Varlıkları Kont-
+     for Worldwide Interbank Financial Telecommu-             rol Dairesi (OFAC) üç tür mali yaptırım listesi uy-
+     nication: Uluslararası Bankalararası Finansal Tele-      gulamaktadır: Özel Olarak Belirlenmiş Vatandaşlar
+     komünikasyon Topluluğu) sistemi ise ABD dola-            ve Engellenen Kişiler Listesi (SDN’ler), Konsolide
+     rının takas güvenliğini sağlar. 200’den fazla ülkede     Yaptırımlar Listesi ve Ek OFAC Yaptırımları Listesi.
+     11,000’den fazla finans kuruluşunu birbirine bağla-      ABD şirketlerinin OFAC onayı almadan Özel Ola-
+     yan, yılda yaklaşık 1.8 milyar mesaj ileten ve gün-      rak Belirlenmiş Vatandaşlar Listesinde yer alan ger-
+     de yaklaşık 6 trilyon dolar değerinde ödeme emri         çek ve tüzel kişilerin malvarlıklarını dondurmaları
+     ileten SWIFT sistemi bu konuda dünyada kurul-            ve bunlarla herhangi bir işlem yapmamaları gerek-
+     muş olan en büyük tekeldir (SWIFT, 2023). ABD,           mektedir (OFAC, 2023) 2000 yılından sonra ABD,
+     SWIFT sistemi üzerinde güçlü bir kontrole sahip-         finans sektöründe İran, Kore Demokratik Halk
+     tir. Dolaysıyla SWIFT işlem bilgilerini kısa sürede      Cumhuriyeti ve diğer ülkelere zarar veren “akıllı
+     işleyip ve ABD’nin “sınır ötesi yargı yetkisi” (long-    yaptırımlar” uyguladı. Eylül 2014’te Avrupa Parla-
+     arm jurisdiction) politikasına uygun hale getirebilir.   mentosu, SWIFT’in yazılım sağlayıcısı Finastra’nın
+     ABD doları cinsinden dünyanın uluslararası takas         Eylül 2017’de iki Rus bankasına hizmetlerini askıya
+     ve ödemelerin büyük çoğunluğu SWIFT ve CHIPS             almasını yasaklayan bir karar aldı. Kasım 2018’de
+     aracılığıyla yapılır. Bu nedenle ABD, ABD dolarının      ABD Hazine Bakanlığı, SWIFT’in İran’a hizmet
+     akışı üzerinde kontrole sahiptir ve onlardan önemli      vermesi durumunda ABD yaptırımlarına tabi ola-
+     ekonomik istihbarat sağlar.                              cağını duyurdu ve SWIFT, İran finans kurumlarıyla
+                                                              olan ara yüzünü kesmek zorunda kaldı. 2020 Ara-
+                                                              lık ayında ABD, Hong Kong meselesine müdahale
+       ABD, finansal bilgi iletim                             amacıyla Çin Ulusal Halk Kongresi Daimi Komi-
+       sistemlerine belirli yaptırımlar                       tesi’nin 14 başkan yardımcısına yaptırım uyguladı-
+       uygulayarak yaptırım uygulanan                         ğını açıklamış ve Hong Kong İcra Kurulu Başkanı,
+       ülkeleri uluslararası dolar                            ABD’nin mali yaptırımlarının hedefi olmuştu. Gö-
+       sisteminden izole edebilir.                            reve geldikten sonra Biden yönetimi, Navalny ola-
+                                                              yını bazı üst düzey Rus yetkililerin mali yaptırımlar
+        4. ABD finansal egemenliği aracılığıyla mali          listesine alınmasının nedeni olarak göstererek Rus-
+     yaptırımlar uygulayabilmektedir.                         ya’ya karşı yeni Batı yaptırımları için baskı yaptı. Bu
+        Dünyadaki finans kurumlarının çoğuna ABD              liste, 2022’de Rusya’nın Ukrayna Operasyonu’nun
+     tarafından sık sık caydırma politikası izleniyor.        başlamasından sonra Rusya aleyhine olarak iyice
+     ABD’nin “sınır ötesi yargı yetkisi” politikasına uy-     uzadı ve genişledi. Rusya’ya uygulanan yaptırım-
+     mak ve yaptırım uygulanan ülkelerin varlıklarını         lar dünya ekonomisinde istikrarı tehdit edecek bir
+     ABD talimatlarına göre dondurmak zorunluluğu             noktaya ulaşmış bulunuyor.
+
+68
+                                       Serhat Latifoğlu - ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+
+  Dünyada Dolarizasyonu Azaltma Süreci                      2. Uluslararası ekonomik işbirliğinde ABD
+              Hızlanıyor                                 dolarının kullanımı azalıyor.
+                                                            Çin ve Rusya arasında ABD dolarının kul-
+ABD’nin finansal egemenliğini kötüye kullan-             lanımının azaltılması konusunda sağlanan an-
+ması, dünya para sisteminin istikrarını ciddi şe-        laşma ve uygulama çok tipik bir örnektir. 2015
+kilde tehdit ediyor ve uluslararası sürtüşmelerin        yılında, Rusya-Çin arasındaki ticaretin yaklaşık
+tırmanmasına yol açıyor. Yüksek dolarizasyon ve          yüzde 90’ı ABD doları ile yapılıyordu. 2020 sonu
+bunun yol açtığı sorunlar çok sayıda ülkenin milli       itibariyle bu oran yüzde 46’lara kadar gerilemiş
+paraların kullanımını uluslararası alanda yaygın-        bulunuyor (Global Times, 2021)
+laştırmasına yol açtı. Son dönemde, Çin, Rusya,             3. ABD dolarının uluslararası para
+Türkiye, Japonya ve bazı AB ülkelerinin de arala-        trafiğindeki rolü azaltılıyor.
+rında bulunduğu 40’tan fazla ülke “dolarizasyonu            ABD’nin finansal egemenliğinin önem-
+azaltma” sürecini başlattı.                              li bir aracı olan SWIFT’ten kurtulmak birçok
+   2. Dünya Savaşı’ndan sonra oluşan statüko             ülkenin baş gündemidir. Rusya, 2012 yılında
+“petrodoları” destekliyordu. ABD dünyanın en             SWIFT’e alternatif olarak kendi geliştirdiği
+büyük petrol ithalatçısı olduğu için petrol ihraç        SPFS’yi (System for Transfer of Financial Mes-
+eden ülkeler doların egemen statüsünü destek-            sages: Finansal Mesaj Transfer Sistemi) kullan-
+liyordu. Fakat artık ABD petrol ihracatçısıdır ve        maya başladı. 2018’in başlarında SPFS, Avras-
+diğer petrol ihracatçısı ülkeler için petrodolar         ya Ekonomik Birliği üye ülkelerini kapsayacak
+anlamını kaybetmiş bunuyor. Dolayısıyla Suudi            şekilde genişletildi. Bugün 52 uluslararası ör-
+Arabistan ve Körfez ülkeleri gibi petrol ihracatçı-      güt ve 12 farklı ülkede yüzlerce finansal kuru-
+larının alacağı tutumlar, dolarizasyonu sona er-         luş tarafından aktif olarak kullanılmaktadır.
+dirme konusunda önemli bir etken olacaktır. Ni-          Resmi olarak Ekim 2015’te Çin tarafından faa-
+tekim 2022 yılında Suudi Arabistan Çin’e yapacağı        liyete geçirilen CIPS (Cross-Border Interbank
+ihracatta yuanı ödeme birimi olarak kabul ettiğini       Payment System: Sınır Ötesi Ödeme Sistemi),
+açıkladı.                                                gerçek zamanlı fon transferine olanak tanıyan
+   Bununla birlikte, Dünyanın “dolarizasyonu             Çin içindeki ve dışındaki finans kuruluşla-
+azaltma” süreci kendini üç şekilde gösteriyor:           rı tarafından sınır ötesi yuan mutabakatı için
+   1. ABD doları rezervleri ve ABD doları                kullanılıyor. CIPS’in bir başka özelliği ise, bu
+borçları azaltılıyor.                                    yöntemle sınır ötesi takas saklama hizmeti de
+   ABD dolarının merkez bankalarından bulu-              veriliyor olmasıdır. Haziran 2022 itibarıyla
+nan rezervler içindeki payı rekor düşük seviyelere       CIPS’i 76’sı “doğrudan üye” ve 1,265’i “dolaylı
+gerilemiş bulunuyor. Son 10 yılda Türkiye, Çin,          üye” olmak üzere 1,341 kurum kullanmakta-
+Fransa, Almanya, Rusya, Hindistan ve İran dolar          dır. Dolaylı üyeler arasında 965 üye Asya’dan
+rezervlerini azalttı. FED’in bu ülke merkez ban-         (547’si Çin’den olmak üzere), 185 Avrupa’dan,
+kaları ile yaptıkları swaplar (takas) ciddi oranda       46 Afrika’dan, 29 Kuzey Amerika’dan, 23 Bü-
+düştü (Perks vd., 2021). Dolayısıyla uluslararası        yük Okyanus’tan ve 17 Güney Amerika’dan
+yatırımcıların ABD tahvillerine olan talebi de ge-       olup dünya çapında 106 ülke ve bölgeyi kapsa-
+rilemiş oldu.                                            maktadır (CIPS, 2022).
+
+                                                                                                                                69
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+        Çin Döviz Ticaret Sistemi (CFETS), yuan ile rub-              Merkez Bankalarının Rezervlerinin
+     le arasında bir PVP ödeme sistemi başlattı ve “Ku-                    Dağılımları Değişiyor
+     şak ve Yol Girişimi” çerçevesinde diğer yabancı para
+     birimleri ile PVP sistemlerini genişletmeyi planlı-         Merkez bankaları 2008 krizinden sonra ağırlıklı
+     yor (Reuters, 2017). Başka bir para transfer sistemi        olarak iki temel yönde rezerv politikalarını de-
+     ise AB’nin geliştirdiği INSTEX’tir (The Instrument          ğiştirmeye başladılar: Doların ağırlığını azaltıp
+     in Support of Trade Exchanges: Ticaret Destek ve            başta yuan olmak üzere alternatif para birim-
+     Yardım Aracı). İran ile petrol ve emtia ticareti için       lerine yönelmek ve altının rezervlerdeki payı-
+     Almanya, Fransa ve İngiltere tarafından kurulan             nı artırmak. ABD dolarının gelişen ülkelerde
+     INSTEX, özünde İran’ın Avrupa’ya petrol ve diğer            bulunan rezervlerinin toplamı 2008 krizinden
+     ürünleri tedarik etmesi şeklinde işleyen bir takas          sonra yavaş yavaş azalmaya başladı. 25 yıl önce
+     belgesi toplama sistemidir. Ancak ödemeler İran             dünya merkez bankalarının rezervlerinin top-
+     bankalarına havale edilmek yerine, İran’a endüstri-         lamının yüzde 71’ini ABD doları oluşturuyor-
+     yel ürünler, ilaç ve gıda maddeleri gibi emtia tedarik      du. Haziran 2022’de 58.8’e kadar geriledi. 2022
+     eden Avrupalı şirketlere havale ediliyor. Mallar İran’a     yılında merkez bankalarının net altın alımları
+     gidip geliyor ama paranın tamamı AB’de kalıyor.             1,135 ton oldu. Alımları yapan merkez banka-
+        Tüm bunlara ek olarak Rusya, Çin ve Hindistan,           ları ise Türkiye, Çin ve Rusya gibi gelişen ülke
+     bir SWIFT bağlantısının kesilmesi durumunda                 merkez bankalarıdır. Ocak 2023 itibariyle mer-
+     acil elektronik iletişimin sürdürülmesi konusun-            kez bankaları son 55 yılın en büyük miktarda
+     da bir proje üstünde çalışıyor. Üç ülkenin mer-             altın alımlarını yaptılar. 1999 yılında yaklaşık
+     kez bankası geliştirdikleri sistemle finansal bilgi         27,780 ton altın tutan merkez bankaları 2008
+     transfer sistemleri ve işlem bilgilerini aktaracaklar       yılında altın rezervlerini 24,380’e kadar düşür-
+     (Chaudhury, 2019).                                          müşlerdi. Merkez bankalarının altın rezervleri-
+
+
+                     Şekil 1. Dünya Merkez Bankalarının Altın Alım/Satımlarının Net Değişimi
+
+
+
+
+                    2022’de merkez bankası alımları, tarihteki en yüksek alım oldu (Grafik: Goldhub, 2023).
+
+
+
+
+70
+                                     Serhat Latifoğlu - ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+
+nin toplamı 2022 itibariyle 29,770 tona ulaşmış             5R: Alternatif Finansal Sistemin Rezerv
+bulunuyor (World Gold Council, 2023). 2022                                  Parası
+yılında Rusya Merkez Bankası rezervlerinin
+ve Rus iş insanlarının varlıklarının keyfi ola-        BRICS tarafından kurulan Yeni Kalkınma Ban-
+rak dondurulması ve adeta yağmalanmasından             kası (YKB), yeni rezerv parayı tasarlayacak ve
+sonra merkez bankalarının altın rezervlerini ar-       uluslararası finans sistemine ihraç edecek kurum
+tırma eğilimi güçlendi. Bu eğilim daha güvenli         olarak ön plana çıkıyor. Yeni rezerv para şimdilik
+bir finansal sistem kurulana kadar devam ede-          5R olarak adlandırılıyor. 5R, BRICS’i oluşturan
+cektir.                                                ülkelerin para birimlerinin baş harflerinden olu-
+                                                       şuyor: real, ruble, rupi, renminbi, rand. 5R’nin söz
+    Yeni Finansal Sistemin Önemli Aktörü               konusu ülkelerin para birimlerinin içinde bulun-
+                   BRICS                               duğu bir sepet olması bekleniyor. Yapılan tasarı-
+                                                       ma göre ilk etapta 5R, milli paraların yerini alan
+Dünya ekonomisinde GSYİH’nin en az yüz-                (avroda olduğu gibi) bir para birimi olmayacak.
+de 25’ini oluşturan bir büyüklüğe sahip olan           5R’nin esasen milli paraları tamamlayıcı bir özel-
+BRICS, alternatif rezerv para konusunda ön-            lik gösteren ve gelişen ülkelerin para birimlerinin
+cülük ediyor. Örgüt aynı anda dünyanın en              rezerv para olma konumunu destekleyen bir işlev
+büyük üretici güçlerini, en büyük tüketim              görmesi öngörülüyor. 5R, ilk aşamada milli para
+pazarlarını ve en büyük hammadde kaynak-               birimleri arasında işlemleri kolaylaştırmak adına
+larını bünyesinde bulunduruyor. Bu ekono-              bir muhasebe birimi olarak kullanılacak. Orta ve
+mik güç, merkez bankalarının rezervlerinde             uzun vadede 5R’den asıl olarak beklenen BRICS
+görülebiliyor. BRICS ülkelerinin merkez ban-           ve çevresinde bulunan ülkelerin merkez bankala-
+kaları toplam olarak 4.5 trilyon dolara yakın          rında takas işlemlerinde, ödemelerde, rezervlerde
+döviz rezervi bulunduruyor (Dünya Bankası,             yer almasıdır.
+2023). Yani, dünyada toplam olarak en büyük               BRICS’in dünyanın en büyük ekonomik birliği
+döviz rezervi BRICS’e aittir. BRICS’in üyele-          olmasının sağladığı imkânlar 5R’nin elini güç-
+rinin altın rezervlerinin toplamı 5,288 ton-           lendiriyor. İlk aşamada 5R’nin kullanımına dış
+dur. Aralık 2022 itibariyle Rusya 2,299 ton,           ticaret işlemleriyle başlanacaktır (Zharikov, 2023:
+Çin 1,949 ton, Hindistan 785 ton, Brezilya             s.16-18). 5R’nin zaman içinde hem BRICS üye-
+130 ton ve Güney Afrika 125 ton altın rezer-           leri hem de BRICS üyesi olmayan çevre ülkeler
+vi tutuyor. BRICS üyelerinin altın rezervleri          tarafından yapılacak olan yatırımlarda kullanıl-
+toplamı dünyada en büyük ikinci altın re-              ması beklenmektedir. Avrasya, Latin Amerika ve
+zervini ifade ediyor (World Gold Council,              Afrika kıtalarına yayılmış olan BRICS üyelerinin
+2023). BRICS merkez bankaları hem rezerv-              bölgesel kalkınma bankalarında aktif olmalarının
+lerindeki çeşitliliği hem de altın pozisyonla-         büyük bir avantaj sağladığı söylenebilir. Özellik-
+rını artırarak dünyanın en büyük rezerv gücü           le Asya Altyapı Yatırım Bankası (AAYB) yapısı
+olarak ağrılığını artıracak ve ABD dolarının           itibariyle YKB’ye Avrasya coğrafyasında büyük
+egemenliğinin sona ermesinde en büyük itici            oranda destek olabilecek bir yatırım bankası gibi
+güç olacaktır.                                         görünmektedir.
+
+                                                                                                                              71
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+                                         Şekil 2. 2022-2023 5R GARCH Volatilitesi
+
+
+
+
+                5R sepetin içinde bulunan 5 para biriminin ayrı ayrı volatilitesi bulunmaktadır (Grafik: V-Lab, 2023).
+
+
+
+         Söz konusu banka olumlu bir gelişme temposuna                        Yuanın Yavaş ve Kararlı Yükselişi
+     sahiptir ve büyük bir potansiyele ulaşmıştır. 5R’nin ya-
+     tırım ölçeğinde başlatacağı uygulamaların AAYB’nin             Çin ekonomisi mevcut konumuyla dünya ekonomisi-
+     etkisiyle büyük gelişim göstermesi bekleniyor. Söz             nin lideri konumundadır. Satınalma Gücü Paritesi’ne
+     konusu bölgesel kalkınma ve yatırım bankaları 5R’nin           (SAGP) göre dünyada birinci, nominal Gayrı Safi
+     uygulanması ve bölgesel ölçekte ortak projelerin geliş-        Yurtiçi Hasıla (GSYİH) açısından dünyanın en bü-
+     tirilmesinde büyük bir rol oynayacağı beklenmektedir.          yük ikinci ekonomisidir (Trading Economics, 2023).
+         5R sepetin içinde bulunan 5 para biriminin ayrı            Çin dünyanın en büyük ticaret yapan ülkesi ve dün-
+     ayrı volatilitesi (finansal piyasalarda belirli bir ürü-       yanın en büyük tüketim pazarıdır. Fakat yuan Çin’in
+     nün belirli bir zaman içerisinde fiyatında yaşanan             bu ekonomik gücü ile eş oranda yaygın olarak kulla-
+     oynaklık) bulunuyor. Şu anda 5 para birimi için-               nılmıyor. Buna karşılık Çin’in ve çevre ülkelerin geli-
+     de volatilitesi en düşük para birimi yuandır. Ayrıca           şim potansiyelini göz önünde bulundurursak yuanın
+     Çin’in sahip olduğu büyük miktarda döviz rezervle-             uluslararası kullanımının önümüzdeki yıllarda hızlı
+     rinden ötürü başlangıçta yuanın 5R sepeti içindeki             bir gelişim göstermesi kaçınılmazdır.
+     payı yüksek olacaktır. Zaman içinde BRICS’in diğer                2009 yılında Çin’de pilot sınır ötesi ticaret uygula-
+     üyelerinin ve BRICS’e aday ülkelerin katılmasıyla              masının başlatılmasından sonra, yuanın sınır ötesi kul-
+     birlikte sepetin içindeki para birimlerinin çeşitliliği        lanımı kademeli olarak genişledi ve uluslararası piyasa-
+     artacaktır.                                                    lardaki fiyatlandırma işlevi istikrarlı bir şekilde iyileşti.
+
+
+72
+                                             Serhat Latifoğlu - ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+
+Ekim 2016’da yuan, IMF’nin (Uluslararası Para Fonu)            lemleri altına dayalı işlemlerdi. Altın ihtiyacı
+SDR’sine (Özel Çekme Hakları) dahil edildi. Yuan SDR           olan merkez bankaları kendi aralarında swap an-
+ağırlık sıralamasında en büyük üçüncü para birimi              laşmalarıyla geçici bir süreyle altın rezervlerini
+haline geldi ve ağırlığı artmaya devam ediyor. SWIFT           takas ettiler. Bugün uygulanan kaydi paraya veya
+tarafından Aralık 2022 tarihinde yayınlanan veriler,           dövize dayalı swap işlemleri 1960’lardan sonra
+yuanın parasal istatistiklere dayalı küresel ödeme para        görülmeye başladı. Dövize dayalı swap işlem-
+birimleri sıralamasında %2.7 pay ile dördüncü sıraya           lerinin öncülüğünü İngiltere, Kanada ve ABD
+yükseldiğini gösterdi (SWIFT, 2023). Rusya, yuan tah-          merkez bankaları yaptı (McCauley ve Schenk,
+villerinin ihraç edildiğini ve yuanın rezerv para biri-        2020: s.4).
+mi olarak dahil edildiğini duyurdu. Yuanın Rusya’nın
+döviz rezervlerindeki payı 2018’de %2.8’den 2021’de
+%13.8’e yükseldi (The Wall Street Journal, 2023). Yua-             ABD yükselen enflasyon karşısında
+nın adım adım yükselişi tüm verilerde açık bir şekilde             son çare olarak kendi inşa ettiği
+görülüyor ve bu istikrarlı yükseliş alternatif rezerv para         Bretton Woods sisteminden tek taraflı
+olarak tasarlanan 5R’nin başarı şansını daha da artırı-
+                                                                   olarak çıktı. Böylece ABD dolarının
+yor.
+                                                                   altınla olan bağı kopmuş oldu.
+      Yeni Finansal Sistemin Aracı Olarak
+                  Swaplar                                         28 Şubat 1962’de ABD ve Fransa merkez ban-
+                                                               kaları bir swap anlaşması imzaladı. O dönem
+Yuanın ve milli paraların kullanımının yay-                    500 milyon frank karşılığı 50 milyon ABD do-
+gınlaştırılmasında merkez bankalarının yap-                    ları takas edildi. Yapılan swap işleminin süresi 3
+tığı swap anlaşmalarının büyük katkısı var. Çin                aydı. Ancak ABD dolarında istikrar sağlanama-
+Merkez Bankası bu çerçevede swap anlaşmaları-                  dığı için takasın süresi uzatıldı. ABD doları krizi
+nı 2008 yılından sonra yaygın olarak kullanmaya                tüm Avrupa’ya yayılınca swap anlaşmaları İngil-
+başladı. 2021 sonu itibariyle Çin Merkez Bankası               tere, İsviçre, Hollanda, Almanya, İtalya, Avus-
+41 ülke ile swap anlaşması imzalamış bulunuyor                 turya ve Belçika gibi Avrupa ülkeleri ve Kanada
+(Tran, 2022). Türkiye, Pakistan, Rusya, Nijerya,               ile yapıldı. Arka arkaya yapılan anlaşmaların bü-
+Cezayir ve İran yuanı takas para birimi olarak kul-            yüklüğü 900 milyon dolara ulaştı. Bretton Woo-
+lanıyorlar. Milli paralara dayalı swap anlaşması               ds sisteminin devam ettiği süreçte ABD’de hızla
+yapılan ülkelere arasında Rusya, Japonya, Güney                yükselen enflasyon nedeniyle ABD dolarında
+Kore, Arjantin, Birleşik Krallık, İsviçre ve Brezilya          istikrar sağlanması amacıyla swap anlaşmaları
+da bulunuyor (The People’s Bank of China, 2023).               yapılmıştı. ABD yükselen enflasyon karşısında
+                                                               son çare olarak kendi inşa ettiği Bretton Woods
+Swapların Tarihçesi                                            sisteminden tek taraflı olarak çıktı. Böylece ABD
+                                                               dolarının altınla olan bağı kopmuş oldu. Ağustos
+   Uluslararası finans sisteminde merkez banka-                1971’den sonra swap anlaşmaları hız kesmeden
+ları düzeyinde swap işlemleri 1880’lerden beri                 devam etti. 1970’lerin ortasında anlaşmalar 20
+yapılmaktadır. 1920’lere kadar yapılan swap iş-                milyar dolara ulaştı (Bordo vd., 2015).
+
+                                                                                                                                      73
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+                                         Şekil 3. Dünya Döviz Rezervleri
+
+
+
+
+                                Grafik için IMF verileri kullanılmıştır (Grafik: BRIQ, 2023).
+
+
+
+
+        Bretton Woods sisteminin çöküşünden                     Merkez Bankası ile 4 milyar dolarlık swaplar
+     sonra uluslararası piyasalarda güçlü para bi-              yaptı. Eylül 2008’e geldiğimizde AMB ve İsviç-
+     rimlerine olan talep arttı. Zira ABD’nin tek               re Merkez Bankası ile 7 ayrı swap daha yapıldı.
+     taraflı kararı piyasaları yeni bir krize sürük-            Kısa sürede söz konusu merkez bankaları ile
+     lemişti. IMF’nin sağladığı destekler piyasalar-            yapılan swapların büyüklüğü 240 milyar do-
+     daki talebi karşılamıyordu. Bu süreçte merkez              lara ulaştı. Kanada (30 milyar dolar), Japonya
+     bankalarının yaptığı swap anlaşmaları döviz                (120 milyar dolar), İngiltere (80 milyar dolar),
+     talep eden ülkelerin imdadına yetişti. Yapılan             Danimarka (150 milyar dolar), Norveç (15
+     swap anlaşmalarının iki temel özelliği vardı:              milyar dolar), Avustralya (30 milyar dolar) ve
+     Anlaşmaların hacmi küçüktü ve vadeleri kı-                 İsveç (10 milyar dolar) ile FED’in yaptığı swap
+     saydı (McCauley ve Schenk, 2020: s.3).                     anlaşmaları toplamda 620 milyar dolara ulaştı.
+                                                                Swapların vadeleri Şubat 2010’de doldu ve kriz
+     2008 Krizinden Sonra Swaplar                               sona erdiği için yenilenmedi (IMF, 2021).
+                                                                   Fakat vade dolduktan sonra AB’de yaşanan
+        2008 krizi swap anlaşmalarında yeni bir                 borç krizinden ötürü Mayıs 2010’da Kanada,
+     dönemin açılmasına neden oldu. 2008 kri-                   İngiltere, AMB, Japonya ve İsviçre merkez
+     zinin hemen ardından FED, Avrupa Merkez                    bankalarıyla yeni swap anlaşmaları yapıldı.
+     Bankası (AMB) ile 20 milyar dolar ve İsviçre               Swapların vadesi Kasım 2013’e kadardı. Söz
+
+
+74
+                                     Serhat Latifoğlu - ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+
+konusu swaplardan sonra işlemlerin niteliği            Swapların Büyük Dönüşümü
+değişmeye başladı. Çünkü merkez bankaları
+döviz rezervlerini tutmaktansa belirli vadeler-           IMF’nin “İkili swap Anlaşmalarının Evrimi”
+le swap yaparak tutmayı tercih etmeye başla-           başlıklı raporunda 15. sayfada bulunan grafik
+dılar. 2013’ten sonra AMB, İsviçre, Japonya,           swapların seyrini çarpıcı bir şekilde gösteriyor.
+Kanada ve İngiltere’nin FED ile yaptığı swap           Swaplar 2009 sonunda üç ana odakta kümeleni-
+anlaşmaları “süresiz ve sınırsız miktar” ola-          yor: büyüklük sırasına göre ABD, AB ve Japonya.
+rak değişti ve ihtiyaç halinde kullanıldı (IMF,        2020 sonunda bu tablo çarpıcı bir şekilde değiş-
+2021).                                                 miş. Büyüklük sırasına göre swapların dağılımı
+                                                       şöyle: ABD, Çin, AB ve Japonya. Yani uluslara-
+                                                       rası finans sisteminde Çin Merkez Bankası yap-
+  2008 krizi swap anlaşmalarında                       tığı yaygın swap anlaşmaları ile güçlü bir oyuncu
+  yeni bir dönemin açılmasına                          haline gelmiş oldu.
+  neden oldu.                                             Swaplarla ilgili tartışmalarda neoliberal eko-
+                                                       nomistler Batı’nın merkez bankalarının kendi
+   ABD dolarının rezerv para olması ve dış             aralarında yaptıkları swap işlemlerinin uluslara-
+ticarette yaygın kullanımı nedeniyle swaplar           rası istikrarı sağladığını iddia ediyorlar (Rosals-
+çoğunlukla ABD doları talebini karşılamak              ky, 2020). Burada göz ardı edilmemesi gereken
+için yapılıyor. Fakat bu eğilim 2008 krizinden         konu şudur: Söz konusu merkez bankaları için
+sonra değişmeye başladı. 2008 krizinde ABD             var olan finansal sistemin sürdürülmesi, ABD
+dolarına olan güvenin sarsılması ve sonrasın-          dolarının egemenliğinin korunması birinci ön-
+da AB’de yaşanan borç krizi avroyu vurunca,            celiktir. Dolayısıyla yeni oluşan alternatif finan-
+merkez bankaları alternatif para birimlerine           sal sistemi ve araçlarını karalamaları ve köstekle-
+yöneldi. Farklı para birimlerini rezerv olarak         meye çalışmaları sık sık karşılaşılan bir konudur.
+tutarak riski dağıtma eğilimi bugüne dek ar-           Oysa kendileri de üstü kapalı veya dolaylı olarak
+tarak devam etti. Ayrıca merkez bankalarının           Batı’nın sorunları kendi içinde halletmesinin
+kendi para birimlerini diğer ülkelerin para            doğurduğu sonuçların dünya ekonomisindeki
+birimleri ile takas ederek swap yapma eğilimi          istikrarsızlığın temel kaynağı olduğunu ifade et-
+güçlendi. Batı ülkelerinde bu uygulamaya ilk           mektedirler. Batı’nın swap işlemlerinin yarattığı
+örneklerden birisi İsviçre Merkez Bankası’nın          sorunlar şunlardır:
+Polonya Merkez Bankası ile Haziran 2008’de                1. ABD doları her zaman ABD ekonomisinin
+yaptığı swap anlaşmasıdır. Yapılan anlaşma             kendi ihtiyaç ve menfaatlerine uygun bir seyir
+İsviçre frangına karşılık Polonya zlotisiydi.          izler. Aşırı finansallaşan ABD ekonomisi sık sık
+Aralık 2012’de benzer şekilde Hindistan ve Ja-         krize girmektedir. Dolayısıyla muhtemel krizler
+ponya milli paralarla 15 milyar dolara tekabül         ve şoklardan kaçınmak mümkün değildir.
+eden 3 yıllık swap işlemi yaptılar (Wiggins vd.,          2. Döviz kurları FED’in belirlediği faiz oran-
+2023: s.40-88). Eş zamanlı olarak Çin’in Kuşak         larına uygun bir seyir izlediği için uluslararası
+ve Yol Girişimi çerçevesinde yaptığı ikili swap        finans piyasalarında likidite sorunlarına ve istik-
+anlaşmaları yayılmaya başladı.                         rarsızlığa sebep olmaktadır.
+
+                                                                                                                              75
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+                                        Şekil 4. 2009 Sonu Swap Döngüsü
+
+
+
+
+                                     2009 sonu ikili swap anlaşmalarını gösteren grafik
+                                                 (Grafik: Perks vd., 2021).
+
+
+
+         3. Halen uluslararası ödemeler dengesi ile ilgili     işlemleri 5-10 yıl gibi uzun vadelerde olmadığı için
+     belirlenmiş kesin standartlar mevcut değildir. Söz        olası aşırı dalgalanmalar ve geri ödememe riski gibi
+     konusu sorunlar uluslararası finansal sistemi sade-       risklerden kaçınmak mümkün oluyor. Merkez ban-
+     ce Batı’ya bağlayan bir yapı oluşturuyor.                 kalarının yuan almak için uyguladığı yöntemlerden
+         Yuan 2022 itibariyle döviz piyasalarında en çok       birisi de tahvil ihraçlarıdır. Hong Kong ve diğer
+     işlem gören 5. para birimi oldu. Çin dünya ticareti-      offshore bölgelerde ihraç edilen tahviller swaplara
+     nin yüzde 15’inden fazlasını gerçekleştiriyor, dün-       oranla daha zahmetli ve maliyetlidir. Çin’le yapılan
+     yanın en büyük ekonomilerinin en önemli ticari            swap işlemleri yuanın uluslararası finans piyasa-
+     ortağıdır, buna karşılık yuanla yapılan ticari işlem-     larında kullanımının beklenenin üstünde yaygın-
+     lerin oranı toplam ticaret hacminin yüzde 2’sine          laşmasında etken oldu. Çin, swap anlaşmaları uy-
+     yakındır. Yuan, dış ticari işlemlerdeki oranı düşük       gulamalarına 2009 yılında krizin hemen ardından
+     kalmakla birlikte bugün 70 ayrı merkez bankasının         başladı. İlk swap anlaşması Güney Kore Merkez
+     rezervinde bulunuyor (SCIO, 2022) Uluslararası            Bankası ile yapıldı. Çin Merkez Bankası bugüne
+     finans piyasalarında konvertibilite ile ilgili sorun-     kadar 41 ülkeyle 3,5 trilyon yuana (554 milyar do-
+     lardan kaynaklanan dezavantaj Çin Merkez Ban-             lar) büyüklüğünde swap anlaşması yaptı (Atlantic
+     kası’nın swap işlemleriyle kapatılıyor. Yapılan swap      Council, 2022).
+
+76
+                                       Serhat Latifoğlu - ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+
+                                 Şekil 5. 2020 Sonu Swap Döngüsü
+
+
+
+
+                             2020 sonu ikili swap anlaşmalarını gösteren grafik
+                                         (Grafik: Perks vd., 2021).
+
+
+
+Çin’in Swap Anlaşmalarının Niteliği                      lerine bakıldığında anlaşmaların belirli stan-
+                                                         dartlarda olduğu görülür. Yapılan anlaşmalarda
+   Neoklasik (neoliberal) veya ana akım ekono-           ekonomik, siyasi ve kurumsal özellikler etken
+mistler tarafından FED’in yaptığı swaplarla il-          oluyor. Öncelikli olarak stratejik ortaklık anlaş-
+gili bazı çekinceler öne sürülüyor. Onlara göre          ması yapılan ve serbest ticaret anlaşması olan
+eğer swap anlaşmaları sınırsız bir süre ve mik-          ülkelerle swap anlaşmaları yapılıyor. Anlaşma
+tarla genişletilirse doğacak sorunlar şöyle sıra-        yapılacak ülke ile olan ticaretin boyutları, hac-
+lanabilir:                                               mi, ticaret anlaşması gibi etkenler swap anlaş-
+   1. Merkez bankasının izlediği bağımsız para           malarının büyüklüğünü ve şekil şartlarını et-
+politikası tehlikeye girer.                              kiliyor. Anlaşmaların çoğunlukla 3 yıl vade ile
+   2. Swap kullanan ülkelerin finansal kuruluş-          yapıldığı görülüyor (IMF, 2021).
+ları ile ilgili şüpheler doğabilir.                         Çin’in diğer merkez bankalarıyla yaptığı
+   3. Birkaç Batılı merkez bankası, uluslararası         anlaşmaların uluslararası finans piyasalarına
+planda son kredi merci olma konusunda tek hâ-            sağladığı çok sayıda olumlu etkisi vardır. En
+kim olur.                                                önemlisi ise ABD dolarının egemenliğinin kırıl-
+   Çin’in yaptığı swap anlaşmalarının özellik-           masına katkıda bulunmasıdır.
+
+                                                                                                                                77
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+        Özellikle kriz dönemlerinde ABD doları bor-          Swapların Yeni Finansal Sistemdeki Yeri
+     cu ve ihtiyacı yüksek olan ülkelerde ödemeler
+     dengesi sorunları yaşandığında ABD doları ta-               ABD başta olmak üzere Batı merkez bankala-
+     lebi artar. Batı merkez bankalarının ve kurumla-        rının 2022 yılında hızla faiz artırmaya başlaması
+     rının yaptığı swap anlaşmaları krizlerde yetersiz       yüksek oranda dış borcu olan gelişen ülkeleri zor
+     olduğu için milli paralarla swap anlaşmaları ge-        durumda bırakıyor. Geçmiş yıllarda FED’in faiz
+     lişen ülkeleri rahatlatmaktadır.                        artırımları ve yaşanan krizler ABD dolarında li-
+                                                             kidite sorunlarına yol açmıştı. IMF’nin ve FED’in
+                                                             sağladığı swaplar gelişen ülkelerde likidite sıkışık-
+       Bugüne kadar yaşanan krizler                          lığının aşılmasında yeterli olmamıştı. Dolayısıy-
+       göstermiştir ki Batı merkez                           la ağırlıklı olarak dolar bazında borçlanmış olan
+       bankaları ve kurumları krizlerde                      ülkeler dolarizasyondan kurtulmanın çarelerini
+       yaşanan likidite sıkışıklıklarında                    aramaya başladılar. Gelişen ülke merkez bankaları
+       önce kendi sorunlarını çözüyorlar.                    kendi aralarında yaptıkları swaplarla dolarizasyo-
+                                                             nu azaltıyorlar. Çin’in sağladığı swaplar ve yuan
+        FED’in yaptığı swap anlaşmaları ile Çin ve di-       bazlı borçlanma bu ülkeler için diğer bir alterna-
+     ğer gelişen ülkelerin yaptığı anlaşmalar arasın-        tiftir. Çin’in swap ve kredi anlaşmalarında politik
+     da temel bir farklılık vardır. FED var olan dolar       şartlar öne sürmemesi yuanla ilgili likidite sorun-
+     egemenliğinin devamı ve korunması için anlaş-           larının yaşanmaması, yuanın fiyat istikrarı gibi
+     malar yaparken, Çin ve gelişen ülke merkez ban-         etkenler gelişen ülkelerin Çin’le yaptığı swapların
+     kaları milli paraları ve karşılıklı ticari ilişkileri   yaygınlaşmasını sağlıyor. Bu eğilimin başka bir et-
+     güçlendirmek amacıyla swaplar yapmaktadır.              kisi ise yuanın uluslararası alanda yaygınlaşması-
+     Söz konusu swapların ikinci önemli katkısı işte         nın önünün açılmasıdır. Bu da merkez bankaları-
+     burada ortaya çıkıyor: hem merkez bankaları             nın rezerv para olarak ABD dolarını azaltıp yuana
+     arasında güveni geliştirmek hem de kullandık-           daha çok pay ayırması ile sonuçlanıyor (Weijia,
+     ları para biriminin uluslararası güvenilirliğini        2022).
+     artırmak.                                                   Çin, son yıllarda yaşanan krizlerde ihtiyaç du-
+        Çin Merkez Bankası’nın sağladığı swaplar sa-         yan ülkelere likidite sağlayarak güvenilir bir ortak
+     dece milli paralarla ticaretin yaygınlaştırılması       olduğunu kanıtladı. Çin-Pakistan swap anlaşması
+     için değil aynı zamanda KYG’de (Kuşak ve Yol            2014’te 10 milyar yuandan (1.42 milyar ABD dola-
+     Girişimi) bulunan ülkelerin altyapı yatırımla-          rı) 2022’de 20 milyar yuana (3.1 milyar ABD Dola-
+     rının finansmanında kullanılmaktadır. Bu bağ-           rı) yükseldi. Benzer şekilde Arjantin, 2009 yılında
+     lamda olası kredi ödemeleri ve ertelemelerinde          Çin ile yapılan 70 milyar yuan swap anlaşmasını
+     swaplar önemli bir finansman kaynağı olarak             2019 yılında 130 milyar yuana (18.47 milyar ABD
+     kullanılıyor. Çin’in KYG ülkeleri ile yaptığı EP-       doları) yükseltti. Halen bu swap anlaşması yürür-
+     C-F (engineering, procurement, construction,            lüktedir. Çin, kriz dönemlerinde yaptığı swaplarla
+     finance) kredilerinde swap anlaşmaları destek-          güçlü ve güvenilir bir finansal ortak olmaya de-
+     leyici unsur olarak öne çıkıyor (Silk Road Brie-        vam ederken her iki ülke ile ticari ilişkilerini bü-
+     fing, 2022).                                            yük oranda geliştirdi (Global Times, 2021).
+
+78
+                                        Serhat Latifoğlu - ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+
+                 Şekil 6. Rusya Merkez Bankası’nın Döviz Rezervlerinin 2021 Dağılımı
+
+
+
+
+                         Rusya Merkez Bankası’nın Döviz Rezervlerinin 2021 Dağılımı
+                                      (Grafik: Bank of Russia, 2022).
+
+
+
+   Çin’in, bazı gelişmiş ülkelerin ve gelişen ülke-       olmak üzere) krizlerde yaşanan likidite sıkışıklık-
+lerin merkez bankalarının yeni arayışlarının gel-         larında önce kendi sorunlarını çözüyorlar. Geri
+diği aşama FED’in ve ABD dolarının ayaklarının            kalan ülkeler, özellikle de gelişen ülkeler bu süreçte
+altında bulunan zeminin kaymaya başladığını               “kurban” ediliyor. Geçmiş deneyimlerden ders çı-
+gösteriyor. Rusya’nın 2022 yılı başında Ukrayna           karan gelişen ülkelerin (hatta bazı gelişmiş ülkeler)
+Operasyonu’nu başlatması ve ardından Rusya’ya             merkez bankaları artık rezervlerini çeşitlendirme-
+uygulanan ambargo bu süreci daha da hızlandıran           ye ve swap anlaşmalarını daha sık kullanmaya baş-
+bir etken oldu. Artık ABD başta olmak üzere Batı,         ladılar.
+sadece sistemi korumak değil kendi iradesi dışında           2008 krizi sonrasında swap anlaşmalarının
+kurulan yeni sisteme uyum sağlamak için kafa yor-         Çin’in öncülüğünde nitelik olarak dönüşüm ge-
+maya başlamış durumdadır. IMF’nin yeni rezerv             çirmesi, gelişmiş ve gelişen ülkelerin kendi arala-
+para olarak SDR’yi öne çıkarması bunun gösterge-          rında yaptığı benzer nitelikteki swap anlaşmalarını
+sidir.                                                    da tetikledi. Bu anlaşmalar eksikliği duyulan para
+   Bugüne kadar yaşanan krizler göstermiştir ki           birimlerinin takas edilmesi ve ticaretin milli para-
+Batı merkez bankaları ve kurumları (IMF başta             larla yapılmasını destekleyen bir özellik gösteriyor.
+
+
+                                                                                                                                 79
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+     Önümüzdeki yıllarda kurulan yeni finansal sistem-       ülke arasındaki bankalararası spot döviz işlemle-
+     de swap anlaşmalarının bu niteliği ağır basacak ve      rine açıldı (The Economic Times, 2010). Yuanın
+     gelişen ülkelerin krizlerde en büyük destekçisi ol-     Moskova Döviz Borsası’nda işlem hacmi Ekim
+     maya devam edecektir. Swaplar kurulan yeni finan-       2022’de ilk kez ABD dolarının işlem hacmini
+     sal sistemde önemli bir araç olarak daha yaygın bir     geçti ve 1.17 milyar dolara ulaştı. Ukrayna Ope-
+     biçimde kullanılacaktır.                                rasyonu öncesi ortalama işlem hacmi günlük 200
+                                                             milyon dolardı (Global Times, 2022). Rusya’nın
+           Çin-Rusya Finansal İşbirliği ve Yuan              Moskova Menkul Kıymetler Borsası’nda yuan iş-
+                                                             lemi yapan 170’den fazla banka ve aracı kurum
+     Bu aşamada BRICS’te devam eden arayışlara pa-           bulunuyor. Bank of China, ICBC, China Cons-
+     ralel olarak Çin ve Rusya’nın ikili olarak attıkla-     truction Bank da Rus finans piyasalarında yuan
+     rı somut adımlar, alternatif bir finansal sistemin      ile işlem görüyor.
+     kuruluşu konusunda dünyaya umut veriyor.                   2. Yuan, Rusya’nın döviz varlıklarının ve
+     2015’te başlayan ortak adımlar, 2022’de Rusya’ya        devlet varlık fonlarının önemli bir kısmını
+     uygulanan geniş kapsamlı ambargodan sonra bü-           oluşturuyor.
+     yük oranda etkin hale geldi. İki tarafın işbirliği         2016 yılında Rusya Merkez Bankası, yuanı
+     kanalları daha da gelişirken karşılıklı milli pa-       ülkenin döviz rezervlerine dahil etti. Yuan Tem-
+     raların olağanüstü koşullarda kullanımı ve yeni         muz 2021’de Rusya Merkez Bankası’nın döviz
+     finansal sistemin diğer uygulamaları konusunda          rezervlerindeki %13.1 oranındaki payı ile Rus-
+     çok önemli tecrübeler edinildi. Çin-Rusya takas         ya’daki en büyük üçüncü döviz rezervi oldu.
+     ve ödeme sisteminde yuana olan talep aşağıdaki          2022 sonunda Rusya Maliye Bakanlığı’nın aldığı
+     nedenlerden dolayı hızlı bir şekilde artıyor.           karara göre NWF’nin portföyündeki varlık dağı-
+        1. Yuanın gücü düşük volatilitesindedir.             lımı şöyle olacak; % 60 yuan, % 40 altın. 1 Şubat
+        Döviz kurunun istikrarı, ödeme para birimi           2023 itibariyle nakit rezervin % 19.6 sı avro, %
+     seçimini etkileyen önemli etkenlerden birisidir.        79.2’si yuan olarak tutuluyor. NWF’nin nakit dışı
+     Yuanın ABD doları, avro ve dünyadaki diğer başlı-       portföyünde 557.2 ton altın bulunuyor (Global
+     ca para birimlerine göre fiyat seyri nispeten istik-    Times, 2023a).
+     rarlıdır. Yuanın ruble karşısındaki fiyat seyri diğer      3. Hızla gelişen Çin-Rusya ticareti ve
+     büyük para birimlerine göre daha dalgalıdır. Çoğu       artan yuan talebi.
+     Çinli işletme ve finans kurumu, dalgalı ruble dö-          Kovid 19 öncesinde Çin ve Rusya, ikili ticaret
+     viz kurunun neden olduğu kur riskini üstlenmek          hacmini 2024 yılına kadar 200 milyar ABD do-
+     konusunda isteksiz ve yerel para birimi takasında       larına çıkarma hedefini belirlemişlerdi. 2020’de
+     yuan kullanmayı tercih ediyor. Önümüzdeki dö-           Çin ile Rusya arasındaki ikili ticaret hacmi 107.77
+     nemde türev ürünlerin kullanılarak döviz sigorta-       milyar ABD doları olmuş ve art arda üçüncü kez
+     sının yapılması bekleniyor.                             100 milyar ABD dolarını aşmıştı. 2022 yılında
+        22 Kasım 2010 ve 15 Aralık 2010 tarihlerinde         Ukrayna Operasyonu’ndan sonra AB’den yapılan
+     ruble ve yuan Çin Bankalararası Döviz Piyasası          ithalatın düşmesi ve Çin’e yönelmesi ile birlikte
+     ve Moskova Döviz Ticaret Merkezi’ne girerek iki         Çin-Rusya arasındaki ticaret hacmi 195 milyar
+
+
+80
+                                            Serhat Latifoğlu - ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+
+                 Çin-Rusya arasındaki ABD doları ile yapılan ticaret yüzdesi 2015'te %90’ı bulurken,
+                       bu oran 2022'de %30’lara kadar gerilemişti (Fotoğraf: CGTN, 2023).
+
+
+
+dolara ulaştı. Artan ticaret hacmi ile Rusya Devlet           leri gibi yeni gelişen ileri teknoloji alanlarında
+Başkanı Vladimir Putin ikili ticaretin yeni hede-             işbirliğinde olumlu ilerlemeler kaydetti (Russia
+finin 250 milyar dolar olarak yenilendiğini açık-             Briefing, 2019).
+ladı. 2020’de Çin-Rus ticari ve ekonomik işbirliği                Çin-Rus ekonomik ve ticari işbirliğinin ge-
+salgına karşı koydu ve güçlü bir direnç gösterdi              lişimi, Çin-Rus ödeme ve takas işlemlerinde
+ve iki taraf arasındaki işbirliğinin temellerini güç-         de büyük bir ilerleme olmasını sağladı. 2015’te
+lendirdi. Çin’in Rusya’nın dış ticaretindeki payı             Çin-Rusya arasındaki ticaretin yüzde 90’ı ABD
+daha da arttı ve art arda 13’üncü yıldır istikrarlı           doları ile yapılırken 2022’de operasyon öncesin-
+bir şekilde Rusya’nın en büyük ticaret ortağı hali-           de yüzde 30’lara kadar gerilemişti. Bu veriler
+ne geldi (Reuters, 2023).                                     Rusya ve Çin’in düzenli olarak “dolarizasyonu”
+   Halen büyük işbirliği potansiyeline sahip ge-              azalttığını gösteriyor (Global Times, 2023b).
+leneksel enerji ve maden sektörlerine ek olarak,                   4. Rusya’da Çin’in yuan bazlı yatırımları
+tarım, yatırım ve müteahhitlik ile bilim ve tek-              için talep artıyor.
+noloji işbirliği hızla gelişiyor. Bilim ve teknoloji              Batı’nın ekonomik yaptırımlarından dolayı
+inovasyonunda işbirliği kapsamlı bir şekilde de-              Rus şirketleri Batı’dan finansman sağlayamıyor.
+rinleşti: Toplam tutarı 1 milyar ABD doları olan              Çin, Rusya’da uluslararası finansman için kilit
+Çin-Rus Ortak Bilim ve Teknoloji İnovasyon                    bir ülke haline geldi ve Rusya’ya yuan finansma-
+Fonu faaliyete geçti ve iki taraf 5G, bulut hizmet-           nının ölçeği genişliyor.
+
+
+                                                                                                                                     81
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+         5. Rusya ve Çin’de milli paraların                       Çin-Rus Finansal İşbirliğinin Teknolojik
+     kullanılmasında önemli ilerleme var.                         Boyutu
+         2017’de ICBC, Moskova’da yuan takas bankası ope-
+     rasyonlarını başlattı. Çin Halk Bankası tarafından baş-         Çin Döviz Ticaret Sistemi (CFETS), rub-
+     latılan Yuan Sınır Ötesi Ödeme Sistemine (CIPS) bir          le ve yuan mutabakatı için takas risklerini ve
+     dizi Rus bankası katıldı (SWIFT, 2017). Rus ve Çin gaz,      farklı zaman dilimlerinde işlem yapma riskini
+     petrol ve altın işlemleri takas para birimi olarak yuan      azaltan ve döviz verimliliğini artıran yeni bir
+     cinsinden yapılabilir.                                       ödeme sistemi (PVP) kurdu (CFETS, 2010).
+         2014’te Çin-Rusya Mali İş Birliği Alt Komitesi’nin 16.   Bu sistem sayesinde Çin ve Rusya arasındaki
+     toplantısında önerilen “Tek Kuşak, Tek Yol” stratejisinin    milli paralarla ticari işlemlerde SWIFT’i atla-
+     uygulanması için yuanın ruble işlemlerine eşleştirilerek     yabiliyor, bilgilerin gizliliğini sağlıyor ve sonuç
+     ödenmesine karar verildi. Komite yuanın yabancı para         olarak ABD’nin mali yaptırımlarından kaçına-
+     birimlerine eş zamanlı takas mekanizmasını resmi ola-        biliyor.
+     rak kurmuş, böylece döviz işlemlerinin ödenmesinde              Harbin Bank uygulamaları Çin-Rus sınır
+     iki para birimi arasındaki zaman farkından kaynakla-         ötesi e-ticaret çevrimiçi platformu uygulama-
+     nan takas risklerini ortadan kaldırmış ve Rusya ile Çin      larına güzel bir örnek olmuştur. Söz konusu
+     arasındaki milli para biriminden fon akışlarının gün-        banka Çin-Rusya sınır ötesi e-ticaret çevrimi-
+     celliğini iyileştirmiştir (Bank of Russia, 2014).            çi ödeme platformuyla, ihracatın zor, uzun ve
+                                                                  maliyetli sorunlarını çözmek için basit ve ve-
+      Dijital para birimleri, milli                               rimli bir entegre çevrimiçi ağ geçidi sistemi ve
+                                                                  çok kanallı bir platform kurmuştur (Shen &
+      paraların mutabakatlarını
+                                                                  Westbrook, 2023). Harbin Bank örneğinin di-
+      hızlandırabilir, SWIFT için kısmi                           ğer Çin ve Rus bankalarına yaygınlaştırılması
+      bir ikame oluşturabilir ve ödeme                            bekleniyor.
+      sistemlerinin küreselleşmesini                                 Dijital teknolojinin hızlı gelişimi alternatif
+      sağlayabilir.                                               kanalların açılmasını sağlıyor. Dijital para bi-
+                                                                  rimleri, milli paraların mutabakatlarını hızlan-
+         Çin ve Rus finans kurumları, UnionPay kartlarının        dırabilir, SWIFT için kısmi bir ikame oluştu-
+     verilmesi ve kabul edilmesinde işbirliğini güçlendiriyor.    rabilir ve ödeme sistemlerinin küreselleşmesini
+     Çin Ziraat Bankası, 2009 yılında Rus tarafıyla işbirliği     sağlayabilir. Çin’in MBDP’lerin (merkez ban-
+     yaparak kullanıcıların Rus ATM’lerinden yuan, ruble          kası dijital para) uygulanmasında geldiği aşa-
+     cinsinden nakit çekmelerine olanak tanıyan bir ban-          ma Çin-Rus finansal işbirliğinin daha ileri bir
+     ka kartı çıkardı. 2014 yılında China UnionPay, ruble         boyuta taşınmasında önemli bir avantaj sağ-
+     ve yuan UnionPay kartları çıkarmak için Rus tarafıy-         lıyor. Çin ve Rusya, dijital para birimlerinin
+     la işbirliği yaptı. Nisan 2019 sonu itibarıyla, Rus kart     araştırılması ve uygulanması konusunda geniş
+     düzenleyicileri 2.5 milyondan fazla UnionPay kartı çı-       bir işbirliği alanına sahiptir.
+     kardı. Sberbank ve VTB Bank gibi büyük bankaların               Blok zincir teknolojisi, Çin’de halihazırda
+     100,000’den fazla ATM’si UnionPay kartlarını kabul           finans, borç verme, akıllı üretim ve lojistik-
+     edebiliyor (Yurou, 2019).                                    te kullanılıyor. CAICT (Çin Bilgi ve İletişim
+
+82
+                                          Serhat Latifoğlu - ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+
+Teknolojileri Enstitüsü) verilerine göre Çin’de             leştirilmelidir. Söz konusu sistemler SWIFT
+1,400 civarında blok zincir şirketi bulunuyor.              sistemine karşı halen en güçlü alternatif ödeme
+MIIT’nin (Çin Sanayi ve Bilgi Teknolojileri Ba-             sistemleridir.
+kanlığı) açıklamasına göre küresel blok zincir                 2. Çin-Rus finansal işbirliği coğrafi olarak
+patentlerinin yaklaşık %84’ü Çin’deki şirketlere            yaygınlaştırılmalıdır.
+aittir. Çin ve diğer ülkeler, SWIFT’e alternatif               Gerek Çin’in Rusya içinde gerekse Rusya’nın
+olabilecek blok zincir teknolojisine dayalı mer-            Çin içinde ticari faaliyetlerini yaygınlaştırması
+kezi olmayan sistem araştırmalarına hız veri-               beklenmektedir. Halen her iki tarafın doğrudan
+yor. SWIFT gibi merkezi sistemlerle karşılaş-               yatırım ve ticari faaliyetlerin sınırlarda yoğunla-
+tırıldığında, dağıtılmış blok zinciri sistemleri,           şan ticari faaliyetlerin büyük şehirlerde yaygın-
+gerçek zamanlı işlemlerin hızını artırabilir ve             laşmadığı görülmektedir. Sınırda sıkışmış olan
+uluslararası ödemelerin üçüncü taraf tarafın-               Çin-Rus ticari faaliyetlerinin daha büyük ölçek-
+dan kesilmesini önleyebilir (CAICT, 2022).                  lerde büyük şehirlere taşınması gerekmektedir.
+                                                            Hong Kong’un statüsü bu süreç için önemli bir
+         Çin-Rusya Finansal İşbirliğinin                    adaydır. Sınırda yapılan ticaretin finansmanı ve
+          Derinleşmesi İçin Öneriler                        finansal altyapısı için bölgesel Çin bankaları uy-
+                                                            gundur. Rusya’da Rus bankaları muhabir banka
+    Yeni finansal sistemin kurulması için Çin-Rus-          hesaplarının sayısını artırmaya, muhabir banka
+ya deneyiminin başarısı büyük önem taşıyor.                 hesaplarının coğrafi kapsamını genişletmeye,
+Çin-Rus takas ve ödeme sisteminin dolarizasyonu             Çin bankalarını Rusya’da ek şubeler açmaya teş-
+azaltması ve yuanın ve rublenin kullanımını yay-            vik etmeye, daha fazla Çinli girişimin yatırım
+gınlaştırılması, Çin ile Rusya arasındaki ikili ticari      yaptığı bölgelerin yerleşim planına odaklanmaya
+ve ekonomik işbirliğinin güvenliğini ve kolaylaş-           teşvik edilmelidir.
+tırılmasını artırmaya yönelik bir harekettir. Ay-              3. Çin-Rus hükümetlerinin işbirliğini
+rıca yapılan işbirliği ruble ve yuanın uluslarara-          derinleştirmesi gerekir.
+sılaşmasını teşvik etmek ve geliştirmek açısından              CIPS ve SPFS sisteminin birleştirilmesin-
+da önem taşıyor. Ruble, yuan gibi milli paraların           de pratikte karşılaşılan sorunlar, teknolojik
+uluslararasılaşması alternatif rezerv paranın geliş-        uyumluluk ve takas saklama hizmetleriyle
+tirilmesi ve 5R gibi alternatifin daha kısa sürede          ilgili sorunlar konusunda daha hızlı adımlar
+hayata geçmesinde etken olacaktır. 2010’ların ba-           atılabilmesi için her iki ülkenin teşvik politi-
+şından itibaren yoğunlaşan finansal işbirliğinde            kalarını hayata geçirmesi ve uygulamalarda
+karşılaşılan sorunları ve çözüm önerilerini birkaç          karşılaşılan bürokratik engelleri aşmak için
+başlık altında toplayabiliriz.                              düzenlemeler yapılması gerekmektedir. Bu-
+    1. Alternatif ödeme kanallarının                        rada karşılıklı olarak finansal kurumların ve
+güçlendirilmesi hızlandırılmalıdır.                         şirketlerin satın almaları veya birleşmeleri da
+    SPFS, CIPS ve PVP’nin entegre edilerek ge-              teşvik edilebilir. İşin diğer bir boyutu ise söz
+liştirilmesi hızlandırılmalıdır. SPFS ve CIPS’in            konusu şirketlerin dijitalleşme süreçlerinin
+entegrasyonu hem yaygınlık hem de verimlilik                hızlandırılması ve her iki tarafın dijital plat-
+açısından sürekli olarak güncellenmeli ve iyi-              formlarınım uyumlaştırılmasıdır.
+
+                                                                                                                                   83
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+        4. Ticari bankaların işbirliği derinleştiril-             CFETS. (2010). Public Announcement of China Foreign
+                                                                    Exchange Trade System on Launching the Trading
+     melidir.
+                                                                    between RMB and Ruble in the Interbank Foreign Ex-
+        Her iki ülkenin ticari bankaları, yatırım ve fi-            change Market. 10 Şubat 2023 tarihinde şu adresten
+     nansman işbirliğini güçlendirmeli, özel yatırım                alındı: https://www.chinamoney.com.cn/english/svcn-
+     fonları ve yatırım-kredi bağlantıları gibi yeni işbir-         rl/20101122/160.html
+     liği modellerini teşvik etmeli, kapsamlı muhabir             CGTN. (2023). Yuan overtaking dollar signals China's inc-
+                                                                    reasing financial influence. 20 Ağustos 2023 tarihinde
+     banka ilişkileri kurulmalıdır. Milli paralarla tica-
+                                                                    şu adresten alındı: https://news.cgtn.com/news/2023-
+     rette karşılaşılan teknik sorunların çözümü için               07-30/Yuan-overtaking-dollar-signals-China-s-incre-
+     daha çok çaba sarf edilmelidir. Bankaların sağla-              asing-financial-influence-1lPS38K1NDO/index.html
+     dığı ürünlerde çeşitlemeye ve finansal işbirliğine           Chaudhury, D. R., (2019). India-Russia-China explore
+     uygun olarak yeni ürünlerin geliştirilmesine ağır-             alternative to SWIFT payment mechanism. The Eco-
+                                                                    nomic Times. 22 Nisan 2023 tarihinde şu adresten
+     lık verilmelidir. Akreditif, teminat mektubu, banka            alındı:https://economictimes.indiatimes.com/news/
+     kartı, dış ticaret factoringi (alacaklandırma) gibi            economy/foreign-trade/india-russia-china-explo-
+     yeni araçların kullanımı güçlendirilmelidir. China             re-alternative-to-swift-payment-mechanism/artic-
+                                                                    leshow/72048472.cms?utm_source=contentofinte-
+     UnionPay kartlarının Rusya’da, MIR Card’ın Çin’de
+                                                                    rest&utm_medium=text&utm_campaign=cppst
+     kullanımının teşviki sağlanmalıdır. Söz konusu
+                                                                  CIPS. (2022). CIPS Participants Announcement No.78. 8
+     kartların ticari işlemlerde kullanılması için altyapı          Mart 2023 tarihinde şu adresten alındı: https://www.
+     geliştirilmelidir.                                             cips.com.cn/en/participants/participants_announce-
+                                                                    ment/58049/index.html
+                           Kaynakça                               Dünya Bankası. (2023). Total reserves. 6 Haziran 2023 ta-
+                                                                    rihinde şu adresten alındı: https://data.worldbank.org/
+                                                                    indicator/FI.RES.TOTL.CD
+     Bank of Russia. (2014). On financial coopera-
+       tion    subcommittee     meeting    of    Russia-C-        Global Times (2021). China, Russia expand trade settle-
+       hina committee. 5 Şubat 2023 tarihinde şu                     ments in local currencies to counter US dollar hege-
+       adresten alındı: http://www.cbr.ru/eng/press/PR/?fi-          mony. 4 Şubat 2023 tarihinde şu adresten alındı:htt-
+       le=30062014_113336eng2014-06-30T11_11_00.htm                  ps://www.globaltimes.cn/page/202109/1233386.shtml
+     Bank of Russia. (2022). Bank of Russia Foreign Exchan-       Global Times (2022). Chinese yuan becomes most traded
+       ge and Gold Asset Management Report. 7 Şubat 2023             foreign currency on the Moscow Exchange, surpasses
+       tarihinde şu adresten alındı: https://cbr.ru/Collection/      the US dollar. 7 Mart 2023 tarihinde şu adresten alın-
+       Collection/File/39685/2022-01_res_en.pdf                      dı: https://www.globaltimes.cn/page/202210/1276588.
+     Bloomberg. (2022). Russia Mulls Big Purchases of ‘Friend-       shtml
+        ly’ FX to Stem Ruble’s Rise. 5 Mart 2023 tarihinde şu     Global Times (2023a). Russia to remove euro, only keeps
+        adresten alındı: https://www.bloomberg.com/news/             yuan and gold in National Wealth Fund. 5 Şubat 2023
+        articles/2022-09-01/russia-mulls-buying-70-billi-
+                                                                     tarihinde şu adresten alındı: https://www.globaltimes.
+        on-in-yuan-friendly-currencies#xj4y7vzkg
+                                                                     cn/page/202302/1285209.shtml.
+     Bordo, M. D., Humpage O. F. ve Schwartz, A. J. (2015).
+                                                                  Global Times (2023b). Over 70% trade between China,
+       U.S. Intervention during the Bretton Woods Era, 1962–
+       1973. National Bureau of Economic Research. 10 Şubat          Russia is settled in local currencies: Russian finance
+       2023 tarihinde şu adresten alındı: https://www.nber.          minister. 13 Nisan 2023 tarihinde şu adresten alındı:ht-
+       org/system/files/chapters/c13540/c13540.pdf                   tps://www.globaltimes.cn/page/202304/1289761.shtml
+     CAICT. (2022). Report on the Development of China’s Di-      Goldhub. (2023). Gold Demand Trends Full Year 2022. 7
+       gital Economy (2022). 12 Mayıs 2023 tarihinde şu ad-         Mayıs 2023 tarihinde şu adresten alındı: https://www.
+       resten alındı: http://www.caict.ac.cn/english/research/      gold.org/goldhub/research/gold-demand-trends/gold-
+       whitepapers/202208/t20220819_407677.html                     demand-trends-full-year-2022/central-banks
+
+
+84
+                                               Serhat Latifoğlu - ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu
+
+
+
+
+McCauley, R.N., Schenk, C.R. (2023). BIS Working Papers          SWIFT. (2023). Swift Traffic Highlights. 5 Şubat 2023
+  No:851. 14 Şubat 2023 tarihinde şu adresten alındı: ht-          tarihinde şu adresten alındı: https://www.swift.com/
+  tps://www.bis.org/publ/work851.pdf                               about-us/swift-traffic-highlights
+OFAC. (2023). Office of Foreign Assets Control - Sanc-           The Economic Times. (2010). Russia China kick off yuan
+  tions Programs and Information. 17 Şubat 2023 tari-              rouble trade. 12 Haziran 2023 tarihinde şu adresten
+  hinde şu adresten alındı: https://home.treasury.gov/             alındı:https://economictimes.indiatimes.com/mar-
+  policy-issues/office-of-foreign-assets-control-sancti-           kets/forex/russia-china-kick-off-yuan-rouble-trade/
+  ons-programs-and-information                                     articleshow/7109328.cms
+Perks, M., Rao, Y., Shin, J. ve Tokuoka, K. (2021). Evolution    The People’s Bank of China. (2023). Swap Agreements. 12
+   of Bilateral Swap Lines. International Monetary Fund.           Şubat 2023 tarihinde şu adresten alındı: http://wzdig.
+   27 Mart 2023 tarihinde şu adresten alındı: https://             pbc.gov.cn:8080/search/pcRender?pageId=9ec5ba-
+   www.imf.org/en/Publications/WP/Issues/2021/08/06/               b6153e41c4b50556e7fa3c09d2
+   Evolution-of-Bilateral-Swap-Lines-463358                      The Wall Street Journal. (2023). Russia Turns to China’s
+Reuters. (2017). China establishes yuan-ruble payment              Yuan in Effort to Ditch the Dollar. 20 Şubat 2023 ta-
+  system. 4 Mayıs 2023 tarihinde şu adresten alındı: htt-          rihinde şu adresten alındı: https://www.wsj.com/ar-
+  ps://www.reuters.com/article/us-china-yuan-rouble-i-             ticles/russia-turns-to-chinas-yuan-in-effort-to-ditch-
+  dUSKBN1CH0ML                                                     the-dollar-a8111457
+Reuters. (2023). China’s 2022 trade with Russia hit re-          Trading Economics. (2023). China GDP Growth Rate. 10
+  cord $190 bln – customs. 22 Nisan 2023 tarihinde                  Şubat 2023 tarihinde şu adresten alındı:https://tradin-
+  şu adresten alındı: https://www.reuters.com/world/                geconomics.com/china/gdp-growth
+  china-customs-says-trade-with-russia-hit-new-hi-               Tran, H. (2022). Internationalization of the renminbi via
+  gh-2022-2023-01-13/                                               bilateral swap lines. Atlantic Council. 5 Şubat 2023
+Rosalsky, G. (2020). Why Is The Fed Sending Billions Of             tarihinde şu adresten alındı:https://www.atlantic-
+  Dollars All Over The World. 17 Şubat 2023 tarihinde               council.org/blogs/econographics/internationalizati-
+  şu adresten alındı: https://www.npr.org/sections/mo-              on-of-the-renmibi-via-bilateral-swap-lines/
+  ney/2020/04/21/839374663/why-is-the-fed-sending-               V-Lab. (2023). Chinese Renminbi GARCH Volatility
+  billions-of-dollars-all-over-the-world                           Analysis. 17 Şubat 2023 tarihinde şu adresten alındı:
+Russia Briefing. (2019). Russia, China, Set Up US$1 Billion        https://vlab.stern.nyu.edu/volatility/VOL.CNY%3A-
+  Technology Innovation Fund. 7 Nisan 2023 tarihinde               FOREX-R.GARCH
+  şu adresten alındı: https://www.russia-briefing.com/           Weijia, H. (2022). Blaming swap lines futile in face of yuan
+  news/russia-china-set-us-1-billion-technology-inno-              internationalization. Global Times. 5 Mayıs 2023 tari-
+  vation-fund.html/                                                hinde şu adresten alındı: https://www.globaltimes.cn/
+SCIO. (2022). RMB. becomes 4th most active currency                page/202212/1281725.shtml
+  for global payments: SWIFT. 18 Nisan 2023 tarihinde            Wiggins, R. Z., Hoffner, B., Feldberg, G., Metrick, A.
+  şu adresten alındı: http://english.scio.gov.cn/chinavoi-         (2023). Central Bank Foreign Currency Swaps and
+  ces/2022-01/21/content_78003282.htm                              Repo Facilities Survey. Journal of Financial Crises,
+Shen, S. ve Westbrook, T. (2023). Chinese banks seize on           5(1), 25-111. 15 Şubat 2023 tarihinde şu adresten alın-
+   Russia, oil trade to internationalise yuan. Reuters. 17         dı: https://elischolar.library.yale.edu/journal-of-finan-
+   Mayıs 2023 tarihinde şu adresten alındı: https://www.           cial-crises/vol5/iss1/2
+   reuters.com/markets/currencies/chinese-banks-sei-             World Gold Council. (2023). 30 years of Gold Demand
+   ze-russia-oil-trade-internationalise-yuan-2023-04-28/           Trends. 5 Haziran 2023 tarihinde şu adresten alın-
+Silk Road Briefing (2022). China Using Currency Cre-               dı:     https://www.gold.org/goldhub/research/30-ye-
+    dit Swaps To Help Re-Finance Errant BRI Projects.              ars-gold-demand-trends
+    26 Haziran 2023 tarihinde şu adresten alındı:https://        Yurou. (2019). Moscow metro users can now use China
+    www.silkroadbriefing.com/news/2022/12/13/china-u-               UnionPay cards to pay fare. Xinhuanet. 18 Mayıs 2023
+    sing-currency-credit-swaps-to-help-re-finance-er-               tarihinde şu adresten alındı: http://www.xinhuanet.
+    rant-bri-projects/                                              com/english/2019-10/11/c_138464664.htm
+SWIFT. (2017). Will the Belt and Road revitalise RMB             Zharikov, M. V. (2023). Digital Money Options for the
+  internationalisation?. 15 Haziran 2023 tarihinde şu              BRICS. International Journal of Financial Studies,
+  adresten alındı: https://www.swift.com/swift-resour-             11(1). 11 Şubat 2023 tarihinde şu adresten alındı: ht-
+  ce/125726/download                                               tps://doi.org/ 10.3390/ijfs11010042
+
+
+                                                                                                                                        85
+

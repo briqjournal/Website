@@ -1,0 +1,1096 @@
+                                                                                              Hakemli Derleme Makalesi
+
+
+
+
+Küresel Finansallaşma Sistemi Altında
+Dolarizasyon ve De-dolarizasyon
+Mekanizması Üzerine Bir İnceleme
+
+
+ Cheng Enfu *                                               Lu Chunyi **
+ Prof. Dr.                                                  Prof. Dr.
+ Kuzeybatı Politeknik Üniversitesi                          Şanghay Uluslararası İşletme ve
+ World Review of Political Economy Baş Editörü              Ekonomi Üniversitesi
+
+
+
+
+*Cheng Enfu, 1950 Şanghay doğumlu, doktora çalışmaları eğitmeni, Merkezi Halk Kongresi
+milletvekili, Marksizm Akademisinin akademik başkanı (Çin’de bu tür kurumlarda bir de politik
+sorumlu bulunmaktadır). Cheng Enfu Çin Komünist Partisi'nin çeşitli konularda, özellikle ekonomik
+sorunlarla ilgili olarak toplantılara davet ederek görüşlerini aldığı, Çin’de ve Japonya’daki çeşitli etkili
+gazetelerde Çin’in dördüncü nesil iktisatçıları arasında önde gelen bir figür ve Çin’deki en yaratıcı
+iktisatçılarından biri olarak değerlendirilmektedir. Prof. Dr. Cheng Enfu Çin Sosyal Bilimler Akademisi
+Başkanı sıfatıyla çeşitli görevleri yürütmektedir.
+
+
+E-mail: ict@cass.org.cn                                  ORCID: https://orcid.org/0000-0002-9236-1916
+
+**Lu Chunyi, ekonomi alanında doktorasını tamamlamış, finans profesörüdür. Şanghay Finans ve
+Ekonomi Üniversitesi'nden mezun olmuş, Fudan Üniversitesi Ekonomi Okulu'nda doktora sonrası
+araştırma yapmıştır. Amerika Birleşik Devletleri'nde Massachusetts Üniversitesi'nde misafir
+akademisyen olarak bulunmuştur. Finansallaşma ve finansal açıklık gibi konularda araştırmalar
+yapmaktadır.
+
+
+
+Geliş Tarihi: 03.08.2023
+Kabul Tarihi: 20.10.2023
+
+
+
+Atıf: Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir
+İnceleme (Çev. Yasin Okyay). BRIQ Kuşak ve Yol Girişimi Dergisi, 5(1), 6-29.
+   Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+                                                             ÖZ
+
+    Marksist para teorisine dayanan bu makale, dolarizasyonun oluşum mekanizmasını, gerçek dünyadaki
+    etkilerini ve alınılabilecek karşı önlemleri incelemektedir. Finansallaşma perspektifinden ele
+    alındığında, ABD dolarının uluslararası egemenliğindeki para sistemi üç aşamadan geçmiştir: Altın-
+    dolar sistemi, petrol-dolar sistemi ve kurum-dolar sistemi. Bunlar arasında, küresel finansallaşma
+    sistemi olarak da bilinen kurum-dolar sistemi, neoliberal kurumsal çerçeve altında finansallaşma
+    yoluyla elde edilen emtia ve finans piyasalarının, yerel ve uluslararası piyasaların bir birleşimidir.
+    Bu birleşim, ABD dolarının uluslararası parasal gücünün genişlemesini daha fazla teşvik etmiştir.
+    Uluslararası parasal gücün genişlemesi esas olarak dolarizasyon yoluyla sağlanır ve küresel dolarizasyon
+    üç finansallaşma mekanizması yoluyla gerçekleştirilir: Emtia finansallaşması, teknolojik finansallaşma
+    ve kurumsal finansallaşma. Emtia finansallaşması küresel dolarizasyonun temelini oluşturmakta,
+    teknolojik finansallaşma katalizör görevi görmekte, kurumsal finansallaşma ise küresel dolarizasyon
+    için temel güvenceyi sağlamaktadır. ABD çıkarlarını merkeze alan dolarizasyonun çevre ülkeler için
+    ciddi sonuçları vardır. Çevre ülkeler, uluslararası parasal çeşitlendirmeyi teşvik ederek, teknolojik
+    finansallaşmayı engelleyerek ve neoliberal reformlarla (liberalizasyon, özelleştirme ve piyasalaştırma)
+    ilişkili riskleri bütünüyle dikkate alarak dolarizasyona karşı koyabilir. Çin, finansal gücünün yönetimine
+    öncelik vermeli ve de-dolarizasyonu ilerletmek için yüksek kaliteli ekonomik kalkınma ve Renminbi
+    uluslararasılaşmasını temel stratejiler olarak benimsemelidir.
+
+
+    Anahtar Kelimeler: de-dolarizasyon, dolarizasyon, Ekonomi Politik Finans Teorisi, küresel finansallaşma
+    sistemi, LPM mekanizması.
+
+
+
+
+                          Giriş                                  emtia satın almaktır. Diğer yaklaşım ise kendi para
+                                                                 birimleriyle yabancı emtia satın almak için nicel
+2022 YILINDA PATLAK VEREN RUSYA-                                 gevşeme politikaları uygulamaktır ki bu da ABD
+Ukrayna Savaşı, Rusya’nın döviz rezervlerinin Avrupa             dolarının enflasyonuna yol açacaktır.
+ve Amerika Birleşik Devletleri (ABD) tarafından                     Sonuç olarak, dolarize olmuş ülkeler iki açıdan zarara
+dondurulmasına yol açmış ve bu durum uluslararası                uğrayabilir. Bir tarafta, ABD doları enflasyonunun
+toplumun küresel finans sistemindeki ABD doları                  sonuçlarına doğrudan maruz kalacaklardır. Diğer
+cinsinden varlıklarının güvenliğini sorgulamasına                taraftan ise, ABD’nin uyguladığı enflasyonla mücadele
+neden olmuştur. Bu noktada, önemli miktarda ABD                  politikaları dolarize olmuş ülkelerin ekonomik
+doları rezervine sahip olan ülkeler için çıkarlarını             kalkınmasını doğrudan etkileyecektir. Nitekim
+korumanın iki yolu vardır. Yaklaşımlardan biri                   dolarizasyon ve etkileri üzerine çok sayıda çalışma
+döviz varlıklarını satmak ve Rusya gibi ülkelerden               bulunmaktadır.
+
+
+                                                                                                                                     7
+    B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+       Dolarizasyon olgusu ilk olarak 18. yüzyılın son-       ettiğini (Mary, 2008: 335-355) ve yükselen ekonomi-
+    larında ortaya çıkmış ve tipik örnekleri 1970’lerde       lerde ekonomi politikalarının istikrara kavuşturul-
+    Latin Amerika ülkelerinde görülmüştür. ABD do-            masına ve finansal piyasaların etkinliğinin artırılma-
+    larının etkisinin derecesine bağlı olarak, dolarizas-     sına katkıda bulunduğunu düşünmektedir (Naceur,
+    yon çeşitli biçimler alabilir ve de-facto dolarizasyon,   2015: 4; Mendoza, 2017: 2-10)
+    de-facto dolarizasyon süreci ve de-facto dolarizasyon        Araştırmacılar dolarizasyonun nedenlerini enflas-
+    politikası olarak kategorize edilebilir (Zhang, 1999:     yon, dış şoklar ve döviz kuru dalgalanmaları gibi pers-
+    17-25). Para ikamesi perspektifinden bakıldığında         pektiflerden araştırmışlardır. Latin Amerika ülkelerin-
+    ise dolarizasyon üç seviyede sınıflandırılabilir: Para    de dolarizasyon üzerine yapılan vaka çalışmalarında,
+    ikamesi, sabit döviz kuru ve yasal para birimi (Song,     kredi dolarizasyonu ve mevduat dolarizasyonunun
+    2006: 65-70). Fonksiyonelliği açısından da işlem do-      birbirini etkilediği, mevduat dolarizasyonunun kredi
+    larizasyonu, varlık dolarizasyonu, mevduat dolari-        dolarizasyonunu teşvik ettiği tespit edilmiştir (Luca
+    zasyonu vb. (Li & Huang, 1999; Reinhart vd.; 2003;        et al., 2008; Nendis, 2009; Isakova, 2010; Escribano,
+    Mwase & Kumah, 2015) ve arbitrajdan kaynaklanan           2011. Uluslararası para sisteminin transformasyonu
+    dolarizasyon (Geng vd., 2018: 5-21) söz konusudur.        boyunca, ABD dolarının küresel konumu istikrarlı
+    Hakim kuruluşa bağlı olarak dolarizasyon resmi, yarı      bir şekilde artmıştır. Eş zamanlı olarak, çevre ülkeler-
+    resmi ve gayri resmi olarak kategorize edilebilir (Cai    deki şiddetli enflasyon ve önemli ölçüde devalüasyon
+    ve Yi, 2003: 5-10). Dolarizasyon derecesi ise tam ve      ülkelerin ABD dolarını öncelikli para birimi olarak
+    kısmi dolarizasyonun yanı sıra yüksek, orta ve düşük      benimsemelerine, dolayısıyla da dolarizasyon olarak
+    dolarizasyon seviyeleri olarak ikiye ayrılabilir (Husa-   bilinen bir olguya yol açmıştır (He ve Lianj, 2015: 31-
+    in, 2006: 13).                                            36). Dış piyasa şokları ekonomilerin dolarizasyonu-
+                                                              nu önemli ölçüde etkileyebilir ve emtia fiyatlarındaki
+                                                              dalgalanmalar, özellikle kaynak zengini ülkelerde
+                                                              dolarizasyonun teşvik edilmesinde önemli bir rol oy-
+        Latin Amerika ülkelerinde                             nar (Catão ve Terrones, 2016). Bazı akademisyenler
+       dolarizasyon üzerine                                   portföy modelleri kullanarak analiz yapmış ve bazı
+       yapılan vaka çalışmalarında,                           Avrupa veya Orta Asya ekonomilerindeki dolari-
+       kredi dolarizasyonu ve                                 zasyonun nedenlerinin yatırımcı arbitrajından kay-
+       mevduat dolarizasyonunun                               naklandığını bulmuştur (Geng vd., 2018: 5-21). Orta
+       birbirini etkilediği, mevduat                          Asya ülkeleri için, yüksek dolarizasyon derecelerinin
+       dolarizasyonunun kredi                                 doğrudan nedeni, Sovyetler Birliği’nin dağılmasının
+       dolarizasyonunu teşvik ettiği                          neden olduğu ekonomik durgunluktur (Wang vd.,
+       tespit edilmiştir                                      2018: 74-83; 2019: 109-118).
+                                                                 Oluşum mekanizması perspektifinden bakıldı-
+                                                              ğında, Batılı ekonomistler, serbest piyasa sistemi
+       Batılı ekonomistlerin çoğu dolarizasyonun Arjan-       varsayımı altında, dolaşım alanındaki farklı para
+    tin ve Ekvador gibi küçük ve orta ölçekli gelişmekte      birimleri arasındaki çeşitli karşılıklı ikame mekaniz-
+    olan ülkelerde enflasyonu düşürme ve finansal pi-         malarını incelemek için nakit rezerv modeli ve işlem
+    yasaları istikrara kavuşturma fonksiyonuna hizmet         maliyeti modeli gibi modeller oluşturmak üzere para
+
+8
+    Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+                              Dolarizasyonun, bir ülkede finansal istikrarsızlığa yol açtığına ve
+                  dolayısıyla bir finansal kriz olasılığını artırdığına inanılmaktadır (Fotoğraf: CGTN, 2022).
+
+
+
+
+talebi teorisini kullanmaktadır. Dolarizasyonun te-               yen koşullar altında, dolarize ülkeler borç tuzağına
+melinde dolar varlıklarını elde tutmanın uzun va-                 düşmeye daha yatkındır (Missaglia, 2021: 656-686).
+deli yüksek getirisinin yattığına işaret etmektedir-              Çoğu Marksist akademisyen, dolarizasyonun ABD
+ler (Wei & Fang, 2003: 66-80). Batılı iktisatçıların              dolarının uluslararası bir para birimi olarak gücü-
+dolarizasyonun maliyetlerinin kısa vadeli olduğu                  nün artmasının ana yolu olduğuna inanmaktadır.
+ve orta ve uzun vadeli kârlar sağlayabileceği görü-               ABD, mali açıkların finanse edilmesi gibi ekonomi
+şünün aksine, Marksist iktisatçılar stok-akış tutar-              politikaları yoluyla dolarize olmuş ülkelerin duru-
+lılığı modelinin oluşturulması yoluyla dolarize ol-               munu daha da kötüleştirmektedir (Ren & Cheng,
+muş ülkelerin ödeme dengesizliklerini düzeltmek                   2021: 5-20; Gong & Zhao, 2021: 87-104).
+için döviz kuru politikalarını kullanamadıklarını,                    Rusya-Ukrayna Savaşı’ndan önce, “de-dolarizas-
+bunun da cari işlemler hesabının bozulmasına ve                   yon” subprime krizi nedeniyle küresel bir konu haline
+GSYİH ile mali gelirin düşmesine yol açtığını be-                 gelmişti. Genel olarak, dolarizasyonun bir ülkenin
+lirtmektedirler (Izurieta, 2003).                                 para ve döviz kuru politikalarının etkinliğini zayıf-
+    Thirlwall’ın modeline dayanan bir dolarize ekono-             lattığına veya ortadan kaldırdığına, finansal istik-
+mi büyüme modeli incelendiğinde, dolarize ülkelerin               rarsızlığa ve finansal risklerin artmasına yol açtığına
+durağan durum ekonomik büyüme oranının egemen                     ve dolayısıyla bir finansal kriz olasılığını artırdığına
+para birimine sahip ülkelerin durağan durum eko-                  inanılmaktadır. Bu nedenle, uygun koşullara sahip
+nomik büyüme oranına kıyasla daha düşük olduğu                    ekonomiler mümkün olan en kısa sürede de-do-
+ve dolarize ülkelerin ekonomik büyümesinin ol-                    larizasyona ulaşmaya çalışmalıdır (Kokenyne vd.,
+dukça istikrarsız olduğu görülmektedir. Değişme-                  2010).
+
+
+                                                                                                                                      9
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+        Asya bölgesi ile ilgili olarak, araştırmalar Çin    mek ve ABD dolarına olan bağımlılıklarını azaltmak
+     yuanının Asya’daki döviz kuru dalgalanmalarını et-     için hızla de-dolarizasyona yönelik tedbirler uygu-
+     kilemede önemli bir rol oynadığını ve uluslararası     lamaktadır (Kubo, 2017). Bazı “Kuşak ve Yol Giri-
+     para sisteminin çeşitlendirilmesinde önemli bir ku-    şimi (KYG)” katılımcısı ülkeler, Çin ile para birimi
+     tup haline gelebileceğini ortaya koymuştur. Sonuç      işbirliği yoluyla çeşitli işlemler için yerel para biri-
+     olarak, dolarizasyon sonrasında isteğe bağlı ulusla-   mi fiyatlandırmasını aşamalı olarak benimsemekte
+     rarası rezervlerden biri haline gelmektedir (Fratz-    ve böylece de-dolarizasyonun önünü açmaktadır
+     scher ve Mehl, 2013: 1343-1370). Gelişmekte olan       (Linn ve Zucker, 2019). Dolarizasyonun Çin üzerin-
+     ekonomilere odaklanan çalışmalar, doların mevcut       deki etkisini inceleyen araştırmalar, dolarizasyonun
+     uluslararası para sistemindeki ayrıcalığının suisti-   uluslararası ekonomik borsalardaki varlığının Çin’in
+     mal edilmesinin finansal krizlerin önemli bir nede-    ekonomisi ve sosyal refahı üzerinde önemli ölçüde
+     ni olduğunu göstermektedir. Bu nedenle, rezervler      negatif bir etki yarattığını göstermektedir. Çin, do-
+     için para birimi çeşitlendirmesinin mümkün olan        larizasyon seviyesini azaltarak kendisini dış şoklara
+     en kısa sürede gerçekleştirilmesi büyük önem taşı-     karşı güçlendirebilir, yerel reel ekonomisinin büyü-
+     maktadır (Fratzscher ve Mehl, 2013: 1343-1370).        mesini teşvik edebilir ve sosyal refahı önemli ölçüde
+                                                            artırabilir (Wang vd., 2022: 79-136).
+                                                               Dolarizasyona ilişkin mevcut literatür, ağırlıklı
+      Dolarizasyonun Çin üzerindeki                         olarak vaka çalışmaları ve ampirik analizler kullana-
+      etkisini inceleyen araştırmalar,                      rak dolarizasyonun önemini, temel nedenlerini, ev-
+                                                            rimsel gidişatını ve sonuçlarını incelemektedir. Bu
+      dolarizasyonun uluslararası
+                                                            çalışmalar öncelikle Batılı ekonomik metodolojileri
+      ekonomik borsalardaki varlığının
+                                                            kullanmakta, bu da özellikle oluşum mekanizması-
+      Çin’in ekonomisi ve sosyal refahı
+                                                            nı araştırırken dolarizasyonun özüne inmeyi zor-
+      üzerinde önemli ölçüde negatif bir
+                                                            laştırmaktadır. Sadece rasyonel ekonomik aktörler
+      etki yarattığını gostermektedir.                      gibi uç varsayımlara dayanmaları, sosyal ve çevresel
+                                                            değişimleri hesaba katmamaları, vardıkları sonucun
+        Bazı akademisyenler dolarize olmuş ülkelerdeki      sıklıkla gerçeklikten uzaklaşmasına yol açmaktadır.
+     de-dolarizasyona odaklanmış durumdadır. Araştır-       Bu makale, Marksist finansallaşma teorisini incele-
+     malar, bir düzineden fazla ülkenin1, döviz kuru dal-   yerek başlamakta ve dolarizasyonun özünü ve olu-
+     galanma aralıklarının gevşetilmesi, yerli ve yabancı   şum mekanizmasını derinlemesine incelemektedir.
+     para mevduat oranları arasındaki farkın genişletil-    Bulgular, dolarizasyondan arındırma stratejilerinin
+     mesi ve döviz kredisi oranlarının yükseltilmesi gibi   seçimi için değerli içgörüler içermektedir.
+     makroekonomik politikaların yanı sıra, yabancı
+     para birimi kullanma kriterlerinin ve yabancı para        Paranın Uluslararasılaşmasına İlişkin
+     mevduat sigorta primlerinin yükseltilmesi gibi mik-                  Marksist Teori
+     roekonomik önlemler yoluyla tamamen veya kıs-
+     men de-dolarizasyonu başardığını göstermektedir        Dolarizasyonun temelinde ABD dolarının ulus-
+     (Kokenyne vd, 2010). Güneydoğu Asya ülkeleri2          lararasılaşması yatmaktadır. Karl Marx, para-
+     kendi yerel para birimlerinin kullanımını teşvik et-   nın uluslararasılaşmasının, parasal işlevlerin
+
+10
+    Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+uluslararasılaşması olarak tezahür ettiği ve özü-                 reylerin toplumsal kaynakları kontrol etmek için sahip
+nün parasal gücün uluslararasılaşmasında yattığı                  oldukları gücün de bir sembolü haline gelir. Bununla
+görüşünü savunmuştur. Nitekim dolarizasyon,                       birlikte, mevcut egemen para birimi (kağıt para, dijital
+uluslararası parasal gücü genişletmenin birincil                  para vb.) içsel kullanım değerinden yoksundur. Yine de
+aracıdır.                                                         devlet, egemen para birimi çıkararak siyasi güç yoluyla
+                                                                  emek değerini emer. Dolayısıyla, egemen para birimi si-
+Para biriminin uluslararasılaşmasının özü,                        yasi ve ekonomik gücün bir ürünüdür.
+parasal gücün uluslararasılaşmasıdır                                  Egemen bir para biriminin dünya parası olabilmesi
+                                                                  için hem arz hem de talep yönünden belirli gereklilikle-
+    Emeğin ikili doğası ilkesine göre, somut emek kulla-          ri karşılaması gerekir. Arz açısından bakıldığında, para
+nım değeri, soyut emek ise değişim değeri üretir. Değer,          biriminin değeri istikrarlı olmalı ve bir değer aracısı
+üretim sürecinde bireyler arasındaki sosyal ilişkileri tem-       olarak geniş çapta kabul görmelidir. Talep açısından ba-
+sil eder ve soyut ve elle tutulamaz niteliktedir. Bu soyut        kıldığında, uluslararası ticaret bu para biriminin kulla-
+ve elle tutulamayan değerin var olabilmesi için somut             nımıyla sınırlandırılmalı ve farklı ülkelerden işçiler bu
+aracılara ihtiyacı vardır ve farklı aracılar farklı değer bi-     para birimini emek değerinin taşıyıcısı olarak kullan-
+çimlerini yansıtır. Değerin birincil biçimi kullanım değe-        maya zorlanmalıdır (Yuan, 2021: 58-69). Egemen bir
+ri, ikinci biçimi değişim değeri (yani malların değişimi)         para birimi dünya para birimi haline geldiğinde, parasal
+ve üçüncü biçimi de para birimidir (yani genel eşdeğer).          gücü uluslararası düzeye genişler ve dünyanın sosyal
+Değer taşıyıcılarının dönüşümü işlemler aracılığıyla ger-         kaynaklarını kontrol eden bir sembol haline gelir. ABD
+çekleşir: malların değişimi sırasında değer, değiş tokuş          doları bu uluslararası para birimini örneklemektedir.
+edilen nesnenin kullanım değeri tarafından taşınır. Pa-           ABD, güçlü ekonomik ve askeri gücüne dayanarak, kü-
+rasal işlemler sırasında değer, “genel eşdeğer” olan para         resel emtia işlemlerinin ABD doları cinsinden yapılma-
+birimi tarafından taşınır. Dolayısıyla para birimi değer          sını talep etmekte ve böylece dünya çapında emek değe-
+aracısı durumundadır.                                             rini sömürmektedir (Lu, 2018).
+    Değer ikili bir anlam taşır. Birincisi, emek tarafın-
+dan yaratılan değerin başkaları için rolü ve önemiyle             Finansallaşma uluslararası parasal gücün
+ilgilidir. İkincisi, başkalarının bu emeğe karşı duyduğu          genişlemesini destekler
+bağımlılıkla ilgilidir. Bu bağımlılık başkalarının eme-
+ğini kontrol etme gücünü doğurur, yani “başkaları bu              Finansallaşma egemen paranın gücünü artırır
+emeğin sağladığı mal ve hizmetler karşılığında kendi
+emeklerini sunmak zorundadır” (Journalist, 2018: 19-                 Marksizm, değerin aracısı olarak paranın bireyler
+28). Sonuç olarak, değerin taşıyıcısı olarak para bu güce         arasındaki sosyal ilişkileri yansıttığını ve başkalarının
+sahiptir. “Her birey, değişim değeri ya da para sahibi            emeğini kontrol etme gücüne sahip olduğunu, finan-
+olarak diğerlerine hükmetme ya da toplumsal zenginliği            sallaşmanın ise bu gücü artırabileceğini düşünmek-
+kontrol etme gücünü kullanır. Toplumsal güç ve top-               tedir. İlk olarak, finansallaşma paranın gücünü ve
+lumla olan bağlantı onların ceplerinde bulunur” (Marx             kapasitesini artırır. Finansallaşma, finansal araçların
+and Engels Collected Works, 2009: 51). Dolayısıyla para           daha da çeşitlendiği (örneğin, vadeli döviz işlemleri,
+yalnızca başkalarına hizmet eden emeğin toplumsal                 döviz opsiyonları, vb.), kontrolü genişleten ve para
+değerini somutlaştırmakla kalmaz, aynı zamanda bi-                biriminin etkisini artıran bir olgudur.
+
+                                                                                                                                      11
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+         İkinci olarak, para birimi gücü emtia finansal-         uluslararası parasal gücü, altının doğal parasal statü-
+     laşması yoluyla elde edilir. Finansallaşma, çeşitli         süne bağlıydı. Ancak, “Triffin İkilemi” ABD’nin ABD
+     emtia ve varlıkları para birimine sıkıca bağlaya-           doları ve altın arasındaki konvertibilite taahhüdünden
+     rak para biriminin gücünü emtia ve varlıklara yayar.        vazgeçmesine yol açtı. Altın artık ABD dolarının ulus-
+     Özellikle emtianın finansallaşması, ticarete elverişlili-   lararasılaşmasının temeli değildi.
+     ğin artması nedeniyle para biriminin bu tür emtialar            ABD dolarının uluslararası parasal gücünü koru-
+     üzerindeki kontrolünü güçlendirmekle kalmaz, aynı           mak için ABD yeni bir değer ölçütü buldu: Sanayi-
+     zamanda finansallaşmış emtialara belirli parasal özel-      leşme için dünya genelinde gerekli olan petrol. ABD,
+     likler (yani değer depolama) kazandırır. Sonuç olarak,      Suudi Arabistan’a askeri yardım ve koruma sağla-
+     finansallaştırılmış metalar egemen para biriminden          mayı kabul etti ve karşılığında Suudi Arabistan da
+     ilave güç (yani, diğer emeği kontrol etme yeteneği) ka-     “petro-dolar anlaşması”3 olarak bilinen tüm petrol
+     zanır. Bu ilave güç, egemen paranın gücünü bölmez           işlemlerini ABD doları üzerinden yapmayı kabul etti.
+     ancak finansallaşma sonrası meta değer dönüşümün-           Suudi Arabistan OPEC’in en büyük petrol üreticisi
+     den ortaya çıkar. Esasen, egemen paranın orijinal gü-       ve en büyük petrol ihracatçısı ülkesi olduğundan,
+     cünün temeli üzerine inşa edilmiş türetilmiş bir güç-       diğer ülkeler de petrol işlemleri için petro-dolar sis-
+     tür. Sonuç olarak, emtianın finansallaşması egemen          temini kurarak ABD dolarını hızla benimsediler. Pet-
+     paranın gücünü artırır.                                     rol gibi emtialar finansallaştıktan sonra, uluslararası
+                                                                 finans piyasası, küresel finansallaşma sistemi olarak
+     Finansallaşma, kredi yoluyla ABD dolarının                  adlandırılan, kredi para birimi olarak ABD doları
+     uluslararasılaşmasını teşvik eder                           merkezli bir fiyatlandırma ve takas döngüsü oluştur-
+                                                                 du (Lu, 2021).
+         Paranın değerinin belirlenmesinde baz alınan kay-           Kurumsal dolar sistemi Washington Konsensüsü’y-
+     nağın ne olduğuna göre, ABD dolarının uluslararası-         le başlatılmıştır. Esasen, petrol gibi emtiaların finan-
+     laşma süreci üç aşamada incelenebilir: Altına dayalı        sallaştırılması üzerine inşa edilen, neoliberal sistem
+     uluslararasılaşma, petrole dayalı uluslararasılaşma ve      aracılığıyla çeşitli ülkelerin egemen para birimlerinin
+     neoliberal sisteme dayalı uluslararasılaşma. Buna pa-       ABD dolarına bağlandığı uluslararası bir para siste-
+     ralel olarak, İkinci Dünya Savaşı’ndan bu yana ulusla-      midir⁴. Bu sistemin önemli bir özelliği, ABD dolarına
+     rarası para sistemi altın-dolar sistemi (Bretton Woods      bağlanan egemen para birimlerinin sembolize edilme-
+     sistemi), petro-dolar sistemi (Jamaika sistemi) ve sis-     si ve bunların birbirleriyle değiştirilebilirliğinin arttı-
+     tem-dolar sistemi (finansallaşma sistemi) olarak ayrı-      rılmasıydı. Sonuç olarak, likidite ile ölçülen alternatif
+     labilir.                                                    para birimleri (yani çeşitli yarı-para birimleri) gelişmiş
+         Altın-dolar sistemi Bretton Woods Konferansı’yla        finansal piyasalara akın etti. Eş zamanlı olarak, çeşitli
+     ortaya çıkmıştır ve esasen bir altın değişim standar-       ülkelerden çeşitli finansallaştırılmış mallar ve varlık-
+     dıdır. ABD doları doğrudan altına çevrilebilmekteydi        lar, uluslararası finans piyasasına girerek, parasal gü-
+     ve diğer ülkelerin egemen para birimleri ABD doları         cün hakiminin ABD doları olduğu, küresel emtianın
+     aracılığıyla altınla değiştirilebiliyordu. Bu durum dün-    baskın merkez gücü haline getirildi. Elbette ABD do-
+     ya çapında ülkelerin ABD dolarını takas ve rezerv para      ları aynı zamanda egemen bir para birimi ve onun et-
+     birimi olarak tutmalarına yol açarak doların ulusla-        rafında odaklanan küresel finansallaşma sistemi esa-
+     rarasılaşmasının temelini oluşturdu. ABD dolarının          sen ABD’nin iradesi altındadır.
+
+12
+    Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+          Ekonomist Robert Triffin 1960 yılında ABD Kongresi önünde verdiği ifadede uluslararası para sistemindeki
+    temel bir sorunu ortaya koymuştur. Triffin ikilemi olarak adlandırılan bu sorun, cari açığı kapatmak üzere dolar basmakla
+                            dolara güven sağlamak arasında oluşan çelişkidir (Fotoğraf: IMF, 2023).
+
+
+
+Finansallaşma parasal uluslararasılaşma                               Bu finansal sistem finansallaşma ve finansal serbest-
+döngüsünün hızını artırır                                         leşme etrafında dönmektedir. Finansallaşma, fiyat olu-
+                                                                  şumu ve işlem mekanizmalarıyla birlikte çeşitli malla-
+    Egemen bir para birimi uluslararasılaştığında ve ulus-        rın finansal niteliklerinin güçlendirilmesini ve finansal
+lararası ticarette yaygın olarak kullanılmaya başlandı-           piyasaya dahil edilmesini içerir. Emtia varlıklaştırma
+ğında çoğu ülke tarafından kamusal bir nitelik kazanır.           ve varlık menkul değerleştirmeleri yoluyla, üretim ve
+Bununla birlikte, belirli bir ülkenin para birimi olarak          tüketim gibi ekonomik faaliyetleri finansal faaliyetlerle
+doğasında var olan egemenlik özelliğinden sıyrılamaz.             yakından ilişkilendirerek uluslararasılaştırılmış para bi-
+Sonuç olarak, uluslararası bir para birimi küresel olarak         rimlerinin getirisi için kanallar yaratır. Bu, geri dönen
+parasal işlevleri yerine getirirken (örneğin, bir değer öl-       paranın hızlı bir şekilde yerel ekonomiye kanalize edil-
+çüsü, değişim aracı ve değer saklama aracı), aynı işlevi          mesini, bu getiri ile yerel ekonomi arasında sorunsuz bir
+yurt içinde de yerine getirir. Bu nedenle, uluslararası           entegrasyon sağlanmasını ve dünya çapında emilen artı
+para birimini ihraç eden ülke, kendi iç ekonomisinin ih-          değerin yerel sermayeye aktarılmasını sağlayarak yerel
+tiyaçlarını karşılamak üzere para biriminin uluslararası          sermaye için kapsamlı faydalara yol açar. Emtia ticareti
+piyasadan geri dönüşünü sağlamak için bir dizi tedbir             gibi diğer biçimlerle karşılaştırıldığında, küresel finans
+uygulamalıdır. Bu geri dönüş mekanizması başlangıçta              sistemindeki finansal işlemlerin serbestleştirilmesi, bir
+uluslararası mal ticareti veya resmi anlaşmalar (örneğin          dünya parasının egemen niteliklerini korumaya daha
+Bretton Woods Anlaşması) yoluyla sağlanabilir. Ancak,             elverişlidir. Böylece, sadece yurtiçi ekonomik ihtiyaçlar
+kapitalizmin genişlemesi, küreselleşmesi ve küresel tica-         bu getiriyle karşılanmakla kalmaz, aynı zamanda yurtiçi
+rette daha uluslararasılaşmış para birimlerine olan tale-         sermaye dolaşımı uluslararası sermaye dolaşımıyla etkin
+bin artmasıyla birlikte, önemli miktarda senyoraj geliri          bir şekilde entegre edilerek, kurumsal düzenlemeler yo-
+elde ederken “Triffin ikilemi” ile mücadele etmek için            luyla küresel ekonominin yurtiçi ekonomi politikaları
+küresel bir finansal sistem ortaya çıkmaktadır.                   tarafından kontrol edilmesi sağlanır.
+
+
+                                                                                                                                      13
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+     Finansallaşma ve küreselleşme birlikte                 nen konumunda bırakmaktadır. Bretton Woods
+     dolarizasyonu teşvik etmektedir                        sisteminin dağılmasının ardından, ABD doları-
+                                                            nın küresel uluslararası rezervler içindeki payı
+        Dolarizasyon, ABD dolarının uluslararasılaş-        yaklaşık %45’e gerilemiştir. Ancak bu oran finan-
+     masının ardından gücünün derinleşmesi ve diğer         sallaşma dönemi boyunca sürekli olarak %60’ın
+     egemen para birimlerinin yerine geçmesidir. Bu         üzerinde kalmış ve çoğu zaman %70’i aşmıştır.
+     aşamada, ABD doları sadece ülke içinde egemen          Dahası, Uluslararası Para Fonu’na (IMF) üye ül-
+     para birimi gücünü kullanmakla kalmaz, aynı za-        kelerin yaklaşık üçte biri para birimlerini doğ-
+     manda etkisini diğer ülkelerin ekonomilerine ve        rudan ABD dolarına sabitlemeyi tercih etmiştir.
+     finansal sistemlerine de yayar. Bir ülke finansal-     Bu olgular, küresel finansallaşma sistemi içinde-
+     laşmayı deneyimledikçe, para birimi ABD doları         ki ülkeler arasında gittikçe yükselen bir eğilimi
+     tarafından ikame edilmeye giderek daha açık hale       göstermektedir. Bu süreç boyunca, giderek daha
+     gelir ve kaynakları potansiyel ABD kontrolüne          fazla sayıda ülke, çeşitli işlevleri yerine getirmek
+     daha fazla maruz kalır. Washington Konsensüsü          için kendi para birimlerini ABD dolarının kısmi
+     tarafından şekillendirilen küresel finansallaşma       ya da tam ikamesi olarak benimsemiştir.
+     sistemi, ABD dolarının küresel olarak yaygın bir           Küresel neoliberal finansallaşma sisteminin
+     şekilde kabul edildiği bu dolarizasyon sürecinin       kurulması, kredi dolarının uluslararası konumu-
+     önemli bir aşamasını temsil etmektedir.                nu güçlendirmiş ve aynı zamanda egemen ülke-
+                                                            lerin dolarizasyonunu teşvik etmiştir. Bu para
+                                                            sistemi içinde kredi doları, üç finansallaşma dü-
+                                                            zeyi aracılığıyla dolarizasyona ulaşır: İlk seviye,
+         Küresel finansallaşma sırasında,
+                                                            orijinal para birimi ölçütünün finansal sisteme
+         küresel emtiaların yaklaşık                        entegre olduğu ve emtiaların daha kolay dola-
+         %95’i ABD doları cinsinden                         şımını, ticaretini ve spekülasyonunu mümkün
+         fiyatlandırılmaktadır.                             kıldığı toplu emtiaların finansallaşmasını içerir.
+                                                            İkinci düzey, dijital sermayenin finansal sermaye
+        Önemli miktarda ABD doları çeşitli uluslara-        ile birleştiği, dijital finansal araçların büyümesini
+     rası alanlara nüfuz ederek diğer ülkelerin egemen      teşvik eden ve daha verimli birleşmeyi, yoğunlaş-
+     para birimlerinin belirli işlevlerini ve hatta tüm     mayı ve tekelleşmeyi kolaylaştıran teknolojik fi-
+     işlevlerini yerinden etmektedir. Bu işlevler ara-      nansallaşma ile karakterize edilir. Üçüncü düzey
+     sında fiyatlandırma, dolaşım, yatırım, rezervler       ise liberalizasyon, özelleştirme ve piyasalaştırma
+     ve çevre ülkelerde para birimi çıpası olarak hare-     (liberalization, privatization, and marketization:
+     ket etme yer almaktadır.                               LPM) reformu aracılığıyla dolarizasyonun ger-
+        Küresel finansallaşma sırasında, küresel emti-      çekleştirildiği, finansal olarak güdümlü emtia ve
+     aların yaklaşık %95’i ABD doları cinsinden fiyat-      teknolojilerin küresel finans piyasasına entegre
+     landırılmakta ve ABD doları uluslararası ticaret       edildiği ve ABD doları için küresel bir dolaşım
+     anlaşmalarının ve takas işlemlerinin %85’inden         sisteminin oluşturulduğu kurumsal finansallaş-
+     fazlasında yer alarak diğer ülkeleri fiyatı kabulle-   madır.
+
+
+14
+    Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+                   Şekil 1. Gelişmekte olan ülkelerde kamu borcu daha hızlı artmaktadır
+
+
+
+
+  BM Küresel Kriz Müdahale Grubu hesaplamaları, IMF Dünya Ekonomik Görünümü'ne (Nisan 2023)dayanmaktadır (Grafik: UNCTAD, 2023).
+
+
+
+         Emtia Finansallaşması Küresel                             oluşturarak petrol ticareti üzerinde kontrol sağlamış ve
+           Dolarizasyonun Temelidir                                bunun karşılığında petro-dolar sistemi aracılığıyla baş-
+                                                                   lıca emtiaların dolarizasyonunu teşvik etmiştir. ABD,
+Emtianın finansallaşması, ABD dolarının uluslarara-                başlıca emtia fiyatlarını kontrol ederek, emtia fiyatlarını
+sı bir para birimi olarak statüsünü güçlendirmekte,                düzenlemek suretiyle döviz kurunu etkileme ve böyle-
+daha fazla ülkenin para birimlerinin belirli işlevlerini           ce uluslararası ticaret dinamiklerini şekillendirme gü-
+ABD doları ve ABD doları cinsinden varlıklarla de-                 cünü elinde bulundurmaktadır. Aynı zamanda, başlıca
+ğiştirmesini sağlayarak ABD dolarının uluslararası                 emtiaların fiyatlandırılması üzerindeki kontrolü elinde
+para birimi gücünü daha da artırmaktadır.                          tutarak, başlıca emtiaları ithal ederken dolar ihraç etme
+                                                                   kabiliyetinden yararlanabilmektedir. Bu da doların sı-
+Doların dökme malları fiyatlandırmada                              nır ötesi kullanımının teşvik edilmesini sağlar ve çeşitli
+gücünün belirlenmesi                                               varlıkların dolarizasyonunu kolaylaştırır. Şu anda ABD
+                                                                   doları bir kredi para birimi olarak hizmet vermekte,
+    Başlıca emtiaların fiyatlandırma gücünü güvence                başlıca emtialara karşı ölçüt olarak altının yerini al-
+altına almak doların uluslararasılaşmasının temelini               makta ve tercih edilen işlem para birimi olarak küresel
+oluşturmaktadır. ABD, Ortadoğu’da stratejik nüfuz                  kabul görmektedir.
+
+
+                                                                                                                                      15
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+     Vadeli işlem fiyatlandırma sistemi                       teşvik etmektedir. Bir yandan, ABD doları önemli
+     aracılığıyla başlıca emtiaların                          bir finansal ticaret aracına dönüşmüş, dolar vade-
+     finansallaşması                                          li işlemleri, dolar opsiyonları ve uluslararası finans
+                                                              piyasasında birincil korunma mekanizmaları ola-
+         Spot emtialar için fiyatlandırma gücünü oluş-        rak ortaya çıkan diğer döviz türevleri ile önemli bir
+     turduktan sonra ABD, başlıca emtialar için dolar         yatırım aracı olarak hizmet etmiştir. Öte yandan,
+     cinsinden ve kurumsal olarak standartlaştırılmış         doların emtiaları fiyatlandırmaktan finansal varlık-
+     bir vadeli işlem fiyatlandırma sistemini başarıyla       ları fiyatlandırmaya doğru ilerlemesi, büyük ölçüde
+     uygulayarak bu emtiaların finansallaşmasını etkin        uluslararası finans piyasasının gelişimine önayak
+     bir şekilde sağlamıştır.⁵ Amerika Birleşik Devletleri,   olmuştur. Aynı zamanda, ticaret, ödeme, yatırım ve
+     vadeli işlem piyasaları kurarak emtia vadeli işlem fi-   riskten korunma amaçları için küresel olarak belirli
+     yatlandırma sistemleri oluşturmuştur. Bu vadeli iş-      bir dolar rezervine ihtiyaç duyulması, doların ulus-
+     lem piyasaları, ABD dolarının uluslararası bir fiyat-    lararası rezerv para birimi statüsünü güçlendirmiş
+     landırma para birimi olarak statüsünü korumuş ve         ve çevre ülke para birimlerinin rezerv işlevini gide-
+     başlıca emtialar için spot piyasası üzerindeki kont-     rek ortadan kaldırmıştır.
+     rolünü kuvvetlendirmiştir. Yurtiçinde vadeli işlem
+     borsaları kurmanın yanı sıra ABD, Marshall Planı             Teknolojinin Finansallaşması Küresel
+     aracılığıyla Avrupa’da dolar cinsinden vadeli işlem             Dolarizasyonun Katalizörüdür
+     borsaları kurulmasını mecburi kılmış ve nihayetin-
+     de değerli metal fiyatlandırma merkezi (New York             Teknolojik finansallaşma dört farklı düzeyde teza-
+     Ticaret Borsası), endüstriyel metal fiyatlandırma        hür etmektedir: İlk etapta, yeni teknolojiler finansal
+     merkezi (Londra Metal Borsası, New York Ticaret          sermaye birikimini hızlandıran ve finans sektörünün
+     Borsası), enerji emtia fiyatlandırma merkezi (New        çıkarlarına hizmet eden araçlar olarak işlev görmekte-
+     York Ticaret Borsası) ve tarımsal ürün fiyatlandır-      dir. İkinci olarak, bu yeni teknolojilerin araştırılması
+     ma merkezi (Chicago Ticaret Borsası, Londra Kı-          ve geliştirilmesi finansal sermayenin yatırımlarına
+     talararası Borsası) gibi başlıca emtia fiyatlandırma     dayanmaktadır. Üçüncü olarak, teknolojik ilerleme
+     merkezlerini oluşturmuştur. Bu önemli merkezler          dijital sermayenin finansallaşmasının önünü açmak-
+     artık başlıca emtia fiyatlarını ABD dolarına göre be-    tadır. Son olarak ise dijital sermayenin finansallaşma-
+     lirlemekte ve diğer ülkelerin uluslararası işlemlerin-   sı doların küresel önemini arttırarak diğer ulusal para
+     de para birimi seçimini doğrudan etkilemektedir.         birimlerinin yerinden edilmesini hızlandırır.
+
+     Başlıca emtiaların finansallaşması kredi                 Bilim ve teknolojinin gelişimi ekonominin
+     dolarının rezerv statüsünü güçlendiriyor                 hızla finansallaşmasını teşvik etmektedir
+
+        Emtianın finansallaşması süreci, ABD dolarının           Çağdaş dünyada, bilgi teknolojisi ve yapay ze-
+     uluslararası ticaret anlaşmaları ve fiyatlandırmada      kanın hızla ilerlemesi, finansın çeşitli teknolojik
+     baskın bir para birimi olarak rolünü arttırmakla         alanlarla derin bir entegrasyon içine girmesine
+     kalmayıp, aynı zamanda doların önemli bir ulus-          yol açmıştır. Bilgi teknolojisi, finansal işlemlerin
+     lararası yatırım para birimi olarak büyümesini de        maliyetinin düşürülmesinde, finansal hizmetlerin
+
+16
+    Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+                    Modern iletişim teknolojisinin ilerlemesi bilgi asimetrisini etkili bir şekilde azaltabilir,
+   kurumsal finansman zorluklarını hafifletebilir ve finansal kaynak dağılımının verimliliğini artırabilir (Fotoğraf: CGTN, 2017).
+
+
+erişiminin ve kullanılabilirliğinin artırılmasında,                 yalı platform tabanlı finansal işlemlerin gelişme-
+finansal faaliyetlerin kapsamının genişletilmesinde                 si, finansal faaliyetleri günlük yaşam sahnesine
+ve finansın ekonominin ve toplumun tüm yönleri-                     taşımaktadır. Bu entegrasyon, sıradan insanların
+ne sorunsuz bir şekilde entegre edilmesinde etki-                   finansman, yatırım ve ödeme gibi finansal davra-
+li olmuştur. Sonuç olarak, bu sadece ekonominin                     nışlarını kesintisiz ve anlık olarak uyumlu hale ge-
+bütünsel finansallaşmasını teşvik etmekle kalma-                    tirmektedir. Sonuç olarak finans, bireylerin günlük
+makta, aynı zamanda sosyal finansallaşmanın da                      yaşamlarıyla karmaşık bir şekilde bağlantılı hale
+önünü açmaktadır.                                                   gelmekte ve finansal işlemler ile kişisel faaliyetler
+    İlk olarak, modern iletişim teknolojisinin ilerle-              arasında pürüzsüz ve uyumlu bir arayüz sağlamak-
+mesi bilgi asimetrisini etkili bir şekilde azaltabilir,             tadır. Üçüncü olarak, yukarıda bahsedilen ilerle-
+kurumsal finansman zorluklarını hafifletebilir ve                   melerin üzerine inşa edilen finans ve teknolojinin
+finansal kaynak dağılımının verimliliğini artırabi-                 kesişimi, Fintech (finansal teknoloji) endüstrisinin
+lir. Bilgi teknolojisinin ağ aramalarına entegrasyo-                özerk bir şekilde ortaya çıkmasına neden olmuştur.
+nu, değerlendirme verimliliğini optimize eder ve                    Bu dinamik sektör, finansal alandaki ürün tasarı-
+işlem hizmetlerini kolaylaştırır, tüketici maliyetle-               mı, iş süreçleri, organizasyonel yapılar ve iş model-
+rini azaltır ve finans piyasasına önemli miktarda                   leri üzerinde kalıcı ve her şeyi kapsayan bir etki ya-
+tüketici girişi sağlar. İkinci olarak, mobil internet               ratmakta ve böylece toplumun genel finansallaşma
+tarafından kolaylaştırılan bilgi teknolojisine da-                  sürecini önemli ölçüde ilerletmektedir.
+
+                                                                                                                                      17
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+     Teknolojik ilerlemeler önemli finansal                     nomik oluşumları üretim ve ticaret için ağa bağlı
+     sermaye yatırımlarından ayrı ele alınamaz                  bir çerçeveye sorunsuz bir şekilde entegre ederek
+                                                                üretim ve işlem maliyetlerini önemli ölçüde azalt-
+         Teknolojik inovasyon sürecinin her aşaması, özel-      maktadır. Dolayısıyla kaynak dağılımı verimliliği
+     likle de bilişim sektöründeki son derece gelişmiş ve       ve sosyalleşme, sanayi ve finans sermayesi dönem-
+     riskli gelişmeler söz konusu olduğunda, sermaye            lerinin ekonomik paradigmalarını aşarak yeni bo-
+     gerektirmektedir. Bu artan risk seviyesi, sektörün gi-     yutlara ulaşmaktadır. Sonuç olarak, dijital sermaye-
+     rişim sermayesine olan yüksek bağımlılığının altını        nin kalkınma modeli olarak adlandırılan bu model,
+     çizmektedir. Bir yandan, icat ve yaratım süreci artan      daha fazla artı değere sahiptir. İkinci olarak, dijital
+     düzeyde ekip işbirliği ve finansal destek gerektirirken,   sermaye modelinde para birimi tüm sermaye ço-
+     bireysel inovasyon olasılığı azalmakta ve giderek pi-      ğaltımı sürecinde aktif ve baskın bir rol oynamak-
+     yasa güçleri tarafından gölgede bırakılmaktadır. Öte       tadır. Dijital teknolojinin etkisi, sermaye birikimi-
+     yandan da yeni teknoloji ancak endüstri içinde bir         nin daha sanal bir biçimine olanak vermektedir.
+     sermaye varlığı olarak yaygın bir şekilde benimsen-        Dijital platformların örgütsel yapısı, bir zamanlar
+     diğinde kapitalistler için kâr yaratabilir. Dolayısıyla,   sermaye hareketini engelleyen zamansal ve mekân-
+     ekonomiyi ve toplumu derinden etkileyen teknolojik         sal engelleri aşarak, kapitalizmin toplumsallaşmış
+     ilerlemeler, doğası gereği finansal sermayenin yatı-       kitlesel üretimini benzersiz bir esneklik ve özgür-
+     rımlarıyla bağlantılıdır. Bu olgu, sermaye piyasasının,    lükle güçlendirir. Geleneksel üretim sürecinden ka-
+     endüstri inovasyonu ve gelişimi için kuluçka maki-         demeli olarak ayrışan bu model, dolaşımdaki dijital
+     nesi olarak yavaş yavaş banka sermayesinin yerini          sermaye üzerinde sanal değerin sınırsız çoğalma-
+     almasına neden olmaktadır.                                 sını kolaylaştırmaktadır. Üçüncü olarak, yukarıda
+                                                                açıklanan dijital sermaye çoğalması süreci, dijital
+     Teknolojik ilerleme dijital sermayenin                     sermaye ve finansal sermayenin birleşmesi yoluyla
+     finansallaşmasına yol açıyor                               orijinal sanal sermayenin yeniden sanallaştırılma-
+                                                                sını temsil etmekte ve dijital sermayenin finansal-
+        Marksist akademisyenlere göre, finansal piya-           laşmasının önemli bir özelliğini vurgulamaktadır.
+     salarda bilgi teknolojisinin yaygın olarak benim-
+     senmesi, kapitalizmin belirli bir aşamaya kadar            Dijital sermayenin finansallaşması doların
+     gelişmesinin kaçınılmaz bir sonucudur bu da sanal          uluslararası statüsünü güçlendiriyor
+     sermayenin üretim üzerindeki üstünlüğüne işaret
+     etmektedir (Liu ve Cheng, 2022). Bilgi teknolojisi-           Sanayi ve finans sermayesi çağında, ABD doları
+     ne dayalı dijital işlemler, küresel finansal ürünlerin     fiyatlandırma, takas ve rezerv amaçları için ulus-
+     dolaşımını hızlandırmış, finansal türevlerin yay-          lararası bir para birimi rolünü üstlenmişti. Bilgi
+     gınlaşmasına yol açmış ve ardından finansal alanı          teknolojisinin gelişimi, hem endüstriyel hem de
+     karmaşıklaştırarak yeni belirsizlikler ortaya çıkar-       finansal sermayeyi dijital dönüşüme doğru yön-
+     mıştır.                                                    lendirerek teknoloji ve finansın kusursuz bir şekil-
+        İlk olarak, büyük veri, yapay zeka ve ilgili tek-       de kaynaşmasını sağlamıştır. Bu kaynaşma, dijital
+     nolojilerden oluşan dijital devrim, ağ temelli bir         sermayenin kapitalist alanın ilerlemeci evrimine
+     ekonomik model yaratmıştır. Bu model, tüm eko-             öncülük etmesini sağlamıştır. Kapitalist dünyada
+
+
+18
+    Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+baskın para birimi olan ABD doları, dijital ve finan-             sabit paralar da dahil olmak üzere çeşitli dijital para
+sal sermayenin entegrasyonu sayesinde daha güçlü                  birimlerinin ortaya çıkması, dijital işlemleri dolarla
+ve kapsamlı bir küresel etkiye sahip olmuştur. So-                daha da iç içe geçirerek doların fiyatlandırmadaki
+nuç olarak, para birimiyle ilgili çeşitli işlevleri yeri-         etki alanını genişletmektedir. Fiyatlandırma ala-
+ne getirmede çevre ulusal egemen para birimlerinin                nındaki bu genişleme, doların bir takas para biri-
+yerini alma ihtimali daha yüksektir.                              mi olarak artan önemi ile birleşerek rezerv değerini
+    İlk olarak, dijital teknoloji çeşitli ürün ve hizmet-         güçlendirmektedir.
+lerin dijitalleşmesini sağlayarak kıymetli enformas-
+yon verilerinin ortaya çıkmasına yol açmaktadır.                  Kurumsal Finansallaşma Küresel
+Bir kez metalaşan bu veri, günümüz kapitalizminde                 Dolarizasyonun Temelidir
+çok önemli bir faktör haline gelerek dijital kapita-
+listler için hayati bir artı değer kaynağı ve dijital ser-        Emtia ve teknolojinin finansallaşmasının ABD do-
+mayenin çoğalması için bir katalizör görevi görür.                larının uluslararası parasal gücünü artırdığı ve böy-
+Dijital sermayenin finansal sermaye ile birleşmesi,               lece ABD hükümetinin dolarizasyon yoluyla küresel
+veri enformasyon metalarının finansallaşmasına yol                ekonomi üzerindeki kontrolünü güçlendirdiği görül-
+açmakta, bu süreç küresel enformasyon kanallarıyla                mektedir. Bununla birlikte, bu gelişme finansallaş-
+iç içe geçmektedir ve ABD doları ile diğer uluslara-              mayı destekleyen ve kurumsal finansallaşma olarak
+rası para birimleri bu finansallaşma yolculuğunda                 adlandırılabilecek bir dizi elverişli kurumsal düzen-
+önemli bir rol oynamaktadır. İkinci olarak, bilgi veri            lemeye bağlıdır. Finansallaşmış bir kurumsal yapının
+metalarının finansallaşması zamansal ve mekan-                    benimsenmesi, küresel dolarizasyona ulaşılmasının
+sal engelleri ortadan kaldırarak çeşitli faktörlerin              güvence altına alınmasında çok önemli bir rol oyna-
+akışında maliyetlerin azalmasına yol açmaktadır.                  maktadır.
+Bu da sermayenin dünya çapında yayılmasını hız-
+landırmakta ve sermayenin ticaret, finans, üretim,                Neoliberal ideoloji kurumsal
+tüketim ve diğer alanlardaki etkisini artırmaktadır.              finansallaşmaya hakimdir
+Bu sektörlerde sermayenin finansallaşma düzeyini
+özellikle güçlendirerek, ABD doları ve diğer ulusla-                 Bretton Woods sisteminin çöküşünü ve Jamai-
+rarası para birimleri tarafından değerlendirilebilen              ka sisteminin gelişimini takiben, uluslararası para
+ve kontrol edilebilen mal yelpazesini genişletmek-                birimleri büyük bir çeşitlilik yaşamıştır. Sonuç ola-
+tedir. Üçüncü olarak, dijital sermayenin yükselişi                rak, ABD doları, başlıca emtialar için tek takas para
+işlemlerin artmasına ve sıklaşmasına yol açarak                   birimi olma statüsünü kaybetmeye başlamış, bu da
+doların daha fazla benimsenmesine katkıda bulun-                  ABD dolarının uluslararası alandaki baskın rolünün
+muş ve baskın bir takas para birimi olarak statüsü-               azalmasına yol açmıştır. Buna karşılık olarak ABD,
+nü güçlendirmiştir. Bilhassa, dijital teknolojiye da-             kurumsal finansallaşma yoluyla birincil uluslararası
+yanan yüksek frekanslı ticaret, kantitatif yatırım ve             para birimi statüsünü güvence altına almış ve küre-
+akıllı yatırım danışmanlığı hizmetleri gibi finansal              sel finansallaşma çağını başlatmıştır.⁶ Neoliberalizm
+faaliyetlerin yaygınlaşması, finansal piyasalardaki               ideolojisine dayanan kurumsal finansallaşma, finan-
+dolar işlemlerinin ölçeğini ve sıklığını önemli öl-               sal serbestleşmeyi destekleyen ve teşvik eden bir dizi
+çüde artırmıştır. Dahası, dolara sabitlenmiş dijital              mekanizmayı ifade etmektedir.
+
+
+                                                                                                                                      19
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+        Neoliberalizm, finansal gücün tekelci sermaye-       eşit muamele sağlanması zorunluluğunu hararet-
+     de yoğunlaşmasının savunulduğu hakim bir ideo-          le vurguladılar. Bu vizyona ulaşmak için gümrük
+     lojidir. Küresel finansallaşma sistemi bu ideolojinin   duvarlarının kaldırılması, gümrük vergilerinin
+     sürdürülmesinde merkezi bir öneme sahiptir ve bu        önemli ölçüde azaltılması ve vergi düzenlemele-
+     ideolojinin omurgası olarak hizmet eden karmaşık        rinin basitleştirilmesi gerekiyordu. İkinci olarak,
+     bir kurumsal çerçevedir. Bu kurumsal düzenleme          devlete ait varlıkların elden çıkarılması için özen-
+     sadece neoliberalizmin ilkelerini pekiştirmekle         le özelleştirme politikaları izlediler ve devlete ait
+     kalmaz, aynı zamanda ABD dolarının uluslarara-          tüm işletmeleri ve diğer değerli mülkleri etkin bir
+     sı hakimiyetinin korunmasında da önemli bir rol         şekilde özelleştirme yoluna gittiler. Bu kapsamlı
+     oynar.                                                  özelleştirme yaklaşımı çerçevesinde stratejik iş or-
+                                                             taklıkları, kiralama düzenlemeleri, hisse satışları
+                                                             ve mülkiyet haklarının tamamen devri söz konusu
+       LPM reformları ABD dolarının                          olmuştur. Üçüncü olarak, mali sektördeki devlete
+       uluslararası itibarının ve öneminin                   ait aktiflerin özelleştirilmesi, faiz oranlarının ve
+       artışında çok önemli bir rol                          döviz kurlarının serbestleştirilmesi, sermaye piya-
+       oynamıştır.                                           salarının dışa açıklığının artırılması, sermaye he-
+                                                             saplarının serbestçe konvertibilitesi ve açığa satış
+        Önde gelen bir ekonomik ve siyasi ideoloji olan      mekanizmalarının getirilmesi dahil olmak üzere
+     neoliberalizm, 1970’lerin ortalarındaki küresel         mali sektörde kapsamlı piyasa odaklı reformları
+     stagflasyon krizi sırasında güç kazanmış ve ilk sa-     savunmuşlardır.
+     vunucularını ABD ve Birleşik Krallık’ta bulmuştur.         1980’lerden bu yana birçok gelişmekte olan
+     Bu ideoloji, dünya genelinde politikaları önemli        ülke, engelleri ve kısıtlamaları kaldırmak için
+     ölçüde etkileyen temel ilkelere dayanmaktadır.          önemli “LPM” reformları gerçekleştirmiştir. Bu re-
+     Bu ilkeler özelleştirme, serbestleştirme, piyasa-       formlar, ABD doları ve diğer egemen para birim-
+     laştırma ve uluslararasılaştırmayı kapsamaktadır.       lerinin küresel entegrasyonunu etkili bir şekilde
+     Küresel finansallaşma sistemi, özel mülkiyet ve         kolaylaştırarak, dünyanın dört bir yanından gelen
+     serbestleşme ilkeleri üzerine sıkıca inşa edilmiş       işgücü değerini kullanmalarını ve diğer ülkelerdeki
+     ve ABD dolarının baskın rezerv para birimi ola-         işgücü piyasaları üzerinde önemli bir etkiye sahip
+     rak uluslararası baskınlığını güçlendirmiştir (Li ve    olmalarını sağlamıştır. Sonuç olarak, bu reformlar
+     Sun, 2020). Finansallaşma sisteminin şekillenme-        ABD dolarının uluslararası itibarının ve öneminin
+     sinde önemli bir rol oynayan Milton Friedman gibi       artışında çok önemli bir rol oynamıştır.
+     serbest piyasa düşünürleri, bir ülkenin ekonomik
+     kalkınmasının “tam serbestleşme”, “kapsamlı özel-       “LPM” mekanizması malların
+     leştirme” ve “kapsamlı piyasalaştırma” (genellikle      finansallaşmasını teşvik eder
+     “liberalization, privatization and marketization”un
+     kısaltması olarak “LPM” mekanizması olarak bili-           1970’lerde kapitalist ülkelerde ortaya çıkan
+     nir) sütunlarına dayandığı inancını benimsemiştir.      ekonomik stagflasyon, esasen sermaye birikimi
+        İlk olarak, uluslararası ekonomik mübadelelerin      çelişkisinden kaynaklanıyordu ve dolaşımda tam
+     serbestleştirilmesi ve yerli ve yabancı işlemler için   olarak değerlendirilemeyen artı değerle birlikte
+
+
+20
+    Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+     Finansallaşmaya doğru kayış, finansal tekelci sermayenin küresel ekonomide hızla egemen olmasına yol açtı
+                                         (Fotoğraf: Monthly Review, 2018).
+
+
+
+aşırı mal ve sermaye bolluğuna yol açtı. Sonuç                    işlemleri daha spekülatif hale gelir ve sermaye ka-
+olarak, malları ve üretken sermayenin çeşitli bi-                 zancı elde etmeyi amaçlar. Odak noktasındaki bu
+çimlerini kapsayacak şekilde dolaşım sektörün-                    değişim, bu malların fiyatlandırılmasını yalnız-
+de finansallaşma teşvik edildi. Finansallaşmaya                   ca spot piyasanın arz ve talep ilişkisi tarafından
+doğru bu kayma, finansal tekelci sermayenin kü-                   belirlenmekten uzaklaştırıp vadeli işlemler piya-
+resel ekonomide hızla egemen olmasına yol açtı.                   sasının yatırım ilişkilerinden etkilenmeye doğru
+Burada malların finansallaşması esas olarak tipik                 kaydırmaktadır. Amerikan finans kapitalistleri,
+finansal niteliklere sahip dökme malları ifade et-                bu finansallaşmaya paralel olarak, finansal piyasa
+mektedir.                                                         ticaret kurallarına uygun şekilde standartlaştırıl-
+   İlk olarak, dökme malların fiyatlandırılması                   mış vadeli işlem ticaret mekanizmaları kurdular.
+piyasa mekanizmaları tarafından belirlenir. Mal-                  Bu gelişme sermaye devir hızını ciddi ölçüde hız-
+ların fiyatı, kendi içsel değerleri ile piyasa arz ve             landırmış ve sermayenin kâr oranını artırmıştır.
+talep güçleri tarafından ortaklaşa belirlenir ve                  Şunu belirtmek gerekir ki, ister spot ister vadeli
+fiyatlar bu değer etrafında dalgalanır. Yatırım                   işlem olsun, bu piyasaları düzenleyen kuralları
+değerinden yoksun olan finansallaştırılmamış                      ağırlıklı olarak Amerikan finans kapitalistleri be-
+mallar tipik olarak minimum fiyat dalgalanma-                     lirlemektedir. Buna ek olarak, sermaye döngüsü-
+ları yaşar, çünkü değerleri esas olarak kullanım                  nü tamamlamak için kullanılan herhangi bir para
+değerlerinden türetilir. Ancak, finansallaştırılmış               birimi, Amerika Birleşik Devletleri’nin küresel
+dökme mallar orijinal kullanım değerlerine ek                     finans dünyasındaki önemli etkisi ve egemenliği
+olarak yatırım değeri de kazanırlar. Dolayısıyla,                 nedeniyle dolar bazında olmalıdır.
+
+
+                                                                                                                                      21
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+        İkinci olarak, dökme emtia fiyatlarının uluslararası          Sermaye bir kez finansallaştığında, sürekli kâr elde
+     aktarımı piyasa mekanizmaları tarafından belirlen-           etmesini ve finans sektörü içinde sürekli sirkülasyon yo-
+     mektedir. Sermayenin serbest akışı ilkeleri çerçevesin-      luyla kendi kendini çoğaltmasını sağlayan dönüştürücü
+     de, dökme emtia fiyatlarının uluslararası aktarımını         bir süreçten geçer. “LPM” politikası tasarım, paketleme
+     döviz piyasası mekanizması belirler. Bu mekanizma            ve değerleme süreçlerini kolaylaştırarak teknoloji stan-
+     ülkeleri, kendi para birimleri ile ABD doları gibi ulus-     dardizasyonuna olanak sağlamaktadır. Bu standartlaş-
+     lararası para birimleri arasındaki döviz kurları üze-        tırılmış teknoloji daha sonra tanıtım turları aracılığıyla
+     rindeki kontrolünden el çektirmektedir. Bu da küresel        satışa sunulur. Nihayetinde teknolojinin finansal bir
+     finans piyasasında emtia vadeli işlem fiyatlarının oy-       ürüne dönüşmesi, finansal piyasada serbestçe alınıp satı-
+     naklığını arttırmaktadır. Bu süreç, mali sermayenin          labilmesini sağlayarak yatırımcılara teknolojinin perfor-
+     spekülasyon yoluyla kâr elde etmesini sağlar ve geliş-       mansından ve büyümesinden faydalanma fırsatı sunar.
+     miş ülkelerin mali sistemlerine, diğer ülkelerin piyasa-         Bu noktada teknoloji, finansal sermayenin dola-
+     larına girme ve mali piyasa yoluyla istediği zaman artı      şımında önemli bir aracıya dönüşür. Ağırlıklı olarak
+     değer elde etme kapasitesi verir. Bu da küresel piyasa-      girişim sermayesi biçimindeki finansal sermaye, tek-
+     larda dolar işlemlerinin sıklığını artırarak uluslararası    nolojinin sanayileşmesinden elde edilecek uzun vadeli
+     piyasa işlemlerinin çapını genişletmektedir.                 kârları tasarlamak yerine, artık teminatlandırma, ipotek
+                                                                  etme ve sermaye transferi yoluyla anlık kazançlara ön-
+     “LPM” mekanizması teknolojinin                               celik vermektedir. Teknoloji sektöründeki finansallaşma
+     finansallaşmasını teşvik eder                                olgusu sadece finans sektörünün kapsamlı büyümesini
+                                                                  körüklemekle kalmamış, aynı zamanda genel iktisadi
+         Teknolojik gelişmede, sermayenin önemli müdaha-          finansallaşma sürecini de hızlandırmıştır. Dahası, ABD
+     lesi, yenilikçi işçiler arasında işgücünün sürekli olarak    doları ve diğer uluslararası para birimlerinin etki alanını
+     yeniden üretilmesi için etkili güvenceler sunarak bir        genişleterek onları küresel piyasalarda daha vazgeçilmez
+     katalizör görevi görebilir. Bu da bir mıknatıs görevi gö-    hale getirmiştir.
+     rerek daha fazla işgücünü yenilikçi alana çeker ve ba-
+     şarılı teknolojik inovasyon olasılığını artırır. İnovasyon   “LPM” mekanizması finansal küreselleşmeyi
+     kuşkusuz önemli olmakla beraber, sermayenin birincil         ve küresel dolarizasyonu teşvik eder
+     amacının yalnızca inovasyon değil, kârı maksimize
+     etmek olduğunu kabul etmek çok önemlidir. Dolayı-                Özelleştirme, serbestleştirme ve piyasalaşma neoli-
+     sıyla, bilgi teknolojisi inovasyonundan kaynaklanan          beral küreselleşmenin temelini oluşturmaktadır. Küresel
+     kazanımların önemli bir kısmı sermaye dolaşımını             ticaret, para, sermaye ve beceri piyasalarının serbestçe
+     hızlandırmaya ve kâr elde etmeye yöneliktir. Bu etki-        açılması, dünya çapındaki ekonomiler arasında kesintisiz
+     nin özellikle belirgin olduğu alanlardan biri, finansal      bağlantılar için kurumsal çerçeveyi oluşturmaktadır. Bu
+     işlemlerde anlık iletişim teknolojisinin kullanılması-       temel üzerine inşa edilen bilgi teknolojisi uygulaması, pi-
+     dır. Bu teknoloji, finansal işlemlerin saniyeler içinde      yasalar arasındaki fiziksel mesafeyi ve engeli ortadan kal-
+     tamamlanmasını sağlayarak çeşitli malların ve serma-         dırarak finansal sermayenin mekânsal transfer maliyetini
+     yenin finansallaşmasını teşvik etmede önemli bir rol         büyük ölçüde düşürür ve yerel işgücü üretimlerinden kâr
+     oynamıştır.                                                  elde ederek faaliyet alanını küresel ölçekte sonsuza kadar
+
+
+
+22
+    Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+genişletir. Dolayısıyla küreselleşmenin genişlemesi, kü-             ABD’nin Faiz Öncelikli Para Politikasının
+resel ölçekte üretilen artı değeri maksimize etmek ama-               Olumsuz Etkileri ve Dolarsızlaştırma
+cıyla küreselleşmenin ilerlemesini ve finansal sermaye-                            Önlemleri
+nin konsolidasyonunu ve tekelleşmesini büyütmektedir.
+   Sonuç olarak küreselleşme, ABD dolarının yaygın                ABD’nin Faiz Öncelikli Para Politikası ve de-
+dolaşımını kolaylaştırmada çok önemli bir rol oynamış             dolarizasyona Etkisi
+ve esas olarak kredi dolarlarına dayanan küresel bir fi-
+nansal para sisteminin kurulmasıyla sonuçlanmıştır. Bu                “LPM” mekanizması altında, FED’in faiz oranı po-
+olgu, genellikle “dolar hegemonyası” olarak adlandırı-            litikası ayarlamaları küresel ekonomiyi önemli ölçüde
+lan ve dolarizasyon olarak bilinen bir süreçle elde edi-          etkilemektedir. Örneğin, 1980’lerdeki Latin Amerika
+len ABD dolarının hakimiyetine yol açmıştır. Temelde,             borç krizi, 1994’teki Meksika döviz krizi, 1997’deki Asya
+uluslararası piyasada dolar sirkülasyonunun ilerleyişi şu         finansal krizi, 2007’deki ABD subprime krizi ve ardından
+şekilde gerçekleşmektedir:                                        gelen Avrupa borç krizi, faiz politikası düzenlemelerin-
+                                                                  den etkilenmiştir. 2015 yılından itibaren ABD faiz oran-
+                                                                  larındaki artış, Arjantin gibi bazı gelişmekte olan ekono-
+                                                                  milerden önemli miktarda sermaye çıkışına yol açarak
+   Küreselleşme, ABD dolarının                                    ekonomik durgunluklara neden olmuştur.
+   yaygın dolaşımını kolaylaştırmada                                  ABD dolarının muazzam etkisi ve yıkıcı gücü, “LPM”
+   çok önemli bir rol oynamıştır.                                 mekanizması üzerine inşa edilmiş uluslararası para bi-
+                                                                  rimi statüsünden kaynaklanmaktadır. FED enflasyonla
+    ABD Merkez Bankası (FED)’in ABD doları ihracı,                mücadele etmek ve emek-sermaye çatışmalarını hafif-
+doların küresel bir para birimi olarak rolünü belirler.           letmek için faiz oranlarını yükselttiğinde, küresel olarak
+Diğer ülkeler döviz değişimi ya da uluslararası mal sa-           dolar cinsinden varlıkların getirilerini de artırır. Dolar
+tışı yoluyla ABD doları edinirler. Sonuç olarak, ABD              cinsinden borçlanmanın maliyeti de buna bağlı olarak
+doları uluslararası bir para birimi haline gelir ve diğer         yükselir. Sonuç olarak, dolar sıkıntısı çeken kuruluş-
+ülkelerin para birimlerinin, finansallaşmış mallarının            lar dolar finansmanını kısar veya dolar kredilerini geri
+ve teknolojilerinin üzerinde etki yaratır. Bu ülkelerdeki         öder. Buna karşılık, dolar fazlası olanlar ise yatırımlarını
+ekonomik kuruluşlar dolar elde ettikten sonra, bu fon-            ABD Hazine tahvilleri gibi dolar cinsinden varlıklarını
+ları, başta tahvil olmak üzere dolar cinsinden varlıklar          güçlendirmeye yönlendirir. Bu ekonomik davranışlar,
+edinerek ABD’ye iade ederler. Dolar, uluslararası ticaret         doların ABD’ye geri dönmesiyle sonuçlanmakta, ser-
+işlemlerini kolaylaştıran baskın bir egemen para birimi           maye yoğunlaşmasını ve konsolidasyonu arttırmakta ve
+olarak hareket ettiğinden, bu dolar akışı ABD vatan-              böylece mali kapitalistlerin tekelci hakimiyetini güçlen-
+daşlarının tüketim için küresel emtia piyasasından mal            dirmektedir.
+satın almalarını sağlar. Bu durum, Şekil 2'de gösterildiği            Çevre ülkelerde bu durum sermaye kaçışına yol
+gibi, ABD’deki seçilmiş bir grup para politikası liderinin,       açmakta ve ciddi vakalarda para biriminin değer
+esasen daha fazla dolar basarak küresel emtiayı kolay-            kaybetmesi, aktiflerin çökmesi, ekonomik durgunluk
+lıkla temin etme gücüne sahip olduğu bir senaryo ya-              ve ekonomide geniş çaplı zorlukların yaşandığı
+ratmaktadır.                                                      finansal krizleri tetiklemektedir.
+
+
+
+                                                                                                                                      23
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+                           Şekil 2. Uluslararası Piyasada Dolar Sirkülasyonunun Gelişimi
+
+
+
+
+                                                    (Cheng & Lu, 2023).
+
+
+
+         Yurtiçi emek-sermaye çatışmaları geçici olarak         ve Rusya-Ukrayna çatışmasından kaynaklanan enf-
+     yatıştığında ve finansal kapitalistler kâr elde ettiğin-   lasyondaki artış neden olmuştu. Ancak, gelişmekte
+     de, ABD faiz indirimleri yoluyla niceliksel gevşeme        olan ekonomiler yüksek enflasyon ve artan borçlar
+     uygular. FED, uluslararası rezerv para talebini kar-       gibi ek zorluklarla karşı karşıya kalırken, sermaye
+     şılamak için küresel piyasayı önemli miktarda dolar        çıkışlarının durumu daha da kötüleşti.
+     arzıyla doldurarak geniş çaplı döviz ihracına girişir.        ABD, doların yerel işlevine öncelik verirken kü-
+     Bu dönemde, finansal kapitalistler sık sık spekülas-       resel para birimi işlevini göz ardı etmektedir. Yük-
+     yon yaparak çevre ülkelerden yüksek kaliteli varlık-       sek frekanslı ve büyük ölçekli faiz artışları çevre
+     ları önemli ölçüde indirimli fiyatlarla satın alabilir,    ülkeler için yıkıcı sonuçlar doğuracak ve ABD do-
+     bu da potansiyel olarak aktif balonlarına veya bu          larının uluslararası para birimi statüsünü aşındıra-
+     ülkelerde aşırı borç birikimine yol açabilir. Tarihsel     caktır.
+     olarak bu süreç periyodik olarak tekrarlanır ve ni-           İstatistiklere göre, dünya çapında 90’dan fazla
+     hayetinde çevre ülkelerde emek tarafından yaratı-          finansal düzenleyici otorite, FED’in politikasından
+     lan değerin kademeli olarak ABD merkezli finansal          etkilenerek faiz oranlarında artışa gitmiş ve bu da
+     kapitalistlerin eline geçmesiyle sonuçlanır.               300 defadan fazla faiz artışıyla sonuçlanmıştır. Bu
+         2022 yılında FED bir dizi faiz artırımı başlat-        önemli faiz artışları ise daha yüksek fonlama ma-
+     mış, Aralık ayı sonuna kadar faiz oranlarını yedi          liyetlerine yol açmış, ekonomik durgunlukların
+     kez artırarak toplamda %4.25’lik bir artışa neden          başlangıcı için uğursuz bir sinyal görevi görmüş ve
+     olmuştur. Bu kez, faiz artırımına COVID-19 salgını         birçok ülkenin yakında karşılaşabileceği potansiyel
+
+
+24
+    Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+krizlere işaret etmiştir. Bir zamanlar kişi başına dü-            ABD doları dışındaki uluslararası para birimle-
+şen GSYH’si yüksek olan Arjantin, gelişmekte olan                 rinin ve ABD dolarına bağımlılığı azaltma po-
+piyasa ülkeleri için neoliberal ekonomi teorisine                 tansiyeli olan gelişmekte olan ekonomilerin para
+dayanan özelleştirme ve piyasa odaklı reformları                  birimlerinin varlıkları artırılmalıdır. Üçüncüsü,
+benimsemesinin ardından tekrarlayan ekonomik                      ticaret ve finansta yerli para birimlerinin kullanı-
+ve mali krizler ve sosyal huzursuzluklarla boğuş-                 mını artırmak ve böylece iç ticaret ve finans piya-
+maktadır.                                                         salarını istikrara kavuşturmak için yakın ilişkili
+                                                                  ticaret ortaklarıyla swap anlaşmaları imzalamak.
+Çevre Ülkelerin De-dolarizasyonu                                  Dördüncüsü, Avrupa INSTEX, Çin CIPS ve BRICS
+Üzerine Tavsiyeler                                                Pay gibi mevcut sistemler üzerine yeni para ödeme
+                                                                  sistemlerini inşa etmek ve SWIFT ile rekabet ede-
+   Para politikası ayarlamalarının zararlı etkilerinin            cek yeni uluslararası ödeme sistemlerini ortaklaşa
+yanı sıra, ABD federal borcu 2022 yılı sonunda yak-               oluşturmak, geliştirmek veya kurmak, ödeme ba-
+laşık 31,4 trilyon dolara ulaşarak borç tavanına yak-             ğımsızlığını ve güvenliğini sağlamak.
+laşmış ve yıllık GSYH’sinin %122’sini oluşturmuş-
+tur. Son otuz yılda ABD dolarının satın alma gücü                 Finansallaşma eğilimine karşı koymak için
+%60’tan fazla değer kaybetmiştir. Yaklaşık 40 ülke,               reel ekonominin gelişimine odaklanılması
+ticaret ve ödemelerde ABD dolarını devre dışı bı-
+rakmak için blok zinciri teknolojisini veya para biri-               Finansallaşma, özellikle de dijital finansal ser-
+mi takaslarını kullanarak de-dolarizasyon sürecine                mayenin oluşumu ve gelişimi, ABD’nin gelecekte
+girmiştir. Elbette de-dolarizasyon ABD’nin baskın                 uluslararası konumunu güçlendirmesi için hayati
+gücüne meydan okumaktadır ve bir gecede gerçek-                   önem taşıyor. Ülkeler bu eğilimi dikkate alarak
+leştirilemez. Biz ilgili ülkelerin aşağıdaki hususlara            ön alıcı tedbirler almalıdır. İlk olarak, salt finansal
+öncelik vererek de-dolarizasyon sürecini etkili bir               teknolojilere yönelik piyasa yatırımlarını azaltmak
+şekilde ilerletebileceğine inanıyoruz:                            veya kısıtlamak için hükümet düzenlemelerini
+                                                                  güçlendirilmeli, sermaye üretim teknolojilerinin
+ABD Doları ve varlıklarına bağımlılığı                            araştırılması ve geliştirilmesine yönlendirilme-
+azaltmak için uluslararası para birimlerinin                      lidir. İkinci olarak, yurt içinde geliştirilen veya
+çeşitlendirilmesinin teşvik edilmesi                              yurt dışından getirilen ileri teknolojilerin imalat
+                                                                  sektörünü ve diğer reel ekonomileri geliştirmek
+   İlk olarak, uluslararası rezervler akılcı bir şe-              için kullanılmasını sağlayarak, bunların finansal
+kilde paylaştırılmalı, ilgili ülkeler uluslararası re-            alanda spekülatif finansal araçlara dönüşmesini
+zervlerin yapısını iyileştirmek ve ABD’nin altın                  engellemelidir. Son olarak ise, dijital platformlarca
+üzerindeki tekelini zayıflatmak için altın rezervle-              temsil edilen dijital sermayenin gelişimini düzen-
+rini artırmaya çalışmalıdır. Buna ilaveten, ülkeler               leyerek, bu platformlardaki finansallaşma faaliyet-
+ABD doları tahvillerinde aşırı miktarda bulundur-                 lerini kontrol altına almak ve son derece tekelci ve
+dukları varlıklarını derhal azaltmalı ve uluslararası             ABD kontrolündeki dijital finansal sermayenin
+varlık tahsislerini çeşitlendirmelidir. İkinci olarak,            oluşumunu engellemek sayılabilir.
+
+
+
+                                                                                                                                      25
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+     Mutlak “LPM” reformlarının bir ulus                   Çin’in aşağıdaki üç hususa öncelik vermesi ge-
+     üzerindeki zararlarını tam olarak anlamak             rekmektedir:
+                                                              İlk olarak, finansal güç üzerinde hakimiyet
+        İlk olarak, dünya çapında ülkeler, özellikle de    kurmak de-dolarizasyona ulaşmak için temel
+     gelişmekte olan ekonomiler, yabancı sermayeye         önemdedir. Reform ve dışa açılmadan bu yana,
+     bağımlılığı etkin bir şekilde kontrol etmek için      Çin’in ihracat odaklı ekonomisinin hızlı gelişimi
+     kendi iç ekonomilerindeki aşırı özelleştirmeyi        neticesinde büyük miktarda ABD doları rezervi
+     düzeltmeli ve kamu iktisadi teşebbüslerinin ge-       birikmiştir. Sonuç olarak, para birimi emisyonu
+     nel ulusal ekonomilerindeki oranını artırmalıdır.     ve varlık fiyatlandırma gücünden kısmen vazge-
+     İkinci olarak, dış ticaret için bir dereceye kadar    çilmesi gerekmiştir. Böyle bir bağlamda, çoğu fi-
+     liberal politikalar uygulamalı, endüstriyel düzen-    nansal varlığın özelleştirilmesi potansiyel olarak
+     lemelere aktif olarak katılmalı, ihracata yönelik     Wall Street merkezli finansal sermayenin haki-
+     endüstrilerin ölçeğini küçültmeli ve ekonomi-         miyetine yol açabilir ve Çin’in finansal güvenliği
+     nin dışa bağımlılığını azaltmalıdır. Uluslarara-      için ciddi bir tehdit oluşturabilir.
+     sı finans tekellerinden gelen anormal sermaye            İlk olarak, Arjantin gibi gelişmekte olan eko-
+     akışını sınırlamak için döviz kontrol politikaları    nomilerdeki “LPM” reformundan dersler çıkar-
+     uygulanmalıdır. Son olarak, ülkenin refahı için       malı ve reform ve dışa açılma sürecinde ulusal
+     hayati önem taşıyan kilit endüstriler tamamen         ekonomik ve mali güvenliğe öncelik vermeliyiz.
+     piyasalaştırılmamalı, doğrudan hükümet tarafın-       İkinci olarak, ulusal ekonominin can damarı
+     dan yönetilmeli ve sosyal istikrarın korunması-       olan mali güç birkaç kişinin elinde toplanma-
+     nın temeli olarak hizmet etmelidir. Bu yaklaşım,      malıdır. Finansal reform ve kalkınma sırasında,
+     küresel finansallaşma sisteminin etkisini hafiflet-   kamu sektörünün finansal sistemdeki baskın ko-
+     meye yardımcı olur ve ABD para politikasındaki        numu temin edilmeli, böylece finansal varlıkla-
+     düzenlemelerin neden olduğu şokları azaltır.          rın geniş halk kitleleri tarafından denetlenmesi
+                                                           ve yönetilmesi garanti altına alınmalıdır. Son
+     Çin’in de-dolarizasyonu için çıkarılacak              olarak, özel finans kurumları, yaratıcılıkları ve
+     dersler                                               esneklikleri ile Çin’in finansal sisteminin geliş-
+                                                           tirilmesinde çok önemli bir rol oynamaktadır.
+        Dolarizasyonun genel tanımına göre Çin de,         Bu nedenle bunlar, devlete ait finans kurumla-
+     dolarize olmuş bir ülkedir ve önemli miktarda         rını tamamlayabilir ve geliştirebilir, rehberliği
+     ABD doları rezervine sahiptir. Mevcut jeopolitik      ve etkin denetimi güçlendirerek ulusal finansal
+     durum ve ABD hükümeti tarafından Çinli şir-           güvenliği korumak için ortaklaşa bir güç haline
+     ketlere sık sık uygulanan yaptırımlar göz önüne       gelebilirler.
+     alındığında, de-dolarizasyon Çin için önemli fi-         İkinci olarak, nitelikli ekonomik kalkınma,
+     nansal risklere karşı korunmak ve finansal gü-        de-dolarizasyonun sağlanması için sağlam bir
+     venliği sağlamak için stratejik bir seçim olabilir.   temeldir. De-dolarizasyon Amerikan finans ka-
+     Dolarizasyon mekanizmalarına ve de-dolarizas-         pitalistlerinin temel çıkarlarına zarar vermekte-
+     yona giden ülkelerin deneyimlerine dayanarak,         dir. Sadece yüksek kaliteli ekonomik kalkınmayı
+
+
+26
+    Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir İnceleme
+
+
+
+
+gerçekleştirerek ABD’nin çeşitli yönlerden gelen                  yetiştirerek yapay zeka, büyük veri, blok zinciri
+baskılarına temelden cevap verebilir ve gerçek                    ve kuantum iletişimi gibi yüksek teknolojiye da-
+de-dolarizasyonu sağlayabiliriz. Çin, ekonomisi-                  yalı reel sektörlerin gelişimini destekleyebilir ve
+nin “hakikatten ayrılıp sahteye yönelmesine” kar-                 gelişmekte olan sektörleri yüksek nitelikli ekono-
+şı korunmalıdır. Emtia, teknoloji ve diğer alan-                  mik kalkınmanın büyüme merkezi haline getire-
+ların finansallaşması kâr marjlarını arttırmıştır                 bilir.
+ancak yerel ekonomik büyümeyi ilerletmemiştir.                        Üçüncüsü, Renminbi’nin uluslararasılaşma-
+Düşük nitelikli kalkınma, Wall Street merkezli                    sı de-dolarizasyon yolunda atılmış önemli bir
+finansal sermaye tarafından avlanma eğilimin-                     adımdır. İlk olarak, Renminbi’nin uluslararası
+dedir.                                                            fiyatlandırmadaki ve takas işlemlerindeki oranı-
+                                                                  nı arttırmalıdır. Hem Marksist para teorisi hem
+                                                                  de Batı finans teorisi, egemen para birimlerinin
+                                                                  sürdürülebilir uzun vadeli bir uluslararası rezerv
+  Çin, ekonomisinin “hakikatten
+                                                                  para birimi olarak uygulanabilir olmadığı ko-
+  ayrılıp sahteye yönelmesine” karşı
+                                                                  nusunda hemfikirdir. Bu nedenle Renminbi’nin
+  korunmalıdır.
+                                                                  uluslararasılaştırılması, uluslararası ticarette fi-
+                                                                  yatlandırma ve takas işlemlerindeki rolüne odak-
+   Ayrıca Çin, yüksek kaliteli ekonomik kal-                      lanmalıdır (Liu ve Cheng, 2020). Bu, Kuşak ve
+kınmayı yönlendiren kritik ana teknolojiler-                      Yol Girişimi gibi bölgelerde dijital Renminbi iş-
+de atılımlar gerçekleştirmek için gerekli temel                   lemlerini teşvik ederek, bölgeselleştirilmiş bir di-
+araştırma yeteneklerini geliştirmelidir. Yetenek,                 jital Renminbi ağı oluşturarak ve ardından bunu
+teknolojik inovasyon için esastır. Uzun vadede                    diğer ilgili bölgelere genişleterek başarılabilir.
+Çin, yetenek geliştirme konusunda yerli üniver-                   İkinci olarak, sermaye hesabı açılımına ihtiyatla
+siteleri ve araştırma enstitülerini desteklemeye                  yaklaşılmalıdır. Renminbi’nin uluslararasılaşma-
+devam etmelidir. Kısa vadede ise Çin, dünyanın                    sı, ABD egemenliğindeki küresel finans sistemi-
+önde gelen Çinli bilim insanlarını Çin’e dönmeye                  ne bütünleşmeyi gerektirecek bir düzeyde serma-
+teşvik ederken Rusya, Avrupa Birliği ve hatta Sri                 ye hareketinin açılmasını zorunlu kılmaktadır
+Lanka dahil olmak üzere çeşitli ülkelerden seç-                   (Cheng ve Sun, 2015: 1-7). Bu süreçte ihtiyatlı ve
+kin yabancı yetenekleri Çin’de yaşamaya ve ileri                  kademeli bir yaklaşım uygulanmalıdır. Sermaye
+düzeyde bilimsel araştırmalara katılmaya teşvik                   hareketleri açılımı sürecinde, uluslararası ve ye-
+edebilir.                                                         rel politikalardaki düzenlemeler veya ekonomik
+   Son olarak Çin, reel ekonomide yüksek tek-                     dalgalanmalar nedeniyle uluslararası sermaye gi-
+nolojinin uygulanmasını geliştirmelidir. Finan-                   riş ve çıkışları birkaç hatta onlarca kat artabilir.
+sal gelişme ve teknolojik yenilik karşılıklı olarak               Spekülatif sermaye baskın hale gelirse, Çin eko-
+birbirini güçlendirmektedir. Ancak, her ikisi de                  nomisini önemli ölçüde etkileyebilir. Buna kar-
+yüksek nitelikli kalkınmayı gerçekleştirmek için                  şı koymak için Tobin vergileri ve geri ödemesiz
+reel ekonomiye hizmet etmelidir. Örneğin Çin,                     rezervler gibi tedbirlerin uygulanması spekülatif
+endüstriyel fonlar kurarak ve işletme yöneticileri                sermaye akışını etkili bir şekilde engelleyebilir.
+
+
+                                                                                                                                      27
+     B R I q • Cilt 5 Sa yı 1 Kış 2023-2024
+
+
+
+
+                            Sonuç                              rerek, sağlam bir teknolojik çerçeve ile desteklenen
+                                                               yüksek kalibreli ekonomik büyümeyi savunarak,
+     Özetle, bu makale dolarizasyonun mekanizmalarını,         teknolojik finansallaşmayı kontrol altına alarak
+     pratik etkilerini ve alternatif politikaları araştırmak   ve uluslararası parasal çeşitliliğin teşvik edilmesi
+     için Marksist para teorisinden yararlanmıştır. Finan-     ve Renminbi’nin uluslararasılaştırılması gibi ABD
+     sallaşma merceğinden bakıldığında, ABD doları ta-         dolarına alternatifler önererek finansal güvenlik ve
+     rafından yönetilen küresel para sistemi üç aşamadan       istikrarlarını güçlendirmelidir.
+     geçmiştir: Altın-dolar çerçevesi, petro-dolar yapısı
+                                                                                          Notlar
+     ve kurum-dolar şeması. Alternatif olarak küre-
+     sel finansallaşma sistemi olarak adlandırılan ku-             1 Bu ülkeler arasında Polonya, Hırvatistan, Türkiye, Mısır,
+     rum-dolar sistemi, neoliberal kurumsallaşma yo-           Macaristan, Şili, Meksika, İsrail, Belarus, Peru, Romanya,
+                                                               Arnavutluk ve diğerleri bulunmaktadır.
+     luyla gerçekleştirilen emtia ve finans piyasaları ile         2 Kamboçya, Laos, Myanmar ve Vietnam gibi ülkeler de
+     yerel ve uluslararası piyasaların birleşmesini temsil     dahil.
+                                                                   31974 yılında ABD, Petrol İhraç Eden Ülkeler Örgütü'nün
+     etmektedir. Bu durum, ABD dolarının uluslararası          (OPEC) ABD dolarını petrolün fiyatlandırılması ve
+     parasal etkisinin artmasını daha da kolaylaştırmış-       ticari anlaşmaların yürütülmesi için tek para birimi
+                                                               olarak belirlemesi karşılığında Suudi Arabistan ile Suudi
+     tır.                                                      güvenliğinin garantisini gerekçe göstererek "Sarsılmaz
+         Genel olarak, finansallaşma potansiyel olarak         Anlaşma" imzaladı.
+                                                                   ⁴Emtialar üzerindeki vadeli işlem sözleşmelerinin büyük
+     egemen para biriminin gücünü artırmakta, ulus-            ölçekli metalaşması, küresel finansallaşma sisteminin
+     lararası parasal dolaşımın hızını artırmakta ve           oluşumunun ayırt edici bir özelliğidir. Temel bir emtia
+                                                               olarak enerji, 1970'lerde vadeli işlem sözleşmelerinin
+     kredi ve ek araçlar yoluyla ABD dolarının küresel         ortaya çıkışına tanık olmuş ve 1980'lerde olgunlaşmıştır.
+     erişimini geliştirmektedir. Teknolojik açıdan ba-         Bu da emtiaların kitlesel finansallaşmasının 1980'lerde,
+                                                               Washington Uzlaşısı'nın kurulduğu dönemde gerçekleştiğini
+     kıldığında, kapitalizmin dijitalleşmesi de bu süreci      göstermektedir. Metnin ilerleyen bölümlerinde analiz
+     hızlandırmıştır. 1970’lerden bu yana neolibera-           edildiği üzere, küresel finansallaşma sisteminin oluşumu,
+                                                               neoliberal rejimin güvencesiyle emtiaların finansallaşması
+     lizm hem finansallaşmada hem de ABD dolarının             üzerine inşa edilmiştir.
+     uluslararasılaşmasında etkili olmuştur. New York              ⁵Emtianın finansallaştırılması, bir emtianın kullanım
+                                                               değeri üzerine inşa edilir, yatırım ve finansman
+     Ticaret Borsası, Londra Metal Borsası, New York           potansiyelini keşfederken ek finansal nitelikler ekler. Bu
+     Ticaret Borsası, Chicago Ticaret Borsası ve Londra        ek özellikler para biriminin özelliklerine benzer olabilir
+                                                               ve kıtlık, depolanabilirlik ve likidite gibi özelliklere sahip
+     Kıtalararası Borsası gibi büyük fiyatlandırma mer-        emtiaları finansallaştırma için uygun adaylar haline getirir.
+     kezleri, emtia fiyatlarını ABD doları cinsinden be-       Yenilenemeyen, son derece kıt, likiditesi yüksek ve kolay
+                                                               depolanabilir emtialar daha belirgin finansal nitelikler
+     lirleme gücüne sahiptir ve böylece diğer ülkelerin        gösterir. Bu emtialar arasında, ham petrol, demir dışı
+     uluslararası işlemlerinde para birimi tercihini doğ-      metaller, tarım ürünleri, demir cevheri ve kömür gibi
+                                                               sanayileşme ile yakından bağlantılı olan ve küresel olarak
+     rudan etkilemektedir.                                     talep edilen önemli kalemler genellikle dökme emtia olarak
+         Bununla birlikte, ticaret ve ödemelerde ABD           adlandırılır.
+                                                                   ⁶ Küresel finansallaşmış sistem ile diğer para sistemleri
+     dolarını devre dışı bırakan blok zinciri teknolojisi      arasındaki temel ayrım, dolaşım alanı içerisinde bir ülkenin
+     ve para birimi swapları sayesinde de-dolarizasyo-         emtia piyasası ile finans piyasası arasındaki geleneksel sınır
+                                                               üzerindeki dönüştürücü etkisinden kaynaklanmaktadır. Bu
+     na doğru gelişen bir hareket gözlemlenebilir. Bir-        paradigmatik değişim, emtia ve finans piyasaları arasında
+     çok ülke LPM reformlarını terk ederse bu ilerleme         daha önce var olan uçurumun kapatılmasına hizmet etmekte
+                                                               ve uluslararası finans piyasasında genellikle "emtia-finans-
+     hızlanabilir. Çin dahil olmak üzere bu tür ülkeler,       ABD doları-emtia" döngüsü olarak adlandırılan kapalı bir
+     devlet denetimini ve etkin düzenlemeyi güçlendi-          döngü yapısının kurulmasıyla sonuçlanmaktadır.
+
+
+28
+     Cheng Enfu - Lu Chunyi - Küresel Finansallaşma Sistemi Altında Dolarizasyon ve De-dolarizasyon Mekanizması Üzerine Bir Araştırma
+
+
+
+
+                                Kaynakça                                        Lu, C. (2021). The Theoretical Mechanism and Practice of Economic Fi-
+                                                                                    nancialization - Based on the Perspective of Capital Accumulation
+                                                                                    Theory. Shandong Social Sciences, (08): 130-136.
+Cai, H., Yi, G. (2003) Advantages and Disadvantages of Dollarization and        Lu, C., Ding, X. (2016). Political Economy Analysis of Economic Finan-
+     the Attitude of the United States. International Economic Review, 2.           cialization Behavior - An Evolutionary Game Framework. Journal of
+Catão, L., Terrones, M. (2016). Financial De-Dollarization: A Global Pers-          Finance and Economics, 42(07): 52-62,74.
+     pective and the Peruvian Experience. IMF Working Papers, 097.
+                                                                                Luca, A., Petrova, I. (2008).What drives credit dollarization in transition
+CGTN. (2017). Was 2017 the year that Chinese fintech grew up?. 20 Tem-              economies?. Journal of Banking & Finance,32(5).
+     muz 2023 tarihinde şu adresten alındı: https://news.cgtn.com/news/
+     3341544f79637a6333566d54/index.html                                        Marx and Engels Collected Works: Volume 8. (2009). Beijing: People’s
+                                                                                    Publishing House, 51.
+CGTN. (2022). Dollar hegemony: The world’s trouble with the U.S. curren-
+     cy. 20 Temmuz 2023 tarihinde şu adresten alındı: https://news.cgtn.        Mary, Q. (2008). Neoliberal Restructuring, Financialisation and Socio-po-
+     com/news/2022-06-15/Dollar-hegemony-The-world-s-trouble-wit-                   litical Competition in Argentina: the Convertibility System and the
+     h-the-U-S-currency-1aT0olLji48/index.html                                      Contradictory Outcomes of Dollarisation 1989-2001. Contemporary
+Cheng, E., Li, J. (2021). An International Political Economy Analysis of            Politics, 14.
+     Maritime Cooperation in the Belt and Road Initiative. Journal of Ma-       Mendoza, E.G., Rojas, E. (2017). Liability Dollarization, Sudden Stops &
+     nagement, 34(01): 1-12.                                                        Optimal Financial Policy. NBER Working Papers, 10: 2-10.
+Cheng, E., Sun, Y. (2015). The “Impossible Trinity” and New Considera-          Missaglia, M. (2021). Understanding Dollarisation: A Keynesian/Kalecki-
+     tions for China’s Capital Account Liberalization. Journal of Liaoning          an Perspective, Review of Political Economy, 33.
+     University (Philosophy and Social Sciences Edition), 43(05).
+                                                                                Monthly Review. (2018). What Is Monopoly Capital?. 22 Temmuz 2023
+Cheng E., Xia H. (2007). Dollar Hegemony: An Important Means for                    tarihinde şu adresten alındı: https://monthlyreview.org/2018/01/01/
+     the United States to Plunder Other Countries’ Wealth. Studies on               what-is-monopoly-capital/#lightbox/0/
+     Marxism, (12): 28-34.
+                                                                                Mwase, N., Kumah, F.Y. (2015). Revisiting the Concept of Dollarization:
+Fratzscher, M., Mehl, A. (2013). China’s Dominance Hypothesis and the               The Global Financial Crisis and Dollarization in Low- Income Count-
+     Emergence of A TriPolar Global Currency System. The Economic                   ries. IMF Working Paper, WP/15/12,1:3.
+     Journal, (12).
+Geng, N., Scutaru, T., Wiegand, J. (2018). Carry Trade vs. Deposit- Driven      Naceur, S.B., Hosny, A., Hadjian, G. (2015). How to De-Dollarize Finan-
+     Euroization. IMF Working Papers, W.P./18/58, 3.                                cial Systems in the Caucasus and Central Asia?. IMF Working Paper,
+                                                                                    WP/15/203, 9: 4.
+Gong, X., Zhao, M. (2021). Is the Belt and Road Initiative a Debt Trap
+     for Underdeveloped Countries? - An Analysis Based on Political Eco-        Reinhart, C.M., Rogoff, K.S., Savastano, M.A. (2014). Addicted to Dollars.
+     nomy. Journal of Economics of Shanghai School, 19(03): 87-104.                 Annals of Economics and Finance, Society for AEF, 15(1):1-50.
+He, C., Lianj, J. (2015). Research on Currency Internationalization Path:       Ren, C., Cheng, E. (2021). A Political Economy Analysis of Fiscal Deficit
+     A Case Study of Dollarization in ASEAN Countries. Southeast Asia               Monetization and the U.S. Financial Crisis. Shanghai Journal of Eco-
+     Survey, (02): 31-36.                                                           nomics, (03).
+Husain, M.A. (2006). To Peg or Not to Peg: A Template for Assessing the         Song, W. (2006). Research on Dollarization Issues. Research on Finance
+     Nobler. IMF Working Paper, WP/06/54, (2):13.                                   and Economics, (08).
+IMF. (2023). The Dollar Glut. 20 Temmuz 2023 tarihinde şu adresten alın-        Tao, S., Xu, L. (2020). Institutional Differences in Different Forms of Cur-
+     dı: https://www.imf.org/external/np/exr/center/mm/eng/mm_sc_03.                rency Regionalization: A Comparative Study of Dollarization and the
+     htm                                                                            Eurozone. Reform and Strategy, 36(07): 18-26.
+Isakova, A. (2010) Financial Sector Development and Dollarization in the        UNCTAD. (2023). A World of Debt. 1 Kasım 2023 tarihinde şu adresten
+     Economies of Central Asia. Final Report, Grant No.RRC IX 69.                   alındı: https://unctad.org/publication/world-of-debt
+Izurieta, A. (2003). Dollarization as a Tight Rein on the Fiscal Stance. In     Wang, S., Fang, L., Li, J. (2018). Analysis of the Macroeconomic Effects of
+     Dollarization. Lessons from Europe and the Americas, edited by L. P.           Dollarization Based on the DSGE Model: The Case of Cambodia, Laos,
+     Rochon and M. Seccareccia. London: Routledge.                                  and Vietnam. Journal of Finance and Economics Theory, (03): 86-98.
+Journalist. (2018). Development of the Currency Power System and Con-
+     temporary Historical Processes - An Interview with Senior Professor        Wang, S., Xiao, Z., Liu, W., Wu, Y. (2022). Dollarization and Monetary Po-
+     Lu Pinyue of Shanghai University of Finance and Economics. Studies             licy Spillover Effects. World Economy Studies, (06).
+     on Marxism, (12).                                                          Wang, W., Qin F., Liu Q. (2018). Research on the “De-dollarization” of
+Kokenyne, A., Ley, J., and Veyrune, R. (2010). Dedollarization. IMF Wor-            Central Asian Countries and the “Going Out” Strategy of the RMB.
+     king Paper, WP/10/188, (8):19.                                                 Shanghai Journal of Economics, (02): 74-83.
+Kubo, K. (2017). Dollarization and De-dollarization in Transitional Eco-        Wang, W., Qin, F., Liu Q. (2019). Research on the “De-dollarization” of
+     nomies of Southeast Asia. Palgrave Macmillan.                                  Central Asian Countries under the Diversification of the International
+Li, H., Li, S. (2019). The Cycle of Strong Dollar, the Tide of De-dollariza-        Monetary System. Financial Theory and Practice, (06): 109-118.
+     tion, and the Adjustment of RMB Internationalization Strategy. Eco-        Wei, W., Fang, W. (2003). Definition, Formation Mechanism, Costs, and
+     nomist, (05): 68-75.                                                           Benefits of Dollarization: A Literature Review. World Economic Pa-
+Li, X., Sun, L. (2020). “Neoliberalism” in the Mirror of European and Ame-          pers, (01).
+     rican Anti-epidemic Practices and Dilemmas. Journal of Economics of        Xie, F., Xiaolu, K., Zhi, L. (2022). Financialisation of developing and
+     Shanghai School, 18(02): 171-185.                                              emerging economies and China’s experience: how China resists fi-
+Li, Y., Huang, J. (1999). Research on Dollarization Issues. Journal of Finan-       nancialisation. Cambridge Journal of Economics, beac037, https://doi.
+     cial Research, (09): 56-62,81.                                                 org/10.1093/cje/beac037.
+Linn, J.F., Zucker, L. (2019). An “Insideout” Perspective on the Impact of      Yang, Z., Xiao L. (2022). Background and Impacts of the Federal Reserve’s
+     the Belt and Road Initiative in Central Asia and the South Caucasus:           Interest Rate Hikes. China Finance, (11): 68-69.
+     How to Maximize its Benefits and Manage its Risks. 2019 Eurasia Me-        Yuan, H. (2021) Marxist Critique and Transcendence of Modern Monetary
+     eting Emerging Markets Forum Background Paper, 10-14.                          Theory . Chinese Journal of Political Economics, (04).
+Liu, W., Cheng, E. (2020). An Analysis of the Strategic Choice for Renmin-
+     bi Internationalization: Based on Marxist Theory of Money. Shanghai        Zhang, Y. (1999). Dollarization: Reality, Theory, and Policy Implications.
+     Journal of Economics, (07): 5-14.                                              World Economy, (09).
+Liu Y., Cheng E. (2022). Opposing American Cyber Hegemony, Defending            Zheng, Z. (2020). World Multi-Level Differentiation of Wealth and Capital
+     Our National Cyber Sovereignty and Security. Chinese Journal of Po-            International Erosion. Chinese Journal of Political Economics, (02):
+     litical Economics, (01): 183-184.                                              110-123.
+
+
+                                                                                                                                                               29
+

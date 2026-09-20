@@ -1,0 +1,16 @@
+Producer:        iLovePDF
+ModDate:         Fri Dec  1 23:14:07 2023 UTC
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           2
+Encrypted:       no
+Page size:       566.929 x 765.354 pts
+Page rot:        0
+File size:       287432 bytes
+Optimized:       no
+PDF version:     1.4

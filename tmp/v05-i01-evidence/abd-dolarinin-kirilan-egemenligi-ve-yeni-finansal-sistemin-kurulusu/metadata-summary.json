@@ -1,0 +1,39 @@
+{
+  "slug": "abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu",
+  "title": {
+    "en": "The Shattering Dominance of the US Dollar and the Establishment of a New Financial System",
+    "tr": "ABD Dolarının Kırılan Egemenliği ve Yeni Finansal Sistemin Kuruluşu"
+  },
+  "type": {
+    "id": "review-article",
+    "tr": "Derleme Makalesi",
+    "en": "Review Article",
+    "peerReviewed": true
+  },
+  "pages": {
+    "first": "66",
+    "last": "85"
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/the-shattering-dominance-the-us-dollar-and-the-establishment-new-financial-system",
+    "tr": "https://briqjournal.com/abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_ENG-66-85.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_TR-66-85.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu-tr.pdf",
+    "sharedBilingualPdf": false
+  },
+  "contributors": [
+    {
+      "displayName": "Tolga Dişçi",
+      "givenName": "Tolga",
+      "familyName": "Dişçi",
+      "role": "translator",
+      "orcid": null
+    }
+  ],
+  "language": [
+    "en",
+    "tr"
+  ]
+}
