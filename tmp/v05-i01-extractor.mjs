@@ -341,9 +341,8 @@ const issueFiveOneRecords = [
   },
   {
     slug: "dunya-ekonomisinin-dolardan-arindirilmasi",
-    pages: [1, 6], body: { tr: 1, en: 1 },
+    pages: [1, 6], body: { tr: 2, en: 1 },
     startContains: {
-      tr: "TARIHSEL",
       en: "HISTORICALLY, RUSSIA JOINED THE DOLLAR"
     },
     skipFirstPortrait: true,
@@ -352,14 +351,25 @@ const issueFiveOneRecords = [
   },
   {
     slug: "abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu",
-    pages: [1, 20], body: { tr: 1, en: 1 },
+    pages: [1, 20], body: { tr: 2, en: 1 },
     startContains: {
-      tr: "ABD’NIN",
       en: "THE MOVES THAT THE US MADE RIGHT"
     },
     headingMode: "strict",
     pdfs: { tr: join(root,"tmp/v05-i01-pdfs/abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu-tr.pdf"), en: join(root,"tmp/v05-i01-pdfs/abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu-en.pdf") },
   },
+  {
+    slug: "taliban-afgan-savas-agalarinin-hikayesi",
+    pages: [1, 3], body: { tr: 1, en: 1 },
+    startContains: {
+      tr: "TALIBAN: THE STORY OF THE AFGHAN",
+      en: "TALIBAN: THE STORY OF THE AFGHAN"
+    },
+    headingMode: "strict",
+    extractImages: false,
+    pdfs: { tr: join(root,"tmp/v05-i01-pdfs/taliban-afgan-savas-agalarinin-hikayesi-tr.pdf"), en: join(root,"tmp/v05-i01-pdfs/taliban-afgan-savas-agalarinin-hikayesi-en.pdf") },
+  },
+
 ];
 
 const issueFiveTwoRecords = [
@@ -954,7 +964,7 @@ for (const record of records) {
     execFileSync("pdftohtml", ["-xml", "-hidden", recordPdfs[locale], xmlPath], { stdio: "ignore" });
     parsed[locale] = parseXml(readFileSync(xmlPath, "utf8"));
   }
-  const imagePaths = issueConfig.extractImages === false ? [] : extractImages(record, recordPdfs.tr);
+  const imagePaths = issueConfig.extractImages === false || record.extractImages === false ? [] : extractImages(record, recordPdfs.tr);
   result[record.slug] = { metadata: record.metadata || {}, tr: null, en: null };
   for (const locale of ["tr", "en"]) {
     const sourceLocale = issueConfig.sourceLocale[locale];
