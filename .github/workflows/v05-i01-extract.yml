@@ -67,12 +67,7 @@ jobs:
 
           slug=cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen
           out="public/assets/article-figures/$slug"
-          figure_count=$(python3 - <<'PY'
-          import json
-          p="tmp/v05-i01-candidates/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen/en.json"
-          print(len(json.load(open(p))["figures"]))
-          PY
-          )
+          figure_count=$(python3 -c 'import json; p="tmp/v05-i01-candidates/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen/en.json"; print(len(json.load(open(p))["figures"]))')
           if [ "$figure_count" = "5" ]; then
             test -s "$out/figure-01.jpg"
             test -s "$out/figure-05.jpg"
