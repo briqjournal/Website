@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "id": "en-section-1",
+      "title": "Photograph",
+      "paragraphs": [
+        "During the parade held for the 10th anniversary celebrations of the Republic, Turkish state officials, including Mustafa Kemal Atatürk, in the stands. Also, from the delegation of the USSR, the People's Commissar for Military and Navy Affairs K. Y. Voroshilov and Semyon Budyonny, the commander of the Red Army's cavalry and a member of the The Revolutionary Military Council, are seen."
+      ]
+    }
+  ],
+  "keywords": [],
+  "footnotes": [
+    {
+      "id": "note-1",
+      "text": "[Photograph]. (1933). The 10th anniversary celebrations of the Republic. Russian State Archive of Literature and Art (RGALİ)."
+    }
+  ],
+  "references": [],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/rgali-29-ekim-1933/figure-01.jpg",
+      "caption": "Celebrating the 10th anniversary of the Republic."
+    }
+  ]
+}
