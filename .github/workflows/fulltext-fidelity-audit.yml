@@ -14,7 +14,7 @@ permissions:
 jobs:
   audit:
     name: Audit official locale PDFs
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 45
     steps:
       - name: Resolve fidelity unit
