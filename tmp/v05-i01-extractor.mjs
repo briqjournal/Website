@@ -321,7 +321,7 @@ const issueFiveOneRecords = [
     slug: "cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi",
     pages: [1, 10], body: { tr: 1, en: 1 },
     startContains: {
-      tr: "ABD’nin küresel finansal hakimiyetinin",
+      tr: "ABD’nin finansal hegemonyasının küresel",
       en: "What has been the global economic impact of US"
     },
     skipFirstPortrait: true,
@@ -331,7 +331,7 @@ const issueFiveOneRecords = [
     slug: "cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen",
     pages: [1, 20], body: { tr: 1, en: 1 },
     startContains: {
-      tr: "KÜRESEL POLİTİK EKONOMİ",
+      tr: "KÜRESEL POLITIK EKONOMI SISTEMI",
       en: "THE GLOBAL POLITICAL ECONOMY HAS"
     },
     pdfs: { tr: join(root,"tmp/v05-i01-pdfs/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen-tr.pdf"), en: join(root,"tmp/v05-i01-pdfs/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen-en.pdf") },
@@ -340,7 +340,7 @@ const issueFiveOneRecords = [
     slug: "dunya-ekonomisinin-dolardan-arindirilmasi",
     pages: [1, 6], body: { tr: 1, en: 1 },
     startContains: {
-      tr: "TARİHSEL OLARAK RUSYA",
+      tr: "TARIHSEL OLARAK RUSYA",
       en: "HISTORICALLY, RUSSIA JOINED THE DOLLAR"
     },
     skipFirstPortrait: true,
@@ -350,7 +350,7 @@ const issueFiveOneRecords = [
     slug: "abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu",
     pages: [1, 20], body: { tr: 1, en: 1 },
     startContains: {
-      tr: "ABD’NİN 1945 SONRASINDA",
+      tr: "ABD’NIN (AMERIKA",
       en: "THE MOVES THAT THE US MADE RIGHT"
     },
     pdfs: { tr: join(root,"tmp/v05-i01-pdfs/abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu-tr.pdf"), en: join(root,"tmp/v05-i01-pdfs/abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu-en.pdf") },
