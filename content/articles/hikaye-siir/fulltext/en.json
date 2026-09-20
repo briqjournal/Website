@@ -2,13 +2,6 @@
   "sections": [
     {
       "id": "en-section-1",
-      "title": "CAHİT KÜLEBİ",
-      "paragraphs": [
-        "*Cahit Külebi (1917-1997) was born in Çeltek village of Zile district of Tokat (December 20, 1917). He completed his secondary education at Sivas High School in 1936 and his higher education at the Department of Turkish Language and Literature at Istanbul Higher Teachers’ School in 1940. He was appointed as a cultural attaché and student inspector to Switzerland. When he returned home, he served as the chief inspector and assistant undersecretary of culture at the Ministry of National Education. He assumed the position of Secretary General of the Turkish Language Association (1978-1982). His first poem was published in “Gençlik” (Youth) magazine in 1938. He treated the life of the Anatolian people in his poems. He valued the national sources of Turkish culture rather than Western-based poetry movements and local reflections of the literature of his period. He wrote poems about Turkish revolutionary leader Mustafa Kemal Atatürk and the Turkish War of Independence. He pioneered the “New Folk Poetry” movement. His poems were included in school textbooks. He won the Turkish Language Association Literature Award in 1955, the Yeditepe Poetry Award in 1981, and the Presidential Culture and Arts Grand Award in 1996 with his works. He was a founder of SODEP and the Social Democratic Populist Party in 1983 and a member of the Central Executive Board. The master poet, who died in Ankara on June 20, 1997, was buried in Niksar."
-      ]
-    },
-    {
-      "id": "en-section-2",
       "title": "TALE",
       "paragraphs": [
         "Your lips are pink  \nYour hands are white,  \nTake my hands baby,  \nhold a little!",
@@ -18,20 +11,18 @@
         "In the villages where I was born  \nPeople didn’t know how to laugh,  \nThat’s why I’m so desperate,  \nLaugh a little!",
         "In the villages where I was born  \nNorthern winds would blow,  \nThat’s why my lips are always chapped  \nKiss a little!",
         "You are bright and beautiful like  \nTurkey!  \nThe villages where I was born were  \nbeautiful too  \nTell me about the places where you  \nwere born,  \nTell a little!",
-        "1944",
-        "*Translated by Latif Bolat (2025).*"
+        "1944"
       ]
     }
   ],
   "keywords": [],
-  "footnotes": [],
+  "footnotes": [
+    {
+      "id": "1",
+      "text": "Translated by Latif Bolat (2025)."
+    }
+  ],
   "references": [],
   "acknowledgements": "",
-  "figures": [
-    {
-      "id": "figure-1",
-      "src": "/assets/article-figures/hikaye-siir/figure-01.jpg",
-      "caption": "Cahit Külebi"
-    }
-  ]
+  "figures": []
 }
