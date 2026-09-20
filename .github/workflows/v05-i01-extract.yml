@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
           fetch-depth: 0
 
       - name: Install PDF and image tools
@@ -139,4 +139,4 @@ jobs:
             exit 0
           fi
           git commit -m "Finalize v05-i01 visual and vector figure assets"
-          git push origin HEAD:chore/v05-i01-fulltext-canonical
+          git push origin HEAD:${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
