@@ -1,0 +1,55 @@
+name: Validate v06-i02 fidelity repair
+
+on:
+  push:
+    branches:
+      - audit/v06-i02-fulltext-fidelity
+    paths:
+      - tmp/v06-i02-validation-trigger.txt
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/v06-i02-fulltext-fidelity
+      - name: Install PDF tools
+        run: sudo apt-get update >/dev/null && sudo apt-get install -y poppler-utils >/dev/null
+      - name: Run focused regression
+        run: node --test tests/v6i2-fidelity-regression.test.mjs
+      - name: Re-run reusable PDF audit
+        run: python3 scripts/audit-fulltext-fidelity.py v06-i02 --out /tmp/v06-i02-post
+      - name: Check post-repair audit invariants
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('/tmp/v06-i02-post/v06-i02/report.json')
+          r=json.loads(p.read_text())
+          assert r['records']==13, r['records']
+          assert len(r['locales'])==26, len(r['locales'])
+          wrong_pdf_en={
+            'osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke',
+            'qi-baishi',
+          }
+          bad=[]
+          for x in r['locales']:
+              if x.get('status'): bad.append((x['slug'],x['locale'],'status',x['status']))
+              for k in ['duplicate_paragraphs','duplicate_footnote_ids','cross_record_title_candidates','metadata_leakage_candidates','missing_figure_assets']:
+                  if x.get(k): bad.append((x['slug'],x['locale'],k,x[k]))
+              if x.get('figure_captions_low_match') and not (x['locale']=='en' and x['slug'] in wrong_pdf_en):
+                  bad.append((x['slug'],x['locale'],'figure_captions_low_match',x['figure_captions_low_match']))
+              print(x['slug'],x['locale'],
+                    'para',x.get('paragraph_match_ratio'),
+                    'refs',x.get('canonical_references'),
+                    'figs',x.get('canonical_figures'),
+                    'unmatched',len(x.get('unmatched_paragraphs') or []),
+                    'nonmono',len(x.get('nonmonotonic_assignments') or []),
+                    'empty',len(x.get('empty_sections') or []),
+                    'lowfig',len(x.get('figure_captions_low_match') or []))
+          if bad:
+              print('POST_REPAIR_FAILURES')
+              for row in bad: print(row)
+              raise SystemExit(1)
+          PY
