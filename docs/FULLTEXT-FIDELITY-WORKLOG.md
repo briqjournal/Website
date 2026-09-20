@@ -48,6 +48,11 @@
   - İzmir Kızılçullu Village Institute / Köy Enstitüsü EN/TR: restored the published explanatory text, association note, and photograph; the already-correct Operários and New Generation of Nazism visual contributions were preserved.
   - Prose body/order/reference/footnote signals were re-checked against the retained official-PDF evidence. Remaining low-match/non-monotonic signals were attributable to two-column layout, pull-quote repetition, hyphenation, or page-layout extraction rather than confirmed canonical defects, so correct body content was preserved.
   - Post-repair whole-issue verification found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, cross-record title contamination, generic placeholder captions, or missing/undersized referenced figure assets.
+- Completed unit: `v05-i04`. All 14 records / 28 EN-TR locale records were checked against the official locale PDFs.
+  - Vietnam Savaşımız / Our Vietnam War and İki Kör / Two Blind Men EN/TR: removed author-biography front matter from canonical poem bodies; Vietnam also removed the stray repeated page-title text, while preserving the published verse structure and source/translation notes.
+  - Restored 13 published figures with the confirmed locale captions and publication order across eight illustrated records: Global East (1), New Asia geopolitics/OTS (1), TRNC/OTS (1), Türkiye/Turkic states integration (2), Central Asia agriculture/trade (1), OTS-BRI carbon market (1), Türkiye/Africa strategy (4), and Birth of a New World (2). Verified production assets were committed and the previously confirmed adjacent-image contamination exclusions were preserved.
+  - A non-figure regression guard confirmed that all eight repaired prose records remained identical to `main` outside the `figures` field; no unrelated canonical prose, reference, footnote, keyword, or acknowledgement changes were introduced.
+  - The post-repair whole-issue fidelity audit actually executed against the official locale PDFs and passed.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v05-i04`.
+**Next unit:** `v05-i03`.
