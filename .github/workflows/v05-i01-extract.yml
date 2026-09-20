@@ -38,6 +38,7 @@ jobs:
             "cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen",
             "dunya-ekonomisinin-dolardan-arindirilmasi",
             "abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu",
+            "taliban-afgan-savas-agalarinin-hikayesi",
           ]
           for slug in slugs:
               meta=json.loads(pathlib.Path("content/articles",slug,"metadata.json").read_text())
