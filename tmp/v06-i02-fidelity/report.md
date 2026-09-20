@@ -1,0 +1,547 @@
+# Full-text fidelity audit: v06-i02
+
+## modernist-milliyetci-olarak-sun-yat-sen-ve-siyasal-mirasi [en]
+- PDF pages: 22
+- Paragraph match ratio: 0.984
+- Heading match ratio: 0.667
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 1
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 7
+- Missing figure assets: 0
+- Rendered pages: 1, 8, 22
+
+## modernist-milliyetci-olarak-sun-yat-sen-ve-siyasal-mirasi [tr]
+- PDF pages: 22
+- Paragraph match ratio: 0.982
+- Heading match ratio: 0.667
+- Reference match ratio: 0.966
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 1
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 7
+- Missing figure assets: 0
+- Rendered pages: 1, 8, 22
+
+## cinin-erken-modernizasyonuna-sun-yat-senin-katkisi [en]
+- PDF pages: 16
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.75
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 1
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 4
+- Missing figure assets: 0
+- Rendered pages: 1, 2, 15, 16
+
+## cinin-erken-modernizasyonuna-sun-yat-senin-katkisi [tr]
+- PDF pages: 16
+- Paragraph match ratio: 0.925
+- Heading match ratio: 0.5
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 5
+- Non-monotonic paragraph assignments: 1
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 4
+- Missing figure assets: 0
+- Rendered pages: 1, 2, 5, 8, 10, 13, 15, 16
+
+## cinli-devrimcilerin-sun-yat-sen-ve-mustafa-kemal-arasindaki-benzerlikler-uzerine-gorusleri [en]
+- PDF pages: 14
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.5
+- Reference match ratio: 0.87
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 4
+- Missing figure assets: 0
+- Rendered pages: 1, 13, 14
+
+## cinli-devrimcilerin-sun-yat-sen-ve-mustafa-kemal-arasindaki-benzerlikler-uzerine-gorusleri [tr]
+- PDF pages: 14
+- Paragraph match ratio: 0.912
+- Heading match ratio: 0.5
+- Reference match ratio: 0.935
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 3
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 4
+- Missing figure assets: 0
+- Rendered pages: 1, 3, 7, 8, 13, 14
+
+## sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin [en]
+- PDF pages: 6
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 2
+- Missing figure assets: 0
+- Rendered pages: 1, 6
+
+## sun-yat-senin-olumunun-13-yildonumu-ve-japonyaya-karsi-savasta-hayatini-kaybeden-askerler-icin [tr]
+- PDF pages: 6
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 2
+- Missing figure assets: 0
+- Rendered pages: 1, 6
+
+## osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke [en]
+- PDF pages: 6
+- Paragraph match ratio: 0.048
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 0.0
+- Figure-caption match ratio: 0.0
+- Unmatched paragraphs: 20
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 2
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 0, 1, 6
+
+## osaka-mainichi-shimbun-gazetesinin-sun-yat-sen-ile-roportaji-23-kasim-1924-dogu-asyali-bir-ulke [tr]
+- PDF pages: 6
+- Paragraph match ratio: 0.9
+- Heading match ratio: 0.6
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 2
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 4, 6
+
+## yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar [en]
+- PDF pages: 14
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.667
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 5
+- Missing figure assets: 0
+- Rendered pages: 1, 14
+
+## yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar [tr]
+- PDF pages: 14
+- Paragraph match ratio: 0.971
+- Heading match ratio: 0.667
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 1
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 5
+- Missing figure assets: 0
+- Rendered pages: 1, 4, 14
+
+## alter-kuresellesme-baglaminda-cin-fransiz-iliskileri [en]
+- PDF pages: 23
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.5
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 0.857
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 1
+- Published visual-label candidates: 8
+- Missing figure assets: 0
+- Rendered pages: 1, 23
+
+## alter-kuresellesme-baglaminda-cin-fransiz-iliskileri [tr]
+- PDF pages: 23
+- Paragraph match ratio: 0.955
+- Heading match ratio: 0.667
+- Reference match ratio: 0.984
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 2
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 9
+- Missing figure assets: 0
+- Rendered pages: 1, 5, 21, 22, 23
+
+## kamu-diplomasisi-ozbekistanin-yabanci-ulkelerle-iliskilerini-guclendirmenin-bir-yolu [en]
+- PDF pages: 4
+- Paragraph match ratio: 0.933
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 1
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 1
+- Missing figure assets: 0
+- Rendered pages: 1, 2, 4
+
+## kamu-diplomasisi-ozbekistanin-yabanci-ulkelerle-iliskilerini-guclendirmenin-bir-yolu [tr]
+- PDF pages: 4
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 1
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 1
+- Missing figure assets: 0
+- Rendered pages: 1, 4
+
+## hikaye-siir [en]
+- PDF pages: 2
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.5
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 2
+
+## hikaye-siir [tr]
+- PDF pages: 2
+- Paragraph match ratio: 1.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 2
+
+## olu-su-siir [en]
+- PDF pages: 2
+- Paragraph match ratio: 1.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 2
+
+## olu-su-siir [tr]
+- PDF pages: 2
+- Paragraph match ratio: 1.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1, 2
+
+## ogonyok [en]
+- PDF pages: 1
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1
+
+## ogonyok [tr]
+- PDF pages: 1
+- Paragraph match ratio: 1.0
+- Heading match ratio: 0.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1
+
+## qi-baishi [en]
+- PDF pages: 1
+- Paragraph match ratio: 0.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 0.0
+- Unmatched paragraphs: 1
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 1
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1
+
+## qi-baishi [tr]
+- PDF pages: 1
+- Paragraph match ratio: 1.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 1
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1
+
+## t-miyano-renkli-tasbaski [en]
+- PDF pages: 1
+- Paragraph match ratio: 1.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1
+
+## t-miyano-renkli-tasbaski [tr]
+- PDF pages: 1
+- Paragraph match ratio: 1.0
+- Heading match ratio: 1.0
+- Reference match ratio: 1.0
+- Footnote match ratio: 1.0
+- Figure-caption match ratio: 1.0
+- Unmatched paragraphs: 0
+- Non-monotonic paragraph assignments: 0
+- Duplicate canonical paragraphs: 0
+- Duplicate footnote IDs: 0
+- Empty sections: 0
+- One-paragraph sections: 0
+- Metadata leakage candidates: 0
+- Turkish contamination candidates: 0
+- Cross-record title candidates: 0
+- Low-match figure captions: 0
+- Published visual-label candidates: 0
+- Missing figure assets: 0
+- Rendered pages: 1
