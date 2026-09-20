@@ -53,6 +53,11 @@
   - Restored 13 published figures with the confirmed locale captions and publication order across eight illustrated records: Global East (1), New Asia geopolitics/OTS (1), TRNC/OTS (1), Türkiye/Turkic states integration (2), Central Asia agriculture/trade (1), OTS-BRI carbon market (1), Türkiye/Africa strategy (4), and Birth of a New World (2). Verified production assets were committed and the previously confirmed adjacent-image contamination exclusions were preserved.
   - A non-figure regression guard confirmed that all eight repaired prose records remained identical to `main` outside the `figures` field; no unrelated canonical prose, reference, footnote, keyword, or acknowledgement changes were introduced.
   - The post-repair whole-issue fidelity audit actually executed against the official locale PDFs and passed.
+- Completed unit: `v05-i03`. All 13 records / 26 EN-TR locale records were checked against the official locale PDFs.
+  - Korkma / Fear not and Kurtuba Camisi / The Mosque of Cordoba EN/TR: removed author-biography front matter from the canonical poem bodies while preserving the published verse/stanza structure, the published `1915` date in Korkma, and the locale-specific source/translation notes.
+  - The eight prose records were preserved after body/order/reference/footnote/caption checks found no additional confirmed canonical defects. Their published figure inventories and production assets were verified against the retained page-aware official-PDF evidence; the intentional front-matter portrait/mask exclusions in the Sayed interview, Akram interview, and Marxism record remain correct, and the Middle East article's previously verified page-14 composite figure was preserved.
+  - The three visual/non-standard records (Altai shepherd girl, The Watermelon Seller, and the Satirikon cartoon) were preserved after their context text, notes, captions, and production assets matched the official publication evidence.
+  - The post-repair whole-issue fidelity audit actually executed against the official locale PDFs and passed; build/test/lint also passed on the repair checkpoint.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v05-i03`.
+**Next unit:** `v05-i02`.
