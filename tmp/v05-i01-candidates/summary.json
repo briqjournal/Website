@@ -63,7 +63,44 @@
   {
     "slug": "abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu",
     "locale": "tr",
-    "sections": [],
+    "sections": [
+      {
+        "title": "Tam metin",
+        "paragraphs": 9
+      },
+      {
+        "title": "Dünyada Dolarizasyonu Azaltma Süreci Hızlanıyor",
+        "paragraphs": 10
+      },
+      {
+        "title": "Merkez Bankalarının Rezervlerinin Dağılımları Değişiyor",
+        "paragraphs": 1
+      },
+      {
+        "title": "Yeni Finansal Sistemin Önemli Aktörü BRICS",
+        "paragraphs": 1
+      },
+      {
+        "title": "5R: Alternatif Finansal Sistemin Rezerv Parası",
+        "paragraphs": 4
+      },
+      {
+        "title": "Yuanın Yavaş ve Kararlı Yükselişi",
+        "paragraphs": 2
+      },
+      {
+        "title": "Yeni Finansal Sistemin Aracı Olarak Swaplar",
+        "paragraphs": 25
+      },
+      {
+        "title": "Çin-Rusya Finansal İşbirliği ve Yuan",
+        "paragraphs": 19
+      },
+      {
+        "title": "Çin-Rusya Finansal İşbirliğinin Derinleşmesi İçin Öneriler",
+        "paragraphs": 9
+      }
+    ],
     "keywords": [
       "BRICS",
       "dolarizasyon",
@@ -72,7 +109,7 @@
       "Yeni Finansal Sistem"
     ],
     "footnotes": 0,
-    "references": 0,
+    "references": 38,
     "figures": 7,
     "captions": [
       "bu oran 2022'de %30’lara kadar gerilemişti (Fotoğraf: CGTN, 2023).",
@@ -291,7 +328,28 @@
   {
     "slug": "dunya-ekonomisinin-dolardan-arindirilmasi",
     "locale": "tr",
-    "sections": [],
+    "sections": [
+      {
+        "title": "Tam metin",
+        "paragraphs": 4
+      },
+      {
+        "title": "Periferiden Merkeze Sermaye Transferi",
+        "paragraphs": 4
+      },
+      {
+        "title": "Yapısal Çatışma",
+        "paragraphs": 6
+      },
+      {
+        "title": "Yeni Finans Mimarisinin Algoritması",
+        "paragraphs": 5
+      },
+      {
+        "title": "Adil Bir Dünya İçin Gelişen Dünyada Yeni Finansal Sistem",
+        "paragraphs": 1
+      }
+    ],
     "keywords": [],
     "footnotes": 0,
     "references": 0,
@@ -403,5 +461,35 @@
       "Görsel 5",
       "Görsel 6"
     ]
+  },
+  {
+    "slug": "taliban-afgan-savas-agalarinin-hikayesi",
+    "locale": "en",
+    "sections": [
+      {
+        "title": "Full text",
+        "paragraphs": 11
+      }
+    ],
+    "keywords": [],
+    "footnotes": 0,
+    "references": 0,
+    "figures": 0,
+    "captions": []
+  },
+  {
+    "slug": "taliban-afgan-savas-agalarinin-hikayesi",
+    "locale": "tr",
+    "sections": [
+      {
+        "title": "Tam metin",
+        "paragraphs": 12
+      }
+    ],
+    "keywords": [],
+    "footnotes": 0,
+    "references": 0,
+    "figures": 0,
+    "captions": []
   }
 ]
