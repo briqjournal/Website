@@ -1,4 +1,4 @@
-name: v05-i01 prose extraction
+name: v05-i01 asset finalization
 
 on:
   push:
@@ -6,14 +6,13 @@ on:
       - chore/v05-i01-fulltext-canonical
     paths:
       - '.github/workflows/v05-i01-extract.yml'
-      - 'tmp/v05-i01-extractor.mjs'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  extract:
+  assets:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,71 +20,118 @@ jobs:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
 
-      - name: Install extraction tools
+      - name: Install PDF and image tools
         run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
 
-      - name: Download authoritative locale PDFs
+      - name: Extract visual-record assets and missing vector figure
         shell: bash
         run: |
           set -euo pipefail
-          rm -rf tmp/v05-i01-pdfs tmp/v05-i01-candidates
-          mkdir -p tmp/v05-i01-pdfs
+          work=/tmp/v05-i01-assets
+          rm -rf "$work"
+          mkdir -p "$work"
+
           python3 - <<'PY'
           import json, pathlib, subprocess
           slugs = [
-            "kuresel-finansallasma-sistemi-altinda-dolarizasyon-ve-de-dolarizasyon-mekanizmasi-uzerine-bir",
-            "cozumun-anahtari-alternatif-finansal-isbirliginin-sistematik-hale-getirilmesi",
+            "filistin-1947",
+            "kudus-2023",
+            "filistinli-bir-multecinin-gozunden",
             "cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen",
-            "dunya-ekonomisinin-dolardan-arindirilmasi",
-            "abd-dolarinin-kirilan-egemenligi-ve-yeni-finansal-sistemin-kurulusu",
-            "taliban-afgan-savas-agalarinin-hikayesi",
           ]
+          root=pathlib.Path("/tmp/v05-i01-assets")
           for slug in slugs:
               meta=json.loads(pathlib.Path("content/articles",slug,"metadata.json").read_text())
-              for locale,key in (("en","pdfEn"),("tr","pdfTr")):
-                  url=meta["urls"][key]
-                  out=pathlib.Path("tmp/v05-i01-pdfs",f"{slug}-{locale}.pdf")
-                  subprocess.run(["curl","-L","--fail","--retry","3","--retry-delay","2","-o",str(out),url],check=True)
+              out=root/f"{slug}.pdf"
+              subprocess.run(["curl","-L","--fail","--retry","3","--retry-delay","2","-o",str(out),meta["urls"]["pdfEn"]],check=True)
           PY
 
-      - name: Build prose candidates and assets
-        run: node tmp/v05-i01-extractor.mjs 5-1
+          # Visual-only records: select the largest extracted non-logo image.
+          for slug in filistin-1947 kudus-2023 filistinli-bir-multecinin-gozunden; do
+            src="$work/$slug.pdf"
+            d="$work/$slug"
+            out="public/assets/article-figures/$slug"
+            rm -rf "$d" "$out"
+            mkdir -p "$d" "$out"
+            pdfimages -png "$src" "$d/image"
+            best=$(find "$d" -type f -name '*.png' -printf '%s %p\n' | sort -nr | head -1 | cut -d' ' -f2-)
+            test -n "$best"
+            convert "$best" -strip -quality 88 "$out/figure-01.jpg"
+          done
 
-      - name: Summarize candidates
-        shell: bash
-        run: |
+          # Multipolar article Figure 1 is a vector table on PDF page 6 (issue p.45).
+          slug=cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen
+          out="public/assets/article-figures/$slug"
+          test -f "$out/figure-01.jpg"
+          test -f "$out/figure-05.jpg"
+          mv "$out/figure-05.jpg" "$out/figure-06.jpg"
+          mv "$out/figure-04.jpg" "$out/figure-05.jpg"
+          mv "$out/figure-03.jpg" "$out/figure-04.jpg"
+          mv "$out/figure-02.jpg" "$out/figure-03.jpg"
+          pdftoppm -f 6 -l 6 -singlefile -jpeg -r 200 "$work/$slug.pdf" "$work/vector-page" >/dev/null 2>&1
+          # Crop the published Figure 1 table, including title and source note, excluding running text.
+          convert "$work/vector-page.jpg" -crop 1405x1075+135+250 +repage -strip -quality 90 "$out/figure-02.jpg"
+
+          # Insert Figure 1 into both locale candidates and shift later asset paths.
           python3 - <<'PY'
           import json, pathlib
-          root=pathlib.Path("tmp/v05-i01-candidates")
-          summary=[]
-          for d in sorted(p for p in root.iterdir() if p.is_dir()):
-              for locale in ("en","tr"):
-                  p=d/f"{locale}.json"
-                  j=json.loads(p.read_text())
-                  summary.append({
-                    "slug":d.name,"locale":locale,
-                    "sections":[{"title":s.get("title"),"paragraphs":len(s.get("paragraphs",[]))} for s in j.get("sections",[])],
-                    "keywords":j.get("keywords",[]),
-                    "footnotes":len(j.get("footnotes",[])),
-                    "references":len(j.get("references",[])),
-                    "figures":len(j.get("figures",[])),
-                    "captions":[f.get("caption") for f in j.get("figures",[])],
-                  })
-          (root/"summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2)+"\n")
+          slug="cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen"
+          root=pathlib.Path("tmp/v05-i01-candidates")/slug
+          caps={
+            "en":[
+              "There are multifaceted relationships between a multipolarised world and the restructuring of the global position of the dollar (Photo: CGTN, 2021).",
+              "Figure 1. De-Dollarization in the Geopolitical Analysis Grid. This is adapted from (Cattaruzza & Limonier, 2019).",
+              "Many allied countries did not feel empowered to challenge the US-centred global political economy, because alignment with US objectives was rewarded with access to vital loans and aid (Photo: China Daily, 2022).",
+              "The RMB's progress is commendable, but the RMB is still far from realising a decisive challenge to globally dominant currencies (Photo: China Daily, 2023).",
+              "Figure and Comment Inserted by BRIQ: development of RMB in cross-border payments, measured as the share of RMB in an economy's total payments to China (Graph: IMF, 2023). Figure 2. Evolution of RMB Cross-Border Payments.",
+              "China's push for de-dollarization and efforts to internationalize the RMB are not limited to direct financial instruments (Photo: CGTN, 2019).",
+            ],
+            "tr":[
+              "Çok kutuplulaşan bir dünya ile doların küresel konumunun yeniden yapılandırılması arasında çok yönlü ilişkiler bulunmaktadır (Fotoğraf: CGTN, 2021).",
+              "Şekil 1. Jeopolitik Analiz Sisteminde De-Dolarizasyon. Tablo (Cattaruzza & Limonier, 2019) kaynağına dayanmaktadır.",
+              "Birçok müttefik ülke ABD merkezli küresel politik ekonomiye meydan okuyabilecek gücü kendinde bulamamıştır; çünkü ABD’nin hedefleriyle uyumlu hareket etmek, hayati kredilere ve yardımlara erişimle ödüllendirilmekteydi (Fotoğraf: China Daily, 2022).",
+              "RMB’nin ilerlemesi takdir edilebilir bir durumdur, ancak RMB küresel olarak hakim para birimlerine kesin bir meydan okuma gerçekleştirmekten henüz uzaktadır (Fotoğraf: China Daily, 2023).",
+              "RMB'nin bir ekonominin Çin'e yaptığı toplam ödemelerdeki payı olarak ölçülen, sınır ötesi ödemelerdeki RMB'nin gelişimi (Grafik: IMF, 2023). Şekil 2. RMB Sınır Ötesi Ödemelerin Gelişimi.",
+              "Çin’in de-dolarizasyon yönündeki itici gücü ve RMB'yi uluslararasılaştırma çabaları sadece doğrudan finansal araçlarla sınırlı değildir (Fotoğraf: CGTN, 2019).",
+            ],
+          }
+          for locale in ("en","tr"):
+              p=root/f"{locale}.json"
+              j=json.loads(p.read_text())
+              j["figures"]=[
+                {"id":f"figure-{i+1}","src":f"/assets/article-figures/{slug}/figure-{i+1:02d}.jpg","caption":cap}
+                for i,cap in enumerate(caps[locale])
+              ]
+              p.write_text(json.dumps(j,ensure_ascii=False,indent=2)+"\n")
           PY
 
-      - name: Commit durable candidates
+      - name: Verify assets
         shell: bash
         run: |
           set -euo pipefail
-          rm -rf tmp/v05-i01-pdfs
+          for slug in filistin-1947 kudus-2023 filistinli-bir-multecinin-gozunden; do
+            test -s "public/assets/article-figures/$slug/figure-01.jpg"
+          done
+          slug=cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen
+          for n in 01 02 03 04 05 06; do
+            test -s "public/assets/article-figures/$slug/figure-$n.jpg"
+          done
+          identify "public/assets/article-figures/$slug/figure-02.jpg"
+
+      - name: Commit finalized assets
+        shell: bash
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f tmp/v05-i01-candidates
-          git add public/assets/article-figures
+          git add public/assets/article-figures/filistin-1947
+          git add public/assets/article-figures/kudus-2023
+          git add public/assets/article-figures/filistinli-bir-multecinin-gozunden
+          git add public/assets/article-figures/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen
+          git add -f tmp/v05-i01-candidates/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen
           if git diff --cached --quiet; then
-            echo "No extraction changes"
+            echo "No asset changes"
             exit 0
           fi
-          git commit -m "Build v05-i01 prose candidates and figure assets"
+          git commit -m "Finalize v05-i01 visual and vector figure assets"
           git push origin HEAD:chore/v05-i01-fulltext-canonical
