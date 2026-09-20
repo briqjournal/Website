@@ -5,39 +5,11 @@
     "sections": [
       {
         "title": "Full text",
-        "paragraphs": 1
-      },
-      {
-        "title": "1. Profits are made on the speculation of",
-        "paragraphs": 1
-      },
-      {
-        "title": "2. The US exports its economic crisis",
-        "paragraphs": 1
-      },
-      {
-        "title": "3. It provides control of international trade and access to economic intelligence",
-        "paragraphs": 1
-      },
-      {
-        "title": "4. The US can impose financial sanctions through its financial hegemony",
-        "paragraphs": 1
+        "paragraphs": 8
       },
       {
         "title": "The Process of De-dollarization Accelerates in the world",
-        "paragraphs": 1
-      },
-      {
-        "title": "1. US dollar reserves and US dollar debt",
-        "paragraphs": 1
-      },
-      {
-        "title": "2. The role of the US dollar in international",
-        "paragraphs": 1
-      },
-      {
-        "title": "3. The role of the US dollar in international",
-        "paragraphs": 1
+        "paragraphs": 6
       },
       {
         "title": "The Distribution of Reserves in Central Banks Are Evolving",
@@ -61,47 +33,11 @@
       },
       {
         "title": "China-Russia Financial Cooperation and Yuan",
-        "paragraphs": 2
-      },
-      {
-        "title": "1. The yuan’s strength lies in its low",
-        "paragraphs": 2
-      },
-      {
-        "title": "2. The yuan accounts for a significant portion of Russia’s foreign exchange reserves",
-        "paragraphs": 1
-      },
-      {
-        "title": "3. There is rapidly developing Sino-",
-        "paragraphs": 3
-      },
-      {
-        "title": "4. Demand for Chinese yuan-based",
-        "paragraphs": 1
-      },
-      {
-        "title": "5. There is significant progress in using",
-        "paragraphs": 7
+        "paragraphs": 20
       },
       {
         "title": "Suggestions for Deepening China-Russia Financial Cooperation",
-        "paragraphs": 1
-      },
-      {
-        "title": "1. The strengthening of alternative payment",
-        "paragraphs": 1
-      },
-      {
-        "title": "2. Sino-Russian financial cooperation should",
-        "paragraphs": 1
-      },
-      {
-        "title": "3. The Sino-Russian governments should",
-        "paragraphs": 1
-      },
-      {
-        "title": "4. Commercial bank cooperation should",
-        "paragraphs": 1
+        "paragraphs": 8
       }
     ],
     "keywords": [
@@ -191,7 +127,24 @@
   {
     "slug": "cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen",
     "locale": "tr",
-    "sections": [],
+    "sections": [
+      {
+        "title": "Tam metin",
+        "paragraphs": 3
+      },
+      {
+        "title": "Kuramsal ve Yöntemsel Çerçeve",
+        "paragraphs": 9
+      },
+      {
+        "title": "Jeopolitik Analiz Sistemi Bağlamında De-Dolarizasyonu Yeniden Düşünmek",
+        "paragraphs": 34
+      },
+      {
+        "title": "Sonuç",
+        "paragraphs": 4
+      }
+    ],
     "keywords": [
       ": ABD hegemonyası",
       "çok kutuplulaşma",
@@ -204,7 +157,7 @@
       "doların her yön"
     ],
     "footnotes": 0,
-    "references": 0,
+    "references": 80,
     "figures": 5,
     "captions": [
       "çok yönlü ilişkiler bulunmaktadır (Fotoğraf: CGTN, 2021).",
@@ -219,39 +172,35 @@
     "locale": "en",
     "sections": [
       {
-        "title": "What has been the global economic impact of US financial dominance?",
-        "paragraphs": 2
-      },
-      {
-        "title": "increasing availability of alternatives. The proliferation of these alternatives is not",
+        "title": "Full text",
         "paragraphs": 1
       },
       {
-        "title": "monetary arrangements. This is necessary because the ad hoc arrangements being",
+        "title": "financial dominance?",
+        "paragraphs": 14
+      },
+      {
+        "title": "The driving force of de-dollarization",
         "paragraphs": 1
       },
       {
-        "title": "be oriented towards productive investment including investment in those sectors which",
-        "paragraphs": 1
-      },
-      {
-        "title": "expanding productive capacity increase the possibilities of international cooperation",
-        "paragraphs": 1
-      },
-      {
-        "title": "equal basis because the spread of multipolarity will reduce the power differentials among countries, it will also make all sorts of financial cooperation possible.”",
-        "paragraphs": 12
-      },
-      {
-        "title": "The driving force of de-dollarization How is the phenomenon of “de-dollarization” currently unfolding? What factors are propelling this ongoing shift, and what is its driving force?",
+        "title": "ongoing shift, and what is its driving force?",
         "paragraphs": 10
       },
       {
-        "title": "The first condition for a developmentoriented financial system is capital control Are there feasible options to counterbalance US financial dominance? What key opportunities and obstacles arise with the emergence of these new alternatives?",
+        "title": "The first condition for a developmentoriented financial system is capital control",
+        "paragraphs": 1
+      },
+      {
+        "title": "alternatives?",
         "paragraphs": 7
       },
       {
-        "title": "China’s difference and the enormous impact of the BRI How does multipolarity influence international financial cooperation? What role does China play in providing alternative solutions in this context?",
+        "title": "China’s difference and the enormous impact of the BRI",
+        "paragraphs": 1
+      },
+      {
+        "title": "in providing alternative solutions in this context?",
         "paragraphs": 7
       }
     ],
@@ -269,27 +218,31 @@
     "locale": "tr",
     "sections": [
       {
-        "title": "ABD’nin finansal hegemonyasının küresel ekonomik etkisi ne olmuştur?",
-        "paragraphs": 2
+        "title": "ekonomik etkisi ne olmuştur?",
+        "paragraphs": 11
       },
       {
-        "title": "Birincisi, dolar sisteminin kendi içinde artan çelişkileridir. İkincisi ise alternatiflerin artan mevcudiyetidir. Bu alternatiflerin çoğalması sistematik değildir, belirli bir geçici karaktere sahiptir ve önemli sayıda ülke alternatif birleşik uluslararası parasal düzenlemeler için bir plan oluşturana kadar bu karakterini koruyacaktır. Dolayısıyla sistematik bir çözüme ihtiyaç vardır ve bu da ancak dünya ekonomisinin yeterince büyük bir bölümünü temsil eden yeterince çok sayıda ülke bir çözüm oluşturmak için karşılıklı olarak anlaştığında gerçekleşecektir. Bir ülkenin kalkınmasına yönelik bir finansal sistem yaratmanın ilk adımı sermaye kontrolleri uygulamaktır. ABD’nin",
+        "title": "Dolarsızlaşmanın itici gücü",
         "paragraphs": 1
       },
       {
-        "title": "sermayeye bağımlı olmayan güçlü bir finansal sektör yaratmaktır. Böyle bir finansal sektör, ihracat pazarlarında rekabetçi olma olasılığı en yüksek olan sektörler de dahil olmak üzere, üretken yatırımlara yönelmelidir. Çok kutupluluğun yaygınlaşması ülkeler arasındaki güç farklılıklarını azaltacağından, genişleyen üretim kapasitesi, birbirleriyle giderek daha eşit bir temelde ilişki kuran ülkeler arasında uluslararası işbirliği olanaklarını arttırmakla kalmayacak, aynı zamanda her türlü finansal işbirliğini de mümkün kılacaktır.”",
-        "paragraphs": 9
-      },
-      {
-        "title": "Dolarsızlaşmanın itici gücü “Dolarsızlaştırma” (dedolarizasyon) olgusu şu anda nasıl gelişiyor? Devam etmekte olan bu değişimi hangi faktörler tetikliyor ve bunun itici gücü nedir?",
+        "title": "gücü nedir?",
         "paragraphs": 10
       },
       {
-        "title": "Kalkınmaya yönelik finansal sistemin ilk şartı, sermaye kontrolü ABD’nin finansal hakimiyetini dengelemek için uygulanabilir seçenekler var mı? Bu yeni alternatiflerin ortaya çıkmasıyla birlikte hangi önemli fırsatlar ve zorluklar ortaya çıkmaktadır?",
+        "title": "Kalkınmaya yönelik finansal sistemin ilk şartı, sermaye kontrolü",
+        "paragraphs": 1
+      },
+      {
+        "title": "önemli fırsatlar ve zorluklar ortaya çıkmaktadır?",
         "paragraphs": 7
       },
       {
-        "title": "Çin’in farkı ve KYG’nin muazzam etkisi Çok kutupluluk uluslararası finansal işbirliğini nasıl etkiliyor? Çin bu bağlamda alternatif çözümler sağlamada nasıl bir rol oynuyor?",
+        "title": "Çin’in farkı ve KYG’nin muazzam etkisi",
+        "paragraphs": 1
+      },
+      {
+        "title": "sağlamada nasıl bir rol oynuyor?",
         "paragraphs": 6
       }
     ],
@@ -311,15 +264,7 @@
         "paragraphs": 3
       },
       {
-        "title": "In developing countries, on the other hand, the ratio of external debt",
-        "paragraphs": 1
-      },
-      {
-        "title": "facto situation: an unbalanced exchange of value between the countries",
-        "paragraphs": 1
-      },
-      {
-        "title": "periphery of this economy.” Capital Transfer from the Periphery to the Centre",
+        "title": "Capital Transfer from the Periphery to the Centre",
         "paragraphs": 5
       },
       {
