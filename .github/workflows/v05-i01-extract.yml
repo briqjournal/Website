@@ -27,96 +27,30 @@ jobs:
       - name: Install PDF and image tools
         run: sudo apt-get update && sudo apt-get install -y poppler-utils imagemagick
 
-      - name: Finalize visual and vector assets
+      - name: Finalize missing vector figure asset
         shell: bash
         run: |
           set -euo pipefail
-          work=/tmp/v05-i01-assets
-          rm -rf "$work"
-          mkdir -p "$work"
-
-          python3 - <<'PY'
-          import json, pathlib, subprocess
-          slugs = [
-              "filistin-1947",
-              "kudus-2023",
-              "filistinli-bir-multecinin-gozunden",
-              "cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen",
-          ]
-          root=pathlib.Path("/tmp/v05-i01-assets")
-          for slug in slugs:
-              meta=json.loads(pathlib.Path("content/articles",slug,"metadata.json").read_text())
-              out=root/f"{slug}.pdf"
-              subprocess.run(["curl","-L","--fail","--retry","3","--retry-delay","2","-o",str(out),meta["urls"]["pdfEn"]],check=True)
-          PY
-
-          for slug in filistin-1947 kudus-2023 filistinli-bir-multecinin-gozunden; do
-            out="public/assets/article-figures/$slug"
-            if [ -s "$out/figure-01.jpg" ]; then
-              echo "$slug production asset already present; preserving it."
-              continue
-            fi
-            src="$work/$slug.pdf"
-            d="$work/$slug"
-            mkdir -p "$d" "$out"
-            pdfimages -png "$src" "$d/image"
-            best=$(find "$d" -type f -name '*.png' -printf '%s %p\n' | sort -nr | head -1 | cut -d' ' -f2-)
-            test -n "$best"
-            convert "$best" -strip -quality 88 "$out/figure-01.jpg"
-          done
-
           slug=cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen
           out="public/assets/article-figures/$slug"
-          figure_count=$(python3 -c 'import json; p="tmp/v05-i01-candidates/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen/en.json"; print(len(json.load(open(p))["figures"]))')
-          if [ "$figure_count" = "5" ]; then
-            test -s "$out/figure-01.jpg"
-            test -s "$out/figure-05.jpg"
-            mv "$out/figure-05.jpg" "$out/figure-06.jpg"
-            mv "$out/figure-04.jpg" "$out/figure-05.jpg"
-            mv "$out/figure-03.jpg" "$out/figure-04.jpg"
-            mv "$out/figure-02.jpg" "$out/figure-03.jpg"
-            pdftoppm -f 6 -l 6 -singlefile -jpeg -r 200 "$work/$slug.pdf" "$work/vector-page" >/dev/null 2>&1
-            convert "$work/vector-page.jpg" -crop 1405x1075+135+250 +repage -strip -quality 90 "$out/figure-02.jpg"
-
-            python3 - <<'PY'
-            import json, pathlib
-            slug="cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen"
-            root=pathlib.Path("tmp/v05-i01-candidates")/slug
-            caps={
-              "en":[
-                "There are multifaceted relationships between a multipolarised world and the restructuring of the global position of the dollar (Photo: CGTN, 2021).",
-                "Figure 1. De-Dollarization in the Geopolitical Analysis Grid. This is adapted from (Cattaruzza & Limonier, 2019).",
-                "Many allied countries did not feel empowered to challenge the US-centred global political economy, because alignment with US objectives was rewarded with access to vital loans and aid (Photo: China Daily, 2022).",
-                "The RMB's progress is commendable, but the RMB is still far from realising a decisive challenge to globally dominant currencies (Photo: China Daily, 2023).",
-                "Figure and Comment Inserted by BRIQ: development of RMB in cross-border payments, measured as the share of RMB in an economy's total payments to China (Graph: IMF, 2023). Figure 2. Evolution of RMB Cross-Border Payments.",
-                "China's push for de-dollarization and efforts to internationalize the RMB are not limited to direct financial instruments (Photo: CGTN, 2019)."
-              ],
-              "tr":[
-                "Çok kutuplulaşan bir dünya ile doların küresel konumunun yeniden yapılandırılması arasında çok yönlü ilişkiler bulunmaktadır (Fotoğraf: CGTN, 2021).",
-                "Şekil 1. Jeopolitik Analiz Sisteminde De-Dolarizasyon. Tablo (Cattaruzza & Limonier, 2019) kaynağına dayanmaktadır.",
-                "Birçok müttefik ülke ABD merkezli küresel politik ekonomiye meydan okuyabilecek gücü kendinde bulamamıştır; çünkü ABD’nin hedefleriyle uyumlu hareket etmek, hayati kredilere ve yardımlara erişimle ödüllendirilmekteydi (Fotoğraf: China Daily, 2022).",
-                "RMB’nin ilerlemesi takdir edilebilir bir durumdur, ancak RMB küresel olarak hakim para birimlerine kesin bir meydan okuma gerçekleştirmekten henüz uzaktadır (Fotoğraf: China Daily, 2023).",
-                "RMB'nin bir ekonominin Çin'e yaptığı toplam ödemelerdeki payı olarak ölçülen, sınır ötesi ödemelerdeki RMB'nin gelişimi (Grafik: IMF, 2023). Şekil 2. RMB Sınır Ötesi Ödemelerin Gelişimi.",
-                "Çin’in de-dolarizasyon yönündeki itici gücü ve RMB'yi uluslararasılaştırma çabaları sadece doğrudan finansal araçlarla sınırlı değildir (Fotoğraf: CGTN, 2019)."
-              ]
-            }
-            for locale in ("en","tr"):
-                p=root/f"{locale}.json"
-                j=json.loads(p.read_text())
-                if len(j.get("figures",[])) != 5:
-                    raise SystemExit(f"{locale}: expected 5 figures before vector insertion")
-                j["figures"]=[
-                  {"id":f"figure-{i+1}","src":f"/assets/article-figures/{slug}/figure-{i+1:02d}.jpg","caption":cap}
-                  for i,cap in enumerate(caps[locale])
-                ]
-                p.write_text(json.dumps(j,ensure_ascii=False,indent=2)+"\n")
-            PY
-          elif [ "$figure_count" = "6" ]; then
-            echo "Multipolar vector figure already inserted; preserving six-figure state."
-          else
-            echo "Unexpected multipolar figure count: $figure_count" >&2
-            exit 1
+          if [ -s "$out/figure-06.jpg" ]; then
+            echo "Six-asset multipolar state already present."
+            exit 0
           fi
+          test -s "$out/figure-01.jpg"
+          test -s "$out/figure-02.jpg"
+          test -s "$out/figure-03.jpg"
+          test -s "$out/figure-04.jpg"
+          test -s "$out/figure-05.jpg"
+
+          pdf=/tmp/multipolar.pdf
+          curl -L --fail --retry 3 --retry-delay 2 -o "$pdf" "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2023-12/BRIQ_C5S1_ENG-40-59.pdf"
+          mv "$out/figure-05.jpg" "$out/figure-06.jpg"
+          mv "$out/figure-04.jpg" "$out/figure-05.jpg"
+          mv "$out/figure-03.jpg" "$out/figure-04.jpg"
+          mv "$out/figure-02.jpg" "$out/figure-03.jpg"
+          pdftoppm -f 6 -l 6 -singlefile -jpeg -r 200 "$pdf" /tmp/vector-page >/dev/null 2>&1
+          convert /tmp/vector-page.jpg -crop 1405x1075+135+250 +repage -strip -quality 90 "$out/figure-02.jpg"
 
       - name: Verify finalized assets
         shell: bash
@@ -137,15 +71,11 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/assets/article-figures/filistin-1947
-          git add public/assets/article-figures/kudus-2023
-          git add public/assets/article-figures/filistinli-bir-multecinin-gozunden
           git add public/assets/article-figures/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen
-          git add -f tmp/v05-i01-candidates/cok-kutupluluk-meydan-okumasi-dolarin-sarsilan-ustunlugu-ve-abd-hegemonyasinin-degisen
           if git diff --cached --quiet; then
             echo "No asset changes"
             exit 0
           fi
-          git commit -m "Finalize v05-i01 visual and vector figure assets"
+          git commit -m "Finalize v05-i01 multipolar vector figure asset"
           git pull --rebase origin chore/v05-i01-fulltext-canonical
           git push origin HEAD:chore/v05-i01-fulltext-canonical
