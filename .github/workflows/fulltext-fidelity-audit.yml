@@ -14,7 +14,7 @@ permissions:
 jobs:
   audit:
     name: Audit official locale PDFs
-    runs-on: ubuntu-22.04
+    runs-on: macos-latest
     timeout-minutes: 45
     steps:
       - name: Resolve fidelity unit
@@ -34,7 +34,7 @@ jobs:
 
       - name: Install PDF tools
         if: steps.unit.outputs.issue != ''
-        run: sudo apt-get update >/dev/null && sudo apt-get install -y poppler-utils >/dev/null
+        run: brew install poppler >/dev/null
 
       - name: Run fidelity audit
         if: steps.unit.outputs.issue != ''

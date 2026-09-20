@@ -16,7 +16,7 @@ concurrency:
 jobs:
   validate:
     name: Build, test, and lint
-    runs-on: ubuntu-22.04
+    runs-on: macos-latest
     timeout-minutes: 20
     env:
       CI: "true"
