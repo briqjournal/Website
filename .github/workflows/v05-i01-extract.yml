@@ -6,6 +6,11 @@ on:
       - chore/v05-i01-fulltext-canonical
     paths:
       - '.github/workflows/v05-i01-extract.yml'
+  pull_request:
+    types: [synchronize, reopened, ready_for_review]
+    paths:
+      - '.github/workflows/v05-i01-extract.yml'
+      - 'content/articles/**/fulltext/*.json'
   workflow_dispatch:
 
 permissions:
