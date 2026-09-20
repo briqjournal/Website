@@ -2,36 +2,26 @@
   "sections": [
     {
       "id": "en-section-1",
-      "title": "Bertolt Brecht",
-      "paragraphs": [
-        "*Bertolt Brecht was one of the most influential playwrights of the 20th century. His works include The Threepenny Opera (1928) with composer Kurt Weill, Mother Courage and Her Children (1941), The Good Person of Szechwan (1943), and The Resistible Rise of Arturo Ui (1958). Brecht was born in Augsburg, Bavaria, in 1898, and the two world wars directly affected his life and works. He wrote poetry when he was a student but studied medicine at the Ludwig Maximilian University of Munich. After military service during World War I, he abandoned his medical studies to pursue writing and theater. A member of the Independent Social Democratic Party, Brecht wrote theater criticism for a socialist newspaper from 1919 to 1921. His plays were banned in Germany in the 1930s, and in 1933, he went into exile. He relocated to East Berlin in 1949 and ran the Berliner Ensemble, a theater company. Brecht’s poetry is collected in Poems 1913-1956 (1997) and Poetry and Prose: Bertolt Brecht (2003). He wrote a wide variety of poetry, including occasional poems, poems he set to music and performed, songs and poems for his plays, personal poems recording anecdotes and thoughts, and political poems. Bertolt Brecht died in 1956. He is buried in Berlin."
-      ]
-    },
-    {
-      "id": "en-section-2",
       "title": "In Praise of Learning",
       "paragraphs": [
         "Learn the simplest things!  \nFor you whose time has come  \nit is never too late!  \nLearn your ABC,  \nit is not enough, but learn it!  \nDo not let it discourage you, begin!  \nYou must know everything!  \nYou must take over the leadership!",
         "Learn, man in the asylum!  \nLearn, man in prison!  \nLearn, wife in the kitchen!  \nLearn, man of sixty!  \nSeek out the school, you who are  \nhomeless!  \nSharpen your wits, you who shiver!  \nHungry man, reach for the book:  \nIt is a weapon.  \nYou must take over the leadership!",
-        "Don’t be afraid of asking, brother!  \nDon’t be won over,  \nSee for yourself!  \nWhat you don’t know yourself, you  \ndon’t know.  \nAdd up the reckoning.  \nIt’s you who must pay it.  \nPut your finger on each item  \nask how did it get here?  \nYou must take over the leadership!",
-        "(from a song written for the play Mother, produced in 1935)"
+        "Don’t be afraid of asking, brother!  \nDon’t be won over,  \nSee for yourself!  \nWhat you don’t know yourself, you  \ndon’t know.  \nAdd up the reckoning.  \nIt’s you who must pay it.  \nPut your finger on each item  \nask how did it get here?  \nYou must take over the leadership!"
       ]
     }
   ],
   "keywords": [],
   "footnotes": [
     {
-      "id": "note-1",
+      "id": "1",
+      "text": "From a song written for the play Mother, produced in 1935."
+    },
+    {
+      "id": "2",
       "text": "Retrieved October 15, 2024, from http://www.progressivelibrariansguild.org/PL/PL23/060.pdf"
     }
   ],
   "references": [],
   "acknowledgements": "",
-  "figures": [
-    {
-      "id": "figure-1",
-      "src": "/assets/article-figures/ogrenmeye-ovgu/figure-01.jpg",
-      "caption": "Visual 1"
-    }
-  ]
+  "figures": []
 }
