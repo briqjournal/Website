@@ -1,6 +1,9 @@
 name: v05-i01 evidence capture
 
 on:
+  push:
+    branches:
+      - chore/v05-i01-fulltext-canonical
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
