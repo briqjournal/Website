@@ -63,6 +63,10 @@
   - The nine prose/interview records were preserved after paragraph/order/reference/footnote/caption checks found no additional confirmed canonical defects. Their published figure inventories matched the migration-verified counts and production assets, including the intentional author-portrait exclusions in Africa at Dawn, the Ahmet Kavas interview, the Bovdunov interview, and the Egypt history record; the already-verified normalized body assets were preserved.
   - The three visual records (Xhosa woman smoking a pipe, Ventriloquist and Crier in the Moor, and Don’t Forget While Fighting for Peace) were preserved after their context text, notes, captions, and artwork assets matched the official publication evidence; locale-specific embedded-image renditions were not treated as contamination.
   - The post-repair whole-issue fidelity audit actually executed against the official locale PDFs and passed; build/test/lint also passed on the repair checkpoint.
+- Completed unit: `v05-i01`. All 11 records / 22 EN-TR locale records were checked against the official locale PDFs, reusing the completed migration audit evidence after verifying that none of the issue's metadata, canonical full-text files, or production figure assets changed between the migration merge (`0ce6ff8026360e5d12650eef9f75763ffb2e43d0`) and the fidelity base (`59d20547f7fd80e3b0e5b57408ba938650df65a5`).
+  - No new confirmed fidelity defect was found, so the already-correct canonical records were preserved. The migration-verified repairs remain intact: one Turkish multipolarity figure caption, bibliography line-wrap repairs, and IMF/V-Lab URL normalization; body/section order, references, footnotes, locale separation, poem structure, captions, and the 25 referenced production figure assets remain unchanged.
+  - A fresh current-tree regression across all 22 canonical locale records found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, or empty sections. The two poem records and three visual/non-standard records remain in their verified published structures.
+  - The branch-level full-text fidelity workflow is the final post-audit PDF-backed verification for this no-repair unit.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v05-i01`.
+**Next unit:** `v04-i04`.
