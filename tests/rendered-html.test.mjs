@@ -275,8 +275,8 @@ test("keeps contribution tables inside author-guide navigation and the licence l
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
 
-  assert.match(trHtml, /class="scrollspy-link level-2" href="#icerik-turleri-ve-kelime-sayilari"/);
-  assert.match(enHtml, /class="scrollspy-link level-2" href="#contribution-types-and-word-counts"/);
+  assert.match(trHtml, /class="[^"]*scrollspy-link level-2[^"]*" href="#icerik-turleri-ve-kelime-sayilari"/);
+  assert.match(enHtml, /class="[^"]*scrollspy-link level-2[^"]*" href="#contribution-types-and-word-counts"/);
   assert.match(trHtml, /<h2>İçerik türleri ve kelime sayıları<\/h2>[\s\S]*class="format-table"/);
   assert.match(enHtml, /<h2>Contribution types and word counts<\/h2>[\s\S]*class="format-table"/);
   assert.doesNotMatch(trHtml, /class="editorial-page-module"/);
