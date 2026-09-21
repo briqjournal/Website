@@ -1,0 +1,44 @@
+name: v04-i03 exact artwork source
+
+on:
+  push:
+    branches:
+      - evidence/v04-i03-exact-artwork
+    paths:
+      - ".github/workflows/v04-i03-exact-artwork-source.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out initial official-PDF import
+        uses: actions/checkout@v4
+        with:
+          ref: 8c5e5252bb6f6cfbd8dd0569702047cdb3486fd1
+          fetch-depth: 1
+          lfs: false
+
+      - name: Fetch only the three official LFS PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git lfs install --local
+          git lfs pull --include="public/assets/archive/pdfs/articles/bell-the-cat-en.pdf,public/assets/archive/pdfs/articles/savas-kan-lekesi-en.pdf,public/assets/archive/pdfs/articles/uluslararasi-kole-plantasyonu-uzerine-en.pdf" --exclude=""
+          test "$(sha256sum public/assets/archive/pdfs/articles/bell-the-cat-en.pdf | cut -d' ' -f1)" = "5925a274b2fc0f314dd79d3190793024cca4ae24c39e678dd5f44d84446ef55a"
+          test "$(sha256sum public/assets/archive/pdfs/articles/savas-kan-lekesi-en.pdf | cut -d' ' -f1)" = "b3cde2f9f46e594fdcbe46f3ee609bff81460088798ac4b88ffc650cf19fe495"
+          test "$(sha256sum public/assets/archive/pdfs/articles/uluslararasi-kole-plantasyonu-uzerine-en.pdf | cut -d' ' -f1)" = "1f334cbbf915f50c24349317fe5713f5a1115a974de32503a666bc8c24379dbd"
+
+      - name: Upload exact official PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: v04-i03-exact-official-pdfs
+          path: |
+            public/assets/archive/pdfs/articles/bell-the-cat-en.pdf
+            public/assets/archive/pdfs/articles/savas-kan-lekesi-en.pdf
+            public/assets/archive/pdfs/articles/uluslararasi-kole-plantasyonu-uzerine-en.pdf
+          if-no-files-found: error
+          retention-days: 1
