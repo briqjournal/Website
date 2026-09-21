@@ -786,17 +786,21 @@ function WritingRules() {
       <EditorialLongform
         navigationTitle="Bu sayfada"
         className="for-authors-longform"
-        before={
-          <div className="format-table">
-            <div className="format-row format-head"><b>İçerik türü</b><b>Uzunluk</b><b>Değerlendirme</b></div>
-            <div className="format-row"><span>Akademik makale</span><span>5000–9000 kelime</span><span>Çift kör hakemlik</span></div>
-            <div className="format-row"><span>Kitap incelemesi</span><span>En çok 1000 kelime</span><span>Editoryal inceleme</span></div>
-            <div className="format-row"><span>Araştırma / inceleme</span><span>En çok 3000 kelime</span><span>Editoryal inceleme</span></div>
-            <div className="format-row"><span>Haber bülteni</span><span>En çok 1500 kelime</span><span>Editoryal inceleme</span></div>
-            <div className="format-row"><span>Ana makale</span><span>En çok 3500 kelime</span><span>Editoryal inceleme</span></div>
-          </div>
-        }
         sections={[
+          {
+            id: "icerik-turleri-ve-kelime-sayilari",
+            title: "İçerik türleri ve kelime sayıları",
+            content: (
+              <div className="format-table">
+                <div className="format-row format-head"><b>İçerik türü</b><b>Uzunluk</b><b>Değerlendirme</b></div>
+                <div className="format-row"><span>Akademik makale</span><span>5000–9000 kelime</span><span>Çift kör hakemlik</span></div>
+                <div className="format-row"><span>Kitap incelemesi</span><span>En çok 1000 kelime</span><span>Editoryal inceleme</span></div>
+                <div className="format-row"><span>Araştırma / inceleme</span><span>En çok 3000 kelime</span><span>Editoryal inceleme</span></div>
+                <div className="format-row"><span>Haber bülteni</span><span>En çok 1500 kelime</span><span>Editoryal inceleme</span></div>
+                <div className="format-row"><span>Ana makale</span><span>En çok 3500 kelime</span><span>Editoryal inceleme</span></div>
+              </div>
+            ),
+          },
           {
             id: "dergi-ve-kapsam",
             title: "Dergi ve yayın kapsamı",
@@ -1024,7 +1028,7 @@ function CallsPage() {
             <a href={call.url} key={call.title}>
               {call.image ? <img src={call.image} alt="" loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}
               <div>
-                <span>{call.status} · Son Tarih: {call.deadline}</span>
+                <span>{call.status} · {call.deadlineLabel}: {call.deadline}</span>
                 <h2>{call.title}</h2>
                 <p>{call.summary}</p>
                 <b>Çağrıyı incele ↗︎</b>
@@ -1149,7 +1153,7 @@ function CallDetail({ slug }: { slug: string }) {
   const copy = completeCallCopyTr[slug] || callEditorialCopy[slug];
   return (
     <>
-      <CallHero locale="tr" slug={slug} title={title} deadline={deadline} active={Boolean(active)} image={active?.image} />
+      <CallHero locale="tr" slug={slug} title={title} deadline={deadline} deadlineLabel={active?.deadlineLabel} active={Boolean(active)} image={active?.image} />
       <div className="site-shell call-detail-page">
         <div className="reading-content">
           <section><h2>Çağrının kapsamı</h2>{copy ? copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{active?.summary || "Bu tematik çağrı, BRIQ’in ilgili sayısı için uluslararası akademik katkıları bir araya getirmek üzere yayımlanmıştır."}</p>}</section>

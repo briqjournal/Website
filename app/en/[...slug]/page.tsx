@@ -305,17 +305,21 @@ function EnglishWritingRules() {
       <EditorialLongform
         navigationTitle="On this page"
         className="for-authors-longform"
-        before={
-          <div className="format-table">
-            <div className="format-row format-head"><b>Contribution type</b><b>Length</b><b>Evaluation</b></div>
-            <div className="format-row"><span>Academic article</span><span>5,000–9,000 words</span><span>Double-blind peer review</span></div>
-            <div className="format-row"><span>Book review</span><span>Up to 1,000 words</span><span>Editorial review</span></div>
-            <div className="format-row"><span>Research / review essay</span><span>Up to 3,000 words</span><span>Editorial review</span></div>
-            <div className="format-row"><span>News report</span><span>Up to 1,500 words</span><span>Editorial review</span></div>
-            <div className="format-row"><span>Feature article</span><span>Up to 3,500 words</span><span>Editorial review</span></div>
-          </div>
-        }
         sections={[
+          {
+            id: "contribution-types-and-word-counts",
+            title: "Contribution types and word counts",
+            content: (
+              <div className="format-table">
+                <div className="format-row format-head"><b>Contribution type</b><b>Length</b><b>Evaluation</b></div>
+                <div className="format-row"><span>Academic article</span><span>5,000–9,000 words</span><span>Double-blind peer review</span></div>
+                <div className="format-row"><span>Book review</span><span>Up to 1,000 words</span><span>Editorial review</span></div>
+                <div className="format-row"><span>Research / review essay</span><span>Up to 3,000 words</span><span>Editorial review</span></div>
+                <div className="format-row"><span>News report</span><span>Up to 1,500 words</span><span>Editorial review</span></div>
+                <div className="format-row"><span>Feature article</span><span>Up to 3,500 words</span><span>Editorial review</span></div>
+              </div>
+            ),
+          },
           {
             id: "journal-and-scope",
             title: "Journal and publication scope",
@@ -566,7 +570,7 @@ function EnglishContact() {
 function EnglishSearch() { return <><EnglishHero kicker="Search" title="Search BRIQ" intro="Search articles, authors, issues, cover titles, DOI records, and calls for papers." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} locale="en" /></div></>; }
 
 function EnglishCalls() {
-  return <><EnglishHero title="Calls for Papers" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={call.urlEn} key={call.urlEn}>{call.image ? <img src={call.image} alt="" loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · Deadline: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
+  return <><EnglishHero title="Calls for Papers" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={call.urlEn} key={call.urlEn}>{call.image ? <img src={call.image} alt="" loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · {call.deadlineLabelEn}: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
 }
 
 function EnglishAuthorProfile({ id }: { id: string }) {
@@ -735,7 +739,7 @@ function EnglishCallDetail({ slug }: { slug: string }) {
   const copy = completeCallCopyEn[slug] || englishCallEditorialCopy[slug];
   return (
     <>
-      <CallHero locale="en" slug={slug} title={title} deadline={deadline} active={Boolean(active)} image={active?.image} />
+      <CallHero locale="en" slug={slug} title={title} deadline={deadline} deadlineLabel={active?.deadlineLabelEn} active={Boolean(active)} image={active?.image} />
       <div className="site-shell call-detail-page">
         <div className="reading-content">
           <section><h2>Scope of the call</h2>{copy ? copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>This thematic call was published to bring together international scholarly contributions for the relevant BRIQ issue.</p>}</section>

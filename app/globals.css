@@ -2234,15 +2234,23 @@ img {
 }
 
 .license-lead img {
-  width: 155px;
+  width: 110px;
 }
 
 .license-lead h2,
 .submission-lead h2 {
   margin: 14px 0 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(30px, 4vw, 50px);
   font-weight: 500;
+}
+
+.license-lead h2 {
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: 1.15;
+}
+
+.submission-lead h2 {
+  font-size: clamp(30px, 4vw, 50px);
   line-height: 1.05;
 }
 

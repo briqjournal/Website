@@ -28,7 +28,7 @@ export default function EnglishHome() {
         <div className="home-call-list">
           {calls.map((call) => <a className="home-call-row" href={call.urlEn} key={call.titleEn}>
             <span className="home-call-image">{call.image && <img src={call.image} alt="" aria-hidden="true" loading="lazy" decoding="async" />}</span>
-            <span className="home-call-deadline"><small>Deadline</small><CallDeadline value={call.deadlineEn} /></span>
+            <span className="home-call-deadline"><small>{call.deadlineLabelEn}</small><CallDeadline value={call.deadlineEn} /></span>
             <div className="home-call-copy"><span>{call.statusEn}</span><h3>{call.titleEn}</h3><p>{call.summaryEn}</p></div>
             <span className="home-call-link">View call <b>↗︎</b></span>
           </a>)}
