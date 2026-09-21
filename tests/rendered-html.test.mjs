@@ -268,6 +268,25 @@ test("keeps the official Turkish and English author guidance in the two-level lo
   }
 });
 
+test("keeps contribution tables inside author-guide navigation and the licence lead at content scale", async () => {
+  const [trResponse, enResponse] = await Promise.all([
+    renderPath("/tr/yazarlar/yazim-kurallari"),
+    renderPath("/en/for-authors/guidelines"),
+  ]);
+  const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
+
+  assert.match(trHtml, /class="scrollspy-link level-2" href="#icerik-turleri-ve-kelime-sayilari"/);
+  assert.match(enHtml, /class="scrollspy-link level-2" href="#contribution-types-and-word-counts"/);
+  assert.match(trHtml, /<h2>İçerik türleri ve kelime sayıları<\/h2>[\s\S]*class="format-table"/);
+  assert.match(enHtml, /<h2>Contribution types and word counts<\/h2>[\s\S]*class="format-table"/);
+  assert.doesNotMatch(trHtml, /class="editorial-page-module"/);
+  assert.doesNotMatch(enHtml, /class="editorial-page-module"/);
+
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(css, /\.license-lead img \{\s*width: 110px/);
+  assert.match(css, /\.license-lead h2 \{[\s\S]*font-size: clamp\(24px, 2\.4vw, 32px\)/);
+});
+
 test("keeps the new issue, board, archive, and author interactions in Turkish-English parity", async () => {
   const [trIssue, enIssue, trBoard, enBoard, trArchive, enArchive, trArticle, enArticle] = await Promise.all([
     renderPath("/tr/guncel-sayi"),
@@ -436,8 +455,8 @@ test("lists active calls with left-hand images and prominent deadlines", async (
     assert.equal((html.match(/class="home-call-deadline"/g) || []).length, 3);
     assert.doesNotMatch(html, /class="call-card/);
   }
-  assert.match(trHome, /<small>Son Tarih<\/small><strong><span>1 Ekim<\/span><span>2026<\/span><\/strong>/);
-  assert.match(enHome, /<small>Deadline<\/small><strong><span>1 October<\/span><span>2026<\/span><\/strong>/);
+  assert.match(trHome, /<small>Uzatılmış Son Tarih<\/small><strong><span>10 Ekim<\/span><span>2026<\/span><\/strong>/);
+  assert.match(enHome, /<small>Extended Deadline<\/small><strong><span>10 October<\/span><span>2026<\/span><\/strong>/);
 });
 
 test("renders the two active thematic calls with complete structured source copy", async () => {
@@ -470,7 +489,8 @@ test("renders the two active thematic calls with complete structured source copy
   assert.match(trTransatlantic, /<h3>Transatlantik İlişkilerde Dönüşüm<\/h3>/);
   assert.match(trTransatlantic, /<h3>Çok Kutupluluk ve Batı İttifakının Krizi<\/h3>/);
   assert.match(trTransatlantic, /Atıf sistemi: APA 7\./);
-  assert.match(trTransatlantic, /Son metin gönderimi: 1 Ekim 2026/);
+  assert.match(trTransatlantic, /Uzatılmış son metin gönderim tarihi: 10 Ekim 2026/);
+  assert.match(enTransatlantic, /Extended deadline for final manuscript submission: 10 October 2026/);
   assert.doesNotMatch(trTransatlantic, /15 Ağustos 2026|APA 6/);
 
   assert.match(trAi, /BRIQ, yukarıdaki genel çerçeve içinde/);
@@ -916,16 +936,16 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(trHome, /Yayıncı: Çin İş Geliştirme ve Dostluk Derneği/);
   assert.match(enHome, /Publisher: Turkish-Chinese Business Development and Friendship Association/);
 
-  assert.match(trHome, /1 Ekim/);
+  assert.match(trHome, /10 Ekim/);
   assert.match(trHome, /1 Aralık/);
-  assert.doesNotMatch(trHome, /15 Ağustos 2026/);
-  assert.match(trCalls, /1 Ekim 2026/);
-  assert.doesNotMatch(trCalls, /15 Ağustos 2026/);
-  assert.match(enHome, /1 October/);
+  assert.doesNotMatch(trHome, /1 Ekim 2026|15 Ağustos 2026/);
+  assert.match(trCalls, /10 Ekim 2026/);
+  assert.doesNotMatch(trCalls, /1 Ekim 2026|15 Ağustos 2026/);
+  assert.match(enHome, /10 October/);
   assert.match(enHome, /1 December/);
-  assert.doesNotMatch(enHome, /15 August 2026/);
-  assert.match(enCalls, /1 October 2026/);
-  assert.doesNotMatch(enCalls, /15 August 2026/);
+  assert.doesNotMatch(enHome, /1 October 2026|15 August 2026/);
+  assert.match(enCalls, /10 October 2026/);
+  assert.doesNotMatch(enCalls, /1 October 2026|15 August 2026/);
 
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   assert.match(css, /Article hierarchy, compact disclosures, and sitewide density refinement/);
