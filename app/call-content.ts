@@ -105,7 +105,7 @@ export const completeCallCopyTr: Record<string, CallEditorialCopy> = {
       "Tüm çalışmalar çift kör hakemlik sürecine tabi tutulacaktır.",
     ],
     guidelineHref: "/tr/yazarlar/yazim-kurallari",
-    deadline: "Son metin gönderimi: 1 Ekim 2026",
+    deadline: "Uzatılmış son metin gönderim tarihi: 10 Ekim 2026",
     contact: "briq@briqjournal.com",
   },
   "yapay-zeka-uretici-gucler-ortak-refah": {
@@ -170,7 +170,7 @@ export const completeCallCopyEn: Record<string, CallEditorialCopy> = {
       "All scholarly articles undergo double-blind peer review.",
     ],
     guidelineHref: "/en/for-authors/submission-guidelines",
-    deadline: "Final manuscript submission: 1 October 2026",
+    deadline: "Extended deadline for final manuscript submission: 10 October 2026",
     contact: "briq@briqjournal.com",
   },
   "artificial-intelligence-productive-forces": {

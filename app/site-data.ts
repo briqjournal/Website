@@ -224,8 +224,10 @@ export const calls = [
   {
     status: "Aktif çağrı",
     statusEn: "Active call",
-    deadline: "1 Ekim 2026",
-    deadlineEn: "1 October 2026",
+    deadlineLabel: "Uzatılmış Son Tarih",
+    deadlineLabelEn: "Extended Deadline",
+    deadline: "10 Ekim 2026",
+    deadlineEn: "10 October 2026",
     title: "Savaşlar ve Stratejik Parçalanma Çağında Transatlantik İlişkilerin Yeniden Yapılanması",
     titleEn: "Reconfiguring Transatlantic Relations in an Era of War and Strategic Fragmentation",
     summary:
@@ -239,6 +241,8 @@ export const calls = [
   {
     status: "Aktif çağrı",
     statusEn: "Active call",
+    deadlineLabel: "Son Tarih",
+    deadlineLabelEn: "Deadline",
     deadline: "1 Aralık 2026",
     deadlineEn: "1 December 2026",
     title: "Yapay Zekâ, Üretici Güçler ve İnsanlığın Ortak Refahı",
@@ -254,6 +258,8 @@ export const calls = [
   {
     status: "Sürekli açık",
     statusEn: "Open call",
+    deadlineLabel: "Son Tarih",
+    deadlineLabelEn: "Deadline",
     deadline: "Süresiz",
     deadlineEn: "Ongoing",
     title: "Kitap İncelemesi",
