@@ -72,6 +72,9 @@
   - The six prose/interview/review records were otherwise preserved. The migration-verified Cai Hesen Turkish paragraph-order repair remains intact; fresh regression found no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, or empty sections.
   - The three visual/non-standard records were preserved with their verified production images and context. Krokodil correctly remains without a genuine English text locale: the English canonical body stays explicitly empty while the shared published cartoon asset is preserved, rather than substituting Turkish prose.
   - The final branch-level official-PDF fidelity workflow and normal build/test/lint are the merge gates; no temporary audit artifacts are committed.
+- Completed unit: `v04-i03`. All 10 records / 20 EN-TR locale records passed the final official-PDF audit for merged PR #77; no confirmed fidelity defect remained.
+  - Wren’s published EN “48 countries” / TR “148 ülke” difference is preserved as a legitimate locale difference.
+  - Gürses’s locale-specific 13-note structure is preserved as a legitimate locale difference.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v04-i03`.
+**Next unit:** `v04-i02`.
