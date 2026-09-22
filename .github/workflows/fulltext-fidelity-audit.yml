@@ -33,6 +33,25 @@ jobs:
       - name: Check out repository
         if: steps.unit.outputs.issue != ''
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          lfs: false
+
+      - name: Restore pinned official v04-i03 issue PDFs
+        if: steps.unit.outputs.issue == 'v04-i03'
+        shell: bash
+        run: |
+          set -euo pipefail
+          evidence_commit="8c5e5252bb6f6cfbd8dd0569702047cdb3486fd1"
+          en="public/assets/archive/pdfs/issues/cilt-4-sayi-3-en.pdf"
+          tr="public/assets/archive/pdfs/issues/cilt-4-sayi-3-tr.pdf"
+          git lfs install --local
+          git fetch --no-tags --depth=1 origin "$evidence_commit"
+          git lfs fetch origin "$evidence_commit" --include="$en,$tr" --exclude=""
+          git checkout "$evidence_commit" -- "$en" "$tr"
+          git lfs checkout "$en" "$tr"
+          test "$(sha256sum "$en" | cut -d' ' -f1)" = "50f832fc08811fcd88cbea777176bccf2f4078e6ba29608a357323fdae12d3f7"
+          test "$(sha256sum "$tr" | cut -d' ' -f1)" = "a8f33f0e6ee2b7727d51bc97ef48910d1be877bedd90ce7a4aa0ceeef9b66698"
 
       - name: Install PDF tools
         if: steps.unit.outputs.issue != ''
