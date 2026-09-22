@@ -6,6 +6,7 @@ on:
       - "content/articles/**/fulltext/*.json"
       - "public/assets/article-figures/**"
       - "scripts/audit-fulltext-fidelity.py"
+      - "scripts/audit-fulltext-fidelity-ci.py"
       - "docs/FULLTEXT-FIDELITY-WORKLOG.md"
       - ".github/workflows/fulltext-fidelity-audit.yml"
 
@@ -43,7 +44,7 @@ jobs:
         run: |
           mkdir -p .audit/diagnostics
           set +e
-          python3 scripts/audit-fulltext-fidelity.py "${{ steps.unit.outputs.issue }}" > .audit/diagnostics/audit.log 2>&1
+          python3 scripts/audit-fulltext-fidelity-ci.py "${{ steps.unit.outputs.issue }}" > .audit/diagnostics/audit.log 2>&1
           status=$?
           echo "$status" > .audit/diagnostics/audit.status
           cat .audit/diagnostics/audit.log
