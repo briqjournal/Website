@@ -36,7 +36,7 @@ const slides = {
       tone: "umber",
     },
     {
-      eyebrow: "Son tarih · 1 Ekim 2026",
+      eyebrow: "Uzatılmış Son Tarih · 10 Ekim 2026",
       kicker: "Makale çağrısı",
       title: "Transatlantik İlişkilerin Yeniden Yapılanması",
       subtitle: "Savaşlar ve Stratejik Parçalanma Çağında",
@@ -108,7 +108,7 @@ const slides = {
       tone: "umber",
     },
     {
-      eyebrow: "Deadline · 1 October 2026",
+      eyebrow: "Extended Deadline · 10 October 2026",
       kicker: "Call for papers",
       title: "Reconfiguring Transatlantic Relations",
       subtitle: "In an Era of War and Strategic Fragmentation",

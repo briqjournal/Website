@@ -70,7 +70,7 @@ export default function Home() {
                   {call.image && <img src={call.image} alt="" aria-hidden="true" loading="lazy" decoding="async" />}
                 </span>
                 <span className="home-call-deadline">
-                  <small>Son Tarih</small>
+                  <small>{call.deadlineLabel}</small>
                   <CallDeadline value={call.deadline} />
                 </span>
                 <div className="home-call-copy">
