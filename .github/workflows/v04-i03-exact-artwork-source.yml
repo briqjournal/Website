@@ -8,7 +8,7 @@ on:
       - ".github/workflows/v04-i03-exact-artwork-source.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   source:
@@ -32,13 +32,61 @@ jobs:
           test "$(sha256sum public/assets/archive/pdfs/articles/savas-kan-lekesi-en.pdf | cut -d' ' -f1)" = "b3cde2f9f46e594fdcbe46f3ee609bff81460088798ac4b88ffc650cf19fe495"
           test "$(sha256sum public/assets/archive/pdfs/articles/uluslararasi-kole-plantasyonu-uzerine-en.pdf | cut -d' ' -f1)" = "1f334cbbf915f50c24349317fe5713f5a1115a974de32503a666bc8c24379dbd"
 
-      - name: Upload exact official PDFs
-        uses: actions/upload-artifact@v4
-        with:
-          name: v04-i03-exact-official-pdfs
-          path: |
-            public/assets/archive/pdfs/articles/bell-the-cat-en.pdf
-            public/assets/archive/pdfs/articles/savas-kan-lekesi-en.pdf
-            public/assets/archive/pdfs/articles/uluslararasi-kole-plantasyonu-uzerine-en.pdf
-          if-no-files-found: error
-          retention-days: 1
+      - name: Recover exact embedded JPEG objects
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          mkdir -p recovered/bell recovered/sabur recovered/minor
+          pdfimages -j public/assets/archive/pdfs/articles/bell-the-cat-en.pdf recovered/bell/img
+          pdfimages -j public/assets/archive/pdfs/articles/savas-kan-lekesi-en.pdf recovered/sabur/img
+          pdfimages -j public/assets/archive/pdfs/articles/uluslararasi-kole-plantasyonu-uzerine-en.pdf recovered/minor/img
+
+          find_match() {
+            local dir="$1" expected="$2" out="$3"
+            local found=""
+            for f in "$dir"/*.jpg; do
+              [ -f "$f" ] || continue
+              if [ "$(sha256sum "$f" | cut -d' ' -f1)" = "$expected" ]; then
+                if [ -n "$found" ]; then
+                  echo "multiple matching JPEGs for $expected" >&2
+                  exit 1
+                fi
+                found="$f"
+              fi
+            done
+            [ -n "$found" ] || { echo "no matching JPEG for $expected" >&2; exit 1; }
+            cp "$found" "$out"
+            test "$(sha256sum "$out" | cut -d' ' -f1)" = "$expected"
+          }
+
+          find_match recovered/bell 47c16a2381b032458e9266e347363ee2c60512fe985e50d10a7a77719b7822de recovered/bell.jpg
+          find_match recovered/sabur 98fca776957781e99696a5bb31ba3385b7eb7cfb60ac916c3b949b922d006b97 recovered/sabur.jpg
+          find_match recovered/minor bb6e32f91ee2cd3828d4fee1eb7d2cbdfe291faa7e3f314e4a052d95f4a87641 recovered/minor.jpg
+
+      - name: Create verified unreferenced Git blobs
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          create_blob() {
+            local label="$1" file="$2"
+            local payload response remote_sha local_sha
+            payload="$(base64 -w0 "$file")"
+            response="$(jq -n --arg content "$payload" '{content:$content,encoding:"base64"}' | curl -fsSL -X POST \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/repos/${GITHUB_REPOSITORY}/git/blobs" \
+              --data-binary @-)"
+            remote_sha="$(jq -r '.sha // empty' <<<"$response")"
+            [ -n "$remote_sha" ] || { echo "$response" >&2; exit 1; }
+            local_sha="$(git hash-object "$file")"
+            test "$remote_sha" = "$local_sha"
+            echo "${label}_BLOB=${remote_sha}"
+          }
+          create_blob BELL recovered/bell.jpg
+          create_blob SABUR recovered/sabur.jpg
+          create_blob MINOR recovered/minor.jpg
