@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, type MouseEvent, type ReactNode } from "react";
-import { articleFigureLabel, type ArticleFigure } from "./ArticleFigures";
+import { articleFigureDisplayCaption, articleFigureLabel, type ArticleFigure } from "./ArticleFigures";
 import { ReferenceText } from "./ReferenceText";
 
 export type FullTextSection = {
@@ -303,7 +303,7 @@ function InlineArticleFigure({
   return (
     <figure className="article-inline-media" id={`inline-${figure.id}`}>
       <img src={figure.src} alt={figure.caption} loading="lazy" decoding="async" />
-      <figcaption><b>{label}.</b> {figure.caption}</figcaption>
+      <figcaption><b>{label}.</b> {articleFigureDisplayCaption(figure)}</figcaption>
     </figure>
   );
 }
