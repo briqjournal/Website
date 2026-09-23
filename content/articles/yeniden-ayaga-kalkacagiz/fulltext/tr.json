@@ -1,8 +1,22 @@
 {
-  "sections": [],
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Yeniden Ayağa Kalkacağız",
+      "paragraphs": [
+        "Filistinli Sabbah, Selçuk Üniversitesi İletişim Fakültesi Gazetecilik Bölümünden 2021 yılında, bölüm 1’incisi ve fakülte 3’üncüsü olarak mezun oldu. Filistinli Animasyon ve Grafik Sanatçısı Sabbah, Fransız Charlie Hebdo dergisinin depremin ardından yayımladığı Türkiye’yi hedef alan karikatürü yeniden çizdi. Sabbah, sosyal medya hesabından yayınladığı videoda Fransa’da yayımlanan haftalık mizah dergisi Charlie Hebdo’nun Türkiye’nin yaşadığı deprem felaketine ilişkin yayınladığı karikatürü yeniden düzenleyerek, \"Hey Ahlaksız Charlie Hebdo. Öyle çizmeyecektiniz. Böyle çizecektiniz! Yeniden ayağa kalkacağız. Bu güçlü millet yeniden ayağa kalkacak!\" diye yazdı."
+      ]
+    }
+  ],
   "keywords": [],
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/yeniden-ayaga-kalkacagiz/figure-01.jpg",
+      "caption": "Yeniden Ayağa Kalkacağız"
+    }
+  ]
 }

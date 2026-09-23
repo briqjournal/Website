@@ -4,7 +4,7 @@
       "id": "tr-section-1",
       "title": "Futbol Taraftarları (Bakü, 1959)",
       "paragraphs": [
-        "Reichstag'ın çatısına zafer sancağının dikildiği meşhur fotoğrafı çeken Yevgeniy Haldey, Sovyet Kızıl Ordu deniz subayı ve fotoğrafçısıydı. Bunun yanı sıra, Nürnberg duruşmalarında Yevgeniy Haldey'in fotoğrafları maddi kanıtlar arasında yer aldı. Novorossiysk, Kerç, Sevastopol'un kurtuluşu ve Romanya, Bulgaristan, Yugoslavya, Avusturya, Macaristan'ın kurtuluşuna yapılan harekâtlara katıldı. Potsdam Konferansı, Paris Konferansı ve Nürnberg Duruşmaları'nın da çekimlerinde yer aldı."
+        "Reichstag’ın çatısına zafer sancağının dikildiği meşhur fotoğrafı çeken Yevgeniy Haldey, Sovyet Kızıl Ordu deniz subayı ve fotoğrafçısıydı. Bunun yanı sıra, Nürnberg duruşmalarında Yevgeniy Haldey'in fotoğrafları maddi kanıtlar arasında yer aldı. Novorossiysk, Kerç, Sevastopol'un kurtuluşu ve Romanya, Bulgaristan, Yugoslavya, Avusturya, Macaristan'ın kurtuluşuna yapılan harekâtlara katıldı. Potsdam Konferansı, Paris Konferansı ve Nürnberg Duruşmaları’nın da çekimlerinde yer aldı."
       ]
     }
   ],
@@ -17,5 +17,11 @@
   ],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/futbol-taraftarlari-baku-1959/figure-01.jpg",
+      "caption": "Futbol Taraftarları (Bakü, 1959)"
+    }
+  ]
 }

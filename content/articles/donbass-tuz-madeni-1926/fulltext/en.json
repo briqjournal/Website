@@ -17,5 +17,11 @@
   ],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/donbass-tuz-madeni-1926/figure-01.jpg",
+      "caption": "Donbass Salt Mine (1926)"
+    }
+  ]
 }
