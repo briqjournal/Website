@@ -243,32 +243,38 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-01.jpg",
-      "caption": "Çin’in Parti ve Devlet liderleri Mao Zedung Anıt Salonu’nda, Pekin (Fotoğraf: Ju Peng/China Daily, 2023)."
+      "caption": "Çin’in Parti ve Devlet liderleri Mao Zedung Anıt Salonu’nda, Pekin (Fotoğraf: Ju Peng/China Daily, 2023).",
+      "kind": "visual"
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-02.jpg",
-      "caption": "Yijing’de Luoshu ve Hetu diyagramları."
+      "caption": "Yijing’de Luoshu ve Hetu diyagramları.",
+      "kind": "figure"
     },
     {
       "id": "figure-3",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-03.jpg",
-      "caption": "Mao Zedung’un Yan’an’da Yangjialing köylüleriyle görüşmesi (Fotoğraf: CPC News, 2025)."
+      "caption": "Mao Zedung’un Yan’an’da Yangjialing köylüleriyle görüşmesi (Fotoğraf: CPC News, 2025).",
+      "kind": "visual"
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-04.jpg",
-      "caption": "Mao Zedung’un Kızıl Muhafızlar ile devrimci öğretmen ve öğrenci temsilcilerini kabulü, 18 Ağustos 1966 (Fotoğraf: Mao Zedong Database, 1966)."
+      "caption": "Mao Zedung’un Kızıl Muhafızlar ile devrimci öğretmen ve öğrenci temsilcilerini kabulü, 18 Ağustos 1966 (Fotoğraf: Mao Zedong Database, 1966).",
+      "kind": "visual"
     },
     {
       "id": "figure-5",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-05.jpg",
-      "caption": "Büyük İleri Atılım sırasında kitlesel emek seferberliği, Hubei, 1958 (Fotoğraf: China Photographers Association, 2021)."
+      "caption": "Büyük İleri Atılım sırasında kitlesel emek seferberliği, Hubei, 1958 (Fotoğraf: China Photographers Association, 2021).",
+      "kind": "visual"
     },
     {
       "id": "figure-6",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-06.jpg",
-      "caption": "Mao Zedung ve Josef Stalin, Moskova, 21 Aralık 1949 (Fotoğraf: Russian State Central Museum of Cinema and Photography, 2021)."
+      "caption": "Mao Zedung ve Josef Stalin, Moskova, 21 Aralık 1949 (Fotoğraf: Russian State Central Museum of Cinema and Photography, 2021).",
+      "kind": "visual"
     }
   ]
 }
