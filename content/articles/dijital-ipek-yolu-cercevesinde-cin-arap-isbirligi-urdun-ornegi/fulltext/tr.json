@@ -269,42 +269,58 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-01.jpg",
-      "caption": "Dijital İpek Yolu ve dijital bağlantısallık (Fotoğraf: CGTN, 2021)."
+      "caption": "Dijital İpek Yolu ve dijital bağlantısallık (Fotoğraf: CGTN, 2021).",
+      "kind": "visual"
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-02.jpg",
-      "caption": "BeiDou Uydu Navigasyon Sistemi’nin küresel kapsama alanı (Fotoğraf: Xinhua, 2024)."
+      "caption": "BeiDou Uydu Navigasyon Sistemi’nin küresel kapsama alanı (Fotoğraf: Xinhua, 2024).",
+      "kind": "visual"
     },
     {
       "id": "figure-3",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-03.jpg",
-      "caption": "Ürdün’ün dijital dönüşümünün politika aşamaları (Çizim: mozon-tech, t.y.)."
+      "caption": "Ürdün’ün dijital dönüşümünün politika aşamaları (Çizim: mozon-tech, t.y.).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-5",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-04.jpg",
-      "caption": "Ürdün’de bilgi ve iletişim teknolojileri sektörü (Çizim: Jordan News Agency, 2026)."
+      "caption": "Ürdün’de bilgi ve iletişim teknolojileri sektörü (Çizim: Jordan News Agency, 2026).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-6",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-5",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-05.jpg",
-      "caption": "Çin Dışişleri Bakanı Wang Yi ve Ürdün Kralı II. Abdullah, Amman, 15 Aralık 2025 (Fotoğraf: China Daily, 2025)."
+      "caption": "Çin Dışişleri Bakanı Wang Yi ve Ürdün Kralı II. Abdullah, Amman, 15 Aralık 2025 (Fotoğraf: China Daily, 2025).",
+      "kind": "visual"
     },
     {
       "id": "figure-6",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-06.jpg",
-      "caption": "Ürdün Yatırım Bakanı Tareq Abughazaleh, Çin Uluslararası Tedarik Zinciri Fuarı, 23 Haziran 2026 (Fotoğraf: Jordan News Agency, 2026)."
+      "caption": "Ürdün Yatırım Bakanı Tareq Abughazaleh, Çin Uluslararası Tedarik Zinciri Fuarı, 23 Haziran 2026 (Fotoğraf: Jordan News Agency, 2026).",
+      "kind": "visual"
     },
     {
       "id": "figure-7",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-07.jpg",
-      "caption": "2026 Ürdün Endüstriyel İşletim Sistemleri Güvenlik Forumu (Fotoğraf: Jordan News Agency, 2026)."
+      "caption": "2026 Ürdün Endüstriyel İşletim Sistemleri Güvenlik Forumu (Fotoğraf: Jordan News Agency, 2026).",
+      "kind": "visual"
     },
     {
       "id": "figure-8",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-08.jpg",
-      "caption": "Ürdün’ün ulusal dijital dönüşüm stratejisi ve dijital kapsayıcılık hedefi (Fotoğraf: TechAfricanews, 2026)."
+      "caption": "Ürdün’ün ulusal dijital dönüşüm stratejisi ve dijital kapsayıcılık hedefi (Fotoğraf: TechAfricanews, 2026).",
+      "kind": "visual"
     }
   ],
   "declarations": {

@@ -451,47 +451,84 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-01.jpg",
-      "caption": "Filistin Devleti’ni tanıyan ülkeler, 22 Eylül 2025 (Harita: IMEMC, 2025)."
+      "caption": "Filistin Devleti’ni tanıyan ülkeler, 22 Eylül 2025 (Harita: IMEMC, 2025).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-1",
+        "afterParagraph": 1
+      }
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-02.jpg",
-      "caption": "Gazze şehrine yönelik saldırılar nedeniyle Nasr’dan ayrılan Filistinli aileler, 21 Eylül 2025 (Fotoğraf: VCG, 2025)."
+      "caption": "Gazze şehrine yönelik saldırılar nedeniyle Nasr’dan ayrılan Filistinli aileler, 21 Eylül 2025 (Fotoğraf: VCG, 2025).",
+      "kind": "visual"
     },
     {
       "id": "figure-3",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-03.jpg",
-      "caption": "Tablo 1: İsrail-Filistin’e ilişkin başlıca transatlantik kamuoyu araştırmaları, Ekim 2023–2026"
+      "caption": "Tablo 1: İsrail-Filistin’e ilişkin başlıca transatlantik kamuoyu araştırmaları, Ekim 2023–2026",
+      "kind": "table"
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-04.jpg",
-      "caption": "Tablo 1’in devamı"
+      "caption": "Tablo 1’in devamı",
+      "kind": "table"
     },
     {
       "id": "figure-5",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-05.jpg",
-      "caption": "Filistin yanlısı protesto gösterisi, Roma, 22 Eylül 2025 (Fotoğraf: Li Jing/Xinhua, 2025)."
+      "caption": "Filistin yanlısı protesto gösterisi, Roma, 22 Eylül 2025 (Fotoğraf: Li Jing/Xinhua, 2025).",
+      "kind": "visual"
     },
     {
       "id": "figure-6",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-06.jpg",
-      "caption": "Gazze şehrinin Zeitoun mahallesinde enkaz arasında yürüyen halk, 27 Kasım 2025 (Fotoğraf: China Daily, 2025)."
+      "caption": "Gazze şehrinin Zeitoun mahallesinde enkaz arasında yürüyen halk, 27 Kasım 2025 (Fotoğraf: China Daily, 2025).",
+      "kind": "visual"
     },
     {
       "id": "figure-7",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-07.jpg",
-      "caption": "Seyyed Hasan Nasrallah’ın fotoğraflarını taşıyan destekçileri, Saida, 28 Eylül 2024 (Fotoğraf: CGTN, 2024)."
+      "caption": "Seyyed Hasan Nasrallah’ın fotoğraflarını taşıyan destekçileri, Saida, 28 Eylül 2024 (Fotoğraf: CGTN, 2024).",
+      "kind": "visual"
     },
     {
       "id": "figure-8",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-08.jpg",
-      "caption": "Hindistan-Orta Doğu-Avrupa Koridoru (Harita: IMEC, t.y.)."
+      "caption": "Hindistan-Orta Doğu-Avrupa Koridoru (Harita: IMEC, t.y.).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-13",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-9",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-09.jpg",
-      "caption": "Batı Şeria’daki yerleşim yayılımı (Grafik: Arab News, 2026)."
+      "caption": "Batı Şeria’daki yerleşim yayılımı (Grafik: Arab News, 2026).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-14",
+        "afterParagraph": 2
+      }
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Tablo 1: İsrail-Filistin’e ilişkin başlıca transatlantik kamuoyu araştırmaları, Ekim 2023–2026",
+      "headers": [],
+      "rows": [],
+      "placement": {
+        "sectionId": "tr-section-4",
+        "afterParagraph": 2
+      },
+      "imageSrcs": [
+        "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-03.jpg",
+        "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-04.jpg"
+      ]
     }
   ]
 }

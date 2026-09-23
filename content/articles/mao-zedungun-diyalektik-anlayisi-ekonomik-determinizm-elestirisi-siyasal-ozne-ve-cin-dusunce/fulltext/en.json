@@ -238,32 +238,43 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-01.jpg",
-      "caption": "Xi Jinping, general secretary of the Communist Party of China Central Committee, Chinese president and chairman of the Central Military Commission, and other Party and State leaders pay tribute to Comrade Mao Zedong at the Chairman Mao Memorial Hall in Beijing on the 130th anniversary of the birth of Mao (Photo: China Daily, 2023)."
+      "caption": "Xi Jinping, general secretary of the Communist Party of China Central Committee, Chinese president and chairman of the Central Military Commission, and other Party and State leaders pay tribute to Comrade Mao Zedong at the Chairman Mao Memorial Hall in Beijing on the 130th anniversary of the birth of Mao (Photo: China Daily, 2023).",
+      "kind": "visual"
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-02.jpg",
-      "caption": "The Luoshu (洛書) and Hetu (河圖) diagrams (Image: KKNews, 2020)."
+      "caption": "The Luoshu (洛書) and Hetu (河圖) diagrams (Image: KKNews, 2020).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-3",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-3",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-03.jpg",
-      "caption": "Mao Zedong talking with peasants in Yangjialing, Yan’an, about their production and living conditions (Photo: CPC News, 2025)."
+      "caption": "Mao Zedong talking with peasants in Yangjialing, Yan’an, about their production and living conditions (Photo: CPC News, 2025).",
+      "kind": "visual"
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-04.jpg",
-      "caption": "On August 18, 1966, Chairman Mao received Red Guards and representatives of revolutionary teachers and students at the Tiananmen Gate Tower (Photo: Mao Zedong Database [毛泽东博览], 1966)."
+      "caption": "On August 18, 1966, Chairman Mao received Red Guards and representatives of revolutionary teachers and students at the Tiananmen Gate Tower (Photo: Mao Zedong Database [毛泽东博览], 1966).",
+      "kind": "visual"
     },
     {
       "id": "figure-5",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-05.jpg",
-      "caption": "Mass labor mobilization during the Great Leap Forward: building a pontoon bridge to transport earth, Jingmen, Hubei, 1958 (Photo provided by Chen Feng/China Photographers Association, 2021)."
+      "caption": "Mass labor mobilization during the Great Leap Forward: building a pontoon bridge to transport earth, Jingmen, Hubei, 1958 (Photo provided by Chen Feng/China Photographers Association, 2021).",
+      "kind": "visual"
     },
     {
       "id": "figure-6",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-06.jpg",
-      "caption": "Mao Zedong and Joseph Stalin at the ceremonial meeting marking Stalin’s 70th birthday, Bolshoi Theatre, Moscow, December 21, 1949 (Photo: Russian State Central Museum of Cinema and Photography [ЦСДФ], 2021)."
+      "caption": "Mao Zedong and Joseph Stalin at the ceremonial meeting marking Stalin’s 70th birthday, Bolshoi Theatre, Moscow, December 21, 1949 (Photo: Russian State Central Museum of Cinema and Photography [ЦСДФ], 2021).",
+      "kind": "visual"
     }
-  ]
+  ],
+  "tables": []
 }

@@ -19,6 +19,7 @@ export type FullTextTable = {
   rows: string[][];
   note?: string;
   imageSrc?: string;
+  imageSrcs?: string[];
   placement: {
     sectionId: string;
     afterParagraph: number;
@@ -245,10 +246,19 @@ function InlineArticleTable({
   references: FullTextReference[];
   notes: FullTextNote[];
 }) {
-  if (table.imageSrc) {
+  const imageSources = table.imageSrcs?.length ? table.imageSrcs : table.imageSrc ? [table.imageSrc] : [];
+  if (imageSources.length) {
     return (
       <figure className="article-inline-table article-inline-table-image" id={table.id}>
-        <img src={table.imageSrc} alt={table.caption} loading="lazy" decoding="async" />
+        {imageSources.map((src, index) => (
+          <img
+            src={src}
+            alt={imageSources.length > 1 ? `${table.caption} (${index + 1}/${imageSources.length})` : table.caption}
+            loading="lazy"
+            decoding="async"
+            key={src}
+          />
+        ))}
         <figcaption className="article-inline-table-image-caption">{table.caption}</figcaption>
       </figure>
     );

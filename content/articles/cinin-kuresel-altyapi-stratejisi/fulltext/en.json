@@ -23,12 +23,14 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/cinin-kuresel-altyapi-stratejisi/figure-01.jpg",
-      "caption": "Austin Strange, Chinese Global Infrastructure (Cambridge University Press, 2024)."
+      "caption": "Austin Strange, Chinese Global Infrastructure (Cambridge University Press, 2024).",
+      "kind": "visual"
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/cinin-kuresel-altyapi-stratejisi/figure-02.jpg",
-      "caption": "China will continue promoting BRI infrastructure development with established advantages (Illustration: Tang Tengfei/Global Times, 2023)."
+      "caption": "China will continue promoting BRI infrastructure development with established advantages (Illustration: Tang Tengfei/Global Times, 2023).",
+      "kind": "visual"
     }
   ]
 }
