@@ -95,6 +95,21 @@ test("keeps registered BRIQ DOIs matched to their Crossref article records", asy
     "dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi": "10.67696/8q6a9a7j",
     "filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun": "10.67696/2t7q7z9t",
     "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce": "10.67696/7j5e3t9z",
+    "kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi": "10.67696/7z8u9a8t",
+    "turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi": "10.67696/9d8g7g6p",
+    "kuresel-kalkinma-girisimi-ve-cinin-ortadogudaki-kalkinma-isbirligi-calismalari": "10.67696/9t8p5a8b",
+    "modernist-milliyetci-olarak-sun-yat-sen-ve-siyasal-mirasi": "10.67696/7w7s7q6w",
+    "cinli-devrimcilerin-sun-yat-sen-ve-mustafa-kemal-arasindaki-benzerlikler-uzerine-gorusleri": "10.67696/6j2e8x6y",
+    "yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar": "10.67696/6z7p7k5f",
+    "alter-kuresellesme-baglaminda-cin-fransiz-iliskileri": "10.67696/8v4k3s3a",
+    "cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine": "10.67696/3h4m9n5e",
+    "endonezya-dis-politikasinda-bandung-mirasina-yeniden-bakis-tarihsel-bir-inceleme-ve-guncel": "10.67696/9k2z2d6j",
+    "bandung-ruhu-70-yasinda": "10.67696/3y9c6c9j",
+    "bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden": "10.67696/6t8c3r4t",
+    "yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar": "10.67696/3y4k5w3e",
+    "rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve": "10.67696/5u4a7a4w",
+    "dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi": "10.67696/6b2t5b5a",
+    "genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme": "10.67696/8d6b6r6u",
   });
 });
 

@@ -14,7 +14,7 @@
   "dates": {"received": "2023-11-28", "revised": "2024-05-08", "accepted": "2024-02-20", "published": "2025-03-01"},
   "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 2, "year": 2025, "season": {"en": "Spring", "tr": "Bahar"}},
   "pages": {"first": "225", "last": "247"},
-  "doi": null,
+  "doi": "10.67696/8v4k3s3a",
   "language": ["en", "tr"],
   "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
   "funding": null,
