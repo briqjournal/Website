@@ -1100,6 +1100,62 @@ test("keeps Saudi Turkish media archive-only and renders Table 8 once", async ()
   assert.match(prerenderTables, /table-08-combined\.svg/);
 });
 
+test("renders the Jordan article secondary headings as subsections in both locales", async () => {
+  const slug = "dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi";
+  const [trResponse, enResponse] = await Promise.all([
+    renderPath(`/tr/makaleler/${slug}`),
+    renderPath(`/en/articles/${englishArticleSlug(slug)}`),
+  ]);
+  assert.equal(trResponse.status, 200);
+  assert.equal(enResponse.status, 200);
+  const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
+
+  const trSubsections = [
+    "Yöntem",
+    "Dijital İpek Yolu Kavramının Gelişimi ve Küresel Bağlamı",
+    "Ürdün’ün Dijital Dönüşüm Stratejisinin Aşamalı Olarak Güncellenmesi",
+    "Ürdün’ün Ulusal Özellikleri ve Dijital Ortaklara Duyduğu İhtiyaç",
+    "Çin-Ürdün Dijital İşbirliği Çerçevesinin Pekişmesi ve Kurumsallaşması",
+    "Fırsatlar",
+    "Zorluklar",
+  ];
+  const enSubsections = [
+    "Methodology",
+    "The Evolving Concept of the Digital Silk Road and Its Global Context",
+    "The Iterative Upgrading of Jordan’s Digital Transformation Strategy",
+    "Jordan’s National Characteristics and Demand for Digital Partners",
+    "Consolidation and Institutionalization of the China-Jordan Digital Cooperation Framework",
+    "Opportunities",
+    "Challenges",
+  ];
+
+  for (const title of trSubsections) {
+    assert.ok(trHtml.includes(`<h4>${title}</h4>`), `TR subsection: ${title}`);
+    assert.ok(!trHtml.includes(`<h3>${title}</h3>`), `TR must not be main section: ${title}`);
+  }
+  for (const title of enSubsections) {
+    assert.ok(enHtml.includes(`<h4>${title}</h4>`), `EN subsection: ${title}`);
+    assert.ok(!enHtml.includes(`<h3>${title}</h3>`), `EN must not be main section: ${title}`);
+  }
+
+  for (const title of [
+    "Dijital İpek Yolu Girişimi ve Çin-Ürdün İşbirliği",
+    "Çinli Şirketlerin Ürdün’ün Dijital Yapılanmasına Katılımındaki Son Gelişmeler",
+    "Fırsatlar ve Zorluklar",
+    "Sonuç",
+  ]) {
+    assert.ok(trHtml.includes(`<h3>${title}</h3>`), `TR main section preserved: ${title}`);
+  }
+  for (const title of [
+    "The Digital Silk Road Initiative and China-Jordan Cooperation",
+    "Recent Developments in Chinese Enterprises’ Participation in Jordan’s Digital Construction",
+    "Opportunities and Challenges",
+    "Conclusion",
+  ]) {
+    assert.ok(enHtml.includes(`<h3>${title}</h3>`), `EN main section preserved: ${title}`);
+  }
+});
+
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trResponse, enResponse] = await Promise.all([
