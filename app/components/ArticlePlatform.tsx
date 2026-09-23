@@ -430,13 +430,7 @@ export async function ArticlePlatform({
         && section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US") !== genericFullTextSectionTitle
       )
       .map((section) => ({ id: section.id, label: section.title, level: 2 })),
-    ...(fullText?.figures.length ? [{
-      id: locale === "tr" ? "gorseller" : "visuals",
-      label: fullText.figures.some((figure) => /^(?:tablo|table)\b/i.test(figure.caption.trim()))
-        ? (locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables")
-        : (locale === "tr" ? "Görseller" : "Visuals"),
-      level: 1,
-    }] : []),
+    ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
     ...(fullText?.publicationNote ? [{ id: locale === "tr" ? "yayin-notu" : "publication-note", label: locale === "tr" ? "Yayın notu" : "Publication note", level: 1 }] : []),
     ...(acknowledgements ? [{ id: locale === "tr" ? "tesekkur" : "acknowledgements", label: locale === "tr" ? "Teşekkür" : "Acknowledgements", level: 1 }] : []),
