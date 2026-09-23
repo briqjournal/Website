@@ -248,6 +248,7 @@ function InlineArticleTable({
     return (
       <figure className="article-inline-table article-inline-table-image" id={table.id}>
         <img src={table.imageSrc} alt={table.caption} loading="lazy" decoding="async" />
+        <figcaption className="article-inline-table-image-caption">{table.caption}</figcaption>
       </figure>
     );
   }
