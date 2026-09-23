@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, type MouseEvent, type ReactNode } from "react";
-import { articleFigureDisplayCaption, articleFigureLabel, type ArticleFigure } from "./ArticleFigures";
+import { articleFigureDisplayCaption, articleFigureKind, articleFigureLabel, type ArticleFigure } from "./ArticleFigures";
 import { ReferenceText } from "./ReferenceText";
 
 export type FullTextSection = {
@@ -334,7 +334,7 @@ export function ArticleRichText({
               section.level === "subsection" ? <h4>{section.title}</h4> : <h3>{section.title}</h3>
             )}
             {figures
-              .filter((figure) => figure.placement?.sectionId === section.id && figure.placement.afterParagraph === 0)
+              .filter((figure) => articleFigureKind(figure) !== "visual" && figure.placement?.sectionId === section.id && figure.placement.afterParagraph === 0)
               .map((figure) => <InlineArticleFigure figure={figure} figures={figures} locale={locale} key={`inline-${figure.id}`} />)}
             {tables
               .filter((table) => table.placement.sectionId === section.id && table.placement.afterParagraph === 0)
@@ -345,7 +345,7 @@ export function ArticleRichText({
                   {renderFormattedText(sectionIndex === 0 && index === 0 ? sentenceCasePdfOpening(paragraph, locale) : paragraph, references, notes, `${section.id}-${index}`)}
                 </p>
                 {figures
-                  .filter((figure) => figure.placement?.sectionId === section.id && figure.placement.afterParagraph === index + 1)
+                  .filter((figure) => articleFigureKind(figure) !== "visual" && figure.placement?.sectionId === section.id && figure.placement.afterParagraph === index + 1)
                   .map((figure) => <InlineArticleFigure figure={figure} figures={figures} locale={locale} key={`inline-${figure.id}`} />)}
                 {tables
                   .filter((table) => table.placement.sectionId === section.id && table.placement.afterParagraph === index + 1)
