@@ -1100,6 +1100,68 @@ test("keeps Saudi Turkish media archive-only and renders Table 8 once", async ()
   assert.match(prerenderTables, /table-08-combined\.svg/);
 });
 
+test("renders the Palestinianism article secondary headings as subsections in both locales", async () => {
+  const slug = "filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun";
+  const [trResponse, enResponse] = await Promise.all([
+    renderPath(`/tr/makaleler/${slug}`),
+    renderPath(`/en/articles/${englishArticleSlug(slug)}`),
+  ]);
+  assert.equal(trResponse.status, 200);
+  assert.equal(enResponse.status, 200);
+  const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
+
+  const trSubsections = [
+    "Araştırma Tasarımı, Analitik Yaklaşım ve Kaynaklar",
+    "Amerika’daki Seyir",
+    "Avrupa’daki Seyir",
+    "Kuşaksal ve Kurumsal Boyutlar",
+    "On İki Gün Savaşı ve İran’ın Nükleer Altyapısının Vurulması",
+    "Direniş Ekseni’nin Zayıflatılması",
+    "İbrahim Anlaşmaları’nın Dayanıklılığı ve Sessizce Genişlemesi",
+    "Suudi Arabistan-İsrail İlişkilerinin Seyri",
+    "Trump Yönetimi ve Bölgesel Hegemonya Mimarisi",
+  ];
+  const enSubsections = [
+    "Research Design, Analytical Approach, and Sources",
+    "The American Trajectory",
+    "The European Trajectory",
+    "Generational and Institutional Dimensions",
+    "The Twelve-Day War and the Striking of Iranian Nuclear Infrastructure",
+    "The Degradation of the Axis of Resistance",
+    "The Resilience and Quiet Expansion of the Abraham Accords",
+    "The Saudi-Israeli Trajectory",
+    "The Trump Administration and the Architecture of Regional Hegemony",
+  ];
+
+  for (const title of trSubsections) {
+    assert.ok(trHtml.includes(`<h4>${title}</h4>`), `TR subsection: ${title}`);
+    assert.ok(!trHtml.includes(`<h3>${title}</h3>`), `TR must not be main section: ${title}`);
+  }
+  for (const title of enSubsections) {
+    assert.ok(enHtml.includes(`<h4>${title}</h4>`), `EN subsection: ${title}`);
+    assert.ok(!enHtml.includes(`<h3>${title}</h3>`), `EN must not be main section: ${title}`);
+  }
+
+  for (const title of [
+    "Transatlantik Siyasal-Retorik Bir Olgu Olarak Filistincilik",
+    "Transatlantik Kamuoyundaki Dönüşüm",
+    "Stratejik Realizm: ABD-Körfez-İsrail-İran Yakınlaşması",
+    "İki Devletli Çözümün Sonu: JST Argümanının Geliştirilmesi",
+    "Sonuç: Stratejik Ayrışma ve Batı İttifakının Geleceği",
+  ]) {
+    assert.ok(trHtml.includes(`<h3>${title}</h3>`), `TR main section preserved: ${title}`);
+  }
+  for (const title of [
+    "Palestinianism as a Transatlantic Political-Rhetorical Phenomenon",
+    "The Transatlantic Public Opinion Shift",
+    "Strategic Realism: The U.S.–Gulf–Israel–Iran Convergence",
+    "The End of the Two-State Solution: Extending the JST Argument",
+    "Conclusion: Strategic Divergence and the Future of the Western Alliance",
+  ]) {
+    assert.ok(enHtml.includes(`<h3>${title}</h3>`), `EN main section preserved: ${title}`);
+  }
+});
+
 test("renders the Jordan article secondary headings as subsections in both locales", async () => {
   const slug = "dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi";
   const [trResponse, enResponse] = await Promise.all([
