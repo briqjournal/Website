@@ -1047,6 +1047,111 @@ test("renders Turkish Çomak figures and tables inline while retaining all PDF m
   assert.equal((prerenderedHtml.slice(prerenderVisualGroup, prerenderDialog).match(/<figure/g) || []).length, 2);
 });
 
+test("applies the v07-i04 Figure/Table inline rule across the whole issue", async () => {
+  const cases = [
+    {
+      slug: "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi",
+      archive: { figure: 3, table: 9, visual: 6 },
+      inlineFigures: ["figure-10", "figure-13", "figure-14"],
+      inlineTables: ["table-1", "table-2", "table-3", "table-4", "table-5", "table-6", "table-7", "table-8"],
+    },
+    {
+      slug: "dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi",
+      archive: { figure: 2, table: 0, visual: 6 },
+      inlineFigures: ["figure-3", "figure-4"],
+      inlineTables: [],
+    },
+    {
+      slug: "filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun",
+      archive: { figure: 3, table: 2, visual: 4 },
+      inlineFigures: ["figure-1", "figure-8", "figure-9"],
+      inlineTables: ["table-1"],
+    },
+    {
+      slug: "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce",
+      // Official PDF contains one additional archive-only Sohu photo that is not yet present
+      // in production assets. Keep this at 7 so CI cannot certify the issue until restored.
+      archiveTotal: 7,
+      archive: { figure: 1, table: 0, visual: 6 },
+      inlineFigures: ["figure-2"],
+      inlineTables: [],
+    },
+    {
+      slug: "cinin-kuresel-altyapi-stratejisi",
+      archive: { figure: 0, table: 0, visual: 2 },
+      inlineFigures: [],
+      inlineTables: [],
+    },
+  ];
+
+  for (const item of cases) {
+    for (const locale of ["tr", "en"]) {
+      const route = locale === "tr"
+        ? `/tr/makaleler/${item.slug}`
+        : `/en/articles/${englishArticleSlug(item.slug)}`;
+      const response = await renderPath(route);
+      assert.equal(response.status, 200, route);
+      const html = await response.text();
+
+      const figureGroup = html.indexOf('data-kind="figure"');
+      const tableGroup = html.indexOf('data-kind="table"');
+      const visualGroup = html.indexOf('data-kind="visual"');
+      const dialog = html.indexOf('class="figure-lightbox"');
+
+      const presentGroups = [
+        ["figure", figureGroup],
+        ["table", tableGroup],
+        ["visual", visualGroup],
+      ].filter(([kind]) => item.archive[kind] > 0);
+      for (let i = 1; i < presentGroups.length; i += 1) {
+        assert.ok(presentGroups[i][1] > presentGroups[i - 1][1], `${route} archive group order`);
+      }
+
+      const boundaries = {
+        figure: [figureGroup, tableGroup >= 0 ? tableGroup : visualGroup >= 0 ? visualGroup : dialog],
+        table: [tableGroup, visualGroup >= 0 ? visualGroup : dialog],
+        visual: [visualGroup, dialog],
+      };
+      for (const kind of ["figure", "table", "visual"]) {
+        const expected = item.archive[kind];
+        const [start, end] = boundaries[kind];
+        if (expected === 0) {
+          assert.equal(start, -1, `${route} has no ${kind} archive group`);
+        } else {
+          assert.ok(start >= 0 && end > start, `${route} ${kind} archive group`);
+          assert.equal((html.slice(start, end).match(/<figure/g) || []).length, expected, `${route} ${kind} archive count`);
+        }
+      }
+
+      const expectedTotal = item.archiveTotal ?? Object.values(item.archive).reduce((sum, count) => sum + count, 0);
+      assert.match(
+        html,
+        new RegExp(`<summary><span>${locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables"}<\\/span><b>${expectedTotal}<\\/b><\\/summary>`),
+        `${route} complete PDF media count`,
+      );
+
+      for (const id of item.inlineFigures) {
+        assert.ok(html.includes(`id="inline-${id}"`), `${route} inline ${id}`);
+      }
+      for (const id of item.inlineTables) {
+        assert.ok(html.includes(`id="${id}"`), `${route} inline ${id}`);
+      }
+
+      const article = archive.articles.find((candidate) => candidate.slug === item.slug);
+      assert.ok(article, item.slug);
+      const fullTextModule = locale === "tr" ? "tr" : "en";
+      const canonical = JSON.parse(
+        await readFile(new URL(`../content/articles/${item.slug}/fulltext/${fullTextModule}.json`, import.meta.url), "utf8"),
+      );
+      for (const figure of canonical.figures || []) {
+        if (figure.kind === "visual") {
+          assert.ok(!html.includes(`id="inline-${figure.id}"`), `${route} visual ${figure.id} must remain archive-only`);
+        }
+      }
+    }
+  }
+});
+
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trResponse, enResponse] = await Promise.all([
