@@ -1047,6 +1047,87 @@ test("renders Turkish Çomak figures and tables inline while retaining all PDF m
   assert.equal((prerenderedHtml.slice(prerenderVisualGroup, prerenderDialog).match(/<figure/g) || []).length, 2);
 });
 
+test("renders Saudi Turkish figures and tables inline at PDF positions while retaining the complete archive", async () => {
+  const slug = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";
+  const response = await renderPath(`/tr/makaleler/${slug}`);
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  for (const id of ["inline-figure-10", "inline-figure-13", "inline-figure-14"]) {
+    assert.ok(html.includes(`id="${id}"`), id);
+  }
+  for (const id of ["table-1", "table-2", "table-3", "table-4", "table-5", "table-6", "table-7", "table-8"]) {
+    assert.ok(html.includes(`id="${id}"`), id);
+  }
+  for (const id of ["figure-1", "figure-2", "figure-3", "figure-4", "figure-5", "figure-6"]) {
+    assert.ok(!html.includes(`id="inline-${id}"`), `${id} must remain archive-only`);
+  }
+
+  const methodParagraph = html.indexOf("Her iki veri akışından elde edilen bulgular");
+  const tableEight = html.indexOf('id="table-8"');
+  const analysisHeading = html.indexOf('id="tr-section-7"');
+  assert.ok(methodParagraph >= 0 && tableEight > methodParagraph && analysisHeading > tableEight);
+  const tableEightHtml = html.slice(tableEight, analysisHeading);
+  assert.match(tableEightHtml, /figure-17\.jpg/);
+  assert.match(tableEightHtml, /figure-18\.jpg/);
+  assert.equal((tableEightHtml.match(/<img/g) || []).length, 2);
+
+  const tableOneLead = html.indexOf("Tablo 1, 2025 itibarıyla Suudi eğitimindeki Amerikan ve Çin yumuşak güç araçlarını");
+  const gamingParagraph = html.indexOf("Suudi Arabistan’ın video oyunları ve e-spor alanında Çin’le angajmanı");
+  assert.ok(tableOneLead >= 0 && html.indexOf('id="table-1"') > tableOneLead && gamingParagraph > html.indexOf('id="table-1"'));
+
+  const tableTwoLead = html.indexOf("Bu tablo Suudi Arabistan’ın oyun stratejisindeki ayrımı göstermektedir");
+  const sportsParagraph = html.indexOf("Suudi Arabistan’ın PIF’i spor alanında ABD’yle angajman kurmaya yönelmiş");
+  assert.ok(tableTwoLead >= 0 && html.indexOf('id="table-2"') > tableTwoLead && sportsParagraph > html.indexOf('id="table-2"'));
+
+  const foodParagraph = html.indexOf("2020-2025 verileri, Vizyon 2030’un turizm ve deneyim ekonomisine verdiği önemi");
+  const figureOneLead = html.indexOf("Şekil 1, Amerikan hızlı yemek zincirlerinin");
+  assert.ok(foodParagraph >= 0 && html.indexOf('id="inline-figure-10"') > foodParagraph && figureOneLead > html.indexOf('id="inline-figure-10"'));
+
+  const airIntro = html.indexOf("2022-2025 dönemine ait hava yolu bağlantısallığı verileri");
+  const figureTwoLead = html.indexOf("Şekil 2, Suudi Arabistan-Çin hava hatlarında önemli bir artış");
+  assert.ok(airIntro >= 0 && html.indexOf('id="inline-figure-13"') > airIntro && figureTwoLead > html.indexOf('id="inline-figure-13"'));
+
+  const tourismIntro = html.indexOf("Hem Çin’den hem de ABD’den Suudi Arabistan’a gelen turist sayısı");
+  const figureThreeLead = html.indexOf("Şekil 3’teki çizgi grafik");
+  assert.ok(tourismIntro >= 0 && html.indexOf('id="inline-figure-14"') > tourismIntro && figureThreeLead > html.indexOf('id="inline-figure-14"'));
+
+  assert.match(html, /Görsel ve tablolar/);
+  const figureGroup = html.indexOf('data-kind="figure"');
+  const tableGroup = html.indexOf('data-kind="table"');
+  const visualGroup = html.indexOf('data-kind="visual"');
+  const dialog = html.indexOf('class="figure-lightbox"');
+  assert.ok(figureGroup >= 0 && tableGroup > figureGroup && visualGroup > tableGroup && dialog > visualGroup);
+
+  assert.equal((html.slice(figureGroup, tableGroup).match(/<figure/g) || []).length, 3);
+  assert.equal((html.slice(tableGroup, visualGroup).match(/<figure/g) || []).length, 9);
+  assert.equal((html.slice(visualGroup, dialog).match(/<figure/g) || []).length, 6);
+  assert.match(html, /<summary><span>Görsel ve tablolar<\/span><b>18<\/b><\/summary>/);
+
+  const prerenderedHtml = await readFile(
+    new URL("../dist/client/tr/makaleler/" + slug + "/index.html", import.meta.url),
+    "utf8",
+  );
+  for (const id of [
+    "inline-figure-10", "inline-figure-13", "inline-figure-14",
+    "table-1", "table-2", "table-3", "table-4", "table-5", "table-6", "table-7", "table-8",
+  ]) {
+    assert.ok(prerenderedHtml.includes('id="' + id + '"'), `prerender ${id}`);
+  }
+  assert.equal((prerenderedHtml.slice(
+    prerenderedHtml.indexOf('data-kind="figure"'),
+    prerenderedHtml.indexOf('data-kind="table"'),
+  ).match(/<figure/g) || []).length, 3);
+  assert.equal((prerenderedHtml.slice(
+    prerenderedHtml.indexOf('data-kind="table"'),
+    prerenderedHtml.indexOf('data-kind="visual"'),
+  ).match(/<figure/g) || []).length, 9);
+  assert.equal((prerenderedHtml.slice(
+    prerenderedHtml.indexOf('data-kind="visual"'),
+    prerenderedHtml.indexOf('class="figure-lightbox"'),
+  ).match(/<figure/g) || []).length, 6);
+});
+
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trResponse, enResponse] = await Promise.all([
