@@ -282,13 +282,21 @@
       "id": "figure-3",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-03.jpg",
       "caption": "Jordan’s digital transformation has evolved through successive policy phases, each building upon prior frameworks (Illustration: mozon-tech, n.d.).",
-      "kind": "visual"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-5",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-04.jpg",
       "caption": "The information and communications technology sector accounts for about 12 percent of Jordan’s GDP (Illustration: Jordan News Agency, 2026).",
-      "kind": "visual"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-6",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-5",
