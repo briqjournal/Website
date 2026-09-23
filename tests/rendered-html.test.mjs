@@ -874,6 +874,8 @@ test("renders Çomak published table images inline at PDF positions while retain
 
   assert.match(html, /class="article-inline-table article-inline-table-image" id="table-1"><img src="[^"]*figure-03-en\.png"/);
   assert.match(html, /class="article-inline-table article-inline-table-image" id="table-2"><img src="[^"]*figure-04-en\.png"/);
+  assert.match(html, /figure-03-en\.png"[^>]*><figcaption class="article-inline-table-image-caption">Table 1\. Indicators Used to Distinguish a Transit Country from a Joint Production Hub<\/figcaption>/);
+  assert.match(html, /figure-04-en\.png"[^>]*><figcaption class="article-inline-table-image-caption">Table 2\. Indicator-Based Assessment of the Research Question<\/figcaption>/);
   assert.doesNotMatch(html, /class="article-inline-table-scroll"/);
 
   const methodSection = html.indexOf('id="en-section-3"');
@@ -902,6 +904,8 @@ test("renders Çomak published table images inline at PDF positions while retain
   );
   assert.match(prerenderedHtml, /class="article-inline-table article-inline-table-image" id="table-1"><img src="[^"]*figure-03-en\.png"/);
   assert.match(prerenderedHtml, /class="article-inline-table article-inline-table-image" id="table-2"><img src="[^"]*figure-04-en\.png"/);
+  assert.match(prerenderedHtml, /figure-03-en\.png"[^>]*><figcaption class="article-inline-table-image-caption">Table 1\. Indicators Used to Distinguish a Transit Country from a Joint Production Hub<\/figcaption>/);
+  assert.match(prerenderedHtml, /figure-04-en\.png"[^>]*><figcaption class="article-inline-table-image-caption">Table 2\. Indicator-Based Assessment of the Research Question<\/figcaption>/);
   assert.doesNotMatch(prerenderedHtml, /class="article-inline-table-scroll"/);
   assert.ok((prerenderedHtml.match(/figure-03-en\.png/g) || []).length >= 2);
   assert.ok((prerenderedHtml.match(/figure-04-en\.png/g) || []).length >= 2);
