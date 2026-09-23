@@ -1074,7 +1074,7 @@ test("keeps Saudi Turkish media archive-only and renders Table 8 once", async ()
   assert.equal((visualsHtml.match(/<figure/g) || []).length, 6);
   assert.match(html, /<summary><span>Görsel ve tablolar<\/span><b>17<\/b><\/summary>/);
 
-  assert.equal((tablesHtml.match(/<b>Tablo 8<\\/b>/g) || []).length, 1);
+  assert.equal(tablesHtml.split("<b>Tablo 8</b>").length - 1, 1);
   assert.match(tablesHtml, /table-08-combined\.svg/);
   assert.doesNotMatch(tablesHtml, /figure-17\.jpg|figure-18\.jpg/);
   assert.match(tablesHtml, /<b>Tablo 8<\/b>Birincil Veri Kaynakları ve Yöntemsel Notlar/);
@@ -1096,7 +1096,7 @@ test("keeps Saudi Turkish media archive-only and renders Table 8 once", async ()
   assert.equal((prerenderedHtml.slice(prerenderFigureGroup, prerenderTableGroup).match(/<figure/g) || []).length, 3);
   assert.equal((prerenderTables.match(/<figure/g) || []).length, 8);
   assert.equal((prerenderedHtml.slice(prerenderVisualGroup, prerenderDialog).match(/<figure/g) || []).length, 6);
-  assert.equal((prerenderTables.match(/<b>Tablo 8<\\/b>/g) || []).length, 1);
+  assert.equal(prerenderTables.split("<b>Tablo 8</b>").length - 1, 1);
   assert.match(prerenderTables, /table-08-combined\.svg/);
 });
 
