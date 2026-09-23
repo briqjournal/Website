@@ -282,13 +282,21 @@
       "id": "figure-3",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-03.jpg",
       "caption": "Ürdün’ün dijital dönüşümünün politika aşamaları (Çizim: mozon-tech, t.y.).",
-      "kind": "visual"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-5",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi/figure-04.jpg",
       "caption": "Ürdün’de bilgi ve iletişim teknolojileri sektörü (Çizim: Jordan News Agency, 2026).",
-      "kind": "visual"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-6",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-5",
