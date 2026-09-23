@@ -34,6 +34,8 @@ type AuthorMetadata = {
   email?: string;
   orcids?: string[];
   institutionUrl?: string;
+  appointmentTermTr?: string;
+  appointmentTermEn?: string;
   biographyTr?: string;
   biographyEn?: string;
 };
@@ -426,6 +428,14 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     orcids: ["0000-0002-9000-4456"],
     institutionUrl: "https://www.iitm.ac.in/",
   },
+  "Semih Koray": {
+    tr: "Bilkent Üniversitesi, İktisat Bölümü",
+    en: "Department of Economics, Bilkent University",
+    orcids: ["0000-0001-7498-6499"],
+    institutionUrl: "https://www.bilkent.edu.tr/",
+    appointmentTermTr: "2019–Günümüz",
+    appointmentTermEn: "2019–Present",
+  },
 };
 
 const displayCorrections: Record<string, string> = {
@@ -546,8 +556,8 @@ export const authorProfiles: AuthorProfile[] = (() => {
       const appointment: BriqAppointment = {
         roleTr: canonicalName === "Fikret Akfırat" && group.tr === "Yayın Kurulu" ? "Genel Yayın Yönetmeni" : group.roleTr,
         roleEn: canonicalName === "Fikret Akfırat" && group.en === "Editorial Board" ? "Editor-in-Chief" : group.roleEn,
-        termTr: "2026–Günümüz",
-        termEn: "2026–Present",
+        termTr: metadata.appointmentTermTr || "2026–Günümüz",
+        termEn: metadata.appointmentTermEn || "2026–Present",
       };
       const existing = profiles.get(id);
       if (existing) {
