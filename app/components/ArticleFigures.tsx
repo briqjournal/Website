@@ -29,16 +29,19 @@ export function articleFigureLabel(
   locale: "tr" | "en",
 ) {
   const kind = articleFigureKind(figure);
-  const number = figures
-    .filter((candidate) => articleFigureKind(candidate) === kind)
-    .findIndex((candidate) => candidate.id === figure.id) + 1;
+  const publishedNumber = figure.caption.trim().match(/^(?:figure|table|visual|şekil|tablo|görsel)\s+(\d+)\b/iu)?.[1];
+  const number = publishedNumber ?? String(
+    figures
+      .filter((candidate) => articleFigureKind(candidate) === kind)
+      .findIndex((candidate) => candidate.id === figure.id) + 1,
+  );
 
   if (kind === "figure") return locale === "tr" ? `Şekil ${number}` : `Figure ${number}`;
   if (kind === "table") return locale === "tr" ? `Tablo ${number}` : `Table ${number}`;
   return locale === "tr" ? `Görsel ${number}` : `Visual ${number}`;
 }
 
-function displayCaption(figure: ArticleFigure) {
+export function articleFigureDisplayCaption(figure: ArticleFigure) {
   return figure.caption
     .replace(/^(?:figure|table|visual|şekil|tablo|görsel)\s+\d+\s*[.:]\s*/iu, "")
     .trim();
@@ -84,7 +87,7 @@ export function ArticleFigures({ figures, locale }: { figures: ArticleFigure[]; 
                           <img src={figure.src} alt={figure.caption} loading="lazy" decoding="async" />
                           <span><ExpandIcon />{locale === "tr" ? "Büyüt" : "Enlarge"}</span>
                         </button>
-                        <figcaption><b>{label}</b>{displayCaption(figure)}</figcaption>
+                        <figcaption><b>{label}</b>{articleFigureDisplayCaption(figure)}</figcaption>
                         <div className="figure-actions">
                           <a href={figure.src} target="_blank" rel="noreferrer">{locale === "tr" ? "Ayrı görüntüle ↗︎" : "Open separately ↗︎"}</a>
                           <a href={figure.src} download>{locale === "tr" ? "İndir ↓︎" : "Download ↓︎"}</a>
