@@ -22,8 +22,25 @@ Locale files use the same general structure:
 - `references[]`
 - `acknowledgements`
 - `figures[]`
+- optional `tables[]` for semantic tables embedded in the article body
 
-The English and Turkish files do **not** need identical paragraph, note, figure, or reference counts.
+The English and Turkish files do **not** need identical paragraph, note, figure, table, or reference counts.
+
+### Semantic tables
+
+When a published table can be reconstructed faithfully as structured data, store it in optional `tables[]` instead of duplicating it as a raster figure.
+
+Each table uses:
+
+- `id`
+- `caption`
+- `headers[]`
+- `rows[][]`
+- optional `note`
+- `placement.sectionId`
+- `placement.afterParagraph`, a **1-based** paragraph number; use `0` to place the table before the first paragraph in that section
+
+Semantic tables are rendered as accessible HTML `<table>` elements inside the full text. Do not keep the same table in `figures[]` once the semantic version is canonical. Use `figures[]` for genuinely visual material, or for tables whose structure cannot be reconstructed reliably from authoritative evidence.
 
 ## Rules
 
