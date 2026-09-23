@@ -19,13 +19,6 @@ export function ArticleFigures({ figures, locale }: { figures: ArticleFigure[]; 
   };
 
   const figureKinds = figures.map((figure) => /^(?:tablo|table)\b/i.test(figure.caption.trim()) ? "table" : "visual");
-  const hasTables = figureKinds.includes("table");
-  const hasVisuals = figureKinds.includes("visual");
-  const collectionLabel = hasTables && hasVisuals
-    ? (locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables")
-    : hasTables
-      ? (locale === "tr" ? "Tablolar" : "Tables")
-      : (locale === "tr" ? "Görseller" : "Visuals");
   const itemLabel = (index: number) => {
     const kind = figureKinds[index];
     const number = figureKinds.slice(0, index + 1).filter((candidate) => candidate === kind).length;
@@ -35,7 +28,7 @@ export function ArticleFigures({ figures, locale }: { figures: ArticleFigure[]; 
 
   return (
     <details className="article-accordion article-figures article-figures-accordion" id={locale === "tr" ? "gorseller" : "visuals"}>
-      <summary><span>{collectionLabel}</span><b>{figures.length}</b></summary>
+      <summary><span>{locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables"}</span><b>{figures.length}</b></summary>
       <div className="article-figure-accordion-body">
         <div className="article-figure-grid">
           {figures.map((figure, index) => (
