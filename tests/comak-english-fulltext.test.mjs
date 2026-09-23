@@ -59,7 +59,7 @@ test("keeps the Çomak-Toker-Manioğlu article bilingual instead of duplicating 
   assert.equal(record.en.figures[4].caption, "Eurasian transport corridors: Türkiye’s connections with Europe, Central Asia, China, the Middle East, and Africa (Map: Prepared by BRIQ based on data from the Republic of Türkiye Ministry of Foreign Affairs and the Republic of Türkiye Ministry of Transport and Infrastructure on Türkiye’s connectivity and international transport corridors, 2026).");
 
   assert.equal(record.en.tables.length, 2);
-  assert.deepEqual(record.en.tables[0].placement, { sectionId: "en-section-3", afterParagraph: 4 });
+  assert.deepEqual(record.en.tables[0].placement, { sectionId: "en-section-3", afterParagraph: 5 });
   assert.deepEqual(record.en.tables[0].headers, ["Dimension", "Indicators", "Analytical interpretation"]);
   assert.equal(record.en.tables[0].rows.length, 5);
   assert.match(record.en.tables[0].rows[0][2], /production hub/u);
