@@ -882,8 +882,11 @@ test("renders Çomak tables inline while retaining their visual copies", async (
 
   const methodSection = html.indexOf('id="en-section-3"');
   const methodParagraph = html.indexOf("Third, the research question was assessed using the criteria in Table 1");
+  const codingParagraph = html.indexOf("During coding, the date, document type, institutional producer");
+  const limitationsParagraph = html.indexOf("The method has two limitations.");
   const tableOne = html.indexOf('id="table-1"');
-  assert.ok(methodSection >= 0 && methodParagraph > methodSection && tableOne > methodParagraph);
+  assert.ok(methodSection >= 0 && methodParagraph > methodSection && codingParagraph > methodParagraph);
+  assert.ok(tableOne > codingParagraph && limitationsParagraph > tableOne);
 
   const asymmetrySection = html.indexOf('id="en-section-6"');
   const fdiParagraph = html.indexOf("Foreign direct investment data likewise reveal the gap between trade volume and production integration.");
