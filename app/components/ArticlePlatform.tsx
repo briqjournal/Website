@@ -25,7 +25,7 @@ import {
 import { ArticleStaticToc } from "./ArticleStaticToc";
 import { BackToTop } from "./BackToTop";
 import { ArticleFigures, type ArticleFigure } from "./ArticleFigures";
-import { ArticleRichText, type FullTextNote, type FullTextReference, type FullTextSection } from "./ArticleRichText";
+import { ArticleRichText, type FullTextNote, type FullTextReference, type FullTextSection, type FullTextTable } from "./ArticleRichText";
 import { CitationTools } from "./CitationTools";
 import { PdfViewer } from "./PdfViewer";
 import { PublicationRecord, type PublicationHistory } from "./PublicationRecord";
@@ -40,6 +40,7 @@ type LocalizedFullText = {
   references: FullTextReference[];
   acknowledgements: string;
   figures: ArticleFigure[];
+  tables?: FullTextTable[];
   declarations?: {
     acknowledgements?: string;
     authorContributions?: string;
@@ -73,6 +74,7 @@ function mergeLocalizedFullText(
     references: primary.references?.length ? primary.references : fallback.references,
     acknowledgements: primary.acknowledgements?.trim() ? primary.acknowledgements : fallback.acknowledgements,
     figures: primary.figures?.length ? primary.figures : fallback.figures,
+    tables: primary.tables?.length ? primary.tables : fallback.tables,
     declarations: { ...fallback.declarations, ...primary.declarations },
     supplementary: primary.supplementary?.length ? primary.supplementary : fallback.supplementary,
   } satisfies LocalizedFullText;
@@ -428,7 +430,13 @@ export async function ArticlePlatform({
         && section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US") !== genericFullTextSectionTitle
       )
       .map((section) => ({ id: section.id, label: section.title, level: 2 })),
-    ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
+    ...(fullText?.figures.length ? [{
+      id: locale === "tr" ? "gorseller" : "visuals",
+      label: fullText.figures.some((figure) => /^(?:tablo|table)\b/i.test(figure.caption.trim()))
+        ? (locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables")
+        : (locale === "tr" ? "Görseller" : "Visuals"),
+      level: 1,
+    }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
     ...(fullText?.publicationNote ? [{ id: locale === "tr" ? "yayin-notu" : "publication-note", label: locale === "tr" ? "Yayın notu" : "Publication note", level: 1 }] : []),
     ...(acknowledgements ? [{ id: locale === "tr" ? "tesekkur" : "acknowledgements", label: locale === "tr" ? "Teşekkür" : "Acknowledgements", level: 1 }] : []),
@@ -487,7 +495,7 @@ export async function ArticlePlatform({
 
           {keywords.length ? <section className="article-keywords" id={locale === "tr" ? "anahtar-kelimeler" : "keywords"}><h2>{locale === "tr" ? "Anahtar kelimeler" : "Keywords"}</h2><div>{keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}</div></section> : null}
 
-          {fullText?.sections.length ? <ArticleRichText sections={fullText.sections} references={displayReferences} notes={fullText.footnotes} locale={locale} /> : (
+          {fullText?.sections.length ? <ArticleRichText sections={fullText.sections} references={displayReferences} notes={fullText.footnotes} tables={fullText.tables} locale={locale} /> : (
             <section className="legacy-fulltext-note"><h2>{locale === "tr" ? "Tam Metin" : "Full Text"}</h2><p>{locale === "tr" ? "Bu arşiv kaydının tam metni dijitalleştirme sırasındadır. Doğrulanmış makale dosyasına üstteki PDF düğmesinden erişebilirsiniz." : "The full text for this archival record is being digitised. Use the PDF button above to access the verified article file."}</p></section>
           )}
 
