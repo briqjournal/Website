@@ -250,7 +250,11 @@
       "id": "figure-2",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-02.jpg",
       "caption": "Yijing’de Luoshu ve Hetu diyagramları.",
-      "kind": "figure"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-3",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-3",
@@ -276,5 +280,6 @@
       "caption": "Mao Zedung ve Josef Stalin, Moskova, 21 Aralık 1949 (Fotoğraf: Russian State Central Museum of Cinema and Photography, 2021).",
       "kind": "visual"
     }
-  ]
+  ],
+  "tables": []
 }
