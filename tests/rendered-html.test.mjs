@@ -963,6 +963,90 @@ test("renders only Çomak figures and tables inline while retaining all PDF medi
   assert.equal((prerenderVisuals.match(/<figure/g) || []).length, 2);
 });
 
+test("renders Turkish Çomak figures and tables inline while retaining all PDF media in the archive", async () => {
+  const slug = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
+  const response = await renderPath(`/tr/makaleler/${slug}`);
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  // Tam Metin: yalnız Şekiller ve Tablolar.
+  assert.match(html, /class="article-inline-media" id="inline-figure-1"><img src="[^"]*figure-01\.jpg"/);
+  assert.match(html, /class="article-inline-table article-inline-table-image" id="table-1"><img src="[^"]*figure-03\.jpg"/);
+  assert.match(html, /class="article-inline-table article-inline-table-image" id="table-2"><img src="[^"]*figure-04\.jpg"/);
+  assert.match(html, /class="article-inline-media" id="inline-figure-5"><img src="[^"]*figure-05\.jpg"/);
+  assert.doesNotMatch(html, /id="inline-figure-2"/);
+  assert.doesNotMatch(html, /id="inline-figure-6"/);
+
+  // Türkçe PDF akışına karşı paragraf konumları.
+  const researchQuestion = html.indexOf("Bu makale şu soruya yanıt aramaktadır:");
+  const contribution = html.indexOf("Çalışmanın özgün katkısı üç düzeydedir.");
+  const figureOne = html.indexOf('id="inline-figure-1"');
+  assert.ok(researchQuestion >= 0 && figureOne > researchQuestion && contribution > figureOne);
+
+  const codingParagraph = html.indexOf("Kodlama sürecinde her belge için tarih, belge türü, kurumsal üretici");
+  const limitationsParagraph = html.indexOf("Yöntemin iki sınırlılığı bulunmaktadır.");
+  const tableOne = html.indexOf('id="table-1"');
+  assert.ok(codingParagraph >= 0 && tableOne > codingParagraph && limitationsParagraph > tableOne);
+
+  const fdiParagraph = html.indexOf("Doğrudan yatırım verileri de ticaret hacmi ile üretim entegrasyonu arasındaki farkı ortaya koymaktadır.");
+  const bydParagraph = html.indexOf("BYD ile Temmuz 2024’te imzalanan yaklaşık 1 milyar dolarlık yatırım anlaşması");
+  const tableTwo = html.indexOf('id="table-2"');
+  assert.ok(fdiParagraph >= 0 && tableTwo > fdiParagraph && bydParagraph > tableTwo);
+
+  const localValueParagraph = html.indexOf("Yerel katma değer ile teknoloji transferi birbirinin yerine kullanılmamalıdır.");
+  const figureFive = html.indexOf('id="inline-figure-5"');
+  assert.ok(bydParagraph >= 0 && figureFive > bydParagraph && localValueParagraph > figureFive);
+
+  // Görsel ve tablolar: PDF'deki 6/6 medya, Şekiller → Tablolar → Görseller.
+  assert.match(html, /Görsel ve tablolar/);
+  const figureGroup = html.indexOf('data-kind="figure"');
+  const tableGroup = html.indexOf('data-kind="table"');
+  const visualGroup = html.indexOf('data-kind="visual"');
+  const dialog = html.indexOf('class="figure-lightbox"');
+  assert.ok(figureGroup >= 0 && tableGroup > figureGroup && visualGroup > tableGroup && dialog > visualGroup);
+
+  const figuresHtml = html.slice(figureGroup, tableGroup);
+  const tablesHtml = html.slice(tableGroup, visualGroup);
+  const visualsHtml = html.slice(visualGroup, dialog);
+  assert.equal((figuresHtml.match(/<figure/g) || []).length, 2);
+  assert.equal((tablesHtml.match(/<figure/g) || []).length, 2);
+  assert.equal((visualsHtml.match(/<figure/g) || []).length, 2);
+
+  assert.match(figuresHtml, /figure-01\.jpg/);
+  assert.match(figuresHtml, /figure-05\.jpg/);
+  assert.match(tablesHtml, /figure-03\.jpg/);
+  assert.match(tablesHtml, /figure-04\.jpg/);
+  assert.match(visualsHtml, /figure-02\.jpg/);
+  assert.match(visualsHtml, /figure-06\.jpg/);
+
+  assert.match(html, /<b>Şekil 1<\/b>Orta Koridor’un Orta Asya ve Türkiye üzerinden Çin ile Avrupa arasındaki bağlantısı/);
+  assert.match(html, /<b>Şekil 2<\/b>Avrasya ulaştırma koridorları:/);
+  assert.match(html, /<b>Tablo 1<\/b>Transit ülke ile ortak üretim merkezi ayrımında kullanılan göstergeler/);
+  assert.match(html, /<b>Tablo 2<\/b>Araştırma sorusuna ilişkin gösterge temelli değerlendirme/);
+  assert.match(html, /<b>Görsel 1<\/b>Cumhurbaşkanı Recep Tayyip Erdoğan ve Çin Devlet Başkanı Xi Jinping/);
+  assert.match(html, /<b>Görsel 2<\/b>Türkiye-Çin ilişkilerinde ekonomik karşılıklılık/);
+
+  const prerenderedHtml = await readFile(
+    new URL("../dist/client/tr/makaleler/" + slug + "/index.html", import.meta.url),
+    "utf8",
+  );
+  for (const id of ["inline-figure-1", "table-1", "table-2", "inline-figure-5"]) {
+    assert.ok(prerenderedHtml.includes('id="' + id + '"'));
+  }
+  assert.ok(!prerenderedHtml.includes('id="inline-figure-2"'));
+  assert.ok(!prerenderedHtml.includes('id="inline-figure-6"'));
+
+  const prerenderFigureGroup = prerenderedHtml.indexOf('data-kind="figure"');
+  const prerenderTableGroup = prerenderedHtml.indexOf('data-kind="table"');
+  const prerenderVisualGroup = prerenderedHtml.indexOf('data-kind="visual"');
+  const prerenderDialog = prerenderedHtml.indexOf('class="figure-lightbox"');
+  assert.ok(prerenderFigureGroup >= 0 && prerenderTableGroup > prerenderFigureGroup && prerenderVisualGroup > prerenderTableGroup && prerenderDialog > prerenderVisualGroup);
+
+  assert.equal((prerenderedHtml.slice(prerenderFigureGroup, prerenderTableGroup).match(/<figure/g) || []).length, 2);
+  assert.equal((prerenderedHtml.slice(prerenderTableGroup, prerenderVisualGroup).match(/<figure/g) || []).length, 2);
+  assert.equal((prerenderedHtml.slice(prerenderVisualGroup, prerenderDialog).match(/<figure/g) || []).length, 2);
+});
+
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trResponse, enResponse] = await Promise.all([
