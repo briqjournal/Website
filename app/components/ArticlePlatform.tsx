@@ -489,7 +489,7 @@ export async function ArticlePlatform({
 
           {keywords.length ? <section className="article-keywords" id={locale === "tr" ? "anahtar-kelimeler" : "keywords"}><h2>{locale === "tr" ? "Anahtar kelimeler" : "Keywords"}</h2><div>{keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}</div></section> : null}
 
-          {fullText?.sections.length ? <ArticleRichText sections={fullText.sections} references={displayReferences} notes={fullText.footnotes} tables={fullText.tables} locale={locale} /> : (
+          {fullText?.sections.length ? <ArticleRichText sections={fullText.sections} references={displayReferences} notes={fullText.footnotes} tables={fullText.tables} figures={fullText.figures} locale={locale} /> : (
             <section className="legacy-fulltext-note"><h2>{locale === "tr" ? "Tam Metin" : "Full Text"}</h2><p>{locale === "tr" ? "Bu arşiv kaydının tam metni dijitalleştirme sırasındadır. Doğrulanmış makale dosyasına üstteki PDF düğmesinden erişebilirsiniz." : "The full text for this archival record is being digitised. Use the PDF button above to access the verified article file."}</p></section>
           )}
 

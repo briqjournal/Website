@@ -4066,6 +4066,26 @@ footer h3 {
   font-weight: 400;
 }
 
+.article-figure-groups {
+  display: grid;
+  gap: 34px;
+}
+
+.article-figure-group {
+  min-width: 0;
+}
+
+.article-figure-group > h3 {
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
 .article-figure-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -8578,6 +8598,30 @@ body {
 
 .article-inline-table {
   margin: 28px 0 32px;
+}
+
+.article-inline-media {
+  margin: 28px 0 32px;
+}
+
+.article-inline-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.article-inline-media figcaption {
+  margin: 8px 2px 0;
+  color: #675e56;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.article-inline-media figcaption b {
+  font-weight: 600;
 }
 
 .article-inline-table-image {

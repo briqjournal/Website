@@ -251,32 +251,54 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-01.jpg",
-      "caption": "The Middle Corridor connects China and Europe through Central Asia and Türkiye and integrates with the Belt and Road Initiative (BRI) (Map: Valdai Club, 2023)."
+      "caption": "The Middle Corridor connects China and Europe through Central Asia and Türkiye and integrates with the Belt and Road Initiative (BRI) (Map: Valdai Club, 2023).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-1",
+        "afterParagraph": 3
+      }
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-02.jpg",
-      "caption": "Turkish President Recep Tayyip Erdoğan met with Chinese President Xi Jinping on July 4, 2024, on the sidelines of the Shanghai Cooperation Organization summit held in Astana, Kazakhstan (Photo: CGTN, 2024)."
+      "caption": "Turkish President Recep Tayyip Erdoğan met with Chinese President Xi Jinping on July 4, 2024, on the sidelines of the Shanghai Cooperation Organization summit held in Astana, Kazakhstan (Photo: CGTN, 2024).",
+      "kind": "visual",
+      "placement": {
+        "sectionId": "en-section-2",
+        "afterParagraph": 7
+      }
     },
     {
       "id": "figure-3",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-03-en.png",
-      "caption": "Table 1. Indicators Used to Distinguish a Transit Country from a Joint Production Hub"
+      "caption": "Table 1. Indicators Used to Distinguish a Transit Country from a Joint Production Hub",
+      "kind": "table"
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-04-en.png",
-      "caption": "Table 2. Indicator-Based Assessment of the Research Question"
+      "caption": "Table 2. Indicator-Based Assessment of the Research Question",
+      "kind": "table"
     },
     {
       "id": "figure-5",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-05-en.jpg",
-      "caption": "Eurasian transport corridors: Türkiye’s connections with Europe, Central Asia, China, the Middle East, and Africa (Map: Prepared by BRIQ based on data from the Republic of Türkiye Ministry of Foreign Affairs and the Republic of Türkiye Ministry of Transport and Infrastructure on Türkiye’s connectivity and international transport corridors, 2026)."
+      "caption": "Eurasian transport corridors: Türkiye’s connections with Europe, Central Asia, China, the Middle East, and Africa (Map: Prepared by BRIQ based on data from the Republic of Türkiye Ministry of Foreign Affairs and the Republic of Türkiye Ministry of Transport and Infrastructure on Türkiye’s connectivity and international transport corridors, 2026).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-6",
+        "afterParagraph": 5
+      }
     },
     {
       "id": "figure-6",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-06.jpg",
-      "caption": "In Türkiye-China relations, the combination of economic reciprocity, institutionalized connectivity, and sustained diplomatic dialogue may enable interdependence to become a mechanism for reducing the risk of conflict (Illustration: The Daily CPEC, 2025)."
+      "caption": "In Türkiye-China relations, the combination of economic reciprocity, institutionalized connectivity, and sustained diplomatic dialogue may enable interdependence to become a mechanism for reducing the risk of conflict (Illustration: The Daily CPEC, 2025).",
+      "kind": "visual",
+      "placement": {
+        "sectionId": "en-section-8",
+        "afterParagraph": 7
+      }
     }
   ],
   "tables": [
