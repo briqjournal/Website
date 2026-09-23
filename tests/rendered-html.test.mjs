@@ -1160,6 +1160,42 @@ test("renders the Palestinianism article secondary headings as subsections in bo
   ]) {
     assert.ok(enHtml.includes(`<h3>${title}</h3>`), `EN main section preserved: ${title}`);
   }
+
+  assert.match(trHtml, /class="article-inline-media" id="inline-figure-1"/);
+  assert.match(trHtml, /<b>Şekil 1\.<\/b>/);
+  assert.match(enHtml, /class="article-inline-media" id="inline-figure-1"/);
+  assert.match(enHtml, /G1ZOhMoWEAAvhVl\.jpeg/);
+  assert.match(enHtml, /<b>Figure 1\.<\/b>/);
+
+  assert.match(trHtml, /id="inline-figure-3"/);
+  assert.match(trHtml, /id="inline-figure-4"/);
+  assert.match(trHtml, /<b>Tablo 1\.<\/b>/);
+  assert.match(enHtml, /class="article-inline-table" id="table-1"/);
+  assert.match(enHtml, /Survey \(source\)/);
+  assert.match(enHtml, /Compiled by the author\./);
+  assert.doesNotMatch(enHtml, /figure-03\.jpg|figure-04\.jpg/);
+
+  const trIntroEnd = trHtml.indexOf("Makale beş bölümden oluşmaktadır.");
+  const trFigureOne = trHtml.indexOf('id="inline-figure-1"');
+  const trResearchDesign = trHtml.indexOf("<h4>Araştırma Tasarımı, Analitik Yaklaşım ve Kaynaklar</h4>");
+  assert.ok(trIntroEnd >= 0 && trFigureOne > trIntroEnd && trResearchDesign > trFigureOne);
+
+  const enIntroEnd = enHtml.indexOf("The article proceeds in five parts.");
+  const enFigureOne = enHtml.indexOf('id="inline-figure-1"');
+  const enResearchDesign = enHtml.indexOf("<h4>Research Design, Analytical Approach, and Sources</h4>");
+  assert.ok(enIntroEnd >= 0 && enFigureOne > enIntroEnd && enResearchDesign > enFigureOne);
+
+  const trTableLead = trHtml.indexOf("Tablo 1, bu bölümde yararlanılan başlıca anketleri");
+  const trTableFirst = trHtml.indexOf('id="inline-figure-3"');
+  const trTableSecond = trHtml.indexOf('id="inline-figure-4"');
+  const trAmerican = trHtml.indexOf("<h4>Amerika’daki Seyir</h4>");
+  assert.ok(trTableLead >= 0 && trTableFirst > trTableLead && trTableSecond > trTableFirst && trAmerican > trTableSecond);
+
+  const enTableLead = enHtml.indexOf("Table 1 summarizes the principal surveys drawn upon in this section");
+  const enTable = enHtml.indexOf('id="table-1"');
+  const enAmerican = enHtml.indexOf("<h4>The American Trajectory</h4>");
+  assert.ok(enTableLead >= 0 && enTable > enTableLead && enAmerican > enTable);
+
 });
 
 test("renders the Jordan article secondary headings as subsections in both locales", async () => {
