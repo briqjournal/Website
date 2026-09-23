@@ -17,6 +17,7 @@ export type FullTextTable = {
   headers: string[];
   rows: string[][];
   note?: string;
+  imageSrc?: string;
   placement: {
     sectionId: string;
     afterParagraph: number;
@@ -243,6 +244,14 @@ function InlineArticleTable({
   references: FullTextReference[];
   notes: FullTextNote[];
 }) {
+  if (table.imageSrc) {
+    return (
+      <figure className="article-inline-table article-inline-table-image" id={table.id}>
+        <img src={table.imageSrc} alt={table.caption} loading="lazy" decoding="async" />
+      </figure>
+    );
+  }
+
   return (
     <figure className="article-inline-table" id={table.id}>
       <figcaption>{table.caption}</figcaption>
