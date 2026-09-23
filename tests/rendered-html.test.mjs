@@ -988,7 +988,7 @@ test("renders Turkish Çomak figures and tables inline while retaining all PDF m
   const tableOne = html.indexOf('id="table-1"');
   assert.ok(codingParagraph >= 0 && tableOne > codingParagraph && limitationsParagraph > tableOne);
 
-  const fdiParagraph = html.indexOf("Doğrudan yatırım verileri de ticaret hacmi ile üretim entegrasyonu arasındaki farkı göstermektedir.");
+  const fdiParagraph = html.indexOf("Doğrudan yatırım verileri de ticaret hacmi ile üretim entegrasyonu arasındaki farkı ortaya koymaktadır.");
   const bydParagraph = html.indexOf("BYD ile Temmuz 2024’te imzalanan yaklaşık 1 milyar dolarlık yatırım anlaşması");
   const tableTwo = html.indexOf('id="table-2"');
   assert.ok(fdiParagraph >= 0 && tableTwo > fdiParagraph && bydParagraph > tableTwo);
