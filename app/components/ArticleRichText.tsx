@@ -11,6 +11,18 @@ export type FullTextSection = {
   toc?: boolean;
 };
 
+export type FullTextTable = {
+  id: string;
+  caption: string;
+  headers: string[];
+  rows: string[][];
+  note?: string;
+  placement: {
+    sectionId: string;
+    afterParagraph: number;
+  };
+};
+
 export type FullTextNote = { id: string; text: string };
 export type FullTextReference = { id: string; text: string };
 
@@ -222,15 +234,62 @@ function renderFormattedText(text: string, references: FullTextReference[], note
   });
 }
 
+function InlineArticleTable({
+  table,
+  references,
+  notes,
+}: {
+  table: FullTextTable;
+  references: FullTextReference[];
+  notes: FullTextNote[];
+}) {
+  return (
+    <figure className="article-inline-table" id={table.id}>
+      <figcaption>{table.caption}</figcaption>
+      <div className="article-inline-table-scroll">
+        <table>
+          <thead>
+            <tr>
+              {table.headers.map((header, index) => (
+                <th scope="col" key={`${table.id}-header-${index}`}>
+                  {renderFormattedText(header, references, notes, `${table.id}-header-${index}`)}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((row, rowIndex) => (
+              <tr key={`${table.id}-row-${rowIndex}`}>
+                {row.map((cell, cellIndex) => cellIndex === 0 ? (
+                  <th scope="row" key={`${table.id}-cell-${rowIndex}-${cellIndex}`}>
+                    {renderFormattedText(cell, references, notes, `${table.id}-cell-${rowIndex}-${cellIndex}`)}
+                  </th>
+                ) : (
+                  <td key={`${table.id}-cell-${rowIndex}-${cellIndex}`}>
+                    {renderFormattedText(cell, references, notes, `${table.id}-cell-${rowIndex}-${cellIndex}`)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {table.note ? <p className="article-inline-table-note">{table.note}</p> : null}
+    </figure>
+  );
+}
+
 export function ArticleRichText({
   sections,
   references,
   notes,
+  tables = [],
   locale,
 }: {
   sections: FullTextSection[];
   references: FullTextReference[];
   notes: FullTextNote[];
+  tables?: FullTextTable[];
   locale: "tr" | "en";
 }) {
   const genericSectionTitles = new Set(["tam metin", "full text"]);
@@ -243,10 +302,18 @@ export function ArticleRichText({
             {!genericSectionTitles.has(section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US")) && (
               section.level === "subsection" ? <h4>{section.title}</h4> : <h3>{section.title}</h3>
             )}
+            {tables
+              .filter((table) => table.placement.sectionId === section.id && table.placement.afterParagraph === 0)
+              .map((table) => <InlineArticleTable table={table} references={references} notes={notes} key={table.id} />)}
             {section.paragraphs.map((paragraph, index) => (
-              <p key={`${section.id}-${index}`}>
-                {renderFormattedText(sectionIndex === 0 && index === 0 ? sentenceCasePdfOpening(paragraph, locale) : paragraph, references, notes, `${section.id}-${index}`)}
-              </p>
+              <Fragment key={`${section.id}-${index}`}>
+                <p>
+                  {renderFormattedText(sectionIndex === 0 && index === 0 ? sentenceCasePdfOpening(paragraph, locale) : paragraph, references, notes, `${section.id}-${index}`)}
+                </p>
+                {tables
+                  .filter((table) => table.placement.sectionId === section.id && table.placement.afterParagraph === index + 1)
+                  .map((table) => <InlineArticleTable table={table} references={references} notes={notes} key={table.id} />)}
+              </Fragment>
             ))}
           </section>
         ))}
