@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment, type MouseEvent, type ReactNode } from "react";
+import { articleFigureLabel, type ArticleFigure } from "./ArticleFigures";
 import { ReferenceText } from "./ReferenceText";
 
 export type FullTextSection = {
@@ -289,17 +290,37 @@ function InlineArticleTable({
   );
 }
 
+function InlineArticleFigure({
+  figure,
+  figures,
+  locale,
+}: {
+  figure: ArticleFigure;
+  figures: ArticleFigure[];
+  locale: "tr" | "en";
+}) {
+  const label = articleFigureLabel(figure, figures, locale);
+  return (
+    <figure className="article-inline-media" id={`inline-${figure.id}`}>
+      <img src={figure.src} alt={figure.caption} loading="lazy" decoding="async" />
+      <figcaption><b>{label}.</b> {figure.caption}</figcaption>
+    </figure>
+  );
+}
+
 export function ArticleRichText({
   sections,
   references,
   notes,
   tables = [],
+  figures = [],
   locale,
 }: {
   sections: FullTextSection[];
   references: FullTextReference[];
   notes: FullTextNote[];
   tables?: FullTextTable[];
+  figures?: ArticleFigure[];
   locale: "tr" | "en";
 }) {
   const genericSectionTitles = new Set(["tam metin", "full text"]);
@@ -312,6 +333,9 @@ export function ArticleRichText({
             {!genericSectionTitles.has(section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US")) && (
               section.level === "subsection" ? <h4>{section.title}</h4> : <h3>{section.title}</h3>
             )}
+            {figures
+              .filter((figure) => figure.placement?.sectionId === section.id && figure.placement.afterParagraph === 0)
+              .map((figure) => <InlineArticleFigure figure={figure} figures={figures} locale={locale} key={`inline-${figure.id}`} />)}
             {tables
               .filter((table) => table.placement.sectionId === section.id && table.placement.afterParagraph === 0)
               .map((table) => <InlineArticleTable table={table} references={references} notes={notes} key={table.id} />)}
@@ -320,6 +344,9 @@ export function ArticleRichText({
                 <p>
                   {renderFormattedText(sectionIndex === 0 && index === 0 ? sentenceCasePdfOpening(paragraph, locale) : paragraph, references, notes, `${section.id}-${index}`)}
                 </p>
+                {figures
+                  .filter((figure) => figure.placement?.sectionId === section.id && figure.placement.afterParagraph === index + 1)
+                  .map((figure) => <InlineArticleFigure figure={figure} figures={figures} locale={locale} key={`inline-${figure.id}`} />)}
                 {tables
                   .filter((table) => table.placement.sectionId === section.id && table.placement.afterParagraph === index + 1)
                   .map((table) => <InlineArticleTable table={table} references={references} notes={notes} key={table.id} />)}
