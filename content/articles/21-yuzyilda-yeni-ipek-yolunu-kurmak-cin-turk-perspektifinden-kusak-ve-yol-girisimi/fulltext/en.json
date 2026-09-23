@@ -215,21 +215,60 @@
   ],
   "footnotes": [],
   "references": [
-    "Action plan on the Belt and Road Initiative. (2015). Retrieved from http://english.www.gov.cn/archive/publications/2015/03/30/content_281475080249035.htm",
-    "Chatzky, A., & McBride, J. (2019). China’s Massive Belt and Road Initiative. Retrieved from https://www.cfr.org/backgrounder/chinas-massive-belt-and-road-initiative",
-    "China beefs up tax services to spur investment in Belt and Road. (2015). Retrieved from http://english.www.gov.cn/state_council/ministries/2015/04/21/content_281475092987442.htm",
-    "China pledges trans-regional customs co-op for Belt and Road. (2015). Retrieved from http://english.www.gov.cn/state_council/ministries/2015/05/27/content_281475115756220.htm",
-    "China unveils action plan on Belt and Road Initiative. (2015). Retrieved from http://english.www.gov.cn/news/video/2015/03/29/content_281475079526119.htm",
-    "China’s Belt and Road plan ‘open’ to all nations. (2015). Retrieved from http://english.www.gov.cn/news/top_news/2015/04/18/content_281475091262006.htm",
-    "Chronology of China’s Belt and Road Initiative. (2015). Retrieved from http://english.www.gov.cn/news/top_news/2015/04/20/content_281475092566326.htm",
-    "DEİK Dış Ekonomik İlişkiler Kurulu. (2019). Türkiye’nin Kuşak ve Yol Girişimi’nde Konumlandırılması. Retrieved from https://www.deik.org.tr/bilgi-merkezi-yayinlar",
-    "Durdular, A. (2016). Çin’in “Kuşak-Yol” Projesi ve Türkiye-Çin İlişkilerine Etkisi. Avrasya Etüdleri, 49/2016-1, 77 – 97.",
-    "Hatipoğlu, M., & Gökmen, E. (2019, November 7). Marmaray’dan tarihi geçiş. Retrieved from https://www.aa.com.tr/tr/turkiye/marmaraydan-tarihi-gecis/1637801.",
-    "Keyvan, Ö. Z. (2017). Bir Kuşak Bir Yol Girişimi Çerçevesinde Türkiye-Çin İlişkileri. Retrieved from https://ankasam.org/bir-kusak-bir-yol-girisimi-cercevesinde-turkiye-cin-iliskileri/",
-    "Kuo, L., & Kommenda, N. (2018, July 30). What is China’s Belt and Road Initiative? The Guardian. Retrieved from https://www.theguardian.com/cities/ng-interactive/2018/jul/30/what-china-belt-road-initiative-silk-road-explainer",
-    "Neuman, W. L. (2014). Toplumsal Araştırma Yöntemler: Nicel ve Nitel Yaklaşımlar. Ankara: Yayın Odası."
+    {
+      "id": "ref-1",
+      "text": "Action plan on the Belt and Road Initiative. (2015). Retrieved from http://english.www.gov.cn/archive/publications/2015/03/30/content_281475080249035.htm"
+    },
+    {
+      "id": "ref-2",
+      "text": "Chatzky, A., & McBride, J. (2019). China’s Massive Belt and Road Initiative. Retrieved from https://www.cfr.org/backgrounder/chinas-massive-belt-and-road-initiative"
+    },
+    {
+      "id": "ref-3",
+      "text": "China beefs up tax services to spur investment in Belt and Road. (2015). Retrieved from http://english.www.gov.cn/state_council/ministries/2015/04/21/content_281475092987442.htm"
+    },
+    {
+      "id": "ref-4",
+      "text": "China pledges trans-regional customs co-op for Belt and Road. (2015). Retrieved from http://english.www.gov.cn/state_council/ministries/2015/05/27/content_281475115756220.htm"
+    },
+    {
+      "id": "ref-5",
+      "text": "China unveils action plan on Belt and Road Initiative. (2015). Retrieved from http://english.www.gov.cn/news/video/2015/03/29/content_281475079526119.htm"
+    },
+    {
+      "id": "ref-6",
+      "text": "China’s Belt and Road plan ‘open’ to all nations. (2015). Retrieved from http://english.www.gov.cn/news/top_news/2015/04/18/content_281475091262006.htm"
+    },
+    {
+      "id": "ref-7",
+      "text": "Chronology of China’s Belt and Road Initiative. (2015). Retrieved from http://english.www.gov.cn/news/top_news/2015/04/20/content_281475092566326.htm"
+    },
+    {
+      "id": "ref-8",
+      "text": "DEİK Dış Ekonomik İlişkiler Kurulu. (2019). Türkiye’nin Kuşak ve Yol Girişimi’nde Konumlandırılması. Retrieved from https://www.deik.org.tr/bilgi-merkezi-yayinlar"
+    },
+    {
+      "id": "ref-9",
+      "text": "Durdular, A. (2016). Çin’in “Kuşak-Yol” Projesi ve Türkiye-Çin İlişkilerine Etkisi. Avrasya Etüdleri, 49/2016-1, 77 – 97."
+    },
+    {
+      "id": "ref-10",
+      "text": "Hatipoğlu, M., & Gökmen, E. (2019, November 7). Marmaray’dan tarihi geçiş. Retrieved from https://www.aa.com.tr/tr/turkiye/marmaraydan-tarihi-gecis/1637801."
+    },
+    {
+      "id": "ref-11",
+      "text": "Keyvan, Ö. Z. (2017). Bir Kuşak Bir Yol Girişimi Çerçevesinde Türkiye-Çin İlişkileri. Retrieved from https://ankasam.org/bir-kusak-bir-yol-girisimi-cercevesinde-turkiye-cin-iliskileri/"
+    },
+    {
+      "id": "ref-12",
+      "text": "Kuo, L., & Kommenda, N. (2018, July 30). What is China’s Belt and Road Initiative? The Guardian. Retrieved from https://www.theguardian.com/cities/ng-interactive/2018/jul/30/what-china-belt-road-initiative-silk-road-explainer"
+    },
+    {
+      "id": "ref-13",
+      "text": "Neuman, W. L. (2014). Toplumsal Araştırma Yöntemler: Nicel ve Nitel Yaklaşımlar. Ankara: Yayın Odası."
+    }
   ],
-  "acknowledgements": null,
+  "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
