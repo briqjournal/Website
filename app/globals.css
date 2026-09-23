@@ -8580,6 +8580,18 @@ body {
   margin: 28px 0 32px;
 }
 
+.article-inline-table-image {
+  overflow: hidden;
+  border: 1px solid rgba(63, 52, 43, .16);
+  background: #fff;
+}
+
+.article-inline-table-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .article-inline-table figcaption {
   margin: 0 0 11px;
   color: var(--ink);
