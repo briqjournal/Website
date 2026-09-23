@@ -451,47 +451,56 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-01.jpg",
-      "caption": "As of September 22, 2025, the State of Palestine is formally recognized by at least 155 of the 193 United Nations member states (Photo: IMEMC, 2025)."
+      "caption": "As of September 22, 2025, the State of Palestine is formally recognized by at least 155 of the 193 United Nations member states (Photo: IMEMC, 2025).",
+      "kind": "figure"
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-02.jpg",
-      "caption": "Palestinian families are forced to flee from Nasr due to the ongoing Israeli attacks in Gaza City, Gaza on September 21, 2025 (Photo: VCG, 2025)."
+      "caption": "Palestinian families are forced to flee from Nasr due to the ongoing Israeli attacks in Gaza City, Gaza on September 21, 2025 (Photo: VCG, 2025).",
+      "kind": "visual"
     },
     {
       "id": "figure-3",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-03.jpg",
-      "caption": "Table 1: Principal transatlantic public-opinion surveys on Israel-Palestine, October 2023–2026."
+      "caption": "Table 1: Principal transatlantic public-opinion surveys on Israel-Palestine, October 2023–2026.",
+      "kind": "table"
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-04.jpg",
-      "caption": "Table 1 (continued)."
+      "caption": "Table 1 (continued).",
+      "kind": "table"
     },
     {
       "id": "figure-5",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-05.jpg",
-      "caption": "People participate in a pro-Palestinian protest in Rome, Italy, on Sept. 22, 2025 (Photo: Li Jing/Xinhua, 2025)."
+      "caption": "People participate in a pro-Palestinian protest in Rome, Italy, on Sept. 22, 2025 (Photo: Li Jing/Xinhua, 2025).",
+      "kind": "visual"
     },
     {
       "id": "figure-6",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-06.jpg",
-      "caption": "People walk among the rubble in the Zeitoun neighborhood of Gaza City on November 27, 2025 (Photo: China Daily, 2025)."
+      "caption": "People walk among the rubble in the Zeitoun neighborhood of Gaza City on November 27, 2025 (Photo: China Daily, 2025).",
+      "kind": "visual"
     },
     {
       "id": "figure-7",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-07.jpg",
-      "caption": "Supporters of Lebanon’s Hezbollah leader Sayyed Hassan Nasrallah carry his pictures, following his killing in an Israeli airstrike in Beirut’s southern suburbs, in Saida, southern Lebanon on September 28, 2024 (Photo: CGTN, 2024)."
+      "caption": "Supporters of Lebanon’s Hezbollah leader Sayyed Hassan Nasrallah carry his pictures, following his killing in an Israeli airstrike in Beirut’s southern suburbs, in Saida, southern Lebanon on September 28, 2024 (Photo: CGTN, 2024).",
+      "kind": "visual"
     },
     {
       "id": "figure-8",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-08.jpg",
-      "caption": "IMEC is an example of an architecture aimed at strengthening the U.S.-Israel-Gulf strategic bloc against Iran, integrating this bloc into a broader connectivity infrastructure linking Asia and Europe, and institutionalizing bilateral security relations with the Gulf monarchies that operate independently of the Israeli-Palestinian conflict (Map: IMEC, n.d.)."
+      "caption": "IMEC is an example of an architecture aimed at strengthening the U.S.-Israel-Gulf strategic bloc against Iran, integrating this bloc into a broader connectivity infrastructure linking Asia and Europe, and institutionalizing bilateral security relations with the Gulf monarchies that operate independently of the Israeli-Palestinian conflict (Map: IMEC, n.d.).",
+      "kind": "figure"
     },
     {
       "id": "figure-9",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-09.jpg",
-      "caption": "In 2024, the Israeli government declared approximately 24,258 dunams as state land, equivalent to roughly half of all such declarations since the Oslo Accords (Graphic: Arab News, 2026)."
+      "caption": "In 2024, the Israeli government declared approximately 24,258 dunams as state land, equivalent to roughly half of all such declarations since the Oslo Accords (Graphic: Arab News, 2026).",
+      "kind": "figure"
     }
   ]
 }
