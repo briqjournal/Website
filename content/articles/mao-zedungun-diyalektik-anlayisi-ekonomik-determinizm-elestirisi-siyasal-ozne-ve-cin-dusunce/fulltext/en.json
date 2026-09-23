@@ -245,7 +245,11 @@
       "id": "figure-2",
       "src": "/assets/article-figures/mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce/figure-02.jpg",
       "caption": "The Luoshu (洛書) and Hetu (河圖) diagrams (Image: KKNews, 2020).",
-      "kind": "figure"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-3",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-3",
@@ -271,5 +275,6 @@
       "caption": "Mao Zedong and Joseph Stalin at the ceremonial meeting marking Stalin’s 70th birthday, Bolshoi Theatre, Moscow, December 21, 1949 (Photo: Russian State Central Museum of Cinema and Photography [ЦСДФ], 2021).",
       "kind": "visual"
     }
-  ]
+  ],
+  "tables": []
 }
