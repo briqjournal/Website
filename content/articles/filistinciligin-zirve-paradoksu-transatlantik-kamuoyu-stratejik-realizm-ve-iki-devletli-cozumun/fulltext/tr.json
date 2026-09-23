@@ -452,7 +452,11 @@
       "id": "figure-1",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-01.jpg",
       "caption": "Filistin Devleti’ni tanıyan ülkeler, 22 Eylül 2025 (Harita: IMEMC, 2025).",
-      "kind": "figure"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-1",
+        "afterParagraph": 1
+      }
     },
     {
       "id": "figure-2",
@@ -494,13 +498,37 @@
       "id": "figure-8",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-08.jpg",
       "caption": "Hindistan-Orta Doğu-Avrupa Koridoru (Harita: IMEC, t.y.).",
-      "kind": "figure"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-13",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-9",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-09.jpg",
       "caption": "Batı Şeria’daki yerleşim yayılımı (Grafik: Arab News, 2026).",
-      "kind": "figure"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-14",
+        "afterParagraph": 2
+      }
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Tablo 1: İsrail-Filistin’e ilişkin başlıca transatlantik kamuoyu araştırmaları, Ekim 2023–2026",
+      "headers": [],
+      "rows": [],
+      "placement": {
+        "sectionId": "tr-section-4",
+        "afterParagraph": 2
+      },
+      "imageSrcs": [
+        "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-03.jpg",
+        "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-04.jpg"
+      ]
     }
   ]
 }
