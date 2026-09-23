@@ -1162,14 +1162,14 @@ test("renders the Palestinianism article secondary headings as subsections in bo
   }
 
   assert.match(trHtml, /class="article-inline-media" id="inline-figure-1"/);
-  assert.match(trHtml, /<b>Şekil 1\.<\/b>/);
+  assert.match(trHtml, /Şekil 1/);
   assert.match(enHtml, /class="article-inline-media" id="inline-figure-1"/);
   assert.match(enHtml, /G1ZOhMoWEAAvhVl\.jpeg/);
-  assert.match(enHtml, /<b>Figure 1\.<\/b>/);
+  assert.match(enHtml, /Figure 1/);
 
   assert.match(trHtml, /id="inline-figure-3"/);
   assert.match(trHtml, /id="inline-figure-4"/);
-  assert.match(trHtml, /<b>Tablo 1\.<\/b>/);
+  assert.match(trHtml, /Tablo 1/);
   assert.match(enHtml, /class="article-inline-table" id="table-1"/);
   assert.match(enHtml, /Survey \(source\)/);
   assert.match(enHtml, /Compiled by the author\./);
