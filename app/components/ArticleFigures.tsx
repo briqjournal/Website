@@ -69,7 +69,7 @@ export function ArticleFigures({ figures, locale }: { figures: ArticleFigure[]; 
 
   return (
     <details className="article-accordion article-figures article-figures-accordion" id={locale === "tr" ? "gorseller" : "visuals"}>
-      <summary><span>{locale === "tr" ? "Şekiller, tablolar ve görseller" : "Figures, tables and visuals"}</span><b>{figures.length}</b></summary>
+      <summary><span>{locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables"}</span><b>{figures.length}</b></summary>
       <div className="article-figure-accordion-body">
         <div className="article-figure-groups">
           {groups.map((group) => {
