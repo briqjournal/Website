@@ -468,23 +468,18 @@
   "figures": [
     {
       "id": "figure-1",
-      "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-01.jpg",
-      "caption": "As of September 22, 2025, the State of Palestine is formally recognized by at least 155 of the 193 United Nations member states (Photo: IMEMC, 2025)."
+      "src": "https://imemc.org/wp-content/uploads/2025/09/G1ZOhMoWEAAvhVl.jpeg",
+      "caption": "As of September 22, 2025, the State of Palestine is formally recognized by at least 155 of the 193 United Nations member states (Photo: IMEMC, 2025).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-1",
+        "afterParagraph": 6
+      }
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-02.jpg",
       "caption": "Palestinian families are forced to flee from Nasr due to the ongoing Israeli attacks in Gaza City, Gaza on September 21, 2025 (Photo: VCG, 2025)."
-    },
-    {
-      "id": "figure-3",
-      "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-03.jpg",
-      "caption": "Table 1: Principal transatlantic public-opinion surveys on Israel-Palestine, October 2023–2026."
-    },
-    {
-      "id": "figure-4",
-      "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-04.jpg",
-      "caption": "Table 1 (continued)."
     },
     {
       "id": "figure-5",
@@ -510,6 +505,103 @@
       "id": "figure-9",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-09.jpg",
       "caption": "In 2024, the Israeli government declared approximately 24,258 dunams as state land, equivalent to roughly half of all such declarations since the Oslo Accords (Graphic: Arab News, 2026)."
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Table 1: Principal transatlantic public-opinion surveys on Israel-Palestine, October 2023–2026",
+      "headers": [
+        "Survey (source)",
+        "Date",
+        "Country / region",
+        "Attitude measured",
+        "Key finding"
+      ],
+      "rows": [
+        [
+          "Silver et al. (2024); Silver (2026)",
+          "2022–Apr 2026",
+          "United States",
+          "Favorability toward Israel",
+          "Favorable view 55% (2022) → 41% (Feb 2024) → 37% (Apr 2026); “very unfavorable” ~10% → 28%"
+        ],
+        [
+          "Brenan (2025)",
+          "Feb 2025",
+          "United States",
+          "Comparative sympathy (Israelis vs. Palestinians)",
+          "Sympathy for Israelis 46% (25-year low); for Palestinians 33% (record high)"
+        ],
+        [
+          "Vigers (2026)",
+          "2026",
+          "United States",
+          "Sympathy / two-state support",
+          "Israelis no longer lead Palestinians in sympathy (a first); two-state support 57%"
+        ],
+        [
+          "Smeltz & El Baz (2025)",
+          "2025",
+          "United States",
+          "Warmth rating (0–100)",
+          "Israel warmth 50 (near half-century low); among Democrats 41"
+        ],
+        [
+          "Smith (2025)",
+          "May 2025",
+          "6 Western European states",
+          "Net favorability; operation proportionality",
+          "Net favorability −44 (Germany) to −55 (Spain); only 6–16% judged Gaza operations proportionate"
+        ],
+        [
+          "Bertelsmann Stiftung",
+          "2025",
+          "Germany",
+          "Favorability toward Israel",
+          "Favorable view 46% (2021) → 36% (2025)"
+        ],
+        [
+          "ZDF (2025); Königshofen & Schmid (2025); Stolz (2025)",
+          "2025",
+          "Germany",
+          "Justification of operations; genocide perception; arms exports",
+          "76% deemed military action unjustified; 62% “genocide”; 51% opposed arms exports"
+        ],
+        [
+          "Silver (2025)",
+          "Spring 2025",
+          "24 countries",
+          "Views of Israel and Netanyahu",
+          "Negative across nearly all surveyed nations"
+        ],
+        [
+          "Brenan (2025)",
+          "2025",
+          "United States",
+          "Net sympathy for Israel by generation",
+          "+46 (Boomers) to +32 (Gen X) to −2 (Millennials)"
+        ],
+        [
+          "Marist Poll (2023)",
+          "Oct 2023",
+          "United States",
+          "Support for U.S. backing of Israel",
+          "48% of Gen Z/Millennials vs. 83% of Boomers"
+        ],
+        [
+          "Telhami (2025)",
+          "Aug 2025",
+          "United States",
+          "Sympathy among young Republicans",
+          "24% of Republicans 18–34 vs. 52% of those 35+"
+        ]
+      ],
+      "note": "Compiled by the author.",
+      "placement": {
+        "sectionId": "en-section-4",
+        "afterParagraph": 2
+      }
     }
   ]
 }
