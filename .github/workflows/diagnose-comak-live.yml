@@ -1,0 +1,40 @@
+name: Diagnose live Comak inline table
+
+on:
+  push:
+    branches:
+      - diagnose/comak-live-inline-table
+    paths:
+      - ".github/workflows/diagnose-comak-live.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check live HTML with cache bypass
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='https://briqjournal.com/en/articles/power-transition-and-geoeconomic-connectivity-in-eurasia-on-the-55th-anniversary-of-turkiye-china-diplomatic-relations/'
+          URL="${BASE}?diagnostic=802ddecee78a4752b556237ed38cb01afe7d7241"
+          curl --fail --location --compressed --retry 2 \
+            -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' \
+            -A 'Mozilla/5.0 BRIQ deployment diagnostic' \
+            -D /tmp/headers.txt "$URL" -o /tmp/page.html
+          echo '=== RESPONSE HEADERS ==='
+          grep -Ei '^(HTTP/|server:|cf-ray:|cf-cache-status:|age:|etag:|last-modified:|cache-control:)' /tmp/headers.txt || true
+          echo '=== INLINE TABLE MARKERS ==='
+          grep -o 'article-inline-table' /tmp/page.html | sort | uniq -c || true
+          grep -o 'id="table-[12]"' /tmp/page.html | sort | uniq -c || true
+          echo '=== TABLE CELL MARKERS ==='
+          grep -F 'Logistical function' /tmp/page.html | head -1 || true
+          grep -F 'R&amp;D, technology, and local value' /tmp/page.html | head -1 || true
+          echo '=== VISUAL ASSET MARKERS ==='
+          grep -o 'figure-03-en.png' /tmp/page.html | sort | uniq -c || true
+          grep -o 'figure-04-en.png' /tmp/page.html | sort | uniq -c || true
+          echo '=== BODY SIZE ==='
+          wc -c /tmp/page.html
