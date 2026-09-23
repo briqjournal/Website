@@ -46,9 +46,20 @@ test("keeps the Iqbal Akhtar article in clean locale-split English full text", a
 
   assert.deepEqual(record.en.keywords, ["Abraham Accords", "Iran", "Palestinianism", "Transatlantic Relations", "Two-State Solution"]);
   assert.equal(record.en.references.length, 70);
-  assert.equal(record.en.figures.length, 9);
+  assert.equal(record.en.figures.length, 7);
   assert.match(record.en.figures[0].caption, /^As of September 22, 2025/u);
-  assert.match(record.en.figures[7].caption, /^IMEC is an example/u);
-  assert.match(record.en.figures[8].caption, /^In 2024, the Israeli government declared/u);
+  assert.equal(record.en.figures[0].kind, "figure");
+  assert.deepEqual(record.en.figures[0].placement, { sectionId: "en-section-1", afterParagraph: 6 });
+  assert.match(record.en.figures[0].src, /G1ZOhMoWEAAvhVl\.jpeg$/u);
+  assert.match(record.en.figures[5].caption, /^IMEC is an example/u);
+  assert.match(record.en.figures[6].caption, /^In 2024, the Israeli government declared/u);
   assert(record.en.figures.every((figure) => !/(?:Fotoğraf|Harita|Tablo|Filistin yanlısı|Batı Şeria)/u.test(figure.caption)));
+
+  assert.equal(record.en.tables.length, 1);
+  assert.equal(record.en.tables[0].id, "table-1");
+  assert.equal(record.en.tables[0].rows.length, 11);
+  assert.deepEqual(record.en.tables[0].placement, { sectionId: "en-section-4", afterParagraph: 2 });
+  assert.match(record.en.tables[0].caption, /^Table 1: Principal transatlantic public-opinion surveys/u);
+  assert.equal(record.en.tables[0].note, "Compiled by the author.");
+  assert.equal(record.en.figures.some((figure) => ["figure-3", "figure-4"].includes(figure.id)), false);
 });

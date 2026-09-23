@@ -469,7 +469,12 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-01.jpg",
-      "caption": "Filistin Devleti’ni tanıyan ülkeler, 22 Eylül 2025 (Harita: IMEMC, 2025)."
+      "caption": "Filistin Devleti’ni tanıyan ülkeler, 22 Eylül 2025 (Harita: IMEMC, 2025).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-1",
+        "afterParagraph": 6
+      }
     },
     {
       "id": "figure-2",
@@ -479,12 +484,22 @@
     {
       "id": "figure-3",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-03.jpg",
-      "caption": "Tablo 1: İsrail-Filistin’e ilişkin başlıca transatlantik kamuoyu araştırmaları, Ekim 2023–2026"
+      "caption": "Tablo 1: İsrail-Filistin’e ilişkin başlıca transatlantik kamuoyu araştırmaları, Ekim 2023–2026",
+      "kind": "table",
+      "placement": {
+        "sectionId": "tr-section-4",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-04.jpg",
-      "caption": "Tablo 1’in devamı"
+      "caption": "Tablo 1’in devamı",
+      "kind": "table",
+      "placement": {
+        "sectionId": "tr-section-4",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-5",
