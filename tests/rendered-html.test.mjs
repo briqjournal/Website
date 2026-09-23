@@ -867,27 +867,24 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.doesNotMatch(doiHtml, /Yapay Zekâ Kullanımı/);
 });
 
-test("renders all Çomak media inline and retains grouped archive copies", async () => {
+test("renders only Çomak figures and tables inline while retaining all PDF media in the archive", async () => {
   const response = await renderPath("/en/articles/power-transition-and-geoeconomic-connectivity-in-eurasia-on-the-55th-anniversary-of-turkiye-china-diplomatic-relations");
   assert.equal(response.status, 200);
   const html = await response.text();
 
+  // Full Text: only Figures and Tables.
   assert.match(html, /class="article-inline-media" id="inline-figure-1"><img src="[^"]*figure-01\.jpg"/);
-  assert.match(html, /class="article-inline-media" id="inline-figure-2"><img src="[^"]*figure-02\.jpg"/);
   assert.match(html, /class="article-inline-table article-inline-table-image" id="table-1"><img src="[^"]*figure-03-en\.png"/);
   assert.match(html, /class="article-inline-table article-inline-table-image" id="table-2"><img src="[^"]*figure-04-en\.png"/);
   assert.match(html, /class="article-inline-media" id="inline-figure-5"><img src="[^"]*figure-05-en\.jpg"/);
-  assert.match(html, /class="article-inline-media" id="inline-figure-6"><img src="[^"]*figure-06\.jpg"/);
+  assert.doesNotMatch(html, /id="inline-figure-2"/);
+  assert.doesNotMatch(html, /id="inline-figure-6"/);
 
-  const introLiterature = html.indexOf("The literature on Türkiye-China relations reveals");
-  const introQuestion = html.indexOf("This article addresses the following question:");
+  // PDF-aligned paragraph positions.
+  const researchQuestion = html.indexOf("This article addresses the following question:");
+  const contribution = html.indexOf("The study makes an original contribution at three levels.");
   const figureOne = html.indexOf('id="inline-figure-1"');
-  assert.ok(introLiterature >= 0 && figureOne > introLiterature && introQuestion > figureOne);
-
-  const theoryClosing = html.indexOf("The model also draws a clear distinction among official discourse");
-  const methodSection = html.indexOf('id="en-section-3"');
-  const figureTwo = html.indexOf('id="inline-figure-2"');
-  assert.ok(theoryClosing >= 0 && figureTwo > theoryClosing && methodSection > figureTwo);
+  assert.ok(researchQuestion >= 0 && figureOne > researchQuestion && contribution > figureOne);
 
   const codingParagraph = html.indexOf("During coding, the date, document type, institutional producer");
   const limitationsParagraph = html.indexOf("The method has two limitations.");
@@ -895,44 +892,48 @@ test("renders all Çomak media inline and retains grouped archive copies", async
   assert.ok(codingParagraph >= 0 && tableOne > codingParagraph && limitationsParagraph > tableOne);
 
   const fdiParagraph = html.indexOf("Foreign direct investment data likewise reveal the gap between trade volume and production integration.");
-  const tableTwo = html.indexOf('id="table-2"');
-  assert.ok(fdiParagraph >= 0 && tableTwo > fdiParagraph);
-
   const bydParagraph = html.indexOf("The approximately USD 1 billion investment agreement signed with BYD");
+  const tableTwo = html.indexOf('id="table-2"');
+  assert.ok(fdiParagraph >= 0 && tableTwo > fdiParagraph && bydParagraph > tableTwo);
+
   const localValueParagraph = html.indexOf("Local value added and technology transfer should not be used interchangeably.");
   const figureFive = html.indexOf('id="inline-figure-5"');
   assert.ok(bydParagraph >= 0 && figureFive > bydParagraph && localValueParagraph > figureFive);
 
-  const peaceMechanism = html.indexOf("The Türkiye-China connection is clear at this point, but conditional.");
-  const monitoringParagraph = html.indexOf("For the framework to be monitored empirically");
-  const figureSix = html.indexOf('id="inline-figure-6"');
-  assert.ok(peaceMechanism >= 0 && figureSix > peaceMechanism && monitoringParagraph > figureSix);
-
-  assert.match(html, /Figures, tables and visuals/);
+  // Archive: every body-media item from the official PDF, grouped Figures → Tables → Visuals.
+  assert.match(html, /Visuals and tables/);
   const figureGroup = html.indexOf('data-kind="figure"');
   const tableGroup = html.indexOf('data-kind="table"');
   const visualGroup = html.indexOf('data-kind="visual"');
-  assert.ok(figureGroup >= 0 && tableGroup > figureGroup && visualGroup > tableGroup);
-  assert.match(html, /<h3>Figures<\/h3>/);
-  assert.match(html, /<h3>Tables<\/h3>/);
-  assert.match(html, /<h3>Visuals<\/h3>/);
+  const dialog = html.indexOf('class="figure-lightbox"');
+  assert.ok(figureGroup >= 0 && tableGroup > figureGroup && visualGroup > tableGroup && dialog > visualGroup);
+
+  const figuresHtml = html.slice(figureGroup, tableGroup);
+  const tablesHtml = html.slice(tableGroup, visualGroup);
+  const visualsHtml = html.slice(visualGroup, dialog);
+
+  assert.equal((figuresHtml.match(/<figure/g) || []).length, 2);
+  assert.equal((tablesHtml.match(/<figure/g) || []).length, 2);
+  assert.equal((visualsHtml.match(/<figure/g) || []).length, 2);
+
+  assert.match(figuresHtml, /figure-01\.jpg/);
+  assert.match(figuresHtml, /figure-05-en\.jpg/);
+  assert.doesNotMatch(figuresHtml, /figure-02\.jpg|figure-06\.jpg|figure-03-en\.png|figure-04-en\.png/);
+
+  assert.match(tablesHtml, /figure-03-en\.png/);
+  assert.match(tablesHtml, /figure-04-en\.png/);
+  assert.doesNotMatch(tablesHtml, /figure-01\.jpg|figure-02\.jpg|figure-05-en\.jpg|figure-06\.jpg/);
+
+  assert.match(visualsHtml, /figure-02\.jpg/);
+  assert.match(visualsHtml, /figure-06\.jpg/);
+  assert.doesNotMatch(visualsHtml, /figure-01\.jpg|figure-03-en\.png|figure-04-en\.png|figure-05-en\.jpg/);
+
   assert.match(html, /<b>Figure 1<\/b>The Middle Corridor connects China and Europe/);
   assert.match(html, /<b>Figure 2<\/b>Eurasian transport corridors:/);
   assert.match(html, /<b>Table 1<\/b>Indicators Used to Distinguish a Transit Country from a Joint Production Hub/);
   assert.match(html, /<b>Table 2<\/b>Indicator-Based Assessment of the Research Question/);
   assert.match(html, /<b>Visual 1<\/b>Turkish President Recep Tayyip Erdoğan met with Chinese President Xi Jinping/);
   assert.match(html, /<b>Visual 2<\/b>In Türkiye-China relations, the combination of economic reciprocity/);
-
-  for (const asset of [
-    /figure-01\.jpg/g,
-    /figure-02\.jpg/g,
-    /figure-03-en\.png/g,
-    /figure-04-en\.png/g,
-    /figure-05-en\.jpg/g,
-    /figure-06\.jpg/g,
-  ]) {
-    assert.ok((html.match(asset) || []).length >= 2);
-  }
 
   const prerenderedHtml = await readFile(
     new URL(
@@ -941,23 +942,25 @@ test("renders all Çomak media inline and retains grouped archive copies", async
     ),
     "utf8",
   );
-  for (const id of ["inline-figure-1", "inline-figure-2", "table-1", "table-2", "inline-figure-5", "inline-figure-6"]) {
+
+  for (const id of ["inline-figure-1", "table-1", "table-2", "inline-figure-5"]) {
     assert.ok(prerenderedHtml.includes('id="' + id + '"'));
   }
+  assert.ok(!prerenderedHtml.includes('id="inline-figure-2"'));
+  assert.ok(!prerenderedHtml.includes('id="inline-figure-6"'));
+
   const prerenderFigureGroup = prerenderedHtml.indexOf('data-kind="figure"');
   const prerenderTableGroup = prerenderedHtml.indexOf('data-kind="table"');
   const prerenderVisualGroup = prerenderedHtml.indexOf('data-kind="visual"');
-  assert.ok(prerenderFigureGroup >= 0 && prerenderTableGroup > prerenderFigureGroup && prerenderVisualGroup > prerenderTableGroup);
-  for (const asset of [
-    /figure-01\.jpg/g,
-    /figure-02\.jpg/g,
-    /figure-03-en\.png/g,
-    /figure-04-en\.png/g,
-    /figure-05-en\.jpg/g,
-    /figure-06\.jpg/g,
-  ]) {
-    assert.ok((prerenderedHtml.match(asset) || []).length >= 2);
-  }
+  const prerenderDialog = prerenderedHtml.indexOf('class="figure-lightbox"');
+  assert.ok(prerenderFigureGroup >= 0 && prerenderTableGroup > prerenderFigureGroup && prerenderVisualGroup > prerenderTableGroup && prerenderDialog > prerenderVisualGroup);
+
+  const prerenderFigures = prerenderedHtml.slice(prerenderFigureGroup, prerenderTableGroup);
+  const prerenderTables = prerenderedHtml.slice(prerenderTableGroup, prerenderVisualGroup);
+  const prerenderVisuals = prerenderedHtml.slice(prerenderVisualGroup, prerenderDialog);
+  assert.equal((prerenderFigures.match(/<figure/g) || []).length, 2);
+  assert.equal((prerenderTables.match(/<figure/g) || []).length, 2);
+  assert.equal((prerenderVisuals.match(/<figure/g) || []).length, 2);
 });
 
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
@@ -968,11 +971,11 @@ test("uses bilingual visual, footnote, and return-navigation labels", async () =
   ]);
   const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
 
-  assert.match(trHtml, /Şekiller, tablolar ve görseller/);
+  assert.match(trHtml, /Görsel ve tablolar/);
   assert.match(trHtml, /<b>Görsel 1<\/b>/);
   assert.match(trHtml, />Dipnotlar</);
   assert.doesNotMatch(trHtml, /Notlar ve dipnotlar/);
-  assert.match(enHtml, /Figures, tables and visuals/);
+  assert.match(enHtml, /Visuals and tables/);
   assert.match(enHtml, /<b>Visual 1<\/b>/);
   assert.match(enHtml, />Footnotes</);
   assert.doesNotMatch(enHtml, /Notes and footnotes/);
