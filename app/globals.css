@@ -8592,7 +8592,7 @@ body {
   height: auto;
 }
 
-.article-inline-table-image .article-inline-table-image-caption {
+.article-inline-table.article-inline-table-image .article-inline-table-image-caption {
   margin: 8px 10px 10px;
   color: #675e56;
   font-family: Georgia, "Times New Roman", serif;
