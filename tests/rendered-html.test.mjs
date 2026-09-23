@@ -84,6 +84,17 @@ test("keeps registered BRIQ DOIs matched to their Crossref article records", asy
     "dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi": "10.67696/7q2m9x4k",
     "islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma": "10.67696/6r8h4k4a",
     "cin-abd-iliskilerinin-gelecegi": "10.67696/5y2r9u9d",
+    "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme": "10.67696/3s9f6q3t",
+    "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin": "10.67696/4k5f5u3h",
+    "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin": "10.67696/8g8a8j3f",
+    "kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre": "10.67696/9v8n5x9a",
+    "cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege": "10.67696/4f9e7s8m",
+    "mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim": "10.67696/7g5d4y5c",
+    "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi": "10.67696/5s9f9a2d",
+    "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik": "10.67696/2z9q4h9h",
+    "dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi": "10.67696/8q6a9a7j",
+    "filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun": "10.67696/2t7q7z9t",
+    "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce": "10.67696/7j5e3t9z",
   });
 });
 
@@ -1502,7 +1513,7 @@ test("preserves Volume 7 PDF hierarchy, metadata, and compact archive/PDF naviga
 
 test("renders linked season-coloured issue metadata and an always-visible DOI field on article pages", async () => {
   const doiSlug = "cin-abd-iliskilerinin-gelecegi";
-  const noDoiSlug = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
+  const noDoiSlug = "cinin-kuresel-altyapi-stratejisi";
   const responses = await Promise.all([
     renderPath(`/tr/makaleler/${doiSlug}`),
     renderPath(`/en/articles/${englishArticleSlug(doiSlug)}`),
