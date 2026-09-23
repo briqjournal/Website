@@ -452,7 +452,11 @@
       "id": "figure-1",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-01.jpg",
       "caption": "As of September 22, 2025, the State of Palestine is formally recognized by at least 155 of the 193 United Nations member states (Photo: IMEMC, 2025).",
-      "kind": "figure"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-1",
+        "afterParagraph": 1
+      }
     },
     {
       "id": "figure-2",
@@ -494,13 +498,37 @@
       "id": "figure-8",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-08.jpg",
       "caption": "IMEC is an example of an architecture aimed at strengthening the U.S.-Israel-Gulf strategic bloc against Iran, integrating this bloc into a broader connectivity infrastructure linking Asia and Europe, and institutionalizing bilateral security relations with the Gulf monarchies that operate independently of the Israeli-Palestinian conflict (Map: IMEC, n.d.).",
-      "kind": "figure"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-13",
+        "afterParagraph": 2
+      }
     },
     {
       "id": "figure-9",
       "src": "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-09.jpg",
       "caption": "In 2024, the Israeli government declared approximately 24,258 dunams as state land, equivalent to roughly half of all such declarations since the Oslo Accords (Graphic: Arab News, 2026).",
-      "kind": "figure"
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-14",
+        "afterParagraph": 2
+      }
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Table 1: Principal transatlantic public-opinion surveys on Israel-Palestine, October 2023–2026",
+      "headers": [],
+      "rows": [],
+      "placement": {
+        "sectionId": "en-section-4",
+        "afterParagraph": 2
+      },
+      "imageSrcs": [
+        "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-03.jpg",
+        "/assets/article-figures/filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun/figure-04.jpg"
+      ]
     }
   ]
 }
