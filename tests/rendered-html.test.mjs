@@ -897,6 +897,22 @@ test("renders Çomak tables inline while retaining their visual copies", async (
   assert.match(html, /figure-04-en\.png/);
   assert.match(html, /<b>Table 1<\/b>Table 1\. Indicators Used to Distinguish a Transit Country from a Joint Production Hub/);
   assert.match(html, /<b>Table 2<\/b>Table 2\. Indicator-Based Assessment of the Research Question/);
+  assert.match(html, /<table>/);
+
+  const prerenderedHtml = await readFile(
+    new URL(
+      "../dist/client/en/articles/power-transition-and-geoeconomic-connectivity-in-eurasia-on-the-55th-anniversary-of-turkiye-china-diplomatic-relations/index.html",
+      import.meta.url,
+    ),
+    "utf8",
+  );
+  assert.match(prerenderedHtml, /class="article-inline-table" id="table-1"/);
+  assert.match(prerenderedHtml, /class="article-inline-table" id="table-2"/);
+  assert.match(prerenderedHtml, /<table>/);
+  assert.match(prerenderedHtml, /<th scope="row">Logistical function<\/th>/);
+  assert.match(prerenderedHtml, /<th scope="row">R&amp;D, technology, and local value<\/th>/);
+  assert.match(prerenderedHtml, /figure-03-en\.png/);
+  assert.match(prerenderedHtml, /figure-04-en\.png/);
 });
 
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
