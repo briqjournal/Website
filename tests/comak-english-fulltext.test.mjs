@@ -51,7 +51,18 @@ test("keeps the Çomak-Toker-Manioğlu article bilingual instead of duplicating 
   );
   assert(record.en.figures.every((figure) => /[A-Za-z]/u.test(figure.caption)));
   assert.equal(record.en.figures[0].caption, "The Middle Corridor connects China and Europe through Central Asia and Türkiye and integrates with the Belt and Road Initiative (BRI) (Map: Valdai Club, 2023).");
-  assert.equal(record.en.figures[2].caption, "Table 1. Indicators Used to Distinguish a Transit Country from a Joint Production Hub");
+  assert.equal(record.en.figures.length, 4);
+  assert(record.en.figures.every((figure) => !/^(?:Table|Tablo)\b/u.test(figure.caption)));
+  assert.equal(record.en.figures[2].caption, "Eurasian transport corridors: Türkiye’s connections with Europe, Central Asia, China, the Middle East, and Africa (Map: Prepared by BRIQ based on data from the Republic of Türkiye Ministry of Foreign Affairs and the Republic of Türkiye Ministry of Transport and Infrastructure on Türkiye’s connectivity and international transport corridors, 2026).");
+
+  assert.equal(record.en.tables.length, 2);
+  assert.deepEqual(record.en.tables[0].placement, { sectionId: "en-section-3", afterParagraph: 4 });
+  assert.deepEqual(record.en.tables[0].headers, ["Dimension", "Indicators", "Analytical interpretation"]);
+  assert.equal(record.en.tables[0].rows.length, 5);
+  assert.match(record.en.tables[0].rows[0][2], /production hub/u);
+  assert.deepEqual(record.en.tables[1].placement, { sectionId: "en-section-6", afterParagraph: 4 });
+  assert.equal(record.en.tables[1].rows[3][0], "Foreign direct investment");
+  assert.match(record.en.tables[1].rows[4][2], /verified joint production hub/u);
 });
 
 
