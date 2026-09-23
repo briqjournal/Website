@@ -1,20 +1,85 @@
 {
   "schemaVersion": 2,
   "id": "kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi",
-  "articleType": {"id": "review-article", "tr": "Derleme Makalesi", "en": "Review Article", "peerReviewed": true},
-  "title": {"en": "Establishing Innovation Systems in the Global South: Challenges and the Path Forward through South-South Cooperation", "tr": "Küresel Güney’de Yenilik Sistemlerinin Kurulması: Zorluklar ve Güney-Güney İşbirliği ile Yol Haritası"},
-  "authors": [{"displayName": "Uğur Murat Leloğlu", "givenName": "Uğur Murat", "familyName": "Leloğlu", "orcid": "https://orcid.org/0000-0002-8584-7301", "affiliations": [{"name": "Turkish Aeronautical Association University", "nameTr": "Türk Hava Kurumu Üniversitesi", "nameEn": "Turkish Aeronautical Association University", "country": "Türkiye", "ror": null}]}],
+  "articleType": {
+    "id": "review-article",
+    "tr": "Derleme Makalesi",
+    "en": "Review Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Establishing Innovation Systems in the Global South: Challenges and the Path Forward through South-South Cooperation",
+    "tr": "Küresel Güney’de Yenilik Sistemlerinin Kurulması: Zorluklar ve Güney-Güney İşbirliği ile Yol Haritası"
+  },
+  "authors": [
+    {
+      "displayName": "Uğur Murat Leloğlu",
+      "givenName": "Uğur Murat",
+      "familyName": "Leloğlu",
+      "orcid": "https://orcid.org/0000-0002-8584-7301",
+      "affiliations": [
+        {
+          "name": "Turkish Aeronautical Association University",
+          "nameTr": "Türk Hava Kurumu Üniversitesi",
+          "nameEn": "Turkish Aeronautical Association University",
+          "country": "Türkiye",
+          "ror": null
+        }
+      ]
+    }
+  ],
   "abstract": {
     "en": "This paper examines the obstacles and prospects for establishing resilient innovation systems in the Global South. In addition to structural impediments like brain drain, fragile industrial bases, and insufficient legal and cultural frameworks, self-perpetuating polarization along the core-periphery axis and the monopolization of knowledge at the core further constrain these nations’ capacity to establish robust science, technology, and innovation systems. The document underscores the constraints of North-South partnerships, which frequently intensify prevailing disparities, and accentuates the promise of South-South collaboration as a more equitable and sustainable option. Through the sharing of resources, expertise, and experiences, countries in the Global South may augment their innovation ecosystems, propel regional development, and fortify their standings in global value chains. Customized policies, regional collaboration, and fair international alliances are seen as crucial for the sustained success of innovation systems in the Global South. A proposed model delineates a shared research domain wherein players allocate adaptable budgets and comply with a notion of equitable returns within structured frameworks. This strategy could promote efficient and effective South-South scientific and technological collaboration at both regional and global levels. The BRICS STI Framework initiative can act as a significant reference for analogous regional organizations, enhancing their collaborative models via shared experiences and adaptable frameworks.",
     "tr": "Bu makale, Küresel Güney’de güçlü yenilik sistemleri inşa etme sürecinde karşılaşılan zorlukları ve fırsatları incelemektedir. Beyin göçü, zayıf sanayi temeli ve yetersiz yasal ve kültürel altyapı gibi yapısal engeller yanında, merkez-çevre ekseninde kendi kendini besleyen kutuplaşma ve bilginin merkezde tekelleşmesi bu ülkelerin etkin bir bilim, teknoloji ve yenilik sistemi geliştirme yeteneğini sınırlandırmaktadır. Makale, Kuzey-Güney işbirliklerinin çoğu zaman mevcut eşitsizlikleri daha da kötüleştiren sınırlamalarına dikkat çekmekte ve Güney-Güney işbirliğinin daha dengeli ve sürdürülebilir bir alternatif olarak potansiyelini vurgulamaktadır. Kaynakları, bilgiyi ve deneyimleri paylaşarak Küresel Güney’deki ülkeler yenilik ekosistemlerini geliştirebilir, bölgesel kalkınmayı destekleyebilir ve küresel değer zincirlerinde pozisyonlarını güçlendirebilir. Güney’de yenilik sistemlerinin uzun vadeli başarısı için özel olarak hazırlanmış politikalar, bölgesel işbirlikleri ve adil uluslararası ortaklıkların önemi ele alınmaktadır. Ayrıca, önerilen bir model çerçevesinde katılımcıların esnek bütçelerle katkıda bulunduğu ve adil getiri ilkesine bağlı kalındığı ortak bir araştırma alanı önerilmektedir. Bu tür bir model, bölgesel ve küresel düzeyde verimli ve etkili Güney-Güney bilimsel ve teknolojik işbirliğini teşvik edebilir. BRICS BTY Çerçeve Programı, benzer bölgesel organizasyonlar için değerli bir referans olarak hizmet edebilir."
   },
-  "keywords": {"en": ["brain drain", "Global South", "science, technology and innovation policy", "South-South cooperation", "sustainable development"], "tr": ["beyin göçü", "bilim, teknoloji ve yenilik politikası", "Güney-Güney işbirliği", "Küresel Güney", "sürdürülebilir kalkınma"]},
-  "dates": {"received": "2024-10-01", "revised": "2024-11-06", "accepted": "2024-11-10", "published": "2024-12-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 1, "year": "2024-2025", "season": {"en": "Winter", "tr": "Kış"}},
-  "pages": {"first": "20", "last": "34"},
-  "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "keywords": {
+    "en": [
+      "brain drain",
+      "Global South",
+      "science, technology and innovation policy",
+      "South-South cooperation",
+      "sustainable development"
+    ],
+    "tr": [
+      "beyin göçü",
+      "bilim, teknoloji ve yenilik politikası",
+      "Güney-Güney işbirliği",
+      "Küresel Güney",
+      "sürdürülebilir kalkınma"
+    ]
+  },
+  "dates": {
+    "received": "2024-10-01",
+    "revised": "2024-11-06",
+    "accepted": "2024-11-10",
+    "published": "2024-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 1,
+    "year": "2024-2025",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "20",
+    "last": "34"
+  },
+  "doi": "10.67696/7z8u9a8t",
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,
@@ -22,6 +87,17 @@
   "dataAvailability": null,
   "aiUse": null,
   "acknowledgements": null,
-  "citation": {"en": "Leloğlu, U. M. (2024). Establishing Innovation Systems in the Global South: Challenges and the Path Forward through South-South Cooperation. BRIQ Belt & Road Initiative Quarterly, 6(1), 20-35.", "tr": "Leloğlu, U. M. (2024). Küresel Güney’de Yenilik Sistemlerinin Kurulması: Zorluklar ve Güney-Güney İşbirliği ile Yol Haritası. BRIQ Kuşak ve Yol Girişimi Dergisi, 6(1), 20-34."},
-  "urls": {"en": "https://briqjournal.com/en/establishing-innovation-systems-the-global-south-challenges-and-the-path-forward-through-south", "tr": "https://briqjournal.com/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi", "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-12/U%C4%9EUR%20MURAT%20LELO%C4%9ELU_ENG.pdf", "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/U%C4%9EUR%20MURAT%20LELO%C4%9ELU_TR.pdf", "pdfEnLocal": "/assets/archive/pdfs/articles/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi-en.pdf", "pdfTrLocal": "/assets/archive/pdfs/articles/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi-tr.pdf", "sharedBilingualPdf": false}
+  "citation": {
+    "en": "Leloğlu, U. M. (2024). Establishing Innovation Systems in the Global South: Challenges and the Path Forward through South-South Cooperation. BRIQ Belt & Road Initiative Quarterly, 6(1), 20-35.",
+    "tr": "Leloğlu, U. M. (2024). Küresel Güney’de Yenilik Sistemlerinin Kurulması: Zorluklar ve Güney-Güney İşbirliği ile Yol Haritası. BRIQ Kuşak ve Yol Girişimi Dergisi, 6(1), 20-34."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/establishing-innovation-systems-the-global-south-challenges-and-the-path-forward-through-south",
+    "tr": "https://briqjournal.com/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-12/U%C4%9EUR%20MURAT%20LELO%C4%9ELU_ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/U%C4%9EUR%20MURAT%20LELO%C4%9ELU_TR.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }

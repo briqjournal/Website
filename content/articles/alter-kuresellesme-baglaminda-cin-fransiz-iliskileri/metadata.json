@@ -1,22 +1,65 @@
 {
   "schemaVersion": 2,
   "id": "alter-kuresellesme-baglaminda-cin-fransiz-iliskileri",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
-  "title": {"en": "The Sino-French Relations in the Context of Alter-Globalization", "tr": "Alter-Küreselleşme Bağlamında Çin-Fransız İlişkileri"},
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "The Sino-French Relations in the Context of Alter-Globalization",
+    "tr": "Alter-Küreselleşme Bağlamında Çin-Fransız İlişkileri"
+  },
   "authors": [
-    {"displayName": "Ahmet Gedik", "givenName": "Ahmet", "familyName": "Gedik", "orcid": null, "affiliations": []}
+    {
+      "displayName": "Ahmet Gedik",
+      "givenName": "Ahmet",
+      "familyName": "Gedik",
+      "orcid": null,
+      "affiliations": []
+    }
   ],
   "abstract": {
     "en": "Examining Sino-French relations within the framework of multipolar international politics in the 2000s reveals new political dynamics with historical roots and future implications. France’s historical presence in the ‘Indochina’ region during the colonial era, as a sovereign state and a pivotal actor until the Vietnam War, establishes the historical context. Despite strained relations during Mao Zedong’s era and the Chinese Revolution, Charles de Gaulle’s 1964 visit revitalized diplomatic ties between the two nations. This study aims to elucidate the evolution of Sino-French relations since the pivotal 1911 Chinese Revolution, focusing on the trajectory leading to the emergence of the People’s Republic of China in both economic and political dimensions. In addition to examining the traditional and Western perceptions of the impacts of globalization, this article addresses the novel opportunities and challenges posed by the superpower status of the People’s Republic of China within the context of French foreign policy. It does so by incorporating an alter-globalization perspective, delving into the evolving dynamics of the global political landscape. Alter-globalization, which emphasizes alternative approaches prioritizing social and environmental justice, becomes particularly relevant. Within this framework, Sino-French relations can be analyzed not only in terms of conventional power dynamics but also through the lens of evolving global norms and values. The cultivation of strong ties between China and France within the EU framework serves as a means for the former to exert influence. This study aims to answer these questions and examine contemporary Sino-French relations, considering historical impacts and utilizing an alter-globalization perspective.",
     "tr": "2000’lerde çok kutuplu uluslararası siyaset çerçevesindeki Çin-Fransız ilişkilerinin incelenmesi, tarihsel köklere ve gelecekteki etkilere dair yeni siyasi dinamikleri ortaya koyuyor. Fransa’nın ‘Hindiçini’ bölgesindeki sömürge döneminden, bağımsız bir devlet ve Vietnam Savaşı’na kadar olan tarihsel varlığı, tarihsel bağlamı oluşturuyor. Mao Zedung döneminde ve Çin Devrimi sırasında gerilmiş ilişkilere rağmen, Charles de Gaulle’ün 1964 ziyareti, iki ülke arasındaki diplomatik ilişkileri canlandırdı. Bu çalışma, 1911 Çin Devrimi’nden bu yana Çin-Fransız ilişkilerinin evrimini açıklamayı amaçlamakta ve ekonomik ve siyasi boyutlarda Çin Halk Cumhuriyeti’nin ortaya çıkışına yol açan rota üzerine odaklanmaktadır. Küreselleşmenin geleneksel ve Batı anlayışlarındaki etkilerinin yanı sıra, bu makale, Çin Halk Cumhuriyeti’nin süper güç statüsünün Fransız dış politikası bağlamındaki yeni fırsatları ve zorlukları ele almaktadır. Bunu yaparken de alter-küreselleşmeci perspektif bağlamını ele almakta, küresel siyasi manzaranın evrimini irdelemektedir. Sosyal ve çevresel adaleti öncelikli kılan küreselleşmeye alternatif yaklaşımları vurgulayan alter-küreselleşme, özellikle önemlidir. Bu çerçevede, Çin-Fransız ilişkileri sadece geleneksel güç dinamikleri açısından değil, aynı zamanda evrilen küresel normlar ve değerler perspektifinden de analiz edilebilir. Çin ve Fransa arasındaki ilişkilerin AB çerçevesinde geliştirilmesi, Çin’in etki etme yollarından biri olarak hizmet etmektedir. Bu çalışma kapsamında, bu sorulara cevap vermeyi ve tarihsel etkileri göz önüne alarak çağdaş Çin-Fransız ilişkilerini incelemektedir."
   },
-  "keywords": {"en": [], "tr": []},
-  "dates": {"received": "2023-11-28", "revised": "2024-05-08", "accepted": "2024-02-20", "published": "2025-03-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 2, "year": 2025, "season": {"en": "Spring", "tr": "Bahar"}},
-  "pages": {"first": "225", "last": "247"},
-  "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "keywords": {
+    "en": [],
+    "tr": []
+  },
+  "dates": {
+    "received": "2023-11-28",
+    "revised": "2024-05-08",
+    "accepted": "2024-02-20",
+    "published": "2025-03-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 2,
+    "year": 2025,
+    "season": {
+      "en": "Spring",
+      "tr": "Bahar"
+    }
+  },
+  "pages": {
+    "first": "225",
+    "last": "247"
+  },
+  "doi": "10.67696/8v4k3s3a",
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,

@@ -1,20 +1,85 @@
 {
   "schemaVersion": 2,
   "id": "turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi",
-  "articleType": {"id": "research-article", "tr": "Araştırma Makalesi", "en": "Research Article", "peerReviewed": true},
-  "title": {"en": "Contributions of Intelligence Agencies to Türkiye’s Security", "tr": "Türkiye’nin Güvenlik Politikalarına İstihbarat Teşkilatlarının Katkısı"},
-  "authors": [{"displayName": "Oğuz Giray", "givenName": "Oğuz", "familyName": "Giray", "orcid": null, "affiliations": [{"name": "Yeditepe University", "nameTr": "Yeditepe Üniversitesi", "nameEn": "Yeditepe University", "country": "Türkiye", "ror": null}]}],
+  "articleType": {
+    "id": "research-article",
+    "tr": "Araştırma Makalesi",
+    "en": "Research Article",
+    "peerReviewed": true
+  },
+  "title": {
+    "en": "Contributions of Intelligence Agencies to Türkiye’s Security",
+    "tr": "Türkiye’nin Güvenlik Politikalarına İstihbarat Teşkilatlarının Katkısı"
+  },
+  "authors": [
+    {
+      "displayName": "Oğuz Giray",
+      "givenName": "Oğuz",
+      "familyName": "Giray",
+      "orcid": null,
+      "affiliations": [
+        {
+          "name": "Yeditepe University",
+          "nameTr": "Yeditepe Üniversitesi",
+          "nameEn": "Yeditepe University",
+          "country": "Türkiye",
+          "ror": null
+        }
+      ]
+    }
+  ],
   "abstract": {
     "en": "Intelligence has been a tool used by states to ensure their security. This effort, which primarily involves the process of gathering and evaluating information, has become professionalized over time and has become an element that determines the security strategies of states. Security is one of the most important pillars of a state’s continued existence. This has military and economic dimensions, as well as other dimensions such as alliances. Intelligence is one of these methods and plays an important role in state policies, future plans and instant security measures. Today, cyber security technologies are an important component of national security and economic security. Türkiye is taking important steps to strengthen national security by developing cyber security policies against cyber threats. These steps enable Türkiye to be in a stronger position in national and international security policies. This article examines the impact of intelligence activities on state security and how they shape state policies. It also examines which types of intelligence are effective in state security policies.",
     "tr": "İstihbarat, devletlerin güvenliklerini sağlamak için kullandığı bir araç olmuştur. Bu, öncelikli olarak bilgi toplama ve değerlendirme sürecini içeren çaba, zamanla profesyonelleşerek devletlerin güvenlik stratejilerini belirleyen bir unsur haline gelmiştir. Devletlerin varlığını devam ettirmesinin en önemli ayaklarından biri güvenliktir. Bunun askeri, ekonomik boyutları olduğu gibi, kurulan ittifaklar gibi farklı boyutları da mevcuttur. İstihbarat da bu yöntemlerden biridir ve devletin politikalarında, gelecek planlarında ve anlık güvenlik tedbirlerinde önemli bir rol oynamaktadır. Günümüzde siber güvenlik teknolojileri, ulusal güvenlik ve ekonomi güvenliği konularında önemli bir bileşendir. Türkiye siber tehditlere karşı geliştirdiği siber güvenlik politikalarıyla ulusal güvenliği güçlendirmeyi amaçlayan önemli adımlar atmaktadır. Bu adımlar Türkiye’nin ulusal ve uluslararası güvenlik politikalarında daha güçlü bir konumda olmasını sağlamaktadır. Bu makalede, istihbarat faaliyetlerinin devlet güvenliğine olan etkisi ve devlet politikalarını nasıl şekillendirdiği incelenecektir. Ayrıca, hangi istihbarat türlerinin devletin güvenlik politikalarında etkili olduğu da ele alınacaktır."
   },
-  "keywords": {"en": ["intelligence", "cyber security", "security", "security policy", "Türkiye"], "tr": ["güvenlik", "güvenlik politikaları", "istihbarat", "siber güvenlik", "Türkiye"]},
-  "dates": {"received": "2024-05-09", "revised": "2024-09-16", "accepted": "2024-09-15", "published": "2024-12-01"},
-  "journal": {"title": "BRIQ Belt & Road Initiative Quarterly", "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi", "issn": "2687-5896", "eissn": "2718-0581", "volume": 6, "issue": 1, "year": "2024-2025", "season": {"en": "Winter", "tr": "Kış"}},
-  "pages": {"first": "74", "last": "91"},
-  "doi": null,
-  "language": ["en", "tr"],
-  "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
+  "keywords": {
+    "en": [
+      "intelligence",
+      "cyber security",
+      "security",
+      "security policy",
+      "Türkiye"
+    ],
+    "tr": [
+      "güvenlik",
+      "güvenlik politikaları",
+      "istihbarat",
+      "siber güvenlik",
+      "Türkiye"
+    ]
+  },
+  "dates": {
+    "received": "2024-05-09",
+    "revised": "2024-09-16",
+    "accepted": "2024-09-15",
+    "published": "2024-12-01"
+  },
+  "journal": {
+    "title": "BRIQ Belt & Road Initiative Quarterly",
+    "titleTr": "BRIQ Kuşak ve Yol Girişimi Dergisi",
+    "issn": "2687-5896",
+    "eissn": "2718-0581",
+    "volume": 6,
+    "issue": 1,
+    "year": "2024-2025",
+    "season": {
+      "en": "Winter",
+      "tr": "Kış"
+    }
+  },
+  "pages": {
+    "first": "74",
+    "last": "91"
+  },
+  "doi": "10.67696/9d8g7g6p",
+  "language": [
+    "en",
+    "tr"
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
   "funding": null,
   "conflictOfInterest": null,
   "authorContributions": null,
@@ -22,6 +87,17 @@
   "dataAvailability": null,
   "aiUse": null,
   "acknowledgements": null,
-  "citation": {"en": "Giray, O. (2024). Contributions of Intelligence Agencies to Türkiye’s Security. BRIQ Belt & Road Initiative Quarterly, 6(1), 74-91.", "tr": "Giray, O. (2024). Türkiye’nin Güvenlik Politikalarına İstihbarat Teşkilatlarının Katkısı. BRIQ Kuşak ve Yol Girişimi Dergisi, 6(1), 74-91."},
-  "urls": {"en": "https://briqjournal.com/en/contributions-intelligence-agencies-turkiyes-security", "tr": "https://briqjournal.com/turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi", "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-12/O%C4%9Fuz%20G%C4%B0ray_ENG.pdf", "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/75-OGUZ%20G%C4%B0RAY-tr.pdf", "pdfEnLocal": "/assets/archive/pdfs/articles/turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi-en.pdf", "pdfTrLocal": "/assets/archive/pdfs/articles/turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi-tr.pdf", "sharedBilingualPdf": false}
+  "citation": {
+    "en": "Giray, O. (2024). Contributions of Intelligence Agencies to Türkiye’s Security. BRIQ Belt & Road Initiative Quarterly, 6(1), 74-91.",
+    "tr": "Giray, O. (2024). Türkiye’nin Güvenlik Politikalarına İstihbarat Teşkilatlarının Katkısı. BRIQ Kuşak ve Yol Girişimi Dergisi, 6(1), 74-91."
+  },
+  "urls": {
+    "en": "https://briqjournal.com/en/contributions-intelligence-agencies-turkiyes-security",
+    "tr": "https://briqjournal.com/turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2025-12/O%C4%9Fuz%20G%C4%B0ray_ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2024-12/75-OGUZ%20G%C4%B0RAY-tr.pdf",
+    "pdfEnLocal": "/assets/archive/pdfs/articles/turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi-en.pdf",
+    "pdfTrLocal": "/assets/archive/pdfs/articles/turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi-tr.pdf",
+    "sharedBilingualPdf": false
+  }
 }
