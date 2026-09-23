@@ -8592,6 +8592,16 @@ body {
   height: auto;
 }
 
+.article-inline-table-image .article-inline-table-image-caption {
+  margin: 8px 10px 10px;
+  color: #675e56;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
 .article-inline-table figcaption {
   margin: 0 0 11px;
   color: var(--ink);
