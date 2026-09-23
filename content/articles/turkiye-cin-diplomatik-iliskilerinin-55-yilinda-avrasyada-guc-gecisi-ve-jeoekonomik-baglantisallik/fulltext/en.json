@@ -255,18 +255,14 @@
       "kind": "figure",
       "placement": {
         "sectionId": "en-section-1",
-        "afterParagraph": 3
+        "afterParagraph": 4
       }
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-02.jpg",
       "caption": "Turkish President Recep Tayyip Erdoğan met with Chinese President Xi Jinping on July 4, 2024, on the sidelines of the Shanghai Cooperation Organization summit held in Astana, Kazakhstan (Photo: CGTN, 2024).",
-      "kind": "visual",
-      "placement": {
-        "sectionId": "en-section-2",
-        "afterParagraph": 7
-      }
+      "kind": "visual"
     },
     {
       "id": "figure-3",
@@ -294,11 +290,7 @@
       "id": "figure-6",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-06.jpg",
       "caption": "In Türkiye-China relations, the combination of economic reciprocity, institutionalized connectivity, and sustained diplomatic dialogue may enable interdependence to become a mechanism for reducing the risk of conflict (Illustration: The Daily CPEC, 2025).",
-      "kind": "visual",
-      "placement": {
-        "sectionId": "en-section-8",
-        "afterParagraph": 7
-      }
+      "kind": "visual"
     }
   ],
   "tables": [
