@@ -319,7 +319,8 @@
       "placement": {
         "sectionId": "en-section-3",
         "afterParagraph": 5
-      }
+      },
+      "imageSrc": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-03-en.png"
     },
     {
       "id": "table-2",
@@ -360,7 +361,8 @@
       "placement": {
         "sectionId": "en-section-6",
         "afterParagraph": 4
-      }
+      },
+      "imageSrc": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-04-en.png"
     }
   ]
 }

@@ -867,25 +867,20 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.doesNotMatch(doiHtml, /Yapay Zekâ Kullanımı/);
 });
 
-test("renders Çomak tables inline while retaining their visual copies", async () => {
+test("renders Çomak published table images inline at PDF positions while retaining their visual copies", async () => {
   const response = await renderPath("/en/articles/power-transition-and-geoeconomic-connectivity-in-eurasia-on-the-55th-anniversary-of-turkiye-china-diplomatic-relations");
   assert.equal(response.status, 200);
   const html = await response.text();
 
-  assert.match(html, /class="article-inline-table" id="table-1"/);
-  assert.match(html, /class="article-inline-table" id="table-2"/);
-  assert.match(html, /<figcaption>Table 1\. Indicators Used to Distinguish a Transit Country from a Joint Production Hub<\/figcaption>/);
-  assert.match(html, /<th scope="col">Dimension<\/th>/);
-  assert.match(html, /<th scope="row">Logistical function<\/th>/);
-  assert.match(html, /<th scope="row">R&amp;D, technology, and local value<\/th>/);
-  assert.match(html, /Compiled by the authors\./);
+  assert.match(html, /class="article-inline-table article-inline-table-image" id="table-1"><img src="[^"]*figure-03-en\.png"/);
+  assert.match(html, /class="article-inline-table article-inline-table-image" id="table-2"><img src="[^"]*figure-04-en\.png"/);
+  assert.doesNotMatch(html, /class="article-inline-table-scroll"/);
 
   const methodSection = html.indexOf('id="en-section-3"');
-  const methodParagraph = html.indexOf("Third, the research question was assessed using the criteria in Table 1");
   const codingParagraph = html.indexOf("During coding, the date, document type, institutional producer");
   const limitationsParagraph = html.indexOf("The method has two limitations.");
   const tableOne = html.indexOf('id="table-1"');
-  assert.ok(methodSection >= 0 && methodParagraph > methodSection && codingParagraph > methodParagraph);
+  assert.ok(methodSection >= 0 && codingParagraph > methodSection);
   assert.ok(tableOne > codingParagraph && limitationsParagraph > tableOne);
 
   const asymmetrySection = html.indexOf('id="en-section-6"');
@@ -893,11 +888,10 @@ test("renders Çomak tables inline while retaining their visual copies", async (
   const tableTwo = html.indexOf('id="table-2"');
   assert.ok(asymmetrySection >= 0 && fdiParagraph > asymmetrySection && tableTwo > fdiParagraph);
 
-  assert.match(html, /figure-03-en\.png/);
-  assert.match(html, /figure-04-en\.png/);
+  assert.ok((html.match(/figure-03-en\.png/g) || []).length >= 2);
+  assert.ok((html.match(/figure-04-en\.png/g) || []).length >= 2);
   assert.match(html, /<b>Table 1<\/b>Table 1\. Indicators Used to Distinguish a Transit Country from a Joint Production Hub/);
   assert.match(html, /<b>Table 2<\/b>Table 2\. Indicator-Based Assessment of the Research Question/);
-  assert.match(html, /<table>/);
 
   const prerenderedHtml = await readFile(
     new URL(
@@ -906,13 +900,11 @@ test("renders Çomak tables inline while retaining their visual copies", async (
     ),
     "utf8",
   );
-  assert.match(prerenderedHtml, /class="article-inline-table" id="table-1"/);
-  assert.match(prerenderedHtml, /class="article-inline-table" id="table-2"/);
-  assert.match(prerenderedHtml, /<table>/);
-  assert.match(prerenderedHtml, /<th scope="row">Logistical function<\/th>/);
-  assert.match(prerenderedHtml, /<th scope="row">R&amp;D, technology, and local value<\/th>/);
-  assert.match(prerenderedHtml, /figure-03-en\.png/);
-  assert.match(prerenderedHtml, /figure-04-en\.png/);
+  assert.match(prerenderedHtml, /class="article-inline-table article-inline-table-image" id="table-1"><img src="[^"]*figure-03-en\.png"/);
+  assert.match(prerenderedHtml, /class="article-inline-table article-inline-table-image" id="table-2"><img src="[^"]*figure-04-en\.png"/);
+  assert.doesNotMatch(prerenderedHtml, /class="article-inline-table-scroll"/);
+  assert.ok((prerenderedHtml.match(/figure-03-en\.png/g) || []).length >= 2);
+  assert.ok((prerenderedHtml.match(/figure-04-en\.png/g) || []).length >= 2);
 });
 
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
