@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Binoy Kampmark",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Binoy Kampmark",
+      "givenName": "Binoy",
+      "familyName": "Kampmark",
+      "orcid": "0000-0002-4171-0645",
+      "affiliations": [
+        {
+          "name": "Department of Global, Urban and Social Studies, RMIT University",
+          "nameTr": "RMIT Üniversitesi, Küresel, Kentsel ve Sosyal Çalışmalar Bölümü",
+          "nameEn": "Department of Global, Urban and Social Studies, RMIT University",
+          "country": "Australia",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

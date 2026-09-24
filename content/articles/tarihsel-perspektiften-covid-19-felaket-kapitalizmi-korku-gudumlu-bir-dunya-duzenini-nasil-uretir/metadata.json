@@ -13,18 +13,34 @@
   },
   "authors": [
     {
-      "displayName": "Efe Can Gürcan",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Doç. Dr. Efe Can Gürcan",
+      "givenName": "Efe Can",
+      "familyName": "Gürcan",
+      "orcid": "0000-0002-5415-3163",
+      "affiliations": [
+        {
+          "name": "Department of International Relations, Istinye University",
+          "nameTr": "İstinye Üniversitesi, Uluslararası İlişkiler Bölümü",
+          "nameEn": "Department of International Relations, Istinye University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     },
     {
-      "displayName": "Ömer Ersin Kahraman",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Öğr. Üyesi Ömer Ersin Kahraman",
+      "givenName": "Ömer Ersin",
+      "familyName": "Kahraman",
+      "orcid": "0000-0002-3744-5965",
+      "affiliations": [
+        {
+          "name": "Department of Sociology, Istinye University",
+          "nameTr": "İstinye Üniversitesi, Sosyoloji Bölümü",
+          "nameEn": "Department of Sociology, Istinye University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
