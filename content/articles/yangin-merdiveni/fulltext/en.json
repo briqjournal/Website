@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "id": "en-section-1",
+      "title": "Full Text",
+      "paragraphs": [
+        "Alexander Rodchenko and Varvara Stepanova lived in this house (No. 21, building 5, years of construction 1913- 1914, architect Nikolai Kurdyukov). In 1918-1935 the street was called Pervomaiskaya, in 1935-1990 - Kirov Street, in 1990 the historical name Myasnitskaya was returned. In this period, photographs Rodchenko, who is one of the leading figures of the Russian avant-garde, are dominated by the concepts of 'bottom-up' and 'top-down'. This understanding is also evident in the 'Fire Escape'."
+      ]
+    }
+  ],
+  "keywords": [],
+  "footnotes": [
+    {
+      "id": "note-1",
+      "text": "From the series \"House on Myasnitskaya\" 1925."
+    }
+  ],
+  "references": [],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/yangin-merdiveni/figure-01.jpg",
+      "caption": "Fire Escape"
+    }
+  ]
+}

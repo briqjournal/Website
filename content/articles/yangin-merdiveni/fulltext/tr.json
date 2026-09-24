@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Tam Metin",
+      "paragraphs": [
+        "Alexander Rodchenko ve Varvara Stepanova bu evde yaşadılar (No. 21, bina 5, inşaat yılları 1913-1914, mimar Nikolai Kurdyukov). 1918-1935'te caddeye Pervomaiskaya, 1935-1990'da - Kirov adı verildi. 1990'da ise tarihi adı Myasnitskaya iade edildi. Rus avanrgardı'nın en önde gelen isimlerinden olan Rodçenko'nun, bu dönemki fotoğraflarında, 'aşağıdan yukarıya' ve 'yukarıdan aşağıya' konsepti hakimdir. 'Yangın Merdiveni'nde de yine bu anlayış göze çarpar."
+      ]
+    }
+  ],
+  "keywords": [],
+  "footnotes": [
+    {
+      "id": "note-1",
+      "text": "\"Myasnitskaya'daki Ev\" serisinden, 1925."
+    }
+  ],
+  "references": [],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/yangin-merdiveni/figure-01.jpg",
+      "caption": "Yangın Merdiveni"
+    }
+  ]
+}
