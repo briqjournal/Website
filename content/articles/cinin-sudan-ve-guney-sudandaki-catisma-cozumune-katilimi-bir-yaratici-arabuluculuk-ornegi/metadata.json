@@ -13,18 +13,34 @@
   },
   "authors": [
     {
-      "displayName": "Hend ElMahly Mahhoud Sultan",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Hend ElMahly Mahmoud Sultan",
+      "givenName": "Hend ElMahly Mahmoud",
+      "familyName": "Sultan",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Faculty of Economics and Political Science, Cairo University",
+          "nameTr": "Kahire Üniversitesi, Ekonomi ve Siyaset Bilimi Fakültesi",
+          "nameEn": "Faculty of Economics and Political Science, Cairo University",
+          "country": "Egypt",
+          "ror": null
+        }
+      ]
     },
     {
-      "displayName": "Degang Sun",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Prof. Dr. Sun Degang",
+      "givenName": "Degang",
+      "familyName": "Sun",
+      "orcid": "0009-0003-3418-8558",
+      "affiliations": [
+        {
+          "name": "Institute of International Studies, Fudan University",
+          "nameTr": "Fudan Üniversitesi, Uluslararası Çalışmalar Enstitüsü",
+          "nameEn": "Institute of International Studies, Fudan University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
