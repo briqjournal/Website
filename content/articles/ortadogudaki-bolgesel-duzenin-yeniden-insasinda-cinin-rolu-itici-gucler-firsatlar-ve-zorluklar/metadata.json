@@ -13,15 +13,15 @@
   },
   "authors": [
     {
-      "displayName": "Yang Chen",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
+      "displayName": "Dr. Öğr. Üyesi Yang Chen",
+      "givenName": "Yang",
+      "familyName": "Chen",
+      "orcid": "0000-0002-4840-6427",
       "affiliations": [
         {
-          "name": "Department of History, Shanghai University",
-          "nameTr": "Tarih Bölümü, Şanghay Üniversitesi",
-          "nameEn": "Department of History, Shanghai University",
+          "name": "Shanghai University",
+          "nameTr": "Şanghay Üniversitesi, Edebiyat Fakültesi, Tarih Bölümü",
+          "nameEn": "Department of History, College of Liberal Arts, Shanghai University",
           "country": "China",
           "ror": null
         }
