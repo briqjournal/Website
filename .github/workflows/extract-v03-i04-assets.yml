@@ -79,9 +79,60 @@ jobs:
             cat "$list"
             echo "::endgroup::"
 
-            # Diagnostic pass: enumerate all qualifying embedded production rasters.
-            # No repository files are written in this pass; selection is verified from the manifest first.
-            true
+            # Bridge pass: copy qualifying exact embedded objects to an Actions artifact.
+            # Nothing is committed here; ChatGPT verifies the binaries before repository writes.
+            local export_dir="tmp/v03-i04-assets/export/${slug}/${locale}"
+            mkdir -p "$export_dir"
+            cp "$list" "$export_dir/candidates.tsv"
+            while IFS=
+          }
+
+          EN=tmp/v03-i04-assets/en.pdf
+          TR=tmp/v03-i04-assets/tr.pdf
+
+          # Printed page ranges map to physical PDF pages with +2 in EN and +1 in TR.
+          extract_range en "$EN" 8 16 1 ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz
+          extract_range tr "$TR" 7 15 1 ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz
+
+          extract_range en "$EN" 30 51 19 ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin
+          extract_range tr "$TR" 29 50 19 ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin
+
+          extract_range en "$EN" 52 63 4 ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme
+          extract_range tr "$TR" 51 62 4 ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme
+
+          extract_range en "$EN" 64 76 13 ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri
+          extract_range tr "$TR" 63 75 13 ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri
+
+          extract_range en "$EN" 78 91 10 ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi
+          extract_range tr "$TR" 77 90 10 ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi
+
+          extract_range en "$EN" 92 94 1 guc-zayifliktir
+          extract_range tr "$TR" 91 93 1 guc-zayifliktir
+
+          extract_range en "$EN" 95 95 1 yangin-merdiveni
+          extract_range tr "$TR" 94 94 1 yangin-merdiveni
+          extract_range en "$EN" 96 96 1 simitci
+          extract_range tr "$TR" 95 95 1 simitci
+          extract_range en "$EN" 97 97 1 uygarligin-ipek-yolu
+          extract_range tr "$TR" 96 96 1 uygarligin-ipek-yolu
+
+      - name: Upload extracted binary bridge artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: v03-i04-extracted-production-rasters
+          path: tmp/v03-i04-assets/export
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 1
+
+      - name: Verify bridge wrote no repository files
+        run: |
+          test -z "$(git status --porcelain --untracked-files=no)"
+\t' read -r num w h size hash f; do
+              [ -n "$f" ] || continue
+              ext="${f##*.}"
+              cp "$f" "$export_dir/object-${num}.${ext}"
+            done < "$list"
           }
 
           EN=tmp/v03-i04-assets/en.pdf
