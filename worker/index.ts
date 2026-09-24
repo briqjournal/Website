@@ -3,8 +3,7 @@ import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } fr
 import handler from "vinext/server/app-router-entry";
 import {
   LEGACY_REDIRECTS,
-  LEGACY_PDF_REDIRECTS,
-  LEGACY_PDF_FILENAME_MAP,
+  COMPACT_PDF_MAP,
 } from "./legacy-redirects";
 
 interface Env {
@@ -33,16 +32,13 @@ function handleLegacyRedirect(url: URL): Response | null {
   const rawPath = normalizedLegacyPath(url.pathname);
   const decodedPath = decodeURIComponent(rawPath);
 
-  // 1. Direct PDF redirect for /sites/default/files/... (including /tr/sites/... and /en/sites/...)
+  // 1. Direct PDF redirect for legacy /sites/default/files/... (including /tr/sites/ and /en/sites/)
   if (rawPath.includes("/sites/default/files/") || decodedPath.includes("/sites/default/files/")) {
-    const filename = decodedPath.split("/").pop()?.toLowerCase() || rawPath.split("/").pop()?.toLowerCase() || "";
-    const targetPdf =
-      LEGACY_PDF_REDIRECTS[rawPath] ||
-      LEGACY_PDF_REDIRECTS[decodedPath] ||
-      LEGACY_PDF_FILENAME_MAP[filename];
+    const filename = (decodedPath.split("/").pop() || rawPath.split("/").pop() || "").toLowerCase();
+    const relativeTarget = COMPACT_PDF_MAP[filename];
 
-    if (targetPdf) {
-      const target = new URL(targetPdf, url.origin);
+    if (relativeTarget) {
+      const target = new URL(`/assets/archive/pdfs/${relativeTarget}`, url.origin);
       return new Response(null, {
         status: 301,
         headers: {
