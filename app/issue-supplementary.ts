@@ -1,4 +1,5 @@
 import type { IssueSupplementaryContent } from "./components/IssuePlatform";
+import { archivedEditorials } from "./editorials";
 
 export const volumeSevenIssueOneSupplementary: readonly IssueSupplementaryContent[] = [
   { typeTr: "Fotoğraf", typeEn: "Photograph", author: "Hiroshi Sugimoto", titleTr: "Cro-Magnon, 1994", titleEn: "Cro-Magnon, 1994", pages: "122", pdfPage: 128 },
@@ -25,7 +26,7 @@ export const volumeSevenIssueThreeSupplementary: readonly IssueSupplementaryCont
 ];
 
 export function archiveEditorialHref(volume: number, issue: number, locale: "tr" | "en") {
-  if (volume !== 7 || issue < 1 || issue > 3) return undefined;
+  if (!archivedEditorials[`${volume}-${issue}`]) return undefined;
   return locale === "tr"
     ? `/tr/arsiv/cilt-${volume}-sayi-${issue}/sunus`
     : `/en/archive/volume-${volume}-issue-${issue}/editorial`;
