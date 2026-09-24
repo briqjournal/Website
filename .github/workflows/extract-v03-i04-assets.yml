@@ -120,7 +120,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: v03-i04-extracted-production-rasters
-          path: tmp/v03-i04-assets/export
+          path: |
+            tmp/v03-i04-assets/export
+            tmp/v03-i04-assets/en.pdf
+            tmp/v03-i04-assets/tr.pdf
           if-no-files-found: error
           compression-level: 0
           retention-days: 1
