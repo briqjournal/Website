@@ -67,7 +67,11 @@ const records = [
     slug: "cinin-dogu-akdenizde-cozum-onerisi-kalkinmaci-baris-yaklasimi",
     startPage: 2,
     start: { en: "Introduction", tr: "Giriş" },
-    collapseLongHeadings: true,
+    strictFixedHeadings: true,
+    fixedHeadings: {
+      en: ["Introduction","Democracy vis-à-vis Development: China’s “Developmental Peace” Proposal","China’s “Developmental Peace” Proposal in the Middle East","China’s “Developmental Peace” Proposal in Syria","China’s “Developmental Peace” Proposal in the Palestinian-Israeli Conflict","China’s “Developmental Peace” Proposal in Lebanon","Eastern Mediterranean and China’s “Developmental Peace” Proposal in Prospect","Conclusion"],
+      tr: ["Giriş","Demokrasi Yerine Kalkınma: Çin’in “Kalkınmacı Barış” Önerisi","Çin’in Ortadoğu’da “Kalkınmacı Barış” Önerisi","Çin’in Suriye’deki “Kalkınmacı Barış” Politikası","Çin’in Filistin-İsrail Çatışmasında “Kalkınmacı Barış” Politikası","Çin’in Lübnan’da “Kalkınmacı Barış” Politikası","Doğu Akdeniz ve Çin’in “Kalkınmacı Barış” Politikasının Geleceği","Sonuç"],
+    },
     figures: 0,
   },
   {
@@ -77,21 +81,33 @@ const records = [
       en: "An Introduction to the Unique Geopolitics",
       tr: "Adalar (Ege) Denizi ve",
     },
-    collapseLongHeadings: true,
-    figures: 1,
+    strictFixedHeadings: true,
+    fixedHeadings: {
+      en: ["An Introduction to the Unique Geopolitics of the Islands Sea and the Karaman Sea","The Geopolitical Break in the Defense Industry in the Islands Sea and Karaman Sea Caused by the Unstoppable Rise of \"Türkiye\"","Turkish-Greek Relations in the Islands Sea and the Karaman Sea That Cannot Establish Their Balance","Historical Foundations of Turkish-Greek Relations","Greece’s Capacity to Face Military Tensions That Might Evolve and Turn into a War","Possible Effects of USA and Israel on Turkish-Greek Tension","Possible Effects of France on Turkish-Greek Tension","Possible Effects of Egypt on Turkish-Greek Tension","Non-Combat Options","International Court of Justice (ICJ)","1988 Athens Consensus","1936 Montreux Straits Convention","Conclusion"],
+      tr: ["Adalar (Ege) Denizi ve Karaman Denizi’nin (Doğu Akdeniz) Sunduğu Eşsiz Jeopolitiğe Giriş","Savunma Endüstrisinde “Türkiye”nin Önlenemez Yükselişinin Adalar Denizi ve Karaman Denizi’nde Yol Açtığı Jeopolitik Kırılma","Dengelerini Kuramayan Adalar Denizi ve Karaman Denizi’nde Türk-Yunan İlişkileri","Türk-Yunan İlişkilerinin Tarihsel Temelleri","Yunanistan’ın Tırmanabilecek ve Bir Savaşa Dönüşebilecek Askerî Gerginlikleri Göğüsleyebilme Kapasitesi","ABD ve İsrail’in Türk-Yunan Gerginliğine Olası Etkileri","Fransa’nın Türk-Yunan Gerginliğine Olası Etkileri","Mısır’ın Türk-Yunan Gerginliğine Olası Etkileri","Savaş Dışı Seçenekler","Uluslararası Adalet Divanı","1988 Atina Mutabakatı","1936 Montrö Boğazlar Sözleşmesi","Sonuç ve Değerlendirme"],
+    },
+    figures: 2,
     captions: {
-      en: ["World Maritime Trade Routes Density Map. (MarineTraffic, 2020)."],
-      tr: ["Dünya Deniz Ticareti Rotaları Yoğunluk Haritası. (MarineTraffic, 2020)."],
+      en: ["World Maritime Trade Routes Density Map. (MarineTraffic, 2020).","The prototype of the Turkish Fighter developed by TAI was shared for the first time on 23 November 2022. Turkish Fighter is planned to leave the hangar next year. (Turkish Defence News, 2022)."],
+      tr: ["Dünya Deniz Ticareti Rotaları Yoğunluk Haritası. (MarineTraffic, 2020).","TUSAŞ tarafından geliştirilen Milli Muharip Uçak’ın prototipi, 23 Kasım 2022’de ilk kez paylaşıldı. Milli Muharip Uçak’ın gelecek yıl hangardan çıkış yapması planlanıyor. (Savunma Sanayi ST, 2022)."],
     },
   },
   {
     slug: "dogu-akdenizde-cin-varligi-suriye-ornegi",
     startPage: 2,
     start: { en: "Introduction" },
-    startContains: { tr: "REFORM VE DIŞA AÇILMA POLITIKALARI" },
+    startContains: { tr: "REFORM VE DIŞA AÇILMA" },
     startAsParagraph: { tr: true },
-    collapseLongHeadings: true,
-    figures: 0,
+    strictFixedHeadings: true,
+    fixedHeadings: {
+      en: ["Introduction","The Geostrategic Importance of Syria","Background on China-Syria Relations","China’s Position on the Syrian Crisis","Chinese Initiatives to Resolve the Syrian Crisis","Analysis of the Belt and Road Initiative in the WENA Region","Syria: A Strategic Partner for China","Recommendations","Conclusion"],
+      tr: ["Suriye’nin Jeostratejik Önemi","Çin-Suriye İlişkilerinin Arka Planı","Çin’in Suriye Krizindeki Konumu","Çin’in Suriye Krizini Çözme Girişimleri","BAKA Bölgesindeki Kuşak ve Yol Girişiminin Analizi","Suriye: Çin için Stratejik Bir Partner","Öneriler","Sonuç"],
+    },
+    figures: 4,
+    captions: {
+      en: ["Syria’s geographical position connects the continents of Asia, Europe and Africa in the World Land-Bridge. (Schiller Institute, 2016).","A sign of the China-Egypt Suez Economic and Trade Cooperation Zone, located some 120 km to the east of Cairo near the Suez Canal, Egypt. (Xinhua Net, 2019).","Gas and oil pipelines around the region. (FracTracker, n.d.).","Head of Syria’s Planning and International Cooperation Commission Imad Sabouni shakes hands with Chinese Ambassador to Syria Feng Biao after signing an economic cooperation agreement in Damascus, Syria, on March 4, 2020. (Ammar Safarjalani/Xinhua, 2020)."],
+      tr: ["Suriye Asya, Avrupa ve Afrika kıtalarını birbirine bağlar. (Schiller Institute, 2016).","Mısır’ın Süveyş Kanalı yakınında Kahire’nin yaklaşık 120 km doğusunda bulunan Çin-Mısır Süveyş Ekonomik ve Ticari İşbirliği Bölgesi’nin tabelası. (Xinhua Net, 2019).","Bölgedeki petrol ve doğal gaz hatları. (FracTracker, t.y.).","Suriye Planlama ve Uluslararası İşbirliği Komisyonu (PICC) Başkanı Imad Sabouni, 4 Mart 2020’de Suriye’nin Şam kentinde ekonomik işbirliği anlaşması imzaladıktan sonra Çin’in Suriye Büyükelçisi Feng Biao ile el sıkışıyor. (Ammar Safarjalani/Xinhua, 2020)."],
+    },
   },
   {
     slug: "kusak-ve-yol-girisimi-bolgesellesme-ve-kuresellesme-icin-yeni-itici-guc",
@@ -225,6 +241,25 @@ function sectionsFrom(blocks,locale,record){
     else if(b.text.length>28)cur.paragraphs.push(b.text);
   }
   if(cur.paragraphs.length)sections.push(cur);
+  const merged=[];
+  for(const s of sections){
+    if(merged.length && merged[merged.length-1].title===s.title) merged[merged.length-1].paragraphs.push(...s.paragraphs);
+    else merged.push(s);
+  }
+  sections=merged;
+  if(record.strictFixedHeadings && record.slug==="kusak-ve-yol-girisimi-bolgesellesme-ve-kuresellesme-icin-yeni-itici-guc"){
+    const expected=record.fixedHeadings?.[locale]||[];
+    const intro=sections[0]||{title:locale==="tr"?"Tam Metin":"Full Text",paragraphs:[]};
+    const normalized=[intro];
+    let lastIndex=-1;
+    for(const s of sections.slice(1)){
+      const idx=expected.findIndex(h=>s.title.includes(h));
+      if(idx<0 || idx<lastIndex){ intro.paragraphs.push(...s.paragraphs); continue; }
+      lastIndex=idx;
+      normalized.push({...s,title:expected[idx]});
+    }
+    sections=normalized;
+  }
   if(record.interview){
     const out=[];
     for(const s of sections){
