@@ -14,15 +14,23 @@
   "authors": [
     {
       "displayName": "Hüseyin Haydar",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Hüseyin",
+      "familyName": "Haydar",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Ulusal Bilim Strateji Merkezi (UBSMER)",
+          "nameTr": "Ulusal Bilim Strateji Merkezi (UBSMER)",
+          "nameEn": "National Science Strategy Center",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
     "en": "It may prove most difficult of all to uproot enmities and reactionary ideas and prejudices that in some cases have been nurtured over hundreds of years.\nIn working towards resolution of these conflicts, we must look to culture and the arts and make use of their potential.",
-    "tr": "Maddi çıkarların çatışması bir noktadan sonra aşılabilir fakat yüzyıllar içinde birikmiş manevi karşıtlıkları aşmak, gerici fikirleri, ön yargıları yıkmak o kadar kolay olmamaktadır. Bunun için ihtiyaç duyulan araçlar kültür ve sanatın olanakları içinde aranmalıdır."
+    "tr": "Maddi çıkarların çatışması bir noktadan sonra aşılabilir fakat yüzyıllar içinde birikmiş manevi karşıtlıkları aşmak, gerici fikirleri, ön yargıları yıkmak o kadar kolay olmamaktadır. Bunun için ihtiyaç duyulan araçlar kültür ve sanatın olanakları içinde aranmalıdır."
   },
   "keywords": {
     "en": [],
@@ -66,10 +74,10 @@
   "ethicsApproval": null,
   "dataAvailability": null,
   "aiUse": null,
-  "acknowledgements": null,
+  "acknowledgements": "",
   "citation": {
-    "en": "Haydar, H. (2019//2020). The world needs the Belt and Road, and the Belt and Road needs poetry. Belt & Road Initiative Quarterly, 1 (1), 67-72.",
-    "tr": "Haydar, H. (2019//2020). Dünyanın Kuşak Yol’a, Kuşak Yol’un şiire ihtiyacı var ve Kuşak Yol şairlerine çağrı. Kuşak ve Yol Girişimi Dergisi, 1(1), 67-72."
+    "en": "Haydar, H. (2019-2020). The world needs the Belt and Road, and the Belt and Road needs poetry. Belt & Road Initiative Quarterly, 1(1), 67-72.",
+    "tr": "Haydar, H. (2019-2020). Dünyanın Kuşak Yol’a, Kuşak Yol’un şiire ihtiyacı var ve Kuşak Yol şairlerine çağrı. Kuşak ve Yol Girişimi Dergisi, 1(1), 67-72."
   },
   "urls": {
     "en": "https://briqjournal.com/en/the-world-needs-the-belt-and-road-and-the-belt-and-road-needs-poetry",
