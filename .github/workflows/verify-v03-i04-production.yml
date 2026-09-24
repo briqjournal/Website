@@ -24,7 +24,7 @@ jobs:
           check_page () {
             locale="$1"
             path="$2"
-            url="https://briqjournal.com$path"
+            url="https://briqjournal.com$path/"
             body="$(mktemp)"
             code="$(curl -sS --connect-timeout 15 --max-time 45 -A 'BRIQ-production-verifier/1.0' -o "$body" -w '%{http_code}' "$url")"
             if [ "$code" != "200" ]; then
