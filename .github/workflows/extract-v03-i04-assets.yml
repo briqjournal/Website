@@ -106,6 +106,38 @@ jobs:
           extract_range en "$EN" 97 97 uygarligin-ipek-yolu
           extract_range tr "$TR" 96 96 uygarligin-ipek-yolu
 
+      - name: Emit labeled contact sheets for visual verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          export_root='tmp/v03-i04-assets/export'
+          emit_sheet () {
+            slug="$1"; locale="$2"
+            dir="$export_root/$slug/$locale"
+            shopt -s nullglob
+            files=("$dir"/object-*)
+            shopt -u nullglob
+            [ "${#files[@]}" -gt 0 ] || return 0
+            sheet="$dir/contact-sheet.jpg"
+            montage "${files[@]}" -thumbnail '220x180>' -background white -fill black \
+              -stroke none -pointsize 14 -set label '%f' -tile 4x -geometry '+12+28' \
+              -quality 65 "$sheet"
+            echo "CONTACT_SHEET_BEGIN::$slug::$locale"
+            base64 -w0 "$sheet"
+            echo
+            echo "CONTACT_SHEET_END::$slug::$locale"
+          }
+
+          emit_sheet ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz en
+          emit_sheet ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin en
+          emit_sheet ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme en
+          emit_sheet ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri en
+          emit_sheet ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi en
+          emit_sheet guc-zayifliktir tr
+          emit_sheet yangin-merdiveni tr
+          emit_sheet simitci tr
+          emit_sheet uygarligin-ipek-yolu tr
+
       - name: Upload binary bridge artifact
         uses: actions/upload-artifact@v4
         with:
