@@ -1,0 +1,77 @@
+name: Verify v03-i04 production
+
+on:
+  push:
+    branches:
+      - verify/v03-i04-production-616b716
+    paths:
+      - .github/workflows/verify-v03-i04-production.yml
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify 24 live v03-i04 article pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Verify production routes and canonical full text
+        shell: bash
+        run: |
+          set -euo pipefail
+          ok=0
+          check_page () {
+            locale="$1"
+            path="$2"
+            url="https://briqjournal.com$path"
+            body="$(mktemp)"
+            code="$(curl -sS --connect-timeout 15 --max-time 45 -A 'BRIQ-production-verifier/1.0' -o "$body" -w '%{http_code}' "$url")"
+            if [ "$code" != "200" ]; then
+              echo "FAIL $locale $path HTTP $code"
+              cat "$body" | head -c 500 || true
+              exit 1
+            fi
+            grep -Fq 'class="article-body-section"' "$body"
+            if [ "$locale" = "tr" ]; then
+              grep -Fq 'class="article-fulltext" id="tam-metin"' "$body"
+              grep -Fq '>Tam Metin<' "$body"
+            else
+              grep -Fq 'class="article-fulltext" id="full-text-body"' "$body"
+              grep -Fq '>Full Text<' "$body"
+            fi
+            if grep -Fq 'legacy-fulltext-note' "$body"; then
+              echo "FAIL $locale $path legacy-fulltext-note"
+              exit 1
+            fi
+            ok=$((ok+1))
+            echo "OK $ok/24 $locale $path"
+          }
+
+          check_page tr /tr/makaleler/uygarlik-yolunda-birlesme-kaynasma-ve-kardeslik
+          check_page en /en/articles/brotherhood-fusion-and-unity-on-the-road-to-civilization
+          check_page tr /tr/makaleler/ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz
+          check_page en /en/articles/we-have-to-address-our-common-heritage-the-past-on-a-global-scale-and-share-science
+          check_page tr /tr/makaleler/yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak
+          check_page en /en/articles/the-new-world-is-to-be-established-by-achieving-wealth-and-peace-which-will-derive-from-the-universal-values-created-by-the-silk-road
+          check_page tr /tr/makaleler/kulturel-ozguveni-percinleyelim
+          check_page en /en/articles/bolstering-cultural-self-confidence
+          check_page tr /tr/makaleler/ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin
+          check_page en /en/articles/a-formal-analysis-of-buddhist-painting-compositions-from-the-northern-wei-period-in-cave-temples-on-the-silk-road
+          check_page tr /tr/makaleler/ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme
+          check_page en /en/articles/on-the-grassland-silk-road-national-economy-communication-and-integration
+          check_page tr /tr/makaleler/ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri
+          check_page en /en/articles/upper-paleolithic-siberian-migrations-to-the-near-east-via-silk-road
+          check_page tr /tr/makaleler/ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi
+          check_page en /en/articles/cultural-interactions-on-the-silk-road-the-yuezhi-migration-era-in-central-asia
+          check_page tr /tr/makaleler/guc-zayifliktir
+          check_page en /en/articles/strength-is-weakness
+          check_page tr /tr/makaleler/yangin-merdiveni
+          check_page en /en/articles/fire-escape
+          check_page tr /tr/makaleler/simitci
+          check_page en /en/articles/simit-seller
+          check_page tr /tr/makaleler/uygarligin-ipek-yolu
+          check_page en /en/articles/silk-road-of-civilization
+
+          test "$ok" -eq 24
+          echo "VERIFIED 24/24 live v03-i04 article pages"
