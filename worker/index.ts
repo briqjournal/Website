@@ -115,7 +115,7 @@ function handleLegacyRedirect(url: URL): Response | null {
   // 1. Direct PDF redirect for legacy /sites/default/files/... (including /tr/sites/ and /en/sites/)
   if (rawPath.includes("/sites/default/files/") || decodedPath.includes("/sites/default/files/")) {
     const filename = (decodedPath.split("/").pop() || rawPath.split("/").pop() || "").toLowerCase();
-    let relativeTarget = COMPACT_PDF_MAP[filename] || parseIssuePdfTarget(filename);
+    const relativeTarget = COMPACT_PDF_MAP[filename] || parseIssuePdfTarget(filename);
 
     if (relativeTarget) {
       const target = new URL(`/assets/archive/pdfs/${relativeTarget}`, url.origin);
