@@ -57,7 +57,7 @@ jobs:
               [ -n "$geom" ] || continue
               read -r w h <<<"$geom"
               size="$(stat -c '%s' "$f")"
-              if (( w < 300 || h < 180 || size < 10000 )); then
+              if (( w < 100 || h < 100 || size < 1000 )); then
                 continue
               fi
               hash="$(sha256sum "$f" | awk '{print $1}')"
