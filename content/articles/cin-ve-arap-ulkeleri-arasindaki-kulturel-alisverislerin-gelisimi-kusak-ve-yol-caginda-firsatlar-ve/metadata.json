@@ -13,18 +13,34 @@
   },
   "authors": [
     {
-      "displayName": "Sun Degang",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Prof. Dr. Sun Degang",
+      "givenName": "Degang",
+      "familyName": "Sun",
+      "orcid": "0009-0003-3418-8558",
+      "affiliations": [
+        {
+          "name": "Institute of International Studies, Fudan University",
+          "nameTr": "Fudan Üniversitesi, Uluslararası Araştırmalar Enstitüsü",
+          "nameEn": "Institute of International Studies, Fudan University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     },
     {
-      "displayName": "Aml Ali Abdrabou",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Dr. Aml Ali Abdrabou",
+      "givenName": "Aml Ali",
+      "familyName": "Abdrabou",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Beeto Arabia Company",
+          "nameTr": "Beeto Arabia Company Ürün Operasyon Müdürü, Mısır",
+          "nameEn": "Product Operations Manager, Beeto Arabia Company, Egypt",
+          "country": "Egypt",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

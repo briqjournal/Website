@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Giampiero Bellingeri",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Prof. Dr. Giampiero Bellingeri",
+      "givenName": "Giampiero",
+      "familyName": "Bellingeri",
+      "orcid": "0000-0002-3015-7522",
+      "affiliations": [
+        {
+          "name": "Ca' Foscari University of Venice",
+          "nameTr": "Venedik Ca' Foscari Üniversitesi (Emekli Profesör)",
+          "nameEn": "Ca' Foscari University of Venice (Professor Emeritus)",
+          "country": "Italy",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

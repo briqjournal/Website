@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Liang Yingying",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "givenName": "Yingying",
+      "familyName": "Liang",
+      "orcid": "0000-0002-7739-0356",
+      "affiliations": [
+        {
+          "name": "College of Liberal Arts, Shanghai University",
+          "nameTr": "Şanghay Üniversitesi, Sosyal Bilimler Fakültesi",
+          "nameEn": "College of Liberal Arts, Shanghai University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

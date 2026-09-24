@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Latif Bolat",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "givenName": "Latif",
+      "familyName": "Bolat",
+      "orcid": "0000-0003-3609-5614",
+      "affiliations": [
+        {
+          "name": "Musician, Composer and Scholar of Turkish Music",
+          "nameTr": "Müzisyen, Besteci ve Türk Müziği Araştırmacısı",
+          "nameEn": "Musician, Composer and Scholar of Turkish Music",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

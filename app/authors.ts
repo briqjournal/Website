@@ -40,7 +40,7 @@ type AuthorMetadata = {
   biographyEn?: string;
 };
 
-const genericBylines = new Set(["admin", "briq", "briqjournal", "Pekin Bildirgesi", "Beijing Declaration"]);
+const genericBylines = new Set(["admin", "briq", "briqjournal", "Pekin Bildirgesi", "Beijing Declaration", "China Global Television Network, CGTN", "CGTN"]);
 
 const profilePhotos: Record<string, string> = {
   "Fikret Akfırat": "/assets/people/fikret-akfirat.jpg",
@@ -849,6 +849,42 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     biographyTr: "Aşkın Ayrancıoğlu, Ondokuz Mayıs Üniversitesi Resim Bölümü mezunudur. Ulusal ve uluslararası karikatür yarışmalarında jüri üyeliği yapmış ve Çin'de 'En İyi Mizah Sanatçısı' ödülünü kazanmıştır.",
     biographyEn: "Aşkın Ayrancıoğlu graduated from the Department of Painting at Ondokuz Mayıs University. He has served on international cartoon juries and won the 'Best Humor Artist Award' in China in 2017.",
   },
+  "Latif Bolat": {
+    tr: "Müzisyen, Besteci ve Türk Müziği Araştırmacısı",
+    en: "Musician, Composer and Scholar of Turkish Music",
+    email: "lbolat@aol.com",
+    orcids: ["0000-0003-3609-5614"],
+    biographyTr: "Latif Bolat, Ankara Üniversitesi Hukuk Fakültesi ve Gazi Üniversitesi Müzik Eğitimi Bölümü mezunudur. San Francisco Eyalet Üniversitesi'nde işletme yüksek lisansı (MBA) yapmıştır. Türk tasavvuf müziği ve felsefesi üzerine dünya çapında konserler ve seminerler vermiştir. 'Quarreling with God: Mystic Poetry from Turkey' kitabının eşyazarıdır ve dünya genelinde yayımlanmış 5 albümü bulunmaktadır.",
+    biographyEn: "Latif Bolat graduated from Ankara University Law School and Gazi University Music Department. He completed an MBA at San Francisco State University. He has presented Turkish mystic Sufi music and philosophy worldwide through lectures and concerts. He co-authored 'Quarreling with God: Mystic Poetry from Turkey' and has released five albums distributed internationally.",
+  },
+  "Giampiero Bellingeri": {
+    tr: "Venedik Ca' Foscari Üniversitesi (Emekli Profesör)",
+    en: "Ca' Foscari University of Venice (Professor Emeritus)",
+    orcids: ["0000-0002-3015-7522"],
+    biographyTr: "Prof. Dr. Giampiero Bellingeri, İtalya Venedik Ca' Foscari Üniversitesi'nden emekli profesördür. Türkoloji, İran ve Transkafkasya dilleri ve edebiyatları alanında uzmandır. Orhan Pamuk, Yahya Kemal ve Yakup Kadri Karaosmanoğlu gibi Türk edebiyatının önde gelen yazarlarının eserlerini İtalyancaya çevirmiştir.",
+    biographyEn: "Prof. Dr. Giampiero Bellingeri is Professor Emeritus at Ca' Foscari University of Venice, Italy. His research focuses on Turcology, Iranian and Transcaucasian literatures. He has translated major Turkish literary figures including Orhan Pamuk, Yahya Kemal, and Yakup Kadri into Italian.",
+  },
+  "Liang Yingying": {
+    tr: "Şanghay Üniversitesi, Sosyal Bilimler Fakültesi",
+    en: "College of Liberal Arts, Shanghai University",
+    email: "LiangYingying39@163.com",
+    orcids: ["0000-0002-7739-0356"],
+    biographyTr: "Liang Yingying, Şanghay Üniversitesi Sosyal Bilimler Fakültesi Küresel Çalışmalar alanında doktora araştırmacısı ve Şanghay Üniversitesi Türkiye Araştırmaları Merkezi'nde araştırmacıdır. Çin-Ortadoğu ilişkileri ve kültürel diplomasi üzerine çalışmaktadır.",
+    biographyEn: "Liang Yingying is a PhD candidate in Global Studies at the College of Liberal Arts and a researcher at the Center for Turkish Studies, Shanghai University. Her research focuses on Sino-Middle Eastern relations and cultural diplomacy.",
+  },
+  "Aml Ali Abdrabou": {
+    tr: "Beeto Arabia Company Ürün Operasyon Müdürü, Mısır",
+    en: "Product Operations Manager, Beeto Arabia Company, Egypt",
+    email: "1502110336@qq.com",
+    biographyTr: "Dr. Aml Ali Abdrabou, sinologdur. Doktorasını 2020 yılında Şanghay Uluslararası Araştırmalar Üniversitesi Ortadoğu Araştırmaları Enstitüsü'nde tamamlamıştır. Araştırma alanları Çin-Arap kültürel ilişkileri ve Kuşak ve Yol Girişimi'dir.",
+    biographyEn: "Dr. Aml Ali Abdrabou is a sinologist. She completed her PhD in 2020 at the Middle East Studies Institute of Shanghai International Studies University, focusing on Sino-Arab cultural relations and the Belt and Road Initiative.",
+  },
+  "İbrahim Balaban": {
+    tr: "Ressam ve Yazar",
+    en: "Painter and Writer",
+    biographyTr: "İbrahim Balaban (1921–2019), Bursa Seçköy'de doğdu. Cezaevinde Nâzım Hikmet ile tanışarak yedi yıl boyunca sanat tarihi, felsefe ve sosyoloji eğitimi aldı. Nâzım Hikmet'in 'Köylü Ressam' ve 'Ressam Yunus Emre' olarak nitelediği Balaban, Anadolu yaşamını ve insanını yansıtan 2.000'den fazla tablo üretti ve 11 kitap yazdı.",
+    biographyEn: "İbrahim Balaban (1921–2019) was born in Bursa. While in prison, he met Nâzım Hikmet and studied art history, philosophy, and political economy for seven years. Known as the 'Peasant Painter' and 'Painter Yunus Emre', he created over 2,000 paintings portraying Anatolian folk life and labor, and authored 11 books.",
+  },
 };
 
 const displayCorrections: Record<string, string> = {
@@ -878,6 +914,8 @@ const displayCorrections: Record<string, string> = {
   "Esra Bayhantopcu": "Esra Bayhantopçu",
   "Sadik Ucok": "Sadık Üçok",
   "Askin Ayrancioglu": "Aşkın Ayrancıoğlu",
+  "Ibrahim Balaban": "İbrahim Balaban",
+  "Huseyin Haydar": "Hüseyin Haydar",
 };
 
 function withoutAcademicTitle(value: string) {

@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Hüseyin Haydar",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Hüseyin",
+      "familyName": "Haydar",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Poet and Writer",
+          "nameTr": "Şair ve Yazar",
+          "nameEn": "Poet and Writer",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

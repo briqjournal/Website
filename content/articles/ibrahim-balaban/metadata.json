@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "İbrahim Balaban",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "İbrahim",
+      "familyName": "Balaban",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Painter and Writer",
+          "nameTr": "Ressam ve Yazar",
+          "nameEn": "Painter and Writer",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
