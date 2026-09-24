@@ -430,9 +430,9 @@ export async function ArticlePlatform({
         && section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US") !== genericFullTextSectionTitle
       )
       .map((section) => ({ id: section.id, label: section.title, level: 2 })),
+    ...(fullText?.publicationNote ? [{ id: locale === "tr" ? "yayin-notu" : "publication-note", label: locale === "tr" ? "Yayın notu" : "Publication note", level: 1 }] : []),
     ...(fullText?.figures.length ? [{ id: locale === "tr" ? "gorseller" : "visuals", label: locale === "tr" ? "Görsel ve tablolar" : "Visuals and tables", level: 1 }] : []),
     ...(supplementary.length ? [{ id: locale === "tr" ? "ek-materyaller" : "supplementary", label: locale === "tr" ? "Ek materyaller" : "Supplementary information", level: 1 }] : []),
-    ...(fullText?.publicationNote ? [{ id: locale === "tr" ? "yayin-notu" : "publication-note", label: locale === "tr" ? "Yayın notu" : "Publication note", level: 1 }] : []),
     ...(acknowledgements ? [{ id: locale === "tr" ? "tesekkur" : "acknowledgements", label: locale === "tr" ? "Teşekkür" : "Acknowledgements", level: 1 }] : []),
     ...(statements.length ? [{ id: locale === "tr" ? "yazar-beyanlari" : "author-declarations", label: locale === "tr" ? "Yazar beyanları" : "Author declarations", level: 1 }] : []),
     { id: locale === "tr" ? "atif" : "cite", label: locale === "tr" ? "Atıfta bulun" : "Cite this article", level: 1 },
@@ -494,10 +494,10 @@ export async function ArticlePlatform({
           )}
 
           <div className="article-disclosure-stack">
+            {fullText?.publicationNote && <details className="article-accordion article-publication-note" id={locale === "tr" ? "yayin-notu" : "publication-note"}><summary><span>{locale === "tr" ? "Yayın notu" : "Publication note"}</span><b>i</b></summary><div className="accordion-copy"><p><PublicationNoteCopy value={fullText.publicationNote} locale={locale} articleSlug={article.slug} /></p></div></details>}
+
             {fullText && <ArticleFigures figures={fullText.figures} locale={locale} />}
             {supplementary.length ? <details className="article-accordion" id={locale === "tr" ? "ek-materyaller" : "supplementary"}><summary><span>{locale === "tr" ? "Ek materyaller" : "Supplementary information"}</span><b>{supplementary.length}</b></summary><div className="supplementary-links">{supplementary.map((item) => <a href={item.url} key={`${item.title}-${item.url}`} download>{item.title}<span>↓︎</span></a>)}</div></details> : null}
-
-            {fullText?.publicationNote && <details className="article-accordion article-publication-note" id={locale === "tr" ? "yayin-notu" : "publication-note"}><summary><span>{locale === "tr" ? "Yayın notu" : "Publication note"}</span><b>i</b></summary><div className="accordion-copy"><p><PublicationNoteCopy value={fullText.publicationNote} locale={locale} articleSlug={article.slug} /></p></div></details>}
 
             <Acknowledgements value={acknowledgements} locale={locale} />
             <ResearchStatements items={statements} locale={locale} />
