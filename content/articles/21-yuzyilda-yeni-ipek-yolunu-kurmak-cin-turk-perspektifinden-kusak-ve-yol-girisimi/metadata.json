@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Şerif Emre Gökçay",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Öğr. Üyesi Şerif Emre Gökçay",
+      "givenName": "Şerif Emre",
+      "familyName": "Gökçay",
+      "orcid": "0000-0002-1361-6598",
+      "affiliations": [
+        {
+          "name": "Istanbul University",
+          "nameTr": "İstanbul Üniversitesi, İktisat Fakültesi, Maliye Bölümü",
+          "nameEn": "Department of Finance, Faculty of Economics, Istanbul University",
+          "country": "Türkiye",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
