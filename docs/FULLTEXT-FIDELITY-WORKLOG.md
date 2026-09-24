@@ -75,6 +75,11 @@
 - Completed unit: `v04-i03`. All 10 records / 20 EN-TR locale records passed the final official-PDF audit for merged PR #77; no confirmed fidelity defect remained.
   - Wren’s published EN “48 countries” / TR “148 ülke” difference is preserved as a legitimate locale difference.
   - Gürses’s locale-specific 13-note structure is preserved as a legitimate locale difference.
+- Completed unit: `v04-i02`. All 11 records / 22 EN-TR canonical locale records were audited against the official locale PDFs after the canonical migration was completed.
+  - No confirmed fidelity defect remained after review of the audit signals. The lone low-match Arbache TR paragraph is split across two PDF pages; heading-score signals are layout/extraction artifacts rather than missing text.
+  - Football Fans / Futbol Taraftarları is a shared-bilingual photograph PDF whose article-level source is Turkish; the separately verified English canonical text was preserved without using Turkish as an English fallback. The three visual records retain their verified production assets.
+  - The published SWOT/GZFT Table 1 in the Ye article was classified as a table rather than a missing figure asset; no screenshot/crop substitute was introduced. The final issue-wide PDF audit reported no duplicate canonical paragraphs, duplicate footnote IDs, metadata leakage, cross-record contamination, or missing referenced figure assets.
+  - The eight verified legacy English archives were retired and all 11 v04-i02 records were moved to the canonical localized catalog.
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
-**Next unit:** `v04-i02`.
+**Next unit:** `v04-i01`.
