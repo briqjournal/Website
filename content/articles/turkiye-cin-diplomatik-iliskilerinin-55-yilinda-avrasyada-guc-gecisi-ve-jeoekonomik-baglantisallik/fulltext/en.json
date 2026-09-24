@@ -251,32 +251,132 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-01.jpg",
-      "caption": "The Middle Corridor connects China and Europe through Central Asia and Türkiye and integrates with the Belt and Road Initiative (BRI) (Map: Valdai Club, 2023)."
+      "caption": "The Middle Corridor connects China and Europe through Central Asia and Türkiye and integrates with the Belt and Road Initiative (BRI) (Map: Valdai Club, 2023).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-1",
+        "afterParagraph": 4
+      }
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-02.jpg",
-      "caption": "Turkish President Recep Tayyip Erdoğan met with Chinese President Xi Jinping on July 4, 2024, on the sidelines of the Shanghai Cooperation Organization summit held in Astana, Kazakhstan (Photo: CGTN, 2024)."
+      "caption": "Turkish President Recep Tayyip Erdoğan met with Chinese President Xi Jinping on July 4, 2024, on the sidelines of the Shanghai Cooperation Organization summit held in Astana, Kazakhstan (Photo: CGTN, 2024).",
+      "kind": "visual"
     },
     {
       "id": "figure-3",
-      "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-03.jpg",
-      "caption": "Table 1. Indicators Used to Distinguish a Transit Country from a Joint Production Hub"
+      "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-03-en.png",
+      "caption": "Table 1. Indicators Used to Distinguish a Transit Country from a Joint Production Hub",
+      "kind": "table"
     },
     {
       "id": "figure-4",
-      "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-04.jpg",
-      "caption": "Table 2. Indicator-Based Assessment of the Research Question"
+      "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-04-en.png",
+      "caption": "Table 2. Indicator-Based Assessment of the Research Question",
+      "kind": "table"
     },
     {
       "id": "figure-5",
-      "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-05.jpg",
-      "caption": "Eurasian transport corridors: Türkiye’s connections with Europe, Central Asia, China, the Middle East, and Africa (Map: Prepared by BRIQ based on data from the Republic of Türkiye Ministry of Foreign Affairs and the Republic of Türkiye Ministry of Transport and Infrastructure on Türkiye’s connectivity and international transport corridors, 2026)."
+      "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-05-en.jpg",
+      "caption": "Eurasian transport corridors: Türkiye’s connections with Europe, Central Asia, China, the Middle East, and Africa (Map: Prepared by BRIQ based on data from the Republic of Türkiye Ministry of Foreign Affairs and the Republic of Türkiye Ministry of Transport and Infrastructure on Türkiye’s connectivity and international transport corridors, 2026).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "en-section-6",
+        "afterParagraph": 5
+      }
     },
     {
       "id": "figure-6",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-06.jpg",
-      "caption": "In Türkiye-China relations, the combination of economic reciprocity, institutionalized connectivity, and sustained diplomatic dialogue may enable interdependence to become a mechanism for reducing the risk of conflict (Illustration: The Daily CPEC, 2025)."
+      "caption": "In Türkiye-China relations, the combination of economic reciprocity, institutionalized connectivity, and sustained diplomatic dialogue may enable interdependence to become a mechanism for reducing the risk of conflict (Illustration: The Daily CPEC, 2025).",
+      "kind": "visual"
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Table 1. Indicators Used to Distinguish a Transit Country from a Joint Production Hub",
+      "headers": [
+        "Dimension",
+        "Indicators",
+        "Analytical interpretation"
+      ],
+      "rows": [
+        [
+          "Logistical function",
+          "Freight volume, time, railway/port capacity, border and customs bottlenecks",
+          "Capacity growth alone strengthens the transit function; it does not demonstrate the existence of a production hub."
+        ],
+        [
+          "Trade structure",
+          "Export-import balance, product composition, share of machinery- and technology-intensive groups",
+          "The continued combination of raw-material exports and technology-intensive imports indicates structural asymmetry."
+        ],
+        [
+          "Investment and production",
+          "Chinese FDI stock, greenfield investment, local sourcing, export-oriented capacity",
+          "The transition toward a joint production hub strengthens as production linkages and local sourcing increase."
+        ],
+        [
+          "Technological capacity",
+          "Joint R&D, patents/licenses, engineering capabilities, realized technology transfer",
+          "The criterion is realized and measurable output, not an announced target."
+        ],
+        [
+          "Institutional resilience",
+          "Joint working groups, transparency, dispute resolution, diversification, and risk management",
+          "Balanced and institutionalized interdependence reduces the risk that economic networks will become instruments of coercion."
+        ]
+      ],
+      "note": "Compiled by the authors.",
+      "placement": {
+        "sectionId": "en-section-3",
+        "afterParagraph": 5
+      },
+      "imageSrc": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-03-en.png"
+    },
+    {
+      "id": "table-2",
+      "caption": "Table 2. Indicator-Based Assessment of the Research Question",
+      "headers": [
+        "Indicator",
+        "Current finding",
+        "Effect on position"
+      ],
+      "rows": [
+        [
+          "Logistics capacity",
+          "USD 660 million railway project and planned capacity increase from 750,000 to 20 million tonnes",
+          "Strongly supports the transit function; completion and corridor-wide coordination remain pending."
+        ],
+        [
+          "Corridor volume and time",
+          "Conditional projection of 11 million tonnes and a halving of travel time by 2030; approximately 1% share of China-EU trade",
+          "High regional importance, but a limited share of global transit."
+        ],
+        [
+          "Trade and technological composition",
+          "USD 41.7 billion deficit in 2023; SITC 84 and 85 accounted for 51.6% of imports in 2018-2020",
+          "A pronounced asymmetry that weakens the production-hub thesis."
+        ],
+        [
+          "Foreign direct investment",
+          "Approximately USD 9 billion in stock at the end of 2023; 1,197 Chinese-capital companies",
+          "Some production linkages exist, but they remain limited relative to the scale of trade."
+        ],
+        [
+          "R&D, technology, and local value",
+          "The BYD case includes R&D and production targets; realized data on local sourcing, patents, and transfer are not yet available",
+          "Transition potential exists, but the characteristics of a verified joint production hub have not yet emerged."
+        ]
+      ],
+      "note": "Compiled by the authors.",
+      "placement": {
+        "sectionId": "en-section-6",
+        "afterParagraph": 4
+      },
+      "imageSrc": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-04-en.png"
     }
   ]
 }

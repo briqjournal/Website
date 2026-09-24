@@ -84,6 +84,32 @@ test("keeps registered BRIQ DOIs matched to their Crossref article records", asy
     "dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-ve-cok-kutuplu-kuresel-yonetisimin-yukselisi": "10.67696/7q2m9x4k",
     "islami-sistem-ve-uluslararasi-iliskilerin-demokratiklesmesi-uzerine-bir-arastirma": "10.67696/6r8h4k4a",
     "cin-abd-iliskilerinin-gelecegi": "10.67696/5y2r9u9d",
+    "afrikada-yabanci-guclerin-mudahaleleri-elestirel-bir-degerlendirme": "10.67696/3s9f6q3t",
+    "uluslararasi-kalkinma-isbirliginin-ic-siyasal-mantigi-guneydogu-asyada-kusak-ve-yol-girisiminin": "10.67696/4k5f5u3h",
+    "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin": "10.67696/8g8a8j3f",
+    "kultur-varliklarinin-yasadisi-ithalatinin-onlenmesi-ve-iadesine-iliskin-turkiye-ile-isvicre": "10.67696/9v8n5x9a",
+    "cinde-somut-olmayan-kulturel-mirasin-korunmasi-yirmi-yillik-deneyim-suregelen-zorluklar-ve-gelecege": "10.67696/4f9e7s8m",
+    "mogolistanin-ucuncu-komsu-diplomasisinde-kurumsal-dengeleme-sanghay-isbirligi-orgutu-ile-etkilesim": "10.67696/7g5d4y5c",
+    "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi": "10.67696/5s9f9a2d",
+    "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik": "10.67696/2z9q4h9h",
+    "dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi": "10.67696/8q6a9a7j",
+    "filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun": "10.67696/2t7q7z9t",
+    "mao-zedungun-diyalektik-anlayisi-ekonomik-determinizm-elestirisi-siyasal-ozne-ve-cin-dusunce": "10.67696/7j5e3t9z",
+    "kuresel-guneyde-yenilik-sistemlerinin-kurulmasi-zorluklar-ve-guney-guney-isbirligi-ile-yol-haritasi": "10.67696/7z8u9a8t",
+    "turkiyenin-guvenlik-politikalarina-istihbarat-teskilatlarinin-katkisi": "10.67696/9d8g7g6p",
+    "kuresel-kalkinma-girisimi-ve-cinin-ortadogudaki-kalkinma-isbirligi-calismalari": "10.67696/9t8p5a8b",
+    "modernist-milliyetci-olarak-sun-yat-sen-ve-siyasal-mirasi": "10.67696/7w7s7q6w",
+    "cinli-devrimcilerin-sun-yat-sen-ve-mustafa-kemal-arasindaki-benzerlikler-uzerine-gorusleri": "10.67696/6j2e8x6y",
+    "yukselen-orta-guclerin-denge-diplomasisi-kavramlar-saikler-ve-cikarimlar": "10.67696/6z7p7k5f",
+    "alter-kuresellesme-baglaminda-cin-fransiz-iliskileri": "10.67696/8v4k3s3a",
+    "cezayir-devrimci-diplomasisi-bandung-temel-girisiminden-yeni-bir-baglantisizlar-konseptine": "10.67696/3h4m9n5e",
+    "endonezya-dis-politikasinda-bandung-mirasina-yeniden-bakis-tarihsel-bir-inceleme-ve-guncel": "10.67696/9k2z2d6j",
+    "bandung-ruhu-70-yasinda": "10.67696/3y9c6c9j",
+    "bandung-konferansi-oncesi-ve-sonrasinda-yeni-cinin-dis-politikasi-bandung-konferansini-yeniden": "10.67696/6t8c3r4t",
+    "yeni-bir-enerji-kaynagi-olarak-gaz-hidratlar": "10.67696/3y4k5w3e",
+    "rusyanin-bolgesel-guvenlikteki-rolu-uzerine-bir-inceleme-kolektif-guvenlik-antlasmasi-orgutu-ve": "10.67696/5u4a7a4w",
+    "dunya-ekonomik-forumunun-kuresellesme-surecindeki-etkisinin-ekonomi-politik-elestirisi": "10.67696/6b2t5b5a",
+    "genc-cin-ve-genc-cinliler-cinde-aydinlanma-yeni-kultur-hareketi-ve-yeni-siyasal-bicimlenme": "10.67696/8d6b6r6u",
   });
 });
 
@@ -867,6 +893,393 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.doesNotMatch(doiHtml, /Yapay Zekâ Kullanımı/);
 });
 
+test("renders only Çomak figures and tables inline while retaining all PDF media in the archive", async () => {
+  const response = await renderPath("/en/articles/power-transition-and-geoeconomic-connectivity-in-eurasia-on-the-55th-anniversary-of-turkiye-china-diplomatic-relations");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  // Full Text: only Figures and Tables.
+  assert.match(html, /class="article-inline-media" id="inline-figure-1"><img src="[^"]*figure-01\.jpg"/);
+  assert.match(html, /class="article-inline-table article-inline-table-image" id="table-1"><img src="[^"]*figure-03-en\.png"/);
+  assert.match(html, /class="article-inline-table article-inline-table-image" id="table-2"><img src="[^"]*figure-04-en\.png"/);
+  assert.match(html, /class="article-inline-media" id="inline-figure-5"><img src="[^"]*figure-05-en\.jpg"/);
+  assert.doesNotMatch(html, /id="inline-figure-2"/);
+  assert.doesNotMatch(html, /id="inline-figure-6"/);
+
+  // PDF-aligned paragraph positions.
+  const researchQuestion = html.indexOf("This article addresses the following question:");
+  const contribution = html.indexOf("The study makes an original contribution at three levels.");
+  const figureOne = html.indexOf('id="inline-figure-1"');
+  assert.ok(researchQuestion >= 0 && figureOne > researchQuestion && contribution > figureOne);
+
+  const codingParagraph = html.indexOf("During coding, the date, document type, institutional producer");
+  const limitationsParagraph = html.indexOf("The method has two limitations.");
+  const tableOne = html.indexOf('id="table-1"');
+  assert.ok(codingParagraph >= 0 && tableOne > codingParagraph && limitationsParagraph > tableOne);
+
+  const fdiParagraph = html.indexOf("Foreign direct investment data likewise reveal the gap between trade volume and production integration.");
+  const bydParagraph = html.indexOf("The approximately USD 1 billion investment agreement signed with BYD");
+  const tableTwo = html.indexOf('id="table-2"');
+  assert.ok(fdiParagraph >= 0 && tableTwo > fdiParagraph && bydParagraph > tableTwo);
+
+  const localValueParagraph = html.indexOf("Local value added and technology transfer should not be used interchangeably.");
+  const figureFive = html.indexOf('id="inline-figure-5"');
+  assert.ok(bydParagraph >= 0 && figureFive > bydParagraph && localValueParagraph > figureFive);
+
+  // Archive: every body-media item from the official PDF, grouped Figures → Tables → Visuals.
+  assert.match(html, /Visuals and tables/);
+  const figureGroup = html.indexOf('data-kind="figure"');
+  const tableGroup = html.indexOf('data-kind="table"');
+  const visualGroup = html.indexOf('data-kind="visual"');
+  const dialog = html.indexOf('class="figure-lightbox"');
+  assert.ok(figureGroup >= 0 && tableGroup > figureGroup && visualGroup > tableGroup && dialog > visualGroup);
+
+  const figuresHtml = html.slice(figureGroup, tableGroup);
+  const tablesHtml = html.slice(tableGroup, visualGroup);
+  const visualsHtml = html.slice(visualGroup, dialog);
+
+  assert.equal((figuresHtml.match(/<figure/g) || []).length, 2);
+  assert.equal((tablesHtml.match(/<figure/g) || []).length, 2);
+  assert.equal((visualsHtml.match(/<figure/g) || []).length, 2);
+
+  assert.match(figuresHtml, /figure-01\.jpg/);
+  assert.match(figuresHtml, /figure-05-en\.jpg/);
+  assert.doesNotMatch(figuresHtml, /figure-02\.jpg|figure-06\.jpg|figure-03-en\.png|figure-04-en\.png/);
+
+  assert.match(tablesHtml, /figure-03-en\.png/);
+  assert.match(tablesHtml, /figure-04-en\.png/);
+  assert.doesNotMatch(tablesHtml, /figure-01\.jpg|figure-02\.jpg|figure-05-en\.jpg|figure-06\.jpg/);
+
+  assert.match(visualsHtml, /figure-02\.jpg/);
+  assert.match(visualsHtml, /figure-06\.jpg/);
+  assert.doesNotMatch(visualsHtml, /figure-01\.jpg|figure-03-en\.png|figure-04-en\.png|figure-05-en\.jpg/);
+
+  assert.match(html, /<b>Figure 1<\/b>The Middle Corridor connects China and Europe/);
+  assert.match(html, /<b>Figure 2<\/b>Eurasian transport corridors:/);
+  assert.match(html, /<b>Table 1<\/b>Indicators Used to Distinguish a Transit Country from a Joint Production Hub/);
+  assert.match(html, /<b>Table 2<\/b>Indicator-Based Assessment of the Research Question/);
+  assert.match(html, /<b>Visual 1<\/b>Turkish President Recep Tayyip Erdoğan met with Chinese President Xi Jinping/);
+  assert.match(html, /<b>Visual 2<\/b>In Türkiye-China relations, the combination of economic reciprocity/);
+
+  const prerenderedHtml = await readFile(
+    new URL(
+      "../dist/client/en/articles/power-transition-and-geoeconomic-connectivity-in-eurasia-on-the-55th-anniversary-of-turkiye-china-diplomatic-relations/index.html",
+      import.meta.url,
+    ),
+    "utf8",
+  );
+
+  for (const id of ["inline-figure-1", "table-1", "table-2", "inline-figure-5"]) {
+    assert.ok(prerenderedHtml.includes('id="' + id + '"'));
+  }
+  assert.ok(!prerenderedHtml.includes('id="inline-figure-2"'));
+  assert.ok(!prerenderedHtml.includes('id="inline-figure-6"'));
+
+  const prerenderFigureGroup = prerenderedHtml.indexOf('data-kind="figure"');
+  const prerenderTableGroup = prerenderedHtml.indexOf('data-kind="table"');
+  const prerenderVisualGroup = prerenderedHtml.indexOf('data-kind="visual"');
+  const prerenderDialog = prerenderedHtml.indexOf('class="figure-lightbox"');
+  assert.ok(prerenderFigureGroup >= 0 && prerenderTableGroup > prerenderFigureGroup && prerenderVisualGroup > prerenderTableGroup && prerenderDialog > prerenderVisualGroup);
+
+  const prerenderFigures = prerenderedHtml.slice(prerenderFigureGroup, prerenderTableGroup);
+  const prerenderTables = prerenderedHtml.slice(prerenderTableGroup, prerenderVisualGroup);
+  const prerenderVisuals = prerenderedHtml.slice(prerenderVisualGroup, prerenderDialog);
+  assert.equal((prerenderFigures.match(/<figure/g) || []).length, 2);
+  assert.equal((prerenderTables.match(/<figure/g) || []).length, 2);
+  assert.equal((prerenderVisuals.match(/<figure/g) || []).length, 2);
+});
+
+test("renders Turkish Çomak figures and tables inline while retaining all PDF media in the archive", async () => {
+  const slug = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
+  const response = await renderPath(`/tr/makaleler/${slug}`);
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  // Tam Metin: yalnız Şekiller ve Tablolar.
+  assert.match(html, /class="article-inline-media" id="inline-figure-1"><img src="[^"]*figure-01\.jpg"/);
+  assert.match(html, /class="article-inline-table article-inline-table-image" id="table-1"><img src="[^"]*figure-03\.jpg"/);
+  assert.match(html, /class="article-inline-table article-inline-table-image" id="table-2"><img src="[^"]*figure-04\.jpg"/);
+  assert.match(html, /class="article-inline-media" id="inline-figure-5"><img src="[^"]*figure-05\.jpg"/);
+  assert.doesNotMatch(html, /id="inline-figure-2"/);
+  assert.doesNotMatch(html, /id="inline-figure-6"/);
+
+  // Türkçe PDF akışına karşı paragraf konumları.
+  const researchQuestion = html.indexOf("Bu makale şu soruya yanıt aramaktadır:");
+  const contribution = html.indexOf("Çalışmanın özgün katkısı üç düzeydedir.");
+  const figureOne = html.indexOf('id="inline-figure-1"');
+  assert.ok(researchQuestion >= 0 && figureOne > researchQuestion && contribution > figureOne);
+
+  const codingParagraph = html.indexOf("Kodlama sürecinde her belge için tarih, belge türü, kurumsal üretici");
+  const limitationsParagraph = html.indexOf("Yöntemin iki sınırlılığı bulunmaktadır.");
+  const tableOne = html.indexOf('id="table-1"');
+  assert.ok(codingParagraph >= 0 && tableOne > codingParagraph && limitationsParagraph > tableOne);
+
+  const fdiParagraph = html.indexOf("Doğrudan yatırım verileri de ticaret hacmi ile üretim entegrasyonu arasındaki farkı ortaya koymaktadır.");
+  const bydParagraph = html.indexOf("BYD ile Temmuz 2024’te imzalanan yaklaşık 1 milyar dolarlık yatırım anlaşması");
+  const tableTwo = html.indexOf('id="table-2"');
+  assert.ok(fdiParagraph >= 0 && tableTwo > fdiParagraph && bydParagraph > tableTwo);
+
+  const localValueParagraph = html.indexOf("Yerel katma değer ile teknoloji transferi birbirinin yerine kullanılmamalıdır.");
+  const figureFive = html.indexOf('id="inline-figure-5"');
+  assert.ok(bydParagraph >= 0 && figureFive > bydParagraph && localValueParagraph > figureFive);
+
+  // Görsel ve tablolar: PDF'deki 6/6 medya, Şekiller → Tablolar → Görseller.
+  assert.match(html, /Görsel ve tablolar/);
+  const figureGroup = html.indexOf('data-kind="figure"');
+  const tableGroup = html.indexOf('data-kind="table"');
+  const visualGroup = html.indexOf('data-kind="visual"');
+  const dialog = html.indexOf('class="figure-lightbox"');
+  assert.ok(figureGroup >= 0 && tableGroup > figureGroup && visualGroup > tableGroup && dialog > visualGroup);
+
+  const figuresHtml = html.slice(figureGroup, tableGroup);
+  const tablesHtml = html.slice(tableGroup, visualGroup);
+  const visualsHtml = html.slice(visualGroup, dialog);
+  assert.equal((figuresHtml.match(/<figure/g) || []).length, 2);
+  assert.equal((tablesHtml.match(/<figure/g) || []).length, 2);
+  assert.equal((visualsHtml.match(/<figure/g) || []).length, 2);
+
+  assert.match(figuresHtml, /figure-01\.jpg/);
+  assert.match(figuresHtml, /figure-05\.jpg/);
+  assert.match(tablesHtml, /figure-03\.jpg/);
+  assert.match(tablesHtml, /figure-04\.jpg/);
+  assert.match(visualsHtml, /figure-02\.jpg/);
+  assert.match(visualsHtml, /figure-06\.jpg/);
+
+  assert.match(html, /<b>Şekil 1<\/b>Orta Koridor’un Orta Asya ve Türkiye üzerinden Çin ile Avrupa arasındaki bağlantısı/);
+  assert.match(html, /<b>Şekil 2<\/b>Avrasya ulaştırma koridorları:/);
+  assert.match(html, /<b>Tablo 1<\/b>Transit ülke ile ortak üretim merkezi ayrımında kullanılan göstergeler/);
+  assert.match(html, /<b>Tablo 2<\/b>Araştırma sorusuna ilişkin gösterge temelli değerlendirme/);
+  assert.match(html, /<b>Görsel 1<\/b>Cumhurbaşkanı Recep Tayyip Erdoğan ve Çin Devlet Başkanı Xi Jinping/);
+  assert.match(html, /<b>Görsel 2<\/b>Türkiye-Çin ilişkilerinde ekonomik karşılıklılık/);
+
+  const prerenderedHtml = await readFile(
+    new URL("../dist/client/tr/makaleler/" + slug + "/index.html", import.meta.url),
+    "utf8",
+  );
+  for (const id of ["inline-figure-1", "table-1", "table-2", "inline-figure-5"]) {
+    assert.ok(prerenderedHtml.includes('id="' + id + '"'));
+  }
+  assert.ok(!prerenderedHtml.includes('id="inline-figure-2"'));
+  assert.ok(!prerenderedHtml.includes('id="inline-figure-6"'));
+
+  const prerenderFigureGroup = prerenderedHtml.indexOf('data-kind="figure"');
+  const prerenderTableGroup = prerenderedHtml.indexOf('data-kind="table"');
+  const prerenderVisualGroup = prerenderedHtml.indexOf('data-kind="visual"');
+  const prerenderDialog = prerenderedHtml.indexOf('class="figure-lightbox"');
+  assert.ok(prerenderFigureGroup >= 0 && prerenderTableGroup > prerenderFigureGroup && prerenderVisualGroup > prerenderTableGroup && prerenderDialog > prerenderVisualGroup);
+
+  assert.equal((prerenderedHtml.slice(prerenderFigureGroup, prerenderTableGroup).match(/<figure/g) || []).length, 2);
+  assert.equal((prerenderedHtml.slice(prerenderTableGroup, prerenderVisualGroup).match(/<figure/g) || []).length, 2);
+  assert.equal((prerenderedHtml.slice(prerenderVisualGroup, prerenderDialog).match(/<figure/g) || []).length, 2);
+});
+
+test("keeps Saudi Turkish media archive-only and renders Table 8 once", async () => {
+  const slug = "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi";
+  const response = await renderPath(`/tr/makaleler/${slug}`);
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  // This article intentionally keeps all media out of Tam Metin.
+  assert.doesNotMatch(html, /id="inline-figure-/);
+  assert.doesNotMatch(html, /id="table-[1-8]"/);
+
+  // Archive remains complete, but Table 8 is one logical/rendered table.
+  assert.match(html, /Görsel ve tablolar/);
+  const figureGroup = html.indexOf('data-kind="figure"');
+  const tableGroup = html.indexOf('data-kind="table"');
+  const visualGroup = html.indexOf('data-kind="visual"');
+  const dialog = html.indexOf('class="figure-lightbox"');
+  assert.ok(figureGroup >= 0 && tableGroup > figureGroup && visualGroup > tableGroup && dialog > visualGroup);
+
+  const figuresHtml = html.slice(figureGroup, tableGroup);
+  const tablesHtml = html.slice(tableGroup, visualGroup);
+  const visualsHtml = html.slice(visualGroup, dialog);
+
+  assert.equal((figuresHtml.match(/<figure/g) || []).length, 3);
+  assert.equal((tablesHtml.match(/<figure/g) || []).length, 8);
+  assert.equal((visualsHtml.match(/<figure/g) || []).length, 6);
+  assert.match(html, /<summary><span>Görsel ve tablolar<\/span><b>17<\/b><\/summary>/);
+
+  assert.equal(tablesHtml.split("<b>Tablo 8</b>").length - 1, 1);
+  assert.match(tablesHtml, /table-08-combined\.svg/);
+  assert.doesNotMatch(tablesHtml, /figure-17\.jpg|figure-18\.jpg/);
+  assert.match(tablesHtml, /<b>Tablo 8<\/b>Birincil Veri Kaynakları ve Yöntemsel Notlar/);
+
+  const prerenderedHtml = await readFile(
+    new URL("../dist/client/tr/makaleler/" + slug + "/index.html", import.meta.url),
+    "utf8",
+  );
+  assert.ok(!prerenderedHtml.includes('id="inline-figure-'));
+  assert.doesNotMatch(prerenderedHtml, /id="table-[1-8]"/);
+
+  const prerenderFigureGroup = prerenderedHtml.indexOf('data-kind="figure"');
+  const prerenderTableGroup = prerenderedHtml.indexOf('data-kind="table"');
+  const prerenderVisualGroup = prerenderedHtml.indexOf('data-kind="visual"');
+  const prerenderDialog = prerenderedHtml.indexOf('class="figure-lightbox"');
+  assert.ok(prerenderFigureGroup >= 0 && prerenderTableGroup > prerenderFigureGroup && prerenderVisualGroup > prerenderTableGroup && prerenderDialog > prerenderVisualGroup);
+
+  const prerenderTables = prerenderedHtml.slice(prerenderTableGroup, prerenderVisualGroup);
+  assert.equal((prerenderedHtml.slice(prerenderFigureGroup, prerenderTableGroup).match(/<figure/g) || []).length, 3);
+  assert.equal((prerenderTables.match(/<figure/g) || []).length, 8);
+  assert.equal((prerenderedHtml.slice(prerenderVisualGroup, prerenderDialog).match(/<figure/g) || []).length, 6);
+  assert.equal(prerenderTables.split("<b>Tablo 8</b>").length - 1, 1);
+  assert.match(prerenderTables, /table-08-combined\.svg/);
+});
+
+test("renders the Palestinianism article secondary headings as subsections in both locales", async () => {
+  const slug = "filistinciligin-zirve-paradoksu-transatlantik-kamuoyu-stratejik-realizm-ve-iki-devletli-cozumun";
+  const [trResponse, enResponse] = await Promise.all([
+    renderPath(`/tr/makaleler/${slug}`),
+    renderPath(`/en/articles/${englishArticleSlug(slug)}`),
+  ]);
+  assert.equal(trResponse.status, 200);
+  assert.equal(enResponse.status, 200);
+  const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
+
+  const trSubsections = [
+    "Araştırma Tasarımı, Analitik Yaklaşım ve Kaynaklar",
+    "Amerika’daki Seyir",
+    "Avrupa’daki Seyir",
+    "Kuşaksal ve Kurumsal Boyutlar",
+    "On İki Gün Savaşı ve İran’ın Nükleer Altyapısının Vurulması",
+    "Direniş Ekseni’nin Zayıflatılması",
+    "İbrahim Anlaşmaları’nın Dayanıklılığı ve Sessizce Genişlemesi",
+    "Suudi Arabistan-İsrail İlişkilerinin Seyri",
+    "Trump Yönetimi ve Bölgesel Hegemonya Mimarisi",
+  ];
+  const enSubsections = [
+    "Research Design, Analytical Approach, and Sources",
+    "The American Trajectory",
+    "The European Trajectory",
+    "Generational and Institutional Dimensions",
+    "The Twelve-Day War and the Striking of Iranian Nuclear Infrastructure",
+    "The Degradation of the Axis of Resistance",
+    "The Resilience and Quiet Expansion of the Abraham Accords",
+    "The Saudi-Israeli Trajectory",
+    "The Trump Administration and the Architecture of Regional Hegemony",
+  ];
+
+  for (const title of trSubsections) {
+    assert.ok(trHtml.includes(`<h4>${title}</h4>`), `TR subsection: ${title}`);
+    assert.ok(!trHtml.includes(`<h3>${title}</h3>`), `TR must not be main section: ${title}`);
+  }
+  for (const title of enSubsections) {
+    assert.ok(enHtml.includes(`<h4>${title}</h4>`), `EN subsection: ${title}`);
+    assert.ok(!enHtml.includes(`<h3>${title}</h3>`), `EN must not be main section: ${title}`);
+  }
+
+  for (const title of [
+    "Transatlantik Siyasal-Retorik Bir Olgu Olarak Filistincilik",
+    "Transatlantik Kamuoyundaki Dönüşüm",
+    "Stratejik Realizm: ABD-Körfez-İsrail-İran Yakınlaşması",
+    "İki Devletli Çözümün Sonu: JST Argümanının Geliştirilmesi",
+    "Sonuç: Stratejik Ayrışma ve Batı İttifakının Geleceği",
+  ]) {
+    assert.ok(trHtml.includes(`<h3>${title}</h3>`), `TR main section preserved: ${title}`);
+  }
+  for (const title of [
+    "Palestinianism as a Transatlantic Political-Rhetorical Phenomenon",
+    "The Transatlantic Public Opinion Shift",
+    "Strategic Realism: The U.S.–Gulf–Israel–Iran Convergence",
+    "The End of the Two-State Solution: Extending the JST Argument",
+    "Conclusion: Strategic Divergence and the Future of the Western Alliance",
+  ]) {
+    assert.ok(enHtml.includes(`<h3>${title}</h3>`), `EN main section preserved: ${title}`);
+  }
+
+  assert.match(trHtml, /class="article-inline-media" id="inline-figure-1"/);
+  assert.match(trHtml, /Şekil 1/);
+  assert.match(enHtml, /class="article-inline-media" id="inline-figure-1"/);
+  assert.match(enHtml, /G1ZOhMoWEAAvhVl\.jpeg/);
+  assert.match(enHtml, /Figure 1/);
+
+  assert.match(trHtml, /id="inline-figure-3"/);
+  assert.match(trHtml, /id="inline-figure-4"/);
+  assert.match(trHtml, /Tablo 1/);
+  assert.match(enHtml, /class="article-inline-table" id="table-1"/);
+  assert.match(enHtml, /Survey \(source\)/);
+  assert.match(enHtml, /Compiled by the author\./);
+  assert.doesNotMatch(enHtml, /figure-03\.jpg|figure-04\.jpg/);
+
+  const trIntroEnd = trHtml.indexOf("Makale beş bölümden oluşmaktadır.");
+  const trFigureOne = trHtml.indexOf('id="inline-figure-1"');
+  const trResearchDesign = trHtml.indexOf("<h4>Araştırma Tasarımı, Analitik Yaklaşım ve Kaynaklar</h4>");
+  assert.ok(trIntroEnd >= 0 && trFigureOne > trIntroEnd && trResearchDesign > trFigureOne);
+
+  const enIntroEnd = enHtml.indexOf("The article proceeds in five parts.");
+  const enFigureOne = enHtml.indexOf('id="inline-figure-1"');
+  const enResearchDesign = enHtml.indexOf("<h4>Research Design, Analytical Approach, and Sources</h4>");
+  assert.ok(enIntroEnd >= 0 && enFigureOne > enIntroEnd && enResearchDesign > enFigureOne);
+
+  const trTableLead = trHtml.indexOf("Tablo 1, bu bölümde yararlanılan başlıca anketleri");
+  const trTableFirst = trHtml.indexOf('id="inline-figure-3"');
+  const trTableSecond = trHtml.indexOf('id="inline-figure-4"');
+  const trAmerican = trHtml.indexOf("<h4>Amerika’daki Seyir</h4>");
+  assert.ok(trTableLead >= 0 && trTableFirst > trTableLead && trTableSecond > trTableFirst && trAmerican > trTableSecond);
+
+  const enTableLead = enHtml.indexOf("Table 1 summarizes the principal surveys drawn upon in this section");
+  const enTable = enHtml.indexOf('id="table-1"');
+  const enAmerican = enHtml.indexOf("<h4>The American Trajectory</h4>");
+  assert.ok(enTableLead >= 0 && enTable > enTableLead && enAmerican > enTable);
+
+});
+
+test("renders the Jordan article secondary headings as subsections in both locales", async () => {
+  const slug = "dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi";
+  const [trResponse, enResponse] = await Promise.all([
+    renderPath(`/tr/makaleler/${slug}`),
+    renderPath(`/en/articles/${englishArticleSlug(slug)}`),
+  ]);
+  assert.equal(trResponse.status, 200);
+  assert.equal(enResponse.status, 200);
+  const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
+
+  const trSubsections = [
+    "Yöntem",
+    "Dijital İpek Yolu Kavramının Gelişimi ve Küresel Bağlamı",
+    "Ürdün’ün Dijital Dönüşüm Stratejisinin Aşamalı Olarak Güncellenmesi",
+    "Ürdün’ün Ulusal Özellikleri ve Dijital Ortaklara Duyduğu İhtiyaç",
+    "Çin-Ürdün Dijital İşbirliği Çerçevesinin Pekişmesi ve Kurumsallaşması",
+    "Fırsatlar",
+    "Zorluklar",
+  ];
+  const enSubsections = [
+    "Methodology",
+    "The Evolving Concept of the Digital Silk Road and Its Global Context",
+    "The Iterative Upgrading of Jordan’s Digital Transformation Strategy",
+    "Jordan’s National Characteristics and Demand for Digital Partners",
+    "Consolidation and Institutionalization of the China-Jordan Digital Cooperation Framework",
+    "Opportunities",
+    "Challenges",
+  ];
+
+  for (const title of trSubsections) {
+    assert.ok(trHtml.includes(`<h4>${title}</h4>`), `TR subsection: ${title}`);
+    assert.ok(!trHtml.includes(`<h3>${title}</h3>`), `TR must not be main section: ${title}`);
+  }
+  for (const title of enSubsections) {
+    assert.ok(enHtml.includes(`<h4>${title}</h4>`), `EN subsection: ${title}`);
+    assert.ok(!enHtml.includes(`<h3>${title}</h3>`), `EN must not be main section: ${title}`);
+  }
+
+  for (const title of [
+    "Dijital İpek Yolu Girişimi ve Çin-Ürdün İşbirliği",
+    "Çinli Şirketlerin Ürdün’ün Dijital Yapılanmasına Katılımındaki Son Gelişmeler",
+    "Fırsatlar ve Zorluklar",
+    "Sonuç",
+  ]) {
+    assert.ok(trHtml.includes(`<h3>${title}</h3>`), `TR main section preserved: ${title}`);
+  }
+  for (const title of [
+    "The Digital Silk Road Initiative and China-Jordan Cooperation",
+    "Recent Developments in Chinese Enterprises’ Participation in Jordan’s Digital Construction",
+    "Opportunities and Challenges",
+    "Conclusion",
+  ]) {
+    assert.ok(enHtml.includes(`<h3>${title}</h3>`), `EN main section preserved: ${title}`);
+  }
+});
+
 test("uses bilingual visual, footnote, and return-navigation labels", async () => {
   const slug = "kulturel-silinmeden-tarihsel-kurtarmaya-nishio-kanji-ve-amerikan-isgali-altindaki-japonyanin";
   const [trResponse, enResponse] = await Promise.all([
@@ -1115,7 +1528,7 @@ test("preserves Volume 7 PDF hierarchy, metadata, and compact archive/PDF naviga
 
 test("renders linked season-coloured issue metadata and an always-visible DOI field on article pages", async () => {
   const doiSlug = "cin-abd-iliskilerinin-gelecegi";
-  const noDoiSlug = "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik";
+  const noDoiSlug = "cinin-kuresel-altyapi-stratejisi";
   const responses = await Promise.all([
     renderPath(`/tr/makaleler/${doiSlug}`),
     renderPath(`/en/articles/${englishArticleSlug(doiSlug)}`),

@@ -255,32 +255,70 @@
     {
       "id": "figure-1",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-01.jpg",
-      "caption": "Orta Koridor’un Orta Asya ve Türkiye üzerinden Çin ile Avrupa arasındaki bağlantısı (Harita: Valdai Club, 2023)."
+      "caption": "Orta Koridor’un Orta Asya ve Türkiye üzerinden Çin ile Avrupa arasındaki bağlantısı (Harita: Valdai Club, 2023).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-1",
+        "afterParagraph": 4
+      }
     },
     {
       "id": "figure-2",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-02.jpg",
-      "caption": "Cumhurbaşkanı Recep Tayyip Erdoğan ve Çin Devlet Başkanı Xi Jinping, Astana, 4 Temmuz 2024 (Fotoğraf: CGTN, 2024)."
+      "caption": "Cumhurbaşkanı Recep Tayyip Erdoğan ve Çin Devlet Başkanı Xi Jinping, Astana, 4 Temmuz 2024 (Fotoğraf: CGTN, 2024).",
+      "kind": "visual"
     },
     {
       "id": "figure-3",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-03.jpg",
-      "caption": "Tablo 1: Transit ülke ile ortak üretim merkezi ayrımında kullanılan göstergeler"
+      "caption": "Tablo 1: Transit ülke ile ortak üretim merkezi ayrımında kullanılan göstergeler",
+      "kind": "table"
     },
     {
       "id": "figure-4",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-04.jpg",
-      "caption": "Tablo 2: Araştırma sorusuna ilişkin gösterge temelli değerlendirme"
+      "caption": "Tablo 2: Araştırma sorusuna ilişkin gösterge temelli değerlendirme",
+      "kind": "table"
     },
     {
       "id": "figure-5",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-05.jpg",
-      "caption": "Avrasya ulaştırma koridorları: Türkiye’nin Avrupa, Orta Asya, Çin, Orta Doğu ve Afrika ile bağlantıları (Harita: BRIQ, 2026)."
+      "caption": "Avrasya ulaştırma koridorları: Türkiye’nin Avrupa, Orta Asya, Çin, Orta Doğu ve Afrika ile bağlantıları (Harita: BRIQ, 2026).",
+      "kind": "figure",
+      "placement": {
+        "sectionId": "tr-section-6",
+        "afterParagraph": 5
+      }
     },
     {
       "id": "figure-6",
       "src": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-06.jpg",
-      "caption": "Türkiye-Çin ilişkilerinde ekonomik karşılıklılık, kurumsallaşmış bağlantısallık ve sürekli diplomatik diyalog (Çizim: The Daily CPEC, 2025)."
+      "caption": "Türkiye-Çin ilişkilerinde ekonomik karşılıklılık, kurumsallaşmış bağlantısallık ve sürekli diplomatik diyalog (Çizim: The Daily CPEC, 2025).",
+      "kind": "visual"
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Tablo 1: Transit ülke ile ortak üretim merkezi ayrımında kullanılan göstergeler",
+      "headers": [],
+      "rows": [],
+      "placement": {
+        "sectionId": "tr-section-3",
+        "afterParagraph": 5
+      },
+      "imageSrc": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-03.jpg"
+    },
+    {
+      "id": "table-2",
+      "caption": "Tablo 2: Araştırma sorusuna ilişkin gösterge temelli değerlendirme",
+      "headers": [],
+      "rows": [],
+      "placement": {
+        "sectionId": "tr-section-6",
+        "afterParagraph": 4
+      },
+      "imageSrc": "/assets/article-figures/turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik/figure-04.jpg"
     }
   ]
 }

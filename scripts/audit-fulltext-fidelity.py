@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import argparse, json, re, subprocess, unicodedata, urllib.request
+import argparse, json, re, subprocess, unicodedata, urllib.error, urllib.parse, urllib.request
 from collections import Counter
 from pathlib import Path
 
@@ -53,6 +53,17 @@ def download(url,dest):
             if not c: break
             f.write(c)
 
+def download_first(urls,dest):
+    errors=[]
+    for url in dict.fromkeys(x for x in urls if x):
+        try:
+            download(url,dest)
+            return url
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as exc:
+            errors.append(f"{url}: {exc}")
+            dest.unlink(missing_ok=True)
+    raise RuntimeError("Could not download official PDF from any configured source: " + " | ".join(errors))
+
 def pdf_pages(pdf):
     out=run(["pdfinfo",str(pdf)])
     m=re.search(r"^Pages:\s+(\d+)",out,re.M)
@@ -88,11 +99,15 @@ def flatten_canonical(j):
 def audit_locale(root,slug,loc,meta,other_titles,out_root):
     ft_path=root/"content"/"articles"/slug/"fulltext"/f"{loc}.json"
     j=json.loads(ft_path.read_text(encoding="utf-8"))
-    url=(meta.get("urls") or {}).get("pdfEn" if loc=="en" else "pdfTr")
-    if not url:
+    urls=meta.get("urls") or {}
+    source_url=urls.get("pdfEn" if loc=="en" else "pdfTr")
+    local_path=urls.get("pdfEnLocal" if loc=="en" else "pdfTrLocal")
+    archived_url=urllib.parse.urljoin("https://www.briqjournal.com", local_path) if local_path else None
+    candidates=[source_url,archived_url]
+    if not any(candidates):
         return {"slug":slug,"locale":loc,"status":"article_pdf_unavailable","pdf_url":None}
     work=out_root/slug/loc; pdf=work/f"{slug}-{loc}.pdf"
-    download(url,pdf)
+    url=download_first(candidates,pdf)
     (work/"raw.txt").write_text(run(["pdftotext","-raw",str(pdf),"-"]), encoding="utf-8")
     page_texts=extract_pages(pdf,work/"pages")
     headings,paras,refs,notes,figs=flatten_canonical(j)

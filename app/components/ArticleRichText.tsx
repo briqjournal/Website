@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment, type MouseEvent, type ReactNode } from "react";
+import { articleFigureDisplayCaption, articleFigureKind, articleFigureLabel, type ArticleFigure } from "./ArticleFigures";
 import { ReferenceText } from "./ReferenceText";
 
 export type FullTextSection = {
@@ -9,6 +10,20 @@ export type FullTextSection = {
   paragraphs: string[];
   level?: "section" | "subsection";
   toc?: boolean;
+};
+
+export type FullTextTable = {
+  id: string;
+  caption: string;
+  headers: string[];
+  rows: string[][];
+  note?: string;
+  imageSrc?: string;
+  imageSrcs?: string[];
+  placement: {
+    sectionId: string;
+    afterParagraph: number;
+  };
 };
 
 export type FullTextNote = { id: string; text: string };
@@ -222,15 +237,100 @@ function renderFormattedText(text: string, references: FullTextReference[], note
   });
 }
 
+function InlineArticleTable({
+  table,
+  references,
+  notes,
+}: {
+  table: FullTextTable;
+  references: FullTextReference[];
+  notes: FullTextNote[];
+}) {
+  const imageSources = table.imageSrcs?.length ? table.imageSrcs : table.imageSrc ? [table.imageSrc] : [];
+  if (imageSources.length) {
+    return (
+      <figure className="article-inline-table article-inline-table-image" id={table.id}>
+        {imageSources.map((src, index) => (
+          <img
+            src={src}
+            alt={imageSources.length > 1 ? `${table.caption} (${index + 1}/${imageSources.length})` : table.caption}
+            loading="lazy"
+            decoding="async"
+            key={src}
+          />
+        ))}
+        <figcaption className="article-inline-table-image-caption">{table.caption}</figcaption>
+      </figure>
+    );
+  }
+
+  return (
+    <figure className="article-inline-table" id={table.id}>
+      <figcaption>{table.caption}</figcaption>
+      <div className="article-inline-table-scroll">
+        <table>
+          <thead>
+            <tr>
+              {table.headers.map((header, index) => (
+                <th scope="col" key={`${table.id}-header-${index}`}>
+                  {renderFormattedText(header, references, notes, `${table.id}-header-${index}`)}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((row, rowIndex) => (
+              <tr key={`${table.id}-row-${rowIndex}`}>
+                {row.map((cell, cellIndex) => cellIndex === 0 ? (
+                  <th scope="row" key={`${table.id}-cell-${rowIndex}-${cellIndex}`}>
+                    {renderFormattedText(cell, references, notes, `${table.id}-cell-${rowIndex}-${cellIndex}`)}
+                  </th>
+                ) : (
+                  <td key={`${table.id}-cell-${rowIndex}-${cellIndex}`}>
+                    {renderFormattedText(cell, references, notes, `${table.id}-cell-${rowIndex}-${cellIndex}`)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {table.note ? <p className="article-inline-table-note">{table.note}</p> : null}
+    </figure>
+  );
+}
+
+function InlineArticleFigure({
+  figure,
+  figures,
+  locale,
+}: {
+  figure: ArticleFigure;
+  figures: ArticleFigure[];
+  locale: "tr" | "en";
+}) {
+  const label = articleFigureLabel(figure, figures, locale);
+  return (
+    <figure className="article-inline-media" id={`inline-${figure.id}`}>
+      <img src={figure.src} alt={figure.caption} loading="lazy" decoding="async" />
+      <figcaption><b>{label}.</b> {articleFigureDisplayCaption(figure)}</figcaption>
+    </figure>
+  );
+}
+
 export function ArticleRichText({
   sections,
   references,
   notes,
+  tables = [],
+  figures = [],
   locale,
 }: {
   sections: FullTextSection[];
   references: FullTextReference[];
   notes: FullTextNote[];
+  tables?: FullTextTable[];
+  figures?: ArticleFigure[];
   locale: "tr" | "en";
 }) {
   const genericSectionTitles = new Set(["tam metin", "full text"]);
@@ -243,10 +343,24 @@ export function ArticleRichText({
             {!genericSectionTitles.has(section.title.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US")) && (
               section.level === "subsection" ? <h4>{section.title}</h4> : <h3>{section.title}</h3>
             )}
+            {figures
+              .filter((figure) => articleFigureKind(figure) !== "visual" && figure.placement?.sectionId === section.id && figure.placement.afterParagraph === 0)
+              .map((figure) => <InlineArticleFigure figure={figure} figures={figures} locale={locale} key={`inline-${figure.id}`} />)}
+            {tables
+              .filter((table) => table.placement.sectionId === section.id && table.placement.afterParagraph === 0)
+              .map((table) => <InlineArticleTable table={table} references={references} notes={notes} key={table.id} />)}
             {section.paragraphs.map((paragraph, index) => (
-              <p key={`${section.id}-${index}`}>
-                {renderFormattedText(sectionIndex === 0 && index === 0 ? sentenceCasePdfOpening(paragraph, locale) : paragraph, references, notes, `${section.id}-${index}`)}
-              </p>
+              <Fragment key={`${section.id}-${index}`}>
+                <p>
+                  {renderFormattedText(sectionIndex === 0 && index === 0 ? sentenceCasePdfOpening(paragraph, locale) : paragraph, references, notes, `${section.id}-${index}`)}
+                </p>
+                {figures
+                  .filter((figure) => articleFigureKind(figure) !== "visual" && figure.placement?.sectionId === section.id && figure.placement.afterParagraph === index + 1)
+                  .map((figure) => <InlineArticleFigure figure={figure} figures={figures} locale={locale} key={`inline-${figure.id}`} />)}
+                {tables
+                  .filter((table) => table.placement.sectionId === section.id && table.placement.afterParagraph === index + 1)
+                  .map((table) => <InlineArticleTable table={table} references={references} notes={notes} key={table.id} />)}
+              </Fragment>
             ))}
           </section>
         ))}

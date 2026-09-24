@@ -34,6 +34,8 @@ type AuthorMetadata = {
   email?: string;
   orcids?: string[];
   institutionUrl?: string;
+  appointmentTermTr?: string;
+  appointmentTermEn?: string;
   biographyTr?: string;
   biographyEn?: string;
 };
@@ -426,6 +428,22 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     orcids: ["0000-0002-9000-4456"],
     institutionUrl: "https://www.iitm.ac.in/",
   },
+  "Semih Koray": {
+    tr: "Bilkent Üniversitesi, İktisat Bölümü",
+    en: "Department of Economics, Bilkent University",
+    orcids: ["0000-0001-7498-6499"],
+    institutionUrl: "https://www.bilkent.edu.tr/",
+    appointmentTermTr: "2019–Günümüz",
+    appointmentTermEn: "2019–Present",
+    biographyTr: "Prof. Dr. Semih Koray, 1980 yılında Boğaziçi Üniversitesi'nden Matematik alanında doktora derecesini almıştır. Social Choice and Welfare, Review of Economic Design, Journal of Economic Theory, Econometrica ve Semigroup Forum gibi dergilerde çok sayıda makalesi yayımlanmıştır. Review of Economic Design dergisinin eş baş editörlüğünü ve yardımcı editörlüğünü, Güney Avrupa İktisat Teorisyenleri Derneği'nin başkanlığını ve genel sekreterliğini, Türkiye Matematik Olimpiyatları Komitesi başkanlığını, Uluslararası Matematik Olimpiyatları Danışma Kurulu üyeliğini ve Ekonomik Tasarım Vakfı başkanlığını yürütmüştür. Araştırma alanları ekonomik ve sosyal tasarım, oyun teorisi ve sosyal seçim teorisi üzerine yoğunlaşmaktadır. Vatan Partisi Uluslararası İlişkiler Bürosu'ndan Sorumlu Genel Başkan Yardımcısıdır. Teori ve Bilim ve Ütopya dergilerinde siyasi ve sosyal konularda makaleleri yayımlanmış olup Aydınlık gazetesinde Avrasya Alternatifi konulu haftalık köşe yazarlığı yapmıştır.",
+    biographyEn: "Prof. Dr. Semih Koray received his Ph.D. in Mathematics from Boğaziçi University in 1980. He has published articles in journals such as Social Choice and Welfare, Review of Economic Design, Journal of Economic Theory, Econometrica, and Semigroup Forum. He served as coordinating editor-in-chief and associate editor of Review of Economic Design, President and Secretary General of the Association of Southern European Economic Theorists, Chair of the Turkish Mathematical Olympiad Committee, member of the International Mathematical Olympiad Advisory Board, and President of the Foundation for Economic Design. His research interests focus on economic and social design, game theory, and social choice theory. He is the Deputy President of the Patriotic Party (Vatan Partisi) in charge of the International Relations Bureau. He has also published articles on political and social issues in the periodicals Teori and Bilim ve Ütopya, and wrote a weekly column on the Eurasian Alternative in the daily newspaper Aydınlık.",
+  },
+  "Wang Yi": {
+    tr: "Çin Halk Cumhuriyeti Dışişleri Bakanı",
+    en: "Minister of Foreign Affairs of the People's Republic of China",
+    biographyTr: "Wang Yi, 1953 yılında Pekin'de doğmuştur. Pekin'de kurulu İkinci Yabancı Dil Enstitüsü'nün Asya ve Afrika Dilleri bölümünden mezun olmuş, ekonomi alanında yüksek lisans derecesi almıştır. 1981 yılında Çin Komünist Partisi'ne (ÇKP) üye olan Wang Yi, 1982-1989 yılları arasında Çin Halk Cumhuriyeti Dışişleri Bakanlığı'nda ataşe, müdür yardımcısı ve müdür konumlarında görev yapmıştır. Bakanlıkta muhtelif üst düzey konumlarda hizmet verdikten sonra 2004-2007 yıllarında Japonya Büyükelçiliği görevini üstlenmiştir. 2013-2018 yıllarında Dışişleri Bakanlığı ÇKP Sekreter Yardımcılığının ardından 2018 yılında Dışişleri Bakanı konumuna terfi etmiştir. 17. Halk Kongresi'nden bu yana ÇKP Merkez Komitesi üyesidir.",
+    biographyEn: "Wang Yi was born in 1953 in Beijing. He graduated from the Institute of Asian and African Languages affiliated to the Second Foreign Languages Institute in Beijing and holds a master's degree in Economics. In 1981, Wang Yi became a member of the Chinese Communist Party (CCP). Between 1982 and 1989, he worked at the Ministry of Foreign Affairs of the People's Republic of China (MFA) as an attaché, assistant manager, and manager consecutively. After serving in various senior positions at the MFA, he served as Ambassador to Japan between 2004 and 2007. He continued his work at the MFA as Deputy Secretary of the CPC Committee from 2013 until 2018, when he was promoted to the position of Minister of Foreign Affairs. Since the 17th People's Congress, he has also been a member of the CCP Central Committee.",
+  },
 };
 
 const displayCorrections: Record<string, string> = {
@@ -546,8 +564,8 @@ export const authorProfiles: AuthorProfile[] = (() => {
       const appointment: BriqAppointment = {
         roleTr: canonicalName === "Fikret Akfırat" && group.tr === "Yayın Kurulu" ? "Genel Yayın Yönetmeni" : group.roleTr,
         roleEn: canonicalName === "Fikret Akfırat" && group.en === "Editorial Board" ? "Editor-in-Chief" : group.roleEn,
-        termTr: "2026–Günümüz",
-        termEn: "2026–Present",
+        termTr: metadata.appointmentTermTr || "2026–Günümüz",
+        termEn: metadata.appointmentTermEn || "2026–Present",
       };
       const existing = profiles.get(id);
       if (existing) {
