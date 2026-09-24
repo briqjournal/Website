@@ -1,6 +1,7 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { LEGACY_REDIRECTS } from "./legacy-redirects";
 
 interface Env {
   ASSETS: Fetcher;
@@ -14,13 +15,6 @@ interface Env {
   };
 }
 
-const LEGACY_DOI_ARTICLE_REDIRECTS: Record<string, string> = {
-  "/en/emerging-trends-low-carbon-rules-international-trade-and-their-implications-the-belt-and-road": "/en/articles/emerging-trends-in-low-carbon-rules-for-international-trade-and-their-implications-for-the-belt-and-road-initiative/",
-  "/en/water-scarcity-and-the-global-food-crisis-the-context-climate-change": "/en/articles/water-scarcity-and-the-global-food-crisis-in-the-context-of-climate-change/",
-  "/en/reordering-the-world-regional-blocs-and-the-rise-multipolar-global-governance": "/en/articles/reordering-the-world-regional-blocs-and-the-rise-of-multipolar-global-governance/",
-  "/en/research-the-islamic-system-and-the-democratization-international-relations": "/en/articles/research-on-the-islamic-system-and-the-democratization-of-international-relations/",
-};
-
 const R2_PDF_PATH_PREFIXES = [
   "/assets/archive/pdfs/",
   "/assets/issues/",
@@ -31,8 +25,14 @@ function normalizedLegacyPath(pathname: string): string {
   return pathname.replace(/\/+$/, "");
 }
 
-function legacyDoiArticleRedirect(url: URL): Response | null {
-  const targetPath = LEGACY_DOI_ARTICLE_REDIRECTS[normalizedLegacyPath(url.pathname)];
+function handleLegacyRedirect(url: URL): Response | null {
+  const pathname = normalizedLegacyPath(url.pathname);
+  let targetPath = LEGACY_REDIRECTS[pathname];
+
+  if (!targetPath && pathname.startsWith("/en/user/")) {
+    targetPath = pathname.replace("/en/user/", "/en/authors/");
+  }
+
   if (!targetPath) return null;
 
   const target = new URL(targetPath, url.origin);
@@ -133,16 +133,10 @@ interface ExecutionContext {
   passThroughOnException(): void;
 }
 
-// Image security config. SVG sources with .svg extension auto-skip the
-// optimization endpoint on the client side (served directly, no proxy).
-// To route SVGs through the optimizer (with security headers), set
-// dangerouslyAllowSVG: true in next.config.js and uncomment below:
-// const imageConfig: ImageConfig = { dangerouslyAllowSVG: true };
-
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
-    const legacyRedirect = legacyDoiArticleRedirect(url);
+    const legacyRedirect = handleLegacyRedirect(url);
     if (legacyRedirect) return legacyRedirect;
 
     if (isR2PdfPath(url.pathname)) {
