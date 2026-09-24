@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Dilek Uyar",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Dilek",
+      "familyName": "Uyar",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Photography Artist",
+          "nameTr": "Fotoğraf Sanatçısı",
+          "nameEn": "Photography Artist",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

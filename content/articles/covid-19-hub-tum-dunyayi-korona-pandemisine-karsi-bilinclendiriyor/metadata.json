@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Şeref Ateş",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Prof. Dr. Şeref Ateş",
+      "givenName": "Şeref",
+      "familyName": "Ateş",
+      "orcid": "0000-0001-5803-3989",
+      "affiliations": [
+        {
+          "name": "Yunus Emre Institute",
+          "nameTr": "Yunus Emre Enstitüsü",
+          "nameEn": "Yunus Emre Institute",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

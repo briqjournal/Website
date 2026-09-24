@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Ethem Sancak",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Ethem",
+      "familyName": "Sancak",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "BMC Executive Board",
+          "nameTr": "BMC Yönetim Kurulu",
+          "nameEn": "BMC Executive Board",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

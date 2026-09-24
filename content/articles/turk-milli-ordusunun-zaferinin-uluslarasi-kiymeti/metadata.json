@@ -13,11 +13,34 @@
   },
   "authors": [
     {
-      "displayName": "Emrah Alan",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Gao Junyu",
+      "givenName": "Junyu",
+      "familyName": "Gao",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Peking University",
+          "nameTr": "Pekin Üniversitesi",
+          "nameEn": "Peking University",
+          "country": "China",
+          "ror": null
+        }
+      ]
+    },
+    {
+      "displayName": "Emrah Alan",
+      "givenName": "Emrah",
+      "familyName": "Alan",
+      "orcid": null,
+      "affiliations": [
+        {
+          "name": "Peking University, Department of History Center for Ancient Chinese Studies",
+          "nameTr": "Pekin Üniversitesi, Tarih Bölümü Eski Çin Araştırmaları Merkezi",
+          "nameEn": "Peking University, Department of History Center for Ancient Chinese Studies",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

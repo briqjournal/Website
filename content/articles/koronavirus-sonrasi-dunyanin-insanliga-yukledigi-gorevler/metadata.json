@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Semih Koray",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Prof. Dr. Semih Koray",
+      "givenName": "Semih",
+      "familyName": "Koray",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Department of Economics, Bilkent University",
+          "nameTr": "Bilkent Üniversitesi, Ekonomi Bölümü",
+          "nameEn": "Department of Economics, Bilkent University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
