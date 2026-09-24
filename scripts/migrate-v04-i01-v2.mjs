@@ -188,7 +188,7 @@ function extractBlocks(pages,record,locale){
         continue;
       }
       const fixed=fixedHeadingMatch(n.text,record.fixedHeadings?.[locale]);
-      const fixedStyled=fixed&&(n.bold||n.font.size>=14.5);
+      const fixedStyled=fixed&&(n.bold||n.font.size>=14.5)?fixed:null;
       const h=fixedStyled||(!record.strictFixedHeadings&&genericHeading(n));
       if(h){
         flushP();
