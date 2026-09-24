@@ -1480,7 +1480,16 @@ export default async function ContentPage({
   const authorMatch = key.match(/^yazar\/(.+)$/);
   const callMatch = key.match(/^makale-cagrilari\/(.+)$/);
   const reportMatch = key.match(/^yillik-raporlar\/(\d+)$/);
-  if (!Page && !editorialMatch && !issueMatch && !articlePdfMatch && !articleMatch && !authorMatch && !callMatch && !reportMatch) notFound();
+  if (!Page && !editorialMatch && !issueMatch && !articlePdfMatch && !articleMatch && !authorMatch && !callMatch && !reportMatch) {
+    const directArticle = archiveArticles.find((article) => article.slug === key);
+    if (directArticle) {
+      redirect(`/tr/makaleler/${directArticle.slug}`);
+    }
+    if (key === "biz-kimiz" || key === "hakkimizda") {
+      redirect("/tr/dergi/briq-hakkinda");
+    }
+    notFound();
+  }
 
   let content: ReactNode;
   if (Page) content = <Page />;

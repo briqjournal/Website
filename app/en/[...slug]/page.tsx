@@ -994,7 +994,16 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
   else if (reportMatch) content = <EnglishReport number={Number(reportMatch[1])} />;
   else if (key.startsWith("calls-for-papers/")) content = <EnglishCallDetail slug={key.split("/").pop() || ""} />;
   else if (page) content = <EnglishStandardPage page={page} />;
-  else notFound();
+  else {
+    const directArticle = findArticleByEnglishRouteSlug(key) || archiveArticles.find((a) => a.slug === key);
+    if (directArticle) {
+      redirect(`/en/articles/${articleRouteSlug(directArticle, "en")}`);
+    }
+    if (key === "about-us" || key === "about" || key === "about-en") {
+      redirect("/en/journal/about-briq");
+    }
+    notFound();
+  }
 
   if (content === null) notFound();
 
