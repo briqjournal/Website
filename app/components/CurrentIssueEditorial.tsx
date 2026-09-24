@@ -36,6 +36,7 @@ export function CurrentIssueEditorial({
   const issue = findArchiveIssue(volume, issueNumber);
   const pdf = issue ? issuePdfUrl(issue, locale) || issuePdfUrl(issue, "tr") : undefined;
   const archivedCopy = archivedEditorials[`${volume}-${issueNumber}`]?.[locale];
+  const issuePdfPage = archivedEditorials[`${volume}-${issueNumber}`]?.issuePdfPage ?? 4;
   const copy = archivedCopy || {
     title: isEnglish ? "A New Era in West Asia" : "Batı Asya’da Yeni Dönem",
     subtitle: isEnglish ? "The Erosion of Hegemony and the Rise of Regional Agency" : "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor",
@@ -78,7 +79,7 @@ export function CurrentIssueEditorial({
         </aside>
         <div className="current-editorial-body">
           {copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          {pdf && <div className="current-editorial-actions"><a className="button button-dark" href={`${pdf}#page=4`}>{isEnglish ? "View in Full Issue PDF" : "Tam Sayı PDF’de Gör"} <span>↗︎</span></a><a className="underlined-link" href={issueHref}>{isEnglish ? "Issue contents" : "Sayı içeriği"} →︎</a></div>}
+          {pdf && <div className="current-editorial-actions"><a className="button button-dark" href={`${pdf}#page=${issuePdfPage}`}>{isEnglish ? "View in Full Issue PDF" : "Tam Sayı PDF’de Gör"} <span>↗︎</span></a><a className="underlined-link" href={issueHref}>{isEnglish ? "Issue contents" : "Sayı içeriği"} →︎</a></div>}
         </div>
       </div>
     </article>

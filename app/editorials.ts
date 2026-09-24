@@ -7,6 +7,7 @@ export type EditorialCopy = {
 type LocalizedEditorial = {
   tr: EditorialCopy;
   en: EditorialCopy;
+  issuePdfPage?: number;
 };
 
 export const archivedEditorials: Record<string, LocalizedEditorial> = {
