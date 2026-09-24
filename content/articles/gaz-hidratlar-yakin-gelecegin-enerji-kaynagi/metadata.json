@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Günay Çifci",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Prof. Dr. Günay Çifci",
+      "givenName": "Günay",
+      "familyName": "Çifci",
+      "orcid": "0000-0002-4380-8056",
+      "affiliations": [
+        {
+          "name": "Department of Geophysics, Dokuz Eylül University",
+          "nameTr": "Jeofizik Bölümü, Dokuz Eylül Üniversitesi",
+          "nameEn": "Department of Geophysics, Dokuz Eylül University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
