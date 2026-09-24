@@ -1,0 +1,43 @@
+name: Migrate v03-i04 canonical full text
+
+on:
+  push:
+    branches:
+      - chore/v03-i04-fulltext-canonical
+    paths:
+      - scripts/migrate-v03-i04.mjs
+      - .github/workflows/migrate-v03-i04.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install PDF tools
+        run: |
+          sudo apt-get update >/dev/null
+          sudo apt-get install -y poppler-utils imagemagick >/dev/null
+      - name: Download official locale issue PDFs
+        run: |
+          mkdir -p tmp/v03-i04-source
+          curl -L --fail --retry 4 --retry-delay 3 'https://briqjournal.com/sites/default/files/dergi-sayilari/2022-09/C3S4_ENG_YK.pdf' -o tmp/v03-i04-source/issue-en.pdf
+          curl -L --fail --retry 4 --retry-delay 3 'https://briqjournal.com/sites/default/files/dergi-sayilari/2022-10/BRIQ_C3S4_TR_FINAL_YEN%C4%B0.pdf' -o tmp/v03-i04-source/issue-tr.pdf
+      - name: Generate canonical candidates
+        run: node scripts/migrate-v03-i04.mjs
+      - name: Commit generated migration output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/articles/*/fulltext/en.json content/articles/*/fulltext/tr.json public/assets/article-figures
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+            exit 0
+          fi
+          git commit -m "feat(fulltext): generate v03-i04 canonical locales"
+          git push origin HEAD:chore/v03-i04-fulltext-canonical
