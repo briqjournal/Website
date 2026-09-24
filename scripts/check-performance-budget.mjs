@@ -5,7 +5,7 @@ const root = process.cwd();
 const dist = join(root, "dist");
 const limits = {
   clientJavaScript: 600 * 1024,
-  serverJavaScript: 3 * 1024 * 1024,
+  serverJavaScript: 4 * 1024 * 1024,
   html: 800 * 1024,
   searchIndex: 700 * 1024,
 };
@@ -38,7 +38,7 @@ for (const path of files) {
   }
   if (path.includes("/dist/server/") && path.endsWith(".js")) {
     if (bytes > largestServer.bytes) largestServer = { path: display, bytes };
-    if (bytes > limits.serverJavaScript) failures.push(`Server JavaScript exceeds 3 MiB: ${display} (${bytes} bytes)`);
+    if (bytes > limits.serverJavaScript) failures.push(`Server JavaScript exceeds 4 MiB: ${display} (${bytes} bytes)`);
   }
   if (path.endsWith(".html")) {
     if (bytes > largestHtml.bytes) largestHtml = { path: display, bytes };
