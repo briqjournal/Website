@@ -13,25 +13,49 @@
   },
   "authors": [
     {
-      "displayName": "Pınar Gökçin Özuyar",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Öğr. Üyesi Pınar Gökçin Özuyar",
+      "givenName": "Pınar Gökçin",
+      "familyName": "Özuyar",
+      "orcid": "0000-0002-2505-2216",
+      "affiliations": [
+        {
+          "name": "Faculty of Economics and Administrative Sciences, Istinye University",
+          "nameTr": "İstinye Üniversitesi, İktisadi, İdari ve Sosyal Bilimler Fakültesi, İşletme Bölümü",
+          "nameEn": "Department of Business Administration, Faculty of Economics and Administrative Sciences, Istinye University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     },
     {
-      "displayName": "Efe Can Gürcan",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Doç. Dr. Efe Can Gürcan",
+      "givenName": "Efe Can",
+      "familyName": "Gürcan",
+      "orcid": "0000-0002-5415-3163",
+      "affiliations": [
+        {
+          "name": "Department of International Relations, İstinye University",
+          "nameTr": "İstinye Üniversitesi, Uluslararası İlişkiler Bölümü",
+          "nameEn": "Department of International Relations, İstinye University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     },
     {
-      "displayName": "Esra Bayhantopçu",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Öğr. Üyesi Esra Bayhantopçu",
+      "givenName": "Esra",
+      "familyName": "Bayhantopçu",
+      "orcid": "0000-0001-6680-8414",
+      "affiliations": [
+        {
+          "name": "Department of Public Relations and Advertising, Istinye University",
+          "nameTr": "İstinye Üniversitesi, Halkla İlişkiler ve Reklamcılık Bölümü",
+          "nameEn": "Department of Public Relations and Advertising, Istinye University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

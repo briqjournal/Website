@@ -801,6 +801,54 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     biographyTr: "Turhan Selçuk (1922–2010), Türk mizah ve karikatür sanatının öncülerindendir. 1957'de yarattığı Abdülcanbaz karakteriyle tanınan usta çizer, Türkiye Karikatürcüler Derneği'nin kurucularındandır.",
     biographyEn: "Turhan Selçuk (1922–2010) was a pioneering Turkish cartoonist and satirist. Renowned for creating the iconic comic character Abdülcanbaz in 1957, he co-founded the Turkish Cartoonists Association and held exhibitions worldwide.",
   },
+  "Pınar Gökçin Özuyar": {
+    tr: "İstinye Üniversitesi, İktisadi, İdari ve Sosyal Bilimler Fakültesi, İşletme Bölümü",
+    en: "Department of Business Administration, Faculty of Economics and Administrative Sciences, Istinye University",
+    email: "pinar.ozuyar@istinye.edu.tr",
+    orcids: ["0000-0002-2505-2216"],
+    biographyTr: "Dr. Öğr. Üyesi Pınar Gökçin Özuyar, lisans derecesini Boğaziçi Üniversitesi Çevre Mühendisliği Bölümü'nden, yüksek lisans ve doktora derecelerini Boğaziçi Üniversitesi Çevre Bilimleri Enstitüsü'nden almıştır. RWTH Aachen Üniversitesi ve Thyssen Mühendislik bursuyla Almanya'da doktora araştırmalarını yürütmüştür. İstinye Üniversitesi İşletme Bölümü'nde öğretim üyesidir ve Sürdürülebilirlik Araştırma ve Uygulama Merkezi Müdürlüğü görevini yürütmektedir.",
+    biographyEn: "Asst. Prof. Dr. Pınar Gökçin Özuyar earned her BS in Environmental Engineering and MS and PhD degrees from the Institute of Environmental Sciences at Boğaziçi University. She conducted doctoral research in Germany with a joint fellowship from RWTH Aachen University and Thyssen Engineering. She is a faculty member in Business Administration and Director of the Sustainability Research Center at Istinye University.",
+  },
+  "Esra Bayhantopçu": {
+    tr: "İstinye Üniversitesi, Halkla İlişkiler ve Reklamcılık Bölümü",
+    en: "Department of Public Relations and Advertising, Istinye University",
+    email: "esra.bayhantopcu@istinye.edu.tr",
+    orcids: ["0000-0001-6680-8414"],
+    biographyTr: "Dr. Öğr. Üyesi Esra Bayhantopçu, Paris 1 Panthéon-Sorbonne Üniversitesi (Siyaset Bilimi) ve Galatasaray Üniversitesi'nden (Medya ve İletişim Çalışmaları) ortak doktora derecesi almıştır (2017). Sürdürülebilirlik, medya, toplumsal cinsiyet ve çocuk hakları alanlarında uzmanlaşmıştır. 2018'den bu yana İstinye Üniversitesi Halkla İlişkiler ve Reklamcılık Bölümü'nde öğretim üyesidir.",
+    biographyEn: "Asst. Prof. Dr. Esra Bayhantopçu completed a joint doctoral program at Paris 1 Panthéon-Sorbonne University (Political Science) and Galatasaray University (Media and Communication Studies) in 2017. Specializing in sustainability, media, gender, and children's rights, she has taught in Public Relations and Advertising at Istinye University since 2018.",
+  },
+  "Salih Ertan": {
+    tr: "Türk-Çin İş Derneği Ege Bölgesi Temsilcisi, Elektrik Mühendisi",
+    en: "Aegean Region Representative of the Turkish-Chinese Business Association, Electrical Engineer",
+    email: "salihertan@qq.com",
+    biographyTr: "Salih Ertan, ODTÜ Elektrik Mühendisliği Bölümü'nden mezun olmuştur. Yenilenebilir enerji kaynakları ve hidroelektrik santralleri üzerine uzmanlaşmıştır. Türk-Çin İş Derneği Ege Bölgesi Temsilcisi olarak görev yapmaktadır.",
+    biographyEn: "Salih Ertan graduated from the Department of Electrical Engineering at Middle East Technical University. He specializes in renewable energy resources and hydroelectric power plants and serves as the Aegean Region Representative of the Turkish-Chinese Business Association.",
+  },
+  "Ye Zhangxu": {
+    tr: "Şanghay Üniversitesi, Sosyal Bilimler Fakültesi Tarih Bölümü",
+    en: "Department of History, College of Liberal Arts, Shanghai University",
+    email: "yezx207@163.com",
+    biographyTr: "Ye Zhangxu, Şanghay Üniversitesi Sosyal Bilimler Fakültesi Dünya Tarihi Bölümü'nde yüksek lisans araştırmacısı ve Türkiye Araştırmaları Merkezi'nde araştırma görevlisidir. Çağdaş dönem Türk dış politikası ve Türk-Çin ilişkileri üzerine çalışmaktadır.",
+    biographyEn: "Ye Zhangxu is a master's candidate in World History at the College of Liberal Arts and a research assistant at the Center for Turkish Studies, Shanghai University. His research focuses on contemporary Turkish foreign policy and Sino-Turkish relations.",
+  },
+  "Sadık Üçok": {
+    tr: "Fotoğraf Sanatçısı ve Karikatürist",
+    en: "Photographer and Cartoonist",
+    biographyTr: "Sadık Üçok, 1980'de Çarşaf mizah dergisinde karikatüristliğe başlamış; Gırgır ve Fırt dergilerinde çizmiştir. 1992'den bu yana profesyonel fotoğrafçılık yapmakta olup 2013'te Sami Güner Kupası'nı kazanmıştır.",
+    biographyEn: "Sadık Üçok began his cartooning career at Çarşaf humor magazine in 1980, also drawing for Gırgır and Fırt. He has been a professional photographer since 1992 and won the prestigious Sami Güner Cup in 2013.",
+  },
+  "Ekrem Kahraman": {
+    tr: "Ressam ve Yazar",
+    en: "Painter and Writer",
+    biographyTr: "Ekrem Kahraman, yurt içi ve yurt dışında 100'ün üzerinde kişisel sergi açmış usta bir ressamdır. 2016'da UPSD tarafından 'Yılın Onur Sanatçısı' seçilmiştir. Plastik sanatlar kuramı üzerine çok sayıda yazı ve kitap yayımlamıştır.",
+    biographyEn: "Ekrem Kahraman has held over 100 solo exhibitions in Turkey and internationally. Named 'Artist of the Year' by UPSD in 2016, he has published extensive theoretical writings and books on contemporary plastic arts.",
+  },
+  "Aşkın Ayrancıoğlu": {
+    tr: "Karikatürist ve Görsel Sanatlar Eğitmeni",
+    en: "Cartoonist and Visual Arts Educator",
+    biographyTr: "Aşkın Ayrancıoğlu, Ondokuz Mayıs Üniversitesi Resim Bölümü mezunudur. Ulusal ve uluslararası karikatür yarışmalarında jüri üyeliği yapmış ve Çin'de 'En İyi Mizah Sanatçısı' ödülünü kazanmıştır.",
+    biographyEn: "Aşkın Ayrancıoğlu graduated from the Department of Painting at Ondokuz Mayıs University. He has served on international cartoon juries and won the 'Best Humor Artist Award' in China in 2017.",
+  },
 };
 
 const displayCorrections: Record<string, string> = {
@@ -826,6 +874,10 @@ const displayCorrections: Record<string, string> = {
   "Ugur Murat Leloglu": "Uğur Murat Leloğlu",
   "Birol Kilkis": "Birol Kılkış",
   "Ali Sahin": "Ali Şahin",
+  "Pinar Gokcin Ozuyar": "Pınar Gökçin Özuyar",
+  "Esra Bayhantopcu": "Esra Bayhantopçu",
+  "Sadik Ucok": "Sadık Üçok",
+  "Askin Ayrancioglu": "Aşkın Ayrancıoğlu",
 };
 
 function withoutAcademicTitle(value: string) {

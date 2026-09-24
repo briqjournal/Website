@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Dominik Pietzcker",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Prof. Dr. Dominik Pietzcker",
+      "givenName": "Dominik",
+      "familyName": "Pietzcker",
+      "orcid": "0000-0002-1420-9396",
+      "affiliations": [
+        {
+          "name": "Macromedia University of Applied Sciences",
+          "nameTr": "Uygulamalı Bilimler Makromedya Üniversitesi",
+          "nameEn": "Macromedia University of Applied Sciences",
+          "country": "Germany",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

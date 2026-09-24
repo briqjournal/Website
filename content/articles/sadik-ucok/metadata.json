@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Sadık Üçok",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Sadık",
+      "familyName": "Üçok",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Photographer and Cartoonist",
+          "nameTr": "Fotoğraf Sanatçısı ve Karikatürist",
+          "nameEn": "Photographer and Cartoonist",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

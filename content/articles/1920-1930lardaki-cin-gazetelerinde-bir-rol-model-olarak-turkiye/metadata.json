@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Ye Zhangxu",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Zhangxu",
+      "familyName": "Ye",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Department of History, College of Liberal Arts, Shanghai University",
+          "nameTr": "Şanghay Üniversitesi, Sosyal Bilimler Fakültesi Tarih Bölümü",
+          "nameEn": "Department of History, College of Liberal Arts, Shanghai University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
