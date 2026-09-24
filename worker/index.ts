@@ -28,6 +28,86 @@ function normalizedLegacyPath(pathname: string): string {
   return pathname.replace(/\/+$/, "");
 }
 
+function parseIssuePdfTarget(filename: string): string | null {
+  const fn = filename.toLowerCase();
+  if (!fn.endsWith(".pdf")) return null;
+
+  const isTr = fn.includes("cilt") || fn.includes("sayi") || fn.includes("sayı") || fn.includes("türkçe") || fn.includes("turkce");
+
+  const cMatch = fn.match(/c(\d+)\s*s(\d+)/);
+  if (cMatch) {
+    const lang = isTr && !fn.includes("eng") ? "tr" : "en";
+    return `issues/cilt-${Number(cMatch[1])}-sayi-${Number(cMatch[2])}-${lang}.pdf`;
+  }
+
+  const trMatch = fn.match(/(?:cilt[^\d]*(\d+)[^\d]*say[ıi][^\d]*(\d+)|(\d+)[^\d]*cilt[^\d]*(\d+)[^\d]*say[ıi]?)/);
+  if (trMatch) {
+    const v = Number(trMatch[1] || trMatch[3]);
+    const i = Number(trMatch[2] || trMatch[4]);
+    const lang = !isTr || fn.includes("eng") ? "en" : "tr";
+    return `issues/cilt-${v}-sayi-${i}-${lang}.pdf`;
+  }
+
+  const enMatch = fn.match(/vol(?:ume)?[^\d]*(\d+)[^\d]*issue[^\d]*(\d+)/);
+  if (enMatch) {
+    const v = Number(enMatch[1]);
+    const i = Number(enMatch[2]);
+    return `issues/cilt-${v}-sayi-${i}-en.pdf`;
+  }
+
+  return null;
+}
+
+function getLegacyPatternRedirect(pathname: string): string | null {
+  const p = pathname.toLowerCase();
+
+  // 1. Author profiles: /en/user/:id -> /en/authors/:id, /user/:id or /tr/user/:id -> /tr/yazar/:id
+  if (pathname.startsWith("/en/user/")) {
+    return "/en/authors/" + pathname.slice("/en/user/".length);
+  }
+  if (pathname.startsWith("/tr/user/")) {
+    return "/tr/yazar/" + pathname.slice("/tr/user/".length);
+  }
+  if (pathname.startsWith("/user/")) {
+    return "/tr/yazar/" + pathname.slice("/user/".length);
+  }
+
+  // 2. English volume/issue: /en/briq-vol{v}-issue{i}, /briq-vol{v}-issue{i}, /en/e-briq/briq-vol...
+  const enVolMatch = pathname.match(/^(?:\/tr)?(?:\/en)?(?:\/e-briq)?\/briq-vol(\d+)-issue(\d+)(?:-.*)?$/i);
+  if (enVolMatch) {
+    return `/en/archive/volume-${enVolMatch[1]}-issue-${enVolMatch[2]}`;
+  }
+
+  // 3. Turkish issue: /e-briq/briq-{v}cilt-{i}sayi
+  const trVolMatch = pathname.match(/^(?:\/tr)?\/e-briq\/briq-(\d+)cilt-(\d+)sayi(?:-.*)?$/i);
+  if (trVolMatch) {
+    return `/tr/arsiv/cilt-${trVolMatch[1]}-sayi-${trVolMatch[2]}`;
+  }
+
+  // 4. Taxonomies, categories, tags
+  if (/^\/(?:en\/)?(?:taxonomy\/term|tag|category|kategori)\//i.test(pathname)) {
+    return pathname.startsWith("/en/") ? "/en/articles" : "/tr/makaleler";
+  }
+
+  // 5. Calls for papers
+  if (/^\/en\/(?:call-for-papers|call-papers|special-issue-call-papers|makale-cagrilari)/i.test(pathname)) {
+    return "/en/calls-for-papers";
+  }
+  if (/^\/(?:makale-cagrilari)/i.test(pathname)) {
+    return "/tr/makale-cagrilari";
+  }
+
+  // 6. General archive / issues
+  if (p === "/en/issues" || p === "/issues" || p === "/en/sayilar" || p === "/archive") {
+    return "/en/archive";
+  }
+  if (p === "/sayilar" || p === "/tr/sayilar" || p === "/tr/archive") {
+    return "/tr/arsiv";
+  }
+
+  return null;
+}
+
 function handleLegacyRedirect(url: URL): Response | null {
   const rawPath = normalizedLegacyPath(url.pathname);
   const decodedPath = decodeURIComponent(rawPath);
@@ -35,7 +115,7 @@ function handleLegacyRedirect(url: URL): Response | null {
   // 1. Direct PDF redirect for legacy /sites/default/files/... (including /tr/sites/ and /en/sites/)
   if (rawPath.includes("/sites/default/files/") || decodedPath.includes("/sites/default/files/")) {
     const filename = (decodedPath.split("/").pop() || rawPath.split("/").pop() || "").toLowerCase();
-    const relativeTarget = COMPACT_PDF_MAP[filename];
+    let relativeTarget = COMPACT_PDF_MAP[filename] || parseIssuePdfTarget(filename);
 
     if (relativeTarget) {
       const target = new URL(`/assets/archive/pdfs/${relativeTarget}`, url.origin);
@@ -50,11 +130,20 @@ function handleLegacyRedirect(url: URL): Response | null {
   }
 
   // 2. Direct page redirect from LEGACY_REDIRECTS
-  let targetPath = LEGACY_REDIRECTS[rawPath] || LEGACY_REDIRECTS[decodedPath];
+  let targetPath =
+    LEGACY_REDIRECTS[rawPath] ||
+    LEGACY_REDIRECTS[decodedPath] ||
+    LEGACY_REDIRECTS["/en" + rawPath] ||
+    LEGACY_REDIRECTS["/en" + decodedPath];
 
-  // 3. Wildcard match for author profiles /en/user/:id* -> /en/authors/:id*
-  if (!targetPath && (rawPath.startsWith("/en/user/") || decodedPath.startsWith("/en/user/"))) {
-    targetPath = decodedPath.replace("/en/user/", "/en/authors/");
+  if (!targetPath && rawPath.startsWith("/tr/")) {
+    const withoutTr = rawPath.slice(3); // e.g. "/the-formula-..."
+    targetPath = LEGACY_REDIRECTS["/en" + withoutTr];
+  }
+
+  // 3. Dynamic patterns (author, issue, taxonomy, calls, archive)
+  if (!targetPath) {
+    targetPath = getLegacyPatternRedirect(decodedPath) || getLegacyPatternRedirect(rawPath);
   }
 
   if (!targetPath) return null;

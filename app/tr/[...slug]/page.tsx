@@ -1485,6 +1485,13 @@ export default async function ContentPage({
     if (directArticle) {
       redirect(`/tr/makaleler/${directArticle.slug}`);
     }
+    const enArticle = archiveArticles.find((article) => articleRouteSlug(article, "en") === key);
+    if (enArticle) {
+      redirect(`/en/articles/${articleRouteSlug(enArticle, "en")}`);
+    }
+    if (key.startsWith("user/")) {
+      redirect(`/tr/yazar/${key.slice(5)}`);
+    }
     if (key === "biz-kimiz" || key === "hakkimizda") {
       redirect("/tr/dergi/briq-hakkinda");
     }
