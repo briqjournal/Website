@@ -284,14 +284,15 @@ function notesFrom(blocks){
   return m.map((x,i)=>({id:"note-"+x[1],text:t.slice(x.index+x[0].length,m[i+1]?.index??t.length).trim()}));
 }
 function refsFrom(blocks){return blocks.filter(b=>b.kind==="paragraph"&&b.text.length>8).map((b,i)=>({id:"ref-"+(i+1),text:b.text.replace(/\s+/g," ").trim()}));}
-function extractImages(pdf,startPage,count,outDir){
+function extractImages(pdf,startPage,count,outDir,preferLargest=false){
   rmSync(outDir,{recursive:true,force:true});if(!count)return[];
   const temp=mkdtempSync(join(tmpdir(),"v04i01-img-"));
   sh("pdfimages",["-f",String(startPage),"-all",pdf,join(temp,"img")],{stdio:"ignore"});
-  const candidates=readdirSync(temp).filter(n=>[".jpg",".jpeg",".png"].includes(extname(n).toLowerCase())).sort().map(name=>{
+  let candidates=readdirSync(temp).filter(n=>[".jpg",".jpeg",".png"].includes(extname(n).toLowerCase())).sort().map(name=>{
     const path=join(temp,name);let w=0,h=0;try{[w,h]=sh("identify",["-format","%w %h",path]).trim().split(/\s+/).map(Number);}catch{}
-    return {name,path,w,h,size:statSync(path).size};
+    return {name,path,w,h,size:statSync(path).size,area:w*h};
   }).filter(x=>x.w>=360&&x.h>=220&&x.size>=18000);
+  if(preferLargest) candidates=candidates.sort((a,b)=>b.area-a.area||b.size-a.size);
   if(!candidates.length){rmSync(temp,{recursive:true,force:true});return[];}
   mkdirSync(outDir,{recursive:true});
   const picked=candidates.slice(0,count);
@@ -334,7 +335,7 @@ for(const record of records){
 
 for(const visual of visualRecords){
   const page=findIssuePage(visual.probes);
-  const files=extractImages(issuePdfTr,page,1,join(root,"public/assets/article-figures",visual.slug));
+  const files=extractImages(issuePdfTr,page,1,join(root,"public/assets/article-figures",visual.slug),true);
   if(files.length!==1)throw new Error("Expected one exact visual asset for "+visual.slug+", got "+files.length);
   for(const locale of ["en","tr"]){
     const ft={sections:[],keywords:[],footnotes:[],references:[],acknowledgements:"",figures:[{id:"figure-1",src:"/assets/article-figures/"+visual.slug+"/"+files[0],caption:visual.title[locale]}]};
