@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Gong Jianhua",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Jianhua",
+      "familyName": "Gong",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Law School, Shanghai University",
+          "nameTr": "Şanghay Üniversitesi, Hukuk Fakültesi",
+          "nameEn": "Law School, Shanghai University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
