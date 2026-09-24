@@ -6,6 +6,7 @@ on:
       - chore/v04-i01-fulltext-canonical
     paths:
       - scripts/migrate-v04-i01.mjs
+      - scripts/migrate-v04-i01-v2.mjs
       - .github/workflows/migrate-v04-i01.yml
 
 permissions:
@@ -29,7 +30,7 @@ jobs:
           curl -L --fail --retry 4 --retry-delay 3             'https://briqjournal.com/sites/default/files/dergi-sayilari/2022-12/VOLUME4_ISSUE1_0.pdf'             -o tmp/v04-i01-source/en.pdf
           curl -L --fail --retry 4 --retry-delay 3             'https://briqjournal.com/sites/default/files/dergi-sayilari/2022-12/CILT4_SAYI1_TR_kapakl%C4%B1.pdf'             -o tmp/v04-i01-source/tr.pdf
       - name: Generate canonical candidates
-        run: node scripts/migrate-v04-i01.mjs
+        run: node scripts/migrate-v04-i01-v2.mjs
       - name: Commit generated migration output
         run: |
           git config user.name "github-actions[bot]"
