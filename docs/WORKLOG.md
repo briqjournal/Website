@@ -6,7 +6,7 @@ Keep this file short. It is a recovery checkpoint for unfinished work, not a pro
 
 **Status:** in progress
 
-- Repository checkpoint: 78 legacy `en-archive.json` files remain; `current.json` and `saudi-en.json` are absent.
+- Repository checkpoint: 71 legacy `en-archive.json` files remain; `current.json` and `saudi-en.json` are absent.
 - Completed unit: `v06-i01`. All 15 records have validated canonical EN/TR pairs; the 14 legacy `en-archive.json` files are retired, and the visual-only Kızılçullu record remains explicitly empty.
 - Completed unit: `v05-i04`. All 14 records have validated canonical EN/TR pairs; the 12 applicable legacy `en-archive.json` files are retired, and the poem, photograph, painting, and cartoon records preserve their published non-standard structures and verified visual assets.
 - Completed unit: `v05-i03`. All 13 records have validated canonical EN/TR pairs; the 12 applicable legacy `en-archive.json` files are retired, and verified production figure assets are preserved.
@@ -15,5 +15,6 @@ Keep this file short. It is a recovery checkpoint for unfinished work, not a pro
 - Completed unit: `v04-i03`. All 10 records have validated canonical EN/TR pairs; the 7 applicable legacy `en-archive.json` files are retired. Whole-issue PDF-backed validation confirmed section/order, references/footnotes, figures/captions, verified production assets, and locale separation. Wren’s published EN “48 countries” / TR “148 ülke” difference and Gürses’s locale-specific 13-note structure are preserved as legitimate locale differences; Bell, Sabur, and Minor retain their published non-standard visual structures and exact production assets. No confirmed fidelity defect remained.
 - Completed unit: `v04-i02`. All 11 records have validated canonical EN/TR pairs; the 8 applicable legacy `en-archive.json` files are retired, and the three visual/non-standard records preserve their verified production assets.
 - Completed unit: `v04-i01`. All 10 records have validated canonical EN/TR pairs; the 7 applicable legacy `en-archive.json` files are retired. The seven prose/interview/review records preserve official-locale-PDF-backed text, references/notes, figures and captions; `Sessiz Işık`, `Mavi Vatan`, and `Silahların Kültürü` preserve distinct exact production assets. Whole-issue PDF fidelity, build, and Workers checks passed before finalization.
-- Next unit: `v03-i04`.
+- Completed unit: `v03-i04`. All 12 records have validated canonical EN/TR pairs; the 6 applicable legacy `en-archive.json` files are retired. Official full-issue locale PDFs confirmed locale-separated text, references/notes, figures/captions, and the already-verified exact production assets; the photograph, painting, and cartoon records preserve their published non-standard structures. One whole-issue fidelity audit found no remaining confirmed fidelity defect.
+- Next unit: `v03-i03`.
 - Then continue issue-by-issue through the earlier issues. Rebuild corrupted English from the official English PDF; never substitute Turkish full text on English pages. Retire legacy files only after the canonical locale files are validated.

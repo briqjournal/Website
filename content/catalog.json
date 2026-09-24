@@ -354,12 +354,6 @@
   "fulltext": {
     "current": [],
     "en_archive": [
-      "ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz",
-      "yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak",
-      "ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme",
-      "ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri",
-      "ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi",
-      "guc-zayifliktir",
       "yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi",
       "turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti",
       "insan-ve-doga-icin-musterek-bir-yasam-yaratmaliyiz",
@@ -612,7 +606,19 @@
       "mavi-vatan",
       "silahlarin-kulturu",
       "cinin-sudan-ve-guney-sudandaki-catisma-cozumune-katilimi-bir-yaratici-arabuluculuk-ornegi",
-      "cok-kutuplulasan-dunyada-geleneksel-olmayan-guvenlik-anlayisi-sio-ornegi"
+      "cok-kutuplulasan-dunyada-geleneksel-olmayan-guvenlik-anlayisi-sio-ornegi",
+      "uygarlik-yolunda-birlesme-kaynasma-ve-kardeslik",
+      "ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz",
+      "yeni-dunya-ipek-yolunun-yarattigi-evrensel-degerler-uzerinde-zenginlik-ve-barisla-kurulacak",
+      "kulturel-ozguveni-percinleyelim",
+      "ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin",
+      "ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme",
+      "ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri",
+      "ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi",
+      "guc-zayifliktir",
+      "yangin-merdiveni",
+      "simitci",
+      "uygarligin-ipek-yolu"
     ]
   }
 }
