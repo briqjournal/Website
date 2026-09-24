@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Şiir Kılkış",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Doç. Dr. Şiir Kılkış",
+      "givenName": "Şiir",
+      "familyName": "Kılkış",
+      "orcid": "0000-0003-3466-3593",
+      "affiliations": [
+        {
+          "name": "Earth System Science, TÜBİTAK and METU",
+          "nameTr": "TÜBİTAK · ODTÜ Yer Sistem Bilimleri",
+          "nameEn": "Earth System Science, TÜBİTAK and METU",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

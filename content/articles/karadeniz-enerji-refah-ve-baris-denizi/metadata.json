@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Birol Kılkış",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Prof. Dr. Birol Kılkış",
+      "givenName": "Birol",
+      "familyName": "Kılkış",
+      "orcid": "0000-0003-2580-3910",
+      "affiliations": [
+        {
+          "name": "OSTIM Technical University",
+          "nameTr": "OSTİM Teknik Üniversitesi",
+          "nameEn": "OSTIM Technical University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
