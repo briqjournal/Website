@@ -787,7 +787,7 @@ export function generateStaticParams() {
 
   for (const issue of archiveIssues) {
     paths.add(`archive/volume-${issue.volume}-issue-${issue.issue}`);
-    if (issue.volume === 7 && issue.issue <= 3) paths.add(`archive/volume-${issue.volume}-issue-${issue.issue}/editorial`);
+    if (archiveEditorialHref(issue.volume, issue.issue, "en")) paths.add(`archive/volume-${issue.volume}-issue-${issue.issue}/editorial`);
   }
   for (const article of archiveArticles) {
     const slug = articleRouteSlug(article, "en");

@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Aşkın Ayrancıoğlu",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Aşkın",
+      "familyName": "Ayrancıoğlu",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Cartoonist and Visual Arts Educator",
+          "nameTr": "Karikatürist ve Görsel Sanatlar Eğitmeni",
+          "nameEn": "Cartoonist and Visual Arts Educator",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

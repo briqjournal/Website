@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Salih Ertan",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Salih",
+      "familyName": "Ertan",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Aegean Region Representative of Turkish-Chinese Business Association",
+          "nameTr": "Türk-Çin İş Derneği Ege Bölgesi Temsilcisi",
+          "nameEn": "Aegean Region Representative of the Turkish-Chinese Business Association",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

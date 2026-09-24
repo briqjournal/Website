@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Ali Şahin",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Ali Şahin",
+      "givenName": "Ali",
+      "familyName": "Şahin",
+      "orcid": "0000-0002-4701-9695",
+      "affiliations": [
+        {
+          "name": "Institute of Atatürk's Principles and Revolution History, Istanbul University",
+          "nameTr": "İstanbul Üniversitesi, Atatürk İlkeleri ve İnkılap Tarihi Enstitüsü",
+          "nameEn": "Institute of Atatürk's Principles and Revolution History, Istanbul University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

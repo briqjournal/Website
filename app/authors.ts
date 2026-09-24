@@ -40,7 +40,7 @@ type AuthorMetadata = {
   biographyEn?: string;
 };
 
-const genericBylines = new Set(["admin", "briq", "briqjournal"]);
+const genericBylines = new Set(["admin", "briq", "briqjournal", "Pekin Bildirgesi", "Beijing Declaration"]);
 
 const profilePhotos: Record<string, string> = {
   "Fikret Akfırat": "/assets/people/fikret-akfirat.jpg",
@@ -138,8 +138,8 @@ export function boardAffiliation(affiliation: string, locale: Locale) {
 
 const authorMetadata: Record<string, AuthorMetadata> = {
   "Efe Can Gürcan": {
-    tr: "London School of Economics and Political Science",
-    en: "London School of Economics and Political Science",
+    tr: "Uluslararası İlişkiler Bölümü, İstinye Üniversitesi",
+    en: "Department of International Relations, İstinye University",
     email: "efe.gurcan@istinye.edu.tr",
     orcids: ["0000-0002-5415-3163"],
     appointmentTermTr: "2019–Günümüz",
@@ -689,6 +689,166 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     biographyTr: "Ni Min, Çinli fotoğraf sanatçısıdır. Eserlerinde Güney Çin Fujian eyaleti Huidong Yarımadası sahilinde yaşayan Hui'an kadınlarının geleneksel halk kıyafetleri, kültürel dokusu ve çalışma pratikleri üzerine belgesel fotoğraflar üretmektedir.",
     biographyEn: "Ni Min is a Chinese photographer whose documentary work captures the distinctive folk customs, daily labor, and traditional attire of the Hui'an women on the coast of the Huidong Peninsula in Fujian Province, Southern China.",
   },
+  "Bassam Abu Abdullah": {
+    tr: "Baas Partisi Merkez Parti Okulu Başkanı",
+    en: "Head of the Ba'ath Party's Central Party School",
+    email: "DCSSI@live.com",
+    orcids: [],
+    biographyTr: "Bassam Abu Abdullah, Özbekistan Üniversitesi Bilimler Akademisi Uluslararası İlişkiler alanında doktora derecesine sahiptir (1993). Türkiye'deki Suriye Büyükelçiliği'nde diplomat olarak görev yapmıştır (2004–2008). Yazar ve siyaset uzmanı olan Abdullah, üniversitelerde dersler vermektedir. Şam Stratejik Araştırmalar Merkezi'nin (2012–2014) çalışma ekibini yönetmiştir. Dr. Ziad Ayoub Arbache ve Malaz Moukada ile birlikte Çin üzerine Arapça bir kitap yayımlamıştır (Çin: Yeni Bir Dünya Düzeninin Kurucu Eylemi, Orient Printing & Publishing, Şam, Eylül 2019). Şangay Uluslararası Araştırmalar Üniversitesi Ortadoğu Araştırmaları Enstitüsü misafir araştırmacısıdır. Arapça, İngilizce, Rusça ve Türkçe bilmektedir.",
+    biographyEn: "Bassam Abu Abdullah holds a PhD in International Relations from the Academy of Sciences of Uzbekistan University (1993). He was a Diplomat in the Syrian embassy in Turkey (2004–2008). He is a writer and political expert who teaches at universities. He served as a team leader at the Damascus Strategic Studies Center (2012–2014). He recently published a book with Dr. Ziad Ayoub Arbache and Malaz Moukada on China in Arabic (China: The Founding Act of a New World Order, Orient Printing & Publishing, Damascus, 2019). He is a visiting researcher at the Institute of Middle Eastern Studies, Shanghai University of International Studies. He speaks Arabic, English, Russian, and Turkish.",
+  },
+  "Ziad Ayoub Arbache": {
+    tr: "İktisat Fakültesi, Şam Üniversitesi",
+    en: "Faculty of Economics, Damascus University",
+    email: "ziad-ay@scs-net.org",
+    orcids: ["0009-0008-5626-4255"],
+    biographyTr: "Ziad Ayoub Arbache, Enerji Ekonomisi ve Politikası Enstitüsü'nden (IEPE-INPG, Grenoble, Fransa) doktora derecesine sahiptir (1998). Suriye'de çeşitli bakanlıklara ve uluslararası kalkınma örgütlerine danışmanlık yapmıştır. Suriye Başbakanlığı'nın danışma kurulu üyesidir. Birçok lisansüstü öğrenim merkezinde öğretim görevlisi olarak görev yapmaktadır. Temel araştırma alanları; jeo-ekonomi ve stratejik öngörü çalışmaları, barış inşası ve iyileştirme stratejileri, bölgesel planlama ve enerji jeopolitiğidir. Arapça, Fransızca ve İngilizce bilmektedir.",
+    biographyEn: "Ziad Ayoub Arbache holds a PhD from the Institute of Energy Economics and Policy (IEPE-INPG), Grenoble, France (1998). He worked as an advisor to several ministries in Syria and as a consultant for international development organizations. He is a member of the Advisory Board of the Syrian Prime Minister and a lecturer in several postgraduate centers. His research covers geo-economics, strategic prospective studies, peacebuilding and recovery strategies, regional planning, and geopolitics of energy. He speaks Arabic, French, and English.",
+  },
+  "Tevfik Kadan": {
+    tr: "Gazeteci",
+    en: "Journalist",
+    email: "tevfikkadan@gmail.com",
+    orcids: ["0009-0007-7935-5857"],
+    biographyTr: "Tevfik Kadan, 27 Nisan 1990'da Isparta'da doğdu. Nazmiye Demirel İlköğretim Okulu'nda ilk ve ortaöğrenimini tamamladıktan sonra 2004 yılında Heybeliada Deniz Lisesi'ne girdi. Üç yıllık Bilgisayar Mühendisliği eğitiminin ardından Selçuk Üniversitesi'nde Elektrik-Elektronik Mühendisliği okudu; 2014 yılında mezun oldu. 2018'de Anadolu Üniversitesi'nde Uluslararası İlişkiler'de ikinci lisans eğitimine başladı. 2010'dan itibaren gazetecilik alanında çalışan Kadan, iki yıl Vatan Partisi Basın Bürosu Başkanlığı ve iki yıl Aydınlık Gazetesi Haber Müdürlüğü yaptı. Aydınlık.com.tr internet sitesinde Genel Yayın Yönetmeni olarak görev yapmaktadır. Deniz jeopolitiği üzerine çok sayıda haber ve röportajı bulunmaktadır.",
+    biographyEn: "Tevfik Kadan was born on April 27, 1990, in Isparta, Turkey. After completing elementary and secondary school at Nazmiye Demirel Elementary School, he entered Heybeliada Naval High School in 2004. After studying Computer Engineering at the Naval Academy for three years, he transferred to Selçuk University to study Electrical and Electronic Engineering, graduating in 2014. He has been pursuing a second BA in International Relations at Anadolu University since 2018. Working in journalism since 2010, he served as Head of the Patriotic Party Press Bureau and news manager at Aydınlık Daily. He currently serves as Editor-in-Chief of Aydınlık.com.tr and has written extensively on maritime geopolitics.",
+  },
+  "Günay Çifci": {
+    tr: "Jeofizik Bölümü, Dokuz Eylül Üniversitesi",
+    en: "Department of Geophysics, Dokuz Eylül University",
+    email: "gunay.cifci@deu.edu.tr",
+    orcids: ["0000-0002-4380-8056"],
+    biographyTr: "Prof. Dr. Günay Çifci, lisans eğitimini Yıldız Üniversitesi Jeofizik Bölümü'nde, yüksek lisansını Dokuz Eylül Üniversitesi (DEÜ) Deniz Bilimleri ve Teknolojisi Enstitüsü'nde (DBTE), doktora çalışmasını ise Trieste Üniversitesi / İtalya ile DEÜ Fen Bilimleri Enstitüsü'nde tamamlamıştır. 1991, 1995, 1996, 2000 ve 2001 yıllarında UNESCO destekli Kayan Üniversite (TTR) programlarına katılmıştır. 2001'de Virginia Tech Üniversitesi Yer Bilimleri Bölümü'nde doktora sonrası araştırmacı olarak bulunmuştur. 2003 yılında DEÜ DBTE'ye tam zamanlı profesör olarak atanmıştır. DPT desteğiyle kurulan Jeofizik Sismik Laboratuvarı'nın (SeisLab) koordinatörlüğünü yürüterek 2005–2018 yılları arasında gaz hidrat ve deniz jeolojisi araştırmalarını yönetmiştir. Çeşitli AB ve Ufuk 2020 projelerinde proje ortağı koordinatörü olarak yer almıştır.",
+    biographyEn: "Prof. Dr. Günay Çifci completed his undergraduate studies at Yıldız University Department of Geophysics, his master's degree at Dokuz Eylül University (DEU) Institute of Marine Sciences and Technology (DBTE), and his doctorate at Trieste University, Italy and DEU Graduate School of Natural and Applied Sciences. He participated in UNESCO-supported Floating University Training through Research (TTR) cruises in 1991, 1995, 1996, 2000, and 2001. In 2001, he was a visiting researcher at Virginia Tech University's Department of Earth Sciences. Appointed full-time professor at DEU DBTE in 2003, he coordinated the Geophysics Seismic Laboratory (SeisLab) conducting gas hydrate and marine geology research between 2005–2018. He has served as a project partner coordinator in several EU and Horizon 2020 projects.",
+  },
+  "Arif Acaloğlu": {
+    tr: null,
+    en: null,
+    email: "arifacal@gmail.com",
+    orcids: ["0000-0002-9873-3979"],
+    biographyTr: "Arif Acaloğlu, 1956'da Kepenekçi/Borçalı/Gürcistan'da doğdu. Bakü Devlet Üniversitesi Filoloji Fakültesi'ni bitirdi. 1982'de Edebiyat Enstitüsü Mitoloji Bölümü'nde araştırma görevlisi olarak çalışmaya başladı. 1983–1986 yıllarında Tartu Üniversitesi'nde (Estonya) Semiyoloji dalında doktora eğitimi gördü. 1987–1990 yıllarında Halkbilim Bölümü'nde uzman, 1990 itibarıyla Bakü Devlet Üniversitesi'nde öğretim görevlisi oldu. 1992–1993 yıllarında Azerbaycan Cumhurbaşkanlığı'nda danışmanlık görevinde bulundu. Uzun süre Bilgi Üniversitesi Rus Dili Programı'nda, 2008–2019 arasında ise Yeditepe Üniversitesi Antropoloji Bölümü'nde öğretim üyeliği yaptı. Akademik çalışmaları mitoloji, halk edebiyatı ve Avrasya halklarının kültürel mirası alanlarını kapsamaktadır. İki kitabı ve 40 civarında makalesi yayımlanmıştır.",
+    biographyEn: "Arif Acaloğlu was born in 1956 in Kepenekçi/Borchali, Georgia. He completed the philology program at Baku State University. In 1982, he began working as a research associate at the Mythology Department of the Literature Institute. From 1983 to 1986, he pursued his Ph.D. studies in semiology at Tartu University, Estonia. He worked as a specialist in the Folklore Department and then as a lecturer at Baku State University from 1990. He served as an advisor at the Azerbaijani Presidency in 1992–1993. He taught at Istanbul Bilgi University's Russian Language Program and at the Department of Anthropology, Yeditepe University (2008–2019). His academic work covers mythology, folk literature, and the cultural heritage of Eurasian peoples. He has published two books and approximately 40 articles.",
+  },
+  "Ömer Burhanoğlu": {
+    tr: "Fotoğraf Sanatçısı",
+    en: "Photography Artist",
+    orcids: [],
+    biographyTr: "1960 yılında Trabzon'da doğan Ömer Burhanoğlu, Boğaziçi Üniversitesi Makine Mühendisliği lisans ve İstanbul Teknik Üniversitesi Sistem Analizi yüksek lisans öğrenimi görmüş, İşletme Mühendisliği alanında doktora çalışmasında bulunmuştur. 37 yılı aşan deneyimiyle otomotiv sanayisinin lider isimleri arasında yer almaktadır. 1983'ten bu yana Farplas'ı sektörün önde gelen şirketlerinden biri hâline getirmiş; hâlen Farplas CEO ve Yönetim Kurulu Üyesi olarak görev yapmaktadır. Fotoğraf sanatçısı olan Burhanoğlu, eserlerini 'AYNI AYRI' adlı kitabında yayımlamıştır; kitabın tüm geliri Trabzon'daki Ömer Burhanoğlu Hastanesi'ne bağışlanmaktadır.",
+    biographyEn: "Born in 1960 in Trabzon, Ömer Burhanoğlu graduated from Boğaziçi University in Mechanical Engineering, earned a master's degree in System Analysis from Istanbul Technical University, and pursued a Ph.D. in Management Engineering. With more than 37 years of experience, he is one of the leaders of the automotive industry, having transformed Farplas into one of the sector's leading companies since 1983. He currently serves as CEO and member of the Executive Board of Farplas. As a photography artist, his work is published in the book 'AYNI AYRI', with all proceeds donated to Ömer Burhanoğlu Hospital in Trabzon.",
+  },
+  "Jinghua Cao": {
+    tr: "Uluslararası Bilim Kuruluşları Birliği (ANSO) İcra Direktörü",
+    en: "Executive Director, Alliance of International Science Organizations (ANSO)",
+    biographyTr: "Prof. Jinghua Cao, Uluslararası Bilim Kuruluşları Birliği (ANSO) Sekreterliği İcra Direktörü'dür. Bu görevinden önce Çin Bilimler Akademisi'nin (CAS) Uluslararası İşbirliği Bürosu Genel Müdürü olarak görev yapmıştır. New York Şehir Koleji'nde işletme ve uluslararası politikalar üzerine yüksek lisans yapmış; 1995–1997 yılları arasında Çin'in Washington Büyükelçiliği'nde Bilim ve Teknoloji Ataşesi olarak bulunmuştur.",
+    biographyEn: "Prof. Jinghua Cao is Executive Director of the Secretariat of the Alliance of International Science Organizations (ANSO). Previously, he served as Director-General of the Bureau of International Cooperation at the Chinese Academy of Sciences (CAS). He holds a master's degree from the City College of New York and served as Science and Technology Attaché at the Chinese Embassy in Washington from 1995 to 1997.",
+  },
+  "Şiir Kılkış": {
+    tr: "TÜBİTAK · ODTÜ Yer Sistem Bilimleri",
+    en: "Earth System Science, TÜBİTAK and METU",
+    email: "siir.kilkis@tubitak.gov.tr",
+    orcids: ["0000-0003-3466-3593"],
+    biographyTr: "Doç. Dr. Şiir Kılkış, doktora derecesini KTH Kraliyet Teknoloji Enstitüsü'nden (İsveç) almıştır. Georgetown Üniversitesi Bilim, Teknoloji ve Uluslararası İlişkiler programından altın madalya ve yüksek onur derecesiyle mezun olmuştur. Hükümetlerarası İklim Değişikliği Paneli (IPCC) Altıncı Değerlendirme Raporu'nda Başyazar olarak görev yapmıştır. TÜBİTAK'ta Başuzman ve Danışman, ODTÜ Yer Sistem Bilimleri'nde öğretim üyesidir.",
+    biographyEn: "Assoc. Prof. Dr. Şiir Kılkış earned her PhD from KTH Royal Institute of Technology and graduated magna cum laude with a gold medal in Science, Technology, and International Affairs from Georgetown University. She serves as a Lead Author for the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report. She is a Senior Researcher and Advisor at TÜBİTAK and teaches at METU Earth System Science.",
+  },
+  "Xi Jinping": {
+    tr: "Çin Halk Cumhuriyeti Cumhurbaşkanı",
+    en: "President of the People's Republic of China",
+    biographyTr: "Xi Jinping, Çin Komünist Partisi Genel Sekreteri ve Çin Halk Cumhuriyeti Cumhurbaşkanıdır.",
+    biographyEn: "Xi Jinping is the General Secretary of the Chinese Communist Party and President of the People's Republic of China.",
+  },
+  "Uğur Murat Leloğlu": {
+    tr: "Orta Doğu Teknik Üniversitesi, Jeodezi ve Coğrafi Bilgi Teknolojileri Bölümü",
+    en: "Department of Geodetic and Geographic Information Technologies, Middle East Technical University",
+    email: "leloglu.um@gmail.com",
+    orcids: ["0000-0002-8584-7301"],
+    institutionUrl: "https://metu.edu.tr/",
+    biographyTr: "Doç. Dr. Uğur Murat Leloğlu, lisans, yüksek lisans ve doktora derecelerini ODTÜ Elektrik-Elektronik Mühendisliği Bölümü'nden almıştır. TÜBİTAK UZAY'da araştırmacı olarak çalışmış; ODTÜ Jeodezi ve Coğrafi Bilgi Teknolojileri Bölümü'nde yer gözlemi ve uzaktan algılama alanında öğretim üyeliği yapmaktadır.",
+    biographyEn: "Assoc. Prof. Dr. Uğur Murat Leloğlu obtained his BSc, MSc, and PhD degrees from the Department of Electrical and Electronics Engineering at Middle East Technical University. He worked at TÜBİTAK UZAY and is currently an associate professor in the Department of Geodetic and Geographic Information Technologies at METU focusing on earth observation and remote sensing.",
+  },
+  "Birol Kılkış": {
+    tr: "OSTİM Teknik Üniversitesi",
+    en: "OSTIM Technical University",
+    email: "birolkilkis@hotmail.com",
+    orcids: ["0000-0003-2580-3910"],
+    institutionUrl: "https://ostimteknik.edu.tr/",
+    biographyTr: "Prof. Dr. Birol Kılkış, ODTÜ Makina Mühendisliği Bölümü'nden lisans, yüksek lisans ve doktora derecelerini almıştır. ASHRAE Fellow üyesi olan Kılkış, enerji, ekserji, ısı pompaları ve kojenerasyon konularında 500'den fazla yayına ve çok sayıda patente sahiptir. OSTİM Teknik Üniversitesi'nde öğretim üyeliği yapmaktadır.",
+    biographyEn: "Prof. Dr. Birol Kılkış earned his BSc, MSc, and PhD in Mechanical Engineering from Middle East Technical University. An ASHRAE Fellow, Dr. Kılkış has authored over 500 papers and holds numerous patents on energy, exergy, heat pump cogeneration, and HVAC systems. He is a professor at OSTIM Technical University.",
+  },
+  "Ali Şahin": {
+    tr: "İstanbul Üniversitesi, Atatürk İlkeleri ve İnkılap Tarihi Enstitüsü",
+    en: "Institute of Atatürk's Principles and Revolution History, Istanbul University",
+    email: "alisahin@istanbul.edu.tr",
+    orcids: ["0000-0002-4701-9695"],
+    institutionUrl: "https://istanbul.edu.tr/",
+    biographyTr: "Dr. Ali Şahin, lisans öğrenimini İstanbul Üniversitesi Antropoloji Bölümü'nde, yüksek lisans ve doktorasını İstanbul Üniversitesi Atatürk İlkeleri ve İnkılap Tarihi Enstitüsü'nde tamamlamıştır. Türkiye'nin yakın tarihi, siyasal düşünce tarihi ve Türk devrimi üzerine çalışmalar yürütmektedir.",
+    biographyEn: "Dr. Ali Şahin completed his undergraduate studies in Anthropology and his master's and PhD at the Institute of Atatürk's Principles and Revolution History, Istanbul University. His research focuses on Turkey's recent political history, intellectual history, and the Turkish Revolution.",
+  },
+  "Sevtap İnal": {
+    tr: "Mersin Fotoğraf Derneği Yönetim Kurulu Üyesi, Fotoğraf Sanatçısı",
+    en: "Board Member of Mersin Photography Association, Photography Artist",
+    biographyTr: "Sevtap İnal, 2010'dan bu yana fotoğraf sanatıyla ilgilenmekte olup Uluslararası Fotoğraf Sanatı Federasyonu (FIAP) tarafından EFIAP unvanına layık görülmüştür. Birçok ulusal ve uluslararası ödülün sahibidir. Mersin Fotoğraf Derneği Yönetim Kurulu üyesidir.",
+    biographyEn: "Sevtap İnal has been practicing photography since 2010 and was awarded the EFIAP distinction by the International Federation of Photographic Art (FIAP). Winner of numerous national and international awards, she is a board member of the Mersin Photography Association.",
+  },
+  "Uğur Durak": {
+    tr: "Ressam ve İllüstratör",
+    en: "Painter and Illustrator",
+    biographyTr: "Uğur Durak, 1959'da Karabük'te doğmuştur. Doğan Kardeş ve Gırgır dergilerinde çizerlik yapmış, Almanya Fachhochschule Köln Serbest Resim Bölümü'nden mezun olmuştur. Yurt dışında 40 kadar sergi açmış, 22 kitap resimlemiştir.",
+    biographyEn: "Uğur Durak was born in 1959 in Karabük. He worked as an illustrator for Doğan Kardeş and Gırgır magazines and graduated from Fachhochschule Köln Department of Painting in Germany. He has held around 40 international exhibitions and illustrated 22 books.",
+  },
+  "Turhan Selçuk": {
+    tr: "Karikatürist",
+    en: "Cartoonist",
+    biographyTr: "Turhan Selçuk (1922–2010), Türk mizah ve karikatür sanatının öncülerindendir. 1957'de yarattığı Abdülcanbaz karakteriyle tanınan usta çizer, Türkiye Karikatürcüler Derneği'nin kurucularındandır.",
+    biographyEn: "Turhan Selçuk (1922–2010) was a pioneering Turkish cartoonist and satirist. Renowned for creating the iconic comic character Abdülcanbaz in 1957, he co-founded the Turkish Cartoonists Association and held exhibitions worldwide.",
+  },
+  "Pınar Gökçin Özuyar": {
+    tr: "İstinye Üniversitesi, İktisadi, İdari ve Sosyal Bilimler Fakültesi, İşletme Bölümü",
+    en: "Department of Business Administration, Faculty of Economics and Administrative Sciences, Istinye University",
+    email: "pinar.ozuyar@istinye.edu.tr",
+    orcids: ["0000-0002-2505-2216"],
+    biographyTr: "Dr. Öğr. Üyesi Pınar Gökçin Özuyar, lisans derecesini Boğaziçi Üniversitesi Çevre Mühendisliği Bölümü'nden, yüksek lisans ve doktora derecelerini Boğaziçi Üniversitesi Çevre Bilimleri Enstitüsü'nden almıştır. RWTH Aachen Üniversitesi ve Thyssen Mühendislik bursuyla Almanya'da doktora araştırmalarını yürütmüştür. İstinye Üniversitesi İşletme Bölümü'nde öğretim üyesidir ve Sürdürülebilirlik Araştırma ve Uygulama Merkezi Müdürlüğü görevini yürütmektedir.",
+    biographyEn: "Asst. Prof. Dr. Pınar Gökçin Özuyar earned her BS in Environmental Engineering and MS and PhD degrees from the Institute of Environmental Sciences at Boğaziçi University. She conducted doctoral research in Germany with a joint fellowship from RWTH Aachen University and Thyssen Engineering. She is a faculty member in Business Administration and Director of the Sustainability Research Center at Istinye University.",
+  },
+  "Esra Bayhantopçu": {
+    tr: "İstinye Üniversitesi, Halkla İlişkiler ve Reklamcılık Bölümü",
+    en: "Department of Public Relations and Advertising, Istinye University",
+    email: "esra.bayhantopcu@istinye.edu.tr",
+    orcids: ["0000-0001-6680-8414"],
+    biographyTr: "Dr. Öğr. Üyesi Esra Bayhantopçu, Paris 1 Panthéon-Sorbonne Üniversitesi (Siyaset Bilimi) ve Galatasaray Üniversitesi'nden (Medya ve İletişim Çalışmaları) ortak doktora derecesi almıştır (2017). Sürdürülebilirlik, medya, toplumsal cinsiyet ve çocuk hakları alanlarında uzmanlaşmıştır. 2018'den bu yana İstinye Üniversitesi Halkla İlişkiler ve Reklamcılık Bölümü'nde öğretim üyesidir.",
+    biographyEn: "Asst. Prof. Dr. Esra Bayhantopçu completed a joint doctoral program at Paris 1 Panthéon-Sorbonne University (Political Science) and Galatasaray University (Media and Communication Studies) in 2017. Specializing in sustainability, media, gender, and children's rights, she has taught in Public Relations and Advertising at Istinye University since 2018.",
+  },
+  "Salih Ertan": {
+    tr: "Türk-Çin İş Derneği Ege Bölgesi Temsilcisi, Elektrik Mühendisi",
+    en: "Aegean Region Representative of the Turkish-Chinese Business Association, Electrical Engineer",
+    email: "salihertan@qq.com",
+    biographyTr: "Salih Ertan, ODTÜ Elektrik Mühendisliği Bölümü'nden mezun olmuştur. Yenilenebilir enerji kaynakları ve hidroelektrik santralleri üzerine uzmanlaşmıştır. Türk-Çin İş Derneği Ege Bölgesi Temsilcisi olarak görev yapmaktadır.",
+    biographyEn: "Salih Ertan graduated from the Department of Electrical Engineering at Middle East Technical University. He specializes in renewable energy resources and hydroelectric power plants and serves as the Aegean Region Representative of the Turkish-Chinese Business Association.",
+  },
+  "Ye Zhangxu": {
+    tr: "Şanghay Üniversitesi, Sosyal Bilimler Fakültesi Tarih Bölümü",
+    en: "Department of History, College of Liberal Arts, Shanghai University",
+    email: "yezx207@163.com",
+    biographyTr: "Ye Zhangxu, Şanghay Üniversitesi Sosyal Bilimler Fakültesi Dünya Tarihi Bölümü'nde yüksek lisans araştırmacısı ve Türkiye Araştırmaları Merkezi'nde araştırma görevlisidir. Çağdaş dönem Türk dış politikası ve Türk-Çin ilişkileri üzerine çalışmaktadır.",
+    biographyEn: "Ye Zhangxu is a master's candidate in World History at the College of Liberal Arts and a research assistant at the Center for Turkish Studies, Shanghai University. His research focuses on contemporary Turkish foreign policy and Sino-Turkish relations.",
+  },
+  "Sadık Üçok": {
+    tr: "Fotoğraf Sanatçısı ve Karikatürist",
+    en: "Photographer and Cartoonist",
+    biographyTr: "Sadık Üçok, 1980'de Çarşaf mizah dergisinde karikatüristliğe başlamış; Gırgır ve Fırt dergilerinde çizmiştir. 1992'den bu yana profesyonel fotoğrafçılık yapmakta olup 2013'te Sami Güner Kupası'nı kazanmıştır.",
+    biographyEn: "Sadık Üçok began his cartooning career at Çarşaf humor magazine in 1980, also drawing for Gırgır and Fırt. He has been a professional photographer since 1992 and won the prestigious Sami Güner Cup in 2013.",
+  },
+  "Ekrem Kahraman": {
+    tr: "Ressam ve Yazar",
+    en: "Painter and Writer",
+    biographyTr: "Ekrem Kahraman, yurt içi ve yurt dışında 100'ün üzerinde kişisel sergi açmış usta bir ressamdır. 2016'da UPSD tarafından 'Yılın Onur Sanatçısı' seçilmiştir. Plastik sanatlar kuramı üzerine çok sayıda yazı ve kitap yayımlamıştır.",
+    biographyEn: "Ekrem Kahraman has held over 100 solo exhibitions in Turkey and internationally. Named 'Artist of the Year' by UPSD in 2016, he has published extensive theoretical writings and books on contemporary plastic arts.",
+  },
+  "Aşkın Ayrancıoğlu": {
+    tr: "Karikatürist ve Görsel Sanatlar Eğitmeni",
+    en: "Cartoonist and Visual Arts Educator",
+    biographyTr: "Aşkın Ayrancıoğlu, Ondokuz Mayıs Üniversitesi Resim Bölümü mezunudur. Ulusal ve uluslararası karikatür yarışmalarında jüri üyeliği yapmış ve Çin'de 'En İyi Mizah Sanatçısı' ödülünü kazanmıştır.",
+    biographyEn: "Aşkın Ayrancıoğlu graduated from the Department of Painting at Ondokuz Mayıs University. He has served on international cartoon juries and won the 'Best Humor Artist Award' in China in 2017.",
+  },
 };
 
 const displayCorrections: Record<string, string> = {
@@ -706,6 +866,18 @@ const displayCorrections: Record<string, string> = {
   "Serdar Yurtçİçek": "Serdar Yurtçiçek",
   "Alexander DUGIN": "Alexander Dugin",
   "Ersel Zafer ORAL": "Ersel Zafer Oral",
+  "Zıad Ayoub Arbache": "Ziad Ayoub Arbache",
+  "Turhan Selcuk": "Turhan Selçuk",
+  "Ugur Durak": "Uğur Durak",
+  "Sevtap Inal": "Sevtap İnal",
+  "Siir Kilkis": "Şiir Kılkış",
+  "Ugur Murat Leloglu": "Uğur Murat Leloğlu",
+  "Birol Kilkis": "Birol Kılkış",
+  "Ali Sahin": "Ali Şahin",
+  "Pinar Gokcin Ozuyar": "Pınar Gökçin Özuyar",
+  "Esra Bayhantopcu": "Esra Bayhantopçu",
+  "Sadik Ucok": "Sadık Üçok",
+  "Askin Ayrancioglu": "Aşkın Ayrancıoğlu",
 };
 
 function withoutAcademicTitle(value: string) {

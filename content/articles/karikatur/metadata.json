@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Turhan Selçuk",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Turhan",
+      "familyName": "Selçuk",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Cartoonist",
+          "nameTr": "Karikatürist",
+          "nameEn": "Cartoonist",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

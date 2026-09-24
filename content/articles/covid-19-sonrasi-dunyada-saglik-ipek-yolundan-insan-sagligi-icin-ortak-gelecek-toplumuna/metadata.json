@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Yang Chen",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Yang Chen",
+      "givenName": "Yang",
+      "familyName": "Chen",
+      "orcid": "0000-0002-4840-6427",
+      "affiliations": [
+        {
+          "name": "Institute of Global Studies, Shanghai University",
+          "nameTr": "Şanghay Üniversitesi, Küresel Çalışmalar Enstitüsü",
+          "nameEn": "Institute of Global Studies, Shanghai University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

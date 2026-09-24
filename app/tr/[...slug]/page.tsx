@@ -1280,7 +1280,7 @@ export function generateStaticParams() {
 
   for (const issue of archiveIssues) {
     paths.add(`arsiv/cilt-${issue.volume}-sayi-${issue.issue}`);
-    if (issue.volume === 7 && issue.issue <= 3) paths.add(`arsiv/cilt-${issue.volume}-sayi-${issue.issue}/sunus`);
+    if (archiveEditorialHref(issue.volume, issue.issue, "tr")) paths.add(`arsiv/cilt-${issue.volume}-sayi-${issue.issue}/sunus`);
   }
   for (const article of archiveArticles) {
     paths.add(`makaleler/${article.slug}`);

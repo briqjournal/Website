@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Ekrem Kahraman",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Ekrem",
+      "familyName": "Kahraman",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Painter and Writer",
+          "nameTr": "Ressam ve Yazar",
+          "nameEn": "Painter and Writer",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

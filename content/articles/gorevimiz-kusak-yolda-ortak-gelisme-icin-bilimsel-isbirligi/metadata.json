@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Jinghua Cao",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Prof. Jinghua Cao",
+      "givenName": "Jinghua",
+      "familyName": "Cao",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Alliance of International Science Organizations (ANSO)",
+          "nameTr": "Uluslararası Bilim Kuruluşları Birliği (ANSO)",
+          "nameEn": "Alliance of International Science Organizations (ANSO)",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
