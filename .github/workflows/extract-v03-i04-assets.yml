@@ -79,19 +79,9 @@ jobs:
             cat "$list"
             echo "::endgroup::"
 
-            if [ "$count" -ne "$expected" ]; then
-              echo "Candidate count mismatch for ${slug} ${locale}: expected ${expected}, got ${count}" >&2
-              exit 1
-            fi
-
-            local i=0
-            while IFS=$'\t' read -r num w h size hash f; do
-              i=$((i+1))
-              ext="${f##*.}"
-              printf -v dest '%s/figure-%02d-%s.%s' "$out" "$i" "$locale" "$ext"
-              cp "$f" "$dest"
-              echo "$hash  $dest"
-            done < "$list"
+            # Diagnostic pass: enumerate all qualifying embedded production rasters.
+            # No repository files are written in this pass; selection is verified from the manifest first.
+            true
           }
 
           EN=tmp/v03-i04-assets/en.pdf
@@ -123,20 +113,6 @@ jobs:
           extract_range en "$EN" 97 97 1 uygarligin-ipek-yolu
           extract_range tr "$TR" 96 96 1 uygarligin-ipek-yolu
 
-      - name: Commit exact extracted image assets only
-        shell: bash
+      - name: Verify diagnostic pass wrote no repository files
         run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/assets/article-figures/
-          if git diff --cached --quiet; then
-            echo "No asset changes"
-            exit 0
-          fi
-          if git diff --cached --name-only | grep -Ev '^public/assets/article-figures/' ; then
-            echo "Refusing to commit non-asset files" >&2
-            exit 1
-          fi
-          git commit -m "feat(fulltext): extract v03-i04 exact production assets"
-          git push origin HEAD:chore/v03-i04-fulltext-canonical
+          test -z "$(git status --porcelain --untracked-files=no)"
