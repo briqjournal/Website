@@ -138,8 +138,8 @@ export function boardAffiliation(affiliation: string, locale: Locale) {
 
 const authorMetadata: Record<string, AuthorMetadata> = {
   "Efe Can Gürcan": {
-    tr: "London School of Economics and Political Science",
-    en: "London School of Economics and Political Science",
+    tr: "Uluslararası İlişkiler Bölümü, İstinye Üniversitesi",
+    en: "Department of International Relations, İstinye University",
     email: "efe.gurcan@istinye.edu.tr",
     orcids: ["0000-0002-5415-3163"],
     appointmentTermTr: "2019–Günümüz",
@@ -689,6 +689,53 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     biographyTr: "Ni Min, Çinli fotoğraf sanatçısıdır. Eserlerinde Güney Çin Fujian eyaleti Huidong Yarımadası sahilinde yaşayan Hui'an kadınlarının geleneksel halk kıyafetleri, kültürel dokusu ve çalışma pratikleri üzerine belgesel fotoğraflar üretmektedir.",
     biographyEn: "Ni Min is a Chinese photographer whose documentary work captures the distinctive folk customs, daily labor, and traditional attire of the Hui'an women on the coast of the Huidong Peninsula in Fujian Province, Southern China.",
   },
+  "Bassam Abu Abdullah": {
+    tr: "Baas Partisi Merkez Parti Okulu Başkanı",
+    en: "Head of the Ba'ath Party's Central Party School",
+    email: "DCSSI@live.com",
+    orcids: [],
+    biographyTr: "Bassam Abu Abdullah, Özbekistan Üniversitesi Bilimler Akademisi Uluslararası İlişkiler alanında doktora derecesine sahiptir (1993). Türkiye'deki Suriye Büyükelçiliği'nde diplomat olarak görev yapmıştır (2004–2008). Yazar ve siyaset uzmanı olan Abdullah, üniversitelerde dersler vermektedir. Şam Stratejik Araştırmalar Merkezi'nin (2012–2014) çalışma ekibini yönetmiştir. Dr. Ziad Ayoub Arbache ve Malaz Moukada ile birlikte Çin üzerine Arapça bir kitap yayımlamıştır (Çin: Yeni Bir Dünya Düzeninin Kurucu Eylemi, Orient Printing & Publishing, Şam, Eylül 2019). Şangay Uluslararası Araştırmalar Üniversitesi Ortadoğu Araştırmaları Enstitüsü misafir araştırmacısıdır. Arapça, İngilizce, Rusça ve Türkçe bilmektedir.",
+    biographyEn: "Bassam Abu Abdullah holds a PhD in International Relations from the Academy of Sciences of Uzbekistan University (1993). He was a Diplomat in the Syrian embassy in Turkey (2004–2008). He is a writer and political expert who teaches at universities. He served as a team leader at the Damascus Strategic Studies Center (2012–2014). He recently published a book with Dr. Ziad Ayoub Arbache and Malaz Moukada on China in Arabic (China: The Founding Act of a New World Order, Orient Printing & Publishing, Damascus, 2019). He is a visiting researcher at the Institute of Middle Eastern Studies, Shanghai University of International Studies. He speaks Arabic, English, Russian, and Turkish.",
+  },
+  "Ziad Ayoub Arbache": {
+    tr: "İktisat Fakültesi, Şam Üniversitesi",
+    en: "Faculty of Economics, Damascus University",
+    email: "ziad-ay@scs-net.org",
+    orcids: ["0009-0008-5626-4255"],
+    biographyTr: "Ziad Ayoub Arbache, Enerji Ekonomisi ve Politikası Enstitüsü'nden (IEPE-INPG, Grenoble, Fransa) doktora derecesine sahiptir (1998). Suriye'de çeşitli bakanlıklara ve uluslararası kalkınma örgütlerine danışmanlık yapmıştır. Suriye Başbakanlığı'nın danışma kurulu üyesidir. Birçok lisansüstü öğrenim merkezinde öğretim görevlisi olarak görev yapmaktadır. Temel araştırma alanları; jeo-ekonomi ve stratejik öngörü çalışmaları, barış inşası ve iyileştirme stratejileri, bölgesel planlama ve enerji jeopolitiğidir. Arapça, Fransızca ve İngilizce bilmektedir.",
+    biographyEn: "Ziad Ayoub Arbache holds a PhD from the Institute of Energy Economics and Policy (IEPE-INPG), Grenoble, France (1998). He worked as an advisor to several ministries in Syria and as a consultant for international development organizations. He is a member of the Advisory Board of the Syrian Prime Minister and a lecturer in several postgraduate centers. His research covers geo-economics, strategic prospective studies, peacebuilding and recovery strategies, regional planning, and geopolitics of energy. He speaks Arabic, French, and English.",
+  },
+  "Tevfik Kadan": {
+    tr: "Gazeteci",
+    en: "Journalist",
+    email: "tevfikkadan@gmail.com",
+    orcids: ["0009-0007-7935-5857"],
+    biographyTr: "Tevfik Kadan, 27 Nisan 1990'da Isparta'da doğdu. Nazmiye Demirel İlköğretim Okulu'nda ilk ve ortaöğrenimini tamamladıktan sonra 2004 yılında Heybeliada Deniz Lisesi'ne girdi. Üç yıllık Bilgisayar Mühendisliği eğitiminin ardından Selçuk Üniversitesi'nde Elektrik-Elektronik Mühendisliği okudu; 2014 yılında mezun oldu. 2018'de Anadolu Üniversitesi'nde Uluslararası İlişkiler'de ikinci lisans eğitimine başladı. 2010'dan itibaren gazetecilik alanında çalışan Kadan, iki yıl Vatan Partisi Basın Bürosu Başkanlığı ve iki yıl Aydınlık Gazetesi Haber Müdürlüğü yaptı. Aydınlık.com.tr internet sitesinde Genel Yayın Yönetmeni olarak görev yapmaktadır. Deniz jeopolitiği üzerine çok sayıda haber ve röportajı bulunmaktadır.",
+    biographyEn: "Tevfik Kadan was born on April 27, 1990, in Isparta, Turkey. After completing elementary and secondary school at Nazmiye Demirel Elementary School, he entered Heybeliada Naval High School in 2004. After studying Computer Engineering at the Naval Academy for three years, he transferred to Selçuk University to study Electrical and Electronic Engineering, graduating in 2014. He has been pursuing a second BA in International Relations at Anadolu University since 2018. Working in journalism since 2010, he served as Head of the Patriotic Party Press Bureau and news manager at Aydınlık Daily. He currently serves as Editor-in-Chief of Aydınlık.com.tr and has written extensively on maritime geopolitics.",
+  },
+  "Günay Çifci": {
+    tr: "Jeofizik Bölümü, Dokuz Eylül Üniversitesi",
+    en: "Department of Geophysics, Dokuz Eylül University",
+    email: "gunay.cifci@deu.edu.tr",
+    orcids: ["0000-0002-4380-8056"],
+    biographyTr: "Prof. Dr. Günay Çifci, lisans eğitimini Yıldız Üniversitesi Jeofizik Bölümü'nde, yüksek lisansını Dokuz Eylül Üniversitesi (DEÜ) Deniz Bilimleri ve Teknolojisi Enstitüsü'nde (DBTE), doktora çalışmasını ise Trieste Üniversitesi / İtalya ile DEÜ Fen Bilimleri Enstitüsü'nde tamamlamıştır. 1991, 1995, 1996, 2000 ve 2001 yıllarında UNESCO destekli Kayan Üniversite (TTR) programlarına katılmıştır. 2001'de Virginia Tech Üniversitesi Yer Bilimleri Bölümü'nde doktora sonrası araştırmacı olarak bulunmuştur. 2003 yılında DEÜ DBTE'ye tam zamanlı profesör olarak atanmıştır. DPT desteğiyle kurulan Jeofizik Sismik Laboratuvarı'nın (SeisLab) koordinatörlüğünü yürüterek 2005–2018 yılları arasında gaz hidrat ve deniz jeolojisi araştırmalarını yönetmiştir. Çeşitli AB ve Ufuk 2020 projelerinde proje ortağı koordinatörü olarak yer almıştır.",
+    biographyEn: "Prof. Dr. Günay Çifci completed his undergraduate studies at Yıldız University Department of Geophysics, his master's degree at Dokuz Eylül University (DEU) Institute of Marine Sciences and Technology (DBTE), and his doctorate at Trieste University, Italy and DEU Graduate School of Natural and Applied Sciences. He participated in UNESCO-supported Floating University Training through Research (TTR) cruises in 1991, 1995, 1996, 2000, and 2001. In 2001, he was a visiting researcher at Virginia Tech University's Department of Earth Sciences. Appointed full-time professor at DEU DBTE in 2003, he coordinated the Geophysics Seismic Laboratory (SeisLab) conducting gas hydrate and marine geology research between 2005–2018. He has served as a project partner coordinator in several EU and Horizon 2020 projects.",
+  },
+  "Arif Acaloğlu": {
+    tr: null,
+    en: null,
+    email: "arifacal@gmail.com",
+    orcids: ["0000-0002-9873-3979"],
+    biographyTr: "Arif Acaloğlu, 1956'da Kepenekçi/Borçalı/Gürcistan'da doğdu. Bakü Devlet Üniversitesi Filoloji Fakültesi'ni bitirdi. 1982'de Edebiyat Enstitüsü Mitoloji Bölümü'nde araştırma görevlisi olarak çalışmaya başladı. 1983–1986 yıllarında Tartu Üniversitesi'nde (Estonya) Semiyoloji dalında doktora eğitimi gördü. 1987–1990 yıllarında Halkbilim Bölümü'nde uzman, 1990 itibarıyla Bakü Devlet Üniversitesi'nde öğretim görevlisi oldu. 1992–1993 yıllarında Azerbaycan Cumhurbaşkanlığı'nda danışmanlık görevinde bulundu. Uzun süre Bilgi Üniversitesi Rus Dili Programı'nda, 2008–2019 arasında ise Yeditepe Üniversitesi Antropoloji Bölümü'nde öğretim üyeliği yaptı. Akademik çalışmaları mitoloji, halk edebiyatı ve Avrasya halklarının kültürel mirası alanlarını kapsamaktadır. İki kitabı ve 40 civarında makalesi yayımlanmıştır.",
+    biographyEn: "Arif Acaloğlu was born in 1956 in Kepenekçi/Borchali, Georgia. He completed the philology program at Baku State University. In 1982, he began working as a research associate at the Mythology Department of the Literature Institute. From 1983 to 1986, he pursued his Ph.D. studies in semiology at Tartu University, Estonia. He worked as a specialist in the Folklore Department and then as a lecturer at Baku State University from 1990. He served as an advisor at the Azerbaijani Presidency in 1992–1993. He taught at Istanbul Bilgi University's Russian Language Program and at the Department of Anthropology, Yeditepe University (2008–2019). His academic work covers mythology, folk literature, and the cultural heritage of Eurasian peoples. He has published two books and approximately 40 articles.",
+  },
+  "Ömer Burhanoğlu": {
+    tr: "Fotoğraf Sanatçısı",
+    en: "Photography Artist",
+    orcids: [],
+    biographyTr: "1960 yılında Trabzon'da doğan Ömer Burhanoğlu, Boğaziçi Üniversitesi Makine Mühendisliği lisans ve İstanbul Teknik Üniversitesi Sistem Analizi yüksek lisans öğrenimi görmüş, İşletme Mühendisliği alanında doktora çalışmasında bulunmuştur. 37 yılı aşan deneyimiyle otomotiv sanayisinin lider isimleri arasında yer almaktadır. 1983'ten bu yana Farplas'ı sektörün önde gelen şirketlerinden biri hâline getirmiş; hâlen Farplas CEO ve Yönetim Kurulu Üyesi olarak görev yapmaktadır. Fotoğraf sanatçısı olan Burhanoğlu, eserlerini 'AYNI AYRI' adlı kitabında yayımlamıştır; kitabın tüm geliri Trabzon'daki Ömer Burhanoğlu Hastanesi'ne bağışlanmaktadır.",
+    biographyEn: "Born in 1960 in Trabzon, Ömer Burhanoğlu graduated from Boğaziçi University in Mechanical Engineering, earned a master's degree in System Analysis from Istanbul Technical University, and pursued a Ph.D. in Management Engineering. With more than 37 years of experience, he is one of the leaders of the automotive industry, having transformed Farplas into one of the sector's leading companies since 1983. He currently serves as CEO and member of the Executive Board of Farplas. As a photography artist, his work is published in the book 'AYNI AYRI', with all proceeds donated to Ömer Burhanoğlu Hospital in Trabzon.",
+  },
 };
 
 const displayCorrections: Record<string, string> = {
@@ -706,6 +753,7 @@ const displayCorrections: Record<string, string> = {
   "Serdar Yurtçİçek": "Serdar Yurtçiçek",
   "Alexander DUGIN": "Alexander Dugin",
   "Ersel Zafer ORAL": "Ersel Zafer Oral",
+  "Zıad Ayoub Arbache": "Ziad Ayoub Arbache",
 };
 
 function withoutAcademicTitle(value: string) {

@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Dominik Pietzcker",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Prof. Dr. Dominik Pietzcker",
+      "givenName": "Dominik",
+      "familyName": "Pietzcker",
+      "orcid": "0000-0002-1420-9396",
+      "affiliations": [
+        {
+          "name": "Public Relations and Communication's Management, Macromedia University of Applied Sciences",
+          "nameTr": "Halkla İlişkiler ve İletişim Yönetimi, Uygulamalı Bilimler Makromedya Üniversitesi",
+          "nameEn": "Public Relations and Communication's Management, Macromedia University of Applied Sciences",
+          "country": "Germany",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

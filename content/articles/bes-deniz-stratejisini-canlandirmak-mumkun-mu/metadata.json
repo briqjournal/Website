@@ -13,18 +13,34 @@
   },
   "authors": [
     {
-      "displayName": "Bassam Abu Abdullah",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Dr. Bassam Abu Abdullah",
+      "givenName": "Bassam",
+      "familyName": "Abu Abdullah",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Ba'ath Party Central Party School",
+          "nameTr": "Baas Partisi Merkez Parti Okulu",
+          "nameEn": "Ba'ath Party Central Party School",
+          "country": "Syria",
+          "ror": null
+        }
+      ]
     },
     {
-      "displayName": "Zıad Ayoub Arbache",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Ziad Ayoub Arbache",
+      "givenName": "Ziad Ayoub",
+      "familyName": "Arbache",
+      "orcid": "0009-0008-5626-4255",
+      "affiliations": [
+        {
+          "name": "Faculty of Economics, Damascus University",
+          "nameTr": "İktisat Fakültesi, Şam Üniversitesi",
+          "nameEn": "Faculty of Economics, Damascus University",
+          "country": "Syria",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
