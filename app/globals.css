@@ -9,7 +9,7 @@
   --rust-dark: #913c19;
   --red: #b00f1b;
   --muted: #70675e;
-  --line: rgba(24, 20, 17, 0.17);
+  --line: rgba(24, 20, 17, 0.10);
 }
 
 /* Refined scholarly controls: quiet rules, compact disclosure rows, and publisher-style citation tools. */
@@ -1796,7 +1796,7 @@ img {
 }
 
 .authors-hub-page > .submission-lead {
-  margin-top: 54px;
+  margin-top: 40px;
 }
 
 .authors-process-module {
@@ -3764,7 +3764,7 @@ footer h3 {
 .article-platform-layout {
   display: grid;
   grid-template-columns: 245px minmax(0, 780px);
-  gap: 108px;
+  gap: 85px;
   align-items: start;
   justify-content: start;
   padding-top: 68px;
@@ -3958,7 +3958,7 @@ footer h3 {
 .article-platform-content > details + details,
 .article-platform-content > .article-body-section,
 .article-platform-content .article-body-section + .article-body-section {
-  margin-top: 54px;
+  margin-top: 40px;
 }
 
 .article-platform-content h2 {
@@ -3979,7 +3979,7 @@ footer h3 {
 }
 
 .article-platform-content .article-body-section {
-  padding-top: 50px;
+  padding-top: 40px;
   border-top: 1px solid var(--line);
 }
 
@@ -5674,7 +5674,7 @@ footer h3 { font-size: 11px; }
 .article-byline > div > span,
 .article-sidebar span {
   color: var(--red);
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 900;
   letter-spacing: .13em;
   text-transform: uppercase;
@@ -8509,7 +8509,7 @@ body {
   }
 
   .imprint-rosters {
-    margin-top: 54px;
+    margin-top: 40px;
   }
 
   .imprint-roster-heading {
@@ -8585,10 +8585,12 @@ body {
 .article-body-section h4 {
   margin: 0 0 10px;
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
   line-height: 1.45;
 }
 
@@ -10515,7 +10517,7 @@ footer {
 }
 
 .call-detail-page .reading-content section + section {
-  margin-top: 54px;
+  margin-top: 40px;
   padding-top: 54px;
 }
 
@@ -11044,4 +11046,9 @@ footer {
     margin-top: 26px;
     padding-top: 0;
   }
+}
+
+
+a, button {
+  transition: all 0.2s ease;
 }
