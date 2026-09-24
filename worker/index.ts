@@ -1,7 +1,11 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
-import { LEGACY_REDIRECTS } from "./legacy-redirects";
+import {
+  LEGACY_REDIRECTS,
+  LEGACY_PDF_REDIRECTS,
+  LEGACY_PDF_FILENAME_MAP,
+} from "./legacy-redirects";
 
 interface Env {
   ASSETS: Fetcher;
@@ -26,11 +30,35 @@ function normalizedLegacyPath(pathname: string): string {
 }
 
 function handleLegacyRedirect(url: URL): Response | null {
-  const pathname = normalizedLegacyPath(url.pathname);
-  let targetPath = LEGACY_REDIRECTS[pathname];
+  const rawPath = normalizedLegacyPath(url.pathname);
+  const decodedPath = decodeURIComponent(rawPath);
 
-  if (!targetPath && pathname.startsWith("/en/user/")) {
-    targetPath = pathname.replace("/en/user/", "/en/authors/");
+  // 1. Direct PDF redirect for /sites/default/files/... (including /tr/sites/... and /en/sites/...)
+  if (rawPath.includes("/sites/default/files/") || decodedPath.includes("/sites/default/files/")) {
+    const filename = decodedPath.split("/").pop()?.toLowerCase() || rawPath.split("/").pop()?.toLowerCase() || "";
+    const targetPdf =
+      LEGACY_PDF_REDIRECTS[rawPath] ||
+      LEGACY_PDF_REDIRECTS[decodedPath] ||
+      LEGACY_PDF_FILENAME_MAP[filename];
+
+    if (targetPdf) {
+      const target = new URL(targetPdf, url.origin);
+      return new Response(null, {
+        status: 301,
+        headers: {
+          location: target.toString(),
+          "cache-control": "public, max-age=86400, s-maxage=604800",
+        },
+      });
+    }
+  }
+
+  // 2. Direct page redirect from LEGACY_REDIRECTS
+  let targetPath = LEGACY_REDIRECTS[rawPath] || LEGACY_REDIRECTS[decodedPath];
+
+  // 3. Wildcard match for author profiles /en/user/:id* -> /en/authors/:id*
+  if (!targetPath && (rawPath.startsWith("/en/user/") || decodedPath.startsWith("/en/user/"))) {
+    targetPath = decodedPath.replace("/en/user/", "/en/authors/");
   }
 
   if (!targetPath) return null;
