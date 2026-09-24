@@ -45,14 +45,38 @@
   ],
   "footnotes": [],
   "references": [
-    "Bloomberg (2018), Is the Euro to Blame for Italy’s Economic Woes? Retrieved from https://www.bloomberg.com/news/articles/2018-12-18/is-the-euro-to-blame-for-italy-s-economic-woes#xj4y7vzkg",
-    "Eurostat (2022), Main GDP aggregates per capita. https://appsso.eurostat.ec.europa.eu/",
-    "Çin Halk Cumhuriyeti Hindistan Elçiliği. (2022) http://in.china-embassy.gov.cn/eng/zgxw/202211/t20221117_10976697.htm adresinden alındı.",
-    "IZA Institute of Labor Economics (2020), Covid-19 and the labor market. Retrieved from https://covid-19.iza.org/crisis-monitor/italy/",
-    "La Stampa (November 2020), Carpenter: “Per Biden l’Italia è strategica ma attenti a Russia e Cina”. Retrieved from https://www.lastampa.it/topnews/primo-piano/2020/11/11/news/carpenter-per-bidenl-italia-e-strategica-ma-attenti-a-russia-e-cina-1.39524269/",
-    "Openpolis (2021), L’Italia è l’unico paese europeo in cui i salari sono diminuiti rispetto al 1990. Retrieved from https://www.openpolis.it/numeri/litalia-e-lunico-paese-europeo-in-cui-i-salari-sono-diminuiti-rispetto-al-1990/",
-    "Panorama (2018), L’euro ha rovinato l’Italia, lo dice Bloomberg. Retrieved from https://www.panorama.it/economia/euro-rovinato-italia",
-    "Telos Press (1975), Reference from History, Philosophy and Culture in the Young Gramsci"
+    {
+      "id": "ref-1",
+      "text": "Bloomberg (2018), Is the Euro to Blame for Italy’s Economic Woes? Retrieved from https://www.bloomberg.com/news/articles/2018-12-18/is-the-euro-to-blame-for-italy-s-economic-woes#xj4y7vzkg"
+    },
+    {
+      "id": "ref-2",
+      "text": "Eurostat (2022), Main GDP aggregates per capita. https://appsso.eurostat.ec.europa.eu/"
+    },
+    {
+      "id": "ref-3",
+      "text": "Çin Halk Cumhuriyeti Hindistan Elçiliği. (2022) http://in.china-embassy.gov.cn/eng/zgxw/202211/t20221117_10976697.htm adresinden alındı."
+    },
+    {
+      "id": "ref-4",
+      "text": "IZA Institute of Labor Economics (2020), Covid-19 and the labor market. Retrieved from https://covid-19.iza.org/crisis-monitor/italy/"
+    },
+    {
+      "id": "ref-5",
+      "text": "La Stampa (November 2020), Carpenter: “Per Biden l’Italia è strategica ma attenti a Russia e Cina”. Retrieved from https://www.lastampa.it/topnews/primo-piano/2020/11/11/news/carpenter-per-bidenl-italia-e-strategica-ma-attenti-a-russia-e-cina-1.39524269/"
+    },
+    {
+      "id": "ref-6",
+      "text": "Openpolis (2021), L’Italia è l’unico paese europeo in cui i salari sono diminuiti rispetto al 1990. Retrieved from https://www.openpolis.it/numeri/litalia-e-lunico-paese-europeo-in-cui-i-salari-sono-diminuiti-rispetto-al-1990/"
+    },
+    {
+      "id": "ref-7",
+      "text": "Panorama (2018), L’euro ha rovinato l’Italia, lo dice Bloomberg. Retrieved from https://www.panorama.it/economia/euro-rovinato-italia"
+    },
+    {
+      "id": "ref-8",
+      "text": "Telos Press (1975), Reference from History, Philosophy and Culture in the Young Gramsci"
+    }
   ],
   "acknowledgements": "",
   "figures": []

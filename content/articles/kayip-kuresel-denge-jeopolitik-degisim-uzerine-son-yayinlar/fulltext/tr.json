@@ -22,18 +22,54 @@
     }
   ],
   "references": [
-    "Allison, Graham (2017). Destined for War. Can America and China escape Thucydides’s trap? Melbourne & London, Scribe Publishers",
-    "Böge, Friederike (2022). Chinas neuer Kaiser. In: Frankfurter Allgemeine Zeitung, October 23, 2022. https://www.faz.net/aktuell/politik/ausland/china-hu-jintaos-unfreiwilliger-abgang-sorgt-fuer-spekulationen-18408598.html",
-    "Braml, Josef (2022). Die transatlantische Illusion. Die neue Weltordnung und wie wir uns darin behaupten können. München, C.H. Beck Verlag",
-    "Chazan, Guy (2022). Scholz and Xi discuss nuclear dangers. In: Financial Times Weekend, Europe Edition, November 5/6, 2022, p. 2",
-    "Dobrindt, Alexander (2022). Wie Europa wirklich souverän werden kann. In: Die Welt, November 2, 2022, p. 7",
-    "Duda, Andrzej (2022). Remarks by Andrzej Duda during the meeting with Joe Biden. March 22, 2022. https://www.president.pl/news/remarks-by-andrzej-duda-during-the-meeting-with-joe-biden,51289",
-    "Geinitz, Christian (2022). Chinas Griff nach dem Westen. Wie sich Peking in unsere Wirtschaft einkauft. München, C.H. Beck Verlag",
-    "Gujer, Eric (2022). Das China-Syndrom – warum es nicht klug ist, Peking als Feind zu behandeln. In: Neue Zürcher Zeitung, November 5, 2022, p. 1. https://www.nzz.ch/meinung/der-andere-blick/scholz-in-peking-es-ist-unklug-china-als-feind-zu-behandeln-ld.1710184",
-    "Reuters (2022). EU should treat China as competitor. https://www.reuters.com/world/eu-should-treat-china-more-competitor-says-diplomat-chief-2022-10-17/",
-    "Röttgen, Norbert (2022). Nie wieder hilflos! Ein Manifest in Zeiten des Krieges. München, dtv Verlag",
-    "Scholz, Olaf (2022). We don’t want to decouple from China, but can’t be overreliant. https://www.bundesregierung.de/breg-en/search/chancellor-guest-article-politico-china-2139576",
-    "Yiu, Karson (2022). How China’s Xi Jinping flipped the script on the world during his 10 years in power. https://abcnews.go.com/International/chinas-xi-jinping-flipped-script-world-10-years/story?id=91858424"
+    {
+      "id": "ref-1",
+      "text": "Allison, Graham (2017). Destined for War. Can America and China escape Thucydides’s trap? Melbourne & London, Scribe Publishers"
+    },
+    {
+      "id": "ref-2",
+      "text": "Böge, Friederike (2022). Chinas neuer Kaiser. In: Frankfurter Allgemeine Zeitung, October 23, 2022. https://www.faz.net/aktuell/politik/ausland/china-hu-jintaos-unfreiwilliger-abgang-sorgt-fuer-spekulationen-18408598.html"
+    },
+    {
+      "id": "ref-3",
+      "text": "Braml, Josef (2022). Die transatlantische Illusion. Die neue Weltordnung und wie wir uns darin behaupten können. München, C.H. Beck Verlag"
+    },
+    {
+      "id": "ref-4",
+      "text": "Chazan, Guy (2022). Scholz and Xi discuss nuclear dangers. In: Financial Times Weekend, Europe Edition, November 5/6, 2022, p. 2"
+    },
+    {
+      "id": "ref-5",
+      "text": "Dobrindt, Alexander (2022). Wie Europa wirklich souverän werden kann. In: Die Welt, November 2, 2022, p. 7"
+    },
+    {
+      "id": "ref-6",
+      "text": "Duda, Andrzej (2022). Remarks by Andrzej Duda during the meeting with Joe Biden. March 22, 2022. https://www.president.pl/news/remarks-by-andrzej-duda-during-the-meeting-with-joe-biden,51289"
+    },
+    {
+      "id": "ref-7",
+      "text": "Geinitz, Christian (2022). Chinas Griff nach dem Westen. Wie sich Peking in unsere Wirtschaft einkauft. München, C.H. Beck Verlag"
+    },
+    {
+      "id": "ref-8",
+      "text": "Gujer, Eric (2022). Das China-Syndrom – warum es nicht klug ist, Peking als Feind zu behandeln. In: Neue Zürcher Zeitung, November 5, 2022, p. 1. https://www.nzz.ch/meinung/der-andere-blick/scholz-in-peking-es-ist-unklug-china-als-feind-zu-behandeln-ld.1710184"
+    },
+    {
+      "id": "ref-9",
+      "text": "Reuters (2022). EU should treat China as competitor. https://www.reuters.com/world/eu-should-treat-china-more-competitor-says-diplomat-chief-2022-10-17/"
+    },
+    {
+      "id": "ref-10",
+      "text": "Röttgen, Norbert (2022). Nie wieder hilflos! Ein Manifest in Zeiten des Krieges. München, dtv Verlag"
+    },
+    {
+      "id": "ref-11",
+      "text": "Scholz, Olaf (2022). We don’t want to decouple from China, but can’t be overreliant. https://www.bundesregierung.de/breg-en/search/chancellor-guest-article-politico-china-2139576"
+    },
+    {
+      "id": "ref-12",
+      "text": "Yiu, Karson (2022). How China’s Xi Jinping flipped the script on the world during his 10 years in power. https://abcnews.go.com/International/chinas-xi-jinping-flipped-script-world-10-years/story?id=91858424"
+    }
   ],
   "acknowledgements": "",
   "figures": []
