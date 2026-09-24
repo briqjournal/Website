@@ -302,7 +302,7 @@ function extractImages(pdf,startPage,count,outDir,preferLargest=false){
 function findIssuePage(probes){
   const raw=sh("pdftotext",["-layout",issuePdfTr,"-"]);
   const pages=raw.split("\f");
-  for(let i=0;i<pages.length;i++)if(probes.some(p=>pages[i].includes(p)))return i+1;
+  for(let i=pages.length-1;i>=0;i--)if(probes.some(p=>pages[i].includes(p)))return i+1;
   throw new Error("Could not locate visual page: "+probes.join(" | "));
 }
 
