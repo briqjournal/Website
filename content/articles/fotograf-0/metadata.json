@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Sevtap İnal",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Sevtap",
+      "familyName": "İnal",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Mersin Photography Association",
+          "nameTr": "Mersin Fotoğraf Derneği Yönetim Kurulu Üyesi, Fotoğraf Sanatçısı",
+          "nameEn": "Board Member of Mersin Photography Association, Photography Artist",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

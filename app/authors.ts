@@ -40,7 +40,7 @@ type AuthorMetadata = {
   biographyEn?: string;
 };
 
-const genericBylines = new Set(["admin", "briq", "briqjournal"]);
+const genericBylines = new Set(["admin", "briq", "briqjournal", "Pekin Bildirgesi", "Beijing Declaration"]);
 
 const profilePhotos: Record<string, string> = {
   "Fikret Akfırat": "/assets/people/fikret-akfirat.jpg",
@@ -736,6 +736,71 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     biographyTr: "1960 yılında Trabzon'da doğan Ömer Burhanoğlu, Boğaziçi Üniversitesi Makine Mühendisliği lisans ve İstanbul Teknik Üniversitesi Sistem Analizi yüksek lisans öğrenimi görmüş, İşletme Mühendisliği alanında doktora çalışmasında bulunmuştur. 37 yılı aşan deneyimiyle otomotiv sanayisinin lider isimleri arasında yer almaktadır. 1983'ten bu yana Farplas'ı sektörün önde gelen şirketlerinden biri hâline getirmiş; hâlen Farplas CEO ve Yönetim Kurulu Üyesi olarak görev yapmaktadır. Fotoğraf sanatçısı olan Burhanoğlu, eserlerini 'AYNI AYRI' adlı kitabında yayımlamıştır; kitabın tüm geliri Trabzon'daki Ömer Burhanoğlu Hastanesi'ne bağışlanmaktadır.",
     biographyEn: "Born in 1960 in Trabzon, Ömer Burhanoğlu graduated from Boğaziçi University in Mechanical Engineering, earned a master's degree in System Analysis from Istanbul Technical University, and pursued a Ph.D. in Management Engineering. With more than 37 years of experience, he is one of the leaders of the automotive industry, having transformed Farplas into one of the sector's leading companies since 1983. He currently serves as CEO and member of the Executive Board of Farplas. As a photography artist, his work is published in the book 'AYNI AYRI', with all proceeds donated to Ömer Burhanoğlu Hospital in Trabzon.",
   },
+  "Jinghua Cao": {
+    tr: "Uluslararası Bilim Kuruluşları Birliği (ANSO) İcra Direktörü",
+    en: "Executive Director, Alliance of International Science Organizations (ANSO)",
+    biographyTr: "Prof. Jinghua Cao, Uluslararası Bilim Kuruluşları Birliği (ANSO) Sekreterliği İcra Direktörü'dür. Bu görevinden önce Çin Bilimler Akademisi'nin (CAS) Uluslararası İşbirliği Bürosu Genel Müdürü olarak görev yapmıştır. New York Şehir Koleji'nde işletme ve uluslararası politikalar üzerine yüksek lisans yapmış; 1995–1997 yılları arasında Çin'in Washington Büyükelçiliği'nde Bilim ve Teknoloji Ataşesi olarak bulunmuştur.",
+    biographyEn: "Prof. Jinghua Cao is Executive Director of the Secretariat of the Alliance of International Science Organizations (ANSO). Previously, he served as Director-General of the Bureau of International Cooperation at the Chinese Academy of Sciences (CAS). He holds a master's degree from the City College of New York and served as Science and Technology Attaché at the Chinese Embassy in Washington from 1995 to 1997.",
+  },
+  "Şiir Kılkış": {
+    tr: "TÜBİTAK · ODTÜ Yer Sistem Bilimleri",
+    en: "Earth System Science, TÜBİTAK and METU",
+    email: "siir.kilkis@tubitak.gov.tr",
+    orcids: ["0000-0003-3466-3593"],
+    biographyTr: "Doç. Dr. Şiir Kılkış, doktora derecesini KTH Kraliyet Teknoloji Enstitüsü'nden (İsveç) almıştır. Georgetown Üniversitesi Bilim, Teknoloji ve Uluslararası İlişkiler programından altın madalya ve yüksek onur derecesiyle mezun olmuştur. Hükümetlerarası İklim Değişikliği Paneli (IPCC) Altıncı Değerlendirme Raporu'nda Başyazar olarak görev yapmıştır. TÜBİTAK'ta Başuzman ve Danışman, ODTÜ Yer Sistem Bilimleri'nde öğretim üyesidir.",
+    biographyEn: "Assoc. Prof. Dr. Şiir Kılkış earned her PhD from KTH Royal Institute of Technology and graduated magna cum laude with a gold medal in Science, Technology, and International Affairs from Georgetown University. She serves as a Lead Author for the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report. She is a Senior Researcher and Advisor at TÜBİTAK and teaches at METU Earth System Science.",
+  },
+  "Xi Jinping": {
+    tr: "Çin Halk Cumhuriyeti Cumhurbaşkanı",
+    en: "President of the People's Republic of China",
+    biographyTr: "Xi Jinping, Çin Komünist Partisi Genel Sekreteri ve Çin Halk Cumhuriyeti Cumhurbaşkanıdır.",
+    biographyEn: "Xi Jinping is the General Secretary of the Chinese Communist Party and President of the People's Republic of China.",
+  },
+  "Uğur Murat Leloğlu": {
+    tr: "Orta Doğu Teknik Üniversitesi, Jeodezi ve Coğrafi Bilgi Teknolojileri Bölümü",
+    en: "Department of Geodetic and Geographic Information Technologies, Middle East Technical University",
+    email: "leloglu.um@gmail.com",
+    orcids: ["0000-0002-8584-7301"],
+    institutionUrl: "https://metu.edu.tr/",
+    biographyTr: "Doç. Dr. Uğur Murat Leloğlu, lisans, yüksek lisans ve doktora derecelerini ODTÜ Elektrik-Elektronik Mühendisliği Bölümü'nden almıştır. TÜBİTAK UZAY'da araştırmacı olarak çalışmış; ODTÜ Jeodezi ve Coğrafi Bilgi Teknolojileri Bölümü'nde yer gözlemi ve uzaktan algılama alanında öğretim üyeliği yapmaktadır.",
+    biographyEn: "Assoc. Prof. Dr. Uğur Murat Leloğlu obtained his BSc, MSc, and PhD degrees from the Department of Electrical and Electronics Engineering at Middle East Technical University. He worked at TÜBİTAK UZAY and is currently an associate professor in the Department of Geodetic and Geographic Information Technologies at METU focusing on earth observation and remote sensing.",
+  },
+  "Birol Kılkış": {
+    tr: "OSTİM Teknik Üniversitesi",
+    en: "OSTIM Technical University",
+    email: "birolkilkis@hotmail.com",
+    orcids: ["0000-0003-2580-3910"],
+    institutionUrl: "https://ostimteknik.edu.tr/",
+    biographyTr: "Prof. Dr. Birol Kılkış, ODTÜ Makina Mühendisliği Bölümü'nden lisans, yüksek lisans ve doktora derecelerini almıştır. ASHRAE Fellow üyesi olan Kılkış, enerji, ekserji, ısı pompaları ve kojenerasyon konularında 500'den fazla yayına ve çok sayıda patente sahiptir. OSTİM Teknik Üniversitesi'nde öğretim üyeliği yapmaktadır.",
+    biographyEn: "Prof. Dr. Birol Kılkış earned his BSc, MSc, and PhD in Mechanical Engineering from Middle East Technical University. An ASHRAE Fellow, Dr. Kılkış has authored over 500 papers and holds numerous patents on energy, exergy, heat pump cogeneration, and HVAC systems. He is a professor at OSTIM Technical University.",
+  },
+  "Ali Şahin": {
+    tr: "İstanbul Üniversitesi, Atatürk İlkeleri ve İnkılap Tarihi Enstitüsü",
+    en: "Institute of Atatürk's Principles and Revolution History, Istanbul University",
+    email: "alisahin@istanbul.edu.tr",
+    orcids: ["0000-0002-4701-9695"],
+    institutionUrl: "https://istanbul.edu.tr/",
+    biographyTr: "Dr. Ali Şahin, lisans öğrenimini İstanbul Üniversitesi Antropoloji Bölümü'nde, yüksek lisans ve doktorasını İstanbul Üniversitesi Atatürk İlkeleri ve İnkılap Tarihi Enstitüsü'nde tamamlamıştır. Türkiye'nin yakın tarihi, siyasal düşünce tarihi ve Türk devrimi üzerine çalışmalar yürütmektedir.",
+    biographyEn: "Dr. Ali Şahin completed his undergraduate studies in Anthropology and his master's and PhD at the Institute of Atatürk's Principles and Revolution History, Istanbul University. His research focuses on Turkey's recent political history, intellectual history, and the Turkish Revolution.",
+  },
+  "Sevtap İnal": {
+    tr: "Mersin Fotoğraf Derneği Yönetim Kurulu Üyesi, Fotoğraf Sanatçısı",
+    en: "Board Member of Mersin Photography Association, Photography Artist",
+    biographyTr: "Sevtap İnal, 2010'dan bu yana fotoğraf sanatıyla ilgilenmekte olup Uluslararası Fotoğraf Sanatı Federasyonu (FIAP) tarafından EFIAP unvanına layık görülmüştür. Birçok ulusal ve uluslararası ödülün sahibidir. Mersin Fotoğraf Derneği Yönetim Kurulu üyesidir.",
+    biographyEn: "Sevtap İnal has been practicing photography since 2010 and was awarded the EFIAP distinction by the International Federation of Photographic Art (FIAP). Winner of numerous national and international awards, she is a board member of the Mersin Photography Association.",
+  },
+  "Uğur Durak": {
+    tr: "Ressam ve İllüstratör",
+    en: "Painter and Illustrator",
+    biographyTr: "Uğur Durak, 1959'da Karabük'te doğmuştur. Doğan Kardeş ve Gırgır dergilerinde çizerlik yapmış, Almanya Fachhochschule Köln Serbest Resim Bölümü'nden mezun olmuştur. Yurt dışında 40 kadar sergi açmış, 22 kitap resimlemiştir.",
+    biographyEn: "Uğur Durak was born in 1959 in Karabük. He worked as an illustrator for Doğan Kardeş and Gırgır magazines and graduated from Fachhochschule Köln Department of Painting in Germany. He has held around 40 international exhibitions and illustrated 22 books.",
+  },
+  "Turhan Selçuk": {
+    tr: "Karikatürist",
+    en: "Cartoonist",
+    biographyTr: "Turhan Selçuk (1922–2010), Türk mizah ve karikatür sanatının öncülerindendir. 1957'de yarattığı Abdülcanbaz karakteriyle tanınan usta çizer, Türkiye Karikatürcüler Derneği'nin kurucularındandır.",
+    biographyEn: "Turhan Selçuk (1922–2010) was a pioneering Turkish cartoonist and satirist. Renowned for creating the iconic comic character Abdülcanbaz in 1957, he co-founded the Turkish Cartoonists Association and held exhibitions worldwide.",
+  },
 };
 
 const displayCorrections: Record<string, string> = {
@@ -754,6 +819,13 @@ const displayCorrections: Record<string, string> = {
   "Alexander DUGIN": "Alexander Dugin",
   "Ersel Zafer ORAL": "Ersel Zafer Oral",
   "Zıad Ayoub Arbache": "Ziad Ayoub Arbache",
+  "Turhan Selcuk": "Turhan Selçuk",
+  "Ugur Durak": "Uğur Durak",
+  "Sevtap Inal": "Sevtap İnal",
+  "Siir Kilkis": "Şiir Kılkış",
+  "Ugur Murat Leloglu": "Uğur Murat Leloğlu",
+  "Birol Kilkis": "Birol Kılkış",
+  "Ali Sahin": "Ali Şahin",
 };
 
 function withoutAcademicTitle(value: string) {

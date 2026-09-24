@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Uğur Durak",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Uğur",
+      "familyName": "Durak",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Painter and Illustrator",
+          "nameTr": "Ressam ve İllüstratör",
+          "nameEn": "Painter and Illustrator",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

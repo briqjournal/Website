@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Uğur Murat Leloğlu",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Doç. Dr. Uğur Murat Leloğlu",
+      "givenName": "Uğur Murat",
+      "familyName": "Leloğlu",
+      "orcid": "0000-0002-8584-7301",
+      "affiliations": [
+        {
+          "name": "Department of Geodetic and Geographic Information Technologies, Middle East Technical University",
+          "nameTr": "Orta Doğu Teknik Üniversitesi, Jeodezi ve Coğrafi Bilgi Teknolojileri Bölümü",
+          "nameEn": "Department of Geodetic and Geographic Information Technologies, Middle East Technical University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
