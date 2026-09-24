@@ -12,6 +12,7 @@ const records = [
     slug: "dogu-akdenizdeki-son-gelismeler-isiginda-kuzey-kibris-turk-cumhuriyetinin-taninmasinin-gerekliligi",
     startPage: 2,
     start: { en: "INTRODUCTION", tr: "Giriş" },
+    strictFixedHeadings: true,
     fixedHeadings: {
       en: ["INTRODUCTION","The Cyprus Negotiation Process and the Solution Based on the Existence of Two Equal Sovereign States","The Importance of the TRNC in the Eastern Mediterranean","The necessity of Recognition of TRNC","Conclusion"],
       tr: ["Giriş","Kıbrıs Müzakere Süreci ve Egemen Eşit İki Devletin Varlığına Dayalı Çözüm","KKTC’nin Doğu Akdeniz’deki Önemi","KKTC’nin Tanınmasının Gerekliliği","Sonuç"],
@@ -31,10 +32,7 @@ const records = [
   {
     slug: "abdnin-cevrelemeye-calistigi-turkiye-rusya-ve-cin-isbirligi-yapmali",
     startPage: 2,
-    startContains: {
-      en: "What’s your evaluation of the US’s recent focus",
-      tr: "ABD’nin son dönemde Doğu Akdeniz’deki askeri ağırlığının artmasının sebebi nedir?",
-    },
+    autoStart: true,
     interview: true,
     figures: 2,
     captions: {
@@ -51,10 +49,7 @@ const records = [
   {
     slug: "yunanistandaki-abd-yiginagi-hem-turkiyeyi-hem-de-rusyayi-hedef-aliyor",
     startPage: 2,
-    startContains: {
-      en: "In the naval doctrine adopted by Russia in August",
-      tr: "Rusya’nın Ağustos ayında kabul ettiği deniz doktrininde",
-    },
+    autoStart: true,
     interview: true,
     figures: 2,
     captions: {
@@ -72,6 +67,7 @@ const records = [
     slug: "cinin-dogu-akdenizde-cozum-onerisi-kalkinmaci-baris-yaklasimi",
     startPage: 2,
     start: { en: "Introduction", tr: "Giriş" },
+    collapseLongHeadings: true,
     figures: 0,
   },
   {
@@ -79,8 +75,9 @@ const records = [
     startPage: 2,
     startContains: {
       en: "An Introduction to the Unique Geopolitics",
-      tr: "Adalar (Ege) Denizi ve Karaman Denizi",
+      tr: "Adalar (Ege) Denizi ve",
     },
+    collapseLongHeadings: true,
     figures: 1,
     captions: {
       en: ["World Maritime Trade Routes Density Map. (MarineTraffic, 2020)."],
@@ -93,12 +90,14 @@ const records = [
     start: { en: "Introduction" },
     startContains: { tr: "REFORM VE DIŞA AÇILMA POLITIKALARI" },
     startAsParagraph: { tr: true },
+    collapseLongHeadings: true,
     figures: 0,
   },
   {
     slug: "kusak-ve-yol-girisimi-bolgesellesme-ve-kuresellesme-icin-yeni-itici-guc",
     startPage: 1,
     startContains: { en: "THE BELT AND ROAD INITIATIVE", tr: "KUŞAK VE YOL GİRİŞİMİ" },
+    strictFixedHeadings: true,
     fixedHeadings: {
       en: ["How Does the BRI Move Towards Epochal Regionalization?","How Will the New Regionalization Promoted by the BRI Affect Globalization?","Can the BRI Provide Sustainable Public Goods?"],
       tr: ["KYG Çağsal Bölgeselleşmeye Doğru Nasıl İlerliyor?","KYG’nin Teşvik Ettiği Yeni Bölgeselleşme Küreselleşmeyi Nasıl Etkileyecek?","KYG Sürdürülebilir Kamusal Mallar Sağlayabilir Mi?"],
@@ -156,7 +155,7 @@ function isNoise(n){
 function fixedHeadingMatch(text,list=[]){
   const norm=s=>s.toLocaleLowerCase("en-US").replace(/[^\p{L}\p{N}]+/gu," ").trim();
   const t=norm(text);
-  return list.find(x=>t===norm(x)||norm(x).startsWith(t+" ")||t.startsWith(norm(x)+" "));
+  return list.find(x=>{const f=norm(x);return t===f||f.startsWith(t+" ")||f.includes(" "+t+" ")||f.endsWith(" "+t);});
 }
 function genericHeading(n){
   if(/^(Giriş|GİRİŞ|Introduction|INTRODUCTION|Sonuç|SONUÇ|Conclusion|CONCLUSION|Conclusions|Kaynakça|KAYNAKÇA|References|REFERENCES|Notlar|NOTLAR|Notes|NOTES|Teşekkür|TEŞEKKÜR|Acknowledg(?:e)?ments?)$/i.test(n.text)) return true;
@@ -176,7 +175,7 @@ function matchesStart(record,locale,text){
   return !!record.startContains?.[locale]&&text.includes(record.startContains[locale]);
 }
 function extractBlocks(pages,record,locale){
-  const blocks=[],captions=[]; let paragraph="",heading="",started=false,mode="body",captionTail=false;
+  const blocks=[],captions=[]; let paragraph="",heading="",started=!!record.autoStart,mode="body",captionTail=false;
   const flushP=()=>{const v=paragraph.replace(/\s+/g," ").trim();if(v.length>1)blocks.push({kind:"paragraph",text:v});paragraph="";};
   const flushH=()=>{const v=heading.replace(/\s+/g," ").trim();if(v)blocks.push({kind:"heading",text:v});heading="";};
   for(const page of pages.filter(p=>p.number>=record.startPage)){
@@ -189,11 +188,12 @@ function extractBlocks(pages,record,locale){
         continue;
       }
       const fixed=fixedHeadingMatch(n.text,record.fixedHeadings?.[locale]);
-      const h=fixed||genericHeading(n);
+      const fixedStyled=fixed&&(n.bold||n.font.size>=14.5);
+      const h=fixedStyled||(!record.strictFixedHeadings&&genericHeading(n));
       if(h){
         flushP();
-        const candidate=fixed||n.text;
-        heading=heading?joinText(heading,candidate):candidate;
+        const candidate=fixedStyled||n.text;
+        heading=heading?(heading===candidate?heading:joinText(heading,candidate)):candidate;
         if(/^(Kaynakça|KAYNAKÇA|References|REFERENCES)$/i.test(candidate))mode="references";
         else if(/^(Notlar|NOTLAR|Notes|NOTES)$/i.test(candidate))mode="notes";
         else if(/^Acknowledg|^Teşekkür/i.test(candidate))mode="ack";
@@ -230,6 +230,14 @@ function sectionsFrom(blocks,locale,record){
     for(const s of sections){
       if(s.title.includes("?")) out.push(s);
       else if(out.length) out[out.length-1].paragraphs.push(...s.paragraphs);
+    }
+    sections=out;
+  }
+  if(record.collapseLongHeadings){
+    const out=[];
+    for(const s of sections){
+      if(s.title.length>100&&out.length) out[out.length-1].paragraphs.push(...s.paragraphs);
+      else out.push(s);
     }
     sections=out;
   }
