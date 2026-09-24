@@ -17,7 +17,15 @@
       "givenName": null,
       "familyName": null,
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Department of History, Shanghai University",
+          "nameTr": "Tarih Bölümü, Şanghay Üniversitesi",
+          "nameEn": "Department of History, Shanghai University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
@@ -29,15 +37,15 @@
       "Belt and Road",
       "Turkey",
       "Middle East",
-      "globalization",
-      "geopolitics"
+      "Globalization",
+      "Geopolitics"
     ],
     "tr": [
       "Kuşak ve Yol",
       "Türkiye",
       "Ortadoğu",
-      "küreselleşme",
-      "jeopolitik"
+      "Küreselleşme",
+      "Jeopolitik"
     ]
   },
   "dates": {
