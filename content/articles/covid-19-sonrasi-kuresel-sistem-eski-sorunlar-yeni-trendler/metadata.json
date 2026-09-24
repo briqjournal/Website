@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Serdar Yurtçiçek",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Serdar",
+      "familyName": "Yurtçiçek",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "University of International Business and Economics (UIBE Beijing), International Politics",
+          "nameTr": "Uluslararası İşletme ve Ekonomi Üniversitesi (Pekin/Çin), Uluslararası Politikalar Bölümü",
+          "nameEn": "University of International Business and Economics (UIBE Beijing), International Politics",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

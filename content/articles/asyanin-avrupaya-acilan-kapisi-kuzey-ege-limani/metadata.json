@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Ersel Zafer Oral",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Dr. Ersel Zafer Oral",
+      "givenName": "Ersel Zafer",
+      "familyName": "Oral",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Margen Marine and Land Research Training Consultancy Services",
+          "nameTr": "Margen Deniz ve Kara Araştırmaları Eğitim Danışmanlık Hizmetleri",
+          "nameEn": "Margen Marine and Land Research Training Consultancy Services",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

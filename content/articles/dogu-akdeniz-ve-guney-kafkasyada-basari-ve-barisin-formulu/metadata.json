@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Mehmet Perinçek",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Dr. Mehmet Perinçek",
+      "givenName": "Mehmet",
+      "familyName": "Perinçek",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Institute of Asian and African Countries, Moscow State University",
+          "nameTr": "Moskova Devlet Üniversitesi, Asya ve Afrika Ülkeleri Enstitüsü",
+          "nameEn": "Institute of Asian and African Countries, Moscow State University",
+          "country": "Russia",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

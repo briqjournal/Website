@@ -13,18 +13,34 @@
   },
   "authors": [
     {
-      "displayName": "Cheng Enfu",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Prof. Cheng Enfu",
+      "givenName": "Enfu",
+      "familyName": "Cheng",
+      "orcid": "0000-0002-9236-1916",
+      "affiliations": [
+        {
+          "name": "Chinese Academy of Social Sciences",
+          "nameTr": "Çin Sosyal Bilimler Akademisi",
+          "nameEn": "Chinese Academy of Social Sciences",
+          "country": "China",
+          "ror": null
+        }
+      ]
     },
     {
-      "displayName": "Li Jing",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Dr. Li Jing",
+      "givenName": "Jing",
+      "familyName": "Li",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Chinese Academy of Social Sciences",
+          "nameTr": "Çin Sosyal Bilimler Akademisi",
+          "nameEn": "Chinese Academy of Social Sciences",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

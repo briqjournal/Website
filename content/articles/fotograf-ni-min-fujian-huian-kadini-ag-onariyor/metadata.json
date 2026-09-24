@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Ni Min",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Min",
+      "familyName": "Ni",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Photography Artist",
+          "nameTr": "Fotoğraf Sanatçısı",
+          "nameEn": "Photography Artist",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
