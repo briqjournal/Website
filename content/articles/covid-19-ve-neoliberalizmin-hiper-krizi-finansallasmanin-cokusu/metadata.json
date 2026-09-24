@@ -13,18 +13,34 @@
   },
   "authors": [
     {
-      "displayName": "Luis Kato Maldonado",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Luis Kato Maldonado",
+      "givenName": "Luis",
+      "familyName": "Kato Maldonado",
+      "orcid": "0000-0003-1257-9382",
+      "affiliations": [
+        {
+          "name": "Metropolitan Autonomous University - Azcapotzalco (UAM-A), Department of Economy",
+          "nameTr": "Metropolitan Autonomous University - Azcapotzalco (UAM-A), Ekonomi Bölümü",
+          "nameEn": "Metropolitan Autonomous University - Azcapotzalco (UAM-A), Department of Economy",
+          "country": "Mexico",
+          "ror": null
+        }
+      ]
     },
     {
-      "displayName": "Guadalupe Huerta Moreno",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Guadalupe Huerta Moreno",
+      "givenName": "Guadalupe",
+      "familyName": "Huerta Moreno",
+      "orcid": "0000-0003-0854-3686",
+      "affiliations": [
+        {
+          "name": "Metropolitan Autonomous University - Azcapotzalco (UAM-A), Department of Business Administration",
+          "nameTr": "Metropolitan Autonomous University - Azcapotzalco (UAM-A), İşletme Yönetimi Bölümü",
+          "nameEn": "Metropolitan Autonomous University - Azcapotzalco (UAM-A), Department of Business Administration",
+          "country": "Mexico",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

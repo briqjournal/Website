@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Cankut Bagana",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Cankut",
+      "familyName": "Bagana",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Onur Air Board of Directors",
+          "nameTr": "Onur Air Yönetim Kurulu",
+          "nameEn": "Onur Air Board of Directors",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

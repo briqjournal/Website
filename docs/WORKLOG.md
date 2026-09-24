@@ -6,7 +6,7 @@ Keep this file short. It is a recovery checkpoint for unfinished work, not a pro
 
 **Status:** in progress
 
-- Repository checkpoint: 78 legacy `en-archive.json` files remain; `current.json` and `saudi-en.json` are absent.
+- Repository checkpoint: 72 legacy `en-archive.json` files remain; `current.json` and `saudi-en.json` are absent.
 - Completed unit: `v06-i01`. All 15 records have validated canonical EN/TR pairs; the 14 legacy `en-archive.json` files are retired, and the visual-only Kızılçullu record remains explicitly empty.
 - Completed unit: `v05-i04`. All 14 records have validated canonical EN/TR pairs; the 12 applicable legacy `en-archive.json` files are retired, and the poem, photograph, painting, and cartoon records preserve their published non-standard structures and verified visual assets.
 - Completed unit: `v05-i03`. All 13 records have validated canonical EN/TR pairs; the 12 applicable legacy `en-archive.json` files are retired, and verified production figure assets are preserved.

@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Emin Gürses",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Prof. Dr. Emin Gürses",
+      "givenName": "Emin",
+      "familyName": "Gürses",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Sakarya University",
+          "nameTr": "Sakarya Üniversitesi ve Yeditepe Üniversitesi, Uluslararası İlişkiler Bölümü",
+          "nameEn": "Department of International Relations, Sakarya University and Yeditepe University",
+          "country": "Türkiye",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

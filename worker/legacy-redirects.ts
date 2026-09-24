@@ -2,6 +2,20 @@
 // Handled at Cloudflare Worker edge in worker/index.ts
 
 export const LEGACY_REDIRECTS: Record<string, string> = {
+  '/en/the-first-book-about-ataturk-ever-published-in-iran': '/en/articles/history-the-first-book-about-ataturk-ever-published-in-iran',
+  '/en/makale/nato-and-the-wider-international-territory': '/en/articles/nato-and-the-wider-international-territory',
+  '/cin-abd-rekabeti-golgesinde-kusak-veyol-girisimi': '/tr/makaleler/cin-abd-rekabeti-golgesinde-kusak-ve-yol-girisimi',
+  '/dilek-uyar-fotograf-sanatcisi': '/tr/makaleler/dilek-uyar-fotograf-sanatcisi',
+  '/en/dilek-uyar-photography-artist': '/en/articles/dilek-uyar-photographic-artist',
+  '/briq_turkce-1-sayi': '/tr/arsiv/cilt-1-sayi-1',
+  '/en/copyright-lisence-terms': '/en/authors/copyright-terms-and-licensing',
+  '/en/evaluation-process-peer-reviewed-submissions': '/en/authors/evaluation-process',
+  '/en/principles-of-publication': '/en/journal/principles',
+  '/en/principles-publication': '/en/journal/principles',
+  '/en/submission-guidelines': '/en/authors/submission-guidelines',
+  '/en/call-book-reviews': '/en/calls-for-papers/kitap-incelemesi',
+  '/en/call-for-book-reviews': '/en/calls-for-papers/kitap-incelemesi',
+  '/en/kitap-inceleme': '/en/calls-for-papers/kitap-incelemesi',
   '/1-uluslararasi-kusak-ve-yol-inisiyatifi-turkiye-sempozyumu-turkiye-dijital-ipek-yolunun-oncusu': '/tr/makaleler/1-uluslararasi-kusak-ve-yol-inisiyatifi-turkiye-sempozyumu-turkiye-dijital-ipek-yolunun-oncusu',
   '/1920-1930lardaki-cin-gazetelerinde-bir-rol-model-olarak-turkiye': '/tr/makaleler/1920-1930lardaki-cin-gazetelerinde-bir-rol-model-olarak-turkiye',
   '/21-yuzyilda-yeni-ipek-yolunu-kurmak-cin-turk-perspektifinden-kusak-ve-yol-girisimi': '/tr/makaleler/21-yuzyilda-yeni-ipek-yolunu-kurmak-cin-turk-perspektifinden-kusak-ve-yol-girisimi',

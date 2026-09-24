@@ -13,18 +13,34 @@
   },
   "authors": [
     {
-      "displayName": "Assadollah Athari",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Dr. Öğr. Üyesi Assadollah Athari",
+      "givenName": "Assadollah",
+      "familyName": "Athari",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Department of Political Science, Islamic Azad University",
+          "nameTr": "İslami Azad Üniversitesi, Siyaset Bilimi Bölümü",
+          "nameEn": "Department of Political Science, Islamic Azad University",
+          "country": "Iran",
+          "ror": null
+        }
+      ]
     },
     {
-      "displayName": "Ehsan Ejazi",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Ehsan Ejazi",
+      "givenName": "Ehsan",
+      "familyName": "Ejazi",
+      "orcid": "0000-0003-3686-1913",
+      "affiliations": [
+        {
+          "name": "Department of International Relations, University of Guilan",
+          "nameTr": "Gilan Üniversitesi, Uluslararası İlişkiler Bölümü",
+          "nameEn": "Department of International Relations, University of Guilan",
+          "country": "Iran",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

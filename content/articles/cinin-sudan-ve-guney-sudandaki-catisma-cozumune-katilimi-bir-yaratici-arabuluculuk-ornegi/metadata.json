@@ -14,17 +14,33 @@
   "authors": [
     {
       "displayName": "Hend ElMahly Mahhoud Sultan",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Hend ElMahly Mahhoud",
+      "familyName": "Sultan",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Shanghai International Studies University",
+          "nameTr": "Şanghay Uluslararası Çalışmalar Üniversitesi Ortadoğu Enstitüsü",
+          "nameEn": "Middle East Studies Institute, Shanghai International Studies University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     },
     {
-      "displayName": "Degang Sun",
-      "givenName": null,
-      "familyName": null,
+      "displayName": "Prof. Dr. Degang Sun",
+      "givenName": "Degang",
+      "familyName": "Sun",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Fudan University",
+          "nameTr": "Şanghay Fudan Üniversitesi Uluslararası Çalışmalar Enstitüsü",
+          "nameEn": "Institute of International Studies, Fudan University",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Alexander Dugin",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Dr. Alexander Dugin",
+      "givenName": "Alexander",
+      "familyName": "Dugin",
+      "orcid": "0000-0001-7611-5152",
+      "affiliations": [
+        {
+          "name": "International Eurasian Movement",
+          "nameTr": "Uluslararası Avrasya Hareketi",
+          "nameEn": "International Eurasian Movement",
+          "country": "Russia",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

@@ -620,6 +620,18 @@ test("uses English article slugs and redirects legacy Turkish-slug English URLs"
   assert.equal(new URL(misplacedTurkishArticle.headers.get("location")).pathname, `/tr/makaleler/${slug}`);
   assert.ok([307, 308].includes(misplacedTurkishPdf.status));
   assert.equal(new URL(misplacedTurkishPdf.headers.get("location")).pathname, `/tr/makaleler/${slug}/pdf`);
+
+  const bareMisplacedEnArticle = await renderPath(`/tr/${englishSlug}`);
+  assert.ok([307, 308].includes(bareMisplacedEnArticle.status));
+  assert.equal(new URL(bareMisplacedEnArticle.headers.get("location")).pathname, `/en/articles/${englishSlug}`);
+});
+
+test("redirects legacy user author profile URLs to canonical author routes", async () => {
+  const [trUser] = await Promise.all([
+    renderPath("/tr/user/prof-dr-cuneyt-akalin"),
+  ]);
+  assert.ok([301, 307, 308].includes(trUser.status));
+  assert.equal(new URL(trUser.headers.get("location")).pathname, "/tr/yazar/prof-dr-cuneyt-akalin");
 });
 
 test("renders every current-issue contribution in the bilingual HTML article platform", async () => {
