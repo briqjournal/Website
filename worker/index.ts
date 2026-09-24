@@ -130,16 +130,7 @@ function handleLegacyRedirect(url: URL): Response | null {
   }
 
   // 2. Direct page redirect from LEGACY_REDIRECTS
-  let targetPath =
-    LEGACY_REDIRECTS[rawPath] ||
-    LEGACY_REDIRECTS[decodedPath] ||
-    LEGACY_REDIRECTS["/en" + rawPath] ||
-    LEGACY_REDIRECTS["/en" + decodedPath];
-
-  if (!targetPath && rawPath.startsWith("/tr/")) {
-    const withoutTr = rawPath.slice(3); // e.g. "/the-formula-..."
-    targetPath = LEGACY_REDIRECTS["/en" + withoutTr];
-  }
+  let targetPath = LEGACY_REDIRECTS[rawPath] || LEGACY_REDIRECTS[decodedPath];
 
   // 3. Dynamic patterns (author, issue, taxonomy, calls, archive)
   if (!targetPath) {
