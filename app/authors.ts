@@ -477,11 +477,60 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     biographyTr: "Şair Hüseyin Haydar, 1956 yılında Trabzon'da doğdu. Yüksek öğrenimini ekonomi ve maliye üzerine yaptı. Yazarlar ve Çevirmenler Kooperatifi YAZKO’da Edebiyat ve Çeviri dergilerinde yazı kurulu üyeliği ve teknik yönetmenlik yaptı. İlk şiir kitabı Acı Türkücü ile 1981 Akademi Şiir Birincilik Ödülünü kazandı. Daha sonra yayımlanan kitaplarıyla TROYA Şiir Ödülü (2012), Ahmet Necdet Şiir Ödülü (2012), Yunus Nadi Şiir Ödülü (2012) ve Enver Gökçe Şiir Ödülü (2013) gibi pek çok ödül kazandı. Ulusal Kanal Yayın Kurulu üyeliği ve görsel yönetmenliği görevlerini yürüttü, Türkiye Yazarlar Sendikası (TYS) Yönetim Kurulu üyeliği yaptı. Ulusal Kanal’da Edebiyat Cephesi programını hazırlayıp sundu. Vatan Partisi Merkez Karar Kurulu ve Ulusal Bilim Strateji Merkezi (UBSMER) üyesidir. Şiirlerini Aydınlık gazetesindeki Şairin Emeği köşesinde yayımlamaktadır.",
     biographyEn: "Poet Hüseyin Haydar was born in 1956 in Trabzon. He studied economics and finance. He worked as an editorial board member and technical director for YAZKO's Literature and Translation magazines. His first poetry collection, Acı Türkücü, won the 1981 Academy Poetry First Prize. He received numerous awards for his books: TROYA Poetry Award (2012), Ahmet Necdet Poetry Award (2012), Yunus Nadi Poetry Award (2012), and Enver Gökçe Poetry Award (2013). He served on the Ulusal Kanal Broadcasting Board and the Writers' Syndicate of Turkey (TYS) Board. He presented the program Literature Front on Ulusal Kanal. He is a member of the Patriotic Party Central Decision Board and the National Science Strategy Center (UBSMER). He publishes poems in his column Poet's Toil in Aydınlık newspaper.",
   },
+  "Hend ElMahly Mahmoud Sultan": {
+    tr: "Kahire Üniversitesi, Ekonomi ve Siyaset Bilimi Fakültesi",
+    en: "Faculty of Economics and Political Science, Cairo University",
+    biographyTr: "Hend ElMahly Mahmoud Sultan, Şanghay Uluslararası Çalışmalar Üniversitesi Ortadoğu Araştırmaları Enstitüsü'nde doktora adayı ve Kahire Üniversitesi Ekonomi ve Siyaset Bilimi Fakültesi'nde asistan öğretim görevlisidir. Araştırmaları Çin-Afrika ilişkileri, Çin'in Afrika Boynuzu'ndaki barış misyonları ve Körfez güvenliğine odaklanmaktadır. Çinceden Arapçaya altı kitap çevirip yayımlamıştır.",
+    biographyEn: "Hend ElMahly Mahmoud Sultan is a Ph.D. candidate at the Middle East Studies Institute of Shanghai International Studies University and an Assistant Lecturer at the Faculty of Economics and Political Science, Cairo University. Her research focuses on China-Africa relations, China's peace mission in the Horn of Africa, and Gulf security. She has translated and published six books from Chinese into Arabic.",
+  },
+  "Sun Degang": {
+    tr: "Fudan Üniversitesi, Uluslararası Çalışmalar Enstitüsü",
+    en: "Institute of International Studies, Fudan University",
+    orcids: ["0009-0003-3418-8558"],
+    institutionUrl: "https://www.fudan.edu.cn/en/",
+    appointmentTermTr: "2019–Günümüz",
+    appointmentTermEn: "2019–Present",
+    biographyTr: "Prof. Dr. Sun Degang, Şanghay Fudan Üniversitesi Uluslararası Çalışmalar Enstitüsü'nde Siyaset Bilimi profesörü ve Asian Journal of Middle Eastern and Islamic Studies baş editörüdür. Daha önce Şanghay Uluslararası Çalışmalar Üniversitesi Ortadoğu Araştırmaları Enstitüsü Müdür Yardımcılığı görevinde bulunmuştur. Harvard Üniversitesi Ortadoğu Araştırmaları Merkezi'nde, Oxford Üniversitesi St. Antony's College'da ve Denver Üniversitesi'nde misafir araştırmacı olarak bulunmuştur. Araştırma alanları Ortadoğu siyaseti, uluslararası ilişkiler, büyük güçlerin Ortadoğu stratejileri ve Çin'in Ortadoğu diplomasisidir.",
+    biographyEn: "Prof. Dr. Degang Sun is Professor of Political Science at the Institute of International Studies, Fudan University, and Editor-in-Chief of Asian Journal of Middle Eastern and Islamic Studies. He previously served as Deputy Director of the Middle East Studies Institute at Shanghai International Studies University. He was a visiting scholar at Harvard University's Center for Middle Eastern Studies, a Senior Associate Member at St Antony's College, Oxford University, and a visiting researcher at Denver University. His research focuses on Middle Eastern politics, international relations, great power strategies in the Middle East, and China's Middle East diplomacy.",
+  },
+  "Ebru Şahin": {
+    tr: "Dokuz Eylül Üniversitesi · BRIQ Editörü",
+    en: "Dokuz Eylül University · BRIQ Editor",
+    appointmentTermTr: "2019–Günümüz",
+    appointmentTermEn: "2019–Present",
+    biographyTr: "Ebru Şahin, Ankara Üniversitesi Siyasal Bilgiler Fakültesi Uluslararası İlişkiler Bölümü’nden 2015 yılında mezun olmuştur. 2019 yılında Aydın Adnan Menderes Üniversitesi Sosyal Bilimler Enstitüsü Uluslararası İlişkiler Anabilim Dalı’nda “Çin’in Küresel Güç Olma Sürecinde Uluslararası İşbirliklerinin Rolü” başlıklı teziyle yüksek lisansını tamamlamıştır. BRIQ Yazıişleri Müdürlüğü ve editörlüğü görevlerini yürütmüştür.",
+    biographyEn: "Ebru Şahin graduated from Ankara University's Faculty of Political Science, Department of International Relations in 2015. In 2019, she completed her master's degree in International Relations at Aydın Adnan Menderes University with a thesis entitled 'The Role of International Cooperation in China's Rise As a Global Power'. She has served as managing editor and editor for BRIQ.",
+  },
+  "Emin Gürses": {
+    tr: "Sakarya Üniversitesi ve Yeditepe Üniversitesi, Uluslararası İlişkiler Bölümü",
+    en: "Department of International Relations, Sakarya University and Yeditepe University",
+    institutionUrl: "https://www.sakarya.edu.tr/",
+    appointmentTermTr: "2019–Günümüz",
+    appointmentTermEn: "2019–Present",
+    biographyTr: "Prof. Dr. Emin Gürses, Marmara Üniversitesi'ni tamamladıktan sonra Londra Üniversitesi'nde (SOAS, Birkbeck College, LSE) ve Boğaziçi Üniversitesi'nde siyaset bilimi, gelişme ekonomisi ve uluslararası ilişkiler alanlarında yüksek lisans ve doktora öğrenimi gördü. İstanbul Üniversitesi SBF'de doktora dersleri veren Gürses, Sakarya Üniversitesi Uluslararası İlişkiler Bölümü ve Yeditepe Üniversitesi'nde öğretim üyeliği yapmaktadır. Milliyetçi Hareketler ve Uluslararası Sistem, Ayrılıkçı Terörün Anatomisi, İnsan Hakları Diplomasisi, Yeni Ortadoğu Haritası gibi çok sayıda kitabın yazarıdır.",
+    biographyEn: "Prof. Dr. Emin Gürses completed his B.Sc. at Marmara University, followed by postgraduate studies in politics, economic development, and international relations at the University of London (SOAS, Birkbeck, LSE) and Boğaziçi University (Ph.D.). He has taught at Istanbul University, Sakarya University, and Yeditepe University. He is the author of numerous books including Nationalist Movements and the International System, Anatomy of Separatist Terror, Human Rights Diplomacy, and New Middle Eastern Map.",
+  },
+  "Cem Gürdeniz": {
+    tr: "Emekli Tümamiral · Koç Üniversitesi Denizcilik Forumu (KUDENFOR) Kurucu Direktörü",
+    en: "Retired Rear Admiral (RADM) · Founding Director of Koç University Maritime Forum",
+    biographyTr: "Emekli Tümamiral Cem Gürdeniz, 1979 yılında Deniz Harp Okulu'ndan mezun oldu. ABD Deniz Kuvvetleri Yüksek Lisans Okulu'nda eğitim gördü ve Brüksel Serbest Üniversitesi'nde (ULB) Uluslararası Politika yüksek lisansı yaptı. Deniz Kuvvetleri Komutanlığı'nda Strateji Şube Müdürlüğü, Plan Prensipler Başkanlığı, Çıkarma Gemileri Komutanlığı ve Mayın Filosu Komutanlığı görevlerinde bulundu. 'Mavi Vatan' kavramının kuramcılarındandır. Cumhuriyet Donanması, Hedefteki Donanma, Mavi Vatan Yazıları gibi çok sayıda eserin yazarı olup Koç Üniversitesi Denizcilik Forumu (KUDENFOR) Kurucu Direktörüdür. Aydınlık gazetesinde köşe yazarlığı yapmaktadır.",
+    biographyEn: "Retired Rear Admiral Cem Gürdeniz graduated from the Turkish Naval Academy in 1979. He completed postgraduate studies at the US Naval Postgraduate School and earned a master's degree in International Politics from the Université Libre de Bruxelles (ULB). He served in senior roles at the Turkish Naval Forces Headquarters, including Head of Strategy, Head of Plans and Policy, and Commander of the Mine Fleet. He is the conceptualizer of the 'Blue Homeland' (Mavi Vatan) maritime doctrine, author of numerous books on maritime strategy, and Founding Director of the Koç University Maritime Forum (KUDENFOR).",
+  },
+  "Gong Jianhua": {
+    tr: "Şanghay Üniversitesi, Hukuk Fakültesi",
+    en: "Law School, Shanghai University",
+    email: "gongjianhuajin@163.com",
+    institutionUrl: "https://en.shu.edu.cn/",
+    biographyTr: "Gong Jianhua, Şanghay Üniversitesi Hukuk Fakültesi'nde Araştırma Görevlisi ve Şanghay Belediyesi bünyesinde Psikolojik Danışmandır. Teori ve Legal System and Society gibi dergilerde makaleleri yayımlanmıştır. Başlıca araştırma alanları ideolojik ve siyasi eğitim ile kamuoyu araştırmalarıdır.",
+    biographyEn: "Gong Jianhua is a Research Assistant at Shanghai University’s Law School and a Psychological Consultant for the Shanghai Municipality. Her articles have appeared in journals including Teori (Turkey) and Legal System and Society (China). She specializes in ideological and political education and public opinion research.",
+  },
 };
 
 const displayCorrections: Record<string, string> = {
   "Barış Adıbellİ": "Barış Adıbelli",
   "Mevlânâ Celâleddİn Rûmî": "Mevlânâ Celâleddin Rûmî",
+  "Degang Sun": "Sun Degang",
+  "Hend ElMahly Mahhoud Sultan": "Hend ElMahly Mahmoud Sultan",
 };
 
 function withoutAcademicTitle(value: string) {

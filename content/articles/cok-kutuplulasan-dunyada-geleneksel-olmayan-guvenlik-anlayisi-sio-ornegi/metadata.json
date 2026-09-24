@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Ebru Şahin",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Ebru",
+      "familyName": "Şahin",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Dokuz Eylül University",
+          "nameTr": "Dokuz Eylül Üniversitesi, Hukuk Fakültesi",
+          "nameEn": "Faculty of Law, Dokuz Eylül University",
+          "country": "Türkiye",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

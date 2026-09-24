@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Cem Gürdeniz",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Cem",
+      "familyName": "Gürdeniz",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Koç University Maritime Forum (KUDENFOR)",
+          "nameTr": "Koç Üniversitesi Denizcilik Forumu (KUDENFOR)",
+          "nameEn": "Koç University Maritime Forum (KUDENFOR)",
+          "country": "Türkiye",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
