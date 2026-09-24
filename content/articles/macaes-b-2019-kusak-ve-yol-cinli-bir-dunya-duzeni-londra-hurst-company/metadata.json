@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Victor Manuel Isidro Luna",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "givenName": "Victor Manuel",
+      "familyName": "Isidro Luna",
+      "orcid": "0000-0003-1571-9387",
+      "affiliations": [
+        {
+          "name": "School of Economics, National Autonomous University of Mexico",
+          "nameTr": "Meksika Ulusal Özerk Üniversitesi, Ekonomi Fakültesi",
+          "nameEn": "School of Economics, National Autonomous University of Mexico",
+          "country": "Mexico",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

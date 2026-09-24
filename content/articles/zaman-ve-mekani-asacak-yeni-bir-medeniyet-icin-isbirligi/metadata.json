@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Xi Jinping",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Jinping",
+      "familyName": "Xi",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "President of the People's Republic of China",
+          "nameTr": "Çin Halk Cumhuriyeti Cumhurbaşkanı",
+          "nameEn": "President of the People's Republic of China",
+          "country": "China",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
