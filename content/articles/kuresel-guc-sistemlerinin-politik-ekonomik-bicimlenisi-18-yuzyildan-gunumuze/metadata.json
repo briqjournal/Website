@@ -13,11 +13,19 @@
   },
   "authors": [
     {
-      "displayName": "Ufuk Tutan",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "displayName": "Prof. Dr. Ufuk Tutan",
+      "givenName": "Ufuk",
+      "familyName": "Tutan",
+      "orcid": "0000-0002-8492-1979",
+      "affiliations": [
+        {
+          "name": "Antalya Bilim University",
+          "nameTr": "Antalya Bilim Üniversitesi",
+          "nameEn": "Antalya Bilim University",
+          "country": "Türkiye",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
