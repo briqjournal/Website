@@ -4,5 +4,11 @@
   "footnotes": [],
   "references": [],
   "acknowledgements": "",
-  "figures": []
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/sessiz-isik/figure-01.jpg",
+      "caption": "Sessiz Işık"
+    }
+  ]
 }
