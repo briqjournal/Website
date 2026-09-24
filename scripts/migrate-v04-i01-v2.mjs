@@ -90,8 +90,9 @@ const records = [
   {
     slug: "dogu-akdenizde-cin-varligi-suriye-ornegi",
     startPage: 2,
-    start: { en: "Introduction", tr: "Giriş" },
-    startAlternatives: { tr: ["GİRİŞ","Giriş","Giriş"] },
+    start: { en: "Introduction" },
+    startContains: { tr: "REFORM VE DIŞA AÇILMA POLITIKALARI" },
+    startAsParagraph: { tr: true },
     figures: 0,
   },
   {
@@ -183,7 +184,7 @@ function extractBlocks(pages,record,locale){
       if(isNoise(n)) continue;
       if(captionTail&&n.font.size<=18){captions[captions.length-1]=joinText(captions[captions.length-1],n.text);captionTail=false;continue;}
       if(isCaptionStart(n.text)){flushP();captions.push(n.text);captionTail=true;continue;}
-      if(!started){if(matchesStart(record,locale,n.text)) started=true;else continue;}
+      if(!started){if(matchesStart(record,locale,n.text)){started=true;if(record.startAsParagraph?.[locale]){paragraph=n.text;continue;}}else continue;}
       if(/^(ÖZ|ABSTRACT|SUMMARY|ANAHTAR KELİMELER|KEYWORDS)$/iu.test(n.text)){
         continue;
       }
