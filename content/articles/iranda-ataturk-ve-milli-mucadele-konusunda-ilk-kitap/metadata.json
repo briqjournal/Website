@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Mesud Sadrmohammadi",
-      "givenName": null,
-      "familyName": null,
+      "givenName": "Mesud",
+      "familyName": "Sadrmohammadi",
       "orcid": null,
-      "affiliations": []
+      "affiliations": [
+        {
+          "name": "Department of History, Hacettepe University",
+          "nameTr": "Hacettepe Üniversitesi, Tarih Bölümü",
+          "nameEn": "Department of History, Hacettepe University",
+          "country": "Turkey",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {

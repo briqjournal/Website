@@ -14,10 +14,18 @@
   "authors": [
     {
       "displayName": "Serhat Latifoğlu",
-      "givenName": null,
-      "familyName": null,
-      "orcid": null,
-      "affiliations": []
+      "givenName": "Serhat",
+      "familyName": "Latifoğlu",
+      "orcid": "0009-0000-6214-7786",
+      "affiliations": [
+        {
+          "name": "Hedge Fund Manager, Versum Wealth",
+          "nameTr": "Serbest Fon Yöneticisi, Versum Wealth",
+          "nameEn": "Hedge Fund Manager, Versum Wealth",
+          "country": "United Kingdom",
+          "ror": null
+        }
+      ]
     }
   ],
   "abstract": {
