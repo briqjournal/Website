@@ -287,7 +287,8 @@ function refsFrom(blocks){return blocks.filter(b=>b.kind==="paragraph"&&b.text.l
 function extractImages(pdf,startPage,count,outDir,preferLargest=false){
   rmSync(outDir,{recursive:true,force:true});if(!count)return[];
   const temp=mkdtempSync(join(tmpdir(),"v04i01-img-"));
-  sh("pdfimages",["-f",String(startPage),"-all",pdf,join(temp,"img")],{stdio:"ignore"});
+  const imageArgs=["-f",String(startPage)]; if(preferLargest) imageArgs.push("-l",String(startPage)); imageArgs.push("-all",pdf,join(temp,"img"));
+  sh("pdfimages",imageArgs,{stdio:"ignore"});
   let candidates=readdirSync(temp).filter(n=>[".jpg",".jpeg",".png"].includes(extname(n).toLowerCase())).sort().map(name=>{
     const path=join(temp,name);let w=0,h=0;try{[w,h]=sh("identify",["-format","%w %h",path]).trim().split(/\s+/).map(Number);}catch{}
     return {name,path,w,h,size:statSync(path).size,area:w*h};
