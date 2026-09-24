@@ -292,7 +292,10 @@ function extractImages(pdf,startPage,count,outDir,preferLargest=false){
     const path=join(temp,name);let w=0,h=0;try{[w,h]=sh("identify",["-format","%w %h",path]).trim().split(/\s+/).map(Number);}catch{}
     return {name,path,w,h,size:statSync(path).size,area:w*h};
   }).filter(x=>x.w>=360&&x.h>=220&&x.size>=18000);
-  if(preferLargest) candidates=candidates.sort((a,b)=>b.area-a.area||b.size-a.size);
+  if(preferLargest) {
+    candidates=candidates.sort((a,b)=>b.area-a.area||b.size-a.size);
+    console.log("VISUAL_CANDIDATES", JSON.stringify(candidates.map(x=>({name:x.name,w:x.w,h:x.h,size:x.size,area:x.area,sha256:sh("sha256sum",[x.path]).split(/\\s+/)[0]}))));
+  }
   if(!candidates.length){rmSync(temp,{recursive:true,force:true});return[];}
   mkdirSync(outDir,{recursive:true});
   const picked=candidates.slice(0,count);
@@ -302,7 +305,7 @@ function extractImages(pdf,startPage,count,outDir,preferLargest=false){
 function findIssuePage(probes){
   const raw=sh("pdftotext",["-layout",issuePdfTr,"-"]);
   const pages=raw.split("\f");
-  for(let i=pages.length-1;i>=0;i--)if(probes.some(p=>pages[i].includes(p)))return i+1;
+  for(let i=pages.length-1;i>=0;i--)if(probes.some(p=>pages[i].includes(p))){console.log("VISUAL_PAGE",JSON.stringify({probes,page:i+1}));return i+1;}
   throw new Error("Could not locate visual page: "+probes.join(" | "));
 }
 
