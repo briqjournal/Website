@@ -26,8 +26,8 @@ jobs:
       - name: Download official locale issue PDFs
         run: |
           mkdir -p tmp/v03-i04-source
-          curl -L --fail --retry 4 --retry-delay 3 'https://briqjournal.com/sites/default/files/dergi-sayilari/2022-09/C3S4_ENG_YK.pdf' -o tmp/v03-i04-source/issue-en.pdf
-          curl -L --fail --retry 4 --retry-delay 3 'https://briqjournal.com/sites/default/files/dergi-sayilari/2022-10/BRIQ_C3S4_TR_FINAL_YEN%C4%B0.pdf' -o tmp/v03-i04-source/issue-tr.pdf
+          curl -L --fail --retry 4 --retry-delay 3 -A 'BRIQ-fulltext-fidelity-audit/1.0' 'https://www.briqjournal.com/sites/default/files/dergi-sayilari/2022-09/C3S4_ENG_YK.pdf' -o tmp/v03-i04-source/issue-en.pdf
+          curl -L --fail --retry 4 --retry-delay 3 -A 'BRIQ-fulltext-fidelity-audit/1.0' 'https://www.briqjournal.com/sites/default/files/dergi-sayilari/2022-10/BRIQ_C3S4_TR_FINAL_YEN%C4%B0.pdf' -o tmp/v03-i04-source/issue-tr.pdf
       - name: Generate canonical candidates
         run: node scripts/migrate-v03-i04.mjs
       - name: Commit generated migration output

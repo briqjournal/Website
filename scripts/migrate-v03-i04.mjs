@@ -118,7 +118,7 @@ function sh(cmd,args,opts={}) {
 }
 function download(url,dest) {
   mkdirSync(resolve(dest,".."),{recursive:true});
-  execFileSync("curl",["-L","--fail","--retry","4","--retry-delay","2",url,"-o",dest],{stdio:"ignore"});
+  execFileSync("curl",["-L","--fail","--retry","4","--retry-delay","2","-A","BRIQ-fulltext-fidelity-audit/1.0",url,"-o",dest],{stdio:"ignore"});
 }
 function decodeEntities(v) {
   return v.replace(/<br\s*\/?\s*>/gi," ").replace(/<[^>]+>/g,"")
