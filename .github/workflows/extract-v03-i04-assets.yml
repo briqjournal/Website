@@ -8,16 +8,13 @@ on:
       - .github/workflows/extract-v03-i04-assets.yml
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   extract:
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Install PDF/image tools
         run: |
@@ -26,6 +23,7 @@ jobs:
 
       - name: Download verified official full-issue PDFs
         run: |
+          set -euo pipefail
           mkdir -p tmp/v03-i04-assets
           curl -L --fail --retry 4 --retry-delay 2 \
             'https://briqjournal.com/assets/archive/pdfs/issues/cilt-3-sayi-4-en.pdf' \
@@ -33,35 +31,32 @@ jobs:
           curl -L --fail --retry 4 --retry-delay 2 \
             'https://briqjournal.com/assets/archive/pdfs/issues/cilt-3-sayi-4-tr.pdf' \
             -o tmp/v03-i04-assets/tr.pdf
-          pdfinfo tmp/v03-i04-assets/en.pdf | grep '^Pages:'
-          pdfinfo tmp/v03-i04-assets/tr.pdf | grep '^Pages:'
+          test "$(pdfinfo tmp/v03-i04-assets/en.pdf | awk '/^Pages:/ {print $2}')" = "98"
+          test "$(pdfinfo tmp/v03-i04-assets/tr.pdf | awk '/^Pages:/ {print $2}')" = "97"
 
-      - name: Extract exact embedded production rasters
+      - name: Extract qualifying embedded production rasters
         shell: bash
         run: |
           set -euo pipefail
 
           extract_range() {
-            local locale="$1" pdf="$2" first="$3" last="$4" expected="$5" slug="$6"
-            local raw="tmp/v03-i04-assets/raw-${slug}-${locale}"
-            local out="public/assets/article-figures/${slug}"
-            rm -rf "$raw"
+            locale="$1"; pdf="$2"; first="$3"; last="$4"; slug="$5"
+            raw="tmp/v03-i04-assets/raw/${slug}/${locale}"
+            out="tmp/v03-i04-assets/export/${slug}/${locale}"
+            rm -rf "$raw" "$out"
             mkdir -p "$raw" "$out"
 
             pdfimages -f "$first" -l "$last" -all "$pdf" "$raw/img"
-
-            local list="$raw/candidates.tsv"
+            list="$out/candidates.tsv"
             : > "$list"
-            declare -A seen=()
 
+            declare -A seen=()
             for f in "$raw"/img-*; do
               [ -f "$f" ] || continue
-              local geom w h size hash num
               geom="$(identify -format '%w %h' "$f" 2>/dev/null || true)"
               [ -n "$geom" ] || continue
               read -r w h <<<"$geom"
               size="$(stat -c '%s' "$f")"
-              # Exclude logos, tiny decorations, masks and incidental UI graphics.
               if (( w < 300 || h < 180 || size < 10000 )); then
                 continue
               fi
@@ -69,104 +64,59 @@ jobs:
               [ -z "${seen[$hash]+x}" ] || continue
               seen[$hash]=1
               num="$(basename "$f" | sed -E 's/^img-([0-9]+).*/\1/')"
-              printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$num" "$w" "$h" "$size" "$hash" "$f" >> "$list"
+              ext="${f##*.}"
+              cp "$f" "$out/object-${num}.${ext}"
+              printf '%s\t%s\t%s\t%s\t%s\tobject-%s.%s\n' \
+                "$num" "$w" "$h" "$size" "$hash" "$num" "$ext" >> "$list"
             done
 
             sort -n -k1,1 -o "$list" "$list"
-            local count
-            count="$(wc -l < "$list" | tr -d ' ')"
-            echo "::group::${slug} ${locale}: ${count} candidates, expected ${expected}"
+            echo "::group::${slug} ${locale}"
             cat "$list"
             echo "::endgroup::"
-
-            # Bridge pass: copy qualifying exact embedded objects to an Actions artifact.
-            # Nothing is committed here; ChatGPT verifies the binaries before repository writes.
-            local export_dir="tmp/v03-i04-assets/export/${slug}/${locale}"
-            mkdir -p "$export_dir"
-            cp "$list" "$export_dir/candidates.tsv"
-            while IFS=
           }
 
           EN=tmp/v03-i04-assets/en.pdf
           TR=tmp/v03-i04-assets/tr.pdf
 
-          # Printed page ranges map to physical PDF pages with +2 in EN and +1 in TR.
-          extract_range en "$EN" 8 16 1 ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz
-          extract_range tr "$TR" 7 15 1 ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz
+          extract_range en "$EN" 8 16 ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz
+          extract_range tr "$TR" 7 15 ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz
 
-          extract_range en "$EN" 30 51 19 ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin
-          extract_range tr "$TR" 29 50 19 ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin
+          extract_range en "$EN" 30 51 ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin
+          extract_range tr "$TR" 29 50 ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin
 
-          extract_range en "$EN" 52 63 4 ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme
-          extract_range tr "$TR" 51 62 4 ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme
+          extract_range en "$EN" 52 63 ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme
+          extract_range tr "$TR" 51 62 ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme
 
-          extract_range en "$EN" 64 76 13 ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri
-          extract_range tr "$TR" 63 75 13 ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri
+          extract_range en "$EN" 64 76 ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri
+          extract_range tr "$TR" 63 75 ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri
 
-          extract_range en "$EN" 78 91 10 ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi
-          extract_range tr "$TR" 77 90 10 ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi
+          extract_range en "$EN" 78 91 ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi
+          extract_range tr "$TR" 77 90 ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi
 
-          extract_range en "$EN" 92 94 1 guc-zayifliktir
-          extract_range tr "$TR" 91 93 1 guc-zayifliktir
+          extract_range en "$EN" 92 94 guc-zayifliktir
+          extract_range tr "$TR" 91 93 guc-zayifliktir
 
-          extract_range en "$EN" 95 95 1 yangin-merdiveni
-          extract_range tr "$TR" 94 94 1 yangin-merdiveni
-          extract_range en "$EN" 96 96 1 simitci
-          extract_range tr "$TR" 95 95 1 simitci
-          extract_range en "$EN" 97 97 1 uygarligin-ipek-yolu
-          extract_range tr "$TR" 96 96 1 uygarligin-ipek-yolu
+          extract_range en "$EN" 95 95 yangin-merdiveni
+          extract_range tr "$TR" 94 94 yangin-merdiveni
 
-      - name: Upload extracted binary bridge artifact
+          extract_range en "$EN" 96 96 simitci
+          extract_range tr "$TR" 95 95 simitci
+
+          extract_range en "$EN" 97 97 uygarligin-ipek-yolu
+          extract_range tr "$TR" 96 96 uygarligin-ipek-yolu
+
+      - name: Upload binary bridge artifact
         uses: actions/upload-artifact@v4
         with:
-          name: v03-i04-extracted-production-rasters
+          name: v03-i04-binary-bridge
           path: |
-            tmp/v03-i04-assets/export
             tmp/v03-i04-assets/en.pdf
             tmp/v03-i04-assets/tr.pdf
+            tmp/v03-i04-assets/export
           if-no-files-found: error
           compression-level: 0
           retention-days: 1
 
-      - name: Verify bridge wrote no repository files
-        run: |
-          test -z "$(git status --porcelain --untracked-files=no)"
-\t' read -r num w h size hash f; do
-              [ -n "$f" ] || continue
-              ext="${f##*.}"
-              cp "$f" "$export_dir/object-${num}.${ext}"
-            done < "$list"
-          }
-
-          EN=tmp/v03-i04-assets/en.pdf
-          TR=tmp/v03-i04-assets/tr.pdf
-
-          # Printed page ranges map to physical PDF pages with +2 in EN and +1 in TR.
-          extract_range en "$EN" 8 16 1 ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz
-          extract_range tr "$TR" 7 15 1 ortak-mirasimiz-olan-gecmisi-kuresel-olcekte-ele-alip-bilimi-paylasmak-zorundayiz
-
-          extract_range en "$EN" 30 51 19 ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin
-          extract_range tr "$TR" 29 50 19 ipek-yolu-uzerindeki-magara-tapinaklarindaki-kuzey-wei-donemine-ait-budist-resim-kompozisyonlarinin
-
-          extract_range en "$EN" 52 63 4 ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme
-          extract_range tr "$TR" 51 62 4 ipek-yolu-cayir-guzergahi-cayir-ipek-yolu-milli-ekonomi-iletisim-ve-butunlesme
-
-          extract_range en "$EN" 64 76 13 ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri
-          extract_range tr "$TR" 63 75 13 ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri
-
-          extract_range en "$EN" 78 91 10 ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi
-          extract_range tr "$TR" 77 90 10 ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi
-
-          extract_range en "$EN" 92 94 1 guc-zayifliktir
-          extract_range tr "$TR" 91 93 1 guc-zayifliktir
-
-          extract_range en "$EN" 95 95 1 yangin-merdiveni
-          extract_range tr "$TR" 94 94 1 yangin-merdiveni
-          extract_range en "$EN" 96 96 1 simitci
-          extract_range tr "$TR" 95 95 1 simitci
-          extract_range en "$EN" 97 97 1 uygarligin-ipek-yolu
-          extract_range tr "$TR" 96 96 1 uygarligin-ipek-yolu
-
-      - name: Verify diagnostic pass wrote no repository files
-        run: |
-          test -z "$(git status --porcelain --untracked-files=no)"
+      - name: Confirm repository untouched
+        run: test -z "$(git status --porcelain --untracked-files=no)"
