@@ -35,6 +35,7 @@ yarn-error.log*
 
 # typescript
 next-env.d.ts
+*.tsbuildinfo
 /dist/
 /.wrangler/
 /.sites-runtime/
@@ -48,6 +49,4 @@ __pycache__/
 
 # generated compatibility aggregates; canonical sources live under /content
 /app/archive-data.json
-/app/article-fulltext-current.json
-/app/article-fulltext-en-archive.json
-/app/article-fulltext-saudi-en.json
+/app/article-fulltext-*.json
