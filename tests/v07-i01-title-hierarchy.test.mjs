@@ -25,7 +25,7 @@ test("Volume 7 Issue 1 keeps the crisis line as subtitle and solution line as ma
   assert.match(enPage, /const isVolumeSevenIssueOne = volume === 7 && issueNumber === 1;/);
   assert.match(trPage, /subtitleFirst=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne\}/);
   assert.match(enPage, /subtitleFirst=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne\}/);
-  assert.match(trPage, /subtitleScale75=\{isVolumeSevenIssueFour\}/);
-  assert.match(enPage, /subtitleScale75=\{isVolumeSevenIssueFour\}/);
-  assert.match(css, /h1\.issue-title-subtitle-first em \{[\s\S]*margin: 0 0 10px;\s*\}/);
+  assert.match(trPage, /subtitleScale75=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne\}/);
+  assert.match(enPage, /subtitleScale75=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne\}/);
+  assert.match(css, /h1\.issue-title-subtitle-first\.issue-title-subtitle-75 em \{[\s\S]*font-size: \.75em;/);
 });
