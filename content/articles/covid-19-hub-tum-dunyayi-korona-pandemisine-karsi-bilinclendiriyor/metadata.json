@@ -8,8 +8,8 @@
     "peerReviewed": false
   },
   "title": {
-    "en": "COVID-19 HUB Raises the Awareness of the Entire World Against the Corona Pandemic*",
-    "tr": "COVID-19 HUB, Tüm Dünyayı Korona Pandemisine Karşı Bilinçlendiriyor*"
+    "en": "COVID-19 HUB Raises the Awareness of the Entire World Against the Corona Pandemic",
+    "tr": "COVID-19 HUB, Tüm Dünyayı Korona Pandemisine Karşı Bilinçlendiriyor"
   },
   "authors": [
     {
@@ -96,5 +96,9 @@
       "role": "Interviewer",
       "orcid": null
     }
-  ]
+  ],
+  "publicationNote": {
+    "tr": "trdergisi.com’dan Deniz Renkveren tarafından yapılan bu röportaj, https://covid19.tabipacademy.com/2020/04/26/covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor/ adresinden alınmış ve Yunus Emre Enstitüsü Başkanlığı’nın onayıyla yayımlanmıştır.",
+    "en": "This interview (by Deniz Renkveren from trdergisi.com) was retrieved from https://covid19.tabipacademy.com/2020/04/28/covid-19-hub-raises-the-awareness-of-the-entire-world-against-corona-pandemic/ and published with the approval of the Yunus Emre Institute."
+  }
 }
