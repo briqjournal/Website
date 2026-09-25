@@ -25,8 +25,17 @@ export const volumeSevenIssueThreeSupplementary: readonly IssueSupplementaryCont
   { typeTr: "Afiş", typeEn: "Poster", author: "Olivio Martinez", titleTr: "Güney Afrika Halkının Mücadelesi ile Dayanışma Günü, 26 Haziran (1974)", titleEn: "Day of World Solidarity within the Struggle of the People of South Africa, June 26 (1974)", pages: "376", pdfPage: 129 },
 ];
 
+export const volumeSevenIssueFourSupplementary: readonly IssueSupplementaryContent[] = [
+  { typeTr: "Şiir", typeEn: "Poem", author: "Attilâ İlhan", titleTr: "Yalnızlığı Denemek", titleEn: "Trying Loneliness", pages: "501–502", pdfPage: 131 },
+  { typeTr: "Şiir", typeEn: "Poem", author: "Salah Abdel Sabour · Çeviren: Latif Bolat", authorEn: "Salah Abdel Sabour · Translated by Latif Bolat", titleTr: "Hüzün", titleEn: "Sorrow", pages: "503–504", pdfPage: 133 },
+  { typeTr: "Fotoğraf", typeEn: "Photograph", author: "Philippe Halsman", titleTr: "Dalí Atomicus (1948)", titleEn: "Dalí Atomicus (1948)", pages: "505", pdfPage: 135 },
+  { typeTr: "Resim", typeEn: "Painting", author: "Pablo Picasso", titleTr: "Saltimbanques Ailesi (1905)", titleEn: "Family of Saltimbanques (1905)", pages: "506", pdfPage: 136 },
+  { typeTr: "Karikatür", typeEn: "Cartoon", author: "Y. Çerepanov", titleTr: "Kendi Uçak Gemisini Denize Sürüyor (1979)", titleEn: "Launching His Own Aircraft Carrier (1979)", pages: "507", pdfPage: 137 },
+];
+
 export function archiveEditorialHref(volume: number, issue: number, locale: "tr" | "en") {
-  if (!archivedEditorials[`${volume}-${issue}`]) return undefined;
+  const hasEditorial = Boolean(archivedEditorials[`${volume}-${issue}`]) || (volume === 7 && issue === 4);
+  if (!hasEditorial) return undefined;
   return locale === "tr"
     ? `/tr/arsiv/cilt-${volume}-sayi-${issue}/sunus`
     : `/en/archive/volume-${volume}-issue-${issue}/editorial`;
@@ -37,5 +46,6 @@ export function issueSupplementaryContents(volume: number, issue: number) {
   if (issue === 1) return volumeSevenIssueOneSupplementary;
   if (issue === 2) return volumeSevenIssueTwoSupplementary;
   if (issue === 3) return volumeSevenIssueThreeSupplementary;
+  if (issue === 4) return volumeSevenIssueFourSupplementary;
   return undefined;
 }
