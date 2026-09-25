@@ -46,6 +46,7 @@ type IssuePlatformProps = {
   subtitle: string;
   description: string;
   current?: boolean;
+  subtitleFirst?: boolean;
   coverSrc?: string;
   periodLabel?: string;
   facts?: readonly IssueFact[];
@@ -63,6 +64,7 @@ export function IssuePlatform({
   subtitle,
   description,
   current = false,
+  subtitleFirst = false,
   coverSrc,
   periodLabel,
   facts,
@@ -149,9 +151,18 @@ export function IssuePlatform({
               <span>{issueName}</span>
               <span>{publicationDateLabel} · {period}</span>
             </div>
-            <h1>
-              {title}
-              {subtitle && <em>{subtitle}</em>}
+            <h1 className={subtitleFirst ? "issue-title-subtitle-first" : undefined}>
+              {subtitleFirst ? (
+                <>
+                  {subtitle && <em>{subtitle}</em>}
+                  <span>{title}</span>
+                </>
+              ) : (
+                <>
+                  {title}
+                  {subtitle && <em>{subtitle}</em>}
+                </>
+              )}
             </h1>
             <p className="issue-deck">{description}</p>
             {(readingPdf || editorialHref) && (

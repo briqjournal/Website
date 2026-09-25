@@ -5362,6 +5362,18 @@ footer h3 { font-size: 11px; }
   line-height: 1.08;
 }
 
+.issue-masthead-copy h1.issue-title-subtitle-first em {
+  margin: 0 0 10px;
+}
+
+.issue-masthead-copy h1.issue-title-subtitle-first > span {
+  display: block;
+  font: inherit;
+  font-style: normal;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
 .issue-deck {
   max-width: 690px;
   margin: 34px 0 0;

@@ -1051,6 +1051,7 @@ function ArchiveIssue({ volume, issue, current = false }: { volume: number; issu
       record={record}
       locale="tr"
       current={current}
+      subtitleFirst={isVolumeSevenIssueFour}
       title={heading.title}
       subtitle={heading.subtitle}
       description={isVolumeSevenIssueFour
