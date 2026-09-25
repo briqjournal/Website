@@ -5380,10 +5380,6 @@ footer h3 { font-size: 11px; }
   font-size: .75em;
 }
 
-.issue-masthead-copy h1.issue-title-subtitle-75 em {
-  font-size: .75em;
-}
-
 .issue-masthead-copy h1.issue-title-subtitle-first > span {
   display: block;
   font: inherit;
