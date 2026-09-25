@@ -5377,6 +5377,9 @@ footer h3 { font-size: 11px; }
 
 .issue-masthead-copy h1.issue-title-subtitle-first em {
   margin: 0 0 10px;
+}
+
+.issue-masthead-copy h1.issue-title-subtitle-first.issue-title-subtitle-75 em {
   font-size: .75em;
 }
 
