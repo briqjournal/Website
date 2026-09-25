@@ -34,8 +34,8 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "From Bandung to BRICS", subtitle: "On its 70th Anniversary", trailingSubtitle: "The Emergence of the Global South Against Hegemonism" },
   },
   "6-2": {
-    tr: { title: "Ölümünün 100. Yıldönümünde", subtitle: "Sun Yat-sen’in Yaşayan Mirası" },
-    en: { title: "On the Centenary of His Demise", subtitle: "The Enduring Legacy of Sun Yat-sen" },
+    tr: { title: "Sun Yat-sen’in Yaşayan Mirası", subtitle: "Ölümünün 100. Yıldönümünde" },
+    en: { title: "The Enduring Legacy of Sun Yat-sen", subtitle: "On the Centenary of His Demise" },
   },
   "6-1": {
     tr: { title: "Gelişen Dünya İçin Kalkınma Yolu", subtitle: "Kuşak-Yol’da Bilimsel Teknolojik İşbirliği" },

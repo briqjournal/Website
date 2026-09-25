@@ -22,8 +22,8 @@ test("Volume 6 Issue 3 uses a three-tier bilingual title with 75% upper and lowe
 
   assert.match(trPage, /const isVolumeSixIssueThree = volume === 6 && issue === 3;/);
   assert.match(enPage, /const isVolumeSixIssueThree = volume === 6 && issueNumber === 3;/);
-  assert.match(trPage, /subtitleFirst=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree\}/);
-  assert.match(enPage, /subtitleFirst=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree\}/);
+  assert.match(trPage, /subtitleFirst=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree \|\| isVolumeSixIssueTwo\}/);
+  assert.match(enPage, /subtitleFirst=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree \|\| isVolumeSixIssueTwo\}/);
 
   assert.match(trPage, /subtitleScale75=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree\}/);
   assert.match(enPage, /subtitleScale75=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree\}/);
