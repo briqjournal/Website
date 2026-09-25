@@ -21,8 +21,8 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "The Political Economy of Socialism with Chinese Characteristics", subtitle: "" },
   },
   "7-1": {
-    tr: { title: "İklim-Su-Gıda Krizi", subtitle: "Çözüm Yükselen Güney’de" },
-    en: { title: "The Climate-Water-Food Crisis", subtitle: "The Solution Lies in the Global South" },
+    tr: { title: "Çözüm Yükselen Güney’de", subtitle: "İklim-Su-Gıda Krizi" },
+    en: { title: "The Solution Lies in the Global South", subtitle: "The Climate-Water-Food Crisis" },
   },
   "6-4": {
     tr: { title: "Birlikte Kalkınmak İçin", subtitle: "Ortak Güvenlik" },
