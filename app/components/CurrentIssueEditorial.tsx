@@ -27,10 +27,12 @@ export function CurrentIssueEditorial({
   locale = "tr",
   volume = 7,
   issueNumber = 4,
+  currentAlias = false,
 }: {
   locale?: "tr" | "en";
   volume?: number;
   issueNumber?: number;
+  currentAlias?: boolean;
 }) {
   const isEnglish = locale === "en";
   const issue = findArchiveIssue(volume, issueNumber);
@@ -42,14 +44,13 @@ export function CurrentIssueEditorial({
     subtitle: isEnglish ? "The Erosion of Hegemony and the Rise of Regional Agency" : "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor",
     paragraphs: isEnglish ? editorialEn : editorialTr,
   };
-  const current = volume === 7 && issueNumber === 4;
   const accent = issueAccent(volume, issueNumber);
   const surface = issueSurface(volume, issueNumber);
   const period = issue
     ? `${isEnglish ? issue.season_en : issue.season_tr} ${issue.year}`
     : "—";
   const home = isEnglish ? "/en" : "/tr";
-  const issueHref = current
+  const issueHref = currentAlias
     ? (isEnglish ? "/en/current-issue" : "/tr/guncel-sayi")
     : (isEnglish ? `/en/archive/volume-${volume}-issue-${issueNumber}` : `/tr/arsiv/cilt-${volume}-sayi-${issueNumber}`);
   return (
@@ -59,7 +60,7 @@ export function CurrentIssueEditorial({
     >
       <header className="current-editorial-hero">
         <div className="site-shell">
-          <div className="page-breadcrumb"><a href={home}>{isEnglish ? "Home" : "Ana Sayfa"}</a><span>/</span><a href={issueHref}>{current ? (isEnglish ? "Current Issue" : "Güncel Sayı") : (isEnglish ? `Volume ${volume} · Issue ${issueNumber}` : `Cilt ${volume} · Sayı ${issueNumber}`)}</a><span>/</span><span>{isEnglish ? "Editorial" : "Sunuş"}</span></div>
+          <div className="page-breadcrumb"><a href={home}>{isEnglish ? "Home" : "Ana Sayfa"}</a><span>/</span><a href={issueHref}>{currentAlias ? (isEnglish ? "Current Issue" : "Güncel Sayı") : (isEnglish ? `Volume ${volume} · Issue ${issueNumber}` : `Cilt ${volume} · Sayı ${issueNumber}`)}</a><span>/</span><span>{isEnglish ? "Editorial" : "Sunuş"}</span></div>
           <p className="section-kicker light">{isEnglish ? "Editorial" : "Editörden"}</p>
           <h1>{copy.title}{copy.subtitle && <em>{copy.subtitle}</em>}</h1>
           <div className="current-editorial-byline"><b>Fikret Akfırat</b><span>{isEnglish ? "Editor-in-Chief" : "Genel Yayın Yönetmeni"}</span></div>
