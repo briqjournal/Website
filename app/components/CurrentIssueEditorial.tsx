@@ -38,7 +38,8 @@ export function CurrentIssueEditorial({
   const issue = findArchiveIssue(volume, issueNumber);
   const pdf = issue ? issuePdfUrl(issue, locale) || issuePdfUrl(issue, "tr") : undefined;
   const archivedCopy = archivedEditorials[`${volume}-${issueNumber}`]?.[locale];
-  const issuePdfPage = archivedEditorials[`${volume}-${issueNumber}`]?.issuePdfPage ?? 4;
+  const rawPdfPage = archivedEditorials[`${volume}-${issueNumber}`]?.issuePdfPage;
+  const issuePdfPage = typeof rawPdfPage === "number" ? rawPdfPage : (rawPdfPage?.[locale] ?? 4);
   const copy = archivedCopy || {
     title: isEnglish ? "A New Era in West Asia" : "Batı Asya’da Yeni Dönem",
     subtitle: isEnglish ? "The Erosion of Hegemony and the Rise of Regional Agency" : "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor",
