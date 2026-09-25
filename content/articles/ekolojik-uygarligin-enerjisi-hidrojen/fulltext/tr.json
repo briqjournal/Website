@@ -10,7 +10,8 @@
         "Öteden beri YEK konusundaki tartışmaların odağında yer alan bir soru bulunmaktadır: YEK, günümüzde ve gelecekte GFY’nin yerini bütünüyle alabilir mi?",
         "Bu çalışmamızda ele alınan konularda bu sorunun yanıtı aranmaktadır: YEK’in, sadece GFY ile sınırlı olmaksızın, Nükleer Enerjinin de yerini alabilecek potansiyele sahip olduğu söylenebilir. YEK yelpazesi / türleri içerisinde yer alan Hidrojen Enerjisinin öne çıkmasıyla YEK, gezegenimiz üzerindeki yaşamı toplu yok oluş tehdidinden esirgeyecek kapasite ve potansiyele sahip olduğu düşünülmektedir YEK türleri ana karakteristikleri bakımından iki gruba ayrılmaktadır. Şöyle ki: rüzgâr, güneş (PV), yoğunlaştırılmış güneş (CSP), dalga (gel-git dahil) kesikli karaktere sahip türler olarak sınıflanırken; jeotermal, biyokütle ve hidrojen esaslı enerji üretim yöntemleri “baz yük” karakterine sahip YEK türleri olarak ayrışmaktadır. Bunlar arasında, sadece biyokütle ve hidrojen, taşınabilir ve depolanabilir olma özelliğine ve avantajına sahip bulunmaktadır.",
         "Hidrojen ve biyokütle kaynaklı enerji üretim sistemlerinin yılda 7.500-8.000 saat devrede olabilmesine karşın, rüzgâr ve güneş enerji kaynaklı sistemlerin yıl içerisinde emre amade olabildikleri sürenin 2-3 bin saat süre zarfında ve üstelik kestirilemez zaman dilimlerinde olduğuna işaret edilmektedir. Diğer taraftan, “birincil” olarak tanımlanan GFY ve diğer YEK türlerinden farklı olarak, hidrojenin enerji üretiminde kullanılmak üzere öncelikle diğer kaynaklardan üretilmesi gerektiği ve bu anlamda “birincil” bir enerji kaynağı olmadığı da belirtilmelidir. Hidrojen, literatürde bir “enerji taşıyıcısı” olarak tanımlanmaktadır (European Environment Agency, 2022)."
-      ]
+      ],
+      "id": "tr-section-1"
     },
     {
       "title": "İklim Değişikliği ve YEK’e Geçişin Zorunluluğu",
@@ -22,7 +23,8 @@
         "Geçen yıl 26’ncısı düzenlenen BM İkilim Değişikliği Konferansları serisinde “Sıfır Karbon Salımı”, “Düşük Karbon Ekonomisine Geçiş” başlıkları altında sıralanan vaat, dilek ve temennilere sıkça karşılaşılmıştır. Ayrıca 2050 yılında “Karbon Nötr” döneme geçileceği yönünde iddialar ortaya konmaktadır. Buna karşın şu sorunun yanıtı açıkta kalmaktadır: Örneğin 2040 yılında atmosferdeki CO konsantrasyonu, farz edelim ki 500 ppm seviyesine eriştiğinde, “Geri Dönülmez Noktanın” hala aşılmamış olacağını nereden ve nasıl bilinmektedir?",
         "Kapıya dayanan tehlike Permafrost’un (çoğunlukla Kuzey Buz Denizini çevreleyen ve genişliği 20.0 milyon km ’yi geçen sürekli donuk araziler) süratle çözülmekte olduğudur. Hızlanarak devam eden çözülme süreciyle birlikte, donmuş toprak tabakaları arasındaki on milyarlarca ton metan gazı atmosfere karışacağı gibi, binlerce yıldır kış uykusunda bulunan virüs ve bakteriler de uyanacaklardır. Bazıları belki de COVID-19’dan daha tehlikeli olan bu hastalık vektörlerine karşı bağışıklığımız da bulunmamaktadır.",
         "İklim Değişikliği olgusunun kısa erimde baş göstermesi olasılığı yüksek bu tür sonuçları da açıkça gösteriyor ki, oyalanmadan, daha fazla gecikmeksizin, Sıfır Salım gibi, mevcut varoluşsal tehdit karşısında etkisiz stratejiler, kısa düşen yetersiz vaatler yerine, “Negatif Karbon Salımı / Karbon Negatif ” uygulamaların küresel ölçekte hayata geçirilmeleri gerekmektedir. Atmosfere salmakta olduğumuz sera gazlarından fazlasını kalıcı olarak tutmak zorunluluğu bulunuyor. Peki, bu hedef nasıl gerçekleştirilebilir? Bu konu başlı başına bir inceleme konusu olup, ayrı bir çalışmada etraflı olarak ele alınmalıdır."
-      ]
+      ],
+      "id": "tr-section-2"
     },
     {
       "title": "Neden Hidrojen Enerjisi",
@@ -31,7 +33,8 @@
         "YEK türleri arasında hidrojen enerjisi, öne çıkan bir önem ve ayrıcalık taşıyor. YEK, GFY ve nükleer enerjinin yerini bütünüyle doldurabilecektir. Ancak, şu noktanın da altını çizmekte yarar var: Hiçbir YEK türü kendi başına bir “gümüş mermi” değildir. Başka bir ifadeyle, sadece hidrojen veya örneğin güneş enerjisinin (PV veya yoğunlaştırılmış güneş), dünyadaki enerji sorununu çözmekte tek başına yeterli olabileceği yönünde bir sav öne sürülemez.",
         "Ancak, hidrojen enerjisinin sağladığı biricik avantajlara, diğer YEK türlerine kıyasla sahip olduğu üstünlüklere de işaret etmek yararlı olacaktır.",
         "Hidrojen de dahil olmak üzere YEK türlerinin ortak özelliği ve çevre etkisi bakımından sağlanan başlıca avantaj, “Temiz ve Tükenmez” karaktere sahip olmalarıdır. Diğerlerinden farklı olarak hidrojenin dolaylı şekilde başka kaynaklardan üretilmesi gerekmektedir. Bu nedenle, yukarıda da belirtildiği üzere, hidrojen bir “enerji taşıyıcısı” olarak sınıflandırılmaktadır (IEA, 2021)."
-      ]
+      ],
+      "id": "tr-section-3"
     },
     {
       "title": "RES ve GES’e Dair Kısıtlar",
@@ -42,7 +45,8 @@
         "Enerji depolanması konusu açıldığında bir diğer popüler isim ya da markaya değinmek gerekiyor: Li-Ion bataryalar.",
         "Bu noktada şu belirlemenin altı çizilmelidir: Enerji depolama araç ve teknolojileri henüz emekleme çağındadır. Bunları geliştirilerek olgun ve yetkin çözümler haline getirme aşamasından henüz uzak bulunuyoruz.",
         "Dahası, rüzgâr ve güneşin bol ve bedava olmasına karşın, Lityum için aynı durum geçerli değildir. Burada, adı enerji depolama konusunda en sık anılan çözümlerin dayandığı ana element olduğu için Lityum üzerinde özellikle durulmaktadır. Her ne kadar kanıtlanmış ve olası lityum rezervleri mevcut üretim seviyesi ve küresel talebin çok üzerinde olması dolayısıyla, yakın ve orta vadede arzda bir sıkışıklık ve buna bağlı olarak fiyatlarda bir sıçrama beklentisi bulunmuyorsa da sınırlı sayıda tedarikçiye bağımlılığın potansiyel bir sorun kaynağı olabileceği düşünülmektedir (National Minerals Information Center, t.y.). Ancak, Li-Ion batarya tipine alternatif olarak çok sayıda çözüm (Sodyum-Sülfür, Alüminyum-İyon vs.) üzerinde yoğun çalışmalar olduğu da belirtilmelidir. Rüzgâr ve güneşe ilişkin bir dezavantajın da bunlara dayalı enerji üretiminin kısıtlı alanlarda; örneğin yılda 3,000+ saat rüzgârın estiği ya da gün ışığına poz süresinin de asgari bu seviyede olduğu alanlarda Rüzgar ve PV enerji üretim tesislerinin kurulması, “proses verimliliği” açısından uygun olacaktır."
-      ]
+      ],
+      "id": "tr-section-4"
     },
     {
       "title": "Hidrojene Kıyasla Jeotermal ve Biyokütle Üzerine Kısa Değerlendirme",
@@ -50,7 +54,8 @@
         "JES esaslı enerji üretim tesisleri de baz yük işlevine sahip olmakla birlikte, gerekli jeotermal kaynakların mevcut bulunduğu alanların, yer kabuğunun faylarla kırılmış ve magmanın yer yüzüne yakın olduğu, tektonik riskler taşıyan arazilerle sınırlı olduğunu belirtmek gerekiyor. Kaynak, pratikte sınırsız olmakla beraber jeotermal alanlarını sınırlı oluşu başlı başına bir dezavantaj oluşturmaktadır.",
         "Buna karşılık, biyokütle; temiz, tükenmez, taşınabilir, depolanabilir ve çöller dışında her alanda mevcut olabilen bir YEK türü olarak öne çıkıyor. Biyokütleden enerji tesisleri (BES), baz yük işlevine sahip, coğrafi bir alan üzerinde farklı kapasitelerdeki tesisler ağı şeklinde dağıtık bir sistem oluşturacak şekilde kurulabilirler. BES’e ilişkin ayırt edici önemli bir avantaj, kentsel alanlarda açığa çıkan organik atıkların bertaraf edilmesinde BES’in etkili bir araç olarak, enerji ve çevre sorunlarına ilişkin çözümleri bütünleştirici bir rol oynama potansiyeline sahip olmasıdır. Biyokütleden, fosil yakıtlarının yerini alabilecek biyoyakıtların üretilmesi olanağı da bulunmaktadır.",
         "Çalışmamızın ana teması bakımından, biyokütlenin aynı zaman da bir hidrojen kaynağı olarak kullanılabileceğini de bu arada belirtmek gerekiyor. Biyokütlenin bu işlevine aşağıda değinilmektedir."
-      ]
+      ],
+      "id": "tr-section-5"
     },
     {
       "title": "Hidrojen Enerjisinin Önemi ve Ayrıcalığı",
@@ -62,14 +67,16 @@
         "2. Doğalgazı, “saf değiştirerek” YEK arasına katmak üzere yöntem ve uygulamalar geliştirmek zorunluluğu bulunmaktadır. Somut bir öneri olarak, doğalgaz bir hidrojen ve aynı zamanda karbon kaynağı olarak kullanılmalıdır.",
         "Her bakımdan iflas etmiş olduğu açık seçik ortada olan “eski dünya düzeninin” yerini alacak olan “Ekolojik Uygarlık”ın bir hidrojen-karbon çağı olacağı öngörülebilir. Şöyle ki: Hidrojen, başta doğalgazı ikame etmek üzere “Sıfır Karbon” bir yakıt olarak kullanılırken, metanın ayrıştırılması yoluyla (karbon ve hidrojen bileşenlerine ayırma) doğalgazdan elde edilecek karbon da yüzlerce çeşit ileri malzemenin üretilmesinde kullanılabilecektir. Bu sayede, doğalgazın yakılması durumunda açığa çıkacak olan karbon kalıcı olarak depolanmış olacaktır (Meier vd., 2013).",
         "Doğalgazın “ehlileştirilerek” YEK saflarına geçmesi sayesinde, tamamen YEK’e geçilmesiyle, mevcut doğalgaz ve “Gaz Hidratı” rezervlerinin heba edileceği yönündeki, ekonomik temelli kimi kaygılar da giderilmiş olacaktır."
-      ]
+      ],
+      "id": "tr-section-6"
     },
     {
       "title": "Hidrojen Üretim Yöntemleri",
       "paragraphs": [
         "Metan (dolayısıyla doğalgaz, gaz hidratları, kaya gazı), biyokütle ve en büyük kaynak olarak su, hidrojenin elde edilebileceği kaynakları oluşturmaktadır.",
         "Doğalgazdan “metan re-formasyonu (methane reformation)” yöntemiyle hidrojen ve karbon elde edilebilmesi, hidrojeni, pek çok kullanım alanında doğalgazın yerini en kolay ve göreli olarak kısa erimde alabilecek YEK türü olarak öne çıkarmaktadır. Doğalgazdan hidrojen üretiminde başlıca yöntemlere aşağıda kısaca değinilmektedir."
-      ]
+      ],
+      "id": "tr-section-7"
     },
     {
       "title": "İstim / Buhar-Metan Re-Formasyonu",
@@ -79,14 +86,16 @@
         "İşlemin “Su – Gaz Değişimi” olarak adlandırılan ikinci aşamasındaki kimyasal reaksiyon: CO + H O → CO + H (+ küçük bir miktar ısı)",
         "Burada bir miktar daha hidrojen elde edilirken CO ’de açığa çıkmaktadır. Reaksiyon esnasında ısı da açığa çıkıyor (ekzotermik reaksiyon). Yöntem, metanol ve diğer kısa karbon zincirli hidrokarbonlara da uygulanabiliyor. Önemli nokta ise şu oluyor: CO ve CO oluşumu, bu yöntemle, Küresel Isınma bağlamında hala bir sorun olmaya devam ediyor.",
         "Eski bir yöntem olmakla birlikte, istim-metan re-formasyonu günümüzde hala geliştirilmekte olup reaksiyonlarda kullanılacak daha uygun katalizörler konusunda araştırmalar da sürmektedir (Chen vd., 2020). Bu yöntemle, CO bir yan ürün olarak açığa çıkmaktadır. Klasik, sık kullanılan, ancak İklim Değişikliği koşullarında ve “Negatif Karbon” yöntemlerine geçişin asıl ölçüt olduğu günümüzde, istim re-formasyonu artık geçerli sayılamayacak bir yöntem olarak görünmektedir."
-      ]
+      ],
+      "id": "tr-section-8"
     },
     {
       "title": "Kısmi Yakma-Gazlaştırma",
       "paragraphs": [
         "Metandan hidrojen üretimine yönelik bir diğer yöntem, Kısmi Yakma / Gazlaştırmadır. Metanın yanı sıra ağır yağ ve farklı petrol türevleri de bu işlemde hammadde olarak kullanılabilmektedir (Zhang & Ruan, 2019). Gazlaştırma, karbon ihtiva eden organik materyalin (metan), işlemin gerçekleştirildiği reaktöre kontrollü miktarda su buharı ve oksijen verildiği koşullarda kısmi yakma (eksik oksijenle yakma) işlemine tabi tutulmasıdır. İşlem sonunda açığa çıkan ürünler; H , CO, CO ile hammadde türüne bağlı olarak hidrojen sülfür de (H S) olabilir. Metan söz konusu olduğunda ilgili kimyasal reaksiyonlar şunlardır: CH + O → CO + 2H CH + 2O → CO + 2H O CH + H O (Gaz) → CO + 3H Gazlaştırma işlemi endotermiktir. Bu işlemde de nihai ürünlerin, H ’nin yanı sıra CO ve CO olduğu görülüyor. İstim-metan re-formasyonu işleminde açığa çıkan H ile CO ürünlerinin hacim olarak oranı 3:1 iken gazlaştırmada bu oranın 1:1 olduğu bilinmektedir (Syed, 2021).",
         "1300–1500°C aralığında olan işlem sıcaklığını azaltmak üzere katalizörlerin kullanıldığı Gazlaştırma yöntemleri de bulunmaktadır. Sonuç olarak; CO ve CO gazlarının da yan ürün olarak açığa çıkması bu yöntemleri, Küresel Isınma açısından olumlu kılmamaktadır. Ancak, H üretmek amacıyla bu yöntemlere başvurulduğu dönemde, İklim Değişikliği olgusu, günümüzde olduğu gibi belirleyici bir ölçüt, bütün kararlara esas bir parametre değildi."
-      ]
+      ],
+      "id": "tr-section-9"
     },
     {
       "title": "Biyokütleden Hidrojen",
@@ -94,7 +103,8 @@
         "Avantajları ve sağladığı esneklikler itibarıyla biyokütle ve H çok benzer özelliklere sahiptir. Her iki YEK türü de taşınabilir ve depolanabilir olma avantajına sahiptir. Gerek biyokütle gerekse H, RES ve GES tesisleri için geçerli olan uygun konum kısıtlamasından bağımsızdırlar. Biyokütle, organik kökenli oluşu dolayısıyla bünyesinde büyük oranda H ve karbon barındırmasından dolayı, birincil enerji olma niteliğinin yanı sıra, aynı zamanda bir H ve karbon kaynağıdır.",
         "Organik kökenli kentsel katı atıklar, kanalizasyon çamuru, hurda araç lastiklerinden, “enerji bitkileri”, tarımsal ve orman ürünü atıklarına kadar uzanan geniş bir ürün yelpazesi, biyokütle tanımı kapsamında yer almaktadır.",
         "Bir önceki başlık altında yer alan Gazlaştırma, biyokütlenin termo-kimyasal işlem vasıtasıyla, esas olarak iki bileşeni olan CO ve H ’ye (Sentez Gazı) ayrıştırılmasını sağlamaktadır. İşlem, 800-1000°C ortam sıcaklığı ile yüksek basınç ortamında, bir gazlaştırıcı / gazlaştırma reaktöründe meydana geliyor. Burada elde edilen Sentez Gazı (esas olarak CO + H bileşimi), istenirse, bir sonraki aşamada Fischer-Tropsch işlemi vasıtasıyla, bioyakıtlar (biodizel, biogazolin, vs.) ile günümüzde tipik bir petrokimya tesisinde üretilen başka birçok materyalin üretiminde de kullanılabilir. Bu arada, nispeten daha yeni bir teknoloji olan plazma gazlaştırma yönteminin de H üretiminde kullanılabileceği bilinmektedir (Favas vd. 2017)."
-      ]
+      ],
+      "id": "tr-section-10"
     },
     {
       "title": "Hidrojen Üretimi ve İklim Değişikliği İlişkisi",
@@ -102,7 +112,8 @@
         "Hidrojen, pek çok sanayi kolunda muhtelif amaçlarla kullanılagelen bir hammaddedir. Bu çalışmamızda ise, hidrojenin, sadece GFY’nin yerini alacak bir YEK türü olarak, bir enerji kaynağı olma özelliği esas alınmaktadır.",
         "GFY’ye dayalı enerji paradigmasının sorgulanmadığı, İklim Değişikliği olgusunun henüz, bugünkü düzeyde yaşamsal bir tehdit oluşturmadığı dönemde, bir önceki bölümde yer alan yöntemlerle hidrojen üretiminin, işlem sonunda açığa çıkan CO ve CO gibi yan ürünler dolayısıyla kritik edilmediği görülmektedir.",
         "Ne var ki, günümüze gelindiğinde, başta enerji sektörü olmak üzere, insanoğlunun bütün etkinlik alanlarında, İklim Değişikliği ana ölçüt ve bütün yatırım ve işletme planlarında başat parametre haline gelmiş bulunmaktadır."
-      ]
+      ],
+      "id": "tr-section-11"
     },
     {
       "title": "“Dekarbonize” / Temiz Hidrojen Üretimi",
@@ -122,7 +133,8 @@
         "Hidrojen enerjisinin gelecekte oynayacağı rol konusunda isabetli saptamalar yapan Rusya’nın bu yöndeki eğilimine işaret eden çarpıcı bir örnek ise, Rosatom ve Gazprom şirketlerinin Sakhalin Adası'nda, hidrojen enerjisine dayalı bir çözüm konusunda ortak hareket etme kararı vermiş olmalarıdır (ROSATOM, 2021).",
         "Türkiye açısından çok dikkate değer gelişme şudur: Mersin Akkuyu’da nükleer santral kurmakta olan Rosatom ile Türkiye’ye büyük miktarda doğalgaz temin etmekte olan Gazprom bir araya gelerek hidrojen enerjisine dayalı bir çözümde ortaklık yapmaktadırlar. Bu durum dahi, kendi başına, enerji alanındaki güncel eğilimlerin yönü konusunda yeterli ve ikna edici bir fikir vermekte yeterli olsa gerekir.",
         "Hidrojen, hiçbir kuşkuya yer vermeyecek şekilde geleceğin başat enerji kaynağı olmaya adaydır. Çalışmamızın odağındaki esas sav, pratikte sonsuz bir enerji kaynağı olan hidrojeni öne çıkaran YEK’e dayalı enerji politikalarının hayata geçirilmesiyle, GFY ve hatta nükleer enerjiye hiçbir şekilde gerek kalmayacak olmasıdır. Hidrojenin önemi, enerji (elektrik ve ısı) kaynağı olması kadar aynı zamanda akaryakıt olarak da kullanılabilmesinden ileri gelmektedir."
-      ]
+      ],
+      "id": "tr-section-12"
     },
     {
       "title": "Elektroliz Yöntemiyle Hidrojen Üretimi",
@@ -132,7 +144,8 @@
         "Bu noktada, rüzgâr (RES) ve güneş (PV – GES) enerjileri gibi kesikli karaktere sahip YEK türlerinin, elektroliz işleminde enerji kaynağı olarak kullanılması çok sık telaffuz edilen ve tartışılan bir konu olarak önümüzde durmaktadır. Bu şekilde elde edilecek hidrojen, literatürde “Yeşil Hidrojen” olarak adlandırılmaktadır. RES ve GES tesislerinde zaten elektrik üretilirken, buralarda üretilecek enerjiyi neden hidrojen üretiminde kullanalım?",
         "Hemen akla gelen yanıtlar: Hidrojen vasıtasıyla, depolanabilir ve taşınabilir olduğu gibi, akaryakıt olarak da kullanılabilecek bir enerji kaynağı elde edilmiş olacaktır. Hidrojen, pek çok enerji uzmanının öne sürdüğü gibi, neredeyse “temiz”(!) olarak nitelendirilen doğalgazın yerini kolaylıkla alacak bir enerji taşıyıcısıdır. Örneğin hidrojen, mevcut doğalgaz iletim hatları üzerinden taşınabilecektir.",
         "Peki, Yeşil Hidrojen üretimi tedarik zincirine bir bakla daha eklemekle maliyet artışının yanı sıra, olasılıkla ek teknik sorunlar da getirmeyecek midir? Bu soru ilk bakışta isabetli gibi görünmekle birlikte, maliyetler konusuna farklı bir bakış açısından eğilmekte de yarar var. Ancak, bu başlıktan önce, Türkiye’nin biricik avantajı olan iki konudan bahsetmekte yarar var. Şimdi kısaca bunlara değinelim."
-      ]
+      ],
+      "id": "tr-section-13"
     },
     {
       "title": "Bir Hidrojen Kaynağı: Hidrojen Sülfür (H₂S)",
@@ -142,14 +155,16 @@
         "Bu arada, yüksek derecede toksin özelliğine sahip H S ’in Karadeniz’de giderek artan bir çevre tehdidi oluşturduğuna da dikkat çekilmektedir. Miktarı gün geçtikçe artan H S , Karadeniz’i süratle bir ölü deniz alanına dönüştürmektedir. 1955 – 2015 yılları arasında, Karadeniz’de yaşama elverişli su kütlesinin (yüzeyden 90 ila 200 metre derinlikte yer alan üst tabaka) %40 oranında azalmış olması, alarm niteliğinde çok dikkat çekici bir gelişmedir (22). Toksik bir kirletici olan H S ’den hidrojen üretimi, değerli bir enerji kaynağı sağladığı gibi olumlu bir çevre etkisine de yol açacaktır.",
         "H S’den H üretiminde, 800-1000°C işlem sıcaklığında gerçekleştirilecek “termal ayrıştırma / piroliz” en uygun yöntem olarak görünüyor (Demirbas, 2009).",
         "Karadeniz’de, eylemsiz kalmak durumunda kaçınılmaz olan bir çevre felaketinin önü alınırken, aynı zamanda geleceğin enerji kaynağı olan hidrojen üretimi, Karadeniz’i çevreleyen ülkeler arasında verimli olduğu kadar zorunlu bir iş birliği alanı oluşturmaktadır."
-      ]
+      ],
+      "id": "tr-section-14"
     },
     {
       "title": "Hidrojen – Sodyum Bor Hidrür (Nabh4) Esaslı Yeni Teknolojiler",
       "paragraphs": [
         "Her ülke gibi Türkiye de biricik olan avantajlarını rekabetçi üstünlüğe taşımak zorundadır. Türkiye, dünyada kanıtlanmış Bor rezervlerinin %70’ten fazlasına sahip bulunuyor. NaBH , bir hidrojen taşıyıcısı olduğu gibi, yepyeni hidrojen yakıt hücresi tasarımlarına da olanak tanıyan bir malzeme, bir kimyasal madde olarak öne çıkıyor. H – NaBH esaslı yakıt hücrelerinin geliştirilmesi Türkiye’nin önünde duran bir sınama niteliğindedir.",
         "Özellikle H enerjisine dayalı araçların yaygınlaşmasında NaBH ’e dayalı yakıt hücrelerinin geliştirilmesi önemli bir rol oynamaya adaydır (Wee vd., 2006). Kuşak ve Yol Girişimi bağlamında önemli bir iş birliği alanı söz konusudur."
-      ]
+      ],
+      "id": "tr-section-15"
     },
     {
       "title": "Hidrojeni Taşımak",
@@ -158,7 +173,8 @@
         "Doğalgazın nakliyesinde olduğu gibi, hidrojenin sıvılaştırılarak sevk edilmesi ise katlanılması gereksiz yüksek maliyetler ve hidrojen molekülünün hemen her yüzeyden geçebilecek olmasına bağlı olarak, çok kalın çeperli tüp / basınçlı kap ve haznelerde muhafaza edilmesini gerektirmesi nedeniyle teknik bakımdan da elverişli bir seçim değildir. Bu bağlamda, olası en uygun yöntem, yüksek basınç altında sıkıştırılmış ve hala gaz formundaki hidrojenin mevcut iletim boruları vasıtasıyla sevk edilmesi olabilir.",
         "NaBH ’ün yanı sıra amonyağın da (NH ) hidrojen taşıyıcısı bir madde olduğu, literatürde sıkça yer almaktadır. Suudi ARAMCO ile Japonya kökenli ENEOS, 25 Mart 2021 tarihinde, aralarında hidrojen ve amonyak esaslı bir tedarik zinciri oluşturmak konusunda bir anlaşma bağıtlamış bulunuyorlar (Sampson, 2021). Bu anlaşmadan daha önce, Eylül 2020’de ARAMCO 40 tonluk ilk parti amonyağı Japonya’ya ihraç etmişti (Saudi Arabian Oil Co., 2020). Petrol ve doğalgaz zengini Suudi Arabistan’ın, Kızıl Deniz kıyısında kurmayı tasarladığı fantastik / fütüristtik Neom kentinde 5,0 milyar dolarlık yatırımla, hidrojen üretmek ve depolamak amacıyla bir tesis kurmayı hedeflemesi çok dikkate değer bir konudur. Bu tesisin, YEK ile çalıştırılması da amaçlanmaktadır (The Japan Times, 2020).",
         "Mevcut boru hatları, kimyevi maddeler veya yine bir kimyevi madde olan amonyağın, hidrojenin taşınmasında kullanılmasının yanı sıra geçerli bir seçenek daha bulunmaktadır: Hidrojen yerine hidrojenden üretilecek elektriğin taşınması…"
-      ]
+      ],
+      "id": "tr-section-16"
     },
     {
       "title": "Hidrojenin Elektrifikasyonu",
@@ -174,7 +190,8 @@
         "Ne var ki, İran’ı da kapsamak üzere, Orta Doğu ülkeleri de hesaba katıldığında, DESERTEC DC GRİD’e bağlanacak GES (ve RES) tesisleri sayesinde güneş enerjisinden gün içerisinde (gece ve gündüz) yararlanma süresinin kayda değer şekilde artacağı dikkat çekmektedir. İran’ı da kapsayan coğrafi alanda (İran’ın doğusu 60 doğu boylamı) 6 saatlik bir zaman dilimi içinde güneş enerjisinden yararlanma olanağı doğmuş olmaktadır. Bu durumla ilgili önemli bir sonuç şudur: Doğu-Batı uzamında oluşturulacak bir DC GRID / SÜPER GRİD, güneş ve rüzgâr gibi kesikli özelliğe sahip YEK türleri için bir yedekleme aracı işlevi de taşıyacaktır.",
         "DESERTEC projesinin ortaya atıldığı ilk yıllarda, esas vurgu esas olarak GES ve biraz da RES üzerine olmuştur. O dönemde, hidrojen ve/veya hidrojen enerjisinin GRİD’e bağlanarak AB’ye iletilmesi konusu hemen hiç gündeme gelmemiştir. Orijinal DESERTEC ve bunu izleyen yenilenmiş fikir planlarını hayata geçirmek muhtelif nedenlerle mümkün olmamıştır. Günümüze gelindiğinde, DESERTEC 3.0 olarak adlandırılan yeni bir sürümün ortaya atıldığı görülmektedir. 2000’li yılların başında kurulan DESERTEC vakfınca, enerji sektöründe faal şirketleri bir araya getirmek ve bu suretle etkin ve güçlü bir yapıyla YEK’e geçişi ivmelendirmek amacıyla, 2009 yılında DII (Desert Industrial Initiative – Çöl Endüstriyel Girişimi) konsorsiyumu oluşturulmuştur. (DESERTEC Foundation, t.y.)",
         "DII’nın benimsediği yaklaşım ve güncel tanımlamada, orijinal DESERTEC fikrinin dayandığı öncüllerden çok farklı olarak, DESERTEC 3.0 sürümünde hidrojen enerjisini öne çıkarılmaktadır. Buna göre, ağırlıklı olarak GES ve bunun yanı sıra RES kullanılarak üretilecek “Yeşil Hidrojen”, Akdeniz tabanına döşenmiş bulunan (örneğin Cezayir – Fransa bağlantısı) doğalgaz boru hatları vasıtasıyla AB ülkelerine ulaştırılacaktır. Hidrojenin, deniz suyunun elektroliz işlemine tabi tutularak üretilmesinin hedeflendiğini de bu arada belirtelim Bu noktada bir revizyona gerek olduğu hemen akla geliyor: Hidrojenin elektrifikasyonu… Hidrojeni taşımak yerine, hidrojenin üretildiği noktada hidrojenden elde edilecek elektrik enerjisinin HVDC hatlarıyla iletilmesi çok daha cazip bir seçenek olabilir."
-      ]
+      ],
+      "id": "tr-section-17"
     },
     {
       "title": "YEK ve Hidrojen Enerjisine İlişkin Maliyetler",
@@ -185,13 +202,15 @@
         "Çevre kirliliği kaynaklı hastalık ve buna bağlı işgücü kayıpları ve sağlık giderleri gibi dolaylı (dışsal) maliyetler bir yana, 2017-2019 yılları arasında, 52 gelişmiş ve gelişmekte olan ülkelerin fosil yakıtlarını, doğrudan olarak, tutarı yılda ortalama 600 milyar dolara yakın sübvansiyonlar ile destekledikleri görülüyor (Timperley, 2021; Geddes vd. 2020). Korona salgını dolayısıyla 2020’de bu miktar geçici olarak azalmıştır.",
         "Yukarıda anılan IMF raporuna göre, İklim Değişikliği olgusuna bağlı olarak insanoğlunun ödemekte olduğu bir de can bedeli var ki, buna bir maddi karşılık biçmek olanaksız; her yıl yaklaşık 900 bin kişiyi, dolaylı olarak, İklim Değişikliğine bağlı olumsuz çevre koşulları nedeniyle hayatını kaybetmektedir.",
         "Yukarıda yer alan veriler temelinde sonuç ve ilk akla gelen düşünce şudur: Anılan sübvansiyonlar pekâlâ YEK’e geçiş sürecinde gerekli maddi teşvikler için kullanılabilecektir. UNDP kaynaklı bir çalışmada, fosil yakıtları için sarf edilen sübvansiyonların, küresel ölçekte yoksullukla mücadele amacıyla kullanılan kaynaklardan fazla olduğuna işaret edilmektedir (UNDP, 2021)."
-      ]
+      ],
+      "id": "tr-section-18"
     },
     {
       "title": "Sonuç",
       "paragraphs": [
         "Fosil yakıtlarından tamamen ve olası en kısa süre zarfında YEK’e geçişin varoluşsal önem ve ivedilik kazandığı günümüzde, hidrojen veya daha genel ifadesiyle bir hidrojen-karbon toplumuna doğru dönüşüm ve bu yönde köklü bir paradigma değişikliği bir zorunluluk olarak ortaya çıkmıştır. YEK esaslı enerji stratejilerinde, hidrojenin giderek öne çıktığı gözlenmektedir. Hidrojen, temiz ve tükenmeyen bir enerji kaynağı olarak, yelpazesi içinde yer aldığı YEK’in, salt fosil yakıtlarıyla sınırlı olmaksızın, aynı zamanda nükleer enerjinin de yerini almaya adaydır. Elektrik enerjisi üretimi amacıyla, taşınabilir, depolanabilir özelliğe sahip hidrojen, aynı zamanda bir yakıt ve mevcut içten patlamalı motor teknolojisinin yerini alabilecek Hidrojen Yakıt Hücreleri sayesinde, ulaşımda da yaygın bir kullanım alanına sahip olacaktır. “Değişime dirençli” doğalgazdan karbon ve hidrojen üretimi sayesinde açılacak yeni bir çığırın, Ekolojik Uygarlığı karakterize edecek bir dönüşümle doğacağı değerlendirilmektedir."
-      ]
+      ],
+      "id": "tr-section-19"
     }
   ],
   "keywords": [
