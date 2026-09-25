@@ -105,34 +105,118 @@
   ],
   "footnotes": [],
   "references": [
-    "ANSO. (2019). The first ANSO young scientists forum held in Hangzhou. Retrieved from http://www.anso.org.cn/news/anso/201911/t20191121_526258.html",
-    "ANSO. (2020a). ANSO collaborative research. Retrieved from http://www.anso.org.cn/programmes/flagshipProject/research/",
-    "ANSO. (2020b). Members and network. Retrieved from http://www.anso.org.cn/membersNetworks/members/",
-    "BRIQ. (2020). Scientific and technological cooperation in the framework of the Belt and Road Initiative. Retrieved from https://briqjournal.com/en/special-issue-call-papers-scientific-and-technological-cooperation-the-framework-the-belt-and-road",
-    "CAS. (2016). Beijing Declaration. Bulletin of the Chinese Academy of Sciences, 30(4), 220–221. Retrieved from http://english.cas.cn/bcas/2016_4/201703/P020170310587505348444.pdf",
-    "Guo, H., Chen, F., Sun, Z., Liu, J., & Liang, D. (2021). Big earth data: a practice of sustainability science to achieve the Sustainable Development Goals. Science Bulletin. https://doi.org/10.1016/j.scib.2021.01.012",
-    "Huan, Y., Liang, T., Li, H., & Zhang, C. (2021). A systematic method for assessing progress of achieving sustainable development goals: A case study of 15 countries. Science of The Total Environment, 752, 141875. https://doi.org/10.1016/j.scitotenv.2020.141875",
-    "IRENA. (2020). Renewable energy statistics 2020. Retrieved from https://www.irena.org/publications/2020/Jul/Renewable-energy-statistics-2020",
-    "Kabisch, S., Finnveden, G., Kratochvil, P., Sendi, R., Smagacz-Poziemska, M., Matos, R., & Bylund, J. (2019). New urban transitions towards sustainability: addressing SDG challenges (Research and Implementation Tasks and Topics from the Perspective of the Scientific Advisory Board (SAB) of the Joint Programming Initiative (JPI) Urban Europe). Sustainability 11(8).",
-    "Kılkış, Ş. (2014). Energy system analysis of a pilot net-zero exergy district. Energy Conversion and Management, 87. https://doi.org/10.1016/j.enconman.2014.05.014",
-    "Kılkış, Ş. (2016). Sustainability-oriented innovation system analyses of Brazil, Russia, India, China, South Africa, Turkey and Singapore. Journal of Cleaner Production, 130. https://doi.org/10.1016/j.jclepro.2016.03.138",
-    "Lin, B., & Zhu, J. (2019). The role of renewable energy technological innovation on climate change: Empirical evidence from China. Science of The Total Environment, 659, 1505–1512. https://doi.org/10.1016/j.scitotenv.2018.12.449",
-    "Lu, H., Yu, Z., Alanne, K., Zhang, L., Fan, L., Xu, X., & Martinac, I. (2014). Transition path towards hybrid systems in China: Obtaining net-zero exergy district using a multi-objective optimization method. Energy and Buildings, 85, 524–535. https://doi.org/10.1016/j.enbuild.2014.09.074",
-    "Lu, N., Liu, L., Yu, D., & Fu, B. (2021). Navigating trade-offs in the social-ecological systems. Current Opinion in Environmental Sustainability, 48, 77–84. https://doi.org/10.1016/j.cosust.2020.10.014",
-    "National Bureau of Statistics of China. (2020). China statistical yearbook 2020. Retrieved from http://www.stats.gov.cn/tjsj/ndsj/2020/indexeh.htm",
-    "Presidency of the Republic of Turkey. (2019). National Smart Cities Strategy and Action Plan. Retrieved from https://www.mevzuat.gov.tr/MevzuatMetin/CumhurbaskanligiGenelgeleri/20191224-29.pdf",
-    "Presidency of the Republic of Turkey Presidency of Strategy and Budget. (2019a). Eleventh Development Plan (2019-2023). Retrieved from https://www.sbb.gov.tr/wp-content/uploads/2020/06/Eleventh_Development_Plan-2019-2023.pdf",
-    "Presidency of the Republic of Turkey Presidency of Strategy and Budget. (2019b). Sustainable Development Goals Second National Review Report 2019: ,Sturdy Foundations for Common Goals. Retrieved from https://www.sbb.gov.tr/wp-content/uploads/2020/03/Surdurulebilir-Kalkinma-Amaclari-Turkiye-2nci-Ulusal-Gozden-Gecirme-Raporu_TR-WEB.pdf",
-    "SCOPUS. (2021). Advanced search. Retrieved from https://www.scopus.com/search/form.uri?display=advanced",
-    "TÜİK. (2020). Research and Development Activities Bulletin 2019. Retrieved from https://tuikweb.tuik.gov.tr/PreHaberBultenleri.do?id=33676",
-    "UN. (2021). Global SDG Database. Retrieved from https://unstats.un.org/sdgs/indicators/database/",
-    "UN DESA. (2019). World Urbanization Prospects 2018 Data. Retrieved from https://population.un.org/wup/Download/",
-    "UNESCO. (2021). Science, technology and innovation. Retrieved from http://data.uis.unesco.org/Index.aspx?DataSetCode=SCN_DS&lang=en",
-    "Wong, D. (2020). What to Expect in China’s 14th Five Year Plan? Decoding the Fifth Plenum Communique. Retrieved from https://www.china-briefing.com/news/what-to-expect-in-chinas-14th-five-year-plan-decoding-the-fifth-plenum-communique/",
-    "Xinhua News Agency. (2020). Proposals of the Central Committee of the Communist Party of China on Formulating the Fourteenth Five-Year Plan for National Economic and Social Development and the Long-term Goals for 2035. http://www.gov.cn/zhengce/2020-11/03/content_5556991.htm",
-    "Xu, Q., Zheng, X., & Zheng, M. (2019). Do urban planning policies meet sustainable urbanization goals? A scenario-based study in Beijing, China. Science of The Total Environment, 670, 498–507. https://doi.org/10.1016/j.scitotenv.2019.03.128",
-    "Xu, Z., Chau, S. N., Chen, X., Zhang, J., Li, Y., Dietz, T., … Liu, J. (2020). Assessing progress towards sustainable development over space and time. Nature, 577(7788), 74–78. https://doi.org/10.1038/s41586-019-1846-3",
-    "Yang, Z., Yang, H., & Wang, H. (2020). Evaluating urban sustainability under different development pathways: A case study of the Beijing-Tianjin-Hebei region. Sustainable Cities and Society, 61, 102226. https://doi.org/10.1016/j.scs.2020.102226"
+    {
+      "id": "ref-1",
+      "text": "ANSO. (2019). The first ANSO young scientists forum held in Hangzhou. Retrieved from http://www.anso.org.cn/news/anso/201911/t20191121_526258.html"
+    },
+    {
+      "id": "ref-2",
+      "text": "ANSO. (2020a). ANSO collaborative research. Retrieved from http://www.anso.org.cn/programmes/flagshipProject/research/"
+    },
+    {
+      "id": "ref-3",
+      "text": "ANSO. (2020b). Members and network. Retrieved from http://www.anso.org.cn/membersNetworks/members/"
+    },
+    {
+      "id": "ref-4",
+      "text": "BRIQ. (2020). Scientific and technological cooperation in the framework of the Belt and Road Initiative. Retrieved from https://briqjournal.com/en/special-issue-call-papers-scientific-and-technological-cooperation-the-framework-the-belt-and-road"
+    },
+    {
+      "id": "ref-5",
+      "text": "CAS. (2016). Beijing Declaration. Bulletin of the Chinese Academy of Sciences, 30(4), 220–221. Retrieved from http://english.cas.cn/bcas/2016_4/201703/P020170310587505348444.pdf"
+    },
+    {
+      "id": "ref-6",
+      "text": "Guo, H., Chen, F., Sun, Z., Liu, J., & Liang, D. (2021). Big earth data: a practice of sustainability science to achieve the Sustainable Development Goals. Science Bulletin. https://doi.org/10.1016/j.scib.2021.01.012"
+    },
+    {
+      "id": "ref-7",
+      "text": "Huan, Y., Liang, T., Li, H., & Zhang, C. (2021). A systematic method for assessing progress of achieving sustainable development goals: A case study of 15 countries. Science of The Total Environment, 752, 141875. https://doi.org/10.1016/j.scitotenv.2020.141875"
+    },
+    {
+      "id": "ref-8",
+      "text": "IRENA. (2020). Renewable energy statistics 2020. Retrieved from https://www.irena.org/publications/2020/Jul/Renewable-energy-statistics-2020"
+    },
+    {
+      "id": "ref-9",
+      "text": "Kabisch, S., Finnveden, G., Kratochvil, P., Sendi, R., Smagacz-Poziemska, M., Matos, R., & Bylund, J. (2019). New urban transitions towards sustainability: addressing SDG challenges (Research and Implementation Tasks and Topics from the Perspective of the Scientific Advisory Board (SAB) of the Joint Programming Initiative (JPI) Urban Europe). Sustainability 11(8)."
+    },
+    {
+      "id": "ref-10",
+      "text": "Kılkış, Ş. (2014). Energy system analysis of a pilot net-zero exergy district. Energy Conversion and Management, 87. https://doi.org/10.1016/j.enconman.2014.05.014"
+    },
+    {
+      "id": "ref-11",
+      "text": "Kılkış, Ş. (2016). Sustainability-oriented innovation system analyses of Brazil, Russia, India, China, South Africa, Turkey and Singapore. Journal of Cleaner Production, 130. https://doi.org/10.1016/j.jclepro.2016.03.138"
+    },
+    {
+      "id": "ref-12",
+      "text": "Lin, B., & Zhu, J. (2019). The role of renewable energy technological innovation on climate change: Empirical evidence from China. Science of The Total Environment, 659, 1505–1512. https://doi.org/10.1016/j.scitotenv.2018.12.449"
+    },
+    {
+      "id": "ref-13",
+      "text": "Lu, H., Yu, Z., Alanne, K., Zhang, L., Fan, L., Xu, X., & Martinac, I. (2014). Transition path towards hybrid systems in China: Obtaining net-zero exergy district using a multi-objective optimization method. Energy and Buildings, 85, 524–535. https://doi.org/10.1016/j.enbuild.2014.09.074"
+    },
+    {
+      "id": "ref-14",
+      "text": "Lu, N., Liu, L., Yu, D., & Fu, B. (2021). Navigating trade-offs in the social-ecological systems. Current Opinion in Environmental Sustainability, 48, 77–84. https://doi.org/10.1016/j.cosust.2020.10.014"
+    },
+    {
+      "id": "ref-15",
+      "text": "National Bureau of Statistics of China. (2020). China statistical yearbook 2020. Retrieved from http://www.stats.gov.cn/tjsj/ndsj/2020/indexeh.htm"
+    },
+    {
+      "id": "ref-16",
+      "text": "Presidency of the Republic of Turkey. (2019). National Smart Cities Strategy and Action Plan. Retrieved from https://www.mevzuat.gov.tr/MevzuatMetin/CumhurbaskanligiGenelgeleri/20191224-29.pdf"
+    },
+    {
+      "id": "ref-17",
+      "text": "Presidency of the Republic of Turkey Presidency of Strategy and Budget. (2019a). Eleventh Development Plan (2019-2023). Retrieved from https://www.sbb.gov.tr/wp-content/uploads/2020/06/Eleventh_Development_Plan-2019-2023.pdf"
+    },
+    {
+      "id": "ref-18",
+      "text": "Presidency of the Republic of Turkey Presidency of Strategy and Budget. (2019b). Sustainable Development Goals Second National Review Report 2019: ,Sturdy Foundations for Common Goals. Retrieved from https://www.sbb.gov.tr/wp-content/uploads/2020/03/Surdurulebilir-Kalkinma-Amaclari-Turkiye-2nci-Ulusal-Gozden-Gecirme-Raporu_TR-WEB.pdf"
+    },
+    {
+      "id": "ref-19",
+      "text": "SCOPUS. (2021). Advanced search. Retrieved from https://www.scopus.com/search/form.uri?display=advanced"
+    },
+    {
+      "id": "ref-20",
+      "text": "TÜİK. (2020). Research and Development Activities Bulletin 2019. Retrieved from https://tuikweb.tuik.gov.tr/PreHaberBultenleri.do?id=33676"
+    },
+    {
+      "id": "ref-21",
+      "text": "UN. (2021). Global SDG Database. Retrieved from https://unstats.un.org/sdgs/indicators/database/"
+    },
+    {
+      "id": "ref-22",
+      "text": "UN DESA. (2019). World Urbanization Prospects 2018 Data. Retrieved from https://population.un.org/wup/Download/"
+    },
+    {
+      "id": "ref-23",
+      "text": "UNESCO. (2021). Science, technology and innovation. Retrieved from http://data.uis.unesco.org/Index.aspx?DataSetCode=SCN_DS&lang=en"
+    },
+    {
+      "id": "ref-24",
+      "text": "Wong, D. (2020). What to Expect in China’s 14th Five Year Plan? Decoding the Fifth Plenum Communique. Retrieved from https://www.china-briefing.com/news/what-to-expect-in-chinas-14th-five-year-plan-decoding-the-fifth-plenum-communique/"
+    },
+    {
+      "id": "ref-25",
+      "text": "Xinhua News Agency. (2020). Proposals of the Central Committee of the Communist Party of China on Formulating the Fourteenth Five-Year Plan for National Economic and Social Development and the Long-term Goals for 2035. http://www.gov.cn/zhengce/2020-11/03/content_5556991.htm"
+    },
+    {
+      "id": "ref-26",
+      "text": "Xu, Q., Zheng, X., & Zheng, M. (2019). Do urban planning policies meet sustainable urbanization goals? A scenario-based study in Beijing, China. Science of The Total Environment, 670, 498–507. https://doi.org/10.1016/j.scitotenv.2019.03.128"
+    },
+    {
+      "id": "ref-27",
+      "text": "Xu, Z., Chau, S. N., Chen, X., Zhang, J., Li, Y., Dietz, T., … Liu, J. (2020). Assessing progress towards sustainable development over space and time. Nature, 577(7788), 74–78. https://doi.org/10.1038/s41586-019-1846-3"
+    },
+    {
+      "id": "ref-28",
+      "text": "Yang, Z., Yang, H., & Wang, H. (2020). Evaluating urban sustainability under different development pathways: A case study of the Beijing-Tianjin-Hebei region. Sustainable Cities and Society, 61, 102226. https://doi.org/10.1016/j.scs.2020.102226"
+    }
   ],
   "figures": [
     {
