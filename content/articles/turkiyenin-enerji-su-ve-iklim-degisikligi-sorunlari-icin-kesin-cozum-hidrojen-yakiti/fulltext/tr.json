@@ -1,0 +1,670 @@
+{
+  "sections": [
+    {
+      "title": "Giriş",
+      "paragraphs": [
+        "BİLİNDİĞİ ÜZERE 19. YÜZYIL ORTALARINDA başlayan Endüstri Devriminden bu yana, önce kömür daha sonra petrol ve doğalgaz gibi fosil yakıt olarak anılan yer altı kaynakları, yoğun bir şekilde enerji sağlamak amacıyla kullanılmaktadır. Sanayileşme ile enerji kullanımının artışı, ülkelerin yaşam standartlarını yükseltirken, fosil yakıt tüketimi de buna bağlı olarak hızlanmıştır. İnsanoğlu maalesef bu aşırı tüketimin, çevre kirliliğinin yanı sıra, küresel iklim değişikliği gibi son derece vahim sonuçları olabileceğini ancak son yıllarda fark edebilmiştir. Fosil yakıt şirketleri ise kendi çıkarları uğruna, iyi kazanç getiren bu sektörde başka alternatifleri sürekli küçümsemiş ve güçlerini kullanarak bunların karar vericiler nezdinde dışlanmasını sağlamışlardır (Türe, 2021: par.3).",
+        "Çevre dostu olarak bilinen güneş, rüzgâr, küçük akarsu gibi alternatif enerjilerin fosil yakıtlara görece daha pahalı olmasının yanı sıra toplum tarafından yeterince kabul edilemiyor olmasının bir",
+        "başka nedeni ise; bu kaynakların sürekli olmaması ve yakıt olarak kullanılamamasıdır.",
+        "Bilindiği üzere, kömür, petrol, doğalgaz gibi yakıtlar kullanıldığında, çevreye çeşitli gazlarla birlikte bazı toz parçacıkları atılmaktadır. Atılan bu gaz karışımı ve parçacıklar arasında, karbon oksitler, kükürt oksitler, hidrokarbonlar, polinükleer aromatik hidrokarbonlar (PAH), olefinler, aldehitler ve bazı diğer kirleticiler bulunmaktadır.",
+        "Hava kirliliğinin çevre üzerindeki etkileri, global, bölgesel ve yerel ölçekte meydana gelmektedir. Global ölçekte, başta karbondioksit olmak üzere, sera gazlarının yol açtığı küresel ısınma ve bunun sonucu olarak kasırgaların şiddetini arttırması, aşırı kuraklık veya sel gibi iklim değişikliklerini saymak mümkündür. Bölgesel ölçekte, asit yağmurları, ormanların tahribi, göllerin asitlik derecesinin artması sonucunda, ekolojik dengenin bozulması en önemli belirtilerdir. Yerel ölçekte ise, CO, SO NOx, O gibi hava kirleticileri, insan sağlığı, bitkiler, yapı ve malzemeler üzerinde olumsuz etkiler meydana getirmektedirler. Şu anda, dünyada fosil yakıtların çevreye verdiği toplam zarar yılda 8 trilyon doları bulmaktadır (Greenpeace, 2020).",
+        "Hidrojen ise halen kullanılan yakıtlara göre birçok avantaja sahiptir. Hidrojenin yakıt olarak kullanılacağı bir yakıt hücresinde, enerji yüksek verimle elde edilirken, atık olarak sadece saf su çıkmaktadır. Hidrojen kaynağı olarak suyun kullanılması hidrojenin en önemli avantajlarından biridir. Halen hidrojen teknolojilerinin çözüm bekleyen en önemli problemlerinin başında, ekonomik olarak depolanma ve taşınma gelmektedir. Ancak son yıllardaki çalışmalar bu problemlerin kısa sürede aşı¬lacağını göstermektedir. Hidrojen teknolojisi, kullanım alanının sürekli gelişmesi ve enerji verimini arttıracak yöntemlerin ilavesiyle giderek önem kazanmaktadır.",
+        "Yapılan maliyet hesaplarına göre hidrojen teknolojisi sistemlerini kullanmak, mevcut fosil yakıt sistemlerinden daha pahalı olmakla birlikte yakın gelecekte artan petrol ve doğalgaz fiyatları ile bu konudaki eşitlik gelecek on yıl içinde sağlanacaktır. Fosil yakıtların sosyal maliyet olarak sınıflandırılan; küresel iklim değişikliği, hava kirliliği, petrol saçılmaları, maden kazaları vb. unsurların dünyaya verdiği bu zarar fosil yakıt fiyatları üzerine konulduğunda, maliyet açısından hidrojen çok daha avantajlı konuma gelmektedir.",
+        "Yukarıda da belirtildiği üzere fosil yakıtların sınırlı olması ve dünyamızı bekleyen çevre felaketleri nedeniyle bu durumun böyle devam etmesi zaten mümkün değildir. İnsanların sahip oldukları konfor ve yaşam standardından feragat etmeleri de mümkün olamayacağına göre, fosil yakıtlar yerine yeni bir sentetik yakıt bulunması gereği doğmuştur. Bu yakıt, temiz, çevre dostu, yenilenebilir, sonsuz, her yerde kullanılabilir, kolayca taşınabilir, ekonomik, yüksek kalori değeri ve verime sahip olmalıdır. Uzun yıllar yapılan çalışmalar ideal yakıtın kesinlikle hidrojen olduğunu ortaya koymuştur. Hidrojen çevre problemlerine tek çözüm olarak gösterilmekte ve ülkeleri fosil yakıtlardan kurtarabilecek “bağımsızlık yakıtı” olarak da adlandırılmaktadır. Hidrojen enerjisinin dünya gündemine oturması, 1973’te enerji krizinin patlak vermesiyle bilim çevrelerinin bu soruna çözüm aramaları vasıtasıyla olmuştur.",
+        "Normal sıcaklık ve basınç altında kokusuz ve renksiz olan bu gaz oksijenle birleştiğinde hayat için en önemli madde, yani su elde edilmektedir. Hidrojen çok hafif bir gaz olup, yoğunluğu havanın 1/14’ü, doğalgazın 1/9’u kadardır. Atmosfer basıncında -253˚C’ye soğutulduğunda sıvı hale gelen hidrojenin yoğunluğu ise benzinin 1/10’u kadardır. Hidrojen en verimli yakıttır. Ortalama olarak, fosil yakıtlardan %26 daha verimlidir. Hidrojen bilinen tüm yakıtlar içerisinde birim kütle başına en yüksek enerji içeriğine sahiptir. Şekil 1 de hidrojenin diğer yakıtlara göre enerji içeriği verilmiştir. 1 kg hidrojen 2.1 kg doğalgaz veya 2.8 kg petrolün sahip olduğu enerjiye sahiptir (Türe, 2021: par.6).",
+        "Sıvı hidrojenin ısıl değeri 120,7 MJ/kg iken uçak benzinin ısıl değerinin kg başına yalnız 44 Mega Joule olduğu göz önüne alındığında, sıvı hidrojenin roket yakıtı olarak kullanılmasını kolaylıkla anlamak mümkündür. Ancak birim hacim başına ısıl değeri düşüktür. Hidrojen gazının ısıl değeri, metre küp başına yaklaşık 12 Mega Joule olarak verilmiştir (Türe, 2021: par.7).",
+        "Hidrojen en temiz enerji taşıyıcısıdır. Hidrojenin yüksek verimi ve fosil yakıtların çevreye verdiği zarar göz önüne alındığında, hidrojen en uygun maliyetli yakıttır. Küresel iklim değişikliğine neden olan sera gazları üretmez, asit yağmurlarına neden olmaz ve ozon tabakasına zarar veren kimyasallar üretmez (Türe, 2021: par 8).",
+        "Hidrojen aynı elektrik gibi ikincil bir enerji, yani taşıyıcı olup, birincil enerji kaynaklarından üretilmesi gerekmektedir. Bu üretimin temiz enerji kaynakları ile sudan elde edilmesi ise hem sonsuz bir enerji, hem de dünyanın küresel ısınma başta olmak üzere tüm çevre problemlerinden kurtulması anlamına gelmektedir. Örneğin güneş enerjisi ile suyun hidrojen ve oksijene ayrılması, elde edilen hidrojenin istenilen yere boru hatları veya depolanmış olarak taşınması ve daha sonra yine oksijenle birleşerek yakılması sonucunda elde edilen enerjinin atık maddesi yine birkaç damla saf su veya su buharı olmaktadır (Türe, 2021: par 9).",
+        "Hidrojen yalnız bu yüzyılın değil, güneşin ömrü olarak tahmin edilen gelecek 5 milyar yılın da yakıtı olarak kabul edilmektedir (Türe, 2021: par 10). İnsanlığın ilk günlerinden başlayarak günümüze kadar geçen sürede kullandığı yakıtlar göz önüne alındığında, bu yakıtlar içinde hidrojen oranının giderek arttığı açıkça görülmektedir (Türe, 2001). Bundan sonraki devrede bu yakıtın artık tamamen hidrojen olacağı kesindir."
+      ],
+      "id": "tr-section-1"
+    },
+    {
+      "title": "Hidrojen Üretim Metotları ve Maliyetleri",
+      "paragraphs": [
+        "Hidrojen, değişik ana enerji kaynaklarının kullanılmasına bağlı olarak sudan çeşitli metotlarla elde edilebilir. Bunlar arasında, elektrolitik, termal, termo-kimyasal, elektrotermokimyasal, fotolitik ve karma metotlar bulunmaktadır. Suyun ayrıştırılması ile hidrojen üretimi için günümüzde kullanılan yöntemler Şekil 2’de özetlenmiştir.",
+        "Günümüzde hidrojen üretiminde en sık kullanılan yöntem doğalgazdan reforming yöntemi ile yüksek saflıkta hidrojen eldesidir. Bu yöntemle üretilen hidrojenin maliyeti kg başına ortalama 2 ABD dolarıdır. Ancak, hidrojenin kömür gibi fosil yakıtlardan elde edilmesi sonucu karbondioksit gazları da açığa çıkmaktadır. CO ’in toprağın altına gömülerek saklanması teknolojisinin maliyeti de dikkate alındığında, fosil yakıtlardan hidrojen eldesi daha da pahalı hale gelmektedir. Hidrojen, fosil yakıt kaynaklarından elde edildiğinde, kaynağın temiz olmadığını belirtmek için buna “mavi hidrojen” denilmektedir (United States Department of Energy, 2020).",
+        "Günümüzde üretilen hidrojenin neredeyse %95’i tamamen ticari hale gelen ve çok iyi bilinen bu teknolojiler ile üretilmekte olduğundan, burada daha ziyade yeni teknolojilere yer verilmiştir. Yenilenebilir enerji kaynakları kullanılarak suyun elektrolizi ile elde edilen hidrojen ise “yeşil hidrojen” olarak anılmaktadır (Şekil 3). Bu yöntem ile maliyet yaklaşık olarak kilogram hidrojen başına 3-7 ABD dolarıdır.",
+        "Tablo 1’de görüleceği gibi hidrojenin yenilenebilir enerji kaynaklarından ve nükleer enerjiden üretim maliyeti, fosil yakıtlara göre halen daha yüksek olmakla beraber, teknolojinin gelişimine bağlı olarak bu maliyetin düşeceği açıktır. Ayrıca, daha önce sözü edilen sosyal maliyetler fosil yakıtlara eklendiğinde yenilenebilir kaynaklardan elde edilen hidrojen yine daha ucuz olmaktadır. Burada rüzgâr ve güneş gibi yenilenebilir enerji kaynaklarından elde edilecek elektrik enerjisi kullanımı esas alındığından, hidrojenin sudan alkali veya PEM elektrolizörler kullanılarak eldesi söz konusudur. Bu nedenle hidrojen maliyetleri bu teknolojilere göre karşılaştırmalı ve tahmini olarak verilmiştir. Bilindiği üzere, doğalgaz ve elektrik fiyatları ülkeden ülkeye olduğu gibi seneler içinde de değişim göstermektedir. Ayrıca üretim için kullanılan cihazların maliyetleri, üretilen hidrojen miktarı gibi faktörler de elde edilen ürünün maliyetinde önemli rol oynamakta olup, hidrojenin kg fiyatı için kesin bir rakam yerine ancak belli bir aralık içinde fiyat tahmini olarak Tablo 1’de verilmiştir."
+      ],
+      "id": "tr-section-2"
+    },
+    {
+      "title": "Güneş, Rüzgâr, Hidrolik ve Jeotermal Enerjilerden Hidrojen Üretimi",
+      "paragraphs": [
+        "Tüm yenilenebilir kaynaklardan elde edilen elektrik yardımıyla suyun elektroliz edilmesi, hidrojen elde edilmesi için temel yöntemdir. Örneğin rüzgar enerjisi de yakıt olarak kullanılacak hidrojenin üretimi için değerlendirilen önemli bir yenilenebilir enerji kaynağıdır. Verimleri her gün daha yüksek seviyelere çıkan rüzgâr türbinleri, rüzgâr enerjini elektrik enerjisine çevirmektedir. Böylelikle üretilen elektrik enerjisi de yine suyun elektroliz yöntemi ile ayrıştırılmasında kullanılmakta ve böylelikle hidrojen elde edilebilmektedir. Elektroliz yöntemleri arasında bazı farklılıklar bulunmakta olup, bunlar aşağıda verilmiştir. Suyun elektrolizi için alkali elektroliz, polimer elektrolit membran (PEM) ve katı oksit elektroliz hücreleri (SOEC’ler) dahil olmak üzere üç ana elektrolitik hücre türü vardır.",
+        "Günümüzde yıllık hidrojen üretimi, tüketiminin yılda yaklaşık %6 artmasıyla yaklaşık 80 milyon ton olduğu tahmin edilmektedir. Bilindiği üzere hidrojen büyük oranda sera gazı emisyonlarına yol açan bir süreç olan doğalgazın buharla reforme edilmesiyle üretilmektedir (Greenpeace, 2020: The Geography of Transport Systems, 2022). Küresel hidrojen talebinin %50’ye yakını şu anda doğalgazın buharla reformasyonu yoluyla, yaklaşık %30’u rafineri/kimyasal endüstriyel atık gazlardan kaynaklanan petrol/nafta reformundan, %18’i kömür gazlaştırmasından, %3.9’u su elektrolizinden ve %0.1 diğer kaynaklardan karşılanmaktadır."
+      ],
+      "id": "tr-section-3"
+    },
+    {
+      "title": "Yüksek Sıcaklıkta Suyun Ayrıştırılması (Termoliz)",
+      "paragraphs": [
+        "İki bin beş yüz santigrat dereceden daha fazla sıcaklık uygulandığında suyun hidrojen ve oksijene kimyasal olarak ayrışması işlemidir. Reaksiyon tersinir olduğundan, hidrojen ve oksijenin tekrar suya dönüşmesini önlemek için etkin bir şekilde ayrılması gerekir. Bu yöntemde konsantre güneş enerjisi veya nükleer güç reaksiyonlarının atık ısı kaynak olarak kullanılabilir. Bu, yöntemle kullanılan ısı kaynağına bağlı olarak çok az veya hemen hemen hiç sera gazı atmosfere salınmaz.",
+        "Termokimyasal metotla suyun elektroliz işlemi sırasında, suyu parçalamak için (500- 2,000)°C sıcaklıkta bir dizi kimyasal reaksiyon için (500–2,000)°C sıcaklık gerekir. Proseste kullanılan kimyasallar her döngüde yeniden kullanılarak yalnızca su tüketen, hidrojen ve oksijen üreten kapalı bir çevrim oluşturulur. İşlemler için gerekli yüksek sıcaklıklar çevre dostu yoğunlaştırılmış güneş enerjisi ile sağlanır (Şekil 4; United States Department of Energy).",
+        "Termoliz işlemi için gerekli yüksek sıcaklığı azaltmak için örneğin 1,200-1,500°C’lere indirmek için ara maddeler (katalizörler) kullanılır."
+      ],
+      "id": "tr-section-4"
+    },
+    {
+      "title": "Elektroliz (Alkali)",
+      "paragraphs": [
+        "Suyun elektrolizi veya suyun oksijen ve hidrojene ayrıştırılması 1890’lardan beri bilinen ve ticari olarak kullanılan bir yöntemdir. Elektroliz, basit olarak su içine iletkenliği arttıran KOH veya NaOH gibi bir madde katılarak ve bu sıvının içinden doğru akım geçirerek su molekülünde bulunan kimyasal bağların kırılmasını sağlayan bir işlemdir. Aynı zamanda, elektrolitik sıvı içine batırılmış metal elektrotlar aracılığı ile dışarıdan elektrik akımı uygulayarak, bir sıvı içinde çözünmüş kimyasal bileşiklerin ayrıştırılması olarak da tanımlanır.",
+        "Elektroliz Hidrojenin saf olarak elde edilmesi için kullanılan en önemli metottur. Elektroliz hücresinde elektrotlar kullanılan elektrolitik sıvıya göre değişik metallerden seçilebilmektedir. Bu hücre, çözünerek artı ve eksi yüklü iyonlara ayrılmış bir bileşiğin içine daldırılmış iki elektrottan oluşur ve bu elektrotlar birbirine değmeyecek biçimde (genellikle iki elektrot arası 5-20 cm)ayarlanır. Örneğin Alkali elektroliz hücrelerinde nikel tabanlı, nikel-alüminyum alaşım gibi elektrotlar tercih edilmektedir. Su içine iletkenliği arttırıcı sülfürik asit konulduğunda ise elektrot olarak asitten etkilenmeyen platin kullanılması gerekir. Platin yüksek verim veren elektrot olmakla beraber maliyet yönünden tercih edilmemektedir. Elektrotlar arasına dışarıdan en az 1.23 Volt gerilim uygulandığında katottan%99.9 saflıkta hidrojen, anottan ise oksijen gazı çıkar. KOH veya NaOH karıştırılmış elektrolitik hücre durumunda reaksiyon sırasıyla; Katotta 2 H O +2e- → H + 2OH- (1) Anotta 2OH- → 0.5 O + H O + 2e- (2) Toplam reaksiyon : H O→ H + 0.5 O (3) olarak meydana gelir. Alkali bir elektrolizör şeması aşağıda gösterilmiştir."
+      ],
+      "id": "tr-section-5"
+    },
+    {
+      "title": "Proton Geçirgenli Membran Elektrolizör (PEM)",
+      "paragraphs": [
+        "Proton Geçirgenli Membran veya Polimer Elektrolit Membran Elektrolizör (Proton Exchange Membrane-PEM): Bu tip elektrolizörler elektrokimyasal olarak 2000 psi veya daha yüksek basınçlarda ve %85 veya üzeri verimle hidrojen üretmek için tasarlanmıştır. Böylece daha sonra hidrojenin sıkıştırılması için kompresör kullanmaya da gerek kalmaz. PEM elektrolizör sıvı elektrolit yerine genellikle polimer tabanlı katı bir membran kullanır. Bu tip elektrolizörlerin bir diğer avantajı da parasitik kayıpların az olması yanında yüksek saflıkta hidrojen üretebilmesidir. PEM elektrolizörler basit yapıları ve hidrojen üretimi yanında, gazı basınçla depolayabilmeleri nedeniyle son yıllarda üzerinde en çok çalışılan konuların başında gelmektedir. Günümüzde “Regenarative Fuel Cell” olarak tanımlanan yakıt pilleri tersine çalışarak elektrolizör görevi yaptığı gibi, yakıt hücresi olarak da hidrojenden elektrik üretebilmekte ve atık olarak yine saf su çıkmaktadır. PEM elektrolizörü/yakıt pili şeması Şekil 6’da verilmiştir."
+      ],
+      "id": "tr-section-6"
+    },
+    {
+      "title": "Katı-oksit Elektrolizör (Solid Oxide Electrolysis Cell- SOEC)",
+      "paragraphs": [
+        "Katı-oksit elektrolizörler genelde (700-1000)°C gibi yüksek sıcaklıklarda negatif yüklü oksijen iyonlarını (O )- seçici olarak uygulayan elektrolit olarak ise katı bir seramik malzeme kullanan elektroliz hücrelerdir. Sistemde öncelikle dış devreden gelen elektronlar, hidrojen gazı ve negatif yüklü (O )- iyonları oluşturmak için katotta su ile birleşir. Daha sonra, oksijen iyonları seramik membrandan geçerek anotta reaksiyona girerek oksijen gazı meydana getirir ve dış devreye elektron sağlar. İşlem yüksek sıcaklık buhar elektrolizörü olarak da tarif edilebilir. Katı-oksit elektrolizörler Proton geçirgenli membran (PEM) elektrolizörlerden çok daha yüksek verime sahiptir (Tucker, 2020; Zheng, vd., 2021)."
+      ],
+      "id": "tr-section-7"
+    },
+    {
+      "title": "Fotonik Enerji (Fotoliz)",
+      "paragraphs": [
+        "Fotoliz, suyun fotonik enerji ile hidrojen ve oksijene kimyasal olarak ayrışmasını içerir. Su ayırma işlemi için potansiyel 1.23 eV olduğundan, buna eşdeğer olan fotonların dalga boyu 1008 nm olup, kızılötesi ışığa karşılık gelir. Bu da suyun ayrışmasının teorik olarak kızılötesi ışıkla mümkün olduğunu göstermekle beraber endüstriyel olarak uygulaması mevcut değildir. Son zamanda yüksek frekans yerine daha düşük frekanslı radyasyon altında fotokatalitik yöntemle suyun ayrıştırılması üzerine daha yoğun çalışmalar yapılmaktadır (Tee, vd., 2017; Waterhouse, vd., 2013)."
+      ],
+      "id": "tr-section-8"
+    },
+    {
+      "title": "Biyokimyasal Metot",
+      "paragraphs": [
+        "Karbonhidratların çeşitli bakterilerin anaerobik (oksijensiz) ortamda fermente olmasıyla hidrojen eldesidir. Fermantasyon işlemi oksijen yokluğunda aşağıdaki reaksiyonla hidrojen üretebilir (Tokio, 1979). C H O + 2H O → 2CH COOH + 2 CO + 4H"
+      ],
+      "id": "tr-section-9"
+    },
+    {
+      "title": "Termo-elektroliz",
+      "paragraphs": [
+        "Suyun termo-elektrolizi, elektrik ve termal enerjinin birleşik kullanımı ile suyun kimyasal olarak ayrışmasını içerir. Yüksek sıcaklıkta daha verimli ve ekonomiktir, çünkü gerekli enerjinin önemli bir kısmı daha ucuz termal enerji ile sağlanır ve bu, elektrik enerjisi talebini önemli ölçüde azaltır ve yüksek sıcaklıkta elektrolitik reaksiyon kinetiğini hızlandırır. Alkali elektroliz optimal olarak 200 °C’ye yakın yüksek sıcaklıkta çalışır ve endüstriyel ölçekte hidrojen üretimi için kullanılır. PEM elektrolizörleri tipik olarak 100 °C’nin altında çalışır (alkali elektrolizden daha verimlidir) ve ticari uygulama için giderek daha fazla kullanılabilir hale gelir. SOEC elektrolizörleri, elektriksel olarak en verimli ancak en az gelişmiş olanlardır. SOEC teknolojisi, hızlı malzeme bozulması ve sınırlı uzun vadeli kararlılıkla zorluklarla karşı karşıyadır (Chao, 2019; Baniasadi, 2012)."
+      ],
+      "id": "tr-section-10"
+    },
+    {
+      "title": "Biyofotoliz",
+      "paragraphs": [
+        "Suyun biyofotolizi, doğrudan ve dolaylı yöntemle hidrojen üretimi için biyokimyasal ve fotonik enerjinin kombine kullanımı ile mikroorganizmalar (yani yeşil mikro algler ve siyanobakteriler) tarafından oksijenik fotosentez içerir. Doğrudan biyofotolizde, mikroorganizmalar güneş ışığını yakalayarak suyuhidrojen iyonu ve oksijene ayırdıklarında, üretilen hidrojen iyonları ayrıca hidrojenaz enzimi (yani 2H O + güneş → 2H + O ) tarafından hidrojene dönüştürülür. Dolaylı biyofotolizde, güneş enerjisi mikroorganizmalar tarafından fotosentez yoluyla yakalanır ve daha sonra hidrojen üretmek için kullanılan bir tür karbohidratta 6CO + 12H O + güneş → C H O + 6O depolanır daha sonra C H O + 12H O + güneş → 12H + 6CO reaksiyon sonucu hidrojen ve karbon dioksite ayrışır (Kamran & Fazal, 2021)."
+      ],
+      "id": "tr-section-11"
+    },
+    {
+      "title": "Foto-katalitik Su Ayrıştırma (Foto-kataliz)",
+      "paragraphs": [
+        "Fotokatalitik yöntem basit olarak, foton enerjisi ile birlikte katalizör kullanılması yardımıyla hidrojen eldesidir. Örneğin güneş enerjisi ile fotokatalizör olarak TiO kullanılması bu alanda en çok çalışılan konular arasındadır. Suyun foton enerjisi ile parçalanması için ışığı çeken fotokatalitik yarı iletkene ihtiyaç vardır. Reaksiyon basit olarak; olarak verilir. Fotokatalizör olarak kullanılan yarıiletkenlerin özellikleri gelen foton enerjisi ile valans banttan elektronların iletkenlik bandına geçerek iletkenlik sağlamalarıdır. Yarıiletken fotokatalizör üzerine düşen ışınımın enerjisi, en az bu yarı iletkeninin valans bandı ile iletkenlik bandı arasındaki eV olarak verilen yasak aralık enerji değerine eşit olmalıdır. Fotokatalizör olarak en çok kullanılanlar TiO , CdS, Fe O ve SnO dur. Foto-katalitik yöntemde ışığın UV ve görünür bölgesinde bulunan foto-katalizörler, ışık absorpsiyonu ile iletkenlik bandında suyun hidrojene indirgenme reaksiyonu gerçekleştirerek hidrojen elde edilmesini sağlarlar (Kudo & Miseki, 2009; Hisatomi, vd., 2014).",
+        "Şimdiye kadar, rapor edilen foto-katalistlerin çoğu sadece ultraviyole ışık ışınımı altında aktiftir. Ancak, ultraviyole ışık (<400 nm) toplam güneş enerjisinin sadece %4’ünü oluştururken, görünür ışık (400-800 nm) ve kızılötesi ışık (>800 nm) toplam güneş enerjisinin sırasıyla %53 ve %43’ünü oluşturur."
+      ],
+      "id": "tr-section-12"
+    },
+    {
+      "title": "Foto-Elektrokimyasal Ayrıştırma",
+      "paragraphs": [
+        "Foto-elektrokimyasal sistemler, güneş enerjisi kullanarak su moleküllerini ayrıştırır ve kimyasal tepkime sonucu olarak hidrojen elde edilir. Foto-elektrokimyasal yöntemlerin en büyük avantajı enerji kaynağı olarak güneş yanında sadece suya ihtiyaç duyması olup, gelecek için ciddi bir potansiyeli olmasıdır (Fujishima & Honda, 1972; Nozik, 1978; Chen, 2010). Foto-elektrokimyasal sistemler foto-anot, foto-katot ve elektrolit olmak üzere üç temel kısımdan oluşur (Şekil 9). Foto-anot, üzerlerine düşen güneş ışığı ile birlikte elektron-hole çiftleri olur ve foto anodun yüzeyine temas eden su molekülü oksitlenerek oksijen molekülü ve pozitif yüklü hidrojen molekülü ortaya çıkar.",
+        "H O H + ½ O"
+      ],
+      "id": "tr-section-13"
+    },
+    {
+      "title": "Fotovoltaik Entegre Edilmiş Foto-Elektrokimyasal Su Ayrıştırma",
+      "paragraphs": [
+        "Bilindiği gibi fotovoltaik hücreler güneş enerjisini doğrudan elektriğe çeviren elektronik araçlar olup, suyu ayrıştırarak hidrojen eldesi için elektrolizöre gerekli elektrik enerjisini sağlayabilir. Böyle bir sistem aşağıda Şekil 10’da verilmiştir. Kristal silisyum tabanlı bir fotovoltaik hücre %18 verimliliğe sahip olup, %80 verimliliğe sahip bir elektrolizör ile entegre edildiğinde, kombine güneş enerjisiyle çalışan elektrolizör sistemi ≈%14.19’luk verimle çalışır. Güneş pili ve elektrolizörün ayrı yapısı ile güneş pili elektrolite daldırılmayı gerektirmez ve bu nedenle korozyona neden olmaz. Fotovoltaik entegreli güneş enerjisiyle çalışan su ayrıştırma, doğrudan yenilenebilir güneş enerjisi kaynağını kullanır ve hidrojen üretimi sırasında sera gazı salmaz.",
+        "Günümüzde ticari olarak kullanılan Alkali, PEM ve Katı-oksit elektrolizörlerden hidrojen üretimi için halen ve gelecekte öngörülen maliyetler Tablo 2’de verilmiştir (Türe, 2005)."
+      ],
+      "id": "tr-section-14"
+    },
+    {
+      "title": "Hidrojen Sülfür den (H₂S) Hidrojen Üretimi",
+      "paragraphs": [
+        "Uzun yıllardır yapılan çalışmalar Karadeniz’de çok büyük miktarda hidrojen sülfür olduğunu göstermekte olup, bu miktar her geçen yıl 2,73 x 106 metrik ton artmaktadır. Bunun nedeni Kuban, Don, Dinyeper, Dinyester ve Tuna olmak üzere beş büyük nehrin organik bileşiklerini hala Karadeniz’e akıtıyor olmasıdır. Aşırı miktarda Organik madde, normalde onu aerobik olarak parçalayacak olan bakteriler için çok fazla olduğundan çözünmüş oksijen kaynağını tüketerek anaerobik bakterileri baskın hale getirmektedir. Bu organizmalar, deniz suyunun bir bileşeni olan sülfat iyonlarından oksijeni alarak işlemde artık gaz olarak H S oluştururlar. Karadeniz’deki H S konsantrasyonunun biri yüzeyden 700 m’ye ve diğeri 700 m’den dibe kadar iki farklı rejime uyduğu bulunmuştur (Türe, 2005; Dimitrov, P., & Dimitrov, D., 2004). Çeşitli kaynaklardan alınan veriler aşağıda Tablo 3’te verilmiştir.",
+        "Karadeniz’de şu anda mevcut olan H S rezervuarının 5.27 x 109 metrik ton olduğu tahmin edilmektedir. Karadeniz’deki bu Yüksek miktardaki H S den hidrojenin ayrıştırılması hem ekonomiye katkı sağlayacak hem de ileride oluşacak çevre felaketlerini önleyecektir. Elde edilen sonuçlara göre hidrojen sülfürün elektrolizi ile elde edilen hidrojen, suyun elektrolizine göre 3 kat daha ekonomiktir (COSIA, 2017).",
+        "Hidrojen sülfür, H S, çürük yumurta kokulu kötü kokudan sorumlu renksiz, zehirli, yanıcı bir gazdır. Hidrojen sülfür havadan ağır olduğu için yetersiz havalandırılan alanlarda yere yakın birikme eğilimindedir. Genellikle bakteriler, bataklıklar ve lağımlar gibi oksijenin yokluğunda organik maddeler parçaladığında ortaya çıkar. Volkanik gazlarda, doğalgazda ve bazı kuyu sularında da oluşur.",
+        "H S üreten bakterilerin insanın kalın bağırsağındaki faaliyetleri sonucu üretilen gaz içindeki koku büyük ölçüde eser miktarda H S gazından kaynaklanır. Ağızdaki bu tür bakteriyel hareket, ağız kokusuna katkıda bulunabilir. Toplam küresel H S emisyonlarının yaklaşık %10’u insan faaliyetlerinden kaynaklanmaktadır (Rubright, vd., 2017). H S üretimi en çok petrol rafinerilerinde gerçekleşir, hidro-desülfürizasyon işlemi ile gerçekleşir ve hidrojenin etkisiyle petrolden sülfürü ayırır. Elde edilen H S, Claus işlemi yolu ve kısmi yanma ile elementel kükürde dönüştürülür. Hidrojen sülfür den hidrojen üretimi için de Clausmetodu kullanılır ancak burada metodun bazı adımları değiştirilmiştir. Genel olarak termal ve katalitik reaksiyonlar olmak üzere iki basamaklı bir işlemdir.",
+        "(a): Termal Adım: H S hava ile kısmen oksitlenir. Bu, yüksek sıcaklıkta (1000-1400) °C bir reaksiyon fırınında yapılır. Kükürt oluşur, ancak bir miktar H S reaksiyona girmeden kalır ve bu reaksiyonlarda az miktarda SO üretilir. H S + 3/2 O SO + H O (1) adım 2 H S + SO 3/n Sn + 2 H O (2) adım İşlem için genel reaksiyon 3 H S +3/2 O 3/n Sn + 3 H O İşlem için genel reaksiyon (b): Katalitik Adım: Geri kalan H S, daha fazla kükürt yapmak için SO ile reaksiyona girer, oran yaklaşık %99.8’dir. Hidrojen üretimi için kullanılan Claus metodu basit olarak Şekil 11’de gösterilmiştir.",
+        "Hidrojen sülfürün deniz suyunda çözünmüş halde bulunması nedeniyle, hidrojen elde etmeden önce sırasıyla; yoğunluğu yeterli olan H S’in doğru derinlikten yüzeye pompalanması, H S molekülünü parçalanmadan sudan ayrılması gerekmektedir. Bu oldukça karmaşık sistemin detayları ilgili yayında verilmiştir (Naman, vd., 2008)."
+      ],
+      "id": "tr-section-15"
+    },
+    {
+      "title": "Biyokütleden Hidrojen Üretimi",
+      "paragraphs": [
+        "Hidrojen üretiminde su yerine biyokütle olarak tarif edilen, her türlü organik atık, odun, tezek vs. kaynak olarak kullanıldığında, elektroliz yönteminden farklı bir metot uygulanır. Yapılan çalışmalar hidrojenin en ucuz, biyokütle kaynaklarından üretilebileceğini göstermektedir. Özellikle enerji tarımıyla, örneğin hızlı büyüyen sorgum gibi enerji bitkilerinin, tarımla rekabet etmeyen nispeten çorak arazilerde yetiştirilmesi ile elde edilen bu kaynak hidrojen üretimi için son derece yararlıdır. Biyokütleden hidrojen eldesinde piroliz, hetotropik ve foto fermantasyon gibi yöntemlerin yanı sıra bakterilerden de faydalanılmaktadır. Biyokütleden hidrojen üretildiği takdirde, daha önce bitki büyürken fotosentez yoluyla absorbe edilen CO açığa çıkacağından atmosferdeki CO dengesi değişmeyecek ve çevre zararı olmayacaktır."
+      ],
+      "id": "tr-section-16"
+    },
+    {
+      "title": "Deniz Suyundan Hidrojen Üretimi",
+      "paragraphs": [
+        "Denizlerdeki su miktarı ve güneş, rüzgâr enerjilerinin potansiyelleri göz önüne alındığında denizlerden milyarca ton hidrojen dolaysıyla enerji ve saf su elde etmek, dünyanın çevre, enerji ve su problemleri için yegâne çözümdür (Türe, 2021: par.14). Burada deniz suyu içindeki tuz (NaCl) nedeniyle klor gazı elektrolizde elektrotların kirlenmesine yol açtığından ya suyun önce ters ozmos gibi bilinen tekniklerle arıtılması veya elektrot üzerinde bazı yeni teknolojik geliştirme yapmak gerekmektedir. Yenilenebilir enerji kaynakları kullanılarak gerçekleştirilebilecek bu iki aşamalı teknik şematik olarak Şekil 12’de verilmiştir.",
+        "Dünya üzerindeki okyanusların tuzluluk oranı %3.1 ile %3.8 arasında değişmekle beraber, denizlerin tuzluluk oranı ortalama su sıcaklığı ve iklimin kuruluğuna bağlı olarak buharlaşma ile artarken, denizi besleyen akarsuların taşıdığı su miktarı ile azalmaktadır. Deniz suyunda su (H O) ve tuzun (NaCl) dışında magnezyum, kalsiyum gibi birçok mineral bulunmaktadır. Saf bir ergimiş tuzun elektrolizinde elektrotlarda gerçekleşecek tepkimeler tuz iyonlarını nötralize eden yarı hücre tepkimeleridir. Oysa deniz suyu arıtımından arta kalan salamuradaki sodyum klorür çözeltisinin elektrolizinde hem suyun hem de tuzun iki indirgenme ve iki yükseltgenme tepkimeleri katot ve anotta yarışacaktır. Na+ ve Cl- dışındaki eser elementlerin oluşturduğu iyonlar ilk aşamada ihmal edilmekle beraber bunların da ekonomik önem taşıdığı ve ayrıca elektrotların çalışma ömrünü etkileyebilecekleri göz ardı edilmemelidir. Tepkimelerin standart hidrojen elektrodu ile kıyaslanan standart yarı hücre potansiyelleri E0 ile gösterilmiştir.",
+        "Katot indirgenme tepkimeleri: 2 Na+(aq) + 2 e- → Na(k) E0 = -2,71 V 2 H O(s) + 2 e- → H (g) + 2 OH-(aq)E0= -0,83 V Anot yükseltgenme tepkimeleri: 2 Cl-(aq) → Cl (g) + 2e- E0= 1,36 V 2 H O(s)→ O (g) + 4 H+(aq) + 4 e- E0= 1,23 V Elektrokimyasal hücrenin standart pil potansiyeli, standart katot potansiyeli (E0katot) ile standart anot potansiyeli (E0anot) arasındaki potansiyel farkına, yani indirgenme ile yükseltgenme yarı hücre potansiyel farkına eşittir.",
+        "E0pil = E0katot – E0anot Katot yarı tepkimeleri incelendiğinde sodyumun indirgenmesi suyun indirgenmesine kıyasla çok daha negatif olduğu için katotta H oluşacak, Na+ iyonuysa çözeltide kalacaktır. Bazı özel katalizörler haricinde O ’nin aşırı potansiyeli Cl ’nin aşırı potansiyeline göre daha fazla olduğu için, pil potansiyeli daha düşük olmasına rağmen, anotta O değil istenmeyen zehirli Cl gazı oluşacaktır. İşlemlerde H dışında klor Cl ve alkali NaOH (aq) iki ana ürün olduğundan, işlem klor-alkali işlemi olarak adlandırılır. Şekil 13’te gösterilen diyafram hücresinde Cl anot bölmesinde, H ve NaOH ise katot bölmesinde üretilir. Diyaframın (Membran) görevi Cl ile NaOH’ın temasına engel olarak ClO- , ClO - ve Cl- iyonları gibi istenmeyen ara ürünlerin oluşmasına engel olarak klor-alkali ürün verimini arttırmaktır. Katot bölmesindeki yaklaşık %10- 12 NaOH(aq) ve %14-16 NaCl (aq) içeren çözelti, suyun bir kısmı buharlaştırılarak ve NaCl(k) kristalleştirilerek deriştirilir ve saflaştırılır. Son ürün %1’e kadar NaCl(aq) içeren %50’lik NaOH’dır."
+      ],
+      "id": "tr-section-17"
+    },
+    {
+      "title": "Hidrojen Yakıtının Güvenilirliği",
+      "paragraphs": [
+        "Gelişen hidrojen teknolojisi, doğalgaz, petrol, kömür ve uranyum gibi nükleer yakıtların geniş çapta kullanımı nedeniyle ortaya çıkan kazalar yanında çok daha güvenli kalmaktadır. Hidrojen kullanımında bazı kurallara uyulduğu takdirde tehlike yok denilecek kadar azalmaktadır. Aslında, hava gazı olarak bilinen ve dünyanın birçok büyük şehrinde yaygın olarak kullanılan gaz karışımı içinde %50 hidrojen, %30 metan ve %7 oranında zehirli bir gaz olan karbon monoksit bulunmaktadır (Türe, 2021: par.25). Hidrojenin güvenli olmasının nedenleri özetle: • Havadan 14 kat hafif olduğundan hızla yayılarak zararsız hale gelmesi; • Hidrojen deposu delinmesi durumunda 35-40 cm yakına gelmeden ateş almaması; • Yandığı zaman sadece saf su oluşturması; • Yanabilmesi için havadaki konsantrasyonun en az % 4 olması; • Odun, kömür, benzin gibi etrafa ısı yaymaması; • Araçların egzozundan zehirli gaz ve kanserojen parçacıklar yerine saf su çıkarmasıdır.",
+        "Hava içinde alev alma sınırı, patlama enerjisi, alev sıcaklığı ve atık ürün gibi parametreler göz önüne alındığında, fosil yakıtların emniyet faktörlerinin 0.5-0.80 arasında olmasına karşın, hidrojen için, daha yüksek (1 civarında) bir emniyet faktörü bulunmuştur. Bu bulgular, hidrojenin diğer yakıtlara göre daha emniyetli olduğunu açıkça göstermektedir. Hidrojenin güvenliği ile ilgili yapılan bir deney Şekil 14’te gösterilmiştir (Türe, 2021: par. 26)."
+      ],
+      "id": "tr-section-18"
+    },
+    {
+      "title": "Hidrojenin Depolanması",
+      "paragraphs": [
+        "Hidrojenin yakıt olarak kullanılmasındaki en büyük sorun depolanmasındaki verim yetersizliğidir. Hidrojen genelde; a) Sıkıştırılmış halde b) Sıvı halde ve c) Kimyasal bağ oluşturmuş halde, olmak üzere üç farklı yolla depolanabilmektedir. Sıkıştırılmış ve sıvı hidrojen saf halde tanklarda depolanabileceği gibi, fiziksel olarak nano-tüplerde de depolanabilmektedir. Kimyasal olarak ise genellikle hidrür şeklindedir. Hidrür formunda depolama, katı halde metallerde olabileceği gibi sodyum bor bileşiğindeki gibi sıvı halde de olabilmektedir. Araştırmalar, bazı alaşımların saf haldeki hidrojenden çok daha yüksek yoğunlukta hidrojen depolayabildiklerini göstermiştir (Türe, 2021: par. 27). Farklı depolama yöntemleri ile elde edilebilecek hacimsel ve gravimetrik hidrojen yoğunluk değerleri Şekil 15’te verilmektedir.",
+        "Yukarıda belirtilen depolamayı gerektiren uygulamalar esas alındığında hidrojen depolamada amaçlanan özellikler özetle; • Olabildiğince yüksek geri dönüşümlü depolama kapasitesi; • Olabildiğince düşük geri-bırakım sıcaklığı; • Zehirlenmeye karşı direnç ve bağlı olarak olabildiğince yüksek tekrarlanabilir dolum sayısıdır.",
+        "Uluslararası Enerji Ajansı (IEA) ve A.B.D. Enerji Bakanlığı otomotiv uygulamaları için hedef değerleri; kapasite için: >% 5-6, geri bırakım sıcaklığı için: <150 °C ve kullanım ömrü için: >1000 dolum olarak tespit etmişlerdir (Schulz, vd., 1999).",
+        "Hidrojenin depolanmasında güvenilirlik ve hafifliğin önemli olması, hidrojenin hidrür yapısında depolanmasını ön plana çıkarmaktadır (Bilici, 2004). Şekil 15’te de görüldüğü gibi “özellikle birim hacimde depolanabilecek hidrojen açısından hidrürler gaz veya sıvı depolamada önemli bir üstünlüğe sahiptirler (Bilici, 2004)."
+      ],
+      "id": "tr-section-19"
+    },
+    {
+      "title": "Hidrojenin Metal Hidrürlerle Depolanması",
+      "paragraphs": [
+        "Hidrojenin metal hidrür olarak magnezyumda depolanması konusunda olumlu sonuçlar elde edilmiştir (Güvendiren, vd., 2004). Bu çalışmalarda %6’lık depolama kapasitesine erişilmiş, ancak geri bırakım sıcaklığı hedef değerlerin üzerinde kalmıştır. Zehirlenmeye karşı direnç açısından sistem, iyileştirmelere gerek duymaktadır (Güvendiren, vd., 2003). Halen çalışmalar yukarıda belirtilen hedef değerler doğrultusunda Mg-Al-B sistemi esasında sürdürülmektedir. Hidrojenin, yine metal hidrür olarak Mg2Ni ve benzer sistemlerde depolanması Osmangazi Üniversitesinde ve LaNi5’te hidrojen depolamanın ısı açısından numerik modellenmesini konu alan çalışmalar ise Niğde Üniversitesinde sürdürülmektedir (Mat & Kaplan, 2001)."
+      ],
+      "id": "tr-section-20"
+    },
+    {
+      "title": "Hidrojenin Bor Hidrürlerle Depolanması",
+      "paragraphs": [
+        "Sodyum bor hidrür (NaBH ), güçlü bir indirgeyici olup, birçok organik ve inorganik bileşikler ile reaksiyona girebilmekte ve diğer bor hidrürlere oranla birim hacimde daha fazla hidrojen atomu içermektedir. Yıllardır sanayinin çeşitli kesimlerinde farklı amaçlar için kullanılmasına rağmen hidrojen taşıma kapasitesi ve bor içeren bir bileşik olması, sodyum bor hidrürün son zamanlarda çok daha iyi bilinir bir bileşik haline gelmesine yol açmıştır (Bilici, 2004).",
+        "Sodyum bor hidrür, ilk olarak Schlesinger prosesi olarak bilinen yöntem ile aşağıdaki eşitlikte görüldüğü gibi borik asidin metanol ile trimetil borata (B(OCH )3) dönüşmesi ve daha sonra sodyum hidrür ile indirgenmesi sonucunda elde edilmiştir. B(OH)3 + CH OH → B(OCH )3 + 4NaH→ NaBH + 3NaOCH Eşitlikteki stokiyometrik oranlar incelendiğinde, gerekli sodyumun %75’inin bir yan ürün olan sodyum metokside dönüştüğü görülmektedir. Bu verim düşüklüğü, yöntemin daha büyük ölçekte uygulanabilirliğini engellemekte ve sodyum bor hidrür üretim maliyetini etkileyen en büyük faktör olmaktadır (Ortega, 2003). Dünya sodyum metalinin %66’sı ABD’de, % 14’ü İngiltere’de, geri kalanı ise Almanya, Fransa, Japonya ve Rusya’da üretilmektedir. Yıllık sodyum metali üretimi 250 bin tondur.",
+        "Sodyum bor hidrür ile su reaksiyona girdiğinde aşağıdaki ekzotermik reaksiyona uygun olarak hidrojenin ağırlıkça %10.8’i açığa çıkmakta ve yan ürün olarak sodyum metaborat (NaBO ) üretilmektedir (Li, vd., 2003).",
+        "Katalizör NaBH + 2 H O → NaBO + 4H ∆H = -218 kJ.mol-1 Görüldüğü gibi reaksiyon sonucu açığa çıkan hidrojen miktarı hidrür şeklinde bağlı olan hidrojenin iki katı olup, 4 mol H NaBH ’den, 4 mol H ise H O’dan gelmektedir. Reaksiyonun ekzotermik olması nedeniyle sistemden elde edilen hidrojen nemlidir ve kullanılacağı ortama bağlı olarak hidrojen gazının, nem miktarını düzenleyici bir sistemden geçirilmesi gerekmektedir.",
+        "Sodyum bor hidrür kullanımının bazı avantajları şunlardır; • Reaksiyonun kontrol edilebilirliği çok yüksektir (katalizörün ortamdan uzaklaştırılması ile reaksiyon durmaktadır, Örn. Rutenyum, platin vb.).",
+        "• Reaksiyon oda sıcaklığı ve basıncında oluşmaktadır (hidrojenin serbest hale geçmesi için ek bir enerjiye gereksinim yoktur).",
+        "• Küçük miktardaki hidrojen üretimi için diğer yöntemlere göre çok daha basit ve ucuz bir yöntemdir.",
+        "• Reaksiyon hızı oldukça kararlı olup, H üretimi yavaş ve kararlıdır. Katalizörler pek çok kez kullanılabilmektedir.",
+        "Sodyum metaborat yeniden sodyum bor hidrür üretiminde kullanılabilmektedir.",
+        "İçten yanmalı motorlarda yapılacak küçük bir değişiklik ile bu şekilde üretilen hidrojen gazı, araçlarda yakıt olarak kullanılabilmektedir. Sodyum bor hidrür kullanılarak araçların yakıt sistemleri için gerekli olan sıvı esaslı sodyum bor hidrür sisteminin akış diyagramı Şekil 16’da şematik olarak gösterilmektedir.",
+        "Sodyum bor hidrür, NaBH , beyaz görünümlü, toksik olmayan, kuru halde 300°C’ye kadar kararlı bir bileşiktir. Toz halinde, granül şeklinde veya NaOH’te %12’lik çözelti halinde bulunabilir. Sodyum bor hidrür çözeltisinin raf ömrünü uzatmak için bu çözeltilere sodyum hidroksit (NaOH) eklenir. Normal saklama koşullarında, %12’lik NaOH’teki NaBH çözeltisinin yıllık kaybı % 0.1’den daha azdır.",
+        "Sodyum bor hidrür, hidroskopik yapısı dolayısıyla havadaki nem ile temas ettiğinde yavaşça sodyum metaborat ve hidrojene bozunur. NaBH ’ den hızlı ve kontrollü biçimde hidrojen üretimi asidik bileşikler veya rutenyum, nikel, kobalt, platin gibi katalizör görevi gören metallerin ilavesiyle gerçekleşebilir. Sodyum bor hidrür çözeltisinin katalizör kullanılarak verdiği ekzotermik hidroliz reaksiyon sonucu 2.37 litre H /g NaBH açığa çıkar. Açığa çıkan hidrojenin yarısı sodyum bor hidrürden, diğer yarısı da sudan gelmektedir. Bu nedenle konsantre sodyum bor hidrür çözeltisinden açığa çıkan hidrojen içeriği oldukça yüksektir ve ağırlık başına enerji içeriği bakımından diğer bilinen mobil hidrojen depolama teknolojileri ile rahatlıkla rekabet edebilir. Sodyum bor hidrürden hidrolizle üretilen teorik hidrojen kapasitesi ağırlıkça %10,8’dir.",
+        "Maddelerin kütle bazlı H-kapasiteleri, depolama kapasitesi ölçütü olarak kullanılagelmiştir. NaBH birçok hidrojen alaşımından daha fazla hidrojen depolama özeliğine sahiptir (Şekil 17). Ayrıca, araştırmalar sodyum bor hidrürün en yoğun sıkıştırılmış hava tankından daha fazla hidrojen tutabilme özelliğine sahip olduğunu göstermiştir (Andersson & Grönkvist, 2019)."
+      ],
+      "id": "tr-section-21"
+    },
+    {
+      "title": "Sodyum Bor Hidrür Sentez ve Hidroliz Maliyetleri",
+      "paragraphs": [
+        "Bayer prosesi sodyum bor hidrür sentezinde en çok kullanılan ticari prosestir. Bu proseste belirli miktarlardaki susuz boraks, sodyum metali ve kuartz, 3 atm hidrojen basıncı altında, 500°C’de karıştırıcı tipli otoklavda 2-4 saat ısıtılır. Reaksiyon ürününün amonyak ile ekstraksiyonundan ve amonyağın evaporasyonundan sonra yüksek bir verimle NaBH elde edilir. İkincil ürün olarak da sodyum metasilikat oluşur. Reaksiyon aşağıda verilmiştir: 1/4 Na B4O + 4Na + 2H + 7/4 SiO → NaBH + 7/4 Na SiO ∆Gº (298) = -411.3 kJ/mol-NaBH ; ∆Hº (298)=- 541.348 kJ/mol NaBH Reaksiyona giren hammaddelerin ve reaksiyon ürünlerinin entalpileri reaksiyon sıcaklığında hesaplanarak reaksiyon için gereken enerji maliyeti 1kg sodyum bor hidrür üretimi için yaklaşık 2/ kg ABD Doları olarak hesaplanmıştır. Ancak bu hesaplamada ideal koşullar varsayımı yapılmış ve yan ürünün sistemden uzaklaştırılması için gereken enerji maliyeti de göz önüne alınmamıştır. Bayer prosesi için gerekli hammaddelerin maliyetleri ise 1 kg NaBH üretimi için minimum $10’dır.",
+        "Sodyum bor hidrürün hidroliz reaksiyonu için gerekli sodyum bor hidrür yukarıdaki gibi Bayer prosesi ile üretildikten sonra hidrolizde kullanılacak ise, 1 kg H sentezi için gereken NaBH maliyeti ideal şartlarda yaklaşık $50’dır. Ancak bu reaksiyonda rutenyum gibi bir katalizör de kullanılmalıdır. Katalizör türüne göre, sodyum bor hidrürden 1 kg hidrojen eldesi maliyeti $80/kg’ı bulmaktadır ve bu maliyet katalizör türüne ve miktarına göre daha da yükselebilmektedir. Ancak şu da belirtilmelidir ki NaBH sistem içinde Bayer prosesiyle üretilmeyip, $47’dan satın alınırsa bunun maliyeti $222’ı bulmaktadır ve buna katalizör maliyeti de ilave edilirse hidroliz reaksiyon maliyeti yaklaşık $260’ı bulacaktır (Türe, vd., 2006).",
+        "Hidroliz sonucunda hidrojenin yanında açığa çıkan sodyum-metaboratın tekrar sodyum bor hidrüre dönüştürülerek sisteme verilmesi sistem döngüsünün devam etmesi bakımından önemlidir. Yapılan araştırmalar, NaBH geri dönüşümünün MgH kullanarak (Amendola vd., 2000) dinamik hidrürleme/dehidrürleme prosesi ile veya Mg2Si kullanılarak gerçekleştirilebileceğini göstermiştir. Bu çalışmada Mg2Si kullanılarak, NaBO ’den NaBH ’e geri dönüşüm reaksiyon maliyeti yaklaşık $15/ kg H olarak hesaplanmıştır. Sonuç olarak, tüm bu maliyetler bir araya getirilerek, ideal şartlarda, sistem kayıpları dikkate alınmadan sodyum bor hidrürün sentezinden, hidrojen sentezi ve sodyum metaboratın sodyum bor hidrüre geri dönüşümü de hesaba alınarak bulunan toplam maliyet yaklaşık US$ 110/kg H olarak belirlenmiştir. Ancak yukarda da belirtildiği gibi sodyum bor hidrür sistem içinde üretilmeyip satın alındığı takdirde bu maliyet yaklaşık $290/kg H olacaktır (Türe, vd., 2006)."
+      ],
+      "id": "tr-section-22"
+    },
+    {
+      "title": "Hidrojen Enerjisi Uygulamaları",
+      "paragraphs": [
+        "Bir yakıtın her yerde, örneğin sanayide, evlerde, taşıt araçlarında kullanılabilmesi büyük önem taşımaktadır. Günümüzde yaygın olarak kullanılan yakıtlarla bakıldığında, bunların birçoğunun ancak belirli uygulamalar için kullanılabildiğini görmekteyiz. Kömürü, otomobillerde veya uçaklarda kullanmak pratik açıdan uygun değildir. Hidrojeni ise, hemen her yerde kolaylıkla kullanmak mümkündür. Evlerde, ısıtma amacı ile kalorifer, fırın ve şofbenlerde doğalgaz yerine rahatlıkla kullanılabilmektedir. Hidrojen fosil yakıtların aksine yalnız alevli yanma ile değil katalitik yanma, kimyasal, elektro-kimyasal yolla üretim gibi çok farklı çevrimlerle enerji verebilmektedir.",
+        "Hidrojen yakıtının içten yanmalı motorlar yanında yakıt pilleri ile elektrik üreterek araçlarda yüksek verimli kullanım sağlaması ile otobüs, kamyon, otomobil, traktör ile tarım makineleri gibi tüm taşıt araçlarında kullanılması mümkündür.",
+        "Hidrojenden elektrik üretimi için kullanılan yakıt pillerinin günümüzde ve gelecekte çok önemli bir yeri olduğundan bu konu daha ayrıntılı olarak aşağıda verilmiştir. Hidrojen, yakıt pillerinde veya taşıtlarda benzin yerine, evlerde kalorifer, fırın ve şofbenlerde doğalgaz yerine kullanılabilmektedir. Günümüzde hidrojen artık cep telefonlarından uçaklara kadar hemen her yerde kullanılmaktadır. Yakıt pilleri ile yüksek verimde elektrik üretilebildiği için bu pillerin kullanım alanları çok geniştir. Şekil 18’de ise yakıt pilleri ile çalışan araç ve ürünlerden bazıları gösterilmiştir. Bunlar arasında; otomobilleri, otobüsleri, motosikletleri, bisikletleri, golf arabalarını, fork liftleri, hizmet araçlarını, elektrik yedek ünitelerini, uçakları, lokomotifleri, denizaltıları vb. araçları saymak mümkündür. Hidrojen sanayide ise margarin yapımından, metal işlemeye kadar çok çeşitli alanlarda yaygın olarak kullanılmaktadır."
+      ],
+      "id": "tr-section-23"
+    },
+    {
+      "title": "Yakıt Pilleri",
+      "paragraphs": [
+        "Yakıt pilleri yüksek verimli elektrokimyasal enerji dönüşüm cihazları olarak tarif edilir ve temel olarak anot ve katot arasına yerleştirilmiş elektrolitten oluşur. Yakıt olarak kullanılan hidrojenin oksijen ile kimyasal reaksiyona girmesi sonucunda elektrik üreten bu cihazlar geleceğin enerji üretim kaynağı olarak görülmektedir. Atık olarak saf su üretmesi, çevre kirliliğine, gürültüye neden olmaması ve hareketli parça içermemesi yakıt pilinin başlıca avantajları arasındadır. Yakıt pilleri genellikle hücrede kullanılan elektrolit türüne bağlı olarak polimer elektrolit (PEM), alkali, fosforik asit, ergimiş karbonat ve katı oksit yakıt pili olarak sınıflandırılmaktadır. PEM yakıt pili özellikle taşıtlarda kullanılmaktadır. Yakıt pilleri otomobillerde kullanılan geleneksel içten yanmalı sistemlerden daha enerji etkindir ve kesinlikle çok daha az kirlilik oluşturmaktadır. Bununla birlikte, otomobil uygulamaları için sistem büyüklüğü, ağırlığı, işletime alma süresi, işletim ömrü ve fiyatı, iyileştirilmesi gereken önemli konulardır.",
+        "Yakıt hücresi, hidrojenin kullanımında önemli bir yer tutmaktadır. Yakıt hücresi sistemleri taşınabilir şekilde kullanılabildiği gibi, ulaşımda, hareketli sistemlerde ve sabit uygulamalarda da kullanılması mümkündür. Yakıt hücreleri genel olarak elektrik enerjisinin ihtiyaç duyulduğu her yerde kullanılabilmekle beraber, genel olarak ticari kullanımı Tablo 4’teki gibidir (Xiao, 2021). Taşınabilir uygulamalara; cep telefonu, dizüstü bilgisayar, dijital fotoğraf makinesi, kamera bataryaları, sabit uygulamalara; jeneratörün ve kesintisiz güç kaynaklarının kullanıldığı hastaneler, iş yerleri, evler, bilgisayar ağları örnek gösterilebilir. Ulaşım sektöründe dünyanın önde gelen otomobil üreticileri, yakıt hücresi ile çalışan otomobil, otobüs prototiplerinin üretimini tamamlamışlardır. 1MW’lık lokomotif için de 2003 yılı içinde beş yıllık bir proje başlatılmıştır. Ayrıca madencilikte emniyetli olması nedeniyle yakıt hücresi kullanımına başlanmıştır."
+      ],
+      "id": "tr-section-24"
+    },
+    {
+      "title": "PEM (Proton Exchange Membrane-Polymer) Yakı Pili",
+      "paragraphs": [
+        "Proton Exchange Membrane veya PolymerElectrolite Membrane olarak da bilinen PEM Yakıt pilleri özellikle ABD, Japonya ve Almanya’da taşıtlarda kullanım için geliştirilmiş bir yakıt pili türüdür. İlk önemli uygulaması, GE tarafından 1 kW çıkışlı bir PEM yakıt pilinin Gemini uzay araçlarında kullanılmasıdır. Yan ürün olarak üretilen saf su da astronotlar tarafından içme suyu olarak kullanılmıştır. Son 5 yıldır PEM yakıt pillerinin hem maliyetinde hem de performansında iyileşme sağlayacak çalışmalarda büyük bir artış olmuştur (Wilkinson & Steck, 1997).",
+        "Komple yakıt pili sistemlerinin birçok taşıma uygulamaları (şehir içi toplu taşıma otobüsleri ve yolcu otobüsleri dahil olmak üzere) için kullanılabildiği gösterilmiştir. Son çalışmalar maliyet düşürme ve katalizör, membranlar ve bipolar plakaların büyük miktarlarda üretimi konularında yoğunlaşmıştır. Bu çalışmalar; güç yoğunluğunu artırma, su yönetimini iyileştirme, ortam koşullarında işletim, dönüştürülmüş yakıta toleransı artırma ve modül ömrünü artırma konularındaki çalışmalarla da kesişmektedir. Örnek bir PEMYP hücresinin şeması Şekil 19’da gösterilmektedir.",
+        "PEM’de diğer yakıt pillerinde olduğu gibi yakıt pil modülü, gaz geçirgenliği yüksek ve elektrolitle temasta olan iki elektroda sahip olup, gaz yakıt, anottan sürekli olarak beslenirken oksitleyici gaz da katottan sürekli olarak beslenmektedir. PEM elektrot reaksiyonlarında ise yakıttan gelen H anotta H+’ya dönüştürülür. H+, polimer elektrolit membrandan geçerek katotta O ile birleşir ve su üretilir. İşletim sıcaklığı 80ºC civarındadır.",
+        "Membranın elektrolit olarak, anot ile katot arasındaki iyonik iletişimi sağlamak ve reaksiyona giren iki gazı ayırmak olmak üzere iki görevi bulunmaktadır. Günümüzde kullanılan standart elektrolit malzemesi DuPont tarafından 1960’ların ortasında uzay uygulamaları için üretilen teflon kökenli malzeme olan Nafion’dur.",
+        "PEM hücresi içinde kullanılan elektrotlar tipik gaz difüzyon elektrotlarıdır ve hidrojen gazını proton ve elektronlarına ayırır. Katalizör tabakası 5-50 m kalınlığındadır ve 2-4 nm çapında Pt mikro kristaller içerir. Günümüzde Pt hem anot hem de katot reaksiyonları için uygun katalizör olarak belirlenmiştir. Ancak pahalı olduğundan birçok yöntem kullanılarak minimum miktarda kullanılmaya çalışılmaktadır. PEM hücrelerin çoğunda, akım toplama ve dağıtma, gaz dağıtımı ve ısıl yönetim için karbon/grafit plakalar kullanılmaktadır. Bu tabaka ~350 m kalınlığındadır ve bir tarafına katalizör tabakası tutturulmuştur."
+      ],
+      "id": "tr-section-25"
+    },
+    {
+      "title": "Doğrudan Metanol Yakıt Pili",
+      "paragraphs": [
+        "PEM yakıt pilinin bir çeşidi olarak da kabul edilen bu piller üzerindeki ilk çalışmalar 1960- 70’li yıllarda Shell ve ESCO-Exon tarafından yapılmıştır. Doğrudan metanol kullanımının Pt- Ru katalizör üzerindeki olumsuz etkisi ve anottaki aşırı gerilimi nedeniyle düşük akım yoğunluğu elde etmişlerdir. 1990’lı yılların başlarında elde edilen verimin %25’in altında olması nedeniyle göz ardı edilen bu piller için araştırmalar sürdürülmektedir. Doğrudan Metanol Yakıt Pili çalışma ilkesi PEM piline benzemektedir. PEM’de olduğu gibi elektrolit olarak asidik katı polimer Nafion, elektrot olarak Pt-Pd bindirilmiş karbon kullanılmaktadır. Bu pilleri PEM’den ayıran en önemli özellik, yakıt metanol/etanolün yakıt dönüştürücü gerekmeksizin doğrudan kullanılabilmesi ve yakıt işleme birimi içermediğinden diğer türlere göre daha az karmaşık, daha hafif ve daha ucuz olmasıdır."
+      ],
+      "id": "tr-section-26"
+    },
+    {
+      "title": "Alkali yakıt pili",
+      "paragraphs": [
+        "Alkali yakıt pilinde düşük sıcaklık (120°C’de) uygulamalarında elektrolit olarak %35-50 KOH kullanılmaktadır. Uzay aracı Apollo’da kullanılan yüksek sıcaklık (250°C’de) alkali yakıt pilinde ise elektrolit olarak %85 KOH kullanılmıştır. Düşük sıcaklıklı alkali sistemler oda sıcaklığında da çalışabilir ve diğer tüm yakıt pili sistemleri arasında en yüksek voltaj verimine sahiptir. Hücre ve elektrotlar düşük maliyetle karbon ve plastiklerden üretilebilir. Birçok malzemeye iyi uyum sağlayabildiğinden 15,000 saat gibi uzun bir ömre sahiptir. Ayrıca bu yakıt pilleri için bulunabilecek Ni, Ag, metal oksitler gibi birçok katalizör seçeneği bulunmaktadır."
+      ],
+      "id": "tr-section-27"
+    },
+    {
+      "title": "Fosforik asit yakıt pili",
+      "paragraphs": [
+        "Eğer uzay uygulamalarında kullanılan alkali yakıt pili sayılmazsa günümüzde ticarileşmeye en yakın yakıt pili Fosforik Asit Yakıt Pilidir. Elektrolit olarak %100’lük fosforik asidin kullanıldığı bu yakıt pili 150-220 °C’de çalışmaktadır. Elektrolit olarak görev yapan fosforik asit, elektrotlar arasında gözenekli bir tabakada sabitlenmiştir. Hem anot hem de katot gaz difüzyon elektrotlarıdır. Düşük sıcaklıklarda fosforik asidin kötü bir iletken olması nedeniyle bu yakıt pili yüksek sıcaklıklarda çalıştırılır. Bu dezavantajın yanı sıra fosforik asit bir elektrolit olarak birçok avantaj sağlamaktadır. Bunlar arasında, mükemmel ısıl, kimyasal ve elektrokimyasal kararlılığı ve 150°C’nin üzerinde diğer inorganik asitlerden göreceli olarak daha düşük uçuculuğa sahip olmasını saymak mümkündür."
+      ],
+      "id": "tr-section-28"
+    },
+    {
+      "title": "Ergimiş karbonat yakıt pili",
+      "paragraphs": [
+        "Ergimiş karbonat yakıt pili 600-650 °C gibi oldukça yüksek sıcaklıklarda çalışır ve son dönemlerde geliştirilen ikinci jenerasyon yakıt pillerindendir, bir başka deyişle, ticarileştirilmeden önce çok fazla geliştirilmeye ihtiyacı vardır. Elektrolit olarak alkali karbonatların karışımı, örneğin (Na ve K) veya Li CO -K CO karışımı kullanılmaktadır. Bu elektrolit seramik bir matris yapısı içine tutturulmuştur. Hücrenin, kolay bulunabilen metal levhalardan baskı tekniği ile üretilebilmesi, hücre reaksiyonlarında pahalı olan değerli metal katalizörler yerine Ni katalizörün yeterli olması, CO’in doğrudan kullanılabildiği bir yakıt türü olması, hücrede açığa çıkan buharın türbinlerinde veya kojenerasyon uygulamalarında kullanılabilecek kadar yüksek sıcaklıkta bulunması avantajları olarak sayılabilir. Ancak Ergimiş Karbonat yakıt pilinin, yüksek sıcaklıkta çalışması ile korozyona neden olması ve dolaysıyla hücre bileşenlerinin ömrünün azalması gibi dezavantajları vardır."
+      ],
+      "id": "tr-section-29"
+    },
+    {
+      "title": "Katı oksitli yakıt pili",
+      "paragraphs": [
+        "Katı oksit elektrolit, bazı özel yararları nedeniyle endüstriyel uygulamalar için çekici olmaktadır. Elektrolit olarak gözeneksiz metal oksitler, %8-10 (mol) Y O içeren ZrO kullanılmaktadır. Saf zirkon yalıtkan olduğu halde Y O ilavesiyle iletkenlik özelliği göstermektedir. ZrO yerine CeO kullanımı işletim sıcaklığını düşürebilecektir. Bu yakıt pilinde de diğer yakıt pillerinde olduğu gibi gözenekli gaz difüzyon elektrotları kullanılmaktadır. Anot ve katot olarak önceleri gözenekli Pt kullanılmaktayken son dönemlerde anot olarak Ni-ZrO (Y O içeren) veya CO-ZrO , katot olarak ise Sr yüklenmiş LaMnO kullanılmaktadır. Çok yüksek sıcaklıklara (1000°C) çıkmak mümkün olduğundan, düşük sıcaklık uygulamalarındaki gibi pahalı katalizör kullanımına gerek kalmadan yakıt, doğrudan yakıt pilinde kullanılabilmektedir. Gaz geçişi düşük, elektrolitin elektronik iletkenliği yüksek olduğu için bu piller açık devrede teorik voltajın en az % 96’sını verebilmektedir. Katı oksit yakıt pillerinin avantajları arasında, katı elektrolitin çok kararlı olması nedeniyle hücrenin çalışma koşullarında diğer elektrolitler gibi sorun çıkarmaması, sıvı faz olmadığından ara yüzey sorunları, gözeneklerden su taşması, katalizörü ıslatmanın gerekliliği gibi problemler de bulunmaması sayılabilir. Genel bir karşılaştırma için Tablo 5’te yakıt pillerinin türleri ve özellikleri verilmiştir."
+      ],
+      "id": "tr-section-30"
+    },
+    {
+      "title": "Hidrojen Enerjisinin Mevcut Kullanım Alanları",
+      "paragraphs": [
+        "Enerji taşıyıcısı olarak hidrojenin hemen her alandaki uygulamaları artık gayet iyi bilinmektedir. Bunların yakında daha da artması kaçınılmazdır.",
+        "Toyota tarafından geliştirilen H City Gold modeli otobüsün tavanına yerleştirilen ve toplam kapasitesi 37.5 kg olan 5 hidrojen tankı ile 400 km yol gidebilmektedir. Yakıt tankları 8 dakikadan kısa bir sürede doldurulabilen otobüs, sadece su buharı salarak çevreci kimliğini ortaya koymaktadır.",
+        "Günümüzde hemen tüm otomobil firmalarının hidrojen yakıtı ile çalışan araçları mevcut olup, önümüzdeki yıllarda üretimlerini hızla arttıracağı açıklanmıştır. Shell, BP gibi büyük petrol şirketleri de hızla hidrojen dolum istasyonları açmaktadırlar (Şekil 21)."
+      ],
+      "id": "tr-section-31"
+    },
+    {
+      "title": "Hidrojenin Deniz Taşıtlarındaki Uygulamaları",
+      "paragraphs": [
+        "Son yıllarda iklim değişikliği ve deniz kirlenmesi konularına artan farkındalık nedeniyle, özellikle İsveç, Norveç gibi kuzey ülkelerinin limanlarına artık petrol türevi yakıtlarla çalışan gemilere kısıtlama getirilmiş ve gemilerde hidrojen gibi temiz yakıt kullanılması teşvik edilmeye başlanmıştır. Hidrojenli deniz taşıtlarına örnekler Şekil 22’te gösterilmiştir.",
+        "Türkiye’deki ticari gemi işletmecileri ve tersane sahipleri de bu bağlamda hidrojen yakıtı kullanımı için çalışma başlatmışlardır. Dünya’da halen hidrojen yakıtı ile çalışan bir çok gemi bulunmakta ve bunların sayısı giderek artmaktadır. Aşağıda halen dolaşımda olan hidrojen yakıtlı gemiler gösterilmiştir.",
+        "Hidrojen/oksijen yakıt hücreleri (özellikle PEMFC gibi düşük sıcaklık yakıt hücreleri) denizaltılarını çalıştırmak için ideal özelliklere sahiptir. Havaya ihtiyaçları yoktur, yakıt (hidrojen) ve oksit (oksijen) depolanması durumunda deniz altında işleyebilir. Su dışında hiçbir emme ya da atık madde üretmezler, bu sebeple de sıfır kaldırma gücünü korurlar. Hareket eden parçaları olmadığından, sonar (deniz radarı) işaretini azaltarak sessizce işlerler. Düşük sıcaklıkta ısı salarlar ve de böylelikle çok az miktarda termal izler üretirler. Çok verimlidirler. Uzun deniz gezileri ve az zaman kaybı sağlarlar."
+      ],
+      "id": "tr-section-32"
+    },
+    {
+      "title": "Hidrojenle Çalışan Uçaklar",
+      "paragraphs": [
+        "Sıvı hidrojenin, ticari subsonik ve süpersonik uçaklarda yakıt olarak birçok avantajı vardır. Sıvı hidrojenin en önemli avantajı, geleneksel jet yakıtlarının enerji içeriğinden 2.8 kat daha fazla olan yüksek enerji içeriğidir (142 MJ/kg). Bu sebeple, sıvı hidrojenle çalışan bir uçak, geleneksel uçağın kütlesinin üçte biri kadar daha az yakıt taşımak durumundadır. Hidrojenle çalışan bir subsonik yolcu uçağı, normal bir uçakla karşılaştırıldığında aynı uçuşu tamamlamak için ortalama %16 daha az yakıta (enerji açısından) ihtiyaç duyar. Bu avantaj, süpersonik bir uçakta daha da yüksek olacaktır (%28). Airbus ve Boeing firmaları hidrojen yakıtlı uçaklar üzerinde yoğun çalışma yapmaktadırlar.",
+        "Genel düşünceye rağmen hidrojen, hava taşımacılığı için daha güvenli bir yakıttır ve şu anda da jet yakıtı olarak kullanılmaktadır. Sıvı H yakıtlı bir uçak çarpışmasındaki zarar ve ziyan, standart yakıtlı bir uçak çarpışmasına göre daha az olacaktır. 1988 Nisan’ında, ticari bir hava yolunun uçağının (Tupolev 155), sıvı hidrojenle çalışan üç turbofan motorundan birisinin Sovyetler Birliği’nde demonstrasyonu yapılmıştır. 19 Haziran 1988’de Amerikan pilotu, William H. Conrad, tamamen sıvı hidrojen ile çalışan bir uçağı (Grumman-American “Cheetah”) çalıştıran ilk kişi olmuştur (Maniaci, 2008)."
+      ],
+      "id": "tr-section-33"
+    },
+    {
+      "title": "Binalarda Hidrojen Uygulamaları",
+      "paragraphs": [
+        "Hidrojen bir alanın ısıtılmasında veya soğutulmasında kullanılabilir. Aynı şekilde, ufak modifikasyonlarla doğalgazın günümüzde kullanıldığı gibi su ısıtmasında da uygundur. Ek olarak, alev yanma yerine, hidrojen, doğrudan ısıtarak ve havayı nemlendirerek katalitik yakıcılarda da kullanılabilir. Daha başka emisyonlar üretilmediğinden bu yakıcılar kapalı mekanlarda da güvenle kullanılabilir. Alan ısıtma ve soğutmasında, dondurucularda, hidrojen kullanımı, hidrojen/hidrojen bileşkesi soğutma sistemleri şeklinde olacaktır.",
+        "Ya alev yanma ya da katalitik yakıcılar yemek pişirmekte kullanılabilir. Yakıcı kapların, hidrojen/hava hızının her zaman hidrojen/hava karışımlarındaki alev yayılma hızından daha fazla olacak şekilde tasarlanması, geri alev yayılmasını engellemek açısından çok önemlidir."
+      ],
+      "id": "tr-section-34"
+    },
+    {
+      "title": "Sonuç ve Öneriler",
+      "paragraphs": [
+        "Hidrojen her açıdan güvenli, temiz ve sonsuz bir yakıt olup, zararlı hiçbir yanı bulunmamaktadır. Bugün için dezavantaj sayılabilecek tek nokta ise henüz yaygın ticari kullanımı olmadığı için fiyatının pahalı olmasıdır ki bu da her yeni teknolojik ürün için geçerlidir. Örneğin cep telefonları veya hesap makineleri gibi teknolojik ürünlerin piyasaya ilk çıktıklarındaki fiyatlarının, şu andaki fiyatlarının onlarca katı olduğu iyi bilinmektedir. Ayrıca petrolün bulunmasından bugüne kadar geçen süre içinde bu sektöre yapılan yatırımın tahmini 160 trilyon (160,000 milyar) Dolar olduğu hesaplanmıştır. Hidrojenin yaygın kullanımı için petrol dolum istasyonlarında hidrojen pompaları kurulması ve tabii büyük miktarda hidrojen üretilmesi gerekmektedir. Bu alandaki çalışmalar birçok ülkede başlamıştır. Örneğin, Nisan 2004 de Kaliforniya Valisi Arnold Schwarzenegger “Hidrojen Otoyolları” projesi çerçevesinde halen 12 adet olan hidrojen dolum istasyonu sayısını önümüzdeki 6 yılda 200’e çıkartmak için çalışma başlatmış ve bundan böyle her 30 km’de hidrojenli arabalar için dolum istasyonları bulunacağı müjdesini vermiştir (Türe, 2020).",
+        "Hidrojen gazı, doğalgaz veya hava gazına benzer şekilde boru hatları vasıtasıyla her yere kolaylıkla ve güvenli olarak taşınabilmektedir. Hidrojenin boru ile taşınmasına, Texas’ta petrol endüstrisi tarafından kullanılmakta olan ve 80 km uzunluğa sahip boru şebekesi ile Almanya’da Ruhr havzasında 1938 yılında işletmeye açılan ve halen 15 atmosfer basınç altında hidrojen taşımaya devam eden, 204 km’lik boru hattını örnek olarak göstermek mümkündür.",
+        "Günümüzde hidrojen depolama ve taşıma ortamı olarak büyük bir önem kazanmış olan sodyum bor hidrür, özel bor kimyasalları içinde de önemli bir potansiyele sahiptir. Sodyum bor hidrürün benzer amaçlı diğer bileşiklere oranla daha fazla hidrojen depolayabilmesi, yanıcı ve patlayıcı olmaması, kolay kontrol edilebilir bir reaksiyon ile hidrojenini verebilmesi gibi özellikleri, yeni ve temiz enerji politikaları ile birlikte değerlendirildiğinde ülkemizin zengin bor kaynakları için yaygın ve kalıcı bir tüketim alanı yaratabilecektir. Teknolojik yenilenmesini ve endüstriyel üretim sürecini hızlandırmak zorunda olan Türkiye ilk on yılda hidrojen enerjisine geçiş için bütün yasal ve hukuki zeminleri hazırlamalı ve bu ikincil enerji kaynağını temin edeceği birincil sistemleri kurmalıdır. Daha sonraki aşamada ise bu yakıtın daha verimli depolanabilmesi ve taşınabilmesi için alternatif olarak önerilen hidrür üretim sistemlerini geliştirmeli ve bor’lu yakıt çözeltilerini piyasaya sunacak teknolojiyi hazırlamalıdır. Bu teknolojiler ise elektrik enerjisine dönüşüm için gerekli yakıt hücre sistemleri ile entegre olmalı ve dışa bağımlılıktan kurtulmak için, pahalı bir yöntem olan teknoloji transferi yerine üreten bir ülke olmalıdır.",
+        "Türkiye bugüne kadar hızla gelişen teknolojiyi yakalamakta geç kalmış ve devamlı teknoloji ithal eden bir ülke konumuna gelmiştir. Hiç olmazsa enerji alanında bu konumdan çıkma şansı Türkiye’nin önündedir. Türkiye hidrojen enerjisi uygulamaları açısından önemli bir konuma sahiptir. Rüzgâr, güneş, jeotermal, su gibi temiz enerji kaynaklarından hidrojen üretim yöntemleri, bu kaynaklar açısından zengin olan ülkemizde kolaylıkla uygulanabilir. Ancak, öncelikle bu teknolojilerin geliştirilip, uygun maliyetli hale getirilmesi gerekmektedir.",
+        "Türkiye’nin enerji alanında dışa bağımlılıktan kurtulması, gelişmiş bir ülke konumuna gelmesi için hidrojen enerjisi fırsatını iyi değerlendirmesi gerekmektedir. Türk toplumunun ilkokuldan başlayarak hidrojen konusunda bilgilendirilmesi, Türkiye’deki bilim adamlarının çalışmalarını hidrojene yönlendirmesi, özellikle yenilenebilir enerji kaynakları kullanılarak hidrojen üretimi çok önemli konulardır. Türkiye’nin sahip olduğu bor minerallerinden sodyum bor hidrürün hidrojenin depolanmasında kullanımı ile ilgili teknolojilerin geliştirilmesi, devletin hidrojen enerjisi çalışmalarına destek olması, hidrojen enerjisi alanında teşvikler vermesi bu teknolojinin bir an önce ülkemizde uygulanmasını sağlayacaktır."
+      ],
+      "id": "tr-section-35"
+    }
+  ],
+  "keywords": [
+    "deniz suyu",
+    "enerji",
+    "hidrojen-sülfür",
+    "hidrojen yakıtı",
+    "sodyum bor-hidrür"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Adamson, K. A. (2008). Fuel Cell Today Industry Review 2008. Platinum Metals, 52(2), 123."
+    },
+    {
+      "id": "ref-2",
+      "text": "Amendola, S. C., Sharp-Goldman, S. L., Janjua, M. S., Spencer, N. C., Kelly, M. T., Petillo, P. J., & Binder, M. (2000). A safe, por table, hydrogen gas generator using aqueous borohydride so lution and Ru catalyst. International Journal of HydrogenE nergy, 25(10), 969-975."
+    },
+    {
+      "id": "ref-3",
+      "text": "Andersson, J., & Grönkvist, S. (2019). Large-Scale Storage of Hyd rogen. International Journal of Hydrogen Energy, 44(23), 11901-11919."
+    },
+    {
+      "id": "ref-4",
+      "text": "Bilici, U. (2004). Enerji Taşıyıcısı Hidrojen, Hidrojen Taşıyıcısı Sodyum Borhidrür. Madencilik Bülteni, Maden Mühendisleri Odası, 67, 43-47."
+    },
+    {
+      "id": "ref-5",
+      "text": "CAB Direct. (2019). Solar Thermal Electrochemical Process (STEP) action to biomass: solar thermo-coupled electroc hemical synergy for efficient breaking of biomass to biofu els and hydrogen.https://www.cabdirect.org/cabdirect/abstra ct/20193075874 adresinden alındı."
+    },
+    {
+      "id": "ref-6",
+      "text": "Chen, Z., Jaramillo, T. F., Deutsch, T. G., Kleiman-Shwarsctein, A., Forman, A. J., Gaillard, N., Garland, R., Takanabe, K., Hes ke, C., Sunkara, M., McFarland, E. W., Domen, K., Miller, E. L., Turner, J. A., & Dinh, H. N. (2010). Accelerating Materi als Development for PhotoElectrochemical Hydrogen Pro duction: Standards For Methods, Definitions, And Reporting Protocols. Journal Of Materials Research, 25(1), 3-16. https:// doi.org/10.1557/JMR.2010.0020"
+    },
+    {
+      "id": "ref-7",
+      "text": "COSIA. (2017). Hydrogen from Hydrogen Sulphide. https://co sia.ca/sites/default/files/attachments/COSIA%20Hyd rogen%20from%20Hydrogen%20Sulphide.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-8",
+      "text": "Degens, E. T., & Ross, D. A. (1974). The Black Sea—Geology, Chemistry, and Biology. American Association of Petroleum Geologists. https://doi.org/10.1306/M20377"
+    },
+    {
+      "id": "ref-9",
+      "text": "Dimitrov, P., & Dimitrov, D. (2004). The Black Sea, The Flood And The Ancient Myths. “Slavena”, Varna. https://doi. org/10.13140/RG.2.2.18954.16327"
+    },
+    {
+      "id": "ref-10",
+      "text": "Ewald, R. (1998). Requirements for advanced mobile storage sys tems. International Journal of Hydrogen Energy, 23(9), 803- 814."
+    },
+    {
+      "id": "ref-11",
+      "text": "Fujishima, A., & Honda, K. (1972). Electrochemical Photolysis of Water at a Semiconductor Electrode. Nature, 238(5358), 37- 38."
+    },
+    {
+      "id": "ref-12",
+      "text": "Greenpeace. (2020). New research: Air pollution from fossil fuels costs the world $8 billion every day.https://www.green peace.org/usa/news/new-research-air-pollution-from-fos sil-fuels-costs-the-world-8-billion-every-day/adresinden alındı."
+    },
+    {
+      "id": "ref-13",
+      "text": "Güvendiren, M., & Öztürk, T. (2003). Enerji kaynağı olarak hid rojen ve hidrojen depolama. Mühendis ve Makina Dergisi, 523."
+    },
+    {
+      "id": "ref-14",
+      "text": "Güvendiren, M., Akyildiz, H., & Öztürk, T. (2003).Hydrogen Sto rage In Magnesium With Graphite And Sulfur Addition, 569- 573."
+    },
+    {
+      "id": "ref-15",
+      "text": "Güvendiren, M., Baybörü, E., & Öztürk, T. (2004). Effects Of Ad ditives On Mechanical Milling and Hydrogenation of Magne sium Powders. International Journal of Hydrogen Energy, 29(5), 491-496."
+    },
+    {
+      "id": "ref-16",
+      "text": "Hisatomi, T., Kubota, J., & Domen, K. (2014). Recent advances in semiconductors for photocatalytic and photoelectrochemi cal water splitting. Chem. Soc. Rev., 43(22), 7520-7535. htt ps://doi.org/10.1039/C CS60378D"
+    },
+    {
+      "id": "ref-17",
+      "text": "Irena. (2020). Green Hydrogen Cost Reduction. https://irena. org/-/media/Files/IRENA/Agency/Publication/2020/Dec/ IRENA_Green_hydrogen_cost_2020.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-18",
+      "text": "Kamran, M. F. & Rayyan, M. (2021). Fundamentals Of Renewab le Energy Systems: Technologies, design and operation. Else vier Academic Press. ISBN: 978-0-12-823538-6"
+    },
+    {
+      "id": "ref-19",
+      "text": "Kudo, A., & Miseki, Y. (2009). Heterogeneous photocatalyst ma terials for water splitting. Chem. Soc. Rev., 38(1), 253. https:// doi.org/10.1039/B800489G"
+    },
+    {
+      "id": "ref-20",
+      "text": "Lein A.,Y., & Ivanov M., V., (1990).Hydrogen Sulfide Production In Shelf Sediments And Its Balance In The Black Sea . Micro biology, 59 ( 5 ) : 921-8."
+    },
+    {
+      "id": "ref-21",
+      "text": "Li, Z. P., Morigazaki, N., Liu, B. H., & Suda, S. (2003). Preparation of sodium borohydride by the reaction of MgH with dehyd rated borax through ball milling at room temperature. Journal of Alloys and Compounds, 349(1-2), 232-236."
+    },
+    {
+      "id": "ref-22",
+      "text": "Library. (2022).Development of a New Hybrid Photochemical/ Electrocatalytic Water Splitting Reactor for Hydrogen Produ ction: Design, Analysis and Experiments. https://ir.library. dc-uoit.ca/bitstream/10155/871/1/Baniasadi_Ehsan.pdf ad resinden alındı."
+    },
+    {
+      "id": "ref-23",
+      "text": "Maniaci, D. (2008). Relative Performance of a Liquid Hyd rogen-Fueled Commercial Transport. 46th AIAA Aerospace Sciences Meeting and Exhibit. 46th AIAA Aerospace Sciences Meeting and Exhibit, Reno, Nevada."
+    },
+    {
+      "id": "ref-24",
+      "text": "Mat, M. D., & Kaplan, Y. (2001). Numerical study of hydrogen absorption in an Lm− Ni5 hydride reactor. International Jour nal of Hydrogen Energy, 26(9), 957-963."
+    },
+    {
+      "id": "ref-25",
+      "text": "Naman, S., Ture, I., & Veziroglu, T. (2008). Industrial extraction pilot plant for stripping H S gas from Black Sea water. Inter national Journal of Hydrogen Energy, 33(22), 6577-6585. htt ps://doi.org/10.1016/j.ijhydene.2008.07.113"
+    },
+    {
+      "id": "ref-26",
+      "text": "National Institute of Standards and Technology (NIST). (2004). PEM Fuel Cells. https://physics.nist.gov/MajResFac/NIF/pem FuelCells.html adresinden alındı."
+    },
+    {
+      "id": "ref-27",
+      "text": "Nature. (2013). Hydrogen production by Tuning the Photonic Band Gap with the Electronic Band Gap of TiO . https:// www.nature.com/articles/srep02849 adresinden alındı."
+    },
+    {
+      "id": "ref-28",
+      "text": "Nelly Hydrogen. (2022). Alkaline water electrolysis.https://nel hydrogen.com/glossary/alkaline-water-electrolysis/ adresin den alındı."
+    },
+    {
+      "id": "ref-29",
+      "text": "Nozik, A. J. (1978). Photoelectrochemistry: Applications to Solar Energy Conversion. Annual Review of Physical Chemistry, 29(1), 189-222."
+    },
+    {
+      "id": "ref-30",
+      "text": "Online Library. (2017).Recent Progress in Energy-Driven Wa ter Splitting. https://onlinelibrary.wiley.com/doi/full/10.1002/ advs.201600337 adresinden alındı."
+    },
+    {
+      "id": "ref-31",
+      "text": "Ortega, J. V., Wu, Y., Amendola, S. C., & Kelly, M. T. (2003). U.S. Patent No. 6,586,563. Washington, DC: U.S. Patent and Tra demark Office."
+    },
+    {
+      "id": "ref-32",
+      "text": "Parsons, M. (2020). Getting Back to Work…At Work (The HYPER Guide to Returning to the Lab Safely), Washington State University. https://hydrogen.wsu.edu/2020/06/12/getting-ba ck-to-work-at-work-the-hyper-guide-to-returningto-the-lab-safely/ adresinden alındı."
+    },
+    {
+      "id": "ref-33",
+      "text": "Protank. (2018). Sodium Hydroxide Storage Tanks & Specifications. https://www.protank.com/sodium-hydroxide adresinden alın dı."
+    },
+    {
+      "id": "ref-34",
+      "text": "Rubright, S. L. M., Pearce, L. L., & Peterson, J. (2017). Environ mental toxicology of hydrogen sulfide. Nitric Oxide: Biology and Chemistry, 71, 1."
+    },
+    {
+      "id": "ref-35",
+      "text": "Ruth, J. D., Hayes, L. M., Martin, D. R., & Hatipoglu, K. (2017). An overview of photoelectrochemical cells (PEC): Mimicking nature to produce hydrogen for fuel cells. SoutheastCon 2017, 1-6."
+    },
+    {
+      "id": "ref-36",
+      "text": "Schulz, R., Huot, J., Liang, G., Boily, S., Lalande, G., Denis, M. C., & Dodelet, J. P. (1999). Recent Developments In The Appli cations of Nanocrystalline Materials To Hydrogen Techno logies. Materials Science and Engineering: A, 267(2), 240-245."
+    },
+    {
+      "id": "ref-37",
+      "text": "Science Direct. (2019). Biological And Biochemical Hydrogen Production. https://www.sciencedirect.com/science/article/ pii/B9780080227139500148 adresinden alındı."
+    },
+    {
+      "id": "ref-38",
+      "text": "Shiva Kumar, S., & Himabindu, V. (2019). Hydrogen production by PEM water electrolysis – A review. Materials Scien ce For Energy Technologies, 2(3), 442-454. Doi: 10.1016/j. mset.2019.03.002."
+    },
+    {
+      "id": "ref-39",
+      "text": "Statista. (2021). Hydrogen production costs worldwide as of 2018, based on production source. https://www.statista.com/statis tics/1132774/global-hydrogen-production-cost-ba sed-on-source/ adresinden alındı."
+    },
+    {
+      "id": "ref-40",
+      "text": "Tee, S. Y., Win, K. Y., Teo, W. S., Koh, L. D., Liu, S., Teng, C. P., & Han, M. Y. (2017). Recent progress in energy‐driven water splitting. Advanced science, 4(5), 1600337."
+    },
+    {
+      "id": "ref-41",
+      "text": "The Geography of Transport Systems. (2022). The spatial orga nization of transportation and mobility.Energy Density of some Combustibles (in MJ/kg). https://transportgeography. org/contents/chapter4/transportation-and-%20%20%20ener gy/combustibles-%20energy-content/ adresinden alındı."
+    },
+    {
+      "id": "ref-42",
+      "text": "Tucker, M. (2020). Progress in metal-supported solid oxide elect rolysis cells: A review. International Journal Of Hydrogen Energy, 45(46), 24203-24218."
+    },
+    {
+      "id": "ref-43",
+      "text": "Türe, İ. E. (2021). Deniz Taşıtlarında Temiz ve Tükenmez Yakıt. https://www.virahaber.com/prof-dr-engin-ture-yazdi-de niz-tasitlarinda-temiz-ve-tukenmez-yakit-hidrojen-60174h. htm adresinden alındı."
+    },
+    {
+      "id": "ref-44",
+      "text": "Türe, İ. E., Tabakoğlu, F. Ö., & Kurtuluş, G. (2006). Economical aspects of sodium borohydride for hydrogen storage. İstanbul Üniversitesi Dergisi, 1(2), 23-62."
+    },
+    {
+      "id": "ref-45",
+      "text": "Türe, İ., E. (2001). Hidrojen Enerjisi. Temiz Enerji Vakfı. TÜBİ TAK. ISBN-975-8547-00-3."
+    },
+    {
+      "id": "ref-46",
+      "text": "Türe, İ., E., (2005). Hydrogen Energy Potential of the Black Sea. World Hydrogen Energy Conference, WHEC Yokohama, Japan."
+    },
+    {
+      "id": "ref-47",
+      "text": "U.S Department of Energy. (2020). Hydrogen Strategy. https:// www.energy.gov/sites/prod/files/2020/07/f76/USDOE_FE_ Hydrogen_%20Strategy_July2020.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-48",
+      "text": "United States Department of Energy. (2022) Hydrogen Produ ction: Thermochemical Water Splitting. https://www.energy. gov/eere/fuelcells/hydrogen-production-thermochemi cal-water-splitting adresinden alındı."
+    },
+    {
+      "id": "ref-49",
+      "text": "Weber, A., Riess, W., Wenzhoefer, F., & Jørgensen, B. B. (2001). Sulfate Reduction In Black Sea Sediments: In Situ And Labora tory Radiotracer Measurements From The Shelf To 2000m Depth. Deep Sea Research Part I: Oceanographic Resear ch Papers, 48(9), 2073-2096. https://doi.org/10.1016/S0967- 0637(01)00006-1"
+    },
+    {
+      "id": "ref-50",
+      "text": "Wilkinson, D. P., & Steck, A. E. (1997). General progress in the research of solid polymer fuel cell technology at Ballard."
+    },
+    {
+      "id": "ref-51",
+      "text": "Yuan, X. Z., Nayoze-Coynel, C., Shaigan, N., Fisher, D., Zhao, N., Zamel, N., Gazdzicki, P., Ulsh, M., Friedrich, K. A., Girard, F., & Groos, U. (2021). A review of functions, attributes, pro perties and measurements for the quality control of proton exchange membrane fuel cell components. Journal of Power Sources, 491, 229540."
+    },
+    {
+      "id": "ref-52",
+      "text": "Zheng, Y., Chen, Z., & Zhang, J. (2021). Solid Oxide Electrolysis of H O and CO to Produce Hydrogen and Low-Carbon Fu els. Electrochemical Energy Reviews, 4(3), 508-517. doi: 10.1007/s41918-021-00097-4."
+    }
+  ],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-01.jpg",
+      "caption": "Şekil 1. Hidrojenin Çeşitli Yakıtlarla Göre Enerji İçeriği (MJ/kg)"
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-02.jpg",
+      "caption": "Şekil 2. Sudan Hidrojen Eldesi İçin Kullanılan Çeşitli Yöntemler"
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-03.jpg",
+      "caption": "Şekil 3. Yeşil Hidrojen Döngüsü"
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-04.png",
+      "caption": "Tablo 1. Dünya’da Çeşitli Kaynaklardan Üretilen Hidrojen İçin Maliyetler"
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-05.jpg",
+      "caption": "Şekil 4. Yoğunlaştırılmış Güneş Enerjisi İle Termokimyasal Hidrojen Üretimi a) Merkezi Güneş Toplayıcı, Kule ve Heliostatlar b) Modüler Çanak ve Güneş toplayıcı"
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-06.jpg",
+      "caption": "Şekil 5. Alkali Elektroliz Hücresi"
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-07.jpg",
+      "caption": "Şekil 6. PEM Elektrolizör"
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-08.jpg",
+      "caption": "Şekil 7. Katı-Oksit Elektroliz Hücresi"
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-09.jpg",
+      "caption": "Şekil 8. Fotokatalitik Su Ayrıştırma: A) Yarıiletken Fotokatalist İle Su Ayrıştırma B) Yarıiletken Bant Yapısı ve Su Ayrıştırma Redoks Potansiyeli"
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-10.jpg",
+      "caption": "Şekil 9. Foto-elektrokimyasal Elektroliz Hücre Şeması"
+    },
+    {
+      "id": "figure-11",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-11.jpg",
+      "caption": "Şekil 10. Fotovoltaik Entegre Edilmiş Elektroliz İle Su Ayrıştırma Sistemi A) Fotovoltaik Sistem ve Dış Elektrolizör B) Fotovoltaik Entegre Elektroliz"
+    },
+    {
+      "id": "figure-12",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-12.png",
+      "caption": "Tablo 2. Elektrolizör Maliyetleri"
+    },
+    {
+      "id": "figure-13",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-13.png",
+      "caption": "Tablo3. Karadeniz’in Farklı Derinliklerdeki H 2 S Konsantrasyonları"
+    },
+    {
+      "id": "figure-14",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-14.jpg",
+      "caption": "Şekil 11. Klasik Claus İşlemi (Metodu)"
+    },
+    {
+      "id": "figure-15",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-15.jpg",
+      "caption": "Şekil 12. Deniz Suyundan Hidrojen Üretim Alternatifleri"
+    },
+    {
+      "id": "figure-16",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-16.jpg",
+      "caption": "Şekil 13. Diyaframlı Klor – Alkali Işlemi"
+    },
+    {
+      "id": "figure-17",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-17.jpg",
+      "caption": "Şekil 14. Hidrojenli ve Benzinli Araçların Yangın Durumunda Karşılaştırılması"
+    },
+    {
+      "id": "figure-18",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-18.jpg",
+      "caption": "Şekil 15. Hidrojende Depolama Şekilleri ve Elde Edilebilen Hacimsel ve Gravimetrik Yoğunluk Değerleri"
+    },
+    {
+      "id": "figure-19",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-19.jpg",
+      "caption": "Şekil 16. Otomotiv ve Benzer Uygulamalar İçin Sıvı Esaslı Sodyum Bor Hidrür Sistemindeki Akış Diyagramı"
+    },
+    {
+      "id": "figure-20",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-20.tif",
+      "caption": "Şekil 17. Kimyasal Hidrürlerin Kıyaslaması"
+    },
+    {
+      "id": "figure-21",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-21.jpg",
+      "caption": "Şekil 18. Hidrojenin Kullanım Alanları"
+    },
+    {
+      "id": "figure-22",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-22.png",
+      "caption": "Tablo 4. Yakıt Hücrelerinin Genel Ticari Kullanım Alanları"
+    },
+    {
+      "id": "figure-23",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-23.jpg",
+      "caption": "Şekil 19. PEM Yakıt Pili Şeması"
+    },
+    {
+      "id": "figure-24",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-24.png",
+      "caption": "Tablo 5. Yakıt Pillerinin Türleri ve Özellikleri"
+    },
+    {
+      "id": "figure-25",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-25.jpg",
+      "caption": "Şekil 21. Hidrojen Dolum İstasyonları"
+    },
+    {
+      "id": "figure-26",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-26.jpg",
+      "caption": "Şekil 22. Hidrojenli Deniz Taşıtları"
+    },
+    {
+      "id": "figure-27",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-27.jpg",
+      "caption": "Şekil 20. Hidrojenle Çalışan Araçlar"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "id": "en-section-1",
+      "title": "Full Text",
+      "paragraphs": [
+        "Aleksey Beliayev Guintovt was born in Moscow in 1965. In 1985 graduated from the Moscow Architectural-Construction Technical College. Between 1985-88 studied in MAI (in the department of Urban Planning). Guintovt, one of the important figures of Russian contemporary painting, stands out with his bold and unique works. His powerful lines combine the traditions with trends of the Russian Avant-garde and Constructivism, and also the imposing Soviet style. His paintings are currently in the collections of the Tretyakov Gallery, the Russian Museum, Moscow Museum of Modern Art, as well as dozens of other museums and many private collections. The artist who was also awarded the Kandinsky award in 2008, promotes a grand style in Russian contemporary art and his paintings create bizarre utopias made up of Orthodox churches, the Soviet Empire, and Apollonian heroes."
+      ]
+    }
+  ],
+  "keywords": [],
+  "footnotes": [
+    {
+      "id": "note-1",
+      "text": "Aleksey Beliayev Guintovt. “Supernova Moscow” 2012. MDF board, inkjet print, palm print of the author. 150/100 cm."
+    }
+  ],
+  "references": [],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/supernova-moskova/figure-01.jpg",
+      "caption": "Supernova Moscow"
+    }
+  ]
+}
