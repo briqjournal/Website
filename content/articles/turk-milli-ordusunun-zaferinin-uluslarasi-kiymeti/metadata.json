@@ -89,7 +89,7 @@
   "ethicsApproval": null,
   "dataAvailability": null,
   "aiUse": null,
-  "acknowledgements": null,
+  "acknowledgements": "Çevirmen: Emrah Alan",
   "citation": {
     "en": "Alan, E. (2020). The views of Chinese Revolutionary Gao Junyu on the Turkish Revolution. Belt & Road Initiative Quarterly, 1 (3), 96-102.",
     "tr": "Alan, E. (2020). Çin Devrimi'nin kıvılcımı Gao Junyu’nün Türk Devrimi'ne bakışı. Kuşak ve Yol Girişimi Dergisi, 1 (3), 97-102."
@@ -102,5 +102,9 @@
     "pdfEnLocal": "/assets/archive/pdfs/articles/turk-milli-ordusunun-zaferinin-uluslarasi-kiymeti-en.pdf",
     "pdfTrLocal": "/assets/archive/pdfs/articles/turk-milli-ordusunun-zaferinin-uluslarasi-kiymeti-tr.pdf",
     "sharedBilingualPdf": false
+  },
+  "publicationNote": {
+    "tr": "Bu makale Kılavuz (Xiangdao 向导) haftalık dergisinin 27 Eylül 1922 tarihli 3. sayısında yayımlanmıştır.",
+    "en": "This letter was published in the 3rd issue of the Xiangdao Zhoukan (向导周报) weekly magazine on September 27, 1922."
   }
 }
