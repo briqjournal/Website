@@ -537,30 +537,7 @@ function EnglishArticles() {
 }
 
 function EnglishCurrentIssue() {
-  const record = findArchiveIssue(7, 4);
-  if (!record) return null;
-  const heading = getIssueCopy(7, 4, "en");
-  return (
-    <IssuePlatform
-      record={record}
-      locale="en"
-      current
-      periodLabel="September 2026"
-      title={heading.title}
-      subtitle={heading.subtitle}
-      description="The issue examines West Asia’s changing balance of power alongside Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy."
-      facts={[["Publication date", "September 2026"], ["Pages", "131"], ["Languages", "Turkish · English abstracts"], ["Access", "Open access · CC BY 4.0"]]}
-      contentsDescription=""
-      editorialHref="/en/current-issue/editorial"
-      additionalContents={[
-        { typeTr: "Şiir", typeEn: "Poem", author: "Attilâ İlhan", titleTr: "Yalnızlığı Denemek", titleEn: "Trying Loneliness", pages: "501–502", pdfPage: 131 },
-        { typeTr: "Şiir", typeEn: "Poem", author: "Salah Abdel Sabour · Translated by Latif Bolat", titleTr: "Hüzün", titleEn: "Sorrow", pages: "503–504", pdfPage: 133 },
-        { typeTr: "Fotoğraf", typeEn: "Photograph", author: "Philippe Halsman", titleTr: "Dalí Atomicus (1948)", titleEn: "Dalí Atomicus (1948)", pages: "505", pdfPage: 135 },
-        { typeTr: "Resim", typeEn: "Painting", author: "Pablo Picasso", titleTr: "Saltimbanques Ailesi (1905)", titleEn: "Family of Saltimbanques (1905)", pages: "506", pdfPage: 136 },
-        { typeTr: "Karikatür", typeEn: "Cartoon", author: "Y. Çerepanov", titleTr: "Kendi Uçak Gemisini Denize Sürüyor (1979)", titleEn: "Launching His Own Aircraft Carrier (1979)", pages: "507", pdfPage: 137 },
-      ]}
-    />
-  );
+  return <EnglishIssue volume={7} issueNumber={4} current />;
 }
 
 function EnglishContact() {
@@ -660,20 +637,26 @@ function EnglishReport({ number }: { number: number }) {
   );
 }
 
-function EnglishIssue({ volume, issueNumber }: { volume: number; issueNumber: number }) {
+function EnglishIssue({ volume, issueNumber, current = false }: { volume: number; issueNumber: number; current?: boolean }) {
   const record = findArchiveIssue(volume, issueNumber);
   if (!record) return null;
   const heading = getIssueCopy(volume, issueNumber, "en");
   const supplementary = issueSupplementaryContents(volume, issueNumber);
   const contributionCount = issueContributionCount(record, supplementary);
+  const isVolumeSevenIssueFour = volume === 7 && issueNumber === 4;
   return (
     <IssuePlatform
       record={record}
       locale="en"
+      current={current}
       title={heading.title}
       subtitle={heading.subtitle}
-      description={`Published in ${record.season_en} ${record.year}, this issue brings together ${contributionCount} contributions in BRIQ’s open-access archive.`}
-      editorialHref={archiveEditorialHref(volume, issueNumber, "en")}
+      description={isVolumeSevenIssueFour
+        ? "The issue examines West Asia’s changing balance of power alongside Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy."
+        : `Published in ${record.season_en} ${record.year}, this issue brings together ${contributionCount} contributions in BRIQ’s open-access archive.`}
+      facts={isVolumeSevenIssueFour ? [["Publication date", "September 2026"], ["Pages", "131"], ["Languages", "Turkish · English abstracts"], ["Access", "Open access · CC BY 4.0"]] : undefined}
+      contentsDescription={isVolumeSevenIssueFour ? "" : undefined}
+      editorialHref={current && isVolumeSevenIssueFour ? "/en/current-issue/editorial" : archiveEditorialHref(volume, issueNumber, "en")}
       additionalContents={supplementary}
     />
   );
@@ -942,6 +925,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       };
     }
   }
+  if (key === "current-issue") {
+    const issue = findArchiveIssue(7, 4);
+    if (issue) {
+      return {
+        title: `${englishPageMetadata[key][0]} | BRIQ`,
+        description: englishPageMetadata[key][1],
+        alternates: {
+          canonical: `/en/archive/volume-${issue.volume}-issue-${issue.issue}`,
+          languages: {
+            "tr-TR": `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}`,
+            "en-US": `/en/archive/volume-${issue.volume}-issue-${issue.issue}`,
+          },
+        },
+      };
+    }
+  }
+  if (key === "current-issue/editorial") {
+    const issue = findArchiveIssue(7, 4);
+    if (issue) {
+      return {
+        title: `${englishPageMetadata[key][0]} | BRIQ`,
+        description: englishPageMetadata[key][1],
+        alternates: {
+          canonical: `/en/archive/volume-${issue.volume}-issue-${issue.issue}/editorial`,
+          languages: {
+            "tr-TR": `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}/sunus`,
+            "en-US": `/en/archive/volume-${issue.volume}-issue-${issue.issue}/editorial`,
+          },
+        },
+      };
+    }
+  }
+
   const staticPage = englishPageMetadata[key];
   if (staticPage) {
     return {
@@ -979,7 +995,7 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
   else if (key === "for-authors/copyright-and-licence") content = <EnglishCopyrightTerms />;
   else if (key === "for-authors/publication-ethics") content = <EnglishEthicsPolicy />;
   else if (key === "current-issue") content = <EnglishCurrentIssue />;
-  else if (key === "current-issue/editorial") content = <CurrentIssueEditorial locale="en" />;
+  else if (key === "current-issue/editorial") content = <CurrentIssueEditorial locale="en" currentAlias />;
   else if (key === "archive") content = <EnglishArchive />;
   else if (key === "articles") content = <EnglishArticles />;
   else if (key === "calls-for-papers") content = <EnglishCalls />;
