@@ -375,7 +375,7 @@ test("renders archived issues with the same platform structure as the current is
   }
 
   assert.match(archivedTr, /<h1>Birlikte Kalkınmak İçin<em>Ortak Güvenlik<\/em><\/h1>/);
-  assert.match(archivedEn, /<h1>Common Security for<em>Shared Development<\/em><\/h1>/);
+  assert.match(archivedEn, /<h1>Common Security for Shared Development<\/h1>/);
   assert.equal((archivedTr.match(/class="issue-toc-number"/g) || []).length, 8);
   assert.equal((archivedEn.match(/class="issue-toc-number"/g) || []).length, 8);
   for (const html of [archivedTr, archivedEn]) {
