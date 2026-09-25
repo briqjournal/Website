@@ -47,7 +47,6 @@ type IssuePlatformProps = {
   description: string;
   current?: boolean;
   subtitleFirst?: boolean;
-  subtitleScale75?: boolean;
   coverSrc?: string;
   periodLabel?: string;
   facts?: readonly IssueFact[];
@@ -66,7 +65,6 @@ export function IssuePlatform({
   description,
   current = false,
   subtitleFirst = false,
-  subtitleScale75 = false,
   coverSrc,
   periodLabel,
   facts,
@@ -153,7 +151,7 @@ export function IssuePlatform({
               <span>{issueName}</span>
               <span>{publicationDateLabel} · {period}</span>
             </div>
-            <h1 className={[subtitleFirst ? "issue-title-subtitle-first" : "", subtitleScale75 ? "issue-title-subtitle-75" : ""].filter(Boolean).join(" ") || undefined}>
+            <h1 className={subtitleFirst ? "issue-title-subtitle-first" : undefined}>
               {subtitleFirst ? (
                 <>
                   {subtitle && <em>{subtitle}</em>}
