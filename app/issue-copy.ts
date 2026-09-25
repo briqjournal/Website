@@ -29,8 +29,8 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "Common Security for Shared Development", subtitle: "" },
   },
   "6-3": {
-    tr: { title: "70. Yıldönümünde Bandung’dan BRICS’e", subtitle: "Hegemonyacılığa Karşı Küresel Güney’in Yükselişi" },
-    en: { title: "From Bandung to BRICS", subtitle: "The Forthcoming Challenge for the Global South" },
+    tr: { title: "Bandung’dan BRICS’e Hegemonyacılığa Karşı Küresel Güney’in Yükselişi", subtitle: "70. Yıldönümünde" },
+    en: { title: "From Bandung to BRICS The Emergence of the Global South Against Hegemonism", subtitle: "On its 70th Anniversary" },
   },
   "6-2": {
     tr: { title: "Ölümünün 100. Yıldönümünde", subtitle: "Sun Yat-sen’in Yaşayan Mirası" },
