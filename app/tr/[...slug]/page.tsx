@@ -987,31 +987,7 @@ function AuthorProfilePage({ id }: { id: string }) {
 }
 
 function CurrentIssue() {
-  const record = findArchiveIssue(7, 4);
-  if (!record) return null;
-  const heading = getIssueCopy(7, 4, "tr");
-  return (
-    <IssuePlatform
-      record={record}
-      locale="tr"
-      current
-      coverSrc="/assets/current-issue-tr.jpg"
-      periodLabel="Eylül 2026"
-      title={heading.title}
-      subtitle={heading.subtitle}
-      description="Batı Asya’daki yeni güç dengesini; Suudi Arabistan’ın kültürel dengeleme stratejisinden Türkiye–Çin ilişkilerine, Dijital İpek Yolu’ndan Çin’in küresel altyapı yaklaşımına uzanan çalışmalarla ele alan yeni sayı."
-      facts={[["Yayın tarihi", "Eylül 2026"], ["Sayfa", "131"], ["Yayın dili", "Türkçe · English"], ["Erişim", "Açık erişim · CC BY 4.0"]]}
-      contentsDescription=""
-      editorialHref="/tr/guncel-sayi/sunus"
-      additionalContents={[
-        { typeTr: "Şiir", typeEn: "Poem", author: "Attilâ İlhan", titleTr: "Yalnızlığı Denemek", titleEn: "Trying Loneliness", pages: "501–502", pdfPage: 131 },
-        { typeTr: "Şiir", typeEn: "Poem", author: "Salah Abdel Sabour · Çeviren: Latif Bolat", titleTr: "Hüzün", titleEn: "Sorrow", pages: "503–504", pdfPage: 133 },
-        { typeTr: "Fotoğraf", typeEn: "Photograph", author: "Philippe Halsman", titleTr: "Dalí Atomicus (1948)", titleEn: "Dalí Atomicus (1948)", pages: "505", pdfPage: 135 },
-        { typeTr: "Resim", typeEn: "Painting", author: "Pablo Picasso", titleTr: "Saltimbanques Ailesi (1905)", titleEn: "Family of Saltimbanques (1905)", pages: "506", pdfPage: 136 },
-        { typeTr: "Karikatür", typeEn: "Cartoon", author: "Y. Çerepanov", titleTr: "Kendi Uçak Gemisini Denize Sürüyor (1979)", titleEn: "Launching His Own Aircraft Carrier (1979)", pages: "507", pdfPage: 137 },
-      ]}
-    />
-  );
+  return <ArchiveIssue volume={7} issue={4} current />;
 }
 
 function CallsPage() {
@@ -1063,20 +1039,26 @@ function Reports() {
   );
 }
 
-function ArchiveIssue({ volume, issue }: { volume: number; issue: number }) {
+function ArchiveIssue({ volume, issue, current = false }: { volume: number; issue: number; current?: boolean }) {
   const record = findArchiveIssue(volume, issue);
   if (!record) return null;
   const heading = getIssueCopy(volume, issue, "tr");
   const supplementary = issueSupplementaryContents(volume, issue);
   const contributionCount = issueContributionCount(record, supplementary);
+  const isVolumeSevenIssueFour = volume === 7 && issue === 4;
   return (
     <IssuePlatform
       record={record}
       locale="tr"
+      current={current}
       title={heading.title}
       subtitle={heading.subtitle}
-      description={`${record.season_tr} ${record.year} döneminde yayımlanan bu sayı, ${contributionCount} çalışmayı BRIQ arşivinde açık erişimle bir araya getiriyor.`}
-      editorialHref={archiveEditorialHref(volume, issue, "tr")}
+      description={isVolumeSevenIssueFour
+        ? "Batı Asya’daki yeni güç dengesini; Suudi Arabistan’ın kültürel dengeleme stratejisinden Türkiye–Çin ilişkilerine, Dijital İpek Yolu’ndan Çin’in küresel altyapı yaklaşımına uzanan çalışmalarla ele alan yeni sayı."
+        : `${record.season_tr} ${record.year} döneminde yayımlanan bu sayı, ${contributionCount} çalışmayı BRIQ arşivinde açık erişimle bir araya getiriyor.`}
+      facts={isVolumeSevenIssueFour ? [["Yayın tarihi", "Eylül 2026"], ["Sayfa", "131"], ["Yayın dili", "Türkçe · English"], ["Erişim", "Açık erişim · CC BY 4.0"]] : undefined}
+      contentsDescription={isVolumeSevenIssueFour ? "" : undefined}
+      editorialHref={current && isVolumeSevenIssueFour ? "/tr/guncel-sayi/sunus" : archiveEditorialHref(volume, issue, "tr")}
       additionalContents={supplementary}
     />
   );
@@ -1226,7 +1208,7 @@ const pages: Record<string, () => ReactNode> = {
   arsiv: Archive,
   makaleler: Articles,
   "guncel-sayi": CurrentIssue,
-  "guncel-sayi/sunus": () => <CurrentIssueEditorial />,
+  "guncel-sayi/sunus": () => <CurrentIssueEditorial currentAlias />,
   "makale-cagrilari": CallsPage,
   "yillik-raporlar": Reports,
 };
@@ -1445,6 +1427,39 @@ export async function generateMetadata({
         alternates: {
           canonical: `/tr/makale-cagrilari/${callSlug}`,
           languages: { "tr-TR": `/tr/makale-cagrilari/${callSlug}`, "en-US": `/en/calls-for-papers/${englishSlug}` },
+        },
+      };
+    }
+  }
+
+  if (key === "guncel-sayi") {
+    const issue = findArchiveIssue(7, 4);
+    if (issue) {
+      return {
+        title: `${pageMetadata[key][0]} | BRIQ`,
+        description: pageMetadata[key][1],
+        alternates: {
+          canonical: `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}`,
+          languages: {
+            "tr-TR": `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}`,
+            "en-US": `/en/archive/volume-${issue.volume}-issue-${issue.issue}`,
+          },
+        },
+      };
+    }
+  }
+  if (key === "guncel-sayi/sunus") {
+    const issue = findArchiveIssue(7, 4);
+    if (issue) {
+      return {
+        title: `${pageMetadata[key][0]} | BRIQ`,
+        description: pageMetadata[key][1],
+        alternates: {
+          canonical: `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}/sunus`,
+          languages: {
+            "tr-TR": `/tr/arsiv/cilt-${issue.volume}-sayi-${issue.issue}/sunus`,
+            "en-US": `/en/archive/volume-${issue.volume}-issue-${issue.issue}/editorial`,
+          },
         },
       };
     }
