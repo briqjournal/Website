@@ -1049,12 +1049,13 @@ function ArchiveIssue({ volume, issue, current = false }: { volume: number; issu
   const isVolumeSevenIssueOne = volume === 7 && issue === 1;
   const isVolumeSixIssueThree = volume === 6 && issue === 3;
   const isVolumeSixIssueTwo = volume === 6 && issue === 2;
+  const isVolumeSixIssueOne = volume === 6 && issue === 1;
   return (
     <IssuePlatform
       record={record}
       locale="tr"
       current={current}
-      subtitleFirst={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree || isVolumeSixIssueTwo}
+      subtitleFirst={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree || isVolumeSixIssueTwo || isVolumeSixIssueOne}
       subtitleScale75={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree}
       title={heading.title}
       subtitle={heading.subtitle}
