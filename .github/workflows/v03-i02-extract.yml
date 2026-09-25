@@ -1,0 +1,92 @@
+name: v03-i02 extraction helper
+
+on:
+  push:
+    branches:
+      - chore/v03-i02-fulltext-canonical
+    paths:
+      - .github/workflows/v03-i02-extract.yml
+  workflow_dispatch:
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PDF tools
+        run: |
+          sudo apt-get update >/dev/null
+          sudo apt-get install -y poppler-utils >/dev/null
+      - name: Extract official PDF evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT=".migration/v03-i02-evidence"
+          CACHE=".migration/v03-i02-cache"
+          mkdir -p "$OUT/text" "$OUT/images" "$OUT/info" "$OUT/xml" "$CACHE"
+          get_pdf() { key="$1"; url="$2"; file="$CACHE/$key.pdf"; curl -fL --retry 3 --retry-delay 2 -A "BRIQ-v03-i02-migration/1.0" "$url" -o "$file"; printf '%s' "$file"; }
+          extract_pair() {
+            slug="$1"; en="$2"; tr="$3"
+            pdftotext -layout "$en" "$OUT/text/$slug-en.txt"; pdftotext -raw "$en" "$OUT/text/$slug-en.raw.txt"; pdfinfo "$en" > "$OUT/info/$slug-en.pdfinfo.txt"; pdftohtml -xml -hidden -i "$en" "$OUT/xml/$slug-en.xml" >/dev/null 2>&1 || true
+            pdftotext -layout "$tr" "$OUT/text/$slug-tr.txt"; pdftotext -raw "$tr" "$OUT/text/$slug-tr.raw.txt"; pdfinfo "$tr" > "$OUT/info/$slug-tr.pdfinfo.txt"; pdftohtml -xml -hidden -i "$tr" "$OUT/xml/$slug-tr.xml" >/dev/null 2>&1 || true
+          }
+          extract_images() {
+            slug="$1"; loc="$2"; pdf="$3"; dir="$OUT/images/$slug/$loc"; mkdir -p "$dir"
+            pdfimages -list "$pdf" > "$OUT/info/$slug-$loc-images.txt"; pdfimages -all "$pdf" "$dir/image"
+            find "$dir" -maxdepth 1 -type f -print0 | sort -z | xargs -0 -r sha256sum > "$OUT/info/$slug-$loc-images.sha256"
+          }
+          find_page() {
+            pdf="$1"; needle="$2"; pages=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
+            for p in $(seq 1 "$pages"); do if pdftotext -layout -f "$p" -l "$p" "$pdf" - 2>/dev/null | grep -Fqi "$needle"; then echo "$p"; return 0; fi; done
+            return 1
+          }
+          extract_page() {
+            slug="$1"; loc="$2"; pdf="$3"; p="$4"; pdftotext -layout -f "$p" -l "$p" "$pdf" "$OUT/text/$slug-$loc.txt"; pdftotext -raw -f "$p" -l "$p" "$pdf" "$OUT/text/$slug-$loc.raw.txt"
+            dir="$OUT/images/$slug/$loc"; mkdir -p "$dir"; pdfimages -f "$p" -l "$p" -list "$pdf" > "$OUT/info/$slug-$loc-images.txt"; pdfimages -f "$p" -l "$p" -all "$pdf" "$dir/image"
+            find "$dir" -maxdepth 1 -type f -print0 | sort -z | xargs -0 -r sha256sum > "$OUT/info/$slug-$loc-images.sha256"
+          }
+
+          ISSUE_TR=$(get_pdf issue-tr "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%203.%20Cilt%202.%20Say%C4%B1_Site.pdf")
+          ISSUE_EN=$(get_pdf issue-en "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.3%20Issue2_Site.pdf")
+          sha256sum "$ISSUE_TR" "$ISSUE_EN" > "$OUT/info/issue-pdfs.sha256"
+          pdftotext -layout "$ISSUE_TR" "$OUT/text/issue-tr-full.txt"; pdftotext -raw "$ISSUE_TR" "$OUT/text/issue-tr-full.raw.txt"; pdftohtml -xml -hidden -i "$ISSUE_TR" "$OUT/xml/issue-tr.xml" >/dev/null 2>&1 || true
+          pdftotext -layout "$ISSUE_EN" "$OUT/text/issue-en-full.txt"; pdftotext -raw "$ISSUE_EN" "$OUT/text/issue-en-full.raw.txt"; pdftohtml -xml -hidden -i "$ISSUE_EN" "$OUT/xml/issue-en.xml" >/dev/null 2>&1 || true
+          pdftotext -layout -f 1 -l 8 "$ISSUE_TR" "$OUT/text/editorial-tr.txt"; pdftotext -layout -f 1 -l 8 "$ISSUE_EN" "$OUT/text/editorial-en.txt"
+
+          EN=$(get_pdf semih-en "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/National-Democratic%20State%20and%20Development%20-%20Semih%20Koray.pdf"); TR=$(get_pdf semih-tr "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Milli%20Demokratik%20Devlet%20ve%20Kalk%C4%B1nma%20-%20Semih%20Koray.pdf")
+          extract_pair "milli-demokratik-devlet-ve-kalkinma" "$EN" "$TR"; extract_images "milli-demokratik-devlet-ve-kalkinma" en "$EN"; extract_images "milli-demokratik-devlet-ve-kalkinma" tr "$TR"
+
+          EN=$(get_pdf xi-en "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Making%20Solid%20Progress%20Toward%20Common%20Prosperity%20-%20Xi%20Jinping.pdf"); TR=$(get_pdf xi-tr "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Ortak%20Refah%20Ger%C3%A7ekle%C5%9Ftirmek%20i%C3%A7in%20%C4%B0zleyece%C4%9Fimiz%20Program.pdf")
+          extract_pair "ortak-refahi-gerceklestirmek-icin-izleyecegimiz-program" "$EN" "$TR"; extract_images "ortak-refahi-gerceklestirmek-icin-izleyecegimiz-program" en "$EN"; extract_images "ortak-refahi-gerceklestirmek-icin-izleyecegimiz-program" tr "$TR"
+
+          EN=$(get_pdf roberts-en "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/China%20A%20Socialist%20Model%20of%20Development%20-%20Michael%20Roberts.pdf"); TR=$(get_pdf roberts-tr "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/%C3%87in%20Sosyalist%20Bir%20Kalk%C4%B1nma%20Modeli%20Mi%20-%20Michael%20Roberts.pdf")
+          extract_pair "cin-sosyalist-bir-kalkinma-modeli-mi" "$EN" "$TR"; extract_images "cin-sosyalist-bir-kalkinma-modeli-mi" en "$EN"; extract_images "cin-sosyalist-bir-kalkinma-modeli-mi" tr "$TR"
+
+          EN=$(get_pdf gurcan-en "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Deciphering%20the%20Chinese%20Economic%20Miracle%20Lessons%20for%20the%20Developing%20World%20-%20EFG.pdf"); TR=$(get_pdf gurcan-tr "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/%C3%87in%20Ekonomik%20Mucizesinin%20Kodlar%C4%B1%20Geli%C5%9Fen%20D%C3%BCnya%20%C4%B0%C3%A7in%20Dersler%20-%20Efe%20Can%20G%C3%BCrcan_0.pdf")
+          extract_pair "cin-ekonomik-mucizesinin-kodlari-gelisen-dunya-icin-dersler" "$EN" "$TR"; extract_images "cin-ekonomik-mucizesinin-kodlari-gelisen-dunya-icin-dersler" en "$EN"; extract_images "cin-ekonomik-mucizesinin-kodlari-gelisen-dunya-icin-dersler" tr "$TR"
+
+          EN=$(get_pdf foster-en "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Launch%20Remarks%20on%20China%E2%80%99s%20Economic%20Dialectic%20The%20Original%20Aspiration%20of%20Reform%20-%20John%20Bellamy%20Foster.pdf"); TR=$(get_pdf foster-tr "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/%C3%87in%E2%80%99in%20Ekonomik%20Diyalekti%C4%9Fi%20Reformun%20As%C4%B1l%20Amac%C4%B1%20%C3%9Czerine%20De%C4%9Ferlendirme%20-%20John%20Bellamy%20Foster.pdf")
+          extract_pair "cinin-ekonomik-diyalektigi-reformun-asil-amaci-uzerine-degerlendirme" "$EN" "$TR"; extract_images "cinin-ekonomik-diyalektigi-reformun-asil-amaci-uzerine-degerlendirme" en "$EN"; extract_images "cinin-ekonomik-diyalektigi-reformun-asil-amaci-uzerine-degerlendirme" tr "$TR"
+
+          EN=$(get_pdf ding-en "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/The%20Dominant%20Position%20of%20the%20Public%20Economy%20is%20the%20Heart%20of%20Chinese%20Socialism%20-%20Ding%20Bing.pdf"); TR=$(get_pdf ding-tr "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Kamu%20Ekonomisinin%20H%C3%A2kim%20Konumu%20%C3%87in%20Sosyalizminin%20Can%20Damar%C4%B1d%C4%B1r%20-%20Ding%20Bing.pdf")
+          extract_pair "kamu-ekonomisinin-hakim-konumu-cin-sosyalizminin-can-damaridir" "$EN" "$TR"; extract_images "kamu-ekonomisinin-hakim-konumu-cin-sosyalizminin-can-damaridir" en "$EN"; extract_images "kamu-ekonomisinin-hakim-konumu-cin-sosyalizminin-can-damaridir" tr "$TR"
+
+          EN=$(get_pdf disci-en "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Economic%20Policies%20of%20Kemalism%20in%20the%20Early%20Republican%20Era%20-%20Tolga%20Di%C5%9F%C3%A7i.pdf"); TR=$(get_pdf disci-tr "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Erken%20Cumhuriyet%20D%C3%B6nemi%E2%80%99nde%20Kemalizm%E2%80%99in%20Ekonomi%20Politikas%C4%B1%20-%20Tolga%20Di%C5%9F%C3%A7i.pdf")
+          extract_pair "erken-cumhuriyet-doneminde-kemalizmin-ekonomi-politikasi-1923-1938" "$EN" "$TR"; extract_images "erken-cumhuriyet-doneminde-kemalizmin-ekonomi-politikasi-1923-1938" en "$EN"; extract_images "erken-cumhuriyet-doneminde-kemalizmin-ekonomi-politikasi-1923-1938" tr "$TR"
+
+          EN=$(get_pdf sahin-en "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Photography%20Art%20-Cemil%20%C5%9Eahin.pdf"); TR=$(get_pdf sahin-tr "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Foto%C4%9Fraf%20-%20Cemil%20%C5%9Eahin_0.pdf")
+          extract_pair "sultanahmet-camii-cuma-namazi" "$EN" "$TR"; extract_images "sultanahmet-camii-cuma-namazi" en "$EN"; extract_images "sultanahmet-camii-cuma-namazi" tr "$TR"
+
+          SHARED=$(get_pdf selcuk "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-03/Karikat%C3%BCr%20-%20Turhan%20Sel%C3%A7uk.pdf")
+          pdftotext -layout "$SHARED" "$OUT/text/turhan-selcuk-karikaturu-shared.txt"; pdftotext -raw "$SHARED" "$OUT/text/turhan-selcuk-karikaturu-shared.raw.txt"; extract_images "turhan-selcuk-karikaturu" shared "$SHARED"
+
+          P=$(find_page "$ISSUE_TR" "Anadolu Büyüleri"); extract_page "anadolu-buyuleri" tr "$ISSUE_TR" "$P"
+          P=$(find_page "$ISSUE_EN" "Anatolian Spells"); extract_page "anadolu-buyuleri" en "$ISSUE_EN" "$P"
+          printf 'done\n' > "$OUT/info/extraction.complete"
+      - name: Upload extraction evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: v03-i02-extraction-evidence
+          path: .migration/v03-i02-evidence
+          if-no-files-found: error
+          retention-days: 1
