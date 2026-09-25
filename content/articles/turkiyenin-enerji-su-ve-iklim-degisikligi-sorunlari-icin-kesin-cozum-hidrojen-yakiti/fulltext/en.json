@@ -1,0 +1,660 @@
+{
+  "sections": [
+    {
+      "id": "en-section-1",
+      "title": "Introduction",
+      "paragraphs": [
+        "IT IS WELL KNOWN THAT, SINCE THE Industrial Revolution that started in the middle of the 19th century, fossil fuel resources namely, coal then oil and natural gas were used to meet the world energy demand. While the increase in energy use with industrialization has increased the living standards of countries, fossil fuel consumption has accelerated accordingly. Unfortunately, human beings have only been able to realize that this excessive consumption can have extremely serious consequences such as global climate change, as well as environmental pollution in recent years. Fossil fuel companies have constantly underestimated other alternatives in this well-profitable sector for their own interests and have used their power to exclude them from the decision-makers (Türe,",
+        "2021: para.3). Alternative energies such as sun, wind, and small streams, which are known as environmentally friendly are considered to be more expensive than fossil fuels. Intermittent natures of these resources were also another reason why they were not accepted by society.",
+        "As it is known, when fossil fuels such as coal, oil, and natural gas are used, some dust particles are released into the environment along with various gases. There are carbon oxides, sulfur oxides, hydrocarbons, poly-nuclear aromatic hydrocarbons (PAH), olefins, aldehydes and some other pollutants in these released gas mixtures and particles. The effects of air pollution on the environment occur on a global, regional and local scale. On a global scale, it is possible to count climate changes such as global warming caused by greenhouse gases, especially carbon dioxide, and consequently increasing the intensity of hurricanes, extreme drought, or flooding. On a regional scale, deterioration of ecological balance as the result of acid rains, forest destruction, and increased acidity of lakes are the most important indications. At the local scale, air pollutants such as CO, SO NOX, and O cause adverse effects on human health, plants, structure, and materials. Currently, the total damage did by fossil fuels to the environment in the world reaches almost 8 trillion dollars per year (Greenpeace, 2020).",
+        "Hydrogen has many advantages over the fossil fuels currently used. In a fuel cell where hydrogen will be used as a fuel, energy is obtained with high efficiency, while only pure water comes out as waste. The use of water as a source of hydrogen constitutes one of the main advantages of hydrogen. Economical storage and transportation are still the most important problems of hydrogen technologies waiting to be solved. However, studies in recent years show that these problems will be overcome in a short period of time. Hydrogen technology is gaining importance with the continuous development of its usage area and the addition of methods to increase energy efficiency. According to the cost calculations, using hydrogen technology systems are more expensive than the existing fossil fuel systems but along with that the increasing oil and natural gas prices in the near future, equality in this regard will be achieved in the next ten years. Classified as the social cost of fossil fuels; global climate change, air pollution, oil spills, mining accidents, etc. when this damage done by the elements to the world is put on fossil fuel prices, hydrogen becomes much more advantageous in terms of cost. As mentioned above, there is no possibility that this situation will continue due to the limited fossil fuels and environmental disasters that await our world. Considering that it is not possible for people to renounce their comfort and living standards, it is necessary to find a new synthetic fuel instead of fossil fuels. This fuel should be clean, environmentally friendly, renewable, endless, ubiquitous, easily transportable, affordable, high calorific value, and efficient. Many years of studies have shown that the ideal fuel is definitely hydrogen. Hydrogen is shown as the only solution to environmental problems and is also called an “independence fuel” that can save countries from fossil fuels. As a result of the eruption of the energy crisis in 1973 and the scientific community’s search for a solution to this problem, hydrogen energy came to the fore in the world.",
+        "When hydrogen gas, which is odorless and colorless under normal temperature and pressure, combines with oxygen, the most important substance for life, namely water, is obtained. Hydrogen is a very light gas; its density is 1/14 of air and 1/9 of natural gas. The density of hydrogen, which becomes liquid when cooled to -253˚C at atmospheric pressure, is 1/10 of that of gasoline. Hydrogen is the most efficient fuel. On average, it is 26% more efficient than fossil fuels. Hydrogen has the highest energy content per unit mass of all known fuels. In Figure 1, the energy content of hydrogen compared to other fuels is given. 1 kg of hydrogen has the same energy as 2.1 kg of natural gas or 2.8 kg of oil (Türe, 2021: para.6).",
+        "Considering that, the heat of combustion of liquid hydrogen is 120.7 MJ/kg, while the heating value of aviation gasoline is only 44 megajoules per kg, it is easy to understand the usage of liquid hydrogen as rocket fuel. However, its heating value per unit volume is low. The heating value of hydrogen gas is given as approximately 12 Mega Joules per cubic meter (Türe, 2021: para.7).",
+        "Hydrogen is the cleanest energy carrier. In view of the high efficiency of hydrogen and the environmental damage of fossil fuels, hydrogen is the most cost-effective fuel. It does not produce greenhouse gases that cause global climate change, does not cause acid rain, and does not produce chemicals that damage the ozone layer (Türe, 2021: para. 8).",
+        "Hydrogen is secondary energy just like electricity, so it is a carrier and must be produced from primary energy sources. Obtaining hydrogen from clean energy sources and water means both endless energy and the world getting rid of all environmental problems, especially global warming. For example, as a result of the separation of water into hydrogen and oxygen with solar energy, the transportation of the obtained hydrogen to the desired location through pipelines or storing, and then combusting with oxygen again, waste material of the resulting energy is again a few drops of pure water or water vapor (Türe, 2021: para. 9).",
+        "Hydrogen is considered to be the fuel not only for this century but also for the next 5 billion years, which is estimated as the life of the sun (Türe, 2021: para. 10). Considering the fuels that humanity has used from the first days of mankind to today it is clearly seen that the hydrogen ratio in these fuels is increasing (Türe, 2001). It is certain that this fuel will be completely hydrogen in the next period."
+      ]
+    },
+    {
+      "id": "en-section-2",
+      "title": "Hydrogen Production Methods and Costs",
+      "paragraphs": [
+        "Hydrogen can be obtained by various methods, depending on the use of different main energy sources (Figure 2). These include electrolytic, thermal, thermo-chemical, electrothermochemical, photolytic, and mixed methods. Nowadays, the methods used for the production of hydrogen by decomposition of water are summarized in Figure 2.",
+        "Today, the most commonly used method in hydrogen production is to obtain high purity hydrogen from natural gas by the reforming method. The cost of hydrogen produced by this method is an average of 2 US dollars per kg. However, carbon dioxide gases are also released as a result of obtaining hydrogen from fossil fuels such as coal. Obtaining hydrogen from fossil fuels becomes even more expensive when the cost of the technology to store CO by burying it in the ground is taken into account. When hydrogen is obtained from fossil fuel sources, it is called “blue hydrogen” to indicate that the source is not clean (United States Department of Energy, 2020). Since almost 95% of the hydrogen produced today is produced by these well-known and fully commercialized technologies, new technologies are mostly included here. Hydrogen obtained by electrolysis of water using renewable energy sources is called “green hydrogen” (Figure 3). The cost is approximately 3-7 US dollars per kilogram of hydrogen with this method.",
+        "As it can be seen in Table 1, although the production cost of hydrogen from renewable energy sources and nuclear energy is still higher than fossil fuels, it is clear that this cost will decrease depending on the development of technology. Also, hydrogen from renewable sources is still cheaper when the aforementioned social costs are added to fossil fuels. Since the usage of electrical energy to be obtained from renewable energy sources such as wind and sun is taken as the basis here, it is possible to obtain hydrogen from water using alkaline or PEM electrolyzers. For this reason, according to these technologies, hydrogen costs are given comparatively and as an estimate. As it is known, natural gas and electricity prices vary from country to country, as well as over the years. In addition, factors such as the costs of the devices used for production and the amount of hydrogen produced play an important role in the cost of the product obtained. For the cost of hydrogen, the estimated price range is given in Table-1 instead of the exact price depending on various sources."
+      ]
+    },
+    {
+      "id": "en-section-3",
+      "title": "Hydrogen Production from Solar, Wind, Hydraulic, and Geothermal Energies",
+      "paragraphs": [
+        "Electrolysis of water with the help of electricity obtained from all renewable sources is the basic method for obtaining hydrogen. For example, wind and solar energies are important renewable energy sources used for the production of hydrogen to be used as fuel. There are three main types of electrolytic cells for the electrolysis of water, including alkaline electrolysis, polymer electrolyte membrane (PEM), and solid oxide electrolysis cells (SOECs).",
+        "Hydrogen consumption increases by about 6% per year and, its annual production is estimated to be around 80 million tons today. As it is known, hydrogen is produced by reforming natural gas with steam which is a process that leads to greenhouse gas emissions to a large extent (Greenpeace, 2020: The Geography of Transport Systems, 2022). Nearly 50% of global hydrogen demand is covering currently through steam reforming of natural gas, approximately 30% from oil/naphtha reform from refinery/ chemical industrial waste gases, 18% from coal gasification, 3.9% from water electrolysis, and 0.1% from other sources."
+      ]
+    },
+    {
+      "id": "en-section-4",
+      "title": "Separation of Water at High Temperature (Thermolysis)",
+      "paragraphs": [
+        "It is the process of chemical decomposition of water into hydrogen and oxygen when a temperature of more than 2500 °C is applied. The hydrogen and oxygen must be effectively separated to prevent them from turning back into the water due to the reaction is reversible. In this method, concentrated solar energy or waste heat of nuclear power reactions can be used as a source. Depending on the heat source used with this method, very few or hardly ever greenhouse gases are emitted into the atmosphere.",
+        "During the electrolysis of water with the thermochemical method, a temperature of (500-2000) °C is required for a series of chemical reactions at a temperature of (500-2.000) °C to decompose the water. The chemicals used in the process are reused in each cycle, creating a closed cycle that consumes only water and produces hydrogen and oxygen. The high temperatures required for the processes are provided by eco-friendly intensive solar energy (Figure 4; United States Department of Energy).",
+        "In order to reduce the high temperature required for the thermolysis process, e.g. to 1200-1500 °C, intermediates (catalysts) are used."
+      ]
+    },
+    {
+      "id": "en-section-5",
+      "title": "Electrolysis (Alkaline)",
+      "paragraphs": [
+        "Electrolysis of water or the decomposition of water into oxygen and hydrogen is a known and commercially used method since the 1890s. Electrolysis is basically a process that breaks the chemical bonds in the water molecule by adding a substance such as KOH or NaOH that increases conductivity in the water and passes a direct current through this liquid. It is also defined as the separation of chemical compounds dissolved in a liquid by applying an external electric current through metal electrodes immersed in the electrolytic liquid. Electrolysis is the most essential method used to obtain pure hydrogen. Electrodes in the electrolysis cell can be selected from different metals according to the electrolytic liquid used. This cell consists of two electrodes that are dissolved into a compound divided into positive and negative charged ions and these electrodes are adjusted by means they do not touch each other (usually 5-20 cm between two electrodes). For instance, nickel-based electrodes such as nickel-aluminum alloys are preferred in alkaline electrolysis cells. When sulfuric acid, which increases conductivity, is added to water, platinum, which is not affected by acid, should be used as an electrode. Although platinum is a highly productive electrode, it is not preferred with regard to cost. When a voltage of at least 1.23 volts is applied between the electrodes from the exterior, 99.9% pure hydrogen comes out from the cathode and oxygen gas from the anode. In the case of an electrolytic cell with KOH or NaOH mixed, the reactions at the cathode and anode are given below respectively; At the Cathode 2 H O +2e- → H + 2OH- (1) At the Anode 2OH- → 0.5 O + H O + 2e- (2) Overall reaction: H O → H + 0.5 O (3) A schematic of an alkaline electrolyzer is shown below."
+      ]
+    },
+    {
+      "id": "en-section-6",
+      "title": "Proton Exchange Membrane ( PEM)",
+      "paragraphs": [
+        "Proton Permeable Membrane Electrolyzer- Proton Exchange Membrane (PEM): This type of electrolyzer is designed to produce hydrogen electrochemically at pressures of 2000 psi and with an efficiency of 85% or more. Thus, it is not necessary to use a compressor to compress the hydrogen later. The PEM electrolyzer usually uses a solid polymer-based membrane instead of a liquid electrolyte. Another advantage of this type of electrolyzer is that it can produce high purity hydrogen alongside low parasitic losses. PEM electrolyzers are one of the most studied subjects in recent years due to their simple structure and hydrogen production, as well as their ability to store gas under pressure. Today, fuel cells, which are defined as “Regenerative Fuel Cell”, work conversely and act as electrolyzer, as well as can, produces electricity from hydrogen as a fuel cell, and pure water is again produced as waste. PEM electrolyzer/fuel cell diagram is given in Figure 6."
+      ]
+    },
+    {
+      "id": "en-section-7",
+      "title": "Solid Oxide Electrolysis Cell- (SOEC)",
+      "paragraphs": [
+        "Solid-oxide electrolyzers are electrolysis cells that selectively apply negatively charged oxygen ions (O )- at high temperatures, usually (700-1000) °C, and use a solid ceramic material as the electrolyte. In the system, firstly, electrons from the external circuit combine with water at the cathode in order to form hydrogen gas and negatively charged (O )- ions. Then, the oxygen ions pass through the ceramic membrane and react at the anode to form oxygen gas and provide electrons to the external circuit. The process can also be expressible as a high-temperature steam electrolyzer. Solid-oxide electrolyzers have much higher efficiency than proton permeable membrane (PEM) electrolyzers (Tucker, 2020; Zheng, et al., 2021)."
+      ]
+    },
+    {
+      "id": "en-section-8",
+      "title": "Photonic Energy (Photolysis)",
+      "paragraphs": [
+        "Photolysis involves the chemical decomposition of water into hydrogen and oxygen by photonic energy. Since the potential for water separation is 1.23 eV, the wavelength of the photons equivalent to it is 1008 nm, corresponding to infrared light. That shows the separation of water is theoretically possible with infrared light, but industrial application is not available. Recently, more intensive studies have been carried out on the separation of water by the photocatalytic method under lower frequency radiation instead of high frequency (Tee, et al., 2017; Waterhouse, et al., 2013)."
+      ]
+    },
+    {
+      "id": "en-section-9",
+      "title": "Biochemical Method",
+      "paragraphs": [
+        "Hydrogen is obtained by fermenting carbohydrates in an anaerobic (oxygen-free) environment by various bacteria. The fermentation process can produce hydrogen in the absence of oxygen by the following reaction (Tokio, 1979). C H O + 2H O → 2CH COOH + 2 CO + 4H"
+      ]
+    },
+    {
+      "id": "en-section-10",
+      "title": "Thermo-electrolysis",
+      "paragraphs": [
+        "Thermo-electrolysis of water involves the chemical decomposition of water with the combined use of electrical and thermal energy. It is more efficient and economical at high temperatures because a significant part of the required energy is supplied by cheaper thermal energy, which significantly reduces the electrical energy demand and speeds up the electrolytic reaction kinetics at high temperatures. Alkaline electrolysis optimally operates at a high temperature of close to 200 °C and is used for industrial-scale hydrogen production. PEM electrolyzers typically operate below 100 °C (more efficient than alkaline electrolysis) and are increasingly available for commercial practices. SOEC electrolyzers are the most electrically efficient but least enhanced. SOEC technology faces challenges with rapid material degradation and limited long-term stability (Chao, 2019; Baniasadi, 2012)."
+      ]
+    },
+    {
+      "id": "en-section-11",
+      "title": "Biophotolysis",
+      "paragraphs": [
+        "Biophotolysis of water involves oxygenic photosynthesis by microorganisms (i.e. green microalgae and cyanobacteria) with the combined use of biochemical and photonics energy for hydrogen production by direct and indirect methods. In direct biophotolysis, when microorganisms split water into hydrogen and oxygen ions by capturing sunlight, the hydrogen ions produced are further converted into hydrogen by the enzyme hydrogenase (i.e. 2H O + sun → 2H + O ). In indirect biophotolysis, solar energy is captured by microorganisms through photosynthesis and stored in a type of carbohydrate 6CO + 12H O + sun → C H O + 6O , which is then used to produce hydrogen, then C H O + 12H O + sun →12H + 6CO decomposes into hydrogen and carbon dioxide as a result of the reaction (Kamran & Fazal, 2021)."
+      ]
+    },
+    {
+      "id": "en-section-12",
+      "title": "Photocatalytic Water Decomposition (Photocatalysis)",
+      "paragraphs": [
+        "The photocatalytic method is simply the production of hydrogen with the help of photon energy and a catalyst. For instance, the use of TiO as a photocatalyst with solar energy is among the most studied subject in this field. A photocatalytic semiconductor that attracts light is needed for water to break down with photon energy. Simply, the reaction is given like that: The features of semiconductors used as photocatalysts are that they provide conductivity by passing the electrons from the valence band to the conduction band with the incoming photon energy. The energy of the radiance falling on the semiconductor photocatalyst should be at least equal to the forbidden gap energy value given in eV between the valence band and the conduction band of this semiconductor. The most commonly used photocatalysts are TiO , CdS, Fe O , and SnO. In the photo-catalytic method, the photo-catalysts in the UV and visible region of the light provide hydrogen production by performing the reaction of reduction of water to hydrogen in the conduction band with light absorption (Kudo & Miseki, 2009; Hisatomi, et al., 2014).",
+        "So far, most of the photocatalysts reported are active only under ultraviolet light radiation. However, ultraviolet light (<400 nm) accounts for only 4% of total solar energy, while visible light (400- 800 nm) and infrared light (>800 nm) account for 53% and 43% of total solar energy, respectively."
+      ]
+    },
+    {
+      "id": "en-section-13",
+      "title": "Photo-Electrochemical Decomposition",
+      "paragraphs": [
+        "Photo-electrochemical systems decompose water molecules using solar energy and hydrogen is obtained as a result of a chemical reaction. The biggest advantage of photo-electrochemical methods is that they only need water beside the sun as an energy source and they have serious potential for the future (Fujishima & Honda, 1972; Nozik,1978; Chen, 2010). Photoelectrochemical systems consist of three basic parts: photo-anode, photo-cathode, and electrolyte (see Figure 9). The photo-anode becomes electron-hole pairs with the sunlight falling on them, and the water molecule that comes into contact with the surface of the photo-anode is oxidized, resulting in an oxygen molecule and a positively charged hydrogen molecule. H O H + ½ O"
+      ]
+    },
+    {
+      "id": "en-section-14",
+      "title": "Photovoltaic Integrated Photo-Electrochemical Water Decomposing",
+      "paragraphs": [
+        "As it is known, photovoltaic cells are electronic devices that convert solar energy directly into electricity and can provide the necessary electrical energy to the electrolyzer to obtain hydrogen by decomposing water. Such a system is given in Figure 10 below. A crystalline silicon-based photovoltaic cell has an efficiency of 18% and when integrated with an electrolyzer with an efficiency of 80%, the combined electrolyzer system which is solar-powered operates with an efficiency of ≈14.19%. With the separate structure of the solar cell and the electrolyzer, the solar cell does not require immersion in the electrolyte and therefore does not cause corrosion. Photovoltaic integrated solar water decomposition uses a direct renewable source of solar energy and does not emit greenhouse gases during hydrogen production.",
+        "Current and future estimated costs for hydrogen production from commercially used Alkaline, PEM, and Solid-oxide electrolyzers are given in the tables below (Türe, 2005)."
+      ]
+    },
+    {
+      "id": "en-section-15",
+      "title": "Hydrogen Production from Hydrogen Sulfide (H₂S)",
+      "paragraphs": [
+        "Studies conducted for many years show that there is a huge amount of hydrogen sulfide in the Black Sea, and this amount is increasing by 2.73 x 106 metric tons every year. This reason is that the five great rivers Kuban, Don, Dnieper, Nistru, and Danube still drain their organic compounds into the Black Sea. The extremely organic matter is too much for the bacteria that would normally break it down aerobically, it renders the anaerobic bacteria dominate via consuming the dissolved oxygen supply. These organisms form H S as residual gas in the process, by taking oxygen from sulfate ions which is a component of seawater. It has been found that the H S concentration in the Black Sea conforms to two different regimes, one from the surface to 700 m and the other from 700 m to the bottom (Türe, 2005; Dimitrov, P., & Dimitrov, D., 2004).",
+        "The currently existing H S reservoir in the Black Sea is estimated to be 5.27 x 109 metric tons. Decomposing hydrogen from this high amount of H S in the Black Sea will both contribute to the economy and prevent future environmental disasters. According to the results obtained, the hydrogen acquired by the electrolysis of hydrogen sulfide is 3 times more economical than the electrolysis of water (COSIA, 2017). Hydrogen sulfide, H S, is a colorless, poisonous, and responsible for the rotten egg odor, flammable gas. Because hydrogen sulfide is heavier than air, it tends to accumulate near the ground in poorly ventilated areas. It usually occurs when organic matter breaks down in the absence of oxygen, such as bacteria, swamp, and sewer. It also occurs in volcanic gases, natural gas, and some well water. The odor in the gas produced as a result of the activities of H S producing bacteria in the human large intestine is substantially the result of trace amounts of H S gas. This type of bacterial action can contribute to bad breath in the mouth. About 10% of total global H S emissions are due to human activities (Rubright, et al., 2017). H S production takes place mostly in oil refineries by the hydro-desulphurization process, and it decomposes sulfur from petroleum by the action of hydrogen. The obtaining H S is converted to elemental sulfur by the Claus process and partial combustion. The Claus method is also used for the production of hydrogen from hydrogen sulfide, but some steps of the method have been changed here. It is a twostep process, generally thermal and catalytic reactions.",
+        "(a): Thermal Step: H S is partially oxidized with air. This is executed in a high temperature (1000-1400) °C reaction furnace. Sulfur is formed, but some H S remains unreacted, and small amounts of SO are produced in these reactions. H S + 3/2 O SO + H O (1) step 2 H S + SO 3/n Sn + 2 H O (2) step General reaction for the process. 3 H S +3/2 O 3/n Sn + 3 H O (b): Catalytic Step: The remaining H S reacts with SO to make more sulfur, the rate of that is approximately 99.8%. The Claus method used for hydrogen production is simply shown in Figure 11.",
+        "Due to the presence of hydrogen sulfide dissolved in seawater, it is necessary to pump sufficient density of H S from the deep water to the surface before it is separated from water. Details of this highly complex system are given in the related publication (Naman, et al., 2008)."
+      ]
+    },
+    {
+      "id": "en-section-16",
+      "title": "Hydrogen Production from Biomass",
+      "paragraphs": [
+        "Biomass sources such as wood, manure, organic wastes, etc. can be converted into hydrogen with gasification, steam reforming or biological conversion like biocatalyzed electrolysis or fermentative technique. Studies have shown that hydrogen can be produced from biomass sources more economically. This resource, especially obtained by energy agriculture, by growing energy crops such as fast-growing sorghum on relatively barren lands that do not compete with agriculture, is extremely useful for hydrogen production. In addition to methods such as pyrolysis, heterotrophic, and photo fermentation, bacteria are also used to obtain hydrogen from biomass. In case of hydrogen is produced from biomass, the CO balance in the atmosphere will not change and there will be no environmental damage since CO that was previously absorbed through photosynthesis while the plant was growing will be released."
+      ]
+    },
+    {
+      "id": "en-section-17",
+      "title": "Hydrogen Production from Seawater",
+      "paragraphs": [
+        "Considering the amount of water in the seas, and the potential of wind and solar energies, billions of tons of hydrogen could be produced and that will be the ultimate solution to the world’s environmental, energy and water shortage problems (Türe, 2021: para.14). At this point, since chlorine gas causes pollution of the electrodes in electrolysis due to the salt (NaCl) in seawater, either the water must be purified first by known techniques such as reverse osmosis or making some new technological development on the electrode is required. This two-stage technique which can be realized using renewable energy sources is schematically given below.",
+        "Apart from water (H O) and salt (NaCl), sea water contains many minerals such as magnesium and calcium. The reactions that will take place at the electrolysis of pure molten salt are half-cell reactions that neutralize the salt ions. Whereas, two reduction and two oxidation reactions of both water and salt will compete at the cathode and anode in the electrolysis of the sodium chloride solution in the brine which is remaining from seawater treatment. Along with the ions formed by trace elements, except for Na+ and Cl-, are neglected at the first stage, it should not be ignored that they are also matter of economic importance and may also affect the operating life of the electrodes. The standard half-cell potentials of the reactions which are compared with the standard hydrogen electrode have indicated by E0.",
+        "Cathode reduction reactions: : 2 Na+(aq) + 2 e- → Na(s) E0 = -2,71 V 2 H O(l) + 2 e- → H (g) + 2 OH-(aq) E0= -0,83 V Anode oxidation reactions: 2 Cl-(aq) → Cl2(g) + 2e- E0= 1,36 V 2 H O(l) → O (g) + 4 H+(aq) + 4 e- E0= 1,23 V The standard battery potential of the electrochemical battery is equal to the potential difference between the standard cathode potential (E0cathode) and the standard anode potential (E0 anode), i.e, the half-cell potential difference between reduction and oxidation.",
+        "E0battery = E0 cathode – E0 anode When the cathode half-reactions are examined, since the reduction of sodium is much more negative comparatively the reduction of water, H will form at the cathode, and the Na+ ion will remain in solution. Except for some special catalysts, since the over potential of O is higher than the over potential of Cl2, undesirable toxic Cl2 gas, not O , will be formed at the anode, although the battery potential is lower. Due to chlorine Cl2 and alkali NaOH(aq) are the two main products in the processes, apart from H , the process is called chlor-alkali process. Cl2 is produced in the anode chamber, and H and NaOH are produced in the cathode chamber in the diaphragm cell shown in Figure 13. The task of the diaphragm (Membrane) is to increase the yield of chlor-alkali product by preventing the formation of undesirable intermediate products such as ClO-, ClO -- and Cl- ions by preventing the contact of Cl2 with NaOH. The dissolution containing about 10-12% NaOH(aq) and 14-16% NaCl (aq) in the cathode chamber is concentrated and purified by evaporating some of the water and crystallizing NaCl(s). The final product is 50% NaOH with up to 1% NaCl(aq)."
+      ]
+    },
+    {
+      "id": "en-section-18",
+      "title": "Reliability of Hydrogen Fuel",
+      "paragraphs": [
+        "The developing hydrogen technology remains much safer compared to the accidents that occur due to the wide use of nuclear fuels such as natural gas, oil, coal and uranium. In case of certain rules are followed in the use of hydrogen, the danger is reduced to a point where it is almost scarcely any. In fact, 50% hydrogen, 30% methane, and 7% carbon monoxide which is poisonous gas, are consisting in the gas mixture known as air gas and widely used in many metropolitan of the world (Türe, 2021: para.25). Here are the reasons why hydrogen is safe: • Since it is 14 times lighter than air, it spreads quickly and becomes harmless; • In case the hydrogen tank is punctured, it does not ignite before it comes close to 35-40 cm; • When it burns, it creates only pure water; • Concentration in the air must be at least 4% for it to burn; • Does not emit heat such as wood, coal, or gasoline; • Extraction of pure water instead of toxic gas and carcinogenic particles from the exhaust of the vehicles.",
+        "Considering parameters such as flammability limit in air, explosion energy, flame temperature and waste product, a higher safety factor (around 1) has found for hydrogen, although the safety factors of fossil fuels are between 0.5-0.80. These findings clearly show that hydrogen is safer than other fuels. An experiment on the safety of hydrogen is shown in Figure 14 (Türe, 2021: para. 26)."
+      ]
+    },
+    {
+      "id": "en-section-19",
+      "title": "Storage of Hydrogen",
+      "paragraphs": [
+        "The biggest problem in using hydrogen as a fuel is the lack of efficiency in its storage. Hydrogen generally can be stored in three different ways: a) compressed, b) liquid and c) chemically bonded. Compressed and liquid hydrogen can be stored in pure form in tanks as well as physically stored in nanotubes. Chemically, it is usually in the form of hydride. Storage in the form of hydride can be in solid form in metals as well as in liquid form in sodium boron compound. Research has shown that some alloys can store hydrogen at a much higher density than pure hydrogen (Türe, 2021: para. 27). Volumetric and gravimetric hydrogen density values that can be obtained with different storage methods are given in Figure 15.",
+        "Based on the implementations that require the above-mentioned storage, the features intended for hydrogen storage in summarize; • Recyclable storage capacity as high as possible; • As low a desorption temperature as possible; • Resistance to poisoning and therefore as high as possible reproducible filling numbers.",
+        "International Energy Agency (IEA) and US Department of Energy determined the target values for automotive implementation; for capacity: > 5-6%, for desorption temperature: <150 °C and for lifetime : >1000 fillings (Schulz, et al., 1999).",
+        "The importance of reliability and lightness in the storage of hydrogen highlights the storage of hydrogen in the hydride structure (Bilici, 2004). As seen in Figure 15, hydrides have a significant advantage in gas or liquid storage, especially in terms of hydrogen that can be stored in unit volume (Bilici, 2004)."
+      ]
+    },
+    {
+      "id": "en-section-20",
+      "title": "Storage of Hydrogen with Metal Hydrides",
+      "paragraphs": [
+        "Positive results have been obtained about the storage of hydrogen as metal hydride in magnesium (Güvendiren, et al., 2004). In these studies, 6% storage capacity has reached, but the desorption temperature remained above the target values. The system needs improvements in terms of resistance to poisoning (Güvendiren, et al., 2003). Currently, studies are carried out on the basis of the Mg- Al-B system in line with the above-mentioned target values. The storage of hydrogen as metal hydride in Mg2Ni and similar systems is carried out at Osmangazi University and the studies on the numerical modeling of hydrogen storage in LaNi5 in terms of heat are carried out at Nigde University (Mat & Kaplan, 2001)."
+      ]
+    },
+    {
+      "id": "en-section-21",
+      "title": "Storage of Hydrogen with Boron Hydrides",
+      "paragraphs": [
+        "Sodium boron hydride (NaBH ) is a strong reducing agent, can react with many organic and inorganic compounds, and contains more hydrogen atoms per unit volume than other boron hydrides. Although it has been used for different purposes in various parts of the industry for years, its hydrogen carrying capacity and being a boron-containing compound have made sodium boron hydride a much more well-known compound recently (Bilici, 2004).",
+        "Sodium boron hydride has firstly obtained by the method known as the Schlesinger process, as seen in the equation below, as a result of the conversion of boric acid to trimethyl borate (B(OCH )3) with methanol and then its reduction with sodium hydride. B(OH)3 + CH OH → B(OCH )3 + 4NaH →NaBH + 3NaOCH When the stoichiometric ratios in the equation are examined, it is seen that 75% of the required sodium is converted to sodium methoxide which is a by-product. This low efficiency hinders the applicability of the method on a larger scale and is the biggest factor affecting the production cost of sodium borohydride (Ortega, 2003). 66% of the world’s sodium metal is produced in the USA, 14% in the UK, and the rest in Germany, France, Japan and Russia. Annual sodium metal production is 250 thousand tons. When sodium boron hydride and water react, 10.8% by weight of hydrogen is released in accordance with the following exothermic reaction and sodium metaborate (NaBO ) is produced as a by-product (Li, et al., 2003).",
+        "Catalyst NaBH + 2 H O → NaBO + 4H ∆H = -218 kJ.mol-1 As can be seen, the amount of hydrogen released as a result of the reaction is twice that of the hydrogen bonded in the form of hydride, and 4 moles of H come from NaBH and 4 moles of H from H O. Since the reaction is exothermic, the hydrogen obtained from the system is moist and depending on the environment in which it will be used, the hydrogen gas must be passed through a system that regulates the amount of moisture.",
+        "Some advantages of using sodium borohydride are: • The controllability of the reaction is ultrahigh (reaction stops when the catalyst is removed from the environment, e.g. Ruthenium, platinum, etc.); • The reaction takes place at room temperature and pressure (no additional energy is required to liberate the hydrogen).",
+        "• It is a simpler and cheaper method compared to other methods for the production of small amounts of hydrogen.",
+        "• The reaction rate is quite stable and the H production is slow and stable. Catalysts can be used many times.",
+        "Sodium metaborate can be reused in the production of sodium borohydride.",
+        "Hydrogen gas produced in this way can be used as fuel in vehicles with a small change to be made in internal combustion engines. The flow diagram of the liquid-based sodium boron hydride system required for the fuel systems of vehicles using sodium boron hydride is shown schematically in Figure 16.",
+        "Sodium boron hydride, NaBH , is a white-looking, non-toxic, stable compound up to 300°C in dry form. It can be found in powder form, granule form, or as a 12% solution in NaOH. Sodium hydroxide (NaOH) is added to these solutions in order to extend the shelf life of the sodium borohydride solution. Under normal storage conditions, the annual loss of NaBH solution in 12% NaOH is less than 0.1%.",
+        "Sodium borohydride slowly decomposes into sodium metaborate and hydrogen when gets into contact with moisture in the air due to its hydroscopic nature. Rapid and controlled hydrogen production from NaBH can be achieved by the addition of acidic compounds or metals that act as catalysts such as ruthenium, nickel, cobalt, and platinum. As a result of the exothermic hydrolysis reaction of sodium borohydride solution using a catalyst, 2.37 liters of H /g NaBH is released. Half of the hydrogen released comes from sodium boron hydride and the other half comes from water. Therefore, the hydrogen content released from the concentrated sodium borohydride solution is quite high and can easily compete with other known mobile hydrogen storage technologies in terms of energy content per weight. The theoretical hydrogen capacity produced by hydrolysis from sodium boron hydride is 10.8% by weight. The mass-based H-capacity of substances has been used as a measure of storage capacity. NaBH has more hydrogen storage qualifications than many hydrogen alloys (Figure 17). Also, studies have shown that sodium borohydride has the ability to hold more hydrogen than the densest compressed air tank (Andersson & Grönkvist, 2019)."
+      ]
+    },
+    {
+      "id": "en-section-22",
+      "title": "Sodium Boron Hydride Synthesis and Hydrolysis Costs",
+      "paragraphs": [
+        "The Bayer process is the most widely used commercial process for the synthesis of sodium borohydride. In this process, certain amounts of anhydrous borax, sodium metal, and quartz are heated under 3 atm hydrogen pressure at 500°C in a stirrer type autoclave for 2-4 hours. After extraction of the reaction product with ammonia and evaporation of the ammonia, NaBH is obtained in a high yield. Sodium metasilicate is formed as a secondary product. The reaction is given below: 1/4 Na B4O + 4Na + 2H + 7/4 SiO → NaBH + 7/4 Na SiO ∆Gº (298) = -411.3 kJ/mol-NaBH ; ∆Hº (298)=- 541.348 kJ/mol NaBH By calculating the enthalpies of the reacting raw materials and reaction products at the reaction temperature, the energy cost required for the reaction was calculated as approximately $2/kg for the production of 1kg of sodium borohydride. However, ideal conditions were assumed and the energy cost required to remove by-products from the system was not taken into account in this calculation. The cost of the raw materials required for the Bayer process is a minimum of $10 for the production of 1 kg of NaBH.",
+        "If the sodium borohydride required for the hydrolysis reaction of sodium boron hydride will be produced by the Bayer process as above, and then used in hydrolysis, the cost of NaBH for the synthesis of 1 kg H is approximately $50 under ideal conditions. However, a catalyst such as ruthenium must also be used in this reaction. According to the type of catalyst, the cost of obtaining 1 kg of hydrogen from sodium borohydride reaches $80/ kg, and this cost can be higher depending on the type and amount of catalyst. On the other hand, it should be noted that if NaBH is not produced in the system by the Bayer process and is purchased at $47, the cost reaches $222, and if the catalyst cost is added to this, the hydrolysis reaction cost will reach approximately to $260 (Türe, et al., 2006).",
+        "It is important for the continuation of the system cycle that the sodium metaborate, which is released next to the hydrogen as a result of hydrolysis, is converted back to sodium borohydride and given to the system. Studies have shown that NaBH recycling can occur by using the MgH (Amendola et al., 2000) dynamic hydration/dehydration process or using Mg2Si. In this study, the cost of conversion reaction from NaBO to NaBH using Mg2Si was calculated as approximately $15/kg H . As a result, by combining all these costs, in ideal conditions, the total cost of sodium borohydride synthesis, hydrogen synthesis, and recycling of sodium metaborate to sodium boron hydride is determined as approximately US$ 110/kg H without taking into account system losses. However, as mentioned above, if sodium borohydride is not produced in the system and purchased, this cost will be approximately $290/ kg H (Türe, et al, 2006)."
+      ]
+    },
+    {
+      "id": "en-section-23",
+      "title": "Hydrogen Energy Applications",
+      "paragraphs": [
+        "It is of great importance that fuel can be used everywhere, for example in industry, homes, and vehicles. Considering the commonly used fuels today, we see that most of them can only be used for certain applications. It is inappropriate to use coal in automobiles or airplanes in terms of practicality. It is possible to use hydrogen easily almost everywhere. It can be easily used instead of natural gas in heaters, ovens, and geysers for heating purposes in homes. Hydrogen can give energy not only with flaming combustion but also with very different cycles such as catalytic combustion, chemical, and electrochemical conversion, unlike fossil fuels.",
+        "It is possible to use hydrogen fuel in all vehicles such as buses, trucks, automobiles, tractors, and agricultural machinery since it provides highefficiency use in vehicles by generating electricity with fuel cells as well as internal combustion engines.",
+        "Since fuel cells used for electricity generation from hydrogen have a very important place today and in the future, this matter is given below in more detail. Hydrogen can be used in fuel cells or vehicles instead of gasoline and in radiators, ovens, and water heaters instead of natural gas in homes. Today, hydrogen is used almost everywhere from cell phones to airplanes. Since high-efficiency electricity can be produced with fuel cells, the usage areas of these batteries are very wide. In Figure 18, some of the vehicles and products that run with fuel cells are shown. It is possible to count among that, the vehicles such as cars, buses, motorcycles, bicycles, golf carts, forklifts, utility vehicles, electrical backup units, aircraft, locomotives, submarines, etc. Hydrogen is widely used in various fields from margarine making to metal processing in the industry."
+      ]
+    },
+    {
+      "id": "en-section-24",
+      "title": "Fuel Cells",
+      "paragraphs": [
+        "Fuel cells are described as high-efficiency electrochemical energy conversion devices and basically composed of an electrolyte placed between the anode and the cathode. These devices which produce electricity as a result of the chemical reaction of hydrogen used as fuel with oxygen, are seen as the energy production source of the future. The main advantages of the fuel cell are that it produces pure water as waste, does not cause environmental pollution, and noise and does not contain moving parts. Fuel batteries are generally classified as polymer electrolyte (PEM), alkali, phosphoric acid, molten carbonate, and solid oxide fuel cells, depending on the type of electrolyte used in the cell. PEM fuel cell is especially used in vehicles. Fuel cells are more energy-efficient than conventional internal combustion systems used in automobiles and certainly create less pollution. In addition to this, system size, weight, commissioning time, operating life, and price are key areas required for improving automotive applications.",
+        "The fuel cell has an important place in the use of hydrogen. Fuel cell systems can be used in a portable way, as well as in transportation, mobile systems, and stationary applications. As well as fuel cells can generally be used wherever electrical energy is needed, their commercial use, in general, is as in Table 4. While mobile phones, laptops, digital cameras, and camera batteries can be given as examples for portable applications, hospitals, workplaces, homes, and computer networks where generators and uninterruptible power supplies are used can be examples for stationary applications. The world’s leading automobile manufacturers in the transportation sector have completed the production of fuel cell-powered automobiles and bus prototypes. A five-year project was started in 2003 for the 1MW locomotive. In addition, fuel cells have been started to be used in mining due to their safety."
+      ]
+    },
+    {
+      "id": "en-section-25",
+      "title": "PEM (Proton Exchange Membrane-Polymer) Fuel Cell",
+      "paragraphs": [
+        "PEM Fuel cells, also known as Proton Exchange Membrane or Polymer Electrolyte Membrane, are a type of fuel cell developed for use in vehicles, especially in the USA, Japan, and Germany. Its first major application is the use of a PEM fuel cell with 1 kW output by GE in the Gemini spacecraft. Pure water produced as a by-product has also been used as drinking water by astronauts. There has been a great increase in studies that will improve both the cost and performance of PEM fuel cells in the last 5 years (Wilkinson & Steck, 1997).",
+        "It has been demonstrated that complete fuel cell systems can be used for many transport applications (including city transit buses and coaches). Recent studies have focused on cost reduction and the production of catalysts, membranes, and bipolar plates in large quantities. These studies also coincide with studies on increasing power density, improving water management, operating in ambient conditions, increasing tolerance to converted fuel and increasing module life. A schematic of an example PEMYP cell is shown in Figure 19.",
+        "In PEM, as in other fuel cells, the fuel cell module has two electrodes with high gas permeability and in contact with the electrolyte, while the gaseous fuel is continuously fed from the anode, while the oxidizing gas is continuously fed from the cathode. H from the fuel is converted to H+ at the anode in PEM electrode reactions. H+ passes through the polymer electrolyte membrane and combines with O at the cathode to produce water. The operating temperature is around 80ºC.",
+        "As an electrolyte membrane has two functions to provide ionic communication between the anode and cathode, and to separate the two reacting gases. Today, the standard electrolyte material used is Nafion which is a Teflon-based material produced by DuPont in the mid-1960s for space applications. The electrodes used in the PEM cell are typical gas diffusion electrodes and isolate the hydrogen gas into protons and electrons. The layer thickness of the catalyst is 5-50 µm and contains Pt microcrystals with a diameter of 2-4 nm. Pt has been determined as a suitable catalyst for both anode and cathode reactions today. However, it is tried to be used in a minimum amount by using many methods since it is expensive. Carbon/graphite plates for current collection and distribution, gas distribution, and thermal management have using in most PEM cells. The thickness of this layer is ~350 µm and has a catalyst layer attached to one side."
+      ]
+    },
+    {
+      "id": "en-section-26",
+      "title": "Direct Methanol Fuel Cell",
+      "paragraphs": [
+        "The first studies on these batteries, which are also admitted as a type of PEM fuel cell, were made by Shell and ESCO-Exon in the 1960s-70s. They obtained low current density due to the negative effect of direct methanol usage on the Pt-Ru catalyst and overvoltage at the anode. Research has been carrying on these batteries, which were ignored because the efficiency obtained in the early 1990s was below 25%. As such in PEM, acidic solid polymer Nafion is used as the electrolyte, and Pt-Pd superimposed carbon is used as the electrode. The most important feature that distinguishes these batteries from PEM is that the fuel methanol/ethanol can be used directly without the need for a fuel converter, and since it does not contain a fuel processing unit, it is less complex, lighter, and cheaper than other types."
+      ]
+    },
+    {
+      "id": "en-section-27",
+      "title": "Alkaline Fuel Cell",
+      "paragraphs": [
+        "In an alkaline fuel cell, 35-50% KOH is used as an electrolyte in low temperature (at 120°C) applications. In the high temperature (at 250°C) alkaline fuel cell used in the spacecraft Apollo, 85% KOH was used as the electrolyte. Low-temperature alkaline systems can operate at room temperature and have the highest voltage efficiency among all fuel cell systems. Cells and electrodes can be produced from carbon and plastics at a low cost. It has a long life of 15,000 hours due to adapt well to many materials. In addition, there are many catalyst options available for these fuel cells such as Ni, Ag, and metal oxides."
+      ]
+    },
+    {
+      "id": "en-section-28",
+      "title": "Phosphoric Acid Fuel Cell",
+      "paragraphs": [
+        "If the alkaline fuel cell used in space applications is not counted, the closest fuel cell to commercialization is the Phosphoric Acid Fuel Cell today. This fuel cell, in which 100% phosphoric acid is used as the electrolyte, operates at 150- 220°C. The phosphoric acid which is acting as the electrolyte has fixed in a porous layer between the electrodes. Both anode and cathode are gas diffusion electrodes. This fuel cell is operated at high temperatures due to phosphoric acid is a poor conductor at low temperatures. In addition to this disadvantage, phosphoric acid provides many advantages as an electrolyte. Among them, it is possible to count its excellent thermal, chemical and electrochemical stability and relatively lower volatility than other inorganic acids above 150°C."
+      ]
+    },
+    {
+      "id": "en-section-29",
+      "title": "Molten Carbonate Fuel Cell",
+      "paragraphs": [
+        "The molten carbonate fuel cell operates at very high temperatures such as 600-650 °C and is one of the second-generation fuel cells which has developed recently, i.e., it needs a lot of development in order to be commercialized. A mixture of alkaline carbonates, for example (Na and K), or a mixture of Li CO -K CO is used as the electrolyte. This electrolyte has attached to a ceramic matrix structure. Those are can be counted as the advantages, that the cell can be produced by printing technique from easily available metal sheets, that Ni catalyst is sufficient instead of expensive precious metal catalysts in cell reactions, that CO is a type of fuel that can be used directly, that the steam released in the cell is at a high enough temperature to be used in turbines or cogeneration applications. However, the Molten Carbonate fuel cell has disadvantages such as operating at high temperatures, causing corrosion, and thus reducing the life of the cell components."
+      ]
+    },
+    {
+      "id": "en-section-30",
+      "title": "Solid Oxide Fuel Cell",
+      "paragraphs": [
+        "The solid oxide electrolyte is tempting for industrial applications due to some specific benefits. Non-porous metal oxides as a catalyst are used ZrO which is containing 8-10% (mol) Y O . Although pure zircon is an insulator, it shows conductivity with the addition of Y O. Using CeO instead of ZrO can lower the operating temperature. In this fuel cell, porous gas diffusion electrodes are used as in other fuel cells. While porous Pt has been used as anode and cathode, Ni-ZrO (containing Y O ) or CO- ZrO as anode and LaMnO with Sr loaded as a cathode are used recently. Since it is possible to reach very high temperatures (1000°C), the fuel can be used directly in the fuel cell without the need for expensive catalysts as in low-temperature applications. Since the gas passage is low and the electronic conductivity of the electrolyte is high, these batteries can give at least 96% of the theoretical voltage in an open circuit. Among the advantages can be counted of solid oxide fuel cells are that it does not cause problems like other electrolytes in the operating conditions of the cell due to the solid electrolyte is very stable, there are no problems such as interface problems, water overflow from the pores, the necessity of wetting the catalyst since there is no liquid phase. For a general comparison, the types and properties of fuel cells are given in Table 5."
+      ]
+    },
+    {
+      "id": "en-section-31",
+      "title": "Current Uses of Hydrogen Energy",
+      "paragraphs": [
+        "The applications of hydrogen as an energy carrier in almost every field are now well known. It is inevitable that these will increase even more in the near future. Some of the vehicles which utilize hydrogen fuel are shown in Figure 20.",
+        "The H City Gold model developed by Toyota can travel 400 km with 5 hydrogen tanks with a total capacity of 37.5 kg placed on the roof of the bus. The bus, whose fuel tanks can be filled in less than 8 minutes, reveals its environmentalist identity by only releasing water vapor.",
+        "Today, almost all automobile companies have vehicles working with hydrogen fuel, and it has been announced that they will increase their production rapidly in the coming years. Large oil companies such as Shell and BP are also opening hydrogen filling stations rapidly (Figure 21)."
+      ]
+    },
+    {
+      "id": "en-section-32",
+      "title": "Applications of Hydrogen in Marine Vehicles",
+      "paragraphs": [
+        "Due to the increasing awareness of climate change and marine pollution in recent years, restrictions have been imposed on ships operating with petroleum-derived fuels, especially in the ports of northern countries such as Sweden and Norway, and the use of clean fuels such as hydrogen on ships has begun to be encouraged. Examples of hydrogen watercraft are shown in Figure 22.",
+        "Commercial ship operators and shipyard owners in Turkey have also started work on the use of hydrogen fuel in this context. There are still many ships operating with hydrogen fuel in the world, and their number is increasing. Shown below are hydrogen-fueled ships still in circulation. Hydrogen/ oxygen fuel cells (especially low-temperature fuel cells such as PEMFC) have ideal features for powering submarines. They do not need air, can operate under the sea if fuel (hydrogen) and oxide (oxygen) are stored. They produce no absorption or waste material other than water, thus maintaining zero buoyancy. Since they have no moving parts, they operate silently, reducing the sonar (sea radar) signal. They release heat at low temperatures and thus produce very little thermal traces. They are enormously productive. They provide long cruises and little waste of time."
+      ]
+    },
+    {
+      "id": "en-section-33",
+      "title": "Hydrogen-Powered Airplanes",
+      "paragraphs": [
+        "Liquid hydrogen has many advantages as a fuel in commercial subsonic and supersonic aircraft. The key advantage of liquid hydrogen is its high energy content (142 MJ/kg), which is 2.8 times the energy content of conventional jet fuels. For this reason, an aircraft powered by liquid hydrogen must carry less fuel, up to one-third the mass of a conventional aircraft. A hydrogen-powered subsonic airliner needs on average 16% less fuel (energy-wise) to complete the same flight compared to a regular airplane. This advantage would be even higher (28%) in supersonic aircraft. Airbus and Boeing are working intensively on hydrogen-fueled aircraft.",
+        "Despite popular opinion, hydrogen is a safer fuel for air transport and is currently used as jet fuel. The damage and loss in a liquid H fuel aircraft collision will be less than in a standard fuel aircraft collision. In April 1988, one of three liquid hydrogen-powered turbofan engines of a commercial airliner’s aircraft (Tupolev 155) was demonstrated in the USSR. On June 19, 1988, American pilot, William H. Conrad, became the first person who operate an airplane (Grumman-American “Cheetah”) powered entirely by liquid hydrogen (Maniaci, 2008)."
+      ]
+    },
+    {
+      "id": "en-section-34",
+      "title": "Hydrogen Applications in Buildings",
+      "paragraphs": [
+        "Hydrogen can be used to heat or cool an area. Likewise, with minor modifications, it is suitable for water heating as natural gas is used today. In addition, hydrogen can be used in catalytic burners by directly heating and humidifying the air instead of flame combustion. Since no further emissions are produced, these burners can also be used safely indoors. The usage of hydrogen will be in the form of hydrogen/hydrogen combination cooling systems in space heating and cooling and, in freezers.",
+        "Either flame combustion or catalytic burners can be used for cooking. It is very important to design combustor vessels so that the hydrogen/air velocity is always greater than the flame propagation velocity in hydrogen/air mixtures to prevent backfire propagation."
+      ]
+    },
+    {
+      "id": "en-section-35",
+      "title": "Conclusion and Recommendations",
+      "paragraphs": [
+        "Hydrogen is a safe, clean and endless fuel in all respects, and it has no harmful side. The only disadvantage that can be considered as a disadvantage today is that the price is expensive since it is not in widespread commercial use yet, so that is valid for each new technological product. For example, it is well known that the prices of technological products such as mobile phones or calculators when they first hit the market are tens of times their current prices. In addition, it has been calculated that the investment made in this sector since the discovery of oil is estimated to be 160 trillion (160,000 billion) Dollars. Hydrogen pumps must be set up at petrol filling stations and, of course, large amounts of hydrogen must be produced due to widespread usage of hydrogen. Studies in this area have started in many countries. For instance, in April 2004, California Governor Arnold Schwarzenegger started work to increase the number of hydrogen filling stations from 12 to 200 in the next 6 years within the framework of the “Hydrogen Highways” project and gave the good news that there will be filling stations for hydrogen cars every 30 km from now on (Türe, 2020).",
+        "Similar to natural gas or air gas, hydrogen gas can be transported anywhere easily and safely through pipelines. It is possible to give that as an example of the transportation of hydrogen by pipe, the 80 km long pipe network used by the petroleum industry in Texas, and the 204 km pipeline that was put into operation in Germany in 1938 in the Ruhr basin and still continue to transport hydrogen under 15 atmospheres pressure.",
+        "Sodium boron hydride, which has gained great importance as a hydrogen storage and transport medium today, also has an important potential in special boron chemicals. When the features of sodium borohydride such as being able to store more hydrogen than other compounds with similar purposes, being non-flammable and non-explosive, and releasing hydrogen with an easily controllable reaction, are evaluated together with new and clean energy policies, it will create a widespread and permanent consumption area for the rich boron resources of our country. Turkey, which has to accelerate its technological renewal and industrial production process, should prepare all legal and juridical grounds for the transition to hydrogen energy in the first ten years and establish the primary systems to provide this secondary energy source. In the next stage, it should develop hydride production systems, which are suggested as an alternative, in order to store and transport this fuel more efficiently and prepare the technology to introduce boron fuel solutions to the market. On the other hand, these technologies should be integrated with the fuel cell systems required for the conversion to electrical energy and should be a producing country instead of a technology transfer which is an expensive method, in order to get rid of foreign dependency.",
+        "Turkey has been late in catching up with rapidly developing technology and has become a country that constantly imports technology. At least, Turkey has a chance to get out of this position in the energy field. Turkey has an important position in terms of hydrogen energy applications. These technologies, on the other hand, should be integrated with the fuel cell systems required for the conversion to electrical energy, and in order to get rid of foreign dependency, there should be a producing country instead of technology transfer, which is an expensive method.",
+        "In order for Turkey to get rid of foreign dependency in the field of energy and to become a developed country, it is necessary to make good use of the hydrogen energy opportunity. Informing the Turkish society about hydrogen starting from primary school, directing the studies of scientists in Turkey to hydrogen, especially hydrogen production using renewable energy sources are crucial issues. In order for Turkey to get rid of foreign dependency in the field of energy and to become a developed country, it is necessary to make good use of the hydrogen energy opportunity."
+      ]
+    }
+  ],
+  "keywords": [
+    "energy",
+    "hydrogen fuel",
+    "hydrogen sulfide",
+    "seawater",
+    "sodium borohydride"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Adamson, K. A. (2008). Fuel Cell Today Industry Review 2008. Platinum Me tals, 52(2), 123."
+    },
+    {
+      "id": "ref-2",
+      "text": "Amendola, S. C., Sharp-Goldman, S. L., Janjua, M. S., Spencer, N. C., Kelly, M. T., Petillo, P. J., & Binder, M. (2000). A safe, portable, hydrogen gas genera tor using aqueous borohydride solution and Ru catalyst. International Jour nal of Hydrogen Energy, 25(10), 969-975."
+    },
+    {
+      "id": "ref-3",
+      "text": "Andersson, J., & Grönkvist, S. (2019). Large-Scale Storage of Hydrogen. Inter national Journal of Hydrogen Energy, 44(23), 11901-11919."
+    },
+    {
+      "id": "ref-4",
+      "text": "Bilici, U. (2004). Enerji Taşıyıcısı Hidrojen, Hidrojen Taşıyıcısı Sodyum Borhid rür. Madencilik Bülteni, Maden Mühendisleri Odası, 67, 43-47."
+    },
+    {
+      "id": "ref-5",
+      "text": "CAB Direct. (2019). Solar Thermal Electrochemical Process (STEP) action to"
+    },
+    {
+      "id": "ref-6",
+      "text": "biomass: solar thermo-coupled electrochemical synergy for efficient breaking of biomass to biofuels and hydrogen. Retrieved from https://www.cabdirect.org/cabdirect/abstract/20193075874"
+    },
+    {
+      "id": "ref-7",
+      "text": "Chen, Z., Jaramillo, T. F., Deutsch, T. G., Kleiman-Shwarsctein, A., Forman, A. J., Gaillard, N., Garland, R., Takanabe, K., Heske, C., Sunkara, M., McFar land, E. W., Domen, K., Miller, E. L., Turner, J. A., & Dinh, H. N. (2010). Accelerating Materials Development for PhotoElectrochemical Hyd rogen Production: Standards For Methods, Definitions, And Reporting Protocols. Journal Of Materials Research, 25(1), 3-16. https://doi.org/10.1557/JMR.2010.0020"
+    },
+    {
+      "id": "ref-8",
+      "text": "COSIA. (2017). Hydrogen from Hydrogen Sulphide. Retrieved from https://cosia.ca/sites/default/files/attachments/COSIA%20Hydrogen%20from%20Hydrogen%20Sulphide.pdf"
+    },
+    {
+      "id": "ref-9",
+      "text": "Degens, E. T., & Ross, D. A. (1974). The Black Sea—Geology, Chemistry, and Bi ology. American Association of Petroleum Geologists. https://doi.org/10.1306/M20377"
+    },
+    {
+      "id": "ref-10",
+      "text": "Dimitrov, P., & Dimitrov, D. (2004). The Black Sea, The Flood And The Ancient Myths. “Slavena”, Varna. https://doi.org/10.13140/RG.2.2.18954.16327"
+    },
+    {
+      "id": "ref-11",
+      "text": "Ewald, R. (1998). Requirements for advanced mobile storage systems. Interna tional Journal of Hydrogen Energy, 23(9), 803-814."
+    },
+    {
+      "id": "ref-12",
+      "text": "Fujishima, A., & Honda, K. (1972). Electrochemical Photolysis of Water at a Semiconductor Electrode. Nature, 238(5358), 37-38."
+    },
+    {
+      "id": "ref-13",
+      "text": "Greenpeace. (2020). New research: Air pollution from fossil fuels costs the wor ld $8 billion every day. Retrieved from https://www.greenpeace.org/usa/news/new-research-air-pollution-from-fossil-fuels-costs-the-world-8-billion-every-day/"
+    },
+    {
+      "id": "ref-14",
+      "text": "Güvendiren, M., & Öztürk, T. (2003). Enerji kaynağı olarak hidrojen ve hidro jen depolama. Mühendis ve Makina Dergisi, 523."
+    },
+    {
+      "id": "ref-15",
+      "text": "Güvendiren, M., Akyildiz, H., & Öztürk, T., (2003). Hydrogen Storage In Mag nesium With Graphite And Sulfur Addition, 569-573."
+    },
+    {
+      "id": "ref-16",
+      "text": "Güvendiren, M., Baybörü, E., & Öztürk, T. (2004). Effects Of Additives On Mechanical Milling and Hydrogenation of Magnesium Powders. Internati onal Journal of Hydrogen Energy, 29(5), 491-496."
+    },
+    {
+      "id": "ref-17",
+      "text": "Hisatomi, T., Kubota, J., & Domen, K. (2014). Recent advances in semicondu ctors for photocatalytic and photoelectrochemical water splitting. Chem. Soc. Rev., 43(22), 7520-7535. https://doi.org/10.1039/CCS60378D"
+    },
+    {
+      "id": "ref-18",
+      "text": "Irena. (2020). Green Hydrogen Cost Reduction. Retrieved from https://irena.org/-/media/Files/IRENA/Agency/Publication/2020/Dec/IRENA_Green_hydrogen_cost_2020.pdf"
+    },
+    {
+      "id": "ref-19",
+      "text": "Kamran, M. F. & Rayyan, M. (2021). Fundamentals Of Renewable Energy Sys tems: Technologies, design and operation. Elsevier Academic Press. ISBN: 978-0-12-823538-6"
+    },
+    {
+      "id": "ref-20",
+      "text": "Kudo, A., & Miseki, Y. (2009). Heterogeneous photocatalyst materials for water splitting. Chem. Soc. Rev., 38(1), 253. https://doi.org/10.1039/B800489G"
+    },
+    {
+      "id": "ref-21",
+      "text": "Lein A.,Y., & Ivanov M., V., (1990).Hydrogen Sulfide Production In Shelf Sedi ments And Its Balance In The Black Sea . Microbiology, 59(5): 921-8."
+    },
+    {
+      "id": "ref-22",
+      "text": "Li, Z. P., Morigazaki, N., Liu, B. H., & Suda, S. (2003). Preparation of sodium bo rohydride by the reaction of MgH with dehydrated borax through ball milling at room temperature. Journal of Alloys and Compounds, 349(1-2), 232-236."
+    },
+    {
+      "id": "ref-23",
+      "text": "Library. (2022).Development of a New Hybrid Photochemical/ Electrocatalytic Water Splitting Reactor for Hydrogen Production: Design, Analysis and Ex periments. Retrieved from https://ir.library.dc-uoit.ca/bitstream/10155/871/1/Baniasadi_Ehsan.pdf"
+    },
+    {
+      "id": "ref-24",
+      "text": "Maniaci, D. (2008). Relative Performance of a Liquid Hydrogen-Fueled Com mercial Transport. 46th AIAA Aerospace Sciences Meeting and Exhibit. 46th AIAA Aerospace Sciences Meeting and Exhibit, Reno, Nevada."
+    },
+    {
+      "id": "ref-25",
+      "text": "Mat, M. D., & Kaplan, Y. (2001). Numerical study of hydrogen absorption in an Lm− Ni5 hydride reactor. International Journal of Hydrogen Energy, 26(9), 957-963."
+    },
+    {
+      "id": "ref-26",
+      "text": "Naman, S., Ture, I., & Veziroglu, T. (2008). Industrial extraction pilot plant for stripping H S gas from Black Sea water. International Journal of Hydrogen Energy, 33(22), 6577-6585. https://doi.org/10.1016/j.ijhydene.2008.07.113"
+    },
+    {
+      "id": "ref-27",
+      "text": "National Institute of Standards and Technology (NIST). (2004). PEM Fuel Cel ls. Retrieved from https://physics.nist.gov/MajResFac/NIF/pemFuelCells.html"
+    },
+    {
+      "id": "ref-28",
+      "text": "Nature. (2013). Hydrogen production by Tuning the Photonic Band Gap with the Electronic Band Gap of TiO . Retrieved from https://www.nature.com/articles/srep02849"
+    },
+    {
+      "id": "ref-29",
+      "text": "Nelly Hydrogen. (2022). Alkaline water electrolysis. Retrieved from https://nelhydrogen.com/glossary/alkaline-water-electrolysis/"
+    },
+    {
+      "id": "ref-30",
+      "text": "Nozik, A. J. (1978). Photoelectrochemistry: Applications to Solar Energy Con version. Annual Review of Physical Chemistry, 29(1), 189-222."
+    },
+    {
+      "id": "ref-31",
+      "text": "Online Library. (2017).Recent Progress in Energy-Driven Water Splitting. Ret rieved from https://onlinelibrary.wiley.com/doi/full/10.1002/advs.201600337"
+    },
+    {
+      "id": "ref-32",
+      "text": "Ortega, J. V., Wu, Y., Amendola, S. C., & Kelly, M. T. (2003). U.S. Patent No. 6,586,563. Washington, DC: U.S. Patent and Trademark Office."
+    },
+    {
+      "id": "ref-33",
+      "text": "Parsons, M. (2020). Getting Back to Work…At Work (The HYPER Guide to Returning to the Lab Safely), Washington State University. Retrieved from https://hydrogen.wsu.edu/2020/06/12/getting-back-to-work-at-work-thehyper-guide-to-returning-to-the-lab-safely/"
+    },
+    {
+      "id": "ref-34",
+      "text": "Protank. (2018). Sodium Hydroxide Storage Tanks & Specifications. Retrieved from https://www.protank.com/sodium-hydroxide"
+    },
+    {
+      "id": "ref-35",
+      "text": "Rubright, S. L. M., Pearce, L. L., & Peterson, J. (2017). Environmental toxicology of hydrogen sulfide. Nitric Oxide: Biology and Chemistry, 71, 1."
+    },
+    {
+      "id": "ref-36",
+      "text": "Ruth, J. D., Hayes, L. M., Martin, D. R., & Hatipoglu, K. (2017). An overview of photoelectrochemical cells (PEC): Mimicking nature to produce hydrogen for fuel cells. SoutheastCon 2017, 1-6."
+    },
+    {
+      "id": "ref-37",
+      "text": "Schulz, R., Huot, J., Liang, G., Boily, S., Lalande, G., Denis, M. C., & Dode let, J. P. (1999). Recent Developments In The Applications of Nanocrystal line Materials To Hydrogen Technologies. Materials Science and Enginee ring: A, 267(2), 240-245."
+    },
+    {
+      "id": "ref-38",
+      "text": "Science Direct. (2019). Biological And Biochemical Hydrogen Produc tion. Retrieved from https://www.sciencedirect.com/science/article/pii/B9780080227139500148"
+    },
+    {
+      "id": "ref-39",
+      "text": "Shiva Kumar, S., & Himabindu, V. (2019). Hydrogen production by PEM water electrolysis – A review. Materials Science For Energy Technologies, 2(3), 442-454. doi: 10.1016/j.mset.2019.03.002."
+    },
+    {
+      "id": "ref-40",
+      "text": "Statista. (2021). Hydrogen production costs worldwide as of 2018, based on pro duction source. Retrieved from https://www.statista.com/statistics/1132774/global-hydrogen-production-cost-based-on-source/"
+    },
+    {
+      "id": "ref-41",
+      "text": "Tee, S. Y., Win, K. Y., Teo, W. S., Koh, L. D., Liu, S., Teng, C. P., & Han, M. Y. (2017). Recent progress in energy‐driven water splitting. Advanced science, 4(5), 1600337."
+    },
+    {
+      "id": "ref-42",
+      "text": "The Geography of Transport Systems. (2022). The spatial organization of transportation and mobility.Energy Density of some Combustibles (in MJ/kg). Retrieved from https://transportgeography.org/contents/chapter4/transportation-and-%20%20%20energy/combustibles-%20energy-content/"
+    },
+    {
+      "id": "ref-43",
+      "text": "Tucker, M. (2020). Progress in metal-supported solid oxide electrolysis cells: A review. International Journal Of Hydrogen Energy, 45(46), 24203-24218."
+    },
+    {
+      "id": "ref-44",
+      "text": "Türe, İ. E. (2021). Deniz Taşıtlarında Temiz ve Tükenmez Yakıt. Retrieved from https://www.virahaber.com/prof-dr-engin-ture-yazdi-deniz-tasitlarinda-temiz-ve-tukenmez-yakit-hidrojen-60174h.htm"
+    },
+    {
+      "id": "ref-45",
+      "text": "Türe, İ. E., Tabakoğlu, F. Ö., & Kurtuluş, G. (2006). Economical aspects of sodi um borohydride for hydrogen storage. İstanbul Üniversitesi Dergisi, 1(2), 23-62."
+    },
+    {
+      "id": "ref-46",
+      "text": "Türe, İ., E. (2001). Hidrojen Enerjisi. Temiz Enerji Vakfı. TÜBİTAK. ISBN- 975-8547-00-3."
+    },
+    {
+      "id": "ref-47",
+      "text": "Türe, İ., E. (2005).Hydrogen Energy Potential of the Black Sea. World Hydrogen Energy Conference, WHEC Yokohama, Japan."
+    },
+    {
+      "id": "ref-48",
+      "text": "United States Department of Energy. (2020). Hydrogen Strategy. Retrieved from https://www.energy.gov/sites/prod/files/2020/07/f76/USDOE_FE_Hydrogen_%20Strategy_July2020.pdf"
+    },
+    {
+      "id": "ref-49",
+      "text": "United States Department of Energy. (2022) Hydrogen Production: Thermoc hemical Water Splitting. Retrieved from https://www.energy.gov/eere/fuelcells/hydrogen-production-thermochemical-water-splitting"
+    },
+    {
+      "id": "ref-50",
+      "text": "Weber, A., Riess, W., Wenzhoefer, F., & Jørgensen, B. B. (2001). Sulfate Re duction In Black Sea Sediments: In Situ And Laboratory Radiotracer Me asurements From The Shelf To 2000m Depth. Deep Sea Research Part I: Oceanographic Research Papers, 48(9), 2073-2096. https://doi.org/10.1016/S0967-0637(01)00006-1"
+    },
+    {
+      "id": "ref-51",
+      "text": "Wilkinson, D. P., & Steck, A. E. (1997). General progress in the research of solid polymer fuel cell technology at Ballard."
+    },
+    {
+      "id": "ref-52",
+      "text": "Yuan, X. Z., Nayoze-Coynel, C., Shaigan, N., Fisher, D., Zhao, N., Zamel, N., Gazdzicki, P., Ulsh, M., Friedrich, K. A., Girard, F., & Groos, U. (2021). A review of functions, attributes, properties and measurements for the qu ality control of proton exchange membrane fuel cell components. Journal of Power Sources, 491, 2 29540."
+    },
+    {
+      "id": "ref-53",
+      "text": "Zheng, Y., Chen, Z., & Zhang, J. (2021). Solid Oxide Electrolysis of H O and CO to Produce Hydrogen and Low-Carbon Fuels. Electrochemical Ener gy Reviews, 4(3), 508-517. doi: 10.1007/s41918-021-00097-4."
+    }
+  ],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-01.jpg",
+      "caption": "Figure 1. The Energy Content of Hydrogen Relative to Various Fuels (Mj / kg)"
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-02.jpg",
+      "caption": "Figure 2. Various Methods Used for Obtaining Hydrogen from Water"
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-03.jpg",
+      "caption": "Figure 3. Green Hydrogen Cycle"
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-04.png",
+      "caption": "Table 1. Costs for Hydrogen Produced from Various Sources in the World"
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-05.jpg",
+      "caption": "Figure 4. Thermochemical Hydrogen Production by Concentrated Solar Energy a) Central Receiver / Reactor Tower With Heliostats b) Modular Dish-Mounted Receiver"
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-06.jpg",
+      "caption": "Figure 5. Alkaline Electrolysis Cell"
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-07.jpg",
+      "caption": "Figure 6. PEM Electrolyzer"
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-08.jpg",
+      "caption": "Figure 7. Solid-Oxide Electrolysis Cell"
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-09.jpg",
+      "caption": "Figure 8. Photocatalytic Water Decomposing: A) Water Decomposing With Semiconductor Photocatalyst B) Semiconductor Band Structure and Water Decomposition Redox Potential"
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-10.jpg",
+      "caption": "Figure 9. Photoelectrochemical Electrolysis Cell Diagram"
+    },
+    {
+      "id": "figure-11",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-11.jpg",
+      "caption": "Figure 10. Water Decomposition System with Photovoltaic Integrated Electrolysis A) Photovoltaic System and External Electrolyzer"
+    },
+    {
+      "id": "figure-12",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-12.png",
+      "caption": "Table 2. Electrolyzer Costs"
+    },
+    {
+      "id": "figure-13",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-13.png",
+      "caption": "Table 3. H 2 S Concentrations in the Black Sea at Different Depths"
+    },
+    {
+      "id": "figure-14",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-14.jpg",
+      "caption": "Figure 11. Classic Claus Process (Method)"
+    },
+    {
+      "id": "figure-15",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-15.jpg",
+      "caption": "Figure 12. Hydrogen Production Alternatives from Seawater"
+    },
+    {
+      "id": "figure-16",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-16.jpg",
+      "caption": "Figure 13. Diaphragm Chlorine-Alkaline Process"
+    },
+    {
+      "id": "figure-17",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-17.jpg",
+      "caption": "Figure 14. Comparison of Hydrogen and Gasoline Vehicles in Case of Fire"
+    },
+    {
+      "id": "figure-18",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-18.jpg",
+      "caption": "Figure 15. Storage Types in Hydrogen and Obtainable Volumetric and Gravimetric Density Values"
+    },
+    {
+      "id": "figure-19",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-19.jpg",
+      "caption": "Figure 16. Operating Scheme of a Commercial NaBH 4 - PEMFC System"
+    },
+    {
+      "id": "figure-20",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-20.tif",
+      "caption": "Figure 17. Comparison of Chemical Hydrides"
+    },
+    {
+      "id": "figure-21",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-21.jpg",
+      "caption": "Figure 18. Usage Areas of Hydrogen"
+    },
+    {
+      "id": "figure-22",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-22.png",
+      "caption": "Table 4. General Commercial Uses of Fuel Cells"
+    },
+    {
+      "id": "figure-23",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-23.jpg",
+      "caption": "Figure 19. PEM Fuel Cell Diagram"
+    },
+    {
+      "id": "figure-24",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-24.png",
+      "caption": "Table 5. Types and Features of Fuel Cells"
+    },
+    {
+      "id": "figure-25",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-25.jpg",
+      "caption": "Figure 21. Hydrogen Filling Stations"
+    },
+    {
+      "id": "figure-26",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-26.jpg",
+      "caption": "Figure 22. Hydrogen Watercrafts"
+    },
+    {
+      "id": "figure-27",
+      "src": "/assets/article-figures/turkiyenin-enerji-su-ve-iklim-degisikligi-sorunlari-icin-kesin-cozum-hidrojen-yakiti/figure-27.jpg",
+      "caption": "Figure 20. Hydrogen-Powered Vehicles"
+    }
+  ]
+}

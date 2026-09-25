@@ -1,0 +1,337 @@
+{
+  "sections": [
+    {
+      "title": "Giriş",
+      "paragraphs": [
+        "HÜKÜMETLER ARASI İKLİM DEĞİŞİKLİĞİ Panelinin (IPCC) Altıncı Değerlendirme Raporu, küresel ısınmanın yaklaşık 1.5°C ile sınırlandırılması sürecinde, küresel sera gazı salımlarının 2025 yılından önce zirveye ulaşmasını takiben 2030 yılına kadar yarıya indirilmesinin gerekli olduğunu vurguluyor. Bu bağlamda, kentlerin tüm unsurları ve çevresel parametreleri arasında salım kaynaklarının karbondan arındırması yönünde ayrılmaz bir boyut olarak ele alınması ve net-sıfır tanımlı olarak önceliklendirilmesi gerekiyor (IPCC, 2022; Kilkis, S., 2022). Bu açıdan bakıldığında, küresel ısınmaya karşı net-sıfır ekserjiye yönelen yapılı çevre ve kentlerin oluşturulma arayışları önem kazanmaktadır (Kılkış, Ş. 2012; Kılkış, Ş., 2014). Ekserji, belirli bir enerji miktarı veya akışının yararlı iş potansiyeline (katma değer) sahip bölümüdür. Belirli bir sistem veya ekipmanın arz ve talep ekserjileri arasındaki uyumsuzluklarından kaynaklanan yaklaşık olarak önlenebilir ΔCO salımlarının tanınmasında önemli bir rol oynar. Bu tür salım sorumlulukları, takip eden bölümlerde gösterileceği üzere %100 yenilenebilir kaynaklar için de geçerlidir ve karbonsuzlaşma arayışları arasında önemli bir yer tutar.",
+        "Bu arayış içerisinde, Kuşak ve Yol Girişimi (KYG) büyük bir sorumluluk ve önem taşımaktadır, çünkü tüm büyük kentler ve yapılı çevre KYG’nin rotasındadır. Küresel Gayri Safi Yurt İçi Hasılanın (GSYİH) yaklaşık dörtte birinin KYG ülkelerinde üretiliyor olması nedeni ile, bu ülkeler sadece enerji ve ekonomi açılarından değil, enerjinin katma değer potansiyeli açısından da akılcı üretilip değerlendirilmesinde birbirleriyle bağlanmalı ve bütünleşmelidirler.",
+        "Bu nedenle, KYG ülkelerinin karbonsuzlaştırılmaları daha da önem arz etmektedir. Bu bağlamdaki asıl sorun, karbonsuzlaştırmada mevcut ekonomik ve teknik enstrümanların baskın etkiye sahip olmalarıdır. Vivid’in (2019) KYG’yi karbondan arındırma raporu, sadece bir \"yeşil finans\" yol haritası içermekte ve bunu anahtar çözüm olarak görmektedir (Vivid, 2019). Bu kısıtlı çerçevede kalındığı sürece Uluslararası Enerji Ajansı (IEA) tarafından önerilen, doğrusallaştırılmış Pareto ilkesi gibi -yüz yıldan eski- ekonomik kuralların ve sürdürülebilir fonlar olarak adlandırılan yeşil finansman araçlarının tek başına Paris anlaşması hedeflerini karşılayamayacağı bu makalede gösterildiği üzere gayet açıktır. Karbon dioksit ve diğer sera gazı salımlarının temel nedenleri klasik ekonominin kavrayabileceğinin çok ötesinde karmaşıklık arz eder. Makalede, günümüz politikacılarının ve hatta bazı bilim adamlarının mevcut öngörülerinin çok ötesine geçen, sürdürülebilir çözümler için yenilikçi teknik konuların baskın olması gereği vurgulanmaktadır. Bu nedenle, yeşil bir KYG’nin oluşumunda tüm ortak ülkeler ekonominin çok ötesinde, sorunun görünmeyen tarafını da görerek birlikte geliştirecekleri, yenilikçi mühendislik çözümlerini geliştirmeli ve uygulamalıdırlar. Bu girişimlerde doğal olarak yenilenebilir ve atık enerji kaynakları karbonsuzlaştırmada en büyük rolü oynayacaktır. Yenilenebilir enerjiden sadece elektrik gücü üretilmez. Önemli bir bölüm değerlendirilmeksizin çevreye atılır. Bu atık enerji çoğu kez atık ısı biçimindedir. Nicelik bakımından ısı ve dolaylı olarak soğuk, yapılı çevrede elektrik gücünden daha fazla üretilir veya bulunur. Bu nedenle gerçek çözümlerde ısının da yeşil KYG denklemine dahil edilmesi kaçınılmaz olmaktadır. Ancak bu kapsamdaki en büyük soru, ısı ve elektriğin KYG üzerinde ve çevresinde birkaç bin kilometre boyunca taşınması zorluğu göz önüne alındığında KYG ülkelerinde bu tür girişimlerin nasıl uygulanacağı ve sürdürüleceğidir. İbrahim Kolawole Muritala, küresel birincil enerji tüketiminin %72’sinin dönüşümlerden sonra kaybolduğunu ortaya koymaktadır. Daha ayrıntılı anlatımla, küresel atık ısının %63’ü 100°C’nin altındaki sıcaklıklarda olmak üzere ulaşım ve sanayiden sonra sektörde en büyük paya sahip olan elektrik üretiminden kaynaklanmaktadır (Forman vd., 2016: 1568-1579). Karbonsuzlaşmanın sürdürülebilir olma başarısı, bu ısı kaynaklarının içerdikleri enerji, niteliklerine (Ekserji) uyumlu talepler bularak veya oluşturarak uygun yöntemlerle ve en üst düzeyde değerlendirilmesi ile mümkün olacaktır.",
+        "Diğer bir deyişle, küresel boyutta en yaygın biçimde bulunan ısı kaynakları düşük entalpili (düşük sıcaklık, düşük ekserjili) yenilenebilir ve elektrik üretiminde pek kullanılamayacak 100°C’nin altındaki kaynaklardır. Öte yandan, eğer sürdürülebilir ve akılcı olarak KYG’deki enerji koridoru ülkeleri birbirine bağlayacaksa, bu tür ısı kaynaklarının da ulusötesi boyutlarda toplanması, depolanması, taşınması ve ülkeler arasında karşılıklı değişimini gerektirir. Ancak, ısının taşınımında gereken pompa istasyonlarının elektrik güç talep ekserjisi ve ısıl güç ekserjileri arasındaki farklılık nedeni ile ısı ve soğuğun hidrolik boru hatlarıyla uzun mesafelere taşınması hemen hemen imkansızdır. Güzergahlardaki termo-mekanik kayıplar, binlerce kilometreye uzayan KYG için düşük ekserjili termal gücün taşınmasını ve dağıtımını daha da imkânsız hale getirecektir. Elektrik gücünün birim ekserjisi 0,95 kW-hekserji/kW-henerji iken, bir bölgesel enerji sisteminde dağıtılan ısıl gücün birim ekserjisi 0,10’dan azdır. Söz konusu birim ekserji dengesizliği, pompalama kapasitesini önemli ölçüde sınırlamayı gerektirir (Kilkis, B., 2020c). Bu gerçeğe karşın, ekserji kavramını göz ardı ederek, Avrupa Birliği (AB) ısı pompaları ve bölgesel enerji sistemleri ile toplam ‘yeşil’ elektrifikasyonu planlamaktadır (EU, 2018). Böylelikle ısının dolaylı da olsa elektrikle sanal biçimde taşınarak ısı hatlarını en aza indirmeyi düşünmektedirler. Bu öngörü, yapılı çevrenin talep tarafında elektrik enerjisinin bir bölümünün tekrar ısıya veya soğuğa dönüştürülmesi aşamasındaki karbon ayakizinin çok az olacağı varsayımına dayandırılmaktadır, ki bu sanı yanlıştır. Elektrik gücünün ısıl güce dönüştürülmesinde ekserji kayıpları oluşur. Öte yandan, termodinamiğin ikinci yasasına (ekserji) göre, geleneksel HVAC (Isıtma, Havalandırma ve İklimlendirme) taleplerini karşılayacak olan ısı pompalarının performans katsayılarının ( COP ), sırası ile ısıtmada sekizden ve soğutmada ondan büyük olması gerekir. Aksi takdirde, elektrikten ısıya dönüşümlerde talep (elektrik) ve arz (ısı) arasındaki ekserji kaybı, önlenebilir ΔCO salım sorumluluklarını ortaya çıkaracaktır. Günümüzde bu kadar yüksek COP değerlerine ulaşmak için ısı pompaları kaskat tarzında kurulsa bile mümkün değildir (Kılkış, B., 2021a). Bu olgu bizi, özellikle ulusötesi ölçekte toplam elektrifikasyonun çevresel açıdan akılcı olup olmadığı sorusuna getiriyor. Buradan çıkarılacak tek ders, uzun mesafelere elektrik ve ısının ortak bir ortamda taşınmasının gerekli oluşudur. Bu elektrik olmayacak ise, seçenekler nelerdir?"
+      ]
+    },
+    {
+      "title": "Ulusötesi Ortak Güç ve Isı Ağlarında Elekrik mi Hidrojen mi?",
+      "paragraphs": [
+        "Tartışma masasında geriye kalan en büyük soru, yenilenebilir ve atık enerji kaynaklarının %100 elektrik olarak taşınmasının KYG’de geçerli olup olamayacağıdır. Bu bağlamda, birbiriyle çelişen dört zorluk bulunmaktadır. Bunlar tekraren aşağıda özetlenmiştir:"
+      ]
+    },
+    {
+      "title": "Birinci Zorluk",
+      "paragraphs": [
+        "Her şeyden önce, elektrik hatları ısıyı taşıyamaz. Bu nedenle, KYG için ikinci, hatta, üçüncü bir boru hattı (soğuk taşımak için) gerekli olacağından sadece elektriği taşımak ve yenilenebilir ve atık enerji kaynaklarını geride bırakmak daha mantıklı görünebilir. Ancak bu, yaklaşımla geride bırakılan bol miktardaki yenilenebilir enerji kaynaklarının yerel kullanımlar dışında KYG boyutundaki büyük miktarlarda israf edilmesi ve salım sorumluluklarının oluşması beklenmelidir."
+      ]
+    },
+    {
+      "title": "İkinci Zorluk",
+      "paragraphs": [
+        "Küresel ölçüde, ısı ve soğuk talepleri nicelik olarak elektrik enerjisi taleplerinde daha fazla iken, minimum salımlar amaçlandığında bu kaynaklar mutlaka KYG boyutunda değerlendirilmelidir. Ancak, yenilenebilir enerjiyi depolama ve mevcut şebekelere bağlama büyük problemlerdir. Farklı ısı kaynaklarının karıştırılması ve entalpileri (sıcaklık; ekserji) açısından eşleşmesi zordur. Katma değer potansiyelleri kaybolabilir. Sonuç olarak, düşük entalpili ısı (100°C’nin altında) verimli bir şekilde elektriğe dönüştürülemediğinden, küresel olarak bol miktarda bulunan bu enerji kaynakları kaynak tarafında kullanılmaksızın çevreye atılarak israf edilecek ve böylece küresel ısınmada giderek artmaya devam edecektir. Bunların ekonomik olumsuzlukları da küçümsenemeyecek boyutlardadır. Çok düşük entalpili ısı kaynakları için, bir seçenek, ısı sıcaklığını Lejyonella riskini azaltma düzeyi olan 65°C’nin üzerine çıkarabilen absorpsiyon teknolojisini kullanan konut tipi su ısıtıcıları olabilir. Ancak, yüksek bir başlangıç maliyeti ve soğutucu akışkanlarla ilgili sorunlar olabilmektedir."
+      ]
+    },
+    {
+      "title": "Üçüncü Zorluk",
+      "paragraphs": [
+        "COP değerleri ısıtma için sekizden ve soğutma için ondan daha düşük olan elektrikle çalışan ısı pompalarıyla talep tarafındaki elektriği tekrar sıcak ve soğuğa dönüştürmek, zararlı salım sorumlulukları anlamına gelir. Bu nedenle, güçten-ısıya sistemleri ile talep tarafında elektrik tüketerek ısıtma ve soğutma gerçekleştirmek ısı pompalarının COP değerlerinin eşik değerlerin (sekiz ve on) üzerine çıkarılması için maliyetli ve zaman alıcı iyileştirmeler yapılmadıkça ve yeni iletim hatları kurulmadıkça mevcut şebekelere aşırı yük bindirecektir. Bu eylemler, mevcut AC (Alternatif Akım) şebekelerinin çoğunun değiştirilmesi/güçlendirilmesi/eklenmesi gerektiği anlamına gelir. Ancak HVDC (Yüksek Gerilim Doğru Akım) gücü, yenilenebilir enerjiler (rüzgâr ve güneş) zaten DC (Doğru Akım) gücü ürettiği için mantıklıdır. Bu kolaylık, AC’den DC’ye ve DC’den AC’ye evirici gereksinimlerini ortadan kaldırmakla birlikte, diğer bir maliyetli konu tüm yapılı çevredeki cihazların DC sisteme dönüştürülmesi gereğidir. AB yol haritasında toplam elektrifikasyonu öngören yetkililerden en az %80’inin bir elektrik enerjisi şirketine sahip olduğu gözden kaçırılmamalıdır (Avrupa Teknoloji ve Yenilik Platformu-ETIP, Yenilenebilir Isıtma ve Soğutma-RHC Toplantısı 2019 Helsinki toplantısındaki özel görüşmeler). Ancak yakın tarihli bir çalışma, HVDC’nin mevcut AC şebeke hatlarını kullanmanın en ucuz ve en kolay yolu olduğu öne sürülmüştür (EEP, 2021). Hollanda bu tür öncü ülkelerden biridir (IEC, 2022). Kimyasal bir element olarak hidrojen ise, elektrik gibi olmadığı ve herhangi bir mesafe başa baş noktasına tabi olmadığı için AC-DC gibi birtakım dönüşümlerine de gerek kalmaz (EEP, 2021). Hidrojen prensip olarak herhangi bir uzun mesafeye hidrojen olarak taşınabilir."
+      ]
+    },
+    {
+      "title": "Dördüncü Zorluk",
+      "paragraphs": [
+        "Elektriğin bir kısmını tekrar sıcağa veya soğuğa dönüştürmek yerine, yenilenebilir kaynaklardan üretilen elektrik, aydınlatma, toplu taşıma, endüstri vb. gibi ve başka seçeneği pek bulunmayan sektörlerde ve daha çevre-akılcı uygulamalarda kullanılmalıdır. Diğer bir deyişle, elektrik, elektrik olarak değerlendirilmelidir. Bununla birlikte, teknolojiye, arz-talep dengelerine, nüfus profiline, iklime, yenilenebilir enerjinin mevcudiyetine bağlı olarak toplam elektrifikasyona karşın hidrojen ağlarının gelişiminde bir ortak paylaşım mümkündür ve en uygun paylaşım oranının hesaplanması gerekir. Dolayısı ile, her ülke ve bölgeye özgü çözümlemeler kaçınılmazdır. Ancak, sonuç ne olursa olsun, AB’nin yenilenebilir enerji kaynaklarıyla ‘toplam’ elektrifikasyon hedefi, asla gerçekleşmeyecek bir rüyadır, zira en uygun paylaşım %100 elektrik değildir.",
+        "Bu makalenin gösterdiği gibi, hidrojen, bazı önlemlerin alınması ve sürdürülmesi koşuluyla, enerjiyi türü değiştirilmeksizin (hidrojen, hidrojen olarak) depolanması ve uzun mesafelere taşınmasının en akılcı yolu olarak gözükmektedir. Ancak, hidrojen, uzun mesafelerde sızıntı yönetimi gerektirir ve küçük ama sıfır olmayan küresel ısınma potansiyeline ( GWP ) sahiptir, yanıcılığı da dikkate alınmalıdır. Ayrıca, sıvılaştırma veya hidrojenin sıkıştırılması yoluyla taşınması enerji yoğun işlemlerdir ve bunların da optimize edilmiş tasarımlara sahip yeşil sistemlerden sağlanması gerekir. Günümüzde ise, KYG rotasındaki kıtalar arasında büyük bir taşınım ve dağıtım boşluğu bulunmaktadır. Şekil 2, KYG’nin enerji geçiş haritasında büyük bir boşluğun bulunduğu ve henüz bir hidrojen ticaret yolunun oluşturulmadığını göstermektedir (Kırmızı elips). Halbuki, dünyanın diğer bölgelerinde hidrojen ağları sürekli genişlemektedir. Bu boşluk aslında hidrojen ağlarına yönelim için önemli bir fırsattır.",
+        "Hidrojen ağlarında tıpkı elektrikte olduğu gibi tek bir hat -hidrojen hattı-bulunur. Ama çok önemli bir fark olarak hidrojen hattında elektrik ve ısının her türü bir arada kimyasal ortamda taşınır ve depolanır. Talep türlerine, nitelik ve niceliklerine göre ayrı talep noktalarında ve zamanlarda ayrı ayrı elektriğe, ısıya, soğuğa, mekanik enerjiye dönüştürülür. Böylelikle, herhangi bir dinamik oranda, yüksek verimlilikle yararlı iş potansiyeli en üst düzeyde oranda korunur, hatta bazılarının yararlı iş potansiyelleri artabilir. Bu rota kolektif çiftlikleri ve şehirleri tek bir ana hidrojen boru hattı üzerinde uzun mesafeler boyunca birbirine bağlayabilir. Böyle bir enerji açığı koridoru gereksinimi KYG için bir tesadüften çok fırsat değerindedir. Yenilenebilir enerji kaynakları açısından nispeten zengin olmasına rağmen, mevcut elektrik üretim ve iletim sistemleri zayıftır. Zaten Şekil 2’de görüldüğü gibi boş bir enerji koridoru bulunmaktadır ve KYG için bir enerji koridoru kaçınılmazdır. Halen yaygın olarak kullanılan kömür, kok kömür baca gazını yakalayıp biyogaz ve hidrojenle karıştırarak halen yaygın biçimdeki termik santraller de daha yeşil hale getirilebilir. Kok kömürü baca gazı, %55 hidrojen içeriği ve %27 (kok fırını gazı) oranındaki metan içeriği yönleri ile oldukça değerli enerji kaynağıdır (İlbaş, 2017). Bu nedenle, baca gazının ısısını geri kazanmak yerine, hidrojen ile kolayca karıştırılabilen bir yakıt karışımı olarak kullanılması daha verimli ve etkilidir. Böylelikle baca gazları da bacadan atılmamış olacaktır. Kömür santrallerinin baca gazları nemli hava ile karşılaştıklarında nükleer saçınım oluşmaktadır. Kok fırını gazının alt ısıl değeri (LHV) 3,678 kcal/m3 iken hidrojenin LHV değeri 2,583 kcal/ m3’tür. Biyogazın LHV değeri ise yaklaşık 3,800 kcal/ m3’tür. Hidrojen en düşük LHV değerine sahip gözükse de bunun nedeni yoğunluğunun en düşük olmasıdır. Baca gazının hidrojen ve biyogazla uygun oranlarda karışımı KY rotasının Doğu Çin’deki başlangıç noktasında ve o yörede yoğun olarak kömüre dayalı sanayi ve termik santrallerle örtüşecektir (bkz. Şekil 3). Bu tür bir karışım KYG boyunca da yerel biyogaz ve diğer kok/kömür gazı kaynakları ile de gerçekleştirilebilir. Ayrıca, kömür, kömür-su bulamacında boru hatlarında taşınabilir, ancak su harcaması, sudaki kalite bozulması ve ilgili çevresel kaygılar göz önünde tutulmalıdır. Pompalama için talep edilecek ekserji (elektrik) de en düşük salım sorumluluğu için optimize edilmelidir. Süper iletkenliğin ortaya çıkmasıyla, kriyojenik hidrojenin -yenilenebilir kaynaklardan üretilmesi koşulu ile- şu an sanayide kullanılmakta olan daha değerli helyum gazının yerini alabilir.",
+        "KYG ülkeleri, yenilenebilir enerji kaynakları yönünden zengin sayılabilse de (Şekil 3), güç üretimi ve iletiminde yeterli altyapıya sahip olduğu söylenemez (Şekil 4). Jeotermal sahalardan ve fosil yakıtlı enerji santrallerinden kaynaklanan atık ısılar dışında kesintili özelliğe sahip yenilenebilir enerji kaynaklarının ulusötesi ölçeklerde kümelenmesi ve gruplandırılmaları günümüzde hala çözüm bekleyen karmaşık sorunlardır. KYG boyunca da böyle bir altyapı yoktur. Ayrıca, yenilenebilir enerji kaynaklarının değerlendirildiği ve desteklendiği tesisler de çok azdır. Bu nedenlerle, üretilen elektrik, ısı ve soğuğun enerji arzında sürekliliği ve güvenirliği teminen depolanmaları gereklidir. Ancak ısı depolamasının daha basit ve ucuz olmasına karşın, elektrik enerjisinin bataryalarda depolanması pahalı ve çevresel açıdan maliyetli olmayı sürdürmektedir. Hidrojen, doğası gereği, son kullanımdan önceki aşamalarda enerji dönüşümü gerektirmeyen daha uygun bir enerji depolama ortamıdır. Hidrojen, hidrojen olarak depolanır. Talep noktalarında ise enerji kırılımının anlık profiline göre her bir talep türü anında çok fazla enerji depolamasına gerek kalmadan karşılanabilir. Sonuç olarak, KYG’nin enerji koridorunda şu an eksik olan, tüm enerji türlerini birleştirecek türdeki bir ortak bağdır ve bu eksikliği akılcı bir biçimde birleştirecek olanın hidrojen olduğu anlaşılmaktadır.",
+        "Hidrojene dayalı bir KYG çözümü, Şekil 4’te görülen güç hatlarındaki boşluğu sadece güç değil fakat tüm ısı ve soğuk kaynaklarını da tek bir hat üzerinde, tek bir ortamda toplayarak enerji türlerinin ayrı ayrı kümelenme ve gruplandırılmasına, talep noktalarında tekrar ayrı ayrı depolanmalarına fazla gerek olmaksızın, doldurabilecektir. Zaten birçok büyük yerleşim bölgeleri böylesi bir ana arter üzerinde veya yakınında bulunmaktadır (Şekil 5). Bu nedenle, enerjinin tüm türlerinin bu kentler arasında tek bir hat üzerinden alışverişinde kolaylık sağlayacak ve kentlerin enerji eşgüdümünü ve müşterekliğini sağlayacaktır. Ana hidrojen hattının ulusötesi demiryollarına paralel biçimde ve çok yakınında tesisi de birçok yönden yararlı olacaktır (Şekil 6). Demiryolunu takiben Hazar denizi altından geçecek bir hidrojen hattına zengin Azerbaycan doğalgazının da karıştırılması ile yol üzerindeki mevcut doğalgaz boru hatlarının da kullanımı mümkündür. Bu hatta Karadeniz H S gazından yeşil hidrojen eldesi projesi de entegre edilebilecektir."
+      ]
+    },
+    {
+      "title": "Yenilenebilir Enerji Kaynaklarının Sorunları",
+      "paragraphs": [
+        "Her ne kadar yenilenebilir enerji kaynakları yeşil KYG ögörüsünün belkemiğini oluşturuyor ise de tekil güneş ve rüzgâr enerjisi uygulamalarının sorunları şu şekilde özetlenebilir: PV (Foto-voltaik) gibi güneşten güç üreten sistemlerde her zaman atık ısı oluşmaktadır. Bu sistemler soğurdukları güneş enerjisini ortalama yüzde yirmi verimle elektrik gücüne evirir, geri kalan enerji ise ısı olarak atmosfere geri döner. Değerlendirilmeyen bu ısı özellikle yoğun yerleşim bölgelerinde yerel ısı adacıklarına da neden olur. Aynı durum özellikle büyük rüzgâr türbinlerinin kule üzeri elektro-mekanik tesisat odacığı için de geçerlidir. Sıcak su üreten düzlemsel toplaçlar (FPC: flat-plate collector) ise sadece ısı üretir ve aynı güneşlenme alanındaki elektrik gücü üretim potansiyelini ziyan eder. Bu nedenle bazı özel durumlar dışında, çok az katma değer (Sadece ısıl ekserji) üretebilen düzlemsel toplaçların kullanımından vazgeçilmelidir. PV ve FPC sistemlerinin yerine aynı güneşlenme alanından hem elektrik hem ısı üreten foto-voltaik-ısı (PVT) panelleri tercih edilmelidir. Bu suretle sıcaklıkla azalan PV verimleri de korunmuş olur. Aksi durumda kentleşmenin arazi kullanım verimi de düşecektir (Land use efficiency, LUE ). Örneğin, Şekil 7’de tek bir uzun direk üzerinde tekil bir rüzgâr türbini ve araziyi işgal eden tekil PV panelleri görülmektedir. Bu sistemlerin ısıları değerlendirilmediği gibi gereksiz arazi işgalinde bulunulmaktadır. Hâlbuki boş duran türbin direğine PV paneller yerleştirilebilir hem de güneşi takip yeteneği oluşabilirdi (İleriki bölümler, Şekil 16)."
+      ]
+    },
+    {
+      "title": "Santral ve Şehir Atık Isılarının Sorunları",
+      "paragraphs": [
+        "Güneş enerjisi sistemleri, rüzgâr türbinleri ve jeotermal santrallerden elde edilen ve halen değerlendirilmeyen atık ısıların yanında, termik santrallerin soğutma kulelerinden atmosfere önemli ölçüde ısı kayıpları olduğu gibi soğutma kulelerinde su tüketilerek atmosfere su buharı salınmaktadır. Su buharının da en az karbondioksit kadar sera gazı etkisi bulunmaktadır. Kentlerin atık suları da düşük sıcaklıkta ısı içerir. Bunlar önemli enerji kaynaklarıdır, ancak pompa motorları ve ısı eşanjörleri gibi elektro-mekanik sistemlerin talep edecekleri güç ekserjisi ile elde edilecek düşük sıcaklıktaki ısıl güç ekserjisi dikkatlice karşılaştırılmalıdır. Örneğin, fan motorunun talep edeceği elektrik ekserjisi kömürle çalışan bir elektrik santralinin baca gazından kazanılabilecek atık ısı ekserjisini aşmamalıdır (Kılkış, B., 2019b). Biyogaz kullanan birleşik ısı ve güç sistemleri de maksimum ekserji, elektrik, ısı ve soğuğun toplamını sağlayacak şekilde dikkatlice tasarlanmalı ve çalıştırılmalıdır (Kilkis, B., & Kilkis, S., 2007)."
+      ]
+    },
+    {
+      "title": "Güneş Enerjisi",
+      "paragraphs": [
+        "Şekil 8’de PV panellerin bile aslında değerlendirilmeyen atık ısısı olduğu betimlenmektedir. Bu ısı değerlendirilmeyince başka birileri, başka yerde, başka zaman diliminde, muhtemelen bir miktar fosil yakıt tüketerek (örneğin bir kazan kullanarak), bu kaybedilen ısıyı kullanmak dururken yeniden aynı ısıyı tekrardan üretmek durumunda kalacaktır. Bu ise dolaylı da olsa PV panelin bir karbondioksit salımından sorumlu olduğu gerçeğini gözler önüne sermektedir (ΔCO ). Şekil 8’de örnek bir PV panelin elektrik ürettiği için en az karbon stokundan çektiği CO kadar kendisinin ΔCO sorumluluğu olduğu görülmektedir ve sonuç itibarı ile bu PV panel aslında çevreye net bir katkı sunmamaktadır. Düzlemsel toplaç ise karbon stokundan çektiği salımdan daha fazlasından sorumludur. Isıtma Tesir Katsayıları ( COP ) sekiz değerini aşmadıkça ısı pompalarının kullanımı da çözüm getirmemektedir."
+      ]
+    },
+    {
+      "title": "Rüzgâr Enerjisi",
+      "paragraphs": [
+        "Çin’in kuzey eyaletlerinin sahip olduğu soğuk iklimlerde rüzgâr enerjisinden elde edilen elektrik gücü ile bina ısıtmasının elektrik dirençleri kullanılarak gerçekleştirilmesi, bu suretle de sobalarda kömür ve linyitin yakılmasının önüne geçilmesi yetkililerce düşünülmektedir (Şekil 9). Bu seçenek kullanılacak olursa sonuç çevresel açıdan hayal kırıklığı, daha doğrusu çevre için bir felaket olacaktır. Konfor için elektrik ve elektrikli ısıtma arasındaki ekserji farkı yaklaşık 0,90 kW-hekserji/kW-henerji dir ve CO salım sorumluluğu açısından neredeyse bir kömür sobasına eşittir (Kılkış, B., 2021a). Ek olarak, herhangi bir elektrik bataryası kullanıldığında ozon tabakasının seyreltim potansiyelinden ( ODP ) sorumlu olunacaktır (Kılkış, B., 2019a). Şekil 10, ısıtma için ısı üretmek üzere rüzgâr gücünün bir kısmını kullanmak üzere bir ısı pompası kullanarak belirli bir gelişmeye işaret etmekle birlikte bu seçenek ancak COP değerinin aşırı bir maliyet artışı ile sekizi aştığında başarılı olur. Aksi takdirde, bir rüzgâr türbininin bir ısı pompası ile bağlantısı karbonsuz değildir. Ek olarak, soğutucu akışkan sızıntısı, ODP ve küresel ısınma potansiyelinin ( GWP ) bir kombinasyonu olan ozon tabakasını inceltme indeksi ODI söz konusu olacaktır."
+      ]
+    },
+    {
+      "title": "Jeotermal Enerji",
+      "paragraphs": [
+        "Jeotermal enerji rezervlerinin yaklaşık %80’i 100°C’ye yakın veya oldukça altında olup, sadece organik Rankin çevrimleri (ORC) ile olmak koşulu ile çok az bir elektrik güç üretim marjı bırakmaktadır. Şekil 11, tesisin kendisinden çok daha fazla yer kaplayan çok sayıdaki ve elektrik enerjisi tüketen kuru soğutma fan sistemini göstermektedir. Fanlar üretilen elektrikten çok daha fazla ısıyı atmosfere atar. Tüketilen elektrik yeşil bile olsa ısının atılması yerine yararlı ve katma değer üreten başka uygulamalarda değerlendirilmediği ve termik santrallerin yükü azaltılmadığı için CO salım sorumluluğu büyüktür. Ayrıca arazi kullanımında fan seti ORC santralinin neredeyse beş katı fazla arazi işgal etmektedir. Atık ısının değerlendirilmesi ile fanlar ve elektrik tüketimi büyük ölçüde ortadan kalkabilmektedir."
+      ]
+    },
+    {
+      "title": "Çözümler",
+      "paragraphs": [
+        "Görüldüğü üzere, yenilenebilir enerji kaynaklarının değerlendirilmesinde yeni teknolojilere ve enerjinin niteliğini de önemseyen hatta en ön planda tutan bir akla gerek vardır. Bu bağlamda, KYG’nin başarısı ve oluşturacağı yeni fırsatlar sadece hidrojen ekonomisine dayalı değildir. Asıl başarı, hidrojen kuşak yolunun yeni teknolojiler, ülkeler arası AR-Ge ve ÜR-GE iş birlikleri, yeni iş imkanları ve daha iyi bir ortak ekonominin tesisi ile taçlandıracaktır."
+      ]
+    },
+    {
+      "title": "Güneş",
+      "paragraphs": [
+        "Şekil 13’te, Şekil 1’de sözü edilen yeni nesil PVT3 sistemi görülmektedir. Sadece bu tür bir sistem eksi karbon niteliği taşıyabilmektedir."
+      ]
+    },
+    {
+      "title": "Rüzgâr",
+      "paragraphs": [
+        "1 MW-elektrik kurulu güce kadar olan orta ölçekli rüzgâr türbinlerinde kule atık ısısı bir ORC türbininde ek elektrik gücüne dönüştürülebilir."
+      ]
+    },
+    {
+      "title": "Jeotermal",
+      "paragraphs": [
+        "Düşük entalpili bir jeotermal kuyudan gerçekleştirilebilecek bir bölge ısıtması Şekil 15’de betimlenmiştir. Sıcaklık piklemesi için ısı pompası kullanılmamakta, buna karşın 35°C’ a kadar düşük sıcaklıklarda çalışabilen ısı borulu radyatörler veya döşemeden ısıtma sistemleri kullanılmaktadır."
+      ]
+    },
+    {
+      "title": "Talep Tarafındaki Cihazlar",
+      "paragraphs": [
+        "Düşük entalpili bölge enerji sistemlerinin en büyük sorunu arz tarafı ile ısıtma taleplerinin karşılanmasında kullanılan mevcut ısıtıcı cihazlar arasındaki sıcaklık dengesizliğidir. Çözüm, KYG’de düşük entalpili cihazların geliştirilmesine yönelik teknik, sınai ve akademi iş birlikleri ortak katma değerlere olanak sağlayacaktır (Kılkış, B., Çağlar, & Şengül, 2021)."
+      ]
+    },
+    {
+      "title": "Kompozit Yenilenebilir Enerji Sistemleri",
+      "paragraphs": [
+        "Tekil sistemler yerine LUE değerini de olumlu yönde etkileyen melez yenilenebilir enerji sistemleri yeraltını ve yerüstünü de birleştirir şekilde uygulandığında aynı zamanda hidrojen ekonomisine de büyük ölçüde katkı sağlayabilecektir. Bu tür bir uygulama Şekil 16’da gösterilmiştir. Görüldüğü üzere tarımsal araziden büyük ölçüde tasarruf edilmektedir."
+      ]
+    },
+    {
+      "title": "Enerji, Su, Gıda, Tarım, Kentleşme ve Ekonomi Bağı: Bir Örnek",
+      "paragraphs": [
+        "Ufak bir tarımsal kooperatif ve yerleşim melez planı Şekil 17’de gösterilmektedir. Bu örnekte sulama, yeşil enerjili DC akımlı motorlarla tahrik edilen kuyu pompaları ile gerçekleştirilmektedir (Kılkış, B., 2020a). Sistemde kapalı su devreli hidrojen sistemi, ısı pompaları hidrojen depolama, absorpsyonlu soğutma, yeşil seracılık, gıda kurutması gibi ufak tarımsal endüstri, paketleme, hidrojenli tarımsal mekanizasyon ve yerel hareketlilik gibi yenilikçi sistemlerin bir sentezi bulunmaktadır."
+      ]
+    },
+    {
+      "title": "Sonuç",
+      "paragraphs": [
+        "Hidrojen, yenilenebilir ve atık enerji kaynaklarından yararlanmak, depolamak ve ulusötesi ölçekte taşımak ve KYG ana koridorunu oluşturarak büyük şehirler, çiftlikler ve köylerle aynı şekildeki kompozit sistemlerle paylaşmak için en iyi seçenek olarak gözükmektedir. Bu çözümün anahtarı Şekil 18’de gösterilmektedir. Bu yenilik, önce tüm enerji türlerini hidrojen ortamına sıkıştırılmasını, bunların hidrojen ile taşınmasını ve ardından hidrojenin anlık taleplere bağlı olarak tekrar farklı enerji türlerine açılımını içermektedir. Hidrojen rotasında, şehirler, çiftlikler ve endüstri, küçük ölçekli hidrojen ekonomilerinde benzer şekilde enerji alışverişinde bulunur. Böyle bir yöntemin ön koşulu, yenilenebilir enerji sistemleri ile ilgili yenilikçi teknolojilerin geliştirilmesi ve bol ve atık enerji kaynaklarının ve çevresel enerji kaynaklarının da değerlendirilmesidir. Tek bir enerji taşıma ortamına indirgenen tüm enerji kaynakları daha fazla çeşitlilik ve esneklik sağlayabilir. Doğalgaz, kömür baca gazı (bunları yaklaşık olarak 1 ila üç oranında değiştirebilir) ve biyogaz da hidrojen ortamında karıştırılabilir. Şekil 18 aynı zamanda Paris anlaşması hedeflerine zamanında ulaşabilmenin anahtarını KYG örneğinde vermektedir (Vivid, 2019). Aslında Asya kıtasını kateden bir doğalgaz hattı bulunmaktadır. Bu mevcut hat da akış ters yöne çevrilerek ve az bir uyarlama ile kullanılabilinir (Şekil 19)."
+      ]
+    }
+  ],
+  "keywords": [
+    "hidrojen kuşak yolu",
+    "ısı ve gücün birleşik taşınımı",
+    "iklimsel kriz",
+    "yakıt pili",
+    "yenilenebilir enerji"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "ALEPH. (2020). Belt and Road Initiative: the World’s Largest Infrastructure Investment. https://www.alephas. org/2020/11/11/belt-and-road-initiative-the-worlds-lar gest-infrastructure-investment/ adresinden alındı."
+    },
+    {
+      "id": "ref-2",
+      "text": "EEP. (2014). Analysing the Costs of High Voltage Direct Current (HVDC) Transmission. https://electrical-engineering-portal. com/analysing-the-costs-of-high-voltage-direct-current-hv dc-transmission adresinden alındı."
+    },
+    {
+      "id": "ref-3",
+      "text": "EU. (2018). Heat Roadmap Europe, Quantifying the Impact of Low-carbon Heating and Cooling Roadmaps Deliverable 6.4, 822 sayfa. https://ec.europa.eu/research/participants/docu ments/downloadPublic?documentIds=080166e5be2fd8f b&appId=PPGMS adresinden alındı."
+    },
+    {
+      "id": "ref-4",
+      "text": "Forman, C., Muritala, I. K., Pardemann, R., & Meyer, B. (2016). Estimating the global waste heat potential. Renewable and Sustainable Energy Reviews , 57, 1568-1579. DOI:10.1016/j. rser.2015.12.192"
+    },
+    {
+      "id": "ref-5",
+      "text": "IEC. (2021). Back to the future: DC public grids again!, IEC Aca demy Webinar. https://www.iec.ch/blog/back-future-dc-pub lic-grids-again adresinden alındı."
+    },
+    {
+      "id": "ref-6",
+      "text": "IPCC. (2022). Climate Change 2022, Mitigation of Climate Chan ge, Working Group III Contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change, Summary for Policymakers, IPCC AR6 WG III. https://re port.ipcc.ch/ar6wg3/pdf/IPCC_AR6_WGIII_FinalDraft_ FullReport.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-7",
+      "text": "IRENA. (2022). Geopolitics of the Energy Transformation: The Hydrogen Factor. I nternational Renewable Energy Agency, Abu Dhabi. ISBN: 978-92-9260-370-0 https://www.irena. org/-/media/Files/IRENA/Agency/Publication/2022/Jan/ IRENA_Geopolitics_Hydrogen_2022.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-8",
+      "text": "İlbaş, M. (2017). The Use of Coal Gases as an Alternative Fuel for Energy Supply. Energy Policy Turkey , (3), 58-63.Jesdergi, 2022. Daha Fazla Jeotermal Deneyim Paylaşımı. 17, 50-51."
+    },
+    {
+      "id": "ref-9",
+      "text": "Kılkış, B. (2019a, September). The Importance of Exergy Ratio nality and Storage For 100% Renewable Targets in Decoup ling Sustainable Development and Ozone Depletion. In UNI DO Workshop, September (pp. 16-17)."
+    },
+    {
+      "id": "ref-10",
+      "text": "Kılkış, B. (2020a, Haziran). Tarım sigortalarında doğal afetler ik limsel ısınma ve enerji sinerjisi. (Türkiye Cumhuriyeti Tarım ve Orman Bakanlığı’na Sunulan Rapor), 16."
+    },
+    {
+      "id": "ref-11",
+      "text": "Kılkış, B. (2021a). Rational Utilization of Wind Energy for Hea ting Purposes In Cold Climates In China. BRIQ Working Pa per Series , KUYÇAM, İstinye University."
+    },
+    {
+      "id": "ref-12",
+      "text": "Kılkış, B., Çağlar, M., & Şengül, M. (2021). Energy Benefits of Heat Pipe Technology for Achieving 100% Renewable Hea ting and Cooling for Fifth-Generation, Low-Temperature District Heating Systems. Energies , 14(17), 5398."
+    },
+    {
+      "id": "ref-13",
+      "text": "Kılkış, Ş. (2012). Green Cities and Compound Metrics Using Exergy Analysis. In Encyclopedia of Energy Engineering and Technology. Taylor and Francis: New York, Published online: 23 July 2012; 1-7. http://dx.doi.org/10.1081/E-EEE-120047398"
+    },
+    {
+      "id": "ref-14",
+      "text": "Kılkış, Ş. (2014). Energy System Analysis Of A Pilot Net-Zero Exergy District. Energy Conversion and Management, 87, 1077-1092. http://dx.doi.org/10.1016/j.encon man.2014.05.014"
+    },
+    {
+      "id": "ref-15",
+      "text": "Kilkis, B. (2019b). Development of an Exergy-Rational Method and Optimum Control Algorithm for the Best Utilization of the Flue Gas Heat in Coal-Fired Power Plant Stacks. Energies, 12(4), 760. https://doi.org/10.3390/en12040760"
+    },
+    {
+      "id": "ref-16",
+      "text": "Kilkis, B. (2020b). Accelerating the transition to 100% renewable era. But how? Exergy rationality in the built environment. In Accelerating the Transition to a 100% Renewable Energy Era (pp. 1-49). Springer, Cham. doi.org/10.1007/978-3-030- 40738-4"
+    },
+    {
+      "id": "ref-17",
+      "text": "Kilkis, B. (2020c). An Exergy-Rational District Energy Model For 100% Renewable Cities With Distance Limitations. Ther mal Science , 24(6 Part A), 3685-3705."
+    },
+    {
+      "id": "ref-18",
+      "text": "Kilkis, B. (2020d). Development of a composite PVT panel with PCM embodiment, TEG modules, flat-plate solar collector, and thermally pulsing heat pipes. Solar Energy , 200, 89-107."
+    },
+    {
+      "id": "ref-19",
+      "text": "Kilkis, B. (2021b). An Exergy-Based Model for Low-Temperature District Heating Systems for Minimum Carbon Footprint with Optimum Equipment Oversizing and Temperature Pea king Mix. Energy , 236, 121339."
+    },
+    {
+      "id": "ref-20",
+      "text": "Kilkis, B. (2021c). Cogeneration Towards Paris Agreement But How? Highlights For WP3, Exergy Based Model 3, Minimum Emissions Responsibility Against Climate Crisis, Geotermica, Accelerating the Heating and Cooling Transition, Geotermica & JPP SES 2021, Project Proposal, Report (co-author)."
+    },
+    {
+      "id": "ref-21",
+      "text": "Kilkis, B. (2022a). Lessons Learned from Labyrinth Type of Air Preconditioning in Exergy-Aware Solar Greenhouses, Journal of Sustainable Development of Energy, Water and Environ mental Systems."
+    },
+    {
+      "id": "ref-22",
+      "text": "Kilkis, B. (2022b). Net-Zero Buildings, What are They and What They Should Be, Energy, EGY-D-21 10639R1 (In print)."
+    },
+    {
+      "id": "ref-23",
+      "text": "Kilkis, B., & Kilkis, S. (2007). Comparison of Poly-generation Systems for Energy Savings, Exergetic Performance, and Har mful Emissions. Proceedings of ES2007, Energy Sustainabi lity, Paper No: ES, 36262 , 27-30. Long Beach, California"
+    },
+    {
+      "id": "ref-24",
+      "text": "Kilkis, S. (2022). All Cities Can Contribute Towards a Net Zero Future, Twitter Media Studio. https://twitter.com/IPCC_CH/ status/1514959224333225996 adresinden alındı."
+    },
+    {
+      "id": "ref-25",
+      "text": "Uysal, O. (2019) 10 countries, 11500 km: China train at Turkey. https://railturkey.org/2019/11/06/10-countries-11000-km-c hina-train-at-turkey/ adresinden alındı."
+    },
+    {
+      "id": "ref-26",
+      "text": "Vivid. (2019). Decarbonizing the Belt and Road-A Green Finance Roadmap, Executive Summary, 8 sayfa. https://www.vivide conomics.com/wp-content/uploads/2019/09/BRI_Exec_ Summary_v13-screen_hi.pdf adresinden alındı."
+    }
+  ],
+  "acknowledgements": "IPCC’nin başyazarı Doç. Dr. Şiir Kılkış, bu makalenin yazımı için oldukça değerli materyal ve bilgi sağlamıştır. Derin kavrayışı, eşsiz katkısı ve özverili desteğine teşekkür ederim.",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-01.jpg",
+      "caption": "Şekil 1. Hidrojen ve Elektriğin Taşınması"
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-02.jpg",
+      "caption": "Şekil 2. Küresel Hidrojen Ticaret Ağları"
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-03.jpg",
+      "caption": "Şekil 3. KYG’de Yenilenebilir Enerji ve Atık Isı Kaynakları"
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-04.jpg",
+      "caption": "Şekil 4. Dünyada Elektrik Güç Hatları ve Güç Üretim Tesislerinin Dağılımı"
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-05.jpg",
+      "caption": "Şekil 5. KYG Boyunca Ana Yerleşim Alanları"
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-06.jpg",
+      "caption": "Şekil 6. KYG Demiryolu"
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-07.jpg",
+      "caption": "Şekil 7. Tekil Rüzgâr Türbini ve Arazide Tekil PV Panellerin Arazi İsrafı"
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-08.tif",
+      "caption": "Şekil 8. Farklı Güneş Enerji Sistemleri"
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-09.tif",
+      "caption": "Şekil 9. Bir Çin Evinin Rüzgâr Enerjisi ile Doğrudan Isıtması"
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-10.tif",
+      "caption": "Şekil 10. Rüzgâr Enerjili Isı Pompası ile Isıtma ve Soğutma"
+    },
+    {
+      "id": "figure-11",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-11.jpg",
+      "caption": "Şekil 11. Organik Rankin Çevrimi ile Jeotermal Enerjiden Sadece Güç Üretimi, Atılan Isı, CO 2 Salım Sorumluluğu ve Aşırı Arazi Kullanımı ( LUE )."
+    },
+    {
+      "id": "figure-12",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-12.jpg",
+      "caption": "Şekil 13. Yeni Nesil, Yüksek Verimli ve En Düşük ΔCO 2 Sorumluluğu Bulunan PVT3 Sistemi"
+    },
+    {
+      "id": "figure-13",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-13.tif",
+      "caption": "Şekil 14. Yaklaşık Sıfır-Karbon Birlikte Isı ve Güç Rüzgâr Türbini"
+    },
+    {
+      "id": "figure-14",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-14.jpg",
+      "caption": "Şekil 15. Jeotermal Enerjiden Bölge Isıtması Sistemi"
+    },
+    {
+      "id": "figure-15",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-15.tif",
+      "caption": "Şekil 12. Değişik Yenilenebilir Enerji Sistemlerinde Arazi Kullanım Etkinliği"
+    },
+    {
+      "id": "figure-16",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-16.jpg",
+      "caption": "Şekil 16. Yeraltı ve Yerüstü Yenilenebilir Enerji Kaynaklarını Tümleştiren Kompozit Yenilenebilir Enerji Sistemleri"
+    },
+    {
+      "id": "figure-17",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-17.jpg",
+      "caption": "Şekil 17. Yeşil Hidrojen Esaslı Kolektif Çiftlik Modeli"
+    },
+    {
+      "id": "figure-18",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-18.jpg",
+      "caption": "Şekil 18. KYG’de Olası Nihai Çözüm: Tek Bir Yeşil Enerji Buluşmasında Tek Kuşak, Tek Enerji Koridoru"
+    },
+    {
+      "id": "figure-19",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-19.jpg",
+      "caption": "Şekil 19. Küresel Ölçekte Doğalgaz Boru Hatları"
+    }
+  ]
+}

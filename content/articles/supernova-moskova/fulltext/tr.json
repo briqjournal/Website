@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "id": "tr-section-1",
+      "title": "Tam Metin",
+      "paragraphs": [
+        "Rus çağdaş resim sanatının önemli isimlerinden Aleksey Beliayev Guintovt, 1965 yılında Moskova’da doğdu. 1988 yılında Moskova Havacılık Enstitüsü, Şehir-Bölge Planlama Bölümü’nden mezun oldu. Guintovt, cesur ve eşsiz eserleriyle öne çıkıyor. Güçlü çizgileri, geleneksel ve öncü Rus sanatından, Konstrüktivizm (Yapımcılık) eğiliminden ve tarihsel Sovyet temasıyla birleşiyor. Resimleri Tretyakov Galerisi, Rus Müzesi, Moskova Modern Sanat Müzesi’nin yanı sıra onlarca başka müze ve birçok özel sanat koleksiyonlarında yer almaktadır. 2008 yılında Kandinsky ödülüne layık görülen sanatçı, Rus çağdaş sanatında özel bir üslubu teşvik ediyor ve resimlerinde Ortodoks kilisesi, Sovyet İmparatorluğu ve Yunan mitolojik kahramanlarından oluşan ilgi çekici ütopyalar yaratıyor."
+      ]
+    }
+  ],
+  "keywords": [],
+  "footnotes": [
+    {
+      "id": "note-1",
+      "text": "Aleksey Beliayev Guintovt. “Süpernova Moskova” 2012. MDF üzerine, Mürekkep baskı, yazarın avuç içi baskısı. 150/100 cm."
+    }
+  ],
+  "references": [],
+  "acknowledgements": "",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/supernova-moskova/figure-01.jpg",
+      "caption": "Süpernova Moskova"
+    }
+  ]
+}

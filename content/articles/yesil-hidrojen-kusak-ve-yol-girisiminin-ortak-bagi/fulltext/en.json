@@ -1,0 +1,372 @@
+{
+  "sections": [
+    {
+      "id": "en-section-1",
+      "title": "Introduction",
+      "paragraphs": [
+        "IPCC’S SIXTH ASSESSMENT REPORT ON Climate Change shows that limiting global warming to around 1.5°C requires global greenhouse gas emissions to peak before 2025 and be halved by 2030. In this respect, cities need to be prioritized for decarbonization as an integral vector among all other environmental parameters and emissions resources in the form of net-zero (IPCC, 2022; Kilkis S., 2022). In this respect, net-zero exergy districts and urban areas must be established against global warming (Kılkış, Ş. 2012; Kılkış, Ş., 2014). Exergy is the useful work potential part of a given energy flow and plays an important role in recognizing the nearly avoidable CO emissions due to exergy mismatches between supply and demand exergy of a given system or equipment. These emission responsibilities also hold for 100% renewables, as shown in Figure 8 in the following sections.",
+        "In this quest, the BRI bears a great responsibility because all major cities and urban areas are on the course of the BRI and they must be interconnected and incorporated mainly from energy and exergy points of view. Almost a quarter of global GDP is produced in the BRI countries.",
+        "Therefore, decarbonizing the BRI becomes even more critical. The main question is whether economic or technical instruments play the dominant role in decarbonization. The report by Vivid (2019) for decarbonizing the BRI envisions the key solution starting from a `green finance` roadmap (Vivid, 2019). However, standard economic rules like the linearized Pareto principle and green financing instruments, the so-called sustainable funds proposed by IEA, cannot satisfy the Paris Agreement goals alone. The reasons are far beyond the comprehension of classical economics, and this article reveals that technical issues are dominant for sustainably potential solutions, which stretch far beyond today`s anticipation of politicians and even scientists.",
+        "By this token, the greening of the BRI must seek solutions beyond economics with innovative engineering solutions to be collaboratively developed by the BRI countries. Obviously, renewable and waste energy resources play the biggest role in decarbonization. However, the big question is how to be implemented and sustained in the BRI countries with the challenge of transporting heat and electricity over several thousand kilometers. Ibrahim Kolawole Muritala reveals that 72% of the global primary energy consumption is lost after conversions. In further detail, 63% of the considered waste heat streams arise at a temperature below 100°C, in which electricity generation has the largest share, after transport and industry (Forman vd., 2016: 1568-1579).",
+        "Therefore, it is evident that today, the most abundant form of global heat is low-enthalpy (low-temperature, low exergy) renewable and waste heat resources below 100°C, which may not be used to generate electricity. On the other hand, if a sustainable and rational energy corridor will link the BRI countries at large, such heat resources must also be transnationally collected, stored, transported, and exchanged among several countries. However, it is quite impossible to transport heat and cold through hydraulic pipelines for long distances due to pumping electricity demand exergy and thermal power distributed and transported. Thermo-mechanical losses on the way further make the transport and distribution of low-exergy thermal power for the BRI, spanning thousands of kilometers, impossible. The unit exergy of electric power is 0.95 kW-hexergy/kW-henergy, whereas the unit exergy of thermal power distributed in a district energy system is less than 0.10. Therefore the unit exergy imbalance makes it critical to limit the pumping capacity and heat transport to shorter distances, depending on the amount of energy and exergy transported (Kilkis, B., 2020c).",
+        "Despite this fact, ignoring the exergy issue, this is one of the main reasons why the EU (European Union) is considering total `green` electrification with heat pumps and district energy systems on the demand side of the built environment by converting part of the electricity back to heat and cold by heat pumps, thus eliminating long-distance transport of thermal power (EU, 2018). However, according to the second law of thermodynamics (exergy), the coefficient of performance of the heat pumps, COP , must be greater than eight in heating and ten in cooling, respectively, using conventional HVAC (Heating, Vantilating, and Air-Conditioning) systems to benefit the environment. Otherwise, nearly avoidable CO emissions responsibilities will arise because there will be a negative mismatch between the electrical power value-adding potential and the value-adding potential of the thermal outputs of the heat pumps. Today, such high COP values are not possible even if heat pumps are cascaded (Kılkış, B., 2021a). This fact brings us to the question of whether total electrification, especially on a trans-national scale, is environmentally rational and sound or not. If not, what are the alternatives?"
+      ]
+    },
+    {
+      "id": "en-section-2",
+      "title": "Electric Power Grid or Hydrogen Grid on a Trans-National Scale?",
+      "paragraphs": [
+        "The biggest remaining question is whether renewable and waste energy sources should be transported as 100% electricity. There are four conflicting handicaps to transport electricity and heat in the BRI. These are summarized below:"
+      ]
+    },
+    {
+      "id": "en-section-3",
+      "title": "Challenge 1",
+      "paragraphs": [
+        "Since electrical power lines cannot transport thermal energy, a second or even a third pipeline (transporting cold) will be necessary for the BRI. Therefore, it may seem rational to transport only electricity and leave behind renewable and waste energy sources. However, this will mean that abundant energy sources are untapped and left behind."
+      ]
+    },
+    {
+      "id": "en-section-4",
+      "title": "Challenge 2",
+      "paragraphs": [
+        "While global thermal demand is more than electric power demand in terms of energy, renewable and waste energy sources, abundant globally, must be utilized for minimum CO emissions.",
+        "Furthermore, renewable energy storage and connecting to the existing grids are major problems. Different heat sources are difficult to mix and match in terms of their enthalpy (temperature; exergy). Added value potentials may be lost. Consequently, because low-enthalpy heat (below 100°C) cannot be efficiently converted to electricity, these globally abundant energy sources will remain unutilized at the source side and wasted on the environment, thus also contributing to global warming. For very low-enthalpy heat sources, an option may be residential water heaters using absorption technology, which may peak the temperature above the Legionella risk mitigation level of 65°C. However, they have a high initial cost and working fluid challenges."
+      ]
+    },
+    {
+      "id": "en-section-5",
+      "title": "Challenge 3",
+      "paragraphs": [
+        "Converting electricity on the demand side site back to heat and cold with electrically operated heat pumps with COP values less than eight for heating and ten for cooling means emissions responsibilities. Trying to heat and cool only by electricity on the demand side with power-to-heat systems will overload the existing grids unless costly and time-consuming retrofits and upgrades are made and new transmission lines are deployed. These actions mean that most existing AC grids have to be replaced/retrofitted/ appended. Although, HVDC (High-Voltage DC) power makes sense because renewables (wind and solar) already generate DC power. This convenience eliminates AC to DC and DC to AC inverters, provided that all household units are also converted to DC, which is another costly issue. Most EU officials have drawn total electrification of the EU roadmap, and at least 80% of them own shares in electric power companies (Private communications during 2019 Helsinki ETIP RHC Meeting). However, a recent study claims that HVDC is the cheapest and easiest way to use existing AC grid lines (EEP, 2021). Holland is one of the pioneering countries (IEC, 2022). Hydrogen does not need AC-DC conversions because it is not electricity and is not subject to any distance break-even point (Fig. 1). Hydrogen may be transported to any distance."
+      ]
+    },
+    {
+      "id": "en-section-6",
+      "title": "Challenge 4",
+      "paragraphs": [
+        "Rather than converting part of the electricity back to heat or cold, generated electricity from renewables should be used for more rational applications like lighting, mass transport, and industry.",
+        "These challenges indicate that electricity must remain as electricity and must be used as electricity (in applications with no other options like lighting, communications, electric mobility, and industry). At any rate, there is a definite optimum point average regarding total electrification and hydrogen mix distribution, which depends on the technology, supplydemand, population profile, climate, and availability of renewables. These variables need to be considered in a case-by-case analysis for every country and region. Therefore, even with renewables, the EU goal of `total` electrification is a dream that will never come true.",
+        "To mobilize the low-enthalpy and waste energy sources in the quest for decarbonization, total electrification and long-distance thermal power transportation do not seem rational candidates for problemsolving, so another transport medium must be sought. Plainly stating, electricity cannot transport everything. We need more elegant solutions. As this paper shows, hydrogen is the best way to store and transport energy over long distances, provided that some precautions are taken and maintained: hydrogen has small but non-zero global warming potential ( GWP ), which requires leakage management over long distances, and flammability must also be considered. Furthermore, transport by liquefaction or compression of hydrogen is energy-intensive, and these must also be provided from green systems with optimized designs. At any rate, there is a large distribution gap today in terms of hydrogen over the BRI course across the continents. Figure 2 shows that there is no hydrogen trade route yet on BRI leaving a large gap on the energy transition map of the initiative.",
+        "If all combined into one singular medium of energy and then stored and transported within the same medium for long distances and then converted back to heat, cold, and electrical power with high efficiency in any dynamic proportion of demand, the useful work potential of the original energy constituents might increase. This route will link collective farms and cities on a single hydrogen pipeline over long distances.",
+        "With the advent of superconductivity, hydrogen at cryogenic temperatures may replace the use of precious helium gas, provided that cryogenic hydrogen is produced from renewables.",
+        "Such an energy gap is not a coincidence for the BRI. Although relatively rich in renewables, power generation with renewables and transmission systems are quite weak. Coal is still used extensively and may be made greener by capturing and mixing the coke/coal flue gas and mixing with hydrogen or via biogas. Coke/ coal flue gas is rich in hydrogen at about 55 % and methane at 27% (coke oven gas) (İlbaş, 2017). Therefore, rather than recovering the heat of the flue gas, utilization of it as a fuel mix is more efficient and effective, as it can be readily mixed with hydrogen. The lower heating value (LHV) of coke oven gas is 3678 kcal/m3, whereas hydrogen has an LHV value of 2583 kcal/m3. LHV of biogas is about 3800. Hydrogen seems to have the lowest LHV, but this is due to its lowest density. Mixing may be achieved at the starting point of the B&R in eastern China, where most coal consumption occurs in industry and power plants (see Figure 3) or along the road with local biogas and other coke/coal gas sources. Furthermore, coal may be transported in coal-water slurry, yet water spending, quality degradation, and associated environmental concerns must be addressed. Pumping exergy demand must also be optimized for minimum emissions responsibility.",
+        "The B&R region is rich in renewables and waste heat (Figure 3) yet relatively poor in power transmission and generation (Figure 4). Transnational collocation and conglomeration are a compound problem, except for geothermal and waste heat from fossil fuel power plants. Renewables are intermittent except for biogas and geothermal. Therefore, energy storage in terms of electricity, heat, and cold is necessary. Although thermal energy storage is simpler and cheaper, electrical energy storage is still expensive and environmentally costly in terms of battery storage. Hydrogen is a more suitable energy storage medium without requiring energy conversions prior to the final use. It is stored as hydrogen upstream.",
+        "What is missing for the BRI is a common thread that unifies all forms of energy on a single thread. Hydrogen seems to be the only feasible thread.",
+        "B&R with hydrogen may reverse this trend shown in Figure 4, where hydrogen eliminates the necessity of collocation and coexistence of renewables and waste heat sources and fills an important gap of energy transit shown in Figure 2.",
+        "Major cities are already on the BRI on land. Therefore, the energy corridor must be on the same line. However, there is not any renewable energy corridor yet, except in Europe. The main pipeline must follow the transnational railroad.",
+        "Figures 5 and 6 imply that a singular hydrogen line should follow the same route, especially close to the railroad link with an under-the-sea passage in the Caspian Sea. Rich natural gas reserves in Azerbaijan may also be mixed with hydrogen for optimal costeffectiveness."
+      ]
+    },
+    {
+      "id": "en-section-7",
+      "title": "Problems with Renewables",
+      "paragraphs": [
+        "There are problems with singular solar and wind applications: All singular applications for generating electric power, like PV panels, have waste heat. Even large wind turbines. PV panels generate electric power but reject the solar heat that they absorb. The nacelle of large wind turbines generates heat due to electro-mechanical system inefficiencies. Flat-plate collectors generate heat but miss the opportunity of generating power with higher exergy. Therefore, the latter (FPC) must be avoided except for some local applications. Figure 7 shows a single wind turbine atop a bare tower where individual solar PV panels occupy the land. This arrangement is not efficient for land use (land use effectiveness, LUE ). The individual solar PV panels could be mounted on the bare tower to improve LUE (See Figure 16 in the following sections)."
+      ]
+    },
+    {
+      "id": "en-section-8",
+      "title": "Plants",
+      "paragraphs": [
+        "Besides the unutilized waste heat available from solar systems, wind turbines, and geothermal power plants, major heat waste occurs in thermal power plants through their cooling towers, which also spend water and release water vapor into the atmosphere. City municipal wastewater also carries low-temperature heat. These are important energy sources, but the electro-mechanical systems like pumping motors and heat exchangers must be carefully designed so that power exergy does not exceed the thermal power exergy obtained. For example, the fan motor capacity must not exceed the heat claimed from the stack gas of a coal-fired power plant (Kılkış, B., 2019b). Combined heat and power systems using biogas must also be carefully designed and operated to provide the maximum exergy, sum of electricity, heat, and cold (Kilkis, B., & Kilkis, S., 2007)."
+      ]
+    },
+    {
+      "id": "en-section-9",
+      "title": "Solar Energy",
+      "paragraphs": [
+        "Figure 8 depicts that even PV panels actually have unutilized waste heat. When this heat is not utilized, someone else will produce the same heat again possibly by consuming some fossil fuel, rather than using this lost heat. This reveals the fact that the PV panel is responsible for a carbon dioxide emission, albeit indirectly (ΔCO ). In Figure 8, it is seen that a sample PV panel has a ΔCO responsibility as much as the CO it draws from its carbon stock because it produces electricity, and as a result, this PV panel does not actually make a net contribution to the environment. The planar collector, on the other hand, is responsible for more than it absorbs from the carbon stock. The use of heat pumps is also not a solution unless the Coefficient of Performance (COP) exceeds eight."
+      ]
+    },
+    {
+      "id": "en-section-10",
+      "title": "Wind Energy",
+      "paragraphs": [
+        "Heating in cold climates of the Northern provinces of China is considered to be accomplished by wind energy to replace coal and lignite by using electricity directly for heating through electric coils (Figure 9). If this alternative is used for buildings in cold climates in China, the result will be disappointing or, better to say, catastrophic for the environment. The exergy difference between electricity and electric heating for comfort is about 0.90 kWhexergy/kW-henergy, almost equal to a coal stove in terms of CO emissions responsibility (Kılkış, B., 2021a).",
+        "In the nacelle for moderately-large-sized wind turbines, the nacelle heat is wasted. In addition, any electric battery will be responsible for ozone depletion potential ( ODP ) (Kılkış, B., 2019a). Figure 10 shows an apparent improvement by using a heat pump to utilize part of the wind power to generate heat for comfort heating. This alternative works only if the COP exceeds eight and adds too much cost. Otherwise, the coupling of a wind turbine with a heat pump is not carbon-free. In addition, the refrigerant leakage will be responsible for the ozonedepletion index, ODI, which is a combination of ODP and global warming potential ( GWP )."
+      ]
+    },
+    {
+      "id": "en-section-11",
+      "title": "Geothermal Energy",
+      "paragraphs": [
+        "About 80% of the geothermal energy reserves are close to or below 100°C, leaving only a small margin of power generation with organic Rankine cycles (ORC). Figure 11 shows a large array of dry cooling fans, occupying much more area than the plant itself. It rejects heat from the atmosphere. Fans consume electric power. Even the electricity is green for the geothermal plant; this means nearly voidable emissions responsibility, because this amount of electrical energy could be supplied to the grid, reducing the power load on thermal power plants. Land use is also important. ORC+heat is the best utilized, and the fans shown in Figure 11 are eliminated."
+      ]
+    },
+    {
+      "id": "en-section-12",
+      "title": "Solutions",
+      "paragraphs": [
+        "Solutions will pave the way to new technology and international collaboration with concerted R&D and P&D, new Jobs, new technologies, and a better economy besides the hydrogen economy."
+      ]
+    },
+    {
+      "id": "en-section-13",
+      "title": "Solar",
+      "paragraphs": [
+        "Figure 13 shows the aforementioned new generation PVT3 system. Only such a system can have negative carbon characteristics."
+      ]
+    },
+    {
+      "id": "en-section-14",
+      "title": "Wind",
+      "paragraphs": [
+        "The wind turbine of moderate size in the range up to 1 MW in rural areas with domiciles may utilize the electro-mechanical waste heat in the nacelle with ORC for additional power and low-temperature heat."
+      ]
+    },
+    {
+      "id": "en-section-15",
+      "title": "Geothermal",
+      "paragraphs": [
+        "From a low enthalpy geothermal well A district heating that can be realized is depicted in Figure 15. No heat pump is used for temperature peaking, however, heat pipe radiators or floor heating systems that can operate at temperatures as low as 35°C are used."
+      ]
+    },
+    {
+      "id": "en-section-16",
+      "title": "Equipment Side",
+      "paragraphs": [
+        "In district energy systems for heating, the biggest challenge is the temperature incompatibility of low supply temperatures and the higher temperature demand of the existing heating equipment. The solution is low-exergy heating and cooling equipment with heat pipe technology (Kılkış, B., Çağlar, & Şengül, 2021)."
+      ]
+    },
+    {
+      "id": "en-section-17",
+      "title": "Compound Renewables",
+      "paragraphs": [
+        "Renewables above and below the ground are combined to form an all-in-one 100% power generation and storage medium based on hydrogen. This arrangement also improves LUE."
+      ]
+    },
+    {
+      "id": "en-section-18",
+      "title": "Energy, Water, Food, Farms, Cities, and Economy Nexus: An Example",
+      "paragraphs": [
+        "Figure 17 shows a hybrid farm, small agricultural industry, and habitat (Kılkış, B., 2020a). In this model, the irrigation is performed by DC-powered pumps from the wells. Power is collectively generated by the on-site wind turbines and PVT panels, which at the same time keep the PV cells cool to maintain their rated efficiency. Hydrogen generation by water electrolysis, heat pumps, hydrogen storage, adsorption cooling, greenhouse operations, small industry like agricultural product drying, food packaging, hydrogen mobility, desiccant moisture control in the buildings, fuel cells, waste heat recovery are the main features."
+      ]
+    },
+    {
+      "id": "en-section-19",
+      "title": "Conclusion",
+      "paragraphs": [
+        "Hydrogen is the best alternative to harness renewables and store and transnationally transport energy. The key innovation is shown in Figure 18. This innovation comprises condensing all energy forms into hydrogen, transporting them with hydrogen, and then expanding hydrogen again to different forms of energy on demand. On the hydrogen route, cities, farms, and industry exchange energy similarly on their minor-scale hydrogen economy.",
+        "The prerequisite to such a success is developing innovative technologies concerning renewable energy systems and utilizing the abundantly available and waste energy sources and ambient energy sources. It also requires more diversity and flexibility in one energy transport medium (hydrogen). Hydrogen may mix natural gas, coal flue gas (may also replace them with a ratio of 1 to three approximately), and biogas, making it highly flexible. Additionally, it is not rational to recover heat from flue gases of power plants (Kilkis, B., 2019b). Better these gases should be used as a fuel. However, attention must be paid to the fact that although this is waste, it may make the hydrogen green hydrogen grey, although LHV is increased after mixing per meter cube of gas. Coke oven gas is the best and makes the industry relatively cleaner. In conclusion, hydrogen is the best-combined heat and power transport, storage, and utilization medium.",
+        "Greener and hydrogenized B&R is expected to bring unprecedented benefits for jobs, R&D, P&D, science and technology, economy, social welfare, and political unity. Figure 18 concludes how the BRI may be implemented for a green energy belt for a sustainable future and potentially the largest positive impact towards satisfying the Paris Agreement goals with 126 countries that B&R covers (Vivid, 2019). A primary transnational infrastructure is already available. According to Figure 19, there is already a natural gas pipeline on the main B&R route. It may be used for hydrogen transport by reversing today’s natural gas flow."
+      ]
+    }
+  ],
+  "keywords": [
+    "climate crisis",
+    "combined transport of power and heat",
+    "fuel cell",
+    "hydrogen belt road",
+    "renewable"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "ALEPH. (2020). Belt and Road Initiative: the World’s Largest Infrastructure Investment. Retrieved from https://www.alephas.org/2020/11/11/belt-and-road-initiative-the-worlds-largest-infrastructure-investment/"
+    },
+    {
+      "id": "ref-2",
+      "text": "EEP. (2014). Analysing the Costs of High Voltage Direct Current (HVDC) Transmission. Retrieved from https://electrical-engineering-portal.com/analysing-the-costs-of-high-voltage-direct-current-hvdc-transmission"
+    },
+    {
+      "id": "ref-3",
+      "text": "EU. (2018). Heat Roadmap Europe, Quantifying the Impact of Low-carbon Heating and Cooling Roadmaps Deliverable 6.4, 822 sayfa. Retrieved from https://ec.europa.eu/research/participants/documents/downloadPublic?documentIds=080166e5be2fd8fb&appId=PPGMS"
+    },
+    {
+      "id": "ref-4",
+      "text": "Forman, C., Muritala, I. K., Pardemann, R., & Meyer, B. (2016). Estimating the global waste heat potential. Renewable and Sustainable Energy Reviews, 57, 1568-1579. DOI:10.1016/j. rser.2015.12.192"
+    },
+    {
+      "id": "ref-5",
+      "text": "IEC. (2021). Back to the future: DC public grids again!, IEC Aca demy Webinar. Retrieved from https://www.iec.ch/blog/back-future-dc-public-grids-again"
+    },
+    {
+      "id": "ref-6",
+      "text": "IPCC. (2022). Climate Change 2022, Mitigation of Climate Change, Working Group III Contribution to the Sixth Assess ment Report of the Intergovernmental Panel on Climate Change, Summary for Policymakers, IPCC AR6 WG III. Retrieved from https://report.ipcc.ch/ar6wg3/pdf/IPCC_AR6_WGIII_FinalDraft_FullReport.pdf"
+    },
+    {
+      "id": "ref-7",
+      "text": "IRENA. (2022). Geopolitics of the Energy Transformation: The Hydrogen Factor. International Renewable Energy Agency, Abu Dhabi. ISBN: 978-92-9260-370-0 Retrieved from https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2022/Jan/IRENA_Geopolitics_Hydrogen_2022.pdf"
+    },
+    {
+      "id": "ref-8",
+      "text": "İlbaş, M. (2017). The Use of Coal Gases as an Alternative Fuel for Energy Supply. Energy Policy Turkey, (3), 58-63."
+    },
+    {
+      "id": "ref-9",
+      "text": "Jesdergi, 2022. Daha Fazla Jeotermal Deneyim Paylaşımı. 17, 50- 51."
+    },
+    {
+      "id": "ref-10",
+      "text": "Kılkış, B. (2019a, September). The Importance of Exergy Ratio nality and Storage For 100% Renewable Targets in Decoup ling Sustainable Development and Ozone Depletion. In UNI DO Workshop, September (pp. 16-17)."
+    },
+    {
+      "id": "ref-11",
+      "text": "Kılkış, B. (2020a, Haziran). Tarım sigortalarında doğal afetler ik limsel ısınma ve enerji sinerjisi. (Türkiye Cumhuriyeti Tarım ve Orman Bakanlığı’na Sunulan Rapor), 16."
+    },
+    {
+      "id": "ref-12",
+      "text": "Kılkış, B. (2021a). Rational Utilization of Wind Energy for Hea ting Purposes In Cold Climates In China. BRIQ Working Pa per Series, KUYÇAM, İstinye University."
+    },
+    {
+      "id": "ref-13",
+      "text": "Kılkış, B., Çağlar, M., & Şengül, M. (2021). Energy Benefits of Heat Pipe Technology for Achieving 100% Renewable Hea ting and Cooling for Fifth-Generation, Low-Temperature District Heating Systems. Energies, 14(17), 5398."
+    },
+    {
+      "id": "ref-14",
+      "text": "Kılkış, Ş. (2012). Green Cities and Compound Metrics Using Exergy Analysis. In Encyclopedia of Energy Engineering and Technology. Taylor and Francis: New York, Published online: 23 July 2012; 1-7. http://dx.doi.org/10.1081/E-EEE-120047398"
+    },
+    {
+      "id": "ref-15",
+      "text": "Kılkış, Ş. (2014). Energy System Analysis Of A Pilot Net-Zero Exergy District. Energy Conversion and Management, 87, 1077-1092. http://dx.doi.org/10.1016/j.enconman.2014.05.014"
+    },
+    {
+      "id": "ref-16",
+      "text": "Kilkis, B. (2019b). Development of an Exergy-Rational Method and Optimum Control Algorithm for the Best Utilization of the Flue Gas Heat in Coal-Fired Power Plant Stacks. Energies, 12(4), 760. https://doi.org/10.3390/en12040760"
+    },
+    {
+      "id": "ref-17",
+      "text": "Kilkis, B. (2020b). Accelerating the transition to 100% renewable era. But how? Exergy rationality in the built environment. In Accelerating the Transition to a 100% Renewable Energy Era (pp. 1-49). Springer, Cham. doi.org/10.1007/978-3-030- 40738-4"
+    },
+    {
+      "id": "ref-18",
+      "text": "Kilkis, B. (2020c). An Exergy-Rational District Energy Model For 100% Renewable Cities With Distance Limitations. Ther mal Science, 24(6 Part A), 3685-3705."
+    },
+    {
+      "id": "ref-19",
+      "text": "Kilkis, B. (2020d). Development of a composite PVT panel with PCM embodiment, TEG modules, flat-plate solar collector, and thermally pulsing heat pipes. Solar Energy, 200, 89-107."
+    },
+    {
+      "id": "ref-20",
+      "text": "Kilkis, B. (2021b). An Exergy-Based Model for Low-Temperature District Heating Systems for Minimum Carbon Footprint with Optimum Equipment Oversizing and Temperature Pea king Mix. Energy, 236, 121339."
+    },
+    {
+      "id": "ref-21",
+      "text": "Kilkis, B. (2021c). Cogeneration Towards Paris Agreement But How? Highlights For WP3, Exergy Based Model 3, Minimum Emissions Responsibility Against Climate Crisis, Geotermica, Accelerating the Heating and Cooling Transition, Geotermica & JPP SES 2021, Project Proposal, Report (co-author)."
+    },
+    {
+      "id": "ref-22",
+      "text": "Kilkis, B. (2022a). Lessons Learned from Labyrinth Type of Air Preconditioning in Exergy-Aware Solar Greenhouses, Journal of Sustainable Development of Energy, Water and Environ mental Systems."
+    },
+    {
+      "id": "ref-23",
+      "text": "Kilkis, B. (2022b). Net-Zero Buildings, What are They and What They Should Be, Energy, EGY-D-21 10639R1 (In print)."
+    },
+    {
+      "id": "ref-24",
+      "text": "Kilkis, B., & Kilkis, S. (2007). Comparison of Poly-generation Systems for Energy Savings, Exergetic Performance, and Har mful Emissions. Proceedings of ES2007, Energy Sustainabi lity, Paper No: ES, 36262, 27-30. Long Beach, California"
+    },
+    {
+      "id": "ref-25",
+      "text": "Kilkis, S. (2022). All Cities Can Contribute Towards a Net Zero Future, Twitter Media Studio. Retrieved from https://twitter.com/IPCC_CH/status/1514959224333225996"
+    },
+    {
+      "id": "ref-26",
+      "text": "Uysal, O. (2019) 10 countries, 11500 km: China train at Turkey. Retrieved from https://railturkey.org/2019/11/06/10-countries-11000-km-china-train-at-turkey/"
+    },
+    {
+      "id": "ref-27",
+      "text": "Vivid. (2019). Decarbonizing the Belt and Road-A Green Finance Roadmap, Executive Summary, 8 sayfa. Retrieved from htt ps://www.vivideconomics.com/wp-content/uploa ds/2019/09/BRI_Exec_Summary_v13-screen_hi.pdf"
+    }
+  ],
+  "acknowledgements": "Assoc. Prof. Dr. Şiir Kılkış, the lead author of IPCC, has provided the most valuable material, knowledge, and deep insight during this research. Her unique contributions and dedicated support are greatly appreciated.",
+  "figures": [
+    {
+      "id": "figure-1",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-01.jpg",
+      "caption": "Figure 1. Hydrogen and Electric Power Transmissions"
+    },
+    {
+      "id": "figure-2",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-02.jpg",
+      "caption": "Figure 2. Hydrogen Trade Routes"
+    },
+    {
+      "id": "figure-3",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-03.jpg",
+      "caption": "Figure 3. Renewables and Major Waste Heat Sources on the Belt and Road Initiative"
+    },
+    {
+      "id": "figure-4",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-04.jpg",
+      "caption": "Figure 4. Global Power Lines and Power Generation Maps"
+    },
+    {
+      "id": "figure-5",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-05.jpg",
+      "caption": "Figure 5. Major Cities on the Belt and Road Initiative"
+    },
+    {
+      "id": "figure-6",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-06.jpg",
+      "caption": "Figure 6. The Railroad Link on the Belt and Road Initiative"
+    },
+    {
+      "id": "figure-7",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-07.jpg",
+      "caption": "Figure 7. Singular Solar Photovoltaics on the Ground and Wind Turbines. Waste of Land"
+    },
+    {
+      "id": "figure-8",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-08.tif",
+      "caption": "Figure 8. Different Solar Energy Systems (Except concentrating solar tower applications)"
+    },
+    {
+      "id": "figure-9",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-09.tif",
+      "caption": "Figure 9. Direct Electric Resistance Heating in a Chinese Building with Wind Energy"
+    },
+    {
+      "id": "figure-10",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-10.tif",
+      "caption": "Figure 10. Wind-Driven Heat and Cold Supply with a Heat Pump Cycle in Geothermal Field with Wasted Heat, CO emissions responsibility, and Excess Land Use"
+    },
+    {
+      "id": "figure-11",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-11.jpg",
+      "caption": "Figure 11. Only Power Generation with Organic Rankine Cycle in Geothermal Field with Wasted Heat, CO 2 emissions responsibility, and Excess Land Use"
+    },
+    {
+      "id": "figure-12",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-12.jpg",
+      "caption": "Figure 13. Advanced Photo-Voltaic-Heat Systems with high Efficiency"
+    },
+    {
+      "id": "figure-13",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-13.tif",
+      "caption": "Figure 14. Cogenerating Wind Turbine"
+    },
+    {
+      "id": "figure-14",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-14.jpg",
+      "caption": "Figure 15. Utilizing Waste Heat from ORC for District Heating and System"
+    },
+    {
+      "id": "figure-15",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-15.tif",
+      "caption": "Figure 12. Land Use Effectiveness of Different Renewables"
+    },
+    {
+      "id": "figure-16",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-16.jpg",
+      "caption": "Figure 16. Compound Renewable Energy Utilization Below and Above the Ground"
+    },
+    {
+      "id": "figure-17",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-17.jpg",
+      "caption": "Figure 17. Green Hydrogen-Based Collective Farm Model"
+    },
+    {
+      "id": "figure-18",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-18.jpg",
+      "caption": "Figure 18. Ultimate Solution: One Road, One Belt, One Energy Corridor, On a Singular Meeting Line of Green Hydrogen"
+    },
+    {
+      "id": "figure-19",
+      "src": "/assets/article-figures/yesil-hidrojen-kusak-ve-yol-girisiminin-ortak-bagi/figure-19.jpg",
+      "caption": "Figure 19. Global Map of Natural Gas Pipelines"
+    }
+  ]
+}
