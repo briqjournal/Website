@@ -38,8 +38,8 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "The Enduring Legacy of Sun Yat-sen", subtitle: "On the Centenary of His Demise" },
   },
   "6-1": {
-    tr: { title: "Gelişen Dünya İçin Kalkınma Yolu", subtitle: "Kuşak-Yol’da Bilimsel Teknolojik İşbirliği" },
-    en: { title: "The Development Pathway for the Developing World", subtitle: "Scientific and Technological Cooperation Along the Belt & Road" },
+    tr: { title: "Kuşak-Yol’da Bilimsel Teknolojik İşbirliği", subtitle: "Gelişen Dünya İçin Kalkınma Yolu" },
+    en: { title: "Scientific and Technological Cooperation Along the Belt & Road", subtitle: "The Development Pathway for the Developing World" },
   },
   "5-4": {
     tr: { title: "Kuşak-Yol Ve", subtitle: "Türk Devletleri Teşkilatı" },

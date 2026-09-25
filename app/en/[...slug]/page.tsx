@@ -647,12 +647,13 @@ function EnglishIssue({ volume, issueNumber, current = false }: { volume: number
   const isVolumeSevenIssueOne = volume === 7 && issueNumber === 1;
   const isVolumeSixIssueThree = volume === 6 && issueNumber === 3;
   const isVolumeSixIssueTwo = volume === 6 && issueNumber === 2;
+  const isVolumeSixIssueOne = volume === 6 && issueNumber === 1;
   return (
     <IssuePlatform
       record={record}
       locale="en"
       current={current}
-      subtitleFirst={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree || isVolumeSixIssueTwo}
+      subtitleFirst={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree || isVolumeSixIssueTwo || isVolumeSixIssueOne}
       subtitleScale75={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree}
       title={heading.title}
       subtitle={heading.subtitle}
