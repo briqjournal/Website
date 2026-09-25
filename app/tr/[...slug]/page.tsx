@@ -1046,12 +1046,14 @@ function ArchiveIssue({ volume, issue, current = false }: { volume: number; issu
   const supplementary = issueSupplementaryContents(volume, issue);
   const contributionCount = issueContributionCount(record, supplementary);
   const isVolumeSevenIssueFour = volume === 7 && issue === 4;
+  const isVolumeSevenIssueOne = volume === 7 && issue === 1;
   return (
     <IssuePlatform
       record={record}
       locale="tr"
       current={current}
-      subtitleFirst={isVolumeSevenIssueFour}
+      subtitleFirst={isVolumeSevenIssueFour || isVolumeSevenIssueOne}
+      subtitleScale75={isVolumeSevenIssueFour}
       title={heading.title}
       subtitle={heading.subtitle}
       description={isVolumeSevenIssueFour
