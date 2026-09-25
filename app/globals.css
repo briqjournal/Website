@@ -641,6 +641,18 @@ img {
   line-height: 1.08;
 }
 
+.hero h1.hero-title-subtitle-first em {
+  margin: 0 0 16px;
+}
+
+.hero h1.hero-title-subtitle-first > span {
+  display: block;
+  font: inherit;
+  font-style: normal;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
 .hero-summary {
   max-width: 610px;
   margin: 29px 0 0;

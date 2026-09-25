@@ -10,8 +10,9 @@ const slides = {
     {
       eyebrow: "Cilt 7 · Sayı 4 · Sonbahar 2026",
       kicker: "Güncel sayı",
-      title: "Batı Asya’da Yeni Dönem",
-      subtitle: "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor",
+      title: "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor",
+      subtitle: "Batı Asya’da Yeni Dönem",
+      subtitleFirst: true,
       summary: "BRIQ’in yeni sayısı Batı Asya’daki dönüşümü, Türkiye–Çin ilişkilerini, Dijital İpek Yolu’nu ve Çin’in küresel altyapı stratejisini birlikte ele alıyor.",
       href: "/tr/guncel-sayi",
       action: "Sayıyı keşfet",
@@ -82,8 +83,9 @@ const slides = {
     {
       eyebrow: "Volume 7 · Issue 4 · Autumn 2026",
       kicker: "Current issue",
-      title: "A New Era in West Asia",
-      subtitle: "The Erosion of Hegemony and the Rise of Regional Agency",
+      title: "The Erosion of Hegemony and the Rise of Regional Agency",
+      subtitle: "A New Era in West Asia",
+      subtitleFirst: true,
       summary: "The new issue brings together work on West Asia’s changing order, Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy.",
       href: "/en/current-issue",
       action: "Explore the issue",
@@ -201,7 +203,19 @@ export function HomeHeroSlider({ locale = "tr" }: { locale?: Locale }) {
               <div className="hero-copy">
                 <div className="eyebrow"><span>{slide.eyebrow}</span></div>
                 <p className="hero-kicker">{slide.kicker}</p>
-                <h1>{slide.title}<em>{slide.subtitle}</em></h1>
+                <h1 className={"subtitleFirst" in slide && slide.subtitleFirst ? "hero-title-subtitle-first" : undefined}>
+                  {"subtitleFirst" in slide && slide.subtitleFirst ? (
+                    <>
+                      <em>{slide.subtitle}</em>
+                      <span>{slide.title}</span>
+                    </>
+                  ) : (
+                    <>
+                      {slide.title}
+                      <em>{slide.subtitle}</em>
+                    </>
+                  )}
+                </h1>
                 <p className="hero-summary">{slide.summary}</p>
                 <div className="hero-actions">
                   <a className="button button-dark" href={slide.href} tabIndex={index === active ? 0 : -1}>{slide.action} <span>→︎</span></a>
