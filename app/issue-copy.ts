@@ -13,7 +13,7 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "The Erosion of Hegemony and the Rise of Regional Agency", subtitle: "A New Era in West Asia" },
   },
   "7-3": {
-    tr: { title: "Kültürel Miras Yağması", subtitle: "Emperyalist Hegemonya Ve İade Mücadelesi" },
+    tr: { title: "Kültürel Miras Yağması", subtitle: "Emperyalist Hegemonya ve İade Mücadelesi" },
     en: { title: "Cultural Heritage Plunder", subtitle: "Imperialist Hegemony and the Struggle for Restitution" },
   },
   "7-2": {
