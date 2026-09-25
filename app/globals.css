@@ -643,6 +643,7 @@ img {
 
 .hero h1.hero-title-subtitle-first em {
   margin: 0 0 16px;
+  font-size: .75em;
 }
 
 .hero h1.hero-title-subtitle-first > span {
@@ -5376,6 +5377,7 @@ footer h3 { font-size: 11px; }
 
 .issue-masthead-copy h1.issue-title-subtitle-first em {
   margin: 0 0 10px;
+  font-size: .75em;
 }
 
 .issue-masthead-copy h1.issue-title-subtitle-first > span {

@@ -38,8 +38,8 @@ test("Volume 7 Issue 4 keeps subtitle above the main title across issue pages an
   assert.match(slider, /hero-title-subtitle-first/);
   assert.match(slider, /<em>\{slide\.subtitle\}<\/em>[\s\S]*<span>\{slide\.title\}<\/span>/);
 
-  assert.match(css, /h1\.issue-title-subtitle-first em \{[\s\S]*margin: 0 0 10px;/);
+  assert.match(css, /h1\.issue-title-subtitle-first em \{[\s\S]*margin: 0 0 10px;[\s\S]*font-size: \.75em;/);
   assert.match(css, /h1\.issue-title-subtitle-first > span \{[\s\S]*font-style: normal;/);
-  assert.match(css, /h1\.hero-title-subtitle-first em \{[\s\S]*margin: 0 0 16px;/);
+  assert.match(css, /h1\.hero-title-subtitle-first em \{[\s\S]*margin: 0 0 16px;[\s\S]*font-size: \.75em;/);
   assert.match(css, /h1\.hero-title-subtitle-first > span \{[\s\S]*font-style: normal;/);
 });
