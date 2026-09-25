@@ -652,9 +652,10 @@ function EnglishIssue({ volume, issueNumber, current = false }: { volume: number
       locale="en"
       current={current}
       subtitleFirst={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree}
-      subtitleScale75={isVolumeSevenIssueFour || isVolumeSevenIssueOne}
+      subtitleScale75={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree}
       title={heading.title}
       subtitle={heading.subtitle}
+      trailingSubtitle={heading.trailingSubtitle}
       description={isVolumeSevenIssueFour
         ? "The issue examines West Asia’s changing balance of power alongside Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy."
         : `Published in ${record.season_en} ${record.year}, this issue brings together ${contributionCount} contributions in BRIQ’s open-access archive.`}

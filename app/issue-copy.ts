@@ -3,6 +3,7 @@ export type IssueLocale = "tr" | "en";
 type IssueHeading = {
   title: string;
   subtitle: string;
+  trailingSubtitle?: string;
 };
 
 type IssueCopy = Record<IssueLocale, IssueHeading>;
@@ -29,8 +30,8 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "Common Security for Shared Development", subtitle: "" },
   },
   "6-3": {
-    tr: { title: "Bandung’dan BRICS’e Hegemonyacılığa Karşı Küresel Güney’in Yükselişi", subtitle: "70. Yıldönümünde" },
-    en: { title: "From Bandung to BRICS The Emergence of the Global South Against Hegemonism", subtitle: "On its 70th Anniversary" },
+    tr: { title: "Bandung’dan BRICS’e", subtitle: "70. Yıldönümünde", trailingSubtitle: "Hegemonyacılığa Karşı Küresel Güney’in Yükselişi" },
+    en: { title: "From Bandung to BRICS", subtitle: "On its 70th Anniversary", trailingSubtitle: "The Emergence of the Global South Against Hegemonism" },
   },
   "6-2": {
     tr: { title: "Ölümünün 100. Yıldönümünde", subtitle: "Sun Yat-sen’in Yaşayan Mirası" },

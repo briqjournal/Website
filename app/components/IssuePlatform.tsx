@@ -44,6 +44,7 @@ type IssuePlatformProps = {
   locale: Locale;
   title: string;
   subtitle: string;
+  trailingSubtitle?: string;
   description: string;
   current?: boolean;
   subtitleFirst?: boolean;
@@ -63,6 +64,7 @@ export function IssuePlatform({
   locale,
   title,
   subtitle,
+  trailingSubtitle,
   description,
   current = false,
   subtitleFirst = false,
@@ -158,6 +160,7 @@ export function IssuePlatform({
                 <>
                   {subtitle && <em>{subtitle}</em>}
                   <span>{title}</span>
+                  {trailingSubtitle && <em className="issue-title-trailing-subtitle">{trailingSubtitle}</em>}
                 </>
               ) : (
                 <>

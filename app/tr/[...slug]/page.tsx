@@ -1054,9 +1054,10 @@ function ArchiveIssue({ volume, issue, current = false }: { volume: number; issu
       locale="tr"
       current={current}
       subtitleFirst={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree}
-      subtitleScale75={isVolumeSevenIssueFour || isVolumeSevenIssueOne}
+      subtitleScale75={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree}
       title={heading.title}
       subtitle={heading.subtitle}
+      trailingSubtitle={heading.trailingSubtitle}
       description={isVolumeSevenIssueFour
         ? "Batı Asya’daki yeni güç dengesini; Suudi Arabistan’ın kültürel dengeleme stratejisinden Türkiye–Çin ilişkilerine, Dijital İpek Yolu’ndan Çin’in küresel altyapı yaklaşımına uzanan çalışmalarla ele alan yeni sayı."
         : `${record.season_tr} ${record.year} döneminde yayımlanan bu sayı, ${contributionCount} çalışmayı BRIQ arşivinde açık erişimle bir araya getiriyor.`}

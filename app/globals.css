@@ -5383,6 +5383,10 @@ footer h3 { font-size: 11px; }
   font-size: .75em;
 }
 
+.issue-masthead-copy h1.issue-title-subtitle-first em.issue-title-trailing-subtitle {
+  margin: 10px 0 0;
+}
+
 .issue-masthead-copy h1.issue-title-subtitle-first > span {
   display: block;
   font: inherit;
