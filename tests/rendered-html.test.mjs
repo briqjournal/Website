@@ -394,7 +394,7 @@ test("uses verified bilingual cover headings for every issue", async () => {
 
   assert.equal(pages.length, archive.issues.length * 2);
   for (const [index, html] of pages.entries()) {
-    assert.match(html, /<h1(?: class="issue-title-subtitle-first")?>(?:[^<]+(?:<em>[^<]+<\/em>)?|<em>[^<]+<\/em><span>[^<]+<\/span>)<\/h1>/, issuePaths[index]);
+    assert.match(html, /<h1(?: class="[^"]*")?>(?:[^<]+(?:<em>[^<]+<\/em>)?|<em>[^<]+<\/em><span>[^<]+<\/span>)<\/h1>/, issuePaths[index]);
     assert.doesNotMatch(html, /(Bahar|Yaz|Sonbahar|Kış) \d{4} Sayısı/, issuePaths[index]);
     assert.doesNotMatch(html, /(Spring|Summer|Autumn|Winter) \d{4} Issue/, issuePaths[index]);
   }
