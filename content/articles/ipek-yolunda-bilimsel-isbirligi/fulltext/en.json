@@ -112,31 +112,106 @@
   ],
   "footnotes": [],
   "references": [
-    "ANSO. (2021a). ANSO Programmes. Retrieved from http://www.anso.org.cn/programmes/",
-    "ANSO. (2021b). ANSO Collaborative Research. Retrieved from http://www.anso.org.cn/programmes/flagshipProject/research/",
-    "Ascensão, F., Fahrig, L., Clevenger, A. P., Corlett, R. T., Jaeger, J. A., Laurance, W. F., & Pereira, H. M. (2018). Environmental challenges for the Belt and Road Initiative. Nature Sustainability, 1(15), 206-209.",
-    "Barakos, G., & Mischo, H. (2018). The potentials of scientific and industrial collaborations in the field of REE through China’s Belt and Road Initiative. International Journal of Georesources and Environment, 4(3), 86-91.",
-    "Binlei, G. (2020). Pathways for expediting joint agricultural development of China and BRI countries. China Economist, 15(5), 15-29.",
-    "Chin, H., & He, W. (2016). The Belt and Road Initiative: 65 countries and beyond. Hong Kong: Fung Business Intelligence Center.",
-    "Ge, Y., Dollar, D., & Yu, X. (2020). Institutions and participation in global value chains: Evidence from Belt and Road Initiative. China Economic Review, 61.",
-    "Guerrero Bote, V. P., Olmeda‐Gómez, C., & Moya‐Anegón, F. (2013). Quantifying the benefits of international scientific collaboration. Journal of the American Society for Information Science and Technology, 64(2), 392-404.",
-    "Gui, Q., Liu, C., & Du, D. (2019). The structure and dynamic of scientific collaboration network among countries along the Belt and Road. Sustainability, 11(19), 5187.",
-    "Guo, H., Liu, J., Qiu, Y., Menenti, M., Chen, F., Uhlir, P.F., Zhang, L., et al. (2018). The Digital Belt and Road program in support of regional sustainability. International Journal of Digital Earth, 11(7), 657-669.",
-    "Guo, Huadong, Liu, J., Qiu, Y., Menenti, M., Chen, F., Zhang, L., Genderen John van, Ishwaran, N., et al. (2017). DBAR: International Science Program for Sustainable Development of the Belt and Road Region Using Big Earth Data. (Bulletin of Chinese Academy of Sciences).",
-    "Hughes, A. C., Lechner, A. M., Chitov, A., Horstmann, A., Hinsley, A., Tritto, A., & Douglas, W.Y. (2020). Horizon scan of the Belt and Road Initiative. Trends in Ecology & Evolution, 35(7), 583-593.",
-    "Kunavut, K., Okuda, A. & Lee, D. (2018). Belt and road initiative (BRI): Enhancing ICT connectivity in China-Central Asia corridor. Journal of Infrastructure, Policy and Development, 2(1), 116-141.",
-    "Li, P., Qian, H., Howard, W. F., & Wu, J. (2015). Building a new and sustainable “Silk Road economic belt”. Environmental Earth Sciences, 74(10), 7267-7270.",
-    "Liu, W. (2015). Scientific understanding of the Belt and Road Initiative of China and related research themes. Progress in Geography, 34(5), 538-544.",
-    "Masood, E. (2019). All roads lead to China. Nature, 569(2).",
-    "Montobbio, F., & Sterzi, V. (2013). The globalization of technology in emerging markets: a gravity model on the determinants of international patent collaborations. World development, 44, 281-299.",
-    "Nie, M. (2019). Asian Space Cooperation and Asia-Pacific Space Cooperation Organization: An appraisal of critical legal challenges in the Belt and Road Space Initiative context, 47. Space Policy, 47, 224-231.",
-    "Pavlenko, A. (2008). Russian in post-Soviet countries. Russian linguistics, 32(1), 59-80.",
-    "Reillon, V. (2015). Horizon 2020 budget and implementation. A guide to the structure of the programme. Brussels: European Parliamentary Research Service.",
-    "Wagner, C. S., & Leydesdorff, L. (2005). Network structure, self-organization, and the growth of international collaboration in science. Research policy, 34(10), 1608-1618.",
-    "Wang, Y. C., Chen, C.X., & Guo, X.F. (2018). A study on the cooperation game between china and southeast asian nations under the “The Belt and Road”. 2018 Chinese Control And Decision Conference (CCDC). IEEE, 3155-3159.",
-    "World Bank. (2021). Scientific and technical journal articles. Retrieved from https://data.worldbank.org/indicator/IP.JRN.ARTC.SC.",
-    "Yan, Y. (2021). Capacity building in regional space cooperation: Asia-pacific space cooperation organization. Advances in Space Research, 67(1), 597-616.",
-    "Yang, D., Cai, J., Hull, V., Wang, K., Tsang, Y. & Liu, J. (2016). New road for telecoupling global prosperity and ecological sustainability. Ecosystem Health and Sustainability, 2(10), e01242."
+    {
+      "id": "ref-1",
+      "text": "ANSO. (2021a). ANSO Programmes. Retrieved from http://www.anso.org.cn/programmes/"
+    },
+    {
+      "id": "ref-2",
+      "text": "ANSO. (2021b). ANSO Collaborative Research. Retrieved from http://www.anso.org.cn/programmes/flagshipProject/research/"
+    },
+    {
+      "id": "ref-3",
+      "text": "Ascensão, F., Fahrig, L., Clevenger, A. P., Corlett, R. T., Jaeger, J. A., Laurance, W. F., & Pereira, H. M. (2018). Environmental challenges for the Belt and Road Initiative. Nature Sustainability, 1(15), 206-209."
+    },
+    {
+      "id": "ref-4",
+      "text": "Barakos, G., & Mischo, H. (2018). The potentials of scientific and industrial collaborations in the field of REE through China’s Belt and Road Initiative. International Journal of Georesources and Environment, 4(3), 86-91."
+    },
+    {
+      "id": "ref-5",
+      "text": "Binlei, G. (2020). Pathways for expediting joint agricultural development of China and BRI countries. China Economist, 15(5), 15-29."
+    },
+    {
+      "id": "ref-6",
+      "text": "Chin, H., & He, W. (2016). The Belt and Road Initiative: 65 countries and beyond. Hong Kong: Fung Business Intelligence Center."
+    },
+    {
+      "id": "ref-7",
+      "text": "Ge, Y., Dollar, D., & Yu, X. (2020). Institutions and participation in global value chains: Evidence from Belt and Road Initiative. China Economic Review, 61."
+    },
+    {
+      "id": "ref-8",
+      "text": "Guerrero Bote, V. P., Olmeda‐Gómez, C., & Moya‐Anegón, F. (2013). Quantifying the benefits of international scientific collaboration. Journal of the American Society for Information Science and Technology, 64(2), 392-404."
+    },
+    {
+      "id": "ref-9",
+      "text": "Gui, Q., Liu, C., & Du, D. (2019). The structure and dynamic of scientific collaboration network among countries along the Belt and Road. Sustainability, 11(19), 5187."
+    },
+    {
+      "id": "ref-10",
+      "text": "Guo, H., Liu, J., Qiu, Y., Menenti, M., Chen, F., Uhlir, P.F., Zhang, L., et al. (2018). The Digital Belt and Road program in support of regional sustainability. International Journal of Digital Earth, 11(7), 657-669."
+    },
+    {
+      "id": "ref-11",
+      "text": "Guo, Huadong, Liu, J., Qiu, Y., Menenti, M., Chen, F., Zhang, L., Genderen John van, Ishwaran, N., et al. (2017). DBAR: International Science Program for Sustainable Development of the Belt and Road Region Using Big Earth Data. (Bulletin of Chinese Academy of Sciences)."
+    },
+    {
+      "id": "ref-12",
+      "text": "Hughes, A. C., Lechner, A. M., Chitov, A., Horstmann, A., Hinsley, A., Tritto, A., & Douglas, W.Y. (2020). Horizon scan of the Belt and Road Initiative. Trends in Ecology & Evolution, 35(7), 583-593."
+    },
+    {
+      "id": "ref-13",
+      "text": "Kunavut, K., Okuda, A. & Lee, D. (2018). Belt and road initiative (BRI): Enhancing ICT connectivity in China-Central Asia corridor. Journal of Infrastructure, Policy and Development, 2(1), 116-141."
+    },
+    {
+      "id": "ref-14",
+      "text": "Li, P., Qian, H., Howard, W. F., & Wu, J. (2015). Building a new and sustainable “Silk Road economic belt”. Environmental Earth Sciences, 74(10), 7267-7270."
+    },
+    {
+      "id": "ref-15",
+      "text": "Liu, W. (2015). Scientific understanding of the Belt and Road Initiative of China and related research themes. Progress in Geography, 34(5), 538-544."
+    },
+    {
+      "id": "ref-16",
+      "text": "Masood, E. (2019). All roads lead to China. Nature, 569(2)."
+    },
+    {
+      "id": "ref-17",
+      "text": "Montobbio, F., & Sterzi, V. (2013). The globalization of technology in emerging markets: a gravity model on the determinants of international patent collaborations. World development, 44, 281-299."
+    },
+    {
+      "id": "ref-18",
+      "text": "Nie, M. (2019). Asian Space Cooperation and Asia-Pacific Space Cooperation Organization: An appraisal of critical legal challenges in the Belt and Road Space Initiative context, 47. Space Policy, 47, 224-231."
+    },
+    {
+      "id": "ref-19",
+      "text": "Pavlenko, A. (2008). Russian in post-Soviet countries. Russian linguistics, 32(1), 59-80."
+    },
+    {
+      "id": "ref-20",
+      "text": "Reillon, V. (2015). Horizon 2020 budget and implementation. A guide to the structure of the programme. Brussels: European Parliamentary Research Service."
+    },
+    {
+      "id": "ref-21",
+      "text": "Wagner, C. S., & Leydesdorff, L. (2005). Network structure, self-organization, and the growth of international collaboration in science. Research policy, 34(10), 1608-1618."
+    },
+    {
+      "id": "ref-22",
+      "text": "Wang, Y. C., Chen, C.X., & Guo, X.F. (2018). A study on the cooperation game between china and southeast asian nations under the “The Belt and Road”. 2018 Chinese Control And Decision Conference (CCDC). IEEE, 3155-3159."
+    },
+    {
+      "id": "ref-23",
+      "text": "World Bank. (2021). Scientific and technical journal articles. Retrieved from https://data.worldbank.org/indicator/IP.JRN.ARTC.SC."
+    },
+    {
+      "id": "ref-24",
+      "text": "Yan, Y. (2021). Capacity building in regional space cooperation: Asia-pacific space cooperation organization. Advances in Space Research, 67(1), 597-616."
+    },
+    {
+      "id": "ref-25",
+      "text": "Yang, D., Cai, J., Hull, V., Wang, K., Tsang, Y. & Liu, J. (2016). New road for telecoupling global prosperity and ecological sustainability. Ecosystem Health and Sustainability, 2(10), e01242."
+    }
   ],
   "figures": [
     {
