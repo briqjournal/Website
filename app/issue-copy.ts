@@ -25,7 +25,7 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "The Solution Lies in the Global South", subtitle: "The Climate-Water-Food Crisis" },
   },
   "6-4": {
-    tr: { title: "Birlikte Kalkınmak İçin", subtitle: "Ortak Güvenlik" },
+    tr: { title: "Birlikte Kalkınmak İçin Ortak Güvenlik", subtitle: "" },
     en: { title: "Common Security for Shared Development", subtitle: "" },
   },
   "6-3": {
