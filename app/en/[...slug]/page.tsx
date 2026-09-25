@@ -649,6 +649,7 @@ function EnglishIssue({ volume, issueNumber, current = false }: { volume: number
       record={record}
       locale="en"
       current={current}
+      subtitleFirst={isVolumeSevenIssueFour}
       title={heading.title}
       subtitle={heading.subtitle}
       description={isVolumeSevenIssueFour
