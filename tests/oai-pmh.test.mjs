@@ -151,6 +151,6 @@ test("accepts OAI-PMH POST requests without changing ordinary site routing", asy
 
   const homeResponse = await fetchFromBuiltWorker("/", { headers: { accept: "text/html" } });
   assert.equal(homeResponse.status, 307);
-  assert.equal(new URL(homeResponse.headers.get("location")).pathname, "/en");
+  assert.equal(new URL(homeResponse.headers.get("location")).pathname, "/en/");
   assert.doesNotMatch(await homeResponse.text(), /<OAI-PMH\b/);
 });

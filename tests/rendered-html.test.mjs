@@ -62,9 +62,9 @@ test("routes the locale gateway by Cloudflare country and preserves legacy Turki
   ]);
 
   assert.equal(turkey.status, 307);
-  assert.equal(new URL(turkey.headers.get("location")).pathname, "/tr");
+  assert.equal(new URL(turkey.headers.get("location")).pathname, "/tr/");
   assert.equal(abroad.status, 307);
-  assert.equal(new URL(abroad.headers.get("location")).pathname, "/en");
+  assert.equal(new URL(abroad.headers.get("location")).pathname, "/en/");
   assert.equal(legacy.status, 308);
   const legacyLocation = new URL(legacy.headers.get("location"));
   assert.equal(legacyLocation.pathname, "/tr/arsiv");
