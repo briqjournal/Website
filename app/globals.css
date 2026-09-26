@@ -3418,6 +3418,7 @@ footer h2 {
 
 .article-author-identifiers {
   display: flex;
+  flex: 0 0 auto;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 7px;
@@ -3436,6 +3437,7 @@ footer h2 {
   color: var(--rust-dark);
   background: rgba(255, 255, 255, .42);
   font-size: 8px;
+  white-space: nowrap;
 }
 
 .article-author-identifiers svg {
