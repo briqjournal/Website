@@ -21,11 +21,9 @@ test("Volume 7 Issue 1 keeps the crisis line as subtitle and solution line as ma
   );
 
   assert.match(platform, /subtitleScale75\?: boolean/);
-  assert.match(trPage, /const isVolumeSevenIssueOne = volume === 7 && issue === 1;/);
-  assert.match(enPage, /const isVolumeSevenIssueOne = volume === 7 && issueNumber === 1;/);
-  assert.match(trPage, /subtitleFirst=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree \|\| isVolumeSixIssueTwo \|\| isVolumeSixIssueOne\}/);
-  assert.match(enPage, /subtitleFirst=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree \|\| isVolumeSixIssueTwo \|\| isVolumeSixIssueOne\}/);
-  assert.match(trPage, /subtitleScale75=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree\}/);
-  assert.match(enPage, /subtitleScale75=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree\}/);
+  assert.match(trPage, /subtitleFirst=\{headingLayout\.subtitleFirst\}/);
+  assert.match(enPage, /subtitleFirst=\{headingLayout\.subtitleFirst\}/);
+  assert.match(trPage, /subtitleScale75=\{headingLayout\.subtitleScale75\}/);
+  assert.match(enPage, /subtitleScale75=\{headingLayout\.subtitleScale75\}/);
   assert.match(css, /h1\.issue-title-subtitle-first\.issue-title-subtitle-75 em \{[\s\S]*font-size: \.75em;/);
 });
