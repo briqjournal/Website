@@ -183,7 +183,7 @@ export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride
         <div className="site-shell header-main">
           <a href={isEnglish ? "/en" : "/tr"} className={`brand brand-${locale}`} aria-label={isEnglish ? "BRIQ home" : "BRIQ ana sayfa"}>
             <span className="brand-mark" aria-hidden="true">
-              <img src={isEnglish ? "/assets/briq-logo.png" : "/assets/briq-logo-tr.png"} alt="" loading="eager" decoding="async" fetchPriority="high" />
+              <img src={isEnglish ? "/assets/briq-logo.png" : "/assets/briq-logo-tr.png"} alt="" width={isEnglish ? 912 : 899} height={isEnglish ? 669 : 668} loading="eager" decoding="async" fetchPriority="high" />
             </span>
           </a>
           <button
@@ -237,7 +237,7 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
     <footer>
       <div className="site-shell footer-grid">
         <div className="footer-brand">
-          <img src={isEnglish ? "/assets/briq-logo.png" : "/assets/briq-logo-tr.png"} alt="BRIQ" loading="lazy" decoding="async" />
+          <img src={isEnglish ? "/assets/briq-logo.png" : "/assets/briq-logo-tr.png"} alt="BRIQ" width={isEnglish ? 912 : 899} height={isEnglish ? 669 : 668} loading="lazy" decoding="async" />
           <p>
             {isEnglish ? "BRIQ is a quarterly journal of international politics, economics, and culture published in Turkish and English." : "BRIQ (Belt & Road Initiative Quarterly) Türkçe-İngilizce, üç aylık uluslararası siyaset, ekonomi ve kültür dergisidir."}
           </p>
@@ -298,7 +298,7 @@ export function IndexTicker({ locale = "tr" }: { locale?: Locale }) {
         <div className="ticker-track">
           {repeated.map(([name, image, href], index) => (
             <a className="ticker-item" href={href} key={`${name}-${index}`} aria-label={`${name} kaydını aç`}>
-              <img src={image} alt={name} loading="lazy" decoding="async" />
+              <img src={image} alt={name} width={420} height={144} loading="lazy" decoding="async" />
             </a>
           ))}
         </div>

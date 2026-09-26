@@ -67,7 +67,7 @@ export default function Home() {
                 key={call.title}
               >
                 <span className="home-call-image">
-                  {call.image && <img src={call.image} alt="" aria-hidden="true" loading="lazy" decoding="async" />}
+                  {call.image && <img src={call.image} alt="" width={400} height={230} aria-hidden="true" loading="lazy" decoding="async" />}
                 </span>
                 <span className="home-call-deadline">
                   <small>{call.deadlineLabel}</small>
