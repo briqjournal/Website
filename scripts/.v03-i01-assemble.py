@@ -375,7 +375,7 @@ def extract_poem(lang):
     lines=[]
     for line in make_lines(lang,75,75):
         if line["top"]<300 or line["top"]>900: continue
-        if any("MinionPro" in n["family"] and n["size"]==15 for n in line["nodes"]):
+        if any("MinionPro" in n["family"] and n["size"]==(15 if lang=="en" else 16) for n in line["nodes"]):
             lines.append(line)
     if len(lines)<20: raise RuntimeError(f"poem {lang}: too few lines {len(lines)}")
     text=""
