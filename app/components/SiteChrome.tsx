@@ -243,21 +243,21 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
           </p>
         </div>
         <div>
-          <h3>{isEnglish ? "Journal" : "Dergi"}</h3>
+          <h2>{isEnglish ? "Journal" : "Dergi"}</h2>
           <a href={isEnglish ? "/en/journal/about-briq" : "/tr/dergi/briq-hakkinda"}>{isEnglish ? "About BRIQ" : "BRIQ Hakkında"}</a>
           <a href={isEnglish ? "/en/journal/publication-board" : "/tr/dergi/yayin-kurulu"}>{isEnglish ? "Editorial Info" : "Yayın Kurulu"}</a>
           <a href={isEnglish ? "/en/journal/indexes" : "/tr/dergi/endeksler"}>{isEnglish ? "Indexes" : "Endeksler"}</a>
           <a href={isEnglish ? "/en/annual-reports" : "/tr/yillik-raporlar"}>{isEnglish ? "Annual reports" : "Yıllık raporlar"}</a>
         </div>
         <div>
-          <h3>{isEnglish ? "Publishing" : "Yayınlar"}</h3>
+          <h2>{isEnglish ? "Publishing" : "Yayınlar"}</h2>
           <a href={isEnglish ? "/en/archive" : "/tr/arsiv"}>{isEnglish ? "All issues" : "Tüm sayılar"}</a>
           <a href={isEnglish ? "/en/articles" : "/tr/makaleler"}>{isEnglish ? "Article Search" : "Makale Arama"}</a>
           <a href={isEnglish ? "/en/for-authors/guidelines" : "/tr/yazarlar/yazim-kurallari"}>{isEnglish ? "For authors" : "Yazarlar için"}</a>
           <a href={isEnglish ? "/en/calls-for-papers" : "/tr/makale-cagrilari"}>{isEnglish ? "Calls for papers" : "Makale çağrıları"}</a>
         </div>
         <div>
-          <h3>{isEnglish ? "Contact" : "İletişim"}</h3>
+          <h2>{isEnglish ? "Contact" : "İletişim"}</h2>
           <a href="mailto:briq@briqjournal.com">briq@briqjournal.com</a>
           <p>
             Ünalan Mahallesi, Libadiye Caddesi
