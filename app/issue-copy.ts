@@ -42,20 +42,20 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "Scientific and Technological Cooperation Along the Belt & Road", subtitle: "The Development Pathway for the Developing World" },
   },
   "5-4": {
-    tr: { title: "Kuşak-Yol Ve", subtitle: "Türk Devletleri Teşkilatı" },
-    en: { title: "Belt & Road and", subtitle: "Organization of Turkic States" },
+    tr: { title: "Kuşak-Yol Ve Türk Devletleri Teşkilatı", subtitle: "" },
+    en: { title: "Belt & Road and Organization of Turkic States", subtitle: "" },
   },
   "5-3": {
-    tr: { title: "Kuşak-Yol Ve İslam Dünyası", subtitle: "Medeniyetlerin Kaynaşma Yolu" },
-    en: { title: "BRI and the Islamic World", subtitle: "Bridging Civilizations" },
+    tr: { title: "Medeniyetlerin Kaynaşma Yolu", subtitle: "Kuşak-Yol Ve İslam Dünyası" },
+    en: { title: "Bridging Civilizations", subtitle: "BRI and the Islamic World" },
   },
   "5-2": {
     tr: { title: "Çok Kutuplu Dünyada", subtitle: "Yükselen Afrika" },
     en: { title: "Africa Rising", subtitle: "in a Multipolar World" },
   },
   "5-1": {
-    tr: { title: "Gelişen Dünyada Yükselen Finansal İşbirliği", subtitle: "Hegemonyacılığa Karşı Dolarsızlaşma" },
-    en: { title: "Emerging Financial Cooperation in the Developing World", subtitle: "De-Dollarization Against Hegemonism" },
+    tr: { title: "Hegemonyacılığa Karşı Dolarsızlaşma", subtitle: "Gelişen Dünyada Yükselen Finansal İşbirliği" },
+    en: { title: "De-Dollarization Against Hegemonism", subtitle: "Emerging Financial Cooperation in the Developing World" },
   },
   "4-4": {
     tr: { title: "Gelişen Dünya İçin", subtitle: "Kemalist Devrim’in Yüz Yıllık Mirası" },
@@ -123,8 +123,32 @@ export const issueCopy: Record<string, IssueCopy> = {
   },
 };
 
+const subtitleFirstIssues = new Set([
+  "7-4",
+  "7-1",
+  "6-3",
+  "6-2",
+  "6-1",
+  "5-3",
+  "5-1",
+]);
+
+const subtitleScale75Issues = new Set([
+  "7-4",
+  "7-1",
+  "6-3",
+]);
+
 export function getIssueCopy(volume: number, issue: number, locale: IssueLocale): IssueHeading {
   const copy = issueCopy[`${volume}-${issue}`]?.[locale];
   if (!copy) throw new Error(`Missing ${locale} issue copy for volume ${volume}, issue ${issue}`);
   return copy;
+}
+
+export function getIssueHeadingLayout(volume: number, issue: number) {
+  const key = `${volume}-${issue}`;
+  return {
+    subtitleFirst: subtitleFirstIssues.has(key),
+    subtitleScale75: subtitleScale75Issues.has(key),
+  };
 }

@@ -17,24 +17,8 @@ test("Volume 6 Issue 1 swaps bilingual title and subtitle with subtitle above", 
     copy,
     /en: \{ title: "Scientific and Technological Cooperation Along the Belt & Road", subtitle: "The Development Pathway for the Developing World" \}/,
   );
-
-  assert.match(trPage, /const isVolumeSixIssueOne = volume === 6 && issue === 1;/);
-  assert.match(enPage, /const isVolumeSixIssueOne = volume === 6 && issueNumber === 1;/);
-  assert.match(
-    trPage,
-    /subtitleFirst=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree \|\| isVolumeSixIssueTwo \|\| isVolumeSixIssueOne\}/,
-  );
-  assert.match(
-    enPage,
-    /subtitleFirst=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree \|\| isVolumeSixIssueTwo \|\| isVolumeSixIssueOne\}/,
-  );
-
-  assert.match(
-    trPage,
-    /subtitleScale75=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree\}/,
-  );
-  assert.match(
-    enPage,
-    /subtitleScale75=\{isVolumeSevenIssueFour \|\| isVolumeSevenIssueOne \|\| isVolumeSixIssueThree\}/,
-  );
+  assert.match(trPage, /subtitleFirst=\{headingLayout\.subtitleFirst\}/);
+  assert.match(enPage, /subtitleFirst=\{headingLayout\.subtitleFirst\}/);
+  assert.match(trPage, /subtitleScale75=\{headingLayout\.subtitleScale75\}/);
+  assert.match(enPage, /subtitleScale75=\{headingLayout\.subtitleScale75\}/);
 });

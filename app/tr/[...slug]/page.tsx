@@ -25,7 +25,7 @@ import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../auth
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
 import { issueAccent } from "../../issue-themes";
-import { getIssueCopy } from "../../issue-copy";
+import { getIssueCopy, getIssueHeadingLayout } from "../../issue-copy";
 import { archiveEditorialHref, issueSupplementaryContents } from "../../issue-supplementary";
 import {
   archiveArticles,
@@ -1046,17 +1046,14 @@ function ArchiveIssue({ volume, issue, current = false }: { volume: number; issu
   const supplementary = issueSupplementaryContents(volume, issue);
   const contributionCount = issueContributionCount(record, supplementary);
   const isVolumeSevenIssueFour = volume === 7 && issue === 4;
-  const isVolumeSevenIssueOne = volume === 7 && issue === 1;
-  const isVolumeSixIssueThree = volume === 6 && issue === 3;
-  const isVolumeSixIssueTwo = volume === 6 && issue === 2;
-  const isVolumeSixIssueOne = volume === 6 && issue === 1;
+  const headingLayout = getIssueHeadingLayout(volume, issue);
   return (
     <IssuePlatform
       record={record}
       locale="tr"
       current={current}
-      subtitleFirst={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree || isVolumeSixIssueTwo || isVolumeSixIssueOne}
-      subtitleScale75={isVolumeSevenIssueFour || isVolumeSevenIssueOne || isVolumeSixIssueThree}
+      subtitleFirst={headingLayout.subtitleFirst}
+      subtitleScale75={headingLayout.subtitleScale75}
       title={heading.title}
       subtitle={heading.subtitle}
       trailingSubtitle={heading.trailingSubtitle}
