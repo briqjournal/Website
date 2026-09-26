@@ -83,3 +83,5 @@
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
 **Next unit:** `v04-i01`.
+
+- Completed unit: `v03-i02`. All 11 records / 22 EN-TR canonical locale records passed the whole-issue official-PDF fidelity audit in temporary PR #203. The editorial and three visual/non-standard records were handled separately, locale differences were preserved, and no Turkish fallback was used for English content. The seven verified legacy English archives were retired after the audit.
