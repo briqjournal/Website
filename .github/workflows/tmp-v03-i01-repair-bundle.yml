@@ -1,0 +1,44 @@
+name: Temporary v03-i01 repair bundle
+
+on:
+  push:
+    branches:
+      - fix/v03-i01-fulltext-fidelity-repair
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bundle v03-i01 repair inputs
+        run: |
+          python - <<'PY'
+          import json, pathlib, shutil
+          root = pathlib.Path(".")
+          issue = json.loads((root/"content/issues/v03-i01.json").read_text())
+          out = root/".repair-bundle"
+          out.mkdir(exist_ok=True)
+          shutil.copy2(root/"content/issues/v03-i01.json", out/"v03-i01.json")
+          for slug in issue["articles"]:
+              src = root/"content/articles"/slug
+              dst = out/"content/articles"/slug
+              dst.mkdir(parents=True, exist_ok=True)
+              for name in ("metadata.json","fulltext/en.json","fulltext/tr.json"):
+                  p = src/name
+                  if p.exists():
+                      q = dst/name
+                      q.parent.mkdir(parents=True, exist_ok=True)
+                      shutil.copy2(p,q)
+          for p in ("scripts/audit-fulltext-fidelity.py","tests/rendered-html.test.mjs","WORKLOG.md","content/catalog.json"):
+              src = root/p
+              if src.exists():
+                  dst = out/p
+                  dst.parent.mkdir(parents=True, exist_ok=True)
+                  shutil.copy2(src,dst)
+          shutil.make_archive("v03-i01-repair-bundle","zip",out)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v03-i01-repair-bundle
+          path: v03-i01-repair-bundle.zip
+          retention-days: 3
