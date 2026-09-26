@@ -27,26 +27,26 @@ jobs:
       - name: Download authoritative issue PDFs
         run: |
           set -euxo pipefail
-          mkdir -p tmp/v03-i01
+          mkdir -p .migration/v03-i01-evidence
           curl -fL --retry 3 --retry-delay 2 \
             'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.3%20Issue1_Site.pdf' \
             -o /tmp/v03-i01-en.pdf
           curl -fL --retry 3 --retry-delay 2 \
             'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%203.%20Cilt%201.%20Say%C4%B1_Site.pdf' \
             -o /tmp/v03-i01-tr.pdf
-          sha256sum /tmp/v03-i01-en.pdf /tmp/v03-i01-tr.pdf > tmp/v03-i01/pdf-sha256.txt
-          pdfinfo /tmp/v03-i01-en.pdf > tmp/v03-i01/en-pdfinfo.txt
-          pdfinfo /tmp/v03-i01-tr.pdf > tmp/v03-i01/tr-pdfinfo.txt
+          sha256sum /tmp/v03-i01-en.pdf /tmp/v03-i01-tr.pdf > .migration/v03-i01-evidence/pdf-sha256.txt
+          pdfinfo /tmp/v03-i01-en.pdf > .migration/v03-i01-evidence/en-pdfinfo.txt
+          pdfinfo /tmp/v03-i01-tr.pdf > .migration/v03-i01-evidence/tr-pdfinfo.txt
 
       - name: Extract text, structural XML, and image inventory
         run: |
           set -euxo pipefail
-          pdftotext -layout -enc UTF-8 /tmp/v03-i01-en.pdf tmp/v03-i01/en.txt
-          pdftotext -layout -enc UTF-8 /tmp/v03-i01-tr.pdf tmp/v03-i01/tr.txt
-          pdftohtml -xml -hidden -i -stdout /tmp/v03-i01-en.pdf > tmp/v03-i01/en.xml
-          pdftohtml -xml -hidden -i -stdout /tmp/v03-i01-tr.pdf > tmp/v03-i01/tr.xml
-          pdfimages -list /tmp/v03-i01-en.pdf > tmp/v03-i01/en-images.txt
-          pdfimages -list /tmp/v03-i01-tr.pdf > tmp/v03-i01/tr-images.txt
+          pdftotext -layout -enc UTF-8 /tmp/v03-i01-en.pdf .migration/v03-i01-evidence/en.txt\n          pdftotext -raw -enc UTF-8 /tmp/v03-i01-en.pdf .migration/v03-i01-evidence/en.raw.txt
+          pdftotext -layout -enc UTF-8 /tmp/v03-i01-tr.pdf .migration/v03-i01-evidence/tr.txt\n          pdftotext -raw -enc UTF-8 /tmp/v03-i01-tr.pdf .migration/v03-i01-evidence/tr.raw.txt
+          pdftohtml -xml -hidden -i -stdout /tmp/v03-i01-en.pdf > .migration/v03-i01-evidence/en.xml
+          pdftohtml -xml -hidden -i -stdout /tmp/v03-i01-tr.pdf > .migration/v03-i01-evidence/tr.xml
+          pdfimages -list /tmp/v03-i01-en.pdf > .migration/v03-i01-evidence/en-images.txt
+          pdfimages -list /tmp/v03-i01-tr.pdf > .migration/v03-i01-evidence/tr-images.txt
 
       - name: Commit extraction evidence
         run: |
