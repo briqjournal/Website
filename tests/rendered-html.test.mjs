@@ -1659,3 +1659,22 @@ test("renders linked season-coloured issue metadata and an always-visible DOI fi
   assert.match(noDoiTrRecord, /<span>DOI<\/span><b><\/b>/);
   assert.match(noDoiEnRecord, /<span>DOI<\/span><b><\/b>/);
 });
+
+
+test("publishes every Volume 3 Issue 2 canonical record as localized bilingual HTML", async () => {
+  const issueArticles = archive.articles.filter((article) => article.volume === 3 && article.issue === 2);
+  assert.equal(issueArticles.length, 11);
+  for (const article of issueArticles) {
+    const slug = article.slug;
+    const [trResponse, enResponse] = await Promise.all([renderPath(`/tr/makaleler/${slug}`), renderPath(`/en/articles/${englishArticleSlug(slug)}`)]);
+    assert.equal(trResponse.status, 200, `TR v03-i02 ${slug}`);
+    assert.equal(enResponse.status, 200, `EN v03-i02 ${slug}`);
+    const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
+    assert.match(trHtml, /<section class="article-fulltext" id="tam-metin"><h2>Tam Metin<\/h2>/, `TR full text ${slug}`);
+    assert.match(enHtml, /<section class="article-fulltext" id="full-text-body"><h2>Full Text<\/h2>/, `EN full text ${slug}`);
+    assert.match(trHtml, /class="article-body-section"/, `TR body ${slug}`);
+    assert.match(enHtml, /class="article-body-section"/, `EN body ${slug}`);
+    assert.doesNotMatch(trHtml, /legacy-fulltext-note/, `TR legacy fallback ${slug}`);
+    assert.doesNotMatch(enHtml, /legacy-fulltext-note/, `EN legacy fallback ${slug}`);
+  }
+});
