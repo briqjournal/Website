@@ -1,0 +1,216 @@
+{
+  "sections": [
+    {
+      "id": "giris",
+      "title": "Giriş",
+      "paragraphs": [
+        "SÜREKLİ BİÇİMDE ARTAN İKLİMSEL ISINMA sorunu yanında uluslararası çatışmaların ana nedenlerinden olan tükenir türdeki fosil yakıt rezervlerine yönelik iştah ve doğalgaz furyasına karşın yöneticiler ve enerji stratejistleri isteseler de istemeseler de, düşük enerji yoğunluk ve kaliteleri (ekserji) nedeni ile daha önceleri yüzüne bile bakmadıkları ve göz ardı etmeye alıştıkları ama aslında çok bol ve hasadı çok kolay olan yenilenebilir ve atık enerji kaynaklarını geleceğimizin en önemli çıkış yolu olarak görmeye başladılar. Ekserji herhangi bir enerji kaynağının yararlı iş üretme potansiyelidir ve günümüzde enerjinin niteliğini betimleyen ekserji, enerjinin niceliğinden çok daha önemli konuma gelmiştir. Bu bağlamda, hidrojenin ekserjisi doğalgazdan bile fazladır. Bununla birlikte, endüstri, ulaşım ve tarım sektörleri, alternatif ve düşük nitelikli kaynaklarla çelişkili biçimde fosil yakıtlara dayanan yüksek nitelikli enerji kaynaklarına ihtiyaç duyar. İşte hidrojen burada da önem kazanmaktadır ve bu çelişkiyi çözebilecek yeni teknolojilerden en önemlisi yenilenebilir enerjiye dayalı hidrojen ekonomisidir.",
+        "Sudan veya denizden hidrojen üretmek için güneş enerjisi gibi daha düşük nitelikli yenilenebilir enerji kaynakları kullanarak, doğalgazdan daha kaliteli olan sıfır karbon salımlı bir yakıt sağlanmış olur. Karadeniz ülkeleri bu açıdan çok özel bir şansa sahiptirler, çünkü, düşük tuzluluk oranına sahip deniz suyunun yanı sıra, rüzgâr, dalga ve güneş gibi yenilenebilir enerji kaynaklarının birlikteliği ve bolluğuna ek olarak zaten denizde eriyik durumda çok miktarda -ve artık tehlikeli boyutlara ulaşmış bollukta- H2S (hidrojen sülfür) gazı mevcuttur. Tüm bu zenginliklerin yan yana geldiği başka bir deniz veya karasal ortam dünyada mevcut değildir. Karadeniz’deki bu özel avantaj rahatlıkla denizdeki yenilenebilir enerji kaynakları da kullanılarak hidrojen, oksijen ve kükürt gazlarına dönüştürülebilir. Karada, denizde ve hatta havada kullanılabilir (sanayi atıkları ve hidrojenden jet yakıtı üretimi gibi). Türkiye’nin karasularındaki hidrojen potansiyeli şu anda tespit edilen doğalgaz rezervinin en az kırk katıdır. Daha da önemlisi, Karadeniz’de endişe verici derecede yüksek olan yanıcı, patlayıcı ve zehirli H2S içeriğinin zaten bertaraf edilmesi gerekmektedir. Şu anda balıkçılıkta ve diğer çevre zararlarında bunu görmekteyiz. Dolayısıyla kazan-kazan-kazan söz konusudur. Hidrojen üretimi hem ekonomik katkı hem Karadeniz ülkeleri arasında işbirliğini ve dostluğunu pekiştirici, aynı zamanda sıfır salımlı yüksek kaliteli enerji kaynağı olan hidrojen ve ticari değeri olan sülfür ve oksijen eldesi yönleri ile Karadeniz bulunmaz bir kaynaktır.",
+        "Bu yazıda deniz üzerinde dalga, güneş, rüzgâr enerjili ve bizatihi kendisi hidrojenle çalışır bir gemide hidrojen gazı üretimi ve karaya nakli anlatılmaktadır. Sinop kenti örneklemi üzerinden, bölgedeki kömür ve jeotermal enerji kaynaklarını da kullanan hidrojen kenti projesinin ana hatlarının yanı sıra ekonomik, çevresel ve politik avantajları ele alınmaktadır."
+      ]
+    },
+    {
+      "id": "karadeniz-potansiyel-enerji-cevre-ve-baris-odagi",
+      "title": "Karadeniz: Potansiyel Enerji, Çevre ve Barış Odağı",
+      "paragraphs": [
+        "Karadeniz, 432,000 km2 yüzey alanı, maksimum 2,200 m su derinliği ve yaklaşık 534,000 km3 su hacmi ile en büyük iç denizlerden birisidir. Karadeniz'in Kirliliğe Karşı Korunması Komisyonu, altıdan fazla su yakalama oranıyla[^1]  dünya okyanuslarının tümüne göre en yararlı kapalı deniz olarak tanımlayarak, Karadeniz'i oldukça iyi bir şekilde dramatize etmektedir. Bu kadar yüksek bir yakalama oranı, onu kıyıdaş ve kıyıdaş olmayan ülkeler için çok kritik hale getiriyor. Olağanüstü yüksek H2S yoğunluğuna sahip karakteristik jeomorfolojisi, deniz yaşamını desteklemek için sadece yaklaşık 150 metrelik çok ince bir üst katmanın kalması ile sonuçlanmıştır (Ertan, 2020; Kılkış, 2020). Bu sorunlar diğer yanlışlarla, örneğin İstanbul kanalizasyonunu bir kısmının İstanbul Boğazı’nın alt akıntısı ile Karadeniz’e deşarjı ile daha da önem kazanmaktadır. Doğalgazın atmosfere açık ortamda yanması sırasında her bir kW-h enerjiye karşılık 0.2 kg CO2 salınır. Bu oran hidrojende yenilenebilir enerji kaynaklarında elde edilme koşulu ile sıfırdır."
+      ]
+    },
+    {
+      "id": "karadeniz-h2s-rezervi-ve-ozel-avantajlar",
+      "title": "Karadeniz, H2S Rezervi ve Özel Avantajlar",
+      "paragraphs": [
+        "Karadeniz bölgesindeki avantajlar dört temel ayakta incelenebilir. Bunlar sırası ile;",
+        "1- Dalga ve rüzgâr enerjisinin sürekliliği ve bolluğu,",
+        "2- H2S kaynaklarından yerinde (deniz üzerinde) H2, O2 ve S gibi sanayide, tıpta kullanım talebi çok olan, enerji bilançosuna, ekonomiye ve çevreye yararlı gazların yenilenebilir enerji kaynakları ile elde edilme potansiyeli. H2S gazı deniz suyunda mevcut olup doğalgazda olduğu gibi arama faaliyetlerine, sondaja gerek yoktur. Hidrojenin şu andaki yöntemlerle eldesine oranla Karadeniz’deki H2S gazından elde etmek üç kat daha ucuz olabilecektir. Bu nedenle hepsi kullanılmasa bile ihracatında büyük avantaj sağlanacaktır.",
+        "3- Bizatihi deniz suyundan elektroliz yolu ile hidrojen eldesinde kolaylık ve verim sağlayan Karadeniz’in düşük tuzluluk oranı önemli bir ek avantajdır.",
+        "4- Dünyanın ve özellikle Akdeniz gibi diğer bölgelere oranla dengeli, sürdürülebilir ve barışçıl bir jeopolitik ortamın mevcudiyeti (Son zamanlarda olduğu gibi NATO ve ABD karışmadığı sürece).",
+        "Karadeniz’e kıyıdaş altı ülkenin hak ve hukukları, çok iyi tespit edilip kabul edilmiş kesin ve değişmez, üzerinde herkesin anlaştığı kıta sahanlıkları bulunmaktadır. Bu barış ortamı bölgenin siyasal dengesinin devamında çok önemli bir unsurdur. Askeri çatışmalar, başka ülkeler karışmadığı ve İstanbul Boğazı ve Çanakkale Boğazı’ndan geçişleri düzenleyen 1936 Montrö Boğazlar Sözleşmesi’ne dil uzatılmadığı sürece olası görünmemektedir. Bu bağlamda Kanal İstanbul projesi gerçekleşirse Montrö Sözleşmesi’nin yabancı ülkelerce delinebileceği de unutulmamalıdır. Ayrıca, Ortadoğu ülkelerinin tükenmekte olan hidrokarbon dışında başka bir kaynağa sahip olmadıkları, ilginin Karadeniz’e kayacağı açıktır. Hidrokarbon kaynaklarının çok daha fazlasını içeren Karadeniz`in gaz hidratlar da dahil olmak üzere (Ertan, 2020; Haklıdır & Kapkın, 2005)  jeopolitik ve ekonomik kaynak çeşitliliğinin diğer ülkelerin iştahlarını kabartmakta olduğu ve bölge üzerindeki olası sinsi planları da şimdiden göz önünde bulundurulmalıdır. Bu tehlikeleri önlemenin tek yolu kıyıdaş ülkelerle bu zenginlikleri paylaşmakta ve ortak projelerle değerlendirmekte acele edilmesidir."
+      ]
+    },
+    {
+      "id": "h2s-potansiyeli",
+      "title": "H2S Potansiyeli",
+      "paragraphs": [
+        "Karadeniz, dünyanın en büyük H2S doğal rezervidir. Bu rezerv 28 ila 63 milyar ton (41x1012 ile 92x1012 m3) arasındadır. Geri kazanım oranının sadece %50 olduğu varsayıldığında ve Karadeniz’de kıta sahanlığı olan altı ülke olduğu düşünüldüğünde, Türkiye'nin payının yaklaşık 7 ila 15x1012 m3 hidrojen olduğu tahmin edilebilir. Hidrojenin ekserji bazlı ısıl değeri, doğalgazdan yaklaşık üç kat fazladır (Kılkış, 2020). Bu nedenle, bir doğalgaz eşdeğerlik karşılaştırmasında, Türkiye için doğalgaz eşdeğeri net rezerv yaklaşık 21 ila 45x1012 m3 eşdeğer doğalgaz olacaktır. Bu, en kötümser tahminle yeni keşfedilen Tuna1 (Sakarya) doğalgaz rezervinin neredeyse 65 katına karşılık gelmektedir.",
+        "Ayrıca, Karadeniz'de H2S gaz rezervinin yıllık artışı  4-9 milyon ton dolayındadır. Bu artışın bile Türkiye payı Tuna1 doğalgaz rezervinin yaklaşık dokuz katıdır. Diğer bir deyişle, H2S gazı Karadeniz üzerinde mevcut yenilenebilir enerji kaynakları kullanılarak hidrojen üretiminde kullanılmazsa, Türkiye her yıl dokuz doğalgaz rezervine eşdeğer enerji rezervini o yıl değerlendirmemiş olacaktır. Kaldı ki sıfır karbon salımlı hidrojenin, H2S gazından yerinde üretilmesi doğalgaza oranla daha ucuz ve daha çevrecidir. Daha da önemlisi, 505 K (232oC) sıcaklıkta kendiliğinden tutuşabilen, son derecede uçucu ve yanıcı olan H2S gazı Karadeniz stokundan çıkarılmazsa, topluma ve çevreye, deniz yaşamına, ekonomiye, özellikle balıkçılığa ve insanlığa yönelik büyük ve geri dönüşü olmayan tehditler giderek artmaya devam edecektir. Veziroğlu ve Tsitskishvili’nin editörlüğünü yaptığı NATO ASI tarafından yayınlanan bir kitapta yer alan birkaç yazar, Karadeniz’i, deniz suyundaki yüksek H2S içeriği nedeniyle önemli ve potansiyel karbonsuz bir enerji rezervi olarak  tanımlamıştır (Veziroğlu & Tsitskishvili, 2013). Hatta, Prof. Dr. Veziroğlu ve çalışma arkadaşları tarafından H2S gazının hasadının, hizmet dışı bırakılmış bir denizaltı kullanılarak derin deniz platformu oluşturulduğunda değerlendirilebileceği projelendirilmiştir (Petrov vd., 2011). Karadeniz Hidrojen Sülfür Çalıştayı’nda (BSHSW) ise çevre, enerji, ekonomi ve genel fizibilite dahil olmak üzere uyumlu araştırma için ortak bir platformun pilot sistemle kıyıdaş ülkeler tarafından oluşturulması gerektiği sonucuna varılmıştır (Petrov vd., 2011; Yazıcı, 2013)."
+      ]
+    },
+    {
+      "id": "karadenizdeki-h2s-yogunlugunun-potansiyel-tehlikeleri",
+      "title": "Karadeniz’deki H2S Yoğunluğunun Potansiyel Tehlikeleri",
+      "paragraphs": [
+        "Şekil 1’de Karadeniz batimetrisi görülmektedir ve sahanlık derinliği 0 ile 160 metreden ibarettir. Yoğunluk bakımından Karadeniz başka hiçbir denizde ve okyanusta olmayan düzeyde H2S gazı içermektedir ve her yıl daha da artmaktadır."
+      ]
+    },
+    {
+      "id": "mevcut-durum",
+      "title": "Mevcut Durum",
+      "paragraphs": [
+        "Karadeniz'den Marmara Denizi'ne olan suyolu bağlantısı, tüm ekosistemde hayati bir rol oynayan İstanbul Boğazı tarafından sağlanmaktadır. Boğaz'da birbirine karışmayan biri tuzlu (Akdeniz’den Karadeniz’e) dip akıntısı, biri de Karadeniz`den Marmara’ya ve oradan Akdeniz’e uzanan daha az tuzlu iki ters akıntı bulunmaktadır ve dünyanın başka hiçbir yerinde olmayan ve binlerce yıldır süren bir denge oluşmaktadır. Kanal İstanbul açılırsa bu doğal denge de bozulacaktır ve tüm kıyıdaş ülkelerin bu konuyu ciddiyetle ele almaları kaçınılmazdır. Daha soğuk olan üst akış, çoğunlukla Tuna Nehri gibi nehirlerden Marmara'ya, oradan da Ege Denizi'ne ve Akdeniz'e tatlı ve daha az tuzlu su taşır, buna Akdeniz’in akciğerleri de denmektedir (ortalama ‰19). Bu akışın daha sıcak ve  tuzlu olan (‰38) Akdeniz’i biraz olsun soğutması ve tuzluluğu dengelemesi söz konusudur. Bu ters akışların yanı sıra her gün Karadeniz’e dökülen nehirlerle taşınan sular nedeni ile Karadeniz sathı Marmara Denizi’ne oranla ortalama 30 ila 60 cm (mevsime bağlı değişkenlik gösterir) daha yüksektedir. Deniz suyunun ince üst tabakası (yaklaşık 200 metre) Karadeniz ekosisteminde eşsiz bir biyolojik yaşamı ağırlamaktadır. Daha kalın ve daha yoğun olan su tabakası ise Karadeniz’deki organik maddelerin çürümesi sonucu binlerce yıldır birikmiş hidrojen sülfüre doygundur."
+      ]
+    },
+    {
+      "id": "yapay-kanal-istanbul-ongorusu",
+      "title": "Yapay Kanal İstanbul Öngörüsü",
+      "paragraphs": [
+        "Potansiyel olarak en tehlikeli insan faaliyeti, son zamanlarda planlanan ve neredeyse mevcut doğal suyolu olan Boğaz'a paralel ve yapay şekilde açılacak olan Kanal İstanbul'dur. Şekil 2, Kanal İstanbul'un açılması sonrasındaki erken olaya işaret eden bir tahmindir. H2S bakımından daha zengin alt katmanlar, hidrodinamik olarak Kanal İstanbul'a doğru çekilebilir ve iki denizin yüzey seviyelerindeki yükseklik farkından dolayı Karadeniz'deki potansiyel enerjinin basıncı altında küçük bir kesitten akar. Kanaldaki yüzey hızları başlangıçta 14 knot'u (29 km/h) aşabilir. Bu akış, yüksek H2S yoğunluklarını deniz yüzeyine taşıyacak ve böylece tüm yanıcılığıyla çevreye ve yakınlardaki yerleşimlere yönelik patlama ve zehirlenme olasılıkları ortaya çıkacaktır. Potansiyel enerji karşılığı 0.8x103 terajuldür (TJ). Kanal açıldığında oluşacak ventüri etkisi ile çok hızlı bir üst akım oluşacak ve muhtemelen H2S gazı İstanbul metropolüne ve Marmara Denizi’ne taşınmış olacaktır. Bu tehditler yüzyıllar boyu dengeli yüzey ve dip akıntıları sayesinde İstanbul Boğazı’nda oluşmamıştır.",
+        "Bu tehditler İstanbul’a, çevresine ve daha aşağı güney ülkelerine ve denizlere yayılmadan, Karadeniz'deki H2S gaz yoğunluğunun seyreltilmesi acil bir konudur. H2S gazı -H2 ve S'ye ayrıştırılırsa bu arada oksijen de elde edilirse- Karadeniz'de hali hazırda mevcut olan rüzgâr, güneş ve dalga gibi örtüşmeli yenilenebilir enerji kaynaklarından yararlanarak akılcı ve çevreci bir şekilde kullanılırsa doğalgaz ve diğer fosil yakıtlardan çok daha verimli, kaliteli ve çok daha temiz bir enerji kaynağı elde edilmiş olur. Bu durumda, tüm faaliyetler, Karadeniz üzerinde yapılmalıdır. Bu deniz üzeri faaliyetler, doğalgaz arama ve çıkarma faaliyetlerinde olduğu gibi, sondaj, hidrokarbon aramaları ve doğalgazı çıkarma gibi uzun süreli, daha pahalı ve çevreyi kirletici faaliyetlere gerek duymaz. H2S faaliyetlerinde deniz dibini bozacak kıyı ötesi rüzgâr türbin temellerine ve doğal dip akıntılarını, balık hareketliliklerini bozacak engellere de gerek yoktur. Tüm bu nedenlerle Karadeniz'deki hidrokarbon arama planlarının H2S sorunu ve aynı zamanda enerji potansiyeli daha güvenli ve bütüncül düzlemde tartışılıp çözümlenene kadar revize edilmesi uygun olacaktır. Doğalgaz veya petrolün CO2 içeriği vardır ve her ikisi de küresel ısınmayı hızlandıran atmosfere nem salımlarından sorumludur. Hidrojen, fosil yakıtlara kıyasla minimum küresel ısınma ayak izine sahip, temiz yanan, çok yüksek kalori değeri olan bir gazdır ve tek çıktı sudur. Hidrojenin de yanarken nem yaydığı iddia edilebilir, ancak bu su salımı, hidrojeni ayrıştırmak için tüketilen su kadar olup kapalı bu su döngüsünde sızıntılar dışında su ve nem doğaya salınmaz. Dolayısıyla, CO2 salımlarına oranla iki kat daha fazla sera etkisi olan su ve nem salımı, hidrojenin kömür veya doğalgaz dışında Karadeniz gibi doğal rezervlerden ve yenilenebilir enerji kaynaklarından üretilmesi koşuluyla neredeyse sıfırdır."
+      ]
+    },
+    {
+      "id": "hidrokarbon-ekonomisine-karsin-hidrojen-ekonomisi",
+      "title": "Hidrokarbon Ekonomisine Karşın Hidrojen Ekonomisi",
+      "paragraphs": [
+        "-Doğalgaz arama faaliyetleri: Son yıllarda hem Akdeniz'de hem de Karadeniz'de doğalgaz aramalarımız hız kazanmıştır. Bu faaliyetlerde motorları deniz dizel yağı (marine diesel oil-MDO) ile çalışan sondaj gemileri ve platformları kullanılmakta ve bizatihi kendileri çevreyi kirletmektedir. Stoktaki diğer tüm gemiler gibi hidrokarbon arama gemilerinde de bu tip yakıtlar NOx (azot oksit) ve partikül sınırlarını aşabilmektedirler.",
+        "Bu gemilerde sondaj işlemi ve tüm gemi üstü faaliyetleri, esas olarak elektrik jeneratörlerinde aynı tip deniz dizel yağı kullanılarak yürütülür, çok azında birlikte ısı ve güç (combined heat and power-CHP) veya üçlü üretim sistemleri kullanır. Doğalgaz rezervleri bulunduğunda, başka bir açık deniz gaz platformu doğalgazı çıkarmaya başlar ve tamamı hasat edilen doğalgazın bir kısmını tüketen pompalarla sabit veya yarı yüzer boru hatlarıyla veya gemilerle kıyıya sevk edilir. Oysa, H2S faaliyetlerindeki hidrojen gemilerinin kendileri hidrojenle çalışacaklardır ve borulamaya gerek yoktur. Diğer yandan, depolama, taşıma ve kullanım sırasında sızıntıları önlemek için hidrojenin işlenmesinde dikkatli olunmalıdır.",
+        "Sonuç olarak, hem doğalgaz ve diğer hidrokarbon yakıtlarını arama gemileri ve açık deniz gaz platformları CO2, SOx, NOx özellikle de salım ve nem açısından küresel ısınmadan sorumlu olacaktır. Buna karşın, bütün bir hidrojen ekonomisinde (hem denizde hem karada) yenilenebilir kaynaklardan üretildikten sonra H2S araması ve hidrojenin akılcı kullanımı neredeyse sıfır hidrokarbon kullanımı olacaktır.",
+        "-Her zamanki senaryo: Hidrokarbon Ekonomisi. Doğalgaz arama, sondaj, çıkarım, aktarım ve verimli kullanım uygulama ve süreçlerinde doğalgazın ekserji-akılcı değerlendirme oranı sadece 0.2 (dünya ortalaması) değerine sahiptir (Kılkış, 2020). Bu düşük değer sonucu ortaya çıkan doğrudan ve önlenebilir CO2 salımlarının toplamı her kW-h doğalgaz için yaklaşık 1 kg CO2 olacaktır.",
+        "-Hidrojen ekonomisi senaryosu: Kavramsal bir hidrojen ana gemisindeki hidrojen ekonomisi, sistemin ve ekipmanın düzenlemeleri hariç, neredeyse sıfır çevresel ayak iziyle kendi kendini idame ettirecektir. Karadeniz'de hidrojen ekonomisinin sondaj maliyeti yoktur, çünkü denizde H2S yoğunluklarına ulaşmak için sondaja gerek yoktur, ancak her ülkenin deniz sahanlığı içinde maksimum konsantrasyonu ve optimum derinliği takip etmek için ana geminin küçük seyirleri kendi ürettiği hidrojenle gerçekleşecektir."
+      ]
+    },
+    {
+      "id": "dogalgaz-faaliyetlerinin-hidrojen-ekonomisine-oranla-maliyet-ve-cevresel-etki-mukayesesi-hidrojen-gemisi-maliyeti",
+      "title": "Doğalgaz Faaliyetlerinin Hidrojen Ekonomisine Oranla Maliyet ve Çevresel Etki Mukayesesi: Hidrojen Gemisi Maliyeti",
+      "paragraphs": [
+        "Tek büyük maliyet, özel olarak tasarlanmış ve inşa edilmiş hidrojen gemisidir. Derin deniz elektromanyetik ve sonik arama gemisi inşa maliyetlerine, pilot sondaj ve üretim kuyusu sondaj maliyetlerine gerek yoktur. Hidrojen platformunun işletme maliyetleri nispeten düşüktür. Tek CO2 sorumluluğu, gemideki faaliyetlerle ilgili küçük ekserji yıkımlarıdır."
+      ]
+    },
+    {
+      "id": "karadenizde-dalga-ve-diger-yenilenebilir-enerji-dagiliminin-tumlesik-haritasi",
+      "title": "Karadeniz’de Dalga ve Diğer Yenilenebilir Enerji Dağılımının Tümleşik Haritası",
+      "paragraphs": [
+        "Tüm deniz üstü yenilenebilir enerji kaynaklarının en üst düzeyde örtüştüğü ve H2S yoğunluğunun deniz yüzeyine en yakın olduğu bölge Sinop ucundan başlamak üzere tamamen kendi karasularımız içerisinde kalmaktadır.  Bu durum değişik nedenlerle AB’nin de dikkatini çekmektedir. Ayrıca kara tarafında kıyıya paralel linyit, rüzgâr ve jeotermal kaynaklar ek olarak bulunmaktadır (Sinop ve Zonguldak illeri). Türk kıyılarının orta kısımları boyunca Karadeniz rüzgar enerjisi için en yüksek potansiyele sahiptir. Potansiyel olarak en ideal bölge Şekil 3’te dikdörtgen kutu içinde gösterilmektedir. Bu alan Türk kıta sahanlığı içerisinde yer almaktadır. Güneş enerjisi için yaklaşık 500 W/m2 olan güneşlenme seviyesi (In) Karadeniz’de pek uygun değildir."
+      ]
+    },
+    {
+      "id": "100-yenilenebilir-enerjili-hidrojen-gemisi-hs-sinop-deniz-tarafinda-genel-kavram-ve-tasarim-temasi",
+      "title": "%100 Yenilenebilir Enerjili Hidrojen Gemisi (H/S Sinop): Deniz Tarafında Genel Kavram ve Tasarım Teması",
+      "paragraphs": [
+        "Şekil 4’te teknesinin arka gövdesi yarım katamaran tipinde olan H2S hasat ve H2, O2 ve S üretim ana hidrojen gemisi görülmektedir. Bu geminin tüm enerjisi de ürettiği birinci kademe hidrojenden karşılanmaktadır. Birinci kademede hidrojen Karadeniz suyundan elektroliz yolu ile üretilmekte ve geminin hidrojen enerjisi talebinden arta kalan büyük bölümü ise ikinci kademe-H2S gazından hidrojen üretiminde yüksek ısı ve güç kaynağı olarak kullanılmaktadır. Bu gemiye iki mekik lojistik gemisi refakat eder. Birincisi kara terminaline ana geminin ürettiği hidrojen, oksijen ve sülfür gazlarını taşırken diğeri ise karadan ana gemiye gerekli ara malzemeleri taşır (Kılkış, 2020).",
+        "Bu gemiler de ana gemi gibi sıfır salımlı hidrojen yakıt pilleri ile çalışır. Ana geminin tonajı ve boyutları Fatih sondaj gemisi ile benzerdir. Geminin ters arka ve ön köşelerinde jiroskop etkisinin birbirini götürür şekilde monteli iki çelik kuleye monteli rüzgâr türbinleri yanı sıra dikey eksenli savonius tipi türbinler de geminin bordasına yerleştirilmiştir.  Fazla rüzgâr enerjisi basınçlı hava şeklinde çelik kulelerde depolanır. Gerektiğinde türbinler ile tekrar elektrik gücüne dönüştürülür. Katamaran bölmedeki dalga enerji hasat sistemi de basınçlı hava üretir. Bu sistem gemi hareket halinde iken su yüzeyinden yukarı çekilir. Ana çelik kulelere güneş takipli PV paneller yerleşiktir. Her kuledeki 120o açı ile birbirinden ayrılmış üç ayrı panelden her birinin ayrı takip açı pozisyonu vardır. Birisi doğrudan güneşi, diğeri havadaki dağıtık ışınımı, diğeri de sudan yansıyan ışınımı takip eder. Acil durumlarda bu paneller uygun konuma getirilerek yelken görevi de görürler (Şekil 4). Dümen arızalarında da dümen görevini üstlenirler. Katamaran bölmesindeki üst yüzeye de ek PV paneller konularak yansıyan ışınım da toplanabilir. Gemi güvertesinde PVT paneller elektrik ve ısı gücü üretirler (Kılkış, 2020). Helikopter pilotlarının göz kamaşmasını önlemek üzere PV panellerin açıları, yansımaları en aza indirgeyecek şekilde ve anlık olarak kontrol edilmelidir. Diğer bir seçenek de geminin arkadaki katamaran bölmesinin tavanına yansıyan güneş ışınımlarını alan ek PV paneller yerleştirmek olabilir. Bunların havacılara göz kamaştırma olasılığı da olmayacaktır. Gemi donanımının tamamı ise doğru akım üzerine tasarımlanmıştır, akım eviricilere gerek yoktur (Kılkış, 2020).",
+        "Hidrojen enerjisi tuzlu suyun elektrolizi ve H2S hasadı olmak üzere iki aşamada üretilir. Bu sistem ile H2 depolama tankları ana gemide güneş, dalga ve rüzgar enerjisini  birlikte kullanır (Şekil 4’te gösterilmiştir). Bilgisayar denetimli bir sistem pompa güç talebi ile H2S hasat verimi arasında optimum derinliği (Hopt) bulur ve bunu derinliği ayarlayan tambura sarılı esnek boru sistemi ile gerçekleştirir (Şekil 5). Şekil 6 rüzgar türbin kulesinin dört işlevini göstermektedir. İklim koşullarına, ekserji temelli tekno-ekonomik uygulanabilirliğe, geminin boyutuna vb. bağlı olarak ilave doğru akım gücü elektromekanik sürücülerle rüzgar türbinlerinin naselinde üretilen ısıyı kullanarak termoelektrik jeneratörlerden ve/veya ORC (organic rankine cycle) türbinlerinden elde edilebilir."
+      ]
+    },
+    {
+      "id": "kara-tarafi",
+      "title": "Kara Tarafı",
+      "paragraphs": [
+        "Biyogaz tesisi, karasal rüzgâr türbinleri ve güneş tarlaları ile birlikte yerel linyit ve jeotermal kaynaklar da kullanılarak ilave hidrojen de elde edilecektir. Ana hidrojen gemisinde hidrojene dönüştürülmeyen fazla H2S gazı da karada işlem görebilecektir. Böylelikle kara ve deniz hidrojen döngüsü tamamlanmış olmaktadır."
+      ]
+    },
+    {
+      "id": "karadeniz-ve-kusak-ve-yol-baglantisi",
+      "title": "Karadeniz ve Kuşak ve Yol Bağlantısı",
+      "paragraphs": [
+        "Kuşak ve Yol Girişimi’nde Karadeniz, birçok yönden önem arz etmektedir. Her şeyden önce, Karadeniz -bu makalede yer aldığı üzere sadece hidrojen teknolojisi anlamında değil- tüm enerji türleri ve biçimleri açısından, odak noktasını netleştirerek Kuşak ve Yol üzerindeki ülkelerin ekonomilerini güçlendirecek bilimsel, yenilikçi ve inovatif bir ortak pota görevi görecektir. Böylelikle, yenilenebilir enerji sistemlerine yönelik tüm AR-GE ve ÜR-GE çalışmalarının planlı ve bütüncül bir biçimde desteklenmesi, koordine edilmesi, güçlendirilmesi ve küresel ısınmaya karşı ortak tedbirlerin alınması boyutlarında tüm dünya ülkelerine bir rol model ortaya çıkacaktır.  Böyle bir atılım, Çin'de yakın zamanda açılması beklenen yeni Hidrojen Enerjisi Merkezi tarafından kolaylaştırılacak ve kurulması planlanan Sinop Hidrojen Araştırma Merkezi ile bütünleşmiş olacaktır.",
+        "Doğru bir eşgüdümü sergileyebilecek yetenekteki bu merkezler, enerji sektörünün ve uygulamaların her boyutunda karbonsuzlaşma girişimlerini tetikleyecek ve hızlandıracaktır. Örneğin Çin, kuzey iklimlerdeki evlerde odun, kömür ve linyit kullanımını rüzgâr enerjisiyle çalışan elektrikli ısıtma sistemi ile ikame etmeyi düşünüyor. Bu fikir daha önceki makalelerimde eleştirel biçimde değindiğim üzere, elektriğin doğrudan ısıya dönüştürülmesi, rüzgâr enerjisini daha iyi kullanma yöntemlerine ve diğer entegre çözümlere kıyasla akılcı ve çevreci değil ve örneğin, bu yeni merkezlerde oluşturulacak modeller ve öğretilerle enerji kullanım zincirinin sonunda ısıtma, çiftçilik, hafif sanayi dahil olmak üzere, hatta hidrojen depolamasının rüzgar enerjisinden yararlanmak için daha uygun olabileceği şeklinde yetkililere öğretme ve tartışma ortamlarını da oluşturacaktır.",
+        "Tüm bunlara ek olarak, Çin ve diğer tüm Orta Asya ülkeleri jeotermal enerji açısından da zengindir. Bu merkezler, tüm Kuşak ve Yol ülkelerinin yenilenebilir enerji varlıklarını ve jeotermal, güneş ve rüzgâr enerjisi konusundaki uzmanlıkları ile birleştirerek yenilikçi ortak ve eşgüdümle yönetilen çözümler geliştirebilir, zenginliği paylaşabilir ve yukarıda Sinop Hidrojen Kenti ile ilgili makalede örneklendiği gibi temiz şehirler geliştirebilir. Şekil 8'de daha önce gösterildiği gibi, bu akıllı kent kavramı hidrojenle sınırlı olmayıp, jeotermal, güneş, rüzgâr, biyogaz, endüstri, dalga enerjisi (varsa) gibi yerel yenilenebilir kaynakların yanı sıra fosil yakıt kaynaklarının optimum ve rasyonel bir harmanlanmasını tümüyle içerir ve bu model tüm Kuşak ve Yol boyuna uzatılabilir.",
+        "Kojenerasyon, yakıt hücreleri ve hidrojen ekonomisinin yanı sıra yakın gelecekte, Çin'deki yeni Merkez, hidrojen-nükleer ilişkisine ve güvenlik önlemleri ve enerji depolama ortak paydasında bor madeni de dahil edilebilir. Jeotermal enerji rezervleri ayrıca tüm Orta Asya ülkeleri, Türkiye ve ötesindeki çiftliklerin elektriksel mekanizasyonu dahil olmak üzere, elektrikli hareketlilik için gerekli Lityumu daha temiz bir şekilde derin jeotermal kuyulardan sağlayabilir. Yük ve yolcu trenleri, bir uçtan diğer uca TIR kamyonları yenilenebilir enerji kullanarak elektriklendirilebilir. Bu yazıda da belirtildiği gibi, sıradan jet yakıtı bile üretilebilir. Bu aynı zamanda, gelecekte uzak doğudan batıya tüm ülkeleri birbirine bağlayacak olan Kuşak ve Yol coğrafyasındaki bölgesel ve uluslararası havalimanlarının ve hava ulaşımının önünü açacaktır. Ayrıca Karadeniz, yenilikçi bir karayolu, demiryolu, denizyolu (Karadeniz ve Hazar), hava (stratejik olarak konumlandırılmış yeni havalimanları) ve nehirler (Tuna Nehri gibi) ağı olarak örnek bir Kuşak Yol'u iki kıtaya, yani Asya ve Avrupa'ya ve hatta ötesine yayılan bir ulaşım zincir seçeneği oluşturacaktır. Karadeniz, ekonomi, çevre, temiz şehirler, sağlık ve refah ağının son ama en önemli halkası olacaktır. Yazarın görüşüne göre, Karadeniz'deki hidrojen sadece hidrojen olarak kalmayacak, aynı zamanda sürdürülebilir ve sağlıklı bir Kuşak ve Yol işbirliği eylemleri için önemli bir farkındalık yaratacak ve katalizör vazifeleri görecektir. Bu yaklaşım Beş Deniz Stratejisi hayata geçirilirse güney enlemlere de genişleyecektir."
+      ]
+    },
+    {
+      "id": "sonuc",
+      "title": "Sonuç",
+      "paragraphs": [
+        "• Hidrojen ve hidrokarbon ekonomileri aynı anda optimum bir bileşimle gerçekleştirilirse, hiçbir uluslararası çatışma olmaksızın çok daha fazla ulusal enerji ve politik alanda ulusal gurur elde edilebilir.",
+        "• Karadeniz'deki hidrojen ekonomisi, enerji ekonomisine önemli bir katkı olarak bu yanıcı ve patlayıcı H2S gazının potansiyel risklerini de hiçbir masrafa gerek olmadan azaltacaktır.",
+        "• Petrol platformu maliyetleri ve işletme masrafları, sondaj ve sismik keşif masrafları olmaksızın bir çözüm önümüzde hazır beklemektedir.",
+        "• Neredeyse sıfır karbon salımına sahip çok daha temiz kentler, ulaşım ve tarım mümkün olacaktır.",
+        "• Hidrojen aynı miktar enerjiyi taşımak için doğalgaz altyapı kapasitesinin yaklaşık üçte-birini kullanacağından daha az bakım ve onarım maliyeti sağlayacaktır. Mevcut doğalgaz hatlarına hacimce %20 hidrojen karışımı, yaklaşık %60 doğalgaz ve işletim ve bakım maliyetlerinde orantılı tasarruf sağlarken, doğalgaza kıyasla aynı ekserji talebi enerji arzından ödün vermeden karşılanacaktır.",
+        "• Politikacıların ve iktisatçıların gündeminde kağıt hala ilk sırada yer almaya devam edecek olursa, şu argüman geçerlidir:",
+        "Hidrojen ekonomisi, özellikle Karadeniz ülkeleri için en sürdürülebilir, ucuz ve çevre açısından güvenli seçenektir. Hidrojeni ihraç etseniz doğalgazın yaklaşık üç kat fiyatına satarsınız. Doğalgazınızın rezerv ömrü de uzar. Bu iki seçenek rakip değil tamamlayıcı unsurlardır."
+      ]
+    }
+  ],
+  "keywords": [
+    "ekserji",
+    "hidrojen ekonomisi",
+    "Karadeniz",
+    "KYG",
+    "yenilenebilir enerji"
+  ],
+  "footnotes": [
+    {
+      "id": "fn-1",
+      "order": 1,
+      "text": "Su yakalama oranı, denize dökülen nehirlerin su havzalarının toplam alanının Karadeniz yüzey alanına oranıdır."
+    }
+  ],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Ertan, S. (2020, Eylül 20). Türkiye çevresindeki denizlerde hidrokarbon rezervleri. Bilgi Notu."
+    },
+    {
+      "id": "ref-2",
+      "text": "Haklidir, M. & Kapkin, Ş. (2005, Temmuz 13-15). Black Sea: A hydrogen source. Proceedings of the International Hydrogen Energy Congress and Exhibition, IHEC 2005, Istanbul, Turkey."
+    },
+    {
+      "id": "ref-3",
+      "text": "Kilkis, B. (2020, Ağustos 30). Exergy-based hydrogen economy with 100% on-board renewables, h2s reserves, and coastal hydrogen cities in the Black Sea Region. [Özel Rpoar]. Turkish Ministry of Energy and Resources (MENR)."
+    },
+    {
+      "id": "ref-4",
+      "text": "Petrov, K., Baykara, S.Z., Ebrasu, D., Gulin, M. & Veziroğlu, A. (2011). An assessment of electrolytic hydrogen production from H2S in Black Sea waters. International Journal of Hydrogen Energy, Vol. 3(6), 8936-8942."
+    },
+    {
+      "id": "ref-5",
+      "text": "Veziroğlu, A. & Tsitskishvili, M. (Ed.). (2013). Black Sea Energy Resource Development and Hydrogen Energy Problems. [NATO Science for Peace and Security Series Sub-Series C: Environmental Security]. Netherlands: Springer."
+    },
+    {
+      "id": "ref-6",
+      "text": "Yazici, S. M. (2013). Conclusions from first Black Sea hydrogen sulfide workshop (BSHSWS): A review. A. Veziroğlu & M. Tsitskishvili (Ed.), Black Sea Energy Resource Development and Hydrogen Energy Problems içinde (ss.9-18), Netherlands: Springer."
+    }
+  ],
+  "figures": [
+    {
+      "id": "figure-1",
+      "order": 1,
+      "src": "/assets/article-figures/karadeniz-enerji-refah-ve-baris-denizi/figure-01.jpg",
+      "caption": "Şekil 1: Karadeniz Batimetrisi / Yapay Kanal İstanbul Öngörüsü"
+    },
+    {
+      "id": "figure-2",
+      "order": 2,
+      "src": "/assets/article-figures/karadeniz-enerji-refah-ve-baris-denizi/figure-02.jpg",
+      "caption": "Şekil 2: Kanal İstanbul Projesi’nin H2S gazını İstanbul Kentine ve Marmara Denizi’ne taşıma riski (Şekil ölçeksiz çizilmiştir) ©B. Kilkis"
+    },
+    {
+      "id": "figure-3",
+      "order": 3,
+      "src": "/assets/article-figures/karadeniz-enerji-refah-ve-baris-denizi/figure-03.jpg",
+      "caption": "Şekil 3: Karadeniz kıta sahanlığımız, hidrojen ekonomi bölgemiz ve yenilenebilir enerji kaynaklarımızın yerel kompozit haritası ©B. Kilkis"
+    },
+    {
+      "id": "figure-4",
+      "order": 4,
+      "src": "/assets/article-figures/karadeniz-enerji-refah-ve-baris-denizi/figure-04.jpg",
+      "caption": "Şekil 4: Karadeniz Ana Hidrojen Gemisi, H/S Sinop ©B. Kilkis"
+    },
+    {
+      "id": "figure-5",
+      "order": 5,
+      "src": "/assets/article-figures/karadeniz-enerji-refah-ve-baris-denizi/figure-05.jpg",
+      "caption": "Şekil 5: Ana hidrojen gemisinde esnek ve derinlik ayarlı H2S hasat sistemi ©2020B. Kilkis"
+    },
+    {
+      "id": "figure-6",
+      "order": 6,
+      "src": "/assets/article-figures/karadeniz-enerji-refah-ve-baris-denizi/figure-06.jpg",
+      "caption": "Şekil 6: Ana hidrojen gemisinde tümleşik yenilenebilir enerjili hidrojen üretim gücü ©2020B. Kilkis"
+    },
+    {
+      "id": "figure-7",
+      "order": 7,
+      "src": "/assets/article-figures/karadeniz-enerji-refah-ve-baris-denizi/figure-07.jpg",
+      "caption": "Şekil 7: Su Çevriminde Kara ve Deniz İşbirliği © 2019 B. Kilkis"
+    },
+    {
+      "id": "figure-8",
+      "order": 8,
+      "src": "/assets/article-figures/karadeniz-enerji-refah-ve-baris-denizi/figure-08.jpg",
+      "caption": "Şekil 8: Hidrojen Ekonomisinde Kara ve Deniz İşbirliği ©2020 B. Kilkis"
+    }
+  ]
+}
