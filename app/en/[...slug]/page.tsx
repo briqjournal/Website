@@ -34,7 +34,7 @@ import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../auth
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
 import { issueAccent } from "../../issue-themes";
-import { getIssueCopy } from "../../issue-copy";
+import { getIssueCopy, getIssueHeadingLayout } from "../../issue-copy";
 import { archiveEditorialHref, issueSupplementaryContents } from "../../issue-supplementary";
 import { advisoryBoard, editorialBoard, editors, calls, pastCalls } from "../../site-data";
 
@@ -391,7 +391,7 @@ function EnglishCopyrightTerms() {
       <EditorialLongform
         navigationTitle="On this page"
         className="for-authors-longform copyright-page"
-        before={<div className="license-lead"><img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" loading="lazy" decoding="async" /><div><span>Licence</span><h2>Creative Commons Attribution 4.0 International</h2><p>CC BY 4.0</p></div></div>}
+        before={<div className="license-lead"><img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" width={88} height={31} loading="lazy" decoding="async" /><div><span>Licence</span><h2>Creative Commons Attribution 4.0 International</h2><p>CC BY 4.0</p></div></div>}
         sections={[
           {
             id: "transfer-of-rights",
@@ -644,14 +644,17 @@ function EnglishIssue({ volume, issueNumber, current = false }: { volume: number
   const supplementary = issueSupplementaryContents(volume, issueNumber);
   const contributionCount = issueContributionCount(record, supplementary);
   const isVolumeSevenIssueFour = volume === 7 && issueNumber === 4;
+  const headingLayout = getIssueHeadingLayout(volume, issueNumber);
   return (
     <IssuePlatform
       record={record}
       locale="en"
       current={current}
-      subtitleFirst={isVolumeSevenIssueFour}
+      subtitleFirst={headingLayout.subtitleFirst}
+      subtitleScale75={headingLayout.subtitleScale75}
       title={heading.title}
       subtitle={heading.subtitle}
+      trailingSubtitle={heading.trailingSubtitle}
       description={isVolumeSevenIssueFour
         ? "The issue examines West Asia’s changing balance of power alongside Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy."
         : `Published in ${record.season_en} ${record.year}, this issue brings together ${contributionCount} contributions in BRIQ’s open-access archive.`}

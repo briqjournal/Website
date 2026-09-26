@@ -150,6 +150,24 @@ function handleLegacyRedirect(url: URL): Response | null {
   });
 }
 
+function localeGatewayRedirect(request: Request, url: URL): Response | null {
+  // Fast-path the root locale gateway at the edge. The app-router gateway
+  // (app/page.tsx) renders server-side before redirecting, which costs
+  // ~800ms per request to "/". Redirect straight to the trailing-slash
+  // locale home so production serves a single fast hop. GET/HEAD only;
+  // query params preserved; no cache headers (the target varies by visitor).
+  if (request.method !== "GET" && request.method !== "HEAD") return null;
+  if (url.pathname !== "/") return null;
+
+  const country = request.headers.get("cf-ipcountry")?.toUpperCase();
+  const target = new URL(country === "TR" ? "/tr/" : "/en/", url.origin);
+  target.search = url.search;
+  return new Response(null, {
+    status: 307,
+    headers: { location: target.toString() },
+  });
+}
+
 function isR2PdfPath(pathname: string): boolean {
   return (
     pathname.toLowerCase().endsWith(".pdf") &&
@@ -242,6 +260,9 @@ const worker = {
     const url = new URL(request.url);
     const legacyRedirect = handleLegacyRedirect(url);
     if (legacyRedirect) return legacyRedirect;
+
+    const localeRedirect = localeGatewayRedirect(request, url);
+    if (localeRedirect) return localeRedirect;
 
     if (isR2PdfPath(url.pathname)) {
       return servePdfFromR2(request, env.BRIQ_PDF, url.pathname);

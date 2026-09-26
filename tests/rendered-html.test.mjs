@@ -62,9 +62,9 @@ test("routes the locale gateway by Cloudflare country and preserves legacy Turki
   ]);
 
   assert.equal(turkey.status, 307);
-  assert.equal(new URL(turkey.headers.get("location")).pathname, "/tr");
+  assert.equal(new URL(turkey.headers.get("location")).pathname, "/tr/");
   assert.equal(abroad.status, 307);
-  assert.equal(new URL(abroad.headers.get("location")).pathname, "/en");
+  assert.equal(new URL(abroad.headers.get("location")).pathname, "/en/");
   assert.equal(legacy.status, 308);
   const legacyLocation = new URL(legacy.headers.get("location"));
   assert.equal(legacyLocation.pathname, "/tr/arsiv");
@@ -374,8 +374,8 @@ test("renders archived issues with the same platform structure as the current is
     }
   }
 
-  assert.match(archivedTr, /<h1>Birlikte Kalkınmak İçin<em>Ortak Güvenlik<\/em><\/h1>/);
-  assert.match(archivedEn, /<h1>Common Security for<em>Shared Development<\/em><\/h1>/);
+  assert.match(archivedTr, /<h1>Birlikte Kalkınmak İçin Ortak Güvenlik<\/h1>/);
+  assert.match(archivedEn, /<h1>Common Security for Shared Development<\/h1>/);
   assert.equal((archivedTr.match(/class="issue-toc-number"/g) || []).length, 8);
   assert.equal((archivedEn.match(/class="issue-toc-number"/g) || []).length, 8);
   for (const html of [archivedTr, archivedEn]) {
@@ -394,7 +394,7 @@ test("uses verified bilingual cover headings for every issue", async () => {
 
   assert.equal(pages.length, archive.issues.length * 2);
   for (const [index, html] of pages.entries()) {
-    assert.match(html, /<h1(?: class="issue-title-subtitle-first")?>(?:[^<]+(?:<em>[^<]+<\/em>)?|<em>[^<]+<\/em><span>[^<]+<\/span>)<\/h1>/, issuePaths[index]);
+    assert.match(html, /<h1(?: class="issue-title-subtitle-first(?: issue-title-subtitle-75)?")?>(?:[^<]+(?:<em>[^<]+<\/em>)?|<em>[^<]+<\/em><span>[^<]+<\/span>(?:<em class="issue-title-trailing-subtitle">[^<]+<\/em>)?)<\/h1>/, issuePaths[index]);
     assert.doesNotMatch(html, /(Bahar|Yaz|Sonbahar|Kış) \d{4} Sayısı/, issuePaths[index]);
     assert.doesNotMatch(html, /(Spring|Summer|Autumn|Winter) \d{4} Issue/, issuePaths[index]);
   }
@@ -608,8 +608,8 @@ test("uses English article slugs and redirects legacy Turkish-slug English URLs"
 
   assert.match(directoryHtml, new RegExp(`href="/en/articles/${englishSlug}"`));
   assert.doesNotMatch(directoryHtml, new RegExp(`href="/en/articles/${slug}"`));
-  const articleSwitchHref = englishArticleHtml.match(/href="([^"]+)"[^>]+aria-label="Bu sayfanın Türkçe sürümü"/)?.[1];
-  const pdfSwitchHref = englishPdfHtml.match(/href="([^"]+)"[^>]+aria-label="Bu sayfanın Türkçe sürümü"/)?.[1];
+  const articleSwitchHref = englishArticleHtml.match(/href="([^"]+)"[^>]+aria-label="TR — Bu sayfanın Türkçe sürümü"/)?.[1];
+  const pdfSwitchHref = englishPdfHtml.match(/href="([^"]+)"[^>]+aria-label="TR — Bu sayfanın Türkçe sürümü"/)?.[1];
   assert.ok([`/tr/makaleler/${slug}`, `/tr/makaleler/${englishSlug}`].includes(articleSwitchHref));
   assert.ok([`/tr/makaleler/${slug}/pdf`, `/tr/makaleler/${englishSlug}/pdf`].includes(pdfSwitchHref));
   assert.ok([307, 308].includes(legacyArticle.status));

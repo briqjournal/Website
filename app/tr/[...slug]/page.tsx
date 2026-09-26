@@ -25,7 +25,7 @@ import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../auth
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
 import { issueAccent } from "../../issue-themes";
-import { getIssueCopy } from "../../issue-copy";
+import { getIssueCopy, getIssueHeadingLayout } from "../../issue-copy";
 import { archiveEditorialHref, issueSupplementaryContents } from "../../issue-supplementary";
 import {
   archiveArticles,
@@ -645,7 +645,7 @@ function AccessPolicy() {
       <EditorialLongform
         navigationTitle="Bu sayfada"
         className="for-authors-longform copyright-page"
-        before={<div className="license-lead"><img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" loading="lazy" decoding="async" /><div><span>Lisans</span><h2>Creative Commons Atıf 4.0 Uluslararası</h2><p>CC BY 4.0</p></div></div>}
+        before={<div className="license-lead"><img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" width={88} height={31} loading="lazy" decoding="async" /><div><span>Lisans</span><h2>Creative Commons Atıf 4.0 Uluslararası</h2><p>CC BY 4.0</p></div></div>}
         sections={[
           {
             id: "haklarin-devri",
@@ -1046,14 +1046,17 @@ function ArchiveIssue({ volume, issue, current = false }: { volume: number; issu
   const supplementary = issueSupplementaryContents(volume, issue);
   const contributionCount = issueContributionCount(record, supplementary);
   const isVolumeSevenIssueFour = volume === 7 && issue === 4;
+  const headingLayout = getIssueHeadingLayout(volume, issue);
   return (
     <IssuePlatform
       record={record}
       locale="tr"
       current={current}
-      subtitleFirst={isVolumeSevenIssueFour}
+      subtitleFirst={headingLayout.subtitleFirst}
+      subtitleScale75={headingLayout.subtitleScale75}
       title={heading.title}
       subtitle={heading.subtitle}
+      trailingSubtitle={heading.trailingSubtitle}
       description={isVolumeSevenIssueFour
         ? "Batı Asya’daki yeni güç dengesini; Suudi Arabistan’ın kültürel dengeleme stratejisinden Türkiye–Çin ilişkilerine, Dijital İpek Yolu’ndan Çin’in küresel altyapı yaklaşımına uzanan çalışmalarla ele alan yeni sayı."
         : `${record.season_tr} ${record.year} döneminde yayımlanan bu sayı, ${contributionCount} çalışmayı BRIQ arşivinde açık erişimle bir araya getiriyor.`}
