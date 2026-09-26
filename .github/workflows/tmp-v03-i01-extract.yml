@@ -21,17 +21,17 @@ jobs:
 
       - name: Install PDF tools
         run: |
-          sudo apt-get update
-          sudo apt-get install -y poppler-utils
+          sudo apt-get update >/dev/null
+          sudo apt-get install -y poppler-utils >/dev/null
 
       - name: Download authoritative issue PDFs
         run: |
           set -euxo pipefail
           mkdir -p .migration/v03-i01-evidence
-          curl -fL --retry 3 --retry-delay 2 \
+          curl -fL --retry 3 --retry-delay 2 -A "BRIQ-v03-i01-migration/1.0" \
             'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.3%20Issue1_Site.pdf' \
             -o /tmp/v03-i01-en.pdf
-          curl -fL --retry 3 --retry-delay 2 \
+          curl -fL --retry 3 --retry-delay 2 -A "BRIQ-v03-i01-migration/1.0" \
             'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%203.%20Cilt%201.%20Say%C4%B1_Site.pdf' \
             -o /tmp/v03-i01-tr.pdf
           sha256sum /tmp/v03-i01-en.pdf /tmp/v03-i01-tr.pdf > .migration/v03-i01-evidence/pdf-sha256.txt
@@ -41,8 +41,10 @@ jobs:
       - name: Extract text, structural XML, and image inventory
         run: |
           set -euxo pipefail
-          pdftotext -layout -enc UTF-8 /tmp/v03-i01-en.pdf .migration/v03-i01-evidence/en.txt\n          pdftotext -raw -enc UTF-8 /tmp/v03-i01-en.pdf .migration/v03-i01-evidence/en.raw.txt
-          pdftotext -layout -enc UTF-8 /tmp/v03-i01-tr.pdf .migration/v03-i01-evidence/tr.txt\n          pdftotext -raw -enc UTF-8 /tmp/v03-i01-tr.pdf .migration/v03-i01-evidence/tr.raw.txt
+          pdftotext -layout -enc UTF-8 /tmp/v03-i01-en.pdf .migration/v03-i01-evidence/en.txt
+          pdftotext -raw -enc UTF-8 /tmp/v03-i01-en.pdf .migration/v03-i01-evidence/en.raw.txt
+          pdftotext -layout -enc UTF-8 /tmp/v03-i01-tr.pdf .migration/v03-i01-evidence/tr.txt
+          pdftotext -raw -enc UTF-8 /tmp/v03-i01-tr.pdf .migration/v03-i01-evidence/tr.raw.txt
           pdftohtml -xml -hidden -i -stdout /tmp/v03-i01-en.pdf > .migration/v03-i01-evidence/en.xml
           pdftohtml -xml -hidden -i -stdout /tmp/v03-i01-tr.pdf > .migration/v03-i01-evidence/tr.xml
           pdfimages -list /tmp/v03-i01-en.pdf > .migration/v03-i01-evidence/en-images.txt
@@ -53,6 +55,6 @@ jobs:
           set -euxo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add tmp/v03-i01
+          git add -f .migration/v03-i01-evidence
           git commit -m 'chore(v03-i01): add temporary PDF extraction evidence'
           git push origin HEAD:chore/v03-i01-fulltext-canonical
