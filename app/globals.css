@@ -759,6 +759,56 @@ img {
   border-right: 1px solid rgba(255, 255, 255, 0.22);
 }
 
+.hero {
+  touch-action: pan-y;
+}
+
+.hero-nav {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  margin-top: -54px;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(10, 8, 6, 0.22);
+  color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+  opacity: 0.75;
+  transform: translateY(-50%);
+  transition: opacity 200ms ease, background 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.hero:hover .hero-nav,
+.hero:focus-within .hero-nav {
+  opacity: 1;
+}
+
+.hero-nav:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--ink);
+}
+
+.hero-nav:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  opacity: 1;
+}
+
+.hero-nav-prev {
+  left: clamp(12px, 3vw, 36px);
+}
+
+.hero-nav-next {
+  right: clamp(12px, 3vw, 36px);
+}
+
 .section {
   padding: 100px 0;
 }
@@ -4553,9 +4603,8 @@ footer h3 {
 .hero .issue-cover img { max-height: 370px; object-fit: contain; }
 .hero-bottom { position: relative; z-index: 5; }
 .hero-controls { display: grid; grid-template-columns: 1fr auto; align-items: center; }
-.slider-controls { display: flex; align-items: center; gap: 12px; padding-left: 22px; }
-.slider-controls button { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,.28); background: transparent; color: white; cursor: pointer; }
-.slider-controls span { font-size: 10px; font-weight: 800; letter-spacing: .12em; }
+.slider-controls { display: flex; align-items: center; justify-content: flex-end; min-width: 76px; padding-left: 22px; }
+.slider-controls span { font-size: 10px; font-weight: 800; letter-spacing: .12em; font-variant-numeric: tabular-nums; }
 
 .latest { padding-top: 62px; padding-bottom: 66px; }
 .latest .split-heading { margin-bottom: 28px; }
@@ -6625,6 +6674,21 @@ body {
     height: 44px;
     font-family: Arial, Helvetica, sans-serif;
     font-variant-emoji: text;
+  }
+
+  .hero-nav {
+    width: 44px;
+    height: 44px;
+    margin-top: -120px;
+    opacity: 0.9;
+  }
+
+  .hero-nav-prev {
+    left: 10px;
+  }
+
+  .hero-nav-next {
+    right: 10px;
   }
 
   .section {
