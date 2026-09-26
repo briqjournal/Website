@@ -63,7 +63,9 @@ export function PeopleDirectory({
                 <a className="editorial-roster-name" href={profileHref}>{name}</a>
                 {displayedAffiliation && <><span aria-hidden="true">, </span><em>{displayedAffiliation}</em></>}
               </div>
-              <a className="editorial-roster-profile" href={profileHref} aria-label={isEnglish ? `View ${name}'s BRIQ profile` : `${name} BRIQ profilini görüntüle`}>↗︎</a>
+              <a className="editorial-roster-profile" href={profileHref} aria-label={isEnglish ? `View ${name}'s BRIQ profile` : `${name} BRIQ profilini görüntule`}>
+                <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              </a>
             </li>
           );
         })}
