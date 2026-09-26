@@ -645,7 +645,7 @@ function AccessPolicy() {
       <EditorialLongform
         navigationTitle="Bu sayfada"
         className="for-authors-longform copyright-page"
-        before={<div className="license-lead"><img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" loading="lazy" decoding="async" /><div><span>Lisans</span><h2>Creative Commons Atıf 4.0 Uluslararası</h2><p>CC BY 4.0</p></div></div>}
+        before={<div className="license-lead"><img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" width={88} height={31} loading="lazy" decoding="async" /><div><span>Lisans</span><h2>Creative Commons Atıf 4.0 Uluslararası</h2><p>CC BY 4.0</p></div></div>}
         sections={[
           {
             id: "haklarin-devri",

@@ -271,7 +271,7 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
       <div className="site-shell footer-bottom">
         <p>{isEnglish ? "Publisher: Turkish-Chinese Business Development and Friendship Association" : "Yayıncı: Çin İş Geliştirme ve Dostluk Derneği"}</p>
         <div>
-          <img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" loading="lazy" decoding="async" />
+          <img src="/assets/cc-by.png" alt="Creative Commons BY 4.0" width={88} height={31} loading="lazy" decoding="async" />
           <span>© 2026 BRIQ</span>
         </div>
       </div>
