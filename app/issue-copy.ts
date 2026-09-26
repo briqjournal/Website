@@ -62,16 +62,16 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "Centennial Legacy of the Kemalist Revolution", subtitle: "for the Developing World" },
   },
   "4-3": {
-    tr: { title: "Çok Kutuplu Dünyada", subtitle: "NATO’nun Genişlemesi Ve Güvenlik İşbirliğinin Geleceği" },
-    en: { title: "NATO’s Enlargement", subtitle: "and the Future of Security Cooperation in a Multipolar World" },
+    tr: { title: "Çok Kutuplu Dünyada NATO’nun Genişlemesi Ve Güvenlik İşbirliğinin Geleceği", subtitle: "" },
+    en: { title: "NATO’s Enlargement and the Future of Security Cooperation in a Multipolar World", subtitle: "" },
   },
   "4-2": {
-    tr: { title: "Akdeniz’i Barış Ve Kalkınma Denizi Yapmak İçin", subtitle: "Kuşak Ve Yol Girişimi Fırsatı" },
-    en: { title: "Transforming the Mediterranean into a Sea of Peace and Development", subtitle: "The Belt & Road Alternative" },
+    tr: { title: "Kuşak Ve Yol Girişimi Fırsatı", subtitle: "Akdeniz’i Barış Ve Kalkınma Denizi Yapmak İçin" },
+    en: { title: "The Belt & Road Alternative", subtitle: "Transforming the Mediterranean into a Sea of Peace and Development" },
   },
   "4-1": {
-    tr: { title: "NATO’nun Yeni Savaş Cephesi", subtitle: "Doğu Akdeniz" },
-    en: { title: "NATO’s New Frontline", subtitle: "The Eastern Mediterranean" },
+    tr: { title: "Doğu Akdeniz", subtitle: "NATO’nun Yeni Savaş Cephesi" },
+    en: { title: "The Eastern Mediterranean", subtitle: "NATO’s New Frontline" },
   },
   "3-4": {
     tr: { title: "Sanatın Ve Kültürün Köklerine Yolculuk", subtitle: "Uygarlığın İpek Yolu" },
@@ -131,6 +131,8 @@ const subtitleFirstIssues = new Set([
   "6-1",
   "5-3",
   "5-1",
+  "4-2",
+  "4-1",
 ]);
 
 const subtitleScale75Issues = new Set([
