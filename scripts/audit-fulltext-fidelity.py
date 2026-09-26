@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import argparse, json, re, subprocess, unicodedata, urllib.error, urllib.parse, urllib.request
+import argparse, json, re, shutil, subprocess, unicodedata, urllib.error, urllib.parse, urllib.request
 from collections import Counter
 from pathlib import Path
 
@@ -104,10 +104,26 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
     local_path=urls.get("pdfEnLocal" if loc=="en" else "pdfTrLocal")
     archived_url=urllib.parse.urljoin("https://www.briqjournal.com", local_path) if local_path else None
     candidates=[source_url,archived_url]
-    if not any(candidates):
-        return {"slug":slug,"locale":loc,"status":"article_pdf_unavailable","pdf_url":None}
     work=out_root/slug/loc; pdf=work/f"{slug}-{loc}.pdf"
-    url=download_first(candidates,pdf)
+    try:
+        if not any(candidates):
+            raise RuntimeError("article-level PDF unavailable")
+        url=download_first(candidates,pdf)
+    except RuntimeError:
+        # v03-i01 has stale/missing article-level archive URLs for some locale records.
+        # Use the authoritative published issue PDF as the audit source, cached once per locale.
+        if out_root.name != "v03-i01":
+            return {"slug":slug,"locale":loc,"status":"article_pdf_unavailable","pdf_url":None}
+        issue_urls={
+          "en":"https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.3%20Issue1_Site.pdf",
+          "tr":"https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%203.%20Cilt%201.%20Say%C4%B1_Site.pdf",
+        }
+        cached=out_root/f"__official-issue-{loc}.pdf"
+        if not cached.exists():
+            download(issue_urls[loc],cached)
+        pdf.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(cached,pdf)
+        url=issue_urls[loc]
     (work/"raw.txt").write_text(run(["pdftotext","-raw",str(pdf),"-"]), encoding="utf-8")
     page_texts=extract_pages(pdf,work/"pages")
     headings,paras,refs,notes,figs=flatten_canonical(j)
