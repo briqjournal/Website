@@ -1,0 +1,18 @@
+Creator:         Adobe InDesign 16.0 (Windows)
+Producer:        Adobe PDF Library 15.0
+CreationDate:    Thu Dec  9 21:44:59 2021 UTC
+ModDate:         Thu Dec 11 12:44:14 2025 UTC
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           97
+Encrypted:       no
+Page size:       566.929 x 765.354 pts
+Page rot:        0
+File size:       35934518 bytes
+Optimized:       no
+PDF version:     1.6
