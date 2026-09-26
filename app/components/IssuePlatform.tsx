@@ -126,7 +126,7 @@ export function IssuePlatform({
 
   return (
     <div
-      className="issue-page-themed"
+      className={`issue-page-themed${record.volume === 7 && record.issue === 4 ? " issue-v74" : ""}`}
       style={{
         "--issue-tone": issueSurface(record.volume, record.issue),
         "--issue-accent": issueAccent(record.volume, record.issue),
