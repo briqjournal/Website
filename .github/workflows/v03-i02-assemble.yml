@@ -1,0 +1,50 @@
+name: v03-i02 canonical assembly
+
+on:
+  push:
+    branches:
+      - chore/v03-i02-fulltext-canonical
+    paths:
+      - .github/workflows/v03-i02-assemble.yml
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chore/v03-i02-fulltext-canonical
+          fetch-depth: 0
+      - name: Download existing extraction evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: v03-i02-extraction-evidence
+          path: .artifact
+          github-token: ${{ github.token }}
+          repository: briqjournal/Website
+          run-id: 36125421434
+      - name: Assemble canonical records and exact assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          evidence_file="$(find .artifact -type f -path '*/text/issue-en-full.raw.txt' | head -1)"
+          test -n "$evidence_file"
+          evidence_root="$(dirname "$(dirname "$evidence_file")")"
+          python3 scripts/.v03-i02-assemble.py "$evidence_root" .
+          test "$(find content/articles -path '*/fulltext/en.json' -o -path '*/fulltext/tr.json' | wc -l)" -ge 22
+          git status --short
+      - name: Commit assembled implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "BRIQ Migration Bot"
+          git config user.email "editor@briqjournal.com"
+          git add content/catalog.json content/articles tests/rendered-html.test.mjs docs/WORKLOG.md public/assets/article-figures
+          git diff --cached --quiet && exit 0
+          git commit -m "content(v03-i02): complete canonical bilingual implementation"
+          git push origin HEAD:chore/v03-i02-fulltext-canonical
