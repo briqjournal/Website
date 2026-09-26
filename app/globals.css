@@ -1115,6 +1115,10 @@ img {
   overflow: hidden;
 }
 
+.ticker-window {
+  overflow: hidden;
+}
+
 .ticker-track {
   width: max-content;
   display: flex;
