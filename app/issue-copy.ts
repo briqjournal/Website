@@ -74,48 +74,48 @@ export const issueCopy: Record<string, IssueCopy> = {
     en: { title: "The Eastern Mediterranean", subtitle: "NATO’s New Frontline" },
   },
   "3-4": {
-    tr: { title: "Sanatın Ve Kültürün Köklerine Yolculuk", subtitle: "Uygarlığın İpek Yolu" },
-    en: { title: "Journey to the Roots of Art and Culture", subtitle: "The Silk Road of Civilization" },
+    tr: { title: "Uygarlığın İpek Yolu", subtitle: "Sanatın Ve Kültürün Köklerine Yolculuk" },
+    en: { title: "The Silk Road of Civilization", subtitle: "Journey to the Roots of Art and Culture" },
   },
   "3-3": {
-    tr: { title: "Ekolojik Uygarlığın Enerjisi", subtitle: "Yeşil Hidrojen" },
-    en: { title: "The Energy of Ecological Civilization", subtitle: "Green Hydrogen" },
+    tr: { title: "Yeşil Hidrojen", subtitle: "Ekolojik Uygarlığın Enerjisi" },
+    en: { title: "Green Hydrogen", subtitle: "The Energy of Ecological Civilization" },
   },
   "3-2": {
-    tr: { title: "Gelişen Dünyanın", subtitle: "Alternatif Kalkınma Programı" },
-    en: { title: "Alternative Models of Development", subtitle: "for Developing Countries" },
+    tr: { title: "Gelişen Dünyanın Alternatif Kalkınma Programı", subtitle: "" },
+    en: { title: "Alternative Models of Development for Developing Countries", subtitle: "" },
   },
   "3-1": {
-    tr: { title: "Türkiye Cumhuriyeti İle Çin Halk Cumhuriyeti Arasında Diplomatik İlişkilerin 50. Yılı", subtitle: "Ortak Kader Ortak Gelecek" },
-    en: { title: "50th Anniversary of Diplomatic Relations Between the Republic of Turkey and the People’s Republic of China", subtitle: "Common Destiny, Shared Future" },
+    tr: { title: "Ortak Kader Ortak Gelecek", subtitle: "Türkiye Cumhuriyeti İle Çin Halk Cumhuriyeti Arasında Diplomatik İlişkilerin 50. Yılı" },
+    en: { title: "Common Destiny Shared Future", subtitle: "50th Anniversary of Diplomatic Relations Between the Republic of Turkey and the People’s Republic of China" },
   },
   "2-4": {
     tr: { title: "Kuşak Yolu’nda Gönül Köprüsü", subtitle: "Yunus Emre Ve Kültürel İşbirliği" },
     en: { title: "Building a Bridge of Hearts", subtitle: "Yunus Emre and Cultural Cooperation in the Belt & Road" },
   },
   "2-3": {
-    tr: { title: "Asya Çağının Habercisi", subtitle: "Ekolojik Uygarlık" },
-    en: { title: "The Herald of the Asian Age", subtitle: "Ecological Civilization" },
+    tr: { title: "Ekolojik Uygarlık", subtitle: "Asya Çağının Habercisi" },
+    en: { title: "Ecological Civilization", subtitle: "The Herald of the Asian Age" },
   },
   "2-2": {
-    tr: { title: "Ortak Geleceğin İnşası İçin", subtitle: "Bilim Ve Teknolojide İşbirliği" },
-    en: { title: "Cooperation in Science and Technology", subtitle: "for Building a Shared Future" },
+    tr: { title: "Ortak Geleceğin İnşası İçin Bilim Ve Teknolojide İşbirliği", subtitle: "" },
+    en: { title: "Cooperation in Science and Technology for Building a Shared Future", subtitle: "" },
   },
   "2-1": {
-    tr: { title: "Deniz İpek Yolu’nda", subtitle: "“Mavi Vatan” Buluşması" },
-    en: { title: "“Blue Homeland” Meets", subtitle: "The Maritime Silk Road" },
+    tr: { title: "Deniz İpek Yolu’nda “Mavi Vatan” Buluşması", subtitle: "" },
+    en: { title: "Reclaiming the 'Blue Homeland' Through the Maritime Silkroad.", subtitle: "" },
   },
   "1-4": {
-    tr: { title: "Deniz İpek Yolu’nda", subtitle: "Ortak Rota" },
-    en: { title: "The Common Course", subtitle: "Towards the Maritime Silk Road" },
+    tr: { title: "Deniz İpek Yolu’nda Ortak Rota", subtitle: "" },
+    en: { title: "The Common Course Towards the Maritime Silk Road", subtitle: "" },
   },
   "1-3": {
-    tr: { title: "COVID-19 Sonrası Yeni Dünya", subtitle: "Paylaşarak Gelişme Çağı" },
-    en: { title: "The New World After COVID-19", subtitle: "Towards an Era of Shared Development" },
+    tr: { title: "Paylaşarak Gelişme Çağı", subtitle: "COVID-19 Sonrası Yeni Dünya" },
+    en: { title: "Towards an Era of Shared Development", subtitle: "The New World After COVID-19" },
   },
   "1-2": {
-    tr: { title: "Uluslararası", subtitle: "Güvenliğin Yolu" },
-    en: { title: "The Road to", subtitle: "International Security" },
+    tr: { title: "Uluslararası Güvenliğin Yolu", subtitle: "" },
+    en: { title: "The Road to International Security", subtitle: "" },
   },
   "1-1": {
     tr: { title: "Uluslararası", subtitle: "Adil Düzenin Yolu" },
@@ -133,6 +133,11 @@ const subtitleFirstIssues = new Set([
   "5-1",
   "4-2",
   "4-1",
+  "3-4",
+  "3-3",
+  "3-1",
+  "2-3",
+  "1-3",
 ]);
 
 const subtitleScale75Issues = new Set([
