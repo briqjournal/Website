@@ -9247,19 +9247,19 @@ footer {
 }
 
 .author-page-identity {
-  grid-template-columns: 86px minmax(0, 1fr);
+  grid-template-columns: 120px minmax(0, 1fr);
   gap: 24px;
   margin-top: 34px;
 }
 
 .author-page-monogram,
 .author-page-photo {
-  width: 84px;
-  height: 84px;
+  width: 116px;
+  height: 116px;
 }
 
 .author-page-monogram {
-  font-size: 38px;
+  font-size: 52px;
 }
 
 .author-page-identity h1 {
@@ -9271,7 +9271,7 @@ footer {
 .author-page-links {
   gap: 7px;
   margin-top: 24px;
-  padding-left: 110px;
+  padding-left: 144px;
 }
 
 .author-page-links a {
@@ -9462,15 +9462,15 @@ footer {
   }
 
   .author-page-identity {
-    grid-template-columns: 64px minmax(0, 1fr);
+    grid-template-columns: 88px minmax(0, 1fr);
     gap: 15px;
     margin-top: 25px;
   }
 
   .author-page-monogram,
   .author-page-photo {
-    width: 62px;
-    height: 62px;
+    width: 84px;
+    height: 84px;
   }
 
   .author-page-identity h1 {
