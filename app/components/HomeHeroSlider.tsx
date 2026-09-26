@@ -244,9 +244,9 @@ export function HomeHeroSlider({ locale = "tr" }: { locale?: Locale }) {
         <div className="site-shell hero-controls">
           <div className="trust-row"><span>{locale === "en" ? "Double-blind peer review" : "Çift kör hakemlik"}</span><span>CC BY 4.0</span><span>{locale === "en" ? "No author fees" : "Yazar ücreti yoktur"}</span><span>DOI: 10.67696</span></div>
           <div className="slider-controls">
-            <button type="button" onClick={previous} aria-label={locale === "en" ? "Previous slide" : "Önceki slayt"}>←︎</button>
+            <button type="button" onClick={previous} aria-label={locale === "en" ? "Previous slide" : "Önceki slayt"}><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M11 18l-6-6 6-6" /></svg></button>
             <span>{String(active + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span>
-            <button type="button" onClick={next} aria-label={locale === "en" ? "Next slide" : "Sonraki slayt"}>→︎</button>
+            <button type="button" onClick={next} aria-label={locale === "en" ? "Next slide" : "Sonraki slayt"}><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
           </div>
         </div>
       </div>

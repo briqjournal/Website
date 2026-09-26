@@ -175,7 +175,7 @@ export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride
             <span>ISSN 2687-5896</span>
             <span>E-ISSN 2718-0581</span>
             <span>DOI 10.67696</span>
-            {isEnglish ? <><a href={alternateHref} aria-label="Bu sayfanın Türkçe sürümü">TR</a><span className="utility-divider" /><strong>EN</strong></> : <><a href={alternateHref} aria-label="English version of this page">EN</a><span className="utility-divider" /><strong>TR</strong></>}
+            {isEnglish ? <><a href={alternateHref} aria-label="TR — Bu sayfanın Türkçe sürümü">TR</a><span className="utility-divider" /><strong>EN</strong></> : <><a href={alternateHref} aria-label="EN — English version of this page">EN</a><span className="utility-divider" /><strong>TR</strong></>}
           </div>
         </div>
       </div>
