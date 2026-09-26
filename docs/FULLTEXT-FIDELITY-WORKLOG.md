@@ -83,3 +83,4 @@
 - Reusable audit helper: `scripts/audit-fulltext-fidelity.py`.
 
 **Next unit:** `v04-i01`.
+- 2026-09-26: v03-i02 whole-issue fidelity audit trigger (temporary audit branch only).
