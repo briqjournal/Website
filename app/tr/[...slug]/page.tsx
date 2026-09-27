@@ -1,5 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { IndexTicker, SiteFooter, SiteHeader } from "../../components/SiteChrome";
 import { PdfViewer } from "../../components/PdfViewer";
@@ -1002,7 +1003,7 @@ function CallsPage() {
         <div className="calls-page-grid">
           {calls.map((call) => (
             <a href={call.url} key={call.title}>
-              {call.image ? <img src={call.image} alt="" loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}
+              {call.image ? <Image src={call.image} alt="" width={400} height={230} loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}
               <div>
                 <span>{call.status} · {call.deadlineLabel}: {call.deadline}</span>
                 <h2>{call.title}</h2>
