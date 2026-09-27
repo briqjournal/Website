@@ -383,7 +383,19 @@ export async function ArticlePlatform({
   const isBookReview = articleType === (locale === "tr" ? "Kitap İncelemesi" : "Book Review");
   const reviewedBook = (article as ArchiveArticle & { reviewed_book?: ReviewedBookMetadata }).reviewed_book;
   const acknowledgements = articleAcknowledgements(article, fullText, locale);
-  const statements = isResearchArticle ? researchStatementItems(article, fullText, locale) : [];
+  const hasDeclarationEvidence = Boolean(
+    localizedMetadataStatement(article.funding, locale)
+    || localizedMetadataStatement(article.conflict_of_interest, locale)
+    || localizedMetadataStatement(article.ethics_approval_and_informed_consent, locale)
+    || localizedMetadataStatement(article.ai_use_statement, locale)
+    || fullText?.declarations?.funding?.trim()
+    || fullText?.declarations?.competingInterests?.trim()
+    || fullText?.declarations?.ethicsApproval?.trim()
+    || fullText?.declarations?.aiUse?.trim()
+  );
+  const statements = isResearchArticle || hasDeclarationEvidence
+    ? researchStatementItems(article, fullText, locale)
+    : [];
   const supplementary = fullText?.supplementary || [];
   const trPdf = articlePdfUrl(article, "tr");
   const enPdf = articlePdfUrl(article, "en");

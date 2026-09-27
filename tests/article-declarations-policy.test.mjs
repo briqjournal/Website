@@ -16,3 +16,9 @@ test("historical declaration UI keeps only funding and conflict of interest as f
   assert.doesNotMatch(block, /label: "Author Contributions"/);
   assert.doesNotMatch(block, /label: "Data Availability"/);
 });
+
+test("non-research records with declaration evidence can surface the declaration block", async () => {
+  const source = await readFile(new URL("../app/components/ArticlePlatform.tsx", import.meta.url), "utf8");
+  assert.match(source, /const hasDeclarationEvidence = Boolean\(/);
+  assert.match(source, /const statements = isResearchArticle \|\| hasDeclarationEvidence/);
+});
