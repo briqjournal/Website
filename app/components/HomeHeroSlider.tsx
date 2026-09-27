@@ -11,6 +11,7 @@ type Slide = {
   deadline?: string;
   kicker: string;
   title: string;
+  titleClass?: string;
   subtitle: string;
   subtitleFirst?: boolean;
   summary: string;
@@ -29,6 +30,7 @@ const slides: Record<Locale, Slide[]> = {
       eyebrow: "Cilt 7 · Sayı 4 · Sonbahar 2026",
       kicker: "Güncel sayı",
       title: "Hegemonyacılık Geriliyor, Bölgesel İrade Güçleniyor",
+      titleClass: "hero-title-v74",
       subtitle: "Batı Asya’da Yeni Dönem",
       subtitleFirst: true,
       summary: "BRIQ’in yeni sayısı Batı Asya’daki dönüşümü, Türkiye–Çin ilişkilerini, Dijital İpek Yolu’nu ve Çin’in küresel altyapı stratejisini birlikte ele alıyor.",
@@ -104,6 +106,7 @@ const slides: Record<Locale, Slide[]> = {
       eyebrow: "Volume 7 · Issue 4 · Autumn 2026",
       kicker: "Current issue",
       title: "The Erosion of Hegemony and the Rise of Regional Agency",
+      titleClass: "hero-title-v74",
       subtitle: "A New Era in West Asia",
       subtitleFirst: true,
       summary: "The new issue brings together work on West Asia’s changing order, Türkiye–China relations, the Digital Silk Road, and China’s global infrastructure strategy.",
@@ -246,7 +249,7 @@ export function HomeHeroSlider({ locale = "tr" }: { locale?: Locale }) {
                   slide.eyebrow && <div className="eyebrow"><span>{slide.eyebrow}</span></div>
                 )}
                 <p className="hero-kicker">{slide.kicker}</p>
-                <h1 className={"subtitleFirst" in slide && slide.subtitleFirst ? "hero-title-subtitle-first" : undefined}>
+                <h1 className={["subtitleFirst" in slide && slide.subtitleFirst ? "hero-title-subtitle-first" : "", slide.titleClass || ""].filter(Boolean).join(" ") || undefined}>
                   {"subtitleFirst" in slide && slide.subtitleFirst ? (
                     <>
                       <em>{slide.subtitle}</em>

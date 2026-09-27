@@ -656,6 +656,11 @@ img {
   letter-spacing: -0.045em;
 }
 
+/* v7i4 titles run long: hold the slider main title to two lines. */
+.hero h1.hero-title-v74 {
+  font-size: clamp(40px, 3.8vw, 50px);
+}
+
 .hero h1 em {
   display: block;
   margin-top: 16px;
@@ -6668,6 +6673,10 @@ body {
     overflow-wrap: anywhere;
   }
 
+  .hero h1.hero-title-v74 {
+    font-size: clamp(38px, 8vw, 52px);
+  }
+
   .hero h1 em {
     font-size: .55em;
     line-height: 1.14;
@@ -7089,6 +7098,10 @@ body {
   }
 
   .hero h1 {
+    font-size: clamp(34px, 10vw, 43px);
+  }
+
+  .hero h1.hero-title-v74 {
     font-size: clamp(34px, 10vw, 43px);
   }
 
