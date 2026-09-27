@@ -273,15 +273,20 @@ const worker = {
       return handleImageOptimization(request, {
         fetchAsset: (path) => env.ASSETS.fetch(new Request(new URL(path, request.url))),
         transformImage: async (body, { width, format, quality }) => {
-          // NOTE: `format` arrives as a MIME type ("image/avif" | "image/webp"
-          // | "image/jpeg") and must be passed through unchanged: the Images
-          // binding expects MIME form (Cloudflare docs, "Optimize with
-          // Workers"). Do NOT map to short names ("avif"/"webp") - that
-          // breaks the transform and vinext silently serves the original.
+          // `format` arrives as a MIME type ("image/avif" | "image/webp" |
+          // "image/jpeg"). The Images binding is given the short name
+          // ("avif" | "webp"); JPEG-only clients keep the input format.
+          // Verified live: short names produced AVIF output, MIME strings
+          // fell back to the untouched original on every request.
+          const requestedFormat = String(format ?? "");
+          const outputFormat =
+            requestedFormat === "image/avif" ? "avif"
+            : requestedFormat === "image/webp" ? "webp"
+            : undefined;
           const resizeWidth = Number(width) || 0;
           const result = await env.IMAGES.input(body)
             .transform(resizeWidth > 0 ? { width: resizeWidth } : {})
-            .output({ format, quality });
+            .output(outputFormat ? { format: outputFormat, quality } : { quality });
           return result.response();
         },
       }, allowedWidths);
