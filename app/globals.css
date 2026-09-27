@@ -605,6 +605,35 @@ img {
   border-left: 1px solid rgba(255, 255, 255, 0.36);
 }
 
+.hero-deadline {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 22px;
+  padding: 14px 20px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-left: 4px solid var(--red);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.hero-deadline span {
+  color: #ffd6c1;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero-deadline strong {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(26px, 2.6vw, 34px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
 .hero-kicker,
 .section-kicker {
   margin: 0 0 17px;
