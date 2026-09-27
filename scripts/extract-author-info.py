@@ -33,8 +33,8 @@ OUT_DIR = ROOT / ".audit" / "author-info"
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
 ORCID_RE = re.compile(r"\b\d{4}-\d{4}-\d{4}-\d{3}[\dX]\b")
-EMAIL_LABEL_RE = re.compile(r"(?:E-?mail|E-?posta)\s*:\s*([A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I)
-STAR_BIO_RE = re.compile(r"\*\s*(?P<bio>.+?)(?P<mail>(?:E-?mail|E-?posta)\s*:\s*[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I | re.S)
+EMAIL_LABEL_RE = re.compile(r"(?:E-?mail|E-?postal?)\s*:\s*([A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I)
+STAR_BIO_RE = re.compile(r"\*\s*(?P<bio>.+?)(?P<mail>(?:E-?mail|E-?postal?)\s*:\s*[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I | re.S)
 
 TITLE_PREFIXES = [
     r"Assoc\.?\s+Prof\.?\s+Dr\.?\s*",
@@ -66,6 +66,35 @@ def norm_space(s: str) -> str:
     s = re.sub(r"[ \t\r\f\v]+", " ", s)
     s = re.sub(r"\n\s*\n+", "\n", s)
     return s.strip()
+
+
+def _title_pattern(title: str) -> re.Pattern | None:
+    words = (title or "").split()[:6]
+    if len(words) < 3:
+        return None
+    return re.compile(r"\s*".join(re.escape(w) for w in words), re.IGNORECASE)
+
+
+def _tr_insensitive(pattern: str) -> str:
+    return "".join("[Iiİı]" if ch in "Iiİı" else re.escape(ch) for ch in pattern)
+
+
+def _head_names_ok(bio: str, base: str) -> bool:
+    head = bio[:120]
+    return any(
+        re.search(_tr_insensitive(tok), head, re.IGNORECASE)
+        for tok in base.split() if len(tok) >= 3
+    )
+
+
+def _clean_bio(raw: str) -> str:
+    bio = norm_space(raw)
+    bio = re.sub(r"^\*+", "", bio)
+    bio = re.sub(r"^\d+(?=[A-Za-zÇĞİÖŞÜçğıöşü])", "", bio).strip()
+    bio = re.sub(r"\s+", " ", bio)
+    bio = re.sub(r"\s*(?:E-?mail|E-?postal?)\s*:.*$", "", bio, flags=re.I).strip()
+    bio = re.sub(r"\s*ORCID\s*:\s*(?:https?://orcid\.org/)?[\dX\-]+$", "", bio, flags=re.I).strip()
+    return bio
 
 
 def download(url: str, dest: Path) -> float:
@@ -134,42 +163,114 @@ def extract_first_pages(pdf: Path, max_pages: int = 2):
         return text, dt, n, f"pdftotext (pymupdf fallback: {e})"
 
 
-def parse_locale(text: str, author_names: list[str]) -> dict:
-    emails = sorted(set(EMAIL_RE.findall(text)))
+def parse_locale(text: str, author_names: list[str], title: str | None = None) -> dict:
+    emails_all = [(m.group(0), m.start()) for m in EMAIL_RE.finditer(text)]
+    emails = sorted(set(e for e, _ in emails_all))
     orcids = sorted(set(ORCID_RE.findall(text)))
     labeled = [{"email": m.group(1), "pos": m.start()} for m in EMAIL_LABEL_RE.finditer(text)]
 
-    bios: list[dict] = []
-    for m in STAR_BIO_RE.finditer(text):
-        bio = norm_space(m.group("bio"))
-        bio = re.sub(r"^[\*\s]+", "", bio)
-        bio = re.sub(r"\s+", " ", bio)
-        bio = re.sub(r"\s*ORCID\s*:\s*[\dX\-]+$", "", bio, flags=re.I).strip()
-        if len(bio) >= 40:
-            bios.append({"text": bio, "email": EMAIL_LABEL_RE.search(m.group(0)).group(1) if EMAIL_LABEL_RE.search(m.group(0)) else None, "chars": len(bio), "source": "star-block"})
-
-    # Fallback: split around each labeled email; preceding ~1200 chars containing a surname => bio candidate
-    if not bios:
-        for item in labeled:
-            start = max(0, item["pos"] - 1500)
-            window = norm_space(text[start:item["pos"]])
-            window_one = re.sub(r"\s+", " ", window)
-            hit = None
-            for full in author_names:
-                base = strip_title(full)
-                surname = base.split()[-1] if base.split() else base
-                if surname and len(surname) >= 3 and surname.lower() in window_one.lower():
-                    hit = full
-                    break
-            if hit:
-                # take last ~2 sentences / 800 chars as candidate
-                cand = window_one[-900:].strip()
-                if len(cand) >= 40:
-                    bios.append({"text": cand, "email": item["email"], "chars": len(cand), "source": "email-window", "matched_author": hit})
-
-    affiliations: list[dict] = []
     lines = [ln.strip() for ln in text.splitlines()]
     non_empty = [ln for ln in lines if ln.strip()]
+
+    def nameblock_charpos(base: str, surname: str) -> int:
+        base_n = norm_name(base)
+        surname_n = norm_name(surname)
+        if len(surname) < 3:
+            return -1
+        positions: list[int] = []
+        for ln in non_empty:
+            low = norm_name(ln)
+            if surname_n not in low:
+                continue
+            cleaned = ln.replace("*", "").strip()
+            if len(cleaned) <= len(base) + 30 and (base_n in low or norm_name(cleaned).startswith(surname_n[:4])):
+                positions.append(text.find(ln))
+        # Prefer the last (title block usually trails the bio in PyMuPDF order).
+        return max(positions) if positions else -1
+
+    bios: list[dict] = []
+    claimed: set[str] = set()
+
+    def claim(author: str, bio: str, email: str | None, source: str) -> None:
+        if author in claimed or len(bio) < 100 or len(bio) > 2500:
+            return
+        claimed.add(author)
+        bios.append({"text": bio, "email": email, "chars": len(bio), "source": source, "matched_author": author})
+
+    # 1. Star-anchored bio ending at an email label. The prose must name an
+    # author up front; otherwise the match swallowed article text.
+    for m in STAR_BIO_RE.finditer(text):
+        bio = _clean_bio(m.group("bio"))
+        mail = EMAIL_LABEL_RE.search(m.group(0))
+        owner = next((full for full in author_names if _head_names_ok(bio, strip_title(full))), None)
+        if owner is not None:
+            claim(owner, bio, mail.group(1) if mail else None, "star-block")
+
+    # 2. Email-window fallback for authors still without a bio. Anchor on the
+    # author's full name and take the prose up to the next email label; bare
+    # surnames also match citations ("Luvsandandar, B. (2026)"), so they are
+    # only a last resort and never on citation lines.
+    for full in author_names:
+        if full in claimed:
+            continue
+        base = strip_title(full)
+        parts = base.split()
+        surname = parts[-1] if parts else base
+        given = parts[0] if parts else ""
+        if len(surname) < 3:
+            continue
+        full_pat = _tr_insensitive(given) + r"\s+" + _tr_insensitive(surname) if len(given) >= 3 else None
+        loose_pat = _tr_insensitive(surname)
+        assigned = False
+        for pattern, strict in ((full_pat, True), (loose_pat, False)):
+            if assigned or pattern is None:
+                continue
+            for occ in re.finditer(pattern, text, re.IGNORECASE):
+                line_start = text.rfind("\n", 0, occ.start()) + 1
+                line = text[line_start:occ.start()]
+                if not strict and re.search(r"^\s*(Atıf|How to cite)\s*:", line, re.I):
+                    continue
+                if not strict and re.search(r",\s*[A-Z]\.\s*\(\d{4}", text[occ.start():occ.start() + 30]):
+                    continue
+                follower = next((pos for _, pos in emails_all if occ.end() < pos <= occ.end() + 1500), None)
+                if follower is None:
+                    continue
+                candidate = _clean_bio(text[occ.start():follower])
+                if len(candidate) >= 100:
+                    em = next(e for e, pos in emails_all if pos == follower)
+                    claim(full, candidate, em, "email-window")
+                    assigned = True
+                    break
+
+    # 3. Interview fallback: star-led block with no email label (interviews
+    # carry no email). Span runs to the author's name block.
+    star_starts = [m.start() for m in re.finditer(r"(?m)^\*", text)]
+    for full in author_names:
+        if full in claimed:
+            continue
+        base = strip_title(full)
+        surname = base.split()[-1] if base.split() else base
+        nb = nameblock_charpos(base, surname)
+        if nb < 0:
+            continue
+        cands = [p for p in star_starts if p < nb]
+        if not cands:
+            continue
+        span = text[cands[-1]:nb]
+        if EMAIL_LABEL_RE.search(span):
+            continue
+        # The title/affiliation/name block trails the bio: cut at the article
+        # title. (No length-based popping: ragged bio endings are short too.)
+        title_pat = _title_pattern(title or "")
+        if title_pat is not None:
+            tm = title_pat.search(span)
+            if tm is not None and tm.start() >= 100:
+                span = span[:tm.start()]
+        bio = _clean_bio(span)
+        if surname and len(surname) >= 3 and norm_name(surname) in norm_name(bio):
+            claim(full, bio, None, "star-para")
+
+    affiliations: list[dict] = []
     for full in author_names:
         base = strip_title(full)
         surname = base.split()[-1] if base.split() else base
@@ -239,7 +340,8 @@ def process_slug(slug: str, locales: list[str], cache: Path) -> dict:
             result["locales"][loc] = {"status": "extract_failed", "pdf_url": url, "error": str(e)}
             continue
         t_parse0 = time.perf_counter()
-        parsed = parse_locale(text, author_names)
+        title = (meta.get("title") or {}).get(loc)
+        parsed = parse_locale(text, author_names, title)
         dt_parse = time.perf_counter() - t_parse0
         result["locales"][loc] = {
             "status": "ok",

@@ -315,6 +315,9 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     tr: "T.C. Kültür ve Turizm Bakanlığı Kaçakçılıkla Mücadele Dairesi Başkanı",
     en: "Head of the Anti-Smuggling Department, Ministry of Culture and Tourism of the Republic of Türkiye",
     institutionUrl: "https://kvmgm.ktb.gov.tr/TR-44454/kacakciligin-onlenmesi-ile-ilgili-faaliyetler.html",
+
+    biographyTr: "Zeynep Boz, eğitimini arkeoloji alanında tamamlamış olup, 2020 yılından bu yana Türkiye Cumhuriyeti Kültür ve Turizm Bakanlığı Kaçakçılıkla Mücadele Dairesi Başkanlığı görevini yürütmektedir. Bakanlıktaki kariyerine 2007 yılında aynı birimde başlamış; 2014–2017 yılları arasında ise 1970 UNESCO Sözleşmesi Sekretaryası’nda görev yapmıştır. Uzmanlık alanları arasında kültür varlıklarının iadesi, ayrıca kaçakçılıkla mücadele alanında farkındalık artırma ve kapasite geliştirme çalışmaları yer almaktadır. Avrupa’daki kolluk kuvvetleri ve yargı mensupları başta olmak üzere ilgili paydaşlara yönelik olarak hazırlanan UNESCO “<em>Kültür Varlıklarının Yasadışı Ticaretiyle Mücadele Araç Seti</em>”nin de yazarıdır.",
+    biographyEn: "Zeynep Boz is an archaeologist by training and has been heading the Department for Combatting Illicit Trafficking at the Ministry of Culture and Tourism of Türkiye since 2020. She began her career at the Ministry in 2007, working in the same department, and from 2014 to 2017 she served at the Secretariat of the 1970 UNESCO Convention. Her expertise includes return and restitution, as well as awareness-raising and capacity-building to strengthen efforts against illicit trafficking. She is also the author of the UNESCO <em>Toolkit on Fighting Illicit Trafficking of Cultural Property</em>, designed primarily for European law enforcement and the judiciary.",
   },
   "Nuray Ekşi": {
     tr: "Marmara Üniversitesi Hukuk Fakültesi (E)",
@@ -322,46 +325,70 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     email: "nurayeksi@gmail.com",
     orcids: ["0000-0002-9713-777X"],
     institutionUrl: "https://hukuk.marmara.edu.tr/en",
+
+    biographyTr: "Prof. Dr. Ekşi, Kültür Varlıklarına İlişkin Uyuşmazlıkların Çözüm Mekanizmaları Hakkında Türk ve Slovenya Hukuklarının Karşılaştırılması adlı TÜBİTAK uluslararası projesinin yürütücülüğünü yapmıştır. Kültür ve tabiat varlıklarının korunması alanında birçok ulusal ve uluslararası konferansta tebliğ sunmuş; yurt içinde ve yurt dışında çok sayıda kitabı ve makalesi yayımlanmıştır. Bu bağlamda 2024 yılında <em>Ulusal ve Uluslararası Hukukta Kültür Varlıklarına İlişkin Uyuşmazlıkların Çözüm Mekanizmaları</em> adlı kitabı Beta Yayınevi tarafından yayınlanmıştır. Baş editörü olduğu <em>Farklı Hukuk Disiplinleri Gözüyle Kültür Varlıkları</em> adlı kitap da aynı yıl ve aynı yayınevi tarafından basılmış olup ikinci bası süreci devam etmektedir. Editörlerinden biri olduğu <em>Law, Humanities and Tourism: Interdisciplinary Approaches to the Restitution of Cultural Heritage</em> adlı kitap Cambridge Scholar tarafından yayımlanmıştır. Ayrıca, baş editörü olduğu <em>Protecting Cultural Property Multiple Mechanisms for a Single Objective</em> adlı kitap Springer tarafından 2026 yılında; Private International Law as a Toolkit for Extraterritorial Refuge of Endangered Cultural Property başlıklı makalesi Santander Art and Culture Law Review’da yayımlanmıştır.",
+    biographyEn: "Prof. Dr. Ekşi served as the principal investigator for the TÜBİTAK international project titled \"A Comparative Analysis of Turkish and Slovenian Laws on the Mechanisms for the Resolution of Disputes Concerning Cultural Property.” She has presented papers at numerous national and international conferences on the protection of cultural and natural property. Her book <em>Dispute Resolution Mechanisms Concerning Cultural Property in National and International Law</em> was published by Beta Publishing in 2024. She served as chief editor of <em>Cultural Property from the Perspective of Different Legal Disciplines</em>, published by Beta Publishing, with a second edition in progress. She is also among the editors of <em>Law, Humanities and Tourism: Interdisciplinary Approaches to the Restitution of Cultural Heritage</em>, published by Cambridge Scholars Publishing. Additionally, she is the chief editor of <em>Protecting Cultural Property: Multiple Mechanisms for a Single Objective</em>, published by Springer in 2026. Her article Private International Law as a Toolkit for Extraterritorial Refuge of Endangered Cultural Property appeared in the Santander Art and Culture Law Review.",
   },
   "Li Ning": {
     tr: "Zunyi Normal Üniversitesi, Tarih Bölümü, Çin",
     en: "Department of History, Zunyi Normal University, China",
     email: "Shuln188@126.com",
     orcids: ["0009-0005-5419-6998"],
+
+    biographyTr: "Li Ning, Zunyi Normal Üniversitesi Tarih, Kültür ve Turizm Okulu Tarih Bölümü’nde Dr. Öğr. Üyesi ve Şanghay Üniversitesi Türkiye Araştırmaları Merkezi’nde yarı zamanlı araştırmacıdır. 2021 yılında Şanghay Üniversitesi Dünya Tarihi programında, bölgesel ve ulusal tarih ile kent kültür tarihi alanlarında uzmanlaşarak doktorasını tamamlamıştır. History Teaching ve World History Review gibi dergilerde çok sayıda makale yayımlamıştır. Hâlen “İstanbul’un Kentsel Nüfusu ve Gündelik Yaşamı (1856–1923)” başlıklı Ulusal Sosyal Bilimler Fonu projesini yürütmektedir.",
+    biographyEn: "Li Ning is an Assistant Professor in the Department of History at the School of History, Culture, and Tourism, Zunyi Normal University, and an Adjunct Researcher at the Turkish Studies Center, Shanghai University. He received his Ph.D. in World History from Shanghai University in 2021, specializing in regional and national history and urban cultural history. He has published multiple papers in journals such as History Teaching and World History Review. Currently, he leads the National Social Science Fund project “Research on Istanbul’s Urban Population and Their Daily Life (1856–1923).”",
   },
   "Yang Xuyan": {
     tr: "Zunyi Normal Üniversitesi, Tarih Bölümü, Çin",
     en: "Department of History, Zunyi Normal University, China",
     email: "846543290@qq.com",
     orcids: ["0009-0001-7804-1772"],
+
+    biographyTr: "Yang Xuyan, Zunyi Normal Üniversitesi Tarih, Kültür ve Turizm Okulu Tarih Bölümü’nde Dr. Öğr. Üyesi ve bu makalenin sorumlu yazarıdır. Araştırmaları Çin etnik gruplarının tarihi ve kültürel miras yönetimi üzerine yoğunlaşmaktadır. Temel akademik dergilerde çok sayıda makale yayımlamış; hazırladığı çeşitli araştırma raporları eyalet ve bakanlık düzeyindeki yöneticiler tarafından onaylanıp benimsenmiştir.",
+    biographyEn: "Yang Xuyan is an Assistant Professor in the Department of History at the School of History, Culture, and Tourism, Zunyi Normal University, and the corresponding author of this paper. His research focuses on the history of China’s ethnic groups and cultural heritage management. He has published numerous academic papers in core journals, and several of his research reports have received approvals and been adopted by provincial and ministerial-level leaders.",
   },
   "Mehmet Celal Özdoğan": {
     tr: "İstanbul Üniversitesi Prehistorya Anabilim Dalı (E)",
     en: "Department of Prehistory, Istanbul University (Emeritus)",
     institutionUrl: "https://tanitimedebiyat.istanbul.edu.tr/en/content/archaeology/prehistory",
+
+    biographyTr: "30 Mayıs 1943’te İstanbul’da doğdu. Ortaöğrenimini İngiliz Erkek Lisesi ve ardından Robert Kolej’de 1963 yılında tamamladı ve İstanbul Üniversitesi Edebiyat Fakültesi Prehistorya Kürsüsü’nde yükseköğrenimine başladı. 1970 yılında İstanbul Üniversitesi’nde “fahri asistan” olarak çalışmaya başladı ve bütün akademik yaşamını İstanbul Üniversitesi’nde geçirdi. 1994 yılında profesörlüğe yükselen Özdoğan, 2000 yılında Prehistorya Anabilim Dalı başkanlığını üstlendi, 2010 yılında da emekli oldu. Özdoğan, Türkiye Bilimler Akademisi (TÜBA) asli üyesi (2002-2011), Bilim Akademisi (2011), Amerika Birleşik Devletleri Bilim Akademisi (NAS) yabancı asli üyesi (2005), Amerika Arkeoloji Enstitüsü (AIA), Alman Arkeoloji Enstitüleri (DAI) üyesidir.",
+    biographyEn: "He was born in Istanbul on May 30, 1943. He completed his secondary education at the English Boys’ High School and then at Robert College in 1963, and began his higher education at the Department of Prehistory in the Faculty of Letters at Istanbul University. In 1970, he began working as an “honorary assistant” at Istanbul University and spent his entire academic career there. Özdoğan was promoted to professor in 1994, assumed the chairmanship of the Department of Prehistory in 2000, and retired in 2010. Özdoğan is a full member of the Turkish Academy of Sciences (TÜBA) (2002 - 2011), a member of the Academy of Sciences (2011), a foreign full member of the National Academy of Sciences (NAS) of the United States (2005), and a member of the American Institute of Archaeology (AIA) and the German Archaeological Institute (DAI).",
   },
   "Pavel Zarifullin": {
     tr: "Lev Gumilev Moskova Merkezi Direktörü",
     en: "Director, Lev Gumilev Moscow Centre",
     institutionUrl: "https://af.gumilev-center.ru/en/about",
+
+    biographyTr: "Pavel Vyacheslavovich Zarifullin, 1977 yılında Kazan’da doğdu. Eğitimini hukuk ve tarih alanında tamamladı. Yıllar boyunca Kosova, Güney Osetya (savaş sırasında), Transdinyester, Kırım (yarımadanın yeniden birleşmesi sırasında), Afganistan ve Ukrayna’da Avrasya insani yardım misyonlarına liderlik etti. 2010 yılından beri Lev Gumilev Moskova Merkezi Direktörü olan Zarifullin, “Yeni İskitler” Uluslararası Hareketini kurdu. Kutsal coğrafya uzmanı olan Zarifullin, İç Avrasya’daki kutsal “güç merkezlerine” (Yakutistan, Moğolistan, Tuva, Pakistan, Afganistan, İran, Tacikistan, Kafkaslar, Rusya’nın kuzeyi, Sibirya ve Uzak Doğu) pek çok gezi düzenledi. Avrasyacılık ve İskitçilik teorisyeni olan Zarifullin, hem Rus hem de uluslararası medyada yayınlanan birçok kitap ve makalenin yazarıdır. Rusya’nın yurt dışındaki çıkarlarını desteklemesi nedeniyle 2. derece “Vatana Hizmet Nişanı” ile ödüllendirildi. Ayrıca Afganistan, Kazakistan, Azerbaycan ve Saha (Yakutistan) Cumhuriyeti’nin nişan, madalya ve rozetlerine de değer görüldü.",
+    biographyEn: "Pavel Vyacheslavovich Zarifullin was born in 1977 in Kazan. He is a lawyer and historian by education. Over the years, he led Eurasian humanitarian missions in Kosovo, South Ossetia (during the war), Transnistria, Crimea (during the peninsula’s reunification), Afghanistan, and Ukraine. Zarifullin, who has been Director of the Lev Gumilev Moscow Center since 2010, founded the International Movement “New Scythians.” He is a specialist in sacred geography; he has led dozens of expeditions to sacred “places of power” in Inner Eurasia: Yakutia, Mongolia, Tuva, Pakistan, Afghanistan, Iran, Tajikistan, the Caucasus, the Russian North, Siberia, and the Far East. Zarifullin, as a theorist of Eurasianism and Scythianism, is an author of many books and essays published in both Russian and international media. He was awarded the Medal of the Order “For Merit to the Fatherland,” 2nd Class, for promoting Russia’s interests abroad, and he was also awarded orders, medals, and commemorative badges of Afghanistan, Kazakhstan, Azerbaijan, and the Republic of Sakha (Yakutia).",
   },
   "Wang Jiani": {
     tr: "Şanghay Üniversitesi Tarih Bölümü, Çin",
     en: "Department of History, Shanghai University, China",
     email: "jiani88254@hotmail.com",
     orcids: ["0009-0000-0543-3719"],
+
+    biographyTr: "Wang Jiani, Şanghay Üniversitesi Tarih Bölümü’nde Dr. Öğr. Üyesi ve Türk Araştırmaları Merkezi’nde araştırmacıdır. Siyasal Bilimler ve Uluslararası İlişkiler doktorasını 2017 yılında Şanghay Uluslararası Çalışmalar Üniversitesi’nde tamamlamıştır. 2017-2019 yılları arasında Fudan Üniversitesi’nde doktora sonrası araştırmacı olarak görev yapmıştır. 2015 ve 2016 yıllarında Duke Üniversitesi’nde misafir araştırmacı, 2012-2013 yıllarında ise Tel Aviv Üniversitesi’nde değişim araştırmacısı olmuştur. Araştırmaları Türkiye çalışmaları, din ve uluslararası ilişkiler alanlarına odaklanmaktadır. Çeşitli dergilerde bir kitap ve çok sayıda akademik makalesi yayımlanmıştır.",
+    biographyEn: "Wang Jiani is an Assistant Professor in the Department of History at Shanghai University and a researcher at the Center for Turkish Studies. She earned her Ph.D. in Political Science and International Relations from Shanghai International Studies University in 2017. From 2017 to 2019, she was a postdoctoral fellow at Fudan University. She was a visiting scholar at Duke University in 2015 and 2016, and an exchange fellow at Tel Aviv University from 2012 to 2013. Her research focuses on Turkish Studies, religion, and International Relations. She has published a book and several academic articles in various journals.",
   },
   "Bilguunzaya Luvsandandar": {
     tr: "Şanghay Üniversitesi Liberal Sanatlar Fakültesi, Çin",
     en: "College of Liberal Arts, Shanghai University, China",
     email: "bilguunzaya.luvsandandar@gmail.com",
     orcids: ["0009-0005-8843-6013"],
+
+    biographyTr: "Bilguunzaya Luvsandandar, hâlen Şanghay Üniversitesi Liberal Sanatlar Fakültesi’nde siyaset bilimi yüksek lisansını sürdürmekte ve aynı zamanda Küresel Çalışmalar Enstitüsü’nde araştırma asistanı olarak çalışmaktadır. Ana dili Moğolcadır; çalışma alanı Moğolistan siyaseti ve dış politikasıdır.",
+    biographyEn: "Bilguunzaya Luvsandandar is currently pursuing a master’s degree in political science at the College of Liberal Arts while also working as a research assistant at the Institute of Global Studies at Shanghai University. He is a native Mongolian speaker, and his field of study includes Mongolian politics and foreign policy.",
   },
   "Nora Maher": {
     tr: "Kahire Mayıs Üniversitesi Siyaset Bilimi Bölümü, Mısır",
     en: "Department of Political Science, May University in Cairo, Egypt",
     email: "nora-maher@hotmail.com",
     orcids: ["0000-0002-9858-8548"],
+
+    biographyTr: "Nora Maher, Kahire May Üniversitesi'nde Siyaset Bilimi Bölüm Başkanıdır. Kahire Üniversitesi'nden Siyaset Bilimi ve Uluslararası İlişkiler alanında doktora derecesine sahiptir. Dr. Maher, Uluslararası İlişkiler ve Stratejik Çalışmalar alanında uzmanlaşmıştır ve özellikle Ortadoğu siyaseti, Arap-İsrail di- namikleri, güvenlik çalışmaları, dış politika, göç ve sosyal hareketler üzerine yoğunlaşmaktadır. Contemporary Arab Affairs, Policy Perspectives, Review of Economics and Political Science ve Asian Perspectives gibi birçok hakemli dergide makaleleri yayınlanan Dr. Maher, İsrail dış politikası üzerine iki kitap yazmıştır. Dr. Maher, Mısır’daki British University, Kahire’deki American University ve Université Française d’Égypte gibi kurumlarda ders vermiş, birçok uluslararası dergi için hakemlik yapmıştır.",
+    biographyEn: "Nora Maher is an Associate Professor of Political Science and Head of the Department of Political Science at May University in Cairo. She holds a Ph.D. in Political Science and International Relations from Cairo University. Dr. Maher specializes in International Relations and Strategic Studies, with a particular focus on Middle East politics, Arab–Israeli dynamics, security studies, foreign policy, migration, and social movements. She has published in several peer-reviewed journals, including Contemporary Arab Affairs, Policy Perspectives, Review of Economics and Political Science, and Asian Perspectives. She is the author of two books on Israeli foreign policy. Dr. Maher has taught at institutions including the British University in Egypt, the American University in Cairo, and Université Française d’Égypte, and serves as a reviewer for multiple international journals.",
   },
   "Fikret Akfırat": {
     tr: "BRIQ Genel Yayın Yönetmeni",
