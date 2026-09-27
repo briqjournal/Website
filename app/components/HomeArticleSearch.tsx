@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { ArchiveArticleListing } from "../archive-listing";
+import { issueBadgeAccent } from "../issue-themes";
 
 export function HomeArticleSearch({
   articles,
@@ -11,17 +12,21 @@ export function HomeArticleSearch({
   locale?: "tr" | "en";
 }) {
   const [query, setQuery] = useState("");
+  const scholarlyArticles = useMemo(
+    () => articles.filter((article) => article.typeEn === "Research Article"),
+    [articles],
+  );
   const visibleArticles = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US");
-    if (!normalized) return articles.slice(0, 5);
-    return articles.filter((article) => {
+    if (!normalized) return scholarlyArticles.slice(0, 10);
+    return scholarlyArticles.filter((article) => {
       const title = locale === "tr" ? article.titleTr : article.titleEn;
       const type = locale === "tr" ? article.typeTr : article.typeEn;
       return `${title} ${article.author} ${type}`
         .toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US")
         .includes(normalized);
-    }).slice(0, 6);
-  }, [articles, locale, query]);
+    }).slice(0, 10);
+  }, [scholarlyArticles, locale, query]);
 
   return (
     <>
@@ -41,14 +46,22 @@ export function HomeArticleSearch({
         </label>
       </div>
       <div className="article-list">
-        {visibleArticles.map((article, index) => (
+        {visibleArticles.map((article) => (
           <a className="article-row" href={`${locale === "tr" ? "/tr/makaleler" : "/en/articles"}/${locale === "en" ? article.slugEn : article.slug}`} key={article.slug}>
-            <span className="article-number">{String(index + 1).padStart(2, "0")}</span>
+            <span className="article-issue-cell">
+              <span className="article-issue-badge" style={{ backgroundColor: issueBadgeAccent(article.volume, article.issue) }}>
+                {locale === "tr" ? `Cilt ${article.volume} · Sayı ${article.issue}` : `Volume ${article.volume} · Issue ${article.issue}`}
+              </span>
+              <small>{locale === "tr" ? `${article.seasonTr} ${article.year}` : `${article.seasonEn} ${article.year}`}</small>
+            </span>
             <span className="article-meta">
               <small>{locale === "tr" ? article.typeTr : article.typeEn}</small>
               <b>{article.author}</b>
             </span>
-            <span className="article-title">{locale === "tr" ? article.titleTr : article.titleEn}</span>
+            <span className="article-title">
+              {locale === "tr" ? article.titleTr : article.titleEn}
+              {article.doi && <span className="article-doi">DOI: {article.doi}</span>}
+            </span>
             <span className="article-arrow">↗︎</span>
           </a>
         ))}

@@ -12,6 +12,8 @@ export type ArchiveArticleListing = {
   volume: number;
   issue: number;
   year: string;
+  seasonTr: string;
+  seasonEn: string;
   author: string;
   titleTr: string;
   titleEn: string;
@@ -32,19 +34,24 @@ export type ArchiveIssueListing = {
   themeEn: string;
 };
 
-export const archiveArticleListings: ArchiveArticleListing[] = archiveArticles.map((article) => ({
-  slug: article.slug,
-  slugEn: articleRouteSlug(article, "en"),
-  volume: article.volume,
-  issue: article.issue,
-  year: article.year,
-  author: article.author,
-  titleTr: article.title_tr,
-  titleEn: article.title_en || article.title_tr,
-  doi: article.doi || "",
-  typeTr: publicationType(article, "tr"),
-  typeEn: publicationType(article, "en"),
-}));
+export const archiveArticleListings: ArchiveArticleListing[] = archiveArticles.map((article) => {
+  const issue = archiveIssues.find((record) => record.volume === article.volume && record.issue === article.issue);
+  return {
+    slug: article.slug,
+    slugEn: articleRouteSlug(article, "en"),
+    volume: article.volume,
+    issue: article.issue,
+    year: article.year,
+    seasonTr: issue?.season_tr || "",
+    seasonEn: issue?.season_en || "",
+    author: article.author,
+    titleTr: article.title_tr,
+    titleEn: article.title_en || article.title_tr,
+    doi: article.doi || "",
+    typeTr: publicationType(article, "tr"),
+    typeEn: publicationType(article, "en"),
+  };
+});
 
 export const archiveIssueListings: ArchiveIssueListing[] = archiveIssues.map((issue) => ({
   volume: issue.volume,
