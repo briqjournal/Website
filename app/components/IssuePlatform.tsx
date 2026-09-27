@@ -138,7 +138,7 @@ export function IssuePlatform({
         <div className="site-shell issue-masthead-grid">
           <div className="issue-cover-column">
             <div className="issue-cover-frame">
-              <Image src={cover} alt={coverAlt} width={480} height={640} sizes="(max-width: 720px) 80vw, 385px" loading="lazy" />
+              <Image src={cover} alt={coverAlt} width={480} height={640} sizes="(max-width: 720px) 80vw, 385px" priority />
             </div>
             <CoverLightbox src={cover} alt={coverAlt} locale={locale} />
           </div>
