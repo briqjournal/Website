@@ -5,7 +5,25 @@ import Image from "next/image";
 
 type Locale = "tr" | "en";
 
-const slides = {
+type Slide = {
+  eyebrow?: string;
+  deadlineLabel?: string;
+  deadline?: string;
+  kicker: string;
+  title: string;
+  subtitle: string;
+  subtitleFirst?: boolean;
+  summary: string;
+  href: string;
+  action: string;
+  secondaryHref: string;
+  secondary: string;
+  image: string;
+  imageAlt: string;
+  tone: string;
+};
+
+const slides: Record<Locale, Slide[]> = {
   tr: [
     {
       eyebrow: "Cilt 7 · Sayı 4 · Sonbahar 2026",
@@ -37,8 +55,9 @@ const slides = {
       tone: "umber",
     },
     {
-      eyebrow: "Uzatılmış Son Tarih · 10 Ekim 2026",
       kicker: "Makale çağrısı",
+      deadlineLabel: "Uzatılmış Son Tarih",
+      deadline: "10 Ekim 2026",
       title: "Transatlantik İlişkilerin Yeniden Yapılanması",
       subtitle: "Savaşlar ve Stratejik Parçalanma Çağında",
       summary: "ABD–Avrupa ilişkileri, NATO’nun dönüşen rolü, çok kutupluluk ve Küresel Güney’in yükselişi üzerine eleştirel ve disiplinler arası çalışmalar bekleniyor.",
@@ -51,8 +70,9 @@ const slides = {
       tone: "transatlantic",
     },
     {
-      eyebrow: "Son tarih · 1 Aralık 2026",
       kicker: "Makale çağrısı",
+      deadlineLabel: "Son Tarih",
+      deadline: "1 Aralık 2026",
       title: "Yapay Zekâ ve Üretici Güçler",
       subtitle: "İnsanlığın Ortak Refahı",
       summary: "Yapay zekânın emek, bilimsel üretim, kamusal planlama, teknolojik egemenlik ve toplumsal refah üzerindeki etkilerini inceleyen çalışmalar bekleniyor.",
@@ -110,8 +130,9 @@ const slides = {
       tone: "umber",
     },
     {
-      eyebrow: "Extended Deadline · 10 October 2026",
       kicker: "Call for papers",
+      deadlineLabel: "Extended Deadline",
+      deadline: "10 October 2026",
       title: "Reconfiguring Transatlantic Relations",
       subtitle: "In an Era of War and Strategic Fragmentation",
       summary: "BRIQ welcomes critical, interdisciplinary work on US–Europe relations, NATO’s changing role, multipolarity, and the rise of the Global South.",
@@ -124,8 +145,9 @@ const slides = {
       tone: "transatlantic",
     },
     {
-      eyebrow: "Deadline · 1 December 2026",
       kicker: "Call for papers",
+      deadlineLabel: "Deadline",
+      deadline: "1 December 2026",
       title: "Artificial Intelligence and Productive Forces",
       subtitle: "The Common Prosperity of Humanity",
       summary: "BRIQ welcomes work on AI, labour, scientific production, public planning, technological sovereignty, and social welfare.",
@@ -152,7 +174,7 @@ const slides = {
       tone: "logo",
     },
   ],
-} as const;
+};
 
 export function HomeHeroSlider({ locale = "tr" }: { locale?: Locale }) {
   const [active, setActive] = useState(0);
@@ -218,7 +240,11 @@ export function HomeHeroSlider({ locale = "tr" }: { locale?: Locale }) {
           <article className={`hero-slide ${index === active ? "is-active" : ""}`} aria-hidden={index !== active} key={slide.title}>
             <div className="site-shell hero-grid">
               <div className="hero-copy">
-                <div className="eyebrow"><span>{slide.eyebrow}</span></div>
+                {slide.deadline ? (
+                  <p className="hero-deadline"><span>{slide.deadlineLabel}</span><strong>{slide.deadline}</strong></p>
+                ) : (
+                  slide.eyebrow && <div className="eyebrow"><span>{slide.eyebrow}</span></div>
+                )}
                 <p className="hero-kicker">{slide.kicker}</p>
                 <h1 className={"subtitleFirst" in slide && slide.subtitleFirst ? "hero-title-subtitle-first" : undefined}>
                   {"subtitleFirst" in slide && slide.subtitleFirst ? (
