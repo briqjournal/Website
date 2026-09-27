@@ -34,7 +34,7 @@ OUT_DIR = ROOT / ".audit" / "author-info"
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
 ORCID_RE = re.compile(r"\b\d{4}-\d{4}-\d{4}-\d{3}[\dX]\b")
 EMAIL_LABEL_RE = re.compile(r"(?:E-?mail|E-?postal?)\s*:\s*([A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I)
-STAR_BIO_RE = re.compile(r"\*\s*(?P<bio>.+?)(?P<mail>(?:E-?mail|E-?postal?)\s*:\s*[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I | re.S)
+STAR_BIO_RE = re.compile(r"\*\s*(?P<bio>(?:(?!\n\*)[\s\S])+?)(?P<mail>(?:E-?mail|E-?postal?)\s*:\s*[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I)
 
 TITLE_PREFIXES = [
     r"Assoc\.?\s+Prof\.?\s+Dr\.?\s*",
@@ -79,12 +79,23 @@ def _tr_insensitive(pattern: str) -> str:
     return "".join("[Iiİı]" if ch in "Iiİı" else re.escape(ch) for ch in pattern)
 
 
+def _full_name_pattern(base: str) -> str | None:
+    parts = [p for p in base.split() if p]
+    if not parts:
+        return None
+    if len(parts) == 1:
+        return _tr_insensitive(parts[0])
+    mid = r"(?:\s+[A-ZÇĞİÖŞÜ][\wçğıöşüÂâÎîÛû\-']+){0,2}"
+    return _tr_insensitive(parts[0]) + mid + r"\s+" + _tr_insensitive(parts[-1])
+
+
 def _head_names_ok(bio: str, base: str) -> bool:
-    head = bio[:120]
-    return any(
-        re.search(_tr_insensitive(tok), head, re.IGNORECASE)
-        for tok in base.split() if len(tok) >= 3
-    )
+    head = bio[:150]
+    full = _full_name_pattern(base)
+    if full and re.search(full, head, re.IGNORECASE):
+        return True
+    head_n = norm_name(head)
+    return any(tok in head_n for tok in norm_name(base).split() if len(tok) >= 3)
 
 
 def _clean_bio(raw: str) -> str:
@@ -92,6 +103,13 @@ def _clean_bio(raw: str) -> str:
     bio = re.sub(r"^\*+", "", bio)
     bio = re.sub(r"^\d+(?=[A-Za-zÇĞİÖŞÜçğıöşü])", "", bio).strip()
     bio = re.sub(r"\s+", " ", bio)
+    # Repair PDF line-wrap hyphenation ("diploma- sisine" -> "diplomasisine").
+    # Restricted to lowercase-letter joints so compounds ("Türk-Çin"),
+    # ranges ("2015-2016") and spaced dashes survive.
+    bio = re.sub(r"(?<=[a-zçğıöşü])-\s+(?=[a-zçğıöşü])", "", bio)
+    # Genuine hyphenated compounds broken by the same wrap.
+    for fused, correct in {"peerreviewed": "peer-reviewed"}.items():
+        bio = re.sub(r"\b" + fused + r"\b", correct, bio)
     bio = re.sub(r"\s*(?:E-?mail|E-?postal?)\s*:.*$", "", bio, flags=re.I).strip()
     bio = re.sub(r"\s*ORCID\s*:\s*(?:https?://orcid\.org/)?[\dX\-]+$", "", bio, flags=re.I).strip()
     return bio
@@ -205,6 +223,10 @@ def parse_locale(text: str, author_names: list[str], title: str | None = None) -
         owner = next((full for full in author_names if _head_names_ok(bio, strip_title(full))), None)
         if owner is not None:
             claim(owner, bio, mail.group(1) if mail else None, "star-block")
+        elif len(author_names) == 1 and len(bio) >= 200:
+            # Anonymous bio (no name in prose, e.g. "*1983'te Bursa'da doğdu…"):
+            # safe only for single-author papers with a substantial block.
+            claim(author_names[0], bio, mail.group(1) if mail else None, "star-block-anon")
 
     # 2. Email-window fallback for authors still without a bio. Anchor on the
     # author's full name and take the prose up to the next email label; bare
@@ -219,7 +241,7 @@ def parse_locale(text: str, author_names: list[str], title: str | None = None) -
         given = parts[0] if parts else ""
         if len(surname) < 3:
             continue
-        full_pat = _tr_insensitive(given) + r"\s+" + _tr_insensitive(surname) if len(given) >= 3 else None
+        full_pat = _full_name_pattern(base)
         loose_pat = _tr_insensitive(surname)
         assigned = False
         for pattern, strict in ((full_pat, True), (loose_pat, False)):
