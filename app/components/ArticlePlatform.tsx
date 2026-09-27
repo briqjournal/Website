@@ -271,15 +271,11 @@ function researchStatementItems(
   const missing = locale === "tr"
     ? {
         funding: "Bu makale için finansman beyanı kaynak kaydında ayrıca belirtilmemiştir.",
-        conflictOfInterest: "Bu makale için çıkar çatışması beyanı kaynak kaydında ayrıca belirtilmemiştir.",
-        authorContributions: "Bu makale için yazar katkıları beyanı kaynak kaydında ayrıca belirtilmemiştir.",
-        dataAvailability: "Bu makale için veri kullanılabilirliği beyanı kaynak kaydında ayrıca belirtilmemiştir.",
+        conflictOfInterest: "Yazar(lar) tarafından herhangi bir çıkar çatışması beyan edilmemiştir.",
       }
     : {
         funding: "A separate funding statement is not available in the source record for this article.",
-        conflictOfInterest: "A separate conflict-of-interest statement is not available in the source record for this article.",
-        authorContributions: "A separate author-contributions statement is not available in the source record for this article.",
-        dataAvailability: "A separate data-availability statement is not available in the source record for this article.",
+        conflictOfInterest: "No conflict of interest was declared by the author(s).",
       };
   const values = {
     funding: localizedMetadataStatement(article.funding, locale)
@@ -288,15 +284,9 @@ function researchStatementItems(
     conflictOfInterest: localizedMetadataStatement(article.conflict_of_interest, locale)
       || declarations?.competingInterests?.trim()
       || missing.conflictOfInterest,
-    authorContributions: localizedMetadataStatement(article.author_contributions, locale)
-      || declarations?.authorContributions?.trim()
-      || missing.authorContributions,
     ethicsApproval: localizedMetadataStatement(article.ethics_approval_and_informed_consent, locale)
       || declarations?.ethicsApproval?.trim()
       || "",
-    dataAvailability: localizedMetadataStatement(article.data_availability, locale)
-      || declarations?.dataAvailability?.trim()
-      || missing.dataAvailability,
     aiUse: localizedMetadataStatement(article.ai_use_statement, locale)
       || declarations?.aiUse?.trim()
       || "",
@@ -304,16 +294,12 @@ function researchStatementItems(
   const items: StatementItem[] = locale === "tr" ? [
     { id: "finansman", label: "Finansman", value: values.funding },
     { id: "cikar-catismasi", label: "Çıkar Çatışması", value: values.conflictOfInterest },
-    { id: "yazar-katkilari", label: "Yazar Katkıları", value: values.authorContributions },
-    { id: "veri-kullanilabilirligi", label: "Veri Kullanılabilirliği", value: values.dataAvailability },
   ] : [
     { id: "funding", label: "Funding", value: values.funding },
     { id: "conflict-of-interest", label: "Conflict of Interest", value: values.conflictOfInterest },
-    { id: "author-contributions", label: "Author Contributions", value: values.authorContributions },
-    { id: "data-availability", label: "Data Availability", value: values.dataAvailability },
   ];
   if (values.ethicsApproval) {
-    items.splice(3, 0, {
+    items.push({
       id: locale === "tr" ? "etik-onay-ve-katilimci-onami" : "ethics-approval-and-informed-consent",
       label: locale === "tr" ? "Etik Onay ve Katılımcı Onamı" : "Ethics Approval and Informed Consent",
       value: values.ethicsApproval,
@@ -397,7 +383,19 @@ export async function ArticlePlatform({
   const isBookReview = articleType === (locale === "tr" ? "Kitap İncelemesi" : "Book Review");
   const reviewedBook = (article as ArchiveArticle & { reviewed_book?: ReviewedBookMetadata }).reviewed_book;
   const acknowledgements = articleAcknowledgements(article, fullText, locale);
-  const statements = isResearchArticle ? researchStatementItems(article, fullText, locale) : [];
+  const hasDeclarationEvidence = Boolean(
+    localizedMetadataStatement(article.funding, locale)
+    || localizedMetadataStatement(article.conflict_of_interest, locale)
+    || localizedMetadataStatement(article.ethics_approval_and_informed_consent, locale)
+    || localizedMetadataStatement(article.ai_use_statement, locale)
+    || fullText?.declarations?.funding?.trim()
+    || fullText?.declarations?.competingInterests?.trim()
+    || fullText?.declarations?.ethicsApproval?.trim()
+    || fullText?.declarations?.aiUse?.trim()
+  );
+  const statements = isResearchArticle || hasDeclarationEvidence
+    ? researchStatementItems(article, fullText, locale)
+    : [];
   const supplementary = fullText?.supplementary || [];
   const trPdf = articlePdfUrl(article, "tr");
   const enPdf = articlePdfUrl(article, "en");

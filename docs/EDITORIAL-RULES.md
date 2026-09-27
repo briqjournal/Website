@@ -25,7 +25,9 @@ This file contains stable content conventions only. Article-specific facts must 
 - Record received, revised, accepted, and published dates only when supported by evidence.
 - A missing revision date is `null`; it does not mean that no revision occurred.
 - Funding belongs under funding, not acknowledgements, when it describes financial/project support.
-- Optional declarations should appear only when relevant and supported; unknown historical declarations must not be backfilled with generic statements.
+- Funding declarations must remain evidence-backed; an absent funding statement must never be converted into a claim that no funding was received.
+- For historical research articles with no recorded conflict-of-interest statement, the public article page uses the editorial wording “No conflict of interest was declared by the author(s).” / “Yazar(lar) tarafından herhangi bir çıkar çatışması beyan edilmemiştir.” This reports the absence of a recorded declaration; it is not a claim that no conflict existed.
+- Author Contributions and Data Availability are currently not displayed on article pages. Preserve any supported canonical values for future use rather than inventing or deleting evidence.
 
 ## Sources and corrections
 
