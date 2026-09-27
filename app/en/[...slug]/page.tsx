@@ -1,5 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   archiveArticles,
   archiveIssues,
@@ -547,7 +548,7 @@ function EnglishContact() {
 function EnglishSearch() { return <><EnglishHero kicker="Search" title="Search BRIQ" intro="Search articles, authors, issues, cover titles, DOI records, and calls for papers." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} locale="en" /></div></>; }
 
 function EnglishCalls() {
-  return <><EnglishHero title="Calls for Papers" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={call.urlEn} key={call.urlEn}>{call.image ? <img src={call.image} alt="" loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · {call.deadlineLabelEn}: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
+  return <><EnglishHero title="Calls for Papers" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={call.urlEn} key={call.urlEn}>{call.image ? <Image src={call.image} alt="" width={400} height={230} loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · {call.deadlineLabelEn}: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
 }
 
 function EnglishAuthorProfile({ id }: { id: string }) {

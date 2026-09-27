@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import Image from "next/image";
 import type { ArchiveIssue } from "../archive";
 import {
   articleRouteSlug,
@@ -137,7 +138,7 @@ export function IssuePlatform({
         <div className="site-shell issue-masthead-grid">
           <div className="issue-cover-column">
             <div className="issue-cover-frame">
-              <img src={cover} alt={coverAlt} loading="lazy" decoding="async" />
+              <Image src={cover} alt={coverAlt} width={480} height={640} sizes="(max-width: 720px) 80vw, 385px" loading="lazy" />
             </div>
             <CoverLightbox src={cover} alt={coverAlt} locale={locale} />
           </div>
