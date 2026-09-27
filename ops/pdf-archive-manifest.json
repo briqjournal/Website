@@ -1,7 +1,7 @@
 {
   "generated_from": "https://briqjournal.com",
-  "unique_files": 618,
-  "total_bytes": 3658795795,
+  "unique_files": 619,
+  "total_bytes": 3689320661,
   "files": [
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_82-83.pdf",
@@ -4541,6 +4541,13 @@
       "bytes": 49742633,
       "sha256": "d07720f79ad235873dae4ec5ac4ce2b32423f9da32d63def43f7984a21254f92",
       "status": "downloaded"
+    },
+    {
+      "source": "https://briqjournal.com/assets/issues/BRIQ-Volume7-Issue4-EN-original.pdf",
+      "local": "/assets/issues/BRIQ-Volume7-Issue4-EN-original.pdf",
+      "bytes": 30524866,
+      "sha256": "d5f251cf54ea00a9ae2f26050b44836b6d44fb93f49004a338225e6285a0f29e",
+      "status": "uploaded"
     },
     {
       "source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2026-05/BRIQ%20Cilt7%20Say%C4%B13%20YAZ%202026_3.pdf",
