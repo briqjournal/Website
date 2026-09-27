@@ -28,6 +28,7 @@ import { ArticlePdfPage, ArticlePlatform } from "../../components/ArticlePlatfor
 import { IssuePlatform, issueContributionCount } from "../../components/IssuePlatform";
 import { CurrentIssueEditorial } from "../../components/CurrentIssueEditorial";
 import { AuthorProfileActions } from "../../components/AuthorProfileActions";
+import { BiographyText } from "../../components/BiographyText";
 import { IndexDirectory } from "../../components/IndexDirectory";
 import { CallHero } from "../../components/CallHero";
 import { completeCallCopyEn } from "../../call-content";
@@ -573,7 +574,7 @@ function EnglishAuthorProfile({ id }: { id: string }) {
               <article className="author-profile-panel">
                 <p className="section-kicker">Profile</p>
                 <h2>Short biography</h2>
-                <p>{profile.biographyEn}</p>
+                <p><BiographyText text={profile.biographyEn} /></p>
               </article>
               {profile.briqAppointments.length > 0 && <article className="author-profile-panel author-role-panel">
                 <p className="section-kicker">BRIQ</p>

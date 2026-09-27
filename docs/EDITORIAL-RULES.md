@@ -14,6 +14,12 @@ This file contains stable content conventions only. Article-specific facts must 
 - Use structured metadata for bibliographic facts; do not encode presentation labels inside semantic fields.
 - Book reviews must identify the reviewed book separately from the review article itself.
 
+## Author biographies
+
+- Author biographies are plain editorial strings; the only inline markup they support is `<em>...</em>`.
+- Book titles in biographies use `<em>` per APA 7 italics. Role labels (`Ed.`), translator credits, and publisher/year parentheticals stay roman.
+- The biography renderer outputs only `<em>` elements and escapes everything else, so no other HTML may be stored in these fields.
+
 ## Dates and declarations
 
 - Record received, revised, accepted, and published dates only when supported by evidence.
