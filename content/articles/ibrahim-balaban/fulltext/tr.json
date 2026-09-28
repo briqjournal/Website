@@ -2,7 +2,7 @@
   "sections": [
     {
       "id": "tr-section-1",
-      "title": "Tam Metin",
+      "title": "İBRAHIM BALABAN",
       "paragraphs": [
         "İbrahim Balaban, 1921 yılında Bursa’nın Seçköy’ünde dünyaya geldi. Genç yaşta hapishaneye düştü. İçeride kendini avutmak için resim yapmaya başladı. Kendi kendine resim yeteneğini ortaya koydu. İkinci kez cezaevine düştüğünde 1941’de büyük Türk şairi Nazım Hikmet’le tanıştı, dostluk kurdu. Nazım Hikmet, Balaban’ı “Bir Ressam Yunus Emre” diye dostlarına tanıştırdı. Kesintisiz yedi yıl boyunca Nazım Hikmet’ten bilimsel sosyalizme dayalı sanat tarihi, felsefe, sosyoloji, ekonomi politik dersleri aldı. 1950 yılında aftan yararlanarak mahpushaneden çıktı. 1953 yılında İstanbul’da ilk kişisel sergisini açtı. 2,000’den fazla tablo ve bunun birkaç katı kadar desen üreterek 50’den fazla kişisel sergi açmış, birçok karma ve grup sergilere katıldı. Eserleri birçok ülkede sergilendi. Anılar, denemeler (resim sanatı üzerine), hikayeler ve ikisi roman olmak üzere yayınlanmış 11 kitabı bulunmaktadır."
       ]
@@ -15,8 +15,8 @@
   "figures": [
     {
       "id": "figure-1",
-      "src": "/assets/article-figures/ibrahim-balaban/tr-figure-01.jpg",
-      "caption": "İbrahim Balaban"
+      "src": "/assets/article-figures/ibrahim-balaban/figure-01-tr.jpg",
+      "caption": ""
     }
   ]
 }

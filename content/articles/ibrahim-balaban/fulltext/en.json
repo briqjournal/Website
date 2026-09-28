@@ -2,9 +2,9 @@
   "sections": [
     {
       "id": "en-section-1",
-      "title": "Full Text",
+      "title": "İbrahim Balaban",
       "paragraphs": [
-        "İbrahim Balaban was born in Seçköy/Bursa in 1921. He was imprisoned when he was young. While in prison, he devoted himself to painting, by doing so, he realized his ability to paint. In 1941, he was imprisoned for the second time, he met Nazım Hikmet, a Turkish poet and they became friends. Nazım Hikmet introduced Balaban to his friends as “A Painter Yunus Emre”. He took lessons on art, history, philosophy, political economy from Nazım Hikmet for incessantly seven years. In 1950, he was released from prison by taking advantage of an amnesty. He opened his first personal exhibition in Istanbul in 1953. He has opened more than 50 solo exhibitions and participated in many group exhibitions by producing more than 2,000 paintings and several times as many designs. His works have been exhibited in many countries. His publications include 11 books consist of memoirs, essays (on painting), stories and two novels. How to cite: [Painting by İbrahim Balaban]. Belt & Road Initiative Quarterly, 2(4), 76."
+        "İbrahim Balaban was born in Seçköy/Bursa in 1921. He was imprisoned when he was young. While in prison, he devoted himself to painting, by doing so, he realized his ability to paint. In 1941, he was imprisoned for the second time, he met Nazım Hikmet, a Turkish poet and they became friends. Nazım Hikmet introduced Balaban to his friends as “A Painter Yunus Emre”. He took lessons on art, history, philosophy, political economy from Nazım Hikmet for incessantly seven years. In 1950, he was released from prison by taking advantage of an amnesty. He opened his first personal exhibition in Istanbul in 1953. He has opened more than 50 solo exhibitions and participated in many group exhibitions by producing more than 2,000 paintings and several times as many designs. His works have been exhibited in many countries. His publications include 11 books consist of memoirs, essays (on painting), stories and two novels."
       ]
     }
   ],
@@ -15,8 +15,8 @@
   "figures": [
     {
       "id": "figure-1",
-      "src": "/assets/article-figures/ibrahim-balaban/en-figure-01.jpg",
-      "caption": "İbrahim Balaban"
+      "src": "/assets/article-figures/ibrahim-balaban/figure-01-en.jpg",
+      "caption": ""
     }
   ]
 }

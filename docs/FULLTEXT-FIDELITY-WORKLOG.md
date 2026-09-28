@@ -4,6 +4,11 @@
 
 **Status:** in progress
 
+- Completed unit: `v02-i04`. All 10 records / 20 EN-TR locale records were audited against the official locale PDFs.
+  - Confirmed legacy-English defects: all seven legacy `en-archive.json` payloads interleaved the two printed columns line-by-line (e.g. zaman "Editor's Note: The Conference on Dialogue around the world, countries need to unite and re-"), so the canonical English records were rebuilt from the official English PDFs and the Turkish records from the official Turkish PDFs.
+  - Repairs were limited to PDF-extraction damage: cross-column/cross-page paragraph continuations rejoined (zaman, ortadogu p2 abstract-box surgery, yesevi italic-term fragments), reference line wraps and URL/DOI corruption repaired (ortadogu, yesevi, cin-arap), and the macaes/macces reviewed-book front matter kept out of the body.
+  - Legitimate published differences preserved: the published duplicated paragraph in yesevi's English epilogue (printed twice in the official PDF), the Yunus Emre verse refrains repeated in senin-kokun, EN/TR section/paragraph/figure-count differences (cin-arap 43/45 references, 6/5 figures; kalp 2/0 footnotes), macaes printed "Book Review"/"Kitap İnceleme" department labels as section titles, and cin-arap's mixed-script (Arabic) reference titles.
+  - Post-repair whole-issue audit: paragraph/footnote/reference/figure-caption match ratios 1.0 for all 20 locale records; no duplicate footnote IDs, metadata leakage, cross-record title contamination, Turkish-on-English contamination, or missing referenced production assets. The "Introduction"/"Giriş" lead-section titles follow the established untitled-lead convention (as in v02-i02 `pekin-bildirgesi`) and are the only headings without a printed PDF counterpart.
 - Completed unit: `v07-i04`. All 6 records / 12 EN-TR locale records were checked against the official locale PDFs.
   - Confirmed repairs were limited to the two defective English records: Saudi Arabia and Türkiye-China.
   - The other ten locale records were preserved after the issue-wide audit found no confirmed cross-record contamination, duplicate canonical paragraphs, English/Turkish contamination, paragraph-order reversal, or missing referenced figure assets.
