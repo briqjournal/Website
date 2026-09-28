@@ -6,6 +6,21 @@ from pathlib import Path
 TOKEN_RE = re.compile(r"[\w’'-]+", re.UNICODE)
 TR_WORDS = {"ve","bir","bu","ile","için","olarak","olan","çok","daha","ancak","çünkü","gibi","sonra","göre","üzerine","arasında","tarafından"}
 
+SAFE_SLUG_RE = re.compile(r"^[a-z0-9-]+$")
+PDF_SOURCE_HOSTS = frozenset({"briqjournal.com", "www.briqjournal.com"})
+# Cap for a single official-PDF download. Headroom above the largest archived
+# PDF (~284 MiB in ops/pdf-archive-manifest.json); raise together with it.
+MAX_PDF_BYTES = 512 * 1024 * 1024
+
+def require_slug(slug, context):
+    if not SAFE_SLUG_RE.match(slug or ""):
+        raise ValueError(f"Unsafe article slug in {context}: {slug!r}")
+
+def check_pdf_url(url):
+    parts = urllib.parse.urlparse(url or "")
+    if parts.scheme != "https" or (parts.hostname or "").lower() not in PDF_SOURCE_HOSTS:
+        raise ValueError(f"PDF source outside allowlist: {url!r}")
+
 def norm(s):
     s = unicodedata.normalize("NFKC", str(s or "")).lower().replace("’", "'")
     return " ".join(TOKEN_RE.findall(s))
@@ -45,13 +60,22 @@ def run(cmd):
     return p.stdout
 
 def download(url,dest):
+    check_pdf_url(url)
     dest.parent.mkdir(parents=True,exist_ok=True)
     req=urllib.request.Request(url,headers={"User-Agent":"BRIQ-fulltext-fidelity-audit/1.0"})
-    with urllib.request.urlopen(req,timeout=90) as r, open(dest,"wb") as f:
-        while True:
-            c=r.read(1024*1024)
-            if not c: break
-            f.write(c)
+    total=0
+    try:
+        with urllib.request.urlopen(req,timeout=90) as r, open(dest,"wb") as f:
+            while True:
+                c=r.read(1024*1024)
+                if not c: break
+                total+=len(c)
+                if total>MAX_PDF_BYTES:
+                    raise RuntimeError(f"PDF exceeds size cap ({MAX_PDF_BYTES} bytes): {url}")
+                f.write(c)
+    except Exception:
+        dest.unlink(missing_ok=True)
+        raise
 
 def download_first(urls,dest):
     errors=[]
@@ -59,7 +83,7 @@ def download_first(urls,dest):
         try:
             download(url,dest)
             return url
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as exc:
+        except (ValueError, urllib.error.HTTPError, urllib.error.URLError, TimeoutError, RuntimeError) as exc:
             errors.append(f"{url}: {exc}")
             dest.unlink(missing_ok=True)
     raise RuntimeError("Could not download official PDF from any configured source: " + " | ".join(errors))
@@ -244,6 +268,7 @@ def main():
     issue=json.loads((root/"content"/"issues"/f"{a.issue}.json").read_text(encoding="utf-8"))
     metas={}; titles={}
     for slug in issue["articles"]:
+        require_slug(slug, f"issue {a.issue}")
         m=json.loads((root/"content"/"articles"/slug/"metadata.json").read_text(encoding="utf-8")); metas[slug]=m; titles[slug]=(m.get("title") or {}).get("en") or slug
     results=[]
     for slug in issue["articles"]:
