@@ -76,7 +76,7 @@ function pushRange(ranges: TextRange[], start: number, end: number) {
 
 function apaItalicRanges(text: string) {
   const ranges: TextRange[] = [];
-  const date = /\((?:(?:19|20)\d{2}[a-z]?(?:,\s*[^)]*)?|n\.d\.(?:-[a-z])?|t\.y\.(?:-[a-z])?)\)\.\s*/i.exec(text);
+  const date = /\((?:(?:19|20)\d{2}[a-z]?(?:[\/-]\d{2,4})?(?:,\s*[^)]*)?|n\.d\.(?:-[a-z])?|t\.y\.(?:-[a-z])?)\)\.\s*/i.exec(text);
   if (!date || date.index == null) return ranges;
 
   const workStart = date.index + date[0].length;

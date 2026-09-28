@@ -15,7 +15,23 @@
   "doi": null,
   "language": ["en", "tr"],
   "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
-  "funding": null,
+  "funding": {
+    "statement": {
+      "en": "This article is supported by funding from the “National Social Science Foundation Youth Program” (22CGJ040).",
+      "tr": "Bu makale, “Ulusal Sosyal Bilimler Vakfı Gençlik Programı” (22CGJ040) tarafından sağlanan fon ile desteklenmiştir."
+    },
+    "funders": [
+      {
+        "name": "National Social Science Foundation Youth Program",
+        "nameTr": "Ulusal Sosyal Bilimler Vakfı Gençlik Programı",
+        "nameEn": "National Social Science Foundation Youth Program",
+        "ror": null,
+        "awardNumbers": [
+          "22CGJ040"
+        ]
+      }
+    ]
+  },
   "conflictOfInterest": null,
   "authorContributions": null,
   "ethicsApproval": null,

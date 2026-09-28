@@ -7,7 +7,7 @@ export type ArticleFigureKind = "figure" | "table" | "visual";
 export type ArticleFigure = {
   id: string;
   src: string;
-  caption: string;
+  caption?: string;
   kind?: ArticleFigureKind;
   placement?: {
     sectionId: string;
@@ -17,7 +17,7 @@ export type ArticleFigure = {
 
 export function articleFigureKind(figure: ArticleFigure): ArticleFigureKind {
   if (figure.kind) return figure.kind;
-  const caption = figure.caption.trim();
+  const caption = (figure.caption ?? "").trim();
   if (/^(?:tablo|table)\b/i.test(caption)) return "table";
   if (/^(?:şekil|figure)\b/i.test(caption)) return "figure";
   return "visual";
@@ -29,7 +29,7 @@ export function articleFigureLabel(
   locale: "tr" | "en",
 ) {
   const kind = articleFigureKind(figure);
-  const publishedNumber = figure.caption.trim().match(/^(?:figure|table|visual|şekil|tablo|görsel)\s+(\d+)\b/iu)?.[1];
+  const publishedNumber = (figure.caption ?? "").trim().match(/^(?:figure|table|visual|şekil|tablo|görsel)\s+(\d+)\b/iu)?.[1];
   const number = publishedNumber ?? String(
     figures
       .filter((candidate) => articleFigureKind(candidate) === kind)
@@ -42,7 +42,7 @@ export function articleFigureLabel(
 }
 
 export function articleFigureDisplayCaption(figure: ArticleFigure) {
-  return figure.caption
+  return (figure.caption ?? "")
     .replace(/^(?:figure|table|visual|şekil|tablo|görsel)\s+\d+\s*[.:]\s*/iu, "")
     .trim();
 }
@@ -84,7 +84,7 @@ export function ArticleFigures({ figures, locale }: { figures: ArticleFigure[]; 
                     return (
                       <figure key={figure.id}>
                         <button type="button" onClick={() => open(figure)} aria-label={locale === "tr" ? `${label} büyüt` : `Enlarge ${label}`}>
-                          <img src={figure.src} alt={figure.caption} loading="lazy" decoding="async" />
+                          <img src={figure.src} alt={figure.caption ?? ""} loading="lazy" decoding="async" />
                           <span><ExpandIcon />{locale === "tr" ? "Büyüt" : "Enlarge"}</span>
                         </button>
                         <figcaption><b>{label}</b>{articleFigureDisplayCaption(figure)}</figcaption>
@@ -102,7 +102,7 @@ export function ArticleFigures({ figures, locale }: { figures: ArticleFigure[]; 
         </div>
         <dialog className="figure-lightbox" ref={dialog} onClick={(event) => event.target === dialog.current && dialog.current?.close()}>
           <button className="figure-lightbox-close" type="button" onClick={() => dialog.current?.close()} aria-label={locale === "tr" ? "Kapat" : "Close"}>×</button>
-          {active && <><img src={active.src} alt={active.caption} /><p>{active.caption}</p></>}
+          {active && <><img src={active.src} alt={active.caption ?? ""} /><p>{active.caption ?? ""}</p></>}
         </dialog>
       </div>
     </details>

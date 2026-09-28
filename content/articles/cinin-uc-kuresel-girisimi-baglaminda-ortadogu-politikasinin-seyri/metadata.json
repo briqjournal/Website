@@ -18,7 +18,32 @@
   "doi": null,
   "language": ["en", "tr"],
   "license": {"name": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/"},
-  "funding": null,
+  "funding": {
+    "statement": {
+      "en": "This article is supported by funding from the Key Project of Philosophy and Social Sciences of the Ministry of Education of China (17JZD036) and the National Social Science Foundation (21FGJB004).",
+      "tr": "Bu makale, Çin Eğitim Bakanlığı Felsefe ve Sosyal Bilimler Anahtar Projesi (17JZD036) ve Ulusal Sosyal Bilimler Vakfı (21FGJB004) tarafından desteklenmektedir."
+    },
+    "funders": [
+      {
+        "name": "Key Project of Philosophy and Social Sciences of the Ministry of Education of China",
+        "nameTr": "Çin Eğitim Bakanlığı Felsefe ve Sosyal Bilimler Anahtar Projesi",
+        "nameEn": "Key Project of Philosophy and Social Sciences of the Ministry of Education of China",
+        "ror": null,
+        "awardNumbers": [
+          "17JZD036"
+        ]
+      },
+      {
+        "name": "National Social Science Foundation",
+        "nameTr": "Ulusal Sosyal Bilimler Vakfı",
+        "nameEn": "National Social Science Foundation",
+        "ror": null,
+        "awardNumbers": [
+          "21FGJB004"
+        ]
+      }
+    ]
+  },
   "conflictOfInterest": null,
   "authorContributions": null,
   "ethicsApproval": null,

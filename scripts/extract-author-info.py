@@ -33,8 +33,8 @@ OUT_DIR = ROOT / ".audit" / "author-info"
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
 ORCID_RE = re.compile(r"\b\d{4}-\d{4}-\d{4}-\d{3}[\dX]\b")
-EMAIL_LABEL_RE = re.compile(r"(?:E-?mail|E-?postal?)\s*:\s*([A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I)
-STAR_BIO_RE = re.compile(r"\*\s*(?P<bio>(?:(?!\n\*)[\s\S])+?)(?P<mail>(?:E-?mail|E-?postal?)\s*:\s*[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I)
+EMAIL_LABEL_RE = re.compile(r"(?:E-?\s?mail|E-?postal?)\s*:\s*([A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I)
+STAR_BIO_RE = re.compile(r"\*\s*(?P<bio>(?:(?!\n\*)[\s\S])+?)(?P<mail>(?:E-?\s?mail|E-?postal?)\s*:\s*[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,})", re.I)
 
 TITLE_PREFIXES = [
     r"Assoc\.?\s+Prof\.?\s+Dr\.?\s*",
@@ -72,7 +72,18 @@ def _title_pattern(title: str) -> re.Pattern | None:
     words = (title or "").split()[:6]
     if len(words) < 3:
         return None
-    return re.compile(r"\s*".join(re.escape(w) for w in words), re.IGNORECASE)
+    parts = []
+    for w in words:
+        e = re.escape(w)
+        e = re.sub(r"[\"'“”‘’‚‛„]", r"""["'“”‘’]""", e)
+        parts.append(e)
+    return re.compile(r"\s*".join(parts), re.IGNORECASE)
+
+
+AFFIL_WORDS = re.compile(r"üniversite|university|enstitü|institute|fakülte|faculty|bölüm|department|merkez|center|school|okul|college|kolej|akademi|academy", re.I)
+
+
+LABEL_CUT = re.compile(r"Atıf\s*:|How to cite\s*:|ORCID\s*:|(?:E-?\s?mail|E-?postal?)\s*:|Geliş Tarihi|Kabul Tarihi|Received\s*:|Accepted\s*:", re.I)
 
 
 def _tr_insensitive(pattern: str) -> str:
@@ -103,15 +114,20 @@ def _clean_bio(raw: str) -> str:
     bio = re.sub(r"^\*+", "", bio)
     bio = re.sub(r"^\d+(?=[A-Za-zÇĞİÖŞÜçğıöşü])", "", bio).strip()
     bio = re.sub(r"\s+", " ", bio)
-    # Repair PDF line-wrap hyphenation ("diploma- sisine" -> "diplomasisine").
-    # Restricted to lowercase-letter joints so compounds ("Türk-Çin"),
-    # ranges ("2015-2016") and spaced dashes survive.
-    bio = re.sub(r"(?<=[a-zçğıöşü])-\s+(?=[a-zçğıöşü])", "", bio)
+    # Repair PDF line-wrap hyphenation ("diploma- sisine" -> "diplomasisine",
+    # including soft hyphens U+00AD). Restricted to lowercase-letter joints
+    # so compounds ("Türk-Çin"), ranges ("2015-2016") and spaced dashes
+    # survive.
+    bio = re.sub(r"(?<=[a-zçğıöşü])[\-\u00ad]\s+(?=[a-zçğıöşü])", "", bio)
+    bio = re.sub(r"(?<=\d)-\s+(?=\d)", "-", bio)
     # Genuine hyphenated compounds broken by the same wrap.
     for fused, correct in {"peerreviewed": "peer-reviewed"}.items():
         bio = re.sub(r"\b" + fused + r"\b", correct, bio)
-    bio = re.sub(r"\s*(?:E-?mail|E-?postal?)\s*:.*$", "", bio, flags=re.I).strip()
+    bio = re.sub(r"\s*(?:E-?\s?mail|E-?postal?)\s*:.*$", "", bio, flags=re.I).strip()
+    bio = re.sub(r"\s+E-?$", "", bio).strip()
     bio = re.sub(r"\s*ORCID\s*:\s*(?:https?://orcid\.org/)?[\dX\-]+$", "", bio, flags=re.I).strip()
+    # Trailing submission-date lines leak into interview bios.
+    bio = re.sub(r"\s*(Geliş Tarihi|Kabul Tarihi|Received|Accepted)\s*:.*$", "", bio, flags=re.I).strip()
     return bio
 
 
@@ -181,6 +197,20 @@ def extract_first_pages(pdf: Path, max_pages: int = 2):
         return text, dt, n, f"pdftotext (pymupdf fallback: {e})"
 
 
+CITATION_MARKERS = re.compile(r"^\s*(Atıf|How to cite)\s*:|Geliş Tarihi|Kabul Tarihi|Received\s*:|Accepted\s*:", re.I | re.M)
+
+
+def _title_overlap(bio: str, title: str | None) -> bool:
+    words = (title or "").split()
+    if len(words) < 4:
+        return False
+    for i in range(len(words) - 3):
+        pat = r"\s*".join(re.escape(w) for w in words[i:i + 4])
+        if re.search(pat, bio, re.IGNORECASE):
+            return True
+    return False
+
+
 def parse_locale(text: str, author_names: list[str], title: str | None = None) -> dict:
     emails_all = [(m.group(0), m.start()) for m in EMAIL_RE.finditer(text)]
     emails = sorted(set(e for e, _ in emails_all))
@@ -190,20 +220,32 @@ def parse_locale(text: str, author_names: list[str], title: str | None = None) -
     lines = [ln.strip() for ln in text.splitlines()]
     non_empty = [ln for ln in lines if ln.strip()]
 
-    def nameblock_charpos(base: str, surname: str) -> int:
+    def short_positions(base: str, surname: str) -> list[int]:
         base_n = norm_name(base)
         surname_n = norm_name(surname)
+        out: list[int] = []
         if len(surname) < 3:
-            return -1
-        positions: list[int] = []
+            return out
         for ln in non_empty:
             low = norm_name(ln)
             if surname_n not in low:
                 continue
             cleaned = ln.replace("*", "").strip()
             if len(cleaned) <= len(base) + 30 and (base_n in low or norm_name(cleaned).startswith(surname_n[:4])):
-                positions.append(text.find(ln))
-        # Prefer the last (title block usually trails the bio in PyMuPDF order).
+                out.append(text.find(ln))
+        return sorted(set(out))
+
+    def nameblock_charpos(base: str, surname: str) -> int:
+        positions = short_positions(base, surname)
+        # Earliest block: affiliation/title material trails the name, while a
+        # later running head repeating the name must not be used.
+        return min(positions) if positions else -1
+
+    def first_block_after(base: str, surname: str, start: int) -> int:
+        positions = [p for p in short_positions(base, surname) if p > start + 100]
+        if positions:
+            return min(positions)
+        positions = short_positions(base, surname)
         return max(positions) if positions else -1
 
     bios: list[dict] = []
@@ -213,7 +255,12 @@ def parse_locale(text: str, author_names: list[str], title: str | None = None) -
         if author in claimed or len(bio) < 100 or len(bio) > 2500:
             return
         claimed.add(author)
-        bios.append({"text": bio, "email": email, "chars": len(bio), "source": source, "matched_author": author})
+        flags = []
+        if _title_overlap(bio, title):
+            flags.append("title-overlap")
+        if CITATION_MARKERS.search(bio):
+            flags.append("citation-markers")
+        bios.append({"text": bio, "email": email, "chars": len(bio), "source": source, "matched_author": author, "flags": flags})
 
     # 1. Star-anchored bio ending at an email label. The prose must name an
     # author up front; otherwise the match swallowed article text.
@@ -264,33 +311,167 @@ def parse_locale(text: str, author_names: list[str], title: str | None = None) -
                     assigned = True
                     break
 
-    # 3. Interview fallback: star-led block with no email label (interviews
-    # carry no email). Span runs to the author's name block.
+    # 4. Post-nameblock bio runs after star-anchored passes (see below):
+    # some interview pages put the name first and the bio box right after
+    # it (affiliation, Name*, bio, interview header).
     star_starts = [m.start() for m in re.finditer(r"(?m)^\*", text)]
     for full in author_names:
         if full in claimed:
             continue
         base = strip_title(full)
         surname = base.split()[-1] if base.split() else base
+        surname_n = norm_name(surname)
         nb = nameblock_charpos(base, surname)
         if nb < 0:
             continue
         cands = [p for p in star_starts if p < nb]
         if not cands:
             continue
-        span = text[cands[-1]:nb]
-        if EMAIL_LABEL_RE.search(span):
+        # Two passes over candidate starts (nearest first): prefer the block
+        # that names the author up front. The name block ends the span: the
+        # first block after the candidate start (a later running head
+        # repeating the name must not extend the span into the body).
+        for need_head in (True, False):
+            if full in claimed:
+                break
+            for start in sorted(cands, reverse=True):
+                nb = first_block_after(base, surname, start)
+                if nb < 0:
+                    continue
+                span = text[start:nb]
+                if EMAIL_LABEL_RE.search(span):
+                    continue
+                # The title/affiliation/name block trails the bio: cut at the
+                # article title or at the next metadata label, then tidy a cut
+                # tail back to the last sentence end. (No length-based
+                # popping: ragged bio endings are short too.)
+                cuts = []
+                title_pat = _title_pattern(title or "")
+                if title_pat is not None:
+                    tm = title_pat.search(span)
+                    if tm is not None and tm.start() >= 100:
+                        cuts.append(tm.start())
+                lm = LABEL_CUT.search(span)
+                if lm is not None and lm.start() >= 100:
+                    cuts.append(lm.start())
+                # A co-author's name block inside the span means the bio ended.
+                for other in author_names:
+                    if other == full:
+                        continue
+                    obase = strip_title(other)
+                    osurname = obase.split()[-1] if obase.split() else obase
+                    for pos in short_positions(obase, osurname):
+                        rel = pos - start
+                        if rel >= 100:
+                            cuts.append(rel)
+                            break
+                    # Same for a co-author's own bio box starting inside.
+                    ofull_pat = _full_name_pattern(obase)
+                    if ofull_pat:
+                        for sm in re.finditer(r"(?m)^\*+", span):
+                            if sm.start() < 100:
+                                continue
+                            head = span[sm.start():sm.start() + 120]
+                            if re.search(ofull_pat, head, re.IGNORECASE):
+                                cuts.append(sm.start())
+                                break
+                if cuts:
+                    span = span[:min(cuts)]
+                    tail = span.rstrip()
+                    if tail and tail[-1] not in ".?!\"”'":
+                        end = max(tail.rfind("."), tail.rfind("?"), tail.rfind("!"))
+                        if end >= 100:
+                            span = tail[:end + 1]
+                    # A trimmed span may still end with the affiliation repeat
+                    # that sits between bio and title: drop verbless
+                    # affiliation tails.
+                    while True:
+                        tail = span.rstrip()
+                        frag = re.split(r"[.?!]\s*", tail)[-1]
+                        if len(frag) < 150 and AFFIL_WORDS.search(frag) and surname_n not in norm_name(frag):
+                            span = tail[:len(tail) - len(frag)].rstrip()
+                            continue
+                        break
+                bio = _clean_bio(span)
+                if not (surname and len(surname) >= 3 and norm_name(surname) in norm_name(bio)):
+                    if not (len(author_names) == 1 and len(bio) >= 300):
+                        continue
+                if need_head and not _head_names_ok(bio, base):
+                    if not (len(author_names) == 1 and len(bio) >= 300):
+                        continue
+                claim(full, bio, None, "star-para")
+                break
+
+    # 4. Post-nameblock bio: some interview pages put the name first and the
+    # bio box right after it (affiliation, Name*, bio, interview header).
+    # Runs last: star-anchored evidence wins whenever it exists.
+    for full in author_names:
+        if full in claimed:
             continue
-        # The title/affiliation/name block trails the bio: cut at the article
-        # title. (No length-based popping: ragged bio endings are short too.)
+        base = strip_title(full)
+        surname = base.split()[-1] if base.split() else base
+        surname_n = norm_name(surname)
+        nb = nameblock_charpos(base, surname)
+        if nb < 0:
+            continue
+        nb_line_end = text.find("\n", nb)
+        if nb_line_end < 0:
+            continue
+        # Prefer starting at the bio's own star when one follows the name.
+        start = nb_line_end
+        for sm in re.finditer(r"(?m)^\*", text[nb_line_end:nb_line_end + 500]):
+            start = nb_line_end + sm.start()
+            break
+        rest = text[start:start + 3000]
+        cuts = []
         title_pat = _title_pattern(title or "")
         if title_pat is not None:
-            tm = title_pat.search(span)
+            tm = title_pat.search(rest)
             if tm is not None and tm.start() >= 100:
-                span = span[:tm.start()]
+                cuts.append(tm.start())
+        lm = LABEL_CUT.search(rest)
+        if lm is not None and lm.start() >= 100:
+            cuts.append(lm.start())
+        hm = re.search(r"(?m)^(?:RÖPORTAJ|INTERVIEW)\s*$", rest)
+        if hm is not None and hm.start() >= 100:
+            cuts.append(hm.start())
+        am = re.search(r"(?m)^(?:ABSTRACT|ÖZ(?:ET)?|Özet|GİRİŞ|INTRODUCTION)\s*$", rest)
+        if am is not None and am.start() >= 100:
+            cuts.append(am.start())
+        im = re.search(r"RÖPORTAJ|INTERVIEW", rest)
+        if im is not None and im.start() >= 100:
+            cuts.append(im.start())
+        truncated = False
+        if cuts:
+            span = rest[:min(cuts)]
+            truncated = True
+        else:
+            span = rest[:3000]
+            truncated = len(text) > start + 3000
+        # A leading article title (interview pages quote it before the bio).
+        title_pat = _title_pattern(title or "")
+        if title_pat is not None:
+            tm0 = title_pat.search(span)
+            if tm0 is not None and tm0.start() < 100:
+                end = tm0.end()
+                qm = re.search(r"['\"“”‘’]", span[end:end + 150])
+                if qm:
+                    end += qm.end()
+                span = span[end:]
+                truncated = True
+        if truncated:
+            tail = span.rstrip()
+            if tail and tail[-1] not in ".?!\"”'":
+                end = max(tail.rfind("."), tail.rfind("?"), tail.rfind("!"))
+                if end >= 100:
+                    span = tail[:end + 1]
         bio = _clean_bio(span)
-        if surname and len(surname) >= 3 and norm_name(surname) in norm_name(bio):
-            claim(full, bio, None, "star-para")
+        full_pat = _full_name_pattern(base)
+        named = (surname and len(surname) >= 3 and surname_n in norm_name(bio)
+                and full_pat and re.search(full_pat, bio[:80], re.IGNORECASE))
+        anon_ok = len(author_names) == 1 and len(bio) >= 300
+        if named or anon_ok:
+            claim(full, bio, None, "post-nameblock")
 
     affiliations: list[dict] = []
     for full in author_names:
