@@ -110,7 +110,14 @@ function getLegacyPatternRedirect(pathname: string): string | null {
 
 function handleLegacyRedirect(url: URL): Response | null {
   const rawPath = normalizedLegacyPath(url.pathname);
-  const decodedPath = decodeURIComponent(rawPath);
+  let decodedPath: string;
+  try {
+    decodedPath = decodeURIComponent(rawPath);
+  } catch {
+    // Malformed percent-encoding: fall through to the locale gateway, R2,
+    // image, and app-router handlers instead of failing the whole request.
+    return null;
+  }
 
   // 1. Direct PDF redirect for legacy /sites/default/files/... (including /tr/sites/ and /en/sites/)
   if (rawPath.includes("/sites/default/files/") || decodedPath.includes("/sites/default/files/")) {
