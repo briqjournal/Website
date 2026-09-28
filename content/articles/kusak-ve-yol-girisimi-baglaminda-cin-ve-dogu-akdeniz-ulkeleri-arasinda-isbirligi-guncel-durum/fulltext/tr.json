@@ -144,12 +144,7 @@
     "işbirliği",
     "Kuşak ve Yol Girişimi"
   ],
-  "footnotes": [
-    {
-      "id": "note-1",
-      "text": "Çeviri: Ertuğrul Gazi Kızılok"
-    }
-  ],
+  "footnotes": [],
   "references": [
     {
       "id": "ref-1",
@@ -301,5 +296,6 @@
     }
   ],
   "acknowledgements": "",
-  "figures": []
+  "figures": [],
+  "publicationNote": "Çeviri: Ertuğrul Gazi Kızılok"
 }

@@ -222,7 +222,7 @@
       "text": "Yu, H. R. (2024). United Nations International Court of Justice Hearing on the Case of South Africa’s Genocide Claim of Israel. Xinhua News Agency. Retrieved March 18, 2024 from http://www.news.cn/world/20240113/2dc1ccb7cb6c4d7880d57c553e391528/c.html"
     }
   ],
-  "acknowledgements": "This article is supported by funding from the Key Project of Philosophy and Social Sciences of Ministry of Education of China (17JZD036) and National Social Science Foundation (21FGJB004)",
+  "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
@@ -269,5 +269,8 @@
       "src": "/assets/article-figures/cinin-uc-kuresel-girisimi-baglaminda-ortadogu-politikasinin-seyri/figure-09.jpg",
       "caption": "The Global Development Initiative, Global Security Initiative, Global Civilization Initiative and Belt and Road Initiative provide solutions to the security and development problems of the Middle East (Figure: CGTN, 2020)."
     }
-  ]
+  ],
+  "declarations": {
+    "funding": "This article is supported by funding from the Key Project of Philosophy and Social Sciences of Ministry of Education of China (17JZD036) and National Social Science Foundation (21FGJB004)"
+  }
 }
