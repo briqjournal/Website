@@ -54,6 +54,24 @@ KNOWN_LOCAL_ISSUES = {
     (7, 4, "en"): "/assets/issues/briq-volume-7-issue-4-autumn-2026.pdf",
 }
 
+# Live current-issue keys served from R2. Downloads landing here are compared
+# against the previously recorded manifest: new or changed live bytes abort
+# the run unless acknowledged via BRIQ_ALLOW_CHANGED_PDFS (comma-separated
+# /assets/... paths). Archive keys are recorded without comparison.
+LIVE_PDF_PREFIXES = ("/assets/issues/",)
+
+
+def load_prior_hashes():
+    try:
+        manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return None
+    return {
+        record["local"]: record["sha256"]
+        for record in manifest.get("files", [])
+        if record.get("local") and record.get("sha256")
+    }
+
 
 def local_file(public_url: str) -> Path:
     return ROOT / "public" / public_url.removeprefix("/")
@@ -189,6 +207,27 @@ def main() -> None:
     missing = [local for local in source_to_local.values() if not is_pdf(local_file(local))]
     if missing:
         raise RuntimeError(f"{len(missing)} localized PDF paths failed validation")
+
+    prior_hashes = load_prior_hashes()
+    if prior_hashes is not None:
+        acknowledged = {part.strip() for part in os.environ.get("BRIQ_ALLOW_CHANGED_PDFS", "").split(",") if part.strip()}
+        blocked = []
+        for item in results:
+            local = item["local"]
+            if not local.startswith(LIVE_PDF_PREFIXES) or local in acknowledged:
+                continue
+            previous = prior_hashes.get(local)
+            if previous is None:
+                blocked.append(f"{local} (new live key with no prior manifest record)")
+            elif previous != item["sha256"]:
+                blocked.append(f"{local} (downloaded bytes differ from recorded sha256)")
+        if blocked:
+            raise RuntimeError(
+                "Live current-issue PDFs are not covered by the recorded manifest: "
+                + "; ".join(sorted(blocked))
+                + ". Aborting before R2 publish. If the change is legitimate, re-run with "
+                + "BRIQ_ALLOW_CHANGED_PDFS set to the acknowledged /assets/issues/ paths."
+            )
 
     data["pdf_archive"] = {
         "localized": True,
