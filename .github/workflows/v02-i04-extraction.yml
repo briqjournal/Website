@@ -61,3 +61,5 @@ jobs:
           path: .evidence/v02-i04
           if-no-files-found: error
           retention-days: 7
+
+# extraction trigger
