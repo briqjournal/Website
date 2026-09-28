@@ -2,6 +2,9 @@ name: v02-i04 extraction evidence
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/v02-i04-extraction.yml"
 
 permissions:
   contents: read
