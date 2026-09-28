@@ -32,6 +32,37 @@ function requireSlug(slug) {
   if (!safeSlug.test(slug)) throw new Error(`Unsafe article slug: ${slug}`);
 }
 
+const issueFilenamePattern = /^v\d{2}-i\d{2}\.json$/;
+
+function requireIssueFilename(file) {
+  if (!issueFilenamePattern.test(file)) throw new Error(`Unsafe issue filename: ${file}`);
+}
+
+function isCanonicalV2(record) {
+  return Boolean(record && (record.schemaVersion === 2 || record.id));
+}
+
+// Merge only the refreshed PDF locations from a monolith article into the
+// canonical record. v2 records keep their full shape; legacy records and new
+// files fall back to the monolith object (migration path).
+function applyPdfRefresh(existing, incoming) {
+  if (!isCanonicalV2(existing)) return incoming;
+  const next = { ...existing, urls: { ...(existing.urls || {}) } };
+  if (incoming.pdf_tr_local !== undefined) next.urls.pdfTrLocal = incoming.pdf_tr_local;
+  if (incoming.pdf_en_local !== undefined) next.urls.pdfEnLocal = incoming.pdf_en_local;
+  if (incoming.shared_bilingual_pdf !== undefined) next.urls.sharedBilingualPdf = incoming.shared_bilingual_pdf;
+  return next;
+}
+
+async function readOptionalJson(path) {
+  try {
+    return await readJson(path);
+  } catch (error) {
+    if (error?.code !== "ENOENT") throw error;
+    return null;
+  }
+}
+
 const catalog = await readCatalog();
 
 if (importArchive) {
@@ -43,12 +74,15 @@ if (importArchive) {
 
   for (const issue of archive.issues) {
     const file = `v${String(issue.volume).padStart(2, "0")}-i${String(issue.issue).padStart(2, "0")}.json`;
+    requireIssueFilename(file);
     catalog.issue_order.push(file);
     await writeJson(join(contentRoot, "issues", file), issue);
   }
   for (const article of archive.articles) {
     requireSlug(article.slug);
-    await writeJson(join(contentRoot, "articles", article.slug, "metadata.json"), article);
+    const target = join(contentRoot, "articles", article.slug, "metadata.json");
+    const existing = await readOptionalJson(target);
+    await writeJson(target, applyPdfRefresh(existing, article));
   }
 }
 
