@@ -985,6 +985,9 @@ test("links each resolvable in-text citation to an expandable reference record",
   assert.match(citationBlock, /<em>/);
   assert.match(citationBlock, /class="reference-inline-link"/);
   assert.doesNotMatch(citationBlock, /style=/);
+  const slashYearArticle = await renderPath("/tr/makaleler/cin-ve-turkiye-imajlarinin-karsilikli-insasi-algilar-sorunlar-ve-politika-onerileri");
+  const slashYearCitation = (await slashYearArticle.text()).match(/<blockquote><p>([\s\S]*?)<\/p><\/blockquote>/)?.[1] || "";
+  assert.match(slashYearCitation, /<em>Kuşak ve Yol Girişimi Dergisi<\/em>/);
   assert.ok((doiHtml.match(/article-declaration-accordion/g) || []).length >= 1);
   assert.ok((doiHtml.match(/article-declaration-item/g) || []).length >= 2);
   const declarationOrder = ["Finansman", "Çıkar Çatışması"]

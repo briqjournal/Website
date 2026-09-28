@@ -292,7 +292,7 @@
       "text": "Zhi, S. Z. (2022). Security in Central Asia after the Changed Political Situation in Afghanistan: Great Powers Game and Regional Cooperation. Russian, East European & Central Asian Studies, (1), 1-16."
     }
   ],
-  "acknowledgements": "Bu makale, “Ulusal Sosyal Bilimler Vakfı Gençlik Programı” (22CGJ040) tarafından sağlanan fon ile desteklenmiştir.",
+  "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
@@ -344,5 +344,8 @@
       "src": "/assets/article-figures/turkiyenin-turk-devletlerinin-butunlesmesindeki-etkin-rolu-baglam-uygulama-ve-etki/figure-10.jpg",
       "caption": "KGAÖ üyesi devletlerin liderleri 16 Mayıs 2022’de Kremlin’deki zirve toplantısında (Fotoğraf: CGTN, 2022)."
     }
-  ]
+  ],
+  "declarations": {
+    "funding": "Bu makale, “Ulusal Sosyal Bilimler Vakfı Gençlik Programı” (22CGJ040) tarafından sağlanan fon ile desteklenmiştir."
+  }
 }

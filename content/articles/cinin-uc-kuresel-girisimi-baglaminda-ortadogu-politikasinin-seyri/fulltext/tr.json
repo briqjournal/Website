@@ -223,7 +223,7 @@
       "text": "Yu, H. R. (2024). United Nations International Court of Justice Hearing on the Case of South Africa’s Genocide Claim of Israel. Xinhua News Agency. 18 Mart 2024 tarihinde http://www.news.cn/world/20240113/2dc1ccb7cb6c4d7880d57c553e391528/c.html adresinden alındı."
     }
   ],
-  "acknowledgements": "Bu makale Çin Eğitim Bakanlığı Felsefe ve Sosyal Bilimler Anahtar Projesi (17JZD036) ve Ulusal Sosyal Bilimler Vakfı (21FGJB004) tarafından desteklenmektedir.",
+  "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
@@ -270,5 +270,8 @@
       "src": "/assets/article-figures/cinin-uc-kuresel-girisimi-baglaminda-ortadogu-politikasinin-seyri/figure-09.jpg",
       "caption": "Küresel Kalkınma Girişimi, Küresel Güvenlik Girişimi, Küresel Medeniyet Girişimi ve Kuşak ve Yol Girişimi, Ortadoğu’nun güvenlik ve kalkınma sorunlarına çözüm üretmektedir (Şekil: CGTN, 2020)."
     }
-  ]
+  ],
+  "declarations": {
+    "funding": "Bu makale Çin Eğitim Bakanlığı Felsefe ve Sosyal Bilimler Anahtar Projesi (17JZD036) ve Ulusal Sosyal Bilimler Vakfı (21FGJB004) tarafından desteklenmektedir."
+  }
 }

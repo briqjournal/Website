@@ -291,7 +291,7 @@
       "text": "Zhi, S. Z. (2022). Security in Central Asia after the Changed Political Situation in Afghanistan: Great Powers Game and Regional Cooperation. Russian, East European & Central Asian Studies, (1), 1-16."
     }
   ],
-  "acknowledgements": "This article is supported by funding from the “National Social Science Foundation Youth Program” (22CGJ040).",
+  "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
@@ -343,5 +343,8 @@
       "src": "/assets/article-figures/turkiyenin-turk-devletlerinin-butunlesmesindeki-etkin-rolu-baglam-uygulama-ve-etki/figure-10.jpg",
       "caption": "Leaders of CSTO member states at a summit meeting in the Kremlin on May 16, 2022 (Photo: CGTN, 2022)."
     }
-  ]
+  ],
+  "declarations": {
+    "funding": "This article is supported by funding from the “National Social Science Foundation Youth Program” (22CGJ040)."
+  }
 }

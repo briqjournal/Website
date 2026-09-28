@@ -133,7 +133,7 @@
       "text": "Ye, T. Q. (2015). The Image Construction of Turkey in Chinese Mainstream Newspapers and Discourse Analysis on Reports about Turkey. West Asia and Africa, (5), 99-113."
     }
   ],
-  "acknowledgements": "This article is supported by funding from the “Key Project of Philosophy and Social Sciences of Ministry of Education of China” (17JZD036) and “Post-funded Project of Chinese National Social Science Foundation”.",
+  "acknowledgements": "",
   "figures": [
     {
       "id": "figure-1",
@@ -150,5 +150,8 @@
       "src": "/assets/article-figures/cin-ve-turkiye-imajlarinin-karsilikli-insasi-algilar-sorunlar-ve-politika-onerileri/figure-03-en.jpg",
       "caption": "Traditional Chinese dragon dance is held in Istanbul in the Year of Chinese Culture. (China Daily, 2012)"
     }
-  ]
+  ],
+  "declarations": {
+    "funding": "This article is supported by funding from the “Key Project of Philosophy and Social Sciences of Ministry of Education of China” (17JZD036) and “Post-funded Project of Chinese National Social Science Foundation”."
+  }
 }
