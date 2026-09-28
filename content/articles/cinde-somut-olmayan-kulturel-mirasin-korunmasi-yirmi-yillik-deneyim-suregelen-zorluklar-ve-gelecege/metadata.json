@@ -95,7 +95,23 @@
     "name": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/"
   },
-  "funding": null,
+  "funding": {
+    "statement": {
+      "en": "This paper is supported by funding from the “Northern Guizhou Cultural Research Center at Zunyi Normal University” (2024JDZD001).",
+      "tr": "Bu makale, Zunyi Normal Üniversitesi Kuzey Guizhou Kültürel Araştırmalar Merkezi (2024JDZD001) tarafından desteklenmektedir."
+    },
+    "funders": [
+      {
+        "name": "Northern Guizhou Cultural Research Center at Zunyi Normal University",
+        "nameTr": "Zunyi Normal Üniversitesi Kuzey Guizhou Kültürel Araştırmalar Merkezi",
+        "nameEn": "Northern Guizhou Cultural Research Center at Zunyi Normal University",
+        "ror": null,
+        "awardNumbers": [
+          "2024JDZD001"
+        ]
+      }
+    ]
+  },
   "conflictOfInterest": null,
   "authorContributions": null,
   "ethicsApproval": null,
