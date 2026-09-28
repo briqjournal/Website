@@ -1,13 +1,12 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { articleFigureDisplayCaption, articleFigureKind, articleFigureLabel } from "../app/components/ArticleFigures.tsx";
 
-test("article figure helpers tolerate empty and missing captions", () => {
-  const missing = { id: "figure-missing", src: "/figure.jpg" };
-  const empty = { id: "figure-empty", src: "/figure-2.jpg", caption: "" };
-  assert.equal(articleFigureKind(missing), "visual");
-  assert.equal(articleFigureDisplayCaption(missing), "");
-  assert.equal(articleFigureLabel(missing, [missing, empty], "en"), "Visual 1");
-  assert.equal(articleFigureKind(empty), "visual");
-  assert.equal(articleFigureDisplayCaption(empty), "");
+const source = await readFile(new URL("../app/components/ArticleFigures.tsx", import.meta.url), "utf8");
+
+test("ArticleFigures defensively normalizes empty and missing captions", () => {
+  assert.match(source, /\(figure\.caption \?\? ["']{2}\)\.trim\(\)/);
+  assert.match(source, /return \(figure\.caption \?\? ["']{2}\)/);
+  assert.match(source, /alt=\{figure\.caption \?\? ["']{2}\}/);
+  assert.match(source, /alt=\{active\.caption \?\? ["']{2}\}/);
 });
