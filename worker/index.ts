@@ -167,11 +167,13 @@ function localeGatewayRedirect(request: Request, url: URL): Response | null {
   if (url.pathname !== "/") return null;
 
   const country = request.headers.get("cf-ipcountry")?.toUpperCase();
-  const target = new URL(country === "TR" ? "/tr/" : "/en/", url.origin);
-  target.search = url.search;
+  // Relative Location keeps the redirect on the request's own origin: no
+  // request-derived host ever enters the header, so a foreign Host header
+  // cannot turn this trusted-domain redirect off-site.
+  const localePath = country === "TR" ? "/tr/" : "/en/";
   return new Response(null, {
     status: 307,
-    headers: { location: target.toString() },
+    headers: { location: `${localePath}${url.search}` },
   });
 }
 
