@@ -353,15 +353,7 @@
   },
   "fulltext": {
     "current": [],
-    "en_archive": [
-      "cinin-cevre-politikalarinin-ekolojik-uygarliga-dogru-gelisimi",
-      "ekolojik-uygarlik-tum-canlilar-icin-ortak-bir-gelecek-insasi",
-      "turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi",
-      "ekolojik-uygarlikta-enerji-cevre-kesisimi",
-      "iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim",
-      "bati-cephesindeki-sessizlik",
-      "1920-1930lardaki-cin-gazetelerinde-bir-rol-model-olarak-turkiye"
-    ],
+    "en_archive": [],
     "localized": [
       "suudi-arabistanin-abd-ile-cin-arasinda-cok-boyutlu-kulturel-dengeleme-stratejisi",
       "turkiye-cin-diplomatik-iliskilerinin-55-yilinda-avrasyada-guc-gecisi-ve-jeoekonomik-baglantisallik",
@@ -635,7 +627,17 @@
       "macaes-b-2019-kusak-ve-yol-cinli-bir-dunya-duzeni-londra-hurst-company",
       "ibrahim-balaban",
       "ipek-yolunun-geri-donusu",
-      "karikatur-0"
+      "karikatur-0",
+      "cinin-cevre-politikalarinin-ekolojik-uygarliga-dogru-gelisimi",
+      "ekolojik-uygarlik-tum-canlilar-icin-ortak-bir-gelecek-insasi",
+      "turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi",
+      "ekolojik-uygarlikta-enerji-cevre-kesisimi",
+      "iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim",
+      "bati-cephesindeki-sessizlik",
+      "1920-1930lardaki-cin-gazetelerinde-bir-rol-model-olarak-turkiye",
+      "sadik-ucok",
+      "ekrem-kahraman",
+      "askin-ayrancioglu"
     ]
   }
 }

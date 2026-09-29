@@ -1,0 +1,208 @@
+{
+  "sections": [
+    {
+      "id": "giris-iklim-acil-durumu",
+      "title": "Giriş İklim Acil Durumu",
+      "paragraphs": [
+        "BIRLEŞMIŞ MILLETLER (BM) GENEL Sekreteri Antonio Guterres, İklim Tutkusu Zirvesi’ndeki konuşmasında tüm ülkeleri iklim acil durumlarını ilan etmeye çağırdı ve net sıfır salıma ulaşmak için daha çok çalışılması gerektiğini söyledi (Reuters, 2020). Bu bağlamda, küresel ısınmanın çoktan acil bir sorun haline geldiğini ve tüm ülkelerin buna karşı harekete geçmesi gerektiğini belirtti. Bu durum gerçekten acil bir konu, ama BM Genel Sekreteri’nin dileği gerçekleşecek mi? Cevap hayır, bugünün önlemleri, teorisi ve küresel ısınmanın mekanizması hakkında bütüncül bir bakış açısı olmadan değil. Şekil 1, şimdiye kadar geliştirilen karbonsuzlaştırma önlemlerinin Karbon Yakalama ve Depolama (KYD) ile bile yeterli olmayacağını göstermektedir. Bu Şekil bütüncül sürdürülebilirlik bulmacasında eksik bir parça olduğu anlamına gelir ve Genel Sekreter de tam bu konuya değinmek istemiştir. Küresel ısınmaya ilişkin mevcut anlayış, atmosferdeki CO2 içeriği düzeyinin tam bir resmine sahiptir (Şekil 1), ancak insanlık CO2 salımının temel nedenlerine dair günümüzün sınırlı anlayışıyla tüm potansiyel çözümler setini kabul etmekte yetersiz kalmaktadır. Şekil 1, temel nedenlerin bütünsel bir resmi çizilmedikçe, net-sıfır karbon arzusunun asla gerçekleşmeyeceğinin üzücü bir kanıtıdır."
+      ]
+    },
+    {
+      "id": "co2-salimi-nem-ve-ozon",
+      "title": "CO₂ Salımı, Nem ve Ozon",
+      "paragraphs": [
+        "Yazar, Şekil 2’de, iklim, atmosfer, küresel ısınma, nem, konfor ve atmosferdeki ozon katmanının incelmesi arasındaki doğrudan ilişkileri göstermektedir. Rüzgar türbini veya fotovoltaik (güneş pili) gibi bir yeşil enerji sistemini ele alalım. Elektrik gücü üretildikten sonra, ekserji açısından nasıl kullanıldığının izini sürmek de üretmek kadar önemlidir. Örneğin, bu “yeşil” elektrik gücü 20oC (293 K) iç mekan konforu ısıtması için bir elektrikli radyatörde kullanılıyorsa, ısıtma için yararlı iş talebi olan , εdem’in birim kalitesi (ekserji) ideal Karno çevrimine göre hesaplanabilir.",
+        "Burada 273 K (0oC) referans çevre sıcaklığı olarak alınmıştır. Öte yandan elektrik gücü arzının, birim ekserjisi εsup 0.95 kW / kW olan çok yüksek kaliteli bir enerji kaynağıdır. Bu uygulamada, üretilen elektrik gücünün kullanılabilen iş potansiyelinin çoğunun yok olduğu anlamına gelir.",
+        "Konfor ısıtmasında rüzgar veya güneş enerjisi kullanmanın ekserji akılcılığı sadece 0.07 (0.068/0.95) dir.",
+        "Geri dönüşü olmaksızın yıkılan bu ekserji miktarı (kaybedilen kullanılabilir enerji fırsatları), birisi tarafından, bir yerde ve büyük olasılıkla fosil yakıtlar kullanılarak dengeleniyor olacaktır. Bu olgu , “yeşil güç” için ek ve “görünmeyen” CO2 salım sorumluluğuna neden olur:",
+        "Bu örnekteki sonuca bakıldığında, doğrudan bir CO2 salım kaynağı olmamasına rağmen (imalat, kurulum, vb. ile ilgili faaliyetlerin neden olduğu gömülü salımlar hariç), ekserji yıkımlarının büyük miktarlarda ek salımlardan sorumlu olduğu ve doğrudan ölçüp görebileceğimiz doğalgaz yoğuşmalı kazanlardan çıkan salımlara neredeyse eşit olduğu görülmektedir.",
+        "Yine de, ekserji yıkımlarından kaynaklanan ek salımlar görünmez ve kendilerini yalnızca ölçülmekte olan küresel ısınma sıcaklıklarında belli ederler. Başka bir deyişle, bu salımlar küresel ısınma bağlamında gözlemlenir, ancak ekserji kavramında bilim adamları ve mühendisler açısından yeterli farkındalık oluşmadıkça açıklanamaz ve çözümsüz kalır. Yazarın neredeyse önlenebilir CO2 salımlarını ekserji yıkımlarıyla matematiksel olarak ilişkilendiren başka bir araştırmasına (Kılkış, 2021a) göre, yıkılan her ekserji için küresel sıcaklığın 0.256 x 10-13 K / kW-h oranında artacağı beklenmektedir. Eğer örneğin, 2 x 1013 kW-h /yıl, sayısı fosil yakıtlar kullanılarak yıllık elektrik enerjisi üretimini temsil ediyorsa enerji sektöründe ekserjiyi değerlendirme akılcılığının önümüzdeki onlu yıllarda 0.8’e yükseleceği tahmin ediliyorsa:",
+        "∆CO2 = 0.256 x 10-13K/kW-h x 2 x 1013 x (1-0.8) = 0.1 K/yıl",
+        "salımların görünmeyen kısmı yaklaşık 0.1 K kadar bir küresel sıcaklık artışından sorumludur ve tüm karbonsuzlaştırma önlemleri, ekserji yıkımları dikkate alınarak buna göre revize edilmelidir.",
+        "Şekil 4 dünyanın birçok bölgesinin çok nemli ve bazı kısımlarının çok kurak olduğunu göstermektedir. İdeal bir bağıl nem değeri olan %50 değerine sahip bölge dünyada neredeyse bulunmamaktadır. Örneğin, Çin hariç, Türkiye ve diğer Kuşak Yol Girişimi ülkelerinin hepsinde bağıl nem yüksektir. Bağıl nem havadaki nem içeriği demek değildir. Örneğin, aynı nem içeriğine sahip bir hava kütlesinin sıcaklığı azaldıkça bağıl nem artar. Şekil 3 ve 4, pandeminin en güçlü olduğu yerleri kısmen açıklayabilir. Nem içeriği, soğutma kuleleri gibi çeşitli kaynaklardan salınan atık ısı ve su buharının yanı sıra küresel sıcaklık ve CO2 salımları ile ilgilidir."
+      ]
+    },
+    {
+      "id": "iklim-acil-durumu-ve-virus-enfeksiyonlari",
+      "title": "İklim Acil Durumu ve Virüs Enfeksiyonları",
+      "paragraphs": [
+        "Denklemin antropojenik tarafında iyi bilinen, iyi gözlemlenmiş hava kirliliğine ek olarak, hava sıcaklığı, nem ve diğer olumsuz hava koşulları arasında niteliksel olarak kurulmuş ilişkiler geliştirilmiştir. Buna karşın, ne yazık ki, virüs enfeksiyonları ile iklim acil durumu arasındaki bağlantıya çok az değinildi. Makalede, bilim adamlarını ilk kez böyle doğrudan bir bağlantının matematiğini daha iyi anlamaya yönlendirmesi beklenen bir matematiksel model geliştirilmesinin ana nedeni budur."
+      ]
+    },
+    {
+      "id": "yesil-bina-covid-19-icin-guvenli-olmayabilir",
+      "title": "Yeşil Bina COVID-19 için Güvenli Olmayabilir",
+      "paragraphs": [
+        "Binalar hem enerji hem koronavirüs riski yoğun kapalı ortamlardır. Pandeminin yayılmasına karşı önlemler bağlamında kişilere yönelik izolasyon önlemleri süresince zamanımızın normalde %90’ı olan sürelerden daha fazlasını kapalı mekanlarda geçiriyoruz. Özellikle COVID-19’un yayılmasına karşı %100 temiz hava ihtiyacı olan binalar, dünyadaki toplam enerji tüketiminin neredeyse %45’inden sorumludurlar. (Cao, Xilei, & Liu, 2016; Tokazhanov, vd., 2020).",
+        "Böylesine yüksek düzeyde bir enerji tüketimi, son derece yüksek CO2 salım sorumlulukları anlamına gelir ve kullanabilecekleri yeşil enerji, enerjinin kullanımına bağlı olarak yeşil olmayabilir. Örneğin, Çin hükümeti, yerel kömür ve linyit sobalarını ve kazanlarını yerel rüzgar türbinleriyle değiştirerek soğuk kırsal alanlardaki CO2 salımlarını azaltmayı düşünmektedir. Bir ön çalışmada (Kılkış, 2021b), Termodinamiğin 1. Yasası’na göre, ısı pompaları ve rüzgar enerjisinin doğrudan ısıtma için kullanılmasının bile 2. Yasa’ya göre akılcı olmadığını ortaya konmuştur. Bir ısı pompasından gelen soğutucu akışkan kaçağı da ΔCO2’ye eşdeğer ozon inceltme etkisine sahiptir. Her bir kW-h rüzgar elektrik enerjisi için, salım sorumluluğu, 677 küresel ısınma potansiyeli (global warming potential-GWP) ve varsayılan soğutucu akışkan kaçak oranı L 1.7 x 10-4 kg / saat olan R32 soğutucu akışkanına dayalı olarak aşağıdaki şekilde hesaplanır:",
+        "Öte yandan, linyit için εsup = 0.8 kW / kW ve ozon katmanını inceltme potansiyeli olmayan (soğutucu akışkan yok) 0.35 verimliliğe sahip bir linyit sobası için ∑CO2 yalnızca 0.26 kg CO2 / kW-h ısıdır. Bu nedenle, 1. Yasa’ya göre performans katsayısı, COP = 3 ve neredeyse sıfır CO2 sorumluluğuolmasına karşın 2. Yasa neredeyse önlenebilir salım sorumluluğunun 2.5 kat olduğunu göstermektedir."
+      ]
+    },
+    {
+      "id": "mevcut-calismaya-duyulan-gereksinim",
+      "title": "Mevcut Çalışmaya Duyulan Gereksinim",
+      "paragraphs": [
+        "Henüz başlangıç niteliğinde olmakla birlikte bu verilerin önemi, Türkiye dahil birçok ülkede PM2.5 ve PM10 sınırlarını aşım sayılarının fazlalığıdır. PM₁₀ havada 10 mikrometre (0.01 mm) veya daha küçük çapa sahip parçacık miktarıdır (EPA Victoria, 2021). Bu miktarın yıl boyunca resmi olarak ve saatlik veri toplayacak şekilde izlenmesi gerekir. İyi bir hava kalitesi, 1 saatte ortalama 40 PM₁₀ µg/m3’ten daha azına karşılık gelir. Dünya Sağlık Örgütü (DSÖ) bu değeri 20 PM₁₀ µg/m3 ile sınırlar. Bu sınırın aşılması, kaydedilen miktara bağlı olarak çeşitli hastalıklar için risk taşımaktadır. Örneğin, 1 saatte ortalama PM₁₀ µg/m3 300’ün üzerindeyse, hava kalitesi son derece düşüktür. Örneğin, Ankara’da PM₁₀ sınırları 2017 yılının 365 gününün toplam 287 gününde aşıldı. Bu değer, olayın ciddiyetinin ve aciliyetinin açık bir göstergesidir.",
+        "Şekil 10’a göre, sadece Hakkari ili 50 PM10 µg/m3 değerini yılda 35 defadan daha fazla aşmamaktadır. 50 PM10 µg/m3 sınırı oldukça yüksek bir değer olmasına rağmen, diğer tüm iller yıllık olarak bu sınırı aşmaktadır ve özellikle pandemi dönemlerinde kısa vadeli sağlıksız koşullara karşılık gelmektedir. Gri alanlar, yılın %75’inden fazlası için ölçüm yapılamayan illerdir."
+      ]
+    },
+    {
+      "id": "baginti-modeli",
+      "title": "Bağıntı Modeli",
+      "paragraphs": [
+        "Bu çalışmada, PM₁₀ ve PM2.5’in bir fonksiyonu olan bin kişi başına günlük COVID-19 vakaları hakkında İtalya’dan alınan ilk verilere dayanarak bir bağıntı modeli geliştirilmiştir. COVID-19 vakaları ile CO2 salımları arasındaki bağın şimdiye kadar önemsenmemiş olmasının nedeni, somut bağıntı modellerinin henüz geliştirilmemiş olmasıdır. Bu amaçla, önce PM değerleri ile CO2 salım değerleri arasında bir ilişkiyi Şekil 11’de görülen dörtlem (Quadrilemma) ve altı vektör kapsamında belirlemek gerekmektedir. İlişkilerin geri kalanı halihazırda mevcuttur, bilinmektedir veya daha kolay belirlenebilir. COVID-19 salgını, bu dörtlemin tüm tarafları ile iki yönlü bir ilişkiler yumağının merkezinde yer almaya başladı. Bu nedenle, genişletilmiş güvenli binalar başlığı altındaki yeşil ölçütlere “Pandemiye Dayanıklı Binalar” kavramını dahil etmenin zamanı gelmiştir.",
+        "PM, Şekil 12’de gösterilen CO2 salımları ile ilgilidir ve ortalama dönüşüm eşleme faktörü, f cinsinden aşağıdaki doğrusal ilişkiye sahip olduğu görülmüştür. Örneğin, dizel deniz motorları için PM2.5 değerinin CO2 salımına oranı, yani f faktörü, ağırlıkça 0.002’dir. Kömür veya linyitle çalışan enerji santrallerinde bu oran yaklaşık 0.1’dir. Bu nedenle, fosil yakıtlar birçok sektörde giderek daha az kullanılmaya devam edildikçe, şimdiye kadar hesaba katılmamış olan ΔCO2, pandemi riski konusunda daha da önemli bir etmen olmaya devam edecektir.",
+        "f faktörü için ağırlıkça 0.06 olarak tahmin edilebilir. Bu, 0.06 kg PM2.5 artıştan 1 kg ΔCO2’nin sorumlu olduğu anlamına gelir. Yerel en fazla günlük aşım sayısı sınırlarına bağlı olarak, o bölgede nüfus başına potansiyel COVID-19 vaka artışı tahmin edilebilir. Böyle bir çaba için, Şekil 8 ve 9’da gösterilen güncel tıbbi raporlar kullanılmıştır.",
+        "Yerel hava kalitesi ölçümlerinden günlük CO2 aşımı belirlenebilir. Aşım sınırları ise yerel ve ulusal yetkililerce belirlenebilir. Örneğin, belirli bir bölgede aşım sınırı 300 ppm ise ve CO2 derişikliği bu sınırı yirmi iki kez aşarsa, CP 0.0002’dir, yani CO2 aşımı nedeniyle 10,000 kişilik bir nüfusta iki vaka daha fazladır. Bu, parçacık sayısı aşımlarına ilişkin ek bir sayıdır. CO2 düzeyi her zaman 300 ppm sınırının üzerinde ise, o zaman on bin nüfus başına ek yirmi beş vaka tahmin edilebilir. Bununla birlikte, bu makalede verilen bağıntının daha yüksek güvenirliğe ulaştırılabilmesi için daha fazla veriye ihtiyaç vardır."
+      ]
+    },
+    {
+      "id": "sonuc-ve-tartisma",
+      "title": "Sonuç ve Tartışma",
+      "paragraphs": [
+        "Değişen iklim koşullarının insanların sağlığı, hatta ölüm oranlarının artışı üzerindeki önemli etkileri biliniyor. Hava koşullarıyla ilişkili ölümler ve hastalıklar, daha sık görülen aşırı iklim olayları nedeniyle daha da artabilir. Birbirini izleyen çok sıcak gün sayısındaki artış, doğrudan akut sağlık problemi olan kişileri, özellikle yaşlı; kardiyovasküler ve solunumla ilgili rahatsızlıkları olan kişileri etkiler. İklim değişikliğine bağlı olarak artacak sel riski, bulaşıcı hastalıkların yayılma risklerini ve bölgeselliğini de değiştirecektir. Bulaşıcı ve/veya yeni tür hastalığa neden olan mikroorganizmaların veya vektörlerin çevreye girmesi ve beklenen küresel ısınmaya karşı yeni yaşam ortamları bulur. Ayrıca iklim değişikliğinden dolayı zoonozlar gibi böcekler tarafından taşınan ciddi bulaşıcı hastalıkların yayılması olasıdır.",
+        "Bu araştırma, ek COVID-19 vakaları ile yerel CO2 derişiklikleri arasındaki ilk matematiksel bağıntıyı geliştirmiştir. Bu bağıntı özellikle binalarla ve bunların salım sorumluluklarıyla ilişkilidir, çünkü binalar şu anda %100 temiz hava gereksinimi ve iç mekanlarda daha fazla zaman geçirilmesi nedeniyle toplam enerji tüketiminin %45’ten fazlasından sorumludurlar. Burada sunulan çalışma, Şekil 11’de gösterilen bulmacayı tamamlamak için iddialı bir araştırma planının ilk adımıdır. Bu çaba, BM Genel Sekreteri’nin Paris Anlaşması’na uymaya çağırdığı gibi, tüm uluslar tarafından yapılması gereken olağanüstü bir atılım olacaktır. Bu hedefe zamanında ulaşılırsa, mevcut ve gelecekteki pandemi riskleri de azalabilecektir."
+      ]
+    }
+  ],
+  "keywords": [
+    "CO 2 salımı",
+    "COVID-19",
+    "iklim acil durumu",
+    "küresel ısınma",
+    "salgına dayanıklı bina"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Cao, X., Xilei, D. & Liu, J. (2016). Building energy-consumption status worldwide and the state-of-the-art technologies for zero-energy buildings during the past decade. Energy and Buildings. 128. 10.1016/j.enbuild.2016.06.089. https://www.researchgate.net/publication/304712030_Building_energy-consumption_status_worldwide_and_the_state-of-the-art_technologies_for_zero-energy_buildings_during_the_past_decade adresinden alındı."
+    },
+    {
+      "id": "ref-2",
+      "text": "Copiello, S. & Grillenzoni, C. (2020). The Spread of 2019-Ncov. ın china was primarily driven by population density. Comment On “association between short-term exposure to air pollution and COVID-19 infection: Evidence from China” By Zhu Et Al., Elsevier Public Health emergency Collection. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7365069/ adresinden alındı."
+    },
+    {
+      "id": "ref-3",
+      "text": "EPA Victoria. (2021, Mart 16). PM10 particles in the air. https://www.epa.vic.gov.au/for-community/environmental-information/air-quality/pm10-particles-in-the-air adresinden alındı."
+    },
+    {
+      "id": "ref-4",
+      "text": "Erten, D., & Kılkış, B. (2021). How can green building certification systems cope with the era of climate emergency and pandemics? Makale değerlendirme sürecindedir."
+    },
+    {
+      "id": "ref-5",
+      "text": "H2O. (2021). Atmospheric water collector production. https://h2omachine.com/humidity-maps/ adresinden alındı."
+    },
+    {
+      "id": "ref-6",
+      "text": "Hawksworth, J. C. (2006). The world in 2050: Can rapid global growth be reconciled with moving to a low carbon economy? https://www.pwc.com/gx/en/psrc/pdf/world_in_2050_carbon_emissions_psrc.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-7",
+      "text": "Kılkış, B. (2021a). Is exergy destruction minimization the same thing as energy efficiency maximization? Journal of Energy Systems 2021, DOI: 10.30521/jes."
+    },
+    {
+      "id": "ref-8",
+      "text": "Kılkış, B. (2021b). (In Print). An exergy-based minimum carbon footprint model for optimum equipment oversizing and temperature peaking in low-temperature district heating systems, Energy."
+    },
+    {
+      "id": "ref-9",
+      "text": "Lowen, A. C., Mubsreka, A. S., Steel, S., & Palese, P. (2007). Influenza virus transmission is dependent on relative humidity and temperature. PLos Pathog, 3(10) PMC2034399."
+    },
+    {
+      "id": "ref-10",
+      "text": "Nur, O. K. (2018). Air Pollution in Istanbul. Netherlands Enterprise Agency."
+    },
+    {
+      "id": "ref-11",
+      "text": "Reuters. (2020). U.N. chief urges leaders of every country to declare “climate emergency”. https://www.reuters.com/article/uk-climate-change-un-summit-idUSKBN28M0IR adresinden alındı."
+    },
+    {
+      "id": "ref-12",
+      "text": "Setti, L., Passarini, F., De Gennaro, G., Barbieri, P., Licen, S., Perrone, M. G., Piazzalunga, A., Borelli, M., Palmisani, J., Di Gilio, A., Rizzo, E., Colao, A., Piscitelli, P., & Miani, A. (2020). Potential role of particulate matter in the spreading of COVID-19 in northern Italy: First observational study based on ınitial epidemic diffusion. BMJ Open. https://bmjopen.bmj.com/content/bmjopen/10/9/e039338.full.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-13",
+      "text": "TMMOB Çevre Mühendisleri Odası. (2019). Hava Kirliliği Raporu 2019. https://www.tmmob.org.tr/sites/default/files/2019.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-14",
+      "text": "Tokazhanov, G., Tleuken, A., Guney, M., Turkyilmaz, A., Karaca, F. (2020). How is COVID-19 experience transforming sustainability requirements of residential buildings? Sustainability, 12, 8732. https://doi.org/10.3390/su12208732. https://www.mdpi.com/2071-1050/12/20/8732/htm adresinden alındı."
+    }
+  ],
+  "figures": [
+    {
+      "id": "figure-1",
+      "order": 1,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-01-tr.jpg",
+      "caption": "Şekil 1. Atmosferdeki CO2 yoğunluğu zor olsa da dengelenebilir fakat azaltılamaz (Hawksworth, 2006)"
+    },
+    {
+      "id": "figure-2",
+      "order": 2,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-02-tr.jpg",
+      "caption": "Şekil 2. Nem ve sıcaklık artışı ile oluşan iklim çemberi. Şekil: Birol Kılkış ©2020 *CFC: Kloro-Floro Karbon"
+    },
+    {
+      "id": "figure-3",
+      "order": 3,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-03-tr.jpg",
+      "caption": "Şekil 3. COVID-19 gibi virütik bulaş riski ile bağıl nem ilişkisi. En emniyetli bağıl nem: %50. (Lowen, vd., 2007)"
+    },
+    {
+      "id": "figure-4",
+      "order": 4,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-04-tr.jpg",
+      "caption": "Şekil 4. Küresel bağıl nem atlası (H2O, 2021)"
+    },
+    {
+      "id": "figure-5",
+      "order": 5,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-05-tr.jpg",
+      "caption": "Şekil 5. Virütik enfeksiyonlarda antropojenik ve doğal etmenler. Şekil orijinali: (Copiello & Grillenzoni, 2020)"
+    },
+    {
+      "id": "figure-6",
+      "order": 6,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-06-tr.jpg",
+      "caption": "Şekil 6. Kuzey Çin bölgeleri için rüzgârdan-ısıtmaya kavramı. Şekil: Birol Kılkış ©2020 (Kılkış, 2021b)"
+    },
+    {
+      "id": "figure-7",
+      "order": 7,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-07-tr.jpg",
+      "caption": "Şekil 7. İtalya için COVID-19 ve hava kirliliği ilişkisinde ön veriler (Setti,vd., 2020)"
+    },
+    {
+      "id": "figure-8",
+      "order": 8,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-08-tr.jpg",
+      "caption": "Şekil 8. Nüfus başına günlük PM10 hava kirliliği aşım ve vaka sayısı ilişkisi (Setti, vd., 2020)"
+    },
+    {
+      "id": "figure-9",
+      "order": 9,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-09-tr.jpg",
+      "caption": "Şekil 9. Türkiye’nin yıl boyu PM10 değerlerinin aşım gün sayıları (Nur, 2018)"
+    },
+    {
+      "id": "figure-10",
+      "order": 10,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-10-tr.jpg",
+      "caption": "Şekil 10. Türkiye’de 2019 yılında 50 PM10 µg/m3 aşımları 2019. (TMMOB Çevre Mühendisleri Odası 2019)"
+    },
+    {
+      "id": "figure-11",
+      "order": 11,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-11-tr.jpg",
+      "caption": "Şekil 11. İklimsel ısınmaya karşı pandemi direnç kavramı (Erten & Kılkış, 2021, hakem incelemesinde). Şekil: Birol Kılkış ©2020"
+    },
+    {
+      "id": "figure-12",
+      "order": 12,
+      "src": "/assets/article-figures/iklim-acil-durumu-pandemi-ve-binalar-arasindaki-iliski-covid-19un-artik-bir-asisi-var-ancak-iklim/figure-12-tr.jpg",
+      "caption": "Şekil 12. Nüfus başına COVID-19 vaka sayısı (CP) ile günlük NOX sınırının aşım sayısı ilişkisi. Şekil: Birol Kılkış ©2020 (Şekil 7 ve 8 verilerinden türetilmiştir)."
+    }
+  ]
+}
