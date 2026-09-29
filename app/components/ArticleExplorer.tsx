@@ -120,13 +120,13 @@ export function ArticleExplorer({ articles, locale = "tr" }: { articles: Archive
           <label><span>{locale === "en" ? "Volume" : "Cilt"}</span><select value={volume} onInput={(event) => update(setVolume, event.currentTarget.value)} onChange={(event) => update(setVolume, event.target.value)}><option value="all">{locale === "en" ? "All" : "Tümü"}</option>{volumes.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
           <label><span>{locale === "en" ? "Per page" : "Sayfa başına"}</span><select value={pageSize} onInput={(event) => { setPageSize(Number(event.currentTarget.value)); setPage(1); }} onChange={(event) => { setPageSize(Number(event.target.value)); setPage(1); }}><option>10</option><option>20</option><option>50</option></select></label>
           <div className="type-dropwrap" ref={typeRef}>
-            <span className="type-drop-label">{locale === "en" ? "Type" : "Tür"}</span>
+            <span className="type-drop-label">{locale === "en" ? "Category" : "Kategori"}</span>
             <button type="button" className="type-dropbtn" aria-expanded={typeOpen} aria-haspopup="true" onClick={() => setTypeOpen((open) => !open)}>
-              <span>{locale === "en" ? "Types" : "Türler"}{selectedTypes.length > 0 && <b>{selectedTypes.length}</b>}</span>
+              <span>{locale === "en" ? "Categories" : "Kategoriler"}{selectedTypes.length > 0 && <b>{selectedTypes.length}</b>}</span>
               <span aria-hidden="true">▾</span>
             </button>
             {typeOpen && (
-              <div className="type-drop" role="group" aria-label={locale === "en" ? "Publication types" : "Yayın türleri"}>
+              <div className="type-drop" role="group" aria-label={locale === "en" ? "Publication categories" : "Yayın kategorileri"}>
                 <div className="type-group">
                   {academicTypes.map((item) => (
                     <label className="type-opt" key={item}><input type="checkbox" checked={selectedTypes.includes(item)} onChange={() => toggleType(item)} /><span className="type-box" aria-hidden="true">✓</span>{item}</label>
