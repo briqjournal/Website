@@ -2376,9 +2376,16 @@ img {
 }
 
 .article-directory p {
-  margin: 12px 0 0;
+  margin: 10px 0 0;
+  color: var(--ink);
+  font-size: 14px;
+}
+.article-directory .article-doi {
+  display: block;
+  margin-top: 6px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
+  letter-spacing: .02em;
 }
 
 .issue-detail {
@@ -4709,7 +4716,7 @@ footer h2 { font-size: 11px; }
 .pagination button:disabled { opacity: .35; }
 .pagination span { font-size: 12px; font-weight: 800; }
 .pagination > span { font-variant-numeric: tabular-nums; }
-.pagination-top { margin-top: 0; margin-bottom: 0; padding-bottom: 16px; border-bottom: 1px solid var(--line); justify-content: flex-start; }
+.pagination-top { margin-top: 0; margin-bottom: 0; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
 .pagination-top + .article-directory { border-top: 0; }
 .page-jump { display: flex; align-items: center; gap: 8px; }
 .page-jump label { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 11px; font-weight: 800; }
@@ -4720,9 +4727,9 @@ footer h2 { font-size: 11px; }
 .type-dropbtn { min-height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; padding: 0 12px; border: 1px solid rgba(255, 255, 255, .24); background: #2b2724; color: #fff; font-size: 13px; cursor: pointer; }
 .type-dropbtn > span:first-child { display: inline-flex; align-items: center; gap: 8px; }
 .type-dropbtn b { min-width: 22px; height: 22px; display: inline-grid; place-items: center; border-radius: 999px; background: var(--red); font-size: 11px; }
-.type-drop { position: absolute; top: calc(100% + 8px); left: 0; width: 300px; max-height: 320px; overflow-y: auto; z-index: 20; padding: 8px; border: 1px solid rgba(255, 255, 255, .2); background: #232120; box-shadow: 0 24px 60px rgba(0, 0, 0, .5); }
+.type-drop { position: absolute; top: calc(100% + 8px); left: 0; width: 264px; max-height: 288px; overflow-y: auto; z-index: 20; padding: 6px; border: 1px solid rgba(255, 255, 255, .24); background: #2b2724; box-shadow: 0 24px 60px rgba(0, 0, 0, .5); }
 .type-drop .type-group { display: flex; flex-direction: column; }
-.type-opt { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 2px; color: rgba(255, 255, 255, .88); font-size: 13px; cursor: pointer; }
+.type-opt { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 2px; color: rgba(255, 255, 255, .88); font-size: 12px; cursor: pointer; white-space: nowrap; }
 .type-opt:hover { background: rgba(255, 255, 255, .07); color: #fff; }
 .type-opt input { position: absolute; opacity: 0; pointer-events: none; }
 .type-opt .type-box { flex: 0 0 auto; width: 16px; height: 16px; display: inline-grid; place-items: center; border: 1px solid rgba(255, 255, 255, .45); color: transparent; font-size: 12px; font-weight: 800; line-height: 1; }
