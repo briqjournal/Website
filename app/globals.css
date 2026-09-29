@@ -4724,7 +4724,7 @@ footer h2 { font-size: 11px; }
 .page-jump button { width: auto; padding: 0 14px; font-size: 11px; font-weight: 800; }
 .type-dropwrap { position: relative; display: flex; flex-direction: column; gap: 7px; }
 .type-drop-label { font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #9a9088; }
-.type-dropbtn { min-height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; padding: 0 12px; border: 1px solid rgba(255, 255, 255, .24); background: #2b2724; color: #fff; font-size: 13px; cursor: pointer; }
+.type-dropbtn { min-height: 48px; display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; padding: 0 12px; border: 1px solid rgba(255, 255, 255, .24); background: #2b2724; color: #fff; font-size: 16px; cursor: pointer; }
 .type-dropbtn > span:first-child { display: inline-flex; align-items: center; gap: 8px; }
 .type-dropbtn b { min-width: 22px; height: 22px; display: inline-grid; place-items: center; border-radius: 999px; background: var(--red); font-size: 11px; }
 .type-drop { position: absolute; top: calc(100% + 8px); left: 0; width: 264px; max-height: 288px; overflow-y: auto; z-index: 20; padding: 6px; border: 1px solid rgba(255, 255, 255, .24); background: #2b2724; box-shadow: 0 24px 60px rgba(0, 0, 0, .5); }
