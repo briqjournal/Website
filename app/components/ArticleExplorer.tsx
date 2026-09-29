@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { ArchiveArticleListing } from "../archive-listing";
 import { issueBadgeAccent } from "../issue-themes";
 import { useArticleSearchIndex } from "./useArticleSearchIndex";
@@ -64,6 +64,23 @@ export function ArticleExplorer({ articles, locale = "tr" }: { articles: Archive
   const [year, setYear] = useState("all");
   const [volume, setVolume] = useState("all");
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+  const [typeOpen, setTypeOpen] = useState(false);
+  const typeRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!typeOpen) return;
+    const onPointerDown = (event: PointerEvent) => {
+      if (typeRef.current && !typeRef.current.contains(event.target as Node)) setTypeOpen(false);
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setTypeOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [typeOpen]);
   const [pageSize, setPageSize] = useState(20);
   const [page, setPage] = useState(1);
   const years = [...new Set(articles.flatMap((item) => expandYears(item.year)))].sort().reverse();
@@ -102,27 +119,35 @@ export function ArticleExplorer({ articles, locale = "tr" }: { articles: Archive
           <label><span>{locale === "en" ? "Year" : "Yıl"}</span><select value={year} onInput={(event) => update(setYear, event.currentTarget.value)} onChange={(event) => update(setYear, event.target.value)}><option value="all">{locale === "en" ? "All" : "Tümü"}</option>{years.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
           <label><span>{locale === "en" ? "Volume" : "Cilt"}</span><select value={volume} onInput={(event) => update(setVolume, event.currentTarget.value)} onChange={(event) => update(setVolume, event.target.value)}><option value="all">{locale === "en" ? "All" : "Tümü"}</option>{volumes.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
           <label><span>{locale === "en" ? "Per page" : "Sayfa başına"}</span><select value={pageSize} onInput={(event) => { setPageSize(Number(event.currentTarget.value)); setPage(1); }} onChange={(event) => { setPageSize(Number(event.target.value)); setPage(1); }}><option>10</option><option>20</option><option>50</option></select></label>
+          <div className="type-dropwrap" ref={typeRef}>
+            <span className="type-drop-label">{locale === "en" ? "Type" : "Tür"}</span>
+            <button type="button" className="type-dropbtn" aria-expanded={typeOpen} aria-haspopup="true" onClick={() => setTypeOpen((open) => !open)}>
+              <span>{locale === "en" ? "Types" : "Türler"}{selectedTypes.length > 0 && <b>{selectedTypes.length}</b>}</span>
+              <span aria-hidden="true">▾</span>
+            </button>
+            {typeOpen && (
+              <div className="type-drop" role="group" aria-label={locale === "en" ? "Publication types" : "Yayın türleri"}>
+                <div className="type-group">
+                  {academicTypes.map((item) => (
+                    <label className="type-opt" key={item}><input type="checkbox" checked={selectedTypes.includes(item)} onChange={() => toggleType(item)} /><span className="type-box" aria-hidden="true">✓</span>{item}</label>
+                  ))}
+                </div>
+                {academicTypes.length > 0 && otherTypes.length > 0 && <hr />}
+                <div className="type-group">
+                  {otherTypes.map((item) => (
+                    <label className="type-opt" key={item}><input type="checkbox" checked={selectedTypes.includes(item)} onChange={() => toggleType(item)} /><span className="type-box" aria-hidden="true">✓</span>{item}</label>
+                  ))}
+                </div>
+                {selectedTypes.length > 0 && (
+                  <button type="button" className="type-clear" onClick={() => { setSelectedTypes([]); setPage(1); }}>
+                    {locale === "en" ? "Clear selection" : "Seçimi temizle"}
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
           <strong>{filtered.length} {locale === "en" ? "results" : "sonuç"}</strong>
         </div>
-        <fieldset className="article-type-filter">
-          <legend>{locale === "en" ? "Type" : "Tür"}</legend>
-          <div className="type-group">
-            {academicTypes.map((item) => (
-              <label key={item}><input type="checkbox" checked={selectedTypes.includes(item)} onChange={() => toggleType(item)} />{item}</label>
-            ))}
-          </div>
-          {academicTypes.length > 0 && otherTypes.length > 0 && <hr />}
-          <div className="type-group">
-            {otherTypes.map((item) => (
-              <label key={item}><input type="checkbox" checked={selectedTypes.includes(item)} onChange={() => toggleType(item)} />{item}</label>
-            ))}
-          </div>
-          {selectedTypes.length > 0 && (
-            <button type="button" className="type-clear" onClick={() => { setSelectedTypes([]); setPage(1); }}>
-              {locale === "en" ? "Clear selection" : "Seçimi temizle"}
-            </button>
-          )}
-        </fieldset>
       </div>
       {pageCount > 1 && <DirectoryPagination page={currentPage} pageCount={pageCount} onPage={setPage} locale={locale} position="top" />}
       <div className="article-directory">
