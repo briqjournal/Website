@@ -1,0 +1,473 @@
+{
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "paragraphs": [
+        "IN 2015, THE UNITED NATIONS ADOPTED the Sustainable Development Goals (SDGs) to be achieved by 2030. These goals were formulated in 17 points that address different, but complementary, issues: eliminating poverty (1), eradicating hunger (2), achieving good health and well-being (3), ensuring quality education (4), attaining gender equality (5), ensuring access to clean water and sanitation to all (6), offering affordable and clean energy (7), generating decent work and economic growth (8), building quality and resilient industry, innovating base and infrastructure (9), reducing inequality (10), creating sustainable cities and communities (11), ensuring responsible consumption and production (12), combating climate change and its impacts (13), conserving marine resources (14), promoting sustainable use of terrestrial ecosystems (15), enabling peaceful and inclusive societies (16), and enhancing international cooperation (17). Goal 13 on climate action proposes to combat climate change through five different fronts: strengthening resilience and adaptive capacity to climate-related hazards, integrating climate change measures into national policies, improving education on climate change, implementing the United Nations Framework Convention on Climate Change, and enabling effective climate change-related planning and management (Kılkış, 2021; UN DESA, 2021a; UN DESA, 2021b.)",
+        "Indeed, one cannot reduce the task of combatting climate change to Goal 13 alone (UN DESA; n.d.). Climate change, which is increasingly felt through extreme climatic events such as droughts, violent storms, floods, and extreme warmth, affects both nature and people’s social lives. Specifically, the United Nations (UN) highlights the connection between environmental and social problems and Sustainable Development Goals (SDG). Their suggestions for environmental protection include the fight against social inequalities (UN DESA, 2021c). Considering that climate change will lead to fundamental problems such as lack of resources, food insecurity, shortages of safe drinking water, sheltering problems, and increasing poverty rates, health problems, and contagious diseases (UN, 2021).",
+        "This article aims to provide a comprehensive understanding of Turkey’s approach to climate change on its path to an ecological civilisation. How does Turkey perceive climate change? What proposals does Turkey offer to tackle climate change? How have Turkey’s perception and policy proposals on this matter taken their current shape?",
+        "The article uses qualitative content analysis and descriptive statistics to address these questions. The first section of this article provides conceptual and historical background for the study of climate change and climate policy; the second uses this background to examine the case of Turkey. Our data analysis divides the texts under study into coding segments in light of our research aims and conceptual framework. With the aim of analysing Turkey’s current climate strategy, we have included in our content analysis strategic and development plans along with climate-specific strategy papers, reports, and action plans: National Strategic Plan (2019-2023), 5-Year Development Plans, National Climate Change Strategy (2010-2023), Climate Change Adaptation Strategy and Action Plan (2011-2023), 2nd Voluntary National Review (2019), National Energy Efficiency Action Plan 2017-2023, National Energy Efficiency Paper (2012-2023).",
+        "Our content analysis is supplemented with descriptive statistical analysis based on data derived from the Turkish Statistical Institute (TURKSTAT) and the BP Statistical Review of World Energy."
+      ]
+    },
+    {
+      "id": "climate-change-a-brief-conceptual-and-historical-context",
+      "title": "Climate Change: A Brief Conceptual and Historical Context",
+      "paragraphs": [
+        "The basic requirement of a healthy society is safe human relations and equality in income distribution, as well as the protection of the natural, cultural, and aesthetic environment. There may be inevitable disruptions to the well-being of societies and those regarding the environment may have a significant impact. Addressing environmental problems means deciding between the needs of today’s generations and those of the future. The inability to evaluate national resources in line with the interests of the country, failure to maintain the environmental impact of increasing production, and the lack of international cooperation cause environmental problems to reach dangerous dimensions. Discussing the well-being of societies amounts to discussing an environmental problem that surfaced to the agendas of all nations - climate change.",
+        "Climate change is driven by the excessive accumulation of natural greenhouse gases in the atmosphere. Indeed, anthropogenic sources increase the concentration of greenhouse gases that disrupt the solar radiation pattern and cause global warming. Global warming, in turn, affects earth-based natural patterns and systems, ocean currents, weather, and increases sea levels due to the melting of ice. In 1994, the United Nations Framework Convention on Climate Change (UNFCCC) represented the first global declaration of climate change with its ultimate goal stated as the stabilisation of greenhouse gas concentrations at a level that would prevent dangerous anthropogenic interference with the climate system (IPCC, 2021).",
+        "The UNFCCC is strengthened by the Intergovernmental Panel on Climate Change (IPCC), which is the scientific board for global data collection and analysis, with its regular reportage acting as a guide to the UNFCCC’s activities. According to the IPCC, climate change efforts require three distinct divisions: assessment, which represents data-based scientific assumptions on the current situation of a country; mitigation, decreasing the amount of greenhouse gases emitted from various sources, i.e. transport, buildings or industry; and adaptation, to set measures for sudden and extreme changes of weather patterns, including short- or long-term effects on regions (IPCC, 2021).",
+        "Countries in the UNFCCC come together at an annual conference, the “Conference of the Parties” (COP). COP 26 is scheduled to be held in Glasgow on November 26th, 2021, where government representatives, academia, NGOs, and others will gather to discuss the current situation. The Copenhagen Summit in 2009, COP 15, was significant, for it coincided with the Kyoto Protocol coming into effect, and had its own final declaration called the “Copenhagen Accord”.",
+        "To date, there are two subsequent global agreements following the UNFCCC. The first is the Kyoto Protocol and the second is the Paris Agreement. These two agreements, although serving the same objective, are different in approach and expectations from the signatory countries. Two striking differences are that the Kyoto Protocol is legally binding and focuses on industrialised and developed countries while the Paris Agreement is not legally binding and targets all signatory countries. Hence, when the ultimate goal is considered, the Kyoto Protocol is targeting a 5% decrease from the 1990 emission levels, while the Paris Agreement demands countries to make their Intended National Declaration of Contributions (INDCs), with all aiming for a 1.5°C decrease from preindustrial levels. The Kyoto Protocol introduced various climate change finance mechanisms, such as the introduction of carbon trade systems and their respective mandatory and voluntary markets (Low & Boettcher, 2020).",
+        "Around the same time as the Paris Agreement, the United Nations for another global agreement, the Sustainable Development Goals, as the successor of the Millennium Development Goals. The Millennium Development Goals provided a set of 8 goals that covered areas from hunger to environment, but the Sustainable Development Goals outlined a total of 17 goals for the period of 2015-2030. Direct and indirect (i.e. Goal 7 on clean and affordable energy) effects of climate were discussed in goals, but Goal 13, “Climate Action”, was exclusively dedicated to climate change. The targets and indicators for SDG 13 briefly suggested urgent action to combat climate change and its impacts.",
+        "SDG 13 suggests “strengthening resilience and adaptive capacity to climate-related hazards and natural disasters in all countries focusing on the climate change adaptation”. It also targets “integrating climate change measures into national policies, strategies and planning as well as improving education, awareness-raising and human and institutional capacity on climate change mitigation, adaptation, impact reduction and early warning” (UN DESA, 2021a).",
+        "Although the UN confirmed the existence of climate change through government-level agreements and scientific data from the IPCC, there is still climate change scepticism individuals, businesses, and even in governments. Nevertheless, the push towards action resulted in a wide range of reactions from businesses and countries. For these groups, there are three main types of reactions. The first group is the proactive businesses or governments that firmly believe in climate change and its various risks. The second group would be those that, while they recognise that climate change is happening, prefer to watch from a distance to inspect and see what others will do before they make their own decisions. Finally, the last group is the climate deniers, who believe that business can go on as usual (Low & Boettcher, 2020). Over the years, governments have followed their own paths, especially those governments that are global impactors."
+      ]
+    },
+    {
+      "id": "turkeys-approach-to-climate-change-a-content-analysis",
+      "title": "Turkey’s Approach to Climate Change: A Content Analysis",
+      "paragraphs": [
+        "The issue of climate change concerns all countries of the world. As a temperate zone country, however, Turkey is among the countries expected to be most affected by climate change. Considering the importance of carbon dioxide emissions as a chief factor in contributing to climate change, the gravity of this issue can be better grasped by looking at Turkey’s carbon dioxide emissions over the years. In the 1970-2019 period, Turkey’s carbon dioxide emissions rose from 39.28 million tonnes to 383.26 million tonnes, which points to a nearly 876% increase in total emissions (BP Statistical Review, 2021; Figure 1).",
+        "Turkey has not remained completely unresponsive to these developments. Turkey’s expenditure on the protection of ambient air and climate has seen a considerable increase, from 338,615,571 TL to 1,139,067,476 TL between 2013 and 2019, which corresponds to an over 236% increase overall (TURKSTAT, 2021; Figure 2). Moreover, TURKSTAT data reveals that the sectors with the greatest share in Turkey’s carbon dioxide emissions are, ranked in order of importance: “electricity, gas, steam and air conditioning supply”, “manufacturing”, “agriculture, forestry and fishing”, and “households” (TURKSTAT, 2021; Figure 3). Indeed, these areas represent priority sectors to be focused on in the fight against climate change.",
+        "Examining Turkey’s strategy documents and action plans would provide a firm understanding of the countries’ priorities regarding climate change. National strategic plans set the general course for the policies to be pursued by Turkey. In other words, they formulate the essential principles, performance criteria, and methods to be adopted in implementing Turkey’s medium- to long-term goals. It follows that these plans also set the course for Turkey’s strategies and action plans in combatting climate change. By way of example, Turkey’s Strategic Plan for the period 2019-2023 adopts the core mission of placing economic and social development within a sustainability framework (TC SBB, 2019a:42). The plan indicates that this mission is formulated based on SDGs and will shape Turkey’s essential policy documents to come. With this aim in mind, the plan also announces the creation of the National Sustainable Development Commission, which will ensure the implementation of this mission (TC SBB, 2019a:45, 49).",
+        "Turkey’s 5-Year Development Plans provide a better picture of its short- to medium-term approach to environmental policy and climate change. The First and Second 5-Year Development Plans (1963-1973) featured both direct and indirect mentions of the environmental question. However, the task of “environmental protection” was not incorporated into the 5-Year Development Plans until the 1972 UN Stockholm Conference on the environment, which later shaped the content of the Third 5-Year Development Plan (1973-1977) (Akkuş Dağdeviren, 2019: 71). This plan is Turkey’s first Five-Year Development Plan to contain an entire section on the environment, which marked the creation of the Prime Ministry Undersecretariat of the Environment. The framework of sustainable development was adopted in the Fifth 5-Year Development Plan (1990-1994), strengthening Turkey’s focus on the environment and sustainability. Further key cases include the Ninth 5-Year Development Plan (2007-2013), which brought to the forefront the links between the environment and future generations, and the Tenth 5-Year Development Plan (2014-2018), which accentuated the notion of “green growth” (Akkuş Dağdeviren, 2019).",
+        "A more in-depth picture of Turkey’s approach to climate change can be obtained by focusing on key official documents that specifically address this individual issue. A case in point is Turkey’s National Climate Change Adaptation Strategy and Action Plan, which was prepared in 2011 by the Ministry of Environment and Urbanisation (Türkiye Cumhuriyeti Çevre ve Şehircilik Bakanlığı, 2011). This document seeks to contribute to Turkey’s efforts at increasing adaptation to climate change as part of the UN Joint Program on Enhancing the Capacity of Turkey. The document identifies Turkey’s key sectors that affect climate change and regions affected by climate change-related strains. In the meantime, it detects adverse factors that prevent the integrated development of economic strategies and climate policies. These factors include inefficient policies, poor institutional coordination, and the lack of technical capabilities. Proposed solutions for policy improvement address five main areas: water resources management, agricultural sector and food security, ecosystem services, biodiversity and forestry, natural disaster risk management, and public health. Table 1 offers a more detailed breakdown of the actions to be implemented in this framework, where research and development appear as a dominant theme (Türkiye Cumhuriyeti Çevre ve Şehircilik Bakanlığı, 2011). At this point, it is noteworthy to mention that TURKSTAT data confirm Turkey’s accentuation of research and development. Evidence from 2013-2019 suggests that Turkey’s environmental protection expenditure for research and development rose from 83.577.115 TRY to 217.983.249 TRY, which corresponds to an over 160% increase (TURKSTAT 2021; Figure 4).",
+        "Conducted in 2019, the 2nd National Voluntary Review detected “medium-level” compliance of Turkey’s policies and strategies, legislation, project inventory, and implementation with SDG 13 on climate action. This corresponds to a 40-60% range. The level of compliance for Turkey’s institutional framework is described as “medium to advanced”, i.e. 60-80% of the targets set in SDG 13 (TC SBB, 2019b.). According to the review, the links between SDGs are strong in the context of Turkey, and Turkey’s performance in SDG 13 stands out as one of the strongest areas where the impact of targets set by other SDGs is observed. On average, 55% of Turkey’s SDG 13 targets are impacted by targets set by other SDGs, whereas SDG 13’s targets affect 53% of the targets set by other SDGs. The review indicates that Turkey’s performance in SDG 13 can be strengthened by consolidating the physical and human infrastructure with the legal-institutional superstructure (TC SBB, 2019a). The review that there is a considerable increase in the frequency of disasters and greenhouse gas emissions that Turkey’s struggle against climate change should devote greater efforts to adaptation to climate change, policy integration, awareness-rising, and capacity increase, which are examined in greater detail in Table 2.",
+        "A closer look at the 2nd National Voluntary Review reveals that clean energy and energy efficiency occupy the forefront of Turkey’s climate policy. The same goes for Turkey’s National Climate Change Adaptation Strategy and Action Plan (2011-2023) (Türkiye Cumhuriyeti Çevre ve Şehircilik Bakanlığı, 2011). In this regard, it would be worthwhile to also examine Turkey’s sustainable energy strategy and action plans. For example, the 2012-2023 Energy Efficiency Strategy (Enerji Verimliliği Strateji Belgesi, 2012) aims for a considerable increase in Turkey’s energy efficiency by 2023. This strategy was prepared in cooperation with the public sector, private sectors, and civil society groups, and accentuates the need for maintaining this participatory cooperation scheme.",
+        "Turkey’s Energy Efficiency Strategy complements priority goals set by national strategies and development plans, particularly concerning the task of combating climate change, environmental protection, ensuring the sustainability and affordability of energy costs, and constraining national energy dependency. Meanwhile, this strategy document supports the goals stated in Turkey’s Ninth 5-Year Development Plan regarding the development of energy and transportation infrastructure (Enerji Verimliliği Strateji Belgesi, 2012).",
+        "The 2012-2023 Energy Efficiency Strategy opens with a general assessment of Turkey’s performance in energy efficiency and emphasizes the need for decreasing energy demand. It also identifies the key sectors and activities that lead to national energy demand, which include the building sector, manufacturing, transportation, and motorised vehicles. The main targets set in this strategy document are to “decrease at least 20% of the amount of energy consumed per GDP of Turkey in the year 2023” and “to reduce energy intensity in each industry sub-sector... [by] at least 10% ... within the 10 years after the publication of the Document”. Other targets include: decreasing energy demand and carbon emissions of buildings; promoting sustainable environment-friendly buildings using renewable energy sources; providing market transformation of energy-efficient products; increasing efficiency in production, transmission, and distribution of electricity; decreasing energy losses and harmful environmental emissions; reducing unit fossil fuel consumption of motorised vehicles; increasing share of public transportation in highways, sea roads, and railroads; preventing unnecessary fuel consumption in urban transportation; using energy effectively and efficiently in the public sector; strengthening institutional capacities and collaborations; increasing the use of state of the art technology and awareness activities; and developing financial mechanisms (Enerji Verimliliği Strateji Belgesi, 2012).",
+        "The 2017-2023 National Energy Efficiency Action Plan (Ulusal Enerji Verimliliği Eylem Planı 2017-2023, 2017) draws attention to the chief factors increasing energy consumption in the developing world, which include population growth, rising prosperity, the strengthening service sector, and industrialisation. These factors led to a 46% increase in energy consumption for the period 2005-2015. The action plan rearticulates Turkey’s will to enhance energy efficiency by reference to the Energy Efficiency Law adopted in 2007, the 2012-2023 Energy Efficiency Strategy, and the National Climate Change Strategy (Ulusal Enerji Verimliliği, 2017). The main target of the 2017-2023 National Energy Efficiency Action Plan is “to reduce the primary energy consumption of Turkey by 14% by 2023 … [and] to achieve savings 23.9 Mtoe (Millions of tonnes of oil equivalent) cumulatively by 2023.” (Ulusal Enerji Verimliliği, 2017). This target involves 55 different policy actions that focus on buildings and services, energy, transport, industry, technology, agriculture, and other overlapping areas (Ulusal Enerji Verimliliği, 2017).",
+        "Realistically, Turkey has a very long way to go before it can implement many of the targets set in its climate and energy strategies. One should also keep in mind that it has a poor record of environmental protection, even before tackling climate change. This being said, Turkey has already achieved concrete results through its energy strategy and action plans. Particularly, Turkey is on the verge of a clean energy revolution in the area of wind, solar, and hydroelectric energy generation. Turkey’s wind energy production rose from 0.01 terawatts/hour in 1998 to 21.7 terawatt/hour in 2019, which points to a 216% increase overall (Figure 5). Furthermore, Turkey has joined the top ten countries with the highest wind energy potential and equipment production. It exports its wind energy equipment to 44 countries in 6 different regions, whose revenues make up 70% of this sector (Cagatay, & Kaya, 2020). In the period 2010-2019, Turkey’s solar energy production rose from 0 to 10.92 terawatts/hour, which corresponds to a 236% increase (Figure 6). Importantly, Turkey has become the world’s third leader in solar water heating capacity after China and the United States (Renewables 2020 Global Status Report, 2020). Finally, Turkey’s hydroelectric production has experienced an annual average increase of 9.88% in the period 1970-2019, from 3.3 terawatts/hour to 89.16 terawatts/hour (BP Statistical Review, 2021; Figure 7). As such, Turkey rose to the second rank in hydroelectric power generation in Europe and the ninth rank in the world (“Turkey 2nd among”, 2020). Turkey’s innovations in environmental and energy implementations –achieved through growing public support for research and development and technology– have played an important role in achieving these results."
+      ]
+    },
+    {
+      "id": "review-and-discussion",
+      "title": "Review and Discussion",
+      "paragraphs": [
+        "To conclude, a fuller understanding of Turkey’s climate change strategy can be gained through an integrative analysis of its recent Strategic Plan and Five-Year Plans in tandem with its key official documents related to climate change strategy and action plans. Our analysis suggests that Turkey’s approach to climate change centres on an ambitious mission that places economic and social development within a sustainability framework. This mission springs from Turkey’s growing percipience that the key to success in the struggle against climate change is in pursuing these efforts in coordination with the Sustainable Development Goals. The selected documents reflect a growing awareness that these efforts can be enhanced through closer cooperation between the public sector, private sectors, and civil society. Moreover, Turkey clearly recognizes the need to strengthen ties between the environment and future generations on the road to “green development”. This being said, the documents acknowledge the current obstacles faced on this road, particularly those relating to scant institutional, financial, and technical capabilities. Finally, the documents frequently emphasise sustainable energy, energy efficiency, and clean energy technologies, thus pointing to the relevance of Turkey’s energy strategy and action plans. In this area, Turkey’s efforts in improving its institutional, financial, and technical capabilities seem to have borne their first fruits, though there is still a very long way to go to fully implement the intended strategies and action plans. A promising development is that enhanced public support for clean energy technologies and production has led to Turkey becoming a leading actor in clean energy."
+      ]
+    }
+  ],
+  "keywords": [
+    "clean energy",
+    "climate change",
+    "climate policy",
+    "sustainable development",
+    "Turkey"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Akkuş Dağdeviren, S. (2019). Sürdürülebilir kalkınma çerçevesinde Türkiye’de çevre politikaları (Master thesis, Başkent Üniversitesi, Ankara). Retrieved from http://acikerisim.baskent.edu.tr/bitstream/handle/11727/4132/10271204.pdf?sequence=1&isAllowed=y"
+    },
+    {
+      "id": "ref-2",
+      "text": "BP Statistical Review. (2021). BP Statistical Review of World Energy. Retrieved from https://knoema.com/BPWES2017/bp-statistical-review-of-world-energy-main-indicators?location=1000750-turkey"
+    },
+    {
+      "id": "ref-3",
+      "text": "Cagatay, G. & Kaya, N.E. (2020, December 30). Turkey becomes key player in global wind energy. Anadolu Ajansı. Retrieved from https://www.aa.com.tr/en/turkey/turkey-becomes-key-player-in-global-wind-energy/2093753"
+    },
+    {
+      "id": "ref-4",
+      "text": "Enerji Verimliliği Strateji Belgesi (2012, February 20). Resmi Gazete (Sayı:28215). Retrieved from https://www.resmigazete.gov.tr/eskiler/2012/02/20120225-7.htm"
+    },
+    {
+      "id": "ref-5",
+      "text": "IPCC. (2021). AR5 Synthesis Report: Climate Change 2014. Retrieved from https://www.ipcc.ch/report/ar5/syr/"
+    },
+    {
+      "id": "ref-6",
+      "text": "Kılkış, Ş. (2021). Science-based solutions for a shared and sustainable future in the Belt and Road Initiative. Belt & Road Initiative Quarterly, 2(2), 22-37."
+    },
+    {
+      "id": "ref-7",
+      "text": "Low, S., & Boettcher, M. (2020). Delaying decarbonization: Climate governmentalities and sociotechnical strategies from Copenhagen to Paris, Earth System Governance, Volume 5, 100073. Retrieved from https://doi.org/10.1016/j.esg.2020.100073."
+    },
+    {
+      "id": "ref-8",
+      "text": "Renewables 2020 Global Status Report (2020). REN21. Retrieved from https://www.ren21.net/reports/global-status-report/"
+    },
+    {
+      "id": "ref-9",
+      "text": "Safonov, G. (2019). Social Consequences of Climate Change, Building Climate Friendly and Resilient Communities via Transition from Planned to Market Economies. Friedrich-Ebert-Stiftung. ISBN: 978-3-96250-483-0."
+    },
+    {
+      "id": "ref-10",
+      "text": "Turkey 2nd among European countries with largest HEPP capacity, eyes 1st place by 2023 (2020, June 4). Daily Sabah. Retrieved from https://www.dailysabah.com/business/energy/turkey-2nd-among-european-countries-with-largest-hepp-capacity-eyes-1st-place-by-2023"
+    },
+    {
+      "id": "ref-11",
+      "text": "TURKSTAT. (2021). Retrieved from https://data.tuik.gov.tr"
+    },
+    {
+      "id": "ref-12",
+      "text": "Türkiye Cumhuriyeti Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı, TC SBB. (2019a). Sürdürülebilir Kalkınma Amaçları Türkiye 2. Ulusal Gözden Geçirme Raporu, Ortak Hedefler için Sağlam Temeller. Retrieved from https://www.sbb.gov.tr/wp-content/uploads/2020/03/Surdurulebilir-Kalkinma-Amaclari-Turkiye-2nci-Ulusal-Gozden-Gecirme-Raporu_TR-WEB"
+    },
+    {
+      "id": "ref-13",
+      "text": "Türkiye Cumhuriyeti Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı, TC SBB. (2019b). Stratejik Plan (2019-2023). Retrieved from https://www.sbb.gov.tr/wp-content/uploads/2019/11/Stratejik-Plan-2019-2023.pdf"
+    },
+    {
+      "id": "ref-14",
+      "text": "Türkiye Cumhuriyeti Çevre ve Şehircilik Bakanlığı. (2011). Türkiye'nin İklim Değişikliği Uyum Stratejisi ve Eylem Planı. Retrieved from https://webdosya.csb.gov.tr/db/iklim/editordosya/uyum_stratejisi_eylem_plani_TR.pdf"
+    },
+    {
+      "id": "ref-15",
+      "text": "Ulusal Enerji Verimliliği Eylem Planı 2017-2023. (2017, December 29). Resmi Gazete (Sayı : 30289 (Mükerrer)). Retrieved from https://www.resmigazete.gov.tr/eskiler/2018/01/20180102M1-1-1.pdf"
+    },
+    {
+      "id": "ref-16",
+      "text": "UN DESA. (2021a). Transforming our world: the 2030 agenda for sustainable development. Retrieved from https://sdgs.un.org/goals/goal13"
+    },
+    {
+      "id": "ref-17",
+      "text": "UN DESA. (2021b). Goals 13. Retrieved from https://sdgs.un.org/goals/goal13"
+    },
+    {
+      "id": "ref-18",
+      "text": "UN DESA. (2021c). Goals 6. Retrieved from https://sdgs.un.org/goals/goal6. Accessed Date: 30.04.2021."
+    },
+    {
+      "id": "ref-19",
+      "text": "UN DESA. (n.d.). Climate Action. Retrieved from https://www.un.org/sustainabledevelopment/climate-action/"
+    },
+    {
+      "id": "ref-20",
+      "text": "UN. (2021). Department of economic and social affairs sustainable development. Water and Sanitation. Retrieved from https://sdgs.un.org/topics/water-and-sanitation"
+    }
+  ],
+  "figures": [
+    {
+      "id": "figure-1",
+      "order": 1,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-01-en.jpg",
+      "caption": "Climate change affects both nature and people’s social lives."
+    },
+    {
+      "id": "figure-2",
+      "order": 2,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-02-en.jpg",
+      "caption": "President of Turkey, Recep Tayyip Erdogan, joined the Climate Summit organized by the US on April 22, 2021. (Presidency of Turkey website)"
+    },
+    {
+      "id": "figure-3",
+      "order": 3,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-03-en.jpg",
+      "caption": "Figure 1. Turkey’s carbon dioxide emissions, million tonnes (1965-2019) https://knoema.com"
+    },
+    {
+      "id": "figure-4",
+      "order": 4,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-04-en.jpg",
+      "caption": "Figure 2. Turkey’s environmental protection expenditure for the protection of ambient air and climate (TRY) https://data.tuik.gov.tr"
+    },
+    {
+      "id": "figure-5",
+      "order": 5,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-05-en.jpg",
+      "caption": "Figure 3. Annual greenhouse gas emissions by economic activity (million tonnes CO2 equivalent) https//:data.tuik.gov.tr"
+    },
+    {
+      "id": "figure-6",
+      "order": 6,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-06-en.jpg",
+      "caption": "Turkey’s first floating Solar Power Plant was activated in 2017. (Istanbul Metropolitan Municipality website)"
+    },
+    {
+      "id": "figure-7",
+      "order": 7,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-07-en.jpg",
+      "caption": "Şekil 4: Turkey’s environmental protection expenditure for research and development (TRY) https://datatuik.gov.tr"
+    },
+    {
+      "id": "figure-8",
+      "order": 8,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-08-en.jpg",
+      "caption": "Figure 5. Turkey’s wind energy generation (Terawatt-hours) https://knoema.com"
+    },
+    {
+      "id": "figure-9",
+      "order": 9,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-09-en.jpg",
+      "caption": "Figure 6: Turkey’s solar energy generation (Terawatt-hours) https://knoema.com"
+    },
+    {
+      "id": "figure-10",
+      "order": 10,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-10-en.jpg",
+      "caption": "Figure 7: Turkey’s hydroelectricity generation (Terawatt-hours) https://knoema.com"
+    },
+    {
+      "id": "figure-11",
+      "order": 11,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-11-en.jpg",
+      "caption": "Turkey clearly recognizes the need to strengthen ties between the environment and future generations on the road to “green development”."
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Table 1. Objectives Formulated in Turkey’s Climate Change Adaptation Strategy and Action Plan (2011-2023)",
+      "headers": [
+        "Objective"
+      ],
+      "rows": [
+        [
+          "I. WATER RESOURCES MANAGEMENT"
+        ],
+        [
+          "Main Objective 1. Integrating adaptation to the impacts of climate change into water resource management policies."
+        ],
+        [
+          "Objective 1.1. Ensuring the integration of adaptation to climate change into existing strategies, plans, and legislation."
+        ],
+        [
+          "Main Objective 2. Strengthening water resources management capacity, interagency cooperation and coordination with regard to adaptation to climate change."
+        ],
+        [
+          "Objective 2.1. Increasing the institutional capacities of agencies and organisations that are authorised and related to the management of water resources."
+        ],
+        [
+          "Objective 2.2. Developing financing policies and practices."
+        ],
+        [
+          "Main Objective 3. Developing and expanding R&D and scientific studies to ensure adaptation to the impacts of climate change in water resources management."
+        ],
+        [
+          "Objective 3.1. Strengthening existing systems and establishing new systems to monitor the effects of climate change."
+        ],
+        [
+          "Objective 3.2. Identifying the vulnerability of management of water resources and coastal management against climate change, developing alternative adaptation options, making periodical revisions based on monitoring results."
+        ],
+        [
+          "Main Objective 4. Integrating management of water resources in water basins for adaptation to climate change."
+        ],
+        [
+          "Objective 4.1. Planning basin-based development of water resources with a holistic approach that offers flexibility in meeting the changing consumer demands."
+        ],
+        [
+          "Objective 4.2. Addressing urban water management from the perspective of adaptation to climate change."
+        ],
+        [
+          "Main Objective 5. Planning renewable energy resources, taking into consideration the impacts of climate change and the sustainability of the ecosystem services oriented to increase resilience to climate change."
+        ],
+        [
+          "Objective 5.1. Planning and operating hydraulic and geothermal energy resources with a climate change adaptation perspective."
+        ],
+        [
+          "II. AGRICULTURE SECTOR AND FOOD SECURITY"
+        ],
+        [
+          "Main Objective 1. Integrating climate change adaptation into the agriculture and food security policies."
+        ],
+        [
+          "Objective 1.1. Reviewing existing strategy and action plans as well as legal arrangements from a perspective of adaptation to climate change."
+        ],
+        [
+          "Objective 1.2. Reviewing signed protocols between institutions from a perspective of adaptation to climate change."
+        ],
+        [
+          "Main Objective 2. Developing and expanding R&D and scientific studies to identify the impacts of climate change on agriculture and to ensure adaptation to climate change."
+        ],
+        [
+          "Objective 2.1. Developing and expanding R&D activities for effective crop, soil, and water management."
+        ],
+        [
+          "Objective 2.2. Increasing the capacities and numbers of organisations carrying out R&D and scientific studies."
+        ],
+        [
+          "Objective 2.3. Developing a ‘Soil and Land Database and Land Information System’ taking into consideration the effects of climate change."
+        ],
+        [
+          "Objective 2.4. Conducting and monitoring disaster analysis for agricultural droughts."
+        ],
+        [
+          "Objective 2.5. Determining the socioeconomic impacts of climate change on the agriculture sector."
+        ],
+        [
+          "Main Objective 3. Sustainable planning of water use in agriculture."
+        ],
+        [
+          "Objective 3.1. Increasing the effectiveness of water management in agriculture."
+        ],
+        [
+          "Main Objective 4. Protecting soil and agricultural biodiversity against the impacts of climate change."
+        ],
+        [
+          "Objective 4.1. Protecting the physical, chemical, and biological efficiency of soil against climate change impacts."
+        ],
+        [
+          "Objective 4.2. Protecting agricultural biodiversity and resources for adaptation to the impacts of climate change."
+        ],
+        [
+          "Objective 4.3. Completing land consolidation activities for the purpose of increasing agricultural efficiency in efforts to adapt to climate change."
+        ],
+        [
+          "Main Objective 5. Developing institutional capacity and improving interagency cooperation in Turkey with regard to adaptation alternatives in agriculture."
+        ],
+        [
+          "Objective 5.1. Strengthening interagency cooperation and developing the capacities of MFAL and its attached and affiliated organisations with regard to combating climate change and adaptation."
+        ],
+        [
+          "Objective 5.2. Increasing the awareness of civil society on the effects of climate change on the agriculture sector and the adaptation approaches."
+        ],
+        [
+          "III. ECOSYSTEM SERVICES, BIODIVERSITY AND FORESTRY"
+        ],
+        [
+          "Main Objective 1. Of the climate change adaptation approach to ecosystem services, biodiversity, and forestry policies."
+        ],
+        [
+          "Objective 1.1. Reviewing the existing strategies in terms of adaptation to the impacts of climate change."
+        ],
+        [
+          "Main Objective 2. Identifying and monitoring the impacts of climate change on biodiversity and ecosystem services."
+        ],
+        [
+          "Objective 2.1. Identifying and monitoring the effects of climate change on species in forest land."
+        ],
+        [
+          "Objective 2.2. Identifying the land-use changes due to the impacts of climate change in forest land."
+        ],
+        [
+          "Objective 2.3. Monitoring the health of forest ecosystems."
+        ],
+        [
+          "Objective 2.4. Carrying out R&D activities oriented to identify and monitor the effects of climate changes in protected areas."
+        ],
+        [
+          "Objective 2.5. Taking into consideration the climate adaptation activities in the socio-economic development of forest villagers, and thereby supporting rural development."
+        ],
+        [
+          "Objective 2.6. Identifying and monitoring the effects of climate change on the mountain, steppe, inland water, marine ecosystems, and the ecosystem services they provide; and developing measures for adaptation to climate change."
+        ],
+        [
+          "Objective 2.7. Integrating climate change adaptation into the marine and coastal zone management framework."
+        ],
+        [
+          "Objective 2.8. Protection of forests against fires."
+        ],
+        [
+          "IV. NATURAL DISASTER RISK MANAGEMENT"
+        ],
+        [
+          "Main Objective 1. Identifying threats and risks for management of natural disasters caused by climate change."
+        ],
+        [
+          "Objective 1.1. Identifying risks of natural disasters caused by climate change, such as floods, overflows, avalanches, landslides etc."
+        ],
+        [
+          "Objective 1.2. Reviewing the legislation on natural disasters caused by climate change and determining implementation principles."
+        ],
+        [
+          "Main Objective 2. Strengthening response mechanisms for natural disasters caused by climate change."
+        ],
+        [
+          "Objective 2.1. Strengthening the capacities of local public organisations with regard to responding to natural disasters caused by climate change and reaching the level of being able to make field exercises."
+        ],
+        [
+          "Objective 2.2. Establishing community-based disaster management in combating disaster risks that may arise due to climate change ı."
+        ],
+        [
+          "Objective 2.3. Continuing the training activities that will increase public awareness and participation with regard to the disaster and risk impacts that may arise due to climate change."
+        ],
+        [
+          "V. PUBLIC HEALTH"
+        ],
+        [
+          "Main Objective 1. Identifying the existing and future effects and risks of climate change on public health."
+        ],
+        [
+          "Objective 1.1. Researching the effects of extreme weather events on public health."
+        ],
+        [
+          "Objective 1.2. Conducting research on the relation between climate change and health risks."
+        ],
+        [
+          "Main Objective 2. Developing the capacity to combat risks originating from climate change in the national healthcare system."
+        ],
+        [
+          "Objective 2.1. Developing emergency response action plans in risky areas and supplying the necessary infrastructure."
+        ],
+        [
+          "Objective 2.2. Strengthening the capacities of health sector organisations against health risks arising due to climate change."
+        ],
+        [
+          "VI. CROSSCUTTING ISSUES IN ADAPTATION"
+        ],
+        [
+          "Main Objective 1. Ensuring adaptation to climate change on crosscutting issues."
+        ],
+        [
+          "Objective 1.1. Integration of adaptation to climate change into national development plans, programs, and policies."
+        ],
+        [
+          "Objective 1.2. Identifying the required amount of financing for implementing the Climate Change Adaptation Strategy."
+        ],
+        [
+          "Objective 1.3. Organising training, awareness-raising, and informative activities to develop the capacity to combat and adapt to climate change."
+        ],
+        [
+          "Objective 1.4. Developing R&D capacity with regard to climate change adaptation."
+        ]
+      ],
+      "placement": {
+        "sectionId": "turkeys-approach-to-climate-change-a-content-analysis",
+        "afterParagraph": 5
+      }
+    },
+    {
+      "id": "table-2",
+      "caption": "Table 2. Policies to be implemented in the context of SDG 13 on Climate Action (as Formulated in Turkey’s Second Voluntary National Review, 2019)",
+      "headers": [
+        "Policy"
+      ],
+      "rows": [
+        [
+          "Improving the implementation of measures for reductions in sectors causing greenhouse gas emissions to the extent of national conditions."
+        ],
+        [
+          "Ensuring the control of greenhouse gas emissions through new technologies and energy efficiency practices and reduction of loss and illegal use rates in electricity."
+        ],
+        [
+          "Developing the technical and institutional capacity needed to analyse risks in priority areas to increase resilience to climate risks."
+        ],
+        [
+          "Identifying and prioritising the impacts of climate change and adaptation needs on a national, local, and sectoral basis."
+        ],
+        [
+          "Developing climate change mitigation and adaptation capacity at the local level."
+        ],
+        [
+          "Increasing practices in water basins on water saving, combatting against drought, and pollution prevention by evaluating the impacts of climate change on water quantity and quality."
+        ],
+        [
+          "Protecting qualified agricultural lands and forest areas, in particular, natural protected areas with special importance; combatting against desertification and erosion effective; using pastures more effectively and efficiently by speeding up pasture rehabilitation activities; developing a range of products resilient to drought and taking preventive measures by monitoring their effects on soil resources in the context of climate adaptation in agriculture."
+        ],
+        [
+          "Prioritising transport systems that provide energy efficiency, the use of clean fuel, and environmentallyfriendly vehicles."
+        ],
+        [
+          "Increasing the share of the railway and maritime transport in freight transportation."
+        ],
+        [
+          "Expanding energy efficiency practices in buildings."
+        ],
+        [
+          "Making demand management effective by developing public transport in urban transportation and benefiting from the practices of intelligent transportation systems in traffic management."
+        ],
+        [
+          "Expanding integrated waste management practices."
+        ]
+      ],
+      "placement": {
+        "sectionId": "turkeys-approach-to-climate-change-a-content-analysis",
+        "afterParagraph": 6
+      }
+    }
+  ]
+}

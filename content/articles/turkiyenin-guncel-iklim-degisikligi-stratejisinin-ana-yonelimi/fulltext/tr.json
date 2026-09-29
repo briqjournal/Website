@@ -1,0 +1,477 @@
+{
+  "sections": [
+    {
+      "id": "giris",
+      "title": "Giriş",
+      "paragraphs": [
+        "2015 YILINDA BIRLEŞMIŞ MILLETLER (BM), 2030 yılı için hedeflenen Sürdürülebilir Kalkınma Amaçlarını (SKA) açıklamıştır. Bu amaçlar, 17 farklı, ancak birbirine bağlı başlık altında şu şekilde duyurulmuştur: yoksulluğun ortadan kaldırılması (1), açlığın ortadan kaldırılması (2), sağlık ve refahın sağlanması (3), eğitim kalitesinin arttırılması (4), toplumsal cinsiyet eşitliğinin sağlanması (5), temiz suya ve hijyene erişim (6), uygun fiyatlı ve temiz enerjiye erişim (7), uygun istihdam ve ekonomik gelişme (8), sanayide yenilikçilik ve altyapı (9), eşitsizliklerin azaltılması (10), sürdürülebilir kent ve topluluklar (11), sorumlu tüketim ve üretim (12), iklim eylemi (13), deniz altındaki yaşamın korunması (14), toprağın korunması (15), barış ve adalet için güçlü kurumlar (16) ve bu hedefler için uluslararası ortaklıkların kurulması (17). Bu başlıklar arasında yer alan iklim eylemi amacı (13. Amaç) ise, iklim değişikliği ile mücadelenin beş farklı cephede sürdürülmesinden bahsetmektedir. Bu beş farklı cephe şu şekilde tanımlanmaktadır: İklim değişikliği ile ilgili afetlere karşı dayanıklılık ve adaptasyonun sağlanması, iklim değişikliğine karşı mücadelenin somut siyasetlere ve planlamaya yansıtılması, iklim değişikliğiyle ilgili mücadelede bilgi ve kapasitenin arttırılması, Paris Anlaşması’na dayanarak Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi’nin uygulanması, iklim değişikliği ile mücadelede planlama ve yönetim kapasitenin sağlanması (Kılkış, 2021; UN DESA, 2021a; UN DESA, 2021b).",
+        "BM’ye göre, iklim değişimi ile mücadele, salt kalkınma amaçları arasında yer alan iklim eylemi hedefine (13. Amaç) indirgenmemelidir (UN DESA; t.y.) Kuraklık, şiddetli fırtınalar, seller, aşırı sıcaklık gibi iklim olayları nedeniyle giderek daha fazla hissedilir hale gelen iklim değişikliği, yalnızca doğayı değil, aynı zamanda insanların yaşamını da olumsuz etkilemektedir. Çevrenin korunması ve sosyal problemler arasındaki söz konusu ilişkiye toplumsal eşitsizlikleri dikkate alan bazı bilimsel makalelerde dikkat çekilmekle birlikte, BM kuruluşları da gerek SKA’lar kapsamında gerekse yayınladıkları raporlarla iki konu arasındaki ilişkiye dikkat çekmektedir (UNDESA, 2021c). İklim değişiminin, kaynak yetersizliği, gıda güvensizliği, sağlıklı içme suyu kıtlığı, barınma sorunları, yoksulluk oranının artması, sağlık problemleri ve bulaşıcı hastalıklar gibi temel sorunlara yol açtığı bilinmektedir (UN, 2021).",
+        "Bu makale, ekolojik uygarlığın inşası yolunda Türkiye’nin iklim değişimi sorununa yaklaşımını bütünsel bir perspektiften incelemeyi amaçlamaktadır. Bu çerçevede; ‘Türkiye, iklim değişikliği sorununu nasıl algılamaktadır?’, ‘Bu soruna yönelik ne gibi çözüm önerileri getirmektedir?’, ‘Türkiye’nin iklim değişikliğine yönelik algısı ve siyaset önerileri nasıl en güncel halini almıştır?’ soruları ele alınacaktır. İki kısımdan oluşacak makale, bu sorulara yanıt sağlamak için niteliksel içerik analizi yöntemine başvurmaktadır. İlk kısım, iklim değişiminin kavramsal ve tarihsel bağlamını tartışarak makalenin analitik çerçevesini sağlayacakken, ikinci kısım Türkiye özelinde veri incelemesine ayrılacaktır.",
+        "İnceleme altındaki metinler çevre ve iklim değişikliği temaları ile ilgili oluşturulan kodlama kesitleri üzerinden içerik analizine tabi tutulmuştur. İnceleme kapsamına dahil edilen metinler, Türkiye Cumhuriyeti’nin güncel yaklaşımını anlayabilmek amacıyla; çevre, sürdürülebilirlik ve iklim değişikliğini ilgilendiren ve hala yürürlükte olan temel strateji ve eylem planı belgelerini içermektedir. Bunlar arasında en önemli belgeler şunlardır: Stratejik Plan (2019- 2023), 5 Yıllık Kalkınma Planları, Türkiye İklim Değişikliği Stratejisi 2010-2023, İklim Değişikliği Uyum Stratejisi ve Eylem Planı (2011-2023), Türkiye’nin 2. Sürdürülebilir Kalkınma Amaçları-Gönüllü Ulusal Gözden Geçirme Raporu (2019), Ulusal Enerji Verimliliği Eylem Planı (2017-2023), Enerji Verimliliği Strateji Belgesi (2012-2023). Çalışma kapsamında yapılan içerik analizi, aynı zamanda Türkiye İstatistik Kurumu (TÜİK) ve BP Enerji İstatistikleri Raporu gibi veri tabanlarından elde edilen verilere dayalı betimsel istatistiki inceleme ile desteklenecektir."
+      ]
+    },
+    {
+      "id": "iklim-degisimi-kavramsal-ve-tarihsel-baglam",
+      "title": "İklim Değişimi: Kavramsal ve Tarihsel Bağlam",
+      "paragraphs": [
+        "Sağlıklı bir toplumun temel ihtiyaçları, doğal, kültürel ve estetik çevrenin korunmasının yanı sıra, güvenli insan ilişkileri ve gelir dağılımında eşitliktir. Bunlar sağlanmadığında toplumların refahı konusunda kalıcı bozulmalar meydana gelebilir ve bu bozulmaların çevreyle ilgili olanları önemli bir etki yaratabilir. Çevresel sorun, artan üretime rağmen daha kaliteli bir çevresel nitelik oluşturma ya da günümüz kuşağının ihtiyaçları ile gelecek neslin ihtiyaçları arasında bir tercih sorunudur. Ulusal kaynakların ülkenin çıkarları doğrultusunda değerlendirilememesi ve çevresel duyarsızlığın uluslararası işbirliği ve barışçıl diyalog eksiliğiyle birleşmesi tehlikeli boyutlara ulaşabilecek çevresel sorunlara neden olur. Bu nedenle, toplumların refahı incelenirken, ulusların gündemlerinde yer alan başlıca çevresel sorunlar arasında iklim değişikliği yer almaktadır.",
+        "İklim değişikliği, atmosferdeki sera gazlarının aşırı birikiminin bir sonucudur. Saf bir şekilde doğal bir gaz grubu olsa da antropojenik kaynaklar, güneş ışınımlarının açısını bozarak küresel ısınmaya sebep olan sera gazı yoğunluğunu artırmaktadır. Küresel ısınma da eriyen buzullar nedeniyle deniz seviyesindeki artışın yanı sıra yer temelli doğal şekillere ve sistemlere, okyanus akıntılarına ve havaya etki etmektedir. 1994’te yürürlüğe giren Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi, kısa ifadesiyle BMİDÇS (United Nations Framework Convention on Climate Change- UNFCCC), iklim değişikliğini konu alan ilk küresel bildiridir. Bu bildirinin nihai hedefi, sera gazı yoğunluklarını belirli bir seviyede tutmak ve böylelikle iklim sistemini etkileyen tehlikeli antropojenik müdahaleleri önlemektir (IPCC, 2021).",
+        "BMİDÇS, düzenli raporlar vererek BMİDÇS’nin eylemlerine rehberlik edecek küresel veri toplama ve analiz sunmak üzere bilimsel bir yapı olan Hükümetlerarası İklim Değişikliği Paneli (Intergovernmental Panel on Climate Change- IPCC) ile güçlendirilmiştir. Bu Panel’e göre, iklim değişikliği çabaları üç farklı bölüme sahiptir. Bunlar; (1) değerlendirme: bir ülkenin mevcut durumuna ilişkin veri temelli bilimsel tahminler: (2) önleme: taşımacılık, binalar ve sanayi gibi çeşitli kaynaklardan salınan sera gazı miktarını azaltmaya yönelik tüm çabalar ve son olarak; (3) uyum: bölgeler üzerindeki kısa ve uzun dönemli etkiler dahil hava hareketlerindeki ani ve aşırı değişikliklere karşı önlemler almaktır (IPCC, 2021).",
+        "BMİDÇS’ye dahil olan ülkeler “Taraflar Konferansı” (Conference of the Parties- COP) olarak anılan yıllık konferansta bir araya gelmektedirler. COP26, hükümet temsilcileri, akademisyenler, hükümet dışı kuruluşlar ve benzeri aktörlerin katılımıyla mevcut durumu tartışmak üzere 26 Kasım 2021’de Glasgow’da toplanacaktır. Bu konferansların en bilineni ise, 2009 yılında düzenlenen Kopenhag Zirvesi’dir. Kyoto Protokolü’nün yürürlüğe girmesiyle aynı zamana denk gelen COP15, Kopenhag Uzlaşması olarak anılan, yasal olarak bağlayıcılığı olmayan bir nihai bildiri yayınlamıştır.",
+        "Bugüne kadar, BMİDÇS’yi takip eden iki önemli küresel anlaşma imzalanmıştır. İlki, Kyoto Protokolü, ikincisi ise Paris Anlaşması’dır. Bu iki anlaşma, aynı amaçlara hizmet etmesine rağmen, imzacı ülkelerden oldukça farklı yaklaşımlara ve beklentilere sahiptir. Bunlar arasında öne çıkan iki önemli fark bulunmaktadır: Kyoto Protokolü yasal olarak bağlayıcı ve sanayileşmiş ve gelişmiş ülkelere odaklanırken, Paris Anlaşması tüm imzacı ülkelere odaklanmakta ve yasal olarak bağlayıcılığı bulunmamaktadır. Bu nedenle, nihai amaçları dikkate alındığında, Kyoto Protokolü 1990 seviyelerinden %5’lik bir azaltım hedeflerken, Paris Anlaşması tüm ülkelerden sanayi öncesi döneme kıyasla 1.5°C düşüş gerçekleştirmeyi bekleyen “Niyet Edilen Ulusal Katkı”yı (Intended National Declaration of Contributions, INDCs) yerine getirmelerini talep etmektedir. Kyoto Protokolü’nün etkililiği hakkında daha fazla şey söylenmesi mümkün olmakla birlikte, protokolün en önemli sonuçlarından biri, karbon ticaret sisteminin ve bununla ilgili zorunlu ve gönüllü pazarların getirilmesi gibi iklim değişikliğine ilişkin çeşitli finans mekanizmalarının ortaya çıkarılması olmuştur (Low & Boettcher, 2020).",
+        "Paris Anlaşması’yla yakın zamanlarda, BM başka bir küresel anlaşmayı Binyıl Kalkınma Hedefleri’nin (Millennium Development Goals) ardılı olan SKA’ları gündeme getirmiştir. Binyıl Kalkınma Hedefleri açlıktan çevreye birçok farklı alanı içeren 8 hedef ortaya koymuştur. 2015-2030 dönemi için planlanan Sürdürülebilir Kalkınma Amaçları ise toplamda 17 amaç belirlemiştir. İklim değişikliği, doğrudan ya da dolaylı olarak (erişilebilir ve temiz enerjiyi ele alan Amaç 7 gibi) birkaç amaç içinde ele alınmakla birlikte “İklim Eylemi” başlıklı 13. Amaç, iklim değişikliğine ayrılmıştır. SKA “İklim Eylemi” altında ortaya konan hedefler ve göstergeler iklim değişikliği ve onun etkileriyle mücadele etmek için acil eylem önerilerinde bulunmuştur. SKA 13, “iklim değişikliğine adapte olmaya odaklanan tüm ülkelerde iklim değişikliği kaynaklı zararlar ve doğal afetler için güçlü ve uyarlanabilir yetenekleri güçlendirirken”, aynı zamanda “iklim değişikliğine ilişkin önlemleri ulusal politikalar ve stratejilerle bütünleştirmeyi ve eğitimi, farkındalığı, iklim değişikliği etkilerini azaltmaya, uyumlaştırmaya yönelik insan yeteneklerini ve kurumların kapasitesini, etki azaltımını ve erken uyarı sistemlerini geliştirmeyi ve planlamayı” da hedeflemektedir (UN DESA, 2021a).",
+        "BM, yukarıda bahsedilen hükümet düzeyindeki anlaşmalar ve IPCC’den alınan tüm bilimsel veriler yoluyla iklim değişikliğinin varlığına ilişkin kesin bir onay vermesine rağmen, hükümetlerin yanı sıra bireyler ve iş dünyası arasında hala iklim değişikliğine ilişkin şüpheler bulunmaktadır. Bununla beraber, eyleme ilişkin baskılar, iş dünyasından ve ülkelerden çok çeşitli tepkilerle sonuçlanmıştır. Bu iki farklı paydaş grup açısından üç farklı tepki biçimi ortaya çıkmıştır. İlk grup, proaktif (önleyici) yapıcılar/uygulayıcılardır. Bunlar, iklim değişikliğine, yarattığı risklere ve beraberinde gelen fırsatlara inanan iş dünyası ya da hükümetlerdir. İkinci grup ise, iklim değişikliğinin göz ardı edilemeyeceğini bilseler de uzaktan izleyip diğerlerinin ne yapacağını görerek kararlarını vermeyi tercih edenlerdir. Üçüncü grup olan umursamaz gruplar ise, iklim değişikliğinin doğal bir olgu olduğuna ve işlerin en nihayetinde yoluna gireceğine inanmaktadırlar (Low & Boettcher, 2020).",
+        "Yıllar geçtikçe, hükümetler kendi yollarını izlemişlerdir; özellikle de küresel etkiye sahip ülkeler yakından takip edilmişlerdir. Bu konuda Amerika Birleşik Devletleri (ABD) iyi bir örnek teşkil etmektedir. Barack Obama Hükümeti döneminde, Paris Anlaşması’nın bir tarafı olarak ABD, sera gazı salımlarını 2005 seviyelerine çekmek için %25-28 azaltma niyetini açıklamıştır. Ancak kendisinden sonra gelen Donald Trump, iklim değişikliğini bütünüyle gözden çıkarmış ve Paris Anlaşması’ndan da çekilme kararı almıştır."
+      ]
+    },
+    {
+      "id": "turkiyenin-iklim-degisimine-yaklasimi-ve-temiz-enerji-stratejisi",
+      "title": "Türkiye’nin İklim Değişimine Yaklaşımı ve Temiz Enerji Stratejisi",
+      "paragraphs": [
+        "Yukarıdaki kısımda tartışıldığı üzere, iklim değişimi sorunu küresel bir sorun olarak Türkiye dahil bütün ülkeleri ilgilendirmektedir. Ayrıca Türkiye’nin orta kuşakta bulunması nedeniyle iklim değişiminden fazlasıyla etkilenmesi beklenen ülkeler arasında olması, bu artışların doğurduğu riskleri önemli ölçüde ağırlaştırmaktadır. Karbondioksit salımlarının iklim değişiminde etkili ana etkenlerin başında geldiği düşünüldüğünde Türkiye’de iklim değişimi tehdidinin boyutları daha iyi anlaşılabilir. 1970-2019 döneminde, Türkiye’nin karbondioksit salımları 39.28 milyon tondan 383.26 milyon tona çıkmıştır. Bu artış oranı, toplamda yaklaşık %876 olarak kayda geçmiştir (BP Statistical Review, 2021; Şekil 1). Türkiye, bu risklerin bilincinde bir şekilde dış ortam havasını ve iklim koruma harcamalarını önemli ölçüde artırmıştır. Bu harcamalarda, sadece 2013-2019 dönemi için 338,615,571 TL’den 1,139,067,476 TL’ye %236’dan fazla bir artış söz konusudur (TÜİK, 2021; Şekil 2). Buna ek olarak, ekonomik faaliyete göre Türkiye’nin yıllık sera gazı salımlarına bakıldığında, en fazla karbondioksit salımı üreten faaliyetlerin sırasıyla “elektrik, gaz, buhar ve iklimlendirme üretimi ve dağıtımı”, “imalat”, “tarım, ormancılık ve balıkçılık” ve “hanehalkı” olduğu anlaşılmaktadır (TÜİK, 2021; Şekil 3).",
+        "Dolayısıyla söz konusu iklim değişimi risklerinin hafifletilmesinde bu faaliyetlere öncelik verilmesi gerekmektedir.",
+        "Türkiye’nin iklim değişimi ile ilgili önceliklerinin anlaşılması için temel strateji belgeleri ve eylem planlarını daha yakından incelemek gerekmektedir. Genel stratejik planlar, Türkiye Cumhuriyeti’nin izlediği politikalar açısından tayin edici nitelikte belgelerdir. Çünkü bu planlar, ülkenin orta ve uzun vadedeki hedefleri ile bunları uygulamak için başvurulacak temel ilke, performans kriterleri ve yöntemleri belirlemektedir. Dolayısıyla stratejik planlar, aynı zamanda iklim değişimi risklerine karşı Türkiye’nin strateji ve eylemlerini tayin edici belgeler olarak düşünülebilir. Örneğin, Türkiye’nin 2019-2023 dönemini kapsayan en güncel Stratejik Plan’ı, ülkenin ekonomik ve sosyal kalkınmasını sürdürülebilir bir çerçeveye oturtmayı ana misyon olarak benimsemiştir (TC SBB, 2019a: 42). Bu ana misyonun, BM 2030 SKA’ları doğrultusunda oluşturulduğu ve ülkenin ilerideki temel politika belgelerinin bu yönde oluşturulacağı belirtilmiştir. Bütün bunları sağlamak için Ulusal Sürdürülebilirlik Kalkınma Komisyonu tesis edilmiştir (TC SBB, 2019a:45, 49).",
+        "Türkiye’nin genel stratejik planları, 5 Yıllık Kalkınma Planları’nın genel çerçevesini çizmektedir. 5 Yıllık Kalkınma Planları’na bakılarak da, Türkiye’nin kısa ve orta vadeli çevresel yaklaşımının daha iyi anlaşılması mümkündür. Çevre sorunu, Türkiye’nin Birinci ve İkinci Üçüncü 5 Yıllık Kalkınma Planları’nda (1963-1973) dolaylı ve dolaysız biçimlerde yer bulmuştur. Ancak “çevre koruması” (Akkuş Dağdeviren, 2019: 71) vurgusunun benimsenmesi için BM’nin 1972 yılında çevre üzerine gerçekleştirdiği Stockholm Konferansı’nı takiben oluşturulan Üçüncü 5 Yıllık Kalkınma Planı’nın beklenmesi gerekmiştir (1973-1977). Bu plan aynı zamanda, Türkiye’de çevre üzerine ayrı bir bölümün yer aldığı ilk 5 yıllık plandır.",
+        "Söz konusu plan doğrultusunda, Türkiye’de çevre sorunlarına bütüncül bir yaklaşım getirmesi beklenen Başbakanlık Çevre Örgütü kurulmuştur. Sürdürülebilir kalkınma kavramı ise ilk defa Türkiye’nin Altıncı 5 Yıllık Kalkınma Planı’nda (1990-1994) dolaysız olarak benimsenmiştir. Bundan sonra benimsenen planlarda çevre ve sürdürülebilirlik vurgusu daha fazla güçlenmeye başlamıştır. Dokuzuncu 5 Yıllık Kalkınma Planı’nda çevre ve gelecek nesiller ilişkisi öne çıkarılmışken, Onuncu 5 Yıllık Kalkınma Planı’nda yeşil büyüme teması işlenmiştir (Akkuş Dağdeviren, 2019).",
+        "Türkiye’nin uzun, orta ve kısa vadeli çevresel yaklaşımının daha berrak bir kavrayışını sağlamak içinse, iklim değişikliği özelindeki resmî belgelerine başvurmak gerekecektir. Örneğin, 2011 yılında Çevre ve Şehircilik Bakanlığının koordinasyonunda hazırlanan Türkiye’nin İklim Değişikliği Uyum Stratejisi ve Eylem Planı (Türkiye Cumhuriyeti Çevre ve Şehircilik Bakanlığı, 2011), Türkiye’nin İklim Değişikliğine Uyum Kapasitesinin Geliştirilmesi amaçlı Birleşmiş Milletler Ortak Programı kapsamında çalışılmış ve iklim değişikliğinin etkileri ile Türkiye’de etkilenebilirlik arz eden sektörler/ bölgeler belirlenmiştir. Bununla beraber, sektörel ve ekonomik stratejilerin iklim değişikliği ile ilgili stratejilerle beraber yürümesini yavaşlatıcı unsurlar olarak şu faktörler saptanmıştır: uyumsuzluk olduğu gerçeğinin algılanmasını veya kabul edilmesini engelleyen bir dizi politikanın ve uygulamanın varlığı, kamu kuruluşları arasında eşgüdümün yetersiz olması ve ihtiyaç duyulan inisiyatiflerin sürdürülebilirliğini sağlayacak kurumsal ve teknik kapasitenin yetersizliği vb. Adı geçen Plan’da; Su Kaynakları Yönetimi, Tarım Sektörü ve Gıda Güvencesi, Ekosistem Hizmetleri, Biyolojik Çeşitlilik ve Ormancılık, Doğal Afet Risk Yönetimi, İnsan Sağlığı ve bunlara ek olarak İklim Değişikliğine Uyum Bağlamında Yatay Kesen Ortak Konular başlıkları altında genel bir eylem planını ortaya koyulmuştur. Tablo 1’de bu kapsamdaki hedefler verilmiştir. Hedeflerin izlenmesi amaçlı eylem planı ve ilgili göstergeleri de burada yer almış ve eylem planı neredeyse tüm alt başlıkları için hedeflenen süreler bitmiştir. Bu alt başlıklar altında, Ar-Ge temasının oldukça ağır bastığını söylemek mümkündür. Sadece 2013-2019 döneminde çevre koruması ile ilgili ARGE harcamalarında 83,577,115’ten 217,983,249’a %160’tan fazla bir artış sağlandığı anlaşılmaktadır. (Türkiye Cumhuriyeti Çevre ve Şehircilik Bakanlığı, 2011; Şekil 4).",
+        "2019 yılına ait olan SKA 2. Ulusal Gözden Geçirme Raporu, İklim Eylemini doğrudan ele alan SKA 13 için politika-strateji, mevzuat, proje stoku ve uygulama alanlarında orta düzeyde bir uyum olduğunu ama kurumsal çerçeve açısından daha ileride olunduğunu belirtmektedir (TC SBB, 2019b.) Tüm ülkeler için geçerli olduğu gibi Türkiye’de de SKA’lar arasında bulunan bağlar, özellikle iklim eyleminde diğer tüm hedeflerle ilişkisinin yüksek ve etkileme gücünün daha fazla olması ile birlikte aynı zamanda karşılıklı etkileşimi güçlü SKA’lardan biri olarak öne çıkmaktadır. Bu anlamda SKA13 için odak çalışma alanları iklim değişikliğine uyum, iklim değişikliğiyle mücadelenin politikalara entegrasyonu, farkındalık ve kapasite artırımı ile finansman olarak belirlenmiştir (TC SBB, 2019a.) Üzerinde durulması gereken politikalar da belirlenmiştir. Tablo 2’de bu politikaların listesi verilmektedir.",
+        "Daha yakından bakıldığında, SKA 2. Ulusal Gözden Geçirme Raporu’nda sıralanan iklim politikalarının başında temiz enerji ve enerji verimliliğinin geldiği görülmektedir. Türkiye’nin İklim Değişikliği Uyum Stratejisi ve Eylem Planı’nın öncelikli hedefleri arasında da bu tema öne çıkarılmıştır (Türkiye Cumhuriyeti Çevre ve Şehircilik Bakanlığı, 2011). Bu bağlamda, Türkiye’nin sürdürülebilir enerji strateji ve planlarına göz atmak oldukça faydalı olacaktır. Örneğin, 2012 yılında kabul edilen Enerji Verimliliği Strateji Belgesi (Enerji Verimliliği Strateji Belgesi, 2012), iklim değişikliği bağlamında Türkiye’nin enerji verimliliğinin 2023 yılına kadar artırılmasını öngörmektedir. Belge, kamu sektörü, özel sektör ve sivil toplum işbirliği ile hazırlanmıştır ve stratejinin uygulanmasında yine bu çerçevede, katılımcı bir işbirliğinin sürdürülmesi hedeflenmektedir. Bu Strateji Belgesi, ulusal stratejik hedeflerde yer alan öncelikli alanlar ile ilgili tamamlayıcı bir özelliğe sahiptir. Söz konusu alanlar arasında iklim değişikliği ile mücadele, çevresel koruma, enerji maliyetlerinin sürdürülebilir hale getirilmesi, enerji güvenliğinin sağlanarak dışa bağımlılıktan kaynaklanan risklerin azaltılması yer almaktadır. Aynı zamanda bu Strateji Belgesi, Türkiye Cumhuriyeti Dokuzuncu 5 Yıllık Kalkınma Planı’nı, özellikle de bu planın enerji ve ulaşım altyapısı ile ilgili kısımlarını desteklemektedir (Enerji Verimliliği Strateji Belgesi, 2012).",
+        "Strateji Belgesi, genel bir durum değerlendirmesi ile başlamaktadır ve “elektrik enerjisi talebinin azaltılmasına yönelik çalışmalara önem verilmesi” gereğinin altını çizmektedir. Enerji talebinde başı çeken sektör ve faaliyetler arasında konut, sanayi, ulaştırma ve araç kullanımı olduğu saptanmıştır. Strateji Belgesi, “Türkiye’nin GSYİH başına tüketilen enerji miktarının (enerji yoğunluğunun) 2011 yılı değerine göre en az %20 azaltılması”nı ve yine bu dönem dahilinde ülkedeki sanayi alt sektörlerindeki enerji yoğunluğunun en az %10 oranında daraltılmasını öngörmektedir. Belgede saptanan diğer stratejik amaçlar ise şunlardır: sanayi ve hizmet sektörlerinde enerji kayıplarını ve binaların karbon salımlarını azaltmak, çevre dostu binaları yaygınlaştırmak, enerji dağıtımında verimliliği artırmak, toplu taşımaya ağırlık vererek özel ulaşımda birim fosil yakıt tüketimini sınırlamak, kamu kesiminde enerjinin verimli kullanımını cesaretlendirmek, ileri teknoloji kullanımı ve bilinçlendirme etkinliklerini yaygınlaştırmak ve bütün bunları yaparken kamu dışında finansman olanaklarını ilerletmek (Enerji Verimliliği Strateji Belgesi, 2012).",
+        "2017-2023 yılları arasındaki dönem için geçerli olan Ulusal Enerji Verimliliği Eylem Planı’nda (Ulusal Enerji Verimliliği Eylem Planı 2017-2023, 2017) nüfus artışı, refah düzeyinin yükselmesi, hizmet sektörünün güçlenmesi ve sanayileşme gibi nedenlerden enerji kullanımın çok hızlı artarak 2005 ile 2015 yılları arasında %50’ye yakın artış olduğu ifade edilmiş ve bunun sonucu, ihtiyacın 2007 yılında yürürlüğe giren Enerji Verimliliği Kanunu ve yine ilgili 2012 tarihli Enerji Verimliliği Strateji Belgesini de dayanak alarak etkin uygulama ve izlemenin hedeflendiği belirtilmiştir.",
+        "Bu Plan’da diğer önemli ulusal belgelerin yanında Ulusal İklim değişikliği Strateji belgesine de atıf yapılmış ve bu anlamdaki farkındalık ortaya konmuştur (Ulusal Enerji Verimliliği, 2017).",
+        "Ulusal Enerji Verimliliği Eylem Planı’nın temel hedefi şöyle ifade edilmiştir. “… Enerji kaynaklarını ve doğal kaynakları verimli ve çevreye duyarlı şekilde değerlendirerek ülke refahına en yüksek katkıyı sağlamak amacı ile hazırlanan bu Eylem Planı ile 2017-2023 döneminde Türkiye’nin birincil enerji tüketiminde kümülatif olarak 23.9 MTEP azaltım sağlanması hedeflenmektedir...” (Ulusal Enerji Verimliliği, 2017). Bu hedef doğrultusunda da bina ve hizmetler sektörü, sanayi ve teknoloji sektörü, enerji sektörü, ulaştırma sektörü, tarım sektörü ve yatay konular için halihazırdaki durumun tespiti sonrası gereken eylemler belirlenmiş ve toplam 55 eylem yolu ile listelenmiştir. Plan ilgili eylemler için yürütülecek faaliyetleri, sorumlu ve ilgili kurumları, çıktılar ve göstergeleri ve zaman planının da içermekle beraber özellikle göstergelerin sayısal olmaması konusunda gelişmeye açıktır (Ulusal Enerji, 2017).",
+        "Gerçekçi olmak gerekirse, Türkiye’nin, yukarıda ele alınan resmî belgelerde yer alan birçok hedefi tam olarak uygulamaya koyacak duruma gelmesi oldukça zaman alacaktır. Bu noktada, daha iklim değişimine gelmeden, Türkiye’nin çevresel koruma ile ilgili zayıf performansı da hatırlanmalıdır. Bununla birlikte, Türkiye’nin iklim stratejisinin belkemiğini oluşturan enerji strateji ve planlarının somut kazanımlar sağladığı anlaşılmaktadır. Özellikle Türkiye; rüzgâr, güneş ve hidroelektrik enerjisi üretiminde adeta bir devrim yaşamıştır. Rüzgâr enerjisi üretimi, 1998 yılında 0.01 terawatt’ten (saatte) 2019 yılında 21.7 terawatt’a (saatte) çıkmıştır. Bu artış da %216’dan fazla bir orana tekabül etmektedir (Şekil 5). Böylelikle, Türkiye rüzgâr enerjisi kapasitesi ve ekipman üretiminde dünyada ilk on ülke arasında yer almaktadır. Rüzgâr enerjisi ekipmanının altı kıtada 44 farklı ülkeye ihracatından elde edilen gelirler, Türkiye’de bu sektörün gelirlerinin %70’ini sağlamaktadır (Cagatay, & Kaya, 2020). Güneş enerjisi üretimindeki artış ise, 2010-2019 döneminde 0’dan 10.92 terawatt’e (saatte) çıkmıştır. Bu artış oranı, yılda ortalama %236 olarak hesaplanmıştır (Şekil 6). Bu bağlamda, Türkiye’nin güneş enerjisi ile su ısıtma kapasitesinde Çin ve Amerika Birleşik Devletleri’nden (ABD) sonra üçüncü sırada yer almaktadır (Renewables 2020 Global Status Report, 2020). Hidroelektrik üretimi ise, yıllık ortalama %9.88 artış oranıyla 1970 yılında 3.3 terawatt’tan (saatte) 2019 yılında 89.16 terawatt’a (saatte) yükselmiştir (BP Statistical Review, 2021; Şekil 7). Bu şekilde Türkiye, hidroleketrik güç üretiminde Avrupa ülkeleri arasında ikinci, dünya ülkeleri arasında ise 9 sıraya yükselmiştir (“Turkey 2ⁿd among”, 2020). Türkiye’nin bütün bu başarılarında, yukarı da bahsi geçen Ar-Ge ve teknoloji desteklerinin payı büyük olmuştur."
+      ]
+    },
+    {
+      "id": "tartisma-ve-degerlendirme",
+      "title": "Tartışma ve Değerlendirme",
+      "paragraphs": [
+        "Türkiye’nin iklim değişimine yönelik stratejisini bütünlüklü olarak anlamanın yolunun Stratejik Planlar’dan ve 5 Yıllık Kalkınma Planları’ndan başlayarak iklim değişimi ile ilgili stratejiler, eylem planları ve temel raporları birlikte ele almaktan geçmektedir. İlgili dökümanlar incelendiğinde, Türkiye’nin iklim değişimi yaklaşımını, esas olarak, ekonomik ve sosyal kalkınmayı sürdürülebilir bir çerçeveye oturtma misyonunun şekillendirildiği, iklim değişimine karşı mücadelenin bütün SKA’lar ile eşgüdümlü çalışmalar yürütülmesi yoluyla başarıya ulaşabileceği anlayışının geliştirildiği görülmektedir. İnceleme altına alınan belgeler, aynı zamanda kamusal çabaların özel sektör ve sivil toplum işbirliği ile ilerletilebileceğine yönelik bir bilinci yansıtmaktadır. Yine Türkiye’nin, çevre ve gelecek nesiller arasındaki bağın “yeşil büyüme” yolunda güçlendirilmesi gereğini kavramış olduğu görülmektedir. Ancak bu yolda, kamu kuruluşları arasında eşgüdümün ilerletilmesi ile kurumsal, finansal ve teknik kapasitenin yükseltilmesinin esas olduğu saptanmıştır. Son olarak, inceleme altına alınan belgelerde yer alan sürdürülebilir enerji, enerji verimliliği ve temiz enerji teknolojilerine yönelik vurgular; Türkiye’nin iklim değişimine yönelik stratejisinin bütünlüklü bir kavrayışını sağlamak adına, enerji stratejisi ve eylem planları konusundaki temel resmî belgelerin de dikkate alınmasının gerektiğini göstermektedir. Bu alanda kurumsal, finansal ve teknik kapasiteyi yükseltme çabalarının meyvelerini vermeye başlamış olduğu gözlemlenmektedir. Devletin artan destekleri sayesinde Türkiye, temiz enerji teknolojisi kapasite ve üretiminde dünya devlerinin arasına katılmıştır. Bütün bu bulgulardan yola çıkarak söylenebilir ki Türkiye, ekolojik uygarlık projesinin gelişmekte olan dünyadaki doğal liderlerinden biri olarak yükselmektedir."
+      ]
+    }
+  ],
+  "keywords": [
+    "Çevre siyasası",
+    "iklim değişikliği",
+    "sürdürülebilir kalkınma",
+    "temiz enerji",
+    "Türkiye"
+  ],
+  "footnotes": [],
+  "references": [
+    {
+      "id": "ref-1",
+      "text": "Akkuş Dağdeviren, S. (2019). Sürdürülebilir kalkınma çerçevesinde Türkiye’de çevre politikaları (Yüksek Lisans tezi, Başkent Üniversitesi, Ankara). http://acikerisim.baskent.edu.tr/bitstream/handle/11727/4132/10271204.pdf?sequence=1&isAllowed=y adresinden alındı."
+    },
+    {
+      "id": "ref-2",
+      "text": "BP Statistical Review. (2021). BP Statistical Review of World Energy. https://knoema.com/BPWES2017/bp-statistical-review-of-world-energy-main-indicators?location=1000750-turkey adresinden alındı."
+    },
+    {
+      "id": "ref-3",
+      "text": "Cagatay, G. & Kaya, N.E. (2020, Aralık 30). Turkey becomes key player in global wind energy. Anadolu Ajansı. https://www.aa.com.tr/en/turkey/turkey-becomes-key-player-in-global-wind-energy/2093753 adresinden alındı."
+    },
+    {
+      "id": "ref-4",
+      "text": "Enerji Verimliliği Strateji Belgesi (2012, Şubat 20). Resmi Gazete (Sayı:28215). https://www.resmigazete.gov.tr/eskiler/2012/02/20120225-7.htm adresinden alındı."
+    },
+    {
+      "id": "ref-5",
+      "text": "IPCC. (2021). AR5 Synthesis Report: Climate Change 2014. https://www.ipcc.ch/report/ar5/syr/ adresinden alındı."
+    },
+    {
+      "id": "ref-6",
+      "text": "Kılkış, Ş. (2021). Kuşak ve Yol Girişimi’nde ortak ve sürdürülebilir bir gelecek için bilime dayalı çözümler. Kuşak ve Yol Girişimi Dergisi, 2 (2), 22-35."
+    },
+    {
+      "id": "ref-7",
+      "text": "Low, S., Boettcher, M. (2020), Delaying decarbonization: Climate governmentalities and sociotechnical strategies from Copenhagen to Paris, Earth System Governance, Volume 5, 100073, ISSN 2589-8116, https://doi.org/10.1016/j.esg.2020.100073."
+    },
+    {
+      "id": "ref-8",
+      "text": "Renewables 2020 Global Status Report (2020). REN21. https://www.ren21.net/reports/global-status-report/ adresinden alındı."
+    },
+    {
+      "id": "ref-9",
+      "text": "Safonov, G. (2019). Social Consequences of Climate Change, Building Climate Friendly and Resilient Communities via Transition from Planned to Market Economies. Friedrich-Ebert-Stiftung. ISBN: 978-3-96250-483-0."
+    },
+    {
+      "id": "ref-10",
+      "text": "Turkey 2nd among European countries with largest HEPP capacity, eyes 1st place by 2023 (2020, Haziran 4). Daily Sabah. https://www.dailysabah.com/business/energy/turkey-2nd-among-european-countries-with-largest-hepp-capacity-eyes-1st-place-by-2023 adresinden alındı."
+    },
+    {
+      "id": "ref-11",
+      "text": "TÜİK. (2021). https://data.tuik.gov.tr adresinden alındı."
+    },
+    {
+      "id": "ref-12",
+      "text": "Türkiye Cumhuriyeti Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı, TC SBB. (2019a). Sürdürülebilir Kalkınma Amaçları Türkiye 2. Ulusal Gözden Geçirme Raporu, Ortak Hedefler için Sağlam Temeller. https://www.sbb.gov.tr/wp-content/uploads/2020/03/Surdurulebilir-Kalkinma-Amaclari-Turkiye-2nci-Ulusal-Gozden-Gecirme-Raporu_TR-WEB.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-13",
+      "text": "Türkiye Cumhuriyeti Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı, TC SBB. (2019b). Stratejik Plan (2019-2023). https://www.sbb.gov.tr/wp-content/uploads/2019/11/Stratejik-Plan-2019-2023.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-14",
+      "text": "Türkiye Cumhuriyeti Çevre ve Şehircilik Bakanlığı. (2011). Türkiye'nin İklim Değişikliği Uyum Stratejisi ve Eylem Planı. https://webdosya.csb.gov.tr/db/iklim/editordosya/uyum_stratejisi_eylem_plani_TR.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-15",
+      "text": "Ulusal Enerji Verimliliği Eylem Planı 2017-2023 (2017, 29 Aralık). Resmi Gazete (Sayı : 30289 (Mükerrer)). https://www.resmigazete.gov.tr/eskiler/2018/01/20180102M1-1-1.pdf adresinden alındı."
+    },
+    {
+      "id": "ref-16",
+      "text": "UN DESA (2021a).Transforming our world: the 2030 Agenda for Sustainable Development. https://sdgs.un.org/goals/goal13 adresinden alındı."
+    },
+    {
+      "id": "ref-17",
+      "text": "UN DESA (2021b). Goals 13. https://sdgs.un.org/goals/goal13 adresinden alındı."
+    },
+    {
+      "id": "ref-18",
+      "text": "UN DESA (2021c). Goals 6. https://sdgs.un.org/goals/goal6. Accessed Date: 30.04.2021. adresinden alındı."
+    },
+    {
+      "id": "ref-19",
+      "text": "UN DESA (t.y.). Climate Action. https://www.un.org/sustainabledevelopment/climate-action/ adresinden alındı."
+    },
+    {
+      "id": "ref-20",
+      "text": "UN (2021). Department of Economic and Social Affairs Sustainable Development. Water and Sanitation. https://sdgs.un.org/topics/water-and-sanitation. Erişim Tarihi: 30.04.2021."
+    }
+  ],
+  "figures": [
+    {
+      "id": "figure-1",
+      "order": 1,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-01-tr.jpg",
+      "caption": "İklim değişikliği, yalnızca doğayı değil, aynı zamanda insanların yaşamını da olumsuz etkilemektedir."
+    },
+    {
+      "id": "figure-2",
+      "order": 2,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-02-tr.jpg",
+      "caption": "Türkiye Cumhurbaşkanı Recep Tayyip Erdoğan, 22 Nisan 2021’de ABD’nin düzenlediği İklim Zirvesi’nde konuştu. (Türkiye Cumhurbaşkanlığı websitesi)"
+    },
+    {
+      "id": "figure-3",
+      "order": 3,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-03-tr.jpg",
+      "caption": "Şekil 1. Türkiye’de yıllara göre karbondioksit salımı https://knoema.com"
+    },
+    {
+      "id": "figure-4",
+      "order": 4,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-04-tr.jpg",
+      "caption": "Şekil 2. Türkiye’nin dış ortam havasını ve iklimi koruma harcamaları (TL cinsinden) https://data.tuik.gov.tr"
+    },
+    {
+      "id": "figure-5",
+      "order": 5,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-05-tr.jpg",
+      "caption": "Şekil 3. Ekonomik faaliyete göre Türkiye’nin yıllık sera gazı emisyonu (Milyon ton CO2 eşdeğeri) https://data.tuik.gov.tr"
+    },
+    {
+      "id": "figure-6",
+      "order": 6,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-06-tr.jpg",
+      "caption": "Türkiye’nin ilk yüzer Güneş Enerji Santrali (GES) 2017’de devreye aldı. (İstanbul Büyükşehir Belediye Başkanlığı websitesi)"
+    },
+    {
+      "id": "figure-7",
+      "order": 7,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-07-tr.jpg",
+      "caption": "Şekil 4: Türkiye’nin çevre koruma harcamaları kapsamındaki AR-GE harcamaları (TL cinsinden) https://datatuik.gov.tr"
+    },
+    {
+      "id": "figure-8",
+      "order": 8,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-08-tr.jpg",
+      "caption": "Şekil 5: Türkiye’nin yıllara göre rüzgâr enerjisi üretimi https://knoema.com"
+    },
+    {
+      "id": "figure-9",
+      "order": 9,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-09-tr.jpg",
+      "caption": "Şekil 6: Türkiye’nin yıllara göre güneş enerjisi üretimi https://knoema.com"
+    },
+    {
+      "id": "figure-10",
+      "order": 10,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-10-tr.jpg",
+      "caption": "Şekil 7: Türkiye’nin yıllara göre hidroelektrik üretimi https://knoema.com"
+    },
+    {
+      "id": "figure-11",
+      "order": 11,
+      "src": "/assets/article-figures/turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi/figure-11-tr.jpg",
+      "caption": "Türkiye’nin, çevre ve gelecek nesiller arasındaki bağın “yeşil büyüme” yolunda güçlendirilmesi gereğini kavramış olduğu görülmektedir."
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Tablo 1: Türkiye İklim Değişikliği Uyum Stratejisi ve Eylem Planı Hedefleri",
+      "headers": [
+        "Hedef"
+      ],
+      "rows": [
+        [
+          "I. SU KAYNAKLARI YÖNETİMİ"
+        ],
+        [
+          "Öncelikli Hedef 1. İklim Değişikliğinin Etkilerine Uyumun Su Kaynaklarının Yönetimi Politikalarına Entegre Edilmesi"
+        ],
+        [
+          "Hedef 1.1. İklim değişikliğine uyum konusunun mevcut strateji, plan ve mevzuata entegrasyonunun sağlanması"
+        ],
+        [
+          "Öncelikli Hedef 2. Su Kaynaklarının Yönetiminde İklim Değişikliğine Uyum Konusunda Kapasitenin, Kurumlar Arası İşbirliği ve Eşgüdümün Güçlendirilmesi"
+        ],
+        [
+          "Hedef 2.1. Su kaynaklarının yönetiminde yetkili ve ilgili olan kurum ve kuruluşların kurumsal kapasitelerinin artırılması"
+        ],
+        [
+          "Hedef 2.2. Finansman politikalarının ve uygulamaların geliştirilmesi"
+        ],
+        [
+          "Öncelikli Hedef 3. Su Kaynaklarının Yönetiminde İklim Değişikliğinin Etkilerine Uyumun Sağlanması İçin Ar-Ge ve Bilimsel Çalışmaların Geliştirilmesi ve Yaygınlaştırılması İklim değişikliğinin etkilerinin sürekli izlenmesi için mevcut sistemlerin geliştirilmesinin yanı sıra, yeni sistemlerin de oluşturulması gereklidir."
+        ],
+        [
+          "Hedef 3.1. İklim değişikliğinin etkilerinin izlenmesi için mevcut sistemlerin güçlendirilmesi ve yeni sistemlerin oluşturulması"
+        ],
+        [
+          "Hedef 3.2. Su kaynakları ve kıyı yönetiminin iklim değişikliğinden etkilenebilirliklerinin belirlenmesi, uyum seçeneklerinin geliştirilmesi, izleme sonuçlarına göre periyodik revizyonların yapılması"
+        ],
+        [
+          "Öncelikli Hedef 4. İklim Değişikliğine Uyum İçin Su Havzalarında Su Kaynaklarının Bütüncül Yönetimi"
+        ],
+        [
+          "Hedef 4.1. Su kaynaklarının havza temelinde geliştirilmesine yönelik çalışmaların, bütüncül bir yaklaşımla ve değişen tüketim taleplerini karşılamakta esneklik sağlayan bir şekilde planlanması"
+        ],
+        [
+          "Hedef 4.2. Kentlerin su yönetiminin iklim değişikliğine uyum bakış açısı ile ele alınması"
+        ],
+        [
+          "Öncelikli Hedef 5. Yenilenebilir Enerji Kaynaklarının İklim Değişikliğinin Etkileri ve İklim Değişikliğine Direnci Artırıcı Ekosistem Hizmetlerinin Sürdürülebilirliği Dikkate Alınarak Planlanması"
+        ],
+        [
+          "Hedef 5.1. Hidrolik ve jeotermal enerji kaynaklarının iklim değişikliğine uyum bakış açısıyla planlanması"
+        ],
+        [
+          "II. TARIM SEKTÖRÜ VE GIDA GÜVENCESİ"
+        ],
+        [
+          "Öncelikli Hedef 1. İklim Değişikliğinin Etkilerine Uyum Yaklaşımının Tarım Sektörü ve Gıda Güvencesi Politikalarına Entegre Edilmesi"
+        ],
+        [
+          "Hedef 1.1. Mevcut strateji ve eylem planları ile yasal düzenlemelerin iklim değişikliğine uyum bakımından gözden geçirilmesi"
+        ],
+        [
+          "Hedef 1.2. Kurumlar arasında imzalanmış olan protokollerin iklim değişikliğine uyum bakış açısıyla gözden geçirilmesi"
+        ],
+        [
+          "Öncelikli Hedef 2. Tarımda İklim Değişikliği Etkilerinin Belirlenmesi ve İklim Değişikliğine Uyumun Sağlanması İçin Araştırma ve Geliştirme (Ar-Ge) ve Bilimsel Çalışmaların Geliştirilmesi ve Yaygınlaştırılması"
+        ],
+        [
+          "Hedef 2.1. Ürün, toprak ve suyun etkin yönetimine ilişkin Ar-Ge faaliyetlerinin geliştirilmesi ve yaygınlaştırılması"
+        ],
+        [
+          "Hedef 2.2. Ar-Ge ve bilimsel çalışma yapan kuruluşların kapasitelerinin ve sayılarının artırılması"
+        ],
+        [
+          "Hedef 2.3. ‘Toprak ve Arazi Veri Tabanı ile Arazi Bilgilendirme Sistemi’nin iklim değişikliğinin etkileri dikkate alınarak oluşturulması"
+        ],
+        [
+          "Hedef 2.4. Tarımsal kuraklıklar için afet analizinin yapılması ve izlenmesi"
+        ],
+        [
+          "Hedef 2.5. İklim değişikliğinin tarım sektöründeki sosyo-ekonomik etkilerinin belirlenmesi"
+        ],
+        [
+          "Öncelikli Hedef 3. Tarımsal Su Kullanımının Sürdürülebilir Bir Şekilde Planlaması"
+        ],
+        [
+          "Hedef 3.1. Tarımda su yönetiminin etkinleştirilmesi"
+        ],
+        [
+          "Öncelikli Hedef 4. Toprak ve Tarımsal Biyolojik Çeşitliliğin İklim Değişikliğinin Etkilerine Karşı Korunması"
+        ],
+        [
+          "Hedef 4.1. Toprağın fiziksel, kimyasal ve biyolojik verimliliğinin iklim değişikliğinin etkilerine karşı korunması"
+        ],
+        [
+          "Hedef 4.2. İklim değişikliğinin etkilerine uyum için tarımsal biyolojik çeşitlilik ve kaynakların korunması"
+        ],
+        [
+          "Hedef 4.3. İklim değişikliğine uyum çalışmalarında tarımsal verimliliğin artırılması amacıyla arazi toplulaştırması çalışmalarının tamamlanması"
+        ],
+        [
+          "Öncelikli Hedef 5. Tarımda Uyum Seçenekleri Konusunda Türkiye’de Kurumsal Kapasite ve Kurumlar Arası İşbirliğinin Geliştirilmesi"
+        ],
+        [
+          "Hedef 5.1. Gıda, Tarım ve Hayvancılık Bakanlığı ile bağlı ve ilgili kuruluşların kapasitelerinin iklim değişikliği ile mücadele ve uyum konularında geliştirilmesi ve kurumlar arası işbirliğinin güçlendirilmesi"
+        ],
+        [
+          "Hedef 5.2. Tarım sektörüne iklim değişikliğinin etkileri ve uyum yaklaşımları konusunda sivil toplumun bilinçlendirilmesi"
+        ],
+        [
+          "III. EKOSİSTEM HİZMETLERİ, BİYOLOJİK ÇEŞİTLİLİK VE ORMANCILIK"
+        ],
+        [
+          "Öncelikli Hedef 1. İklim Değişikliğine Uyum Yaklaşımının Ekosistem Hizmetleri, Biyolojik Çeşitlilik ve Ormancılık Politikalarına Entegre Edilmesi"
+        ],
+        [
+          "Hedef 1.1. Mevcut stratejilerin iklim değişikliği etkilerine uyum için gözden geçirilmesi"
+        ],
+        [
+          "Öncelikli Hedef 2. İklim Değişikliğinin Biyolojik Çeşitlilik ve Ekosistem Hizmetleri Üzerindeki Etkilerinin Belirlenmesi ve İzlenmesi"
+        ],
+        [
+          "Hedef 2.1. İklim değişikliğinin orman alanlarındaki türler üzerine etkileri açısından tespiti ve izlenmesi"
+        ],
+        [
+          "Hedef 2.2. Orman alanlarında iklim değişikliğinin etkilerinden kaynaklanan arazi kullanım değişiminin tespit edilmesi"
+        ],
+        [
+          "Hedef 2.3. Orman ekosistemlerinin sağlığının izlenmesi"
+        ],
+        [
+          "Hedef 2.4. Korunan alanlarda iklim değişikliğinin etkilerini belirleme ve izlemeye yönelik araştırma ve geliştirme çalışmalarının yapılması"
+        ],
+        [
+          "Hedef 2.5. Orman köylülerinin sosyo-ekonomik kalkınmasında iklim değişikliğine uyum faaliyetlerinin dikkate alınması ve bu yolla kırsal kalkınmaya destek olunması"
+        ],
+        [
+          "Hedef 2.6. Dağ, step, iç su, deniz kıyı ekosistemlerinde ve sağladıkları ekosistem hizmetlerinde iklim değişikliği etkilerinin belirlenmesi, izlenmesi, iklim değişikliğine uyuma yönelik önlemlerin geliştirilmesi"
+        ],
+        [
+          "Hedef 2.7. Deniz ve kıyı alanları yönetimi çerçevesine iklim değişikliğine uyumun entegre edilmesi"
+        ],
+        [
+          "Hedef 2.8. Ormanların yangınlara karşı korunması"
+        ],
+        [
+          "IV. DOĞAL AFET RİSK YÖNETİMİ"
+        ],
+        [
+          "Öncelikli Hedef 1. İklim Değişikliğine Bağlı Doğal Afetlerin Yönetimi İçin Tehdit ve Risklerin Belirlenmesi"
+        ],
+        [
+          "Hedef 1.1. İklim değişikliğine bağlı sel, taşkın, çığ, heyelan vb. doğal afet risklerinin tespit edilmesi"
+        ],
+        [
+          "Hedef 1.2. İklim değişikliğine bağlı doğal afetlerle ilgili mevzuatın gözden geçirilmesi ve uygulama esaslarının belirlenmesi"
+        ],
+        [
+          "Öncelikli Hedef 2. İklim Değişikliğine Bağlı Doğal Afetlerde Müdahale Mekânizmalarının Güçlendirilmesi"
+        ],
+        [
+          "Hedef 2.1. İklim değişikliğine bağlı doğal afetlere müdahalede taşra teşkilat kapasitelerinin güçlendirilmesi ve tatbikat yapabilme düzeyine eriştirilmesi"
+        ],
+        [
+          "Hedef 2.2. İklim değişikliğinin yaratabileceği afet riskleriyle mücadelede toplum temelli afet yönetiminin oluşturulması"
+        ],
+        [
+          "Hedef 2.3. İklim değişikliğinin yaratabileceği afet ve risk etkileri konusunda toplumsal bilinci ve katılımı yükseltecek eğitim çalışmalarının sürdürülmesi"
+        ],
+        [
+          "V. İNSAN SAĞLIĞI"
+        ],
+        [
+          "Öncelikli Hedef 1. İklim Değişikliğinin İnsan Sağlığı Üzerinde Mevcut ve Gelecekteki Etkilerinin ve Risklerin Belirlenmesi"
+        ],
+        [
+          "Hedef 1.1. Aşırı hava olaylarının insan sağlığı üzerine etkilerinin araştırılması"
+        ],
+        [
+          "Hedef 1.2. İklim değişikliği, bulaşıcı hastalıklar ve sağlık riskleri arasındaki bağın araştırılması, izlenmesi ve olası önlemlerin belirlenmesi"
+        ],
+        [
+          "Öncelikli Hedef 2. Ulusal Sağlık Sisteminde İklim Değişikliği Kaynaklı Riskler İle Mücadele Kapasitesinin Geliştirilmesi"
+        ],
+        [
+          "Hedef 2.1. Riskli bölgelerde acil müdahale eylem planlarının oluşturulması ve gerekli altyapının temini"
+        ],
+        [
+          "Hedef 2.2. İklim duyarlı sağlık risklerine karşı sağlık sektörü kuruluşlarının kapasitelerinin güçlendirilmesi"
+        ],
+        [
+          "VI. İKLİM DEĞİŞİKLİĞİNE UYUM BAĞLAMINDA YATAY KESEN ORTAK KONULAR"
+        ],
+        [
+          "Öncelikli Hedef 1. Yatay Kesen Konularda İklim Değişikliğinin Etkilerine Uyumun Sağlanması"
+        ],
+        [
+          "Hedef 1.1. Ulusal kalkınma plan, program ve politikalarına iklim değişikliğine uyumun entegre edilmesi"
+        ],
+        [
+          "Hedef 1.2. Karar verme süreçlerini destekleyici bilgi, izleme ve değerlendirme sistem ve araçlarının geliştirilmesi ve uygulamaya konulması"
+        ],
+        [
+          "Hedef 1.3. İklim Değişikliği Ulusal Stratejisi’nin ulusal, bölgesel ve yerel ölçekte uygulamaya geçmesi için gerekli finansal düzenlemelerin gerçekleştirilmesi ve uygulamaya konulması"
+        ],
+        [
+          "Hedef 1.4. İklim değişikliği ile mücadele ve uyum kapasitesinin geliştirilmesi için eğitim, bilinçlendirme, bilgilendirme ve kamuoyunda farkındalık artırma faaliyetlerinin düzenlenmesi"
+        ],
+        [
+          "Hedef 1.5. İklim değişikliğine uyum konusunda bilimsel ve teknolojik Ar-Ge kapasitesinin geliştirilmesi"
+        ]
+      ],
+      "placement": {
+        "sectionId": "turkiyenin-iklim-degisimine-yaklasimi-ve-temiz-enerji-stratejisi",
+        "afterParagraph": 6
+      }
+    },
+    {
+      "id": "table-2",
+      "caption": "Tablo 2: Türkiye SKA 2. Ulusal Gözden Geçirme Raporu’na göre SKA 13 İklim Eylemi için geliştirilmesi gereken politikalar",
+      "headers": [
+        "Politika"
+      ],
+      "rows": [
+        [
+          "Ulusal koşullar ölçüsünde sera gazı salımına neden olan sektörlerde azaltıma yönelik tedbirlerin uygulamasının geliştirilmesi"
+        ],
+        [
+          "Yeni teknolojiler ve enerji verimliliği uygulamaları ile elektrikte kayıp-kaçak oranlarının azaltılmasıyla sera gazı salımlarının kontrolünün sağlanması"
+        ],
+        [
+          "İklim risklerine karşı dayanıklılığı artırmak amacıyla öncelikli alanlarda risklerin analizinin yapılması için ihtiyaç duyulan teknik ve kurumsal kapasitenin geliştirilmesi"
+        ],
+        [
+          "Ulusal, yerel ve sektörel bazda iklim değişikliğinin etkilerinin ve uyum ihtiyaçlarının belirlenmesi ve önceliklendirilmesi"
+        ],
+        [
+          "Yerelde iklim değişikliği ile mücadele ve uyum kapasitesinin geliştirilmesi"
+        ],
+        [
+          "İklim değişikliğinin su miktarı ve kalitesine etkilerinin değerlendirilerek havzalarda su tasarrufu sağlama, kuraklıkla mücadele ve kirlilik önleme uygulamalarının artırılması"
+        ],
+        [
+          "Tarım alanında iklim değişikliğine uyuma yönelik olarak özel öneme sahip doğal korunan alanları başta olmak üzere, nitelikli tarım arazileri ve orman varlığının korunması, çölleşme ve erozyona karşı mücadelenin etkinleştirilmesi, çayır ve mera alanlarının ıslahı çalışmalarının hızlandırılarak daha etkin ve verimli kullanımı, kuraklığa dayanıklı ürün çeşitlerinin geliştirilmesi ve toprak kaynakları üzerindeki etkilerinin izlenerek önleyici tedbirlerin alınması"
+        ],
+        [
+          "Enerji verimliliği ile temiz yakıt ve çevre dostu araç kullanımını sağlayan ulaşım sistemlerine öncelik verilmesi,"
+        ],
+        [
+          "Yük taşımacılığında demiryolu ve deniz yolunun payının artırılması"
+        ],
+        [
+          "Binalarda enerji verimliliği uygulamalarının yaygınlaştırılması"
+        ],
+        [
+          "Kentiçi ulaşımda toplu taşıma geliştirilerek, trafik yönetiminde akıllı ulaşım sistemleri uygulamalarından yararlanılarak talep yönetiminin etkinleştirilmesi"
+        ],
+        [
+          "Entegre atık yönetimi uygulamalarının yaygınlaştırılması"
+        ]
+      ],
+      "placement": {
+        "sectionId": "turkiyenin-iklim-degisimine-yaklasimi-ve-temiz-enerji-stratejisi",
+        "afterParagraph": 7
+      }
+    }
+  ]
+}
