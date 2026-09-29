@@ -10,7 +10,7 @@ const read = (slug, locale) =>
 
 // 10 records × 2 locales = the 20 published full-text routes of v02-i03
 const structure = {
-  "cinin-cevre-politikalarinin-ekolojik-uygarliga-dogru-gelisimi": { en: [5, 72], tr: [5, 71] },
+  "cinin-cevre-politikalarinin-ekolojik-uygarliga-dogru-gelisimi": { en: [5, 72], tr: [5, 72] },
   "ekolojik-uygarlik-tum-canlilar-icin-ortak-bir-gelecek-insasi": { en: [1, 0], tr: [1, 0] },
   "turkiyenin-guncel-iklim-degisikligi-stratejisinin-ana-yonelimi": { en: [4, 20], tr: [4, 20] },
   "ekolojik-uygarlikta-enerji-cevre-kesisimi": { en: [11, 22], tr: [11, 22] },
