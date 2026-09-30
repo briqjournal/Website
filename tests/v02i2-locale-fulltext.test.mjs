@@ -171,3 +171,80 @@ test("V2I2 never falls back from an English page to Turkish full text", () => {
     assert.notDeepEqual(en, read(slug, "tr"), `${slug} locales are not interchangeable`);
   }
 });
+
+test("V2I2 keeps the printed tables as semantic data, never as raw markdown", () => {
+  const slug = "kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-bilime-dayali-cozumler";
+  for (const locale of ["en", "tr"]) {
+    const doc = read(slug, locale);
+    assert.equal(doc.tables.length, 3, `${locale} tables`);
+    const ids = doc.tables.map((t) => t.id);
+    assert.equal(new Set(ids).size, 3, `${locale} unique table ids`);
+    const sectionIds = new Set(doc.sections.map((s) => s.id));
+    for (const table of doc.tables) {
+      assert.ok(table.caption.length > 10, `${locale}/${table.id} caption`);
+      assert.ok(table.headers.length >= 4, `${locale}/${table.id} headers`);
+      assert.equal(table.rows.length, 7, `${locale}/${table.id} rows`);
+      assert.ok(table.rows.every((row) => row.length === table.headers.length), `${locale}/${table.id} row width`);
+      assert.ok(table.note.startsWith(locale === "tr" ? "Not:" : "Note:"), `${locale}/${table.id} note`);
+      assert.ok(sectionIds.has(table.placement.sectionId), `${locale}/${table.id} sectionId`);
+      const section = doc.sections.find((s) => s.id === table.placement.sectionId);
+      assert.ok(table.placement.afterParagraph >= 0 && table.placement.afterParagraph <= section.paragraphs.length,
+        `${locale}/${table.id} afterParagraph`);
+    }
+    // the printed cell values, in the printed form of this locale
+    const table1 = doc.tables.find((t) => t.id === "table-1");
+    assert.deepEqual(table1.headers[0], locale === "tr" ? "ANSO Ülke Örneklemi" : "ANSO Country Sample");
+    assert.equal(table1.rows[0][1], "4,800,100", `${locale} table-1 first cell`);
+    assert.equal(table1.rows[6][1], "16,053", `${locale} table-1 last cell`);
+    const table2 = doc.tables.find((t) => t.id === "table-2");
+    assert.equal(table2.rows[3][1], "22.69", `${locale} table-2 Thailand renewable share`);
+    assert.equal(table2.rows[6][2], "14,318", `${locale} table-2 Kazakhstan renewable production`);
+    const table3 = doc.tables.find((t) => t.id === "table-3");
+    assert.equal(table3.headers.length, 6, `${locale} table-3 headers`);
+    assert.equal(table3.rows[0][5], "18.6", `${locale} table-3 China total change`);
+    // no pipe, no separator row: the table text must not sit in the body
+    for (const section of doc.sections) {
+      for (const paragraph of section.paragraphs) {
+        assert.ok(!paragraph.includes("|"), `${locale} raw markdown table left in ${section.id}`);
+        assert.ok(!/\|\s*-{3,}/.test(paragraph), `${locale} separator row left in ${section.id}`);
+      }
+    }
+  }
+});
+
+test("V2I2 never publishes raw markdown in the body", () => {
+  for (const slug of issue.articles) {
+    for (const locale of ["en", "tr"]) {
+      const doc = read(slug, locale);
+      const texts = [
+        ...doc.sections.map((s) => s.title || ""),
+        ...doc.sections.flatMap((s) => s.paragraphs),
+        ...(doc.figures || []).map((f) => f.caption || ""),
+      ];
+      for (const text of texts) {
+        assert.doesNotMatch(text, /\[\^\d+\]/, `${slug}/${locale} markdown footnote marker`);
+        assert.doesNotMatch(text, /\|\s*-{3,}/, `${slug}/${locale} markdown table`);
+        assert.doesNotMatch(text, /^\s*#{1,6}\s/m, `${slug}/${locale} markdown heading`);
+        assert.doesNotMatch(text, /\[[^\]]+\]\([^)]+\)/, `${slug}/${locale} markdown link`);
+        assert.doesNotMatch(text, /```/, `${slug}/${locale} markdown code fence`);
+        // a year range whose line-break hyphen was lost reads as one eight-digit number
+        assert.doesNotMatch(text, /\b(19|20)\d{2}\d{2,4}\b/, `${slug}/${locale} lost year-range hyphen`);
+      }
+    }
+  }
+});
+
+test("V2I2 does not repeat the reference list inside the body", () => {
+  for (const slug of issue.articles) {
+    for (const locale of ["en", "tr"]) {
+      const doc = read(slug, locale);
+      const refs = (doc.references || []).map((r) => (typeof r === "string" ? r : r.text));
+      for (const section of doc.sections) {
+        for (const paragraph of section.paragraphs) {
+          const repeats = refs.filter((r) => r && r.slice(0, 40) && paragraph.includes(r.slice(0, 40))).length;
+          assert.ok(repeats < 3, `${slug}/${locale} ${section.id}: ${repeats} reference entries repeated in the body`);
+        }
+      }
+    }
+  }
+});
