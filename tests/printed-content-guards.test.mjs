@@ -160,3 +160,50 @@ test("archive: every reference carries a unique, sequential id and readable text
   }
   assert.ok(entries > 0, "the archive has references to check");
 });
+
+test("archive: a heading never survives as body text", () => {
+  // The print sets a heading in its own font; the migration sometimes captured its first line as
+  // the last paragraph of the preceding section, so the page showed the heading twice — once as
+  // body text, once as the heading. The article title can leak the same way, line by line.
+  const flat = (value) =>
+    String(value ?? "")
+      .replace(/\u2019/g, "'").replace(/\u201c|\u201d/g, '"')
+      .replace(/[\u015f\u011f\u0130\u0131\u00e7\u00f6\u00fc\u011e\u00fc\u00e7]/gi, (c) =>
+        ({ "\u015f": "s", "\u011f": "s", "\u0130": "i", "\u0131": "i", "\u00e7": "c",
+           "\u00f6": "o", "\u00fc": "u", "\u011e": "g", "\u00fc": "u", "\u00e7": "c" }[c] ?? c))
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+
+  for (const slug of slugs) {
+    const metadata = JSON.parse(
+      fs.readFileSync(path.join(contentDir, slug, "metadata.json"), "utf8"));
+    for (const locale of localesOf(slug)) {
+      const doc = read(slug, locale);
+      const raw = metadata[`title_${locale}`] ?? metadata.title ??
+        (locale === "tr" ? metadata.titleTr : metadata.titleEn) ?? "";
+      const title = flat(typeof raw === "string" ? raw : (raw?.tr ?? raw?.en ?? ""));
+      for (const section of doc.sections || []) {
+        const paragraphs = section.paragraphs || [];
+        const next = doc.sections[(doc.sections || []).indexOf(section) + 1];
+        if (next) {
+          const heading = flat(next.title || "");
+          const last = flat(paragraphs[paragraphs.length - 1] || "");
+          assert.ok(!(last.split(" ").length >= 2 && last.length <= 120 && heading.startsWith(last)),
+            `${slug}/${locale} ${section.id}: the next heading\u2019s first line is still a body paragraph \u2014 "${paragraphs[paragraphs.length - 1]}"`);
+        }
+        // the article title, line by line
+        for (let i = 0; i < paragraphs.length - 1; i += 1) {
+          const parts = [];
+          for (let k = i; k < paragraphs.length && parts.join(" ").length < title.length; k += 1) {
+            parts.push((paragraphs[k] || "").trim());
+          }
+          const joined = flat(parts.join(" "));
+          if (parts.length >= 2 && joined === title) {
+            assert.fail(`${slug}/${locale} ${section.id}: the article title is repeated in the body as ${parts.length} paragraphs`);
+          }
+        }
+      }
+    }
+  }
+});
