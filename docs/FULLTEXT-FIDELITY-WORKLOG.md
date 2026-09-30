@@ -4,6 +4,31 @@
 
 **Status:** in progress
 
+- Section headings rebuilt from the print, `v04-i01` (`fix/section-headings-v04-i01`). The heading test is the **font family** — the print
+  sets headings in `MyriadPro-Semibold` and body text in `MinionPro-Regular` — because Turkish headings sit at 10.3-10.6 pt, the same
+  band as English body text, so point size cannot separate them. Each section's title was read as the heading the print prints
+  before that section's first paragraph.
+  - `turkiye-misir-ve-yunanistanin-savunma-harcamalari…` (en, tr) — the visible double headings were two printed headings glued into
+    one title: `Possible Effects of France on Turkish-Greek Tension Possible Effects of USA and Israel on…`, and the same for Egypt;
+    `Dengelerini Kuramayan … Türk-Yunan İlişkileri Türk-Yunan İlişkilerinin Tarihsel Temelleri`. Two titles were cut at the print's
+    line wrap and completed from it (`…Karaman Sea Caused by the Unstoppable Rise of "Türkiye"`, `…Göğüsleyebilme Kapasitesi`). One
+    English section carried the article's own first heading in front of the real one and now reads `1988 Athens Consensus`. The Egypt
+    section had been split across two sections, one of them titled `Greece's Capacity to Face Military Tensions…`; it is now one
+    section of six paragraphs in printed order (EN p13-p14). The three sub-headings printed under `Non-Combat Options` (11.00 pt vs
+    10.50 pt) are marked `level: subsection`, so they render as `h4` instead of `h3` and leave the article outline.
+  - `cinin-dogu-akdenizde-cozum-onerisi…` (en, tr) — one glued title cut (TR), and three English titles corrected to the heading that
+    actually governs their text (`…Proposal in the Palestinian-Israeli Conflict`, `…Proposal in Lebanon`, `Conclusion`), each verified
+    by locating the section's first paragraph in the print.
+  - Still open, and needing the same paragraph-level rebuild: the English `cin-dogu-akdenizde…` record holds **12 sections for the
+    print's 8 headings** — four sections repeat another's text; `turkiye-misir` still lacks sections for the printed `Non-Combat
+    Options` / `Savaş Dışı Seçenekler`, `Historical Foundations of Turkish-Greek Relations` / `Türk-Yunan İlişkilerinin Tarihsel
+    Temelleri` and `International Court of Justice (ICJ)` / `Uluslararası Adalet Divanı`; `kusak-ve-yol-girisimi-bolgesellesme…` (tr)
+    prints its second question heading twice and never as a section, and its first question heading only as a body paragraph;
+    `ipek-yolu-uzerindeki-magara-tapinaklarında…` stores a pull-quote as a section title (tr) and, for two headings, the English and
+    Turkish prints disagree on the size band, so the level cannot be set from the typography alone.
+  - Archive-wide: **2 624 sections carry no `level`** and only 34 records use `subsection` at all, while the print sets headings in two
+    sizes. The sub-heading/normal-heading distinction is therefore missing in most records, which is why every sub-heading currently
+    renders as `h3` and appears in the article outline.
 - Reference-list completeness, third round (`fix/reference-list-segments`). Two more classes surfaced while verifying the previous
   round against the printed page rather than against the text layer:
   - **A reference stored as several slices of itself.** In `ortadoguda-bolgesel-isbirligi-…` the print (p16, both locales) carries
