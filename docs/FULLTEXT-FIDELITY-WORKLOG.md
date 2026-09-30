@@ -4,6 +4,24 @@
 
 **Status:** in progress
 
+- Reference-list completeness, third round (`fix/reference-list-segments`). Two more classes surfaced while verifying the previous
+  round against the printed page rather than against the text layer:
+  - **A reference stored as several slices of itself.** In `ortadoguda-bolgesel-isbirligi-…` the print (p16, both locales) carries
+    *one* Bassam entry, but the record held it as a merged entry plus a second entry that begins mid-name
+    (`M., & Ziad, A. A. (2019). Bassam, A. A., …`). That second slice is removed; the surviving entry keeps the printed duplicate
+    author name and the print's `Macro-Syste(m,`. The Turkish slice also carried the PDF text layer's intra-word break (`Bas sam`),
+    repaired to `Bassam`. The list now stands at 34 (en) and 32 (tr) entries.
+  - **List boundaries shifted by one entry** — the largest remaining defect, and it is why no guard for it can ship yet. Two `v03-i04`
+    records have every entry carrying the tail of the previous one plus a complete following entry:
+    - `ipek-yolu-uzerinden-yakin-doguya-sibiryali-ust-paleolitik-cag-gocleri` — the print lists about **57** entries
+      (EN p12–p13, TR p12–p13); `references[]` holds **8** (en) and **20** (tr). The largest single gap in the archive.
+    - `ipek-yolunda-kulturel-etkilesim-orta-asyada-yuezhi-goc-donemi` — 21 entries, but the boundaries are shifted throughout
+      (`ref-5` starts `Moskva: 68-86.`, `ref-6` is the bare journal name `Comptes Rendus de l'Academie des Inscriptions et
+      Belles-Lettres.`, `ref-8` starts `Reflection sur leur identite ethnique…`); the print (p14) gives the correct entries.
+    Both pages interleave the reference column with the numbered footnote column, so the reconstruction must be read from the
+    rendered page, not from the text layer. This is the next unit.
+  - A detector for the shifted-boundary signature (an entry containing a second `Surname, I. (year)` start) reports exactly these two
+    locale files and nothing else in the 572-file archive; it becomes a permanent guard test once they are repaired.
 - Bibliography completeness, second round (`fix/reference-completeness`). A print-coverage ratio cannot see a *missing* reference, so the printed list was read directly against `references[]` for the record the previous round touched, and the gaps it exposed were closed:
   - `avrasyada-ayrilikci-hareketlerin-jeopolitigi` (en, tr) — **four printed entries never reached `references[]`**: `Art, R. J. (1998/1999). Geopolitics Updated…`, `Mamadough, V. (2000). Reclaiming Geopolitics…`, `O’Sullivan, P. (1986). Geopolitics…` and `Schaffer, M. B. (1998). Speculations about Geopolitics…`, all on EN p14/p16/p17 and TR p15/p17/p18. Each was inserted in its printed alphabetical position with the printed wording per locale (the TR list keeps its own hyphenated page ranges) and the ids renumbered. The list now stands at 128 entries and a two-way check is clean: every entry is found in the print, and every printed entry is found in the record.
   - `ortadoguda-bolgesel-isbirligi-…` (en, tr) — one printed reference was stored as two fragments (`Bassam, A.` + `A., Malaz, M.`). The print (p16, both locales) was read as an image because that page's text layer is fragmented; the entry is `Bassam, A. A., Malaz, M. M., & Ziad, A. A. (2019). Bassam, A. A., Malaz, M. M., & Ziad, A. A. China: The Founding Act Of The Global Macro-Syste(m, The Trajectory and Limits of Ambitions.` — the repeated author and the print's own `Macro-Syste(m,` are kept as printed.
