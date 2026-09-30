@@ -361,7 +361,7 @@
       ],
       "note": "Kaynak: (CASCF, t.y.; Çin Halk Cumhuriyeti Dışişleri Bakanlığı, t.y.)",
       "placement": {
-        "sectionId": "introduction",
+        "sectionId": "giris",
         "afterParagraph": 8
       }
     },
@@ -468,7 +468,7 @@
       ],
       "note": "Kaynak: (Dil Eğitimi ve İşbirliği Merkezi, t.y.; Ding & Chen, 2018: 34-35).",
       "placement": {
-        "sectionId": "intellectual-interaction-china-arab-educational-exchanges",
+        "sectionId": "entelektuel-etkilesim-cin-arap-egitim-degisimleri",
         "afterParagraph": 2
       }
     },
@@ -539,7 +539,7 @@
       ],
       "note": "Kaynak: Açık erişimli kaynaklar esas alınarak hazırlanmıştır bkz. (Ajang, 2021).",
       "placement": {
-        "sectionId": "influencing-public-opinions-china-arab-media-exchanges",
+        "sectionId": "kamuoyunu-etkileme-cin-ve-arap-ulkeleri-arasinda-medya-degisimleri",
         "afterParagraph": 6
       }
     }
