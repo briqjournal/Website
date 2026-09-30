@@ -4,6 +4,23 @@
 
 **Status:** in progress
 
+- Headings surviving as body text (`fix/headings-in-body`). The migration sometimes captured a heading's **first line** as the last
+  paragraph of the preceding section, so a page showed the same words twice: once as body text, once as the heading. Three records,
+  confirmed in the print before each deletion:
+  - `kusak-ve-yol-girisiminde-ortak-ve-surdurulebilir-bir-gelecek-icin-…` (tr) — the `Giriş` section ended with the body paragraph
+    `Ortak ve Sürdürülebilir Bir Gelecek için`; the print sets that line and `Ortak Beklentiler` as one wrapped heading (TR p2, both
+    lines in `Frutiger-NormalTr` at 10.5 pt, 13 pt apart, the same spacing as the record's other wrapped headings) and the section title
+    already carries the whole thing.
+  - `dunyanin-yeniden-duzenlenisi-bolgesel-bloklar-…` (en, tr) — `The Traditional Global Governance System:` and
+    `Bölgesel Kurumların ve Blokların Yükselişi:` were the first lines of the following headings.
+  - `covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler` (tr) — three consecutive paragraphs spelled out the **article title**
+    line by line (`COVID-19 Sonrası` / `Küresel Sistem: Eski` / `Sorunlar, Yeni Trendler`), which the page already prints as its `h1`.
+  - `tests/printed-content-guards.test.mjs` gains a sixth test: no section may end with a paragraph that is the next heading's first
+    line, and no two or more consecutive paragraphs may join into the article title. It fails when the defect is put back.
+  - Why the earlier rounds missed it: every scan so far looked at titles, tokens and references, never at the **boundary** between a
+    section's last paragraph and the next heading, and the print-coverage ratio cannot see it because the leaked line is genuinely in
+    the print — it is only in the wrong place. Heading audits also have to be font-agnostic: this record sets its headings in
+    `Frutiger-NormalTr`, not the journal's usual `MyriadPro-Semibold`, so a detector pinned to one font sees no headings at all in it.
 - Section headings rebuilt from the print, `v04-i01` (`fix/section-headings-v04-i01`). The heading test is the **font family** — the print
   sets headings in `MyriadPro-Semibold` and body text in `MinionPro-Regular` — because Turkish headings sit at 10.3-10.6 pt, the same
   band as English body text, so point size cannot separate them. Each section's title was read as the heading the print prints
