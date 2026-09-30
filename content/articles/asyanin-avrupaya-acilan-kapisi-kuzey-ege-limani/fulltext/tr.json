@@ -21,7 +21,6 @@
         "2019 yılı itibarı ile limanlarımızda elleçlenen toplam konteyner 11,750,660 TEU (Twenty-foot Equivalent Unit) olarak gerçekleşmiştir. Dış ticaret ve kabotaj konteyner 8.5 milyon TEU, transit konteyner ise 3.1 milyon TEU'dur (Şekil 3). gelişimi (TEU) (Türklim, 2020).",
         "Limanlarımızda konteyner elleçlemesi bir önceki yıla göre toplamda %6.2, dış ticaret ve kabotaj konteyner toplamda %5.9, transit konteyner ise %6.9 oranlarında artış göstermiştir. Elleçlenen toplam konteyner hacmi açısından Türkiye'de elleçlenen konteynerin %60.5'ini elleçleyen Marmara Bölgesi limanları ilk sırada yer almaktadır. Marmara Bölgesi'ni sırasıyla; %23.2 ile Akdeniz Bölgesi limanları, %14.7 ile Ege Bölgesi limanları takip etmektedir. Karadeniz Bölgesi limanlarının toplam konteyner elleçleme hacmi içerisindeki payı %1.6'dır (Şekil 4). (Türklim, 2020).",
         "2019 yılında ülkemizde elleçlenen yükün %15.6'sını elleçleyen Mersin Uluslararası Limanı 1.9 milyon TEU elleçleyerek ilk sıradaki yerini korumuştur. 1.7 milyon TEU ile Marport Limanı ikinci, 1.4 milyon TEU ile Asyaport Limanı",
-        "Tablo 1. Türkiye’de bir milyon TEU üzerinde konteyner elleçleyen limanlar (Türklim, 2020)\n\n| Sıralama | Limanlar | 2017 | 2018 | 2019 |\n|---|---|---|---|---|\n| 1 | MIP | 1,591,983 | 1,722,711 | 1,939,029 |\n| 2 | MARPORT | 1,711,357 | 1,573,600 | 1,679,340 |\n| 3 | ASYA PORT | 1,002,133 | 1,117,749 | 1,353,409 |\n| 4 | KUMPORT | 1,063,246 | 1,258,294 | 1,281,850 |",
         "Marmara Bölgesi özellikle Karadeniz yükleri için önemli bir aktarma merkezi olmuştur. Ülkemizde elleçlenen aktarma yükün %83.9'u Marmara Bölgesi limanlarında elleçlenmektedir. 2019 yılı itibarı ile Asyaport bir milyon TEU'nun üzerinde transit yük elleçlemiştir. İkinci sırada run Limanlarının yer aldığı Doğu Akdeniz Bölgesi gelmektedir."
       ]
     },
@@ -151,6 +150,53 @@
       "id": "figure-7",
       "src": "/assets/article-figures/asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani/figure-07.jpg",
       "caption": "Cebelitarık Boğazı'ndan ve Süveyş Kanalı'ndan geçerek Çandarlı Limanı'na ulaşan bir gemi yalnızca 6,500 deniz mili katedecektir. (Sagisman, Kuzey Ege Limanı websitesi)"
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Tablo 1. Türkiye’de bir milyon TEU üzerinde konteyner elleçleyen limanlar (Türklim, 2020)",
+      "headers": [
+        "Sıralama",
+        "Limanlar",
+        "2017",
+        "2018",
+        "2019"
+      ],
+      "rows": [
+        [
+          "1",
+          "MIP",
+          "1,591,983",
+          "1,722,711",
+          "1,939,029"
+        ],
+        [
+          "2",
+          "MARPORT",
+          "1,711,357",
+          "1,573,600",
+          "1,679,340"
+        ],
+        [
+          "3",
+          "ASYA PORT",
+          "1,002,133",
+          "1,117,749",
+          "1,353,409"
+        ],
+        [
+          "4",
+          "KUMPORT",
+          "1,063,246",
+          "1,258,294",
+          "1,281,850"
+        ]
+      ],
+      "placement": {
+        "sectionId": "section-2",
+        "afterParagraph": 8
+      }
     }
   ]
 }

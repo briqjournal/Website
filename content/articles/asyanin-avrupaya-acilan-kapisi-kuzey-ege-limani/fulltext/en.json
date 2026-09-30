@@ -22,7 +22,6 @@
         "Container handling at ports in Turkey increased by 6.2% in total, foreign trade and cabotage container by 5.9%, and transit container by 6.9% compared to the previous year.",
         "The Marmara Region ranks first with 60.5% in terms of the volume of containers handled in Turkish ports. Following the Marmara Region respectively; Mediterranean Region ports follow with 23.2% and Aegean Region ports with 14.7%. The share of Black Sea Region ports in total container handling volume is 1.6% (Figure 4). (Türklim, 2020).",
         "Mersin International Port, where 15.6% of the cargo in Turkey is handled, maintains its first place by handling 1.9 million TEU. Marport Port ranked second with 1.7 million TEU and Asiaport Port third with 1.4 million TEU",
-        "Table 1. Container ports handled over a million TEU in Turkey (Türklim, 2020).\n\n| Ranking | Ports | 2017 | 2018 | 2019 |\n|---|---|---|---|---|\n| 1 | MIP | 1,591,983 | 1,722,711 | 1,939,029 |\n| 2 | MARPORT | 1,711,357 | 1,573,600 | 1,679,340 |\n| 3 | ASYA PORT | 1,002,133 | 1,117,749 | 1,353,409 |\n| 4 | KUMPORT | 1,063,246 | 1,258,294 | 1,281,850 |",
         "The Marmara Region has become an important transfer center especially for Black Sea cargoes. 83.9% of the transhipment cargo handled in Turkey goes through the Marmara Region ports. Since 2019, Asyaport has handled over one million TEU transit cargo. With a share of 15.9%, the Eastern Mediterranean Reerun Ports are located, is in the second place."
       ]
     },
@@ -152,6 +151,53 @@
       "id": "figure-7",
       "src": "/assets/article-figures/asyanin-avrupaya-acilan-kapisi-kuzey-ege-limani/figure-07.jpg",
       "caption": "A ship, arrived in Çandarlı Port crossing Strait of Gibraltar and the Suez Canal will only cover 6,500 miles. (Sagisman, North Aegean Port website)"
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Table 1. Container ports handled over a million TEU in Turkey (Türklim, 2020).",
+      "headers": [
+        "Ranking",
+        "Ports",
+        "2017",
+        "2018",
+        "2019"
+      ],
+      "rows": [
+        [
+          "1",
+          "MIP",
+          "1,591,983",
+          "1,722,711",
+          "1,939,029"
+        ],
+        [
+          "2",
+          "MARPORT",
+          "1,711,357",
+          "1,573,600",
+          "1,679,340"
+        ],
+        [
+          "3",
+          "ASYA PORT",
+          "1,002,133",
+          "1,117,749",
+          "1,353,409"
+        ],
+        [
+          "4",
+          "KUMPORT",
+          "1,063,246",
+          "1,258,294",
+          "1,281,850"
+        ]
+      ],
+      "placement": {
+        "sectionId": "section-2",
+        "afterParagraph": 9
+      }
     }
   ]
 }
