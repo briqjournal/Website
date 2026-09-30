@@ -133,3 +133,30 @@ test("archive: every table is semantic data with a caption, headers and a placem
   }
   assert.ok(tables > 0, "the archive has semantic tables to check");
 });
+
+test("archive: every reference carries a unique, sequential id and readable text", () => {
+  // a printed entry that never reaches `references[]` is invisible to a print-coverage ratio,
+  // and a renumbered list silently breaks anything that addressed an id, so both are invariants
+  let entries = 0;
+  for (const slug of slugs) {
+    for (const locale of localesOf(slug)) {
+      const refs = read(slug, locale).references || [];
+      const ids = refs.map((ref) => ref.id);
+      assert.equal(new Set(ids).size, ids.length,
+        `${slug}/${locale}: duplicate reference id`);
+      ids.forEach((id, i) => assert.equal(id, `ref-${i + 1}`,
+        `${slug}/${locale}: reference ${i + 1} has id ${id}, expected ref-${i + 1}`));
+      for (const ref of refs) {
+        const text = (ref.text || "").trim();
+        assert.ok(text.length > 0, `${slug}/${locale}/${ref.id}: empty reference`);
+        // a printed reference, or the bare group heading the print uses to introduce a block of
+        // newspaper sources ("Newspapers", "Gazeteler") — never a fragment of a split entry
+        const isGroupHeading = !/[.,]/.test(text) && text.split(/\s+/).length <= 3;
+        assert.ok(text.length > 10 || isGroupHeading,
+          `${slug}/${locale}/${ref.id}: reference looks like a fragment — "${text}"`);
+        entries += 1;
+      }
+    }
+  }
+  assert.ok(entries > 0, "the archive has references to check");
+});
