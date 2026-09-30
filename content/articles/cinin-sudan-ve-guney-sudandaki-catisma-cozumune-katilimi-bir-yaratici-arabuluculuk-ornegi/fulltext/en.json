@@ -17,7 +17,6 @@
       "paragraphs": [
         "There are two types of protecting states’ overseas interests: one is the use of force by a state without the consent of the host state, and sometimes under the authorization of the UN Security Council, to protect its national interests that are facing multiple threats. The second one is the use of diplomatic tools, based on the consent of the target state and under the authorization of the UN Security Council such as mediation, constructive involvement, indirection engagement, and consultation with a state concerned. Creative mediation diplomacy is based on the right of protecting overseas interests under the international law and the consent of the host states. The diplomatic tools of China’s creative mediation diplomacy are based on the types (strategic political, security, economic and ideological) and degrees (vital, major, survival) of national interests in Sudan and South Sudan, along with adhering to the doctrine of non-interference in other’s internal affairs.",
         "Western academics have made significant contributions to understanding the mediation theory and its dynamics, terms, methodology, and mediators and adversaries (Bercovitch, 1991a; Bercovitch, 1991b). Mediation is an extension of negotiations where the conflicting parties accept the involvement or assistance of external parties without breaking international law or the state’s sovereignty, or a low-cost and flexible strategy, legitimately and creatively adopted by external security actors and international organizations. The success of mediation depends on the experience and efficiency of the mediator and successful judgment on the conflict from all directions. Therefore, the mediation process often fails to manage and resolve the conflict. It is a complex process with rarely positive results. Conflicts can easily escalate into wars as a result of the mediator’s calculations and motives. In a way, any external actors may become a formal or informal mediator.",
-        "Table 1: Differentiating Chinese and Western Mediation Diplomacies\n\n| | Western Mediation Diplomacy | China’s Creative Mediation Diplomacy |\n|---|---|---|\n| Mediator’s Interests Involved | Security and Strategic Interests | Commercial and Political/Diplomatic Interests |\n| Attitudes of Mediators | Proactive | Selective on a case-by-case basis |\n| Positions | Dominating | Participating |\n| Roles of Mediators | Leading | Following |\n| Mediation Process | Agenda-Setting | Agenda-Revising |\n| Resources that Mediators Commit to | Major Resources | Minor Resources |\n| Primary Goals | Conflict Resolution | Conflict De-Escalation |\n\nSource: Sun & Zoubir, 2016: 240.",
         "Bercovitch divides the mediator into three categories: individuals, countries and institutions (organizations). The international mediator aims to influence or change the conflict system through its resources and diplomatic tools. These resources illustrate the behavior and strategy of the mediator, which include good offices, creative conciliation, mediation, constructive engagement, negotiation, and arbitration (Bercovitch, 1996; Bercovitch&Houston, 1996). Ravan also introduces six types of resources or so-called “rules of influence”:",
         "Reward Resources: the ability of the mediator to provide tangible covenants and benefits to the warring parties such as the form of economic assistance.",
         "Coercion Resources: the threat of the mediator to withdraw mediation or punish one or both parties such as the use of his economic influence to force the warring parties to conflict resolution.",
@@ -292,5 +291,58 @@
       "text": "Zhao, L. (2014, September 26). Foreign Ministry Spokesperson Hua Chunying’s Regular Press Conference. Embassy of The People’s Republic of China in the United States of America. Retrieved from http://www.china-embassy.org/eng/fyrth/ t1195557.htm"
     }
   ],
-  "acknowledgements": ""
+  "acknowledgements": "",
+  "tables": [
+    {
+      "id": "table-1",
+      "caption": "Table 1: Differentiating Chinese and Western Mediation Diplomacies",
+      "headers": [
+        "",
+        "Western Mediation Diplomacy",
+        "China’s Creative Mediation Diplomacy"
+      ],
+      "rows": [
+        [
+          "Mediator’s Interests Involved",
+          "Security and Strategic Interests",
+          "Commercial and Political/Diplomatic Interests"
+        ],
+        [
+          "Attitudes of Mediators",
+          "Proactive",
+          "Selective on a case-by-case basis"
+        ],
+        [
+          "Positions",
+          "Dominating",
+          "Participating"
+        ],
+        [
+          "Roles of Mediators",
+          "Leading",
+          "Following"
+        ],
+        [
+          "Mediation Process",
+          "Agenda-Setting",
+          "Agenda-Revising"
+        ],
+        [
+          "Resources that Mediators Commit to",
+          "Major Resources",
+          "Minor Resources"
+        ],
+        [
+          "Primary Goals",
+          "Conflict Resolution",
+          "Conflict De-Escalation"
+        ]
+      ],
+      "placement": {
+        "sectionId": "section-2",
+        "afterParagraph": 2
+      },
+      "note": "Source: Sun & Zoubir, 2016: 240."
+    }
+  ]
 }
