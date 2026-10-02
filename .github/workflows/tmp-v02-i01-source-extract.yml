@@ -1,0 +1,45 @@
+name: Temporary v02-i01 source extraction
+
+on:
+  push:
+    branches:
+      - chore/v02-i01-fulltext-canonical
+    paths:
+      - ".github/workflows/tmp-v02-i01-source-extract.yml"
+      - "scripts/tmp-v02-i01-source-extract.py"
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update >/dev/null && sudo apt-get install -y poppler-utils >/dev/null
+      - name: Extract exact embedded production assets
+        run: python3 scripts/tmp-v02-i01-source-extract.py
+      - name: Commit extracted assets
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/assets/article-figures/
+          if git diff --cached --quiet; then
+            echo "No asset changes"
+          else
+            git commit -m "assets: extract v02-i01 production figures"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+      - name: Package authoritative Turkish gas-hydrates pages
+        shell: bash
+        run: |
+          mkdir -p .tmp-v02-i01/gas-tr
+          pdfseparate -f 61 -l 75 public/assets/archive/pdfs/issues/cilt-2-sayi-1-tr.pdf '.tmp-v02-i01/gas-tr/page-%d.pdf'
+          mapfile -t pages < <(find .tmp-v02-i01/gas-tr -name 'page-*.pdf' | sort -V)
+          pdfunite "${pages[@]}" .tmp-v02-i01/gas-tr-issue.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v02-i01-gas-tr-official-issue
+          path: .tmp-v02-i01/gas-tr-issue.pdf
+          retention-days: 7
