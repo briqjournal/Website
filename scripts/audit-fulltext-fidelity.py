@@ -130,8 +130,11 @@ def audit_locale(root,slug,loc,meta,other_titles,out_root):
     candidates=[source_url,archived_url]
     # v02-i01: the article-level Turkish URL for gas-hydrates currently serves the English PDF.
     # Use the official Turkish issue PDF as the authoritative locale source for this one record.
-    if out_root.name == "v02-i01" and slug == "gaz-hidratlar-yakin-gelecegin-enerji-kaynagi" and loc == "tr":
-        candidates=["https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%202.%20Cilt%201.%20Say%C4%B1_Site.pdf"]
+    if out_root.name == "v02-i01" and slug == "gaz-hidratlar-yakin-gelecegin-enerji-kaynagi":
+        candidates=[{
+            "en": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%20Vol.2%20Issue1_Site.pdf",
+            "tr": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%202.%20Cilt%201.%20Say%C4%B1_Site.pdf",
+        }[loc]]
     work=out_root/slug/loc; pdf=work/f"{slug}-{loc}.pdf"
     try:
         if not any(candidates):
