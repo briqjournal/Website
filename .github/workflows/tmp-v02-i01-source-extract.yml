@@ -35,7 +35,8 @@ jobs:
         shell: bash
         run: |
           mkdir -p .tmp-v02-i01/gas-tr
-          pdfseparate -f 61 -l 75 public/assets/archive/pdfs/issues/cilt-2-sayi-1-tr.pdf '.tmp-v02-i01/gas-tr/page-%d.pdf'
+          curl -fsSL --retry 3 'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%202.%20Cilt%201.%20Say%C4%B1_Site.pdf' -o .tmp-v02-i01/issue-tr.pdf
+          pdfseparate -f 61 -l 75 .tmp-v02-i01/issue-tr.pdf '.tmp-v02-i01/gas-tr/page-%d.pdf'
           mapfile -t pages < <(find .tmp-v02-i01/gas-tr -name 'page-*.pdf' | sort -V)
           pdfunite "${pages[@]}" .tmp-v02-i01/gas-tr-issue.pdf
       - uses: actions/upload-artifact@v4
