@@ -171,6 +171,6 @@ test("V2I1 canonical text is free of confirmed PDF extraction debris", () => {
     assert.doesNotMatch(raw, debris, `${slug}/${locale} extraction debris`);
     const parsed = JSON.parse(raw);
     const serialized = JSON.stringify(parsed);
-    assert.doesNotMatch(serialized, /[\\u0000-\\u001f]/u, `${slug}/${locale} control characters`);
+    assert.doesNotMatch(serialized, /\\u00(?:0[0-9a-f]|1[0-9a-f])/iu, `${slug}/${locale} control characters`);
   }
 });
