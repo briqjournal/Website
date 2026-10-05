@@ -17,30 +17,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update >/dev/null && sudo apt-get install -y poppler-utils >/dev/null
-      - name: Extract exact embedded production assets
+      - name: Build canonical locale records from official PDFs
         run: python3 scripts/tmp-v02-i01-source-extract.py
-      - name: Commit extracted assets
+      - name: Validate the 14-route regression
+        run: node --test tests/v02i1-locale-fulltext.test.mjs
+      - name: Commit completed records progressively
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/assets/article-figures/
-          if git diff --cached --quiet; then
-            echo "No asset changes"
-          else
-            git commit -m "assets: extract v02-i01 production figures"
-            git push origin "HEAD:${GITHUB_REF_NAME}"
+          for slug in \
+            bes-deniz-stratejisini-canlandirmak-mumkun-mu \
+            turkiye-ve-cinin-degisen-deniz-jeopolitiginin-neo-mahanci-bir-okumasi \
+            mavi-vatan-doktrini-nasil-olustu \
+            mare-nostrumdan-denizlerde-uluslararasi-isbirligine-tarih-akdenizin-gelecegi-ile-ilgili \
+            gaz-hidratlar-yakin-gelecegin-enerji-kaynagi \
+            karabag-baslangictan-gunumuze-sorunlar-ve-cozumler \
+            fotograf-omer-burhanoglu
+          do
+            git add "content/articles/$slug/fulltext/en.json" "content/articles/$slug/fulltext/tr.json"
+            if ! git diff --cached --quiet; then
+              git commit -m "feat(v02-i01): migrate $slug bilingual fulltext"
+            fi
+          done
+          git add content/catalog.json tests/v02i1-locale-fulltext.test.mjs
+          if ! git diff --cached --quiet; then
+            git commit -m "test(v02-i01): register and cover all 14 bilingual routes"
           fi
-      - name: Package authoritative Turkish gas-hydrates pages
-        shell: bash
-        run: |
-          mkdir -p .tmp-v02-i01/gas-tr
-          curl -fsSL --retry 3 'https://briqjournal.com/sites/default/files/dergi-sayilari/2025-12/BRIQ%202.%20Cilt%201.%20Say%C4%B1_Site.pdf' -o .tmp-v02-i01/issue-tr.pdf
-          pdfseparate -f 61 -l 75 .tmp-v02-i01/issue-tr.pdf '.tmp-v02-i01/gas-tr/page-%d.pdf'
-          mapfile -t pages < <(find .tmp-v02-i01/gas-tr -name 'page-*.pdf' | sort -V)
-          pdfunite "${pages[@]}" .tmp-v02-i01/gas-tr-issue.pdf
-      - uses: actions/upload-artifact@v4
-        with:
-          name: v02-i01-gas-tr-official-issue
-          path: .tmp-v02-i01/gas-tr-issue.pdf
-          retention-days: 7
+          git push origin "HEAD:$GITHUB_REF_NAME"
