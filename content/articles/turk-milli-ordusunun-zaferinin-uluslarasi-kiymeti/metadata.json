@@ -2,14 +2,14 @@
   "schemaVersion": 2,
   "id": "turk-milli-ordusunun-zaferinin-uluslarasi-kiymeti",
   "articleType": {
-    "id": "perspective-piece",
-    "tr": "Görüş Makalesi",
-    "en": "Perspective Piece",
+    "id": "historical-document",
+    "tr": "Tarihten",
+    "en": "History",
     "peerReviewed": false
   },
   "title": {
     "en": "The International Value of the Victory of the Turkish National Army",
-    "tr": "Türk Milli Ordusunun Zaferinin Uluslarası Kıymeti"
+    "tr": "Türk Milli Ordusu'nun Zaferinin Uluslararası Kıymeti"
   },
   "authors": [
     {

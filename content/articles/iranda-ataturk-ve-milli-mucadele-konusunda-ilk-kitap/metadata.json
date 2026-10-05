@@ -2,13 +2,13 @@
   "schemaVersion": 2,
   "id": "iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap",
   "articleType": {
-    "id": "perspective-piece",
-    "tr": "Görüş Makalesi",
-    "en": "Perspective Piece",
+    "id": "historical-document",
+    "tr": "Tarihten",
+    "en": "History",
     "peerReviewed": false
   },
   "title": {
-    "en": "History – The First Book About Atatürk Ever Published in Iran",
+    "en": "The First Book About Atatürk Ever Published in Iran",
     "tr": "İran’da Atatürk ve Millî Mücadele Konusunda İlk Kitap"
   },
   "authors": [
@@ -82,8 +82,8 @@
   "urls": {
     "en": "https://briqjournal.com/en/history-the-first-book-about-ataturk-ever-published-iran",
     "tr": "https://briqjournal.com/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap",
-    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20MESUD%20SADRMOHAMMAD%C4%B0%20-%20TR.pdf",
-    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-09/BRIQ_TURKCE%20-%204.%20SAYI%20-%20MESUD%20SADRMOHAMMAD%C4%B0%20-%20ENG.pdf",
+    "pdfEn": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-09/BRIQ_TURKCE%20-%204.%20SAYI%20-%20MESUD%20SADRMOHAMMAD%C4%B0%20-%20ENG.pdf",
+    "pdfTr": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2020-11/BRIQ_INGILIZCE%20-%204.%20SAYI%20-%20MESUD%20SADRMOHAMMAD%C4%B0%20-%20TR.pdf",
     "pdfEnLocal": "/assets/archive/pdfs/articles/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap-en.pdf",
     "pdfTrLocal": "/assets/archive/pdfs/articles/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap-tr.pdf",
     "sharedBilingualPdf": false
