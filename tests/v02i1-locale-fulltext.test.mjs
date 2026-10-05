@@ -162,3 +162,15 @@ test("V2I1 never uses a locale fallback or leaks PDF furniture into body paragra
     assert.doesNotMatch(body, /(?:B R I q|How to cite|Atıf:|Keywords:|Anahtar Kelimeler:)/u, `${slug}/${locale} furniture`);
   }
 });
+
+
+test("V2I1 canonical text is free of confirmed PDF extraction debris", () => {
+  const debris = /(?:GAF- TA|MER- COSUR|ARM- ERKOM|AR- MERKOM|UN- CLOS|NA- TO|GE- NESİS|FE- TÖ|DK- MV|AH C|Ind eed|under going|limi ting|gatherin g|olasıl ığı|to plum|Awğustos|\\u001f)/u;
+  for (const slug of issue.articles) for (const locale of ["en", "tr"]) {
+    const raw = fs.readFileSync(path.join("content/articles", slug, "fulltext", locale + ".json"), "utf8");
+    assert.doesNotMatch(raw, debris, `${slug}/${locale} extraction debris`);
+    const parsed = JSON.parse(raw);
+    const serialized = JSON.stringify(parsed);
+    assert.doesNotMatch(serialized, /[\\u0000-\\u001f]/u, `${slug}/${locale} control characters`);
+  }
+});
