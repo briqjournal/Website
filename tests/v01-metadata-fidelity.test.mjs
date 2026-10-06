@@ -2,8 +2,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { buildArchiveData } from '../scripts/archive-store.mjs';
 
-const archive = JSON.parse(fs.readFileSync('app/archive-data.json', 'utf8'));
+async function getArchive() {
+  if (fs.existsSync('app/archive-data.json')) {
+    return JSON.parse(fs.readFileSync('app/archive-data.json', 'utf8'));
+  }
+  return buildArchiveData();
+}
+
+const archive = await getArchive();
 const v1Issues = archive.issues.filter((iss) => iss.volume === 1).sort((a, b) => a.issue - b.issue);
 
 test('Volume 1 all 34 records have valid schema and consistent journal metadata', () => {
@@ -12,24 +20,24 @@ test('Volume 1 all 34 records have valid schema and consistent journal metadata'
     for (const slug of iss.articles) {
       count++;
       const meta = JSON.parse(fs.readFileSync(path.join('content/articles', slug, 'metadata.json'), 'utf8'));
-      assert.equal(meta.schemaVersion, 2, );
-      assert.equal(meta.id, slug, );
-      assert.equal(meta.journal.volume, 1, );
-      assert.equal(meta.journal.issue, iss.issue, );
-      assert.ok(meta.title.tr, );
-      assert.ok(meta.title.en, );
-      assert.ok(meta.articleType.id, );
-      assert.ok(meta.authors.length > 0, );
+      assert.equal(meta.schemaVersion, 2);
+      assert.equal(meta.id, slug);
+      assert.equal(meta.journal.volume, 1);
+      assert.equal(meta.journal.issue, iss.issue);
+      assert.ok(meta.title.tr);
+      assert.ok(meta.title.en);
+      assert.ok(meta.articleType.id);
+      assert.ok(meta.authors.length > 0);
       for (const a of meta.authors) {
-        assert.ok(a.displayName, );
-        assert.ok(a.givenName, );
-        assert.ok(a.familyName, );
+        assert.ok(a.displayName);
+        assert.ok(a.givenName);
+        assert.ok(a.familyName);
       }
       if (meta.urls.pdfEn) {
-        assert.doesNotMatch(meta.urls.pdfEn, /-(?:TR|_TR|tr)(?:_0)?\.pdf$/u, );
+        assert.doesNotMatch(meta.urls.pdfEn, /-(?:TR|_TR|tr)(?:_0)?\.pdf$/u);
       }
       if (meta.urls.pdfTr) {
-        assert.doesNotMatch(meta.urls.pdfTr, /-(?:ENG|_ENG|eng)(?:_0)?\.pdf$/u, );
+        assert.doesNotMatch(meta.urls.pdfTr, /-(?:ENG|_ENG|eng)(?:_0)?\.pdf$/u);
       }
     }
   }
@@ -98,19 +106,20 @@ test('V01-I04 metadata fidelity, routing and title prefix repairs remain canonic
   assert.equal(nimin.title.en, "Fujian Hui'an Maiden's Weaving Net");
 });
 
-test('Archive-data synchronization remains intact with metadata', () => {
-  const bySlug = new Map(archive.articles.map((a) => [a.slug, a]));
+test('Archive-data synchronization remains intact with metadata', async () => {
+  const currentArchive = await getArchive();
+  const bySlug = new Map(currentArchive.articles.map((a) => [a.slug, a]));
   for (const iss of v1Issues) {
     for (const slug of iss.articles) {
       const art = bySlug.get(slug);
-      assert.ok(art, );
+      assert.ok(art, `article exists in archive data: ${slug}`);
       const meta = JSON.parse(fs.readFileSync(path.join('content/articles', slug, 'metadata.json'), 'utf8'));
-      assert.equal(art.title_tr, meta.title.tr, );
-      assert.equal(art.title_en, meta.title.en, );
-      assert.equal(art.pdf_en_source, meta.urls.pdfEn, );
-      assert.equal(art.pdf_tr_source, meta.urls.pdfTr, );
-      assert.equal(art.publication_type_tr, meta.articleType.tr, );
-      assert.equal(art.publication_type_en, meta.articleType.en, );
+      assert.equal(art.title_tr, meta.title.tr);
+      assert.equal(art.title_en, meta.title.en);
+      assert.equal(art.pdf_en_source, meta.urls.pdfEn);
+      assert.equal(art.pdf_tr_source, meta.urls.pdfTr);
+      assert.equal(art.publication_type_tr, meta.articleType.tr);
+      assert.equal(art.publication_type_en, meta.articleType.en);
     }
   }
 });
