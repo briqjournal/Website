@@ -1,0 +1,56 @@
+name: Verify BRIQ access after renewal
+on:
+  push:
+    branches:
+      - diagnostic/site-access-2026-10-10
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verify registry, independent DNS resolvers, and HTTPS routes
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures,datetime,json,re,urllib.request,urllib.error
+          print("UTC",datetime.datetime.now(datetime.timezone.utc).isoformat(),flush=True)
+          with urllib.request.urlopen("https://rdap.verisign.com/com/v1/domain/briqjournal.com",timeout=20) as response:
+              d=json.load(response)
+              print("REGISTRY",json.dumps({k:d.get(k) for k in ("ldhName","status","events","nameservers")}),flush=True)
+          for host in ("briqjournal.com","www.briqjournal.com"):
+              for provider in ("https://dns.google/resolve?","https://cloudflare-dns.com/dns-query?"):
+                  u=provider+"name="+host+"&type=A"
+                  try:
+                      with urllib.request.urlopen(urllib.request.Request(u,headers={"Accept":"application/dns-json"}),timeout=20) as response:
+                          print("DNS",u,json.dumps(json.load(response)),flush=True)
+                  except Exception as exc: print("DNS_ERROR",u,str(exc),flush=True)
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self,req,fp,code,msg,headers,newurl): return None
+          opener=urllib.request.build_opener(NoRedirect())
+          urls=[
+              "https://briqjournal.com/",
+              "https://www.briqjournal.com/",
+              "https://briqjournal.com/tr/",
+              "https://briqjournal.com/en/",
+              "https://briqjournal.com/tr/arsiv/cilt-7-sayi-4/",
+              "https://briqjournal.com/en/archive/volume-7-issue-4/",
+              "https://briqjournal.com/assets/briq-logo.png",
+              "https://briqjournal.com/assets/archive/pdfs/issues/cilt-7-sayi-4-en.pdf",
+              "https://briq.briq.workers.dev/tr/",
+          ]
+          def probe(u):
+              req=urllib.request.Request(u,method="HEAD" if u.endswith(".pdf") else "GET",headers={"User-Agent":"BRIQ-renewal-verification/1.0"})
+              try: response=opener.open(req,timeout=25)
+              except urllib.error.HTTPError as exc: response=exc
+              except Exception as exc: return {"url":u,"error":str(exc)}
+              with response:
+                  b=response.read(16000).decode(errors="replace")
+                  h={k:v for k,v in response.headers.items() if k.lower() in ("server","content-type","location","cf-ray","cf-cache-status","content-length","date")}
+                  t=re.search(r"<title[^>]*>(.*?)</title>",b,re.S)
+                  out={"url":u,"status":response.status,"headers":h,"title":t.group(1) if t else None}
+                  if response.status>=400: out["body"]=b[:3000]
+                  return out
+          with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+              for r in pool.map(probe,urls): print("HTTP",json.dumps(r,ensure_ascii=False),flush=True)
+          PY
