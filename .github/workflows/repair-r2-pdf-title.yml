@@ -1,0 +1,87 @@
+name: Repair one PDF placeholder without visual changes
+on:
+  push:
+    branches: [diagnostic/site-access-2026-10-10]
+    paths: [.github/workflows/repair-r2-pdf-title.yml]
+permissions:
+  contents: read
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Download the exact published original
+        run: |
+          mkdir -p result
+          curl --fail --location --max-time 90 https://briqjournal.com/assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --output result/original-cilt-6-sayi-4-en.pdf
+      - name: Install PDF tools
+        run: python3 -m pip install --quiet pymupdf
+      - name: Remove only the placeholder and verify all pages
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,re,datetime
+          from pathlib import Path
+          import fitz
+          root=Path("result"); root.mkdir(exist_ok=True)
+          src=root/"original-cilt-6-sayi-4-en.pdf"
+          out=root/"cilt-6-sayi-4-en.pdf"
+          expected="dd11482cdc2eb113335b45f7f24a037c14d103ba463fa8fcbf29e5260364fd35"
+          sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+          assert sha(src)==expected,"Published original changed; stop."
+          needle="BURADA KAPAK OLACAK"
+          doc=fitz.open(src)
+          original_text=[p.get_text() for p in doc]
+          hits=[]
+          for i,p in enumerate(doc):
+           for rect in p.search_for(needle):
+            hits.append((i,tuple(rect)))
+            p.add_redact_annot(rect,fill=False,cross_out=False)
+           if any(h[0]==i for h in hits):
+            p.apply_redactions(images=0,graphics=0,text=0)
+          assert len(hits)==1 and hits[0][0]==0,"Unexpected placeholder locations; stop."
+          metadata=doc.metadata.copy()
+          metadata["title"]="BRIQ — Volume 6, Issue 4 — Autumn 2025"
+          metadata["modDate"]=datetime.datetime.now(datetime.timezone.utc).strftime("D:%Y%m%d%H%M%SZ")
+          doc.set_metadata(metadata)
+          doc.save(out,garbage=4,deflate=True)
+          doc.close()
+          before=fitz.open(src); after=fitz.open(out)
+          assert len(before)==len(after)==114
+          norm=lambda s:re.sub(r"\\s+"," ",s).strip()
+          changed_text=[]
+          visual_differences=[]
+          for i,(a,b) in enumerate(zip(before,after)):
+           assert needle not in norm(b.get_text())
+           expected_text=a.get_text().replace(needle,"")
+           if norm(expected_text)!=norm(b.get_text()):changed_text.append(i+1)
+           pa=a.get_pixmap(matrix=fitz.Matrix(1,1),alpha=False)
+           pb=b.get_pixmap(matrix=fitz.Matrix(1,1),alpha=False)
+           if (pa.width,pa.height,pa.samples)!=(pb.width,pb.height,pb.samples):visual_differences.append(i+1)
+          before[0].get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).save(root/"cover-before.png")
+          after[0].get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).save(root/"cover-after.png")
+          report={"source_sha256":sha(src),"corrected_sha256":sha(out),"corrected_bytes":out.stat().st_size,"pages":len(after),"title":after.metadata["title"],"removed_phrase":needle,"removed_from_pdf_page":1,"unexpected_text_changes":changed_text,"pages_with_render_differences":visual_differences}
+          (root/"verification.json").write_text(json.dumps(report,ensure_ascii=False,indent=2))
+          print(json.dumps(report,ensure_ascii=False,indent=2))
+          assert not changed_text,"Other text would change; do not publish."
+          assert not visual_differences,"Visible appearance would change; do not publish."
+          
+          PY
+      - name: Preserve original, corrected PDF, and verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-pdf-placeholder-repair
+          path: result/
+          retention-days: 30
+      - name: Publish the verified PDF at the existing R2 key
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_EC2_METADATA_DISABLED: "true"
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          test "$R2_BUCKET" = "briq-pdf"
+          aws s3api put-object --bucket "$R2_BUCKET" --key assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --endpoint-url "$R2_ENDPOINT" --body result/cilt-6-sayi-4-en.pdf --content-type application/pdf --content-disposition inline --output json
