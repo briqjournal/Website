@@ -36,7 +36,7 @@ jobs:
               "https://briqjournal.com/tr/arsiv/cilt-7-sayi-4/",
               "https://briqjournal.com/en/archive/volume-7-issue-4/",
               "https://briqjournal.com/assets/briq-logo.png",
-              "https://briqjournal.com/assets/archive/pdfs/issues/cilt-7-sayi-4-en.pdf",
+              "https://briqjournal.com/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf",
               "https://briq.briq.workers.dev/tr/",
           ]
           def probe(u):
