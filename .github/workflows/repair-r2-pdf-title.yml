@@ -70,7 +70,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: verified-pdf-placeholder-repair
+          name: verified-pdf-placeholder-repair-${{ github.run_attempt }}
           path: result/
           retention-days: 30
       - name: Publish the verified PDF at the existing R2 key
@@ -84,4 +84,31 @@ jobs:
         run: |
           set -euo pipefail
           if [ "$R2_BUCKET" != "briq-pdf" ]; then echo "Configured R2 bucket does not match the live briq-pdf binding."; exit 1; fi
+          aws s3api get-object --bucket "$R2_BUCKET" --key assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --endpoint-url "$R2_ENDPOINT" existing-r2.pdf --query ContentLength --output text
+          python3 - <<'PY'
+          import hashlib
+          from pathlib import Path
+          assert hashlib.sha256(Path("existing-r2.pdf").read_bytes()).hexdigest() == "dd11482cdc2eb113335b45f7f24a037c14d103ba463fa8fcbf29e5260364fd35", "Live R2 original has changed; stop."
+          PY
           aws s3api put-object --bucket "$R2_BUCKET" --key assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --endpoint-url "$R2_ENDPOINT" --body result/cilt-6-sayi-4-en.pdf --content-type application/pdf --content-disposition inline --output json
+          aws s3api get-object --bucket "$R2_BUCKET" --key assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --endpoint-url "$R2_ENDPOINT" uploaded-r2.pdf --query ContentLength --output text
+          python3 - <<'PY'
+          import hashlib,json,urllib.request
+          from pathlib import Path
+          import fitz
+          expected=hashlib.sha256(Path("result/cilt-6-sayi-4-en.pdf").read_bytes()).hexdigest()
+          assert hashlib.sha256(Path("uploaded-r2.pdf").read_bytes()).hexdigest()==expected
+          url="https://briqjournal.com/assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf"
+          with urllib.request.urlopen(url,timeout=90) as response:
+              public=response.read()
+              headers={key:response.headers.get(key) for key in ("content-type","content-length","etag","cf-cache-status","age")}
+              status=response.status
+          Path("live.pdf").write_bytes(public)
+          digest=hashlib.sha256(public).hexdigest()
+          doc=fitz.open(stream=public,filetype="pdf")
+          hits=[i+1 for i,page in enumerate(doc) if "BURADA KAPAK OLACAK" in " ".join(page.get_text().split())]
+          report={"http_status":status,"sha256":digest,"matches_uploaded_object":digest==expected,"title":doc.metadata["title"],"pages":len(doc),"placeholder_pages":hits,"headers":headers}
+          print("LIVE_PUBLIC_VERIFICATION="+json.dumps(report,ensure_ascii=False))
+          assert digest==expected, "Public URL still serves another version."
+          assert not hits and doc.metadata["title"]=="BRIQ — Volume 6, Issue 4 — Autumn 2025"
+          PY
