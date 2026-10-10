@@ -10,17 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Read only the requested PDF from R2
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: auto
-          AWS_EC2_METADATA_DISABLED: "true"
-          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
-          R2_BUCKET: ${{ secrets.R2_BUCKET }}
-        run: |
-          set -euo pipefail
-          aws s3api get-object --bucket "$R2_BUCKET" --key assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --endpoint-url "$R2_ENDPOINT" target.pdf --query '{ContentLength:ContentLength,ContentType:ContentType,ETag:ETag}' --output json
+      - name: Read the publicly published issue PDF
+        run: curl --fail --location --max-time 90 https://briqjournal.com/assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --output target.pdf
       - name: Install PDF reader
         run: python3 -m pip install --quiet pymupdf
       - name: Inspect all pages and metadata
