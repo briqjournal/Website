@@ -1,7 +1,7 @@
 {
   "generated_from": "https://briqjournal.com",
   "unique_files": 619,
-  "total_bytes": 3689320661,
+  "total_bytes": 3689234127,
   "files": [
     {
       "source": "https://briqjournal.com/sites/default/files/yazi-ici-dosyalar/2022-06/CILT3_SAYI3_ENG_FINAL_SON_82-83.pdf",
@@ -4433,8 +4433,8 @@
     {
       "source": "https://briqjournal.com/sites/default/files/dergi-sayilari/2025-09/BRIQ%20Vol.6%20Issue4%202026%20Autumn_0.pdf",
       "local": "/assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf",
-      "bytes": 25079605,
-      "sha256": "dd11482cdc2eb113335b45f7f24a037c14d103ba463fa8fcbf29e5260364fd35",
+      "bytes": 24993071,
+      "sha256": "b0f75196a42d1d096e98a01209aea901f64298250c1478f676527a62e64a63a1",
       "status": "downloaded"
     },
     {
