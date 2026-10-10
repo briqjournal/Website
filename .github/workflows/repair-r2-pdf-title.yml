@@ -1,4 +1,4 @@
-name: Repair one PDF placeholder without visual changes
+name: Verify published PDF directly in R2
 on:
   push:
     branches: [diagnostic/site-access-2026-10-10]
@@ -6,74 +6,13 @@ on:
 permissions:
   contents: read
 jobs:
-  repair:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 5
     steps:
-      - name: Download the exact published original
-        run: |
-          mkdir -p result
-          curl --fail --location --max-time 90 https://briqjournal.com/assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --output result/original-cilt-6-sayi-4-en.pdf
-      - name: Install PDF tools
+      - name: Install PDF reader
         run: python3 -m pip install --quiet pymupdf
-      - name: Remove only the placeholder and verify all pages
-        run: |
-          python3 - <<'PY'
-          import hashlib,json,re,datetime
-          from pathlib import Path
-          import fitz
-          root=Path("result"); root.mkdir(exist_ok=True)
-          src=root/"original-cilt-6-sayi-4-en.pdf"
-          out=root/"cilt-6-sayi-4-en.pdf"
-          expected="dd11482cdc2eb113335b45f7f24a037c14d103ba463fa8fcbf29e5260364fd35"
-          sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-          assert sha(src)==expected,"Published original changed; stop."
-          needle="BURADA KAPAK OLACAK"
-          doc=fitz.open(src)
-          target=b"[(BUR)-4.9 (AD)14 (A K)-10 (AP)84 (AK OLA)15 (C)-4 (AK)]TJ"
-          changes=[]
-          for xref in doc[0].get_contents():
-           data=doc.xref_stream(xref)
-           if target in data:
-            assert data.count(target)==1
-            assert target+b"\nET" in data
-            doc.update_stream(xref,data.replace(target,b"[]TJ"))
-            changes.append(xref)
-          assert len(changes)==1,"Unexpected target text operator; stop."
-          metadata=doc.metadata.copy()
-          metadata["title"]="BRIQ — Volume 6, Issue 4 — Autumn 2025"
-          metadata["modDate"]=datetime.datetime.now(datetime.timezone.utc).strftime("D:%Y%m%d%H%M%SZ")
-          doc.set_metadata(metadata)
-          doc.save(out,garbage=4,deflate=True)
-          doc.close()
-          before=fitz.open(src); after=fitz.open(out)
-          assert len(before)==len(after)==114
-          norm=lambda s:" ".join(s.split())
-          changed_text=[]; visual_differences=[]
-          for i,(a,b) in enumerate(zip(before,after)):
-           assert needle not in norm(b.get_text())
-           if norm(a.get_text().replace(needle,""))!=norm(b.get_text()):changed_text.append(i+1)
-           scale=2 if i==0 else 1
-           pa=a.get_pixmap(matrix=fitz.Matrix(scale,scale),alpha=False)
-           pb=b.get_pixmap(matrix=fitz.Matrix(scale,scale),alpha=False)
-           if (pa.width,pa.height,pa.samples)!=(pb.width,pb.height,pb.samples):visual_differences.append(i+1)
-          before[0].get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).save(root/"cover-before.png")
-          after[0].get_pixmap(matrix=fitz.Matrix(1.5,1.5),alpha=False).save(root/"cover-after.png")
-          report={"source_sha256":sha(src),"corrected_sha256":sha(out),"corrected_bytes":out.stat().st_size,"pages":len(after),"title":after.metadata["title"],"removed_phrase":needle,"removed_from_pdf_page":1,"changed_original_streams":changes,"unexpected_text_changes":changed_text,"pages_with_render_differences":visual_differences}
-          (root/"verification.json").write_text(json.dumps(report,ensure_ascii=False,indent=2))
-          print(json.dumps(report,ensure_ascii=False,indent=2))
-          assert not changed_text,"Other text would change; do not publish."
-          assert not visual_differences,"Visible appearance would change; do not publish."
-          
-          PY
-      - name: Preserve original, corrected PDF, and verification
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: verified-pdf-placeholder-repair-${{ github.run_attempt }}
-          path: result/
-          retention-days: 30
-      - name: Publish the verified PDF at the existing R2 key
+      - name: Verify the stored production PDF without further writes
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -82,33 +21,20 @@ jobs:
           R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
         run: |
-          set -euo pipefail
-          if [ "$R2_BUCKET" != "briq-pdf" ]; then echo "Configured R2 bucket does not match the live briq-pdf binding."; exit 1; fi
-          aws s3api get-object --bucket "$R2_BUCKET" --key assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --endpoint-url "$R2_ENDPOINT" existing-r2.pdf --query ContentLength --output text
           python3 - <<'PY'
-          import hashlib
-          from pathlib import Path
-          assert hashlib.sha256(Path("existing-r2.pdf").read_bytes()).hexdigest() == "dd11482cdc2eb113335b45f7f24a037c14d103ba463fa8fcbf29e5260364fd35", "Live R2 original has changed; stop."
-          PY
-          aws s3api put-object --bucket "$R2_BUCKET" --key assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --endpoint-url "$R2_ENDPOINT" --body result/cilt-6-sayi-4-en.pdf --content-type application/pdf --content-disposition inline --output json
-          aws s3api get-object --bucket "$R2_BUCKET" --key assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf --endpoint-url "$R2_ENDPOINT" uploaded-r2.pdf --query ContentLength --output text
-          python3 - <<'PY'
-          import hashlib,json,urllib.request
+          import hashlib,json,os,subprocess
           from pathlib import Path
           import fitz
-          expected=hashlib.sha256(Path("result/cilt-6-sayi-4-en.pdf").read_bytes()).hexdigest()
-          assert hashlib.sha256(Path("uploaded-r2.pdf").read_bytes()).hexdigest()==expected
-          url="https://briqjournal.com/assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf"
-          with urllib.request.urlopen(url,timeout=90) as response:
-              public=response.read()
-              headers={key:response.headers.get(key) for key in ("content-type","content-length","etag","cf-cache-status","age")}
-              status=response.status
-          Path("live.pdf").write_bytes(public)
-          digest=hashlib.sha256(public).hexdigest()
-          doc=fitz.open(stream=public,filetype="pdf")
+          key="assets/archive/pdfs/issues/cilt-6-sayi-4-en.pdf"
+          command=["aws","s3api","get-object","--bucket",os.environ["R2_BUCKET"],"--key",key,"--endpoint-url",os.environ["R2_ENDPOINT"],"verified-live-r2.pdf","--query","ContentLength","--output","text"]
+          subprocess.run(command,check=True)
+          p=Path("verified-live-r2.pdf")
+          doc=fitz.open(p)
           hits=[i+1 for i,page in enumerate(doc) if "BURADA KAPAK OLACAK" in " ".join(page.get_text().split())]
-          report={"http_status":status,"sha256":digest,"matches_uploaded_object":digest==expected,"title":doc.metadata["title"],"pages":len(doc),"placeholder_pages":hits,"headers":headers}
-          print("LIVE_PUBLIC_VERIFICATION="+json.dumps(report,ensure_ascii=False))
-          assert digest==expected, "Public URL still serves another version."
-          assert not hits and doc.metadata["title"]=="BRIQ — Volume 6, Issue 4 — Autumn 2025"
+          report={"sha256":hashlib.sha256(p.read_bytes()).hexdigest(),"bytes":p.stat().st_size,"pages":len(doc),"title":doc.metadata["title"],"placeholder_pages":hits}
+          print("R2_FINAL_VERIFICATION="+json.dumps(report,ensure_ascii=False))
+          assert report["sha256"]=="b0f75196a42d1d096e98a01209aea901f64298250c1478f676527a62e64a63a1"
+          assert len(doc)==114 and not hits
+          assert report["title"]=="BRIQ — Volume 6, Issue 4 — Autumn 2025"
+          
           PY
