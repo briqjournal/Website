@@ -101,3 +101,42 @@ jobs:
                       result=[{k:z.get(k) for k in ("id","name","status","paused","name_servers")} for z in result]
                   print("CF_API",path,json.dumps({"success":payload.get("success"),"result":result}),flush=True)
           PY
+
+      - name: Inspect public DNS delegation and domain registration
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures, json, urllib.request, urllib.parse, subprocess
+          dns_urls = []
+          for name, kinds in [("briqjournal.com",["A","AAAA","NS","SOA","DS"]),("www.briqjournal.com",["A"])]:
+              for kind in kinds:
+                  query=urllib.parse.urlencode({"name":name,"type":kind})
+                  dns_urls.append(("https://dns.google/resolve?"+query,{}))
+                  dns_urls.append(("https://cloudflare-dns.com/dns-query?"+query,{"Accept":"application/dns-json"}))
+          def get_dns(pair):
+              url, headers=pair
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=20) as response:
+                      return {"url":url,"data":json.load(response)}
+              except Exception as exc:
+                  return {"url":url,"error":str(exc)}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+              for result in pool.map(get_dns,dns_urls):
+                  print("PUBLIC_DNS",json.dumps(result),flush=True)
+          for url in ["https://rdap.verisign.com/com/v1/domain/briqjournal.com","https://rdap.org/domain/briqjournal.com"]:
+              try:
+                  with urllib.request.urlopen(url,timeout=20) as response:
+                      data=json.load(response)
+                  registrar=[]
+                  for entity in data.get("entities",[]):
+                      if "registrar" in entity.get("roles",[]):
+                          registrar.append({k:entity.get(k) for k in ("handle","roles","publicIds","links")})
+                  print("RDAP",json.dumps({"url":url,"ldhName":data.get("ldhName"),"status":data.get("status"),"events":data.get("events"),"nameservers":data.get("nameservers"),"registrar":registrar,"links":data.get("links")}),flush=True)
+              except Exception as exc:
+                  print("RDAP_ERROR",url,str(exc),flush=True)
+          try:
+              result=subprocess.run(["dig","+trace","briqjournal.com","NS","+time=3","+tries=1"],capture_output=True,text=True,timeout=40)
+              print("DNS_TRACE",result.stdout,result.stderr,flush=True)
+          except Exception as exc:
+              print("DNS_TRACE_ERROR",str(exc),flush=True)
+          PY
