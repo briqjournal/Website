@@ -1,0 +1,103 @@
+name: Diagnose BRIQ production access
+on:
+  push:
+    branches:
+      - diagnostic/site-access-2026-10-10
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+    steps:
+      - name: Inspect DNS, HTTPS, and available Cloudflare read access
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures, datetime, json, os, re, socket, ssl, urllib.request, urllib.error
+          print("UTC", datetime.datetime.now(datetime.timezone.utc).isoformat(), flush=True)
+          hosts = ["briqjournal.com", "www.briqjournal.com", "briq.briq.workers.dev"]
+          for host in hosts:
+              try:
+                  print("DNS", host, sorted({i[4][0] for i in socket.getaddrinfo(host, 443)}), flush=True)
+              except Exception as exc:
+                  print("DNS_ERROR", host, str(exc), flush=True)
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  return None
+          opener = urllib.request.build_opener(NoRedirect())
+          urls = [
+              "https://briqjournal.com/",
+              "https://briqjournal.com/tr/",
+              "https://briqjournal.com/en/",
+              "https://www.briqjournal.com/",
+              "https://briq.briq.workers.dev/",
+              "https://briq.briq.workers.dev/tr/",
+              "https://briqjournal.com/robots.txt",
+              "https://briqjournal.com/assets/briq-logo.png",
+              "https://briqjournal.com/assets/archive/pdfs/issues/cilt-7-sayi-4-en.pdf",
+              "https://briqjournal.com/cdn-cgi/trace",
+          ]
+          def probe(url):
+              req = urllib.request.Request(url, headers={"User-Agent":"BRIQ-production-diagnostics/1.0"})
+              try:
+                  response = opener.open(req, timeout=25)
+              except urllib.error.HTTPError as exc:
+                  response = exc
+              except Exception as exc:
+                  return {"url":url, "error":str(exc)}
+              with response:
+                  data = response.read(12000)
+                  headers = {k:v for k,v in response.headers.items() if k.lower() in ("server","content-type","location","cf-ray","cf-cache-status","retry-after","date","content-length")}
+                  result = {"url":url,"status":response.status,"headers":headers}
+                  if response.status >= 400:
+                      result["body"] = data.decode(errors="replace")[:10000]
+                  elif "cdn-cgi/trace" in url:
+                      result["trace"] = [line for line in data.decode(errors="replace").splitlines() if line.split("=")[0] in ("colo","loc","tls","http","warp")]
+                  elif "text/html" in response.headers.get("content-type",""):
+                      title = re.search(r"<title[^>]*>(.*?)</title>", data.decode(errors="replace"), re.S)
+                      result["title"] = title.group(1) if title else None
+                  return result
+          with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+              for result in pool.map(probe, urls):
+                  print("HTTP", json.dumps(result, ensure_ascii=False), flush=True)
+          for host in hosts[:2]:
+              try:
+                  with socket.create_connection((host,443),timeout=15) as conn:
+                      with ssl.create_default_context().wrap_socket(conn,server_hostname=host) as secure:
+                          cert = secure.getpeercert()
+                          print("TLS",host,json.dumps({k:cert.get(k) for k in ("subject","issuer","notBefore","notAfter","subjectAltName")}),flush=True)
+              except Exception as exc:
+                  print("TLS_ERROR",host,str(exc),flush=True)
+          token = os.environ.get("CLOUDFLARE_API_TOKEN") or os.environ.get("CF_API_TOKEN")
+          print("CLOUDFLARE_API_TOKEN_AVAILABLE",bool(token),flush=True)
+          if token:
+              account = "13d2593630d6f5bdd987477ddac638e2"
+              paths = [
+                  "/user/tokens/verify",
+                  "/accounts/"+account+"/workers/scripts/briq/deployments",
+                  "/accounts/"+account+"/workers/scripts/briq/settings",
+                  "/accounts/"+account+"/workers/domains",
+                  "/zones?name=briqjournal.com",
+              ]
+              for path in paths:
+                  req = urllib.request.Request("https://api.cloudflare.com/client/v4"+path,headers={"Authorization":"Bearer "+token,"Content-Type":"application/json"})
+                  try:
+                      with urllib.request.urlopen(req,timeout=25) as response:
+                          payload=json.load(response)
+                  except urllib.error.HTTPError as exc:
+                      print("CF_API_ERROR",path,exc.code,flush=True)
+                      continue
+                  except Exception as exc:
+                      print("CF_API_ERROR",path,type(exc).__name__,flush=True)
+                      continue
+                  result=payload.get("result")
+                  if path.endswith("/settings") and isinstance(result,dict):
+                      result={k:result.get(k) for k in ("compatibility_date","compatibility_flags","limits","observability","placement")}
+                  elif path.startswith("/zones") and isinstance(result,list):
+                      result=[{k:z.get(k) for k in ("id","name","status","paused","name_servers")} for z in result]
+                  print("CF_API",path,json.dumps({"success":payload.get("success"),"result":result}),flush=True)
+          PY
