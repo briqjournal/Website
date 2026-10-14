@@ -22,6 +22,8 @@ const turkishToEnglishPaths: Record<string, string> = {
   "/tr/dergi/danisma-kurulu": "/en/journal/advisory-board",
   "/tr/dergi/endeksler": "/en/journal/indexes",
   "/tr/iletisim": "/en/contact",
+  "/tr/gizlilik-politikasi": "/en/privacy-policy",
+  "/tr/cerez-politikasi": "/en/cookie-policy",
   "/tr/guncel-sayi": "/en/current-issue",
   "/tr/guncel-sayi/sunus": "/en/current-issue/editorial",
   "/tr/arsiv": "/en/archive",
@@ -266,6 +268,8 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
             <br />
             Üsküdar · İstanbul · Türkiye
           </p>
+          <a href={isEnglish ? "/en/privacy-policy" : "/tr/gizlilik-politikasi"}>{isEnglish ? "Privacy & Personal Data" : "Gizlilik ve Kişisel Veriler"}</a>
+          <a href={isEnglish ? "/en/cookie-policy" : "/tr/cerez-politikasi"}>{isEnglish ? "Cookie Policy" : "Çerez Politikası"}</a>
         </div>
       </div>
       <div className="site-shell footer-bottom">
