@@ -24,6 +24,12 @@ export function ContactForm({ locale = "tr" }: { locale?: "tr" | "en" }) {
         <label className="full"><span>{locale === "en" ? "Subject" : "Konu"}</span><input name="subject" required /></label>
         <label className="full"><span>{locale === "en" ? "Message" : "Mesaj"}</span><textarea name="message" rows={5} required /></label>
       </div>
+      <p className="form-note">
+        {locale === "en" ? "Information about how we use details you send:" : "İletişim için paylaştığınız verilerin kullanımına ilişkin bilgi:"}{" "}
+        <a href={locale === "en" ? "/en/privacy-policy" : "/tr/gizlilik-politikasi"}>
+          {locale === "en" ? "Privacy and Personal Data Protection" : "Gizlilik ve Kişisel Verilerin Korunması"}
+        </a>
+      </p>
       <button className="button button-dark" type="submit">{locale === "en" ? "Prepare email" : "E-postayı hazırla"} <span>→︎</span></button>
       {sent && <p className="form-note" role="status">{locale === "en" ? "Your email application has been opened with the recipient and message filled in." : "E-posta uygulamanız alıcı ve mesaj doldurulmuş olarak açıldı."}</p>}
     </form>
