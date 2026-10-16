@@ -1291,7 +1291,7 @@ export function generateStaticParams() {
   return [...paths].map((path) => ({ slug: path.split("/") }));
 }
 
-export async function generatePageMetadata({
+async function generatePageMetadata({
   params,
 }: {
   params: Promise<{ slug: string[] }>;
