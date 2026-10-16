@@ -1134,6 +1134,25 @@ function SearchPage() {
   return <><PageHero kicker="Arama" title="BRIQ’te Ara" intro="Makaleleri, yazarları, sayıları, kapak başlıklarını, DOI kayıtlarını ve makale çağrılarını tek alanda arayın." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} /></div></>;
 }
 
+async function HistoricalCallDetailTR({ slug, deadline, historicalKey }: { slug: string; deadline: string; historicalKey: string }) {
+  // Import the archival full texts only for historical routes, never for routine article renders.
+  const { historicCalls } = await import("../../historical-calls");
+  const historical = historicCalls.tr[historicalKey];
+  if (!historical) return null;
+  return (<>
+      <CallHero locale="tr" slug={slug} title={historical.title} deadline={deadline} active={false} />
+      <div className="site-shell call-detail-page">
+        <div className="reading-content">
+          <section><p><strong>Tarihî arşiv kaydı.</strong> Bu çağrının başvuru süresi sona ermiştir. Aşağıdaki metin ve başvuru koşulları yayımlandıkları döneme aittir; güncel başvuru kuralları olarak değerlendirilmemelidir.</p></section>
+          <section className="historical-call-original" dangerouslySetInnerHTML={{ __html: historical.html }} />
+          <section><p><a className="underlined-link" href={historical.source} target="_blank" rel="noopener noreferrer">Özgün sayfanın arşiv kopyası ↗︎</a></p></section>
+          <a className="underlined-link" href={canonicalPageHref("/tr/makale-cagrilari")}>Tüm çağrılara dön →︎</a>
+        </div>
+      </div>
+    </>
+  );
+}
+
 function CallDetail({ slug }: { slug: string }) {
   const active = calls.find((item) => item.url.endsWith(`/${slug}`));
   const past = pastCalls.find((item) => item.slug === slug);
@@ -1141,6 +1160,7 @@ function CallDetail({ slug }: { slug: string }) {
   if (!title) return null;
   const deadline = active?.deadline || past?.deadline || "";
   const copy = completeCallCopyTr[slug] || callEditorialCopy[slug];
+  if (past?.historicalKey) return <HistoricalCallDetailTR slug={slug} deadline={deadline} historicalKey={past.historicalKey} />;
   return (
     <>
       <CallHero locale="tr" slug={slug} title={title} deadline={deadline} deadlineLabel={active?.deadlineLabel} active={Boolean(active)} image={active?.image} />
@@ -1424,11 +1444,11 @@ async function generatePageMetadata({
     const past = pastCalls.find((item) => item.slug === callSlug);
     const title = active?.title || past?.title;
     if (title) {
-      const englishSlug = callSlug === "transatlantik-iliskilerin-yeniden-yapilanmasi"
+      const englishSlug = past?.slugEn || (callSlug === "transatlantik-iliskilerin-yeniden-yapilanmasi"
         ? "transatlantic-relations"
         : callSlug === "yapay-zeka-uretici-gucler-ortak-refah"
           ? "artificial-intelligence-productive-forces"
-          : callSlug === "kitap-incelemesi" ? "book-reviews" : callSlug;
+          : callSlug === "kitap-incelemesi" ? "book-reviews" : callSlug);
       return {
         title: `${title} | BRIQ`,
         description: active?.summary || `Geçmiş BRIQ makale çağrısı. Son tarih: ${past?.deadline}.`,

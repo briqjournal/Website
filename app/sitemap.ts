@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   for (const call of pastCalls) {
     paths.add(`tr/makale-cagrilari/${call.slug}`);
-    paths.add(`en/calls-for-papers/${call.slug}`);
+    paths.add(`en/calls-for-papers/${call.slugEn || call.slug}`);
   }
   return [...paths].map((path) => ({
     url: path ? `${base}/${path}/` : base,

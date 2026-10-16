@@ -1802,3 +1802,71 @@ test("bilingual HTML navigation links use final canonical page URLs without redi
   }
   assert.ok(checked >= 250, `expected broad bilingual internal-link coverage, got ${checked}`);
 });
+
+
+test("publishes sixteen faithful historical call routes with reciprocal bilingual metadata", async () => {
+  const pairs = [
+    [
+        "ataturk-devriminin-yuzuncu-yili",
+        "centenary-1923-turkish-revolution"
+    ],
+    [
+        "natonun-asya-pasifike-genislemesi",
+        "nato-expansion-asia-pacific"
+    ],
+    [
+        "enerjide-hidrojen-cagi",
+        "carbon-hydrogen-era"
+    ],
+    [
+        "turkiye-cin-diplomatik-iliskilerinin-50-yili",
+        "turkey-china-diplomatic-relations-50th-anniversary"
+    ],
+    [
+        "21-yuzyilda-ekolojik-medeniyet",
+        "ecological-civilization-21st-century"
+    ],
+    [
+        "kusak-yol-bilimsel-teknolojik-isbirligi",
+        "belt-road-scientific-technological-cooperation"
+    ],
+    [
+        "koronavirus-sonrasi-sosyoekonomik-sistemler",
+        "post-coronavirus-socioeconomic-systems"
+    ],
+    [
+        "gelismekte-olan-dunyada-uluslararasi-guvenlik",
+        "international-security-developing-world"
+    ]
+];
+  for (const [trSlug, enSlug] of pairs) {
+    const trPath = `/tr/makale-cagrilari/${trSlug}/`;
+    const enPath = `/en/calls-for-papers/${enSlug}/`;
+    const trHtml = await readFile(new URL(`../dist/client${trPath}index.html`, import.meta.url), "utf8");
+    const enHtml = await readFile(new URL(`../dist/client${enPath}index.html`, import.meta.url), "utf8");
+    for (const [path, html, peer] of [[trPath, trHtml, enPath], [enPath, enHtml, trPath]]) {
+      assert.match(html, /historical-call-original/, `published original text: ${path}`);
+      assert.match(html, /https:\/\/web\.archive\.org\/web\//, `source provenance: ${path}`);
+      assert.match(html, /<link rel="canonical" href="https:\/\/briqjournal\.com\//, `canonical: ${path}`);
+      assert.ok(html.includes(`https://briqjournal.com${peer}`), `reciprocal hreflang target for ${path}`);
+      assert.match(html, /hrefLang="tr-TR"|hreflang="tr-TR"/i, `TR hreflang: ${path}`);
+      assert.match(html, /hrefLang="en-US"|hreflang="en-US"/i, `EN hreflang: ${path}`);
+    }
+    assert.match(trHtml, /Tarihî arşiv kaydı/);
+    assert.match(enHtml, /Historical archive record/);
+    assert.doesNotMatch(trHtml, /dergipark-button/);
+    assert.doesNotMatch(enHtml, /dergipark-button/);
+  }
+});
+
+test("historic archive preserves original publication-period rules and differing locale deadlines", async () => {
+  const trHydrogen = await readFile(new URL("../dist/client/tr/makale-cagrilari/enerjide-hidrojen-cagi/index.html", import.meta.url), "utf8");
+  const enHydrogen = await readFile(new URL("../dist/client/en/calls-for-papers/carbon-hydrogen-era/index.html", import.meta.url), "utf8");
+  const trNato = await readFile(new URL("../dist/client/tr/makale-cagrilari/natonun-asya-pasifike-genislemesi/index.html", import.meta.url), "utf8");
+  const enNato = await readFile(new URL("../dist/client/en/calls-for-papers/nato-expansion-asia-pacific/index.html", import.meta.url), "utf8");
+  assert.match(trHydrogen, /Sodyum Bor Hidrür/);
+  assert.match(enHydrogen, /sodium boron hydride/i);
+  assert.match(trHydrogen, /6th edition/);
+  assert.match(trNato, /1 Mart 2023/);
+  assert.match(enNato, /1 April 2023/);
+});
