@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../seo-links";
 import { authorProfileHref, boardAffiliation, type Locale } from "../authors";
 
 type ImprintGroup = {
@@ -24,12 +25,12 @@ export function ImprintRoster({
               <p>{isEnglish ? "Journal structure" : "Kurumsal yapı"}</p>
               <h2>{group.title}</h2>
             </div>
-            <a href={group.href}>{isEnglish ? "Profile cards" : "Profil kartları"} →︎</a>
+            <a href={canonicalPageHref(group.href)}>{isEnglish ? "Profile cards" : "Profil kartları"} →︎</a>
           </div>
           <ul>
             {group.people.map(([name, affiliation]) => (
               <li key={`${name}-${affiliation}`}>
-                <a href={authorProfileHref(name, locale)}>{name}</a>
+                <a href={canonicalPageHref(authorProfileHref(name, locale))}>{name}</a>
                 <span>{boardAffiliation(affiliation, locale)}</span>
               </li>
             ))}

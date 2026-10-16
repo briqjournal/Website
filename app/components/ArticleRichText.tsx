@@ -1,4 +1,5 @@
 "use client";
+import { canonicalPageHref } from "../seo-links";
 
 import { Fragment, type MouseEvent, type ReactNode } from "react";
 import { articleFigureDisplayCaption, articleFigureKind, articleFigureLabel, type ArticleFigure } from "./ArticleFigures";
@@ -145,7 +146,7 @@ function citationAnchor(reference: FullTextReference, label: string, key: string
       id={anchorId}
       className="inline-citation"
       data-return-target={reference.id}
-      href={`#${reference.id}`}
+      href={canonicalPageHref(`#${reference.id}`)}
       onClick={(event) => revealTarget(event, reference.id)}
       key={key}
     >
@@ -206,7 +207,7 @@ function renderText(text: string, references: FullTextReference[], notes: FullTe
           className="inline-footnote"
           data-tooltip={notes.find((note) => note.id === match[3])?.text}
           data-return-target={`footnote-${match[3]}`}
-          href={`#footnote-${match[3]}`}
+          href={canonicalPageHref(`#footnote-${match[3]}`)}
           onClick={(event) => revealTarget(event, `footnote-${match[3]}`)}
           key={`${match.index}-note-${match[3]}`}
         >

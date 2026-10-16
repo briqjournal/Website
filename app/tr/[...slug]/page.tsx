@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../../seo-links";
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -73,7 +74,7 @@ function PageHero({
       <div className="page-hero-rule" />
       <div className="site-shell page-hero-inner">
         <div className="page-breadcrumb">
-          <a href="/tr">Ana Sayfa</a>
+          <a href={canonicalPageHref("/tr")}>Ana Sayfa</a>
           <span>/</span>
           <span>{breadcrumbLabel || kicker || title}</span>
         </div>
@@ -93,7 +94,7 @@ function LinkCards({
   return (
     <div className="link-card-grid">
       {items.map((item) => (
-        <a className="link-card" href={item.href} key={item.href}>
+        <a className="link-card" href={canonicalPageHref(item.href)} key={item.href}>
           <span>{item.number}</span>
           <h2>{item.title}</h2>
           <p>{item.text}</p>
@@ -314,10 +315,10 @@ function AimScope() {
       <div className="site-shell reading-layout">
         <aside className="reading-nav">
           <b>Bu sayfada</b>
-          <a href="#amac">Amaç</a>
-          <a href="#kapsam">Kapsam</a>
-          <a href="#yonelim">Yayın yaklaşımı</a>
-          <a href="#diller">Yayın dilleri</a>
+          <a href={canonicalPageHref("#amac")}>Amaç</a>
+          <a href={canonicalPageHref("#kapsam")}>Kapsam</a>
+          <a href={canonicalPageHref("#yonelim")}>Yayın yaklaşımı</a>
+          <a href={canonicalPageHref("#diller")}>Yayın dilleri</a>
         </aside>
         <div className="reading-content">
           <section id="amac">
@@ -428,7 +429,7 @@ function Publisher() {
       <div className="site-shell page-section">
         <div className="publisher-card">
           <span>Yayıncı</span>
-          <h2><a href="https://www.cinisder.com/tr">Çin İş Geliştirme ve Dostluk Derneği ↗︎</a></h2>
+          <h2><a href={canonicalPageHref("https://www.cinisder.com/tr")}>Çin İş Geliştirme ve Dostluk Derneği ↗︎</a></h2>
           <p>Türk-Çin İş Der · İstanbul, Türkiye</p>
           <dl>
             <div><dt>Yayın türü</dt><dd>Süreli bilimsel dergi</dd></div>
@@ -492,7 +493,7 @@ function Contact() {
       <div className="site-shell page-section contact-grid contact-grid-compact">
         <article>
           <span>E-posta</span>
-          <h2><a href="mailto:briq@briqjournal.com">briq@briqjournal.com</a></h2>
+          <h2><a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a></h2>
           <p>Başvuru dosyaları DergiPark üzerinden gönderilmelidir.</p>
         </article>
         <article>
@@ -503,12 +504,12 @@ function Contact() {
         <article>
           <span>Dergi iletişim sorumlusu</span>
           <h2>İbrahim Fikret Akfırat</h2>
-          <p><a href="mailto:fikretakfirat@briqjournal.com">fikretakfirat@briqjournal.com</a></p>
+          <p><a href={canonicalPageHref("mailto:fikretakfirat@briqjournal.com")}>fikretakfirat@briqjournal.com</a></p>
         </article>
         <article>
           <span>Makale gönderimi</span>
           <h2 className="dergipark-heading"><DergiParkLogo /></h2>
-          <a className="underlined-link" href="https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new">Gönderim ekranını aç ↗︎</a>
+          <a className="underlined-link" href={canonicalPageHref("https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new")}>Gönderim ekranını aç ↗︎</a>
         </article>
       </div>
       <div className="site-shell contact-form-wrap contact-form-wrap-compact"><ContactForm /></div>
@@ -628,7 +629,7 @@ function EthicsPolicy() {
             subsections: [
               { id: "editorlerin-sorumluluklari", title: "Editörlerin Görev ve Sorumlulukları", content: <><p>Kuşak ve Yol Girişimi Dergisi bünyesindeki görevli editörler ve editör yardımcıları, her türlü önyargıdan uzak, objektif ve tarafsız bir şekilde görevlerini yerine getirmekle yükümlüdür.</p><p>Kuşak ve Yol Girişimi Dergisi bünyesindeki görevli editörler ve editör yardımcıları, görevlerinin gerektirdiği ölçüde gizlilik içerisinde hareket etmelidir.</p><p>Kuşak ve Yol Girişimi Dergisi bünyesinde görevli editörler ve editör yardımcıları, yayın sürecine ilişkin her türlü etkinlikte iş birliği içerisinde hareket etmelidir. Dergi bünyesinde adil görev dağılımı yapılması iş birliğinin özünü oluşturmaktadır.</p></> },
               { id: "eser-sahiplerinin-sorumluluklari", title: "Eser Sahiplerinin Etik Sorumlulukları", content: <><p>Eserlerinin Kuşak ve Yol Girişimi Dergisi’nde yayımlanmasını isteyen eser sahipleri, 5846 sayılı Fikir ve Sanat Eserleri Kanunu hükümlerine, YÖK tarafından Bilimsel Araştırma ve Yayın Etiği Yönergesi’nde belirlenen esaslara, COPE tarafından ortaya konulan standartlara ve Kuşak ve Yol Girişimi Dergisi tarafından benimsenen diğer esaslara ve standartlara uymakla yükümlüdür.</p><p>Eser sahipleri, yayımlanması için Kuşak ve Yol Girişimi Dergisi’ne gönderdikleri eserlerini, ilgili esaslara ve standartlara uygun olarak hazırladıklarını taahhüt etmiş kabul edilirler.</p></> },
-              { id: "hakemlerin-sorumluluklari", title: "Hakemlerin Etik Sorumlulukları", content: <><p>Hakemler, Dergi veya Derginin yetkili kıldığı birimler tarafından kendilerine gönderilen eserlerin eser incelemesini dikkatli bir şekilde yerine getirmelidir; eser değerlendirmesini uzmanlık alanlarına uygun olarak, tarafsız ve adil bir şekilde yapmalıdır.</p><p>Hakemler, değerlendirdikleri eserlerde akademik ilke ve etik değerlere, ulusal veya uluslararası esas veya standartlara aykırılık tespit ettiği takdirde, Dergi editör kurulunu derhal bilgilendirmekle yükümlüdür.</p><p>Hakemler, değerlendirmeyi yapıcı ve nazik bir dille yapmalıdır. Düşmanlık, iftira ve hakaret içeren aşağılayıcı kişisel yorumlar yapılmamalıdır.</p><a className="editorial-next-link" href="/tr/yazarlar/telif-hakki-sartlari-ve-lisans">Telif Hakkı Şartları ve Lisans →︎</a></> },
+              { id: "hakemlerin-sorumluluklari", title: "Hakemlerin Etik Sorumlulukları", content: <><p>Hakemler, Dergi veya Derginin yetkili kıldığı birimler tarafından kendilerine gönderilen eserlerin eser incelemesini dikkatli bir şekilde yerine getirmelidir; eser değerlendirmesini uzmanlık alanlarına uygun olarak, tarafsız ve adil bir şekilde yapmalıdır.</p><p>Hakemler, değerlendirdikleri eserlerde akademik ilke ve etik değerlere, ulusal veya uluslararası esas veya standartlara aykırılık tespit ettiği takdirde, Dergi editör kurulunu derhal bilgilendirmekle yükümlüdür.</p><p>Hakemler, değerlendirmeyi yapıcı ve nazik bir dille yapmalıdır. Düşmanlık, iftira ve hakaret içeren aşağılayıcı kişisel yorumlar yapılmamalıdır.</p><a className="editorial-next-link" href={canonicalPageHref("/tr/yazarlar/telif-hakki-sartlari-ve-lisans")}>Telif Hakkı Şartları ve Lisans →︎</a></> },
             ],
           },
         ]}
@@ -675,7 +676,7 @@ function AccessPolicy() {
             id: "yazar-onayi-ve-lisans",
             title: "Yazar onayı ve lisans",
             subsections: [
-              { id: "uygulama-ve-imzalar", title: "Uygulama ve imzalar", content: <><p>• BRIQ, Makalenin İlgili Yazarına Makalenin elektronik bir kopyasını sağlayacaktır.</p><p>Eğer Makale için birden fazla telif hakkı sahipliği mevcutsa, her bir Yazar bu sözleşmenin basılı bir kopyasını imzalamalıdır.</p><p>Sorularınız veya bu Anlaşmanın basılı bir kopyasını almak için lütfen <a href="mailto:briq@briqjournal.com">briq@briqjournal.com</a> ile iletişime geçiniz.</p><p>Çalışmanın telif hakkı Yazarlar&apos;a aittir. Yazar, Makaleye ilişkin telif hakkının Yazarlar’a ait olduğunu beyan ve taahhüt eder.</p><p>İmzacı Yazar, bu Anlaşmayı tüm Yazarlar adına imzalayarak her bir Yazardan bu Anlaşmayı kendi adına imzalamak ve burada belirtilen hakları devretmek için yazılı izin aldığını beyan ve taahhüt etmiş olur. Yazarlar, her biri tarafından imzalanması ve doğrudan Yayın Ofisine geri gönderilmesine ilişkin bu Anlaşmanın bir sürümü için Yayın Ofisi ile iletişime geçerek her bir Yazarın bu Anlaşmanın ayrı bir kopyasını imzalama seçeneğine sahip olduğunu anlarlar.</p></> },
+              { id: "uygulama-ve-imzalar", title: "Uygulama ve imzalar", content: <><p>• BRIQ, Makalenin İlgili Yazarına Makalenin elektronik bir kopyasını sağlayacaktır.</p><p>Eğer Makale için birden fazla telif hakkı sahipliği mevcutsa, her bir Yazar bu sözleşmenin basılı bir kopyasını imzalamalıdır.</p><p>Sorularınız veya bu Anlaşmanın basılı bir kopyasını almak için lütfen <a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a> ile iletişime geçiniz.</p><p>Çalışmanın telif hakkı Yazarlar&apos;a aittir. Yazar, Makaleye ilişkin telif hakkının Yazarlar’a ait olduğunu beyan ve taahhüt eder.</p><p>İmzacı Yazar, bu Anlaşmayı tüm Yazarlar adına imzalayarak her bir Yazardan bu Anlaşmayı kendi adına imzalamak ve burada belirtilen hakları devretmek için yazılı izin aldığını beyan ve taahhüt etmiş olur. Yazarlar, her biri tarafından imzalanması ve doğrudan Yayın Ofisine geri gönderilmesine ilişkin bu Anlaşmanın bir sürümü için Yayın Ofisi ile iletişime geçerek her bir Yazarın bu Anlaşmanın ayrı bir kopyasını imzalama seçeneğine sahip olduğunu anlarlar.</p></> },
               { id: "cc-by-lisansi", title: "Creative Commons Atıf 4.0", content: <p>BRIQ, yalnızca uygun atıf verilerek metinlerin kopyalanmasına, indirilmesine, yeniden dağıtımına ve paylaşılmasına izin veren Creative Commons Atıf 4.0 Uluslararası Lisansı ( CC BY 4.0 ) kullanır.</p> },
             ],
           },
@@ -756,7 +757,7 @@ function AuthorsHub() {
             <h2 className="dergipark-heading"><DergiParkLogo /></h2>
             <p>Türkçe ve İngilizce gönderiler kabul edilir. Başvuru ve yayın ücretsizdir.</p>
           </div>
-          <a className="button button-dark" href="https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new">Yeni başvuru ↗︎</a>
+          <a className="button button-dark" href={canonicalPageHref("https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new")}>Yeni başvuru ↗︎</a>
         </div>
         <LinkCards
           items={[
@@ -816,9 +817,9 @@ function WritingRules() {
             id: "gonderim-kosullari",
             title: "Gönderim koşulları",
             subsections: [
-              { id: "dil-dosya-ozgunluk", title: "Dil, dosya ve özgünlük", content: <><p>Gönderiler İngilizce ya da Türkçe kabul edilir. Tüm gönderiler kısa bir biyografi (en fazla 150 kelime) içermeli ve <a href="mailto:briq@briqjournal.com">briq@briqjournal.com</a> adresine Microsoft Word dosya eki olarak gönderilmelidir. Daha önceden yayımlanmış olan ya da başka dergiler tarafından incelenmekte olan makaleler ve diğer içerikler yayımlama için dikkate alınmayacaktır.</p><p>BRIQ, American Psychological Association (APA, 7th edition, <a href="https://apastyle.apa.org/">www.apastyle.org</a>) yöntemini izler ve İngilizce makalelerde Amerikan İngilizcesi yazımını kullanır.</p></> },
+              { id: "dil-dosya-ozgunluk", title: "Dil, dosya ve özgünlük", content: <><p>Gönderiler İngilizce ya da Türkçe kabul edilir. Tüm gönderiler kısa bir biyografi (en fazla 150 kelime) içermeli ve <a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a> adresine Microsoft Word dosya eki olarak gönderilmelidir. Daha önceden yayımlanmış olan ya da başka dergiler tarafından incelenmekte olan makaleler ve diğer içerikler yayımlama için dikkate alınmayacaktır.</p><p>BRIQ, American Psychological Association (APA, 7th edition, <a href={canonicalPageHref("https://apastyle.apa.org/")}>www.apastyle.org</a>) yöntemini izler ve İngilizce makalelerde Amerikan İngilizcesi yazımını kullanır.</p></> },
               { id: "akademik-makaleler", title: "Akademik makaleler", content: <p>BRIQ, tüm “akademik makaleler” için çift kör hakem değerlendirme sürecini uygular. Akademik makaleler özetler, notlar, referanslar ve diğer tüm içerikler dahil 5000 ila 9000 kelime aralığında olmalıdır. Bir özet (en fazla 200 kelime) ve 5 anahtar kelime içeren tamamen isimsizleştirilmiş yazının ve tam yazar bilgisinin dahil olduğu bir kapak sayfası da dergiye ulaştırılmalıdır.</p> },
-              { id: "diger-icerikler", title: "Diğer içerik türleri", content: <><p>Kitap incelemeleri 1000 kelimeden uzun olmamalıdır. İki ya da daha fazla çalışmayı içeren araştırma/inceleme yazıları en fazla 3000 kelime olabilir.</p><p>Haber gelişmelerinin kısa analizini içeren haber bültenleri, 1500 kelimeden uzun olmamalıdır. Rapor ve analizi birleştiren ana makaleler en fazla 3500 kelime olabilir.</p><p>Röportaj önerileri için lütfen Yayın Kurulu ile iletişime geçiniz.</p><a className="editorial-next-link" href="/tr/yazarlar/yayin-degerlendirme-sureci">Yayın Değerlendirme Süreci →︎</a></> },
+              { id: "diger-icerikler", title: "Diğer içerik türleri", content: <><p>Kitap incelemeleri 1000 kelimeden uzun olmamalıdır. İki ya da daha fazla çalışmayı içeren araştırma/inceleme yazıları en fazla 3000 kelime olabilir.</p><p>Haber gelişmelerinin kısa analizini içeren haber bültenleri, 1500 kelimeden uzun olmamalıdır. Rapor ve analizi birleştiren ana makaleler en fazla 3500 kelime olabilir.</p><p>Röportaj önerileri için lütfen Yayın Kurulu ile iletişime geçiniz.</p><a className="editorial-next-link" href={canonicalPageHref("/tr/yazarlar/yayin-degerlendirme-sureci")}>Yayın Değerlendirme Süreci →︎</a></> },
             ],
           },
         ]}
@@ -895,7 +896,7 @@ function ReviewFlow() {
             id: "yayina-hazirlik",
             title: "Yayına hazırlık",
             subsections: [
-              { id: "ceviri-ve-son-onay", title: "Çeviri ve son onay", content: <><p>h)Gözden geçirilen makale çeviriye yollanır. Çeviriden gelen metin, Yazıişleri Müdürü’nün görevlendireceği editör tarafından kontrol edilir ve son şekli verilerek Yazıişleri’ne ulaştırılır.</p><p>i) Çeviri metinle birlikte son şekli verilen gönderiler ilgili yazarın onayına sunulur ve Telif Hakkı Şartlarını kabul etmesi istenir. Bu aşamada, ilgili yazar yalnızca sınırlı değişiklikler yapabilir. Yazarların değişiklik önerileri Yazıişleri’nin uygun bulduğu ölçüde metne yansıtılır.</p><p>j) Yazar tarafından onaylanan gönderilerin son hali Yazıişleri’nin kontrolünden geçerek baskıya gönderilir.</p><a className="editorial-next-link" href="/tr/yazarlar/yayin-etigi">Yayın Etiği →︎</a></> },
+              { id: "ceviri-ve-son-onay", title: "Çeviri ve son onay", content: <><p>h)Gözden geçirilen makale çeviriye yollanır. Çeviriden gelen metin, Yazıişleri Müdürü’nün görevlendireceği editör tarafından kontrol edilir ve son şekli verilerek Yazıişleri’ne ulaştırılır.</p><p>i) Çeviri metinle birlikte son şekli verilen gönderiler ilgili yazarın onayına sunulur ve Telif Hakkı Şartlarını kabul etmesi istenir. Bu aşamada, ilgili yazar yalnızca sınırlı değişiklikler yapabilir. Yazarların değişiklik önerileri Yazıişleri’nin uygun bulduğu ölçüde metne yansıtılır.</p><p>j) Yazar tarafından onaylanan gönderilerin son hali Yazıişleri’nin kontrolünden geçerek baskıya gönderilir.</p><a className="editorial-next-link" href={canonicalPageHref("/tr/yazarlar/yayin-etigi")}>Yayın Etiği →︎</a></> },
             ],
           },
         ]}
@@ -912,7 +913,7 @@ function Archive() {
         breadcrumbLabel="Arşiv"
       />
       <div className="site-shell page-section">
-        <div className="archive-tools"><p><b>{archiveIssues.length} sayı</b> · 7 cilt · 2019–2026</p><a className="underlined-link" href="/tr/guncel-sayi">Güncel sayıya git →︎</a></div>
+        <div className="archive-tools"><p><b>{archiveIssues.length} sayı</b> · 7 cilt · 2019–2026</p><a className="underlined-link" href={canonicalPageHref("/tr/guncel-sayi")}>Güncel sayıya git →︎</a></div>
         <ArchiveExplorer issues={archiveIssueListings} />
       </div>
     </div>
@@ -941,7 +942,7 @@ function AuthorProfilePage({ id }: { id: string }) {
     <>
       <section className="author-page-hero">
         <div className="site-shell author-page-hero-inner">
-          <div className="page-breadcrumb"><a href="/tr">Ana Sayfa</a><span>/</span><span>Yazar</span></div>
+          <div className="page-breadcrumb"><a href={canonicalPageHref("/tr")}>Ana Sayfa</a><span>/</span><span>Yazar</span></div>
           <div className="author-page-identity">
             {profile.photo ? <img className="author-page-photo" src={profile.photo} alt={`${profile.name} portresi`} loading="lazy" decoding="async" /> : <span className="author-page-monogram" aria-hidden="true">{profile.name.slice(0, 1)}</span>}
             <div><p className="section-kicker">{profile.rolesTr.length ? profile.rolesTr.join(" · ") : "Yazar"}</p><h1>{profile.name}</h1><p>{profile.affiliationTr}</p></div>
@@ -973,7 +974,7 @@ function AuthorProfilePage({ id }: { id: string }) {
             <div><p className="section-kicker">Arşiv</p><h2>BRIQ’te yayımlanan çalışmalar</h2></div>
             <div className="author-work-list">
               {profile.articles.map((article) => (
-                <a href={`/tr/makaleler/${article.slug}`} key={`${article.volume}-${article.issue}-${article.slug}`}>
+                <a href={canonicalPageHref(`/tr/makaleler/${article.slug}`)} key={`${article.volume}-${article.issue}-${article.slug}`}>
                   <span className="author-work-issue" style={{ backgroundColor: issueAccent(article.volume, article.issue) }}>Cilt {article.volume} · Sayı {article.issue} · {article.year}</span>
                   <h3>{article.title_tr}</h3>
                   <p>{article.pages ? `ss. ${article.pages}` : article.season_tr}{article.doi ? ` · DOI: ${article.doi}` : ""}</p>
@@ -1004,7 +1005,7 @@ function CallsPage() {
         <h2 className="page-section-title" id="aktif">Aktif çağrılar</h2>
         <div className="calls-page-grid">
           {calls.map((call) => (
-            <a href={call.url} key={call.title}>
+            <a href={canonicalPageHref(call.url)} key={call.title}>
               {call.image ? <Image src={call.image} alt="" width={400} height={230} loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}
               <div>
                 <span>{call.status} · {call.deadlineLabel}: {call.deadline}</span>
@@ -1031,7 +1032,7 @@ function Reports() {
       />
       <div className="site-shell page-section report-list">
         {annualReports.map((report) => (
-          <a href={`/tr/yillik-raporlar/${report.number}`} key={report.number}>
+          <a href={canonicalPageHref(`/tr/yillik-raporlar/${report.number}`)} key={report.number}>
             <span>{String(report.number).padStart(2, "0")}</span>
             <div><small>{report.dateTr}</small><h2>BRIQ {report.titleTr}</h2></div>
             <b>PDF ↗︎</b>
@@ -1164,20 +1165,20 @@ function CallDetail({ slug }: { slug: string }) {
             <section className="call-guidelines-section">
               <h2>Yazım Kuralları</h2>
               <ul>{copy.guidelines.map((item) => <li key={item}>{item}</li>)}</ul>
-              {copy.guidelineHref && <a className="underlined-link" href={copy.guidelineHref}>Ayrıntılı yazım kurallarını incele →︎</a>}
+              {copy.guidelineHref && <a className="underlined-link" href={canonicalPageHref(copy.guidelineHref)}>Ayrıntılı yazım kurallarını incele →︎</a>}
             </section>
           ) : copy?.note ? <section><h2>Yazım ve başvuru</h2><p>{copy.note}</p></section> : null}
           {copy?.deadline && <section className="call-important-date"><h2>Önemli Tarihler</h2><p>{copy.deadline}</p></section>}
           {copy?.contact && (
             <section className="call-contact-section">
               <h2>Başvuru ve İletişim</h2>
-              <p><a className="inline-link" href={`mailto:${copy.contact}`}>{copy.contact}</a></p>
-              {active && <a className="button button-dark dergipark-button" href="https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new"><DergiParkLogo suffix="’tan gönder" /><span>↗︎</span></a>}
+              <p><a className="inline-link" href={canonicalPageHref(`mailto:${copy.contact}`)}>{copy.contact}</a></p>
+              {active && <a className="button button-dark dergipark-button" href={canonicalPageHref("https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new")}><DergiParkLogo suffix="’tan gönder" /><span>↗︎</span></a>}
             </section>
           )}
-          {past && <section><h2>Çağrı sonucu</h2><p>{past.issueHref ? <>Bu çağrı sonucunda yayımlanan sayı: <a className="inline-link" href={past.issueHref}>{past.issue}</a>.</> : past.issue}</p></section>}
-          {active && !copy?.contact && <section><h2>Gönderim</h2><p>Çalışmalar Türkçe veya İngilizce hazırlanabilir. Başvuru öncesinde yazım kuralları ve gönderim kontrol listesi incelenmelidir.</p><a className="button button-dark dergipark-button" href="https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new"><DergiParkLogo suffix="’tan gönder" /><span>↗︎</span></a></section>}
-          <a className="underlined-link" href="/tr/makale-cagrilari">Tüm çağrılara dön →︎</a>
+          {past && <section><h2>Çağrı sonucu</h2><p>{past.issueHref ? <>Bu çağrı sonucunda yayımlanan sayı: <a className="inline-link" href={canonicalPageHref(past.issueHref)}>{past.issue}</a>.</> : past.issue}</p></section>}
+          {active && !copy?.contact && <section><h2>Gönderim</h2><p>Çalışmalar Türkçe veya İngilizce hazırlanabilir. Başvuru öncesinde yazım kuralları ve gönderim kontrol listesi incelenmelidir.</p><a className="button button-dark dergipark-button" href={canonicalPageHref("https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new")}><DergiParkLogo suffix="’tan gönder" /><span>↗︎</span></a></section>}
+          <a className="underlined-link" href={canonicalPageHref("/tr/makale-cagrilari")}>Tüm çağrılara dön →︎</a>
         </div>
       </div>
     </>
@@ -1190,7 +1191,7 @@ function ReportDetail({ number }: { number: string }) {
   return (
     <>
       <PageHero kicker="Yıllık Rapor" title={`BRIQ ${report.titleTr}`} intro={`${report.dateTr} tarihli yayın faaliyeti, uluslararası erişim ve kurumsal gelişim kaydı.`} />
-      <div className="site-shell reading-layout"><aside className="issue-record-number"><span>RAPOR</span><b>{String(report.number).padStart(2, "0")}</b></aside><div className="reading-content"><section><h2>Doğrulanmış rapor kaydı</h2><p>Türkçe ve İngilizce özgün rapor dosyaları BRIQ’in kaynak arşivindeki kayıtlarla eşleştirilmiş ve site içi okuyucuya bağlanmıştır.</p></section><a className="underlined-link" href="/tr/yillik-raporlar">Tüm raporlara dön →︎</a></div></div>
+      <div className="site-shell reading-layout"><aside className="issue-record-number"><span>RAPOR</span><b>{String(report.number).padStart(2, "0")}</b></aside><div className="reading-content"><section><h2>Doğrulanmış rapor kaydı</h2><p>Türkçe ve İngilizce özgün rapor dosyaları BRIQ’in kaynak arşivindeki kayıtlarla eşleştirilmiş ve site içi okuyucuya bağlanmıştır.</p></section><a className="underlined-link" href={canonicalPageHref("/tr/yillik-raporlar")}>Tüm raporlara dön →︎</a></div></div>
       <div className="site-shell issue-pdf-section">
         <PdfViewer title={`BRIQ ${report.titleTr}`} turkishSrc={report.pdfTrLocal} englishSrc={report.pdfEnLocal} />
       </div>

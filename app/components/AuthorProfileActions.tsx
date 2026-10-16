@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../seo-links";
 import { AuthorUpdateForm } from "./AuthorUpdateForm";
 
 type ActionIcon = "email" | "scholar" | "orcid" | "institution";
@@ -27,10 +28,10 @@ export function AuthorProfileActions({
   const isEnglish = locale === "en";
   return (
     <div className="author-page-links" aria-label={isEnglish ? "Author external links" : "Yazarın dış bağlantıları"}>
-      {email && <a href={`mailto:${email}`}><ProfileActionIcon type="email"/><span>{isEnglish ? "Email" : "E-posta"}</span></a>}
-      <a href={scholarUrl} target="_blank" rel="noreferrer"><ProfileActionIcon type="scholar"/><span>Google Scholar</span></a>
-      {orcids.map((orcid) => <a href={`https://orcid.org/${orcid}`} target="_blank" rel="noreferrer" key={orcid}><ProfileActionIcon type="orcid"/><span>ORCID</span></a>)}
-      {institutionUrl && <a href={institutionUrl} target="_blank" rel="noreferrer"><ProfileActionIcon type="institution"/><span>{isEnglish ? "Institution" : "Üniversite"}</span></a>}
+      {email && <a href={canonicalPageHref(`mailto:${email}`)}><ProfileActionIcon type="email"/><span>{isEnglish ? "Email" : "E-posta"}</span></a>}
+      <a href={canonicalPageHref(scholarUrl)} target="_blank" rel="noreferrer"><ProfileActionIcon type="scholar"/><span>Google Scholar</span></a>
+      {orcids.map((orcid) => <a href={canonicalPageHref(`https://orcid.org/${orcid}`)} target="_blank" rel="noreferrer" key={orcid}><ProfileActionIcon type="orcid"/><span>ORCID</span></a>)}
+      {institutionUrl && <a href={canonicalPageHref(institutionUrl)} target="_blank" rel="noreferrer"><ProfileActionIcon type="institution"/><span>{isEnglish ? "Institution" : "Üniversite"}</span></a>}
       <AuthorUpdateForm authorName={authorName} locale={locale} />
     </div>
   );

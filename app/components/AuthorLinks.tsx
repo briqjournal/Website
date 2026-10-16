@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../seo-links";
 import { Fragment } from "react";
 import {
   authorEmail,
@@ -30,9 +31,9 @@ export function AuthorLinks({ byline, locale }: { byline: string; locale: Locale
             {index > 0 && <span className="author-separator" aria-hidden="true"> · </span>}
             {isPersonByline(name) ? (
               <span className="author-link-item">
-                <a className="author-profile-link" href={profileHref}>{name}</a>
+                <a className="author-profile-link" href={canonicalPageHref(profileHref)}>{name}</a>
                 {email && (
-                  <a className="author-mail-link" href={`mailto:${email}`} aria-label={locale === "tr" ? `${name} adlı yazara e-posta gönder` : `Email ${name}`} title={email}>
+                  <a className="author-mail-link" href={canonicalPageHref(`mailto:${email}`)} aria-label={locale === "tr" ? `${name} adlı yazara e-posta gönder` : `Email ${name}`} title={email}>
                     <MailIcon />
                   </a>
                 )}

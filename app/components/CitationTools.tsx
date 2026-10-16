@@ -1,4 +1,5 @@
 "use client";
+import { canonicalPageHref } from "../seo-links";
 
 import { useState } from "react";
 import { ReferenceText } from "./ReferenceText";
@@ -25,9 +26,9 @@ export function CitationTools({ citation, slug, locale }: { citation: string; sl
         </button>
         <div className="citation-export-group">
           <span>{locale === "tr" ? "Dışa aktar" : "Export"}</span>
-          <a href={`/citations/${slug}.ris?locale=${locale}`}><span>RIS</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14"/></svg></a>
-          <a href={`/citations/${slug}.bib?locale=${locale}`}><span>BibTeX</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14"/></svg></a>
-          <a href={`/citations/${slug}.enw?locale=${locale}`}><span>EndNote</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14"/></svg></a>
+          <a href={canonicalPageHref(`/citations/${slug}.ris?locale=${locale}`)}><span>RIS</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14"/></svg></a>
+          <a href={canonicalPageHref(`/citations/${slug}.bib?locale=${locale}`)}><span>BibTeX</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14"/></svg></a>
+          <a href={canonicalPageHref(`/citations/${slug}.enw?locale=${locale}`)}><span>EndNote</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14"/></svg></a>
         </div>
       </div>
     </div>

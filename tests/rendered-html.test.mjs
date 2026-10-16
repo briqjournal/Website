@@ -1780,3 +1780,25 @@ test("dynamic-record existence guards preserve published pages in both locales",
     assert.equal(response.status, 200, `published record must remain accessible: ${path}`);
   }
 });
+
+test("bilingual HTML navigation links use final canonical page URLs without redirects", async () => {
+  const pages = ["/tr", "/en", "/tr/makaleler", "/en/articles", "/tr/arsiv", "/en/archive", "/tr/arsiv/cilt-4-sayi-2", "/en/archive/volume-2-issue-2", "/en/articles/making-solid-progress-toward-common-prosperity"];
+  let checked = 0;
+  for (const page of pages) {
+    const response = await renderPath(page);
+    assert.equal(response.status, 200, `render ${page}`);
+    const html = await response.text();
+    const anchors = [...html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)].map((m) => m[1]);
+    let eligible = 0;
+    for (const href of anchors) {
+      if (!/^\/(?:tr|en)(?:\/|$)/.test(href)) continue;
+      const destination = href.split(/[?#]/)[0];
+      if (/\.[a-z0-9]{1,8}$/i.test(destination)) continue;
+      eligible++;
+      assert.ok(destination.endsWith("/"), `noncanonical internal link ${page} -> ${href}`);
+    }
+    assert.ok(eligible >= 5, `expected crawlable internal page anchors on ${page}`);
+    checked += eligible;
+  }
+  assert.ok(checked >= 250, `expected broad bilingual internal-link coverage, got ${checked}`);
+});

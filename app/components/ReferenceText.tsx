@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../seo-links";
 import { Fragment, type ReactNode } from "react";
 
 type TextRange = { start: number; end: number };
@@ -176,9 +177,9 @@ function renderReference(text: string, briqHref?: string, linkify = true) {
     let node: ReactNode = italic ? <em>{segment}</em> : segment;
 
     if (link) {
-      node = <a className="reference-inline-link" href={link.href} target="_blank" rel="noreferrer">{node}</a>;
+      node = <a className="reference-inline-link" href={canonicalPageHref(link.href)} target="_blank" rel="noreferrer">{node}</a>;
     } else if (briqHref) {
-      node = <a className="reference-inline-link reference-briq-link" href={briqHref}>{node}</a>;
+      node = <a className="reference-inline-link reference-briq-link" href={canonicalPageHref(briqHref)}>{node}</a>;
     }
     output.push(<Fragment key={`${start}-${end}`}>{node}</Fragment>);
   }
@@ -193,7 +194,7 @@ export function ReferenceText({ text, doi, briqHref, omitLinks = false }: { text
 
   if (!omitLinks && canonical && !detectedDoi) {
     const href = `https://doi.org/${canonical}`;
-    output.push(<Fragment key="appended-doi"> · <a className="reference-inline-link" href={href} target="_blank" rel="noreferrer">{href}</a></Fragment>);
+    output.push(<Fragment key="appended-doi"> · <a className="reference-inline-link" href={canonicalPageHref(href)} target="_blank" rel="noreferrer">{href}</a></Fragment>);
   }
   return <>{output}</>;
 }

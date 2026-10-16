@@ -1,4 +1,5 @@
 "use client";
+import { canonicalPageHref } from "../seo-links";
 
 import { useMemo, useState } from "react";
 
@@ -62,10 +63,10 @@ export function PdfViewer({
               English
             </button>
           )}
-          <a href={activeSrc} target="_blank" rel="noreferrer">
+          <a href={canonicalPageHref(activeSrc)} target="_blank" rel="noreferrer">
             {locale === "en" ? "Open in new tab ↗︎" : "Yeni sekmede aç ↗︎"}
           </a>
-          <a href={activeSrc} download={activeDownloadName || true}>
+          <a href={canonicalPageHref(activeSrc)} download={activeDownloadName || true}>
             {locale === "en" ? "Download ↓︎" : "İndir ↓︎"}
           </a>
         </div>
@@ -74,7 +75,7 @@ export function PdfViewer({
         <iframe src={viewerSrc} title={`${title} - ${language === "tr" ? "Türkçe" : "İngilizce"} PDF`} />
         <p>
           {locale === "en" ? "If your browser does not support embedded PDFs, " : "Tarayıcınız gömülü PDF görüntülemeyi desteklemiyorsa "}
-          <a href={activeSrc} target="_blank" rel="noreferrer">{locale === "en" ? "open the PDF in a new tab." : "PDF'yi yeni sekmede açın."}</a>
+          <a href={canonicalPageHref(activeSrc)} target="_blank" rel="noreferrer">{locale === "en" ? "open the PDF in a new tab." : "PDF'yi yeni sekmede açın."}</a>
         </p>
       </div>
     </section>

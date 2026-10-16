@@ -1,4 +1,5 @@
 "use client";
+import { canonicalPageHref } from "../seo-links";
 
 import { useEffect, useMemo, useState } from "react";
 
@@ -64,7 +65,7 @@ export function ScrollSpyNav({
         return (
           <a
             className={`scrollspy-link level-${item.level}${isActive ? " is-active" : ""}${isParentActive ? " is-parent-active" : ""}`}
-            href={`#${item.id}`}
+            href={canonicalPageHref(`#${item.id}`)}
             aria-current={isActive ? "location" : undefined}
             onClick={(event) => goToSection(event, item.id)}
             key={item.id}

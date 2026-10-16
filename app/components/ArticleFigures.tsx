@@ -1,4 +1,5 @@
 "use client";
+import { canonicalPageHref } from "../seo-links";
 
 import { useRef, useState } from "react";
 
@@ -89,8 +90,8 @@ export function ArticleFigures({ figures, locale }: { figures: ArticleFigure[]; 
                         </button>
                         <figcaption><b>{label}</b>{articleFigureDisplayCaption(figure)}</figcaption>
                         <div className="figure-actions">
-                          <a href={figure.src} target="_blank" rel="noreferrer">{locale === "tr" ? "Ayrı görüntüle ↗︎" : "Open separately ↗︎"}</a>
-                          <a href={figure.src} download>{locale === "tr" ? "İndir ↓︎" : "Download ↓︎"}</a>
+                          <a href={canonicalPageHref(figure.src)} target="_blank" rel="noreferrer">{locale === "tr" ? "Ayrı görüntüle ↗︎" : "Open separately ↗︎"}</a>
+                          <a href={canonicalPageHref(figure.src)} download>{locale === "tr" ? "İndir ↓︎" : "Download ↓︎"}</a>
                         </div>
                       </figure>
                     );
