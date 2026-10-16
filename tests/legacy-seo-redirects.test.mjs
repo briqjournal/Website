@@ -98,3 +98,15 @@ test("four additional historically indexed 404 aliases reach verified canonical 
     ["/sites/default/files/dergi-sayilari/2020-11/BRIQ_ENG%20ISSUE%204.pdf", "/assets/archive/pdfs/issues/cilt-1-sayi-4-en.pdf"],
   ]) await assertRedirect(source, destination);
 });
+
+test("old honorific-prefixed author URLs redirect only to verified localized author identities", async () => {
+  for (const [from, to] of [
+    ["/user/dr-hande-gunozu", "/tr/yazar/hande-gunozu"],
+    ["/en/user/dr-francisco-dominguez", "/en/authors/francisco-dominguez"],
+    ["/user/assoc-prof-dr-yang-chen", "/tr/yazar/yang-chen"],
+    ["/en/user/assoc-prof-dr-yang-chen", "/en/authors/yang-chen"],
+    ["/user/prof-dr-semih-koray", "/tr/yazar/semih-koray"],
+    ["/en/user/prof-dr-semih-koray", "/en/authors/semih-koray"],
+    ["/en/user/assoc-prof-dr-aleksandr-sotnicenko", "/en/authors/aleksandr-sotnicenko"],
+  ]) await assertRedirect(from, to);
+});

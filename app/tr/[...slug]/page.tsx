@@ -1506,6 +1506,24 @@ export default async function ContentPage({
   const authorMatch = key.match(/^yazar\/(.+)$/);
   const callMatch = key.match(/^makale-cagrilari\/(.+)$/);
   const reportMatch = key.match(/^yillik-raporlar\/(\d+)$/);
+  // Dynamic route patterns must resolve to an actual published record.
+  // Returning <AuthorProfilePage /> (or <ArticleDetail />) for an unknown
+  // slug yields a non-null React element whose child renders null: HTTP 200
+  // with the inherited homepage canonical, i.e. a soft 404.
+  if (authorMatch && !findAuthorProfile(authorMatch[1])) notFound();
+  const requestedArticleSlug = articlePdfMatch?.[1] || articleMatch?.[1];
+  if (requestedArticleSlug) {
+    const listed = articles.find((item) => item.url.endsWith(`/${requestedArticleSlug}`));
+    const article = findArticleByRouteSlug(requestedArticleSlug)
+      || archiveArticles.find((item) => listed && item.volume === 7 && item.issue === 3 && item.title_tr === listed.title);
+    if (!article) notFound();
+  }
+  const requestedIssue = editorialMatch || issueMatch;
+  if (requestedIssue && !findArchiveIssue(Number(requestedIssue[1]), Number(requestedIssue[2]))) notFound();
+  if (callMatch
+      && !calls.some((item) => item.url.endsWith(`/${callMatch[1]}`))
+      && !pastCalls.some((item) => item.slug === callMatch[1])) notFound();
+  if (reportMatch && !annualReports.some((item) => item.number === Number(reportMatch[1]))) notFound();
   if (!Page && !editorialMatch && !issueMatch && !articlePdfMatch && !articleMatch && !authorMatch && !callMatch && !reportMatch) {
     const directArticle = archiveArticles.find((article) => article.slug === key);
     if (directArticle) {
