@@ -89,3 +89,12 @@ test("nonexistent paths are not redirected indiscriminately to the homepage", as
   const response = await requestLegacy("/en/author/nonexistent-person-99999");
   assert.notEqual(response.status, 301);
 });
+
+test("four additional historically indexed 404 aliases reach verified canonical destinations", async () => {
+  for (const [source, destination] of [
+    ["/en/neo-mahanian-", "/en/articles/a-neo-mahanian-reading-of-turkey-and-chinas-changing-maritime-geopolitics"],
+    ["/en/russian-strategist-", "/en/articles/russian-strategist-dr-alexander-dugin-the-belt-and-road-initiative-a-eurasian-road"],
+    ["/turk-milli-ordusunun-zaferinin-uluslararasi-kiymeti", "/tr/makaleler/turk-milli-ordusunun-zaferinin-uluslarasi-kiymeti"],
+    ["/sites/default/files/dergi-sayilari/2020-11/BRIQ_ENG%20ISSUE%204.pdf", "/assets/archive/pdfs/issues/cilt-1-sayi-4-en.pdf"],
+  ]) await assertRedirect(source, destination);
+});
