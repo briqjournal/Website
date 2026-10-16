@@ -49,6 +49,7 @@ test("legacy front-controller routes preserve article, author, issue and languag
     ["/en/author/gongjianhua/", "/en/authors/gong-jianhua"],
     ["/en/user/doc-dr-efe-can-gurcan", "/en/authors/efe-can-gurcan"],
     ["/user/prof-caner-karavit", "/tr/yazar/caner-karavit"],
+    ["/tr/user/prof-dr-cuneyt-akalin", "/tr/yazar/cuneyt-akalin/"],
     ["/makaleler/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi", "/tr/makaleler/dijital-ipek-yolu-cercevesinde-cin-arap-isbirligi-urdun-ornegi"],
     ["/makale-cagrilari/transatlantik-iliskilerin-yeniden-yapilanmasi", "/tr/makale-cagrilari/transatlantik-iliskilerin-yeniden-yapilanmasi"],
   ]) await assertRedirect(source, destination);
