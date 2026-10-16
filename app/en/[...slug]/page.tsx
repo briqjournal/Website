@@ -994,6 +994,19 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
   const reportMatch = key.match(/^annual-reports\/(\d+)$/);
   const page = pages[key];
 
+  // Prevent soft 404s: a JSX child which returns null still leaves the
+  // route with HTTP 200 and an inherited homepage canonical.
+  if (authorMatch && !findAuthorProfile(authorMatch[1])) notFound();
+  const requestedArticleSlug = articlePdfMatch?.[1] || articleMatch?.[1];
+  if (requestedArticleSlug && !findArticleByEnglishRouteSlug(requestedArticleSlug)) notFound();
+  const requestedIssue = editorialMatch || issueMatch;
+  if (requestedIssue && !findArchiveIssue(Number(requestedIssue[1]), Number(requestedIssue[2]))) notFound();
+  if (reportMatch && !annualReports.some((item) => item.number === Number(reportMatch[1]))) notFound();
+  const requestedCallSlug = key.startsWith("calls-for-papers/") ? key.slice("calls-for-papers/".length) : null;
+  if (requestedCallSlug
+      && !calls.some((item) => item.urlEn.endsWith(`/${requestedCallSlug}`))
+      && !pastCalls.some((item) => (item.slugEn || item.slug) === requestedCallSlug)) notFound();
+
   let content;
   if (key === "journal" || key === "journal/about-briq") content = <EnglishAboutBriq />;
   else if (key === "journal/publication-principles") content = <EnglishPublicationPrinciples />;
