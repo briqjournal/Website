@@ -1,4 +1,5 @@
 "use client";
+import { canonicalPageHref } from "../seo-links";
 
 import type { MouseEvent } from "react";
 
@@ -21,7 +22,7 @@ export function ArticleStaticToc({ items, locale }: { items: TocItem[]; locale: 
   return (
     <nav className="article-static-toc" aria-label={locale === "tr" ? "Makale içindekiler" : "Article navigation"}>
       <b>{locale === "tr" ? "İçindekiler" : "Article navigation"}</b>
-      {visibleItems.map((item) => <a className={item.level === 2 ? "is-subsection" : ""} href={`#${item.id}`} onClick={(event) => navigate(event, item.id)} key={`${item.id}-${item.label}`}>{item.label}</a>)}
+      {visibleItems.map((item) => <a className={item.level === 2 ? "is-subsection" : ""} href={canonicalPageHref(`#${item.id}`)} onClick={(event) => navigate(event, item.id)} key={`${item.id}-${item.label}`}>{item.label}</a>)}
     </nav>
   );
 }

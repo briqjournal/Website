@@ -1,4 +1,5 @@
 "use client";
+import { canonicalPageHref } from "../seo-links";
 
 import { useEffect, useState, type MouseEvent } from "react";
 
@@ -34,5 +35,5 @@ export function ReferenceBackLink({ targetId, locale, kind }: { targetId: string
     ? (kind === "footnote" ? "Dipnottan metindeki işarete dön" : "Kaynakçadan metindeki atfa dön")
     : (kind === "footnote" ? "Return to the footnote marker" : "Return to the in-text citation");
 
-  return <a className="reference-backlink" href={`#citation-${targetId}`} onClick={goBack} aria-label={label} title={label}><ReturnIcon /></a>;
+  return <a className="reference-backlink" href={canonicalPageHref(`#citation-${targetId}`)} onClick={goBack} aria-label={label} title={label}><ReturnIcon /></a>;
 }

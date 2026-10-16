@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../seo-links";
 import type { CSSProperties } from "react";
 import { findArchiveIssue, issuePdfUrl } from "../archive";
 import { archivedEditorials } from "../editorials";
@@ -61,7 +62,7 @@ export function CurrentIssueEditorial({
     >
       <header className="current-editorial-hero">
         <div className="site-shell">
-          <div className="page-breadcrumb"><a href={home}>{isEnglish ? "Home" : "Ana Sayfa"}</a><span>/</span><a href={issueHref}>{currentAlias ? (isEnglish ? "Current Issue" : "Güncel Sayı") : (isEnglish ? `Volume ${volume} · Issue ${issueNumber}` : `Cilt ${volume} · Sayı ${issueNumber}`)}</a><span>/</span><span>{isEnglish ? "Editorial" : "Sunuş"}</span></div>
+          <div className="page-breadcrumb"><a href={canonicalPageHref(home)}>{isEnglish ? "Home" : "Ana Sayfa"}</a><span>/</span><a href={canonicalPageHref(issueHref)}>{currentAlias ? (isEnglish ? "Current Issue" : "Güncel Sayı") : (isEnglish ? `Volume ${volume} · Issue ${issueNumber}` : `Cilt ${volume} · Sayı ${issueNumber}`)}</a><span>/</span><span>{isEnglish ? "Editorial" : "Sunuş"}</span></div>
           <p className="section-kicker light">{isEnglish ? "Editorial" : "Editörden"}</p>
           <h1>{copy.title}{copy.subtitle && <em>{copy.subtitle}</em>}</h1>
           <div className="current-editorial-byline"><b>Fikret Akfırat</b><span>{isEnglish ? "Editor-in-Chief" : "Genel Yayın Yönetmeni"}</span></div>
@@ -77,11 +78,11 @@ export function CurrentIssueEditorial({
             <div><dt>E-ISSN</dt><dd>2718-0581</dd></div>
             <div><dt>{isEnglish ? "Access" : "Erişim"}</dt><dd>{isEnglish ? "Open access" : "Açık erişim"}</dd></div>
           </dl>
-          <a href={issueHref}>{isEnglish ? "Back to the issue" : "Sayıya dön"} <span>→︎</span></a>
+          <a href={canonicalPageHref(issueHref)}>{isEnglish ? "Back to the issue" : "Sayıya dön"} <span>→︎</span></a>
         </aside>
         <div className="current-editorial-body">
           {copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          {pdf && <div className="current-editorial-actions"><a className="button button-dark" href={`${pdf}#page=${issuePdfPage}`}>{isEnglish ? "View in Full Issue PDF" : "Tam Sayı PDF’de Gör"} <span>↗︎</span></a><a className="underlined-link" href={issueHref}>{isEnglish ? "Issue contents" : "Sayı içeriği"} →︎</a></div>}
+          {pdf && <div className="current-editorial-actions"><a className="button button-dark" href={canonicalPageHref(`${pdf}#page=${issuePdfPage}`)}>{isEnglish ? "View in Full Issue PDF" : "Tam Sayı PDF’de Gör"} <span>↗︎</span></a><a className="underlined-link" href={canonicalPageHref(issueHref)}>{isEnglish ? "Issue contents" : "Sayı içeriği"} →︎</a></div>}
         </div>
       </div>
     </article>

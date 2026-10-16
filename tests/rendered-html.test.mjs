@@ -134,8 +134,8 @@ test("keeps the revised Turkish and English information architecture in parity",
     const [trHtml, enHtml] = await Promise.all([trResponse.text(), enResponse.text()]);
     assert.match(trHtml, new RegExp(trText, "i"), trPath);
     assert.match(enHtml, new RegExp(enText, "i"), enPath);
-    assert.match(trHtml, new RegExp(`href=["']${enPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["']`), `${trPath} language switch`);
-    assert.match(enHtml, new RegExp(`href=["']${trPath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["']`), `${enPath} language switch`);
+    assert.match(trHtml, new RegExp(`href=["']${(enPath + "/").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["']`), `${trPath} language switch`);
+    assert.match(enHtml, new RegExp(`href=["']${(trPath + "/").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["']`), `${enPath} language switch`);
   }
 });
 
@@ -340,11 +340,11 @@ test("keeps the new issue, board, archive, and author interactions in Turkish-En
   assert.match(trBoard, /<h1>Yayın Kurulu<\/h1>/);
   assert.match(trBoard, /class="editorial-roster-list"/);
   assert.doesNotMatch(trBoard, /\/assets\/people\//);
-  assert.match(trBoard, /href="\/tr\/yazar\/fikret-akfirat"/);
+  assert.match(trBoard, /href="\/tr\/yazar\/fikret-akfirat\/"/);
   assert.match(enBoard, /<h1>Editorial Info<\/h1>/);
   assert.match(enBoard, /<h2>Editorial Board<\/h2>/);
   assert.doesNotMatch(enBoard, /\/assets\/people\//);
-  assert.match(enBoard, /href="\/en\/authors\/fikret-akfirat"/);
+  assert.match(enBoard, /href="\/en\/authors\/fikret-akfirat\/"/);
 
   for (const html of [trArchive, enArchive]) {
     assert.match(html, /class="archive-year-group"/);
@@ -573,8 +573,8 @@ test("separates bilingual HTML article reading from the dedicated PDF viewer", a
 
   assert.match(trArticle, /Kitaplar Nasıl “Yakıldı”/);
   assert.match(enArticle, /How the Books Were “Burned”/);
-  assert.match(trArticle, new RegExp(`href="/tr/makaleler/${slug}/pdf"`));
-  assert.match(enArticle, new RegExp(`href="/en/articles/${englishSlug}/pdf"`));
+  assert.match(trArticle, new RegExp(`href="/tr/makaleler/${slug}/pdf/"`));
+  assert.match(enArticle, new RegExp(`href="/en/articles/${englishSlug}/pdf/"`));
   assert.match(enArticle, new RegExp(`download="briq-${englishSlug}-en\\.pdf"`));
   assert.match(trArticle, /class="inline-citation"/);
   assert.match(trArticle, /class="article-accordion article-references"/);
@@ -586,8 +586,8 @@ test("separates bilingual HTML article reading from the dedicated PDF viewer", a
   assert.match(enPdf, /PDF viewer/);
   assert.match(trPdf, /<iframe/);
   assert.match(enPdf, /<iframe/);
-  assert.match(trPdf, new RegExp(`href="/tr/makaleler/${slug}"`));
-  assert.match(enPdf, new RegExp(`href="/en/articles/${englishSlug}"`));
+  assert.match(trPdf, new RegExp(`href="/tr/makaleler/${slug}/"`));
+  assert.match(enPdf, new RegExp(`href="/en/articles/${englishSlug}/"`));
   assert.match(enPdf, new RegExp(`download="briq-${englishSlug}-en\\.pdf"`));
 });
 
@@ -606,12 +606,12 @@ test("uses English article slugs and redirects legacy Turkish-slug English URLs"
   const directoryHtml = await directory.text();
   const [englishArticleHtml, englishPdfHtml] = await Promise.all([englishArticle.text(), englishPdf.text()]);
 
-  assert.match(directoryHtml, new RegExp(`href="/en/articles/${englishSlug}"`));
-  assert.doesNotMatch(directoryHtml, new RegExp(`href="/en/articles/${slug}"`));
+  assert.match(directoryHtml, new RegExp(`href="/en/articles/${englishSlug}/"`));
+  assert.doesNotMatch(directoryHtml, new RegExp(`href="/en/articles/${slug}/"`));
   const articleSwitchHref = englishArticleHtml.match(/href="([^"]+)"[^>]+aria-label="TR — Bu sayfanın Türkçe sürümü"/)?.[1];
   const pdfSwitchHref = englishPdfHtml.match(/href="([^"]+)"[^>]+aria-label="TR — Bu sayfanın Türkçe sürümü"/)?.[1];
-  assert.ok([`/tr/makaleler/${slug}`, `/tr/makaleler/${englishSlug}`].includes(articleSwitchHref));
-  assert.ok([`/tr/makaleler/${slug}/pdf`, `/tr/makaleler/${englishSlug}/pdf`].includes(pdfSwitchHref));
+  assert.ok([`/tr/makaleler/${slug}/`, `/tr/makaleler/${englishSlug}/`].includes(articleSwitchHref));
+  assert.ok([`/tr/makaleler/${slug}/pdf/`, `/tr/makaleler/${englishSlug}/pdf/`].includes(pdfSwitchHref));
   assert.ok([307, 308].includes(legacyArticle.status));
   assert.equal(new URL(legacyArticle.headers.get("location")).pathname, `/en/articles/${englishSlug}`);
   assert.ok([307, 308].includes(legacyPdf.status));
@@ -776,8 +776,8 @@ test("publishes Volume 7 Issues 1–3 editorials and Issue 3 supplementary conte
     assert.match(trEditorial, /2687-5896/);
     assert.match(trEditorial, /2718-0581/);
     assert.match(trEditorial, /--issue-accent:#[0-9a-f]{6}/i);
-    assert.match(trEditorial, new RegExp(`href="/en/archive/volume-7-issue-${issue}/editorial"`));
-    assert.match(enEditorial, new RegExp(`href="/tr/arsiv/cilt-7-sayi-${issue}/sunus"`));
+    assert.match(trEditorial, new RegExp(`href="/en/archive/volume-7-issue-${issue}/editorial/"`));
+    assert.match(enEditorial, new RegExp(`href="/tr/arsiv/cilt-7-sayi-${issue}/sunus/"`));
   }
 
   const issueThree = await (await renderPath("/tr/arsiv/cilt-7-sayi-3")).text();
@@ -1495,10 +1495,10 @@ test("orders author guidance as rules, review, ethics, and copyright in both lan
 
   assert.ok(trHub.indexOf("Yayın Etiği") < trHub.indexOf("Telif Hakkı Şartları ve Lisans"));
   assert.ok(enHub.indexOf("Publication Ethics") < enHub.indexOf("Copyright Terms and Licence"));
-  assert.match(trReview, /class="editorial-next-link" href="\/tr\/yazarlar\/yayin-etigi">Yayın Etiği/);
-  assert.match(enReview, /class="editorial-next-link" href="\/en\/for-authors\/publication-ethics">Publication Ethics/);
-  assert.match(trEthics, /class="editorial-next-link" href="\/tr\/yazarlar\/telif-hakki-sartlari-ve-lisans">Telif Hakkı Şartları ve Lisans/);
-  assert.match(enEthics, /class="editorial-next-link" href="\/en\/for-authors\/copyright-and-licence">Copyright Terms and Licence/);
+  assert.match(trReview, /class="editorial-next-link" href="\/tr\/yazarlar\/yayin-etigi\/">Yayın Etiği/);
+  assert.match(enReview, /class="editorial-next-link" href="\/en\/for-authors\/publication-ethics\/">Publication Ethics/);
+  assert.match(trEthics, /class="editorial-next-link" href="\/tr\/yazarlar\/telif-hakki-sartlari-ve-lisans\/">Telif Hakkı Şartları ve Lisans/);
+  assert.match(enEthics, /class="editorial-next-link" href="\/en\/for-authors\/copyright-and-licence\/">Copyright Terms and Licence/);
 });
 
 test("shows biographies and dated BRIQ appointments on staff profiles", async () => {
@@ -1649,10 +1649,10 @@ test("renders linked season-coloured issue metadata and an always-visible DOI fi
 
   assert.match(doiTrRecord, /<span>Cilt \/ Sayı<\/span>/);
   assert.match(doiEnRecord, /<span>Volume \/ Issue<\/span>/);
-  assert.match(doiTrRecord, /class="article-record-issue-link"[^>]*href="\/tr\/arsiv\/cilt-7-sayi-1"[^>]*style="[^"]*background-color:#1f6668[^"]*"[^>]*>7 \/ 1 \(Kış\)<\/a>/);
-  assert.match(doiEnRecord, /class="article-record-issue-link"[^>]*href="\/en\/archive\/volume-7-issue-1"[^>]*style="[^"]*background-color:#1f6668[^"]*"[^>]*>7 \/ 1 \(Winter\)<\/a>/);
-  assert.match(noDoiTrRecord, /class="article-record-issue-link"[^>]*href="\/tr\/guncel-sayi"[^>]*style="[^"]*background-color:#713349[^"]*"[^>]*>7 \/ 4 \(Sonbahar\)<\/a>/);
-  assert.match(noDoiEnRecord, /class="article-record-issue-link"[^>]*href="\/en\/current-issue"[^>]*style="[^"]*background-color:#713349[^"]*"[^>]*>7 \/ 4 \(Autumn\)<\/a>/);
+  assert.match(doiTrRecord, /class="article-record-issue-link"[^>]*href="\/tr\/arsiv\/cilt-7-sayi-1\/"[^>]*style="[^"]*background-color:#1f6668[^"]*"[^>]*>7 \/ 1 \(Kış\)<\/a>/);
+  assert.match(doiEnRecord, /class="article-record-issue-link"[^>]*href="\/en\/archive\/volume-7-issue-1\/"[^>]*style="[^"]*background-color:#1f6668[^"]*"[^>]*>7 \/ 1 \(Winter\)<\/a>/);
+  assert.match(noDoiTrRecord, /class="article-record-issue-link"[^>]*href="\/tr\/guncel-sayi\/"[^>]*style="[^"]*background-color:#713349[^"]*"[^>]*>7 \/ 4 \(Sonbahar\)<\/a>/);
+  assert.match(noDoiEnRecord, /class="article-record-issue-link"[^>]*href="\/en\/current-issue\/"[^>]*style="[^"]*background-color:#713349[^"]*"[^>]*>7 \/ 4 \(Autumn\)<\/a>/);
 
   for (const record of [doiTrRecord, doiEnRecord, noDoiTrRecord, noDoiEnRecord]) {
     assert.doesNotMatch(record, /<span>(?:Yayın|Published)<\/span>/);
@@ -1779,4 +1779,26 @@ test("dynamic-record existence guards preserve published pages in both locales",
     const response = await renderPath(path);
     assert.equal(response.status, 200, `published record must remain accessible: ${path}`);
   }
+});
+
+test("bilingual HTML navigation links use final canonical page URLs without redirects", async () => {
+  const pages = ["/tr", "/en", "/tr/makaleler", "/en/articles", "/tr/arsiv", "/en/archive", "/tr/arsiv/cilt-4-sayi-2", "/en/archive/volume-2-issue-2", "/en/articles/making-solid-progress-toward-common-prosperity"];
+  let checked = 0;
+  for (const page of pages) {
+    // Verify the prerendered production artifact without launching another
+    // server render in this memory-intensive regression suite.
+    const html = await readFile(new URL(`../dist/client${page}/index.html`, import.meta.url), "utf8");
+    const anchors = [...html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)].map((m) => m[1]);
+    let eligible = 0;
+    for (const href of anchors) {
+      if (!/^\/(?:tr|en)(?:\/|$)/.test(href)) continue;
+      const destination = href.split(/[?#]/)[0];
+      if (/\.[a-z0-9]{1,8}$/i.test(destination)) continue;
+      eligible++;
+      assert.ok(destination.endsWith("/"), `noncanonical internal link ${page} -> ${href}`);
+    }
+    assert.ok(eligible >= 5, `expected crawlable internal page anchors on ${page}`);
+    checked += eligible;
+  }
+  assert.ok(checked >= 250, `expected broad bilingual internal-link coverage, got ${checked}`);
 });

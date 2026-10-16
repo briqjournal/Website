@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../seo-links";
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import type { ArchiveIssue } from "../archive";
@@ -144,12 +145,12 @@ export function IssuePlatform({
           </div>
           <div className="issue-masthead-copy">
             <div className="page-breadcrumb issue-breadcrumb">
-              <a href={homeHref}>{isEnglish ? "Home" : "Ana Sayfa"}</a>
+              <a href={canonicalPageHref(homeHref)}>{isEnglish ? "Home" : "Ana Sayfa"}</a>
               <span>/</span>
               {current ? (
                 <span>{isEnglish ? "Current Issue" : "Güncel Sayı"}</span>
               ) : (
-                <><a href={archiveHref}>{isEnglish ? "Archive" : "Arşiv"}</a><span>/</span><span>{issueName}</span></>
+                <><a href={canonicalPageHref(archiveHref)}>{isEnglish ? "Archive" : "Arşiv"}</a><span>/</span><span>{issueName}</span></>
               )}
             </div>
             <div className="issue-superline">
@@ -173,13 +174,13 @@ export function IssuePlatform({
             <p className="issue-deck">{description}</p>
             {(readingPdf || editorialHref) && (
               <div className="issue-actions">
-                {readingPdf && <a className="button button-light" href="#pdf-viewer">
+                {readingPdf && <a className="button button-light" href={canonicalPageHref("#pdf-viewer")}>
                   {isEnglish ? "Read PDF on site" : "PDF’yi sitede oku"} <span>↓︎</span>
                 </a>}
-                {readingPdf && <a href={readingPdf} download>
+                {readingPdf && <a href={canonicalPageHref(readingPdf)} download>
                   {isEnglish ? "Download Full Issue PDF" : "Tam Sayı PDF İndir"} <span>↓︎</span>
                 </a>}
-                {editorialHref && <a href={editorialHref}>
+                {editorialHref && <a href={canonicalPageHref(editorialHref)}>
                   {isEnglish ? "Read the editorial" : "Sunuş yazısını oku"} <span>→︎</span>
                 </a>}
               </div>
@@ -208,7 +209,7 @@ export function IssuePlatform({
         <div className="issue-toc">
           {publications.map((publication, index) => (
             <a
-              href={isEnglish ? `/en/articles/${articleRouteSlug(publication, "en")}` : `/tr/makaleler/${publication.slug}`}
+              href={canonicalPageHref(isEnglish ? `/en/articles/${articleRouteSlug(publication, "en")}` : `/tr/makaleler/${publication.slug}`)}
               key={publication.slug}
             >
               <span className="issue-toc-number">{padIssueNumber(index + 1)}</span>
@@ -222,7 +223,7 @@ export function IssuePlatform({
             </a>
           ))}
           {additionalContents.map((content, index) => (
-            <a href={`${readingPdf}#page=${content.pdfPage}`} key={`${content.author}-${content.titleTr}`}>
+            <a href={canonicalPageHref(`${readingPdf}#page=${content.pdfPage}`)} key={`${content.author}-${content.titleTr}`}>
               <span className="issue-toc-number">{padIssueNumber(publications.length + index + 1)}</span>
               <span className="issue-toc-meta">
                 <small>{isEnglish ? content.typeEn : content.typeTr}</small>

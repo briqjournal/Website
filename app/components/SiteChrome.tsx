@@ -1,4 +1,5 @@
 "use client";
+import { canonicalPageHref } from "../seo-links";
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -175,13 +176,13 @@ export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride
             <span>ISSN 2687-5896</span>
             <span>E-ISSN 2718-0581</span>
             <span>DOI 10.67696</span>
-            {isEnglish ? <><a href={alternateHref} aria-label="TR — Bu sayfanın Türkçe sürümü">TR</a><span className="utility-divider" /><strong>EN</strong></> : <><a href={alternateHref} aria-label="EN — English version of this page">EN</a><span className="utility-divider" /><strong>TR</strong></>}
+            {isEnglish ? <><a href={canonicalPageHref(alternateHref)} aria-label="TR — Bu sayfanın Türkçe sürümü">TR</a><span className="utility-divider" /><strong>EN</strong></> : <><a href={canonicalPageHref(alternateHref)} aria-label="EN — English version of this page">EN</a><span className="utility-divider" /><strong>TR</strong></>}
           </div>
         </div>
       </div>
       <header className={`site-header ${condensed ? "is-condensed" : ""}`}>
         <div className="site-shell header-main">
-          <a href={isEnglish ? "/en" : "/tr"} className={`brand brand-${locale}`} aria-label={isEnglish ? "BRIQ home" : "BRIQ ana sayfa"}>
+          <a href={canonicalPageHref(isEnglish ? "/en" : "/tr")} className={`brand brand-${locale}`} aria-label={isEnglish ? "BRIQ home" : "BRIQ ana sayfa"}>
             <span className="brand-mark" aria-hidden="true">
               <img src={isEnglish ? "/assets/briq-logo.png" : "/assets/briq-logo-tr.png"} alt="" width={isEnglish ? 912 : 899} height={isEnglish ? 669 : 668} loading="eager" decoding="async" fetchPriority="high" />
             </span>
@@ -201,13 +202,13 @@ export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride
           <nav id="primary-navigation" className={mobileOpen ? "main-nav is-open" : "main-nav"}>
             {items.map((item) => (
               <div className="nav-item" key={item.label}>
-                <a href={item.href} onClick={() => setMobileOpen(false)}>
+                <a href={canonicalPageHref(item.href)} onClick={() => setMobileOpen(false)}>
                   {item.label}{item.children && <span className="nav-caret" aria-hidden="true">⌄</span>}
                 </a>
                 {item.children && (
                   <div className="nav-dropdown" aria-label={isEnglish ? `${item.label} submenu` : `${item.label} alt menüsü`}>
                     {item.children.map(([label, href]) => (
-                      <a href={href} key={href} onClick={() => setMobileOpen(false)}>{label}</a>
+                      <a href={canonicalPageHref(href)} key={href} onClick={() => setMobileOpen(false)}>{label}</a>
                     ))}
                   </div>
                 )}
@@ -215,13 +216,13 @@ export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride
             ))}
           </nav>
           <div className="header-actions">
-            <a className="submit-button reviewer-button" href={`https://dergipark.org.tr/${isEnglish ? "en" : "tr"}/journal/4696/reviewer-request/send`}>
+            <a className="submit-button reviewer-button" href={canonicalPageHref(`https://dergipark.org.tr/${isEnglish ? "en" : "tr"}/journal/4696/reviewer-request/send`)}>
               {isEnglish ? "Reviewer Request" : "Hakemlik Talebi"} <span>↗︎</span>
             </a>
-            <a className="submit-button" href={`https://dergipark.org.tr/${isEnglish ? "en" : "tr"}/journal/4696/submission/step/manuscript/new`}>
+            <a className="submit-button" href={canonicalPageHref(`https://dergipark.org.tr/${isEnglish ? "en" : "tr"}/journal/4696/submission/step/manuscript/new`)}>
               {isEnglish ? "Submit" : "Yazı Gönder"} <span>↗︎</span>
             </a>
-            <a className="header-search" href={isEnglish ? "/en/search" : "/tr/arama"} aria-label={isEnglish ? "Search BRIQ" : "BRIQ’te ara"}>
+            <a className="header-search" href={canonicalPageHref(isEnglish ? "/en/search" : "/tr/arama")} aria-label={isEnglish ? "Search BRIQ" : "BRIQ’te ara"}>
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
             </a>
           </div>
@@ -244,21 +245,21 @@ export function SiteFooter({ locale = "tr" }: { locale?: Locale }) {
         </div>
         <div>
           <h2>{isEnglish ? "Journal" : "Dergi"}</h2>
-          <a href={isEnglish ? "/en/journal/about-briq" : "/tr/dergi/briq-hakkinda"}>{isEnglish ? "About BRIQ" : "BRIQ Hakkında"}</a>
-          <a href={isEnglish ? "/en/journal/publication-board" : "/tr/dergi/yayin-kurulu"}>{isEnglish ? "Editorial Info" : "Yayın Kurulu"}</a>
-          <a href={isEnglish ? "/en/journal/indexes" : "/tr/dergi/endeksler"}>{isEnglish ? "Indexes" : "Endeksler"}</a>
-          <a href={isEnglish ? "/en/annual-reports" : "/tr/yillik-raporlar"}>{isEnglish ? "Annual reports" : "Yıllık raporlar"}</a>
+          <a href={canonicalPageHref(isEnglish ? "/en/journal/about-briq" : "/tr/dergi/briq-hakkinda")}>{isEnglish ? "About BRIQ" : "BRIQ Hakkında"}</a>
+          <a href={canonicalPageHref(isEnglish ? "/en/journal/publication-board" : "/tr/dergi/yayin-kurulu")}>{isEnglish ? "Editorial Info" : "Yayın Kurulu"}</a>
+          <a href={canonicalPageHref(isEnglish ? "/en/journal/indexes" : "/tr/dergi/endeksler")}>{isEnglish ? "Indexes" : "Endeksler"}</a>
+          <a href={canonicalPageHref(isEnglish ? "/en/annual-reports" : "/tr/yillik-raporlar")}>{isEnglish ? "Annual reports" : "Yıllık raporlar"}</a>
         </div>
         <div>
           <h2>{isEnglish ? "Publishing" : "Yayınlar"}</h2>
-          <a href={isEnglish ? "/en/archive" : "/tr/arsiv"}>{isEnglish ? "All issues" : "Tüm sayılar"}</a>
-          <a href={isEnglish ? "/en/articles" : "/tr/makaleler"}>{isEnglish ? "Article Search" : "Makale Arama"}</a>
-          <a href={isEnglish ? "/en/for-authors/guidelines" : "/tr/yazarlar/yazim-kurallari"}>{isEnglish ? "For authors" : "Yazarlar için"}</a>
-          <a href={isEnglish ? "/en/calls-for-papers" : "/tr/makale-cagrilari"}>{isEnglish ? "Calls for papers" : "Makale çağrıları"}</a>
+          <a href={canonicalPageHref(isEnglish ? "/en/archive" : "/tr/arsiv")}>{isEnglish ? "All issues" : "Tüm sayılar"}</a>
+          <a href={canonicalPageHref(isEnglish ? "/en/articles" : "/tr/makaleler")}>{isEnglish ? "Article Search" : "Makale Arama"}</a>
+          <a href={canonicalPageHref(isEnglish ? "/en/for-authors/guidelines" : "/tr/yazarlar/yazim-kurallari")}>{isEnglish ? "For authors" : "Yazarlar için"}</a>
+          <a href={canonicalPageHref(isEnglish ? "/en/calls-for-papers" : "/tr/makale-cagrilari")}>{isEnglish ? "Calls for papers" : "Makale çağrıları"}</a>
         </div>
         <div>
           <h2>{isEnglish ? "Contact" : "İletişim"}</h2>
-          <a href="mailto:briq@briqjournal.com">briq@briqjournal.com</a>
+          <a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a>
           <p>
             Ünalan Mahallesi, Libadiye Caddesi
             <br />
@@ -297,13 +298,13 @@ export function IndexTicker({ locale = "tr" }: { locale?: Locale }) {
       <div className="ticker-window">
         <div className="ticker-track">
           {repeated.map(([name, image, href], index) => (
-            <a className="ticker-item" href={href} key={`${name}-${index}`} aria-label={`${name} kaydını aç`}>
+            <a className="ticker-item" href={canonicalPageHref(href)} key={`${name}-${index}`} aria-label={`${name} kaydını aç`}>
               <img src={image} alt={name} width={420} height={144} loading="lazy" decoding="async" />
             </a>
           ))}
         </div>
       </div>
-      <a href={isEnglish ? "/en/journal/indexes" : "/tr/dergi/endeksler"} className="ticker-link">
+      <a href={canonicalPageHref(isEnglish ? "/en/journal/indexes" : "/tr/dergi/endeksler")} className="ticker-link">
         {isEnglish ? "Details" : "Ayrıntılar"} →︎
       </a>
     </section>

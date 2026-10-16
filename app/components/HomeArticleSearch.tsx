@@ -1,4 +1,5 @@
 "use client";
+import { canonicalPageHref } from "../seo-links";
 
 import { useMemo, useState } from "react";
 import type { ArchiveArticleListing } from "../archive-listing";
@@ -47,7 +48,7 @@ export function HomeArticleSearch({
       </div>
       <div className="article-list">
         {visibleArticles.map((article) => (
-          <a className="article-row" href={`${locale === "tr" ? "/tr/makaleler" : "/en/articles"}/${locale === "en" ? article.slugEn : article.slug}`} key={article.slug}>
+          <a className="article-row" href={canonicalPageHref(`${locale === "tr" ? "/tr/makaleler" : "/en/articles"}/${locale === "en" ? article.slugEn : article.slug}`)} key={article.slug}>
             <span className="article-issue-cell">
               <span className="article-issue-badge" style={{ backgroundColor: issueBadgeAccent(article.volume, article.issue) }}>
                 {locale === "tr" ? `Cilt ${article.volume} · Sayı ${article.issue}` : `Volume ${article.volume} · Issue ${article.issue}`}
@@ -69,7 +70,7 @@ export function HomeArticleSearch({
           <p className="empty-state">{locale === "tr" ? "Bu aramayla eşleşen içerik bulunamadı." : "No article matches this search."}</p>
         )}
       </div>
-      <a className="underlined-link" href={locale === "tr" ? "/tr/makaleler" : "/en/articles"}>
+      <a className="underlined-link" href={canonicalPageHref(locale === "tr" ? "/tr/makaleler" : "/en/articles")}>
         {locale === "tr" ? "Tüm makaleleri görüntüle" : "View all articles"} <span>→︎</span>
       </a>
     </>

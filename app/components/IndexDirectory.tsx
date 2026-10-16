@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../seo-links";
 const indexServices = [
   {
     name: "ERIH PLUS",
@@ -51,7 +52,7 @@ function ServiceGrid({ services, locale }: { services: readonly { name: string; 
   return (
     <div className="index-detail-grid">
       {services.map((service) => (
-        <a className="index-service-card" href={locale === "en" && service.hrefEn ? service.hrefEn : service.href} target="_blank" rel="noreferrer" key={service.name}>
+        <a className="index-service-card" href={canonicalPageHref(locale === "en" && service.hrefEn ? service.hrefEn : service.href)} target="_blank" rel="noreferrer" key={service.name}>
           <span className="index-logo-wrap"><img src={service.logo} width="210" height="72" alt={`${service.name} logo`} loading="lazy" decoding="async" /></span>
           <h2>{service.name}</h2>
           <p>{locale === "en" ? service.en : service.tr}</p>

@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../seo-links";
 import { IndexTicker, SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { HomeHeroSlider } from "../components/HomeHeroSlider";
 import { HomeArticleSearch } from "../components/HomeArticleSearch";
@@ -34,13 +35,13 @@ export default function Home() {
               ve ortak kalkınma perspektifiyle tartışır.
             </p>
             <div className="manifesto-links">
-              <a href="/tr/dergi/briq-hakkinda">
+              <a href={canonicalPageHref("/tr/dergi/briq-hakkinda")}>
                 BRIQ Hakkında <span>→︎</span>
               </a>
-              <a href="/tr/dergi/yayin-ilkeleri">
+              <a href={canonicalPageHref("/tr/dergi/yayin-ilkeleri")}>
                 Yayın İlkeleri <span>→︎</span>
               </a>
-              <a href="/tr/dergi/yayin-kurulu">
+              <a href={canonicalPageHref("/tr/dergi/yayin-kurulu")}>
                 Yayın Kurulu <span>→︎</span>
               </a>
             </div>
@@ -55,7 +56,7 @@ export default function Home() {
               <p className="section-kicker">Katkı çağrısı</p>
               <h2>Açık makale çağrıları</h2>
             </div>
-            <a className="underlined-link" href="/tr/makale-cagrilari">
+            <a className="underlined-link" href={canonicalPageHref("/tr/makale-cagrilari")}>
               Tüm çağrılar <span>→︎</span>
             </a>
           </div>
@@ -63,7 +64,7 @@ export default function Home() {
             {calls.map((call) => (
               <a
                 className="home-call-row"
-                href={call.url}
+                href={canonicalPageHref(call.url)}
                 key={call.title}
               >
                 <span className="home-call-image">
@@ -101,14 +102,14 @@ export default function Home() {
           <div className="author-actions">
             <a
               className="button button-light"
-              href="https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new"
+              href={canonicalPageHref("https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new")}
             >
               <DergiParkLogo suffix="’tan gönder" /> <span>↗︎</span>
             </a>
-            <a href="/tr/yazarlar/yazim-kurallari">
+            <a href={canonicalPageHref("/tr/yazarlar/yazim-kurallari")}>
               Yazım kuralları <span>→︎</span>
             </a>
-            <a href="/tr/yazarlar/yayin-degerlendirme-sureci">
+            <a href={canonicalPageHref("/tr/yazarlar/yayin-degerlendirme-sureci")}>
               Değerlendirme süreci <span>→︎</span>
             </a>
           </div>

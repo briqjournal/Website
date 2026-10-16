@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../seo-links";
 import {
   loadArchiveEnglishFullText,
   loadCurrentFullText,
@@ -121,7 +122,7 @@ function PublicationNoteCopy({ value, locale, articleSlug }: { value: string; lo
   const text = articleSlug === HE_GANQIANG_TRANSLATION_SLUG ? `${value} ${credit}` : value;
   const linkedNames = new Set(["Necati Demircan", "Jessica Durdu"]);
   return <>{text.split(/(Necati Demircan|Jessica Durdu)/g).map((part, index) => linkedNames.has(part)
-    ? <a className="reference-inline-link" href={authorProfileHref(part, locale)} key={`${part}-${index}`} style={{ whiteSpace: "normal", color: "var(--rust-dark)", fontSize: "inherit", fontWeight: "inherit", textDecoration: "underline" }}>{part}</a>
+    ? <a className="reference-inline-link" href={canonicalPageHref(authorProfileHref(part, locale))} key={`${part}-${index}`} style={{ whiteSpace: "normal", color: "var(--rust-dark)", fontSize: "inherit", fontWeight: "inherit", textDecoration: "underline" }}>{part}</a>
     : part)}</>;
 }
 
@@ -161,13 +162,13 @@ function ArticleAuthors({ article, locale, correspondingAuthor }: { article: Arc
         return (
           <div className="article-author-row" key={`${name}-${index}`}>
             <div>
-              {person ? <a className="author-profile-link" href={authorProfileHref(name, locale)}><span className="article-author-name">{name}</span></a> : <b>{name}</b>}
+              {person ? <a className="author-profile-link" href={canonicalPageHref(authorProfileHref(name, locale))}><span className="article-author-name">{name}</span></a> : <b>{name}</b>}
               {correspondingAuthor === name && <span className="corresponding-badge">{locale === "tr" ? "Sorumlu yazar" : "Corresponding author"}</span>}
               <small>{articleAffiliation?.trim() || authorAffiliation(name, locale)}</small>
             </div>
             <span className="article-author-identifiers">
-              {orcid && <a href={`https://orcid.org/${orcid}`} target="_blank" rel="noreferrer" title={`ORCID ${orcid}`}><OrcidBadge /><span>{orcid}</span></a>}
-              {email && <a href={`mailto:${email}`} title={email} aria-label={locale === "tr" ? `${name} adlı yazara e-posta gönder` : `Email ${name}`}><MailIcon /></a>}
+              {orcid && <a href={canonicalPageHref(`https://orcid.org/${orcid}`)} target="_blank" rel="noreferrer" title={`ORCID ${orcid}`}><OrcidBadge /><span>{orcid}</span></a>}
+              {email && <a href={canonicalPageHref(`mailto:${email}`)} title={email} aria-label={locale === "tr" ? `${name} adlı yazara e-posta gönder` : `Email ${name}`}><MailIcon /></a>}
             </span>
           </div>
         );
@@ -439,7 +440,7 @@ export async function ArticlePlatform({
       <section className="article-masthead article-platform-masthead">
         <div className="article-masthead-rule" />
         <div className="site-shell article-masthead-inner">
-          <div className="page-breadcrumb article-breadcrumb"><a href={locale === "tr" ? "/tr" : "/en"}>{locale === "tr" ? "Ana Sayfa" : "Home"}</a><span>/</span><a href={issueHref}>{locale === "tr" ? `Cilt ${article.volume} · Sayı ${article.issue}` : `Volume ${article.volume} · Issue ${article.issue}`}</a><span>/</span><span>{articleType}</span></div>
+          <div className="page-breadcrumb article-breadcrumb"><a href={canonicalPageHref(locale === "tr" ? "/tr" : "/en")}>{locale === "tr" ? "Ana Sayfa" : "Home"}</a><span>/</span><a href={canonicalPageHref(issueHref)}>{locale === "tr" ? `Cilt ${article.volume} · Sayı ${article.issue}` : `Volume ${article.volume} · Issue ${article.issue}`}</a><span>/</span><span>{articleType}</span></div>
           <div className="article-status-row"><span className="article-type-label">{articleType}</span></div>
           <h1>{title}</h1>
           <ArticleAuthors article={article} locale={locale} correspondingAuthor={metadata?.correspondingAuthor} />
@@ -447,10 +448,10 @@ export async function ArticlePlatform({
       </section>
 
       <div className="article-action-bar article-platform-actions"><div className="site-shell">
-        <a className="article-fulltext-action" href="#full-text"><span>{locale === "tr" ? "Tam metin" : "Full text"}</span><ArrowIcon direction="down" /></a>
-        <a className="article-issue-action" href={issueHref} style={{ backgroundColor: issueColor }}><span>{locale === "tr" ? "Sayıya git" : "View issue"}</span><ArrowIcon /></a>
-        {activePdf && <a className="article-primary-action" href={`${base}/pdf`}><PdfFileIcon /><span>{locale === "tr" ? "PDF’yi görüntüle" : "View PDF"}</span><ArrowIcon direction="right" /></a>}
-        {activePdf && <a className="article-download-action" href={activePdf} download={articlePdfFilename(article, locale)}><PdfFileIcon /><span>{locale === "tr" ? "PDF’yi indir" : "Download PDF"}</span><DownloadIcon /></a>}
+        <a className="article-fulltext-action" href={canonicalPageHref("#full-text")}><span>{locale === "tr" ? "Tam metin" : "Full text"}</span><ArrowIcon direction="down" /></a>
+        <a className="article-issue-action" href={canonicalPageHref(issueHref)} style={{ backgroundColor: issueColor }}><span>{locale === "tr" ? "Sayıya git" : "View issue"}</span><ArrowIcon /></a>
+        {activePdf && <a className="article-primary-action" href={canonicalPageHref(`${base}/pdf`)}><PdfFileIcon /><span>{locale === "tr" ? "PDF’yi görüntüle" : "View PDF"}</span><ArrowIcon direction="right" /></a>}
+        {activePdf && <a className="article-download-action" href={canonicalPageHref(activePdf)} download={articlePdfFilename(article, locale)}><PdfFileIcon /><span>{locale === "tr" ? "PDF’yi indir" : "Download PDF"}</span><DownloadIcon /></a>}
         <span className="article-license">CC BY 4.0</span>
       </div></div>
 
@@ -461,13 +462,13 @@ export async function ArticlePlatform({
             <div>
               <span>{locale === "tr" ? "Cilt / Sayı" : "Volume / Issue"}</span>
               <b>
-                <a className="article-record-issue-link" href={issueHref} style={{ backgroundColor: issueColor }}>
+                <a className="article-record-issue-link" href={canonicalPageHref(issueHref)} style={{ backgroundColor: issueColor }}>
                   {article.volume} / {article.issue} ({locale === "tr" ? article.season_tr : article.season_en})
                 </a>
               </b>
             </div>
             <div><span>{locale === "tr" ? "Sayfa" : "Pages"}</span><b>{article.pages || "—"}</b></div>
-            <div className="publication-doi"><span>DOI</span><b>{article.doi ? <a href={`https://doi.org/${article.doi}`} target="_blank" rel="noreferrer">{article.doi}</a> : null}</b></div>
+            <div className="publication-doi"><span>DOI</span><b>{article.doi ? <a href={canonicalPageHref(`https://doi.org/${article.doi}`)} target="_blank" rel="noreferrer">{article.doi}</a> : null}</b></div>
           </div>
           <PublicationRecord locale={locale} history={history} />
         </aside>
@@ -491,7 +492,7 @@ export async function ArticlePlatform({
             {fullText?.publicationNote && <details className="article-accordion article-publication-note" id={locale === "tr" ? "yayin-notu" : "publication-note"}><summary><span>{locale === "tr" ? "Yayın notu" : "Publication note"}</span><b>i</b></summary><div className="accordion-copy"><p><PublicationNoteCopy value={fullText.publicationNote} locale={locale} articleSlug={article.slug} /></p></div></details>}
 
             {fullText && <ArticleFigures figures={fullText.figures} locale={locale} />}
-            {supplementary.length ? <details className="article-accordion" id={locale === "tr" ? "ek-materyaller" : "supplementary"}><summary><span>{locale === "tr" ? "Ek materyaller" : "Supplementary information"}</span><b>{supplementary.length}</b></summary><div className="supplementary-links">{supplementary.map((item) => <a href={item.url} key={`${item.title}-${item.url}`} download>{item.title}<span>↓︎</span></a>)}</div></details> : null}
+            {supplementary.length ? <details className="article-accordion" id={locale === "tr" ? "ek-materyaller" : "supplementary"}><summary><span>{locale === "tr" ? "Ek materyaller" : "Supplementary information"}</span><b>{supplementary.length}</b></summary><div className="supplementary-links">{supplementary.map((item) => <a href={canonicalPageHref(item.url)} key={`${item.title}-${item.url}`} download>{item.title}<span>↓︎</span></a>)}</div></details> : null}
 
             <Acknowledgements value={acknowledgements} locale={locale} />
             <ResearchStatements items={statements} locale={locale} />
@@ -510,7 +511,7 @@ export async function ArticlePlatform({
             })}</ol></details> : null}
           </div>
 
-          <section className="article-rights"><div><h3>{locale === "tr" ? "Lisans ve telif" : "Licence and copyright"}</h3><p>© BRIQ · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a></p></div><div><h3>{locale === "tr" ? "İzinler ve yeniden kullanım" : "Permissions and reprints"}</h3><p><a href="mailto:briq@briqjournal.com">briq@briqjournal.com</a></p></div></section>
+          <section className="article-rights"><div><h3>{locale === "tr" ? "Lisans ve telif" : "Licence and copyright"}</h3><p>© BRIQ · <a href={canonicalPageHref("https://creativecommons.org/licenses/by/4.0/")} target="_blank" rel="noreferrer">CC BY 4.0</a></p></div><div><h3>{locale === "tr" ? "İzinler ve yeniden kullanım" : "Permissions and reprints"}</h3><p><a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a></p></div></section>
         </article>
       </div>
       <BackToTop locale={locale} />
@@ -533,7 +534,7 @@ export function ArticlePdfPage({ article, locale, routeSlug = article.slug }: { 
   const authorNames = splitAuthorNames(article.author);
   return (
     <>
-      <section className="pdf-page-heading"><div className="site-shell"><div className="pdf-page-copy"><span>{locale === "tr" ? "PDF görüntüleyici" : "PDF viewer"}</span><h1>{title}</h1><p><b>{authorNames.map((name, index) => <span key={`${name}-${index}`}>{index > 0 ? ", " : ""}{isPersonByline(name) ? <a href={authorProfileHref(name, locale)} style={{ position: "relative", top: "1px", textDecoration: "underline", textUnderlineOffset: "2px" }}>{name}</a> : name}</span>)}</b><a href={issueHref} style={{ width: "fit-content", display: "inline-flex", padding: "7px 9px", borderRadius: "2px", color: "#fff", backgroundColor: issueColor, fontSize: "10px", fontWeight: 800, lineHeight: 1 }}>{issueLabel}</a></p></div><div className="pdf-page-actions"><a className="button button-light" href={articleHref}>←︎ {locale === "tr" ? "Tam Metne Geri Dön" : "Back to Full Text"}</a><a className="button pdf-issue-button" href={issueHref} style={{ backgroundColor: issueColor }}>{locale === "tr" ? "Sayıya Dön" : "Back to Issue"} →︎</a></div></div></section>
+      <section className="pdf-page-heading"><div className="site-shell"><div className="pdf-page-copy"><span>{locale === "tr" ? "PDF görüntüleyici" : "PDF viewer"}</span><h1>{title}</h1><p><b>{authorNames.map((name, index) => <span key={`${name}-${index}`}>{index > 0 ? ", " : ""}{isPersonByline(name) ? <a href={canonicalPageHref(authorProfileHref(name, locale))} style={{ position: "relative", top: "1px", textDecoration: "underline", textUnderlineOffset: "2px" }}>{name}</a> : name}</span>)}</b><a href={canonicalPageHref(issueHref)} style={{ width: "fit-content", display: "inline-flex", padding: "7px 9px", borderRadius: "2px", color: "#fff", backgroundColor: issueColor, fontSize: "10px", fontWeight: 800, lineHeight: 1 }}>{issueLabel}</a></p></div><div className="pdf-page-actions"><a className="button button-light" href={canonicalPageHref(articleHref)}>←︎ {locale === "tr" ? "Tam Metne Geri Dön" : "Back to Full Text"}</a><a className="button pdf-issue-button" href={canonicalPageHref(issueHref)} style={{ backgroundColor: issueColor }}>{locale === "tr" ? "Sayıya Dön" : "Back to Issue"} →︎</a></div></div></section>
       <div className="site-shell standalone-article-pdf"><PdfViewer title={title} turkishSrc={trPdf} englishSrc={enPdf} turkishDownloadName={articlePdfFilename(article, "tr")} englishDownloadName={articlePdfFilename(article, "en")} locale={locale} compact showTitle={false} /></div>
     </>
   );

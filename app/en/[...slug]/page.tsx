@@ -1,3 +1,4 @@
+import { canonicalPageHref } from "../../seo-links";
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -93,7 +94,7 @@ function EnglishHero({ kicker, title, intro, breadcrumbLabel }: { kicker?: strin
     <section className="page-hero">
       <div className="page-hero-rule" />
       <div className="site-shell page-hero-inner">
-        <div className="page-breadcrumb"><a href="/en">Home</a><span>/</span><span>{breadcrumbLabel || kicker || title}</span></div>
+        <div className="page-breadcrumb"><a href={canonicalPageHref("/en")}>Home</a><span>/</span><span>{breadcrumbLabel || kicker || title}</span></div>
         {kicker && <p className="section-kicker light">{kicker}</p>}
         <h1>{title}</h1>
         {intro && <p>{intro}</p>}
@@ -110,7 +111,7 @@ function EnglishStandardPage({ page }: { page: PageRecord }) {
         <aside className="reading-nav">
           <b>On this page</b>
           {page.sections.map(([title]) => (
-            <a href={`#${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} key={title}>{title}</a>
+            <a href={canonicalPageHref(`#${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`)} key={title}>{title}</a>
           ))}
         </aside>
         <div className="reading-content">
@@ -130,7 +131,7 @@ function EnglishLinkCards({ items }: { items: { number: string; title: string; t
   return (
     <div className="link-card-grid">
       {items.map((item) => (
-        <a href={item.href} className="link-card" key={item.href}>
+        <a href={canonicalPageHref(item.href)} className="link-card" key={item.href}>
           <span>{item.number}</span><h2>{item.title}</h2><p>{item.text}</p><b aria-hidden="true">→︎</b>
         </a>
       ))}
@@ -281,7 +282,7 @@ function EnglishAuthorsHub() {
         </div>
         <div className="submission-lead">
           <div><span>Submission channel</span><h2 className="dergipark-heading"><DergiParkLogo /></h2><p>Submissions are accepted in Turkish and English. Submission and publication are free of charge.</p></div>
-          <a className="button button-dark" href="https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new">Start a submission ↗︎</a>
+          <a className="button button-dark" href={canonicalPageHref("https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new")}>Start a submission ↗︎</a>
         </div>
         <EnglishLinkCards items={[
           { number: "01", title: "Submission Guidelines", text: "Contribution types, lengths, anonymisation, abstracts, and APA 7 requirements.", href: "/en/for-authors/guidelines" },
@@ -335,9 +336,9 @@ function EnglishWritingRules() {
             id: "submission-conditions",
             title: "Submission conditions",
             subsections: [
-              { id: "language-file-originality", title: "Language, file, and originality", content: <><p>Submissions are invited in English or Turkish. All submissions are to include a short biography (150-word limit) and should be sent as Microsoft Word attachments to <a href="mailto:briq@briqjournal.com">briq@briqjournal.com</a>. Articles or other content that have been previously published or are under review by other journals will not be considered for publication.</p><p>BRIQ follows American Psychological Association style (7th edition, <a href="https://apastyle.apa.org/">www.apastyle.org</a>) and uses American English spelling.</p></> },
+              { id: "language-file-originality", title: "Language, file, and originality", content: <><p>Submissions are invited in English or Turkish. All submissions are to include a short biography (150-word limit) and should be sent as Microsoft Word attachments to <a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a>. Articles or other content that have been previously published or are under review by other journals will not be considered for publication.</p><p>BRIQ follows American Psychological Association style (7th edition, <a href={canonicalPageHref("https://apastyle.apa.org/")}>www.apastyle.org</a>) and uses American English spelling.</p></> },
               { id: "academic-articles", title: "Academic articles", content: <><p>BRIQ uses a double-blind review process for all academic articles.</p><p>Academic articles should be between 5,000 and 9,000 words in length, including abstracts, notes, references, and all other content. Please supply a cover page that includes complete author information, and a fully anonymized manuscript that also contains an abstract (200- word limit) and 5 keywords.</p></> },
-              { id: "other-contributions", title: "Other contribution types", content: <><p>Book reviews should not exceed 1,000 words; review essays covering two or more works can be up to 3,000 words.</p><p>News reports consisting of brief analyses of news developments should not exceed 1,500 words; feature articles combining reporting and analysis can be up to 3,500 words.</p><p>BRIQ is an open access journal that allows readers to easily read and download the contents of published articles from the website. These contents are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0) which means that the readers can copy, download, redistribute, and share the contents only if appropriate credit is given.</p><p>Please contact the Editorial Board for interview proposals.</p><a className="editorial-next-link" href="/en/for-authors/review-process">Evaluation Process for Peer-Reviewed Submissions →︎</a></> },
+              { id: "other-contributions", title: "Other contribution types", content: <><p>Book reviews should not exceed 1,000 words; review essays covering two or more works can be up to 3,000 words.</p><p>News reports consisting of brief analyses of news developments should not exceed 1,500 words; feature articles combining reporting and analysis can be up to 3,500 words.</p><p>BRIQ is an open access journal that allows readers to easily read and download the contents of published articles from the website. These contents are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0) which means that the readers can copy, download, redistribute, and share the contents only if appropriate credit is given.</p><p>Please contact the Editorial Board for interview proposals.</p><a className="editorial-next-link" href={canonicalPageHref("/en/for-authors/review-process")}>Evaluation Process for Peer-Reviewed Submissions →︎</a></> },
             ],
           },
         ]}
@@ -378,7 +379,7 @@ function EnglishReviewFlow() {
             id: "publication-preparation",
             title: "Publication preparation",
             subsections: [
-              { id: "translation-and-final-approval", title: "Translation and final approval", content: <><p>h) Revised submissions are sent to translation, if necessary. After translations, submissions are checked by a BRIQ editor, appointed by the Managing Editor. The editor inserts photographs, prepares the final proofs and sends them to Editorial Team.</p><p>i) Bilingual proofs and Copyright Terms are sent to the corresponding author for final approval. In that stage, the corresponding author can only make minor changes, which are later to be approved by the Editorial Team and should agree the Copyright Terms.</p><p>j) The approved version of the final proofs by the corresponding author are controlled by the Editorial Team and then sent to publication.</p><a className="editorial-next-link" href="/en/for-authors/publication-ethics">Publication Ethics →︎</a></> },
+              { id: "translation-and-final-approval", title: "Translation and final approval", content: <><p>h) Revised submissions are sent to translation, if necessary. After translations, submissions are checked by a BRIQ editor, appointed by the Managing Editor. The editor inserts photographs, prepares the final proofs and sends them to Editorial Team.</p><p>i) Bilingual proofs and Copyright Terms are sent to the corresponding author for final approval. In that stage, the corresponding author can only make minor changes, which are later to be approved by the Editorial Team and should agree the Copyright Terms.</p><p>j) The approved version of the final proofs by the corresponding author are controlled by the Editorial Team and then sent to publication.</p><a className="editorial-next-link" href={canonicalPageHref("/en/for-authors/publication-ethics")}>Publication Ethics →︎</a></> },
             ],
           },
         ]}
@@ -421,7 +422,7 @@ function EnglishCopyrightTerms() {
             id: "contributor-approval-and-licence",
             title: "Contributor approval and licence",
             subsections: [
-              { id: "implementation-and-signatures", title: "Implementation and signatures", content: <><p>• BRIQ will provide the Corresponding Contributor of the Contribution with an electronic copy of the Contribution.</p><p>If more than one copyright ownership applies to the Contribution, each Contributor should sign a hard copy of this agreement.</p><p>Please contact <a href="mailto:briq@briqjournal.com">briq@briqjournal.com</a> with any questions or to receive a hard copy of this Agreement.</p><p>The copyright to the Work is owned by the Contributors. Contributor represents and warrants that the copyright to the Contribution is owned by the Contributor(s).</p><p>By signing this Agreement on behalf of all Contributors, the signing Contributor represents and warrants that he/she has received written permission from each Contributor to sign this Agreement on his or her behalf and to transfer the rights as set forth herein. Contributors understand that he/she each has the option of having each Contributor sign a separate copy of this Agreement by contacting the Editorial Office for a version of this Agreement to be signed by each Contributor and returned directly to the Editorial Office.</p></> },
+              { id: "implementation-and-signatures", title: "Implementation and signatures", content: <><p>• BRIQ will provide the Corresponding Contributor of the Contribution with an electronic copy of the Contribution.</p><p>If more than one copyright ownership applies to the Contribution, each Contributor should sign a hard copy of this agreement.</p><p>Please contact <a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a> with any questions or to receive a hard copy of this Agreement.</p><p>The copyright to the Work is owned by the Contributors. Contributor represents and warrants that the copyright to the Contribution is owned by the Contributor(s).</p><p>By signing this Agreement on behalf of all Contributors, the signing Contributor represents and warrants that he/she has received written permission from each Contributor to sign this Agreement on his or her behalf and to transfer the rights as set forth herein. Contributors understand that he/she each has the option of having each Contributor sign a separate copy of this Agreement by contacting the Editorial Office for a version of this Agreement to be signed by each Contributor and returned directly to the Editorial Office.</p></> },
               { id: "cc-by-licence", title: "Creative Commons Attribution 4.0", content: <p>The Journal uses Creative Commons Attribution 4.0 International License ( CC BY 4.0 ), which means that texts may be copied, downloaded, redistributed, and shared only if appropriate credit is given.</p> },
             ],
           },
@@ -452,7 +453,7 @@ function EnglishEthicsPolicy() {
             subsections: [
               { id: "editors-duties", title: "Editors' Duties and Responsibilities", content: <><p>The editors and assistant editors of the Belt &amp; Road Initiative Quarterly are obliged to fulfill their duties in an objective and impartial manner, free from any prejudice.</p><p>The editors and assistant editors of the Belt and Road Initiative Quarterly should act confidentially to the extent required by their duties.</p><p>Editors and assistant editors of the Belt and Road Initiative Journal should cooperate in all activities related to the publication process. Fair distribution of tasks within the journal constitutes the essence of cooperation.</p></> },
               { id: "authors-responsibilities", title: "Ethical Responsibilities of Authors", content: <><p>Owners of works who want their works to be published in the Belt &amp; Road Initiative Quarterly must comply with the provisions of the “Law on Intellectual and Artistic Works No. 5846”, the principles set by YÖK in the Scientific Research and Publication Ethics Directive, the standards set forth by COPE and other principles adopted by the Belt and Road Initiative Quarterly.</p><p>The authors are deemed to have committed that they have prepared the works they sent to the Belt &amp; Road Initiative Quarterly for publication in accordance with the relevant principles and standards.</p></> },
-              { id: "reviewers-responsibilities", title: "Ethical Responsibilities of Referees", content: <><p>Referees should carefully review the works sent to them by the Journal or the units authorized by the Journal; should make the evaluation of the work in an impartial and fair manner in accordance with their area of ​​expertise.</p><p>The referees are obliged to immediately inform the Editorial Board of the Journal if they find any contradictions with academic principles and ethical values, national or international principles or standards in the works they evaluate.</p><p>Reviewers should make the assessment in a constructive and courteous manner. Personal comments that are hostile, slanderous and insulting should not be made.</p><a className="editorial-next-link" href="/en/for-authors/copyright-and-licence">Copyright Terms and Licence →︎</a></> },
+              { id: "reviewers-responsibilities", title: "Ethical Responsibilities of Referees", content: <><p>Referees should carefully review the works sent to them by the Journal or the units authorized by the Journal; should make the evaluation of the work in an impartial and fair manner in accordance with their area of ​​expertise.</p><p>The referees are obliged to immediately inform the Editorial Board of the Journal if they find any contradictions with academic principles and ethical values, national or international principles or standards in the works they evaluate.</p><p>Reviewers should make the assessment in a constructive and courteous manner. Personal comments that are hostile, slanderous and insulting should not be made.</p><a className="editorial-next-link" href={canonicalPageHref("/en/for-authors/copyright-and-licence")}>Copyright Terms and Licence →︎</a></> },
             ],
           },
         ]}
@@ -521,7 +522,7 @@ function EnglishArchive() {
     <div className="archive-page">
       <EnglishHero title="All issues" breadcrumbLabel="Archive" />
       <div className="site-shell page-section">
-        <div className="archive-tools"><p><b>{archiveIssues.length} issues</b> · 7 volumes · 2019-2026</p><a className="underlined-link" href="/en/current-issue">Go to current issue →︎</a></div>
+        <div className="archive-tools"><p><b>{archiveIssues.length} issues</b> · 7 volumes · 2019-2026</p><a className="underlined-link" href={canonicalPageHref("/en/current-issue")}>Go to current issue →︎</a></div>
         <ArchiveExplorer issues={archiveIssueListings} locale="en" />
       </div>
     </div>
@@ -544,13 +545,13 @@ function EnglishCurrentIssue() {
 }
 
 function EnglishContact() {
-  return <div className="contact-page"><EnglishHero kicker="Contact" title="Contact BRIQ" intro="Contact BRIQ for editorial questions, publication processes, and institutional matters." /><div className="site-shell page-section contact-grid contact-grid-compact"><article><span>Email</span><h2><a href="mailto:briq@briqjournal.com">briq@briqjournal.com</a></h2><p>Manuscripts should be submitted through DergiPark.</p></article><article><span>Office</span><h2>Üsküdar · Istanbul</h2><p>Ünalan Mahallesi, Libadiye Caddesi No:84, Üsküdar / Istanbul, Türkiye</p></article><article><span>Journal contact person</span><h2>İbrahim Fikret Akfırat</h2><p><a href="mailto:fikretakfirat@briqjournal.com">fikretakfirat@briqjournal.com</a></p></article><article><span>Manuscript submission</span><h2 className="dergipark-heading"><DergiParkLogo /></h2><a className="underlined-link" href="https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new">Open the submission page ↗︎</a></article></div><div className="site-shell contact-form-wrap contact-form-wrap-compact"><ContactForm locale="en" /></div></div>;
+  return <div className="contact-page"><EnglishHero kicker="Contact" title="Contact BRIQ" intro="Contact BRIQ for editorial questions, publication processes, and institutional matters." /><div className="site-shell page-section contact-grid contact-grid-compact"><article><span>Email</span><h2><a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a></h2><p>Manuscripts should be submitted through DergiPark.</p></article><article><span>Office</span><h2>Üsküdar · Istanbul</h2><p>Ünalan Mahallesi, Libadiye Caddesi No:84, Üsküdar / Istanbul, Türkiye</p></article><article><span>Journal contact person</span><h2>İbrahim Fikret Akfırat</h2><p><a href={canonicalPageHref("mailto:fikretakfirat@briqjournal.com")}>fikretakfirat@briqjournal.com</a></p></article><article><span>Manuscript submission</span><h2 className="dergipark-heading"><DergiParkLogo /></h2><a className="underlined-link" href={canonicalPageHref("https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new")}>Open the submission page ↗︎</a></article></div><div className="site-shell contact-form-wrap contact-form-wrap-compact"><ContactForm locale="en" /></div></div>;
 }
 
 function EnglishSearch() { return <><EnglishHero kicker="Search" title="Search BRIQ" intro="Search articles, authors, issues, cover titles, DOI records, and calls for papers." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} locale="en" /></div></>; }
 
 function EnglishCalls() {
-  return <><EnglishHero title="Calls for Papers" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={call.urlEn} key={call.urlEn}>{call.image ? <Image src={call.image} alt="" width={400} height={230} loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · {call.deadlineLabelEn}: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
+  return <><EnglishHero title="Calls for Papers" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={canonicalPageHref(call.urlEn)} key={call.urlEn}>{call.image ? <Image src={call.image} alt="" width={400} height={230} loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · {call.deadlineLabelEn}: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
 }
 
 function EnglishAuthorProfile({ id }: { id: string }) {
@@ -560,7 +561,7 @@ function EnglishAuthorProfile({ id }: { id: string }) {
     <>
       <section className="author-page-hero">
         <div className="site-shell author-page-hero-inner">
-          <div className="page-breadcrumb"><a href="/en">Home</a><span>/</span><span>Author</span></div>
+          <div className="page-breadcrumb"><a href={canonicalPageHref("/en")}>Home</a><span>/</span><span>Author</span></div>
           <div className="author-page-identity">
             {profile.photo ? <img className="author-page-photo" src={profile.photo} alt={`${profile.name} portrait`} loading="lazy" decoding="async" /> : <span className="author-page-monogram" aria-hidden="true">{profile.name.slice(0, 1)}</span>}
             <div><p className="section-kicker">{profile.rolesEn.length ? profile.rolesEn.join(" · ") : "Author"}</p><h1>{profile.name}</h1><p>{profile.affiliationEn}</p></div>
@@ -592,7 +593,7 @@ function EnglishAuthorProfile({ id }: { id: string }) {
             <div><p className="section-kicker">Archive</p><h2>Work published in BRIQ</h2></div>
             <div className="author-work-list">
               {profile.articles.map((article) => (
-                <a href={`/en/articles/${articleRouteSlug(article, "en")}`} key={`${article.volume}-${article.issue}-${article.slug}`}>
+                <a href={canonicalPageHref(`/en/articles/${articleRouteSlug(article, "en")}`)} key={`${article.volume}-${article.issue}-${article.slug}`}>
                   <span className="author-work-issue" style={{ backgroundColor: issueAccent(article.volume, article.issue) }}>Volume {article.volume} · Issue {article.issue} · {article.year}</span>
                   <h3>{article.title_en || article.title_tr}</h3>
                   <p>{article.pages ? `pp. ${article.pages}` : article.season_en}{article.doi ? ` · DOI: ${article.doi}` : ""}</p>
@@ -614,7 +615,7 @@ function EnglishReports() {
       <EnglishHero kicker="Journal" title="Annual reports" intro="Verified records of BRIQ’s publication activity, international reach, and institutional development." />
       <div className="site-shell page-section report-list">
         {annualReports.map((report) => (
-          <a href={`/en/annual-reports/${report.number}`} key={report.number}>
+          <a href={canonicalPageHref(`/en/annual-reports/${report.number}`)} key={report.number}>
             <span>{String(report.number).padStart(2, "0")}</span>
             <div><small>{report.dateEn}</small><h2>BRIQ {report.titleEn}</h2></div>
             <b>PDF ↗︎</b>
@@ -633,7 +634,7 @@ function EnglishReport({ number }: { number: number }) {
       <EnglishHero kicker="Annual Report" title={`BRIQ ${report.titleEn}`} intro={`A verified record dated ${report.dateEn}.`} />
       <div className="site-shell reading-layout">
         <aside className="issue-record-number"><span>REPORT</span><b>{String(report.number).padStart(2, "0")}</b></aside>
-        <div className="reading-content"><section><h2>Verified report record</h2><p>The original Turkish and English reports have been matched to BRIQ’s source archive and are available in the on-site viewer.</p></section><a className="underlined-link" href="/en/annual-reports">Back to all reports →︎</a></div>
+        <div className="reading-content"><section><h2>Verified report record</h2><p>The original Turkish and English reports have been matched to BRIQ’s source archive and are available in the on-site viewer.</p></section><a className="underlined-link" href={canonicalPageHref("/en/annual-reports")}>Back to all reports →︎</a></div>
       </div>
       <div className="site-shell issue-pdf-section"><PdfViewer title={`BRIQ ${report.titleEn}`} turkishSrc={report.pdfTrLocal} englishSrc={report.pdfEnLocal} locale="en" /></div>
     </>
@@ -751,20 +752,20 @@ function EnglishCallDetail({ slug }: { slug: string }) {
             <section className="call-guidelines-section">
               <h2>Submission Guidelines</h2>
               <ul>{copy.guidelines.map((item) => <li key={item}>{item}</li>)}</ul>
-              {copy.guidelineHref && <a className="underlined-link" href={copy.guidelineHref}>View the complete submission guidelines →︎</a>}
+              {copy.guidelineHref && <a className="underlined-link" href={canonicalPageHref(copy.guidelineHref)}>View the complete submission guidelines →︎</a>}
             </section>
           ) : copy?.note ? <section><h2>Guidelines and submission</h2><p>{copy.note}</p></section> : null}
           {copy?.deadline && <section className="call-important-date"><h2>Important Dates</h2><p>{copy.deadline}</p></section>}
           {copy?.contact && (
             <section className="call-contact-section">
               <h2>Submission and Contact</h2>
-              <p><a className="inline-link" href={`mailto:${copy.contact}`}>{copy.contact}</a></p>
-              {active && <a className="button button-dark dergipark-button" href="https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new"><DergiParkLogo prefix="Submit via" /><span>↗︎</span></a>}
+              <p><a className="inline-link" href={canonicalPageHref(`mailto:${copy.contact}`)}>{copy.contact}</a></p>
+              {active && <a className="button button-dark dergipark-button" href={canonicalPageHref("https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new")}><DergiParkLogo prefix="Submit via" /><span>↗︎</span></a>}
             </section>
           )}
-          {past && <section><h2>Outcome of the call</h2><p>{past.issueHrefEn ? <>The issue published following this call: <a className="inline-link" href={past.issueHrefEn}>{past.issueEn}</a>.</> : past.issueEn}</p></section>}
-          {active && !copy?.contact && <section><h2>Submission</h2><p>Manuscripts may be prepared in Turkish or English. Authors should review the submission guidelines before submitting.</p><a className="button button-dark dergipark-button" href="https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new"><DergiParkLogo prefix="Submit via" /><span>↗︎</span></a></section>}
-          <a className="underlined-link" href="/en/calls-for-papers">Back to all calls →︎</a>
+          {past && <section><h2>Outcome of the call</h2><p>{past.issueHrefEn ? <>The issue published following this call: <a className="inline-link" href={canonicalPageHref(past.issueHrefEn)}>{past.issueEn}</a>.</> : past.issueEn}</p></section>}
+          {active && !copy?.contact && <section><h2>Submission</h2><p>Manuscripts may be prepared in Turkish or English. Authors should review the submission guidelines before submitting.</p><a className="button button-dark dergipark-button" href={canonicalPageHref("https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new")}><DergiParkLogo prefix="Submit via" /><span>↗︎</span></a></section>}
+          <a className="underlined-link" href={canonicalPageHref("/en/calls-for-papers")}>Back to all calls →︎</a>
         </div>
       </div>
     </>

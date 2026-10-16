@@ -1,4 +1,5 @@
 "use client";
+import { canonicalPageHref } from "../seo-links";
 
 import { useEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import Image from "next/image";
@@ -264,11 +265,11 @@ export function HomeHeroSlider({ locale = "tr" }: { locale?: Locale }) {
                 </h1>
                 <p className="hero-summary">{slide.summary}</p>
                 <div className="hero-actions">
-                  <a className="button button-dark" href={slide.href} tabIndex={index === active ? 0 : -1}>{slide.action} <span>→︎</span></a>
-                  <a className="text-link" href={slide.secondaryHref} tabIndex={index === active ? 0 : -1}>{slide.secondary} <span>↗︎</span></a>
+                  <a className="button button-dark" href={canonicalPageHref(slide.href)} tabIndex={index === active ? 0 : -1}>{slide.action} <span>→︎</span></a>
+                  <a className="text-link" href={canonicalPageHref(slide.secondaryHref)} tabIndex={index === active ? 0 : -1}>{slide.secondary} <span>↗︎</span></a>
                 </div>
               </div>
-              <a className="issue-cover" href={slide.href} tabIndex={index === active ? 0 : -1}>
+              <a className="issue-cover" href={canonicalPageHref(slide.href)} tabIndex={index === active ? 0 : -1}>
                 <span className="cover-shadow cover-shadow-one" />
                 <span className="cover-shadow cover-shadow-two" />
                 {index === active && (
