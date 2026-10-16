@@ -1785,9 +1785,9 @@ test("bilingual HTML navigation links use final canonical page URLs without redi
   const pages = ["/tr", "/en", "/tr/makaleler", "/en/articles", "/tr/arsiv", "/en/archive", "/tr/arsiv/cilt-4-sayi-2", "/en/archive/volume-2-issue-2", "/en/articles/making-solid-progress-toward-common-prosperity"];
   let checked = 0;
   for (const page of pages) {
-    const response = await renderPath(page);
-    assert.equal(response.status, 200, `render ${page}`);
-    const html = await response.text();
+    // Verify the prerendered production artifact without launching another
+    // server render in this memory-intensive regression suite.
+    const html = await readFile(new URL(`../dist/client${page}/index.html`, import.meta.url), "utf8");
     const anchors = [...html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)].map((m) => m[1]);
     let eligible = 0;
     for (const href of anchors) {
