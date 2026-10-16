@@ -51,7 +51,7 @@ test("renders production metadata without preview markers", async () => {
   );
   const html = await response.text();
   assert.doesNotMatch(html, /name=["']codex-preview["']/i);
-  assert.match(html, /<link rel="canonical" href="https:\/\/briqjournal\.com\/tr"/i);
+  assert.match(html, /<link rel="canonical" href="https:\/\/briqjournal\.com\/tr\/"/i);
 });
 
 test("routes the locale gateway by Cloudflare country and preserves legacy Turkish URLs", async () => {
