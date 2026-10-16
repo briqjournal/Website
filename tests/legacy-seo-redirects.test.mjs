@@ -163,3 +163,84 @@ test("four source-verified Search Console 404 aliases reach their exact publishe
   ]) await assertRedirect(source, destination);
   await assertRedirect("/roportaj-yesil-ve-dijital-donusum-kapsaminda-?ref=gsc", "/tr/makaleler/roportaj-yesil-ve-dijital-donusum-kapsaminda-ar-ge-ve-yenilik-ekosistemini-harekete-geciriyoruz/", "?ref=gsc");
 });
+
+
+test("historical calls redirect to their verified original-language archive records", async () => {
+  for (const [source, destination] of [
+    [
+        "/makale-cagrisi-ataturk-devriminin-yuzuncu-yili-ve-avrasyayi-birlestiren-ortak-program",
+        "/tr/makale-cagrilari/ataturk-devriminin-yuzuncu-yili/"
+    ],
+    [
+        "/makale-cagrisi-natonun-asya-pasifike-dogru-genisleme-planlarinin-dunyaya-etkisi",
+        "/tr/makale-cagrilari/natonun-asya-pasifike-genislemesi/"
+    ],
+    [
+        "/makale-cagrisi-enerjide-hidrojen-cagi",
+        "/tr/makale-cagrilari/enerjide-hidrojen-cagi/"
+    ],
+    [
+        "/makale-cagrisi-turkiye-cumhuriyeti-ile-cin-halk-cumhuriyeti-arasinda-diplomatik-iliskilerin",
+        "/tr/makale-cagrilari/turkiye-cin-diplomatik-iliskilerinin-50-yili/"
+    ],
+    [
+        "/21-yuzyilda-ekolojik-bir-makale-cagrisi-medeniyet-insa-etmek-gelismekte-olan-dunyadan-perspektifler",
+        "/tr/makale-cagrilari/21-yuzyilda-ekolojik-medeniyet/"
+    ],
+    [
+        "/makale-cagrisi-kusak-yol-girisimi-kapsaminda-bilimsel-ve-teknolojik-isbirligi",
+        "/tr/makale-cagrilari/kusak-yol-bilimsel-teknolojik-isbirligi/"
+    ],
+    [
+        "/makale-cagrisi-koronavirus-sonrasi-dunyada-sosyoekonomik-sistemlerin-catismasi",
+        "/tr/makale-cagrilari/koronavirus-sonrasi-sosyoekonomik-sistemler/"
+    ],
+    [
+        "/makale-cagrisi-gelismekte-olan-dunyada-uluslararasi-guvenlik-sorunlar-ve-cozumleri",
+        "/tr/makale-cagrilari/gelismekte-olan-dunyada-uluslararasi-guvenlik/"
+    ],
+    [
+        "/en/special-issue-call-papers-centenary-the-1923-turkish-revolution",
+        "/en/calls-for-papers/centenary-1923-turkish-revolution/"
+    ],
+    [
+        "/en/special-issue-call-papers-the-impact-natos-expansion-plans-towards-asia-pacific",
+        "/en/calls-for-papers/nato-expansion-asia-pacific/"
+    ],
+    [
+        "/en/special-issue-call-papers-carbon-hydrogen-era",
+        "/en/calls-for-papers/carbon-hydrogen-era/"
+    ],
+    [
+        "/en/special-issue-call-papers-the-50th-anniversary-the-establishment-diplomatic-relations-between-the",
+        "/en/calls-for-papers/turkey-china-diplomatic-relations-50th-anniversary/"
+    ],
+    [
+        "/en/special-issue-call-papers-building-ecological-civilization-the-21st-century-perspectives-the",
+        "/en/calls-for-papers/ecological-civilization-21st-century/"
+    ],
+    [
+        "/en/special-issue-call-papers-scientific-and-technological-cooperation-the-framework-the-belt-and-road",
+        "/en/calls-for-papers/belt-road-scientific-technological-cooperation/"
+    ],
+    [
+        "/en/call-papers-the-clash-socioeconomic-systems-post-coronavirus-world",
+        "/en/calls-for-papers/post-coronavirus-socioeconomic-systems/"
+    ],
+    [
+        "/en/call-papers-international-security-the-developing-world-problems-and-solutions",
+        "/en/calls-for-papers/international-security-developing-world/"
+    ],
+    [
+        "/en/special-issue-call-for-papers-scientific-and-technological-cooperation-in-the-framework-of-the-belt-and-road-initiative",
+        "/en/calls-for-papers/belt-road-scientific-technological-cooperation/"
+    ],
+    [
+        "/en/special-issue-call-for-papers-building-an-ecological-civilization-in-the-21st-century-perspectives-from-the-developing-world",
+        "/en/calls-for-papers/ecological-civilization-21st-century/"
+    ]
+]) {
+    await assertRedirect(source, destination);
+  }
+  await assertRedirect("/makale-cagrisi-enerjide-hidrojen-cagi?source=historic", "/tr/makale-cagrilari/enerjide-hidrojen-cagi/", "?source=historic");
+});
