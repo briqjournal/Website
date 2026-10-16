@@ -33,6 +33,7 @@ import { BiographyText } from "../../components/BiographyText";
 import { IndexDirectory } from "../../components/IndexDirectory";
 import { CallHero } from "../../components/CallHero";
 import { completeCallCopyEn } from "../../call-content";
+import { historicCalls } from "../../historical-calls";
 import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../authors";
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
@@ -728,6 +729,20 @@ function EnglishCallDetail({ slug }: { slug: string }) {
   if (!title) return null;
   const deadline = active?.deadlineEn || past?.deadlineEn || "";
   const copy = completeCallCopyEn[slug] || englishCallEditorialCopy[slug];
+  const historical = past?.historicalKey ? historicCalls.en[past.historicalKey] : null;
+  if (historical) return (
+    <>
+      <CallHero locale="en" slug={slug} title={historical.title} deadline={deadline} active={false} />
+      <div className="site-shell call-detail-page">
+        <div className="reading-content">
+          <section><p><strong>Historical archive record.</strong> This call is closed. The original text and submission requirements below reflect the period of publication, not current submission guidelines.</p></section>
+          <section className="historical-call-original" dangerouslySetInnerHTML={{ __html: historical.html }} />
+          <section><p><a className="underlined-link" href={historical.source} target="_blank" rel="noopener noreferrer">Archived original call ↗︎</a></p></section>
+          <a className="underlined-link" href={canonicalPageHref("/en/calls-for-papers")}>Back to all calls →︎</a>
+        </div>
+      </div>
+    </>
+  );
   return (
     <>
       <CallHero locale="en" slug={slug} title={title} deadline={deadline} deadlineLabel={active?.deadlineLabelEn} active={Boolean(active)} image={active?.image} />
@@ -918,11 +933,11 @@ async function generatePageMetadata({ params }: { params: Promise<{ slug: string
     const past = pastCalls.find((item) => (item.slugEn || item.slug) === callSlug);
     const title = active?.titleEn || past?.titleEn;
     if (title) {
-      const turkishSlug = callSlug === "transatlantic-relations"
+      const turkishSlug = past?.slug || (callSlug === "transatlantic-relations"
         ? "transatlantik-iliskilerin-yeniden-yapilanmasi"
         : callSlug === "artificial-intelligence-productive-forces"
           ? "yapay-zeka-uretici-gucler-ortak-refah"
-          : callSlug === "book-reviews" ? "kitap-incelemesi" : callSlug;
+          : callSlug === "book-reviews" ? "kitap-incelemesi" : callSlug);
       return {
         title: `${title} | BRIQ`,
         description: active?.summaryEn || `Archived BRIQ call for papers. Deadline: ${past?.deadlineEn}.`,
