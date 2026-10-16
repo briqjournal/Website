@@ -1718,7 +1718,9 @@ test("canonical and hreflang point to the final 200 page URL, not the slashless 
   ];
 
   for (const [path, canonicalPath] of cases) {
-    const response = await renderPath(path);
+    // The worker uses slashless internal app paths; public HTML is
+    // prerendered and served by Cloudflare at the terminal-slash path.
+    const response = await renderPath(path.slice(0, -1));
     assert.equal(response.status, 200, `render ${path}`);
     const html = await response.text();
     const canonical = html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1];
