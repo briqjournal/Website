@@ -65,7 +65,7 @@ export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
   "/en/user/doc-dr-efe-can-gurcan": "/en/authors/efe-can-gurcan",
   "/user/dr-yang-chen": "/tr/yazar/yang-chen",
   "/en/author/gongjianhua": "/en/authors/gong-jianhua",
-  "/en/author/degangsun": "/en/authors/degang-sun",
+  "/en/author/degangsun": "/en/authors/sun-degang",
   "/en/author/emingurses": "/en/authors/emin-gurses",
   "/en/author/cemgurdeniz": "/en/authors/cem-gurdeniz",
 
@@ -114,6 +114,10 @@ export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
   "/kusak-ve-yol-girisimi-avrasyanin-yolu": "/tr/makaleler/rus-stratejist-dr-alexander-dugin-kusak-ve-yol-girisimi-avrasyanin-yolu",
   "/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon": "/tr/makaleler/sovyet-reformunun-tarihi-trajedisinden-bizi-kurtaran-ne-oldu-cinin-ekonomik-cagdaslasmasina-yon-0",
 
+  // Exact formerly published slugs recovered from the Search Console 404 sample.
+  "/roportaj-yesil-ve-dijital-donusum-kapsaminda-": "/tr/makaleler/roportaj-yesil-ve-dijital-donusum-kapsaminda-ar-ge-ve-yenilik-ekosistemini-harekete-geciriyoruz",
+  "/1uluslararasi-kusak-ve-yol-inisiyatifi-turkiye-sempozyumu": "/tr/makaleler/1-uluslararasi-kusak-ve-yol-inisiyatifi-turkiye-sempozyumu-turkiye-dijital-ipek-yolunun-oncusu",
+
   // Additional legacy slugs matched to published records in the article catalog.
   "/en/neo-mahanian-": "/en/articles/a-neo-mahanian-reading-of-turkey-and-chinas-changing-maritime-geopolitics",
   "/en/russian-strategist-": "/en/articles/russian-strategist-dr-alexander-dugin-the-belt-and-road-initiative-a-eurasian-road",
@@ -122,6 +126,7 @@ export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
   // Specific 2020 English Issue 4 upload: name omits volume, so automatic
   // legacy PDF parser cannot infer the published issue. R2 target verified.
   "/sites/default/files/dergi-sayilari/2020-11/BRIQ_ENG ISSUE 4.pdf": "/assets/archive/pdfs/issues/cilt-1-sayi-4-en.pdf",
+  "/sites/default/files/dergi-sayilari/2020-11/briq_eng issue 4.pdf": "/assets/archive/pdfs/issues/cilt-1-sayi-4-en.pdf",
 
   // Volume 7 issues 3/4 live under /assets/issues, not the older PDF prefix.
   "/assets/archive/pdfs/issues/cilt-7-sayi-3-tr.pdf": "/assets/issues/briq-cilt-7-sayi-3-yaz-2026-tr.pdf",
