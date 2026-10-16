@@ -244,3 +244,24 @@ test("historical calls redirect to their verified original-language archive reco
   }
   await assertRedirect("/makale-cagrisi-enerjide-hidrojen-cagi?source=historic", "/tr/makale-cagrilari/enerjide-hidrojen-cagi/", "?source=historic");
 });
+
+test("recover three source-verified GSC 404s without extra redirects", async () => {
+  for (const [source, destination] of [
+    ["/index.php/user/7", "/tr/yazar/mehmet-adnan-akfirat"],
+    ["/user/7", "/tr/yazar/mehmet-adnan-akfirat"],
+    ["/en/author/briq/", "/en/calls-for-papers"],
+    ["/2729-2/", "/tr/makaleler/bmc-yonetim-kurulu-baskani-ethem-sancak-asya-kartalinin-iki-kanadi-turkiye-ve-cin"],
+  ]) {
+    await assertRedirect(source, destination);
+  }
+  await assertRedirect(
+    "/index.php/user/7?source=historic",
+    "/tr/yazar/mehmet-adnan-akfirat",
+    "?source=historic",
+  );
+  await assertRedirect(
+    "/2729-2/?archive=2020",
+    "/tr/makaleler/bmc-yonetim-kurulu-baskani-ethem-sancak-asya-kartalinin-iki-kanadi-turkiye-ve-cin",
+    "?archive=2020",
+  );
+});
