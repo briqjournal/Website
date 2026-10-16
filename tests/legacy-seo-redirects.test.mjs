@@ -17,7 +17,14 @@ async function assertRedirect(source, destination, expectedQuery = "") {
   assert.equal(response.status, 301, `status for ${source}`);
   const location = new URL(response.headers.get("location"));
   assert.equal(location.origin, "https://briqjournal.com", `host for ${source}`);
-  assert.equal(location.pathname, destination, `target for ${source}`);
+  // PDF and file targets must remain unchanged; HTML redirects land on the
+  // actual published trailing-slash canonical URL in a single Worker hop.
+  const canonicalDestination = /^\/(?:en|tr)(?:\/|$)/.test(destination)
+    && !destination.endsWith("/")
+    && !/\.[a-z0-9]{1,8}$/i.test(destination)
+    ? destination + "/"
+    : destination;
+  assert.equal(location.pathname, canonicalDestination, `target for ${source}`);
   assert.equal(location.search, expectedQuery, `query for ${source}`);
 }
 
@@ -109,4 +116,39 @@ test("old honorific-prefixed author URLs redirect only to verified localized aut
     ["/en/user/prof-dr-semih-koray", "/en/authors/semih-koray"],
     ["/en/user/assoc-prof-dr-aleksandr-sotnicenko", "/en/authors/aleksandr-sotnicenko"],
   ]) await assertRedirect(from, to);
+});
+
+test("previously broken legacy article aliases now resolve straight to verified canonical articles", async () => {
+  for (const [source, destination] of [
+    ["/dilek-uyar-fotograf-sanatcisi", "/tr/makaleler/cobanin-sagim-sonrasi-suruyu-tekrar-otlaklara-goturme-cabasi-ve-tozlu-yolculuk/"],
+    ["/download/after-milking-shepherds-effort-to-bring-the-herd-back-to-pasture-and-their-dusty-journey", "/en/articles/after-milking-shepherds-effort-to-bring-the-herd-back-to-pasture-and-their-dusty-journey-bitlis/"],
+    ["/en/articles/history-the-first-book-about-ataturk-ever-published-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/book-review-post-covid-19-global-system-old-problems-new-trends", "/en/articles/post-covid-19-global-system-old-problems-new-trends/"],
+    ["/en/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler", "/en/articles/post-covid-19-global-system-old-problems-new-trends/"],
+    ["/en/dilek-uyar-photography-artist", "/en/articles/after-milking-shepherds-effort-to-bring-the-herd-back-to-pasture-and-their-dusty-journey-bitlis/"],
+    ["/en/fotograf-ni-min-fujian-huian-kadini-ag-onariyor", "/en/articles/fujian-huian-maidens-weaving-net/"],
+    ["/en/history-the-first-book-about-ataturk-ever-published-in-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/history-the-first-book-about-ataturk-ever-published-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/makale/book-review-post-covid-19-global-system-old-problems-new-trends", "/en/articles/post-covid-19-global-system-old-problems-new-trends/"],
+    ["/en/makale/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler", "/en/articles/post-covid-19-global-system-old-problems-new-trends/"],
+    ["/en/makale/fotograf-ni-min-fujian-huian-kadini-ag-onariyor", "/en/articles/fujian-huian-maidens-weaving-net/"],
+    ["/en/makale/history-the-first-book-about-ataturk-ever-published-in-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/makale/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/makale/nato-and-the-wider-international-territory", "/en/articles/nato-from-control-of-the-western-territorial-line-to-control-of-the-wider-international-territory/"],
+    ["/en/makale/photograph-fujian-huian-maidens-weaving-net", "/en/articles/fujian-huian-maidens-weaving-net/"],
+    ["/en/photograph-fujian-huian-maidens-weaving-net", "/en/articles/fujian-huian-maidens-weaving-net/"],
+    ["/en/the-first-book-about-ataturk-ever-published-in-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+  ]) await assertRedirect(source, destination);
+});
+
+test("HTML legacy redirects have no extra slash hop and PDFs preserve their filenames", async () => {
+  for (const [source, destination, query] of [
+    ["/kategori/karaman-denizi", "/tr/makaleler/", ""],
+    ["/en/user/can-ulusoy", "/en/authors/can-ulusoy/", ""],
+    ["/user/dr-hande-gunozu?ref=old", "/tr/yazar/hande-gunozu/", "?ref=old"],
+    ["/en/briq-vol5-issue2", "/en/archive/volume-5-issue-2/", ""],
+    ["/en/homepage", "/en/", ""],
+    ["/assets/archive/pdfs/issues/cilt-7-sayi-3-tr.pdf", "/assets/issues/briq-cilt-7-sayi-3-yaz-2026-tr.pdf", ""],
+  ]) await assertRedirect(source, destination, query);
 });
