@@ -631,7 +631,7 @@ test("redirects legacy user author profile URLs to canonical author routes", asy
     renderPath("/tr/user/prof-dr-cuneyt-akalin"),
   ]);
   assert.ok([301, 307, 308].includes(trUser.status));
-  assert.equal(new URL(trUser.headers.get("location")).pathname, "/tr/yazar/prof-dr-cuneyt-akalin");
+  assert.equal(new URL(trUser.headers.get("location")).pathname, "/tr/yazar/cuneyt-akalin/");
 });
 
 test("renders every current-issue contribution in the bilingual HTML article platform", async () => {
