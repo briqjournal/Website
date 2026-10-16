@@ -92,13 +92,13 @@ function getLegacyPatternRedirect(pathname: string): string | null {
 
   // 5. Drupal listing URLs. The old ?page=N parameter has no equivalent
   // in the modern, filterable article archive.
-  if (/^\\/(?:tr\\/|en\\/)?(?:makale|roportaj|tarihten|kitap-inceleme|hikaye-siir)$/i.test(pathname)) {
+  if (/^\/(?:tr\/|en\/)?(?:makale|roportaj|tarihten|kitap-inceleme|hikaye-siir)$/i.test(pathname)) {
     return pathname.startsWith("/en/") ? "/en/articles" : "/tr/makaleler";
   }
 
   // Published locale-less article and CFP detail links.
   // Preserve the exact slug; genuinely unknown slugs should still 404.
-  if (/^\\/(?:makaleler|makale-cagrilari)\\/[a-z0-9-]+$/i.test(pathname)) {
+  if (/^\/(?:makaleler|makale-cagrilari)\/[a-z0-9-]+$/i.test(pathname)) {
     return "/tr" + pathname;
   }
 
@@ -124,7 +124,7 @@ function getLegacyPatternRedirect(pathname: string): string | null {
 function handleLegacyRedirect(url: URL): Response | null {
   const originalPath = normalizedLegacyPath(url.pathname);
   // Strip Drupal front controller before matching its former routes.
-  const rawPath = originalPath.replace(/^\\/index\\.php(?=\\/|$)/i, "") || "/";
+  const rawPath = originalPath.replace(/^\/index\.php(?=\/|$)/i, "") || "/";
   let decodedPath: string;
   try {
     decodedPath = decodeURIComponent(rawPath);
@@ -173,7 +173,7 @@ function handleLegacyRedirect(url: URL): Response | null {
   const target = new URL(targetPath, url.origin);
   // Old list pagination is not semantically supported by the new archive.
   // Drop ?page=N instead of generating hundreds of duplicate canonical URLs.
-  const oldListing = /^\\/(?:tr\\/|en\\/)?(?:makale|roportaj|tarihten|kitap-inceleme|hikaye-siir|sayilar)$/i.test(rawPath);
+  const oldListing = /^\/(?:tr\/|en\/)?(?:makale|roportaj|tarihten|kitap-inceleme|hikaye-siir|sayilar)$/i.test(rawPath);
   target.search = oldListing ? "" : url.search;
   return new Response(null, {
     status: 301,
