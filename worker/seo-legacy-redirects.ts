@@ -33,6 +33,7 @@ export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
   "/en/user/prof-dr-ugur-murat-leloglu": "/en/authors/ugur-murat-leloglu",
   "/en/user/prof-dr-cuneyt-akalin": "/en/authors/cuneyt-akalin",
   "/user/prof-dr-cuneyt-akalin": "/tr/yazar/cuneyt-akalin",
+  "/tr/user/prof-dr-cuneyt-akalin": "/tr/yazar/cuneyt-akalin",
   "/user/prof-jinghua-cao": "/tr/yazar/jinghua-cao",
   "/user/prof-dr-gunay-cifci": "/tr/yazar/gunay-cifci",
   "/en/user/prof-dr-ahmet-kavas": "/en/authors/ahmet-kavas",
@@ -85,6 +86,28 @@ export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
   "/en/challenges-multipolarity-and-provocations-ethnic-separatists-and-religious-extremists": "/en/calls-for-papers/cok-kutupluluga-karsi-tehditler",
   "/70-yil-donumunde-bandung-konferansinin-gecmisten-gunumuze-suregelen-mirasi": "/tr/makale-cagrilari/bandung-konferansinin-mirasi",
   "/makale-cagrisi-kuresel-guneyde-bilimsel-ve-teknolojik-gelisme-politikalari": "/tr/makale-cagrilari/kuresel-guneyde-bilim-ve-teknoloji",
+
+  // Former article aliases that resolved to removed slugs (confirmed 404).
+  // Targets are their verified, published EN/TR canonical article pages.
+  "/dilek-uyar-fotograf-sanatcisi": "/tr/makaleler/cobanin-sagim-sonrasi-suruyu-tekrar-otlaklara-goturme-cabasi-ve-tozlu-yolculuk/",
+  "/download/after-milking-shepherds-effort-to-bring-the-herd-back-to-pasture-and-their-dusty-journey": "/en/articles/after-milking-shepherds-effort-to-bring-the-herd-back-to-pasture-and-their-dusty-journey-bitlis/",
+  "/en/articles/history-the-first-book-about-ataturk-ever-published-iran": "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/",
+  "/en/book-review-post-covid-19-global-system-old-problems-new-trends": "/en/articles/post-covid-19-global-system-old-problems-new-trends/",
+  "/en/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler": "/en/articles/post-covid-19-global-system-old-problems-new-trends/",
+  "/en/dilek-uyar-photography-artist": "/en/articles/after-milking-shepherds-effort-to-bring-the-herd-back-to-pasture-and-their-dusty-journey-bitlis/",
+  "/en/fotograf-ni-min-fujian-huian-kadini-ag-onariyor": "/en/articles/fujian-huian-maidens-weaving-net/",
+  "/en/history-the-first-book-about-ataturk-ever-published-in-iran": "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/",
+  "/en/history-the-first-book-about-ataturk-ever-published-iran": "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/",
+  "/en/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap": "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/",
+  "/en/makale/book-review-post-covid-19-global-system-old-problems-new-trends": "/en/articles/post-covid-19-global-system-old-problems-new-trends/",
+  "/en/makale/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler": "/en/articles/post-covid-19-global-system-old-problems-new-trends/",
+  "/en/makale/fotograf-ni-min-fujian-huian-kadini-ag-onariyor": "/en/articles/fujian-huian-maidens-weaving-net/",
+  "/en/makale/history-the-first-book-about-ataturk-ever-published-in-iran": "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/",
+  "/en/makale/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap": "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/",
+  "/en/makale/nato-and-the-wider-international-territory": "/en/articles/nato-from-control-of-the-western-territorial-line-to-control-of-the-wider-international-territory/",
+  "/en/makale/photograph-fujian-huian-maidens-weaving-net": "/en/articles/fujian-huian-maidens-weaving-net/",
+  "/en/photograph-fujian-huian-maidens-weaving-net": "/en/articles/fujian-huian-maidens-weaving-net/",
+  "/en/the-first-book-about-ataturk-ever-published-in-iran": "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/",
 
   // Existing article whose old, noncanonical slug is an exact content match.
   "/en/the-belt-and-road-initiative-in-the-shadow-of-competition-between-china-and-the-us": "/en/articles/the-belt-and-road-initiative-in-the-shadow-of-competition-between-china-and-the-us",
