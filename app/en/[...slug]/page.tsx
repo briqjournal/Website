@@ -33,7 +33,6 @@ import { BiographyText } from "../../components/BiographyText";
 import { IndexDirectory } from "../../components/IndexDirectory";
 import { CallHero } from "../../components/CallHero";
 import { completeCallCopyEn } from "../../call-content";
-import { historicCalls } from "../../historical-calls";
 import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../authors";
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
@@ -722,16 +721,12 @@ const englishCallEditorialCopy: Record<string, { paragraphs: string[]; topics?: 
   },
 };
 
-function EnglishCallDetail({ slug }: { slug: string }) {
-  const active = calls.find((item) => item.urlEn.endsWith(`/${slug}`));
-  const past = pastCalls.find((item) => (item.slugEn || item.slug) === slug);
-  const title = active?.titleEn || past?.titleEn;
-  if (!title) return null;
-  const deadline = active?.deadlineEn || past?.deadlineEn || "";
-  const copy = completeCallCopyEn[slug] || englishCallEditorialCopy[slug];
-  const historical = past?.historicalKey ? historicCalls.en[past.historicalKey] : null;
-  if (historical) return (
-    <>
+async function HistoricalCallDetailEN({ slug, deadline, historicalKey }: { slug: string; deadline: string; historicalKey: string }) {
+  // Import the archival full texts only for historical routes, never for routine article renders.
+  const { historicCalls } = await import("../../historical-calls");
+  const historical = historicCalls.en[historicalKey];
+  if (!historical) return null;
+  return (<>
       <CallHero locale="en" slug={slug} title={historical.title} deadline={deadline} active={false} />
       <div className="site-shell call-detail-page">
         <div className="reading-content">
@@ -743,6 +738,16 @@ function EnglishCallDetail({ slug }: { slug: string }) {
       </div>
     </>
   );
+}
+
+function EnglishCallDetail({ slug }: { slug: string }) {
+  const active = calls.find((item) => item.urlEn.endsWith(`/${slug}`));
+  const past = pastCalls.find((item) => (item.slugEn || item.slug) === slug);
+  const title = active?.titleEn || past?.titleEn;
+  if (!title) return null;
+  const deadline = active?.deadlineEn || past?.deadlineEn || "";
+  const copy = completeCallCopyEn[slug] || englishCallEditorialCopy[slug];
+  if (past?.historicalKey) return <HistoricalCallDetailEN slug={slug} deadline={deadline} historicalKey={past.historicalKey} />;
   return (
     <>
       <CallHero locale="en" slug={slug} title={title} deadline={deadline} deadlineLabel={active?.deadlineLabelEn} active={Boolean(active)} image={active?.image} />
