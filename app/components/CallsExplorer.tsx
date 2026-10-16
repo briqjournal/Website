@@ -15,6 +15,7 @@ type Call = {
   issueHrefEn?: string | null;
   slug: string;
   slugEn?: string;
+  historicalKey?: string;
 };
 
 function callResultColor(issue: string) {
@@ -31,6 +32,7 @@ export function CallsExplorer({ calls, locale = "tr" }: { calls: Call[]; locale?
     issue: locale === "en" ? (call.issueEn || call.issue) : call.issue,
     issueHref: locale === "en" ? (call.issueHrefEn ?? call.issueHref) : call.issueHref,
     slug: locale === "en" ? (call.slugEn || call.slug) : call.slug,
+    historicalKey: call.historicalKey,
   });
   const localizedCalls = calls.map(localize);
   const years = [...new Set(localizedCalls.map((call) => call.deadline.match(/\d{4}/)?.[0]).filter(Boolean) as string[])].sort().reverse();
@@ -49,7 +51,7 @@ export function CallsExplorer({ calls, locale = "tr" }: { calls: Call[]; locale?
         <label className="directory-search"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={locale === "en" ? "Search title or result" : "Çağrı başlığında veya sonuçta ara"} /></label>
         <label><span>{locale === "en" ? "Year" : "Yıl"}</span><select value={year} onInput={(event) => setYear(event.currentTarget.value)} onChange={(event) => setYear(event.target.value)}><option value="all">{locale === "en" ? "All years" : "Tüm yıllar"}</option>{years.map((item) => <option key={item}>{item}</option>)}</select></label>
       </div>
-      {Object.entries(grouped).sort(([a], [b]) => b.localeCompare(a)).map(([groupYear, items]) => <div className="call-year-group" key={groupYear}><h3>{groupYear}</h3><div>{items.map((call, index) => <a href={canonicalPageHref(`${locale === "en" ? "/en/calls-for-papers" : "/tr/makale-cagrilari"}/${call.slug}`)} key={call.title}><span>{String(index + 1).padStart(2, "0")}</span><div><b>{call.title}</b><small>{locale === "en" ? "Deadline" : "Son Tarih"}: {call.deadline}</small></div><div className="call-result"><small>{locale === "en" ? "Result" : "Çağrı sonucu"}</small>{call.issueHref ? <strong className="call-result-issue" style={{ backgroundColor: callResultColor(call.issue) }}>{call.issue}</strong> : <em>{call.issue}</em>}</div><em>↗︎</em></a>)}</div></div>)}
+      {Object.entries(grouped).sort(([a], [b]) => b.localeCompare(a)).map(([groupYear, items]) => <div className="call-year-group" key={groupYear}><h3>{groupYear}</h3><div>{items.map((call, index) => <a href={canonicalPageHref(`${locale === "en" ? "/en/calls-for-papers" : "/tr/makale-cagrilari"}/${call.slug}`)} key={call.title}><span>{String(index + 1).padStart(2, "0")}</span><div><b>{call.title}</b><small>{locale === "en" ? "Deadline" : "Son Tarih"}: {call.deadline}</small></div><div className="call-result"><small>{call.historicalKey ? (locale === "en" ? "Status" : "Durum") : (locale === "en" ? "Result" : "Çağrı sonucu")}</small>{call.issueHref ? <strong className="call-result-issue" style={{ backgroundColor: callResultColor(call.issue) }}>{call.issue}</strong> : <em>{call.issue}</em>}</div><em>↗︎</em></a>)}</div></div>)}
       {filtered.length === 0 && <p className="empty-state">{locale === "en" ? "No past call matches this search." : "Bu aramayla eşleşen geçmiş çağrı bulunamadı."}</p>}
     </section>
   );
