@@ -33,6 +33,7 @@ export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
   "/en/user/prof-dr-ugur-murat-leloglu": "/en/authors/ugur-murat-leloglu",
   "/en/user/prof-dr-cuneyt-akalin": "/en/authors/cuneyt-akalin",
   "/user/prof-dr-cuneyt-akalin": "/tr/yazar/cuneyt-akalin",
+  "/tr/user/prof-dr-cuneyt-akalin": "/tr/yazar/cuneyt-akalin",
   "/user/prof-jinghua-cao": "/tr/yazar/jinghua-cao",
   "/user/prof-dr-gunay-cifci": "/tr/yazar/gunay-cifci",
   "/en/user/prof-dr-ahmet-kavas": "/en/authors/ahmet-kavas",
