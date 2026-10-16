@@ -171,6 +171,16 @@ function handleLegacyRedirect(url: URL): Response | null {
   if (!targetPath) return null;
 
   const target = new URL(targetPath, url.origin);
+  // HTML legacy redirects must point to the published trailing-slash URL.
+  // This avoids a second redirect through the app's automatic 307.
+  // PDF and other file targets keep their exact paths.
+  if (
+    /^\/(?:en|tr)(?:\/|$)/.test(target.pathname)
+    && !target.pathname.endsWith("/")
+    && !/\.[a-z0-9]{1,8}$/i.test(target.pathname)
+  ) {
+    target.pathname += "/";
+  }
   // Old list pagination is not semantically supported by the new archive.
   // Drop ?page=N instead of generating hundreds of duplicate canonical URLs.
   const oldListing = /^\/(?:tr\/|en\/)?(?:makale|roportaj|tarihten|kitap-inceleme|hikaye-siir|sayilar)$/i.test(rawPath);
