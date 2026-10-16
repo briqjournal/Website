@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   description:
     "BRIQ, uluslararası siyaset, ekonomi ve kültür alanlarında Türkçe ve İngilizce yayımlanan üç aylık hakemli akademik dergidir.",
   alternates: {
-    canonical: "/tr",
-    languages: { "tr-TR": "/tr", "en-US": "/en", "x-default": "/" },
+    canonical: "/tr/",
+    languages: { "tr-TR": "/tr/", "en-US": "/en/", "x-default": "/" },
   },
 };
 
