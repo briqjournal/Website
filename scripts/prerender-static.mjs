@@ -33,8 +33,13 @@ await removeStaleHtml(clientRoot);
 console.log(`Removed ${staleHtmlRemoved} stale prerendered HTML files.`);
 
 async function render(pathname) {
+  // vinext internally resolves slashless app routes. Cloudflare's static
+  // assets serve the prerendered index.html files at final slash URLs.
+  const internalPath = pathname.length > 1 && pathname.endsWith("/")
+    ? pathname.slice(0, -1)
+    : pathname;
   return worker.fetch(
-    new Request(`https://briqjournal.com${pathname}`, {
+    new Request(`https://briqjournal.com${internalPath}`, {
       headers: { accept: pathname.endsWith(".xml") ? "application/xml" : "text/html" },
     }),
     env,
@@ -68,11 +73,11 @@ const articleAliases = [
   "mogolistanin-ucuncu-komsu-diplomasisi",
   "kusak-ve-yolun-guvenligi-kitap-incelemesi",
 ];
-for (const slug of articleAliases) paths.add(`/tr/makaleler/${slug}`);
+for (const slug of articleAliases) paths.add(`/tr/makaleler/${slug}/`);
 
 for (const pathname of [...paths]) {
-  if (/^\/(?:tr\/makaleler|en\/articles)\/[^/]+$/.test(pathname)) {
-    paths.add(`${pathname}/pdf`);
+  if (/^\/(?:tr\/makaleler|en\/articles)\/[^/]+\/$/.test(pathname)) {
+    paths.add(`${pathname}pdf/`);
   }
 }
 

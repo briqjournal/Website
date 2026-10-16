@@ -51,7 +51,7 @@ test("renders production metadata without preview markers", async () => {
   );
   const html = await response.text();
   assert.doesNotMatch(html, /name=["']codex-preview["']/i);
-  assert.match(html, /<link rel="canonical" href="https:\/\/briqjournal\.com\/tr"/i);
+  assert.match(html, /<link rel="canonical" href="https:\/\/briqjournal\.com\/tr\/"/i);
 });
 
 test("routes the locale gateway by Cloudflare country and preserves legacy Turkish URLs", async () => {
@@ -1703,5 +1703,44 @@ test("publishes every Volume 3 Issue 1 canonical record as localized bilingual H
     assert.match(enHtml, /class="article-body-section"/, `EN body ${slug}`);
     assert.doesNotMatch(trHtml, /legacy-fulltext-note/, `TR legacy fallback ${slug}`);
     assert.doesNotMatch(enHtml, /legacy-fulltext-note/, `EN legacy fallback ${slug}`);
+  }
+});
+
+test("canonical and hreflang point to the final 200 page URL, not the slashless redirect", async () => {
+  const cases = [
+    ["/tr/", "/tr/"],
+    ["/en/", "/en/"],
+    ["/tr/arsiv/cilt-4-sayi-3/", "/tr/arsiv/cilt-4-sayi-3/"],
+    ["/en/archive/volume-2-issue-2/", "/en/archive/volume-2-issue-2/"],
+    ["/tr/dergi/yayin-ilkeleri/", "/tr/dergi/yayin-ilkeleri/"],
+    ["/en/journal/publication-principles/", "/en/journal/publication-principles/"],
+    ["/en/for-authors/guidelines/", "/en/for-authors/guidelines/"],
+  ];
+
+  for (const [path, canonicalPath] of cases) {
+    // The worker uses slashless internal app paths; public HTML is
+    // prerendered and served by Cloudflare at the terminal-slash path.
+    const response = await renderPath(path.slice(0, -1));
+    assert.equal(response.status, 200, `render ${path}`);
+    const html = await response.text();
+    const canonical = html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1];
+    assert.equal(canonical, `https://briqjournal.com${canonicalPath}`, `canonical ${path}`);
+    for (const link of html.matchAll(/<link[^>]+hrefLang="(?:tr-TR|en-US)"[^>]*>/gi)) {
+      const href = link[0].match(/href="([^"]+)"/i)?.[1];
+      assert.ok(href && new URL(href).pathname.endsWith("/"), `hreflang should resolve directly: ${path}`);
+    }
+  }
+});
+
+test("sitemap contains terminal-slash canonical destinations, not redirecting variants", async () => {
+  const response = await renderPath("/sitemap.xml");
+  assert.equal(response.status, 200);
+  const xml = await response.text();
+  const locations = [...xml.matchAll(new RegExp("<loc>([^<]+)</loc>", "g"))].map((match) => match[1]);
+  assert.ok(locations.length >= 1200, "expected full bilingual sitemap");
+  for (const location of locations) {
+    const parsed = new URL(location);
+    assert.equal(parsed.hostname, "briqjournal.com");
+    assert.ok(parsed.pathname.endsWith("/"), `redirecting sitemap URL: ${location}`);
   }
 });
