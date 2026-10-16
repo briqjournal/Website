@@ -1744,3 +1744,39 @@ test("sitemap contains terminal-slash canonical destinations, not redirecting va
     assert.ok(parsed.pathname.endsWith("/"), `redirecting sitemap URL: ${location}`);
   }
 });
+
+test("nonexistent bilingual dynamic records return HTTP 404, not soft-404 homepage shells", async () => {
+  for (const path of [
+    "/tr/yazar/dr-hande-gunozu",
+    "/en/authors/nonexistent-seo-test-999",
+    "/tr/makaleler/nonexistent-seo-test-999",
+    "/en/articles/nonexistent-seo-test-999",
+    "/tr/makaleler/nonexistent-seo-test-999/pdf",
+    "/en/articles/nonexistent-seo-test-999/pdf",
+    "/tr/arsiv/cilt-99-sayi-99",
+    "/en/archive/volume-99-issue-99",
+    "/tr/arsiv/cilt-99-sayi-99/sunus",
+    "/en/archive/volume-99-issue-99/editorial",
+    "/tr/makale-cagrilari/nonexistent-seo-test-999",
+    "/en/calls-for-papers/nonexistent-seo-test-999",
+    "/tr/yillik-raporlar/999",
+    "/en/annual-reports/999",
+  ]) {
+    const response = await renderPath(path);
+    assert.equal(response.status, 404, `missing dynamic record must return 404: ${path}`);
+  }
+});
+
+test("dynamic-record existence guards preserve published pages in both locales", async () => {
+  for (const path of [
+    "/tr/yazar/hande-gunozu",
+    "/en/authors/lydia-alhassan",
+    "/tr/arsiv/cilt-1-sayi-3",
+    "/en/archive/volume-5-issue-2",
+    "/tr/makaleler/turklerin-milli-mucadelesi-japonlar-icin-de-cesaret-ve-umut-kaynagi",
+    "/en/articles/chinas-novel-coronavirus-pneumonia-battle-responses-results-and-reflections",
+  ]) {
+    const response = await renderPath(path);
+    assert.equal(response.status, 200, `published record must remain accessible: ${path}`);
+  }
+});
