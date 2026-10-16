@@ -24,6 +24,7 @@ import { BiographyText } from "../../components/BiographyText";
 import { IndexDirectory } from "../../components/IndexDirectory";
 import { CallHero } from "../../components/CallHero";
 import { completeCallCopyTr } from "../../call-content";
+import { historicCalls } from "../../historical-calls";
 import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../authors";
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
@@ -1141,6 +1142,20 @@ function CallDetail({ slug }: { slug: string }) {
   if (!title) return null;
   const deadline = active?.deadline || past?.deadline || "";
   const copy = completeCallCopyTr[slug] || callEditorialCopy[slug];
+  const historical = past?.historicalKey ? historicCalls.tr[past.historicalKey] : null;
+  if (historical) return (
+    <>
+      <CallHero locale="tr" slug={slug} title={historical.title} deadline={deadline} active={false} />
+      <div className="site-shell call-detail-page">
+        <div className="reading-content">
+          <section><p><strong>Tarihî arşiv kaydı.</strong> Bu çağrının başvuru süresi sona ermiştir. Aşağıdaki metin ve başvuru koşulları yayımlandıkları döneme aittir; güncel başvuru kuralları olarak değerlendirilmemelidir.</p></section>
+          <section className="historical-call-original" dangerouslySetInnerHTML={{ __html: historical.html }} />
+          <section><p><a className="underlined-link" href={historical.source} target="_blank" rel="noopener noreferrer">Özgün sayfanın arşiv kopyası ↗︎</a></p></section>
+          <a className="underlined-link" href={canonicalPageHref("/tr/makale-cagrilari")}>Tüm çağrılara dön →︎</a>
+        </div>
+      </div>
+    </>
+  );
   return (
     <>
       <CallHero locale="tr" slug={slug} title={title} deadline={deadline} deadlineLabel={active?.deadlineLabel} active={Boolean(active)} image={active?.image} />
@@ -1424,11 +1439,11 @@ async function generatePageMetadata({
     const past = pastCalls.find((item) => item.slug === callSlug);
     const title = active?.title || past?.title;
     if (title) {
-      const englishSlug = callSlug === "transatlantik-iliskilerin-yeniden-yapilanmasi"
+      const englishSlug = past?.slugEn || (callSlug === "transatlantik-iliskilerin-yeniden-yapilanmasi"
         ? "transatlantic-relations"
         : callSlug === "yapay-zeka-uretici-gucler-ortak-refah"
           ? "artificial-intelligence-productive-forces"
-          : callSlug === "kitap-incelemesi" ? "book-reviews" : callSlug;
+          : callSlug === "kitap-incelemesi" ? "book-reviews" : callSlug);
       return {
         title: `${title} | BRIQ`,
         description: active?.summary || `Geçmiş BRIQ makale çağrısı. Son tarih: ${past?.deadline}.`,
