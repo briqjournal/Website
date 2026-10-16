@@ -153,3 +153,13 @@ test("HTML legacy redirects have no extra slash hop and PDFs preserve their file
     ["/assets/archive/pdfs/issues/cilt-7-sayi-3-tr.pdf", "/assets/issues/briq-cilt-7-sayi-3-yaz-2026-tr.pdf", ""],
   ]) await assertRedirect(source, destination, query);
 });
+
+test("four source-verified Search Console 404 aliases reach their exact published destinations", async () => {
+  for (const [source, destination] of [
+    ["/en/author/degangsun/", "/en/authors/sun-degang/"],
+    ["/roportaj-yesil-ve-dijital-donusum-kapsaminda-", "/tr/makaleler/roportaj-yesil-ve-dijital-donusum-kapsaminda-ar-ge-ve-yenilik-ekosistemini-harekete-geciriyoruz/"],
+    ["/1uluslararasi-kusak-ve-yol-inisiyatifi-turkiye-sempozyumu", "/tr/makaleler/1-uluslararasi-kusak-ve-yol-inisiyatifi-turkiye-sempozyumu-turkiye-dijital-ipek-yolunun-oncusu/"],
+    ["/sites/default/files/dergi-sayilari/2020-11/briq_eng%20issue%204.pdf", "/assets/archive/pdfs/issues/cilt-1-sayi-4-en.pdf"],
+  ]) await assertRedirect(source, destination);
+  await assertRedirect("/roportaj-yesil-ve-dijital-donusum-kapsaminda-?ref=gsc", "/tr/makaleler/roportaj-yesil-ve-dijital-donusum-kapsaminda-ar-ge-ve-yenilik-ekosistemini-harekete-geciriyoruz/", "?ref=gsc");
+});
