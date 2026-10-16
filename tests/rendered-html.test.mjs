@@ -1734,7 +1734,7 @@ test("sitemap contains terminal-slash canonical destinations, not redirecting va
   const response = await renderPath("/sitemap.xml");
   assert.equal(response.status, 200);
   const xml = await response.text();
-  const locations = [...xml.matchAll(/<loc>([^<]+)<\\/loc>/g)].map((match) => match[1]);
+  const locations = [...xml.matchAll(new RegExp("<loc>([^<]+)</loc>", "g"))].map((match) => match[1]);
   assert.ok(locations.length >= 1200, "expected full bilingual sitemap");
   for (const location of locations) {
     const parsed = new URL(location);
