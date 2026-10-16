@@ -35,6 +35,7 @@ import { completeCallCopyEn } from "../../call-content";
 import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../authors";
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
+import { alignPageSeoAlternates } from "../../seo-metadata";
 import { issueAccent } from "../../issue-themes";
 import { getIssueCopy, getIssueHeadingLayout } from "../../issue-copy";
 import { archiveEditorialHref, issueSupplementaryContents } from "../../issue-supplementary";
@@ -791,7 +792,7 @@ export function generateStaticParams() {
   return [...paths].map((path) => ({ slug: path.split("/") }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
+export async function generatePageMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
   const { slug } = await params;
   const key = slug.join("/");
   const editorialMatch = key.match(/^archive\/volume-(\d+)-issue-(\d+)\/editorial$/);
@@ -976,6 +977,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
   return { title: "BRIQ | Belt & Road Initiative Quarterly" };
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
+  return alignPageSeoAlternates(await generatePageMetadata({ params }));
 }
 
 export default async function EnglishContentPage({ params }: { params: Promise<{ slug: string[] }> }) {
