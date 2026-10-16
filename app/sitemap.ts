@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     paths.add(`en/calls-for-papers/${call.slug}`);
   }
   return [...paths].map((path) => ({
-    url: path ? `${base}/${path}` : base,
+    url: path ? `${base}/${path}/` : base,
     changeFrequency: path.includes("makaleler/") || path.includes("articles/") ? "yearly" : "monthly",
     priority: path === "tr" || path === "en" ? 1 : 0.7,
   }));
