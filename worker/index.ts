@@ -5,6 +5,7 @@ import {
   LEGACY_REDIRECTS,
   COMPACT_PDF_MAP,
 } from "./legacy-redirects";
+import { SEO_LEGACY_REDIRECTS } from "./seo-legacy-redirects";
 
 interface Env {
   ASSETS: Fetcher;
@@ -89,7 +90,19 @@ function getLegacyPatternRedirect(pathname: string): string | null {
     return pathname.startsWith("/en/") ? "/en/articles" : "/tr/makaleler";
   }
 
-  // 5. Calls for papers
+  // 5. Drupal listing URLs. The old ?page=N parameter has no equivalent
+  // in the modern, filterable article archive.
+  if (/^\\/(?:tr\\/|en\\/)?(?:makale|roportaj|tarihten|kitap-inceleme|hikaye-siir)$/i.test(pathname)) {
+    return pathname.startsWith("/en/") ? "/en/articles" : "/tr/makaleler";
+  }
+
+  // Published locale-less article and CFP detail links.
+  // Preserve the exact slug; genuinely unknown slugs should still 404.
+  if (/^\\/(?:makaleler|makale-cagrilari)\\/[a-z0-9-]+$/i.test(pathname)) {
+    return "/tr" + pathname;
+  }
+
+  // 6. Calls for papers
   if (/^\/en\/(?:call-for-papers|call-papers|special-issue-call-papers|makale-cagrilari)/i.test(pathname)) {
     return "/en/calls-for-papers";
   }
@@ -109,7 +122,9 @@ function getLegacyPatternRedirect(pathname: string): string | null {
 }
 
 function handleLegacyRedirect(url: URL): Response | null {
-  const rawPath = normalizedLegacyPath(url.pathname);
+  const originalPath = normalizedLegacyPath(url.pathname);
+  // Strip Drupal front controller before matching its former routes.
+  const rawPath = originalPath.replace(/^\\/index\\.php(?=\\/|$)/i, "") || "/";
   let decodedPath: string;
   try {
     decodedPath = decodeURIComponent(rawPath);
@@ -125,7 +140,12 @@ function handleLegacyRedirect(url: URL): Response | null {
     const relativeTarget = COMPACT_PDF_MAP[filename] || parseIssuePdfTarget(filename);
 
     if (relativeTarget) {
-      const target = new URL(`/assets/archive/pdfs/${relativeTarget}`, url.origin);
+      // Most generated PDF routes are relative; Volume 7 has absolute
+      // /assets/issues paths. Never prepend the old archive prefix twice.
+      const targetPath = relativeTarget.startsWith("/")
+        ? relativeTarget
+        : `/assets/archive/pdfs/${relativeTarget}`;
+      const target = new URL(targetPath, url.origin);
       return new Response(null, {
         status: 301,
         headers: {
@@ -137,17 +157,24 @@ function handleLegacyRedirect(url: URL): Response | null {
   }
 
   // 2. Direct page redirect from LEGACY_REDIRECTS
-  let targetPath = LEGACY_REDIRECTS[rawPath] || LEGACY_REDIRECTS[decodedPath];
+  let targetPath = SEO_LEGACY_REDIRECTS[rawPath]
+    || SEO_LEGACY_REDIRECTS[decodedPath]
+    || LEGACY_REDIRECTS[rawPath]
+    || LEGACY_REDIRECTS[decodedPath];
 
   // 3. Dynamic patterns (author, issue, taxonomy, calls, archive)
   if (!targetPath) {
     targetPath = getLegacyPatternRedirect(decodedPath) || getLegacyPatternRedirect(rawPath);
   }
 
+  if (!targetPath && rawPath === "/" && originalPath !== "/") targetPath = "/tr";
   if (!targetPath) return null;
 
   const target = new URL(targetPath, url.origin);
-  target.search = url.search;
+  // Old list pagination is not semantically supported by the new archive.
+  // Drop ?page=N instead of generating hundreds of duplicate canonical URLs.
+  const oldListing = /^\\/(?:tr\\/|en\\/)?(?:makale|roportaj|tarihten|kitap-inceleme|hikaye-siir|sayilar)$/i.test(rawPath);
+  target.search = oldListing ? "" : url.search;
   return new Response(null, {
     status: 301,
     headers: {
