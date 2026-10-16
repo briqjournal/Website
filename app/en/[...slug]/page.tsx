@@ -792,7 +792,7 @@ export function generateStaticParams() {
   return [...paths].map((path) => ({ slug: path.split("/") }));
 }
 
-export async function generatePageMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
+async function generatePageMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
   const { slug } = await params;
   const key = slug.join("/");
   const editorialMatch = key.match(/^archive\/volume-(\d+)-issue-(\d+)\/editorial$/);
