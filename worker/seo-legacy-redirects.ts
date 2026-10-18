@@ -60,6 +60,17 @@ export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
   "/briq-1cilt-3-sayi": "/tr/arsiv/cilt-1-sayi-3",
   "/briq-6cilt-4sayi-0": "/tr/arsiv/cilt-6-sayi-4",
 
+  // Evidence recovered from dated BRIQ pages in the Internet Archive.
+  // /index.php is stripped before lookup: /index.php/user/7 and /user/7
+  // are both Mehmet Adnan Akfırat's historical Drupal author profile.
+  "/user/7": "/tr/yazar/mehmet-adnan-akfirat",
+  // Former WordPress "BRIQ Journal" author archive lists calls for papers.
+  // The destination preserves the recovered historical CFP archive, not a
+  // mismatched individual author profile.
+  "/en/author/briq": "/en/calls-for-papers",
+  // WordPress numeric slug = Cilt 1 Sayı 3 Ethem Sancak interview.
+  "/2729-2": "/tr/makaleler/bmc-yonetim-kurulu-baskani-ethem-sancak-asya-kartalinin-iki-kanadi-turkiye-ve-cin",
+
   // Old contributor slug conventions. Generic /user/:slug is handled separately.
   "/user/prof-caner-karavit": "/tr/yazar/caner-karavit",
   "/en/user/doc-dr-efe-can-gurcan": "/en/authors/efe-can-gurcan",
