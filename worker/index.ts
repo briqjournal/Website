@@ -315,7 +315,11 @@ const worker = {
     }
 
     if (url.pathname === "/_vinext/image") {
-      const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
+      // Historic cover image URLs still request 480px or 720px; vinext's
+      // defaults omit both widths and reject those otherwise-valid requests
+      // with HTTP 400. Keep the default allowlist and add only the two
+      // source-verified legacy sizes (Cloudflare 2026-10-17/18 logs).
+      const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES, 480, 720];
       return handleImageOptimization(request, {
         fetchAsset: (path) => env.ASSETS.fetch(new Request(new URL(path, request.url))),
         transformImage: async (body, { width, format, quality }) => {
