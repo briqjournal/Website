@@ -1437,6 +1437,12 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.equal((enArticle.match(/<h2>Abstract<\/h2>/g) || []).length, 1);
   assert.match(trArticle, /<section class="article-fulltext" id="tam-metin"><h2>Tam Metin<\/h2>/);
   assert.match(enArticle, /<section class="article-fulltext" id="full-text-body"><h2>Full Text<\/h2>/);
+  assert.match(trArticle, /class="article-fulltext-action" href="#tam-metin"/);
+  assert.match(enArticle, /class="article-fulltext-action" href="#full-text-body"/);
+  assert.match(trArticle, /class="article-citation-shortcut" href="#atif"[^>]*>Atıf<\/a>/);
+  assert.match(enArticle, /class="article-citation-shortcut" href="#cite"[^>]*>Cite<\/a>/);
+  assert.match(trArticle, /class="article-mobile-toc"/);
+  assert.match(enArticle, /class="article-mobile-toc"/);
   assert.match(trArticle, /<details class="article-accordion article-figures article-figures-accordion" id="gorseller">/);
   assert.doesNotMatch(trArticle, /HTML tam metin/);
   assert.doesNotMatch(enArticle, /HTML full text/i);
