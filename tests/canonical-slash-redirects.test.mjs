@@ -1,20 +1,31 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 
-const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-workerUrl.searchParams.set("canonical-slash-audit", `${process.pid}-${Date.now()}`);
+// These rules run in Cloudflare Workers Static Assets, before Worker fetch.
+// Worker.fetch cannot exercise them; preview HTTP tests validate deployment.
+const source = readFileSync(new URL("../public/_redirects", import.meta.url), "utf8");
+const lines = source.split(/\r?\n/).map(x => x.trim()).filter(x => x && !x.startsWith("#"));
+const rules = lines.map((line) => line.split(/\s+/));
+const bySource = new Map(rules.map(([src, target, code]) => [src, { target, code }]));
 
-async function requestWorker(path, { method = "GET" } = {}) {
-  const { default: worker } = await import(workerUrl.href);
-  return worker.fetch(
-    new Request(`https://briqjournal.com${path}`, { method }),
-    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
-    { waitUntil() {}, passThroughOnException() {} },
-  );
-}
+test("published canonical redirects are bounded, exact and loop-free", () => {
+  assert.equal(lines.length, 1256, "audited sitemap snapshot");
+  assert.ok(lines.length <= 2000, "Cloudflare static rules limit");
+  assert.equal(bySource.size, lines.length, "no duplicate redirect sources");
+  for (const [source, target, code, ...extras] of rules) {
+    assert.deepEqual(extras, [], `unexpected redirect fields: ${source}`);
+    assert.equal(code, "308");
+    assert.match(source, /^\/(en|tr)(?:\/|$)/);
+    assert.ok(!source.endsWith("/"), `never redirect canonical URL: ${source}`);
+    assert.ok(!/[:*?]/.test(source), `no wildcard/dynamic rules: ${source}`);
+    assert.equal(target, source + "/", `redirect to matching canonical: ${source}`);
+    assert.ok(!bySource.has(target), `prevent a redirect chain: ${source}`);
+  }
+});
 
-test("app's canonical trailing-slash redirects are permanent, one hop", async () => {
-  for (const path of [
+test("English and Turkish article, issue and author canonical routes are covered", () => {
+  for (const src of [
     "/en/articles/anatolian-spells",
     "/tr/makaleler/dunyayi-sarsan-turk-devrimi",
     "/en/archive/volume-1-issue-3",
@@ -22,36 +33,16 @@ test("app's canonical trailing-slash redirects are permanent, one hop", async ()
     "/en/authors/jessica-durdu",
     "/tr/yazar/cem-gurdeniz",
     "/en",
-  ]) {
-    const response = await requestWorker(path);
-    assert.equal(response.status, 308, `expected permanent canonical redirect: ${path}`);
-    const target = new URL(response.headers.get("location"), "https://briqjournal.com");
-    assert.equal(target.href, `https://briqjournal.com${path}/`);
-  }
+    "/tr",
+  ]) assert.deepEqual(bySource.get(src), { target: src + "/", code: "308" });
 });
 
-test("canonical redirects preserve the query string and support HEAD", async () => {
-  for (const method of ["GET", "HEAD"]) {
-    const response = await requestWorker("/en/articles/anatolian-spells?utm_source=legacy&lang=en", { method });
-    assert.equal(response.status, 308);
-    const target = new URL(response.headers.get("location"), "https://briqjournal.com");
-    assert.equal(target.href, "https://briqjournal.com/en/articles/anatolian-spells/?utm_source=legacy&lang=en");
-  }
-});
-
-test("no conversion of legacy, root-locale, file, missing-route or canonical responses", async () => {
-  const legacy = await requestWorker("/en/author/briq/");
-  assert.equal(legacy.status, 301, "existing source-verified legacy redirect remains 301");
-
-  const gateway = await requestWorker("/");
-  assert.equal(gateway.status, 307, "country-sensitive homepage gateway stays temporary");
-
+test("never add indiscriminate redirects for missing articles, 404s or files", () => {
   for (const path of [
-    "/en/articles/anatolian-spells/",
+    "/en/articles/this-article-definitely-does-not-exist-99999",
+    "/tr/makaleler/does-not-exist-99999",
     "/en/node/160",
     "/assets/archive/covers/cilt-1-sayi-1-en.jpg",
-  ]) {
-    const response = await requestWorker(path);
-    assert.notEqual(response.status, 308, `unchanged routing behavior for ${path}`);
-  }
+    "/",
+  ]) assert.equal(bySource.has(path), false, `must not redirect ${path}`);
 });
