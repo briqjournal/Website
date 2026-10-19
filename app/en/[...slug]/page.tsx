@@ -531,12 +531,12 @@ function EnglishArchive() {
 
 function EnglishArticles() {
   return (
-    <>
+    <div className="search-page">
       <EnglishHero kicker="Publications" title="Article Search" intro="Search BRIQ articles, interviews, book reviews, and other contributions by title, author, abstract, DOI, year, and volume." />
       <div className="site-shell page-section">
         <ArticleExplorer articles={archiveArticleListings} locale="en" />
       </div>
-    </>
+    </div>
   );
 }
 
@@ -548,7 +548,7 @@ function EnglishContact() {
   return <div className="contact-page"><EnglishHero kicker="Contact" title="Contact BRIQ" intro="Contact BRIQ for editorial questions, publication processes, and institutional matters." /><div className="site-shell page-section contact-grid contact-grid-compact"><article><span>Email</span><h2><a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a></h2><p>Manuscripts should be submitted through DergiPark.</p></article><article><span>Office</span><h2>Üsküdar · Istanbul</h2><p>Ünalan Mahallesi, Libadiye Caddesi No:84, Üsküdar / Istanbul, Türkiye</p></article><article><span>Journal contact person</span><h2>İbrahim Fikret Akfırat</h2><p><a href={canonicalPageHref("mailto:fikretakfirat@briqjournal.com")}>fikretakfirat@briqjournal.com</a></p></article><article><span>Manuscript submission</span><h2 className="dergipark-heading"><DergiParkLogo /></h2><a className="underlined-link" href={canonicalPageHref("https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new")}>Open the submission page ↗︎</a></article></div><div className="site-shell contact-form-wrap contact-form-wrap-compact"><ContactForm locale="en" /></div></div>;
 }
 
-function EnglishSearch() { return <><EnglishHero kicker="Search" title="Search BRIQ" intro="Search articles, authors, issues, cover titles, DOI records, and calls for papers." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} locale="en" /></div></>; }
+function EnglishSearch() { return <div className="search-page"><EnglishHero kicker="Search" title="Search BRIQ" intro="Search articles, authors, issues, cover titles, DOI records, and calls for papers." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} locale="en" /></div></div>; }
 
 function EnglishCalls() {
   return <><EnglishHero title="Calls for Papers" intro="BRIQ’s thematic issues, special sections, and continuously open call for book reviews." /><div className="site-shell page-section"><h2 className="page-section-title" id="active">Active calls</h2><div className="calls-page-grid">{calls.map((call) => <a href={canonicalPageHref(call.urlEn)} key={call.urlEn}>{call.image ? <Image src={call.image} alt="" width={400} height={230} loading="lazy" decoding="async" /> : <div className="call-fallback">BRIQ</div>}<div><span>{call.statusEn} · {call.deadlineLabelEn}: {call.deadlineEn}</span><h2>{call.titleEn}</h2><p>{call.summaryEn}</p><b>View call ↗︎</b></div></a>)}</div><CallsExplorer calls={pastCalls} locale="en" /></div></>;
@@ -750,7 +750,7 @@ function EnglishCallDetail({ slug }: { slug: string }) {
   if (past?.historicalKey) return <HistoricalCallDetailEN slug={slug} deadline={deadline} historicalKey={past.historicalKey} />;
   return (
     <>
-      <CallHero locale="en" slug={slug} title={title} deadline={deadline} deadlineLabel={active?.deadlineLabelEn} active={Boolean(active)} image={active?.image} />
+      <CallHero locale="en" slug={slug} title={title} deadline={deadline} deadlineLabel={active?.deadlineLabelEn || past?.deadlineLabelEn} active={Boolean(active)} image={active?.image || past?.image} />
       <div className="site-shell call-detail-page">
         <div className="reading-content">
           <section><h2>Scope of the call</h2>{copy ? copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>This thematic call was published to bring together international scholarly contributions for the relevant BRIQ issue.</p>}</section>

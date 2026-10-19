@@ -476,16 +476,16 @@ test("lists active calls with left-hand images and prominent deadlines", async (
   const [trHome, enHome] = await Promise.all([trResponse.text(), enResponse.text()]);
 
   for (const html of [trHome, enHome]) {
-    assert.equal((html.match(/class="home-call-row"/g) || []).length, 3);
-    assert.equal((html.match(/class="home-call-image"/g) || []).length, 3);
-    assert.equal((html.match(/class="home-call-deadline"/g) || []).length, 3);
+    assert.equal((html.match(/class="home-call-row"/g) || []).length, 2);
+    assert.equal((html.match(/class="home-call-image"/g) || []).length, 2);
+    assert.equal((html.match(/class="home-call-deadline"/g) || []).length, 2);
     assert.doesNotMatch(html, /class="call-card/);
   }
-  assert.match(trHome, /<small>Uzatılmış Son Tarih<\/small><strong><span>10 Ekim<\/span><span>2026<\/span><\/strong>/);
-  assert.match(enHome, /<small>Extended Deadline<\/small><strong><span>10 October<\/span><span>2026<\/span><\/strong>/);
+  assert.doesNotMatch(trHome, /transatlantik-iliskilerin-yeniden-yapilanmasi|10 Ekim/);
+  assert.doesNotMatch(enHome, /transatlantic-relations|10 October/);
 });
 
-test("renders the two active thematic calls with complete structured source copy", async () => {
+test("preserves complete source copy when a thematic call is archived", async () => {
   const [trTransatlanticResponse, trAiResponse, enTransatlanticResponse, enAiResponse] = await Promise.all([
     renderPath("/tr/makale-cagrilari/transatlantik-iliskilerin-yeniden-yapilanmasi"),
     renderPath("/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah"),
@@ -512,6 +512,12 @@ test("renders the two active thematic calls with complete structured source copy
     assert.match(html, /mailto:briq@briqjournal\.com/);
   }
 
+  assert.match(trTransatlantic, /Geçmiş çağrı/);
+  assert.match(enTransatlantic, /Past call/);
+  assert.match(trTransatlantic, /Başvurular kapandı/);
+  assert.match(enTransatlantic, /Submissions closed/);
+  assert.doesNotMatch(trTransatlantic, /class="button button-dark dergipark-button"/);
+  assert.doesNotMatch(enTransatlantic, /class="button button-dark dergipark-button"/);
   assert.match(trTransatlantic, /<h3>Transatlantik İlişkilerde Dönüşüm<\/h3>/);
   assert.match(trTransatlantic, /<h3>Çok Kutupluluk ve Batı İttifakının Krizi<\/h3>/);
   assert.match(trTransatlantic, /Atıf sistemi: APA 7\./);
@@ -1445,8 +1451,8 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(trArticle, /class="citation-toolbox-heading"/);
   assert.match(trArticle, /class="citation-export-group"/);
   assert.match(trArticle, /class="article-disclosure-stack"/);
-  assert.equal((trHome.match(/class="hero-slide /g) || []).length, 5);
-  assert.equal((enHome.match(/class="hero-slide /g) || []).length, 5);
+  assert.equal((trHome.match(/class="hero-slide /g) || []).length, 4);
+  assert.equal((enHome.match(/class="hero-slide /g) || []).length, 4);
   assert.match(trHome, /Gelişen Dünyanın Fikir Platformu/);
   assert.match(enHome, /A Forum for the Developing World/);
   assert.match(trHome, /briq-logo-tr\.png/);
@@ -1456,12 +1462,12 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(trHome, /Yayıncı: Çin İş Geliştirme ve Dostluk Derneği/);
   assert.match(enHome, /Publisher: Turkish-Chinese Business Development and Friendship Association/);
 
-  assert.match(trHome, /10 Ekim/);
+  assert.doesNotMatch(trHome, /10 Ekim/);
   assert.match(trHome, /1 Aralık/);
   assert.doesNotMatch(trHome, /1 Ekim 2026|15 Ağustos 2026/);
   assert.match(trCalls, /10 Ekim 2026/);
   assert.doesNotMatch(trCalls, /1 Ekim 2026|15 Ağustos 2026/);
-  assert.match(enHome, /10 October/);
+  assert.doesNotMatch(enHome, /10 October/);
   assert.match(enHome, /1 December/);
   assert.doesNotMatch(enHome, /1 October 2026|15 August 2026/);
   assert.match(enCalls, /10 October 2026/);

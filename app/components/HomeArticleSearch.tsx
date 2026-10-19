@@ -1,7 +1,6 @@
 "use client";
 import { canonicalPageHref } from "../seo-links";
 
-import { useMemo, useState } from "react";
 import type { ArchiveArticleListing } from "../archive-listing";
 import { issueBadgeAccent } from "../issue-themes";
 
@@ -12,22 +11,7 @@ export function HomeArticleSearch({
   articles: ArchiveArticleListing[];
   locale?: "tr" | "en";
 }) {
-  const [query, setQuery] = useState("");
-  const scholarlyArticles = useMemo(
-    () => articles.filter((article) => article.typeEn === "Research Article"),
-    [articles],
-  );
-  const visibleArticles = useMemo(() => {
-    const normalized = query.trim().toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US");
-    if (!normalized) return scholarlyArticles.slice(0, 10);
-    return scholarlyArticles.filter((article) => {
-      const title = locale === "tr" ? article.titleTr : article.titleEn;
-      const type = locale === "tr" ? article.typeTr : article.typeEn;
-      return `${title} ${article.author} ${type}`
-        .toLocaleLowerCase(locale === "tr" ? "tr-TR" : "en-US")
-        .includes(normalized);
-    }).slice(0, 10);
-  }, [scholarlyArticles, locale, query]);
+  const visibleArticles = articles.filter((article) => article.typeEn === "Research Article").slice(0, 10);
 
   return (
     <>
@@ -36,15 +20,15 @@ export function HomeArticleSearch({
           <p className="section-kicker">{locale === "tr" ? "Arşivden yeni yayınlar" : "Latest from the archive"}</p>
           <h2>{locale === "tr" ? "Son Makaleler" : "Latest Articles"}</h2>
         </div>
-        <label className="article-search">
-          <span className="sr-only">{locale === "tr" ? "Makalelerde ara" : "Search articles"}</span>
+        <form className="article-search" role="search" method="get" action={canonicalPageHref(locale === "tr" ? "/tr/makaleler" : "/en/articles")}>
+          <label className="sr-only" htmlFor="home-article-query">{locale === "tr" ? "Tüm makalelerde ara" : "Search all articles"}</label>
           <input
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            id="home-article-query"
+            name="q"
             placeholder={locale === "tr" ? "Başlık veya yazar ara" : "Search title or author"}
           />
-          <span aria-hidden="true">⌕</span>
-        </label>
+          <button type="submit" aria-label={locale === "tr" ? "Makalelerde ara" : "Search articles"}><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></svg></button>
+        </form>
       </div>
       <div className="article-list">
         {visibleArticles.map((article) => (
