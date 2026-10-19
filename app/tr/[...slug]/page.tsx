@@ -843,6 +843,7 @@ function SubmissionPage() {
         breadcrumbParent={{ label: "Yazarlar İçin", href: "/tr/yazarlar" }}
       />
       <SubmissionGuide />
+      <a className="submission-mobile-help" href="mailto:briq@briqjournal.com"><span>DergiPark’ta takıldınız mı?</span><b>E-posta gönder →</b></a>
     </>
   );
 }

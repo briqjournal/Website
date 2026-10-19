@@ -116,7 +116,6 @@ export function SubmissionGuide() {
         </section>
         <section className="submission-section" id="sonrasi"><span className="submission-kicker">Başvurudan sonra</span><h2>Gönderimden sonra</h2><p>Çalışmanız önce editoryal ön incelemeden geçer. Uygun bulunan akademik makaleler çift kör hakem değerlendirmesine gönderilir. Düzeltme taleplerini ve süreç bildirimlerini takip edin.</p><a className="editorial-next-link" href={canonicalPageHref("/tr/yazarlar/yayin-degerlendirme-sureci")}>Yayın değerlendirme sürecini inceleyin →︎</a></section>
       </article>
-      <a className="submission-mobile-help" href={`mailto:${mail}`}><Icon name="mail"/><span>DergiPark’ta takıldınız mı?</span><b>E-posta gönder</b></a>
     </div>
   );
 }
