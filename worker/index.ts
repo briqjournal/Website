@@ -301,49 +301,6 @@ interface ExecutionContext {
   passThroughOnException(): void;
 }
 
-/**
- * The app router currently normalizes slashless document URLs with HTTP 307.
- * Those are permanently superseded by their published trailing-slash
- * canonicals; 307 tells crawlers the move may be temporary.
- *
- * Upgrade ONLY the exact same-origin "/path" -> "/path/" 307 produced by the
- * app, not its other temporary redirects. Do not redirect a route that the
- * app would otherwise return as 404, a file, a POST, or the locale gateway.
- */
-function promoteCanonicalSlashRedirect(
-  request: Request,
-  url: URL,
-  response: Response,
-): Response {
-  if (
-    (request.method !== "GET" && request.method !== "HEAD")
-    || response.status !== 307
-    || url.pathname.endsWith("/")
-    || !/^\/(?:en|tr)(?:\/|$)/.test(url.pathname)
-    || /\/[^/]+\.[a-z0-9]{1,8}$/i.test(url.pathname)
-  ) return response;
-
-  const location = response.headers.get("location");
-  if (!location) return response;
-  let target: URL;
-  try {
-    target = new URL(location, url);
-  } catch {
-    return response;
-  }
-
-  if (
-    target.origin !== url.origin
-    || target.pathname !== url.pathname + "/"
-    || target.search !== url.search
-    || target.hash
-  ) return response;
-
-  const headers = new Headers(response.headers);
-  headers.set("cache-control", "public, max-age=86400");
-  return new Response(null, { status: 308, headers });
-}
-
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
@@ -385,8 +342,7 @@ const worker = {
       }, allowedWidths);
     }
 
-    const response = await handler.fetch(request, env, ctx);
-    return promoteCanonicalSlashRedirect(request, url, response);
+    return handler.fetch(request, env, ctx);
   },
 };
 
