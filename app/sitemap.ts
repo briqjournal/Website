@@ -9,7 +9,7 @@ const base = SITE_URL;
 const trStatic = [
   "tr", "tr/dergi", "tr/dergi/briq-hakkinda", "tr/dergi/yayin-ilkeleri",
   "tr/dergi/yayin-kurulu", "tr/dergi/danisma-kurulu",
-  "tr/dergi/endeksler", "tr/iletisim", "tr/arama", "tr/yazarlar", "tr/yazarlar/yazim-kurallari",
+  "tr/dergi/endeksler", "tr/iletisim", "tr/arama", "tr/yazarlar", "tr/yazarlar/yazi-gonder", "tr/yazarlar/yazim-kurallari",
   "tr/yazarlar/yayin-degerlendirme-sureci", "tr/yazarlar/telif-hakki-sartlari-ve-lisans", "tr/yazarlar/yayin-etigi",
   "tr/guncel-sayi", "tr/arsiv", "tr/makaleler", "tr/makale-cagrilari", "tr/yillik-raporlar",
 ];

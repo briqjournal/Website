@@ -2,7 +2,6 @@ import { canonicalPageHref } from "../seo-links";
 import { IndexTicker, SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { HomeHeroSlider } from "../components/HomeHeroSlider";
 import { HomeArticleSearch } from "../components/HomeArticleSearch";
-import { DergiParkLogo } from "../components/DergiParkLogo";
 import { CallDeadline } from "../components/CallDeadline";
 import { archiveArticleListings } from "../archive-listing";
 import { calls } from "../site-data";
@@ -102,9 +101,9 @@ export default function Home() {
           <div className="author-actions">
             <a
               className="button button-light"
-              href={canonicalPageHref("https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new")}
+              href={canonicalPageHref("/tr/yazarlar/yazi-gonder")}
             >
-              <DergiParkLogo suffix="’tan gönder" /> <span>↗︎</span>
+              Yazı gönderim rehberi <span>→︎</span>
             </a>
             <a href={canonicalPageHref("/tr/yazarlar/yazim-kurallari")}>
               Yazım kuralları <span>→︎</span>

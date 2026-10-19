@@ -19,6 +19,7 @@ import { DergiParkLogo } from "../../components/DergiParkLogo";
 import { ArticlePdfPage, ArticlePlatform } from "../../components/ArticlePlatform";
 import { IssuePlatform, issueContributionCount } from "../../components/IssuePlatform";
 import { CurrentIssueEditorial } from "../../components/CurrentIssueEditorial";
+import { SubmissionGuide } from "../../components/SubmissionGuide";
 import { AuthorProfileActions } from "../../components/AuthorProfileActions";
 import { BiographyText } from "../../components/BiographyText";
 import { IndexDirectory } from "../../components/IndexDirectory";
@@ -63,11 +64,13 @@ function PageHero({
   title,
   intro,
   breadcrumbLabel,
+  breadcrumbParent,
 }: {
   kicker?: string;
   title: string;
   intro?: string;
   breadcrumbLabel?: string;
+  breadcrumbParent?: { label: string; href: string };
 }) {
   return (
     <section className="page-hero">
@@ -76,6 +79,7 @@ function PageHero({
         <div className="page-breadcrumb">
           <a href={canonicalPageHref("/tr")}>Ana Sayfa</a>
           <span>/</span>
+          {breadcrumbParent && <><a href={canonicalPageHref(breadcrumbParent.href)}>{breadcrumbParent.label}</a><span>/</span></>}
           <span>{breadcrumbLabel || kicker || title}</span>
         </div>
         {kicker && <p className="section-kicker light">{kicker}</p>}
@@ -494,7 +498,7 @@ function Contact() {
         <article>
           <span>E-posta</span>
           <h2><a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a></h2>
-          <p>Başvuru dosyaları DergiPark üzerinden gönderilmelidir.</p>
+          <p>DergiPark başvurusu ve gönderim desteği için Yazı Gönder sayfamızı ziyaret edin.</p>
         </article>
         <article>
           <span>Yönetim yeri</span>
@@ -509,7 +513,7 @@ function Contact() {
         <article>
           <span>Makale gönderimi</span>
           <h2 className="dergipark-heading"><DergiParkLogo /></h2>
-          <a className="underlined-link" href={canonicalPageHref("https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new")}>Gönderim ekranını aç ↗︎</a>
+          <a className="underlined-link" href={canonicalPageHref("/tr/yazarlar/yazi-gonder")}>Gönderim rehberini aç →︎</a>
         </article>
       </div>
       <div className="site-shell contact-form-wrap contact-form-wrap-compact"><ContactForm /></div>
@@ -757,7 +761,7 @@ function AuthorsHub() {
             <h2 className="dergipark-heading"><DergiParkLogo /></h2>
             <p>Türkçe ve İngilizce gönderiler kabul edilir. Başvuru ve yayın ücretsizdir.</p>
           </div>
-          <a className="button button-dark" href={canonicalPageHref("https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new")}>Yeni başvuru ↗︎</a>
+          <a className="button button-dark" href={canonicalPageHref("/tr/yazarlar/yazi-gonder")}>Yazı gönderme rehberi →︎</a>
         </div>
         <LinkCards
           items={[
@@ -817,13 +821,29 @@ function WritingRules() {
             id: "gonderim-kosullari",
             title: "Gönderim koşulları",
             subsections: [
-              { id: "dil-dosya-ozgunluk", title: "Dil, dosya ve özgünlük", content: <><p>Gönderiler İngilizce ya da Türkçe kabul edilir. Tüm gönderiler kısa bir biyografi (en fazla 150 kelime) içermeli ve <a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a> adresine Microsoft Word dosya eki olarak gönderilmelidir. Daha önceden yayımlanmış olan ya da başka dergiler tarafından incelenmekte olan makaleler ve diğer içerikler yayımlama için dikkate alınmayacaktır.</p><p>BRIQ, American Psychological Association (APA, 7th edition, <a href={canonicalPageHref("https://apastyle.apa.org/")}>www.apastyle.org</a>) yöntemini izler ve İngilizce makalelerde Amerikan İngilizcesi yazımını kullanır.</p></> },
+              { id: "dil-dosya-ozgunluk", title: "Dil, dosya ve özgünlük", content: <><p>Gönderiler İngilizce ya da Türkçe kabul edilir. Tüm gönderiler kısa bir biyografi (en fazla 150 kelime) içermelidir. Başvurular DergiPark üzerinden yapılır; başvuruyu platformda tamamlayamayan yazarlar, Microsoft Word dosyalarını ve karşılaştıkları sorunu <a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a> adresine iletebilir. Daha önceden yayımlanmış olan ya da başka dergiler tarafından incelenmekte olan makaleler ve diğer içerikler yayımlama için dikkate alınmayacaktır.</p><p>BRIQ, American Psychological Association (APA, 7th edition, <a href={canonicalPageHref("https://apastyle.apa.org/")}>www.apastyle.org</a>) yöntemini izler ve İngilizce makalelerde Amerikan İngilizcesi yazımını kullanır.</p></> },
               { id: "akademik-makaleler", title: "Akademik makaleler", content: <p>BRIQ, tüm “akademik makaleler” için çift kör hakem değerlendirme sürecini uygular. Akademik makaleler özetler, notlar, referanslar ve diğer tüm içerikler dahil 5000 ila 9000 kelime aralığında olmalıdır. Bir özet (en fazla 200 kelime) ve 5 anahtar kelime içeren tamamen isimsizleştirilmiş yazının ve tam yazar bilgisinin dahil olduğu bir kapak sayfası da dergiye ulaştırılmalıdır.</p> },
               { id: "diger-icerikler", title: "Diğer içerik türleri", content: <><p>Kitap incelemeleri 1000 kelimeden uzun olmamalıdır. İki ya da daha fazla çalışmayı içeren araştırma/inceleme yazıları en fazla 3000 kelime olabilir.</p><p>Haber gelişmelerinin kısa analizini içeren haber bültenleri, 1500 kelimeden uzun olmamalıdır. Rapor ve analizi birleştiren ana makaleler en fazla 3500 kelime olabilir.</p><p>Röportaj önerileri için lütfen Yayın Kurulu ile iletişime geçiniz.</p><a className="editorial-next-link" href={canonicalPageHref("/tr/yazarlar/yayin-degerlendirme-sureci")}>Yayın Değerlendirme Süreci →︎</a></> },
             ],
           },
         ]}
       />
+    </>
+  );
+}
+
+function SubmissionPage() {
+  return (
+    <>
+      <PageHero
+        kicker="Yazarlar İçin"
+        title="Yazı Gönder"
+        intro="BRIQ’e çalışmanızı göndermek için DergiPark adımlarını izleyin. Takıldığınız yerde e-posta ile bize ulaşabilirsiniz."
+        breadcrumbLabel="Yazı Gönder"
+        breadcrumbParent={{ label: "Yazarlar İçin", href: "/tr/yazarlar" }}
+      />
+      <SubmissionGuide />
+      <a className="submission-mobile-help" href="mailto:briq@briqjournal.com"><span>DergiPark’ta takıldınız mı?</span><b>E-posta gönder →</b></a>
     </>
   );
 }
@@ -1193,11 +1213,11 @@ function CallDetail({ slug }: { slug: string }) {
             <section className="call-contact-section">
               <h2>Başvuru ve İletişim</h2>
               <p><a className="inline-link" href={canonicalPageHref(`mailto:${copy.contact}`)}>{copy.contact}</a></p>
-              {active && <a className="button button-dark dergipark-button" href={canonicalPageHref("https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new")}><DergiParkLogo suffix="’tan gönder" /><span>↗︎</span></a>}
+              {active && <a className="button button-dark dergipark-button" href={canonicalPageHref("/tr/yazarlar/yazi-gonder")}>Yazı gönderme rehberi <span>→︎</span></a>}
             </section>
           )}
           {past && <section><h2>Çağrı sonucu</h2><p>{past.issueHref ? <>Bu çağrı sonucunda yayımlanan sayı: <a className="inline-link" href={canonicalPageHref(past.issueHref)}>{past.issue}</a>.</> : past.issue}</p></section>}
-          {active && !copy?.contact && <section><h2>Gönderim</h2><p>Çalışmalar Türkçe veya İngilizce hazırlanabilir. Başvuru öncesinde yazım kuralları ve gönderim kontrol listesi incelenmelidir.</p><a className="button button-dark dergipark-button" href={canonicalPageHref("https://dergipark.org.tr/tr/journal/4696/submission/step/manuscript/new")}><DergiParkLogo suffix="’tan gönder" /><span>↗︎</span></a></section>}
+          {active && !copy?.contact && <section><h2>Gönderim</h2><p>Çalışmalar Türkçe veya İngilizce hazırlanabilir. Başvuru öncesinde yazım kurallarını inceleyin ve gönderim rehberindeki adımları izleyin.</p><a className="button button-dark dergipark-button" href={canonicalPageHref("/tr/yazarlar/yazi-gonder")}>Yazı gönderme rehberi <span>→︎</span></a></section>}
           <a className="underlined-link" href={canonicalPageHref("/tr/makale-cagrilari")}>Tüm çağrılara dön →︎</a>
         </div>
       </div>
@@ -1229,6 +1249,7 @@ const pages: Record<string, () => ReactNode> = {
   iletisim: Contact,
   arama: SearchPage,
   yazarlar: AuthorsHub,
+  "yazarlar/yazi-gonder": SubmissionPage,
   "yazarlar/yazim-kurallari": WritingRules,
   "yazarlar/yayin-degerlendirme-sureci": ReviewFlow,
   "yazarlar/telif-hakki-sartlari-ve-lisans": AccessPolicy,
@@ -1251,6 +1272,7 @@ const pageMetadata: Record<string, [string, string]> = {
   iletisim: ["İletişim", "BRIQ iletişim bilgileri ve mesaj formu."],
   arama: ["BRIQ’te Ara", "BRIQ makale, sayı ve çağrı araması."],
   yazarlar: ["Yazarlar için", "BRIQ’e gönderim, yazım kuralları ve değerlendirme adımları."],
+  "yazarlar/yazi-gonder": ["Yazı Gönder", "BRIQ’e DergiPark üzerinden yazı gönderme adımları ve destek seçenekleri."],
   "yazarlar/yazim-kurallari": ["Yazım kuralları", "BRIQ araştırma makalesi ve diğer katkı türleri için yazım kuralları."],
   "yazarlar/yayin-degerlendirme-sureci": ["Yayın Değerlendirme Süreci", "Başvurudan yayıma BRIQ değerlendirme ve hakemlik iş akışı."],
   "yazarlar/telif-hakki-sartlari-ve-lisans": ["Telif Hakkı Şartları ve Lisans", "BRIQ telif devri ve CC BY 4.0 lisans koşulları."],
@@ -1273,6 +1295,7 @@ const pageEnglishPaths: Record<string, string> = {
   iletisim: "/en/contact",
   arama: "/en/search",
   yazarlar: "/en/for-authors",
+  "yazarlar/yazi-gonder": "/en/for-authors",
   "yazarlar/yazim-kurallari": "/en/for-authors/guidelines",
   "yazarlar/yayin-degerlendirme-sureci": "/en/for-authors/review-process",
   "yazarlar/telif-hakki-sartlari-ve-lisans": "/en/for-authors/copyright-and-licence",
