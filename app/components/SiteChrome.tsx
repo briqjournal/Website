@@ -28,6 +28,7 @@ const turkishToEnglishPaths: Record<string, string> = {
   "/tr/arsiv": "/en/archive",
   "/tr/makaleler": "/en/articles",
   "/tr/yazarlar": "/en/for-authors",
+  "/tr/yazarlar/yazi-gonder": "/en/for-authors",
   "/tr/yazarlar/yazim-kurallari": "/en/for-authors/guidelines",
   "/tr/yazarlar/yayin-degerlendirme-sureci": "/en/for-authors/review-process",
   "/tr/yazarlar/telif-hakki-sartlari-ve-lisans": "/en/for-authors/copyright-and-licence",
@@ -219,8 +220,8 @@ export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride
             <a className="submit-button reviewer-button" href={canonicalPageHref(`https://dergipark.org.tr/${isEnglish ? "en" : "tr"}/journal/4696/reviewer-request/send`)}>
               {isEnglish ? "Reviewer Request" : "Hakemlik Talebi"} <span>↗︎</span>
             </a>
-            <a className="submit-button" href={canonicalPageHref(`https://dergipark.org.tr/${isEnglish ? "en" : "tr"}/journal/4696/submission/step/manuscript/new`)}>
-              {isEnglish ? "Submit" : "Yazı Gönder"} <span>↗︎</span>
+            <a className="submit-button" href={canonicalPageHref(isEnglish ? "https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new" : "/tr/yazarlar/yazi-gonder")}>
+              {isEnglish ? "Submit" : "Yazı Gönder"} <span>{isEnglish ? "↗︎" : "→︎"}</span>
             </a>
             <a className="header-search" href={canonicalPageHref(isEnglish ? "/en/search" : "/tr/arama")} aria-label={isEnglish ? "Search BRIQ" : "BRIQ’te ara"}>
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>

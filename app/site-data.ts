@@ -24,6 +24,7 @@ export const navItems = [
     label: "Yazarlar İçin",
     href: "/tr/yazarlar",
     children: [
+      ["Yazı Gönder", "/tr/yazarlar/yazi-gonder"],
       ["Yazım Kuralları", "/tr/yazarlar/yazim-kurallari"],
       ["Yayın Değerlendirme Süreci", "/tr/yazarlar/yayin-degerlendirme-sureci"],
       ["Yayın Etiği", "/tr/yazarlar/yayin-etigi"],
