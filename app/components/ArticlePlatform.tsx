@@ -24,6 +24,7 @@ import {
   splitAuthorNames,
 } from "../authors";
 import { ArticleStaticToc } from "./ArticleStaticToc";
+import { ArticleCitationShortcut } from "./ArticleCitationShortcut";
 import { BackToTop } from "./BackToTop";
 import { ArticleFigures, type ArticleFigure } from "./ArticleFigures";
 import { ArticleRichText, type FullTextNote, type FullTextReference, type FullTextSection, type FullTextTable } from "./ArticleRichText";
@@ -448,7 +449,8 @@ export async function ArticlePlatform({
       </section>
 
       <div className="article-action-bar article-platform-actions"><div className="site-shell">
-        <a className="article-fulltext-action" href={canonicalPageHref("#full-text")}><span>{locale === "tr" ? "Tam metin" : "Full text"}</span><ArrowIcon direction="down" /></a>
+        <a className="article-fulltext-action" href={canonicalPageHref(`#${fullText?.sections.length ? (locale === "tr" ? "tam-metin" : "full-text-body") : (locale === "tr" ? "legacy-tam-metin" : "legacy-full-text")}`)}><span>{locale === "tr" ? "Tam metin" : "Full text"}</span><ArrowIcon direction="down" /></a>
+        <ArticleCitationShortcut locale={locale} />
         <a className="article-issue-action" href={canonicalPageHref(issueHref)} style={{ backgroundColor: issueColor }}><span>{locale === "tr" ? "Sayıya git" : "View issue"}</span><ArrowIcon /></a>
         {activePdf && <a className="article-primary-action" href={canonicalPageHref(`${base}/pdf`)}><PdfFileIcon /><span>{locale === "tr" ? "PDF’yi görüntüle" : "View PDF"}</span><ArrowIcon direction="right" /></a>}
         {activePdf && <a className="article-download-action" href={canonicalPageHref(activePdf)} download={articlePdfFilename(article, locale)}><PdfFileIcon /><span>{locale === "tr" ? "PDF’yi indir" : "Download PDF"}</span><DownloadIcon /></a>}
@@ -485,7 +487,7 @@ export async function ArticlePlatform({
           {keywords.length ? <section className="article-keywords" id={locale === "tr" ? "anahtar-kelimeler" : "keywords"}><h2>{locale === "tr" ? "Anahtar kelimeler" : "Keywords"}</h2><div>{keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}</div></section> : null}
 
           {fullText?.sections.length ? <ArticleRichText sections={fullText.sections} references={displayReferences} notes={fullText.footnotes} tables={fullText.tables} figures={fullText.figures} locale={locale} /> : (
-            <section className="legacy-fulltext-note"><h2>{locale === "tr" ? "Tam Metin" : "Full Text"}</h2><p>{locale === "tr" ? "Bu arşiv kaydının tam metni dijitalleştirme sırasındadır. Doğrulanmış makale dosyasına üstteki PDF düğmesinden erişebilirsiniz." : "The full text for this archival record is being digitised. Use the PDF button above to access the verified article file."}</p></section>
+            <section className="legacy-fulltext-note" id={locale === "tr" ? "legacy-tam-metin" : "legacy-full-text"}><h2>{locale === "tr" ? "Tam Metin" : "Full Text"}</h2><p>{locale === "tr" ? "Bu arşiv kaydının tam metni dijitalleştirme sırasındadır. Doğrulanmış makale dosyasına üstteki PDF düğmesinden erişebilirsiniz." : "The full text for this archival record is being digitised. Use the PDF button above to access the verified article file."}</p></section>
           )}
 
           <div className="article-disclosure-stack">

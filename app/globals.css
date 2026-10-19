@@ -4381,34 +4381,81 @@ footer h2 {
   }
 
   .article-navigation .article-static-toc {
-    max-height: none;
-    display: flex;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    border-bottom: 1px solid var(--line);
-    scrollbar-width: thin;
+    display: none;
   }
 
-  .article-navigation .article-static-toc > b,
-  .article-navigation .article-static-toc > a {
-    position: static;
-    flex: 0 0 auto;
+  .article-navigation .article-mobile-toc {
+    display: block;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .article-mobile-toc > summary {
+    min-height: 50px;
     display: flex;
     align-items: center;
-    min-height: 46px;
-    padding: 10px 14px;
-    border-right: 1px solid var(--line);
-    border-bottom: 0;
-    white-space: nowrap;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 4px;
+    color: var(--ink);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    list-style: none;
   }
 
-  .article-navigation .article-static-toc > a.is-subsection {
-    padding-left: 14px;
+  .article-mobile-toc > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .article-mobile-toc > summary::after {
+    content: "+";
+    margin-left: auto;
+    color: var(--rust-dark);
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .article-mobile-toc[open] > summary::after {
+    content: "−";
+  }
+
+  .article-mobile-toc > summary span {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .article-mobile-toc > nav {
+    display: grid;
+    padding: 0 0 10px;
+    border-top: 1px solid var(--line);
+  }
+
+  .article-mobile-toc > nav a {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .article-mobile-toc > nav a.is-subsection {
+    padding-left: 24px;
+    color: var(--muted);
   }
 
   .article-record-compact {
     display: none;
   }
+}
+
+.article-mobile-toc {
+  display: none;
 }
 
 @media (max-width: 640px) {
