@@ -137,12 +137,6 @@ export function IssuePlatform({
       <section className="issue-masthead" data-issue={`${padIssueNumber(record.volume)} / ${padIssueNumber(record.issue)}`}>
         <div className="issue-masthead-rule" />
         <div className="site-shell issue-masthead-grid">
-          <div className="issue-cover-column">
-            <div className="issue-cover-frame">
-              <Image src={cover} alt={coverAlt} width={480} height={640} sizes="(max-width: 720px) 80vw, 385px" priority />
-            </div>
-            <CoverLightbox src={cover} alt={coverAlt} locale={locale} />
-          </div>
           <div className="issue-masthead-copy">
             <div className="page-breadcrumb issue-breadcrumb">
               <a href={canonicalPageHref(homeHref)}>{isEnglish ? "Home" : "Ana Sayfa"}</a>
@@ -172,9 +166,12 @@ export function IssuePlatform({
               )}
             </h1>
             <p className="issue-deck">{description}</p>
-            {(readingPdf || editorialHref) && (
+            {(publications.length > 0 || additionalContents.length > 0 || readingPdf || editorialHref) && (
               <div className="issue-actions">
-                {readingPdf && <a className="button button-light" href={canonicalPageHref("#pdf-viewer")}>
+                <a className="button button-light issue-contents-action" href={canonicalPageHref(isEnglish ? "#contents" : "#icerikler")}>
+                  {isEnglish ? "Issue contents" : "İçindekiler"} <span>↓︎</span>
+                </a>
+                {readingPdf && <a className="issue-read-pdf-action" href={canonicalPageHref("#pdf-viewer")}>
                   {isEnglish ? "Read PDF on site" : "PDF’yi sitede oku"} <span>↓︎</span>
                 </a>}
                 {readingPdf && <a href={canonicalPageHref(readingPdf)} download>
@@ -193,6 +190,19 @@ export function IssuePlatform({
               {issueFacts.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
             </dl>
           </div>
+          <div className="issue-cover-column">
+            <div className="issue-cover-frame">
+              <Image src={cover} alt={coverAlt} width={480} height={640} sizes="(max-width: 720px) 96px, 385px" priority />
+            </div>
+            <CoverLightbox src={cover} alt={coverAlt} locale={locale} />
+          </div>
+          <details className="issue-mobile-details">
+            <summary>{isEnglish ? "About this issue" : "Sayı hakkında"}</summary>
+            <p className="issue-deck">{description}</p>
+            <dl className="issue-facts">
+              {issueFacts.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
+            </dl>
+          </details>
         </div>
       </section>
 

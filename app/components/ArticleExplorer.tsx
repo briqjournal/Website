@@ -5,6 +5,9 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { ArchiveArticleListing } from "../archive-listing";
 import { issueBadgeAccent } from "../issue-themes";
 import { useArticleSearchIndex } from "./useArticleSearchIndex";
+import { useSearchUrlState } from "./useSearchUrlState";
+import { SearchScopeNav } from "./SearchScopeNav";
+import { searchExcerpt } from "../search-state";
 
 const ACADEMIC_TYPES: Record<"tr" | "en", string[]> = {
   tr: ["Araştırma Makalesi", "Derleme Makalesi", "Kitap İncelemesi"],
@@ -61,10 +64,10 @@ function DirectoryPagination({
 }
 
 export function ArticleExplorer({ articles, locale = "tr" }: { articles: ArchiveArticleListing[]; locale?: "tr" | "en" }) {
-  const [query, setQuery] = useState("");
-  const [year, setYear] = useState("all");
-  const [volume, setVolume] = useState("all");
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+  const { state, update: updateSearch } = useSearchUrlState("article");
+  const { query, year, volume, types: selectedTypes, pageSize, page } = state;
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const filterCount = Number(year !== "all") + Number(volume !== "all") + selectedTypes.length;
   const [typeOpen, setTypeOpen] = useState(false);
   const typeRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -82,8 +85,6 @@ export function ArticleExplorer({ articles, locale = "tr" }: { articles: Archive
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [typeOpen]);
-  const [pageSize, setPageSize] = useState(20);
-  const [page, setPage] = useState(1);
   const years = [...new Set(articles.flatMap((item) => expandYears(item.year)))].sort().reverse();
   const volumes = [...new Set(articles.map((item) => item.volume))].sort((a, b) => b - a);
   const types = [...new Set(articles.map((item) => locale === "en" ? item.typeEn : item.typeTr).filter(Boolean))]
@@ -105,21 +106,25 @@ export function ArticleExplorer({ articles, locale = "tr" }: { articles: Archive
   const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize));
   const currentPage = Math.min(page, pageCount);
   const visible = filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize);
-  const update = (setter: (value: string) => void, value: string) => { setter(value); setPage(1); };
+  const setPage = (value: number) => updateSearch({ page: value });
   const toggleType = (value: string) => {
-    setSelectedTypes((current) => current.includes(value) ? current.filter((item) => item !== value) : [...current, value]);
-    setPage(1);
+    updateSearch({ types: selectedTypes.includes(value) ? selectedTypes.filter((item) => item !== value) : [...selectedTypes, value], page: 1 });
   };
 
   return (
     <>
       <div className="article-search-panel">
-        <div><p className="section-kicker">{locale === "en" ? "Archive search" : "Arşiv araması"}</p><h2>{locale === "en" ? "Find a publication" : "Bir yayın bulun"}</h2></div>
-        <label className="directory-search"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => update(setQuery, event.target.value)} placeholder={locale === "en" ? "Title, author, abstract, or DOI" : "Başlık, yazar, özet veya DOI"} /></label>
-        <div className="article-filter-row">
-          <label><span>{locale === "en" ? "Year" : "Yıl"}</span><select value={year} onInput={(event) => update(setYear, event.currentTarget.value)} onChange={(event) => update(setYear, event.target.value)}><option value="all">{locale === "en" ? "All" : "Tümü"}</option>{years.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
-          <label><span>{locale === "en" ? "Volume" : "Cilt"}</span><select value={volume} onInput={(event) => update(setVolume, event.currentTarget.value)} onChange={(event) => update(setVolume, event.target.value)}><option value="all">{locale === "en" ? "All" : "Tümü"}</option>{volumes.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
-          <label><span>{locale === "en" ? "Per page" : "Sayfa başına"}</span><select value={pageSize} onInput={(event) => { setPageSize(Number(event.currentTarget.value)); setPage(1); }} onChange={(event) => { setPageSize(Number(event.target.value)); setPage(1); }}><option>10</option><option>20</option><option>50</option></select></label>
+        <SearchScopeNav locale={locale} kind="article" query={query} />
+        <label className="directory-search"><span aria-hidden="true">⌕</span><input aria-label={locale === "en" ? "Search articles" : "Makalelerde ara"} value={query} onChange={(event) => updateSearch({ query: event.target.value, page: 1 })} placeholder={locale === "en" ? "Title, author, abstract, or DOI" : "Başlık, yazar, özet veya DOI"} /></label>
+        <div className="search-filter-toolbar">
+          <button type="button" className="search-filter-toggle" aria-expanded={filtersOpen} aria-controls="article-search-filters" onClick={() => setFiltersOpen((open) => !open)}>{locale === "en" ? "Filters" : "Filtreler"}{filterCount > 0 ? ` (${filterCount})` : ""} <span aria-hidden="true">⌄</span></button>
+          <p role="status">{filtered.length} {locale === "en" ? "results" : "sonuç"}</p>
+          {filterCount > 0 && <button type="button" className="search-filter-clear" onClick={() => updateSearch({ year: "all", volume: "all", types: [], page: 1 })}>{locale === "en" ? "Clear filters" : "Filtreleri temizle"}</button>}
+        </div>
+        <div className={`article-filter-row${filtersOpen ? " is-open" : ""}`} id="article-search-filters">
+          <label><span>{locale === "en" ? "Year" : "Yıl"}</span><select value={year} onChange={(event) => updateSearch({ year: event.target.value, page: 1 })}><option value="all">{locale === "en" ? "All" : "Tümü"}</option>{years.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
+          <label><span>{locale === "en" ? "Volume" : "Cilt"}</span><select value={volume} onChange={(event) => updateSearch({ volume: event.target.value, page: 1 })}><option value="all">{locale === "en" ? "All" : "Tümü"}</option>{volumes.map((item) => <option value={item} key={item}>{item}</option>)}</select></label>
+          <label><span>{locale === "en" ? "Per page" : "Sayfa başına"}</span><select value={pageSize} onChange={(event) => updateSearch({ pageSize: Number(event.target.value), page: 1 })}><option>10</option><option>20</option><option>50</option></select></label>
           <div className="type-dropwrap" ref={typeRef}>
             <span className="type-drop-label">{locale === "en" ? "Category" : "Kategori"}</span>
             <button type="button" className="type-dropbtn" aria-expanded={typeOpen} aria-haspopup="true" onClick={() => setTypeOpen((open) => !open)}>
@@ -140,19 +145,18 @@ export function ArticleExplorer({ articles, locale = "tr" }: { articles: Archive
                   ))}
                 </div>
                 {selectedTypes.length > 0 && (
-                  <button type="button" className="type-clear" onClick={() => { setSelectedTypes([]); setPage(1); }}>
+                  <button type="button" className="type-clear" onClick={() => updateSearch({ types: [], page: 1 })}>
                     {locale === "en" ? "Clear selection" : "Seçimi temizle"}
                   </button>
                 )}
               </div>
             )}
           </div>
-          <strong>{filtered.length} {locale === "en" ? "results" : "sonuç"}</strong>
         </div>
       </div>
       {pageCount > 1 && <DirectoryPagination page={currentPage} pageCount={pageCount} onPage={setPage} locale={locale} position="top" />}
       <div className="article-directory">
-        {visible.map((article, index) => <a href={canonicalPageHref(`${locale === "en" ? "/en/articles" : "/tr/makaleler"}/${locale === "en" ? article.slugEn : article.slug}`)} key={`${article.volume}-${article.issue}-${article.slug}`}><span className="article-number">{String((currentPage - 1) * pageSize + index + 1).padStart(2, "0")}</span><div className="article-directory-meta"><small title={locale === "en" ? "Publication type" : "Yayın türü"}>{locale === "en" ? article.typeEn : article.typeTr}</small><span className="article-issue-badge" style={{ backgroundColor: issueBadgeAccent(article.volume, article.issue) }}>{locale === "en" ? `Volume ${article.volume} · Issue ${article.issue}` : `Cilt ${article.volume} · Sayı ${article.issue}`}</span></div><div><h2>{locale === "en" ? article.titleEn : article.titleTr}</h2><p>{article.author}</p>{article.doi && <span className="article-doi">DOI: {article.doi}</span>}</div><b>↗︎</b></a>)}
+        {visible.map((article, index) => <a href={canonicalPageHref(`${locale === "en" ? "/en/articles" : "/tr/makaleler"}/${locale === "en" ? article.slugEn : article.slug}`)} key={`${article.volume}-${article.issue}-${article.slug}`}><span className="article-number">{String((currentPage - 1) * pageSize + index + 1).padStart(2, "0")}</span><div className="article-directory-meta"><small title={locale === "en" ? "Publication type" : "Yayın türü"}>{locale === "en" ? article.typeEn : article.typeTr}</small><span className="article-issue-badge" style={{ backgroundColor: issueBadgeAccent(article.volume, article.issue) }}>{locale === "en" ? `Volume ${article.volume} · Issue ${article.issue}` : `Cilt ${article.volume} · Sayı ${article.issue}`}</span></div><div><h2>{locale === "en" ? article.titleEn : article.titleTr}</h2><p>{article.author}</p>{article.doi && <span className="article-doi">DOI: {article.doi}</span>}{searchExcerpt(abstractIndex?.[article.slug] || "", query, locale) && <p className="search-excerpt">{searchExcerpt(abstractIndex?.[article.slug] || "", query, locale)}</p>}</div><b>↗︎</b></a>)}
       </div>
       {visible.length === 0 && <p className="empty-state">{locale === "en" ? "No publication matches these filters." : "Bu filtrelerle eşleşen yayın bulunamadı."}</p>}
       {pageCount > 1 && <DirectoryPagination page={currentPage} pageCount={pageCount} onPage={setPage} locale={locale} position="bottom" />}

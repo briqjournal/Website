@@ -922,7 +922,7 @@ function Archive() {
 
 function Articles() {
   return (
-    <>
+    <div className="search-page">
       <PageHero
         kicker="Yayınlar"
         title="Makale Arama"
@@ -931,7 +931,7 @@ function Articles() {
       <div className="site-shell page-section">
         <ArticleExplorer articles={archiveArticleListings} />
       </div>
-    </>
+    </div>
   );
 }
 
@@ -1131,7 +1131,7 @@ const callEditorialCopy: Record<string, { paragraphs: string[]; topics?: [string
 };
 
 function SearchPage() {
-  return <><PageHero kicker="Arama" title="BRIQ’te Ara" intro="Makaleleri, yazarları, sayıları, kapak başlıklarını, DOI kayıtlarını ve makale çağrılarını tek alanda arayın." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} /></div></>;
+  return <div className="search-page"><PageHero kicker="Arama" title="BRIQ’te Ara" intro="Makaleleri, yazarları, sayıları, kapak başlıklarını, DOI kayıtlarını ve makale çağrılarını tek alanda arayın." /><div className="site-shell page-section"><SearchExplorer articles={archiveArticleListings} issues={archiveIssueListings} calls={[...calls, ...pastCalls]} /></div></div>;
 }
 
 async function HistoricalCallDetailTR({ slug, deadline, historicalKey }: { slug: string; deadline: string; historicalKey: string }) {
@@ -1163,7 +1163,7 @@ function CallDetail({ slug }: { slug: string }) {
   if (past?.historicalKey) return <HistoricalCallDetailTR slug={slug} deadline={deadline} historicalKey={past.historicalKey} />;
   return (
     <>
-      <CallHero locale="tr" slug={slug} title={title} deadline={deadline} deadlineLabel={active?.deadlineLabel} active={Boolean(active)} image={active?.image} />
+      <CallHero locale="tr" slug={slug} title={title} deadline={deadline} deadlineLabel={active?.deadlineLabel || past?.deadlineLabel} active={Boolean(active)} image={active?.image || past?.image} />
       <div className="site-shell call-detail-page">
         <div className="reading-content">
           <section><h2>Çağrının kapsamı</h2>{copy ? copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{active?.summary || "Bu tematik çağrı, BRIQ’in ilgili sayısı için uluslararası akademik katkıları bir araya getirmek üzere yayımlanmıştır."}</p>}</section>

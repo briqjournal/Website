@@ -10283,3 +10283,102 @@ footer {
     padding-top: 0;
   }
 }
+
+
+/* Put reading and contents before supplementary issue detail on small screens. */
+.issue-masthead-copy { grid-column: 2; grid-row: 1; }
+.issue-cover-column { grid-column: 1; grid-row: 1; }
+.issue-mobile-details { display: none; }
+.issue-contents-section { scroll-margin-top: 120px; }
+
+@media (max-width: 720px) {
+  .issue-masthead-grid {
+    grid-template-columns: minmax(0, 1fr) 96px;
+    grid-template-areas: "breadcrumb breadcrumb" "meta meta" "title cover" "actions actions" "details details";
+    gap: 20px 18px;
+    min-height: 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  .issue-masthead-copy { display: contents; }
+  .issue-breadcrumb { grid-area: breadcrumb; margin: 0; }
+  .issue-superline { grid-area: meta; gap: 8px; margin: 0; }
+  .issue-superline > span { padding: 8px; font-size: 9px; }
+  .issue-masthead-copy h1,
+  .issue-v74 .issue-masthead-copy h1 { grid-area: title; font-size: 28px; line-height: 1.08; }
+  .issue-cover-column {
+    grid-area: cover;
+    align-self: start;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0;
+    min-width: 0;
+  }
+  .issue-cover-frame { width: 96px; }
+  .issue-cover-frame::before, .issue-cover-frame::after { display: none; }
+  .issue-cover-column .cover-inspect-button { width: 100%; min-width: 0; min-height: 44px; padding: 7px; font-size: 11px; }
+  .issue-cover-column .cover-inspect-button svg { display: none; }
+  .issue-masthead-copy > .issue-deck,
+  .issue-masthead-copy > .issue-identity-row,
+  .issue-masthead-copy > .issue-facts { display: none; }
+  .issue-actions { grid-area: actions; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; margin: 0; }
+  .issue-actions > a { min-width: 0; font-size: 12px; }
+  .issue-actions > a:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .issue-mobile-details { display: block; grid-area: details; border-top: 1px solid rgba(255,255,255,.3); }
+  .issue-mobile-details summary { padding: 15px 0 0; min-height: 44px; color: white; font-size: 13px; cursor: pointer; }
+  .issue-mobile-details .issue-deck { margin-top: 16px; }
+  .issue-mobile-details .issue-facts { grid-template-columns: 1fr 1fr; margin-top: 18px; }
+  .issue-mobile-details .issue-facts div { padding: 12px 8px 12px 0; }
+  .issue-mobile-details .issue-facts dt { font-size: 10px; }
+  .issue-mobile-details .issue-facts dd { font-size: 15px; }
+  .issue-contents-section { padding-top: 30px; scroll-margin-top: 110px; }
+  .issue-section-heading { margin-bottom: 22px; }
+}
+
+@media (min-width: 721px) and (max-width: 860px) {
+  .issue-masthead-copy, .issue-cover-column { grid-column: auto; grid-row: auto; }
+}
+
+/* Shared search navigation and compact, progressively disclosed filters. */
+.search-page .page-hero-inner { min-height: 0; padding-top: 32px; padding-bottom: 32px; }
+.search-page .page-breadcrumb { margin-bottom: 20px; }
+.search-page .page-hero h1 { font-size: clamp(36px, 4vw, 52px); }
+.search-page .page-hero-inner > p:not(.section-kicker) { margin-top: 14px; font-size: 17px; }
+.search-page .page-section { padding-top: 30px; }
+.search-page .article-search-panel { margin-bottom: 16px; padding: 22px 24px; }
+.search-kind-tabs { flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+.search-kind-tabs a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 16px; border: 1px solid var(--line); font-size: 14px; white-space: nowrap; }
+.search-kind-tabs a.is-active { color: white; background: var(--red); border-color: var(--red); }
+.article-search-panel .search-kind-tabs a { color: white; border-color: rgba(255,255,255,.3); }
+.article-search-panel .search-kind-tabs a.is-active { background: var(--red); border-color: var(--red); }
+.search-filter-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 16px; }
+.search-filter-toolbar p { margin: 0; color: rgba(255,255,255,.8); font-size: 13px; }
+.search-filter-toggle, .search-filter-clear { min-height: 44px; padding: 8px 12px; color: white; border: 1px solid rgba(255,255,255,.3); background: transparent; cursor: pointer; font-size: 13px; }
+.search-filter-toggle { display: none; }
+.search-page .article-filter-row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.search-page .article-filter-row label > span, .search-page .type-drop-label { font-size: 11px; }
+.search-page .directory-search:focus-within, .site-search-box:focus-within { outline: 2px solid var(--red); outline-offset: 3px; }
+.search-kind-tabs a:focus-visible, .search-filter-toolbar button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.article-search button { display: inline-grid; place-items: center; flex: 0 0 44px; min-height: 44px; border: 0; background: transparent; color: var(--red); cursor: pointer; }
+.article-search input { min-width: 0; }
+.search-page .search-excerpt { margin: 10px 0 0; color: var(--muted); font: 14px/1.6 Arial, Helvetica, sans-serif; }
+.site-search-page .search-kind-tabs { margin-top: 0; }
+
+@media (max-width: 720px) {
+  .search-page .page-hero-inner { padding-top: 24px; padding-bottom: 24px; }
+  .search-page .page-breadcrumb { margin-bottom: 16px; }
+  .search-page .page-hero-inner > p:not(.section-kicker) { font-size: 15px; line-height: 1.5; }
+  .search-page .page-section { padding-top: 20px; }
+  .search-page .article-search-panel { margin: 0 0 16px; padding: 16px; }
+  .search-kind-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; overflow: visible; }
+  .search-kind-tabs a { min-width: 0; padding: 8px 5px; font-size: 12px; }
+  .search-filter-toggle { display: inline-flex; align-items: center; gap: 18px; }
+  .search-page .article-filter-row { display: none; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .search-page .article-filter-row.is-open { display: grid; }
+  .search-page .article-filter-row label:last-of-type { grid-column: auto; }
+  .search-page .article-filter-row select { min-width: 0; width: 100%; }
+  .search-page .type-drop { right: 0; left: auto; max-width: calc(100vw - 60px); }
+  .search-page .site-search-box { padding: 14px; }
+}
+
+.article-search button svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; }
