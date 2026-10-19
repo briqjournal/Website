@@ -1,0 +1,5 @@
+# Canonical article URLs are published with trailing slashes.
+# Workers Static Assets can otherwise emit temporary 307 redirects for these.
+# Keep redirects in the asset layer; no additional Worker invocation required.
+/en/articles/:slug /en/articles/:slug/ 308
+/tr/makaleler/:slug /tr/makaleler/:slug/ 308
