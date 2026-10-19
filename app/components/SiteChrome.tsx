@@ -28,7 +28,6 @@ const turkishToEnglishPaths: Record<string, string> = {
   "/tr/arsiv": "/en/archive",
   "/tr/makaleler": "/en/articles",
   "/tr/yazarlar": "/en/for-authors",
-  "/tr/yazarlar/yazi-gonder": "/en/for-authors",
   "/tr/yazarlar/yazim-kurallari": "/en/for-authors/guidelines",
   "/tr/yazarlar/yayin-degerlendirme-sureci": "/en/for-authors/review-process",
   "/tr/yazarlar/telif-hakki-sartlari-ve-lisans": "/en/for-authors/copyright-and-licence",

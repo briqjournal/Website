@@ -3,6 +3,7 @@ import { IndexTicker, SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { HomeHeroSlider } from "../components/HomeHeroSlider";
 import { HomeArticleSearch } from "../components/HomeArticleSearch";
 import { CallDeadline } from "../components/CallDeadline";
+import { DergiParkLogo } from "../components/DergiParkLogo";
 import { archiveArticleListings } from "../archive-listing";
 import { calls } from "../site-data";
 
@@ -103,7 +104,7 @@ export default function Home() {
               className="button button-light"
               href={canonicalPageHref("/tr/yazarlar/yazi-gonder")}
             >
-              Yazı gönderim rehberi <span>→︎</span>
+              <DergiParkLogo suffix=" gönderim rehberi" /> <span>→︎</span>
             </a>
             <a href={canonicalPageHref("/tr/yazarlar/yazim-kurallari")}>
               Yazım kuralları <span>→︎</span>
