@@ -255,7 +255,7 @@ export function HomeHeroSlider({ locale = "tr" }: { locale?: Locale }) {
                   ) : (
                     <>
                       {slide.title}
-                      <em>{slide.subtitle}</em>
+                      {slide.subtitle && <em>{slide.subtitle}</em>}
                     </>
                   )}
                 </h1>
