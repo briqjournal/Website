@@ -10,7 +10,7 @@ type Locale = "tr" | "en";
 const englishNavItems = [
   { label: "Journal", href: "/en/journal/about-briq", children: [["About BRIQ", "/en/journal/about-briq"], ["Publication Principles", "/en/journal/publication-principles"], ["Editorial Info", "/en/journal/publication-board"], ["Advisory Board", "/en/journal/advisory-board"], ["Indexing & Archiving", "/en/journal/indexes"], ["Annual Reports", "/en/annual-reports"]] },
   { label: "Publications", href: "/en/current-issue", children: [["Current Issue", "/en/current-issue"], ["All Issues", "/en/archive"], ["Article Search", "/en/articles"], ["Author Directory", "/en/author-directory"]] },
-  { label: "For Authors", href: "/en/for-authors", children: [["Submission Guidelines", "/en/for-authors/guidelines"], ["Publication Review Process", "/en/for-authors/review-process"], ["Publication Ethics", "/en/for-authors/publication-ethics"], ["Copyright Terms and Licence", "/en/for-authors/copyright-and-licence"]] },
+  { label: "For Authors", href: "/en/for-authors", children: [["Submit a Manuscript", "/en/for-authors/submit"], ["Submission Guidelines", "/en/for-authors/guidelines"], ["Publication Review Process", "/en/for-authors/review-process"], ["Publication Ethics", "/en/for-authors/publication-ethics"], ["Copyright Terms and Licence", "/en/for-authors/copyright-and-licence"]] },
   { label: "Calls for Papers", href: "/en/calls-for-papers", children: [["Active Calls", "/en/calls-for-papers#active"], ["Past Calls", "/en/calls-for-papers#past"], ["Book Reviews", "/en/calls-for-papers/book-reviews"]] },
   { label: "Contact", href: "/en/contact" },
 ];
@@ -29,6 +29,7 @@ const turkishToEnglishPaths: Record<string, string> = {
   "/tr/makaleler": "/en/articles",
   "/tr/yazar-dizini": "/en/author-directory",
   "/tr/yazarlar": "/en/for-authors",
+  "/tr/yazarlar/yazi-gonder": "/en/for-authors/submit",
   "/tr/yazarlar/yazim-kurallari": "/en/for-authors/guidelines",
   "/tr/yazarlar/yayin-degerlendirme-sureci": "/en/for-authors/review-process",
   "/tr/yazarlar/telif-hakki-sartlari-ve-lisans": "/en/for-authors/copyright-and-licence",
@@ -220,8 +221,8 @@ export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride
             <a className="submit-button reviewer-button" href={canonicalPageHref(`https://dergipark.org.tr/${isEnglish ? "en" : "tr"}/journal/4696/reviewer-request/send`)}>
               {isEnglish ? "Reviewer Request" : "Hakemlik Talebi"} <span>↗︎</span>
             </a>
-            <a className="submit-button" href={canonicalPageHref(isEnglish ? "https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new" : "/tr/yazarlar/yazi-gonder")}>
-              {isEnglish ? "Submit" : "Yazı Gönder"} <span>{isEnglish ? "↗︎" : "→︎"}</span>
+            <a className="submit-button" href={canonicalPageHref(isEnglish ? "/en/for-authors/submit" : "/tr/yazarlar/yazi-gonder")}>
+              {isEnglish ? "Submit" : "Yazı Gönder"} <span>{isEnglish ? "→︎" : "→︎"}</span>
             </a>
             <a className="header-search" href={canonicalPageHref(isEnglish ? "/en/search" : "/tr/arama")} aria-label={isEnglish ? "Search BRIQ" : "BRIQ’te ara"}>
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>

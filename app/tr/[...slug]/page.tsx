@@ -843,7 +843,6 @@ function SubmissionPage() {
         breadcrumbParent={{ label: "Yazarlar İçin", href: "/tr/yazarlar" }}
       />
       <SubmissionGuide />
-      <a className="submission-mobile-help" href="mailto:briq@briqjournal.com"><span>DergiPark’ta takıldınız mı?</span><b>E-posta gönder →︎</b></a>
     </>
   );
 }
@@ -1295,7 +1294,7 @@ const pageEnglishPaths: Record<string, string> = {
   iletisim: "/en/contact",
   arama: "/en/search",
   yazarlar: "/en/for-authors",
-  "yazarlar/yazi-gonder": "/en/for-authors",
+  "yazarlar/yazi-gonder": "/en/for-authors/submit",
   "yazarlar/yazim-kurallari": "/en/for-authors/guidelines",
   "yazarlar/yayin-degerlendirme-sureci": "/en/for-authors/review-process",
   "yazarlar/telif-hakki-sartlari-ve-lisans": "/en/for-authors/copyright-and-licence",
@@ -1610,7 +1609,7 @@ export default async function ContentPage({
   const alternateHref = alternateArticle
     ? `/en/articles/${articleRouteSlug(alternateArticle, "en")}${articlePdfMatch ? "/pdf" : ""}`
     : key === "yazarlar/yazi-gonder"
-      ? "/en/for-authors"
+      ? "/en/for-authors/submit"
     : editorialMatch
       ? `/en/archive/volume-${editorialMatch[1]}-issue-${editorialMatch[2]}/editorial`
       : undefined;

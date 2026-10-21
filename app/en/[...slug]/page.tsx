@@ -25,6 +25,7 @@ import { ScrollSpyNav, type ScrollSpyItem } from "../../components/ScrollSpyNav"
 import { EditorialLongform } from "../../components/EditorialLongform";
 import { PeopleDirectory } from "../../components/PeopleDirectory";
 import { DergiParkLogo } from "../../components/DergiParkLogo";
+import { SubmissionGuide } from "../../components/SubmissionGuide";
 import { ArticlePdfPage, ArticlePlatform } from "../../components/ArticlePlatform";
 import { IssuePlatform, issueContributionCount } from "../../components/IssuePlatform";
 import { CurrentIssueEditorial } from "../../components/CurrentIssueEditorial";
@@ -77,6 +78,7 @@ const englishPageMetadata: Record<string, [string, string, string]> = {
   contact: ["Contact", "BRIQ contact information and message form.", "/tr/iletisim"],
   search: ["Search BRIQ", "Search BRIQ articles, issues, authors, and calls for papers.", "/tr/arama"],
   "for-authors": ["For Authors", "BRIQ submission guidelines and publication review process.", "/tr/yazarlar"],
+  "for-authors/submit": ["Submit a Manuscript", "Step-by-step instructions for submitting to BRIQ through DergiPark.", "/tr/yazarlar/yazi-gonder"],
   "for-authors/guidelines": ["Submission Guidelines", "Submission requirements for BRIQ research articles and other contributions.", "/tr/yazarlar/yazim-kurallari"],
   "for-authors/review-process": ["Publication Review Process", "BRIQ’s editorial and peer-review workflow from submission to publication.", "/tr/yazarlar/yayin-degerlendirme-sureci"],
   "for-authors/copyright-and-licence": ["Copyright Terms and Licence", "BRIQ copyright transfer and CC BY 4.0 licence terms.", "/tr/yazarlar/telif-hakki-sartlari-ve-lisans"],
@@ -282,7 +284,7 @@ function EnglishAuthorsHub() {
         </div>
         <div className="submission-lead">
           <div><span>Submission channel</span><h2 className="dergipark-heading"><DergiParkLogo /></h2><p>Submissions are accepted in Turkish and English. Submission and publication are free of charge.</p></div>
-          <a className="button button-dark" href={canonicalPageHref("https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new")}>Start a submission ↗︎</a>
+          <a className="button button-dark" href={canonicalPageHref("/en/for-authors/submit")}>Start a submission →︎</a>
         </div>
         <EnglishLinkCards items={[
           { number: "01", title: "Submission Guidelines", text: "Contribution types, lengths, anonymisation, abstracts, and APA 7 requirements.", href: "/en/for-authors/guidelines" },
@@ -300,6 +302,13 @@ function EnglishAuthorsHub() {
       </div>
     </>
   );
+}
+
+function EnglishSubmissionPage() {
+  return <>
+    <EnglishHero kicker="For Authors" title="Submit a Manuscript" intro="Follow the DergiPark submission steps and contact our editorial team if you need help." />
+    <SubmissionGuide locale="en" />
+  </>;
 }
 
 function EnglishWritingRules() {
@@ -336,7 +345,7 @@ function EnglishWritingRules() {
             id: "submission-conditions",
             title: "Submission conditions",
             subsections: [
-              { id: "language-file-originality", title: "Language, file, and originality", content: <><p>Submissions are invited in English or Turkish. All submissions are to include a short biography (150-word limit) and should be sent as Microsoft Word attachments to <a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a>. Articles or other content that have been previously published or are under review by other journals will not be considered for publication.</p><p>BRIQ follows American Psychological Association style (7th edition, <a href={canonicalPageHref("https://apastyle.apa.org/")}>www.apastyle.org</a>) and uses American English spelling.</p></> },
+              { id: "language-file-originality", title: "Language, file, and originality", content: <><p>Submissions are invited in English or Turkish. All submissions must include a short biography (up to 150 words) and should be made through <a href={canonicalPageHref("/en/for-authors/submit")}>DergiPark using our submission guide</a>. If you cannot complete a submission on DergiPark, email the Word files and a description of the problem to <a href={canonicalPageHref("mailto:briq@briqjournal.com")}>briq@briqjournal.com</a>. Articles or other content that have been previously published or are under review by other journals will not be considered for publication.</p><p>BRIQ follows American Psychological Association style (7th edition, <a href={canonicalPageHref("https://apastyle.apa.org/")}>www.apastyle.org</a>) and uses American English spelling.</p></> },
               { id: "academic-articles", title: "Academic articles", content: <><p>BRIQ uses a double-blind review process for all academic articles.</p><p>Academic articles should be between 5,000 and 9,000 words in length, including abstracts, notes, references, and all other content. Please supply a cover page that includes complete author information, and a fully anonymized manuscript that also contains an abstract (200- word limit) and 5 keywords.</p></> },
               { id: "other-contributions", title: "Other contribution types", content: <><p>Book reviews should not exceed 1,000 words; review essays covering two or more works can be up to 3,000 words.</p><p>News reports consisting of brief analyses of news developments should not exceed 1,500 words; feature articles combining reporting and analysis can be up to 3,500 words.</p><p>BRIQ is an open access journal that allows readers to easily read and download the contents of published articles from the website. These contents are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0) which means that the readers can copy, download, redistribute, and share the contents only if appropriate credit is given.</p><p>Please contact the Editorial Board for interview proposals.</p><a className="editorial-next-link" href={canonicalPageHref("/en/for-authors/review-process")}>Evaluation Process for Peer-Reviewed Submissions →︎</a></> },
             ],
@@ -1035,6 +1044,7 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
   else if (key === "journal/advisory-board") content = <EnglishAdvisoryBoard />;
   else if (key === "journal/indexes") content = <EnglishIndexes />;
   else if (key === "for-authors") content = <EnglishAuthorsHub />;
+  else if (key === "for-authors/submit") content = <EnglishSubmissionPage />;
   else if (key === "for-authors/guidelines") content = <EnglishWritingRules />;
   else if (key === "for-authors/review-process") content = <EnglishReviewFlow />;
   else if (key === "for-authors/copyright-and-licence") content = <EnglishCopyrightTerms />;
@@ -1074,6 +1084,8 @@ export default async function EnglishContentPage({ params }: { params: Promise<{
     : undefined;
   const alternateHref = alternateArticle
     ? `/tr/makaleler/${alternateArticle.slug}${articlePdfMatch ? "/pdf" : ""}`
+    : key === "for-authors/submit"
+      ? "/tr/yazarlar/yazi-gonder"
     : editorialMatch
       ? `/tr/arsiv/cilt-${editorialMatch[1]}-sayi-${editorialMatch[2]}/sunus`
       : undefined;
