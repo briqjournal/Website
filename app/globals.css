@@ -10524,3 +10524,75 @@ footer {
 }
 
 .article-search button svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+
+
+/* BRIQ author directory — bilingual, crawlable list of published contributors. */
+.author-directory-page { background: var(--paper); color: var(--ink); }
+.author-directory-subnav { background: #eee7dc; border-bottom: 1px solid var(--line); }
+.author-directory-subnav .site-shell { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 26px; padding-top: 13px; padding-bottom: 13px; }
+.author-directory-subnav a { color: #55483e; font-size: 12px; font-weight: 600; line-height: 1.5; }
+.author-directory-subnav a:hover, .author-directory-subnav a[aria-current="page"] { color: var(--rust-dark); }
+.author-directory-subnav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.author-directory-shell { max-width: 1100px; padding-top: 48px; padding-bottom: 84px; }
+.author-directory-breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 38px; color: #71665a; font-size: 10px; font-weight: 700; letter-spacing: .09em; }
+.author-directory-breadcrumb a:hover { color: var(--rust-dark); }
+.author-directory-hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 34px; padding-bottom: 40px; border-bottom: 1px solid var(--ink); }
+.author-directory-hero-copy { min-width: 0; }
+.author-directory-kicker { margin: 0 0 18px; color: var(--rust-dark); font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+.author-directory-hero h1 { margin: 0 0 19px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(44px, 6vw, 72px); font-weight: 400; line-height: 1.04; letter-spacing: -.055em; }
+.author-directory-hero h1 span { color: var(--rust); }
+.author-directory-hero-copy > p:last-child { max-width: 640px; margin: 0; color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-size: 19px; line-height: 1.55; }
+.author-directory-total { min-width: 120px; padding-bottom: 3px; text-align: right; }
+.author-directory-total strong { display: block; font-family: Georgia, "Times New Roman", serif; font-size: clamp(48px, 6vw, 72px); font-weight: 400; line-height: 1; }
+.author-directory-total span { display: block; margin-top: 5px; font-size: 11px; font-weight: 800; letter-spacing: .14em; }
+.author-directory-toolbar { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 13px; margin-top: 32px; }
+.author-directory-search { display: flex; align-items: center; gap: 12px; padding: 0 17px; min-height: 54px; border: 1px solid #c9bdaf; background: var(--white); color: var(--ink); }
+.author-directory-search:focus-within { outline: 2px solid var(--rust); outline-offset: 2px; }
+.author-directory-search input { width: 100%; min-width: 0; border: 0; outline: none; background: transparent; color: var(--ink); font-size: 15px; }
+.author-directory-search input::placeholder { color: #82766c; }
+.author-directory-mode { display: flex; align-items: center; justify-content: center; padding: 0 20px; border: 1px solid #c9bdaf; font-size: 10px; font-weight: 800; letter-spacing: .12em; white-space: nowrap; }
+.author-directory-alphabet { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.author-directory-alphabet button { min-width: 28px; min-height: 30px; padding: 5px 7px; border: 0; background: transparent; color: #665c52; font-size: 12px; font-weight: 650; cursor: pointer; }
+.author-directory-alphabet button:first-child { padding: 5px 11px; }
+.author-directory-alphabet button:hover:not(:disabled) { color: var(--rust-dark); background: rgba(145,60,25,.08); }
+.author-directory-alphabet button.is-active { background: var(--ink); color: var(--white); }
+.author-directory-alphabet button:disabled { opacity: .32; cursor: not-allowed; }
+.author-directory-alphabet button:focus-visible, .author-directory-entry:focus-visible { outline: 2px solid var(--rust); outline-offset: 3px; }
+.author-directory-count { padding-top: 14px; color: var(--muted); font-size: 12px; }
+.author-directory-group { padding-top: 21px; }
+.author-directory-group-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; padding: 7px 0 13px; }
+.author-directory-group-heading h2, .author-directory-group-heading span { margin: 0; color: var(--rust-dark); font-size: 11px; font-weight: 800; letter-spacing: .14em; }
+.author-directory-group-heading span { color: var(--muted); font-size: 10px; }
+.author-directory-entry { display: flex; align-items: center; gap: 20px; min-height: 90px; padding: 16px 4px; border-bottom: 1px solid var(--line); color: var(--ink); transition: background-color .16s ease; }
+.author-directory-entry:hover { background: rgba(255,255,255,.42); }
+.author-directory-monogram { display: grid; place-items: center; flex: 0 0 54px; width: 54px; height: 54px; border: 1px solid #d3c5b5; border-radius: 50%; background: #f0e7da; color: var(--rust-dark); font-family: Georgia, "Times New Roman", serif; font-size: 24px; }
+.author-directory-person { display: flex; flex: 1 1 auto; flex-direction: column; gap: 7px; min-width: 0; }
+.author-directory-person strong { font-family: Georgia, "Times New Roman", serif; font-size: 23px; font-weight: 400; line-height: 1.18; }
+.author-directory-person > span { color: var(--muted); font-size: 12px; line-height: 1.4; }
+.author-directory-work-count { flex: 0 0 125px; color: var(--muted); font-size: 12px; text-align: right; }
+.author-directory-arrow { flex: 0 0 24px; color: var(--rust-dark); font-size: 23px; text-align: right; }
+.author-directory-empty { padding: 52px 12px; text-align: center; }
+.author-directory-empty h2 { font-family: Georgia, "Times New Roman", serif; font-size: 28px; font-weight: 400; }
+.author-directory-empty p { color: var(--muted); }
+.author-directory-empty button { margin-top: 16px; padding: 12px 16px; background: var(--ink); color: var(--white); border: 0; cursor: pointer; }
+@media(max-width:700px) {
+  .author-directory-subnav .site-shell { justify-content: flex-start; gap: 18px; }
+  .author-directory-subnav a { font-size: 11px; }
+  .author-directory-shell { padding-top: 30px; padding-bottom: 48px; }
+  .author-directory-breadcrumb { margin-bottom: 26px; font-size: 9px; }
+  .author-directory-hero { align-items: flex-start; gap: 12px; padding-bottom: 28px; }
+  .author-directory-kicker { font-size: 9px; margin-bottom: 12px; }
+  .author-directory-hero h1 { font-size: clamp(35px, 9vw, 52px); letter-spacing: -.04em; }
+  .author-directory-hero-copy > p:last-child { font-size: 15px; }
+  .author-directory-total { min-width: 60px; }
+  .author-directory-total strong { font-size: 36px; }
+  .author-directory-total span { font-size: 9px; }
+  .author-directory-toolbar { grid-template-columns: 1fr; gap: 9px; }
+  .author-directory-mode { min-height: 34px; justify-content: flex-start; border: 0; padding: 0; }
+  .author-directory-alphabet { gap: 3px; padding: 15px 0; }
+  .author-directory-alphabet button { min-width: 27px; padding: 5px; }
+  .author-directory-entry { min-height: 78px; gap: 12px; padding: 12px 0; }
+  .author-directory-monogram { flex-basis: 42px; width: 42px; height: 42px; font-size: 20px; }
+  .author-directory-person strong { font-size: 19px; }
+  .author-directory-work-count { display: none; }
+}

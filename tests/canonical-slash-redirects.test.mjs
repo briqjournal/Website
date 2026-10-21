@@ -10,7 +10,7 @@ const rules = lines.map((line) => line.split(/\s+/));
 const bySource = new Map(rules.map(([src, target, code]) => [src, { target, code }]));
 
 test("published canonical redirects are bounded, exact and loop-free", () => {
-  assert.equal(lines.length, 1256, "audited sitemap snapshot");
+  assert.equal(lines.length, 1258, "audited sitemap snapshot plus bilingual author directories");
   assert.ok(lines.length <= 2000, "Cloudflare static rules limit");
   assert.equal(bySource.size, lines.length, "no duplicate redirect sources");
   for (const [source, target, code, ...extras] of rules) {
@@ -34,6 +34,8 @@ test("English and Turkish article, issue and author canonical routes are covered
     "/tr/yazar/cem-gurdeniz",
     "/en",
     "/tr",
+    "/en/author-directory",
+    "/tr/yazar-dizini",
   ]) assert.deepEqual(bySource.get(src), { target: src + "/", code: "308" });
 });
 
