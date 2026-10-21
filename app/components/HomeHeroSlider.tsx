@@ -86,6 +86,19 @@ const slides: Record<Locale, Slide[]> = {
       imageAlt: "BRIQ Kuşak ve Yol Girişimi Dergisi logosu",
       tone: "logo",
     },
+    {
+      kicker: "Yazı gönderimi",
+      title: "BRIQ, DergiPark sistemine geçti",
+      subtitle: "",
+      summary: "Çalışmanızı DergiPark üzerinden BRIQ’e gönderin. Gönderim adımlarını inceleyin; desteğe ihtiyaç duyarsanız bize ulaşın.",
+      href: "/tr/yazarlar/yazi-gonder/",
+      action: "Çalışmanızı BRIQ’e gönderin",
+      secondaryHref: "/tr/yazarlar/yazi-gonder/#dergipark",
+      secondary: "Gönderim rehberi ve destek",
+      image: "/assets/dergipark-logo.png",
+      imageAlt: "DergiPark",
+      tone: "logo",
+    },
   ],
   en: [
     {
@@ -145,6 +158,19 @@ const slides: Record<Locale, Slide[]> = {
       secondary: "Article archive",
       image: "/assets/briq-logo.png",
       imageAlt: "BRIQ Belt and Road Initiative Quarterly logo",
+      tone: "logo",
+    },
+    {
+      kicker: "Submissions",
+      title: "BRIQ has moved to DergiPark",
+      subtitle: "",
+      summary: "Submit your work to BRIQ through DergiPark. Review the submission steps and contact us if you need assistance.",
+      href: "https://dergipark.org.tr/en/journal/4696/submission/step/manuscript/new",
+      action: "Submit your work to BRIQ",
+      secondaryHref: "/en/for-authors/guidelines/",
+      secondary: "Submission guide and support",
+      image: "/assets/dergipark-logo.png",
+      imageAlt: "DergiPark",
       tone: "logo",
     },
   ],
@@ -223,13 +249,13 @@ export function HomeHeroSlider({ locale = "tr" }: { locale?: Locale }) {
                 <h1 className={["subtitleFirst" in slide && slide.subtitleFirst ? "hero-title-subtitle-first" : "", slide.titleClass || ""].filter(Boolean).join(" ") || undefined}>
                   {"subtitleFirst" in slide && slide.subtitleFirst ? (
                     <>
-                      <em>{slide.subtitle}</em>
+                      {slide.subtitle && <em>{slide.subtitle}</em>}
                       <span>{slide.title}</span>
                     </>
                   ) : (
                     <>
                       {slide.title}
-                      <em>{slide.subtitle}</em>
+                      {slide.subtitle && <em>{slide.subtitle}</em>}
                     </>
                   )}
                 </h1>

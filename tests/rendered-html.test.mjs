@@ -1457,8 +1457,13 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(trArticle, /class="citation-toolbox-heading"/);
   assert.match(trArticle, /class="citation-export-group"/);
   assert.match(trArticle, /class="article-disclosure-stack"/);
-  assert.equal((trHome.match(/class="hero-slide /g) || []).length, 4);
-  assert.equal((enHome.match(/class="hero-slide /g) || []).length, 4);
+  assert.equal((trHome.match(/class="hero-slide /g) || []).length, 5);
+  assert.equal((enHome.match(/class="hero-slide /g) || []).length, 5);
+  assert.match(trHome, /BRIQ, DergiPark sistemine geçti/);
+  assert.match(trHome, /Gönderim rehberi ve destek/);
+  assert.match(enHome, /BRIQ has moved to DergiPark/);
+  assert.match(enHome, /Submission guide and support/);
+  assert.match(enHome, /https:\/\/dergipark\.org\.tr\/en\/journal\/4696\/submission\/step\/manuscript\/new/);
   assert.match(trHome, /Gelişen Dünyanın Fikir Platformu/);
   assert.match(enHome, /A Forum for the Developing World/);
   assert.match(trHome, /briq-logo-tr\.png/);
