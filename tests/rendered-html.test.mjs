@@ -1463,7 +1463,7 @@ test("keeps the refined article hierarchy, action order, and call deadline in pa
   assert.match(trHome, /Gönderim rehberi ve destek/);
   assert.match(enHome, /BRIQ has moved to DergiPark/);
   assert.match(enHome, /Submission guide and support/);
-  assert.match(enHome, /https:\/\/dergipark\.org\.tr\/en\/journal\/4696\/submission\/step\/manuscript\/new/);
+  assert.match(enHome, /href="\/en\/for-authors\/submit"/);\n  assert.match(enHome, /View the submission guide/);
   assert.match(trHome, /Gelişen Dünyanın Fikir Platformu/);
   assert.match(enHome, /A Forum for the Developing World/);
   assert.match(trHome, /briq-logo-tr\.png/);
