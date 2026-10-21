@@ -47,12 +47,38 @@ async function render(pathname) {
   );
 }
 
+// Published pages are served as static Cloudflare assets, bypassing the Worker.
+// Fix the document language at build time without making every page dynamic.
+function alignDocumentLanguage(pathname, html) {
+  const locale = pathname.startsWith("/en/") ? "en"
+    : pathname.startsWith("/tr/") ? "tr"
+    : null;
+  if (!locale) return html;
+
+  const rootTag = html.match(/<html\b[^>]*>/i)?.[0];
+  const language = rootTag?.match(/\blang\s*=\s*(["'])([^"']+)\1/i);
+  if (!rootTag || !language) {
+    throw new Error(`Missing HTML document language for ${pathname}`);
+  }
+  if (language[2] === locale) return html;
+
+  // The shared Next/Vinext root layout currently renders lang="tr".
+  // Only the English output requires correction; fail on other surprises.
+  if (locale !== "en" || language[2] !== "tr") {
+    throw new Error(`Unexpected HTML language ${language[2]} for ${pathname}`);
+  }
+  return html.replace(rootTag, rootTag.replace(language[0], 'lang="en"'));
+}
+
 async function writeResponse(pathname, outputPath) {
   const response = await render(pathname);
   if (!response.ok) {
     throw new Error(`Prerender failed for ${pathname}: HTTP ${response.status}`);
   }
-  const body = await response.text();
+  const renderedBody = await response.text();
+  const body = outputPath.endsWith(".html")
+    ? alignDocumentLanguage(pathname, renderedBody)
+    : renderedBody;
   await mkdir(dirname(outputPath), { recursive: true });
   await writeFile(outputPath, body, "utf8");
   return body;
