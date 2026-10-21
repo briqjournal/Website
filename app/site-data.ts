@@ -18,6 +18,7 @@ export const navItems = [
       ["Güncel Sayı", "/tr/guncel-sayi"],
       ["Tüm Sayılar", "/tr/arsiv"],
       ["Makale Arama", "/tr/makaleler"],
+      ["Yazar Dizini", "/tr/yazar-dizini"],
     ],
   },
   {

@@ -11,7 +11,7 @@ const trStatic = [
   "tr/dergi/yayin-kurulu", "tr/dergi/danisma-kurulu",
   "tr/dergi/endeksler", "tr/iletisim", "tr/arama", "tr/yazarlar", "tr/yazarlar/yazi-gonder", "tr/yazarlar/yazim-kurallari",
   "tr/yazarlar/yayin-degerlendirme-sureci", "tr/yazarlar/telif-hakki-sartlari-ve-lisans", "tr/yazarlar/yayin-etigi",
-  "tr/guncel-sayi", "tr/arsiv", "tr/makaleler", "tr/makale-cagrilari", "tr/yillik-raporlar",
+  "tr/guncel-sayi", "tr/arsiv", "tr/makaleler", "tr/yazar-dizini", "tr/makale-cagrilari", "tr/yillik-raporlar",
 ];
 
 const enStatic = [
@@ -19,7 +19,7 @@ const enStatic = [
   "en/journal/publication-board", "en/journal/advisory-board",
   "en/journal/indexes", "en/contact", "en/search", "en/for-authors", "en/for-authors/guidelines",
   "en/for-authors/review-process", "en/for-authors/copyright-and-licence", "en/for-authors/publication-ethics", "en/current-issue",
-  "en/archive", "en/articles", "en/calls-for-papers", "en/annual-reports",
+  "en/archive", "en/articles", "en/author-directory", "en/calls-for-papers", "en/annual-reports",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

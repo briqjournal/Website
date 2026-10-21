@@ -9,7 +9,7 @@ type Locale = "tr" | "en";
 
 const englishNavItems = [
   { label: "Journal", href: "/en/journal/about-briq", children: [["About BRIQ", "/en/journal/about-briq"], ["Publication Principles", "/en/journal/publication-principles"], ["Editorial Info", "/en/journal/publication-board"], ["Advisory Board", "/en/journal/advisory-board"], ["Indexing & Archiving", "/en/journal/indexes"], ["Annual Reports", "/en/annual-reports"]] },
-  { label: "Publications", href: "/en/current-issue", children: [["Current Issue", "/en/current-issue"], ["All Issues", "/en/archive"], ["Article Search", "/en/articles"]] },
+  { label: "Publications", href: "/en/current-issue", children: [["Current Issue", "/en/current-issue"], ["All Issues", "/en/archive"], ["Article Search", "/en/articles"], ["Author Directory", "/en/author-directory"]] },
   { label: "For Authors", href: "/en/for-authors", children: [["Submission Guidelines", "/en/for-authors/guidelines"], ["Publication Review Process", "/en/for-authors/review-process"], ["Publication Ethics", "/en/for-authors/publication-ethics"], ["Copyright Terms and Licence", "/en/for-authors/copyright-and-licence"]] },
   { label: "Calls for Papers", href: "/en/calls-for-papers", children: [["Active Calls", "/en/calls-for-papers#active"], ["Past Calls", "/en/calls-for-papers#past"], ["Book Reviews", "/en/calls-for-papers/book-reviews"]] },
   { label: "Contact", href: "/en/contact" },
@@ -27,6 +27,7 @@ const turkishToEnglishPaths: Record<string, string> = {
   "/tr/guncel-sayi/sunus": "/en/current-issue/editorial",
   "/tr/arsiv": "/en/archive",
   "/tr/makaleler": "/en/articles",
+  "/tr/yazar-dizini": "/en/author-directory",
   "/tr/yazarlar": "/en/for-authors",
   "/tr/yazarlar/yazim-kurallari": "/en/for-authors/guidelines",
   "/tr/yazarlar/yayin-degerlendirme-sureci": "/en/for-authors/review-process",
