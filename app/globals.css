@@ -1749,7 +1749,7 @@ img {
 .submission-side-help svg { width: 23px; height: 23px; color: var(--rust-dark); }
 .submission-side-help h2 { margin: 12px 0 6px; font: 500 20px/1.2 Georgia,serif; }
 .submission-side-help p { margin: 0 0 8px; color: var(--muted); font-size: 13px; line-height: 1.55; }
-.submission-side-help a, .submission-content a:not(.button) { color: var(--rust-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.submission-side-help a, .submission-content a:not(.button):not(.editorial-next-link) { color: var(--rust-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .submission-content { min-width: 0; }
 .submission-section { padding: 0 0 54px; margin: 0 0 54px; border-bottom: 1px solid var(--line); scroll-margin-top: 112px; }
 .submission-section:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
@@ -1771,13 +1771,13 @@ img {
 .submission-flow-tools span { font:600 10px Arial,sans-serif; letter-spacing:.12em; text-transform:uppercase; }
 .submission-flow-tools button { padding:6px 0; border:0; color:var(--rust-dark); background:transparent; font:600 12px Arial,sans-serif; cursor:pointer; }
 .submission-step { border-bottom:1px solid var(--line); }
-.submission-step summary { display:grid; grid-template-columns:34px 25px 1fr; gap:15px; align-items:center; padding:19px 5px; cursor:pointer; list-style:none; }
+.submission-step summary { display:grid; grid-template-columns:34px 25px minmax(0,1fr) 18px; gap:15px; align-items:center; padding:19px 5px; cursor:pointer; list-style:none; }
 .submission-step summary::-webkit-details-marker { display:none; }
-.submission-step summary::after { content:"+"; grid-column:3; grid-row:1; justify-self:end; margin-right:4px; color:var(--rust-dark); font-size:20px; }
+.submission-step summary::after { content:"+"; grid-column:4; grid-row:1; justify-self:end; color:var(--rust-dark); font-size:20px; }
 .submission-step[open] summary::after { content:"−"; }
 .submission-step-number { color:var(--rust-dark); font:500 13px Georgia,serif; }
 .submission-step summary > svg { width:23px; height:23px; color:var(--rust-dark); }
-.submission-step summary > span:last-of-type { display:grid; gap:5px; padding-right:24px; }
+.submission-step summary > span:last-of-type { grid-column:3; grid-row:1; min-width:0; display:grid; gap:5px; padding-right:4px; }
 .submission-step summary b { font:500 20px Georgia,serif; }
 .submission-step summary small { color:var(--muted); font-size:13px; line-height:1.45; }
 .submission-step-body { padding:0 12px 22px 79px; }
@@ -1787,6 +1787,12 @@ img {
 .submission-check p { display:grid; gap:4px; margin:0; color:#49433c; font-size:13px; line-height:1.55; }
 .submission-check b { color:var(--ink); font-size:12px; }
 .submission-step-body > a { font-size:13px; }
+.submission-login-note { display:flex; gap:12px; padding:15px 17px; margin:18px 0 10px; background:rgba(233,223,210,.48); }
+.submission-login-note svg { flex:0 0 21px; width:21px; height:21px; color:var(--rust-dark); }
+.submission-login-note p { margin:0; color:#49433c; font-size:13px; line-height:1.6; }
+.submission-login-note a { font-weight:600; }
+.submission-section .editorial-next-link { color:#fff; text-decoration:none; }
+.submission-section .editorial-next-link:hover { color:#fff; }
 .submission-main-link { margin:24px 0 12px; }
 .submission-mail-panel { display:grid; grid-template-columns:26px 1fr; gap:16px; padding:22px; margin:22px 0; border:1px solid var(--line); background:rgba(255,253,249,.72); }
 .submission-mail-panel > svg { width:23px; height:23px; color:var(--rust-dark); }
@@ -1815,7 +1821,7 @@ img {
   .submission-entry { align-items:flex-start; flex-direction:column; gap:16px; padding:18px; }
   .submission-file-grid { grid-template-columns:1fr; gap:10px; }
   .submission-file-grid > div { padding:17px; }
-  .submission-step summary { grid-template-columns:25px 22px 1fr; gap:10px; padding:16px 0; }
+  .submission-step summary { grid-template-columns:25px 22px minmax(0,1fr) 18px; gap:10px; padding:16px 0; }
   .submission-step summary b { font-size:18px; }
   .submission-step summary small { font-size:12px; }
   .submission-step-body { padding:0 2px 19px 57px; }
