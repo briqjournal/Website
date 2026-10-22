@@ -221,7 +221,7 @@ function isR2PdfPath(pathname: string): boolean {
   );
 }
 
-function applyPdfHeaders(headers: Headers): void {
+function applyPdfHeaders(headers: Headers, pathname: string): void {
   if (!headers.has("content-type")) {
     headers.set("content-type", "application/pdf");
   }
@@ -231,6 +231,9 @@ function applyPdfHeaders(headers: Headers): void {
   if (!headers.has("content-disposition")) headers.set("content-disposition", "inline");
   headers.set("accept-ranges", "bytes");
   headers.set("x-content-type-options", "nosniff");
+  // The PDF is a distinct published document. Declare its stable root-domain
+  // URL, never the request Host, and discard tracking/query parameters.
+  headers.set("link", `<${new URL(pathname, "https://briqjournal.com").href}>; rel="canonical"`);
 }
 
 function applyContentLengthAndRange(
@@ -280,7 +283,7 @@ async function servePdfFromR2(
     const headers = new Headers();
     object.writeHttpMetadata(headers);
     headers.set("etag", object.httpEtag);
-    applyPdfHeaders(headers);
+    applyPdfHeaders(headers, pathname);
     applyContentLengthAndRange(headers, object);
     return new Response(null, { status: 200, headers });
   }
@@ -291,7 +294,7 @@ async function servePdfFromR2(
   const headers = new Headers();
   object.writeHttpMetadata(headers);
   headers.set("etag", object.httpEtag);
-  applyPdfHeaders(headers);
+  applyPdfHeaders(headers, pathname);
   const status = applyContentLengthAndRange(headers, object);
   return new Response(object.body, { status, headers });
 }
