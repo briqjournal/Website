@@ -31,16 +31,24 @@ function mockBucket() {
   }
   return {
     async head(key) {
-      return key.endsWith(".pdf") && !key.includes("missing") ? metadata() : null;
-    },
-    async get(key, { range }) {
       if (!key.endsWith(".pdf") || key.includes("missing")) return null;
-      const requested = range.get("range");
+      // Mirrors R2 responses that expose range metadata for a full object.
+      return { ...metadata(), range: { offset: 0, length: BYTES.length } };
+    },
+    async get(key, options = {}) {
+      if (!key.endsWith(".pdf") || key.includes("missing")) return null;
+      const requested = options.range?.get("range");
       if (requested === "bytes=0-3") {
         return { ...metadata(), range: { offset: 0, length: 4 },
           body: new Blob([BYTES.slice(0, 4)]).stream() };
       }
-      return { ...metadata(), body: new Blob([BYTES]).stream() };
+      if (requested === "bytes=-4") {
+        return { ...metadata(), range: { offset: BYTES.length - 4, length: 4 },
+          body: new Blob([BYTES.slice(-4)]).stream() };
+      }
+      // A full-range object is not necessarily a client partial-content request.
+      return { ...metadata(), range: { offset: 0, length: BYTES.length },
+        body: new Blob([BYTES]).stream() };
     },
   };
 }
@@ -63,9 +71,28 @@ test("R2 PDF HEAD, GET and Range/206 all declare a stable self canonical", async
     assert.equal(response.headers.get("content-disposition"), "inline");
   }
   assert.equal(head.headers.get("content-length"), String(BYTES.length));
+  assert.equal(head.headers.get("content-range"), null);
+  assert.equal(get.headers.get("content-length"), String(BYTES.length));
+  assert.equal(get.headers.get("content-range"), null);
   assert.equal(range.headers.get("content-range"), "bytes 0-3/" + BYTES.length);
   assert.equal(await range.text(), "%PDF");
   assert.deepEqual(new Uint8Array(await get.arrayBuffer()), BYTES);
+});
+
+test("an explicitly requested full-file or suffix Range remains HTTP 206", async () => {
+  const bucket = mockBucket();
+  const [fullRange, suffix] = await Promise.all([
+    fetchWorker(PDF, { bucket, headers: { Range: "bytes=0-" } }),
+    fetchWorker(PDF, { bucket, headers: { Range: "bytes=-4" } }),
+  ]);
+  assert.equal(fullRange.status, 206);
+  assert.equal(fullRange.headers.get("content-length"), String(BYTES.length));
+  assert.equal(fullRange.headers.get("content-range"), "bytes 0-" + (BYTES.length - 1) + "/" + BYTES.length);
+  assert.deepEqual(new Uint8Array(await fullRange.arrayBuffer()), BYTES);
+  assert.equal(suffix.status, 206);
+  assert.equal(suffix.headers.get("content-length"), "4");
+  assert.equal(suffix.headers.get("content-range"), "bytes " + (BYTES.length - 4) + "-" + (BYTES.length - 1) + "/" + BYTES.length);
+  assert.deepEqual(new Uint8Array(await suffix.arrayBuffer()), BYTES.slice(-4));
 });
 
 test("volume PDF path uses the same canonical policy without leaking request Host", async () => {
