@@ -115,7 +115,7 @@ test("bilingual HTML PDF viewers canonicalize to the article, not the viewer", a
       assert.ok(target, "redirect must declare Location: " + viewer);
       const location = new URL(target, ROOT);
       assert.equal(location.origin, ROOT);
-      assert.equal(location.pathname, viewer.replace(/\\/$/, ""));
+      assert.equal(location.pathname, viewer.replace(/\/$/, ""));
       response = await fetchWorker(location.pathname, { headers: { Accept: "text/html" } });
     }
     assert.equal(response.status, 200, viewer);
