@@ -107,7 +107,17 @@ test("bilingual HTML PDF viewers canonicalize to the article, not the viewer", a
     },
   ];
   for (const { viewer, article, alternate } of cases) {
-    const response = await fetchWorker(viewer, { headers: { Accept: "text/html" } });
+    // Direct Worker tests bypass Cloudflare Static Assets redirect handling.
+    // Follow the app router's trailing-slash normalization when present.
+    let response = await fetchWorker(viewer, { headers: { Accept: "text/html" } });
+    if (response.status === 307 || response.status === 308) {
+      const target = response.headers.get("location");
+      assert.ok(target, "redirect must declare Location: " + viewer);
+      const location = new URL(target, ROOT);
+      assert.equal(location.origin, ROOT);
+      assert.equal(location.pathname, viewer.replace(/\\/$/, ""));
+      response = await fetchWorker(location.pathname, { headers: { Accept: "text/html" } });
+    }
     assert.equal(response.status, 200, viewer);
     const html = await response.text();
     assert.ok(html.includes('<link rel="canonical" href="' + ROOT + article + '"'),
