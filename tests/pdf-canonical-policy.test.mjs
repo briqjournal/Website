@@ -107,7 +107,7 @@ test("bilingual HTML PDF viewers canonicalize to the article, not the viewer", a
     },
   ];
   for (const { viewer, article, alternate } of cases) {
-    const response = await fetchWorker(viewer);
+    const response = await fetchWorker(viewer, { headers: { Accept: "text/html" } });
     assert.equal(response.status, 200, viewer);
     const html = await response.text();
     assert.ok(html.includes('<link rel="canonical" href="' + ROOT + article + '"'),
