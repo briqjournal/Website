@@ -836,8 +836,9 @@ async function generatePageMetadata({ params }: { params: Promise<{ slug: string
         title: `${title} — PDF | BRIQ`,
         description: `Verified PDF viewer for ${title}.`,
         alternates: {
-          canonical: `/en/articles/${englishSlug}/pdf`,
-          languages: { "tr-TR": `/tr/makaleler/${article.slug}/pdf`, "en-US": `/en/articles/${englishSlug}/pdf` },
+          // A PDF viewer is an alternate interface for the published HTML article.
+          canonical: `/en/articles/${englishSlug}`,
+          languages: { "tr-TR": `/tr/makaleler/${article.slug}`, "en-US": `/en/articles/${englishSlug}` },
         },
       };
     }

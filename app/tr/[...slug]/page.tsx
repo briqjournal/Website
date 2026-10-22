@@ -1352,8 +1352,9 @@ async function generatePageMetadata({
       title: `${article.title_tr} — PDF | BRIQ`,
       description: `${article.title_tr} doğrulanmış PDF görüntüleyicisi.`,
       alternates: {
-        canonical: `/tr/makaleler/${article.slug}/pdf`,
-        languages: { "tr-TR": `/tr/makaleler/${article.slug}/pdf`, "en-US": `/en/articles/${articleRouteSlug(article, "en")}/pdf` },
+        // A PDF viewer is an alternate interface for the published HTML article.
+        canonical: `/tr/makaleler/${article.slug}`,
+        languages: { "tr-TR": `/tr/makaleler/${article.slug}`, "en-US": `/en/articles/${articleRouteSlug(article, "en")}` },
       },
     };
   }
