@@ -239,10 +239,14 @@ function applyPdfHeaders(headers: Headers, pathname: string): void {
 function applyContentLengthAndRange(
   headers: Headers,
   object: R2Object | R2ObjectBody,
+  rangeRequested: boolean,
 ): number {
-  const range = object.range;
+  // R2 can report a full-object range even when the client did not request
+  // partial content. HTTP 206 depends on the request, not metadata alone.
+  const range = rangeRequested ? object.range : undefined;
   if (!range) {
     headers.set("content-length", String(object.size));
+    headers.delete("content-range");
     return 200;
   }
 
@@ -284,18 +288,21 @@ async function servePdfFromR2(
     object.writeHttpMetadata(headers);
     headers.set("etag", object.httpEtag);
     applyPdfHeaders(headers, pathname);
-    applyContentLengthAndRange(headers, object);
+    applyContentLengthAndRange(headers, object, false);
     return new Response(null, { status: 200, headers });
   }
 
-  const object = await bucket.get(key, { range: request.headers });
+  const rangeRequested = request.headers.has("range");
+  const object = rangeRequested
+    ? await bucket.get(key, { range: request.headers })
+    : await bucket.get(key);
   if (!object) return new Response("PDF Not Found", { status: 404 });
 
   const headers = new Headers();
   object.writeHttpMetadata(headers);
   headers.set("etag", object.httpEtag);
   applyPdfHeaders(headers, pathname);
-  const status = applyContentLengthAndRange(headers, object);
+  const status = applyContentLengthAndRange(headers, object, rangeRequested);
   return new Response(object.body, { status, headers });
 }
 
