@@ -265,3 +265,20 @@ test("recover three source-verified GSC 404s without extra redirects", async () 
     "?archive=2020",
   );
 });
+
+test("resolve precisely matched 404 legacy CFP and issue PDF URLs without chains", async () => {
+  // GSC's literal old paths, including the Drupal front controller and
+  // URL-encoded spaces, must resolve directly to verified publication routes.
+  for (const [source, destination] of [
+    ["/kitap-incelemesi", "/tr/makale-cagrilari/kitap-incelemesi/"],
+    ["/index.php/yapay-zeka-uretici-gucler-ve-insanligin-ortak-refahi",
+      "/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah/"],
+    ["/yapay-zeka-uretici-gucler-ve-insanligin-ortak-refahi",
+      "/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah/"],
+    ["/sites/default/files/dergi-sayilari/2020-09/BRIQ_TURKCE%20-%203.%20SAYI.pdf",
+      "/assets/archive/pdfs/issues/cilt-1-sayi-3-tr.pdf"],
+  ]) {
+    await assertRedirect(source, destination);
+  }
+});
+
