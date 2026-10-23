@@ -282,3 +282,21 @@ test("resolve precisely matched 404 legacy CFP and issue PDF URLs without chains
   }
 });
 
+
+test("recover GSC's Drupal user 68 and uniquely identified truncated issue PDF paths", async () => {
+  // Google-indexed, historical /en/user/emrah-alan HTML proves that
+  // /user/68 was its Turkish language link (Drupal system path user/68).
+  await assertRedirect("/user/68", "/tr/yazar/emrah-alan/");
+  await assertRedirect("/index.php/user/68", "/tr/yazar/emrah-alan/");
+
+  // One old April 2021 PDF in the published 619-file migration manifest
+  // starts with this exact prefix. Test both variants of the cut-off GSC URL.
+  for (const path of [
+    "/sites/default/files/yazi-ici-dosyalar/2021-04/Turkey%20in%20the",
+    "/sites/default/files/yazi-ici-dosyalar/2021-04/Turkey%20in%20the%20",
+  ]) await assertRedirect(
+    path,
+    "/assets/archive/pdfs/articles/deniz-ve-asya-yuzyilinda-turkiye-en.pdf",
+  );
+});
+
