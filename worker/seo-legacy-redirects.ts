@@ -165,6 +165,13 @@ export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
   "/assets/archive/pdfs/issues/cilt-7-sayi-4-tr.pdf": "/assets/issues/briq-cilt-7-sayi-4-sonbahar-2026.pdf",
   "/assets/archive/pdfs/issues/cilt-7-sayi-4-en.pdf": "/assets/issues/BRIQ-Volume7-Issue4-EN-original.pdf",
 
+  // Three exact aliases from GSC's 2026-10-16 404 sample, rechecked live on
+  // 2026-10-23. Each target exists and returns HTTP 200. No broad fallback.
+  "/kitap-incelemesi": "/tr/makale-cagrilari/kitap-incelemesi/",
+  // handleLegacyRedirect removes /index.php before looking up aliases.
+  "/yapay-zeka-uretici-gucler-ve-insanligin-ortak-refahi": "/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah/",
+  "/sites/default/files/dergi-sayilari/2020-09/BRIQ_TURKCE - 3. SAYI.pdf": "/assets/archive/pdfs/issues/cilt-1-sayi-3-tr.pdf",
+
   // Older issue filenames observed in live 404 logs; source and R2 targets
   // were checked by volume/issue metadata and exact R2 object existence.
   "/assets/archive/pdfs/cilt-3-sayi-1-turk-cin-iliskileri-tr.pdf": "/assets/archive/pdfs/issues/cilt-3-sayi-1-tr.pdf",
