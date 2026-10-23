@@ -172,6 +172,18 @@ export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
   "/yapay-zeka-uretici-gucler-ve-insanligin-ortak-refahi": "/tr/makale-cagrilari/yapay-zeka-uretici-gucler-ortak-refah/",
   "/sites/default/files/dergi-sayilari/2020-09/BRIQ_TURKCE - 3. SAYI.pdf": "/assets/archive/pdfs/issues/cilt-1-sayi-3-tr.pdf",
 
+  // Exact recoveries from GSC's 404 report, source-verified 2026-10-24:
+  // The crawled Drupal HTML for /en/user/emrah-alan explicitly sets
+  // data-drupal-link-system-path="user/68" on its Turkish language link.
+  "/user/68": "/tr/yazar/emrah-alan/",
+
+  // A cut-off GSC link is uniquely matched in the 619-file migration manifest:
+  // the sole 2021-04 old PDF starting "Turkey in the" is the published
+  // "Turkey in the Century of the Sea and Asia" (exact designed English PDF).
+  // Only these two exact truncated spellings redirect; no wildcard guessing.
+  "/sites/default/files/yazi-ici-dosyalar/2021-04/Turkey in the": "/assets/archive/pdfs/articles/deniz-ve-asya-yuzyilinda-turkiye-en.pdf",
+  "/sites/default/files/yazi-ici-dosyalar/2021-04/Turkey in the ": "/assets/archive/pdfs/articles/deniz-ve-asya-yuzyilinda-turkiye-en.pdf",
+
   // Older issue filenames observed in live 404 logs; source and R2 targets
   // were checked by volume/issue metadata and exact R2 object existence.
   "/assets/archive/pdfs/cilt-3-sayi-1-turk-cin-iliskileri-tr.pdf": "/assets/archive/pdfs/issues/cilt-3-sayi-1-tr.pdf",
