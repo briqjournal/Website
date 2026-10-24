@@ -10602,3 +10602,81 @@ footer {
   .author-directory-person strong { font-size: 19px; }
   .author-directory-work-count { display: none; }
 }
+
+
+/* Historic joint-author pages: a group record links real individual people,
+   never conflating a coauthor byline with a separate individual profile. */
+.historical-coauthors-section {
+  margin-bottom: 66px;
+}
+
+.historical-coauthors-heading {
+  margin-bottom: 24px;
+}
+
+.historical-coauthors-heading h2 {
+  margin: 8px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+
+.historical-coauthors-members {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.historical-coauthors-members .author-profile-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.historical-coauthors-members h3 {
+  margin: 8px 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 2.4vw, 29px);
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.historical-coauthors-members .historical-coauthors-affiliation {
+  margin: 0 0 19px;
+  color: var(--rust-dark);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.historical-coauthors-members .historical-coauthors-biography {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.68;
+}
+
+.historical-coauthors-profile-link {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 13px;
+  color: var(--rust-dark);
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.historical-coauthors-profile-link:hover,
+.historical-coauthors-profile-link:focus-visible {
+  color: var(--red);
+}
+
+@media (max-width: 700px) {
+  .historical-coauthors-members {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
