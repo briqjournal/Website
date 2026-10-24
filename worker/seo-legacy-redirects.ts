@@ -4,6 +4,42 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // Reviewed 2026-10-16 GSC canonical sample: exact English Drupal author
+  // aliases, matched to existing English author profiles and publication order.
+  // Never create joint-author pages or redirect ambiguous identities to one author.
+  "/en/user/fahri-erenel-ahmet-gedik": "/en/authors/fahri-erenel/",
+  "/en/user/liu-ningning-cheng-enfu": "/en/authors/liu-ningning/",
+  "/en/user/wenbo-zhang-quan-heng": "/en/authors/wenbo-zhang/",
+  "/en/user/shangtao-gao-jessica-durdu": "/en/authors/shangtao-gao/",
+  "/en/user/8": "/en/authors/dominik-pietzcker/",
+  "/en/user/necati-demircan-ye-zhangxu": "/en/authors/necati-demircan/",
+  "/en/user/dr-mohamad-zreik-prof-dr-zhao-changfeng": "/en/authors/mohamad-zreik/",
+  "/en/user/luis-kato-maldonado-ve-guadalupe-huerta-moreno": "/en/authors/luis-kato-maldonado/",
+  "/en/user/sitki-rifat": "/en/authors/sitki-firat/",
+  "/en/user/prof-dr-sun-degang-zhang-jieying": "/en/authors/sun-degang/",
+  "/en/user/robet-minor": "/en/authors/robert-minor/",
+  "/en/user/sule-perincek": "/en/authors/h-sule-perincek/",
+  "/en/user/drarif-acaloglu": "/en/authors/arif-acaloglu/",
+  "/en/user/igor-korotchenko": "/en/authors/igor-korotcenko/",
+  "/en/user/yang-chen-ma-jinting": "/en/authors/yang-chen/",
+  "/en/user/prof-dr-song-shuli-prof-dr-cheng-enfu": "/en/authors/song-shuli/",
+  "/en/user/semih-guneri-ayca-avci-ahmet-z-bayburt": "/en/authors/semih-guneri/",
+  "/en/user/cheng-enfu-ve-lu-chunyi": "/en/authors/cheng-enfu/",
+  "/en/user/amit-kumar-ve-dr-veena-ramachandran": "/en/authors/amit-kumar/",
+  "/en/user/zhang-yan-jun-liu-yu-jun": "/en/authors/zhang-yan-jun/",
+  "/en/user/wang-laixi-na-risu-wu-lan": "/en/authors/wang-laixi/",
+  "/en/user/fang-chenyu-and-wang-weibin": "/en/authors/fang-chenyu/",
+  "/en/user/guo-xingen": "/en/authors/guo-xin-gen/",
+  "/en/user/degang-sun-yingqi-yang": "/en/authors/sun-degang/",
+  "/en/user/yi-shaoxuan-yang-chen": "/en/authors/yi-shaoxuan/",
+  "/en/user/forugh-farrokhzad": "/en/authors/furug-ferruhzad/",
+  "/en/user/sultan-hem-ve-degang-sun": "/en/authors/hend-elmahly-mahmoud-sultan/",
+
+  // Historical published issue and call-for-papers URLs; both titles and
+  // current final destinations matched and verified HTTP 200.
+  "/en/reconfiguring-transatlantic-relations-era-war-and-strategic-fragmentation": "/en/calls-for-papers/transatlantic-relations/",
+  "/briq-1cilt-2-sayi": "/tr/arsiv/cilt-1-sayi-2/",
+
   // Historical Drupal joint-author aliases: resolve each to the first author
   // shown in the published BRIQ article byline (verified 2026-10-24).
   // There are NO new joint-author pages or fabricated person profiles.
