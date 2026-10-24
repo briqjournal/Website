@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { annualReports, archiveArticles, archiveIssues, articleRouteSlug } from "./archive";
 import { SITE_URL } from "./site-url";
 import { authorProfiles } from "./authors";
+import { historicalAuthorGroups } from "./historical-author-groups";
 import { calls, pastCalls } from "./site-data";
 
 const base = SITE_URL;
@@ -35,6 +36,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const author of authorProfiles) {
     paths.add(`tr/yazar/${author.id}`);
     paths.add(`en/authors/${author.id}`);
+  }
+  for (const group of historicalAuthorGroups) {
+    paths.add(`tr/ortak-yazarlar/${group.slug}`);
+    paths.add(`en/coauthors/${group.slug}`);
   }
   for (const report of annualReports) {
     paths.add(`tr/yillik-raporlar/${report.number}`);
