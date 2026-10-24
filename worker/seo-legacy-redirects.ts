@@ -4,6 +4,13 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // Source identity verified against original archived Drupal profiles:
+  // /user/8 -> Dominik Pietzcker (2026-04-15 Wayback snapshot);
+  // /user/sitki-rifat -> Sıtkı Fırat (2024-03-02 source biography,
+  // despite the historical page heading spelling "Sıtkı Rıfat").
+  "/user/8": "/tr/yazar/dominik-pietzcker/",
+  "/user/sitki-rifat": "/tr/yazar/sitki-firat/",
+
   // GSC's historical /user aliases found in the 2026-10-16 canonical sample.
   // Exact old spelling/identity matched to an existing published author profile
   // on 2026-10-24. No combined-author or ambiguous identity fallbacks.
