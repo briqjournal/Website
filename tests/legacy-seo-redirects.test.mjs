@@ -315,3 +315,11 @@ test("exact historical GSC author spellings reach existing canonical profiles", 
   await assertRedirect("/index.php/user/mao-zedung", "/tr/yazar/mao-zedong/");
   await assertRedirect("/user/robet-minor?from=gsc", "/tr/yazar/robert-minor/", "?from=gsc");
 });
+
+test("recover GSC historical Drupal numeric and misspelled author identities", async () => {
+  // Both are original Drupal pages preserved in the Wayback Machine:
+  // /user/8 named Dominik Pietzcker, /user/sitki-rifat biography named Sıtkı Fırat.
+  await assertRedirect("/user/8", "/tr/yazar/dominik-pietzcker/");
+  await assertRedirect("/index.php/user/8", "/tr/yazar/dominik-pietzcker/");
+  await assertRedirect("/user/sitki-rifat", "/tr/yazar/sitki-firat/");
+});
