@@ -4,6 +4,16 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // GSC's historical /user aliases found in the 2026-10-16 canonical sample.
+  // Exact old spelling/identity matched to an existing published author profile
+  // on 2026-10-24. No combined-author or ambiguous identity fallbacks.
+  "/user/mao-zedung": "/tr/yazar/mao-zedong/",
+  "/user/robet-minor": "/tr/yazar/robert-minor/",
+  "/user/sule-perincek": "/tr/yazar/h-sule-perincek/",
+  "/user/igor-korotchenko": "/tr/yazar/igor-korotcenko/",
+  "/user/drarif-acaloglu": "/tr/yazar/arif-acaloglu/",
+  "/user/expert-committee-shanghai-energy-conservation-commission": "/tr/yazar/expert-committee-of-shanghai-energy-conservation-commission/",
+
   // Search Console's legacy /user aliases with honorifics; each target is a
   // verified existing EN/TR author profile in the production sitemap.
   "/user/dr-hande-gunozu": "/tr/yazar/hande-gunozu",
