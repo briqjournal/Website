@@ -323,3 +323,37 @@ test("recover GSC historical Drupal numeric and misspelled author identities", a
   await assertRedirect("/index.php/user/8", "/tr/yazar/dominik-pietzcker/");
   await assertRedirect("/user/sitki-rifat", "/tr/yazar/sitki-firat/");
 });
+
+test("historical shared-author aliases resolve to dedicated editorial records", async () => {
+  const names = [
+  "amit-kumar-ve-dr-veena-ramachandran",
+  "cheng-enfu-ve-li-jing",
+  "cheng-enfu-ve-lu-chunyi",
+  "dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
+  "dr-mohamad-zreik-prof-dr-zhao-changfeng",
+  "dr-ogr-uyesi-assadollah-athari-ve-dr-ehsan-ejazi",
+  "efe-can-gurcan-ve-omer-ersin-kahraman",
+  "fahri-erenel-ahmet-gedik",
+  "fang-chenyu-ve-wang-weibin",
+  "liu-ningning-cheng-enfu",
+  "luis-kato-maldonado-ve-guadalupe-huerta-moreno",
+  "necati-demircan-ye-zhangxu",
+  "prof-dr-song-shuli-prof-dr-cheng-enfu",
+  "prof-dr-sun-degang-dr-aml-ali-abdrabou",
+  "prof-dr-sun-degang-zhang-jieying",
+  "semih-guneri-ayca-avci-ahmet-z-bayburt",
+  "shangtao-gao-jessica-durdu",
+  "wenbo-zhang-quan-heng",
+  "yang-chen-ma-jinting",
+  "zhang-qingyi-du-donghui",
+  "zhang-yan-jun-liu-yu-jun"
+];
+  assert.equal(names.length, 21);
+  for (const slug of names) {
+    await assertRedirect(`/user/${slug}`, `/tr/ortak-yazarlar/${slug}/`);
+  }
+  await assertRedirect(
+    "/index.php/user/necati-demircan-ye-zhangxu",
+    "/tr/ortak-yazarlar/necati-demircan-ye-zhangxu/",
+  );
+});
