@@ -4,6 +4,30 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // Verified historical Drupal coauthor identities. Every target preserves
+  // individual author profiles and their shared bibliographic work.
+  "/user/amit-kumar-ve-dr-veena-ramachandran": "/tr/ortak-yazarlar/amit-kumar-ve-dr-veena-ramachandran/",
+  "/user/cheng-enfu-ve-li-jing": "/tr/ortak-yazarlar/cheng-enfu-ve-li-jing/",
+  "/user/cheng-enfu-ve-lu-chunyi": "/tr/ortak-yazarlar/cheng-enfu-ve-lu-chunyi/",
+  "/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache": "/tr/ortak-yazarlar/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache/",
+  "/user/dr-mohamad-zreik-prof-dr-zhao-changfeng": "/tr/ortak-yazarlar/dr-mohamad-zreik-prof-dr-zhao-changfeng/",
+  "/user/dr-ogr-uyesi-assadollah-athari-ve-dr-ehsan-ejazi": "/tr/ortak-yazarlar/dr-ogr-uyesi-assadollah-athari-ve-dr-ehsan-ejazi/",
+  "/user/efe-can-gurcan-ve-omer-ersin-kahraman": "/tr/ortak-yazarlar/efe-can-gurcan-ve-omer-ersin-kahraman/",
+  "/user/fahri-erenel-ahmet-gedik": "/tr/ortak-yazarlar/fahri-erenel-ahmet-gedik/",
+  "/user/fang-chenyu-ve-wang-weibin": "/tr/ortak-yazarlar/fang-chenyu-ve-wang-weibin/",
+  "/user/liu-ningning-cheng-enfu": "/tr/ortak-yazarlar/liu-ningning-cheng-enfu/",
+  "/user/luis-kato-maldonado-ve-guadalupe-huerta-moreno": "/tr/ortak-yazarlar/luis-kato-maldonado-ve-guadalupe-huerta-moreno/",
+  "/user/necati-demircan-ye-zhangxu": "/tr/ortak-yazarlar/necati-demircan-ye-zhangxu/",
+  "/user/prof-dr-song-shuli-prof-dr-cheng-enfu": "/tr/ortak-yazarlar/prof-dr-song-shuli-prof-dr-cheng-enfu/",
+  "/user/prof-dr-sun-degang-dr-aml-ali-abdrabou": "/tr/ortak-yazarlar/prof-dr-sun-degang-dr-aml-ali-abdrabou/",
+  "/user/prof-dr-sun-degang-zhang-jieying": "/tr/ortak-yazarlar/prof-dr-sun-degang-zhang-jieying/",
+  "/user/semih-guneri-ayca-avci-ahmet-z-bayburt": "/tr/ortak-yazarlar/semih-guneri-ayca-avci-ahmet-z-bayburt/",
+  "/user/shangtao-gao-jessica-durdu": "/tr/ortak-yazarlar/shangtao-gao-jessica-durdu/",
+  "/user/wenbo-zhang-quan-heng": "/tr/ortak-yazarlar/wenbo-zhang-quan-heng/",
+  "/user/yang-chen-ma-jinting": "/tr/ortak-yazarlar/yang-chen-ma-jinting/",
+  "/user/zhang-qingyi-du-donghui": "/tr/ortak-yazarlar/zhang-qingyi-du-donghui/",
+  "/user/zhang-yan-jun-liu-yu-jun": "/tr/ortak-yazarlar/zhang-yan-jun-liu-yu-jun/",
+
   // Source identity verified against original archived Drupal profiles:
   // /user/8 -> Dominik Pietzcker (2026-04-15 Wayback snapshot);
   // /user/sitki-rifat -> Sıtkı Fırat (2024-03-02 source biography,
