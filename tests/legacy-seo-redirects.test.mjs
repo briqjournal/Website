@@ -300,3 +300,18 @@ test("recover GSC's Drupal user 68 and uniquely identified truncated issue PDF p
   );
 });
 
+
+test("exact historical GSC author spellings reach existing canonical profiles", async () => {
+  for (const [source, destination] of [
+    ["/user/mao-zedung", "/tr/yazar/mao-zedong/"],
+    ["/user/robet-minor", "/tr/yazar/robert-minor/"],
+    ["/user/sule-perincek", "/tr/yazar/h-sule-perincek/"],
+    ["/user/igor-korotchenko", "/tr/yazar/igor-korotcenko/"],
+    ["/user/drarif-acaloglu", "/tr/yazar/arif-acaloglu/"],
+    ["/user/expert-committee-shanghai-energy-conservation-commission", "/tr/yazar/expert-committee-of-shanghai-energy-conservation-commission/"],
+  ]) await assertRedirect(source, destination);
+
+  // The existing front-controller normalization must preserve the exact alias.
+  await assertRedirect("/index.php/user/mao-zedung", "/tr/yazar/mao-zedong/");
+  await assertRedirect("/user/robet-minor?from=gsc", "/tr/yazar/robert-minor/", "?from=gsc");
+});
