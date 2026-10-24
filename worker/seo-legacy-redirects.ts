@@ -4,6 +4,32 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // Historical Drupal joint-author aliases: resolve each to the first author
+  // shown in the published BRIQ article byline (verified 2026-10-24).
+  // There are NO new joint-author pages or fabricated person profiles.
+  // Excluded: Bassam Abu Abdullah / Ziad Ayoub Arbache — their two shared
+  // articles reverse first-author order; no unique correct target.
+  "/user/amit-kumar-ve-dr-veena-ramachandran": "/tr/yazar/amit-kumar/",
+  "/user/cheng-enfu-ve-li-jing": "/tr/yazar/cheng-enfu/",
+  "/user/cheng-enfu-ve-lu-chunyi": "/tr/yazar/cheng-enfu/",
+  "/user/dr-mohamad-zreik-prof-dr-zhao-changfeng": "/tr/yazar/mohamad-zreik/",
+  "/user/dr-ogr-uyesi-assadollah-athari-ve-dr-ehsan-ejazi": "/tr/yazar/assadollah-athari/",
+  "/user/efe-can-gurcan-ve-omer-ersin-kahraman": "/tr/yazar/efe-can-gurcan/",
+  "/user/fahri-erenel-ahmet-gedik": "/tr/yazar/fahri-erenel/",
+  "/user/fang-chenyu-ve-wang-weibin": "/tr/yazar/fang-chenyu/",
+  "/user/liu-ningning-cheng-enfu": "/tr/yazar/liu-ningning/",
+  "/user/luis-kato-maldonado-ve-guadalupe-huerta-moreno": "/tr/yazar/luis-kato-maldonado/",
+  "/user/necati-demircan-ye-zhangxu": "/tr/yazar/necati-demircan/",
+  "/user/prof-dr-song-shuli-prof-dr-cheng-enfu": "/tr/yazar/song-shuli/",
+  "/user/prof-dr-sun-degang-dr-aml-ali-abdrabou": "/tr/yazar/sun-degang/",
+  "/user/prof-dr-sun-degang-zhang-jieying": "/tr/yazar/sun-degang/",
+  "/user/semih-guneri-ayca-avci-ahmet-z-bayburt": "/tr/yazar/semih-guneri/",
+  "/user/shangtao-gao-jessica-durdu": "/tr/yazar/shangtao-gao/",
+  "/user/wenbo-zhang-quan-heng": "/tr/yazar/wenbo-zhang/",
+  "/user/yang-chen-ma-jinting": "/tr/yazar/yang-chen/",
+  "/user/zhang-qingyi-du-donghui": "/tr/yazar/zhang-qingyi/",
+  "/user/zhang-yan-jun-liu-yu-jun": "/tr/yazar/zhang-yan-jun/",
+
   // Source identity verified against original archived Drupal profiles:
   // /user/8 -> Dominik Pietzcker (2026-04-15 Wayback snapshot);
   // /user/sitki-rifat -> Sıtkı Fırat (2024-03-02 source biography,
