@@ -323,3 +323,38 @@ test("recover GSC historical Drupal numeric and misspelled author identities", a
   await assertRedirect("/index.php/user/8", "/tr/yazar/dominik-pietzcker/");
   await assertRedirect("/user/sitki-rifat", "/tr/yazar/sitki-firat/");
 });
+
+test("historical joint byline aliases redirect to the published first author only", async () => {
+  const mappings = [
+    ["/user/amit-kumar-ve-dr-veena-ramachandran", "/tr/yazar/amit-kumar/"],
+    ["/user/cheng-enfu-ve-li-jing", "/tr/yazar/cheng-enfu/"],
+    ["/user/cheng-enfu-ve-lu-chunyi", "/tr/yazar/cheng-enfu/"],
+    ["/user/dr-mohamad-zreik-prof-dr-zhao-changfeng", "/tr/yazar/mohamad-zreik/"],
+    ["/user/dr-ogr-uyesi-assadollah-athari-ve-dr-ehsan-ejazi", "/tr/yazar/assadollah-athari/"],
+    ["/user/efe-can-gurcan-ve-omer-ersin-kahraman", "/tr/yazar/efe-can-gurcan/"],
+    ["/user/fahri-erenel-ahmet-gedik", "/tr/yazar/fahri-erenel/"],
+    ["/user/fang-chenyu-ve-wang-weibin", "/tr/yazar/fang-chenyu/"],
+    ["/user/liu-ningning-cheng-enfu", "/tr/yazar/liu-ningning/"],
+    ["/user/luis-kato-maldonado-ve-guadalupe-huerta-moreno", "/tr/yazar/luis-kato-maldonado/"],
+    ["/user/necati-demircan-ye-zhangxu", "/tr/yazar/necati-demircan/"],
+    ["/user/prof-dr-song-shuli-prof-dr-cheng-enfu", "/tr/yazar/song-shuli/"],
+    ["/user/prof-dr-sun-degang-dr-aml-ali-abdrabou", "/tr/yazar/sun-degang/"],
+    ["/user/prof-dr-sun-degang-zhang-jieying", "/tr/yazar/sun-degang/"],
+    ["/user/semih-guneri-ayca-avci-ahmet-z-bayburt", "/tr/yazar/semih-guneri/"],
+    ["/user/shangtao-gao-jessica-durdu", "/tr/yazar/shangtao-gao/"],
+    ["/user/wenbo-zhang-quan-heng", "/tr/yazar/wenbo-zhang/"],
+    ["/user/yang-chen-ma-jinting", "/tr/yazar/yang-chen/"],
+    ["/user/zhang-qingyi-du-donghui", "/tr/yazar/zhang-qingyi/"],
+    ["/user/zhang-yan-jun-liu-yu-jun", "/tr/yazar/zhang-yan-jun/"],
+  ];
+  assert.equal(mappings.length, 20);
+  for (const [source, destination] of mappings) await assertRedirect(source, destination);
+  await assertRedirect("/index.php/user/necati-demircan-ye-zhangxu", "/tr/yazar/necati-demircan/");
+  await assertRedirect("/user/efe-can-gurcan-ve-omer-ersin-kahraman?source=gsc", "/tr/yazar/efe-can-gurcan/", "?source=gsc");
+
+  // The historical Bassam/Ziad group points to two articles with different
+  // first authors; there is no unambiguous 301 target in this exact map.
+  const { readFile } = await import("node:fs/promises");
+  const map = await readFile(new URL("../worker/seo-legacy-redirects.ts", import.meta.url), "utf8");
+  assert.ok(!map.includes('"/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache":'));
+});
