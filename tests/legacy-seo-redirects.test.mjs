@@ -358,3 +358,49 @@ test("historical joint byline aliases redirect to the published first author onl
   const map = await readFile(new URL("../worker/seo-legacy-redirects.ts", import.meta.url), "utf8");
   assert.ok(!map.includes('"/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache":'));
 });
+
+test("2026 GSC English historical author aliases reach verified first-author profiles", async () => {
+  const aliases = [
+    ["/en/user/fahri-erenel-ahmet-gedik", "/en/authors/fahri-erenel/"],
+    ["/en/user/liu-ningning-cheng-enfu", "/en/authors/liu-ningning/"],
+    ["/en/user/wenbo-zhang-quan-heng", "/en/authors/wenbo-zhang/"],
+    ["/en/user/shangtao-gao-jessica-durdu", "/en/authors/shangtao-gao/"],
+    ["/en/user/8", "/en/authors/dominik-pietzcker/"],
+    ["/en/user/necati-demircan-ye-zhangxu", "/en/authors/necati-demircan/"],
+    ["/en/user/dr-mohamad-zreik-prof-dr-zhao-changfeng", "/en/authors/mohamad-zreik/"],
+    ["/en/user/luis-kato-maldonado-ve-guadalupe-huerta-moreno", "/en/authors/luis-kato-maldonado/"],
+    ["/en/user/sitki-rifat", "/en/authors/sitki-firat/"],
+    ["/en/user/prof-dr-sun-degang-zhang-jieying", "/en/authors/sun-degang/"],
+    ["/en/user/robet-minor", "/en/authors/robert-minor/"],
+    ["/en/user/sule-perincek", "/en/authors/h-sule-perincek/"],
+    ["/en/user/drarif-acaloglu", "/en/authors/arif-acaloglu/"],
+    ["/en/user/igor-korotchenko", "/en/authors/igor-korotcenko/"],
+    ["/en/user/yang-chen-ma-jinting", "/en/authors/yang-chen/"],
+    ["/en/user/prof-dr-song-shuli-prof-dr-cheng-enfu", "/en/authors/song-shuli/"],
+    ["/en/user/semih-guneri-ayca-avci-ahmet-z-bayburt", "/en/authors/semih-guneri/"],
+    ["/en/user/cheng-enfu-ve-lu-chunyi", "/en/authors/cheng-enfu/"],
+    ["/en/user/amit-kumar-ve-dr-veena-ramachandran", "/en/authors/amit-kumar/"],
+    ["/en/user/zhang-yan-jun-liu-yu-jun", "/en/authors/zhang-yan-jun/"],
+    ["/en/user/wang-laixi-na-risu-wu-lan", "/en/authors/wang-laixi/"],
+    ["/en/user/fang-chenyu-and-wang-weibin", "/en/authors/fang-chenyu/"],
+    ["/en/user/guo-xingen", "/en/authors/guo-xin-gen/"],
+    ["/en/user/degang-sun-yingqi-yang", "/en/authors/sun-degang/"],
+    ["/en/user/yi-shaoxuan-yang-chen", "/en/authors/yi-shaoxuan/"],
+    ["/en/user/forugh-farrokhzad", "/en/authors/furug-ferruhzad/"],
+    ["/en/user/sultan-hem-ve-degang-sun", "/en/authors/hend-elmahly-mahmoud-sultan/"],
+  ];
+  assert.equal(aliases.length, 27);
+  for (const [source, target] of aliases) await assertRedirect(source, target);
+  await assertRedirect("/index.php/en/user/wang-laixi-na-risu-wu-lan", "/en/authors/wang-laixi/");
+  await assertRedirect("/en/user/fang-chenyu-and-wang-weibin?ref=gsc", "/en/authors/fang-chenyu/", "?ref=gsc");
+});
+
+test("two historically named publication aliases preserve editorial context", async () => {
+  await assertRedirect("/en/reconfiguring-transatlantic-relations-era-war-and-strategic-fragmentation", "/en/calls-for-papers/transatlantic-relations/");
+  await assertRedirect("/briq-1cilt-2-sayi", "/tr/arsiv/cilt-1-sayi-2/");
+  const { readFile } = await import("node:fs/promises");
+  const rules = await readFile(new URL("../worker/seo-legacy-redirects.ts", import.meta.url), "utf8");
+  for (const old of ["/en/user/admin", "/en/user/prof-dr-yang-guang", "/en/user/inan-oner", "/en/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache"]) {
+    assert.ok(!rules.includes(JSON.stringify(old) + ":"), `unsupported source: ${old}`);
+  }
+});
