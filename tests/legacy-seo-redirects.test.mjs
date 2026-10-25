@@ -512,3 +512,16 @@ test("combined old account does not rewrite independent coauthor profiles", asyn
     assert.notEqual(response.status, 301, path);
   }
 });
+
+// October 26 GSC sample: four distinct aliases with existing profile targets.
+test("four source-verified author alias routes resolve directly without changing other contributors", async () => {
+  for (const [oldPath, target] of [
+    ["/tr/yazar/prof-caner-karavit", "/tr/yazar/caner-karavit/"],
+    ["/tr/yazar/prof-dr-david-laibman", "/tr/yazar/david-laibman/"],
+    ["/en/authors/forugh-farrokhzad", "/en/authors/furug-ferruhzad/"],
+    ["/tr/yazar/wang-jiani-bilguunzaya-luvsandandar", "/tr/yazar/wang-jiani/"],
+  ]) await assertRedirect(oldPath, target);
+  await assertRedirect("/tr/yazar/wang-jiani-bilguunzaya-luvsandandar?ref=gsc", "/tr/yazar/wang-jiani/", "?ref=gsc");
+  const independent = await requestLegacy("/tr/yazar/bilguunzaya-luvsandandar/");
+  assert.notEqual(independent.status, 301, "second author's existing personal profile must remain independent");
+});
