@@ -61,6 +61,9 @@ export async function GET(request: Request, context: { params: Promise<{ file: s
     headers: {
       "Content-Type": contentType,
       "Content-Disposition": `attachment; filename="${article.slug}.${match[2].toLowerCase()}"`,
+      // Citation-manager downloads are metadata exports, not independent search pages.
+      // Keep files crawlable/downloadable while excluding them from search results.
+      "X-Robots-Tag": "noindex, follow",
     },
   });
 }
