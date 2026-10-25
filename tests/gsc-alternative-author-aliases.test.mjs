@@ -127,7 +127,7 @@ test("103 verified legacy author profile URLs redirect to existing individual pr
     const response = await request(source);
     assert.equal(response.status, 301, `expected permanent redirect: ${source}`);
     assert.equal(new URL(response.headers.get("location")).href, BASE + destination, source);
-    assert.ok(/\\/(?:tr\\/yazar|en\\/authors)\\//.test(destination), source);
+    assert.ok(destination.startsWith("/tr/yazar/") || destination.startsWith("/en/authors/"), source);
   }
 });
 
