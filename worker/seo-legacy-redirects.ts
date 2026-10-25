@@ -4,6 +4,16 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // 2026-10-26 GSC 19 Oct sample: independently verified legacy aliases.
+  // Honorific-prefixed names already have correct individual author records;
+  // Forugh was previously verified as the historical /en/user/ identity.
+  // Wang Jiani is first author of BRIQ 7(3) (2026), pp. 338–365,
+  // DOI 10.67696/7g5d4y5c. Preserve Bilguunzaya's separate profile.
+  "/tr/yazar/prof-caner-karavit": "/tr/yazar/caner-karavit/",
+  "/tr/yazar/prof-dr-david-laibman": "/tr/yazar/david-laibman/",
+  "/en/authors/forugh-farrokhzad": "/en/authors/furug-ferruhzad/",
+  "/tr/yazar/wang-jiani-bilguunzaya-luvsandandar": "/tr/yazar/wang-jiani/",
+
   // GSC Oct 2026: exact, source-verified first-author aliases.
   // Li Ning (first author, BRIQ 7(3), pp. 302–325; DOI 10.67696/4f9e7s8m).
   // Hasret Çomak (first author, BRIQ 7(4), pp. 407–426; DOI 10.67696/2z9q4h9h).
