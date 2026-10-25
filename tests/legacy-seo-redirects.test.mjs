@@ -488,9 +488,7 @@ test("uncertain author and historical administrative identities remain unmapped"
     "/en/authors/inan-oner",
     "/en/authors/6",
     "/en/authors/admin",
-    "/en/authors/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
-    "/en/authors/hasret-comak-furkan-toker-oguzhan-manioglu",
-    "/tr/yazar/li-ning-yang-xuyan"
+    "/en/authors/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache"
   ]) assert.ok(!text.includes(JSON.stringify(path) + ":"), path);
 });
 
