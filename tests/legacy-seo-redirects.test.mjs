@@ -404,3 +404,33 @@ test("two historically named publication aliases preserve editorial context", as
     assert.ok(!rules.includes(JSON.stringify(old) + ":"), `unsupported source: ${old}`);
   }
 });
+
+test("Volume 1 issue 4 historic article URLs redirect directly to source-verified canonical records", async () => {
+  // All three original publications were checked against live article title,
+  // author, publication type, pages, issue and original PDF citations.
+  const sources = [
+    ["/en/articles/photograph-fujian-huian-maidens-weaving-net", "/en/articles/fujian-huian-maidens-weaving-net/"],
+    ["/en/fotograf-ni-min-fujian-huian-kadini-ag-onariyor", "/en/articles/fujian-huian-maidens-weaving-net/"],
+    ["/en/makale/fotograf-ni-min-fujian-huian-kadini-ag-onariyor", "/en/articles/fujian-huian-maidens-weaving-net/"],
+    ["/en/makale/photograph-fujian-huian-maidens-weaving-net", "/en/articles/fujian-huian-maidens-weaving-net/"],
+    ["/en/photograph-fujian-huian-maidens-weaving-net", "/en/articles/fujian-huian-maidens-weaving-net/"],
+    ["/en/articles/history-the-first-book-about-ataturk-ever-published-in-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/the-first-book-about-ataturk-ever-published-in-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/articles/history-the-first-book-about-ataturk-ever-published-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/history-the-first-book-about-ataturk-ever-published-in-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/history-the-first-book-about-ataturk-ever-published-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/makale/history-the-first-book-about-ataturk-ever-published-in-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/makale/iranda-ataturk-ve-milli-mucadele-konusunda-ilk-kitap", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/"],
+    ["/en/articles/book-review-post-covid-19-global-system-old-problems-new-trends", "/en/articles/post-covid-19-global-system-old-problems-new-trends/"],
+    ["/en/book-review-post-covid-19-global-system-old-problems-new-trends", "/en/articles/post-covid-19-global-system-old-problems-new-trends/"],
+    ["/en/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler", "/en/articles/post-covid-19-global-system-old-problems-new-trends/"],
+    ["/en/makale/book-review-post-covid-19-global-system-old-problems-new-trends", "/en/articles/post-covid-19-global-system-old-problems-new-trends/"],
+    ["/en/makale/covid-19-sonrasi-kuresel-sistem-eski-sorunlar-yeni-trendler", "/en/articles/post-covid-19-global-system-old-problems-new-trends/"],
+  ];
+  assert.equal(sources.length, 18);
+  assert.equal(new Set(sources.map(([source]) => source)).size, 18);
+  for (const [source, target] of sources) await assertRedirect(source, target);
+  await assertRedirect("/index.php/en/articles/history-the-first-book-about-ataturk-ever-published-in-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/");
+  await assertRedirect("/en/articles/book-review-post-covid-19-global-system-old-problems-new-trends/?ref=gsc", "/en/articles/post-covid-19-global-system-old-problems-new-trends/", "?ref=gsc");
+});
