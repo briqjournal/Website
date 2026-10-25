@@ -4,6 +4,27 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // 2026-10-25 GSC source-backed legacy identities. Book review call maps to
+  // the ongoing individual CFP; its obsolete listing pagination is discarded.
+  // Grouped Drupal user slugs map ONLY to the first author in the official
+  // BRIQ publication and to an existing individual profile in that locale.
+  // Standalone Engin Türe is the existing İ. Engin Türe profile; never
+  // redirect unknown people, joint accounts with unclear first authors,
+  // historical admin accounts or missing contributor identities.
+  "/en/calls-for-papers/kitap-incelemesi": "/en/calls-for-papers/book-reviews/",
+  "/en/authors/li-sainan-li-xi": "/en/authors/li-sainan/",
+  "/en/authors/salman-k-al-dhafeeire-sun-degang": "/en/authors/salman-k-al-dhafeeire/",
+  "/tr/yazar/salman-k-al-dhafeeire-sun-degang": "/tr/yazar/salman-k-al-dhafeeire/",
+  "/en/authors/pinar-gokcin-ozuyar-efe-can-gurcan-ve-esra-bayhantopcu": "/en/authors/pinar-gokcin-ozuyar/",
+  "/tr/yazar/pinar-gokcin-ozuyar-efe-can-gurcan-ve-esra-bayhantopcu": "/tr/yazar/pinar-gokcin-ozuyar/",
+  "/en/authors/prof-dr-gunay-cifci-and-team": "/en/authors/gunay-cifci/",
+  "/tr/yazar/prof-dr-gunay-cifci-ve-ekibi": "/tr/yazar/gunay-cifci/",
+  "/en/authors/shu-zhan-hao-ruiqi": "/en/authors/shu-zhan/",
+  "/tr/yazar/shu-zhan-hao-ruiqi": "/tr/yazar/shu-zhan/",
+  "/en/authors/bulent-gucubuk-dogan-basaran": "/en/authors/bulent-gulcubuk/",
+  "/en/authors/engin-ture": "/en/authors/i-engin-ture/",
+  "/tr/yazar/engin-ture": "/tr/yazar/i-engin-ture/",
+
   // GSC alternative-canonical legacy article aliases, verified against the
   // authoritative Volume 1 Issue 4 English published record (2020):
   // title, publication type, first author, issue/page range and PDF asset.

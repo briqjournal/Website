@@ -184,7 +184,17 @@ function handleLegacyRedirect(url: URL): Response | null {
   // Old list pagination is not semantically supported by the new archive.
   // Drop ?page=N instead of generating hundreds of duplicate canonical URLs.
   const oldListing = /^\/(?:tr\/|en\/)?(?:makale|roportaj|tarihten|kitap-inceleme|hikaye-siir|sayilar)$/i.test(rawPath);
-  target.search = oldListing ? "" : url.search;
+  // Historical book-review CFP had paginated listings, but the new
+  // permanent book-review call is a single canonical page. Strip only
+  // obsolete page=N while retaining meaningful tracking query parameters.
+  const oldBookReviewCall = rawPath === "/en/calls-for-papers/kitap-incelemesi";
+  if (oldBookReviewCall) {
+    const params = new URLSearchParams(url.searchParams);
+    params.delete("page");
+    target.search = params.toString();
+  } else {
+    target.search = oldListing ? "" : url.search;
+  }
   return new Response(null, {
     status: 301,
     headers: {
