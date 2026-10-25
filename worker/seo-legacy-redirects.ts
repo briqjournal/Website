@@ -4,6 +4,13 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // GSC Oct 2026: exact, source-verified first-author aliases.
+  // Li Ning (first author, BRIQ 7(3), pp. 302–325; DOI 10.67696/4f9e7s8m).
+  // Hasret Çomak (first author, BRIQ 7(4), pp. 407–426; DOI 10.67696/2z9q4h9h).
+  // Preserve all individual coauthor profiles; never create combined authors.
+  "/tr/yazar/li-ning-yang-xuyan": "/tr/yazar/li-ning/",
+  "/en/authors/hasret-comak-furkan-toker-oguzhan-manioglu": "/en/authors/hasret-comak/",
+
   // 2026-10-25 GSC source-backed legacy identities. Book review call maps to
   // the ongoing individual CFP; its obsolete listing pagination is discarded.
   // Grouped Drupal user slugs map ONLY to the first author in the official
