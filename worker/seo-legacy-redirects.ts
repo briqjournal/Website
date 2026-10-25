@@ -4,6 +4,15 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // GSC alternative-canonical legacy article aliases, verified against the
+  // authoritative Volume 1 Issue 4 English published record (2020):
+  // title, publication type, first author, issue/page range and PDF asset.
+  // Direct 301s prevent the former /en/articles/ intermediate paths from
+  // returning 404. Existing Drupal entry aliases already reach these targets.
+  "/en/articles/photograph-fujian-huian-maidens-weaving-net": "/en/articles/fujian-huian-maidens-weaving-net/", // Ni Min · photograph · BRIQ 1(4), p. 94 (2020)
+  "/en/articles/history-the-first-book-about-ataturk-ever-published-in-iran": "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/", // Mesud Sadrmohammadi · history · BRIQ 1(4), pp. 85–90 (2020)
+  "/en/articles/book-review-post-covid-19-global-system-old-problems-new-trends": "/en/articles/post-covid-19-global-system-old-problems-new-trends/", // Serdar Yurtçiçek · book review · BRIQ 1(4), pp. 91–93 (2020)
+
   // 2026-10-25 GSC alternative-canonical audit: 103 exact historical author
   // profile aliases in the currently 404 cohort. All destinations were
   // checked as published individual profiles: HTTP 200 and in sitemap.xml.
