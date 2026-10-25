@@ -1764,7 +1764,7 @@ test("sitemap contains terminal-slash canonical destinations, not redirecting va
 
 test("nonexistent bilingual dynamic records return HTTP 404, not soft-404 homepage shells", async () => {
   for (const path of [
-    "/tr/yazar/dr-hande-gunozu",
+    "/tr/yazar/nonexistent-seo-test-999",
     "/en/authors/nonexistent-seo-test-999",
     "/tr/makaleler/nonexistent-seo-test-999",
     "/en/articles/nonexistent-seo-test-999",
