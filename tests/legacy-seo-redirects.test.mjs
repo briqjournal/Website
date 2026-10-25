@@ -493,3 +493,24 @@ test("uncertain author and historical administrative identities remain unmapped"
     "/tr/yazar/li-ning-yang-xuyan"
   ]) assert.ok(!text.includes(JSON.stringify(path) + ":"), path);
 });
+
+test("official 2026 publication first-author order preserves two safe legacy group aliases", async () => {
+  // BRIQ 7(3), pp.302–325: Li Ning precedes Yang Xuyan.
+  await assertRedirect("/tr/yazar/li-ning-yang-xuyan", "/tr/yazar/li-ning/");
+  // BRIQ 7(4), pp.407–426: Hasret Çomak precedes Toker and Manioğlu.
+  await assertRedirect("/en/authors/hasret-comak-furkan-toker-oguzhan-manioglu", "/en/authors/hasret-comak/");
+  await assertRedirect("/tr/yazar/li-ning-yang-xuyan?ref=gsc", "/tr/yazar/li-ning/", "?ref=gsc");
+});
+
+test("combined old account does not rewrite independent coauthor profiles", async () => {
+  for (const path of [
+    "/tr/yazar/yang-xuyan/",
+    "/tr/yazar/li-ning/",
+    "/en/authors/ege-furkan-toker/",
+    "/en/authors/oguzhan-manioglu/",
+    "/en/authors/hasret-comak/",
+  ]) {
+    const response = await requestLegacy(path);
+    assert.notEqual(response.status, 301, path);
+  }
+});
