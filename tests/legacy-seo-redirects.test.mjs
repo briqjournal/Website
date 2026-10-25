@@ -434,3 +434,62 @@ test("Volume 1 issue 4 historic article URLs redirect directly to source-verifie
   await assertRedirect("/index.php/en/articles/history-the-first-book-about-ataturk-ever-published-in-iran", "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/");
   await assertRedirect("/en/articles/book-review-post-covid-19-global-system-old-problems-new-trends/?ref=gsc", "/en/articles/post-covid-19-global-system-old-problems-new-trends/", "?ref=gsc");
 });
+
+
+// GSC October 2026: safe only when first author is established by the
+// official publication, and destination is an existing individual profile.
+// The original grouping never warrants creation of new co-author pages.
+test("12 verified historical individual/first-author aliases and the book-review CFP use direct permanent redirects", async () => {
+  const pairs = [
+    ["/en/calls-for-papers/kitap-incelemesi", "/en/calls-for-papers/book-reviews/"],
+    ["/en/authors/li-sainan-li-xi", "/en/authors/li-sainan/"],
+    ["/en/authors/salman-k-al-dhafeeire-sun-degang", "/en/authors/salman-k-al-dhafeeire/"],
+    ["/tr/yazar/salman-k-al-dhafeeire-sun-degang", "/tr/yazar/salman-k-al-dhafeeire/"],
+    ["/en/authors/pinar-gokcin-ozuyar-efe-can-gurcan-ve-esra-bayhantopcu", "/en/authors/pinar-gokcin-ozuyar/"],
+    ["/tr/yazar/pinar-gokcin-ozuyar-efe-can-gurcan-ve-esra-bayhantopcu", "/tr/yazar/pinar-gokcin-ozuyar/"],
+    ["/en/authors/prof-dr-gunay-cifci-and-team", "/en/authors/gunay-cifci/"],
+    ["/tr/yazar/prof-dr-gunay-cifci-ve-ekibi", "/tr/yazar/gunay-cifci/"],
+    ["/en/authors/shu-zhan-hao-ruiqi", "/en/authors/shu-zhan/"],
+    ["/tr/yazar/shu-zhan-hao-ruiqi", "/tr/yazar/shu-zhan/"],
+    ["/en/authors/bulent-gucubuk-dogan-basaran", "/en/authors/bulent-gulcubuk/"],
+    ["/en/authors/engin-ture", "/en/authors/i-engin-ture/"],
+    ["/tr/yazar/engin-ture", "/tr/yazar/i-engin-ture/"],
+  ];
+  assert.equal(pairs.length, 13);
+  for (const [source, target] of pairs) await assertRedirect(source, target);
+});
+
+test("book-review CFP removes unsupported pagination without dropping unrelated query parameters", async () => {
+  await assertRedirect(
+    "/en/calls-for-papers/kitap-incelemesi?page=2",
+    "/en/calls-for-papers/book-reviews/"
+  );
+  await assertRedirect(
+    "/en/calls-for-papers/kitap-incelemesi?ref=gsc&page=2",
+    "/en/calls-for-papers/book-reviews/",
+    "?ref=gsc"
+  );
+  await assertRedirect(
+    "/index.php/en/calls-for-papers/kitap-incelemesi?page=1",
+    "/en/calls-for-papers/book-reviews/"
+  );
+  await assertRedirect(
+    "/en/authors/engin-ture?ref=gsc",
+    "/en/authors/i-engin-ture/",
+    "?ref=gsc"
+  );
+});
+
+test("uncertain author and historical administrative identities remain unmapped", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const text = await readFile(new URL("../worker/seo-legacy-redirects.ts", import.meta.url), "utf8");
+  for (const path of [
+    "/en/authors/prof-dr-yang-guang",
+    "/en/authors/inan-oner",
+    "/en/authors/6",
+    "/en/authors/admin",
+    "/en/authors/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
+    "/en/authors/hasret-comak-furkan-toker-oguzhan-manioglu",
+    "/tr/yazar/li-ning-yang-xuyan"
+  ]) assert.ok(!text.includes(JSON.stringify(path) + ":"), path);
+});
