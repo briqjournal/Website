@@ -30,7 +30,17 @@ test("citation downloads remain valid attachments but are excluded from search i
 });
 
 test("noindex for citation exports does not bleed into regular scholarly HTML pages", async () => {
-  const response = await requestWorker("/en/articles/the-first-book-about-ataturk-ever-published-in-iran/");
+  const articlePath = "/en/articles/the-first-book-about-ataturk-ever-published-in-iran/";
+  let response = await requestWorker(articlePath);
+  // The direct Worker test bypasses the edge's trailing-slash normalization.
+  // Follow the app router's redirect rather than mistaking it for a failed page.
+  if (response.status === 307 || response.status === 308) {
+    const target = response.headers.get("location");
+    assert.ok(target, "redirect must include Location");
+    const location = new URL(target, ROOT);
+    assert.equal(location.origin, ROOT);
+    response = await requestWorker(location.pathname);
+  }
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("x-robots-tag"), null);
   assert.match(await response.text(), /rel="canonical"/);
