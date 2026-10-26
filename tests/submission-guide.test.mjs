@@ -25,6 +25,8 @@ test("both locales describe the five actual DergiPark submission stages", () => 
   assert.match(trSteps, /Ek bilgileri ve beyanları tamamlayın/);
   assert.match(enSteps, /Complete additional information/);
   assert.match(guide, /intihal\.net/);
+  assert.match(trSteps, /Gönderiminizi gözden geçirin ve tamamlayın/);
+  assert.match(enSteps, /Review and complete your submission/);
 });
 
 test("English submission guide has a reciprocal canonical locale route and internal CTA", () => {
@@ -35,4 +37,18 @@ test("English submission guide has a reciprocal canonical locale route and inter
   assert.match(chrome, /"\/tr\/yazarlar\/yazi-gonder": "\/en\/for-authors\/submit"/);
   assert.match(chrome, /isEnglish \? "\/en\/for-authors\/submit" : "\/tr\/yazarlar\/yazi-gonder"/);
   assert.doesNotMatch(tr, /<a className="submission-mobile-help"/);
+});
+
+test("approved institutional, courteous submission language appears in both locales", () => {
+  assert.match(guide, /Gönderimle ilgili sorularınız mı var\?/);
+  assert.match(guide, /Kontrol etmeniz gerekenler/);
+  assert.match(guide, /Alternatif gönderim ve destek/);
+  assert.match(guide, /BRIQ Yazıişleri ile iletişime geçebilirsiniz/);
+  assert.match(guide, /belirtmenizi rica ederiz/);
+  assert.match(guide, /Questions About Your Submission\?/);
+  assert.match(guide, /Alternative Submission and Support/);
+  assert.match(guide, /Contact the Editorial Office/);
+  assert.doesNotMatch(guide, /mailNote|Bir adımda takıldınız mı|Size yardımcı olalım|E-posta taslağı oluştur|Start on DergiPark/);
+  assert.match(tr, /Gönderim için hazırlamanız gereken dosyaları/);
+  assert.match(en, /If you have any questions, you can contact the BRIQ Editorial Office/);
 });

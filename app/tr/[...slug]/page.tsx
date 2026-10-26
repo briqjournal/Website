@@ -838,7 +838,7 @@ function SubmissionPage() {
       <PageHero
         kicker="Yazarlar İçin"
         title="Yazı Gönder"
-        intro="BRIQ’e çalışmanızı göndermek için DergiPark adımlarını izleyin. Takıldığınız yerde e-posta ile bize ulaşabilirsiniz."
+        intro="BRIQ’e yazınızı DergiPark üzerinden gönderebilirsiniz. Gönderim için hazırlamanız gereken dosyaları ve izleyeceğiniz adımları bu sayfada bulabilirsiniz. Süreçle ilgili sorularınız için BRIQ Yazıişleri ile iletişime geçebilirsiniz."
         breadcrumbLabel="Yazı Gönder"
         breadcrumbParent={{ label: "Yazarlar İçin", href: "/tr/yazarlar" }}
       />
