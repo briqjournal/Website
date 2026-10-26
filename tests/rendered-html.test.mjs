@@ -823,8 +823,8 @@ test("publishes Volume 7 Issues 1–3 editorials and Issue 3 supplementary conte
     assert.match(issueTwo, new RegExp(`href="/tr/makaleler/${slug}/"`), slug);
   }
   const issueTwoEnglish = await (await renderPath("/en/archive/volume-7-issue-2")).text();
-  assert.match(issueTwoEnglish, /href="\\/en\\/articles\\/revolutionary-operas\\/"/);
-  assert.match(issueTwoEnglish, /href="\\/en\\/articles\\/chairman-mao-en-route-to-anyuan\\/"/);
+  assert.ok(issueTwoEnglish.includes('href="/en/articles/revolutionary-operas/"'));
+  assert.ok(issueTwoEnglish.includes('href="/en/articles/chairman-mao-en-route-to-anyuan/"'));
 });
 
 test("renders Volume 7 Issue 2 articles as bilingual HTML with issue-verified affiliations", async () => {
