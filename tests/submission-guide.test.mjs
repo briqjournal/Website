@@ -52,3 +52,14 @@ test("approved institutional, courteous submission language appears in both loca
   assert.match(tr, /Gönderim için hazırlamanız gereken dosyaları/);
   assert.match(en, /If you have any questions, you can contact the BRIQ Editorial Office/);
 });
+
+
+test("submission guide uses compact, responsive section spacing without changing its four-column accordion layout", () => {
+  assert.match(css, /\.submission-section \{ padding: 0 0 28px; margin: 0 0 30px;/);
+  assert.match(css, /\.submission-section > p:last-child \{ margin-bottom: 0; \}/);
+  assert.match(css, /\.submission-guide \{[\s\S]*?padding-top: 48px;[\s\S]*?padding-bottom: 72px;/);
+  assert.match(css, /\.submission-guide \{ grid-template-columns:1fr; gap:28px; padding-top:36px; padding-bottom:60px; \}/);
+  assert.match(css, /\.submission-guide \{ gap:20px; padding-top:24px; padding-bottom:48px; \}/);
+  assert.match(css, /\.submission-section \{ padding-bottom:22px; margin-bottom:24px; \}/);
+  assert.match(css, /\.submission-step summary \{ grid-template-columns:25px 22px minmax\(0,1fr\) 18px; gap:10px; padding:14px 0; \}/);
+});
