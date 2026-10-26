@@ -4,6 +4,11 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // GSC 2026-10-26: exact previously missing 404 aliases, both confirmed
+  // against live published pages and reciprocal EN/TR hreflang.
+  "/tr/makale-cagrilari/belt-road-scientific-technological-cooperation": "/tr/makale-cagrilari/kusak-yol-bilimsel-teknolojik-isbirligi/",
+  "/user/prof-cheng-enfu": "/tr/yazar/cheng-enfu/",
+
   // GSC 2026-10-26: eleven exact historical 404 URLs matched to
   // independently verified published pages or the original R2 PDF.
   // No generic profile remapping, invented scholarship or fuzzy redirects.
