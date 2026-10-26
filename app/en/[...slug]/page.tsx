@@ -306,7 +306,7 @@ function EnglishAuthorsHub() {
 
 function EnglishSubmissionPage() {
   return <>
-    <EnglishHero kicker="For Authors" title="Submit a Manuscript" intro="Follow the DergiPark submission steps and contact our editorial team if you need help." />
+    <EnglishHero kicker="For Authors" title="Submit a Manuscript" intro="You can submit your manuscript to BRIQ through DergiPark. This page explains how to prepare your files and complete the submission process. If you have any questions, you can contact the BRIQ Editorial Office." />
     <SubmissionGuide locale="en" />
   </>;
 }
