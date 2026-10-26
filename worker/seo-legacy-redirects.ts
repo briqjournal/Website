@@ -4,6 +4,21 @@
  * Do not add speculative article redirects or route unrelated content home.
  */
 export const SEO_LEGACY_REDIRECTS: Record<string, string> = {
+  // GSC 2026-10-26: eleven exact historical 404 URLs matched to
+  // independently verified published pages or the original R2 PDF.
+  // No generic profile remapping, invented scholarship or fuzzy redirects.
+  "/en/past-present-the-enduring-legacy-the-bandung-conference-its-70th-anniversary": "/en/calls-for-papers/bandung-konferansinin-mirasi/",
+  "/makale-cagrisi-21-yuzyilda-ekolojik-bir-medeniyet-insa-etmek-gelismekte-olan-dunyadan-perspektifler": "/tr/makale-cagrilari/21-yuzyilda-ekolojik-medeniyet/",
+  "/en/calls-for-papers/ataturk-devriminin-yuzuncu-yili": "/en/calls-for-papers/centenary-1923-turkish-revolution/",
+  "/tr/yazar/prof-jinghua-cao": "/tr/yazar/jinghua-cao/",
+  "/en/author/yangchen": "/en/authors/yang-chen/",
+  "/en/author/efecangurcan": "/en/authors/efe-can-gurcan/",
+  "/en/author/ebrusahin": "/en/authors/ebru-sahin/",
+  "/en/authors/copyright-terms-and-licensing": "/en/for-authors/copyright-and-licence/",
+  "/telif-hakki-sartlari": "/tr/yazarlar/telif-hakki-sartlari-ve-lisans/",
+  "/yazim-kurallari": "/tr/yazarlar/yazim-kurallari/",
+  "/download/the-middle-eastern-security-dilemma-and-its-impact-on-chinas-belt-and-road-initiative": "/assets/archive/pdfs/articles/ortadoguda-guvenlik-ikileminin-cinin-kusak-ve-yol-girisimine-etkisi-en.pdf",
+
   // 2026-10-26 GSC 19 Oct sample: independently verified legacy aliases.
   // Honorific-prefixed names already have correct individual author records;
   // Forugh was previously verified as the historical /en/user/ identity.
