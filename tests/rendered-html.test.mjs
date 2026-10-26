@@ -810,7 +810,21 @@ test("publishes Volume 7 Issues 1–3 editorials and Issue 3 supplementary conte
   assert.match(issueTwo, /Devrimci Operalar/);
   assert.match(issueTwo, /Anyuan’a Giderken Başkan Mao/);
   assert.match(issueTwo, /On Bin Hane, Bir Aile, Bahar Şehri Doldurur/);
-  for (const page of [125, 127, 129, 130, 131]) assert.match(issueTwo, new RegExp(`#page=${page}`));
+  // V7I2 supplementary works have canonical bilingual HTML pages, unlike
+  // PDF-only art/poetry entries in V7I1/V7I3. Issue TOC must link to the
+  // scholarly contribution record rather than exclusively to a PDF page.
+  for (const slug of [
+    "siir-li-bai-zor-yolculuk",
+    "siir-melih-cevdet-anday-telgrafhane",
+    "zhang-yaxin",
+    "liu-chunhua",
+    "sanghay-halk-guzel-sanatlar-yayinevi-propaganda-afis-grubu",
+  ]) {
+    assert.match(issueTwo, new RegExp(`href="/tr/makaleler/${slug}/"`), slug);
+  }
+  const issueTwoEnglish = await (await renderPath("/en/archive/volume-7-issue-2")).text();
+  assert.ok(issueTwoEnglish.includes('href="/en/articles/revolutionary-operas/"'));
+  assert.ok(issueTwoEnglish.includes('href="/en/articles/chairman-mao-en-route-to-anyuan/"'));
 });
 
 test("renders Volume 7 Issue 2 articles as bilingual HTML with issue-verified affiliations", async () => {

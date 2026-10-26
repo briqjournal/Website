@@ -232,8 +232,17 @@ export function IssuePlatform({
               <span className="issue-toc-arrow">↗︎</span>
             </a>
           ))}
-          {additionalContents.map((content, index) => (
-            <a href={canonicalPageHref(`${readingPdf}#page=${content.pdfPage}`)} key={`${content.author}-${content.titleTr}`}>
+          {additionalContents.map((content, index) => {
+            // Link published contributions to their canonical HTML page.
+            // For PDF-only supplementary items, preserve the exact PDF page link.
+            const publication = content.sourceSlug ? findArchiveArticle(content.sourceSlug) : undefined;
+            const href = publication
+              ? (isEnglish
+                ? `/en/articles/${articleRouteSlug(publication, "en")}`
+                : `/tr/makaleler/${publication.slug}`)
+              : `${readingPdf}#page=${content.pdfPage}`;
+            return (
+            <a href={canonicalPageHref(href)} key={`${content.author}-${content.titleTr}`}>
               <span className="issue-toc-number">{padIssueNumber(publications.length + index + 1)}</span>
               <span className="issue-toc-meta">
                 <small>{isEnglish ? content.typeEn : content.typeTr}</small>
@@ -243,7 +252,8 @@ export function IssuePlatform({
               <span className="issue-toc-pages">{content.pages}</span>
               <span className="issue-toc-arrow">↗︎</span>
             </a>
-          ))}
+            );
+          })}
         </div>
       </section>
 
