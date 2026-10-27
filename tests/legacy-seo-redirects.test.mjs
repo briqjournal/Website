@@ -525,3 +525,21 @@ test("four source-verified author alias routes resolve directly without changing
   const independent = await requestLegacy("/tr/yazar/bilguunzaya-luvsandandar/");
   assert.notEqual(independent.status, 301, "second author's existing personal profile must remain independent");
 });
+
+// 27 Oct GSC full canonical cohort: source-unknown historic author IDs
+// must not be 301-redirected to nonexistent author profile targets.
+test("unverified old user aliases do not redirect to nonexistent author profiles", async () => {
+  for (const source of [
+    "/en/user/prof-dr-yang-guang",
+    "/en/user/inan-oner",
+    "/en/user/admin",
+    "/en/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
+    "/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
+  ]) {
+    const response = await requestLegacy(source);
+    assert.notEqual(response.status, 301, `unverified author should not redirect: ${source}`);
+  }
+  // Source-verified old user IDs must retain their canonical single-author redirects.
+  await assertRedirect("/en/user/doc-dr-efe-can-gurcan", "/en/authors/efe-can-gurcan");
+  await assertRedirect("/user/prof-caner-karavit", "/tr/yazar/caner-karavit");
+});
