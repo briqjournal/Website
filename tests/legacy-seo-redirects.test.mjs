@@ -535,9 +535,11 @@ test("unverified old user aliases do not redirect to nonexistent author profiles
     "/en/user/admin",
     "/en/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
     "/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
+    "/tr/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
   ]) {
     const response = await requestLegacy(source);
-    assert.notEqual(response.status, 301, `unverified author should not redirect: ${source}`);
+    assert.equal(response.status, 404, `unverified author should have no matching profile: ${source}`);
+    assert.equal(response.headers.get("location"), null, `unverified author must not redirect: ${source}`);
   }
   // Source-verified old user IDs must retain their canonical single-author redirects.
   await assertRedirect("/en/user/doc-dr-efe-can-gurcan", "/en/authors/efe-can-gurcan");
