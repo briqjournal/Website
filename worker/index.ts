@@ -59,8 +59,21 @@ function parseIssuePdfTarget(filename: string): string | null {
   return null;
 }
 
+// GSC 2026-10-27: these historic user IDs have no source-verified published
+// individual author profile. Do not redirect them to a nonexistent author page.
+// Other legacy-user aliases retain their existing behavior.
+const UNVERIFIED_LEGACY_USER_PATHS = new Set([
+  "/en/user/prof-dr-yang-guang",
+  "/en/user/inan-oner",
+  "/en/user/admin",
+  "/en/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
+  "/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
+]);
+
 function getLegacyPatternRedirect(pathname: string): string | null {
   const p = pathname.toLowerCase();
+
+  if (UNVERIFIED_LEGACY_USER_PATHS.has(p)) return null;
 
   // 1. Author profiles: /en/user/:id -> /en/authors/:id, /user/:id or /tr/user/:id -> /tr/yazar/:id
   if (pathname.startsWith("/en/user/")) {
