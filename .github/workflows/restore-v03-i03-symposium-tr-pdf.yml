@@ -1,0 +1,87 @@
+name: Restore verified v03-i03 symposium Turkish PDF to R2 (one-time)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/restore-v03-i03-symposium-tr-pdf.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: briq-restore-v03-i03-symposium-tr-pdf
+  cancel-in-progress: false
+
+jobs:
+  restore-exact-published-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REGION: auto
+      AWS_EC2_METADATA_DISABLED: "true"
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      SOURCE_KEY: assets/archive/pdfs/issues/cilt-3-sayi-3-tr.pdf
+      OUTPUT_KEY: assets/archive/pdfs/cilt-3-sayi-3-turkiye-sempozyumu-tr.pdf
+    steps:
+      - name: Verify exact BRIQ R2 bucket, source, and authenticated access
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$R2_BUCKET" = "briq-pdf" || { echo "Unexpected R2 bucket" >&2; exit 1; }
+          for x in AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY R2_ENDPOINT; do
+            test -n "${!x:-}" || { echo "Missing required R2 credential" >&2; exit 1; }
+          done
+          aws s3api head-object --bucket "$R2_BUCKET" --key "$SOURCE_KEY" --endpoint-url "$R2_ENDPOINT" --query ContentLength --output text | grep -Fx 69908626
+
+      - name: Extract only printed pages 88-89, with text validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet 'pymupdf==1.26.6'
+          aws s3 cp "s3://$R2_BUCKET/$SOURCE_KEY" /tmp/briq-source-issue-tr.pdf --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          python3 - <<'PY'
+          import hashlib
+          from pathlib import Path
+          import fitz
+
+          src=Path("/tmp/briq-source-issue-tr.pdf")
+          assert src.stat().st_size==69908626, "Official R2 issue PDF size changed; stop and review"
+          issue=fitz.open(src)
+          assert len(issue)==97, f"Unexpected source page count {len(issue)}"
+          pages=(issue[88].get_text(),issue[89].get_text())
+          assert "88" in pages[0], "Printed first page 88 is not present"
+          assert "89" in pages[1], "Printed second page 89 is not present"
+          assert "SEMPOZYUM" in pages[0].upper(), "First page does not contain the published symposium"
+          result=fitz.open()
+          result.insert_pdf(issue,from_page=88,to_page=89,links=True,annots=True)
+          result.set_metadata({"title":"1. Uluslararası Kuşak ve Yol İnisiyatifi Türkiye Sempozyumu — BRIQ 3(3), 88–89","subject":"Unmodified printed page content extracted from the official Turkish issue PDF","producer":"BRIQ published issue archival excerpt"})
+          result.save("/tmp/briq-symposium-tr.pdf",garbage=4,deflate=True)
+          result.close()
+          issue.close()
+          check=fitz.open("/tmp/briq-symposium-tr.pdf")
+          assert len(check)==2
+          assert "88" in check[0].get_text() and "89" in check[1].get_text()
+          check.close()
+          data=Path("/tmp/briq-symposium-tr.pdf").read_bytes()
+          assert len(data)>10000
+          print(f"Verified official 2-page PDF: {len(data)} bytes SHA256 {hashlib.sha256(data).hexdigest()}")
+          PY
+
+      - name: Upload missing file without overwriting an existing published object
+        shell: bash
+        run: |
+          set -euo pipefail
+          if aws s3api head-object --bucket "$R2_BUCKET" --key "$OUTPUT_KEY" --endpoint-url "$R2_ENDPOINT" >/dev/null 2>&1; then
+            echo "Expected destination already exists; refusing to replace it" >&2
+            exit 1
+          fi
+          aws s3 cp /tmp/briq-symposium-tr.pdf "s3://$R2_BUCKET/$OUTPUT_KEY" --endpoint-url "$R2_ENDPOINT" --content-type application/pdf --only-show-errors
+          remote_bytes="$(aws s3api head-object --bucket "$R2_BUCKET" --key "$OUTPUT_KEY" --endpoint-url "$R2_ENDPOINT" --query ContentLength --output text)"
+          local_bytes="$(stat -c '%s' /tmp/briq-symposium-tr.pdf)"
+          test "$remote_bytes" = "$local_bytes"
+          echo "RESTORED $OUTPUT_KEY ($remote_bytes bytes)"
