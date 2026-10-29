@@ -3403,6 +3403,9 @@ export const COMPACT_PDF_MAP: Record<string, string> = {
   'briq 2. cilt 2. sayı_site.pdf': 'issues/cilt-2-sayi-2-tr.pdf',
   'briq 2.cilt 3. sayı_site.pdf': 'issues/cilt-2-sayi-3-tr.pdf',
   'briq 2.cilt 4.sayı.pdf': 'issues/cilt-2-sayi-4-tr.pdf',
+  // GSC 2026-10-27: verified Turkish issue PDFs, original full-issue filenames.
+  'briq 2023 yaz sayısı.pdf': 'issues/cilt-4-sayi-3-tr.pdf',
+  'briq 2024 yaz - e-briq_compressed.pdf': 'issues/cilt-5-sayi-3-tr.pdf',
   'briq 2024 summer issue_0.pdf': 'issues/cilt-5-sayi-3-en.pdf',
   'briq 3. cilt 1. sayı_site.pdf': 'issues/cilt-3-sayi-1-tr.pdf',
   'briq 3. cilt 2. sayı_site.pdf': 'issues/cilt-3-sayi-2-tr.pdf',
@@ -3519,6 +3522,7 @@ export const COMPACT_PDF_MAP: Record<string, string> = {
   'briq_turkce - 3. sayi - semi̇h koray.pdf': 'articles/koronavirus-sonrasi-dunyanin-insanliga-yukledigi-gorevler-tr.pdf',
   'briq_turkce - 3. sayi - victor manuel isidro luna.pdf': 'articles/ye-m-2020-the-belt-road-and-beyond-state-mobilized-globalization-china-1998-2018-tr.pdf',
   'briq_turkce - 3. sayi - şeref ateş.pdf': 'articles/covid-19-hub-tum-dunyayi-korona-pandemisine-karsi-bilinclendiriyor-tr.pdf',
+  'briq_turkce - 4. sayi-min.pdf': 'issues/cilt-1-sayi-4-tr.pdf',
   'briq_turkce - 4. sayi - alexander dugin - tr.pdf': 'articles/rus-stratejist-dr-alexander-dugin-kusak-ve-yol-girisimi-avrasyanin-yolu-tr.pdf',
   'briq_turkce - 4. sayi - assadollah athari - ehsan ejazi - tr.pdf': 'articles/cin-abd-rekabeti-golgesinde-kusak-ve-yol-girisimi-tr.pdf',
   'briq_turkce - 4. sayi - cheng enfu - li jing - tr.pdf': 'articles/kusak-ve-yol-girisiminde-deniz-isbirliginin-gunumuzdeki-ve-gelecekteki-durumu-tr.pdf',
