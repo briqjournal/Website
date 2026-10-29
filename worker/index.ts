@@ -68,6 +68,7 @@ const UNVERIFIED_LEGACY_USER_PATHS = new Set([
   "/en/user/admin",
   "/en/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
   "/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
+  "/tr/user/dr-bassam-abu-abdullah-ve-dr-ziad-ayoub-arbache",
 ]);
 
 function getLegacyPatternRedirect(pathname: string): string | null {
@@ -145,6 +146,15 @@ function handleLegacyRedirect(url: URL): Response | null {
     // Malformed percent-encoding: fall through to the locale gateway, R2,
     // image, and app-router handlers instead of failing the whole request.
     return null;
+  }
+
+  // Unknown legacy user IDs must stop here: returning null lets downstream
+  // legacy locale routing reintroduce a 301 to a nonexistent author profile.
+  if (UNVERIFIED_LEGACY_USER_PATHS.has(decodedPath.toLowerCase())) {
+    return new Response("Not Found", {
+      status: 404,
+      headers: { "content-type": "text/plain; charset=utf-8" },
+    });
   }
 
   // 1. Direct PDF redirect for legacy /sites/default/files/... (including /tr/sites/ and /en/sites/)
