@@ -10837,3 +10837,26 @@ footer {
     margin-inline: 0;
   }
 }
+
+/* Keep scholarly citation bubbles within tablet viewports as well. */
+@media (min-width: 721px) and (max-width: 1024px) {
+  .article-platform-content .citation-tooltip,
+  .article-platform-content .inline-footnote::after {
+    position: fixed;
+    top: auto;
+    bottom: 16px;
+    left: 24px;
+    right: 24px;
+    width: auto;
+    max-height: 38dvh;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    transform: translateY(5px);
+  }
+  .article-platform-content .inline-citation:hover .citation-tooltip,
+  .article-platform-content .inline-citation:focus-visible .citation-tooltip,
+  .article-platform-content .inline-footnote:hover::after,
+  .article-platform-content .inline-footnote:focus-visible::after {
+    transform: translateY(0);
+  }
+}
