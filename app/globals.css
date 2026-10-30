@@ -10810,3 +10810,22 @@ footer {
   .nav-submenu-toggle span,
   .hero-slide { transition: none; }
 }
+
+
+/* Mobile author submission and article discovery: predictable touch targets and rhythm. */
+@media (max-width: 620px) {
+  .submission-guide { gap: 16px; padding-top: 19px; padding-bottom: 72px; }
+  .submission-side nav { gap: 2px 13px; padding-bottom: 12px; }
+  .submission-side nav a { display: inline-flex; align-items: center; min-height: 38px; padding: 6px 0; }
+  .submission-section { padding-bottom: 20px; margin-bottom: 22px; }
+  .submission-file-grid { gap: 8px; margin: 14px 0; }
+  .submission-file-grid > div { padding: 14px 15px; }
+  .submission-file-grid h3 { margin-top: 9px; }
+  .submission-flow-tools button { min-height: 44px; padding: 8px 2px; }
+  .submission-step summary { min-height: 58px; }
+
+  .search-page .article-search-panel { padding: 14px; }
+  .search-page .search-filter-toolbar { gap: 8px 12px; margin-top: 12px; }
+  .search-page .article-filter-row.is-open { gap: 10px; }
+  .search-page .search-kind-tabs a { min-height: 44px; }
+}
