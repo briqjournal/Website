@@ -10603,3 +10603,260 @@ footer {
   .author-directory-person strong { font-size: 19px; }
   .author-directory-work-count { display: none; }
 }
+
+
+/* Mobile UX refinement — shared TR/EN navigation, reading, and page density. */
+.nav-submenu-toggle { display: none; }
+
+@media (max-width: 860px) {
+  .main-nav,
+  .site-header.is-condensed .main-nav {
+    max-height: calc(100dvh - 102px);
+    padding: 10px 18px calc(24px + env(safe-area-inset-bottom));
+    background: #f5f0e8;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .main-nav .nav-item {
+    position: relative;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .main-nav .nav-item > a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 54px;
+    padding: 13px 52px 13px 0;
+    border-bottom: 0;
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .main-nav .nav-submenu-toggle {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .main-nav .nav-submenu-toggle span {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 1;
+    transition: transform 150ms ease;
+  }
+
+  .main-nav .nav-submenu-toggle[aria-expanded="true"] span {
+    transform: rotate(180deg);
+  }
+
+  .main-nav .nav-submenu-toggle:focus-visible,
+  .main-nav a:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: -3px;
+  }
+
+  .main-nav .nav-dropdown {
+    display: none;
+    position: static;
+    width: 100%;
+    padding: 0 0 14px 14px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .main-nav .nav-dropdown.is-expanded { display: block; }
+
+  .main-nav .nav-dropdown a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 9px 12px;
+    font-size: 13px;
+    line-height: 1.35;
+    font-weight: 500;
+  }
+
+  .main-nav .nav-dropdown a:hover {
+    background: rgba(145, 60, 25, .07);
+  }
+}
+
+@media (max-width: 720px) {
+  /* Keep carousel controls out of the headline and action buttons. */
+  .hero-slide { transform: none; }
+  .hero-grid,
+  .hero-slide .hero-grid {
+    gap: 16px;
+    padding-top: 25px;
+    padding-bottom: 24px;
+  }
+
+  .hero .eyebrow { margin-bottom: 10px; }
+  .hero .hero-kicker { margin-bottom: 12px; }
+  .hero h1,
+  .hero h1.hero-title-v74-tr,
+  .hero h1.hero-title-v74-en {
+    font-size: clamp(30px, 8.6vw, 38px);
+    line-height: 1.05;
+    letter-spacing: -.035em;
+  }
+  .hero h1.hero-title-subtitle-first em {
+    margin-bottom: 10px;
+    font-size: .76em;
+  }
+  .hero h1 em { margin-top: 10px; }
+  .hero-summary {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .hero-actions { margin-top: 16px; gap: 8px; }
+  .hero-actions .button,
+  .hero-actions .text-link { min-height: 44px; }
+  .hero .issue-cover { width: min(46vw, 170px); }
+  .hero .issue-cover img { max-height: 230px; }
+  .hero .hero-nav {
+    top: auto;
+    bottom: 5px;
+    margin-top: 0;
+    width: 44px;
+    height: 44px;
+  }
+  .hero .hero-nav-prev { left: 14px; }
+  .hero .hero-nav-next { right: 14px; }
+  .hero-controls .slider-controls {
+    min-height: 55px;
+    justify-content: center;
+    padding: 10px 54px;
+  }
+
+  /* Tooltips are anchored to the viewport, not the citation's text location. */
+  .article-platform-content .citation-tooltip,
+  .article-platform-content .inline-footnote::after {
+    position: fixed;
+    top: auto;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    left: 16px;
+    right: 16px;
+    width: auto;
+    max-height: 38dvh;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    transform: translateY(5px);
+  }
+
+  .article-platform-content .inline-citation:hover .citation-tooltip,
+  .article-platform-content .inline-citation:focus-visible .citation-tooltip,
+  .article-platform-content .inline-footnote:hover::after,
+  .article-platform-content .inline-footnote:focus-visible::after {
+    transform: translateY(0);
+  }
+
+  .article-platform-content,
+  .article-platform-content .article-fulltext,
+  .article-platform-content .article-body-section,
+  .article-platform-content .article-body-section > p {
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  .article-platform-content .article-body-section img,
+  .article-platform-content .article-body-section svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Keep archive and search controls comfortably tappable without excess padding. */
+  .archive-page .directory-toolbar { padding: 12px; margin-bottom: 22px; }
+  .archive-page .page-hero-inner { min-height: 0; padding-top: 24px; padding-bottom: 27px; }
+  .archive-page .page-breadcrumb { margin-bottom: 14px; }
+  .archive-page .page-section { padding-top: 20px; }
+
+  .issue-contents-section { padding-top: 24px; }
+  .issue-section-heading { margin-bottom: 18px; }
+  .issue-masthead-grid { gap: 16px 14px; padding-top: 22px; padding-bottom: 22px; }
+
+  .submission-page .reading-content,
+  .submission-page .article-content { min-width: 0; }
+}
+
+@media (max-width: 360px) {
+  .hero h1,
+  .hero h1.hero-title-v74-tr,
+  .hero h1.hero-title-v74-en { font-size: 29px; }
+  .hero .issue-cover { width: min(48vw, 150px); }
+  .main-nav, .site-header.is-condensed .main-nav { padding-left: 14px; padding-right: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-submenu-toggle span,
+  .hero-slide { transition: none; }
+}
+
+
+/* Mobile author submission and article discovery: predictable touch targets and rhythm. */
+@media (max-width: 620px) {
+  .submission-guide { gap: 16px; padding-top: 19px; padding-bottom: 72px; }
+  .submission-side nav { gap: 2px 13px; padding-bottom: 12px; }
+  .submission-side nav a { display: inline-flex; align-items: center; min-height: 38px; padding: 6px 0; }
+  .submission-section { padding-bottom: 20px; margin-bottom: 22px; }
+  .submission-file-grid { gap: 8px; margin: 14px 0; }
+  .submission-file-grid > div { padding: 14px 15px; }
+  .submission-file-grid h3 { margin-top: 9px; }
+  .submission-flow-tools button { min-height: 44px; padding: 8px 2px; }
+  .submission-step summary { min-height: 58px; }
+
+  .search-page .article-search-panel { padding: 14px; }
+  .search-page .search-filter-toolbar { gap: 8px 12px; margin-top: 12px; }
+  .search-page .article-filter-row.is-open { gap: 10px; }
+  .search-page .search-kind-tabs a { min-height: 44px; }
+}
+
+/* Full-bleed index ticker sits directly in main on home; avoid 14px horizontal overflow. */
+@media (max-width: 720px) {
+  main > .index-ticker {
+    width: 100%;
+    margin-inline: 0;
+  }
+}
+
+/* Keep scholarly citation bubbles within tablet viewports as well. */
+@media (min-width: 721px) and (max-width: 1024px) {
+  .article-platform-content .citation-tooltip,
+  .article-platform-content .inline-footnote::after {
+    position: fixed;
+    top: auto;
+    bottom: 16px;
+    left: 24px;
+    right: 24px;
+    width: auto;
+    max-height: 38dvh;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    transform: translateY(5px);
+  }
+  .article-platform-content .inline-citation:hover .citation-tooltip,
+  .article-platform-content .inline-citation:focus-visible .citation-tooltip,
+  .article-platform-content .inline-footnote:hover::after,
+  .article-platform-content .inline-footnote:focus-visible::after {
+    transform: translateY(0);
+  }
+}
