@@ -132,6 +132,7 @@ function alternateLocalePath(pathname: string, locale: Locale) {
 
 export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride }: { locale?: Locale; alternateHref?: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [expandedMobileGroup, setExpandedMobileGroup] = useState<string | null>(null);
   const [condensed, setCondensed] = useState(false);
   const condensedRef = useRef(false);
   const pathname = usePathname() || (locale === "en" ? "/en" : "/tr");
@@ -163,8 +164,11 @@ export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride
       if (event.key === "Escape") setMobileOpen(false);
     };
 
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", closeOnEscape);
     return () => {
+      document.body.style.overflow = originalOverflow;
       window.removeEventListener("keydown", closeOnEscape);
     };
   }, [mobileOpen]);
@@ -195,24 +199,43 @@ export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride
             aria-label={isEnglish ? "Open or close menu" : "Menüyü aç veya kapat"}
             aria-expanded={mobileOpen}
             aria-controls="primary-navigation"
-            onClick={() => setMobileOpen((open) => !open)}
+            onClick={() => {
+              setMobileOpen((open) => !open);
+              setExpandedMobileGroup(null);
+            }}
           >
             <span />
             <span />
             <span />
           </button>
           <nav id="primary-navigation" className={mobileOpen ? "main-nav is-open" : "main-nav"}>
-            {items.map((item) => (
+            {items.map((item, index) => (
               <div className="nav-item" key={item.label}>
-                <a href={canonicalPageHref(item.href)} onClick={() => setMobileOpen(false)}>
+                <a href={canonicalPageHref(item.href)} onClick={() => { setMobileOpen(false); setExpandedMobileGroup(null); }}>
                   {item.label}{item.children && <span className="nav-caret" aria-hidden="true">⌄</span>}
                 </a>
                 {item.children && (
-                  <div className="nav-dropdown" aria-label={isEnglish ? `${item.label} submenu` : `${item.label} alt menüsü`}>
-                    {item.children.map(([label, href]) => (
-                      <a href={canonicalPageHref(href)} key={href} onClick={() => setMobileOpen(false)}>{label}</a>
-                    ))}
-                  </div>
+                  <>
+                    <button
+                      className="nav-submenu-toggle"
+                      type="button"
+                      aria-label={isEnglish ? `Toggle ${item.label} submenu` : `${item.label} alt menüsünü aç veya kapat`}
+                      aria-expanded={expandedMobileGroup === item.label}
+                      aria-controls={`mobile-nav-submenu-${locale}-${index}`}
+                      onClick={() => setExpandedMobileGroup((current) => current === item.label ? null : item.label)}
+                    >
+                      <span aria-hidden="true">⌄</span>
+                    </button>
+                    <div
+                      id={`mobile-nav-submenu-${locale}-${index}`}
+                      className={`nav-dropdown ${expandedMobileGroup === item.label ? "is-expanded" : ""}`}
+                      aria-label={isEnglish ? `${item.label} submenu` : `${item.label} alt menüsü`}
+                    >
+                      {item.children.map(([label, href]) => (
+                        <a href={canonicalPageHref(href)} key={href} onClick={() => { setMobileOpen(false); setExpandedMobileGroup(null); }}>{label}</a>
+                      ))}
+                    </div>
+                  </>
                 )}
               </div>
             ))}
