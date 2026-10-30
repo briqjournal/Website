@@ -274,7 +274,7 @@ export function HomeHeroSlider({ locale = "tr" }: { locale?: Locale }) {
                     alt={slide.imageAlt}
                     width={720}
                     height={960}
-                    sizes="(max-width: 760px) 62vw, (max-width: 1100px) 34vw, 390px"
+                    sizes="(max-width: 720px) 46vw, (max-width: 760px) 62vw, (max-width: 1100px) 34vw, 390px"
                     priority={index === 0}
                   />
                 )}
