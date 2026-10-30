@@ -10829,3 +10829,11 @@ footer {
   .search-page .article-filter-row.is-open { gap: 10px; }
   .search-page .search-kind-tabs a { min-height: 44px; }
 }
+
+/* Full-bleed index ticker sits directly in main on home; avoid 14px horizontal overflow. */
+@media (max-width: 720px) {
+  main > .index-ticker {
+    width: 100%;
+    margin-inline: 0;
+  }
+}
