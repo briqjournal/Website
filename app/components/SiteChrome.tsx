@@ -164,11 +164,14 @@ export function SiteHeader({ locale = "tr", alternateHref: alternateHrefOverride
       if (event.key === "Escape") setMobileOpen(false);
     };
 
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    // Lock the root scroll container, not <body>. Body overflow creates a
+    // new scroll container and causes the sticky header to jump offscreen
+    // when the menu is opened after scrolling on mobile.
+    const originalOverflow = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = "hidden";
     window.addEventListener("keydown", closeOnEscape);
     return () => {
-      document.body.style.overflow = originalOverflow;
+      document.documentElement.style.overflow = originalOverflow;
       window.removeEventListener("keydown", closeOnEscape);
     };
   }, [mobileOpen]);
