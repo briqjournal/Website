@@ -10615,7 +10615,7 @@ footer {
   .main-nav,
   .site-header.is-condensed .main-nav {
     max-height: calc(100dvh - 102px);
-    padding: 10px 18px calc(24px + env(safe-area-inset-bottom));
+    padding: 10px 18px max(4px, env(safe-area-inset-bottom));
     background: #f5f0e8;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
