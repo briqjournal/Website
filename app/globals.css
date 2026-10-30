@@ -6785,7 +6785,10 @@ body {
     box-shadow: 0 24px 46px rgba(35, 23, 17, .18);
   }
 
-  .main-nav.is-open {
+  /* The condensed-header selector has greater specificity than .main-nav.is-open.
+     Keep the panel visible when opened from a scrolled position. */
+  .main-nav.is-open,
+  .site-header.is-condensed .main-nav.is-open {
     display: flex;
     touch-action: pan-y;
   }
