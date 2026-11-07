@@ -342,7 +342,7 @@ export const advisoryBoard = [
 export const editors = [
   ["Mustafa Altınkaya", "İTÜ TMDK"],
   ["Tolga Dişçi", "Hacettepe Üniversitesi"],
-  ["Jessica Durdu", "Çin Dışişleri Üniversitesi"],
+  ["Dr. Jessica Durdu", "Çin Dışişleri Üniversitesi"],
   ["Elif Erkeç", "Şanghay Uluslararası Çalışmalar Üniversitesi"],
   ["Dr. Sean Thomas McKenna", "İngilizce Dil Editörü"],
   ["Ece Kırbaş Perinçek", "Sanat Tarihçisi-Ressam"],
