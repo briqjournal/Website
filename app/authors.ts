@@ -29,6 +29,7 @@ export type AuthorProfile = {
 };
 
 type AuthorMetadata = {
+  displayName?: string;
   tr?: string;
   en?: string;
   email?: string;
@@ -212,12 +213,13 @@ const authorMetadata: Record<string, AuthorMetadata> = {
     biographyEn: "Shangtao Gao is a professor and master’s supervisor at the Institute of International Relations, China Foreign Affairs University, and directs its Center for Middle East Studies. He works on international-relations theory, China’s foreign policy, and the Middle East.",
   },
   "Jessica Durdu": {
+    displayName: "Dr. Jessica Durdu",
     tr: "Çin Dışişleri Üniversitesi, Uluslararası İlişkiler, Çin",
     en: "International Relations, China Foreign Affairs University, China",
     email: "jessicadurdu@gmail.com",
     orcids: ["0009-0000-2315-9661"],
-    biographyTr: "Jessica Durdu, Çin Dışişleri Üniversitesi’nde uluslararası ilişkiler doktora adayı ve Türkiye-Çin ilişkileri ile uluslararası diplomasi alanlarında çalışan dış ilişkiler uzmanıdır. Araştırmaları diplomatik strateji ve küresel siyasi işbirliğine odaklanmaktadır.",
-    biographyEn: "Jessica Durdu is a PhD candidate in International Relations at China Foreign Affairs University and a foreign-affairs specialist in Türkiye-China relations and international diplomacy. Her research focuses on diplomatic strategy and global political cooperation.",
+    biographyTr: "Dr. Jessica Durdu, Çin Dışişleri Üniversitesi’nde uluslararası ilişkiler doktorasını tamamlamış, Türkiye-Çin ilişkileri ve uluslararası diplomasi alanlarında çalışan bir dış ilişkiler uzmanıdır. Araştırmaları diplomatik strateji ve küresel siyasi işbirliğine odaklanmaktadır.",
+    biographyEn: "Dr. Jessica Durdu holds a PhD in International Relations from China Foreign Affairs University and is a foreign-affairs specialist in Türkiye-China relations and international diplomacy. Her research focuses on diplomatic strategy and global political cooperation.",
   },
   "Zhang Yan Jun": {
     tr: "Xi’an Uluslararası Çalışmalar Üniversitesi, Uluslararası İlişkiler Okulu, Çin",
@@ -1469,7 +1471,7 @@ export const authorProfiles: AuthorProfile[] = (() => {
 
       profiles.set(id, {
         id,
-        name,
+        name: metadata.displayName || name,
         affiliationTr: authorAffiliation(name, "tr"),
         affiliationEn: authorAffiliation(name, "en"),
         email: metadata.email,
@@ -1517,7 +1519,7 @@ export const authorProfiles: AuthorProfile[] = (() => {
 
       profiles.set(id, {
         id,
-        name: listedName,
+        name: metadata.displayName || listedName,
         affiliationTr: metadata.tr || affiliation,
         affiliationEn: metadata.en || boardAffiliation(affiliation, "en"),
         email: metadata.email,
