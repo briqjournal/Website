@@ -1366,7 +1366,9 @@ async function generatePageMetadata({
     );
     if (article) {
       const description = article.abstract_tr?.split("\n").find(Boolean)?.slice(0, 300)
-        || `${article.author} tarafından BRIQ Cilt ${article.volume}, Sayı ${article.issue} içinde yayımlanan çalışma.`;
+        || (article.author.trim()
+          ? `${article.author} tarafından BRIQ Cilt ${article.volume}, Sayı ${article.issue} içinde yayımlanan çalışma.`
+          : `${article.title_tr}, BRIQ Cilt ${article.volume}, Sayı ${article.issue} içinde yayımlandı.`);
       const firstPage = article.pages?.split(/[-–]/)[0];
       const lastPage = article.pages?.split(/[-–]/)[1];
       return {
@@ -1381,7 +1383,7 @@ async function generatePageMetadata({
         },
         other: {
           citation_title: article.title_tr,
-          citation_author: article.author,
+          ...(article.author.trim() ? { citation_author: article.author.trim() } : {}),
           citation_journal_title: "BRIQ Kuşak ve Yol Girişimi Dergisi",
           citation_volume: String(article.volume),
           citation_issue: String(article.issue),
