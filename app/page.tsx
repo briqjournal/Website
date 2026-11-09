@@ -42,12 +42,12 @@ export default function LocaleGateway() {
             <a className={styles.choice} href="/tr/" lang="tr" hrefLang="tr">
               <span className={styles.choiceEyebrow}>TÜRKÇE YAYIN</span>
               <strong>Türkçe</strong>
-              <span className={styles.choiceLabel}>Dergiye devam et <span aria-hidden="true">↗</span></span>
+              <span className={styles.choiceLabel}>Dergiye devam et <span aria-hidden="true">↗︎</span></span>
             </a>
             <a className={styles.choice} href="/en/" lang="en" hrefLang="en">
               <span className={styles.choiceEyebrow}>ENGLISH EDITION</span>
               <strong>English</strong>
-              <span className={styles.choiceLabel}>Enter the journal <span aria-hidden="true">↗</span></span>
+              <span className={styles.choiceLabel}>Enter the journal <span aria-hidden="true">↗︎</span></span>
             </a>
           </nav>
         </div>
