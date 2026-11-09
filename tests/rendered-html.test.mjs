@@ -67,7 +67,7 @@ test("root serves a stable x-default language selector independent of visitor co
     assert.ok((response.headers.get("content-type") ?? "").startsWith("text/html"));
     const html = await response.text();
     assert.ok(html.includes('rel="canonical" href="https://briqjournal.com/"'));
-    assert.ok(html.includes('hreflang="x-default"'));
+    assert.match(html, /hreflang="x-default"/i);
     assert.ok(html.includes('href="/tr/"'));
     assert.ok(html.includes('href="/en/"'));
     assert.match(html, /Dil seçimi/);
