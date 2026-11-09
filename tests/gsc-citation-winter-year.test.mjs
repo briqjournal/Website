@@ -9,7 +9,7 @@ async function renderArticle(pathname) {
   workerUrl.searchParams.set("citation-year-test", `${process.pid}-${pathname}`);
   const { default: worker } = await import(workerUrl.href);
   const response = await worker.fetch(
-    new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }),
+    new Request(`http://localhost${pathname.replace(/\/$/, "")}`, { headers: { accept: "text/html" } }),
     { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
     { waitUntil() {}, passThroughOnException() {} },
   );
