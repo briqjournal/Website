@@ -1,9 +1,10 @@
-import { headers } from "next/headers";
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
-export const dynamic = "force-dynamic";
-
-export default async function LocaleGateway() {
-  const country = (await headers()).get("cf-ipcountry")?.toUpperCase();
-  redirect(country === "TR" ? "/tr" : "/en");
+/**
+ * English is the site's fixed default locale.
+ * Cloudflare handles GET/HEAD at "/" as a single 308 hop in production.
+ * Keep the framework route as a matching permanent redirect fallback.
+ */
+export default function Home() {
+  permanentRedirect("/en/");
 }

@@ -54,18 +54,18 @@ test("renders production metadata without preview markers", async () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/briqjournal\.com\/tr\/"/i);
 });
 
-test("routes the locale gateway by Cloudflare country and preserves legacy Turkish URLs", async () => {
+test("root redirects permanently to English regardless of visitor country", async () => {
   const [turkey, abroad, legacy] = await Promise.all([
     renderPath("/", { "cf-ipcountry": "TR" }),
     renderPath("/", { "cf-ipcountry": "DE" }),
     renderPath("/arsiv?cilt=7"),
   ]);
 
-  assert.equal(turkey.status, 307);
-  assert.equal(new URL(turkey.headers.get("location"), "http://localhost").pathname, "/tr/");
-  assert.equal(abroad.status, 307);
-  assert.equal(new URL(abroad.headers.get("location"), "http://localhost").pathname, "/en/");
-  assert.equal(legacy.status, 308);
+  for (const response of [turkey, abroad]) {
+    assert.equal(response.status, 308);
+    assert.equal(new URL(response.headers.get("location"), "http://localhost").pathname, "/en/");
+  }
+  assert.equal(legacy.status, 308, "historic redirects must remain unchanged");
   const legacyLocation = new URL(legacy.headers.get("location"));
   assert.equal(legacyLocation.pathname, "/tr/arsiv");
   assert.equal(legacyLocation.searchParams.get("cilt"), "7");
