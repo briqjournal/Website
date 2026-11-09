@@ -28,7 +28,7 @@ import { completeCallCopyTr } from "../../call-content";
 import { authorProfiles, findAuthorProfile, bylineAffiliation } from "../../authors";
 import { archiveArticleListings, archiveIssueListings } from "../../archive-listing";
 import { absoluteSiteUrl } from "../../site-url";
-import { alignPageSeoAlternates } from "../../seo-metadata";
+import { alignPageSeoAlternates, citationPublicationYear } from "../../seo-metadata";
 import { issueAccent } from "../../issue-themes";
 import { getIssueCopy, getIssueHeadingLayout } from "../../issue-copy";
 import { archiveEditorialHref, issueSupplementaryContents } from "../../issue-supplementary";
@@ -1385,7 +1385,7 @@ async function generatePageMetadata({
           citation_journal_title: "BRIQ Kuşak ve Yol Girişimi Dergisi",
           citation_volume: String(article.volume),
           citation_issue: String(article.issue),
-          citation_publication_date: article.year,
+          citation_publication_date: citationPublicationYear(article.year),
           citation_language: "tr",
           ...(firstPage ? { citation_firstpage: firstPage } : {}),
           ...(lastPage ? { citation_lastpage: lastPage } : {}),
