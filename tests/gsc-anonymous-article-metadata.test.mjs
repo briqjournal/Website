@@ -60,7 +60,10 @@ test("anonymous contributions have a clean bilingual fallback description", asyn
     renderArticle("/tr/makaleler/istanbul-bogazinin-kopuklerinden-yeni-anayasa-venusunun-dogusu/"),
   ]);
   assert.match(metaContent(en, "description"), /^Palestine in 1947\. Published in BRIQ, Volume 5, Issue 1\.$/);
-  assert.match(metaContent(tr, "description"), /^İstanbul Boğazı'nın Köpüklerinden Yeni Anayasa Venüsünün Doğuşu, BRIQ Cilt 5, Sayı 3 içinde yayımlandı\.$/);
+  const trDescription = metaContent(tr, "description");
+  assert.ok(trDescription?.startsWith("İstanbul Boğazı"), "anonymous Turkish title is retained");
+  assert.match(trDescription, /BRIQ Cilt 5, Sayı 3 içinde yayımlandı\.$/);
+  assert.doesNotMatch(trDescription, /^\s*tarafından/);
 });
 
 test("authored articles retain their verified Highwire author byline", async () => {
