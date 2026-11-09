@@ -227,6 +227,16 @@ function handleLegacyRedirect(url: URL): Response | null {
   });
 }
 
+function defaultEnglishRedirect(request: Request, url: URL): Response | null {
+  // The public root has a single, permanent destination, independent of IP.
+  // The canonical English and Turkish homepages remain at /en/ and /tr/.
+  if ((request.method !== "GET" && request.method !== "HEAD") || url.pathname !== "/") return null;
+  return new Response(null, {
+    status: 308,
+    headers: { location: `/en/${url.search}` },
+  });
+}
+
 function isR2PdfPath(pathname: string): boolean {
   return (
     pathname.toLowerCase().endsWith(".pdf") &&
@@ -329,6 +339,9 @@ const worker = {
     const url = new URL(request.url);
     const legacyRedirect = handleLegacyRedirect(url);
     if (legacyRedirect) return legacyRedirect;
+
+    const englishDefault = defaultEnglishRedirect(request, url);
+    if (englishDefault) return englishDefault;
 
     if (isR2PdfPath(url.pathname)) {
       return servePdfFromR2(request, env.BRIQ_PDF, url.pathname);
