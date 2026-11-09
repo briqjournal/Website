@@ -227,13 +227,23 @@ function handleLegacyRedirect(url: URL): Response | null {
   });
 }
 
-function defaultEnglishRedirect(request: Request, url: URL): Response | null {
-  // The public root has a single, permanent destination, independent of IP.
-  // The canonical English and Turkish homepages remain at /en/ and /tr/.
-  if ((request.method !== "GET" && request.method !== "HEAD") || url.pathname !== "/") return null;
+function localeGatewayRedirect(request: Request, url: URL): Response | null {
+  // Fast-path the root locale gateway at the edge. The app-router gateway
+  // (app/page.tsx) renders server-side before redirecting, which costs
+  // ~800ms per request to "/". Redirect straight to the trailing-slash
+  // locale home so production serves a single fast hop. GET/HEAD only;
+  // query params preserved; no cache headers (the target varies by visitor).
+  if (request.method !== "GET" && request.method !== "HEAD") return null;
+  if (url.pathname !== "/") return null;
+
+  const country = request.headers.get("cf-ipcountry")?.toUpperCase();
+  // Relative Location keeps the redirect on the request's own origin: no
+  // request-derived host ever enters the header, so a foreign Host header
+  // cannot turn this trusted-domain redirect off-site.
+  const localePath = country === "TR" ? "/tr/" : "/en/";
   return new Response(null, {
-    status: 308,
-    headers: { location: `/en/${url.search}` },
+    status: 307,
+    headers: { location: `${localePath}${url.search}` },
   });
 }
 
@@ -340,8 +350,8 @@ const worker = {
     const legacyRedirect = handleLegacyRedirect(url);
     if (legacyRedirect) return legacyRedirect;
 
-    const englishDefault = defaultEnglishRedirect(request, url);
-    if (englishDefault) return englishDefault;
+    const localeRedirect = localeGatewayRedirect(request, url);
+    if (localeRedirect) return localeRedirect;
 
     if (isR2PdfPath(url.pathname)) {
       return servePdfFromR2(request, env.BRIQ_PDF, url.pathname);
