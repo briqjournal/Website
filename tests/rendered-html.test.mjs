@@ -54,7 +54,7 @@ test("renders production metadata without preview markers", async () => {
   assert.match(html, /<link rel="canonical" href="https:\/\/briqjournal\.com\/tr\/"/i);
 });
 
-test("root serves a stable x-default language selector independent of visitor country", async () => {
+test("root redirects permanently to English regardless of visitor country", async () => {
   const [turkey, abroad, legacy] = await Promise.all([
     renderPath("/", { "cf-ipcountry": "TR" }),
     renderPath("/", { "cf-ipcountry": "DE" }),
@@ -62,19 +62,10 @@ test("root serves a stable x-default language selector independent of visitor co
   ]);
 
   for (const response of [turkey, abroad]) {
-    assert.equal(response.status, 200, "root must be crawlable, not a geo redirect");
-    assert.equal(response.headers.get("location"), null);
-    assert.ok((response.headers.get("content-type") ?? "").startsWith("text/html"));
-    const html = await response.text();
-    assert.ok(html.includes('rel="canonical" href="https://briqjournal.com/"'));
-    assert.match(html, /hreflang="x-default"/i);
-    assert.ok(html.includes('href="/tr/"'));
-    assert.ok(html.includes('href="/en/"'));
-    assert.match(html, /Dil seçimi/);
-    assert.match(html, /Choose your language/);
+    assert.equal(response.status, 308);
+    assert.equal(new URL(response.headers.get("location"), "http://localhost").pathname, "/en/");
   }
-
-  assert.equal(legacy.status, 308, "historical redirects must remain unchanged");
+  assert.equal(legacy.status, 308, "historic redirects must remain unchanged");
   const legacyLocation = new URL(legacy.headers.get("location"));
   assert.equal(legacyLocation.pathname, "/tr/arsiv");
   assert.equal(legacyLocation.searchParams.get("cilt"), "7");
