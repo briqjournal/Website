@@ -34,3 +34,14 @@ export function alignPageSeoAlternates(metadata: Metadata): Metadata {
     },
   };
 }
+
+/**
+ * Winter issues are labelled with two calendar years (e.g. 2025-2026).
+ * For Highwire citation_publication_date, use the January-side year (2026),
+ * without changing the printed issue-year label or dated source records.
+ */
+export function citationPublicationYear(issueYear: string): string {
+  const label = issueYear.trim();
+  const winterRange = label.match(/^\d{4}\s*[-–—/]\s*(\d{4})$/);
+  return winterRange ? winterRange[1] : label;
+}
