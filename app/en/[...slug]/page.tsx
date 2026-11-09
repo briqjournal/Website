@@ -850,7 +850,9 @@ async function generatePageMetadata({ params }: { params: Promise<{ slug: string
       const title = article.title_en || article.title_tr;
       const englishSlug = articleRouteSlug(article, "en");
       const description = article.abstract_en?.split("\n").find(Boolean)?.slice(0, 300)
-        || `${article.author}, BRIQ Volume ${article.volume}, Issue ${article.issue}.`;
+        || (article.author.trim()
+          ? `${article.author}, BRIQ Volume ${article.volume}, Issue ${article.issue}.`
+          : `${title}. Published in BRIQ, Volume ${article.volume}, Issue ${article.issue}.`);
       const firstPage = article.pages?.split(/[-–]/)[0];
       const lastPage = article.pages?.split(/[-–]/)[1];
       return {
@@ -865,7 +867,7 @@ async function generatePageMetadata({ params }: { params: Promise<{ slug: string
         },
         other: {
           citation_title: title,
-          citation_author: article.author,
+          ...(article.author.trim() ? { citation_author: article.author.trim() } : {}),
           citation_journal_title: "BRIQ Belt & Road Initiative Quarterly",
           citation_volume: String(article.volume),
           citation_issue: String(article.issue),
