@@ -64,12 +64,12 @@ test("root serves a stable x-default language selector independent of visitor co
   for (const response of [turkey, abroad]) {
     assert.equal(response.status, 200, "root must be crawlable, not a geo redirect");
     assert.equal(response.headers.get("location"), null);
-    assert.match(response.headers.get("content-type") ?? "", /^text\\/html/i);
+    assert.ok((response.headers.get("content-type") ?? "").startsWith("text/html"));
     const html = await response.text();
-    assert.match(html, /<link[^>]+rel="canonical"[^>]+href="https:\\/\\/briqjournal\\.com\\/"/i);
-    assert.match(html, /hreflang="x-default"/i);
-    assert.match(html, /href="\\/tr\\/"/i);
-    assert.match(html, /href="\\/en\\/"/i);
+    assert.ok(html.includes('rel="canonical" href="https://briqjournal.com/"'));
+    assert.ok(html.includes('hreflang="x-default"'));
+    assert.ok(html.includes('href="/tr/"'));
+    assert.ok(html.includes('href="/en/"'));
     assert.match(html, /Dil seçimi/);
     assert.match(html, /Choose your language/);
   }
