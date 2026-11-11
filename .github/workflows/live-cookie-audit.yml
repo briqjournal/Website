@@ -1,0 +1,37 @@
+name: Read-only live cookie audit
+
+on:
+  pull_request:
+    paths:
+      - "scripts/audit-live-cookies.mjs"
+      - ".github/workflows/live-cookie-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    name: Inspect BRIQ with Chromium
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install temporary browser tooling (no lockfile changes)
+        run: |
+          npm install --no-save --package-lock=false --ignore-scripts playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Audit public website (read-only)
+        run: node scripts/audit-live-cookies.mjs
+      - name: Upload privacy-safe audit inventory
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: briq-live-cookie-audit
+          path: cookie-audit-output/report.json
+          if-no-files-found: warn
